@@ -1,6 +1,3 @@
-
-# D8 TTRPG Part 11: Weaves (N-Z)
-
 ## P
 
 ### Passwall

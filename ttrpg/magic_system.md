@@ -61,12 +61,8 @@ Energy regenerates fully after long rest.
 ##### Divine Gift (Divine)
 - Roll 8d8, assign one result to each energy
 - Choose Divine Path:
-  - Cleric Path: Choose Divine Affinity (Positive or Negative). Chosen
-    affinity = highest roll + 2 (max 8), other divine energy = any other
-    roll + 1
-  - Druid Path: Choose Elemental Affinity (Earth, Air, Fire, or Water) =
-    highest roll + 2 (max 8), and choose one divine energy (Positive or
-    Negative) = any other roll + 1
+  - Cleric Path: Choose Divine Affinity (Positive or Negative). Chosen affinity = highest roll + 2 (max 8), other divine energy = any other roll + 1
+  - Druid Path: Choose Elemental Affinity (Earth, Air, Fire, or Water) = highest roll + 2 (max 8), and choose one divine energy (Positive or Negative) = any other roll + 1
 
 ##### Enhanced Options (Additional Advantages)
 - Gifted Mage (-2 points, requires magical advantage): Roll 9d8, drop lowest, assign remaining 8. Advantage bonuses still apply.
