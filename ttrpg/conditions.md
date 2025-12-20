@@ -271,7 +271,7 @@
 -   If at 0 HP or below, bleeding damage stops (no damage taken while dying)
 -   However, add your total bleeding stack count to both dice when making stabilization saves.
 
--   **Example:** At -2 HP with 2 bleeding stacks, you add 2 (from negative HP) = add 2 total to both your Constitution die and Luck die when attempting to stabilize
+-   **Example:** At -2 HP with 2 bleeding stacks, you add 2 (from bleeding stacks) = add 2 total to both your Constitution die and Luck die when attempting to stabilize
 -   This makes it much harder to stabilize.
 
 #### Stopping Bleeding:

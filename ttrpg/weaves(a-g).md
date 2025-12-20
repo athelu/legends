@@ -1,4 +1,4 @@
-# D8 TTRPG Part 10: Weaves (A-M)
+# D8 TTRPG Part 10: Weaves
 
 ## Using This Guide
 
@@ -19,12 +19,10 @@ Each weave entry includes:
 -   Weavers can combine energies creatively
 -   Increase Damage: Spend 2 more Energy per damage tier (8/16/24/32)
 -   Increase Range: +1 Energy per range increment (Touch/Close/Medium/Long)
--   Increase Area: +1 Energy per area increase (single/2targets/10ft/4 targets/20ft/6 targets/30ft)
+-   Increase Area: +1 Energy per area increase (single, 2 targets/10ft. 4 targets/20ft, 6 targets/30ft)
 -   Increase Duration: +1 Energy per duration step (instant/1 round/1minute/10 minutes/1 hour)
 -   Overspending Penalty Remember: Spending Energy beyond your Mastery in that energy type adds +1 to both dice per point over. Plan your weaves within your capabilities or accept the penalty for heroic moments!
--   Creative Weaving These weaves are guidelines. Work with your GM to create unique effects by combining energies in new ways. The eight energies are tools
--   These are just common patterns
--   Your imagination defines how to use them!
+-   These weaves are guidelines. Work with your GM to create unique effects by combining energies in new ways. The eight energies are tools
 
 ## A
 
