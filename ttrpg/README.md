@@ -45,3 +45,26 @@ counting.
 
 ### Feats
 -   Feats provide access to abilities that would normally be given via a class
+
+## Sections
+-   The rules are broken down into different sections for easier management
+
+        legends/ttrpg/
+        ├── action.md
+        ├── backgrounds.md
+        ├── character-creation.md
+        ├── combat.md
+        ├── conditions.md
+        ├── core-system.md
+        ├── equipment.md
+        ├── feats.md
+        ├── flaws.md
+        ├── magic-system.md
+        ├── README.md
+        ├── traits.md
+        ├── weaves(a-g).md
+        ├── weaves(h-m).md
+        ├── weaves(n-r).md
+        └── weaves(s-z).md
+
+
