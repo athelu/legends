@@ -4,7 +4,7 @@
 
 ### Buckler (Light Shield)
 - Hand Usage: Occupies off-hand but allows punch/pommel strikes
-- Melee Defense: Fortune on defensive melee combat rolls
+- Melee Defense: Grants Shield Block reaction
 - Active Parry: Once per round as a [Free] action (no reaction cost), after seeing an incoming melee attack roll, you may force the attacker to reroll one of their dice (attacker chooses which result to keep)
 - **Special:** Can make off-hand attacks with the buckler itself (treat as light weapon, 4 damage bludgeoning) without Two-Weapon Fighting penalty
 - No ranged defense
