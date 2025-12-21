@@ -313,6 +313,21 @@ Most feats require:
 - **Benefit:** When you take the Attack action, your animal companion can use its reaction to make one attack
 - **Usage:** Once per round (uses companion's reaction)
 
+### Ranger's Weaving
+- **Prerequisites:** Wis 5, Wilderness 5, Tier 2+
+- **Benefit:** You gain limited nature magic:
+  - Roll **4d8**, assign to four Magical Potentials:
+    - **Earth Potential** = highest roll + 2 (max 8) [nature, plants, stone]
+    - Choose **Secondary Focus** (Air, Water, or Positive): second-highest + 1
+    - Assign remaining two rolls to remaining energies from: Air, Water, Positive, Space
+  - Use **Wisdom** as Casting Stat
+  - Gain **4 Magical Mastery skills** corresponding to your 4 energies (start rank 0)
+  - **Energy Pool:** Sum of 4 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
+  - Energy regenerates on **short rest**
+  - Can weave using these 4 energies
+- **Usage:** Passive (once taken, you become a half-caster ranger)
+- **Note:** This is the ranger equivalent of the paladin's Divine Warrior trait, but as an optional feat
+
 ---
 
 ## COMBAT FEATS - PALADIN STYLE
@@ -416,6 +431,204 @@ Most feats require:
 - **Prerequisites:** Divine Gift trait, Wis 7, Tier 6+
 - **Benefit:** Once per week, as 1 [Combat] action, attempt to call on your deity. Make Wisdom + Religion check. On 2 successes, your deity intervenes with an appropriate effect (GM discretion). On 1 success, minor assistance. On 0 successes, no effect and ability still consumed
 - **Usage:** Once per week
+
+---
+
+## MAGICAL FEATS - SORCERER METAMAGIC
+
+### Metamagic: Careful Weave
+- **Prerequisites:** Sorcerous Origin trait, Cha 5
+- **Benefit:** When you weave an area effect, spend 1 Sorcery Point to choose a number of targets equal to your Charisma. They automatically succeed on their saves
+- **Usage:** Spend 1 Sorcery Point per use
+
+### Metamagic: Distant Weave
+- **Prerequisites:** Sorcerous Origin trait, Cha 5
+- **Benefit:** When you weave a ranged effect, spend 1 Sorcery Point to double its range
+- **Usage:** Spend 1 Sorcery Point per use
+
+### Metamagic: Empowered Weave
+- **Prerequisites:** Sorcerous Origin trait, Cha 6
+- **Benefit:** When you weave a damage effect, spend 1 Sorcery Point to reroll all weaving dice, must take new result
+- **Usage:** Spend 1 Sorcery Point per use
+
+### Metamagic: Extended Weave
+- **Prerequisites:** Sorcerous Origin trait, Cha 5
+- **Benefit:** When you weave a duration effect, spend 1 Sorcery Point to double its duration
+- **Usage:** Spend 1 Sorcery Point per use
+
+### Metamagic: Heightened Weave
+- **Prerequisites:** Sorcerous Origin trait, Cha 6
+- **Benefit:** When you weave against a target's save, spend 2 Sorcery Points to add 1 to all of the target's saving throw dice
+- **Usage:** Spend 2 Sorcery Points per use
+
+### Metamagic: Quickened Weave
+- **Prerequisites:** Sorcerous Origin trait, Cha 6
+- **Benefit:** When you weave a Simple Weave (1 action), spend 2 Sorcery Points to cast it as a [Minor] action instead
+- **Usage:** Spend 2 Sorcery Points per use
+
+### Metamagic: Subtle Weave
+- **Prerequisites:** Sorcerous Origin trait, Cha 5
+- **Benefit:** When you weave, spend 1 Sorcery Point to cast without any visible or audible components
+- **Usage:** Spend 1 Sorcery Point per use
+
+### Metamagic: Twinned Weave
+- **Prerequisites:** Sorcerous Origin trait, Cha 6
+- **Benefit:** When you weave a single-target effect, spend Sorcery Points equal to the Primary Energy cost (minimum 1) to target a second creature within range
+- **Usage:** Spend Sorcery Points per use
+
+---
+
+## MAGICAL FEATS - WARLOCK
+
+### Eldritch Blast
+- **Prerequisites:** Eldritch Pact trait
+- **Benefit:** You can make a ranged weave attack at will:
+  - Range: 120 feet
+  - Damage: 8 force damage
+  - No Energy cost
+  - Uses your Charisma + Space Mastery for the attack roll
+  - At Tier 3, make two beams (can target same or different creatures)
+  - At Tier 5, make three beams
+  - At Tier 7, make four beams
+- **Usage:** Unlimited (at-will)
+- **Note:** Core defining feature for warlock characters
+
+### Agonizing Blast
+- **Prerequisites:** Eldritch Blast feat, Cha 5
+- **Benefit:** Add your Charisma score to Eldritch Blast damage
+- **Usage:** Passive
+
+### Repelling Blast
+- **Prerequisites:** Eldritch Blast feat, Tier 3+
+- **Benefit:** When you hit with Eldritch Blast, push target 10 feet away
+- **Usage:** Passive
+
+### Grasp of Hadar
+- **Prerequisites:** Eldritch Blast feat, Tier 3+
+- **Benefit:** Once per turn when you hit with Eldritch Blast, pull target 10 feet toward you
+- **Usage:** Once per turn
+
+### Lance of Lethargy
+- **Prerequisites:** Eldritch Blast feat, Tier 3+
+- **Benefit:** Once per turn when you hit with Eldritch Blast, reduce target's movement by 10 feet until end of your next turn
+- **Usage:** Once per turn
+
+### Armor of Shadows
+- **Prerequisites:** Eldritch Pact trait, Negative Mastery 3
+- **Benefit:** You can weave an at-will mage armor effect on yourself (no Energy cost): DR = 2 + your tier while unarmored
+- **Usage:** Unlimited (at-will)
+
+### Devil's Sight
+- **Prerequisites:** Eldritch Pact trait, Tier 2+
+- **Benefit:** You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet
+- **Usage:** Passive
+
+### Mask of Many Faces
+- **Prerequisites:** Eldritch Pact trait, Cha 5
+- **Benefit:** You can weave disguise self at will (no Energy cost)
+- **Usage:** Unlimited (at-will)
+
+### Misty Visions
+- **Prerequisites:** Eldritch Pact trait, Space Mastery 3
+- **Benefit:** You can weave silent image at will (no Energy cost)
+- **Usage:** Unlimited (at-will)
+
+### Pact of the Blade
+- **Prerequisites:** Eldritch Pact trait, Tier 2+
+- **Benefit:** As 1 [Combat] action, summon a magical weapon. Choose form each time (any melee weapon). It counts as magical, uses Charisma for attack/damage, and disappears if more than 5 feet from you
+- **Usage:** Unlimited
+
+### Pact of the Chain
+- **Prerequisites:** Eldritch Pact trait, Tier 2+
+- **Benefit:** Gain a familiar (imp, quasit, sprite, or pseudodragon). It acts independently and can attack. You can communicate telepathically within 100 feet
+- **Usage:** Passive
+
+### Pact of the Tome
+- **Prerequisites:** Eldritch Pact trait, Tier 2+
+- **Benefit:** Gain a grimoire. Learn 3 weaves from any spell list that you can cast using your available energies. You can cast them as rituals (10 minutes, half Energy cost)
+- **Usage:** Passive
+
+### Thirsting Blade
+- **Prerequisites:** Pact of the Blade feat, Tier 5+
+- **Benefit:** When using your pact weapon, you can make two attacks as a single [Combat] action using Shared Attribute Roll
+- **Usage:** Passive
+
+---
+
+## MAGICAL FEATS - DRUID
+
+### Wild Shape
+- **Prerequisites:** Divine Gift (Druid Path), Wis 5, Tier 2+
+- **Benefit:** You can transform into beasts:
+  - As 1 [Combat] action, transform into a beast you've seen
+  - **Tier 2-3:** CR 1 beasts, no flying or swimming speed
+  - **Tier 4-5:** CR 2 beasts, swimming speed allowed
+  - **Tier 6-7:** CR 3 beasts, flying speed allowed
+  - **Tier 8:** CR 4 beasts
+  - Gain beast's physical stats (Str, Con, Agi, Dex), keep mental stats (Int, Wis, Cha, Luck)
+  - Gain beast's HP as temporary HP
+  - Gain beast's movement, senses, and natural attacks
+  - Can't weave or speak while in beast form (unless you have Combat Wild Shape)
+  - Lasts 1 hour or until you revert (1 [Free] action)
+  - **Uses:** Equal to your Wisdom score per long rest
+- **Usage:** Limited by uses per long rest
+
+### Combat Wild Shape
+- **Prerequisites:** Wild Shape feat, Wis 6, Tier 4+
+- **Benefit:** While in Wild Shape:
+  - You can weave using your available energies (somatic components only - no speech)
+  - You can use Wild Shape as a [Minor] action instead of [Combat] action
+  - You can spend 1 Energy as a [Minor] action to regain 4 HP while in beast form
+- **Usage:** Passive enhancement to Wild Shape
+
+### Elemental Wild Shape
+- **Prerequisites:** Wild Shape feat, Tier 7+
+- **Benefit:** You can transform into elementals in addition to beasts:
+  - **Tier 7:** CR 3 elementals (Air, Earth, Fire, Water)
+  - **Tier 8:** CR 4 elementals
+  - Uses the same transformation rules as Wild Shape
+- **Usage:** Uses Wild Shape pool
+
+### Circle of the Moon: Primal Strike
+- **Prerequisites:** Wild Shape feat, Wis 6
+- **Benefit:** While in Wild Shape, your natural attacks count as magical for overcoming resistance
+- **Usage:** Passive
+
+---
+
+## MAGICAL FEATS - BARD
+
+### Bardic Inspiration
+- **Prerequisites:** Bardic Magic trait, Cha 5
+- **Benefit:** As 1 [Minor] action, spend 2 Energy and choose one creature within 60 feet who can hear you. For the next 10 minutes, they can add your Charisma score to one ability check, attack roll, or saving throw. They must choose before rolling. Can only have one Bardic Inspiration at a time
+- **Usage:** Spend 2 Energy per inspiration
+- **Note:** Creates tension between using Energy for spells vs. inspiration
+
+### Song of Rest
+- **Prerequisites:** Bardic Magic trait, Cha 4, Perform 4
+- **Benefit:** During a short rest, you can perform for your allies. All allies who can hear you regain additional HP equal to your Charisma score
+- **Usage:** Once per short rest
+
+### Countercharm
+- **Prerequisites:** Bardic Magic trait, Cha 5, Perform 5
+- **Benefit:** As 1 [Combat] action, start a performance. Until the start of your next turn, you and allies within 30 feet subtract 1 from both dice on saves against Charmed and Frightened
+- **Usage:** Unlimited
+
+### Cutting Words
+- **Prerequisites:** Bardic Inspiration feat, Cha 6
+- **Benefit:** When a creature you can see within 60 feet makes an attack roll, ability check, or damage roll, you can use your reaction and spend 2 Energy to add 1 to all their dice for that roll
+- **Usage:** Once per round (reaction), costs 2 Energy
+
+### Magical Secrets
+- **Prerequisites:** Bardic Magic trait, Tier 5+, any two Masteries at 5+
+- **Benefit:** Learn weaves from any spell list that you can cast with your available 5 energies. Choose 2 weaves you've seen cast or researched. You can now cast them as if they were bard weaves
+- **Usage:** Passive (expands spell list)
+- **Note:** Can be taken multiple times at Tier 5, 7, and 8, gaining 2 more weaves each time
+
+### Peerless Skill
+- **Prerequisites:** Bardic Inspiration feat, Cha 6, Tier 6+
+- **Benefit:** When you make an ability check, you can spend 2 Energy to add your Charisma score to the result (choose before or after rolling)
+- **Usage:** Spend 2 Energy per use
 
 ---
 
