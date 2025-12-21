@@ -121,6 +121,8 @@
 
 **Thrown:** Can be thrown using Ranged Combat skill, retains damage type and value.
 
+**Monk:** Can be used with monk abilities like Flurry of Blows and benefits from Unarmed Mastery feat. Monk weapons are typically simple, balanced weapons suitable for martial arts techniques.
+
 ## Weapon Table
 
 |                    |        |                                     |                                                |                                             |
@@ -129,12 +131,14 @@
 |                    |        |                                     |                                                |                                             |
 | Battleaxe          | 8/9    | Versatile                           | Slashing                                       |                     |
 | Buckler            | 4      | Light, Standard, Finesse            | Bludgeoning                                    | Shield used as weapon                       |
-| Club               | 4      | Light, Standard                     | Bludgeoning                                    | Simple weapon                               |
-| Dagger             | 4      | Light, Multi-Type, Thrown, Finesse  | Piercing/Slashing                              | Range 30/60 when thrown                     |
+| Club               | 4      | Light, Standard, Monk               | Bludgeoning                                    | Simple weapon                               |
+| Dagger             | 4      | Light, Multi-Type, Thrown, Finesse, Monk  | Piercing/Slashing                              | Range 30/60 when thrown                     |
 | Flail              | 6      | Standard                            | Bludgeoning                                    | Ignores some shield bonuses (GM discretion) |
 | Greataxe           | 10     | Two-Handed                          | Slashing                                       |                            |
 | Greatsword         | 10     | Two-Handed, Alternate Strike        | Slashing (primary), Bludgeoning (crossguard 5) |                                |
-| Hand Axe           | 4      | Light, Thrown                       | Slashing                                       | Range 30/60 when thrown                     |
+| Hand Axe           | 4      | Light, Thrown, Monk                 | Slashing                                       | Range 30/60 when thrown                     |
+| Kama               | 4      | Light, Finesse, Monk                | Slashing                                       | Sickle-like monk weapon                     |
+| Nunchaku           | 6      | Light, Finesse, Monk                | Bludgeoning                                    | Classic monk weapon, requires training      |
 | Heavy Crossbow     | 8      | Two-Handed, Ranged                  | Piercing                                       | Range 80/160/320, reload 2 actions          |
 | Light Crossbow     | 6      | Two-Handed, Ranged                  | Piercing                                       | Range 60/120/240, reload 1 action           |
 | Longbow            | 8      | Two-Handed, Ranged                  | Piercing                                       | Range 80/160/320, Str 3 req                 |
@@ -143,14 +147,15 @@
 | Maul               | 10     | Two-Handed                          | Bludgeoning                                    |                        |
 | Morningstar        | 8      | Standard, Multi-Type                | Bludgeoning/Piercing                           |                                  |
 | Poleaxe            | 10     | Two-Handed, Multi-Type              | Slashing/Piercing/Bludgeoning                  |                        |
-| Quarterstaff       | 6      | Two-Handed, Finesse                 | Bludgeoning                                    |                            |
+| Quarterstaff       | 6      | Two-Handed, Finesse, Monk           | Bludgeoning                                    | Iconic monk weapon                          |
 | Rapier             | 8      | Standard, Finesse                   | Piercing                                       | Classic dueling weapon                      |
-| Sap                | 4      | Light, Standard, Finesse            | Bludgeoning                                    | Non-lethal option                           |
+| Sap                | 4      | Light, Standard, Finesse, Monk      | Bludgeoning                                    | Non-lethal option                           |
+| Sai                | 6      | Light, Finesse, Monk, Thrown        | Piercing                                       | Range 20/40 when thrown, defensive weapon   |
 | Scimitar           | 6      | Light, Multi-Type, Finesse          | Slashing/Piercing                              |                                 |
 | Shortbow           | 6      | Two-Handed, Ranged                  | Piercing                                       | Range 60/120/240                            |
-| Shortsword         | 6      | Light, Multi-Type, Finesse          | Slashing/Piercing                              | Excellent off-hand weapon                   |
+| Shortsword         | 6      | Light, Multi-Type, Finesse, Monk    | Slashing/Piercing                              | Excellent off-hand weapon                   |
 | Sling              | 4      | Ranged                              | Bludgeoning                                    | Range 40/80/160                             |
-| Spear              | 6/7    | Versatile, Alternate Strike, Thrown | Piercing (primary), Bludgeoning (haft 3)       | Range 30/60 when thrown                     |
+| Spear              | 6/7    | Versatile, Alternate Strike, Thrown, Monk | Piercing (primary), Bludgeoning (haft 3)       | Range 30/60 when thrown, Monk when 1-handed |
 | War Pick           | 8      | Standard, Multi-Type                | Piercing/Bludgeoning                           |                         |
 | Warhammer          | 8      | Standard                            | Bludgeoning                                    |                                 |
 | Warhammer (spiked) | 8      | Standard, Multi-Type                | Bludgeoning/Piercing                           |                             |
@@ -159,3 +164,18 @@
 
 ### Range Format
 Ranges listed as Short/Medium/Long (e.g., 60/120/240 means short range 60ft, medium 120ft, long 240ft)
+
+### Monk Weapons
+Weapons with the **Monk** property can be used with monk class abilities like Flurry of Blows. The following weapons have the Monk property:
+- **Club** (4 damage, Light, Standard)
+- **Dagger** (4 damage, Light, Finesse, can be thrown)
+- **Hand Axe** (4 damage, Light, can be thrown)
+- **Kama** (4 damage, Light, Finesse) - Sickle-like weapon
+- **Nunchaku** (6 damage, Light, Finesse) - Classic monk weapon
+- **Quarterstaff** (6 damage, Two-Handed, Finesse) - Iconic monk weapon
+- **Sai** (6 damage, Light, Finesse, can be thrown) - Defensive trident
+- **Sap** (4 damage, Light, Finesse) - Non-lethal
+- **Shortsword** (6 damage, Light, Finesse)
+- **Spear** (6 damage when one-handed, Versatile, can be thrown)
+
+**Note:** With the Unarmed Mastery feat, unarmed strikes deal 6 damage and count as monk weapons. Quarterstaff is included despite being Two-Handed due to its iconic status in martial arts traditions.

@@ -207,7 +207,7 @@ Most feats require:
 
 ### Unarmed Mastery
 - **Prerequisites:** Agi 4, Melee 3
-- **Benefit:** Your unarmed strikes count as monk weapons and deal 6 damage (same as standard weapons)
+- **Benefit:** Your unarmed strikes deal 6 damage (same as standard weapons). Additionally, all weapons with the **Monk** property count as monk weapons for your abilities (Club, Dagger, Hand Axe, Kama, Nunchaku, Quarterstaff, Sai, Sap, Shortsword, Spear when one-handed)
 - **Usage:** Passive
 
 ### Flurry of Blows
