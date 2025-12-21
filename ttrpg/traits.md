@@ -29,7 +29,7 @@ Aware of surroundings.
 -   Gain only **4 Magical Mastery skills** corresponding to your 4 chosen energies (start at rank 0, untrained)
 -   Can weave bardic magic using only those 4 energies
 -   **Energy Pool:** Calculate using only your 4 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
--   **Gain Inspiring Performance ability:** Once per short rest, spend 1 [Combat] action to perform. All allies within 30 feet gain Fortune on their next roll within the next minute.
+-   **Gain Inspiring Performance ability:** Once per short rest, spend 1 [Combat] action to perform. All allies within 30 feet subtract 1 from both dice on their next roll.
 
 ### Contacts (-1 to -3)
 Associates or influential people for information/favors.
@@ -86,7 +86,7 @@ Unparalleled quickness.
 ### Lion Heart (-3)
 Unfaltering courage.
 -   Will saves: Subtract 1 from die results
--   Fortune on fear saves
+-   Subtract 1 from both fear save dice
 
 ### Longevity (-5)
 Longer lifespan.

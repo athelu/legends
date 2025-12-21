@@ -82,7 +82,6 @@ attack rolls:
 
 #### Fortune on attacks (roll 3d8, take best 2):
 -   Attacking a Blinded opponent
--   Attacking a Prone opponent (melee only)
 -   Attacking a Cowering opponent
 -   Other beneficial tactical positions
 
@@ -206,7 +205,7 @@ Cover provides physical protection from attacks through defensive positioning.
 
 **Cover vs. Area Effects:**
 -   Area effects (fireballs, lightning, etc.) typically allow Reflex saves
--   Cover provides Fortune on Reflex saves against area effects
+-   Subtract 1 from one Reflex save die on Reflex saves against area effects
 -   Full cover may provide total protection from area effects (GM discretion)
 -   Example: Fireball explodes - you're behind half cover = Fortune on your Reflex save
 
@@ -221,12 +220,12 @@ Cover provides physical protection from attacks through defensive positioning.
 
 #### Prone and Cover
 
--   Being Prone provides equivalent of Partial Cover against ranged attacks (make Reflex save to avoid being hit)
+-   Being Prone provides equivalent of Partial Cover against ranged attacks
 -   Can combine with physical cover for better protection:
-    -   Prone + Partial Cover = Half Cover (Fortune on Reflex save)
-    -   Prone + Half Cover = Three-Quarters Cover (subtract 1 from Reflex save dice)
+    -   Prone + Partial Cover = Half Cover
+    -   Prone + Half Cover = Three-Quarters Cover
 -   Against Melee Attacks: Being Prone does NOT provide DR
--   Melee attacks against prone targets have Fortune (offsetting the ranged defensive benefit)
+-   Melee attacks against prone targets have subtract 1 from both attack dice
 
 #### Cover Tactics
 

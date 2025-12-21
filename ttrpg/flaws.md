@@ -107,7 +107,7 @@ emotions.
 
 ### Haunted (3)
 Spirit only you see berates you.
--   Once per session, GM imposes disadvantage on critical roll
+-   Once per session, GM imposes Misfortune on a roll
 
 ### Hired Sword (3)
 Mercenary reputation. Will do anything for price. No loyalty possible.
