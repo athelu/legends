@@ -21,11 +21,11 @@
 
 #### Defensive Fighting
 -   Prerequisites: Agi 4, Melee 3
--   Benefit: Defenseive Stance: opponents have Misfortune on attacks against you, you cannot attack while in defensive stance
+-   Benefit: Defensive Stance - opponents add 1 to both attack dice when attacking you
 
 #### Weapon Specialization
 -   Prerequisites: Melee 4 or Ranged 4
--   Benefit: Choose one weapon type: Fortune when attacking with that weapon
+-   Benefit: Choose one weapon type. When attacking with that weapon, subtract 1 from your attack skill die
 
 #### Two-Weapon Fighting
 -   Prerequisites: Agi 4, Dex 3
@@ -99,7 +99,7 @@
 
 #### Expertise
 -   Prerequisites: Any skill rank 5
--   Benefit: For chosen skill: Fortune when using that skill
+-   Benefit: For chosen skill, subtract 1 from both dice when making checks
 
 #### Linguist
 -   Prerequisites: Int 4, Language 3
@@ -119,7 +119,7 @@
 
 #### Acrobatic Defense
 -   Prerequisites: Agi 5, Acrobatics 4
--   Benefit: Unarmored: Subtract half Acrobatics rank from defense die results
+-   Benefit: When unarmored, subtract 1 from both defense dice 
 
 ### General Feats
 
