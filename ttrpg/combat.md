@@ -76,6 +76,30 @@ Weapon Damage (Margin of Success)
     -   Bypass half DR
     -   Extra combat maneuver
 
+## Non-Lethal Damage
+
+### Non-Lethal Attacks
+Non-lethal damage represents attacks intended to subdue rather than kill. When a creature is reduced to 0 HP by non-lethal damage, they fall unconscious but are stable (not dying).
+
+**Naturally Non-Lethal Attacks:**
+- Unarmed strikes (punches, kicks, grapples)
+- Sap
+- Any weapon or attack specifically described as non-lethal
+
+**Declaring Non-Lethal Intent:**
+Before making any melee weapon attack, you may declare the attack as non-lethal:
+- If the attack hits and reduces the target to 0 HP or below, the target falls unconscious but is stable
+- You cannot declare ranged attacks, area effects, or ongoing damage (fire, acid, etc.) as non-lethal
+
+**Recovering from Non-Lethal Damage:**
+- A creature at 0 HP from non-lethal damage is unconscious but stable
+- They regain consciousness after 1d8 minutes
+- They can be awakened early with 1 minute of tending and a Medicine check
+- Healing restores them normally and wakes them immediately
+
+**Mixing Lethal and Non-Lethal:**
+- If reduced to 0 HP by non-lethal while also having lethal damage, creature is unconscious and dying normally
+
 ## Temporary Hit Points
 
 Temporary HP is a buffer that absorbs damage before your actual HP.
