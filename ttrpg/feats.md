@@ -704,6 +704,137 @@ Most feats require:
 
 ---
 
+## MAGICAL FEATS - GISH (MAGIC + MARTIAL HYBRIDS)
+
+### Arcane Trickster
+- **Prerequisites:** Sneak Attack feat, Int 5, Tier 2+
+- **Benefit:** You gain limited illusion and enchantment magic:
+  - Roll **3d8**, assign to three Magical Potentials:
+    - **Space Potential** = highest roll + 2 (max 8) [illusion, invisibility, misdirection]
+    - **Time Potential** = second-highest roll + 1 [duration for enchantments and illusions]
+    - **Negative Potential** = remaining roll [enchantment, charm, sleep, fear]
+  - Use **Intelligence** as Casting Stat
+  - Gain **3 Magical Mastery skills** (Space, Time, Negative) starting at rank 0
+  - **Energy Pool:** Sum of 3 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)
+  - Energy regenerates on **short rest**
+  - Can weave using only these 3 energies
+  - **Mage Hand Legerdemain:** You can cast mage hand at will (no Energy cost). As a [Minor] action, you can make Thievery checks with the hand at 30 feet range, or use it to pick locks and disarm traps
+- **Usage:** Passive (once taken, you become a limited caster)
+- **Note:** Focuses on trickery magic - illusions, invisibility, charm, and misdirection
+
+### Eldritch Knight
+- **Prerequisites:** Martial Training feat, Int 5, Tier 2+
+- **Benefit:** You gain limited abjuration and evocation magic:
+  - Roll **3d8**, assign to three Magical Potentials:
+    - **Space Potential** = highest roll + 2 (max 8) [shields, wards, protection, absorption]
+    - **Time Potential** = second-highest roll + 1 [duration for protective effects]
+    - **Choose primary damage element** (Fire, Air, Water, or Earth) = remaining roll
+  - Use **Intelligence** as Casting Stat
+  - Gain **3 Magical Mastery skills** (Space, Time, chosen element) starting at rank 0
+  - **Energy Pool:** Sum of 3 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)
+  - Energy regenerates on **short rest**
+  - Can weave using only these 3 energies
+  - **Weapon Bond:** During a long rest, bond with up to 2 weapons. You can summon a bonded weapon as a [Minor] action (appears in hand, or flies to hand from up to 100 feet away)
+- **Usage:** Passive (once taken, you become a limited caster)
+- **Note:** Focuses on war magic - protection, enhancement, and a single damage element
+
+### War Magic
+- **Prerequisites:** Eldritch Knight feat, Int 6, Tier 4+
+- **Benefit:** When you use your action to cast a weave, you can make one weapon attack as a [Minor] action
+- **Usage:** Unlimited
+- **Note:** Enhances action economy for Eldritch Knights
+
+### Eldritch Strike
+- **Prerequisites:** Eldritch Knight feat, Int 5, Tier 3+
+- **Benefit:** When you hit a creature with a weapon attack, that creature has Misfortune on the next saving throw it makes against a weave you cast before the end of your next turn
+- **Usage:** Passive
+
+---
+
+## MAGICAL FEATS - FOUR ELEMENTS MONK
+
+### Way of Four Elements
+- **Prerequisites:** Flurry of Blows feat, Wis 5, Tier 2+
+- **Benefit:** You gain elemental weaving focused on the classical elements:
+  - Roll **4d8**, assign to four Magical Potentials:
+    - **Choose primary element** (Earth, Air, Fire, or Water) = highest roll + 2 (max 8)
+    - **Other three elements** (Earth, Air, Fire, Water) = assign remaining three rolls
+  - Use **Wisdom** as Casting Stat
+  - Gain **4 Magical Mastery skills** for the 4 elements (start rank 0)
+  - **Energy Pool:** Sum of 4 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
+  - Energy regenerates on **short rest**
+  - Can weave using only the four elemental energies (Earth, Air, Fire, Water)
+  - **Elemental Attunement:** You can use minor elemental effects at will (create campfire-sized flame, freeze/thaw up to 1 cubic foot of water, create 10-foot breeze, excavate up to 5 cubic feet of earth) for no Energy cost
+- **Usage:** Passive (once taken, you become a limited elemental caster)
+- **Note:** Energy pool replaces ki points for elemental disciplines. Short rest recovery matches monk's ki recovery
+
+### Fangs of the Fire Snake
+- **Prerequisites:** Way of Four Elements, Fire Mastery 3
+- **Benefit:** When you use Flurry of Blows, you can spend 1 Energy to extend your reach by 10 feet for all unarmed strikes in that flurry. These strikes deal fire damage instead of normal damage and add +4 fire damage
+- **Usage:** Costs 1 Energy per use
+
+### Fist of Unbroken Air
+- **Prerequisites:** Way of Four Elements, Air Mastery 3
+- **Benefit:** As 1 [Combat] action, spend 2 Energy to strike with compressed air: choose target within 30 feet, make opposed roll (your Wisdom + Air Mastery vs target's Fortitude). If you win, target takes 12 bludgeoning damage and is pushed 20 feet away and knocked Prone. Add +4 damage and +5 feet pushed for each additional Energy spent (max 3 additional)
+- **Usage:** Costs 2+ Energy per use
+
+### Shape the Flowing River
+- **Prerequisites:** Way of Four Elements, Water Mastery 3
+- **Benefit:** As 1 [Combat] action, spend 1 Energy to shape water: freeze or thaw water, animate water into simple shapes that move as you direct, walk on water's surface, or create ice structures. Effects last 1 hour or until you lose concentration
+- **Usage:** Costs 1 Energy per use
+
+### Eternal Mountain Defense  
+- **Prerequisites:** Way of Four Elements, Earth Mastery 3
+- **Benefit:** As a [Reaction] when you would take damage, spend 1 Energy to gain temporary DR equal to your Wisdom score until the start of your next turn. This DR stacks with other DR sources
+- **Usage:** Costs 1 Energy per use (reaction)
+
+### Clench of the North Wind
+- **Prerequisites:** Way of Four Elements, Water Mastery 4, Tier 3+
+- **Benefit:** As 1 [Combat] action, spend 3 Energy to freeze a creature: choose target within 60 feet, make opposed roll (your Wisdom + Water Mastery vs target's Fortitude). If you win by 2+ successes, target is Paralyzed for 1 minute (can repeat save each turn). If you win by 1 success, target is Restrained for 1 minute
+- **Usage:** Costs 3 Energy per use
+
+### Gong of the Summit
+- **Prerequisites:** Way of Four Elements, Earth Mastery 4, Tier 3+
+- **Benefit:** As 1 [Combat] action, spend 3 Energy to create shockwave: all creatures within 20 feet of you make Fortitude saves against your Wisdom + Earth Mastery. On failure, take 12 thunder damage and are knocked Prone. On success, take half damage
+- **Usage:** Costs 3 Energy per use
+
+### Ride the Wind
+- **Prerequisites:** Way of Four Elements, Air Mastery 5, Tier 4+
+- **Benefit:** As 1 [Combat] action, spend 4 Energy to gain a flying speed equal to your walking speed for 10 minutes. You can carry one willing creature of your size or smaller
+- **Usage:** Costs 4 Energy per use
+
+### Rush of the Gale Spirits
+- **Prerequisites:** Way of Four Elements, Air Mastery 5, Tier 5+
+- **Benefit:** As 1 [Combat] action, spend 4 Energy to create a line of wind 60 feet long and 15 feet wide. Each creature in the line must make a Reflex save against your Wisdom + Air Mastery. On failure, take 16 bludgeoning damage and are pushed 20 feet away. On success, take half damage and are not pushed
+- **Usage:** Costs 4 Energy per use
+
+### River of Hungry Flame
+- **Prerequisites:** Way of Four Elements, Fire Mastery 5, Tier 5+
+- **Benefit:** As 1 [Combat] action, spend 5 Energy to create a 20-foot-radius sphere of flame (range 150 feet). All creatures in the area make Reflex saves against your Wisdom + Fire Mastery. Targets take 16 fire damage on failure, half on success. Add +8 damage for each additional Energy spent (max 3 additional)
+- **Usage:** Costs 5+ Energy per use
+
+### Mist Stance
+- **Prerequisites:** Way of Four Elements, Water Mastery 5, Tier 5+
+- **Benefit:** As 1 [Minor] action, spend 4 Energy to transform into mist for 10 minutes: gain resistance to all nonmagical damage (half damage), can move through small openings, gain flying speed equal to walking speed, can't attack or cast weaves while in mist form. You can end the effect early as a [Free] action
+- **Usage:** Costs 4 Energy per use
+
+### Breath of Winter
+- **Prerequisites:** Way of Four Elements, Water Mastery 6, Tier 6+
+- **Benefit:** As 1 [Combat] action, spend 6 Energy to exhale freezing wind in a 60-foot cone. Each creature in the area makes Fortitude save against your Wisdom + Water Mastery. On failure, take 20 cold damage and become Frozen (counts as Paralyzed) for 1 minute (can repeat save each turn). On success, take half damage and are not Frozen
+- **Usage:** Costs 6 Energy per use
+
+### Flames of the Phoenix
+- **Prerequisites:** Way of Four Elements, Fire Mastery 6, Tier 6+
+- **Benefit:** As 1 [Combat] action, spend 4 Energy to create a 20-foot-radius sphere of flame centered on you. All creatures you choose within the area take 16 fire damage. You gain a phoenix aura for 1 minute: any creature that hits you with a melee attack takes 4 fire damage
+- **Usage:** Costs 4 Energy per use
+
+### Wave of Rolling Earth
+- **Prerequisites:** Way of Four Elements, Earth Mastery 6, Tier 6+
+- **Benefit:** As 1 [Combat] action, spend 6 Energy to create a wave of earth in a 30-foot cone. Each creature in the area makes Reflex save against your Wisdom + Earth Mastery. On failure, take 20 bludgeoning damage and are knocked Prone. On success, take half damage. The affected area becomes difficult terrain
+- **Usage:** Costs 6 Energy per use
+
+---
+
 ## SKILL FEATS
 
 ### Expertise
