@@ -44,7 +44,7 @@ All characters have access to these combat options:
 - **Notes:**
   - Unopposed roll (target doesn't roll defense)
   - Subject to Multiple Action Penalty
-  - Making a ranged attack while threatened (enemy within 5 feet) has Misfortune
+  - Making a ranged attack while threatened (enemy within 5 feet) add 1 to both attack dice
   - subtract 1 from both dice when making a ranged attack into a meleet combat
 
 ##### Simple Weave [Combat]

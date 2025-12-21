@@ -6,7 +6,7 @@
 -   **Total Cost:** 7 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Time Potential + Time Mastery (2d8 only, single energy type)
--   **Effect:** Target at touch gains +1 action per turn (can be used for Move, Attack, or Activate only), Fortune on Reflex saves, and Fortune on Agility checks. When weave ends, target gains 1 level of Exhaustion.
+-   **Effect:** Target at touch gains +1 action per turn (can be used for Move, Attack, or Activate only), subtract 1 from both dice on Reflex saves, and subtract 1 from both dice on Agility checks. When weave ends, target gains 1 level of Exhaustion.
 -   **Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = no exhaustion (1 hour)
 
 ### Healing Word
@@ -53,7 +53,7 @@
 -   **Total Cost:** 7 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Target at touch becomes invisible. Attacks against target have Misfortune. Target has Fortune on Stealth. Breaks if target attacks or casts a weave.
+-   **Effect:** Target at touch becomes invisible. Attacks against target have Misfortune. Target subtract 1 from both Stealth dice on Stealth. Breaks if target uses a [Combat] action or casts a weave.
 -   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = affects 2 creatures (8 hours)
 
 ## K

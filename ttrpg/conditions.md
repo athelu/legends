@@ -78,7 +78,7 @@
 
 #### Prone
 -   Lying on the ground
--   Melee attacks against you have Fortune
+-   Melee attacks against subtract 1 from both attack dice
 -   Ranged attacks against you have Misfortune
 -   Your melee attacks have Misfortune
 -   Your ranged attacks have Misfortune (unless weapon can be used prone)

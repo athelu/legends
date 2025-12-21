@@ -286,7 +286,7 @@ Each weave entry includes:
 -   **Total Cost:** 6 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Target at close range (30ft) makes Fortitude save if unwilling. Enlarge: Double size, Fortune on Strength checks, +2 damage. Reduce: Half size, Misfortune on Strength checks, -2 damage, Fortune on Stealth.
+-   **Effect:** Target at close range (30ft) makes Fortitude save if unwilling. Enlarge: Double size, Fortune on Strength checks, +2 damage. Reduce: Half size, add 1 to both Strength check dice on Strength checks, -2 damage, subtract 1 from both Stealth check dice on Stealth.
 -   **Success Scaling:** Net successes: 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = triple/third size (1 hour)
 
 ### Entangle
@@ -398,7 +398,7 @@ Each weave entry includes:
 -   **Total Cost:** 6 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Create a Large hand of force at medium range (60ft). Can use action to command it: Grapple (opposed Athletics using your Space Mastery), Shove (move target 10 feet), or Interpose (grant Fortune to one ally's defense). Hand has HP = Space Potential 4.
+-   **Effect:** Create a Large hand of force at medium range (60ft). Can use action to command it: Grapple (opposed Athletics using your Space Mastery), Shove (move target 10 feet), or Interpose (grant subtract 1 from both defense dice). Hand has HP = Space Potential 4.
 -   **Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = Huge hand (double HP, 1 hour)
 
 ### Grease

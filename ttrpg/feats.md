@@ -111,7 +111,7 @@
 
 #### Medical Expert
 -   Prerequisites: Wis 4, Medicine 4
--   Benefit: Fortune on Medicine checks, heal 1d8 additional HP
+-   Benefit: Subtract 1 from both dice on Medicine checks, heal 1d8 additional HP
 
 #### Master Craftsman
 -   Prerequisites: Dex 5, Craft 5
