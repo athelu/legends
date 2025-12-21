@@ -84,13 +84,11 @@ attack rolls:
 -   Attacking a Blinded opponent
 -   Attacking a Prone opponent (melee only)
 -   Attacking a Cowering opponent
--   Flanking (if using flanking rules)
 -   Other beneficial tactical positions
 
 #### Misfortune on attacks (roll 3d8, take worst 2):
 -   You are Blinded
 -   Attacking while Prone
--   Attacking into melee without Precise Shot feat
 -   Other detrimental circumstances
 
 ### Physical Damage Types
@@ -171,7 +169,7 @@ Cover provides physical protection from attacks through defensive positioning.
 -   Portcullis, arrow slit, thick tree trunk
 -   **Against Melee Attacks:** +2 DR (significantly fewer vulnerable areas)
 -   **Against Ranged Attacks:** Make Reflex save (Agility + Luck) to duck behind cover
-    -   Fortune on your Reflex save (easier to get behind substantial cover)
+    -   Subtract 1 from both Reflex save die results
     -   1+ successes: Attack misses
     -   0 successes: Attack hits normally
 -   Examples: Firing through arrow slit, crouching behind a barrel, most of body behind wall
@@ -180,7 +178,7 @@ Cover provides physical protection from attacks through defensive positioning.
 -   Murder hole, small window, only small part visible
 -   **Against Melee Attacks:** +3 DR (minimal exposed areas to strike)
 -   **Against Ranged Attacks:** Make Reflex save (Agility + Luck) to duck behind cover
-    -   Subtract 1 from both Reflex save die results (very easy to duck behind)
+    -   Subtract 1 from both Reflex save die results
     -   1+ successes: Attack misses
     -   0 successes: Attack hits normally
 -   Examples: Peeking around a corner, firing through a narrow window

@@ -45,6 +45,7 @@ All characters have access to these combat options:
   - Unopposed roll (target doesn't roll defense)
   - Subject to Multiple Action Penalty
   - Making a ranged attack while threatened (enemy within 5 feet) has Misfortune
+  - subtract 1 from both dice when making a ranged attack into a meleet combat
 
 ##### Simple Weave [Combat]
 - **Cost:** 1 [Combat] action
@@ -379,7 +380,7 @@ All characters have access to these movement options:
 
 #### Flanking (Optional Rule):
 - When you and an ally are on opposite sides of an enemy (with both in melee reach)
-- Both you and your ally have Fortune on melee attacks against that enemy
+- Both you and your ally subtract 1 from both dice when making attacks
 - Enemy must be no more than one size larger than you
 
 ### Important Clarifications
