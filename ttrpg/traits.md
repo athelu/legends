@@ -1,4 +1,9 @@
 # D8 TTRPG - Part 4: Traits
+
+## TRAITS (Cost Points)
+
+**Design Philosophy:** Traits are reserved for abilities that grant unique resource systems (Energy pools, special points), supernatural characteristics, or features that cannot be learned through normal training. Most combat abilities and "class features" are now available as feats.
+
 ## NOTES ON REMOVED TRAITS
 
 The following traits have been **removed** from the system. Their core abilities are now available as **feats** that any character can take if they meet the prerequisites:
@@ -16,7 +21,7 @@ This change supports the classless design philosophy: any character who meets th
 ## WISDOM ON TRAIT SELECTION
 
 **When to take a trait:**
--   You want to play a spellcaster (Magical Aptitude, Divine Gift, Bardic Magic, Divine Warrior)
+-   You want to play a spellcaster (Magical Aptitude, Divine Gift, Sorcerous Origin, Eldritch Pact, Bardic Magic, Divine Warrior)
 -   You want a supernatural characteristic (Immortality, Mythic Characteristic)
 -   You want a permanent passive benefit that defines your character (Eidetic Memory, Lightning Reflexes)
 
@@ -26,11 +31,6 @@ This change supports the classless design philosophy: any character who meets th
 -   You want skills → Use XP and backgrounds instead
 
 The trait system is now focused and purposeful, reserving its mechanical weight for truly exceptional or supernatural capabilities.
-
-
-## TRAITS (Cost Points)
-
-**Design Philosophy:** Traits are reserved for abilities that grant unique resource systems (Energy pools, special points), supernatural characteristics, or features that cannot be learned through normal training. Most combat abilities and "class features" are now available as feats.
 
 ---
 
@@ -89,6 +89,56 @@ Music and performance as magical conduit.
 -   **Water**: Graceful dancers, ice sculptors, flowing movements  
 -   **Earth**: Drum circles, nature singers, stone resonance, stomping rhythms
 -   **Negative**: Dirge singers, horror storytellers, theatrical darkness, requiems
+
+### Sorcerous Origin (-7)
+**Requirements:** Charisma ≥ 3
+
+Innate magical power flows through your bloodline.
+-   Roll **8d8**, assign to eight Magical Potentials
+-   **Choose Sorcerous Origin:** Determines which energy gets highest affinity and special abilities
+    - **Draconic Bloodline:** Choose elemental (Fire/Water/Earth/Air) = highest roll + 2 (max 8). Gain draconic resilience.
+    - **Wild Magic:** Choose any energy = highest roll + 2 (max 8). Chaos infuses your magic.
+    - **Divine Soul:** Choose Positive or Negative = highest roll + 2 (max 8). Divine power flows through you.
+    - **Storm Sorcery:** Air = highest roll + 2 (max 8). Storm magic crackles around you.
+    - **Shadow Magic:** Negative = highest roll + 2 (max 8). Darkness is your ally.
+-   Choose **Secondary Focus** (any other energy): That Potential = any other roll + 1
+-   Use **Charisma** as Casting Stat
+-   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0, untrained)
+-   Can weave sorcerous magic using all 8 energies
+-   **Energy Pool:** Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
+-   **Gain Sorcery Points:** Pool equal to your Charisma score. Regain all points after long rest. Can spend for metamagic effects (see Metamagic feats).
+
+**Origin Benefits:**
+-   **Draconic Bloodline:** +1 max HP per tier, DR = 1 when unarmored
+-   **Wild Magic:** Roll on Wild Magic table whenever you roll double 1s or 8s while weaving
+-   **Divine Soul:** Can use Channel Divinity once per long rest (costs 4 Energy minimum)
+-   **Storm Sorcery:** When you weave with Air energy, you can fly 10 feet without provoking opportunity attacks
+-   **Shadow Magic:** Subtract 1 from both dice on Stealth checks in dim light or darkness
+
+### Eldritch Pact (-7)
+**Requirements:** Charisma ≥ 3
+
+You've made a pact with an otherworldly patron for power.
+-   Roll **5d8**, assign to five Magical Potentials based on patron
+-   **Choose Patron:** Determines energy access and grants patron gift
+    - **Archfey:** Air (highest +2), Positive (any +1), Space, Time, Earth
+    - **Fiend:** Fire (highest +2), Negative (any +1), Space, Time, Water
+    - **Great Old One:** Space (highest +2), Negative (any +1), Air, Time, Water
+    - **Celestial:** Positive (highest +2), Fire (any +1), Space, Time, Air
+    - **Hexblade:** Negative (highest +2), Space (any +1), Fire, Earth, Time
+-   Use **Charisma** as Casting Stat
+-   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 0, untrained)
+-   Can weave eldritch magic using only these 5 energies
+-   **Energy Pool:** Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
+-   **Pact Magic:** Energy regenerates on **short rest** instead of long rest
+-   **Patron Gift:** Gain special ability based on patron choice
+
+**Patron Gifts:**
+-   **Archfey:** Once per short rest, as 1 [Combat] action, target within 30 feet makes Will save. If you win, target is Charmed for 1 minute.
+-   **Fiend:** When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier.
+-   **Great Old One:** You can communicate telepathically with any creature you can see within 30 feet (no shared language needed).
+-   **Celestial:** Your healing weaves restore an additional amount equal to your Charisma score.
+-   **Hexblade:** You can use Charisma instead of Strength or Agility for attack and damage rolls with one chosen weapon.
 
 ### Divine Warrior (-5)
 **Requirements:** Wisdom ≥ 3, Charisma ≥ 3
