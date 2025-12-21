@@ -99,9 +99,9 @@
 - Swimming: Medium armor -1 Athletics, half swim speed; Heavy armor -2 Athletics, quarter swim speed
 - Fatigue: Heavy armor worn 8+ hours in extreme conditions may require Constitution check or gain Exhaustion condition.
 
-### Weapon Properties
+## Weapon Properties
 
-#### Property Keywords
+### Property Keywords
 
 **Light:** Easily wielded in the off-hand. Required for off-hand in Two-Weapon Fighting.
 
@@ -111,6 +111,8 @@
 
 **Two-Handed:** Requires both hands to wield. Cannot be used with shields or in Two-Weapon Fighting.
 
+**Finesse:** Can use either Strength or Agility for damage calculations (player's choice). Attack rolls always use Agility + Melee Combat (as standard for all melee weapons), but the damage bonus can come from either Strength or Agility, whichever is higher.
+
 **Alternate Strike:** Can use secondary attack for different damage type at reduced damage (typically half, rounded down).
 
 **Multi-Type:** Deals full damage with multiple damage types - player chooses which type when attacking.
@@ -119,16 +121,16 @@
 
 **Thrown:** Can be thrown using Ranged Combat skill, retains damage type and value.
 
-Weapon Table
+## Weapon Table
 
 |                    |        |                                     |                                                |                                             |
 |--------------------|--------|-------------------------------------|------------------------------------------------|---------------------------------------------|
 | Weapon             | Damage | Properties                          | Damage Type                                    | Notes                                       |
 |                    |        |                                     |                                                |                                             |
 | Battleaxe          | 8/9    | Versatile                           | Slashing                                       |                     |
-| Buckler            | 4      | Light, Standard                     | Bludgeoning                                    | Shield used as weapon                       |
+| Buckler            | 4      | Light, Standard, Finesse            | Bludgeoning                                    | Shield used as weapon                       |
 | Club               | 4      | Light, Standard                     | Bludgeoning                                    | Simple weapon                               |
-| Dagger             | 4      | Light, Multi-Type, Thrown           | Piercing/Slashing                              | Range 30/60 when thrown                     |
+| Dagger             | 4      | Light, Multi-Type, Thrown, Finesse  | Piercing/Slashing                              | Range 30/60 when thrown                     |
 | Flail              | 6      | Standard                            | Bludgeoning                                    | Ignores some shield bonuses (GM discretion) |
 | Greataxe           | 10     | Two-Handed                          | Slashing                                       |                            |
 | Greatsword         | 10     | Two-Handed, Alternate Strike        | Slashing (primary), Bludgeoning (crossguard 5) |                                |
@@ -141,16 +143,18 @@ Weapon Table
 | Maul               | 10     | Two-Handed                          | Bludgeoning                                    |                        |
 | Morningstar        | 8      | Standard, Multi-Type                | Bludgeoning/Piercing                           |                                  |
 | Poleaxe            | 10     | Two-Handed, Multi-Type              | Slashing/Piercing/Bludgeoning                  |                        |
-| Quarterstaff       | 6      | Two-Handed                          | Bludgeoning                                    |                            |
-| Sap                | 4      | Light, Standard                     | Bludgeoning                                    | Non-lethal option                           |
-| Scimitar           | 6      | Light, Multi-Type                   | Slashing/Piercing                              |                                 |
+| Quarterstaff       | 6      | Two-Handed, Finesse                 | Bludgeoning                                    |                            |
+| Rapier             | 8      | Standard, Finesse                   | Piercing                                       | Classic dueling weapon                      |
+| Sap                | 4      | Light, Standard, Finesse            | Bludgeoning                                    | Non-lethal option                           |
+| Scimitar           | 6      | Light, Multi-Type, Finesse          | Slashing/Piercing                              |                                 |
 | Shortbow           | 6      | Two-Handed, Ranged                  | Piercing                                       | Range 60/120/240                            |
-| Shortsword         | 6      | Light, Multi-Type                   | Slashing/Piercing                              | Excellent off-hand weapon                   |
+| Shortsword         | 6      | Light, Multi-Type, Finesse          | Slashing/Piercing                              | Excellent off-hand weapon                   |
 | Sling              | 4      | Ranged                              | Bludgeoning                                    | Range 40/80/160                             |
 | Spear              | 6/7    | Versatile, Alternate Strike, Thrown | Piercing (primary), Bludgeoning (haft 3)       | Range 30/60 when thrown                     |
 | War Pick           | 8      | Standard, Multi-Type                | Piercing/Bludgeoning                           |                         |
 | Warhammer          | 8      | Standard                            | Bludgeoning                                    |                                 |
 | Warhammer (spiked) | 8      | Standard, Multi-Type                | Bludgeoning/Piercing                           |                             |
+| Whip               | 4      | Standard, Finesse                   | Slashing                                       | Reach 10ft                                  |
 |                    |        |                                     |                                                |                                             |
 
 ### Range Format

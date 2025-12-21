@@ -12,6 +12,22 @@
 7.  Charisma - Personality, leadership, social influence
 8.  Luck - Fortune, fate, cosmic favor
 
+## Character Creation Steps
+
+1. **Determine Attributes**
+2. **Choose Background**
+3. **Select Traits and Flaws**
+4. **Spend Starting XP**
+5. **Receive Starting Feat**
+6. **Calculate Hit Points**
+7. **Select Starting Equipment**
+
+
+## Determine Attributes
+
+### Random roll
+8d8, assign as desired
+
 ### Starting Attribute Array
 
 Players assign the following values to their eight attributes: 4, 3, 3, 3, 3, 2, 2, 1
@@ -89,8 +105,8 @@ Spending Background XP:
 ### Traits and Flaws (Advantages/Disadvantages)
 
 #### Core Rule
--   Traits (advantages) cost points
--   Flaws (disadvantages) grant points
+-   Traits cost points
+-   Flaws grant points
 -   To take a trait, you must have equal or greater flaw points
 -   Character creation only - cannot be taken after initial creation
 
@@ -113,11 +129,7 @@ Spending Background XP:
 -   **Example:** Fire Potential 5→6 costs 80 XP
 
 ##### Feats: 40 XP each
--   Tier limits: Maximum feats = Current Tier
-    -   Tier 1: Max 1 feat
-    -   Tier 2: Max 2 feats
-    -   Tier 4: Max 4 feats
-    -   Tier 8: Max 8 feats
+-   Tier limits: Maximum feats = 2 per tier
 
 ### Character Tiers
 
