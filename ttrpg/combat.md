@@ -76,6 +76,21 @@ Weapon Damage (Margin of Success)
     -   Bypass half DR
     -   Extra combat maneuver
 
+## Temporary Hit Points
+
+Temporary HP is a buffer that absorbs damage before your actual HP.
+
+**Rules:**
+- Temporary HP is lost before actual HP when you take damage
+- You can only have one source of temporary HP at a time (new temp HP replaces old, they don't stack)
+- Temporary HP from the same source doesn't stack with itself
+- Temporary HP can't be healed - only regained through the source that granted it
+- Temporary HP disappears after a long rest
+- Temporary HP doesn't count as healing (doesn't trigger healing-related effects)
+
+**Example:** You have 25 HP and gain 8 temporary HP. An enemy deals 12 damage. You lose all 8 temporary HP and 4 actual HP (now at 21/25 HP, 0 temp HP).
+
+
 ### Fortune & Misfortune in Combat
 Certain conditions and circumstances grant Fortune or Misfortune on
 attack rolls:

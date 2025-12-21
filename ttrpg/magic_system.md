@@ -22,6 +22,20 @@
 - Limited to 4 energies (always includes Air)
 - Includes Inspiring Performance ability
 
+### Comparison of Magic Types
+
+| Feature | Magical Aptitude | Divine Gift | Bardic Magic |
+|---------|-----------------|-------------|--------------|
+| Casting Stat | Intelligence | Wisdom | Charisma |
+| # of Energies | 8 | 8 | 5 |
+| Primary Energy | Elemental (choice) | Divine or Elemental | Air (fixed) |
+| Secondary Energy | Any (choice) | Divine or Elemental | Positive (fixed) |
+| Fixed Energies | None | None | Air, Positive, Space, Time |
+| Chosen Energy | All 8 | All 8 | 1 (Earth/Fire/Water/Negative) |
+| Special Ability | Ritual Casting | Channel Divinity | Inspiring Performance |
+| Energy Pool | Full (8 Potentials) | Full (8 Potentials) | Limited (5 Potentials) |
+| Focus | Versatile arcane | Divine/nature power | Support, utility, performance |
+
 ### The Eight Magical Energies
 1.  Earth - Stone, metal, earth magic
 2.  Air - Wind, lightning, sound
