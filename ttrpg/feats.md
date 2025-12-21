@@ -361,49 +361,60 @@ Most feats require:
 
 ## MAGICAL FEATS
 
+**Design Note:** Most magical enhancement feats are available to all casters regardless of magical tradition. This allows for build diversity while maintaining class identity through resource-specific abilities (Sorcery Points, Channel Divinity, etc.) and signature features (Eldritch Blast, Wild Shape, etc.).
+
+### UNIVERSAL MAGICAL ENHANCEMENTS
+
 ### Arcane Recovery
-- **Prerequisites:** Magical Aptitude trait, Int 5
+- **Prerequisites:** Any magical trait (Magical Aptitude, Divine Gift, Sorcerous Origin, Bardic Magic, Eldritch Pact, or Divine Warrior), Int OR Wis OR Cha 5
 - **Benefit:** Once per day during a short rest, regain Energy equal to your tier × 4
 - **Usage:** Once per day
+- **Note:** Originally a wizard ability, now available to all casters who dedicate study to energy recovery
 
 ### Elemental Adept
-- **Prerequisites:** Magical Aptitude or Divine Gift, chosen elemental Mastery 5
+- **Prerequisites:** Any magical trait, chosen elemental Mastery 5
 - **Benefit:** Choose one elemental energy (Earth/Air/Fire/Water). When weaving with that energy, treat any overspending penalty of +1 as +0 instead
 - **Usage:** Passive
+- **Note:** Can be taken multiple times for different elements
 
 ### Evocation Focus
-- **Prerequisites:** Magical Aptitude or Divine Gift, any damage energy Mastery 5
+- **Prerequisites:** Any magical trait, any damage energy Mastery 5
 - **Benefit:** When weaving damage effects, add your Casting Stat to the damage
 - **Usage:** Passive
+- **Note:** Works with whichever Casting Stat your magical tradition uses (Int, Wis, or Cha)
 
 ### Metaweaving: Quicken
-- **Prerequisites:** Magical Aptitude or Divine Gift, Int or Wis 6
+- **Prerequisites:** Any magical trait, Int OR Wis OR Cha 6
 - **Benefit:** Once per day: cast a Simple Weave (1 action) as a [Minor] action instead
 - **Usage:** Once per day
+- **Note:** Different from Sorcerer's Quickened Weave which uses Sorcery Points
 
 ### Metaweaving: Empower
-- **Prerequisites:** Magical Aptitude or Divine Gift, Int or Wis 6
+- **Prerequisites:** Any magical trait, Int OR Wis OR Cha 6
 - **Benefit:** Once per day: reroll all weaving dice, must take new result
 - **Usage:** Once per day
+- **Note:** Different from Sorcerer's Empowered Weave which uses Sorcery Points
 
 ### Metaweaving: Extend
-- **Prerequisites:** Magical Aptitude or Divine Gift, Int or Wis 5
+- **Prerequisites:** Any magical trait, Int OR Wis OR Cha 5
 - **Benefit:** Once per day: double weave duration with no extra cost
 - **Usage:** Once per day
+- **Note:** Different from Sorcerer's Extended Weave which uses Sorcery Points
 
 ### Ritual Weaver
-- **Prerequisites:** Magical Aptitude or Divine Gift, Int or Wis 4
+- **Prerequisites:** Any magical trait, Int OR Wis OR Cha 4
 - **Benefit:** Use a 10-minute ritual to cast weaves at half Energy cost (minimum 1), cannot be used in combat
 - **Usage:** Unlimited (out of combat only)
-- **Note:** Magical Aptitude grants this automatically; this feat allows other casters to gain it
+- **Note:** Magical Aptitude grants this automatically; this feat allows other casters to learn the technique
 
 ### Weave Focus
-- **Prerequisites:** Magical Aptitude or Divine Gift, any Mastery 3
+- **Prerequisites:** Any magical trait, any Mastery 3
 - **Benefit:** Choose one energy type: subtract 1 from Potential and Mastery die results for casting rolls
 - **Usage:** Passive
+- **Note:** Can be taken multiple times for different energies
 
 ### Split Energy
-- **Prerequisites:** Magical Aptitude or Divine Gift, two Masteries 5+
+- **Prerequisites:** Any magical trait, two Masteries 5+
 - **Benefit:** Split weave to two targets or locations, each uses half Energy
 - **Usage:** Passive
 
@@ -411,6 +422,67 @@ Most feats require:
 - **Prerequisites:** Magical Aptitude, Luck 5
 - **Benefit:** On double 1s or 8s when weaving: roll on Wild Magic table for extra effect
 - **Usage:** Passive
+
+---
+
+## MAGICAL FEATS - WIZARD SCHOOLS
+
+### School of Abjuration: Arcane Ward
+- **Prerequisites:** Magical Aptitude, Int 5, Space Mastery 4
+- **Benefit:** When you weave using Space energy, gain temporary HP equal to the Energy spent. This ward lasts until depleted or you finish a long rest. Ward HP can stack with itself up to a maximum of your Intelligence × tier
+- **Usage:** Passive
+- **Note:** Represents protective magic specialization
+
+### School of Conjuration: Benign Transposition
+- **Prerequisites:** Magical Aptitude, Int 5, Space Mastery 5, Tier 3+
+- **Benefit:** As 1 [Combat] action, teleport up to 30 feet. You can swap places with a willing creature of your size or smaller within range instead
+- **Usage:** Your Intelligence score times per long rest
+
+### School of Divination: Portent
+- **Prerequisites:** Magical Aptitude, Int 6, Space Mastery 5, Tier 3+
+- **Benefit:** When you finish a long rest, roll 2d8 and record the results. Before any creature you can see makes a d8 roll, you can replace their roll with one of your portent dice (no action required). You must choose before the roll
+- **Usage:** 2 uses per long rest
+- **Note:** Powerful predictive magic
+
+### School of Enchantment: Hypnotic Gaze
+- **Prerequisites:** Magical Aptitude, Int 5, Negative OR Positive Mastery 4, Cha 4
+- **Benefit:** As 1 [Combat] action, choose one creature within 5 feet. Target makes Will save against your Intelligence + Arcane skill. If you win, target is Charmed and its speed becomes 0 until the end of your next turn. Effect ends if target takes damage
+- **Usage:** Unlimited
+
+### School of Evocation: Sculpt Spell
+- **Prerequisites:** Magical Aptitude, Int 5, any damage energy Mastery 5
+- **Benefit:** When you weave an area damage effect, choose a number of creatures equal to your Intelligence. Those creatures automatically take no damage from the weave
+- **Usage:** Passive
+- **Note:** Core evocation mastery - protect allies from your fireballs
+
+### School of Evocation: Empowered Evocation
+- **Prerequisites:** School of Evocation: Sculpt Spell, Int 6, Tier 5+
+- **Benefit:** Add your Intelligence score to the damage of any evocation weave you cast (stacks with Evocation Focus if you have it)
+- **Usage:** Passive
+- **Note:** Requires Sculpt Spell feat first
+
+### School of Illusion: Improved Minor Illusion
+- **Prerequisites:** Magical Aptitude, Int 5, Space Mastery 4
+- **Benefit:** You can weave minor illusions (silent image equivalent) at will for no Energy cost. Additionally, you can create both sound and image with a single weave
+- **Usage:** Unlimited (at-will)
+
+### School of Necromancy: Grim Harvest
+- **Prerequisites:** Magical Aptitude, Int 5, Negative Mastery 5
+- **Benefit:** When you kill a creature with a weave using Negative energy, regain HP equal to twice the Energy spent (3× if the creature was undead)
+- **Usage:** Passive
+
+### School of Transmutation: Minor Alchemy
+- **Prerequisites:** Magical Aptitude, Int 5, Earth OR Fire OR Water Mastery 4, Craft 4
+- **Benefit:** You can temporarily alter the physical properties of one nonmagical object (no larger than 1 cubic foot). You transform it into another nonmagical object of similar size and mass. The transformation lasts 1 hour
+- **Usage:** Unlimited
+
+### School of Transmutation: Transmuter's Stone
+- **Prerequisites:** School of Transmutation: Minor Alchemy, Int 6, Tier 3+
+- **Benefit:** You can spend 8 hours creating a transmuter's stone. The bearer gains one benefit (choose when creating): darkvision 60ft, +2 movement speed, proficiency in Constitution saves (subtract 1 from Fortitude dice), or resistance to one damage type (acid, cold, fire, lightning, or thunder - reduces damage by half)
+- **Usage:** One stone at a time, can remake during long rest
+- **Note:** Requires Minor Alchemy feat first
+
+---
 
 ### Channel Mastery
 - **Prerequisites:** Divine Gift trait, Wis 5, Pos or Neg Mastery 4
