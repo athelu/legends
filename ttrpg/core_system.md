@@ -1,3 +1,5 @@
+# D8 TTRPG - Part 1: Core System
+
 ### Core Mechanic: Roll Equal-to-or-Under
 
 #### Basic Skill Test
@@ -74,7 +76,7 @@
 When you achieve partial success (1 success when 2 needed):
 1.  Roll d8
 2.  If result is ≤ your Current Luck: No complication
-3.  If result is \> your Current Luck: GM introduces a complication, cost, or consequence
+3.  If result is > your Current Luck: GM introduces a complication, cost, or consequence
 
 ### Luck in Saving Throws
 All three saving throw types roll Attribute + Current Luck and count successes:
@@ -83,7 +85,7 @@ All three saving throw types roll Attribute + Current Luck and count successes:
 -   Will Save: Wisdom + Current Luck
 
 Roll 2d8 (one for the attribute, one for Current Luck), count successes.
-These successes are compared against the threat\'s successes.
+These successes are compared against the threat's successes.
 
 **Important:** As you spend Luck throughout the session, your Current Luck decreases, making it harder to generate successes on your Luck die!
 
@@ -164,7 +166,38 @@ Only actions with [Combat] keywords trigger the penalty:
 
 All other keyword types can be used multiple times without penalty.
 
-#### Success Probability Reference
+## Experience and Advancement
+
+### Experience Points (XP)
+-   **24 XP per session** (awarded equally to all players)
+-   XP can be spent on attributes, skills, Potentials (if magical), or feats
+
+### Advancement Costs
+-   **Skills:** 4 for rank 1, else 8 × current rank
+-   **Attributes:** 16 × current rank
+-   **Potentials:** 16 × current rank (magical characters only)
+-   **Feats:** 40 XP each
+
+### Character Tiers
+
+| Tier | XP Range | Sessions (24/session) | D&D Equivalent |
+|------|----------|----------------------|----------------|
+| 1 | 0–120 | ~5 | Levels 1–2 |
+| 2 | 120–360 | ~10 | Levels 3–5 |
+| 3 | 360–600 | ~10 | Levels 6–8 |
+| 4 | 600–840 | ~10 | Levels 9–11 |
+| 5 | 840–1080 | ~10 | Levels 12–14 |
+| 6 | 1080–1320 | ~10 | Levels 15–17 |
+| 7 | 1320–1560 | ~10 | Levels 18–19 |
+| 8 | 1560+ | ~10+ | Level 20 |
+
+### Feat Limits
+-   **Starting:** 2 free feats at character creation
+-   **Per Tier:** Can purchase up to 2 additional feats per tier
+-   **Example:** Tier 3 character can have 2 starting + 6 purchased = 8 total feats
+
+## Success Probability Reference
+
 | Value | Single Die | At Least 1 Success | Both Succeed (2 successes) |
 |-------:|:----------:|:------------------:|:--------------------------:|
 | 1/1    | 12.5%      | 23%                | 1.6%                       |
@@ -176,19 +209,19 @@ All other keyword types can be used multiple times without penalty.
 | 7/7    | 87.5%      | 98%                | 77%                        |
 | 8/8    | 100%       | 100%               | 100%                       |
 
-#### Typical Starting Character Success Rates
+### Typical Starting Character Success Rates
 
 With array 4,3,3,3,3,2,2,1 and skills at 2-3:
 
-##### Best skills (Attribute 4/Skill 3):
+#### Best skills (Attribute 4/Skill 3):
 -   66% at least one success
 -   19% both successes
 
-##### Good skills (Attribute 3/Skill 2):
+#### Good skills (Attribute 3/Skill 2):
 -   53% at least one success
 -   9% both successes
 
-##### Weak areas (Attribute 2/Skill 1):
+#### Weak areas (Attribute 2/Skill 1):
 -   34% at least one success
 -   3% both successes
 
@@ -196,16 +229,16 @@ With array 4,3,3,3,3,2,2,1 and skills at 2-3:
 
 Using two energies, within trained ability (no overspending):
 
-##### Competent Weaver (Potential 4, Mastery 3):
+#### Competent Weaver (Potential 4, Mastery 3):
 -   Average: 1.75 successes (typically 2)
 
-##### Skilled Weaver (Potential 5, Mastery 4):
+#### Skilled Weaver (Potential 5, Mastery 4):
 -   Average: 2.25 successes (typically 2-3)
 
-##### Expert Weaver (Potential 6, Mastery 5):
+#### Expert Weaver (Potential 6, Mastery 5):
 -   Average: 2.75 successes (typically 3)
 
-##### Master Weaver (Potential 8, Mastery 7):
+#### Master Weaver (Potential 8, Mastery 7):
 -   Average: 3.75 successes (typically 4)
 
 ## The Dying Mechanic
@@ -232,11 +265,10 @@ check:
 -   1 success: You gain +1 to your next stabilization save
 
 Magical healing immediately restores you to consciousness and removes
-Dying, Unconcious, and Blinded conditions.
+Dying, Unconscious, and Blinded conditions.
 
 ### Recovering from Stabilization
-Once stabilized, you remain Unconscious Blinded and Prone.
+Once stabilized, you remain Unconscious, Blinded and Prone.
 At the end of your next turn, make a Will save (Wisdom + Luck):
--   1+ successes: Regain consciousness with 1 HP. Remove Unconcious, and Blinded Conditions. Receive Grievously Wounded condition
+-   1+ successes: Regain consciousness with 1 HP. Remove Unconscious and Blinded conditions. Receive Grievously Wounded condition
 -   0 successes: Remain Unconscious, Blinded and Prone. Repeat save each turn
-
