@@ -1,13 +1,15 @@
 # D8 TTRPG - Part 1: Core System
 
-### Core Mechanic: Roll Equal-to-or-Under
+### Core Mechanic: Roll Under
 
 #### Basic Skill Test
 
 1.  Roll d8 for the governing attribute
 2.  Roll d8 for the skill
-3.  Each die that rolls equal to or under its value = 1 success
-4.  Maximum 2 successes per basic test
+3.  Each die that rolls **under** its value = 1 success
+4.  **Rolling a natural 1 always counts as a success** regardless of attribute/skill value
+5.  **Rolling an 8 always fails** (counts as 0 successes)
+6.  Maximum 2 successes per basic test
 
 #### Success Thresholds
 -   Easy Task: 1 success required
@@ -43,17 +45,20 @@
 -   Stealth check: Agility 4, Stealth 3
 -   Roll 3d8: results are 2, 5, 7
 -   Take best 2: 2 and 5
--   Assign: 2 to Agility (≤4? Success!), 5 to Stealth (≤3? Failure)
+-   Assign: 2 to Agility (<4? Success!), 5 to Stealth (<3? Failure)
 -   Total: 1 success
 
 **Multiple sources:** Fortune and Misfortune cancel each other out on a 1-to-1 basis. If you have 2 sources of Fortune and 1 source of Misfortune, you have 1 Fortune remaining.
 
 ## Critical Results
 ### Critical Success: Rolling double 1s (1.56% chance)
--   Action succeeds spectacularly
+-   Both dice automatically succeed (counts as 2 successes)
+-   Grants +1 additional success (total 3 successes in opposed rolls)
 -   Restore all Luck points to maximum
+-   **In combat:** 3+ success margin = maximum damage + Luck restore + apply condition
 
 ### Critical Failure: Rolling double 8s (1.56% chance)
+-   Both dice automatically fail (0 successes)
 -   Action fails catastrophically
 -   GM determines consequences
 
@@ -82,7 +87,7 @@ When you achieve partial success (1 success when 2 needed):
 All three saving throw types roll Attribute + Current Luck and count successes:
 -   Fortitude Save: Constitution + Current Luck
 -   Reflex Save: Agility + Current Luck
--   Will Save: Wisdom + Current Luck
+-   Willpower Save: Wisdom + Current Luck
 
 Roll 2d8 (one for the attribute, one for Current Luck), count successes.
 These successes are compared against the threat's successes.
@@ -207,15 +212,15 @@ All other keyword types can be used multiple times without penalty.
 | 5/5    | 62.5%      | 86%                | 39%                        |
 | 6/6    | 75%        | 94%                | 56%                        |
 | 7/7    | 87.5%      | 98%                | 77%                        |
-| 8/8    | 100%       | 100%               | 100%                       |
+| 8/8    | 87.5%      | 98%                | 77%                        |
 
 ### Typical Starting Character Success Rates
 
 With array 4,3,3,3,3,2,2,1 and skills at 2-3:
 
 #### Best skills (Attribute 4/Skill 3):
--   66% at least one success
--   19% both successes
+-   61% at least one success
+-   14% both successes
 
 #### Good skills (Attribute 3/Skill 2):
 -   53% at least one success

@@ -442,7 +442,7 @@ Automatic for all Divine Gift characters.
 - Indiscriminate: Heals ALL undead
 
 ##### 5. Channel Negative - HARM Intent
-- ALL living creatures within range take 1d8 necrotic damage per 4 Energy spent
+- ALL living creatures within range take 1d8 negative damage per 4 Energy spent
 - Affects: Living creatures only (including the channeler!)
 - Does NOT affect: Undead
 - Reflex save (Agility + Luck): Count successes, reduce damage by 1d8 per success (minimum 0)
