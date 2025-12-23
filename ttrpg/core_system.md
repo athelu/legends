@@ -80,7 +80,7 @@
 ### Luck for Complications (Reactive)
 When you achieve partial success (1 success when 2 needed):
 1.  Roll d8
-2.  If result is ≤ your Current Luck: No complication
+2.  If result is < your Current Luck: No complication
 3.  If result is > your Current Luck: GM introduces a complication, cost, or consequence
 
 ### Luck in Saving Throws
@@ -96,9 +96,9 @@ These successes are compared against the threat's successes.
 
 #### Example:
 -   Early session with Current Luck 3: Roll Constitution d8 and Luck d8
-    (need ≤3 on Luck die)
--   Late session with Current Luck 0: Roll Constitution d8 and Luck d8 (need ≤0 on Luck die = impossible!)
--   Your Constitution can still generate successes, but Luck cannot
+    (need <3 on Luck die)
+-   Late session with Current Luck 0: Roll Constitution d8 and Luck d8 (need 1 on Luck die as 1 = success)
+-   Your Constitution can still generate successes, but Luck only on a 1
 
 ### Restoring Luck During Sessions
 

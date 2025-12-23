@@ -30,7 +30,7 @@
 
 ### Starting Attribute Array
 
-Players assign the following values to their eight attributes: 4, 3, 3, 3, 3, 2, 2, 1
+Players assign the following values to their eight attributes: 5, 4, 3, 3, 3, 2, 2, 2
 
 ### Hit Points
 HP = Constitution × 8
