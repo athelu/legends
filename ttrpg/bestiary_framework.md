@@ -66,20 +66,31 @@ Natural weapons (bite, claw, slam, etc.) deal damage based on size:
 
 ### Attribute Benchmarks
 
-| Threat | Primary Attrs | Secondary Attrs | Dump Attrs | Skill Ranks (combat) |
-|--------|---------------|-----------------|------------|---------------------|
-| 1/8 | 2-3 | 1-2 | 1 | 0-1 |
-| 1/4 | 2-3 | 2 | 1 | 1-2 |
-| 1/2 | 3-4 | 2-3 | 1-2 | 2-3 |
-| 1 | 3-4 | 2-3 | 1-2 | 2-3 |
-| 2 | 4-5 | 3-4 | 1-2 | 3-4 |
-| 3 | 4-6 | 3-5 | 1-3 | 4-5 |
-| 4 | 5-7 | 4-6 | 2-3 | 5-6 |
-| 5 | 6-8 | 5-7 | 2-4 | 6-7 |
-| 6 | 7-8 | 6-8 | 3-5 | 7-8 |
-| 7-8 | 8 | 7-8 | 4-6 | 8 |
+| Threat | Primary Attrs | Secondary Attrs | Dump Attrs | Skill Ranks (combat) | Max Skill > Attr |
+|--------|---------------|-----------------|------------|---------------------|------------------|
+| 1/8 | 2-3 | 1-2 | 1 | 0-1 | +1 |
+| 1/4 | 2-3 | 2 | 1 | 1-2 | +1 |
+| 1/2 | 3-4 | 2-3 | 1-2 | 2-3 | +1 |
+| 1 | 3-4 | 2-3 | 1-2 | 2-3 | +1 |
+| 2 | 4-5 | 3-4 | 1-2 | 3-4 | +2 |
+| 3 | 4-6 | 3-5 | 1-3 | 4-5 | +2 |
+| 4 | 5-7 | 4-6 | 2-3 | 5-6 | +2 |
+| 5 | 6-8 | 5-7 | 2-4 | 6-7 | +3 |
+| 6 | 7-8 | 6-8 | 3-5 | 7-8 | +3 |
+| 7-8 | 8 | 7-8 | 4-6 | 8 | +3 |
 
-**Note:** Monster skills CAN exceed their governing attribute. This represents innate talent, specialized training, or supernatural ability. A creature might have Agi 3 but Melee Combat 5 due to lifelong predatory instincts.
+**Note:** Monster skills can exceed their governing attribute by a limited amount:
+- **TR 1/8 to 1:** Skills can exceed attribute by +1 maximum
+- **TR 2 to 4:** Skills can exceed attribute by +2 maximum
+- **TR 5 to 8:** Skills can exceed attribute by +3 maximum
+
+This represents innate talent, specialized training, or supernatural ability. 
+
+**Examples:**
+- Wolf (TR 1/4, Agi 4): Melee Combat can be 4 or 5 (max +1)
+- Orc Warrior (TR 1/2, Agi 3): Melee Combat can be 3 or 4 (max +1)
+- Young Dragon (TR 4, Agi 6): Melee Combat can be 6, 7, or 8 (max +2)
+- Ancient Dragon (TR 8, Agi 8): Melee Combat can be 8 (already at max, +3 would exceed cap)
 
 ### Primary Attributes
 - Physical monsters: Str, Con, Agi
@@ -99,17 +110,17 @@ Natural weapons (bite, claw, slam, etc.) deal damage based on size:
 
 | Threat Rating | Fragile (×) | Standard (×) | Tough (×) | Massive (×) |
 |--------------|-------------|--------------|-----------|-------------|
-| 1/8 | 5 | 7 | 9 | 11 |
-| 1/4 | 6 | 8 | 10 | 12 |
-| 1/2 | 7 | 9 | 11 | 13 |
-| 1 | 8 | 10 | 12 | 14 |
-| 2 | 10 | 13 | 16 | 19 |
-| 3 | 12 | 16 | 20 | 24 |
-| 4 | 15 | 20 | 25 | 30 |
-| 5 | 18 | 24 | 30 | 36 |
-| 6 | 22 | 30 | 38 | 46 |
-| 7 | 26 | 36 | 46 | 56 |
-| 8 | 30 | 42 | 54 | 66 |
+| 1/8 | 5 | 7 | 7 | 11 |
+| 1/4 | 6 | 8 | 8 | 12 |
+| 1/2 | 7 | 9 | 9 | 13 |
+| 1 | 8 | 10 | 10 | 14 |
+| 2 | 10 | 13 | 14 | 19 |
+| 3 | 12 | 16 | 18 | 24 |
+| 4 | 15 | 20 | 23 | 30 |
+| 5 | 18 | 24 | 28 | 36 |
+| 6 | 22 | 30 | 36 | 46 |
+| 7 | 26 | 36 | 44 | 56 |
+| 8 | 30 | 42 | 52 | 66 |
 
 **How to use:** Find the intersection of Threat Rating and creature type category to get the multiplier. Multiply this by the creature's Constitution score to calculate total HP.
 
@@ -143,9 +154,8 @@ Natural weapons (bite, claw, slam, etc.) deal damage based on size:
 
 **Example:** 
 - Goblin (Threat 1/4, Con 2, Fragile): 2 × 6 = 12 HP
-- Orc Warrior (Threat 1/2, Con 4, Tough): 4 × 11 = 44 HP
+- Orc Warrior (Threat 1/2, Con 4, Tough): 4 × 9 = 36 HP
 - Young Dragon (Threat 4, Con 6, Massive): 6 × 30 = 180 HP
-
 ---
 
 ## Creature Type Keywords
@@ -387,7 +397,7 @@ Multiattack: The owlbear makes one bite and two claw attacks.
 
 **Example Combat:**
 - Owlbear has Agi 4, Melee Combat 5
-- Uses Multiattack: Roll Agi die once (1d8, need ≤4), roll skill die three times (1d8, need ≤5)
+- Uses Multiattack: Roll Agi die once (1d8, need <4), roll skill die three times (1d8, need <5)
 - If Agi die rolls 3: All attacks get that 3 for attribute portion
 - Skill rolls separately: 4, 2, 6 = two hit (3/4 and 3/2), one miss (3/6)
 

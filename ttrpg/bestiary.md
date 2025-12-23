@@ -89,7 +89,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **Medium humanoid, typically chaotic**
 
 - **Threat Rating:** 1/2
-- **HP:** 44 (Con 4 × 11, Tough)
+- **HP:** 36 (Con 4 × 9, Tough)
 - **DR:** 3 (hide armor + shield, +1 DR from shield)
 - **Speed:** 30 ft
 - **Attributes:** Str 4 / Con 4 / Agi 3 / Dex 3 / Int 2 / Wis 3 / Cha 3 / Luck 2
@@ -235,7 +235,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **Multiattack:**
 - **Multiattack [Combat]:** The ghoul makes one bite and two claw attacks
   - Shared Attribute Roll (Agi 4): Roll once, apply to all three attacks
-  - Roll Melee Combat separately for each attack (three rolls of 1d8, need ≤5 each)
+  - Roll Melee Combat separately for each attack (three rolls of 1d8, need <5 each)
 
 **Special Abilities:**
 - **Paralytic Claws:** Creatures hit by claw attacks must save vs paralysis (see Claws attack)
@@ -258,7 +258,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **Large monstrosity**
 
 - **Threat Rating:** 3
-- **HP:** 96 (Con 6 × 16, Tough)
+- **HP:** 108 (Con 6 × 18, Tough)
 - **DR:** 2 (thick hide and feathers, natural armor)
 - **Speed:** 40 ft
 - **Attributes:** Str 6 / Con 6 / Agi 4 / Dex 3 / Int 1 / Wis 4 / Cha 2 / Luck 3
@@ -279,7 +279,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **Multiattack:**
 - **Multiattack [Combat]:** The owlbear makes one beak attack and one claw attack
   - Shared Attribute Roll (Agi 4): Roll once, apply to both attacks
-  - Roll Melee Combat separately for each attack (two rolls of 1d8, need ≤6 each)
+  - Roll Melee Combat separately for each attack (two rolls of 1d8, need <6 each)
 
 **Special Abilities:**
 - **Large Size:** Occupies 10×10 ft space, 10 ft reach
@@ -300,7 +300,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **Medium monstrosity**
 
 - **Threat Rating:** 3
-- **HP:** 64 (Con 5 × 16, Tough)
+- **HP:** 90 (Con 5 × 18, Tough)
 - **DR:** 4 (thick scales, natural armor)
 - **Speed:** 20 ft
 - **Attributes:** Str 5 / Con 5 / Agi 3 / Dex 2 / Int 1 / Wis 3 / Cha 2 / Luck 2
@@ -353,16 +353,16 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 - **DR:** 5 (dragon scales, natural armor)
 - **Speed:** 40 ft, Climb 40 ft, Fly 80 ft
 - **Attributes:** Str 6 / Con 6 / Agi 4 / Dex 4 / Int 4 / Wis 4 / Cha 5 / Luck 4
-- **Skills:** Melee Combat 7, Perception 7, Stealth 4, Arcane 4, Intimidate 6
+- **Skills:** Melee Combat 6, Perception 7, Stealth 4, Arcane 4, Intimidate 6
 - **Senses:** Darkvision 120 ft, Blindsight 30 ft
 - **Initiative Bonus:** +4 (Agi 4)
 
 **Attacks:**
-- **Bite [Combat]:** Melee attack (Agi 4 + Melee Combat 7 vs opponent's defense)
+- **Bite [Combat]:** Melee attack (Agi 4 + Melee Combat 6 vs opponent's defense)
   - Reach: 10 ft (Large creature with long neck)
   - Margin 1: 12 damage (Large, two-handed equivalent) + 6 fire damage
   - Margin 2: 18 damage (12 + 6 Str) + 6 fire damage
-- **Claw [Combat]:** Melee attack (Agi 4 + Melee Combat 7 vs opponent's defense)
+- **Claw [Combat]:** Melee attack (Agi 4 + Melee Combat 6 vs opponent's defense)
   - Reach: 5 ft
   - Margin 1: 8 damage (Large, light weapon: 6 + 2)
   - Margin 2: 14 damage (8 + 6 Str)
@@ -370,7 +370,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **Multiattack:**
 - **Multiattack [Combat]:** The dragon makes one bite attack and two claw attacks
   - Shared Attribute Roll (Agi 4): Roll once, apply to all three attacks
-  - Roll Melee Combat separately for each attack (three rolls of 1d8, need ≤7 each)
+  - Roll Melee Combat separately for each attack (three rolls of 1d8, need <6 each)
 
 **Breath Weapon:**
 - **Fire Breath (Recharge 5-8) [Combat]:** 30-foot cone. Each creature in area makes Reflex save (Agi + Luck):
@@ -408,7 +408,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 - **DR:** 6 (stone body, natural armor)
 - **Speed:** 30 ft
 - **Attributes:** Str 7 / Con 6 / Agi 2 / Dex 2 / Int 1 / Wis 3 / Cha 1 / Luck 2
-- **Skills:** Melee Combat 7
+- **Skills:** Melee Combat 5
 - **Senses:** Darkvision 120 ft, Blindsight 60 ft
 - **Initiative Bonus:** +2 (Agi 2)
 
@@ -421,7 +421,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **Multiattack:**
 - **Multiattack [Combat]:** The golem makes two slam attacks
   - Shared Attribute Roll (Agi 2): Roll once, apply to both attacks
-  - Roll Melee Combat separately for each attack (two rolls of 1d8, need ≤7 each)
+  - Roll Melee Combat separately for each attack (two rolls of 1d8, need <5 each)
 
 **Special Abilities:**
 - **Large Size:** Occupies 10×10 ft space, 10 ft reach
