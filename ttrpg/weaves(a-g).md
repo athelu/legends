@@ -146,7 +146,7 @@ Each weave entry includes:
 -   **Total Cost:** 14 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Negative Potential + Negative Mastery + Space Potential + Space Mastery (4d8)
--   **Effect:** All living creatures in area take 24 necrotic damage. Targets make Fortitude saves to reduce.
+-   **Effect:** All living creatures in area take 24 negative damage. Targets make Fortitude saves to reduce.
 -   **Success Scaling:** Net successes after saves: 0 = resist, 1 = half, 2 = full, 3 = +8 damage, 4 = +16 damage and Frightened
 
 ### Clairvoyance
@@ -324,7 +324,7 @@ Each weave entry includes:
 -   **Total Cost:** 15 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Negative Potential + Negative Mastery + Space Potential + Space Mastery (4d8)
--   **Effect:** Target takes 32 necrotic damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target dies and rises as a zombie under your control after 1 minute.
+-   **Effect:** Target takes 32 negative damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target dies and rises as a zombie under your control after 1 minute.
 -   **Success Scaling:** Net successes after save: 0 = half damage, 1 = 3/4 damage, 2 = full, 3 = +8 damage, 4 = +16 damage (instant death if reduced to -Con)
 
 ### Fire Bolt

@@ -2,14 +2,14 @@
 
 ## Core Concept
 
-A classless tabletop roleplaying game built entirely around the number eight, using d8 dice and a roll equal-to-or-under system with success counting.  
+A classless tabletop roleplaying game built entirely around the number eight, using d8 dice and a **roll-under** system with success counting.
 
 ## Design Notes
 
 ### Core Design Principles
 
 - Everything based on the number 8
-- Roll Equal-to-or-under system rewards investment
+- Roll-under system rewards investment while maintaining challenge at all tiers
 - Success counting creates gradients
 - Resource management (Luck, Energy) creates tactical decisions
 - **True classless system:** Any character can learn any ability if they meet prerequisites

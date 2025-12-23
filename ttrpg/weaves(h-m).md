@@ -84,7 +84,7 @@
 -   **Total Cost:** 3 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Negative Potential + Negative Mastery + Air Potential + Air Mastery (4d8)
--   **Effect:** Target takes 8 necrotic damage. You heal HP equal to half the damage dealt.
+-   **Effect:** Target takes 8 negative damage. You heal HP equal to half the damage dealt.
 -   **Success Scaling:** 0 = miss, 1 = half (4 damage, heal 2), 2 = full (8 damage, heal 4), 3 = +8 damage (heal +4), 4 = +16 damage (heal +8)
 
 ### Light

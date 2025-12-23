@@ -69,9 +69,10 @@ Weapon Damage (Margin of Success)
 -   Two-handed: 10 damage (greatsword, greataxe, maul)
 
 ### Critical Hits (Double 1s)
--   Deal maximum damage (base + attribute, no roll needed)
+-   Grants +1 additional success (3 total successes in opposed rolls)
+-   Margin 3+: Deal maximum damage (base + attribute, no roll needed)
 -   Restore all Luck (as per existing rule)
--   Optional: Choose one additional effect:
+-   Choose one additional effect:
     -   Apply condition (Prone, Disarm, Bleeding)
     -   Bypass half DR
     -   Extra combat maneuver

@@ -47,7 +47,7 @@ Most feats require:
 
 ### Defensive Duelist
 - **Prerequisites:** Agi 6
-- **Benefit:** When wielding a finesse weapon (one that can use Agility for damage), you can use your reaction to add 2 to both of an attacker's dice against one melee attack
+- **Benefit:** When wielding a finesse weapon , you can use your reaction to add 2 to both of an attacker's dice against one melee attack
 - **Usage:** Once per round (reaction)
 
 ---
@@ -110,7 +110,7 @@ Most feats require:
 
 ### Rage
 - **Prerequisites:** Str or Con 5, Melee 3
-- **Benefit:** As 1 [Combat] action, enter Rage for 1 minute: gain temporary HP equal to your Constitution score, +2 damage on melee attacks using Strength, +2 DR against physical damage, subtract 1 from both dice on Fortitude saves, cannot weave while raging
+- **Benefit:** As 1 [Combat] action, enter Rage for 1 minute: gain temporary HP equal to your Constitution score, +2 damage on melee attacks, +2 DR against physical damage, subtract 1 from both dice on Fortitude saves, cannot weave while raging
 - **Usage:** Unlimited uses
 - **Note:** Core defining feature for barbarian-style characters
 
@@ -172,12 +172,12 @@ Most feats require:
 
 ### Evasion
 - **Prerequisites:** Agi 6, Tier 3+
-- **Benefit:** When subjected to an effect allowing Reflex save for half damage: if you win (1+ successes) take no damage; if you lose (0 successes) take half damage
+- **Benefit:** When subjected to an effect allowing Reflex save: if you win (1+ successes) take no damage; if you lose (0 successes) take half damage
 - **Usage:** Passive
 
 ### Reliable Talent
 - **Prerequisites:** Tier 5+
-- **Benefit:** Choose two skills in which you have rank 5+. When you roll those skills and get a result higher than your skill rank, treat it as equal to your skill rank instead
+- **Benefit:** Choose two (non-combat or mastery) skills in which you have rank 5+. When you roll those skills and get a result higher than your skill rank, treat it as equal to your skill rank instead
 - **Usage:** Passive
 
 ### Blindsense
@@ -187,7 +187,7 @@ Most feats require:
 
 ### Slippery Mind
 - **Prerequisites:** Wis 5, Tier 5+
-- **Benefit:** Subtract 1 from both dice on Wisdom saving throws
+- **Benefit:** Subtract 1 from both dice on Willpower saving throws
 - **Usage:** Passive
 
 ### Supreme Sneak
@@ -207,7 +207,7 @@ Most feats require:
 
 ### Unarmed Mastery
 - **Prerequisites:** Agi 4, Melee 3
-- **Benefit:** Your unarmed strikes deal 6 damage (same as standard weapons). Additionally, all weapons with the **Monk** property count as monk weapons for your abilities (Club, Dagger, Hand Axe, Kama, Nunchaku, Quarterstaff, Sai, Sap, Shortsword, Spear when one-handed)
+- **Benefit:** Your unarmed strikes deal 6 damage (same as standard weapons). Additionally, all weapons with the **Monk** property count as monk weapons for your abilities
 - **Usage:** Passive
 
 ### Flurry of Blows
@@ -286,6 +286,8 @@ Most feats require:
 ### Horde Breaker
 - **Prerequisites:** Agi 5
 - **Benefit:** Once per turn when you make a weapon attack, you can make another attack with the same weapon against a different creature within 5 feet of the original target
+  - **Use Shared Attribute Roll:** Roll your Attribute die once, use that result for both attacks
+  - **Roll Combat skill die separately** for each attack
 - **Usage:** Once per turn
 
 ### Multiattack Defense
@@ -334,12 +336,12 @@ Most feats require:
 
 ### Divine Smite
 - **Prerequisites:** Divine Warrior trait, Positive Mastery 3
-- **Benefit:** When you hit with a melee attack, you may expend Energy to add radiant damage: 2 Energy for +4 radiant, 4 Energy for +8 radiant, 6 Energy for +12 radiant. Double damage if target is undead or fiend
+- **Benefit:** When you hit with a melee attack, you may expend Energy to add positive damage: 2 Energy for +4 positive, 4 Energy for +8 positive, 6 Energy for +12 positive. Double damage if target is undead or fiend
 - **Usage:** Limited by Energy pool
 
 ### Improved Divine Smite
 - **Prerequisites:** Divine Smite feat, Positive Mastery 5, Tier 5+
-- **Benefit:** Whenever you hit with a melee weapon, you deal an additional 4 radiant damage
+- **Benefit:** Whenever you hit with a melee weapon, you deal an additional 4 positive damage
 - **Usage:** Passive
 
 ### Aura of Protection
@@ -491,7 +493,7 @@ Most feats require:
 
 ### Potent Channeling
 - **Prerequisites:** Divine Gift trait, Pos or Neg Mastery 5
-- **Benefit:** Add Wisdom to healing and necrotic damage when channeling
+- **Benefit:** Add Wisdom to healing and negative damage when channeling
 - **Usage:** Passive
 
 ### Selective Channeling

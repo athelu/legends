@@ -37,7 +37,7 @@
 -   **Success Scaling:** Net successes: 1 = 10 minutes service, 2 = 1 hour, 3 = 24 hours, 4 = 10 days or complex task
 
 ### Poison Spray
--   **Primary Energy:** Water 2 (toxic mist) or Negative 2 (necrotic poison)
+-   **Primary Energy:** Water 2 (toxic mist) or Negative 2 (negative poison)
 -   **Supporting Energy:** None (touch or 10 feet, instantaneous)
 -   **Total Cost:** 2 Energy
 -   **Action:** Complex weave (2 actions)

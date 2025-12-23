@@ -195,9 +195,9 @@ Natural weapons (bite, claw, slam, etc.) deal damage based on size:
 - **Chaotic Nature (Demons):** Unpredictable, may have random effects
 
 #### **Celestial**
-- **Celestial Resistances:** Often resistant to radiant, necrotic
+- **Celestial Resistances:** Often resistant to positive, negative energy
 - **Magic Resistance:** Subtract 1 from both dice on saves vs magical effects
-- **Holy Aura:** May deal radiant damage or have protective effects
+- **Holy Aura:** May deal positive damage or have protective effects
 
 #### **Fey**
 - **Fey Ancestry:** Fortune on saves vs charm effects

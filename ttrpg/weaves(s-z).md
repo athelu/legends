@@ -157,7 +157,7 @@
 -   **Action:** Complex weave (2 actions) to cast, then complex weave (2 actions) to discharge
 -   **Range:** Touch
 -   **Duration:** 1 minute or until discharged
--   **Effect:** Your touch deals 12 necrotic damage. You heal HP equal to half damage dealt. Can hold the charge for up to 1 minute and attack multiple times if charge remains.
+-   **Effect:** Your touch deals 12 negative damage. You heal HP equal to half damage dealt. Can hold the charge for up to 1 minute and attack multiple times if charge remains.
 -   **Success Scaling:** 0 = no charge created, 1 = 8 damage (heal 4), 2 = 12 damage (heal 6), 3 = 16 damage (heal 8), 4 = 24 damage (heal 12, 10 minutes)
 
 ## W
