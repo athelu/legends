@@ -7,6 +7,7 @@
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Earth Potential + Earth Mastery + Time Potential + Time Mastery (4d8)
 -   **Effect:** Create a passage at close range (30ft) up to 5 feet wide, 8 feet tall, and 20 feet deep through wood, plaster, or stone. When weave ends, creatures still in passage are ejected safely.
+-   **Saving Throw:** None (environmental manipulation)
 -   **Success Scaling:** 1 = 10 feet deep (1 round), 2 = full effect, 3 = 40 feet deep (10 minutes), 4 = permanent passage
 
 ### Phantasmal Force
@@ -15,8 +16,10 @@
 -   **Total Cost:** 6 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Create an illusion at medium range (60ft, 10ft cube) in one creature's mind. Target makes Will save. If you win, target perceives illusion as real and rationalizes illogical elements. If illusion could damage target, it takes 1d8 psychic damage per round. Target can use action + Perception vs your Space Mastery to recognize illusion.
--   **Success Scaling:** Net successes: 1 = 1 round, 2 = full effect (2d8 damage), 3 = harder to disbelieve (-1 penalty), 4 = 10 minutes or 3d8 damage
+-   **Effect:** Create an illusion at medium range (60ft, 10ft cube) in one creature's mind. Target makes Will save. Compare your weaving successes to their save successes. If you have more, target perceives illusion as real and rationalizes illogical elements. If illusion could damage target, it takes 1d8 psychic damage per round. Target can use action + Perception vs your Space Mastery to recognize illusion.
+-   **Saving Throw:** Will (to resist mental illusion); Perception vs Space Mastery (to disbelieve)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect (2d8 damage), 3 = harder to disbelieve (add 1 to their Perception dice), 4 = 10 minutes or 3d8 damage
+-   **Disoriented Condition (at Net 3):** Target has Misfortune on Perception checks while illusion persists.
 
 ### Phantasmal Killer
 -   **Primary Energy:** Space 6 (creating terrifying illusion in target's mind, major mental effect)
@@ -24,8 +27,10 @@
 -   **Total Cost:** 8 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Target at medium range (60ft) makes Will save. If you win, target sees its worst fear made manifest. Target is Frightened and takes 3d8 psychic damage at start of each turn. Can repeat Will save each round to end effect.
--   **Success Scaling:** Net successes: 1 = Frightened only (no damage), 2 = full effect, 3 = 4d8 damage, 4 = Fleeing instead of Frightened (5d8 damage)
+-   **Effect:** Target at medium range (60ft) makes Will save. Compare your weaving successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes 3d8 psychic damage at start of each turn. Can repeat Will save each round to end effect.
+-   **Saving Throw:** Will (to resist fear manifestation)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = Frightened only (no damage), 2 = full effect (Frightened + 3d8 damage), 3 = 4d8 damage, 4 = Fleeing instead of Frightened (5d8 damage)
+-   **Frightened/Fleeing Conditions:** See conditions document for full mechanics. Target can repeat save at end of each turn.
 
 ### Planar Binding
 -   **Primary Energy:** Space 6 (binding extraplanar creature, major binding)
@@ -33,8 +38,9 @@
 -   **Total Cost:** 10 Energy
 -   **Action:** Complex weave (2 actions), takes 1 hour to cast
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes Will save. If you win, creature must serve you for duration or until completing one task. Must negotiate payment/service.
--   **Success Scaling:** Net successes: 1 = 10 minutes service, 2 = 1 hour, 3 = 24 hours, 4 = 10 days or complex task
+-   **Effect:** Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes Will save. Compare your weaving successes to their save successes. If you have more, creature must serve you for duration or until completing one task. Must negotiate payment/service.
+-   **Saving Throw:** Will (to resist binding)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 10 minutes service, 2 = 1 hour, 3 = 24 hours, 4 = 10 days or complex task
 
 ### Poison Spray
 -   **Primary Energy:** Water 2 (toxic mist) or Negative 2 (negative poison)
@@ -42,8 +48,12 @@
 -   **Total Cost:** 2 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Water/Negative Potential + Water/Negative Mastery (2d8 only)
--   **Effect:** Target takes 8 poison damage. Target makes Fortitude save to reduce.
--   **Success Scaling:** Net successes after save: 0 = no damage, 1 = half, 2 = full (8), 3 = +8 and Poisoned, 4 = +16 and Poisoned
+-   **Effect:** Target takes 8 poison damage. Target makes Fortitude save to reduce damage.
+-   **Saving Throw:** Fortitude (to resist poison)
+-   **Damage Type:** Poison (special - follows energy type used)
+-   **DR Interaction:** Half DR if using Water/Negative energy (8 poison damage vs DR 4 becomes 8 - 2 = 6 damage)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half (4), 2 = full (8), 3 = +8 and Poisoned (16 total), 4 = +16 and Poisoned (24 total)
+-   **Poisoned Condition (at Net 3+):** Target has Misfortune on all rolls until the end of their next turn. At Net 4, duration extends to 1 minute (can save at end of each turn).
 
 ### Polymorph
 -   **Primary Energy:** Space 6 (transforming into another creature, major transformation)
@@ -51,8 +61,9 @@
 -   **Total Cost:** 9 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Transform target at close range (30ft) into a beast. Target gains beast's HP (temporary), physical stats, and abilities. Keeps mental stats and personality. Unwilling targets get Fortitude save. Reverts when reaching 0 HP or weave ends (returns to previous HP total).
--   **Success Scaling:** Net successes (if unwilling): 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours
+-   **Effect:** Transform target at close range (30ft) into a beast. Target gains beast's HP (temporary), physical stats, and abilities. Keeps mental stats and personality. Unwilling targets get Fortitude save. Compare your weaving successes to their save successes. Reverts when reaching 0 HP or weave ends (returns to previous HP total).
+-   **Saving Throw:** Fortitude (if unwilling, to resist transformation)
+-   **Success Scaling (Net successes if unwilling = Your successes - Their successes):** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours
 
 ### Project Image
 -   **Primary Energy:** Space 6 (creating illusory duplicate at range, complex illusion)
@@ -61,6 +72,7 @@
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
 -   **Effect:** Create an illusory duplicate of yourself that you can see and hear through (can move up to 120 feet away). Can cast weaves from duplicate's location. Duplicate can move and speak. Physical interaction reveals it as illusion.
+-   **Saving Throw:** Perception vs Space Mastery (to recognize as illusion)
 -   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = long range (240 feet, 8 hours)
 
 ### Protection from Energy
@@ -70,17 +82,17 @@
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
 -   **Effect:** Target at touch gains Resistance (+1 DR) against one chosen damage type (fire, cold, acid, lightning, thunder).
+-   **Saving Throw:** None (beneficial buff, willing targets only)
 -   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = Greater Resistance (+2 DR, 8 hours)
 
 ## R
 
 ### Rope Trick
--   **Primary Energy:** Space (creating extradimensional space)
--   **Supporting Energy:** Time (duration)
--   **Total Cost:** 7 Energy (4 base + 3 for 10 minutes)
+-   **Primary Energy:** Space 4 (creating extradimensional space)
+-   **Supporting Energy:** Time 3 (duration 10 minutes)
+-   **Total Cost:** 7 Energy
 -   **Action:** Complex weave (2 actions)
--   **Range:** Touch
--   **Duration:** 10 minutes
+-   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
 -   **Effect:** Touch a rope up to 60 feet long. Upper end rises and disappears into extradimensional space holding up to 8 Medium creatures. Creatures can pull rope up to hide. From outside, rope is invisible. Space holds up to 8 hours of air.
+-   **Saving Throw:** None (creates extradimensional space)
 -   **Success Scaling:** 1 = 1 minute (4 creatures), 2 = full effect, 3 = 1 hour (16 creatures), 4 = 8 hours (permanent until exited)
-

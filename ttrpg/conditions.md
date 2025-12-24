@@ -69,12 +69,44 @@
 -   Vision-based Perception checks: Add 1 to die results
 -   Attack rolls: Add 1 to die results
 
+#### Disoriented
+-   Spatial awareness or balance impaired
+-   Perception checks: Add 1 to die results
+-   Initiative: -1
+-   Cannot determine exact positions of creatures/objects (GM may require check)
+-   Duration: Typically 1 round unless specified otherwise
+**Recovery:**
+-   Automatically ends after specified duration
+-   Some effects allow Perception check to end early
+
 ### Physical Conditions
 
 #### Clumsy
 -   Physical coordination impaired
 -   Dexterity and Agility checks: Add 1 to die results
 -   Reflex saves: Add 1 to die results
+
+#### Weakened
+-   Physical strength impaired
+-   Strength checks and Athletics: Add 1 to die results
+-   Melee damage: Reduce by 2 (minimum 1)
+-   Carrying capacity: Halved
+-   Duration: Typically 1 minute to 1 hour unless specified otherwise
+**Recovery:**
+-   Automatically ends after specified duration
+-   Magical healing can remove (if from magical source)
+-   Rest removes non-magical weakness
+
+#### Sickened
+-   Constitution and bodily functions impaired
+-   Fortitude saves: Add 1 to die results
+-   Cannot benefit from food or drink
+-   Concentration on weaves requires check (1 success)
+-   Duration: Typically 10 minutes to 1 hour unless specified otherwise
+**Recovery:**
+-   Automatically ends after specified duration
+-   Medicine check (2 successes) can end early
+-   Magical healing removes condition
 
 #### Prone
 -   Lying on the ground
@@ -91,6 +123,18 @@
 -   Can only take one action per turn (move OR standard action, not both)
 -   Cannot take reactions
 -   **Recovery:** Condition ends when healed above 1 HP
+
+#### Dazed
+-   Mental processing slowed, disoriented or stunned briefly
+-   Next action taken: Add 1 to both dice
+-   Initiative: -1 for the round
+-   Cannot take reactions until after your next turn
+-   Duration: Until end of your next turn (typically)
+**Recovery:**
+-   Automatically ends after your next turn completes
+-   No save typically required
+**Note:** Dazed is less severe than Stunned (which prevents all actions)
+
 
 ### Incapacitation & Death States
 
@@ -295,3 +339,123 @@
 -   Character takes a critical hit and gains 2 bleeding stacks
 -   On their turn, they can use an action to attempt self-treatment (2 successes needed)
 -   At the end of their turn, if bleeding wasn\'t stopped, they take 4 damage
+
+### Magic-Specific Conditions
+
+#### Ignited
+-   Character is on fire
+-   Take 1d8 fire damage at the start of each of your turns
+-   Damage occurs before you can act
+-   Duration: Until extinguished
+**Extinguishing Fire (Choose one):**
+-   Use 1 [Action] to drop and roll: Make Reflex save (Agility + Luck)
+    -   1 success: Ignited ends
+    -   0 successes: Remains Ignited
+-   Ally within 5 feet can use 1 [Action]: Automatic extinguish
+-   Jump in water or smother flames: Automatic extinguish
+-   Take cold damage of any amount: Automatic extinguish
+
+#### Burning (Severe Fire)
+-   Character is engulfed in intense flames
+-   Take 2d8 fire damage at the start of each of your turns
+-   All actions: Add 1 to die results (panic and pain)
+-   Duration: Until extinguished
+**Extinguishing Severe Fire:**
+-   Use 1 [Action] to drop and roll: Make Reflex save
+    -   2 successes: Burning ends completely
+    -   1 success: Downgrade to Ignited
+    -   0 successes: Remains Burning
+-   Ally can use 1 [Action]: Make Reflex save
+    -   2 successes: Burning ends
+    -   1 success: Downgrade to Ignited
+-   Immerse in water: Automatic extinguish
+-   Take 8+ cold damage: Automatic downgrade to Ignited
+
+#### Smoldering (Minor Fire)
+-   Character has embers or minor burns continuing
+-   Take 2 fire damage at the start of your next turn only
+-   Duration: One turn only (not ongoing)
+**Recovery:**
+-   Automatically ends after taking the 2 damage
+-   Can be extinguished early as action (no roll required)
+
+#### Singed
+-   Hair or clothing lightly burned, minor distraction
+-   Subtract 1 from one die on your next action only
+-   Duration: One action only
+**Recovery:**
+-   Automatically ends after your next action
+
+#### Chilled
+-   Cold has numbed extremities and slowed reactions slightly
+-   Agility checks: Subtract 1 from one die on your next action
+-   Initiative: -1 for this round only
+-   Duration: Until end of your next turn
+**Recovery:**
+-   Automatically ends after specified duration
+-   Fire/heat source removes immediately
+
+#### Numbed (Severe Cold)
+-   Extremities significantly numbed, fine motor control impaired
+-   Dexterity checks: Add 1 to one die
+-   Attacks with weapons: Add 1 to one die
+-   Duration: 1 minute unless specified otherwise
+**Recovery:**
+-   Automatically ends after 1 minute
+-   Warming by fire or heat source: Immediate recovery
+
+#### Frosted
+-   Ice has formed on skin and clothing, movement impaired
+-   Movement speed: Halved
+-   Clumsy condition active (add 1 to Agility/Dexterity dice)
+-   Duration: 1 minute unless specified otherwise
+**Recovery:**
+-   Automatically ends after 1 minute
+-   Fire damage or intense heat: Immediate recovery
+-   Can attempt Fortitude save at end of each turn (2 successes ends condition)
+
+#### Frozen (Extreme Cold)
+-   Body encased in ice or frozen solid
+-   Restrained condition active (cannot move, add 2 to all dice, auto-fail Reflex)
+-   Take 1d8 cold damage per turn (frostbite)
+-   Duration: Until ice breaks or melts
+**Escaping Frozen:**
+-   Self: Use 1 [Action] to make Athletics check
+    -   2 successes: Break free completely
+    -   1 success: Damage the ice, subtract 1 from next attempt
+    -   0 successes: Remain Frozen
+-   Ally: Can make Athletics check to break ally free (same thresholds)
+-   Fire damage of 8+: Automatic freedom
+-   Time: Melts naturally after 10 minutes (environmental temperature dependent)
+
+#### Slowed (Movement Reduction)
+-   Actions and movement reduced by temporal or physical effects
+-   **Minor Slowed:** Movement speed reduced by 10 feet, initiative -1
+-   **Major Slowed:** Can only take 2 actions per turn (instead of 3)
+-   Duration: Varies by source (typically 1 round to 1 minute)
+**Recovery:**
+-   Depends on source
+-   Some allow Will save at end of turn
+-   Dispel magic removes magical slowing
+-   Haste spell can counteract (if magical)
+
+**Stacking:**
+-   Minor Slowed + Major Slowed = Major Slowed only (use worse effect)
+-   Multiple Major Slowed effects = Only 1 action per turn (GM discretion)
+
+### Condition Interaction Notes
+
+#### Fire Conditions Progression:
+Singed (1 action) < Smoldering (1 turn) < Ignited (ongoing 1d8) < Burning (ongoing 2d8)
+
+#### Cold Conditions Progression:
+Chilled (1 turn) < Numbed (1 minute) < Frosted (1 minute + slowed) < Frozen (restrained + damage)
+
+#### Fear Conditions Progression:
+Frightened (penalties while source visible) < Fleeing (must retreat) < Cowering (cannot act)
+
+#### Stun Conditions:
+Dazed (penalties on next action) < Stunned (no actions 1 round) < Paralyzed (no actions, ongoing)
+
+#### Movement Conditions:
+Grappled (speed 0, add 1 to dice) < Restrained (speed 0, add 2 to dice, auto-fail Reflex) < Paralyzed (complete immobility)

@@ -415,6 +415,21 @@ Most feats require:
 - **Usage:** Passive
 - **Note:** Can be taken multiple times for different energies
 
+### War Caster
+- **Prerequisites:** Any magical trait, at least 3 different Mastery skills at rank 4+, Int OR Wis OR Cha 5
+- **Benefit:** Complex Weaves do not provoke opportunity attacks
+- **Usage:** Passive
+- **Note:** Represents mastery of combat casting through deep understanding of multiple magical energies. Requires significant XP investment (36+ XP in Mastery skills: 12 XP each to reach rank 4 from rank 0: 4+8+16=28 XP, but you need 3 of them)
+- **Design Note:** This feat is expensive (requires 3 Masteries at 4+) to prevent early-game abuse. Casters must choose between investing in this feat OR learning tactical positioning with Simple Weaves
+
+### Battle Weaver
+- **Prerequisites:** Any magical trait, at least 4 different Mastery skills at rank 4+, Int OR Wis OR Cha 6, Tier 3+
+- **Benefit:** Complex Weaves do not provoke opportunity attacks, and you can perform somatic components even while wielding weapons or using shields
+- **Usage:** Passive
+- **Cost:** 40 XP
+- **Note:** Master-level combat casting feat. Requires enormous XP investment (48+ XP in Mastery skills) and high tier. Allows true battle mage playstyle where you can fight and cast simultaneously without penalty
+- **Design Note:** This is an endgame feat that represents complete mastery of combat magic. The tier restriction and 4 Masteries requirement ensure it's not available until mid-late game
+
 ### Split Energy
 - **Prerequisites:** Any magical trait, two Masteries 5+
 - **Benefit:** Split weave to two targets or locations, each uses half Energy
