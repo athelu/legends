@@ -314,6 +314,18 @@ Supporting Energy modifies the delivery and scope of your Primary effect.
 - 2 points: 4 targets or 20ft radius
 - 3+ points: 6 targets or 30ft radius
 
+**AOE Damage Application:**
+When a damage weave affects multiple targets through area effect:
+- **Each target in the area takes the full listed damage**
+- Damage is NOT divided among targets
+- Each target makes their own saving throw (if applicable)
+- Total damage dealt = Base Damage × Number of Targets
+
+**Example:** Burning Hands (Fire 3 = 16 damage base, Space 1 = 2 targets)
+- First target: 16 fire damage (makes own save)
+- Second target: 16 fire damage (makes own save)
+- Total damage dealt: 32 damage (if both hit)
+
 ##### Supporting Energy: Duration (typically Time or element)
 - 0 points: Instantaneous
 - 1 point: 1 round (8 seconds)
@@ -327,17 +339,60 @@ Supporting Energy modifies the delivery and scope of your Primary effect.
 
 **Note:** Concentration-required effects typically use durations of 1 minute to 1 hour and cost 1-2 less Energy than non-concentration effects of the same duration.
 
+##### Supporting Energy: Simple Weaves
+Simple Weaves use only a single energy type (no supporting energy) and are limited in scope:
+
+**Range Limitations:**
+- **No Air or Space for range** = Touch to 5-10 feet maximum
+- Simple damage weaves are energy emanations from the caster's body, not shaped projectiles
+- Think "channeling fire through your palm" vs "shaping and hurling a fire bolt"
+
+**Other Limitations:**
+- **No area effects** (single target only)
+- **No duration** (instantaneous effects only)
+- **No complex transformations** (supporting energy needed for range/area/duration)
+
+**Simple Weave Benefits:**
+- Cost only 1 [Combat] action (vs 2 for Complex Weaves)
+- Do NOT provoke opportunity attacks (quick, instinctive magic)
+- Lower energy cost (typically 2-3 Energy vs 3-4+ for Complex)
+- Can be cast multiple times per round
+
+**Tactical Use:**
+- When caught in melee: Use Simple Weaves to avoid opportunity attacks
+- When at range: Use Complex Weaves for better damage and range
+- Risk/Reward: Simple Weaves require close proximity but don't provoke
+
+**Design Philosophy:**
+Simple Weaves represent raw magical energy channeled directly through the caster's body without the time, concentration, and shaping required for Complex Weaves. They are instinctive bursts of power rather than carefully crafted effects.
+
 ### Building Spells with the Tables
+
+#### Choosing Simple vs Complex Weaves:
+
+**Simple Weave (1 action):**
+- Uses only Primary Energy (no supporting energy)
+- Limited to touch or 5-10ft range
+- Single target, instantaneous effect
+- Does NOT provoke opportunity attacks
+- Examples: Fire Burst, Shocking Grasp, Frost Touch
+
+**Complex Weave (2 actions):**
+- Uses Primary + Supporting Energy (or multiple energies)
+- Can achieve range, area effects, or duration
+- DOES provoke opportunity attacks when cast while threatened
+- Examples: Fire Bolt, Fireball, Burning Hands
 
 #### Step-by-Step Process:
 1.  Choose your Primary effect type (damage, healing, buff, control, etc.)
-2.  Find the appropriate Primary Energy cost from the table
-3.  Add Supporting Energy for:
-    - Range (if not touch): Space 1-3
+2.  Decide if you need range/area/duration (if yes → Complex Weave)
+3.  Find the appropriate Primary Energy cost from the table
+4.  If Complex: Add Supporting Energy for:
+    - Range (if not touch): Air/Space 1-3
     - Area (if multiple targets): Space 1-3+
     - Duration (if not instant): Time 1-8
-4.  Total Cost = Primary Energy + Supporting Energy (max 16 total)
-5.  Each energy type capped at 8 individually
+5.  Calculate total Energy cost
+6.  Determine action cost: Simple (1 action) or Complex (2 actions)
 
 ##### Example - Fireball:
 - Primary: Fire 5 (24 damage, 3rd level power)
@@ -400,6 +455,423 @@ Permanency should feel earned and special. A 4-success weaving is rare (requirin
 - Fortitude (Constitution + Luck): Resists fire, cold, poison, physical effects
 - Reflex (Agility + Luck): Resists area effects, explosions
 - Will (Wisdom + Luck): Resists mind control, fear, charm, illusions
+
+#### Attack Weaves vs Save Weaves
+
+Weaves fall into two categories based on how they interact with targets:
+
+##### Attack Weaves (No Saving Throw)
+**Characteristics:**
+- Single-target direct effects
+- Touch-range direct damage
+- Weaving successes alone determine effectiveness
+- No opposed roll by target
+
+**Weave Types:**
+- Single-target ranged damage (Fire Bolt, Ray of Frost, Shocking Grasp)
+- Touch-range damage spells
+- Single-target healing (Cure Wounds, Healing Word)
+- Single-target buffs that benefit the target
+
+**Success Determination:**
+- 0 successes: Miss/fail
+- 1 success: Reduced effect (typically half damage or half duration)
+- 2 successes: Full effect as listed
+- 3 successes: Enhanced effect (+8 damage or extended duration)
+- 4 successes: Maximum effect (+16 damage or double duration)
+
+**Example - Fire Bolt:**
+Caster rolls Fire Potential + Fire Mastery + Air Potential + Air Mastery (4d8)
+- 0 successes: Miss, no damage
+- 1 success: 4 damage (half of 8)
+- 2 successes: 8 damage (full)
+- 3 successes: 16 damage (8 + 8 bonus)
+- 4 successes: 24 damage (8 + 16 bonus)
+
+##### Save Weaves (Saving Throw Allowed)
+**Characteristics:**
+- Area effect damage
+- Control/debuff effects
+- Transformation effects
+- Ongoing effects
+
+**Weave Types:**
+- Area damage (Fireball, Lightning Bolt, Burning Hands, Cone of Cold)
+- Line effects (Lightning Bolt, Wall of Fire)
+- Control spells (Hold Person, Sleep, Slow, Fear)
+- Debuffs (Blindness, Curse, Poison)
+- Transformation (Polymorph, Petrification)
+
+**Success Determination - Opposed Roll:**
+1. **Caster rolls weaving:** Count successes normally from weaving roll
+2. **Each target rolls save:** Count successes from appropriate save (Reflex/Fortitude/Will)
+3. **Calculate Net Successes:** Net = Caster Successes - Target Successes
+4. **Apply effect based on net successes:**
+   - Net 0 or less: Target resists/reduces effect significantly
+   - Net 1: Reduced effect (typically half damage)
+   - Net 2: Full effect as listed
+   - Net 3: Enhanced effect
+   - Net 4: Maximum effect
+
+**Important:** Even when net successes are 0 or negative, some spells still deal partial damage. Check individual spell descriptions for "minimum effect" rules.
+
+**Example - Fireball:**
+Caster rolls 3 successes on weaving (Fire + Space)
+- Target A rolls 1 success on Reflex save: Net 2, takes full 28 damage
+- Target B rolls 2 successes on Reflex save: Net 1, takes half (14 damage)
+- Target C rolls 3 successes on Reflex save: Net 0, takes no damage
+- Target D rolls 4 successes on Reflex save: Net -1, takes no damage
+
+#### Which Save Type Applies?
+
+The save type is determined by the effect being resisted:
+
+**Reflex (Agility + Luck) - Dodging/Avoiding:**
+- Area damage effects (explosions, fire, lightning, acid)
+- Physical hazards (falling objects, crushing walls)
+- Sudden environmental changes
+- Effects you can physically dodge
+
+**Fortitude (Constitution + Luck) - Enduring/Resisting:**
+- Poison and disease
+- Physical transformation (petrification, polymorphing)
+- Death effects
+- Constitution-draining effects
+- Cold/heat endurance
+
+**Will (Wisdom + Luck) - Mental Resistance:**
+- Mind control and domination
+- Fear and morale effects
+- Charm and compulsion
+- Illusions (to disbelieve)
+- Sleep and unconsciousness effects
+
+**When in Doubt:**
+- If it's an explosion or area damage → Reflex
+- If it changes your body or kills you → Fortitude
+- If it affects your mind or emotions → Will
+
+### Damage Resistance (DR) and Magical Damage
+
+Physical armor and natural defenses interact differently with magical damage based on the energy type.
+
+#### Energy Damage - Half DR (Rounded Down)
+
+**Energy-based magical damage types apply half DR:**
+- **Fire** (flames, heat, burning)
+- **Cold** (frost, ice energy, freezing)
+- **Lightning** (electricity, shock)
+- **Acid** (corrosive energy)
+- **Thunder** (sonic energy, sound waves)
+- **Negative** (life-draining, necrotic energy)
+- **Positive** (radiant, divine energy)
+- **Force** (pure magical energy)
+- **Psychic** (mental damage)
+
+**Formula:** Damage - (DR ÷ 2, rounded down)
+
+**Examples:**
+- 16 fire damage vs DR 4 → 16 - 2 = **14 damage**
+- 8 lightning damage vs DR 3 → 8 - 1 = **7 damage**
+- 28 cold damage vs DR 6 → 28 - 3 = **25 damage**
+- 8 acid damage vs DR 1 → 8 - 0 = **8 damage** (DR 1 provides no protection)
+
+**Rationale:** Pure energy can partially bypass physical armor but heavy armor still provides some protection through insulation, dispersion, and reduced exposed area.
+
+#### Physical Magic Damage - Full DR
+
+**Physical-based magical effects respect full DR:**
+- **Ice Storm** (physical ice chunks and hail)
+- **Meteor Swarm** (physical meteors with impact)
+- **Conjured Weapons** (summoned blades, magical projectiles)
+- **Stone Shape** (crushing stone)
+- **Earthquake** (falling debris, collapsing structures)
+- **Wall of Stone/Ice** (physical crushing)
+- **Thorn Whip** (physical thorns)
+- **Any spell creating physical objects that strike/crush**
+
+**Formula:** Damage - DR (normal physical damage reduction)
+
+**Examples:**
+- Ice Storm 28 damage vs DR 4 → 28 - 4 = **24 damage**
+- Meteor 40 damage vs DR 6 → 40 - 6 = **34 damage**
+- Conjured Blade 10 damage vs DR 3 → 10 - 3 = **7 damage**
+
+**Rationale:** These spells create actual physical matter or force that impacts like mundane weapons. Armor protects normally.
+
+#### Quick Reference Table
+
+| Damage Type | DR Application | Example Spell |
+|-------------|----------------|---------------|
+| Fire | Half DR | Fire Bolt, Fireball, Burning Hands |
+| Cold | Half DR | Ray of Frost, Cone of Cold |
+| Lightning | Half DR | Lightning Bolt, Shocking Grasp |
+| Acid | Half DR | Acid Splash, Acid Arrow |
+| Thunder | Half DR | Thunderwave, Shatter |
+| Negative | Half DR | Chill Touch, Blight, Vampiric Touch |
+| Positive | Half DR | Sacred Flame, Guiding Bolt |
+| Force | Half DR | Magic Missile, Eldritch Blast |
+| Psychic | Half DR | Mind Blast, Psychic Scream |
+| Physical Ice | Full DR | Ice Storm (ice chunks) |
+| Physical Stone | Full DR | Meteor Swarm, Conjured weapons |
+| Physical Debris | Full DR | Earthquake, Avalanche |
+
+#### Elemental Resistance (Separate from DR)
+
+Some creatures have specific elemental resistances or immunities listed in their stat blocks. These are separate from DR and stack with DR reduction.
+
+**Application Order:**
+1. Apply DR reduction (half or full depending on damage type)
+2. Apply elemental resistance (subtract listed amount)
+3. Apply vulnerability (add listed amount)
+
+**Example:** Red Dragon with DR 5 and Fire Immunity
+- Fireball 28 fire damage → Immune, takes 0 damage
+- Ice Storm 28 cold damage → 28 - 5 (full DR for physical ice) = 23 damage
+
+**Example:** Frost Giant with DR 4 and Cold Resistance 8
+- Cone of Cold 28 damage → 28 - 2 (half DR) - 8 (resistance) = **18 damage**
+- Fireball 28 damage → 28 - 2 (half DR) = **26 damage**
+
+#### Special Cases
+
+**Force Damage (Magic Missile, etc.):**
+- Applies half DR
+- Almost never resisted (very rare to have Force Resistance)
+- Considered pure magical energy
+
+**Healing (Positive Energy):**
+- DR does not reduce healing
+- Negative Energy Resistance does not reduce healing
+
+**Spell Damage Types in Descriptions:**
+Each spell description now includes:
+- **Damage Type:** [Energy type or Physical]
+- **DR Interaction:** [Half DR / Full DR / Ignores DR]
+
+### Condition Application in Weaves
+
+Many weaves can inflict conditions on targets when achieving high success thresholds. The conditions applied depend on the primary energy type used in the weave and the power level of the spell.
+
+#### Success Threshold Framework
+
+**Attack Weaves (No Saving Throw):**
+- 0 successes: Miss
+- 1 success: Partial effect (typically half damage)
+- 2 successes: Full effect
+- 3 successes: Enhanced effect + minor condition
+- 4 successes: Maximum effect + major condition
+- 5+ successes: Overwhelming effect + severe or multiple conditions
+
+**Save Weaves (With Saving Throw):**
+- Net 0 or less: Resisted/minimal effect
+- Net 1: Reduced effect (typically half damage)
+- Net 2: Full effect
+- Net 3: Enhanced effect + minor condition
+- Net 4: Maximum effect + major condition
+- Net 5+: Overwhelming effect + severe or multiple conditions
+
+**Note:** Net successes = Caster's total successes - Target's save successes
+
+#### Condition Selection by Energy Type
+
+Conditions should thematically match the primary energy used in the weave. Reference the conditions document for full condition rules.
+
+##### Fire Energy Conditions
+**Minor (3 successes / Net 3):**
+- Singed
+- Smoldering
+- Dazzled
+
+**Major (4 successes / Net 4):**
+- Ignited
+- Frightened (fire panic)
+- Blinded (intense flash)
+
+**Severe (5+ successes / Net 5+):**
+- Burning
+- Cowering (fire terror)
+- Multiple conditions (Ignited + Frightened)
+
+##### Cold/Water Energy Conditions
+**Minor (3 successes / Net 3):**
+- Chilled
+- Numbed
+- Difficult terrain (ice)
+
+**Major (4 successes / Net 4):**
+- Slowed (major - 2 actions only)
+- Frosted
+- Prone (slipped on ice)
+
+**Severe (5+ successes / Net 5+):**
+- Frozen (Restrained + ongoing damage)
+- Paralyzed (extreme cold)
+- Multiple conditions (Prone + Frosted)
+
+##### Lightning/Air Energy Conditions
+**Minor (3 successes / Net 3):**
+- Dazed
+- Deafened
+- Pushed (forced movement)
+
+**Major (4 successes / Net 4):**
+- Stunned
+- Prone (knocked down)
+- Disoriented
+
+**Severe (5+ successes / Net 5+):**
+- Paralyzed (electrical shock)
+- Unconscious (extreme shock)
+- Multiple conditions (Stunned + Prone)
+
+##### Earth Energy Conditions
+**Minor (3 successes / Net 3):**
+- Difficult terrain
+- Off-balance (penalty to next action)
+- Prone (minor)
+
+**Major (4 successes / Net 4):**
+- Prone (knocked down)
+- Grappled
+- Slowed (movement impaired)
+
+**Severe (5+ successes / Net 5+):**
+- Restrained (bound by earth/stone)
+- Buried (Restrained + Blinded + suffocating)
+- Prone + Restrained
+
+##### Positive Energy Conditions
+**Minor (3 successes / Net 3):**
+- Dazzled (bright light)
+- Revealed (invisibility ends)
+- Weakened (offensive use)
+
+**Major (4 successes / Net 4):**
+- Blinded (intense light)
+- Frightened (undead only)
+- Turned (undead flee)
+
+**Severe (5+ successes / Net 5+):**
+- Destroyed (undead at low HP)
+- Banished (extraplanar creatures)
+- Multiple conditions
+
+##### Negative Energy Conditions
+**Minor (3 successes / Net 3):**
+- Weakened
+- Sickened
+- Chilled (death chill)
+
+**Major (4 successes / Net 4):**
+- Poisoned
+- Exhausted (Level 1)
+- Frightened (fear of death)
+
+**Severe (5+ successes / Net 5+):**
+- Dying (if below threshold HP)
+- Paralyzed (body wracked with pain)
+- Exhausted (Level 2+)
+
+##### Space Energy Conditions
+**Minor (3 successes / Net 3):**
+- Disoriented
+- Pushed (forced movement)
+- Off-balance
+
+**Major (4 successes / Net 4):**
+- Teleported (moved to different location)
+- Prone
+- Restrained (force bonds)
+
+**Severe (5+ successes / Net 5+):**
+- Banished (sent to another plane)
+- Stunned (reality distortion)
+- Grappled + Teleported
+
+##### Time Energy Conditions
+**Minor (3 successes / Net 3):**
+- Slowed (minor - speed/initiative penalty)
+- Disoriented (lost sense of timing)
+
+**Major (4 successes / Net 4):**
+- Slowed (major - 2 actions only)
+- Stunned (frozen in time)
+- Aged (Exhaustion gained)
+
+**Severe (5+ successes / Net 5+):**
+- Paralyzed (time frozen)
+- Slowed (1 action only)
+- Temporal displacement
+
+#### Power Level Restrictions
+
+The severity of conditions that can be applied depends on the weave's Energy cost:
+
+**Cantrip Level (1-2 Energy):**
+- Maximum at 3 successes: Minor condition only
+- Maximum at 4 successes: Major condition (single effect, not most severe)
+- No severe conditions available
+
+**Low Level (3-4 Energy):**
+- 3 successes: Minor or moderate condition
+- 4 successes: Major condition
+- 5+ successes: Major + minor, or severe for 1 round only
+
+**Medium Level (5-6 Energy):**
+- 3 successes: Major condition
+- 4 successes: Severe condition or major + minor
+- 5+ successes: Severe + additional effects
+
+**High Level (7-8 Energy):**
+- 3 successes: Severe condition possible
+- 4 successes: Severe condition + significant effect
+- 5+ successes: Multiple conditions or long-duration severe effects
+
+#### Condition Duration Guidelines
+
+Unless specified in the spell description:
+- **Minor conditions:** Typically 1 action to 1 round
+- **Major conditions:** Typically 1 round to 1 minute, with saves to end
+- **Severe conditions:** Typically 1 minute to 10 minutes, with saves to end
+
+**Recovery Saves:**
+Most magical conditions allow the target to attempt a save at the end of each of their turns to end the effect. The save type is typically the same as the initial save (Reflex/Fortitude/Will).
+
+#### Examples in Practice
+
+**Fire Bolt (Fire 2, Cantrip):**
+- 3 successes: 16 damage + Singed (minor - subtract 1 from next die)
+- 4 successes: 24 damage + Ignited (major - 1d8 per turn, action to extinguish)
+- 5+ successes: 32 damage + Ignited + Dazzled (multiple conditions)
+
+**Fireball (Fire 5, Medium Level AOE):**
+- Net 3: 36 damage + Frightened (major - add 1 to dice while visible)
+- Net 4: 44 damage + Ignited (major ongoing damage)
+- Net 5+: 52 damage + Burning (severe - 2d8 per turn, hard to extinguish)
+
+**Hold Person (Space 4, Low Level Control):**
+- Net 2: Paralyzed for 1 minute (save each turn)
+- Net 3: Paralyzed + Misfortune on saves (harder to break)
+- Net 4: Paralyzed + affects 2 targets
+- Net 5+: Paralyzed for 1 hour + affects 2 targets
+
+**Lightning Bolt (Air 5, Medium Level AOE):**
+- Net 3: 36 damage + Dazed (minor - penalties next action)
+- Net 4: 44 damage + Stunned (major - no actions for 1 round)
+- Net 5+: 52 damage + Stunned + Prone (multiple conditions)
+
+#### GM Guidelines for Condition Application
+
+1. **Check Energy Type:** Conditions must thematically match the primary energy
+2. **Check Power Level:** Don't exceed the condition caps for that power level
+3. **Check Success Threshold:** Minor at 3, major at 4, severe at 5+
+4. **Check Spell Description:** Individual spells may specify different conditions
+5. **Be Consistent:** Similar spells should apply similar conditions
+
+When creating custom weaves or adjudicating edge cases, prioritize thematic appropriateness over mechanical optimization. A fire spell should never freeze someone, and a cold spell should never ignite them.
+
+For complete condition descriptions, mechanics, and recovery rules, see the **Conditions** document.
 
 ### Channel Divinity (Divine Gift Only)
 

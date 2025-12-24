@@ -50,37 +50,48 @@ All characters have access to these combat options:
 ##### Simple Weave [Combat]
 - **Cost:** 1 [Combat] action
 - **Requirements:** Ability to weave, sufficient Energy
-- **Range:** Typically touch or close range (30 feet)
-- **Effect:** Cast a single-energy weave or basic effect
-- **Examples:** Fire Bolt, Healing Word, Mage Hand, Light
-- **Weaving Roll:** Primary Energy Potential + Primary Energy Mastery (2d8)
+- **Range:** Touch to 5-10 feet maximum (no supporting energy for range)
+- **Effect:** Cast a single-energy weave (Primary Energy only, no Supporting Energy)
+- **Examples:** Fire Burst, Shocking Grasp, Frost Touch, Stone Fist, Shadow Touch
+- **Weaving Roll:** Primary Energy Potential + Primary Energy Mastery (2d8 only)
 - **Notes:**
   - Subject to Multiple Action Penalty
-  - See Part 7 (Magic System) for full weaving rules
-  - Simple weaves are single-target or basic effects
+  - Limited to touch or very close range (raw energy emanation)
+  - Cannot achieve area effects or duration without supporting energy
+  - Single target, instantaneous effects only
+  - See Part 7 (Magic System) for full weaving rules and Simple Weave limitations
 
 ##### Complex Weave [Combat]
 - **Cost:** 2 [Combat] actions
 - **Requirements:** Ability to weave, sufficient Energy
-- **Effect:** Cast a multi-energy weave with range, area, or duration
-- **Examples:** Fireball, Cure Wounds, Hold Person, Invisibility
+- **Effect:** Cast a multi-energy weave using Primary + Supporting Energy
+- **Examples:** Fire Bolt, Fireball, Cure Wounds, Hold Person, Invisibility
 - **Weaving Roll:** Primary Potential + Primary Mastery + Supporting Potential + Supporting Mastery (4d8)
 - **Notes:**
   - Counts as ONE combat action for Multiple Action Penalty purposes (even though it costs 2 actions)
+  - Requires Supporting Energy to achieve range beyond touch, area effects, or duration
   - See Part 7 (Magic System) for full weaving rules
-  - Complex weaves typically have area effects, require saves, or affect range/duration
+  - Complex weaves typically have area effects, require saves, affect range/duration, or involve complex energy manipulation
 
 ### Weaving While Threatened
 
 ##### Opportunity Attacks from Weaving:
-- **Simple Weaves (1 action):** Don't provoke Opportunity Attacks - these are quick, instinctive magical effects
-- **Complex Weaves (2 actions):** Provoke Opportunity Attacks - these require concentration, gestures, and time
+- **Simple Weaves (1 action):** Don't provoke Opportunity Attacks
+  - Quick, instinctive magical effects channeled through the body
+  - Limited to touch/close range (5-10ft)
+  - Raw energy emanations, not shaped projectiles
+  
+- **Complex Weaves (2 actions):** Provoke Opportunity Attacks
+  - Require concentration, gestures, shaping, and time
+  - Use supporting energies to achieve range/area/duration
+  - Enemy gets opportunity attack before weave completes
 
 ##### Tactical Options:
-- Use Disengage action before casting a Complex Weave
-- Use Simple Weaves when in melee
-- Position yourself before combat to avoid being threatened
-- Have allies protect you while weaving
+- **In melee:** Use Simple Weaves (don't provoke) or use Disengage first
+- **At range:** Use Complex Weaves freely (more damage, better range)
+- **High Mastery casters:** Consider War Caster feat (Complex Weaves don't provoke)
+- **Positioning:** Stay at range to avoid being threatened
+- **Party tactics:** Have allies protect you while weaving
 
 ##### Channel Divinity [Combat]
 - **Cost:** 2 [Combat] actions
@@ -284,7 +295,7 @@ All characters have access to these movement options:
   - You can stand and move in the same turn by spending 2 [Move] actions
 
 ##### Disengage [Move]
-- **Cost:** 1 [Move] action
+- **Cost:** 2 [Move] action
 - **Effect:** Your movement doesn't provoke Opportunity Attacks for the rest of your turn
 - **Restriction:** You cannot end your movement within melee reach of an enemy creature
 - **Notes:**
