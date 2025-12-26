@@ -174,18 +174,18 @@ This represents innate talent, specialized training, or supernatural ability.
 
 #### **Undead**
 - **Undead Immunities:** Immune to poison damage, Poisoned condition, disease, exhaustion
-- **Mindless (if applicable):** Immune to charm, fear, psychic effects
+- **Mindless (if applicable):** immune to enchantment effects (charm, fear, sleep), fear, psychic effects
 - **Does not need:** Air, food, drink, sleep
 - **Negative Healing (optional):** Healed by negative energy, harmed by positive
 
 #### **Construct**
 - **Construct Immunities:** Immune to poison, Poisoned, disease, exhaustion, Paralyzed, Petrified
-- **Mindless (if applicable):** Immune to charm, fear, psychic effects
+- **Mindless (if applicable):** immune to enchantment effects (charm, fear, sleep), fear, psychic effects
 - **Does not need:** Air, food, drink, sleep
 
 #### **Aberration**
 - Alien biology
-- Often has alien mind (advantage vs mental effects or vulnerability, varies)
+- Often has alien mind (Fortune vs mental effects or vulnerability, varies)
 - Unusual anatomy
 
 #### **Dragon**
@@ -226,7 +226,7 @@ This represents innate talent, specialized training, or supernatural ability.
 
 #### **Ooze**
 - **Ooze Immunities:** Immune to Blinded, Deafened, Exhaustion, Frightened, Prone
-- **Mindless:** Immune to charm, fear, psychic effects
+- **Mindless:** immune to enchantment effects (charm, fear, sleep), fear, psychic effects
 - **Amorphous:** Can squeeze through tiny spaces
 - **Corrosive (many):** Deals acid damage, dissolves equipment
 

@@ -64,7 +64,7 @@ Pattern C (Balanced)
 Pattern A (Generalist)
 - Skills: Empathy 2, Persuasion 2, Society 2, Perception 2, +24 XP to spend
 - Equipment: Apron, mug, bottle of spirits, common clothes
-- Feature - Tavern Talk: You know how to listen and learn. Gain advantage when gathering information in drinking establishments.
+- Feature - Tavern Talk: You know how to listen and learn. Gain Fortune on skill tests when gathering information in drinking establishments.
 
 #### Barrister
 Pattern D (Specialist)

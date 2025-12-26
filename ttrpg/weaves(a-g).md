@@ -50,16 +50,28 @@ Each weave entry includes:
 -   **Saving Throw:** None (self-only transformation)
 -   **Success Scaling:** 1 = 1 round duration, 2 = full effect, 3 = 10 minutes, 4 = 1 hour
 
-### Animate Dead
--   **Primary Energy:** Negative 6 (animating corpses with necromantic energy)
+### Animal Messenger
+-   **Primary Energy:** Positive 2 (animating natural creature with purpose)
+-   **Supporting Energy:** Time 3 (duration up to 24 hours)
+-   **Total Cost:** 5 Energy
+-   **Action:** Complex weave (2 actions), requires 1 minute to cast
+-   **Weaving Roll:** Positive Potential + Positive Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Target one Tiny beast you can see within close range (30ft). The beast travels to a location you specify (must be familiar to you) and delivers a message of up to 25 words to a creature you describe. The beast travels at 50 miles per day (fly) or 25 miles per day (ground).
+-   **Saving Throw:** None (beast is willing messenger)
+-   **Success Scaling:** 1 = 12 hours duration, 2 = 24 hours, 3 = 48 hours, 4 = 7 days (beast can travel much farther)
+-   **Note:** Perfect for invokers who speak to creatures using fragments of their true names
+
+### Animate Dead **[Necromantic]**
+-   **Primary Energy:** Negative 6 (binding soul fragments to corpses)
 -   **Supporting Energy:** Time 4 (duration 1 hour of control)
 -   **Total Cost:** 10 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Negative Potential + Negative Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Animate 1 corpse as a skeleton or zombie under your control. Undead has HP equal to your Negative Potential × 4, deals 6 damage, uses your Negative Mastery for attacks. Can command as [Free] action.
+-   **Effect:** **[FORBIDDEN KNOWLEDGE]** Bind soul fragments or echoes to 1 corpse, animating it as a skeleton or zombie under your control. Undead has HP equal to your Negative Potential × 4, deals 6 damage, uses your Negative Mastery for attacks. Can command as [Free] action.
 -   **Saving Throw:** None (corpse has no will)
 -   **Scaling:** +2 Energy per additional undead (max = Negative Mastery)
 -   **Success Scaling:** 1 = 1 round control, 2 = full effect, 3 = 24 hours control, 4 = permanent until destroyed
+-   **Necromantic Warning:** This weave manipulates pneuma (soul essence) and represents lost First Men knowledge. It cannot be learned at character creation and requires GM permission. Regular use may attract malevolent daemons and corrupt the caster's soul.
 
 ### Antimagic Field
 -   **Primary Energy:** Space 8 (negating magical energies in an area)
@@ -135,6 +147,51 @@ Each weave entry includes:
 -   **DR Interaction:** Half DR (16 fire damage vs DR 4 becomes 16 - 2 = 14 damage)
 -   **Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half damage (8), 2 = full damage (16), 3 = +8 damage (24 total), 4 = +16 damage (32 total)
 -   **Ignited Condition (at Net 4):** Target takes 1d8 fire damage at the start of each of their turns. Target can use 1 action to make a Reflex save (1 success ends condition) or an ally can use 1 action to extinguish the flames.
+
+### Calm Emotions
+-   **Primary Energy:** Positive 4 (soothing emotional turmoil)
+-   **Supporting Energy:** Time 2 (duration 1 minute, concentration)
+-   **Total Cost:** 6 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Positive Potential + Positive Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** All creatures in a 20-foot radius sphere at medium range (60ft) must make Will saves. Compare your weaving successes to each target's save successes. Those you beat can choose to be affected (suppressing Charmed or Frightened) or you can suppress hostility (they become indifferent if not directly threatened). Creatures immune to charm are immune to this weave.
+-   **Saving Throw:** Will (to resist emotion suppression)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect (1 minute), 3 = no concentration required, 4 = 10 minutes
+-   **Note:** Particularly effective for invokers speaking words of peace and calm
+
+### Command
+-   **Primary Energy:** Negative 2 (imposing your will through compulsion)
+-   **Supporting Energy:** None (close range 30ft, instantaneous effect)
+-   **Total Cost:** 2 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Negative Potential + Negative Mastery (2d8 only)
+-   **Effect:** Speak a one-word command to a creature you can see within close range (30ft). Target makes Will save. Compare your weaving successes to their save successes. If you have more, target follows the command on their next turn. Commands: Approach, Drop, Flee, Grovel (prone), Halt (no actions). Cannot command self-harm. Creatures immune to charm are immune.
+-   **Saving Throw:** Will (to resist compulsion)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 0-1 = resists, 2 = follows command for 1 round, 3 = follows for 2 rounds, 4 = affects 2 targets instead
+-   **Note:** Invokers speak fragments of the target's true name as a command
+
+### Comprehend Languages
+-   **Primary Energy:** Air 2 (understanding spoken communication)
+-   **Supporting Energy:** Time 2 (duration 1 hour)
+-   **Total Cost:** 4 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Air Potential + Air Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** For the duration, you understand the literal meaning of any spoken language you hear. You also understand written languages you see, but must touch the surface on which words are written. Reading takes about 1 minute per page.
+-   **Saving Throw:** None (personal enhancement)
+-   **Success Scaling:** 1 = 10 minutes (spoken only), 2 = full effect, 3 = 8 hours, 4 = can speak (not just understand) all languages for duration
+-   **Note:** Essential for invokers seeking to learn new true names from foreign tongues
+
+### Confusion
+-   **Primary Energy:** Negative 6 (mental chaos and discord)
+-   **Supporting Energy:** Time 2 (duration 1 minute, concentration)
+-   **Total Cost:** 8 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Negative Potential + Negative Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** All creatures in 10-foot radius sphere at medium range (60ft) make Will saves. Compare your weaving successes to each target's save successes. Those you beat are confused. At the start of each confused creature's turn, roll 1d8: 1-2 = do nothing, 3-4 = no action and move random direction, 5-6 = attack nearest creature, 7-8 = act normally. Repeat save at end of each turn.
+-   **Saving Throw:** Will (to resist mental chaos)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 20-foot radius, 4 = 10 minutes duration
+-   **Confused Condition (Net 2+):** Creature acts randomly each turn as described. Can repeat save at end of each turn to end effect.
+-   **Note:** Creatures immune to charm are immune to this weave
 
 ## C
 
@@ -334,6 +391,17 @@ Each weave entry includes:
 
 ## F
 
+### Faerie Fire
+-   **Primary Energy:** Positive 2 (revealing light outlining creatures)
+-   **Supporting Energy:** Time 2 (duration 1 minute, concentration)
+-   **Total Cost:** 4 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Positive Potential + Positive Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** All objects and creatures in 20-foot cube at medium range (60ft) are outlined in violet light. Make Reflex save. Compare your weaving successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.
+-   **Saving Throw:** Reflex (to avoid being outlined)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = dim light only, 2 = full effect, 3 = 30-foot cube, 4 = 10 minutes duration
+-   **Note:** The violet light reveals the true form beneath illusions
+
 ### Fear
 -   **Primary Energy:** Negative 5 (projecting terror, mental effect)
 -   **Supporting Energy:** Space 1 (self, 30ft cone area)
@@ -345,8 +413,19 @@ Each weave entry includes:
 -   **Success Scaling (Net successes = Your successes - Their successes):** 1 = Frightened (1 round), 2 = Fleeing (1 minute), 3 = Cowering, 4 = Paralyzed with fear (10 minutes)
 -   **Frightened/Fleeing/Cowering Conditions:** See conditions document for full mechanics.
 
-### Finger of Death
--   **Primary Energy:** Negative 8 (pure death energy, massive damage)
+### Feather Fall
+-   **Primary Energy:** Air 2 (slowing fall with updraft)
+-   **Supporting Energy:** None (close range 30ft, instantaneous)
+-   **Total Cost:** 2 Energy
+-   **Action:** [Reaction] when you or creature within close range falls
+-   **Weaving Roll:** Air Potential + Air Mastery (2d8 only)
+-   **Effect:** Up to 5 falling creatures within close range (30ft) descend 60 feet per round and take no falling damage. Weave lasts until they land (up to 1 minute).
+-   **Saving Throw:** None (beneficial effect)
+-   **Success Scaling:** 1 = 1 creature, 2 = 5 creatures, 3 = 10 creatures, 4 = can cast as [Free] reaction without spending action
+-   **Note:** Invokers speak a word of lightness and buoyancy
+
+### Finger of Death **[Necromantic]**
+-   **Primary Energy:** Negative 8 (pure death energy combined with soul binding)
 -   **Supporting Energy:** Space 2 (medium range 60ft)
 -   **Total Cost:** 10 Energy
 -   **Action:** Complex weave (2 actions)
@@ -356,6 +435,7 @@ Each weave entry includes:
 -   **Damage Type:** Negative (energy)
 -   **DR Interaction:** Half DR (40 negative damage vs DR 4 becomes 40 - 2 = 38 damage)
 -   **Success Scaling (Net successes = Your successes - Their successes):** 0 = half damage (20), 1 = 3/4 damage (30), 2 = full damage (40), 3 = +8 damage (48 total), 4 = +16 damage (56 total, instant death if reduced to -Constitution)
+-   **Necromantic Warning:** The soul-binding component of this weave (raising the slain as undead) represents lost First Men knowledge. Cannot be learned at character creation, requires GM permission. The damage portion is standard Negative energy, but the automatic raising effect manipulates pneuma.
 
 ### Fire Bolt
 -   **Primary Energy:** Fire 2 (bolt of flame, damage)
@@ -483,6 +563,17 @@ Each weave entry includes:
 -   **Effect:** Area becomes slippery difficult terrain. Creatures entering or starting turn in area make Reflex save or fall Prone. Those running must save or fall. Compare your weaving successes to their save successes.
 -   **Saving Throw:** Reflex (to avoid falling prone)
 -   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 20ft square (10 minutes), 4 = 30ft square (1 hour)
+
+### Greater Restoration
+-   **Primary Energy:** Positive 6 (powerful cleansing and restoration)
+-   **Supporting Energy:** Time 2 (casting time 1 minute)
+-   **Total Cost:** 8 Energy
+-   **Action:** Complex weave (2 actions), requires 1 minute to cast
+-   **Weaving Roll:** Positive Potential + Positive Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Touch a creature and end one of the following: one curse (including attunement to cursed item), petrification, reduction of attribute scores, reduction of max HP. The weave removes only one effect per casting.
+-   **Saving Throw:** None (beneficial restoration)
+-   **Success Scaling:** 1 = temporary relief (1 hour), 2 = full effect, 3 = removes 2 effects, 4 = removes all applicable effects
+-   **Note:** Invokers speak the creature's true name as it was before corruption
 
 ### Greater Invisibility
 -   **Primary Energy:** Space 6 (bending light completely, strong illusion)

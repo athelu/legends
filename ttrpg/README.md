@@ -112,12 +112,12 @@ legends/ttrpg/
 
 | Modifier | Effect on Success | Use For |
 |----------|-------------------|---------|
-| Add 1 to one die | ~9% penalty | Minor/specific disadvantage |
-| Add 1 to both dice | ~15% penalty | Moderate disadvantage |
-| Misfortune (3d8 worst 2) | ~25% penalty | Major disadvantage |
-| Subtract 1 from one die | ~9% benefit | Minor/specific advantage |
-| Subtract 1 from both dice | ~15% benefit | Moderate advantage |
-| Fortune (3d8 best 2) | ~25% benefit | Major advantage |
+| Add 1 to one die | ~9% penalty | Minor/specific penalty |
+| Add 1 to both dice | ~15% penalty | Moderate penalty |
+| Misfortune (3d8 worst 2) | ~25% penalty | Major penalty |
+| Subtract 1 from one die | ~9% benefit | Minor/specific bonus |
+| Subtract 1 from both dice | ~15% benefit | Moderate bonus |
+| Fortune (3d8 best 2) | ~25% benefit | Major bonus |
 
 ## Tier Progression
 
@@ -133,6 +133,14 @@ legends/ttrpg/
 | 8 | 1560+ | ~10+ | 2 start + 16 purchased | Level 20 |
 
 ## Version History
+
+### v0.4.0 - Roll Under Conversion
+- System moved from roll under-and-equal to Roll under.
+- Natural 1 always succeed. allows for skill/attribute/master 1 to have success in roll under.
+- Create DR and Save mechanics for Magic
+- Adjusted bestiary creation guidelines
+- Created new conditions
+- Created guidelines for simples combat weaves (and rules for making new ones)
 
 ### v0.3.0 - Classless System Refactor
 - Removed martial trait gates (Martial Prowess, Roguish Training, Ranger's Path, Monastic Training)

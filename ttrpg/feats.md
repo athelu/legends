@@ -368,7 +368,7 @@ Most feats require:
 ### UNIVERSAL MAGICAL ENHANCEMENTS
 
 ### Arcane Recovery
-- **Prerequisites:** Any magical trait (Magical Aptitude, Divine Gift, Sorcerous Origin, Bardic Magic, Eldritch Pact, or Divine Warrior), Int OR Wis OR Cha 5
+- **Prerequisites:** Any magical trait (Mageborn, Divine Gift, Sorcerous Origin, Invoker Magic, Eldritch Pact, or Divine Warrior), Int OR Wis OR Cha 5
 - **Benefit:** Once per day during a short rest, regain Energy equal to your tier × 4
 - **Usage:** Once per day
 - **Note:** Originally a wizard ability, now available to all casters who dedicate study to energy recovery
@@ -379,7 +379,7 @@ Most feats require:
 - **Usage:** Passive
 - **Note:** Can be taken multiple times for different elements
 
-### Evocation Focus
+### Destruction Focus
 - **Prerequisites:** Any magical trait, any damage energy Mastery 5
 - **Benefit:** When weaving damage effects, add your Casting Stat to the damage
 - **Usage:** Passive
@@ -407,7 +407,7 @@ Most feats require:
 - **Prerequisites:** Any magical trait, Int OR Wis OR Cha 4
 - **Benefit:** Use a 10-minute ritual to cast weaves at half Energy cost (minimum 1), cannot be used in combat
 - **Usage:** Unlimited (out of combat only)
-- **Note:** Magical Aptitude grants this automatically; this feat allows other casters to learn the technique
+- **Note:** Mageborn grants this automatically; this feat allows other casters to learn the technique
 
 ### Weave Focus
 - **Prerequisites:** Any magical trait, any Mastery 3
@@ -436,7 +436,7 @@ Most feats require:
 - **Usage:** Passive
 
 ### Wild Magic
-- **Prerequisites:** Magical Aptitude, Luck 5
+- **Prerequisites:** Mageborn, Luck 5
 - **Benefit:** On double 1s or 8s when weaving: roll on Wild Magic table for extra effect
 - **Usage:** Passive
 
@@ -444,60 +444,60 @@ Most feats require:
 
 ## MAGICAL FEATS - WIZARD SCHOOLS
 
-### School of Abjuration: Arcane Ward
-- **Prerequisites:** Magical Aptitude, Int 5, Space Mastery 4
+### Protective Weaving
+- **Prerequisites:** Mageborn, Int 5, Space Mastery 4
 - **Benefit:** When you weave using Space energy, gain temporary HP equal to the Energy spent. This ward lasts until depleted or you finish a long rest. Ward HP can stack with itself up to a maximum of your Intelligence × tier
 - **Usage:** Passive
-- **Note:** Represents protective magic specialization
+- **Note:** Represents protective magic specialization using spatial barriers
 
-### School of Conjuration: Benign Transposition
-- **Prerequisites:** Magical Aptitude, Int 5, Space Mastery 5, Tier 3+
+### Spatial Transposition
+- **Prerequisites:** Mageborn, Int 5, Space Mastery 5, Tier 3+
 - **Benefit:** As 1 [Combat] action, teleport up to 30 feet. You can swap places with a willing creature of your size or smaller within range instead
 - **Usage:** Your Intelligence score times per long rest
 
-### School of Divination: Portent
-- **Prerequisites:** Magical Aptitude, Int 6, Space Mastery 5, Tier 3+
+### Foresight Weaving
+- **Prerequisites:** Mageborn, Int 6, Space Mastery 5, Tier 3+
 - **Benefit:** When you finish a long rest, roll 2d8 and record the results. Before any creature you can see makes a d8 roll, you can replace their roll with one of your portent dice (no action required). You must choose before the roll
 - **Usage:** 2 uses per long rest
-- **Note:** Powerful predictive magic
+- **Note:** Powerful predictive magic using temporal/spatial perception
 
-### School of Enchantment: Hypnotic Gaze
-- **Prerequisites:** Magical Aptitude, Int 5, Negative OR Positive Mastery 4, Cha 4
+### Hypnotic Influence
+- **Prerequisites:** Mageborn, Int 5, Negative OR Positive Mastery 4, Cha 4
 - **Benefit:** As 1 [Combat] action, choose one creature within 5 feet. Target makes Will save against your Intelligence + Arcane skill. If you win, target is Charmed and its speed becomes 0 until the end of your next turn. Effect ends if target takes damage
 - **Usage:** Unlimited
 
-### School of Evocation: Sculpt Spell
-- **Prerequisites:** Magical Aptitude, Int 5, any damage energy Mastery 5
+### Precision Destruction
+- **Prerequisites:** Mageborn, Int 5, any damage energy Mastery 5
 - **Benefit:** When you weave an area damage effect, choose a number of creatures equal to your Intelligence. Those creatures automatically take no damage from the weave
 - **Usage:** Passive
-- **Note:** Core evocation mastery - protect allies from your fireballs
+- **Note:** Core destruction mastery - protect allies from your area damage weaves
 
-### School of Evocation: Empowered Evocation
-- **Prerequisites:** School of Evocation: Sculpt Spell, Int 6, Tier 5+
-- **Benefit:** Add your Intelligence score to the damage of any evocation weave you cast (stacks with Evocation Focus if you have it)
+### Amplified Destruction
+- **Prerequisites:** Precision Destruction, Int 6, Tier 5+
+- **Benefit:** Add your Intelligence score to the damage of any damage weave you cast (stacks with Destruction Focus if you have it)
 - **Usage:** Passive
-- **Note:** Requires Sculpt Spell feat first
+- **Note:** Requires Precision Destruction feat first
 
-### School of Illusion: Improved Minor Illusion
-- **Prerequisites:** Magical Aptitude, Int 5, Space Mastery 4
+### At-Will Illusion
+- **Prerequisites:** Mageborn, Int 5, Space Mastery 4
 - **Benefit:** You can weave minor illusions (silent image equivalent) at will for no Energy cost. Additionally, you can create both sound and image with a single weave
 - **Usage:** Unlimited (at-will)
 
-### School of Necromancy: Grim Harvest
-- **Prerequisites:** Magical Aptitude, Int 5, Negative Mastery 5
+### Death Harvest
+- **Prerequisites:** Mageborn, Int 5, Negative Mastery 5
 - **Benefit:** When you kill a creature with a weave using Negative energy, regain HP equal to twice the Energy spent (3× if the creature was undead)
 - **Usage:** Passive
 
-### School of Transmutation: Minor Alchemy
-- **Prerequisites:** Magical Aptitude, Int 5, Earth OR Fire OR Water Mastery 4, Craft 4
+### Elemental Shaping
+- **Prerequisites:** Mageborn, Int 5, Earth OR Fire OR Water Mastery 4, Craft 4
 - **Benefit:** You can temporarily alter the physical properties of one nonmagical object (no larger than 1 cubic foot). You transform it into another nonmagical object of similar size and mass. The transformation lasts 1 hour
 - **Usage:** Unlimited
 
-### School of Transmutation: Transmuter's Stone
-- **Prerequisites:** School of Transmutation: Minor Alchemy, Int 6, Tier 3+
-- **Benefit:** You can spend 8 hours creating a transmuter's stone. The bearer gains one benefit (choose when creating): darkvision 60ft, +2 movement speed, proficiency in Constitution saves (subtract 1 from Fortitude dice), or resistance to one damage type (acid, cold, fire, lightning, or thunder - reduces damage by half)
+### Elemental Infusion
+- **Prerequisites:** Elemental Shaping, Int 6, Tier 3+
+- **Benefit:** You can spend 8 hours creating an elemental infusion stone. The bearer gains one benefit (choose when creating): darkvision 60ft, +2 movement speed, proficiency in Constitution saves (subtract 1 from Fortitude dice), or resistance to one damage type (acid, cold, fire, lightning, or thunder - reduces damage by half)
 - **Usage:** One stone at a time, can remake during long rest
-- **Note:** Requires Minor Alchemy feat first
+- **Note:** Requires Elemental Shaping feat first
 
 ---
 
@@ -685,39 +685,186 @@ Most feats require:
 
 ---
 
-## MAGICAL FEATS - BARD
+## MAGICAL FEATS - INVOKER
 
-### Bardic Inspiration
-- **Prerequisites:** Bardic Magic trait, Cha 5
-- **Benefit:** As 1 [Minor] action, spend 2 Energy and choose one creature within 60 feet who can hear you. For the next 10 minutes, they can add your Charisma score to one ability check, attack roll, or saving throw. They must choose before rolling. Can only have one Bardic Inspiration at a time
+### Words of Inspiration
+- **Prerequisites:** Invoker trait, Cha 5
+- **Benefit:** As 1 [Minor] action, spend 2 Energy and speak a word of power to one creature within 60 feet you can see. For the next 10 minutes, they can add your Charisma score to one ability check, attack roll, or saving throw. They must choose before rolling. Can only have one Words of Inspiration active at a time
 - **Usage:** Spend 2 Energy per inspiration
-- **Note:** Creates tension between using Energy for spells vs. inspiration
+- **Note:** You speak a fragment of their true name, temporarily empowering them. Creates tension between using Energy for weaves vs. inspiration
 
-### Song of Rest
-- **Prerequisites:** Bardic Magic trait, Cha 4, Perform 4
-- **Benefit:** During a short rest, you can perform for your allies. All allies who can hear you regain additional HP equal to your Charisma score
+### Words of Recovery
+- **Prerequisites:** Invoker trait, Cha 4, any social skill 4
+- **Benefit:** During a short rest, you can speak words of power over your allies. All allies you can see within 30 feet regain additional HP equal to your Charisma score
 - **Usage:** Once per short rest
+- **Note:** You speak healing syllables and restorative fragments of true names
 
-### Countercharm
-- **Prerequisites:** Bardic Magic trait, Cha 5, Perform 5
-- **Benefit:** As 1 [Combat] action, start a performance. Until the start of your next turn, you and allies within 30 feet subtract 1 from both dice on saves against Charmed and Frightened
+### Words of Warding
+- **Prerequisites:** Invoker trait, Cha 5, any Mastery 5
+- **Benefit:** As 1 [Combat] action, speak a protective word of power. Until the start of your next turn, you and allies you can see within 30 feet subtract 1 from both dice on saves against Charmed and Frightened
 - **Usage:** Unlimited
+- **Note:** You speak the true names of courage and clarity, warding against mental effects
 
-### Cutting Words
-- **Prerequisites:** Bardic Inspiration feat, Cha 6
-- **Benefit:** When a creature you can see within 60 feet makes an attack roll, ability check, or damage roll, you can use your reaction and spend 2 Energy to add 1 to all their dice for that roll
+### Disruptive Words
+- **Prerequisites:** Words of Inspiration feat, Cha 6
+- **Benefit:** When a creature you can see within 60 feet makes an attack roll, ability check, or damage roll, you can use your reaction and spend 2 Energy to speak their true name with a discordant syllable, adding 1 to all their dice for that roll
 - **Usage:** Once per round (reaction), costs 2 Energy
+- **Note:** Speaking someone's true name incorrectly disrupts their actions
 
-### Magical Secrets
-- **Prerequisites:** Bardic Magic trait, Tier 5+, any two Masteries at 5+
-- **Benefit:** Learn weaves from any spell list that you can cast with your available 5 energies. Choose 2 weaves you've seen cast or researched. You can now cast them as if they were bard weaves
+### Forbidden Names
+- **Prerequisites:** Invoker trait, Tier 5+, any two Masteries at 5+
+- **Benefit:** You have learned true names beyond your normal understanding. Choose 2 weaves you've witnessed or researched that you can cast with your available 5 energies. You can now cast them as if they were invoker weaves
 - **Usage:** Passive (expands spell list)
-- **Note:** Can be taken multiple times at Tier 5, 7, and 8, gaining 2 more weaves each time
+- **Note:** Can be taken multiple times at Tier 5, 7, and 8, gaining 2 more weaves each time. Represents discovering new true names through observation and study
 
-### Peerless Skill
-- **Prerequisites:** Bardic Inspiration feat, Cha 6, Tier 6+
-- **Benefit:** When you make an ability check, you can spend 2 Energy to add your Charisma score to the result (choose before or after rolling)
+### Words of Mastery
+- **Prerequisites:** Words of Inspiration feat, Cha 6, Tier 6+
+- **Benefit:** You've learned to speak your own true name for momentary empowerment. When you make an ability check, you can spend 2 Energy to add your Charisma score to the result (choose before or after rolling)
 - **Usage:** Spend 2 Energy per use
+- **Note:** Speaking your own true name is dangerous but powerful
+
+### Resonant Speech
+- **Prerequisites:** Invoker trait, Cha 4, Air Mastery 3
+- **Benefit:** Your spoken words of power resonate with enhanced magical frequency. When you cast a weave using Air as the primary or supporting energy, you can choose to have it affect one additional target within range (if the weave targets creatures) or increase its area by 5 feet (if it's an area effect)
+- **Usage:** Passive enhancement to Air-based weaves
+- **Note:** Your mastery of sound allows words to echo with greater power
+
+### True Name Binding
+- **Prerequisites:** Invoker trait, Cha 6, Space Mastery 4
+- **Benefit:** When you successfully affect a creature with an enchantment or charm effect, you have learned a fragment of their true name. Until your next long rest:
+  - You can sense their general direction and distance (within 1 mile)
+  - They have Misfortune on saves against your weaves
+  - You can target them with weaves even without line of sight (as long as they're in range)
+- You can maintain one True Name Binding at a time. Creating a new binding ends the previous one
+- **Usage:** Triggered by successful enchantment/charm effects
+- **Note:** Learning someone's true name gives you power over them
+
+---
+
+## MAGICAL FEATS - INFUSER (ARTIFICER)
+
+### Infusion Specialist
+- **Prerequisites:** Infuser trait, Int 4
+- **Benefit:** Your Imbue Item ability can now be used twice per short rest (instead of once). You can choose from expanded infusion options:
+  - **Weapon Infusions:** +1d8 damage on next hit OR weapon gains Finesse property for 1 minute OR weapon's range increases by 50% for 1 minute
+  - **Armor Infusions:** +1 DR for 1 minute OR wearer gains Fortune on next save OR wearer gains +10 feet movement speed for 1 minute
+  - **Tool/Item Infusions:** Item gains magical light (30ft radius) for 1 hour OR item becomes unbreakable for 1 minute OR item grants Subtract 1 from one skill check using it
+- Duration of infusions increases to 10 minutes
+- **Usage:** Twice per short rest
+
+### Enhanced Infusion
+- **Prerequisites:** Infusion Specialist feat, Int 5
+- **Benefit:** Your infusions have become significantly more powerful:
+  - Imbue Item can now be used three times per short rest
+  - Weapon infusions: +2d8 damage on next hit (instead of +1d8)
+  - Armor infusions: +2 DR for 1 minute (instead of +1 DR)
+  - You can maintain two simultaneous infusions (instead of one)
+  - Infusions last until used or until your next long rest (instead of 10 minutes)
+- **Usage:** Three times per short rest
+
+### Replicate Magic Item
+- **Prerequisites:** Infuser trait, Int 4, Earth Mastery 3
+- **Benefit:** You can create temporary versions of common magic items. Spend 10 minutes and 4 Energy to create a temporary replica. Choose from:
+  - **Bag of Holding:** Container holds 500 lbs in 64 cubic feet, weighs 15 lbs regardless of contents
+  - **Everburning Torch:** Produces light equivalent to a torch, never goes out
+  - **Rope of Climbing:** 60ft rope that animates on command to climb, knot, or coil
+  - **Sending Stones (pair):** Two stones that allow 25-word messages between holders once per day
+  - **Immovable Rod:** Rod that becomes fixed in place when activated, holds 8,000 lbs
+- Item functions exactly as the magic item for 24 hours, then becomes mundane
+- You can maintain one replicated item at a time
+- Creating a new replicated item causes the previous one to become mundane
+- **Usage:** 10 minutes and 4 Energy per item
+
+### Spell-Storing Item
+- **Prerequisites:** Infuser trait, Int 5, any Mastery 4
+- **Benefit:** You can store a weave in an object for later use:
+  - Spend 10 minutes to store one weave you know (costing 4 Energy or less) into a held object
+  - The weave must have a casting time of 2 actions or less
+  - Anyone can activate the stored weave as 1 [Combat] action by using the object
+  - The stored weave uses your Potentials and Masteries for its effect
+  - You can maintain one spell-storing item at a time
+  - The stored weave remains in the object until used or until you store a different weave
+  - When activated, you must spend the Energy cost from your pool (even if someone else activates it)
+- **Usage:** 10 minutes to store, one item active at a time
+
+### Homunculus Servant
+- **Prerequisites:** Infuser trait, Int 5, Earth Mastery 3
+- **Benefit:** You can create a small magical construct to serve you:
+  - Spend 1 hour and 8 Energy to create a Tiny homunculus
+  - **Homunculus Stats:** HP = Your Earth Potential × 4, DR = 2, Speed 20ft, Fly 40ft
+  - **Actions:** Can take Move, Interact, or Help actions on its turn
+  - **Channel Infusion:** You can deliver touch-range weaves through your homunculus (as if you touched the target)
+  - **Telepathic Bond:** You can communicate telepathically with it within 100 feet
+  - **Senses:** You can see through its eyes and hear through its ears as a [Minor] action
+  - If destroyed, you can recreate it with the same ritual
+  - You can have only one homunculus at a time
+- **Usage:** 1 hour and 8 Energy to create
+
+### Alchemical Savant
+- **Prerequisites:** Int 4, Craft skill 2
+- **Benefit:** You've learned to blend mundane alchemy with magical principles:
+  - You can craft alchemical items (acids, alchemist's fire, antitoxins, healing poultices) in half the normal time
+  - When you use an alchemical item you crafted, it has enhanced effects:
+    - **Acids/Alchemist's Fire:** +1d8 damage
+    - **Antitoxins:** Grants Fortune on save against poison
+    - **Healing Poultices:** +4 HP restored
+  - Once per short rest, you can spend 1 Energy and 1 [Combat] action to enhance an alchemical item, doubling its effects for one use
+- **Usage:** Passive enhancement, one magical boost per short rest
+
+### Arcane Armor
+- **Prerequisites:** Int 4, wearing armor
+- **Benefit:** You've learned to integrate magic into your armor:
+  - Choose one suit of armor you're wearing - it becomes your Arcane Armor
+  - You can doff/don your Arcane Armor as 1 [Minor] action (instead of normal time)
+  - Your Arcane Armor can't be removed from you against your will
+  - While wearing it, you ignore the Stealth penalty from the armor
+  - If you have the Infuser trait:
+    - You can use your Arcane Armor as a spellcasting focus
+    - While wearing it, you gain +1 to your Energy Pool maximum per tier
+    - You can cast touch-range weaves with a range of 5 feet instead
+- **Usage:** Passive
+
+### Arcane Firearm
+- **Prerequisites:** Int 4, Ranged Combat 2
+- **Benefit:** You've created a specialized magical weapon that channels your power:
+  - Choose one wand, rod, or ranged weapon - it becomes your Arcane Firearm
+  - When you cast a damage-dealing weave using your Arcane Firearm as a focus:
+    - Add +1d8 to one damage roll of the weave
+    - The weave's visual effects are enhanced (glyphs spiral from the firearm, violet energy trails)
+  - You can change which item is your Arcane Firearm over the course of a long rest
+  - If you lose your Arcane Firearm, you can spend 1 hour creating a new one from a suitable item
+- **Usage:** Passive enhancement to damage weaves
+
+### Flash of Genius
+- **Prerequisites:** Int 5
+- **Benefit:** Your analytical mind can assist allies in critical moments:
+  - When you or an ally you can see within 30 feet makes an ability check or saving throw, you can use your [Reaction] to add your Intelligence modifier to the roll
+  - This represents quick tactical advice, geometric calculations, or sudden insights
+  - You can use this ability a number of times per long rest equal to your Intelligence modifier (minimum 1)
+- **Usage:** Reaction, limited uses per long rest
+
+### Tool Expertise
+- **Prerequisites:** Int 3, Craft skill 2
+- **Benefit:** You're a master of working with tools and equipment:
+  - Choose three types of artisan's tools (smith's tools, tinker's tools, alchemist's supplies, jeweler's tools, etc.)
+  - When using these tools: Subtract 2 from both dice on Craft checks
+  - You can craft items in half the normal time when using these tools
+  - You can repair damaged items in the field (1 hour work, restore item to functionality)
+  - You gain Fortune on checks to identify the maker, quality, or purpose of crafted items
+- **Usage:** Passive
+- **Note:** Can be taken multiple times, choosing different tools each time
+
+### Magical Tinkering
+- **Prerequisites:** Int 3, Devices skill 2
+- **Benefit:** You can create minor magical trinkets and curiosities:
+  - Spend 1 minute to imbue a Tiny nonmagical object with one of the following properties (lasts until your next long rest):
+    - **Light:** Emit bright light in 5-foot radius, dim light for 5 feet beyond that
+    - **Message:** Play a recorded message (up to 6 seconds) when tapped
+    - **Sound/Odor:** Emit an odor or nonverbal sound continuously
+    - **Static Image:** Display a static visual image on one surface (picture, text, pattern)
+  - You can have a number of these active equal to your Intelligence modifier (minimum 3)
+  - Creating a new one beyond your limit causes the oldest to lose its magic
+- **Usage:** 1 minute per trinket
 
 ---
 
@@ -1009,5 +1156,5 @@ Tier 2: Reckless Attack, Uncanny Dodge
 ### The Magical Warrior (Wizard with combat training)
 Starting: Power Attack + Alert
 Tier 1: Shield Master
-Tier 2: Arcane Recovery, Evocation Focus
-*Note: Has Magical Aptitude trait for spellcasting*
+Tier 2: Arcane Recovery, Destruction Focus
+*Note: Has Mageborn trait for spellcasting*

@@ -20,6 +20,29 @@
 -   **Saving Throw:** None (healing weave, no resistance)
 -   **Success Scaling:** 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8)
 
+### Heroism
+-   **Primary Energy:** Positive 2 (inspiring courage and vitality)
+-   **Supporting Energy:** Time 2 (duration 1 minute, concentration)
+-   **Total Cost:** 4 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Positive Potential + Positive Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Touch a willing creature. For the duration, target is immune to Frightened condition and gains temporary HP equal to your Positive Potential at the start of each of its turns. When weave ends, any remaining temporary HP is lost.
+-   **Saving Throw:** None (beneficial buff, willing target only)
+-   **Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = affects 2 targets at once
+-   **Note:** Invokers speak words of valor and the target's heroic true name
+
+### Hideous Laughter
+-   **Primary Energy:** Negative 2 (overwhelming target with uncontrollable mirth)
+-   **Supporting Energy:** Time 2 (duration up to 1 minute, concentration)
+-   **Total Cost:** 4 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Negative Potential + Negative Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Target at close range (30ft) makes Will save. Compare your weaving successes to their save successes. If you have more, target falls Prone with uncontrollable laughter, becoming Incapacitated and unable to stand. Can repeat save at end of each turn (with Fortune if they took damage since last turn).
+-   **Saving Throw:** Will (to resist mental effect)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = no save if damaged, 4 = 10 minutes
+-   **Incapacitated Condition (at Net 2+):** Target can't take actions or reactions, is Prone, and can't stand. Repeats save at end of each turn.
+-   **Note:** Creatures with Intelligence 4 or less aren't affected. Invokers speak absurd fragments of the target's true name
+
 ### Hold Person
 -   **Primary Energy:** Space 4 (freezing target in place, paralysis)
 -   **Supporting Energy:** Time 2 (duration up to 1 minute)
@@ -29,6 +52,19 @@
 -   **Effect:** Humanoid target at medium range (60ft) makes Will save. Compare your weaving successes to their save successes. If you have more, target is Paralyzed. Target can repeat save at end of each turn to break free.
 -   **Saving Throw:** Will (to resist mental binding)
 -   **Success Scaling (Net successes = Your successes - Their successes):** 1 = Paralyzed 1 round, 2 = Paralyzed (full effect, 1 minute), 3 = target has Misfortune on saves, 4 = 10 minutes or affects 2 targets
+
+### Hypnotic Pattern
+-   **Primary Energy:** Space 4 (creating mesmerizing illusion)
+-   **Supporting Energy:** Time 2 (duration 1 minute, concentration)
+-   **Total Cost:** 6 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Create a twisting pattern of colors in 30-foot cube at medium range (60ft). All creatures in area make Will saves. Compare your weaving successes to each target's save successes. Those you beat become Charmed and Incapacitated, staring at the pattern. Weave ends for a creature if it takes damage or if someone uses action to shake them. Creatures immune to charm are immune.
+-   **Saving Throw:** Will (to resist hypnotic effect)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 40-foot cube, 4 = 10 minutes (very hard to break)
+-   **Charmed + Incapacitated Condition (at Net 2+):** Target can't take actions or move, stares at pattern. Damage or being shaken (action by ally) ends effect for that creature.
+-   **Note:** Invokers weave visible sound patterns or resonant syllables into mesmerizing forms
+
 
 ## I
 
@@ -92,6 +128,17 @@
 -   **Success Scaling:** 1 = makes loud noise but doesn't open, 2 = opens, 3 = silent, 4 = opens and disarms any traps
 
 ## L
+
+### Lesser Restoration
+-   **Primary Energy:** Positive 4 (cleansing lesser afflictions)
+-   **Supporting Energy:** None (touch range, instantaneous)
+-   **Total Cost:** 4 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Positive Potential + Positive Mastery (2d8 only)
+-   **Effect:** Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned.
+-   **Saving Throw:** None (beneficial restoration)
+-   **Success Scaling:** 1 = temporary relief (10 minutes), 2 = full effect, 3 = removes 2 conditions, 4 = affects creature at close range (30ft) instead of touch
+-   **Note:** Invokers speak the creature's true name as it should be, free from affliction
 
 ### Levitate
 -   **Primary Energy:** Air 3 (lifting target into air)
@@ -157,6 +204,17 @@
 -   **Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total)
 -   **Stunned Condition (at Net 4):** Target is Stunned until the end of their next turn, unable to take actions as electricity courses through their body.
 
+### Locate Object
+-   **Primary Energy:** Space 4 (sensing specific object's location)
+-   **Supporting Energy:** Time 2 (duration 10 minutes, concentration)
+-   **Total Cost:** 6 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Sense the direction to a specific object you describe (must have seen it before) within 1,000 feet. If object is moving, you learn its direction of movement. Weave can't locate object if any thickness of lead blocks the path.
+-   **Saving Throw:** None (divination)
+-   **Success Scaling:** 1 = 100 feet range, 2 = full effect (1,000 feet), 3 = 1 mile range, 4 = can locate general type of object (e.g., "stairs" or "freshwater") instead of specific item
+-   **Note:** Invokers speak the object's true name to find it
+
 ## M
 
 ### Mage Armor
@@ -221,6 +279,17 @@
 -   **Effect:** Up to 6 creatures you choose within range heal 16 HP each.
 -   **Saving Throw:** None (healing weave, no resistance)
 -   **Success Scaling:** 0 = no healing, 1 = 8 HP each, 2 = 16 HP each, 3 = 24 HP each, 4 = 32 HP each
+
+### Message
+-   **Primary Energy:** Air 2 (transmitting sound across distance)
+-   **Supporting Energy:** None (close range 30ft, instantaneous)
+-   **Total Cost:** 2 Energy
+-   **Action:** Simple Weave (1 action) - Does NOT provoke opportunity attacks
+-   **Weaving Roll:** Air Potential + Air Mastery (2d8 only)
+-   **Effect:** Point at a creature within close range (30ft) and whisper a message. Target (and only target) hears the message and can whisper a reply that only you hear. Weave transmits through most barriers but is blocked by 1 foot of stone, 1 inch of common metal, thin sheet of lead, or 3 feet of wood.
+-   **Saving Throw:** None (communication)
+-   **Success Scaling:** 1 = one-way message only, 2 = full effect (can reply), 3 = medium range (60ft), 4 = long range (120ft)
+-   **Note:** Perfect cantrip for invokers, whispering across distance. Does NOT provoke opportunity attacks.
 
 ### Minor Illusion
 -   **Primary Energy:** Space 2 (small sensory illusion, minor effect)
