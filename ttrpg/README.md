@@ -79,6 +79,7 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 
 - **24 XP per session** (awarded equally to all players)
 - Spend XP on:
+  - Untrained Skills: Rank 0 -> 1 costs 4 xp
   - Skills: 8 × current rank
   - Attributes: 16 × current rank
   - Potentials (if magical): 16 × current rank
@@ -90,8 +91,11 @@ The rules are broken down into different sections for easier management:
 
 ```
 legends/ttrpg/
-├── action.md
+├── actions.md
+├── ancestry.md
 ├── backgrounds.md
+├── bestiary_framework.md
+├── bestiary.md
 ├── character-creation.md
 ├── combat.md
 ├── conditions.md
@@ -99,8 +103,11 @@ legends/ttrpg/
 ├── equipment.md
 ├── feats.md
 ├── flaws.md
+├── gear.md
 ├── magic-system.md
+├── magic.md
 ├── README.md
+├── skills.md
 ├── traits.md
 ├── weaves(a-g).md
 ├── weaves(h-m).md
@@ -133,6 +140,16 @@ legends/ttrpg/
 | 8 | 1560+ | ~10+ | 2 start + 16 purchased | Level 20 |
 
 ## Version History
+
+### v0.4.1 - Invoker and Infuser
+- Invoker replaces bard (homebrew world flavor)
+- Infuser = Artificer. Based on original idea for alchemist. may still make alchemist
+- Added a character sheet for playtesting
+- Python script for combat testing (work in progress)
+- Necromantic - banned/forbidden magic type (homebrew world flavor)
+- Magic user classification (Arcanist/Diabolist/Divine)
+- Created charmed condition
+- add gp cost to equipment/gear
 
 ### v0.4.0 - Roll Under Conversion
 - System moved from roll under-and-equal to Roll under.
