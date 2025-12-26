@@ -95,7 +95,7 @@ All characters have access to these combat options:
 
 ##### Channel Divinity [Combat]
 - **Cost:** 2 [Combat] actions
-- **Requirements:** Divine Gift advantage
+- **Requirements:** Divine Gift Trait
 - **Range:** 30-foot radius centered on you
 - **Effect:** Automatically succeeds for Heal/Harm intents (see Part 7 for full details)
 - **Types:** Heal, Harm, Turn (undead), Command (undead)

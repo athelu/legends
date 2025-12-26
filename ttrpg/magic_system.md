@@ -1,8 +1,8 @@
 # D8 TTRPG - Part 7: Magic System - Weaving
 
-### Three Paths to Magic
+### Six Paths to Magic
 
-#### Arcane Weaving (Magical Aptitude advantage)
+#### Arcane Weaving (Mageborn Trait)
 - Studied magic, intellectual manipulation of elements
 - Uses Intelligence as Casting Stat
 - Bonus to one elemental energy (Earth, Air, Fire, Water)
@@ -10,31 +10,101 @@
 - **Ritual Casting:** Can cast any weave as a 10-minute ritual for half
   Energy cost (minimum 1). Cannot be used in combat.
 
-#### Divine Weaving (Divine Gift advantage)
+#### Divine Weaving (Divine Gift Trait)
 - Channeled magic, spiritual connection to life/death forces or nature
 - Uses Wisdom as Casting Stat
 - Bonus to chosen divine/elemental energies (see Divine Paths)
 - Includes Channel Divinity ability
 
-#### Bardic Weaving (Bardic Magic advantage)
+#### Invoker Weaving (Invoker Trait)
 - Performance magic, charisma-based casting
 - Uses Charisma as Casting Stat
 - Limited to 4 energies (always includes Air)
 - Includes Inspiring Performance ability
 
+#### Innate Weaving (Sorcerous Origin Trait)
+- Innate magic use from Bloodline
+- Uses Charisma as Casting Stat
+- Bonus to Primary Magic Potential based upon Bloodline
+- Includes Sorcery points to modify weaves
+
+#### Patron Weaving (Eldritch Pact Trait)
+- Powers drawn from an otherworldy patron
+- Uses Charisma as Casting Stat
+- Bonus to Primary Magic Potential based upon Patron
+- Limited to 5 energies
+- Grants Eldritch blast ability
+
+#### Paladin Weaving (Divine Warrior Trait)
+- Spiritual warrior with an oath to protect and defend
+- Uses Charisma as Casting Stat
+- Attribute Bonuses from chosen Oath
+- Grants lay on hands healing ability
+
+#### Infuser Weaving (Infuser Trait)
+- Object infusion magic, intelligence-based casting
+- Uses Intelligence as Casting Stat
+- Limited to 5 energies (always includes Earth)
+- Includes Imbue Item ability
+- Requires touch to infuse objects
+
 ### Comparison of Magic Types
 
-| Feature | Magical Aptitude | Divine Gift | Bardic Magic |
-|---------|-----------------|-------------|--------------|
-| Casting Stat | Intelligence | Wisdom | Charisma |
-| # of Energies | 8 | 8 | 5 |
-| Primary Energy | Elemental (choice) | Divine or Elemental | Air (fixed) |
-| Secondary Energy | Any (choice) | Divine or Elemental | Positive (fixed) |
-| Fixed Energies | None | None | Air, Positive, Space, Time |
-| Chosen Energy | All 8 | All 8 | 1 (Earth/Fire/Water/Negative) |
-| Special Ability | Ritual Casting | Channel Divinity | Inspiring Performance |
-| Energy Pool | Full (8 Potentials) | Full (8 Potentials) | Limited (5 Potentials) |
-| Focus | Versatile arcane | Divine/nature power | Support, utility, performance |
+| Feature | Mageborn | Divine Gift | Invoker | Infuser | Sorcerous Origin | Eldritch Pact | Divine Warrior |
+|---------|----------|-------------|---------|---------|------------------|---------------|----------------|
+| **Trait** | Arcane Weaving | Divine Weaving | Invoker Weaving | Infuser Weaving | Innate Weaving | Patron Weaving | Paladin Weaving |
+| **Casting Stat** | Intelligence | Wisdom | Charisma | Intelligence | Charisma | Charisma | Charisma |
+| **# of Energies** | 8 | 8 | 5 | 5 | 8 | 5 | 4 |
+| **Primary Energy** | Elemental (choice) | Divine or Elemental | Air (fixed) | Earth (fixed) | Bloodline-dependent | Patron-dependent | Oath-dependent |
+| **Fixed Energies** | None | None | Air, Positive, Space, Time | Earth, Space, Positive, Time | None | Patron-dependent | Oath-dependent |
+| **Special Ability** | Ritual Casting | Channel Divinity | Words of Power | Imbue Item | Sorcery Points | Pact Magic (short rest) | Lay on Hands |
+| **Energy Pool** | Full (8 Potentials) | Full (8 Potentials) | Limited (5 Potentials) | Limited (5 Potentials) | Full (8 Potentials) | Limited (5 Potentials) | Limited (4 Potentials) |
+| **Focus** | Versatile arcane | Divine/nature power | True names, line of sight | Object infusion, touch required | Innate bloodline magic | Otherworldly patron power | Martial divine warrior |
+| **Unique Traits** | Half-cost rituals | Channel options | Always includes Air, requires LoS | Always includes Earth, touch required | Metamagic via points | Short rest energy regen | Healing ability, short rest regen |
+
+### Magic Effect Types & Terminology
+
+#### Damage Effects (Destructive Magic)
+Weaves that deal direct harm through elemental or negative energy. Uses Fire, Air, Water, Earth, or Negative as primary energy. These effects are sometimes called "evocations" in traditional wizard terminology, but in D8 TTRPG we simply refer to them as damage weaves. Key characteristic: targets take HP damage.
+
+**Common Examples:** Fireball, lightning bolt, ice storm, acid splash, necrotic blast
+
+#### Enchantment Effects (Mind-Affecting Magic)
+Any weave that alters a creature's mental state, emotions, or thoughts without direct mind control. Typically uses Negative energy (for fear, sleep, mental assault) or Positive energy (for courage, inspiration, euphoria). Creatures immune to psychic effects or described as "mindless" are immune to enchantment effects.
+
+**Includes:** Charm, fear, sleep, emotion manipulation, mental influence
+**Does NOT include:** Direct mind control (compulsion), illusions, or physical transformations
+**Common Examples:** Charm person, sleep, cause fear, heroism
+
+**Immunity Note:** When a creature is listed as "immune to enchantment effects" or "immune to enchantment effects (charm, fear, sleep)," they cannot be affected by any weaves that rely on mental/emotional manipulation. Constructs, undead, and mindless creatures typically have this immunity.
+
+#### Illusion Effects (False Perception)
+Weaves that create false sensory information or conceal the truth. Primarily uses Space energy to manipulate perception and create false images or sounds. May also use Air energy for auditory illusions or Negative energy for shadow-based illusions.
+
+**Key Characteristic:** Creates false perceptions, doesn't change reality
+**Seeing Through Illusions:** Creatures with truesight, blindsight, or tremorsense may see through illusions automatically. Physical interaction typically reveals an illusion as false (you can pass your hand through it, it has no substance, etc.).
+
+**Common Examples:** Silent image, invisibility, disguise self, major image
+
+#### Protective Effects (Warding Magic)
+Weaves that create barriers, wards, or defensive magic. Primarily uses Space energy to create force barriers or shield effects. Traditional wizards call this "abjuration," but we refer to them as protective weaves or wards.
+
+**Common Examples:** Shield, mage armor, protection from energy, counterspell, dispel magic
+
+#### Transformation Effects (Physical Alteration)
+Weaves that physically change or enhance creatures or objects. Uses elemental energies (Earth, Fire, Water, Air) to reshape matter, or Positive/Negative to enhance/wither living tissue. Traditional terminology calls this "transmutation."
+
+**Common Examples:** Polymorph, enlarge/reduce, stone shape, enhance ability
+
+#### Summoning & Teleportation Effects (Spatial Manipulation)
+Weaves that move creatures/objects through space or bring things from other places. Uses Space energy as primary, often with Time energy for duration of summons. Traditional wizards call this "conjuration."
+
+**Common Examples:** Teleport, dimension door, summon creature, create food and water
+
+#### Information & Divination Effects (Temporal/Spatial Perception)
+Weaves that gather information, predict the future, or perceive distant locations. Uses Space energy (scrying, detection) or Time energy (foresight, prophecy). Traditional terminology calls this "divination."
+
+**Common Examples:** Detect magic, scrying, foresight, identify, locate object
 
 ### The Eight Magical Energies
 1.  Earth - Stone, metal, earth magic
@@ -45,6 +115,76 @@
 6.  Negative - Decay, necrotic, shadow, death
 7.  Time - Haste, slow, temporal manipulation
 8.  Space - Teleportation, portals, distance, barriers
+
+
+### Pneuma and Necromancy
+
+**Pneuma** is the soul-essence that connects all living beings to the planes. Every creature's pneuma acts as a conduit through which magical energies flow. When a mage weaves fire or a cleric channels healing, they are directing elemental and conceptual energies *through* their pneuma—but they are not manipulating the pneuma itself.
+
+**The Eight Energies:**
+- **Elemental:** Earth, Air, Fire, Water (Physical forces)
+- **Vital:** Positive (life, growth, healing) and Negative (entropy, decay, harm)
+- **Conceptual:** Space (distance, barriers, perception) and Time (duration, speed, causality)
+
+All eight energies flow *through* pneuma as a conduit, but standard weaving does not manipulate souls directly.
+
+#### Necromancy: The Forbidden Art
+
+Necromancy is not simply "death magic" or harmful spells—it is the direct manipulation, binding, trapping, or consumption of pneuma (souls) themselves. This forbidden knowledge:
+
+- **Was mastered by the First Men** through their study of pneuma and its connection to the outer realms
+- **Has been lost to time** and is unknown to current inhabitants of Athelu
+- **Tarnishes the caster's pneuma**, attracting malevolent daemons and corrupting the soul
+- **Requires GM permission** and significant story justification to learn
+- **Cannot be taken at character creation**—it must be discovered through gameplay
+
+#### The [Necromantic] Keyword
+
+Weaves marked with the **[Necromantic]** keyword are forbidden and represent lost First Men knowledge. These weaves don't merely channel Negative energy for harm—they bind, trap, reshape, or consume souls:
+
+**Examples of Necromantic Weaves:**
+- **Animate Dead** - Binding soul fragments or echoes to corpses
+- **Soul Cage** - Trapping a departing soul in a vessel
+- **Magic Jar** - Displacing souls between bodies
+- **Speak with Dead** - Forcing communion with departed souls
+- **Create Undead** - Binding stronger soul remnants to corpses
+- **Finger of Death** - Killing and instantly raising as undead (soul binding)
+
+**Non-Necromantic Uses of Negative Energy:**
+
+The following are *not* necromantic, as they channel entropy and harm without manipulating souls:
+- **Inflict Wounds** - Channeling decay and necrotic energy
+- **Harm** - Draining life force
+- **Blight** - Withering and entropy
+- **Bestow Curse** - Imposing misfortune
+- **Shadow-based effects** - Manipulating darkness and shadow
+- **Ray of Enfeeblement** - Weakening through entropy
+
+#### Identifying Necromantic Intent
+
+**Ask these questions:**
+1. Does the weave bind, trap, or manipulate a soul?
+2. Does it create undead (which requires binding soul energy to corpses)?
+3. Does it force interaction with departed souls against their will?
+4. Does it consume or damage pneuma directly?
+
+If yes to any of these, the weave is necromantic and requires the **[Necromantic]** keyword.
+
+**Using Negative Energy ≠ Necromancy**
+
+A cleric channeling Negative energy to harm living creatures, or a wizard casting Blight to wither plants, is using entropy and decay—not manipulating souls. These are standard (if dark) magical practices and do not carry the corruption and forbidden nature of true necromancy.
+
+#### GM Guidelines for Necromancy
+
+If players discover lost First Men texts or forbidden knowledge:
+
+1. **Require significant in-game discovery** - This cannot simply be learned through normal advancement
+2. **Warn of consequences** - Necromancy attracts daemons and corrupts the caster's pneuma
+3. **Consider alignment and story** - This is dark magic with serious narrative weight
+4. **Use sparingly** - Necromancy should remain rare and dangerous, not a common tool
+5. **Apply penalties** - Regular use might impose Misfortune on certain rolls, attract unwanted attention, or cause other story consequences
+
+The forbidden nature of necromancy is a feature, not a bug—it should feel dangerous and consequential when encountered.
 
 #### Magical Potentials & Mastery
 
@@ -67,20 +207,16 @@ Energy regenerates fully after long rest.
 
 #### Determining Magical Potentials
 
-##### Magical Aptitude (Arcane)
-- Roll 8d8, assign one result to each energy
-- Choose Elemental Affinity (Earth, Air, Fire, or Water)
-- That Potential = highest roll + 2 (maximum 8)
+How you determine your Magical Potentials depends on which magical trait you selected during character creation. See **Part 4: Traits** for complete details on:
 
-##### Divine Gift (Divine)
-- Roll 8d8, assign one result to each energy
-- Choose Divine Path:
-  - Cleric Path: Choose Divine Affinity (Positive or Negative). Chosen affinity = highest roll + 2 (max 8), other divine energy = any other roll + 1
-  - Druid Path: Choose Elemental Affinity (Earth, Air, Fire, or Water) = highest roll + 2 (max 8), and choose one divine energy (Positive or Negative) = any other roll + 1
+- **Mageborn** (Arcane Weaving)
+- **Divine Gift** (Divine Weaving)
+- **Invoker Magic** (Invoker Weaving)
+- **Sorcerous Origin** (Innate Weaving)
+- **Eldritch Pact** (Patron Weaving)
+- **Divine Warrior** (Paladin Weaving)
 
-##### Enhanced Options (Additional Advantages)
-- Gifted Mage (-2 points, requires magical advantage): Roll 9d8, drop lowest, assign remaining 8. Advantage bonuses still apply.
-- Balanced Channeler (-1 point, requires magical advantage): Use fixed array: 5,4,3,3,2,2,1,1. Advantage bonuses still apply.
+Each trait specifies how many dice to roll, which energies you have access to, and which energies receive bonuses based on your chosen specialization (Elemental Affinity, Divine Path, Bloodline, Patron, or Oath).
 
 ### Weaving (Casting) Mechanics
 
@@ -96,7 +232,7 @@ Energy regenerates fully after long rest.
 #### Step 3: Make Weaving Roll
 - Roll Primary Potential + Primary Mastery (2d8)
 - If using supporting energy: Also roll Secondary Potential + Secondary Mastery (2d8)
-- Total possible: Up to 4 successes
+- Total possible: Up to 4 successes (5 with a critical roll)
 
 #### Step 4: Apply Overspending Penalties
 - If Energy Points spent exceed your Mastery in that energy:
@@ -126,7 +262,7 @@ Energy regenerates fully after long rest.
 - Maximum power/critical success
 - Damage: Maximum on one die or spectacular effect
 - Utility: Double duration or overwhelming power
-- May achieve permanency (see below)
+
 
 #### Weave Effect Scaling Tables
 
@@ -404,35 +540,6 @@ Simple Weaves represent raw magical energy channeled directly through the caster
 - Supporting: Touch (0) or +1 for Close range
 - Total: 3 Energy at touch, 4 at range
 
-#### Permanency Rules
-
-Permanency is not achieved through duration alone, but through exceptional weaving success. It represents the caster achieving such mastery that the effect becomes self-sustaining.
-
-##### Achieving Permanency
-- Cast the spell normally with appropriate duration energy investment
-- Achieve 4 successes on your weaving roll
-- The specific spell must list permanency as an option in its success
-  scaling
-
-##### What Can Be Made Permanent
-
-Eligible for Permanency (with 4 successes):
-- Structural changes: Walls, shaped stone/water/earth, passages
-- Enchantments on objects: Arcane locks, magical traps, glyphs
-- Created objects: Conjured items, fabricated materials
-- Bindings and wards: Planar bindings, protective circles, sealed portals
-- Environmental changes: Darkness, light, temperature alterations in fixed locations
-
-NOT Eligible for Permanency:
-- Buffs/debuffs on living creatures: Transformations, stat changes, conditions
-- Summoned creatures: Elementals, conjured beings
-- Ongoing energy effects: Sustained fire, continuous lightning, persistent storms
-- Mind-affecting magic: Charms, compulsions, sleep effects
-- Healing or damage: Cannot permanently heal or harm
-
-#### GM Guidance
-Permanency should feel earned and special. A 4-success weaving is rare (requiring high Potential/Mastery or fortunate rolls). Not every spell should offer permanency as an option---reserve it for effects that make narrative sense to become self-sustaining.
-
 ### Magic in Combat
 
 #### Attack Weaves (like Fire Bolt, Lightning)
@@ -545,11 +652,22 @@ The save type is determined by the effect being resisted:
 - Charm and compulsion
 - Illusions (to disbelieve)
 - Sleep and unconsciousness effects
+- **Note:** Creatures described as "mindless" or "immune to enchantment effects" automatically succeed on Will saves against enchantment effects (charm, fear, sleep, emotion manipulation). See **Magic Effect Types & Terminology** section for details.
 
 **When in Doubt:**
 - If it's an explosion or area damage → Reflex
 - If it changes your body or kills you → Fortitude
 - If it affects your mind or emotions → Will
+
+**Effect Type Guidelines:**
+- **Damage weaves** (destruction magic): Reflex for area effects, no save for single-target attack weaves
+- **Enchantment effects** (mind-affecting): Always Will save. Mindless creatures immune.
+- **Illusion effects** (false perception): Will save to disbelieve if suspicious. Some creatures see through automatically.
+- **Transformation effects** (physical alteration): Fortitude save for unwilling targets
+- **Teleportation/forced movement**: Reflex save for unwilling targets
+- **Protective effects** (buffs, wards): Usually no save (benefits target)
+
+For complete effect type definitions, see the **Magic Effect Types & Terminology** section for more information.
 
 ### Damage Resistance (DR) and Magical Damage
 
@@ -883,22 +1001,34 @@ Automatic for all Divine Gift characters.
 - Range: 30-foot radius centered on you
 - No Roll Required: Channeling automatically succeeds for Heal/Harm intents
 
+#### Available Channel Options by Divine Path
+
+**Good Paths (Cleric, Druid):**
+- Channel Positive - HEAL Intent
+- Channel Positive - HARM Intent (undead only)
+- Channel Positive - TURN Intent (undead only)
+
+**Evil Paths (Death Cleric, Blight Druid):**
+- Channel Negative - HEAL Intent (undead only)
+- Channel Negative - HARM Intent (living creatures)
+- Channel Negative - COMMAND Intent (undead only)
+
 #### The Six Channel Types
 
-##### 1. Channel Positive - HEAL Intent
+##### 1. Channel Positive - HEAL Intent (Good Paths Only)
 - ALL living creatures within range heal 1d8 HP per 4 Energy spent
 - Affects: Living creatures (anything that can be healed)
 - Does NOT affect: Undead
 - Indiscriminate: Heals friends AND enemies
 
-##### 2. Channel Positive - HARM Intent
+##### 2. Channel Positive - HARM Intent (Good Paths Only)
 - ALL undead within range take 1d8 positive damage per 4 Energy spent
 - Affects: Undead only
 - Does NOT affect: Living creatures
 - No save (raw divine power)
 - Indiscriminate: Damages ALL undead
 
-##### 3. Channel Positive - TURN Intent
+##### 3. Channel Positive - TURN Intent (Good Paths Only)
 - All undead within range must resist
 - Channeler rolls: Wisdom + Positive Mastery (2d8, count successes)
 - Each undead rolls: Will save (Wisdom + Luck, count successes)
@@ -907,20 +1037,20 @@ Automatic for all Divine Gift characters.
   - Undead equals or exceeds: Resists, no effect
 - Indiscriminate: Turns ALL undead
 
-##### 4. Channel Negative - HEAL Intent
+##### 4. Channel Negative - HEAL Intent (Evil Paths Only)
 - ALL undead within range heal 1d8 HP per 4 Energy spent
 - Affects: Undead only
 - Does NOT affect: Living creatures
 - Indiscriminate: Heals ALL undead
 
-##### 5. Channel Negative - HARM Intent
+##### 5. Channel Negative - HARM Intent (Evil Paths Only)
 - ALL living creatures within range take 1d8 negative damage per 4 Energy spent
 - Affects: Living creatures only (including the channeler!)
 - Does NOT affect: Undead
 - Reflex save (Agility + Luck): Count successes, reduce damage by 1d8 per success (minimum 0)
 - Indiscriminate: Damages caster, allies, AND enemies
 
-##### 6. Channel Negative - COMMAND Intent
+##### 6. Channel Negative - COMMAND Intent (Evil Paths Only)
 - Target one undead within range (not area effect)
 - Channeler rolls: Wisdom + Negative Mastery (2d8, count successes)
 - Target rolls: Will save (Wisdom + Luck, count successes)
@@ -933,3 +1063,5 @@ Automatic for all Divine Gift characters.
 - Heal intent: Only heals (never harms)
 - Harm intent: Only harms (never heals)
 - Special intents: Turn/Command require opposed rolls
+
+**Alignment Restriction:** Your Divine Path determines which channel options are available. Good paths (Cleric, Druid) use Positive energy to heal allies and destroy undead. Evil paths (Death Cleric, Blight Druid) use Negative energy to heal undead, harm living creatures, and command the dead.

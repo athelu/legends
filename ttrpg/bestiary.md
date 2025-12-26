@@ -434,7 +434,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 - **Immutable Form:** Immune to any weave that would alter its form (transformation, polymorph, etc.)
 
 **Creature Type Traits:**
-- **Construct:** Immune to poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified. Mindless: Immune to charm, fear, psychic effects. Does not need air, food, drink, or sleep.
+- **Construct:** Immune to poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified. Mindless: immune to enchantment effects (charm, fear, sleep), fear, psychic effects. Does not need air, food, drink, or sleep.
 
 **Resistances/Immunities:**
 - **Immunities:** Poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified, charm, fear, psychic damage, non-magical piercing and slashing damage

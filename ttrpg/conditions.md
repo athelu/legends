@@ -136,6 +136,24 @@
 **Note:** Dazed is less severe than Stunned (which prevents all actions)
 
 
+### Mental & Social Conditions
+
+#### Charmed
+- You regard the charmer as a friendly acquaintance
+- The charmer has Fortune (subtract 1 from both dice) on Charisma-based checks against you
+- You cannot attack the charmer or target them with harmful abilities/weaves
+- You can still act freely otherwise and defend yourself
+- You interpret the charmer's words and actions in the most favorable way possible
+- **Does NOT grant:** Mind control, forced obedience, or compulsion to follow commands
+- **Recovery:** 
+  - Condition ends immediately if charmer or their allies harm you
+  - Some charm effects allow Will save at end of each turn to end early
+  - Effect ends when duration expires
+- **Note:** You're friendly and suggestible, not dominated. You won't follow commands that are obviously harmful to yourself or that go against your core values. The charmer must still convince you through normal social interaction, they just have an easier time doing so.
+
+**Example:** A charmed guard won't attack their charmer, and might be convinced to let them pass with a good story. But they won't hand over the keys to the treasury or betray their lord without exceptional persuasion - being charmed makes you friendly, not stupid.
+**See Also:** For information about enchantment effects and which creatures are immune, see **Part 7: Magic System - Magic Effect Types & Terminology**.
+
 ### Incapacitation & Death States
 
 #### Asleep/Unconscious (Incapacitated)

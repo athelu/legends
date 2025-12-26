@@ -118,7 +118,7 @@ Every character receives **2 free feats** at character creation. These represent
 
 These starting feats do NOT count against your tier feat limits.
 
-### Traits and Flaws (Advantages/Disadvantages)
+### Traits and Flaws
 
 #### Core Rule
 -   Traits cost points
