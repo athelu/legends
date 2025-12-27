@@ -1,0 +1,102 @@
+[
+  {
+    "name": "Soldier",
+    "type": "background",
+    "img": "icons/svg/combat.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Soldier</h3><p>You have served in a military organization, learning discipline, tactics, and the brutal realities of warfare. Whether you served in a standing army, a mercenary company, or a militia, you know how to follow orders and work as part of a unit.</p><p><strong>Skill Proficiencies:</strong> Athletics, Intimidate</p><p><strong>Equipment:</strong> A rank insignia, a trophy from a fallen enemy, a set of common clothes, and a belt pouch containing 10 GP.</p>"
+      }
+    }
+  },
+  {
+    "name": "Scholar",
+    "type": "background",
+    "img": "icons/svg/book.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Scholar</h3><p>You spent years in study, whether at a formal academy, under the tutelage of a master, or through your own voracious reading. You've devoted yourself to learning and understanding the world through research and study.</p><p><strong>Skill Proficiencies:</strong> Arcane, History</p><p><strong>Equipment:</strong> A bottle of black ink, a quill, a small knife, a letter from a colleague, a set of common clothes, and a belt pouch containing 10 GP.</p>"
+      }
+    }
+  },
+  {
+    "name": "Criminal",
+    "type": "background",
+    "img": "icons/svg/mystery-man.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Criminal</h3><p>You have operated outside the law, whether as a burglar, smuggler, pickpocket, or perhaps something more sinister. You know the ins and outs of criminal enterprises and have connections to the underworld.</p><p><strong>Skill Proficiencies:</strong> Deception, Stealth</p><p><strong>Equipment:</strong> A crowbar, a set of dark common clothes including a hood, and a belt pouch containing 15 GP.</p>"
+      }
+    }
+  },
+  {
+    "name": "Noble",
+    "type": "background",
+    "img": "icons/svg/crown.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Noble</h3><p>You were born into privilege and wealth. You understand the ways of high society and have connections among the upper classes. Whether you embrace or reject your noble heritage, it has shaped who you are.</p><p><strong>Skill Proficiencies:</strong> History, Persuasion</p><p><strong>Equipment:</strong> A set of fine clothes, a signet ring, a scroll of pedigree, and a purse containing 25 GP.</p>"
+      }
+    }
+  },
+  {
+    "name": "Folk Hero",
+    "type": "background",
+    "img": "icons/svg/farmer.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Folk Hero</h3><p>You come from humble origins but are destined for greatness. The common folk see you as their champion, someone who stood up to tyranny or injustice. Your deeds, whether legendary or modest, have earned you renown among ordinary people.</p><p><strong>Skill Proficiencies:</strong> Wilderness, Perception</p><p><strong>Equipment:</strong> A set of artisan's tools, a shovel, an iron pot, a set of common clothes, and a belt pouch containing 10 GP.</p>"
+      }
+    }
+  },
+  {
+    "name": "Acolyte",
+    "type": "background",
+    "img": "icons/svg/holy-symbol.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Acolyte</h3><p>You have spent your life in service to a temple, monastery, or other religious institution. You act as an intermediary between the holy and the mortal, performing sacred rites and offering guidance to those who seek it.</p><p><strong>Skill Proficiencies:</strong> Religion, Medicine</p><p><strong>Equipment:</strong> A holy symbol, a prayer book or prayer wheel, 5 sticks of incense, vestments, a set of common clothes, and a belt pouch containing 15 GP.</p>"
+      }
+    }
+  },
+  {
+    "name": "Entertainer",
+    "type": "background",
+    "img": "icons/svg/dice.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Entertainer</h3><p>You thrive in front of an audience, whether as an actor, musician, dancer, or another type of performer. You know how to work a crowd and make yourself the center of attention.</p><p><strong>Skill Proficiencies:</strong> Perform, Acrobatics</p><p><strong>Equipment:</strong> A musical instrument, the favor of an admirer, a costume, and a belt pouch containing 15 GP.</p>"
+      }
+    }
+  },
+  {
+    "name": "Sage",
+    "type": "background",
+    "img": "icons/svg/scroll.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Sage</h3><p>You are a seeker of knowledge, dedicating your life to answering the great questions of existence. You've scoured ancient libraries, consulted with experts, and pursued obscure lore in your quest for understanding.</p><p><strong>Skill Proficiencies:</strong> Arcane, History</p><p><strong>Equipment:</strong> A bottle of black ink, a quill, a small knife, a letter from a colleague posing a question, a set of common clothes, and a belt pouch containing 10 GP.</p>"
+      }
+    }
+  },
+  {
+    "name": "Outlander",
+    "type": "background",
+    "img": "icons/svg/mountain.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Outlander</h3><p>You grew up in the wilderness, far from civilization. You are accustomed to solitude, danger, and the primal world. The wild is in your blood, whether you were a nomad, explorer, or simply someone who preferred the company of beasts to people.</p><p><strong>Skill Proficiencies:</strong> Wilderness, Athletics</p><p><strong>Equipment:</strong> A staff, a hunting trap, a trophy from an animal you killed, a set of traveler's clothes, and a belt pouch containing 10 GP.</p>"
+      }
+    }
+  },
+  {
+    "name": "Sailor",
+    "type": "background",
+    "img": "icons/svg/anchor.svg",
+    "system": {
+      "description": {
+        "value": "<h3>Sailor</h3><p>You sailed on a ship for years, whether as a merchant sailor, naval officer, pirate, or fisherman. The sea is in your blood, and you know the ways of ships and the dangers of the ocean.</p><p><strong>Skill Proficiencies:</strong> Perception, Athletics</p><p><strong>Equipment:</strong> A belaying pin (club), 50 feet of silk rope, a lucky charm, a set of common clothes, and a belt pouch containing 10 GP.</p>"
+      }
+    }
+  }
+]

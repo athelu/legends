@@ -1,0 +1,279 @@
+/**
+ * Legends System for Foundry VTT
+ * Author: Sean (athelu)
+ * Software License: MIT
+ */
+
+// Import document classes
+import { D8Actor } from "./documents/actor.mjs";
+import { D8Item } from "./documents/item.mjs";
+
+// Import sheet classes
+import { D8CharacterSheet } from "./sheets/character-sheet.mjs";
+import { D8NPCSheet } from "./sheets/npc-sheet.mjs";
+import { D8ItemSheet } from "./sheets/item-sheet.mjs";
+
+// Import helpers
+import * as dice from "./dice.mjs";
+import * as chat from "./chat.mjs";
+
+/* -------------------------------------------- */
+/*  Init Hook                                   */
+/* -------------------------------------------- */
+
+Hooks.once('init', async function() {
+  console.log('Legends | Initializing Legends System');
+
+  // Add custom constants
+  game.d8 = {
+    D8Actor,
+    D8Item,
+    rollSkillCheck,
+    rollSavingThrow,
+    rollInitiative,
+    rollWeave
+  };
+
+  // Define custom Document classes
+  CONFIG.Actor.documentClass = D8Actor;
+  CONFIG.Item.documentClass = D8Item;
+
+  // Register sheet application classes
+  Actors.unregisterSheet("core", ActorSheet);
+  Actors.registerSheet("legends", D8CharacterSheet, {
+    types: ["character"],
+    makeDefault: true,
+    label: "D8.SheetLabels.Character"
+  });
+  
+  Actors.registerSheet("legends", D8NPCSheet, {
+    types: ["npc"],
+    makeDefault: true,
+    label: "D8.SheetLabels.NPC"
+  });
+
+  Items.unregisterSheet("core", ItemSheet);
+  Items.registerSheet("legends", D8ItemSheet, {
+    makeDefault: true,
+    label: "D8.SheetLabels.Item"
+  });
+
+  // Preload Handlebars templates
+  await loadTemplates([
+    "systems/legends/templates/actor/parts/character-header.hbs",
+    "systems/legends/templates/actor/parts/character-attributes.hbs",
+    "systems/legends/templates/actor/parts/character-skills.hbs",
+    "systems/legends/templates/actor/parts/character-combat.hbs",
+    "systems/legends/templates/actor/parts/character-magic.hbs",
+    "systems/legends/templates/actor/parts/character-features.hbs",
+    "systems/legends/templates/actor/parts/character-equipment.hbs",
+    "systems/legends/templates/actor/parts/character-biography.hbs"
+  ]);
+
+  // Register Handlebars helpers
+  registerHandlebarsHelpers();
+});
+
+/* -------------------------------------------- */
+/*  Ready Hook                                  */
+/* -------------------------------------------- */
+
+Hooks.once('ready', async function() {
+  console.log('Legends | System Ready');
+});
+
+/* -------------------------------------------- */
+/*  Hotbar Macros                               */
+/* -------------------------------------------- */
+
+Hooks.on("hotbarDrop", (bar, data, slot) => {
+  if (data.type !== "Item") return;
+  createItemMacro(data, slot);
+  return false;
+});
+
+/* -------------------------------------------- */
+/*  Core Rolling Functions                      */
+/* -------------------------------------------- */
+
+/**
+ * Roll a skill check using the 2d8 roll-under system
+ * @param {Actor} actor - The actor making the check
+ * @param {string} skillKey - The skill being tested
+ * @param {Object} options - Additional rolling options
+ */
+export async function rollSkillCheck(actor, skillKey, options = {}) {
+  const skill = actor.system.skills[skillKey];
+  const attr = actor.system.attributes[skill.attr];
+  
+  return dice.rollD8Check({
+    actor,
+    attrValue: attr.value,
+    skillValue: skill.value,
+    attrLabel: attr.label,
+    skillLabel: game.i18n.localize(`D8.Skills.${skillKey}`),
+    fortune: options.fortune || 0,
+    misfortune: options.misfortune || 0,
+    modifier: options.modifier || 0
+  });
+}
+
+/**
+ * Roll a saving throw
+ * @param {Actor} actor - The actor making the save
+ * @param {string} saveType - Type of save: fortitude, reflex, or will
+ * @param {Object} options - Additional rolling options
+ */
+export async function rollSavingThrow(actor, saveType, options = {}) {
+  let attrKey, attrLabel;
+  
+  switch(saveType) {
+    case 'fortitude':
+      attrKey = 'constitution';
+      attrLabel = 'Fortitude (Con + Luck)';
+      break;
+    case 'reflex':
+      attrKey = 'agility';
+      attrLabel = 'Reflex (Agi + Luck)';
+      break;
+    case 'will':
+      attrKey = 'wisdom';
+      attrLabel = 'Will (Wis + Luck)';
+      break;
+  }
+  
+  const attr = actor.system.attributes[attrKey];
+  const luckCurrent = actor.system.luck?.current ?? actor.system.attributes.luck.value;
+  
+  return dice.rollD8Check({
+    actor,
+    attrValue: attr.value,
+    skillValue: luckCurrent,
+    attrLabel,
+    skillLabel: 'Luck',
+    fortune: options.fortune || 0,
+    misfortune: options.misfortune || 0,
+    modifier: options.modifier || 0,
+    isSave: true
+  });
+}
+
+/**
+ * Roll initiative
+ * @param {Actor} actor - The actor rolling initiative
+ * @param {string} skillKey - The skill being used for initiative
+ */
+export async function rollInitiative(actor, skillKey = 'perception') {
+  const skill = actor.system.skills[skillKey];
+  const agility = actor.system.attributes.agility.value;
+  const luckCurrent = actor.system.luck?.current ?? actor.system.attributes.luck.value;
+  
+  // Roll 1d8
+  const roll = new Roll('1d8');
+  await roll.evaluate();
+  
+  const total = agility + luckCurrent + skill.value + roll.total;
+  
+  // Create chat message
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: `
+      <div class="d8-roll initiative-roll">
+        <h3>Initiative</h3>
+        <div class="formula">
+          ${agility} (Agility) + ${luckCurrent} (Luck) + ${skill.value} (${game.i18n.localize(`D8.Skills.${skillKey}`)}) + ${roll.total}
+        </div>
+        <div class="total">
+          <strong>Total:</strong> ${total}
+        </div>
+      </div>
+    `
+  });
+  
+  return total;
+}
+
+/**
+ * Roll a weave (spell)
+ * @param {Actor} actor - The actor casting the weave
+ * @param {Item} weave - The weave item being cast
+ */
+export async function rollWeave(actor, weave) {
+  const primaryEnergy = weave.system.energyCost.primary.type;
+  const supportingEnergy = weave.system.energyCost.supporting.type;
+  
+  const primaryPotential = actor.system.potentials[primaryEnergy].value;
+  const primaryMastery = actor.system.mastery[primaryEnergy].value;
+  
+  let supportingPotential = 0;
+  let supportingMastery = 0;
+  
+  if (supportingEnergy) {
+    supportingPotential = actor.system.potentials[supportingEnergy].value;
+    supportingMastery = actor.system.mastery[supportingEnergy].value;
+  }
+  
+  return dice.rollWeaveCheck({
+    actor,
+    weave,
+    primaryPotential,
+    primaryMastery,
+    supportingPotential,
+    supportingMastery
+  });
+}
+
+/* -------------------------------------------- */
+/*  Handlebars Helpers                          */
+/* -------------------------------------------- */
+
+function registerHandlebarsHelpers() {
+  Handlebars.registerHelper('concat', function(...args) {
+    args.pop(); // Remove options object
+    return args.join('');
+  });
+  
+  Handlebars.registerHelper('times', function(n, block) {
+    let result = '';
+    for (let i = 0; i < n; ++i) {
+      result += block.fn(i);
+    }
+    return result;
+  });
+  
+  Handlebars.registerHelper('eq', function(a, b) {
+    return a === b;
+  });
+  
+  Handlebars.registerHelper('add', function(a, b) {
+    return a + b;
+  });
+  
+  Handlebars.registerHelper('subtract', function(a, b) {
+    return a - b;
+  });
+}
+
+/* -------------------------------------------- */
+/*  Macro Functions                             */
+/* -------------------------------------------- */
+
+async function createItemMacro(data, slot) {
+  const item = await fromUuid(data.uuid);
+  if (!item) return ui.notifications.warn("Could not find item");
+  
+  const command = `game.d8.rollItemMacro("${item.name}");`;
+  let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
+  
+  if (!macro) {
+    macro = await Macro.create({
+      name: item.name,
+      type: "script",
+      img: item.img,
+      command: command,
+      flags: { "legends.itemMacro": true }
+    });
+  }
+  
+  game.user.assignHotbarMacro(macro, slot);
+}

@@ -1,0 +1,73 @@
+{
+  "D8": {
+    "SheetLabels": {
+      "Character": "Character Sheet",
+      "NPC": "NPC Sheet",
+      "Item": "Item Sheet"
+    },
+    
+    "Attributes": {
+      "strength": "Strength",
+      "constitution": "Constitution",
+      "agility": "Agility",
+      "dexterity": "Dexterity",
+      "intelligence": "Intelligence",
+      "wisdom": "Wisdom",
+      "charisma": "Charisma",
+      "luck": "Luck"
+    },
+    
+    "Skills": {
+      "athletics": "Athletics",
+      "might": "Might",
+      "devices": "Devices",
+      "thievery": "Thievery",
+      "writing": "Writing",
+      "rangedCombat": "Ranged Combat",
+      "craft": "Craft",
+      "acrobatics": "Acrobatics",
+      "meleeCombat": "Melee Combat",
+      "stealth": "Stealth",
+      "investigate": "Investigate",
+      "language": "Language",
+      "history": "History",
+      "arcane": "Arcane",
+      "society": "Society",
+      "perception": "Perception",
+      "empathy": "Empathy",
+      "medicine": "Medicine",
+      "wilderness": "Wilderness",
+      "religion": "Religion",
+      "persuasion": "Persuasion",
+      "intimidate": "Intimidate",
+      "perform": "Perform",
+      "deception": "Deception"
+    },
+    
+    "Energies": {
+      "earth": "Earth",
+      "air": "Air",
+      "fire": "Fire",
+      "water": "Water",
+      "positive": "Positive",
+      "negative": "Negative",
+      "time": "Time",
+      "space": "Space"
+    },
+    
+    "Resources": {
+      "hp": "HP",
+      "luck": "Luck",
+      "energy": "Energy",
+      "dr": "DR"
+    },
+    
+    "Actions": {
+      "shortRest": "Short Rest",
+      "longRest": "Long Rest",
+      "spendLuck": "Spend Luck",
+      "rollSkill": "Roll Skill",
+      "rollSave": "Roll Save"
+    }
+  }
+}
