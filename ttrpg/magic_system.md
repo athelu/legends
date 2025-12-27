@@ -17,10 +17,10 @@
 - Includes Channel Divinity ability
 
 #### Invoker Weaving (Invoker Trait)
-- Performance magic, charisma-based casting
+- True name magic, charisma-based casting
 - Uses Charisma as Casting Stat
 - Limited to 4 energies (always includes Air)
-- Includes Inspiring Performance ability
+- Includes Words of Power ability
 
 #### Innate Weaving (Sorcerous Origin Trait)
 - Innate magic use from Bloodline
