@@ -1,0 +1,40 @@
+# Legends TTRPG Foundry System Repository
+
+# Build artifacts
+build/
+releases/
+*.tar.gz
+!releases/*.tar.gz
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (if using build tools)
+node_modules/
+package-lock.json
+
+# Foundry compiled packs (binary .db files)
+legends-system/packs/**/*.db
+legends-system/packs/**/*.log
+
+# Keep source files
+!legends-system/packs/**/_source/
+!legends-system/packs/**/_source/**
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+tmp/
+temp/
+.tmp/

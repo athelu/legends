@@ -1,0 +1,117 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Weave Name"/></h1>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="tab description" data-group="primary" data-tab="description">
+      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <div class="tab details" data-group="primary" data-tab="details">
+      <div class="form-group">
+        <label>Weave Type</label>
+        <select name="system.weaveType">
+          <option value="simple" {{#if (eq system.weaveType "simple")}}selected{{/if}}>Simple (1 action)</option>
+          <option value="complex" {{#if (eq system.weaveType "complex")}}selected{{/if}}>Complex (2 actions)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>Effect Type</label>
+        <select name="system.effectType">
+          {{#each effectTypes as |label value|}}
+          <option value="{{value}}" {{#if (eq ../system.effectType value)}}selected{{/if}}>{{label}}</option>
+          {{/each}}
+        </select>
+      </div>
+      
+      <h3>Primary Energy</h3>
+      <div class="energy-cost-group">
+        <div class="form-group">
+          <label>Type</label>
+          <select name="system.energyCost.primary.type">
+            {{#each energyTypes as |label value|}}
+            <option value="{{value}}" {{#if (eq ../system.energyCost.primary.type value)}}selected{{/if}}>{{label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Cost</label>
+          <input type="number" name="system.energyCost.primary.cost" value="{{system.energyCost.primary.cost}}" data-dtype="Number" />
+        </div>
+      </div>
+      
+      <h3>Supporting Energy (Optional)</h3>
+      <div class="energy-cost-group">
+        <div class="form-group">
+          <label>Type</label>
+          <select name="system.energyCost.supporting.type">
+            <option value="">None</option>
+            {{#each energyTypes as |label value|}}
+            <option value="{{value}}" {{#if (eq ../system.energyCost.supporting.type value)}}selected{{/if}}>{{label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Cost</label>
+          <input type="number" name="system.energyCost.supporting.cost" value="{{system.energyCost.supporting.cost}}" data-dtype="Number" />
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label>Range</label>
+        <select name="system.range.value">
+          <option value="touch" {{#if (eq system.range.value "touch")}}selected{{/if}}>Touch</option>
+          <option value="close" {{#if (eq system.range.value "close")}}selected{{/if}}>Close (30ft)</option>
+          <option value="medium" {{#if (eq system.range.value "medium")}}selected{{/if}}>Medium (60ft)</option>
+          <option value="long" {{#if (eq system.range.value "long")}}selected{{/if}}>Long (120ft)</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>Target</label>
+        <select name="system.target">
+          <option value="single" {{#if (eq system.target "single")}}selected{{/if}}>Single Target</option>
+          <option value="multiple" {{#if (eq system.target "multiple")}}selected{{/if}}>Multiple Targets</option>
+          <option value="area" {{#if (eq system.target "area")}}selected{{/if}}>Area Effect</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label>Duration</label>
+        <input type="text" name="system.duration" value="{{system.duration}}" placeholder="Instantaneous, 1 round, 1 minute, etc." />
+      </div>
+      
+      <div class="form-group">
+        <label>Save Type</label>
+        <select name="system.saveType">
+          <option value="none" {{#if (eq system.saveType "none")}}selected{{/if}}>None (Attack Weave)</option>
+          <option value="fortitude" {{#if (eq system.saveType "fortitude")}}selected{{/if}}>Fortitude</option>
+          <option value="reflex" {{#if (eq system.saveType "reflex")}}selected{{/if}}>Reflex</option>
+          <option value="will" {{#if (eq system.saveType "will")}}selected{{/if}}>Will</option>
+        </select>
+      </div>
+      
+      {{#if (eq system.effectType "damage")}}
+      <h3>Damage</h3>
+      <div class="form-group">
+        <label>Base Damage</label>
+        <input type="number" name="system.damage.base" value="{{system.damage.base}}" data-dtype="Number" />
+      </div>
+      <div class="form-group">
+        <label>Damage Type</label>
+        <input type="text" name="system.damage.type" value="{{system.damage.type}}" placeholder="fire, cold, lightning, etc." />
+      </div>
+      {{/if}}
+    </div>
+  </section>
+</form>

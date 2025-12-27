@@ -1,0 +1,247 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "common": {
+        "hp": {
+          "value": 32,
+          "max": 32,
+          "temp": 0
+        },
+        "attributes": {
+          "strength": {
+            "value": 3,
+            "label": "Strength"
+          },
+          "constitution": {
+            "value": 4,
+            "label": "Constitution"
+          },
+          "agility": {
+            "value": 3,
+            "label": "Agility"
+          },
+          "dexterity": {
+            "value": 3,
+            "label": "Dexterity"
+          },
+          "intelligence": {
+            "value": 3,
+            "label": "Intelligence"
+          },
+          "wisdom": {
+            "value": 3,
+            "label": "Wisdom"
+          },
+          "charisma": {
+            "value": 2,
+            "label": "Charisma"
+          },
+          "luck": {
+            "value": 2,
+            "label": "Luck"
+          }
+        },
+        "skills": {
+          "athletics": { "value": 0, "attr": "strength" },
+          "might": { "value": 0, "attr": "strength" },
+          "devices": { "value": 0, "attr": "dexterity" },
+          "thievery": { "value": 0, "attr": "dexterity" },
+          "writing": { "value": 0, "attr": "dexterity" },
+          "rangedCombat": { "value": 0, "attr": "dexterity" },
+          "craft": { "value": 0, "attr": "dexterity" },
+          "acrobatics": { "value": 0, "attr": "agility" },
+          "meleeCombat": { "value": 0, "attr": "agility" },
+          "stealth": { "value": 0, "attr": "agility" },
+          "investigate": { "value": 0, "attr": "intelligence" },
+          "language": { "value": 0, "attr": "intelligence" },
+          "history": { "value": 0, "attr": "intelligence" },
+          "arcane": { "value": 0, "attr": "intelligence" },
+          "society": { "value": 0, "attr": "intelligence" },
+          "perception": { "value": 0, "attr": "wisdom" },
+          "empathy": { "value": 0, "attr": "wisdom" },
+          "medicine": { "value": 0, "attr": "wisdom" },
+          "wilderness": { "value": 0, "attr": "wisdom" },
+          "religion": { "value": 0, "attr": "wisdom" },
+          "persuasion": { "value": 0, "attr": "charisma" },
+          "intimidate": { "value": 0, "attr": "charisma" },
+          "perform": { "value": 0, "attr": "charisma" },
+          "deception": { "value": 0, "attr": "charisma" }
+        },
+        "dr": {
+          "value": 0,
+          "base": 0,
+          "bonus": 0
+        }
+      },
+      "magical": {
+        "potentials": {
+          "earth": { "value": 0, "label": "Earth" },
+          "air": { "value": 0, "label": "Air" },
+          "fire": { "value": 0, "label": "Fire" },
+          "water": { "value": 0, "label": "Water" },
+          "positive": { "value": 0, "label": "Positive" },
+          "negative": { "value": 0, "label": "Negative" },
+          "time": { "value": 0, "label": "Time" },
+          "space": { "value": 0, "label": "Space" }
+        },
+        "mastery": {
+          "earth": { "value": 0, "label": "Earth" },
+          "air": { "value": 0, "label": "Air" },
+          "fire": { "value": 0, "label": "Fire" },
+          "water": { "value": 0, "label": "Water" },
+          "positive": { "value": 0, "label": "Positive" },
+          "negative": { "value": 0, "label": "Negative" },
+          "time": { "value": 0, "label": "Time" },
+          "space": { "value": 0, "label": "Space" }
+        },
+        "energy": {
+          "value": 0,
+          "max": 0
+        },
+        "castingStat": {
+          "value": "intelligence",
+          "label": "Casting Stat"
+        },
+        "magicType": {
+          "value": "",
+          "label": "Magic Type"
+        }
+      }
+    },
+    "character": {
+      "templates": ["common", "magical"],
+      "luck": {
+        "current": 2,
+        "max": 2
+      },
+      "tier": {
+        "value": 1,
+        "xp": 0
+      },
+      "biography": {
+        "value": "",
+        "ancestry": "",
+        "background": ""
+      },
+      "currency": {
+        "gp": 150
+      }
+    },
+    "npc": {
+      "templates": ["common"],
+      "luck": {
+        "current": 2,
+        "max": 2
+      },
+      "cr": {
+        "value": 1
+      },
+      "biography": {
+        "value": ""
+      }
+    }
+  },
+  "Item": {
+    "types": ["weapon", "armor", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry"],
+    "templates": {
+      "common": {
+        "description": {
+          "value": ""
+        }
+      },
+      "physical": {
+        "quantity": 1,
+        "weight": 0,
+        "price": 0,
+        "equipped": false
+      }
+    },
+    "weapon": {
+      "templates": ["common", "physical"],
+      "weaponType": "melee",
+      "damage": {
+        "base": 6,
+        "type": "slashing"
+      },
+      "range": {
+        "short": 0,
+        "medium": 0,
+        "long": 0
+      },
+      "properties": []
+    },
+    "armor": {
+      "templates": ["common", "physical"],
+      "armorType": "light",
+      "dr": {
+        "value": 0
+      },
+      "properties": []
+    },
+    "equipment": {
+      "templates": ["common", "physical"]
+    },
+    "weave": {
+      "templates": ["common"],
+      "weaveType": "simple",
+      "actionCost": 1,
+      "energyCost": {
+        "primary": {
+          "type": "fire",
+          "cost": 2
+        },
+        "supporting": {
+          "type": "",
+          "cost": 0
+        }
+      },
+      "effectType": "damage",
+      "damage": {
+        "base": 8,
+        "type": "fire"
+      },
+      "range": {
+        "value": "touch",
+        "distance": 0
+      },
+      "target": "single",
+      "duration": "instantaneous",
+      "saveType": "none",
+      "school": "evocation"
+    },
+    "feat": {
+      "templates": ["common"],
+      "xpCost": 40,
+      "prerequisites": {
+        "attributes": {},
+        "skills": {},
+        "tier": 0
+      },
+      "benefits": ""
+    },
+    "trait": {
+      "templates": ["common"],
+      "pointCost": 0,
+      "traitType": "magical",
+      "benefits": ""
+    },
+    "flaw": {
+      "templates": ["common"],
+      "pointValue": 0,
+      "flawType": "physical",
+      "description": ""
+    },
+    "background": {
+      "templates": ["common"],
+      "startingXP": 0,
+      "skillBonuses": {},
+      "startingEquipment": []
+    },
+    "ancestry": {
+      "templates": ["common"],
+      "bonuses": {},
+      "traits": []
+    }
+  }
+}

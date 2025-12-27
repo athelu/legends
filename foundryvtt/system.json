@@ -1,0 +1,120 @@
+{
+  "id": "legends",
+  "title": "Legends TTRPG System",
+  "description": "A classless tabletop roleplaying game built entirely around the number eight, using d8 dice and a roll-under system with success counting.",
+  "version": "0.6.0",
+  "authors": [
+    {
+      "name": "Sean (athelu)",
+      "url": "https://github.com/athelu/legends"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "esmodules": [
+    "module/legends.mjs"
+  ],
+  "styles": [
+    "styles/legends.css"
+  ],
+  "packs": [
+    {
+      "name": "backgrounds",
+      "label": "Legends - Backgrounds",
+      "path": "packs/legends/backgrounds",
+      "type": "Item",
+      "system": "legends"
+    },
+    {
+      "name": "ancestries",
+      "label": "Legends - Ancestries",
+      "path": "packs/legends/ancestries",
+      "type": "Item",
+      "system": "legends"
+    },
+    {
+      "name": "traits",
+      "label": "Legends - Traits",
+      "path": "packs/legends/traits",
+      "type": "Item",
+      "system": "legends"
+    },
+    {
+      "name": "flaws",
+      "label": "Legends - Flaws",
+      "path": "packs/legends/flaws",
+      "type": "Item",
+      "system": "legends"
+    },
+    {
+      "name": "feats",
+      "label": "Legends - Feats",
+      "path": "packs/legends/feats",
+      "type": "Item",
+      "system": "legends"
+    },
+    {
+      "name": "weapons",
+      "label": "Legends - Weapons",
+      "path": "packs/legends/weapons",
+      "type": "Item",
+      "system": "legends"
+    },
+    {
+      "name": "armor",
+      "label": "Legends - Armor",
+      "path": "packs/legends/armor",
+      "type": "Item",
+      "system": "legends"
+    },
+    {
+      "name": "equipment",
+      "label": "Legends - Equipment",
+      "path": "packs/legends/equipment",
+      "type": "Item",
+      "system": "legends"
+    },
+    {
+      "name": "weaves",
+      "label": "Legends - Weaves",
+      "path": "packs/legends/weaves",
+      "type": "Item",
+      "system": "legends"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "documentTypes": {
+    "Actor": {
+      "character": {},
+      "npc": {}
+    },
+    "Item": {
+      "weapon": {},
+      "armor": {},
+      "equipment": {},
+      "weave": {},
+      "feat": {},
+      "trait": {},
+      "flaw": {},
+      "background": {},
+      "ancestry": {}
+    }
+  },
+  "socket": false,
+  "initiative": "1d8 + @attributes.agility.value + @luck.current + @skills.perception.value",
+  "primaryTokenAttribute": "hp",
+  "secondaryTokenAttribute": "energy",
+  "url": "https://github.com/athelu/legends",
+  "manifest": "",
+  "download": "",
+  "license": "LICENSE.txt",
+  "readme": "README.md"
+}

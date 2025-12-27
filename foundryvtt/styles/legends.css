@@ -1,0 +1,988 @@
+/* D8 TTRPG System Styles - Clean Two-Column Layout */
+
+/* === Color Palette === */
+:root {
+  --d8-primary: #4a5568;
+  --d8-secondary: #718096;
+  --d8-accent: #3182ce;
+  --d8-success: #38a169;
+  --d8-danger: #e53e3e;
+  --d8-warning: #d69e2e;
+  --d8-bg: #f7f4ed;
+  --d8-bg-light: #ffffff;
+  --d8-text: #392300;
+  --d8-border: #392300;
+  --d8-gold: #b8860b;
+}
+
+/* === Window Styling === */
+.legends.sheet {
+  font-family: "Signika", "Trebuchet MS", sans-serif;
+  background: var(--d8-bg);
+  color: var(--d8-text);
+  height: 100%;
+}
+
+.legends .window-content {
+  background: var(--d8-bg);
+  padding: 0;
+  height: 100%;
+}
+
+.legends.sheet form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* === Sheet Header === */
+.legends .sheet-header {
+  background: var(--d8-bg-light);
+  border-bottom: 2px solid var(--d8-border);
+  padding: 10px 20px;
+  flex: 0 0 auto;
+}
+
+.legends .header-info {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--d8-bg-light);
+}
+
+.legends .info-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.legends .info-line label {
+  font-weight: bold;
+  min-width: 100px;
+  font-size: 13px;
+}
+
+.legends .info-line input[type="text"],
+.legends .info-line input[type="number"] {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid var(--d8-border);
+  background: transparent;
+  padding: 3px;
+  font-size: 13px;
+}
+
+.legends .info-line input[name="name"] {
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid var(--d8-border);
+}
+
+.legends .tier-display {
+  font-weight: bold;
+  color: var(--d8-accent);
+  font-size: 14px;
+}
+
+.legends .xp-label {
+  font-weight: bold;
+  margin-left: 15px;
+  min-width: auto;
+  font-size: 13px;
+}
+
+.legends .xp-input {
+  width: 80px;
+  flex: 0 0 80px;
+}
+
+/* === Tabs === */
+.legends .tabs {
+  height: 32px;
+  border-bottom: 2px solid var(--d8-border);
+  display: flex;
+  background: var(--d8-bg-light);
+  flex: 0 0 auto;
+}
+
+.legends .tabs .item {
+  flex: 1;
+  text-align: center;
+  padding: 6px 8px;
+  border-bottom: 3px solid transparent;
+  color: var(--d8-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.legends .tabs .item.active {
+  border-bottom-color: var(--d8-gold);
+  color: var(--d8-text);
+  background: var(--d8-bg);
+}
+
+.legends .tabs .item:hover {
+  color: var(--d8-text);
+}
+
+/* === Sheet Body === */
+.legends .sheet-body {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.legends .sheet-body .tab {
+  padding: 15px;
+  display: none;
+}
+
+.legends .sheet-body .tab.active {
+  display: block;
+}
+
+.legends .sheet-body h3 {
+  margin: 20px 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid var(--d8-border);
+  color: var(--d8-border);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* === Main Tab Two-Column Layout === */
+.legends .main-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.legends .main-layout h3 {
+  margin: 0 0 15px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--d8-border);
+  color: var(--d8-border);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+/* === Skills Column === */
+.legends .skills-column {
+  min-width: 0;
+}
+
+.legends .skills-list {
+  display: grid;
+  gap: 4px;
+}
+
+.legends .skill-row {
+  display: grid;
+  grid-template-columns: 1fr auto 70px auto;
+  gap: 10px;
+  align-items: center;
+  background: var(--d8-bg-light);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  padding: 6px 12px;
+}
+
+.legends .skill-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.legends .skill-attr {
+  color: var(--d8-secondary);
+  font-size: 11px;
+  font-style: italic;
+}
+
+.legends .skill-rank {
+  width: 70px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--d8-border);
+  color: var(--d8-text);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px;
+}
+
+.legends .skill-roll {
+  background: var(--d8-accent);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.legends .skill-roll:hover {
+  background: var(--d8-gold);
+}
+
+/* === Stats Column === */
+.legends .stats-column {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Attributes List */
+.legends .attributes-list {
+  display: grid;
+  gap: 6px;
+}
+
+.legends .attribute-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  align-items: center;
+  background: var(--d8-bg-light);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.legends .attribute-row label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.legends .attribute-row input {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--d8-border);
+  color: var(--d8-text);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 4px;
+}
+
+/* Resources List */
+.legends .resources-list {
+  display: grid;
+  gap: 6px;
+}
+
+.legends .resource-row {
+  display: grid;
+  grid-template-columns: 120px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  background: var(--d8-bg-light);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.legends .resource-row label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.legends .resource-row input {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--d8-border);
+  color: var(--d8-text);
+  font-size: 18px;
+  font-weight: bold;
+  padding: 4px;
+}
+
+.legends .resource-value {
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--d8-accent);
+}
+
+.legends .resource-max {
+  color: var(--d8-secondary);
+  font-size: 14px;
+}
+
+/* Saves List */
+.legends .saves-list {
+  display: grid;
+  gap: 8px;
+}
+
+.legends .save-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.legends .save-roll {
+  width: 100%;
+  padding: 10px;
+  background: var(--d8-bg-light);
+  border: 2px solid var(--d8-border);
+  border-radius: 4px;
+  color: var(--d8-text);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: bold;
+  text-align: left;
+}
+
+.legends .save-roll:hover {
+  background: var(--d8-accent);
+  border-color: var(--d8-accent);
+  color: white;
+}
+
+.legends .save-formula {
+  font-size: 11px;
+  color: var(--d8-secondary);
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* Rest Buttons */
+.legends .rest-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.legends .short-rest,
+.legends .long-rest {
+  padding: 10px;
+  background: var(--d8-success);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.legends .long-rest {
+  background: var(--d8-accent);
+}
+
+.legends .short-rest:hover,
+.legends .long-rest:hover {
+  background: var(--d8-gold);
+}
+
+/* === Octagonal Energy Layout (Magic Tab) === */
+.legends .magic-resources {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.legends .energies-octagon-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.legends .energies-octagon {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 12px;
+  padding: 40px;
+}
+
+.legends .energy-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.legends .energy-box label {
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--d8-border);
+  margin-bottom: 5px;
+}
+
+.legends .energy-split {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legends .energy-split input {
+  width: 45px;
+  height: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  color: var(--d8-text);
+}
+
+.legends .energy-split .divider {
+  width: 2px;
+  height: 40px;
+  background: var(--d8-border);
+}
+
+/* Positioning for octagonal energy layout - adjusted for better alignment */
+.legends .energy-fire { grid-column: 2; grid-row: 1; }
+.legends .energy-earth { grid-column: 1; grid-row: 1; transform: translate(25px, 20px); }
+.legends .energy-positive { grid-column: 3; grid-row: 1; transform: translate(-25px, 20px); }
+.legends .energy-space { grid-column: 1; grid-row: 2; }
+.legends .energy-time { grid-column: 3; grid-row: 2; }
+.legends .energy-water { grid-column: 1; grid-row: 3; transform: translate(25px, -20px); }
+.legends .energy-negative { grid-column: 2; grid-row: 3; }
+.legends .energy-air { grid-column: 3; grid-row: 3; transform: translate(-25px, -20px); }
+
+/* === Items List === */
+.legends .items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legends .items-header {
+  font-weight: bold;
+  border-bottom: 2px solid var(--d8-border);
+  padding: 5px;
+  background: var(--d8-bg-light);
+}
+
+.legends .item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--d8-border);
+  gap: 10px;
+  background: var(--d8-bg-light);
+  margin-bottom: 2px;
+}
+
+.legends .item:hover {
+  background: rgba(184, 134, 11, 0.1);
+}
+
+.legends .item-image {
+  flex: 0 0 24px;
+}
+
+.legends .item-image img {
+  border: none;
+  border-radius: 3px;
+}
+
+.legends .item-name {
+  flex: 1;
+  margin: 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.legends .item-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.legends .item-control {
+  font-size: 14px;
+  color: var(--d8-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.legends .item-control:hover {
+  color: var(--d8-gold);
+}
+
+.legends .item-create {
+  margin-top: 10px;
+}
+
+.legends .item-create button {
+  width: 100%;
+  padding: 8px;
+  background: var(--d8-accent);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.legends .item-create button:hover {
+  background: var(--d8-gold);
+}
+
+/* === Chat Messages === */
+.d8-roll {
+  background: var(--d8-bg-light);
+  border: 2px solid var(--d8-border);
+  border-radius: 6px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.d8-roll h3 {
+  margin: 0 0 10px 0;
+  color: var(--d8-accent);
+  border-bottom: 1px solid var(--d8-border);
+  padding-bottom: 5px;
+}
+
+.d8-roll.critical-success {
+  border-color: var(--d8-success);
+  background: rgba(56, 161, 105, 0.1);
+}
+
+.d8-roll.critical-failure {
+  border-color: var(--d8-danger);
+  background: rgba(229, 62, 62, 0.1);
+}
+
+.d8-roll .dice-results {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.d8-roll .die-result {
+  flex: 0 1 auto;
+  text-align: center;
+  padding: 10px;
+  background: var(--d8-bg);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  min-width: 80px;
+}
+
+.d8-roll .die-label {
+  display: block;
+  font-size: 11px;
+  color: var(--d8-secondary);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.d8-roll .die-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.d8-roll .natural-one {
+  color: var(--d8-success);
+}
+
+.d8-roll .natural-eight {
+  color: var(--d8-danger);
+}
+
+.d8-roll .successes {
+  margin-top: 15px;
+  padding: 10px;
+  background: var(--d8-bg);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.d8-roll .successes.critical {
+  background: rgba(56, 161, 105, 0.2);
+  border-color: var(--d8-success);
+}
+
+.d8-roll .crit-text {
+  display: block;
+  color: var(--d8-success);
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.d8-roll .fortune {
+  color: var(--d8-success);
+}
+
+.d8-roll .misfortune {
+  color: var(--d8-danger);
+}
+
+.d8-roll .overspend {
+  color: var(--d8-warning);
+}
+
+/* === Weave Rolls === */
+.d8-roll.weave-roll .energy-section {
+  margin: 15px 0;
+  padding: 10px;
+  background: var(--d8-bg);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+}
+
+.d8-roll.weave-roll h4 {
+  margin: 0 0 10px 0;
+  color: var(--d8-accent);
+}
+
+.d8-roll.weave-roll .energy-successes {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* === Rollable Elements === */
+.rollable {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rollable:hover {
+  color: var(--d8-gold);
+  text-shadow: 0 0 5px rgba(184, 134, 11, 0.3);
+}
+
+/* === Scrollbar === */
+.legends .sheet-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.legends .sheet-body::-webkit-scrollbar-track {
+  background: var(--d8-bg);
+}
+
+.legends .sheet-body::-webkit-scrollbar-thumb {
+  background: var(--d8-border);
+  border-radius: 4px;
+}
+
+.legends .sheet-body::-webkit-scrollbar-thumb:hover {
+  background: var(--d8-gold);
+}
+
+/* === Magic Tab === */
+.legends .magic-header {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background: var(--d8-bg-light);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+}
+
+.legends .energy-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legends .energy-info label {
+  font-weight: bold;
+}
+
+.legends .energy-info input {
+  width: 80px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--d8-border);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px;
+}
+
+.legends .energy-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--d8-accent);
+}
+
+.legends .energies-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.legends .energy-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 10px;
+  align-items: center;
+  background: var(--d8-bg-light);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
+.legends .energy-row label {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.legends .energy-row input {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--d8-border);
+  color: var(--d8-text);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px;
+}
+
+/* === Items List === */
+.legends .items-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.legends .items-header {
+  font-weight: bold;
+  border-bottom: 2px solid var(--d8-border);
+  padding: 5px;
+  background: var(--d8-bg-light);
+}
+
+.legends .item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid var(--d8-border);
+  gap: 10px;
+  background: var(--d8-bg-light);
+  margin-bottom: 2px;
+}
+
+.legends .item:hover {
+  background: rgba(184, 134, 11, 0.1);
+}
+
+.legends .item-image {
+  flex: 0 0 24px;
+}
+
+.legends .item-image img {
+  border: none;
+  border-radius: 3px;
+}
+
+.legends .item-name {
+  flex: 1;
+  margin: 0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.legends .item-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.legends .item-control {
+  font-size: 14px;
+  color: var(--d8-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.legends .item-control:hover {
+  color: var(--d8-gold);
+}
+
+.legends .item-create {
+  margin-top: 10px;
+}
+
+.legends .item-create button {
+  width: 100%;
+  padding: 8px;
+  background: var(--d8-accent);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.legends .item-create button:hover {
+  background: var(--d8-gold);
+}
+
+/* === Chat Messages === */
+.d8-roll {
+  background: var(--d8-bg-light);
+  border: 2px solid var(--d8-border);
+  border-radius: 6px;
+  padding: 15px;
+  margin: 10px 0;
+}
+
+.d8-roll h3 {
+  margin: 0 0 10px 0;
+  color: var(--d8-accent);
+  border-bottom: 1px solid var(--d8-border);
+  padding-bottom: 5px;
+}
+
+.d8-roll.critical-success {
+  border-color: var(--d8-success);
+  background: rgba(56, 161, 105, 0.1);
+}
+
+.d8-roll.critical-failure {
+  border-color: var(--d8-danger);
+  background: rgba(229, 62, 62, 0.1);
+}
+
+.d8-roll .dice-results {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+  justify-content: center;
+}
+
+.d8-roll .die-result {
+  flex: 0 1 auto;
+  text-align: center;
+  padding: 10px;
+  background: var(--d8-bg);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  min-width: 80px;
+}
+
+.d8-roll .die-label {
+  display: block;
+  font-size: 11px;
+  color: var(--d8-secondary);
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.d8-roll .die-value {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.d8-roll .natural-one {
+  color: var(--d8-success);
+}
+
+.d8-roll .natural-eight {
+  color: var(--d8-danger);
+}
+
+.d8-roll .successes {
+  margin-top: 15px;
+  padding: 10px;
+  background: var(--d8-bg);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.d8-roll .successes.critical {
+  background: rgba(56, 161, 105, 0.2);
+  border-color: var(--d8-success);
+}
+
+.d8-roll .crit-text {
+  display: block;
+  color: var(--d8-success);
+  font-weight: bold;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.d8-roll .fortune {
+  color: var(--d8-success);
+}
+
+.d8-roll .misfortune {
+  color: var(--d8-danger);
+}
+
+.d8-roll .overspend {
+  color: var(--d8-warning);
+}
+
+.d8-roll.weave-roll .energy-section {
+  margin: 15px 0;
+  padding: 10px;
+  background: var(--d8-bg);
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+}
+
+.d8-roll.weave-roll h4 {
+  margin: 0 0 10px 0;
+  color: var(--d8-accent);
+}
+
+.d8-roll.weave-roll .energy-successes {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* === Rollable Elements === */
+.rollable {
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.rollable:hover {
+  color: var(--d8-gold);
+}
+
+/* === Scrollbar === */
+.legends .sheet-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.legends .sheet-body::-webkit-scrollbar-track {
+  background: var(--d8-bg);
+}
+
+.legends .sheet-body::-webkit-scrollbar-thumb {
+  background: var(--d8-border);
+  border-radius: 4px;
+}
+
+.legends .sheet-body::-webkit-scrollbar-thumb:hover {
+  background: var(--d8-gold);
+}
