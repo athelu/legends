@@ -162,19 +162,19 @@ Combat maneuvers are declared before rolling and modify the attack:
 
 #### Two-Weapon Fighting
 ##### Without Feat
--   When wielding two weapons, you may make two attacks with a single [Attack] action (1 action total)
+-   When wielding two weapons, you may make two attacks with a single [Combat] action (1 action total)
 -   Off-hand weapon must have the Light property
 -   Use a Shared Attribute Roll (roll attribute once, applies to both attacks)
 -   Roll skill die separately for each weapon
 -   First Two-Weapon Action: First attack: Add 1 to both die results, Second attack: Add 2 to both die results
 -   Second Two-Weapon Action: First attack: Add 2 to both die results, Second attack: Add 3 to both die results
--   Additional [Attack] actions continue penalty progression (3rd attack adds 3, 4th adds 4, etc.)
+-   Additional [Combat] actions continue penalty progression (3rd attack adds 3, 4th adds 4, etc.)
 
 ##### With Two-Weapon Fighting Feat
 -   Off-hand weapon must have the Light property
--   First attack in an [Attack] action: Normal (no penalty)
+-   First attack in an [Combat] action: Normal (no penalty)
 -   Second attack: Add 1 to both die results (instead of 2)
--   Subsequent [Attack] actions follow normal penalty progression from there
+-   Subsequent [Combat] actions follow normal penalty progression from there
 -   Still use Shared Attribute Roll
 
 ##### Example without feat:

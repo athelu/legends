@@ -293,7 +293,7 @@
 -   Attacks against you: No modifier
 
 #### Initiating Grapple:
--   Use 1 [Attack] action
+-   Use 1 [Combat] action
 -   Make opposed Athletics (Str + Athletics) check vs target's choice of Athletics or Acrobatics
 -   If you win: Target becomes Grappled
 -   Both you and target are grappling (you cannot move either, but can release as [Free] action)

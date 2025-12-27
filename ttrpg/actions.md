@@ -251,18 +251,6 @@ These maneuvers modify or replace your standard attacks:
 - Stacks cumulatively throughout your turn
 - Resets at the start of your next turn
 
-
-[Activate] (1 action):
--   Drink potion
--   Use magic item
--   Activate device/mechanism
-
-[Interact] (1 action):
--   Most skill checks
--   Search
--   Medicine check (stabilize dying ally)
--   Social skills (rally frightened ally, etc.)
-
 ## Movement Actions
 Movement actions allow you to reposition, navigate terrain, and control the battlefield.
 
@@ -407,21 +395,263 @@ All characters have access to these movement options:
 - Choose not to use all your available movement
 - Move through allies' spaces (costs normal movement)
 
+## Activate Actions
 
-[Minor] (1 action, or free with [Move]):
--   Draw/stow weapon
--   Open/close door
--   Speak/shout/give command
--   Pick up item
+Activate actions involve using items, equipment, or abilities that require deliberate triggering or operation. These actions represent more complex interactions than simple manipulation.
 
-[Free] (no action cost):
--   Drop item
--   Brief communication (a few words)
--   End concentration on a spell
--   Release a grapple
--   **Limit:** You can take a reasonable number of [Free] actions per turn (typically 1-2), subject to GM discretion
+### Activate Magic Item [Activate]
+- **Cost:** 1 [Activate] action (or as specified by item)
+- **Effect:** Trigger a magic item's power or property
+- **Examples:**
+  - Speaking a command word to activate a magic sword's flame ability
+  - Rubbing a magic lamp
+  - Activating a wand or staff
+  - Triggering a ring's protective power
+- **Notes:**
+  - Some items specify different action costs (may require 2 actions or be [Free])
+  - Command word items require you to be able to speak
+  - See the item's description for specific activation requirements
 
-##### Drop Prone [Free]
+### Use Special Ability [Activate]
+- **Cost:** 1 [Activate] action (or as specified by ability)
+- **Effect:** Use a class feature, feat, or special ability that doesn't fit other categories
+- **Examples:**
+  - Activating a Barbarian's Rage
+  - Using a Rogue's Cunning Action
+  - Triggering special movement abilities
+  - Using consumable magic items
+- **Notes:**
+  - Specific action cost listed in ability description
+  - Some abilities may be [Free] or [Reaction] instead
+
+### Drink Potion [Activate]
+- **Cost:** 1 [Activate] action
+- **Effect:** Consume a potion and gain its effects
+- **Notes:**
+  - Administering a potion to another creature requires 1 [Activate] action
+  - The unconscious/willing creature must be adjacent
+  - Drinking while threatened provokes Opportunity Attacks (unless you use Disengage first)
+
+### Use Consumable [Activate]
+- **Cost:** 1 [Activate] action
+- **Effect:** Use a consumable item (oil, poison, alchemical item, etc.)
+- **Examples:**
+  - Applying oil to a weapon
+  - Throwing alchemist's fire
+  - Using a healer's kit to stabilize a dying creature
+  - Setting a bear trap
+- **Notes:**
+  - Some consumables may have different action costs (see item description)
+  - Applying poison to a weapon requires 1 [Activate] action
+
+### Read Scroll [Activate]
+- **Cost:** 2 [Activate] actions
+- **Requirements:** Ability to read, appropriate magical knowledge
+- **Effect:** Cast the spell contained in the scroll
+- **Check:** Arcane check required if spell level exceeds your weaving capability
+- **Notes:**
+  - The scroll is consumed after use
+  - Provokes Opportunity Attacks (like Complex Weave)
+  - Failure may destroy the scroll
+
+### Don/Doff Shield [Activate]
+- **Cost:** 1 [Activate] action
+- **Effect:** Equip or remove a shield
+- **Notes:**
+  - Drawing/stowing a shield requires focused effort (not quick like a weapon)
+  - Cannot be done as part of a [Move] action
+  - Shield must be readily accessible (on your back, at your side, etc.)
+
+### Don/Doff Armor [Activate]
+- **Cost:** Variable (see table below)
+- **Effect:** Put on or take off armor
+- **Timing:**
+
+| Armor Type | Don (Put On) | Doff (Remove) |
+|------------|--------------|---------------|
+| Light Armor | 1 minute | 1 minute |
+| Medium Armor | 5 minutes | 1 minute |
+| Heavy Armor | 10 minutes | 5 minutes |
+| Shield | 1 action | 1 action |
+
+- **Notes:**
+  - Requires assistance to halve the time for medium/heavy armor
+  - Cannot be done during combat rounds (too time-consuming)
+  - Sleeping in armor may cause exhaustion
+
+## Interact Actions
+
+Interact actions involve manipulating objects, the environment, or simple physical tasks that don't require specialized skills. Many Interact actions can be combined with movement for efficiency.
+
+### Interact with Object [Interact]
+- **Cost:** 1 [Interact] action (or [Free] with [Move] action, GM discretion)
+- **Effect:** Manipulate an object or environmental feature
+- **Examples:**
+  - Open or close a door
+  - Pull a lever
+  - Turn a crank
+  - Light or extinguish a torch/candle
+  - Open or close a container
+  - Ring a bell
+- **Notes:**
+  - Simple, straightforward interactions
+  - More complex manipulations may require full [Interact] action
+  - GM determines if action can be done as [Free] during movement
+
+### Draw/Stow Weapon [Interact]
+- **Cost:** [Free] with [Move] action, or 1 [Interact] action if standing still
+- **Effect:** Draw a weapon or stow it in its sheath/holster
+- **Examples:**
+  - Drawing a sword from scabbard
+  - Readying a bow
+  - Stowing a dagger in belt sheath
+  - Drawing ammunition
+- **Notes:**
+  - Can draw/stow ONE weapon per turn as part of movement
+  - Drawing two weapons requires Quick Draw feat or two separate actions
+  - Doesn't provoke Opportunity Attacks
+  - Cannot draw/stow weapons while Grappled (hands not free)
+
+### Pick Up/Drop Item [Interact]
+- **Cost:** [Free] to drop, [Free] with [Move] to pick up (or 1 [Interact] action)
+- **Effect:** Retrieve or release an item
+- **Examples:**
+  - Picking up a dropped weapon
+  - Grabbing a potion from the ground
+  - Dropping a torch
+  - Releasing a rope
+- **Notes:**
+  - Dropping an item is always [Free] and doesn't provoke
+  - Picking up an item while threatened may provoke Opportunity Attacks (GM discretion)
+  - Item must be within reach (typically 5 feet)
+
+### Manipulate Object [Interact]
+- **Cost:** 1 [Interact] action
+- **Effect:** Perform a more complex object manipulation
+- **Examples:**
+  - Tying a rope to a grappling hook
+  - Barricading a door
+  - Loading a heavy crossbow (already accounted for in weapon properties)
+  - Searching a body for items
+  - Retrieving an item from a backpack
+- **Notes:**
+  - More involved than simple interactions
+  - May require skill check for complex tasks
+  - GM determines if task requires multiple actions
+
+### Hand Off Item [Interact]
+- **Cost:** [Free] action
+- **Effect:** Pass an item to an adjacent willing creature
+- **Requirements:** Both creatures must have at least one free hand
+- **Notes:**
+  - Recipient must be within 5 feet
+  - Both parties must be willing
+  - Can hand off weapons, potions, items, etc.
+  - Doesn't provoke Opportunity Attacks
+
+### Extinguish Flames [Interact]
+- **Cost:** 1 [Interact] action
+- **Effect:** Put out flames on yourself or an adjacent creature
+- **Examples:**
+  - Stop, drop, and roll
+  - Patting out flames on ally
+  - Smothering a small fire
+- **Notes:**
+  - Ends the Burning condition (if small fire)
+  - Larger magical fires may require multiple actions or skill checks
+  - Uses your action but could save significant HP
+
+### Use Tool/Kit [Interact]
+- **Cost:** Variable (typically 1-10 [Interact] actions)
+- **Effect:** Use thieves' tools, healer's kit, artisan's tools, etc.
+- **Examples:**
+  - Picking a lock (1-10 actions, requires skill check)
+  - Disarming a trap (2-5 actions, requires skill check)
+  - Using healer's kit (1 action)
+  - Repairing equipment (variable time)
+- **Notes:**
+  - Most tool use requires proficiency or appropriate skills
+  - Time requirements vary by task complexity
+  - May require skill checks (Devices for locks, Medicine for healer's kit, etc.)
+
+### Ready/Stow Shield [Interact]
+- **Cost:** See Don/Doff Shield in [Activate] actions
+- **Note:** Shields are substantial equipment and cannot be readied as quickly as weapons
+
+### Search [Interact]
+- **Cost:** 1 [Interact] action
+- **Effect:** Make a Perception or Investigate check to find something
+- **Examples:**
+  - Searching a 10-foot area for hidden doors
+  - Looking through a chest for specific items
+  - Examining a room for clues
+- **Notes:**
+  - Check difficulty set by GM
+  - May require multiple actions for larger areas
+  - Active searching vs. passive Perception
+
+### Take Cover [Interact]
+- **Cost:** [Free] with [Move] action
+- **Effect:** Position yourself to gain cover benefits
+- **Notes:**
+  - Must have cover available (wall, boulder, etc.)
+  - See Cover rules in Combat section
+  - Enemies may have Misfortune attacking you depending on cover quality
+
+### Speak/Signal [Interact]
+- **Cost:** [Free] action
+- **Effect:** Communicate briefly with allies or enemies
+- **Examples:**
+  - Shouting a warning
+  - Giving a one-word command
+  - Making hand signals
+  - Calling out spell names (for flavor)
+- **Notes:**
+  - Complex communication requires full action
+  - Can be done once per turn as [Free] action
+  - Silenced creatures cannot speak
+
+## Free Actions
+
+Free actions require no significant time or effort and can be performed alongside other actions.
+
+### Drop Item [Free]
+- **Cost:** [Free] action
+- **Effect:** Release an item from your hand
+- **Notes:**
+  - Item falls in your space
+  - Doesn't provoke Opportunity Attacks
+  - Can drop multiple items per turn if necessary (GM discretion)
+
+### Brief Communication [Free]
+- **Cost:** [Free] action
+- **Effect:** Say a few words (3-5 words maximum)
+- **Examples:**
+  - "Look out!"
+  - "Help me!"
+  - "Attack the mage!"
+- **Notes:**
+  - Not enough time for complex instructions
+  - Can be done once per turn
+  - Silenced creatures cannot speak
+
+### End Concentration [Free]
+- **Cost:** [Free] action
+- **Effect:** Stop concentrating on a weave/spell
+- **Notes:**
+  - The weave immediately ends
+  - Can be done at any time, even on another creature's turn
+  - Useful for ending harmful weaves or switching concentration
+
+### Release Grapple [Free]
+- **Cost:** [Free] action
+- **Effect:** Stop grappling a creature you're currently grappling
+- **Notes:**
+  - The target is no longer Grappled by you
+  - You are no longer grappling them
+  - Doesn't require a check
+
+### Drop Prone [Free]
 - **Cost:** [Free] action
 - **Effect:** Fall prone in your current space
 - **Notes:**
@@ -429,10 +659,15 @@ All characters have access to these movement options:
   - Useful for gaining cover against ranged attacks (enemies have Misfortune)
   - Remember: Enemies have Fortune on melee attacks against you while prone
 
+#### Free Action Limits
+- **Limit:** You can take a reasonable number of [Free] actions per turn (typically 1-3), subject to GM discretion
+- **Abuse Prevention:** GM may rule that excessive free actions (like dropping 20 items) require actual action costs
+- **Timing:** Free actions can typically be taken at any point during your turn
+
 ## Reactions
 Reactions are special responses triggered by specific circumstances that occur outside your turn.
 
-#### Basic Reaction Mechanics:
+### Basic Reaction Mechanics:
 - **Frequency:** You can take ONE reaction per round (between your turns)
 - **Timing:** Reactions occur immediately when their trigger happens
 - **Availability:** You can use your reaction even before your first turn in combat (unless Surprised)
@@ -441,11 +676,11 @@ Reactions are special responses triggered by specific circumstances that occur o
 - **Choice:** If you have access to multiple reactions, you must choose which one to use when triggered
 - **Additional Reactions:** Some feats, equipment, and weaves grant additional reaction options beyond those listed here
 
-#### Universal Reactions
+### Universal Reactions
 
 All characters have access to these reactions:
 
-##### Opportunity Attack [Attack]
+#### Opportunity Attack [Combat] (Reaction)
 - **Trigger:** A hostile creature you can see moves out of your melee reach
 - **Effect:** Make one melee attack against the triggering creature
 - **Resolution:** Roll your Melee Combat skill normally. This attack uses your reaction for the round.
@@ -454,7 +689,7 @@ All characters have access to these reactions:
   - Teleportation and forced movement don't trigger this reaction
   - The Disengage action (see below) prevents opportunity attacks
 
-##### Shield Block (requires wielding a shield)
+#### Shield Block (requires wielding a shield)
 - **Trigger:** You are hit by a melee attack while wielding a shield
 - **Effect:** Choose one:
   - **Force Reroll:** Attacker must reroll one of their dice (attacker chooses which die, must keep new result)
@@ -464,7 +699,7 @@ All characters have access to these reactions:
   - Cannot be used if you've already used your reaction this round
   - See Equipment (Part 8) for shield-specific bonus reactions
 
-##### Counterweave [Combat]
+#### Counterweave [Combat]
 - **Requirements:** Ability to weave, Space energy available
 - **Trigger:** You see a creature weaving within medium range (60ft)
 - **Effect:** Attempt to counter the weave (see Counterspell in Part 10: Weaves)

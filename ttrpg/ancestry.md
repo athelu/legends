@@ -5,13 +5,101 @@ Humans are creative, imaginative and inventive. There are distinct differences i
 ### Human Characteristics
     | Characteristic | Male | Female |
     |---|---|---|
-    | Height | 5'7" | 5'7" |
+    | Height | 5'-7" | 5'-7' |
     | Height (Average) | 5'9" | 5'4" |
     | Weight | 90-300 lbs | 90-300 lbs |
     | Weight (Average) | 175 lbs | 120 lbs |
     | Eyes | Blue, Brown, Green, Gray, Amber |
     | Hair | Black, Brown, Red, Blonde |
     | Lifespan | 70 years |
+
+#### Optional
+
+
+##### Height & Build Table (d8)
+
+Roll 1d8 to determine your character's height and build:
+
+| d8 | Build Type | Male Height | Male Weight | Female Height | Female Weight |
+|----|------------|-------------|-------------|---------------|---------------|
+| 1  | Frail/Petite | 5'0" | 90 lbs | 5'0" | 90 lbs |
+| 2  | Lean/Skinny | 5'3" | 120 lbs | 5'2" | 100 lbs |
+| 3  | Slender | 5'6" | 145 lbs | 5'4" | 115 lbs |
+| 4  | Average | 5'9" | 175 lbs | 5'6" | 130 lbs |
+| 5  | Athletic/Sturdy | 6'0" | 200 lbs | 5'8" | 145 lbs |
+| 6  | Muscular/Broad | 6'3" | 230 lbs | 5'10" | 165 lbs |
+| 7  | Heavy/Stocky | 6'6" | 265 lbs | 6'1" | 200 lbs |
+| 8  | Massive/Powerful | 7'0" | 300 lbs | 6'6" | 240 lbs |
+
+**Variation:** After rolling, you may adjust height by ±2 inches and weight by ±15 lbs to taste.
+
+**Note:** Humans show greater height and weight variation than other ancestries, reflecting their adaptability and diverse genetics.
+
+---
+
+##### Eye Color Table (d8)
+
+Roll 1d8 to determine eye color:
+
+| d8 | Eye Color | Description |
+|----|-----------|-------------|
+| 1  | Blue | Pale ice blue to deep sapphire |
+| 2  | Dark Brown | Deep chocolate to nearly black |
+| 3  | Light Brown | Hazel to warm chestnut |
+| 4  | Green | Light jade to deep emerald |
+| 5  | Gray | Pale silver to steel gray |
+| 6  | Amber | Golden honey to burnished copper |
+| 7  | Mixed/Hazel | Green-brown or blue-gray combinations |
+| 8  | Unusual | Heterochromia or very rare shade (roll twice) |
+
+**Unusual Examples (if you roll 8):**
+- Heterochromia (one blue, one brown)
+- Very pale gray (almost white)
+- Deep green with amber center
+- Blue with brown central heterochromia
+- Roll two different colors for heterochromia
+
+---
+
+##### Hair Color Table (d8)
+
+Roll 1d8 to determine hair color:
+
+| d8 | Hair Color | Description |
+|----|-----------|-------------|
+| 1  | Black | Jet black to charcoal |
+| 2  | Dark Brown | Deep chocolate to espresso |
+| 3  | Medium Brown | Chestnut to cocoa |
+| 4  | Light Brown | Sandy to mousy brown |
+| 5  | Blonde | Dirty blonde to golden |
+| 6  | Red | Auburn to copper to bright red |
+| 7  | Light Blonde | Honey to platinum blonde |
+| 8  | Special | White, gray, or unusual shade for age |
+
+**Special Hair Notes (if you roll 8):**
+- Prematurely gray or white (young age)
+- Naturally gray (middle age)
+- Strawberry blonde (red-blonde mix)
+- Very light platinum blonde
+
+---
+
+##### Hair Texture (Optional d8)
+
+Roll 1d8 for hair texture (optional detail):
+
+| d8 | Texture |
+|----|---------|
+| 1  | Straight and fine |
+| 2  | Straight and thick |
+| 3  | Wavy and loose |
+| 4  | Wavy and full |
+| 5  | Curly |
+| 6  | Tightly curled |
+| 7  | Coiled/Kinky |
+| 8  | Mixed/Unique pattern |
+
+---
 
 ### Starting Age
 While it makes sense that you would want your character to start their adventuring life early, rarely do campaigns span decades of the characters life.
@@ -95,6 +183,69 @@ Elves are tall, thin, fair skinned humanoids with pointed ears. They have a deli
     | Hair           | black, brown, red, blonde, white, grey |
     | Lifespan       | 200-400 years |
 
+#### Optional
+
+## Height & Build Table (d8)
+
+Roll 1d8 to determine your character's height and build:
+
+| d8 | Build Type | Male Height | Male Weight | Female Height | Female Weight |
+|----|------------|-------------|-------------|---------------|---------------|
+| 1  | Frail/Gaunt | 6'0" | 120 lbs | 6'0" | 120 lbs |
+| 2  | Lean/Skinny | 6'2" | 140 lbs | 6'1" | 135 lbs |
+| 3  | Slender | 6'4" | 160 lbs | 6'2" | 145 lbs |
+| 4  | Average | 6'6" | 175 lbs | 6'3" | 155 lbs |
+| 5  | Athletic/Sturdy | 6'8" | 185 lbs | 6'5" | 165 lbs |
+| 6  | Muscular/Broad | 6'10" | 195 lbs | 6'7" | 175 lbs |
+| 7  | Heavy/Stocky | 7'0" | 200 lbs | 6'9" | 185 lbs |
+| 8  | Massive/Powerful | 7'0" | 200 lbs | 6'11" | 200 lbs |
+
+**Variation:** If you want more granular control, after rolling, you may adjust height by ±2 inches and weight by ±10 lbs to taste.
+
+---
+
+## Eye Color Table (d8)
+
+Roll 1d8 to determine eye color:
+
+| d8 | Eye Color | Description |
+|----|-----------|-------------|
+| 1  | Blue | Clear sky blue to deep sapphire |
+| 2  | Brown | Light hazel to deep chocolate |
+| 3  | Green | Emerald to forest green |
+| 4  | Gray | Pale silver to storm gray |
+| 5  | Amber | Golden honey to burnished copper |
+| 6  | Violet | Lavender to deep purple |
+| 7  | Orange | Pale orange to deep sunset |
+| 8  | Tinted (Roll Again) | Roll again, result has slight unusual tint or heterochromia |
+
+**Tinted Examples (if you roll 8):**
+- Blue with green flecks
+- Brown with amber rings
+- Gray with violet hints
+- Green with gold specks
+- Heterochromia (two different colors - roll twice)
+
+---
+
+## Hair Color Table (d8)
+
+Roll 1d8 to determine hair color:
+
+| d8 | Hair Color | Description |
+|----|-----------|-------------|
+| 1  | Black | Raven black to charcoal |
+| 2  | Dark Brown | Deep chocolate to mahogany |
+| 3  | Brown | Chestnut to medium brown |
+| 4  | Light Brown | Sandy brown to mousy |
+| 5  | Blonde | Honey blonde to golden |
+| 6  | Red | Auburn to copper to flame red |
+| 7  | White | Platinum to snow white |
+| 8  | Gray | Silver to ash gray |
+
+---
+
+
 ### Starting Age 
 
 Elves make the starting age an even tougher discussion. The assumption is that they physically mature at the same pace as humans.
@@ -130,6 +281,78 @@ Dwarves are a rough and durable race. They are short and stocky and very often h
     | Eyes | blue, brown, green, gray, amber, violet, orange, and slight tints of these colors |
     | Hair | black, brown, red, blonde, white, grey |
     | Lifespan | 300-400 years |
+
+#### Optional
+
+##### Height & Build Table (d8)
+
+Roll 1d8 to determine your character's height and build:
+
+| d8 | Build Type | Male Height | Male Weight | Female Height | Female Weight |
+|----|------------|-------------|-------------|---------------|---------------|
+| 1  | Wiry/Compact | 4'0" | 120 lbs | 4'0" | 120 lbs |
+| 2  | Lean/Hardy | 4'2" | 135 lbs | 4'1" | 130 lbs |
+| 3  | Solid | 4'4" | 150 lbs | 4'3" | 140 lbs |
+| 4  | Stout/Average | 4'6" | 160 lbs | 4'4" | 145 lbs |
+| 5  | Broad/Sturdy | 4'8" | 170 lbs | 4'6" | 155 lbs |
+| 6  | Barrel-Chested | 4'10" | 180 lbs | 4'8" | 165 lbs |
+| 7  | Heavy/Thick | 5'0" | 190 lbs | 4'10" | 180 lbs |
+| 8  | Massive/Dense | 5'0" | 200 lbs | 5'0" | 200 lbs |
+
+**Variation:** After rolling, you may adjust height by ±1 inch and weight by ±10 lbs to taste.
+
+**Note:** Dwarves are incredibly dense and muscular for their height. A 4'6" dwarf weighing 160 lbs is proportionally much stronger than a 5'9" human of the same weight.
+
+---
+
+##### Eye Color Table (d8)
+
+Roll 1d8 to determine eye color:
+
+| d8 | Eye Color | Description |
+|----|-----------|-------------|
+| 1  | Blue | Pale ice blue to deep sapphire, often steely |
+| 2  | Brown | Light amber-brown to deep earth brown |
+| 3  | Green | Jade to deep forest green |
+| 4  | Gray | Pale silver to dark slate, common among mountain dwarves |
+| 5  | Amber | Golden honey to molten copper |
+| 6  | Violet | Rare, lavender to deep amethyst |
+| 7  | Orange | Uncommon, pale orange to deep sunset |
+| 8  | Tinted/Unique | Roll again, result has unusual tint or heterochromia |
+
+**Tinted Examples (if you roll 8):**
+- Gray with violet flecks (stone with gem-like quality)
+- Brown with amber rings (like layered stone)
+- Blue with silver metallic sheen
+- Green with copper tints
+- Heterochromia (one blue, one amber - very rare)
+- Eyes that seem to catch light like polished gems
+
+---
+
+##### Hair Color Table (d8)
+
+Roll 1d8 to determine hair color:
+
+| d8 | Hair Color | Description |
+|----|-----------|-------------|
+| 1  | Black | Coal black to charcoal, often with metallic sheen |
+| 2  | Dark Brown | Deep chocolate to mahogany |
+| 3  | Brown | Chestnut to medium brown |
+| 4  | Red | Auburn to bright copper to flame red (common) |
+| 5  | Blonde | Honey to golden blonde (less common) |
+| 6  | White | Platinum to snow white (may occur at any age) |
+| 7  | Gray | Silver to ash gray, often premature |
+| 8  | Special | Unusual color or early graying - roll twice and mix |
+
+**Special Hair Notes (if you roll 8):**
+- Prematurely gray or white (even in youth)
+- Red-blonde mix (copper-gold)
+- Black with silver streaks
+- Brown with natural highlights
+- Metallic sheen to any color (catches light like polished metal)
+
+---
 
 The Dwarven race has been in isolation and confinement since the rash actions of King Derhagar.  The Elven and Dwarven races had not always been at war, in fact they had been allies and partners for many centuries.  Dwarves had been the natural artisans of the two races- performing much of the building and trade skills for both races.  Dwarves have long since been renowned for their skill in stone and metal work.  The exquisiteness with which they build is unsurpassed, the beauty of their creations is unbelievable.  The Elves Continued to ask for greater and greater works from the dwarves. 
 King Derhagar, always spiteful and brought his jealousy and rage into the Dwarven kingdom when he came into power, He set his goals to create artifacts that would allow the dwarves to be as powerful in magic as the elves.  Derhagar dedicated his life's work to bringing magic to the dwarves. He sent countless designs and plans to his artisans and smiths with no success. The breakthrough of rune Magic was the key. None outside of those who had been working on it knew how it was created or where the inspiration for it had come - other than it was passed down in a fervor from the King.  With these artifacts any dwarf could manipulate magic on a scale that would make the most powerful Elven Mage shudder.  Derhegar had his high Chiefs bestowed with weaponry and armor crafted with the new runic techniques. Many new uses and devices were crafted that were able to harness the runic magic energy, producing miraculous effects and improvements throughout dwarven society. Derhegar hoarded his knowledge from the elves. He became ever more suspicious of his interactions with them, always believing they wanted nothing more than the secret of the runes.

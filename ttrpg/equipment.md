@@ -1,212 +1,120 @@
 # D8 TTRPG - Part 8: Equipment
-
 ## Currency
 
 It is necessary to establish some type of currency for the game system to allow for the purchasing of equipment during the character creation process at least. We will leverages the standard coin types:
-Copper Piece (cp)
-Silver Piece (sp)
-Gold Piece (gp)
+- Copper Piece (cp)
+- Silver Piece (sp)
+- Gold Piece (gp)
 
-10 cp = 1 sp
-10 sp = 1 gp
+**Exchange Rates:**
+- 10 cp = 1 sp
+- 10 sp = 1 gp
 
-For a value proposition, lets assume $1  = 5 cp. 
+For a value proposition, lets assume $1 = 5 cp.
 
-## Shields
+## Equipment Price List
 
-### Buckler (Light Shield)
-- **Hand Usage:** Occupies off-hand but allows punch/pommel strikes
-- **Melee Defense:** Grants Shield Block reaction
-- **Active Parry:** Once per round as a [Free] action (no reaction cost), after seeing an incoming melee attack roll, you may force the attacker to reroll one of their dice (attacker chooses which result to keep)
-- **Special:** Can make off-hand attacks with the buckler itself (treat as light weapon, 4 damage bludgeoning) using the two-weapon combat action.
-- **Cost:** 10 gp
-
-### Targe (Round Shield - Medium Shield)
-- **Hand Usage:** Occupies off-hand completely
-- **Melee Defense:** Fortune on defensive melee combat rolls
-- **Ranged Defense:** [Reaction] - Force Misfortune on one ranged attack per round (short range only, 30ft)
-- **Special:** Can be slung on back when not in use (takes 1 [Minor] action to ready)
-- **Cost:** 10 gp
-
-### Heater Shield (Medium Shield)
-- Hand Usage: Occupies off-hand completely
-- Melee Defense: Fortune on defensive melee combat rolls
-- Ranged Defense: [Reaction] - Force Misfortune on one ranged attack per round (short or medium range, up to 60ft)
-- **Special:** Better coverage than targe, traditional knightly shield
-- **Cost:** 15 gp
-
-### Kite Shield (Heavy Shield)
-- Hand Usage: Occupies off-hand completely
-- Melee Defense: Fortune on defensive melee combat rolls
-- Ranged Defense: [Reaction] - Force Misfortune on one ranged attack per round (any range)
-- **Requirements:** Strength 3 minimum or suffer Misfortune on your own attacks
-- **Special:** Provides Partial Cover when crouching
-- **Cost:** 20 gp
-
-### Tower Shield (Heavy Shield)
-- Hand Usage: Occupies off-hand completely
-- **Requirements:** Strength 4 minimum
-- **Special:** Provides Full Cover when crouching
-- **Cost:** 25 gp
-
-### Pavise (Heavy Shield)
-- Hand Usage: Requires both hands to move/position, but can be planted
-- Planted Mode: Use 1 [Move] action to plant shield. While planted:
-  - Provides full cover against ranged attacks from one direction (choose direction when planting)
-  - Use 1 [Move] action to retrieve it from planted
-- Carried Mode (not planted): Functions as Kite Shield but with Misfortune on your attacks
-- **Requirements:** Strength 4 minimum
-- **Special:** Primarily a siege/defensive weapon, awkward in mobile combat
-- **Cost:** 40 gp
-
-## Armor Categories
-
-### Light Armor
-
-#### Aketon/Light Padded - DR 2
-- **Weakness:** Piercing (DR 1)
-- **Resistance:** Bludgeoning (DR 3)
-- **Stealth:** No penalty
-- **Noise:** Very quiet
-- **Cost:** 15 gp
-
-#### Cuir Bouilli (Hardened Leather) - DR 3
-- Weakness: Piercing (DR 1)
-- Resistance: Bludgeoning (DR 4)
-- Stealth: No penalty
-- Noise: Quiet
-- Description: Boiled and hardened leather plates, shaped and rigid
-- **Cost:** 200 gp
-
-### Medium Armor
-#### Gambeson - DR 4
-- Weakness: Piercing (DR 2)
-- Resistance: Bludgeoning (DR 5)
-- Stealth: No penalty
-- Noise: Quiet
-- **Cost:** 40 gp
-
-#### Chain Mail - DR 5
-- Weakness: Bludgeoning (DR 2)
-- Resistance: Slashing (DR 6)
-- Stealth: -1 penalty
-- Noise: Moderate (links clink)
-- **Cost:** 200 gp
-
-#### Scale Mail - DR 5
-- Weakness: Bludgeoning (DR 2)
-- Resistance: Slashing (DR 6)
-- Stealth: -1 penalty
-- Noise: Moderate
-- **Cost:** 250 gp
-
-#### Brigandine/Coat of Plates - DR 6
-- No weaknesses
-- No resistances
-- Stealth: -1 penalty
-- Noise: Moderate
-- **Cost:** 400 gp
-
-### Heavy Armor
-
-#### Splint Mail - DR 7
-- Weakness: Bludgeoning (DR 3)
-- Resistance: Slashing (DR 8)
-- Stealth: -2 penalty
-- Noise: Loud
-- **Cost:** 500 gp
-
-#### Full Plate - DR 8
-- Weakness: Bludgeoning (DR 4)
-- Resistance: Slashing (DR 9)
-- Stealth: -2 penalty
-- Noise: Loud
-- **Cost:** 750 gp
-
-### Armor Properties
-- Movement: Armor does NOT reduce movement speed or impose Agility/Dexterity penalties
-- Stealth: Armor may impose stealth check penalties
-- Noise: Detection difficulty based on armor type
-- Swimming: Medium armor -1 Athletics, half swim speed; Heavy armor -2 Athletics, quarter swim speed
-- Fatigue: Heavy armor worn 8+ hours in extreme conditions may require Constitution check or gain Exhaustion condition.
-
-## Weapon Properties
-
-### Property Keywords
-
-**Light:** Easily wielded in the off-hand. Required for off-hand in Two-Weapon Fighting.
-
-**Standard (One-Handed):** Default weapons requiring one hand. Cannot be wielded two-handed for benefit.
-
-**Versatile:** Can be wielded one-handed or two-handed for +1 damage when two-handed.
-
-**Two-Handed:** Requires both hands to wield. Cannot be used with shields or in Two-Weapon Fighting.
-
-**Finesse:** Can use either Strength or Agility for damage calculations (player's choice). Attack rolls always use Agility + Melee Combat (as standard for all melee weapons), but the damage bonus can come from either Strength or Agility, whichever is higher.
-
-**Alternate Strike:** Can use secondary attack for different damage type at reduced damage (typically half, rounded down).
-
-**Multi-Type:** Deals full damage with multiple damage types - player chooses which type when attacking.
-
-**Ranged:** For ranged attacks using Ranged Combat skill. Has range increments.
-
-**Thrown:** Can be thrown using Ranged Combat skill, retains damage type and value.
-
-**Monk:** Can be used with monk abilities like Flurry of Blows and benefits from Unarmed Mastery feat. Monk weapons are typically simple, balanced weapons suitable for martial arts techniques.
-
-## Weapon Table
-
-|                    |        ||        |                                     |                                                |                                             |
-|--------------------|--------||--------|-------------------------------------|------------------------------------------------|---------------------------------------------|
-| Weapon             |  Cost  || Damage | Properties                          | Damage Type                                    | Notes                                       |
-|                    |        ||        |                                     |                                                |                                             |
-| Battleaxe          |  40 gp || 8/9    | Versatile                           | Slashing                                       |                     |
-| Buckler            |  10 gp || 4      | Light, Standard, Finesse            | Bludgeoning                                    | Shield used as weapon                       |
-| Club               |   5 gp || 4      | Light, Standard, Monk               | Bludgeoning                                    | Simple weapon                               |
-| Dagger             |  15 gp || 4      | Light, Multi-Type, Thrown, Finesse, Monk  | Piercing/Slashing                              | Range 30/60 when thrown                     |
-| Flail              |  15 gp || 6      | Standard                            | Bludgeoning                                    | Ignores some shield bonuses (GM discretion) |
-| Greataxe           |  40 gp || 10     | Two-Handed                          | Slashing                                       |                            |
-| Greatsword         |  50 gp || 10     | Two-Handed, Alternate Strike        | Slashing (primary), Bludgeoning (crossguard 5) |                                |
-| Hand Axe           |  15 gp || 4      | Light, Thrown, Monk                 | Slashing                                       | Range 30/60 when thrown                     |
-| Kama               |  10 gp || 4      | Light, Finesse, Monk                | Slashing                                       | Sickle-like monk weapon                     |
-| Nunchaku           |  12 gp || 6      | Light, Finesse, Monk                | Bludgeoning                                    | Classic monk weapon, requires training      |
-| Heavy Crossbow     |  75 gp || 8      | Two-Handed, Ranged                  | Piercing                                       | Range 80/160/320, reload 2 actions          |
-| Light Crossbow     |  65 gp || 6      | Two-Handed, Ranged                  | Piercing                                       | Range 60/120/240, reload 1 action           |
-| Longbow            |  60 gp || 8      | Two-Handed, Ranged                  | Piercing                                       | Range 80/160/320, Str 3 req                 |
-| Longsword          |  40 gp || 8/9    | Versatile, Alternate Strike         | Slashing (primary), Bludgeoning (pommel 4)     |                      |
-| Mace               |  10 gp || 6      | Standard                            | Bludgeoning                                    |                             |
-| Maul               |  30 gp || 10     | Two-Handed                          | Bludgeoning                                    |                        |
-| Morningstar        |  20 gp || 8      | Standard, Multi-Type                | Bludgeoning/Piercing                           |                                  |
-| Poleaxe            |  50 gp || 10     | Two-Handed, Multi-Type              | Slashing/Piercing/Bludgeoning                  |                        |
-| Quarterstaff       |  10 gp || 6      | Two-Handed, Finesse, Monk           | Bludgeoning                                    | Iconic monk weapon                          |
-| Rapier             |  30 gp || 8      | Standard, Finesse                   | Piercing                                       | Classic dueling weapon                      |
-| Sap                |  5 gp  || 4      | Light, Standard, Finesse, Monk      | Bludgeoning                                    | Non-lethal option                           |
-| Sai                |  10 gp || 6      | Light, Finesse, Monk, Thrown        | Piercing                                       | Range 20/40 when thrown, defensive weapon   |
-| Scimitar           |  30 gp || 6      | Light, Multi-Type, Finesse          | Slashing/Piercing                              |                                 |
-| Shortbow           |  25 gp || 6      | Two-Handed, Ranged                  | Piercing                                       | Range 60/120/240                            |
-| Shortsword         |  18 gp || 6      | Light, Multi-Type, Finesse, Monk    | Slashing/Piercing                              | Excellent off-hand weapon                   |
-| Sling              |  1 gp  || 4      | Ranged                              | Bludgeoning                                    | Range 40/80/160                             |
-| Spear              |  12 gp || 6/7    | Versatile, Alternate Strike, Thrown, Monk | Piercing (primary), Bludgeoning (haft 3)       | Range 30/60 when thrown, Monk when 1-handed |
-| War Pick           |  30 gp || 8      | Standard, Multi-Type                | Piercing/Bludgeoning                           |                         |
-| Warhammer          |  25 gp || 8      | Standard                            | Bludgeoning                                    |                                 |
-| Warhammer (spiked) |  30 gp || 8      | Standard, Multi-Type                | Bludgeoning/Piercing                           |                             |
-| Whip               |  30 gp || 4      | Standard, Finesse                   | Slashing                                       | Reach 10ft                                  |
-|                    |        ||        |                                     |                                                |                                             |
-
-### Range Format
-Ranges listed as Short/Medium/Long (e.g., 60/120/240 means short range 60ft, medium 120ft, long 240ft)
-
-### Monk Weapons
-Weapons with the **Monk** property can be used with monk class abilities like Flurry of Blows. The following weapons have the Monk property:
-- **Club** (4 damage, Light, Standard)
-- **Dagger** (4 damage, Light, Finesse, can be thrown)
-- **Hand Axe** (4 damage, Light, can be thrown)
-- **Kama** (4 damage, Light, Finesse) - Sickle-like weapon
-- **Nunchaku** (6 damage, Light, Finesse) - Classic monk weapon
-- **Quarterstaff** (6 damage, Two-Handed, Finesse) - Iconic monk weapon
-- **Sai** (6 damage, Light, Finesse, can be thrown) - Defensive trident
-- **Sap** (4 damage, Light, Finesse) - Non-lethal
-- **Shortsword** (6 damage, Light, Finesse)
-- **Spear** (6 damage when one-handed, Versatile, can be thrown)
-
-**Note:** With the Unarmed Mastery feat, unarmed strikes deal 6 damage and count as monk weapons. Quarterstaff is included despite being Two-Handed due to its iconic status in martial arts traditions.
+| Item | Price |
+|------|-------|
+| Abacus | 15 gp |
+| Apron | 5 gp |
+| Artisan's tools (specify type) | 50 gp |
+| Artist's tools (paints, etc.) | 40 gp |
+| Backpack | 15 gp |
+| Bedroll | 10 gp |
+| Belt | 7 gp |
+| Blanket | 5 sp |
+| Book, blank | 30 gp |
+| Book, general topic | 50 gp |
+| Book, prayer | 5 gp |
+| Boots, high | 40 gp |
+| Boots, low | 25 gp |
+| Boots, riding | 50 gp |
+| Boots, work | 45 gp |
+| Candle, beeswax | 5 sp |
+| Candle, tallow | 5 cp |
+| Cape | 7 gp |
+| Carpenter's tools | 40 gp |
+| Cleaver | 8 gp |
+| Cloak | 8 gp |
+| Clothes, common | 5 gp |
+| Clothes, fine | 30 gp |
+| Clothes, traveler's | 15 gp |
+| Clothes, work | 8 gp |
+| Comb | 2 sp |
+| Crowbar | 10 gp |
+| Dice set | 5 sp |
+| Disguise kit | 35 gp |
+| Fruit, dried | 5 cp |
+| Gloves, hunting | 10 gp |
+| Gloves, work | 4 gp |
+| Grain, dried | 5 cp |
+| Hammer | 10 gp |
+| Hardtack | 5 cp |
+| Hat, basic | 2 gp |
+| Herbalism kit | 30 gp |
+| Holy symbol, gold | 10 gp |
+| Holy symbol, iron | 5 sp |
+| Holy symbol, silver | 5 gp |
+| Holy symbol, wood | 2 sp |
+| Hood, wool | 5 gp |
+| Hose | 2 gp |
+| Incense, stick | 5 cp |
+| Ink, 1 oz | 7 sp |
+| Journal | 10 gp |
+| Knife, belt | 8 gp |
+| Lamp | 7 gp |
+| Lantern | 8 gp |
+| Lantern, bullseye | 15 gp |
+| Lodging, common | 6 sp |
+| Lodging, fine | 2 gp |
+| Lodging, good | 11 sp |
+| Lodging, poor | 3 sp |
+| Magnifying glass | 100 gp |
+| Manacles | 20 gp |
+| Map case | 10 gp |
+| Meal, common | 2 sp |
+| Meal, fine | 10 gp |
+| Meal, good | 6 sp |
+| Meal, poor | 1 sp |
+| Meat, salted/cured | 3 sp |
+| Meat hook | 4 gp |
+| Mortar and pestle | 10 gp |
+| Musical instrument, basic | 30 gp |
+| Musical instrument, fine | 200 gp |
+| Musical instrument, standard | 60 gp |
+| Net | 15 gp |
+| Pants | 6 gp |
+| Parchment, papyrus | 5 cp |
+| Parchment, vellum | 5 sp |
+| Pen, fountain | 7 gp |
+| Piton | 2 sp |
+| Playing cards | 5 sp |
+| Pouch, belt | 5 gp |
+| Purse, belt | 4 gp |
+| Quill | 1 gp |
+| Quiver | 7 gp |
+| Razor | 5 gp |
+| Robe | 12 gp |
+| Rope, jute/hemp | 3 gp |
+| Rope, lime bast | 7 gp |
+| Rucksack | 12 gp |
+| Saddlebags | 25 gp |
+| Satchel | 10 gp |
+| Scabbard, great | 125 gp |
+| Scabbard, long | 75 gp |
+| Scabbard, short | 25 gp |
+| Scissors | 20 gp |
+| Scrollcase | 3 gp |
+| Sewing kit | 15 gp |
+| Shirt, linen | 10 gp |
+| Shoes | 10 gp |
+| Shovel | 8 gp |
+| Signet ring | 50 gp |
+| Smith's tools | 60 gp |
+| Soap | 2 sp |
+| Tent | 25 gp |
+| Torch | 1 sp |
+| Tunic | 5 gp |
+| Uniform/Livery | 15 gp |
+| Wineskin | 4 gp |
