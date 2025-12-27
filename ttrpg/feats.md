@@ -32,7 +32,7 @@ Most feats require:
 
 ### Two-Weapon Fighting
 - **Prerequisites:** Agi 4, Dex 3
-- **Benefit:** When making dual-weapon attacks in a single [Attack] action, first attack is normal, second attack adds 1 to both die results (instead of 2). Both attacks use Shared Attribute Roll
+- **Benefit:** When making dual-weapon attacks in a single [Combat] action, first attack is normal, second attack adds 1 to both die results (instead of 2). Both attacks use Shared Attribute Roll
 - **Usage:** Passive
 
 ### Defensive Fighting

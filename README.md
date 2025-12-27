@@ -1,127 +1,168 @@
-# Legends TTRPG - Foundry VTT System
+# Legends TTRPG System - Core Rules v0.4.2
 
-Official Foundry VTT implementation of the Legends TTRPG system.
+## Core Concept
 
-## Quick Links
+A classless tabletop roleplaying game built entirely around the number eight, using d8 dice and a **roll-under** system with success counting.
 
-- [System README](legends-system/README.md) - Full system documentation
-- [Compendium Development](legends-system/COMPENDIUM_DEVELOPMENT.md) - Guide for adding content
-- [Importing Backgrounds](legends-system/IMPORT_GUIDE.md) - How to populate compendiums
+## Design Notes
 
-## Installation
+### Core Design Principles
 
-### For Players (Release Version)
+- Everything based on the number 8
+- Roll-under system rewards investment while maintaining challenge at all tiers
+- Success counting creates gradients
+- Resource management (Luck, Energy) creates tactical decisions
+- **True classless system:** Any character can learn any ability if they meet prerequisites
+- Feats replace class features, allowing unlimited customization
 
-1. In Foundry VTT, go to **Game Systems**
-2. Click **Install System**
-3. Paste the manifest URL: `[URL will be provided when published]`
-4. Click Install
+### Key Features
 
-### For Developers (From Source)
+- **Classless progression:** Feats unlock traditional class abilities
+- No Levels: Power tiers, similar to how many game systems manage threats instead of character levels
+- Static HP: Combat remains dangerous at all Tiers (levels)
+- XP Spending: XP Gained is directly spent into improving your character
+- Luck depletion: use luck to adjust dice rolls
+- Elemental Energy Magic System: Combining energies increases power ceiling
+- Opposed combat: Every fight tactical, and players activley affect outcome
+- Armor matters: DR instead of AC. Opposed combat means not "target" number to hit
+- **Flexible character building:** Mix fighter techniques with rogue abilities with monk training
 
-```bash
-# Clone the repository
-git clone https://github.com/athelu/legends.git
-cd legends
+### Character Building Philosophy
 
-# Copy to Foundry systems folder
-cp -r legends-system [FoundryVTT]/Data/systems/legends
+**Feats** provide:
+- Combat techniques and abilities
+- Class-like features (Rage, Sneak Attack, Flurry of Blows, etc.)
+- Skill expertise and specializations
+- Magical enhancements
 
-# Restart Foundry VTT
+**Results:**
+- A "Fighter" takes Martial Training + Action Surge as starting feats
+- A "Rogue" takes Sneak Attack + Cunning Action
+- A "Fighter/Rogue hybrid" can take Martial Training + Sneak Attack
+- Any combination is possible if prerequisites are met
+
+### Flaws and Traits
+
+- Access to some powerful abilities and character options (traits) require taking flaws
+- Flaws and traits may only be taken during character creation
+- Taking a flaw provides points to purchase traits
+- You cannot spend more points on traits than you have gained from flaws
+
+#### Flaws
+
+- Flaws represent Physical and Societal penalties the character has/must endure
+- Flaws range in value from 1 - 10
+- Some Flaws require DM Approval
+
+#### Traits
+
+- Traits represent magical abilities, unique resource systems, and supernatural characteristics
+- Traits range in value from 1 - 10
+- Some Traits require DM Approval
+- **Note:** Most "class features" are now feats, not traits
+
+
+### Experience System
+
+- **24 XP per session** (awarded equally to all players)
+- Spend XP on:
+  - Untrained Skills: Rank 0 -> 1 costs 4 xp
+  - Skills: 8 × current rank
+  - Attributes: 16 × current rank
+  - Potentials (if magical): 16 × current rank
+  - Feats: 40 XP each
+
+## Sections
+
+The rules are broken down into different sections for easier management:
+
+```
+legends/ttrpg/
+├── actions.md
+├── ancestry.md
+├── armor.md
+├── backgrounds.md
+├── bestiary.md
+├── bestiary_framework.md
+├── character-creation.md
+├── combat.md
+├── conditions.md
+├── core-system.md
+├── equipment.md
+├── feats.md
+├── flaws.md
+├── magic-system.md
+├── magic.md
+├── README.md
+├── skills.md
+├── traits.md
+├── weapons.md
+├── weaves(a-g).md
+├── weaves(h-m).md
+├── weaves(n-r).md
+└── weaves(s-z).md
 ```
 
-## Building Releases
+## Bonuses and Penalties
+Guidelines for applying bonus/penatlies
+| Modifier | Effect on Success | Use For |
+|----------|-------------------|---------|
+| Add 1 to one die | ~9% penalty | Minor/specific penalty |
+| Add 1 to both dice | ~15% penalty | Moderate penalty |
+| Misfortune (3d8 worst 2) | ~25% penalty | Major penalty |
+| Subtract 1 from one die | ~9% benefit | Minor/specific bonus |
+| Subtract 1 from both dice | ~15% benefit | Moderate bonus |
+| Fortune (3d8 best 2) | ~25% benefit | Major bonus |
 
-```bash
-# Build a release tarball
-./build.sh
+## Tier Progression
 
-# Output will be in releases/legends-v0.6.0.tar.gz
-```
+| Tier | XP Range | Sessions at 24/session | Max Feats | D&D Equivalent |
+|------|----------|------------------------|-----------|----------------|
+| 1 | 0–120 | ~5 | 2 start + 2 purchased | Levels 1–2 |
+| 2 | 120–360 | ~10 | 2 start + 4 purchased | Levels 3–5 |
+| 3 | 360–600 | ~10 | 2 start + 6 purchased | Levels 6–8 |
+| 4 | 600–840 | ~10 | 2 start + 8 purchased | Levels 9–11 |
+| 5 | 840–1080 | ~10 | 2 start + 10 purchased | Levels 12–14 |
+| 6 | 1080–1320 | ~10 | 2 start + 12 purchased | Levels 15–17 |
+| 7 | 1320–1560 | ~10 | 2 start + 14 purchased | Levels 18–19 |
+| 8 | 1560+ | ~10+ | 2 start + 16 purchased | Level 20 |
 
-## Repository Structure
+## Version History
 
-```
-.
-├── build.sh                    # Release build script
-├── .gitignore                  # Repository .gitignore
-├── README.md                   # This file
-└── legends-system/             # The Foundry system
-    ├── system.json             # System manifest
-    ├── template.json           # Data model definitions
-    ├── module/                 # JavaScript modules
-    ├── templates/              # Handlebars templates
-    ├── styles/                 # CSS styling
-    ├── lang/                   # Translations
-    ├── packs/                  # Compendium packs
-    │   └── legends/            # All Legends content
-    │       ├── backgrounds/
-    │       ├── ancestries/
-    │       ├── traits/
-    │       ├── flaws/
-    │       ├── feats/
-    │       ├── weapons/
-    │       ├── armor/
-    │       ├── equipment/
-    │       └── weaves/
-    ├── README.md               # System documentation
-    └── COMPENDIUM_DEVELOPMENT.md
-```
+### v0.4.2 - Equipment and summaries
+- Reorganize documents to aid with foundry compendiums
+- Equipment: organize and expand
+- Actions: clarify interact/activate actions
+- Ancestry: created rollable tables for random characteristics
 
-## Compendium Packs
+### v0.4.1 - Invoker and Infuser
+- Invoker replaces bard (homebrew world flavor)
+- Infuser = Artificer. Based on original idea for alchemist. may still make alchemist
+- Added a character sheet for playtesting
+- Python script for combat testing (work in progress)
+- Necromantic - banned/forbidden magic type (homebrew world flavor)
+- Magic user classification (Arcanist/Diabolist/Divine)
+- Created charmed condition
+- add gp cost to equipment/gear
 
-All game content is organized under the `legends/` folder:
+### v0.4.0 - Roll Under Conversion
+- System moved from roll under-and-equal to Roll under.
+- Natural 1 always succeed. allows for skill/attribute/master 1 to have success in roll under.
+- Create DR and Save mechanics for Magic
+- Adjusted bestiary creation guidelines
+- Created new conditions
+- Created guidelines for simples combat weaves (and rules for making new ones)
 
-- ✅ **Backgrounds** - 50 character backgrounds
-- ⏳ **Ancestries** - Character races/ancestries
-- ⏳ **Traits** - Magical and extraordinary abilities
-- ⏳ **Flaws** - Character disadvantages
-- ⏳ **Feats** - Character abilities and features
-- ⏳ **Weapons** - Melee and ranged weapons
-- ⏳ **Armor** - All armor types
-- ⏳ **Equipment** - General gear and supplies
-- ⏳ **Weaves** - Spells and magical effects
+### v0.3.0 - Classless System Refactor
+- Removed martial trait gates (Martial Prowess, Roguish Training, Ranger's Path, Monastic Training)
+- Converted all martial abilities to feats with prerequisite requirements
+- Increased XP per session from 20 to 24 for better divisibility
+- Adjusted tier XP thresholds to accommodate new feat economy
+- Granted 2 free starting feats (up from 1)
+- Clarified trait philosophy: magical/resource systems only
+- Enabled true multiclass flexibility through feat combinations
 
-## Contributing
-
-Contributions welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
-### Adding Content
-
-To add backgrounds, ancestries, or feats:
-
-1. Edit the JSON in `d8-system/packs/[type]/_source/`
-2. See [COMPENDIUM_DEVELOPMENT.md](d8-system/COMPENDIUM_DEVELOPMENT.md) for details
-3. Submit a pull request
-
-## Development Setup
-
-```bash
-# Install fvtt-cli (optional, for compendium management)
-npm install -g @foundryvtt/fvtt-cli
-
-# Configure Foundry path
-fvtt configure set dataPath "/path/to/FoundryVTT/Data"
-
-# Pack compendiums from source
-fvtt package workon d8-ttrpg
-fvtt package pack backgrounds --in d8-system/packs/backgrounds/_source/backgrounds.json
-```
-
-## License
-
-This work is licensed under the MIT License. See [LICENSE.txt](d8-system/LICENSE.txt) for details.
-
-The D8 TTRPG game system and rules are the intellectual property of Sean (athelu).
-
-## Credits
-
-**System Design**: Sean (athelu)  
-**Foundry Implementation**: Sean (athelu)  
-**Based on**: D8 TTRPG Core Rules v0.4.1
-
-## Support
-
-- **Issues**: [GitHub Issues](https://github.com/athelu/legends/issues)
-- **Documentation**: [GitHub Wiki](https://github.com/athelu/legends/wiki)
-- **Discord**: [Link TBD]
+### v0.2.1 - Previous Version
+- Original trait-gated class system
+- 20 XP per session
+- 1 free starting feat

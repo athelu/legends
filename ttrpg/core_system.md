@@ -267,7 +267,7 @@ If negative HP equals your Constitution score, you die
 An ally can use an [Interact] action to stabilize you with a Medicine
 check:
 -   2 successes: You stabilize at 0 HP
--   1 success: You gain +1 to your next stabilization save
+-   1 success: You gain -1 to both dice on your next stabilization save
 
 Magical healing immediately restores you to consciousness and removes
 Dying, Unconscious, and Blinded conditions.

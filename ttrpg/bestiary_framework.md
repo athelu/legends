@@ -312,13 +312,11 @@ When a monster wields manufactured weapons or wears armor:
 
 #### **Armor:**
 - Provides DR as normal
-- May restrict movement (heavy armor)
-- Can be damaged or removed
+- May affect stealth
 
 #### **Shields:**
 - Grants Shield Block reaction
 - Provides +1 DR (standard shield) or +2 DR (tower shield)
-- Requires proficiency (assumed for most warriors)
 
 #### **Other Gear:**
 - Potions, scrolls, magic items work as normal

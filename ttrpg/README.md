@@ -1,4 +1,4 @@
-# D8 TTRPG System - Core Rules v0.3.0
+# Legends TTRPG System - Core Rules v0.4.2
 
 ## Core Concept
 
@@ -17,23 +17,17 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 
 ### Key Features
 
-- **Classless progression:** No trait gates for martial abilities - feats are available to all who qualify
-- Luck depletion: Rising tension throughout sessions
-- Overspending penalties: Heroic risk-taking with consequences
-- 4-success weaving: Combining energies increases power ceiling
-- Opposed combat: Every fight tactical
-- Critical restoration: Double 1s create legendary moments
-- Channel Divinity: Reliable but indiscriminate area effects
+- **Classless progression:** Feats unlock traditional class abilities
+- No Levels: Power tiers, similar to how many game systems manage threats instead of character levels
 - Static HP: Combat remains dangerous at all Tiers (levels)
-- Armor matters: DR system makes protection crucial
+- XP Spending: XP Gained is directly spent into improving your character
+- Luck depletion: use luck to adjust dice rolls
+- Elemental Energy Magic System: Combining energies increases power ceiling
+- Opposed combat: Every fight tactical, and players activley affect outcome
+- Armor matters: DR instead of AC. Opposed combat means not "target" number to hit
 - **Flexible character building:** Mix fighter techniques with rogue abilities with monk training
 
 ### Character Building Philosophy
-
-**Traits** are reserved for:
-- Magical abilities (Energy pools, Mastery skills, weaving systems)
-- Unique resource systems (Lay on Hands, Sorcery Points)
-- Supernatural characteristics (Immortality, Mythic attributes)
 
 **Feats** provide:
 - Combat techniques and abilities
@@ -67,13 +61,6 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 - Some Traits require DM Approval
 - **Note:** Most "class features" are now feats, not traits
 
-### Feats
-
-- Feats provide access to combat abilities, techniques, and class-like features
-- Cost: 40 XP per feat
-- Starting characters receive 2 free feats
-- Can purchase up to 2 additional feats per tier
-- No trait prerequisites for martial feats - only attribute/skill requirements
 
 ### Experience System
 
@@ -93,9 +80,10 @@ The rules are broken down into different sections for easier management:
 legends/ttrpg/
 ├── actions.md
 ├── ancestry.md
+├── armor.md
 ├── backgrounds.md
-├── bestiary_framework.md
 ├── bestiary.md
+├── bestiary_framework.md
 ├── character-creation.md
 ├── combat.md
 ├── conditions.md
@@ -103,12 +91,12 @@ legends/ttrpg/
 ├── equipment.md
 ├── feats.md
 ├── flaws.md
-├── gear.md
 ├── magic-system.md
 ├── magic.md
 ├── README.md
 ├── skills.md
 ├── traits.md
+├── weapons.md
 ├── weaves(a-g).md
 ├── weaves(h-m).md
 ├── weaves(n-r).md
@@ -116,7 +104,7 @@ legends/ttrpg/
 ```
 
 ## Bonuses and Penalties
-
+Guidelines for applying bonus/penatlies
 | Modifier | Effect on Success | Use For |
 |----------|-------------------|---------|
 | Add 1 to one die | ~9% penalty | Minor/specific penalty |
@@ -140,6 +128,12 @@ legends/ttrpg/
 | 8 | 1560+ | ~10+ | 2 start + 16 purchased | Level 20 |
 
 ## Version History
+
+### v0.4.2 - Equipment and summaries
+- Reorganize documents to aid with foundry compendiums
+- Equipment: organize and expand
+- Actions: clarify interact/activate actions
+- Ancestry: created rollable tables for random characteristics
 
 ### v0.4.1 - Invoker and Infuser
 - Invoker replaces bard (homebrew world flavor)
