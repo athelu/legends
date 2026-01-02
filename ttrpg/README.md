@@ -1,4 +1,4 @@
-# Legends TTRPG System - Core Rules v0.4.2
+# Legends TTRPG System - Core Rules v0.4.3
 
 ## Core Concept
 
@@ -17,7 +17,6 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 
 ### Key Features
 
-- **Classless progression:** Feats unlock traditional class abilities
 - No Levels: Power tiers, similar to how many game systems manage threats instead of character levels
 - Static HP: Combat remains dangerous at all Tiers (levels)
 - XP Spending: XP Gained is directly spent into improving your character
@@ -25,7 +24,7 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 - Elemental Energy Magic System: Combining energies increases power ceiling
 - Opposed combat: Every fight tactical, and players activley affect outcome
 - Armor matters: DR instead of AC. Opposed combat means not "target" number to hit
-- **Flexible character building:** Mix fighter techniques with rogue abilities with monk training
+
 
 ### Character Building Philosophy
 
@@ -34,12 +33,6 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 - Class-like features (Rage, Sneak Attack, Flurry of Blows, etc.)
 - Skill expertise and specializations
 - Magical enhancements
-
-**Results:**
-- A "Fighter" takes Martial Training + Action Surge as starting feats
-- A "Rogue" takes Sneak Attack + Cunning Action
-- A "Fighter/Rogue hybrid" can take Martial Training + Sneak Attack
-- Any combination is possible if prerequisites are met
 
 ### Flaws and Traits
 
@@ -81,6 +74,7 @@ legends/ttrpg/
 ├── actions.md
 ├── ancestry.md
 ├── armor.md
+├── ashan.md
 ├── backgrounds.md
 ├── bestiary.md
 ├── bestiary_framework.md
@@ -88,11 +82,15 @@ legends/ttrpg/
 ├── combat.md
 ├── conditions.md
 ├── core-system.md
+├── daemon.md
 ├── equipment.md
+├── faith.md
 ├── feats.md
 ├── flaws.md
+├── history.md
 ├── magic-system.md
 ├── magic.md
+├── number8.md
 ├── README.md
 ├── skills.md
 ├── traits.md
@@ -128,6 +126,13 @@ Guidelines for applying bonus/penatlies
 | 8 | 1560+ | ~10+ | 2 start + 16 purchased | Level 20 |
 
 ## Version History
+
+### v0.4.3 - New feats and World content
+- Pantheon added to aid in building out divine powers
+- World History added
+- Daemon: definition for low magic setting
+- Number 8: More examples of how the number 8 influences the setting
+- Feats: new feats based on core campaign concepts
 
 ### v0.4.2 - Equipment and summaries
 - Reorganize documents to aid with foundry compendiums
