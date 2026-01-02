@@ -1,5 +1,38 @@
 # The Faith
 
+
+## Design Notes
+
+**Why These Energy Pairings?**
+
+Each deity's energy pairing reflects their thematic focus:
+
+- **Alkira:** Fire (his sunburst symbol, righteous flame) + Positive (protection, healing allies)
+- **Ambis:** Positive (healing, nurturing) + Space (sanctuary, protective barriers)
+- **Athore:** Positive (righteousness) + Fire (punishment, purification)
+- **Enschede:** Time (prophecy, fate) + Space (scrying, divination)
+- **Hirnaloyta:** Earth (nature, plants) + Positive (life, growth)
+- **Nevil:** Negative (death, endings) + Time (cycles, passage)
+- **Rudlu:** Space (illusion, trickery) + Air (freedom, unpredictability)
+- **Shu-Jahan:** Space (learning, perception) + Positive (enlightenment, teaching)
+
+**Channel Divinity Balance:**
+
+Each deity has three options covering different aspects:
+- One offensive/combat option
+- One defensive/protective option  
+- One utility/support option
+
+This ensures versatility while maintaining deity flavor.
+
+**Generalist Trade-off:**
+
+The generalist gets:
+- **Benefits:** More balanced energy distribution, access to all 8 deities' abilities (one each), ultimate versatility
+- **Drawbacks:** Lower individual energy bonuses (+1/+1/+1 vs +2/+1), less specialized, weaker at any one thing
+
+This makes focused devotion stronger for specialists while allowing pantheon-wide priests to exist.
+
 ## Temples
 
 The symbol of the Pantheon is an 8-pointed star that represents the eight different gods that are acknowledged and worshipped throughout Estaea.  These are not individual gods with separate religions but a structure of gods forming a complete pantheon.
@@ -233,7 +266,7 @@ House of Sand
 
 ### Dragon Cult
 The order of eight is an ancient and presumably obsolete religion revolving around the great Daemons of legends known as Dragons.
-Dragons are thought to be extinct if they ever existed to begin with. The order of eight was a monastical religion with very fanatical tendencies. There were eight dragons and they are:  Aq-Yin-To, Char-Talt, Har-Ten-Mo, Kylo, Luk-Anda, Sein-Tuk-Tak,Tiet-Amor
+Dragons are thought to be extinct if they ever existed to begin with. The order of eight was a monastical religion with very fanatical tendencies. There were eight dragons and they are:  Aq-Yin-To, Char-Talt, Har-Ten-Mo, Kylo, Luk-Anda, Sein-Tuk-Tak,Tiet-Amor, Garro-Leth
 
 **Symbol:** Eight colored discs on a convoluted frame. 
 

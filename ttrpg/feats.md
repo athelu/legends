@@ -1,7 +1,6 @@
-# D8 TTRPG - Part 5: Feats
+# Feats
 
 ## Feat System Overview
-
 Feats are the primary way characters gain special abilities, combat techniques, and class-like features. Unlike the old system where traits gated access to abilities, feats are now available to any character who meets the prerequisites.
 
 ### Feat Costs and Limits
@@ -84,13 +83,13 @@ When creating new feats, follow these guidelines:
 
 ---
 
-## COMBAT FEATS - WARRIOR STYLE
+## COMBAT FEATS - Martial Combatant Style
 
 ### Combat Excellence
 - **Prerequisites:** Str or Agi 5, any combat skill 4
 - **Benefit:** Your intensive training reduces multiple attack penalties. Reduce multiple attack penalty by 1 for all attacks after the first (first attack normal, second attack +0 instead of +1, third attack +1 instead of +2)
 - **Usage:** Passive
-- **Note:** Core feature for fighter-style characters
+- **Note:** Core feature for Martial Combatant-style characters
 
 ### Battle Fury
 - **Prerequisites:** Con 5, any combat skill 5
@@ -473,7 +472,6 @@ When creating new feats, follow these guidelines:
 - **Prerequisites:** Any magical trait (Mageborn, Divine Gift, Sorcerous Origin, Invoker Magic, Eldritch Pact, or Divine Warrior), Int OR Wis OR Cha 5
 - **Benefit:** Once per day during a short rest, regain Energy equal to your tier × 4
 - **Usage:** Once per day
-- **Note:** Originally a wizard ability, now available to all casters who dedicate study to energy recovery
 
 ### Elemental Adept
 - **Prerequisites:** Any magical trait, chosen elemental Mastery 5
@@ -624,26 +622,30 @@ When creating new feats, follow these guidelines:
 
 ---
 
-### Bardic Specializations
+### Invoker Specializations
 
-#### Bardic Inspiration
-- **Prerequisites:** Bardic Magic trait, Cha 5
-- **Benefit:** As 1 [Minor] action, choose one creature within 60 feet who can hear you. They gain a Bardic Inspiration die (1d8). Within 10 minutes, they can add this die to one ability check, attack roll, or saving throw. Can have only one die at a time
+#### Inspiring Words
+- **Prerequisites:** Invoker trait, Cha 5
+- **Description:** You've learned true names that bolster courage, sharpen focus, and strengthen resolve. These aren't mere encouragement—they're words that resonate with the listener's pneuma, temporarily enhancing their capabilities.
+- **Benefit:** As 1 [Minor] action, speak true names of encouragement to one creature within 60 feet who can hear you. Until the end of their next turn, they subtract 1 from both dice on their next skill check, attack roll, or saving throw (their choice when to apply). Only one creature can benefit from your Inspiring Words at a time.
 - **Usage:** Charisma score times per long rest
 
-#### Jack of All Trades
-- **Prerequisites:** Bardic Magic trait, Cha 4
-- **Benefit:** Add half your proficiency bonus (rounded down) to any ability check you make that doesn't already include your proficiency bonus
+#### Versatile Knowledge
+- **Prerequisites:** Invoker trait, Cha 4
+- **Description:** True names teach connections between all things. Your studies have given you breadth of knowledge that aids even in unfamiliar tasks.
+- **Benefit:** Your diverse understanding of true names gives you insight into many fields. Add +1 to any skill check where you have rank 0 (untrained)
 - **Usage:** Passive
 
-#### Song of Rest
-- **Prerequisites:** Bardic Magic trait
-- **Benefit:** During a short rest, you and friendly creatures who can hear your performance regain an extra 1d8 HP
+#### Restorative Resonance
+- **Prerequisites:** Invoker trait
+- **Description:** Certain true names promote healing and restoration. Speaking them during rest helps allies' pneuma repair their bodies more efficiently.
+- **Benefit:** During a short rest, you can speak words of healing and restoration. You and friendly creatures who can hear your invocations regain an extra 1d8 HP
 - **Usage:** Unlimited (once per short rest)
 
-#### Countercharm
-- **Prerequisites:** Bardic Magic trait, Tier 3+
-- **Benefit:** As 1 [Combat] action, start a performance that lasts until end of your next turn. You and friendly creatures within 30 feet have advantage (subtract 1 from one die of choice) on saves against being Frightened or Charmed
+#### Disrupting Harmony
+- **Prerequisites:** Invoker trait, Tier 3+
+- **Description:** Just as true names can inspire, they can also create protective dissonance that disrupts mental manipulation. Your words create a shield of sound that wards against fear and compulsion.
+- **Benefit:** As 1 [Combat] action, begin speaking true names in discordant patterns. This lasts until end of your next turn. You and friendly creatures within 30 feet subtract 1 from their Wisdom die on saves against being Frightened or Charmed
 - **Usage:** Unlimited
 
 ---
@@ -672,151 +674,115 @@ When creating new feats, follow these guidelines:
 
 ---
 
-
----
-
 ## INVESTIGATION FEATS
 
 ### Antiquarian Feats
 
 #### Artifact Identification (Tier 1+)
-**Prerequisites:** Arcane 3 or History 3
-
-**Benefit:** When examining artifacts or ancient items, gain **Fortune** on Arcane or History checks to identify purpose, origin, and danger level. Can determine activation method on 2 successes. Reduce identification time from 10 minutes to 1 minute.
+- **Prerequisites:** Arcane 3 or History 3
+- **Benefit:** When examining artifacts or ancient items, gain Fortune on Arcane or History checks to identify purpose, origin, and danger level. Can determine activation method on 2 successes. Reduce identification time from 10 minutes to 1 minute
+- **Usage:** Passive
 
 #### Linguistic Savant (Tier 2+)
-**Prerequisites:** Language 3
-
-**Benefit:** Can attempt to decipher unknown scripts if they're related to languages you know. Make Language check (Hard task) to understand basic meaning. **Subtract 1 from both dice** when translating ancient or dead languages. Learn new languages in half the normal time (2 weeks instead of 4 weeks of study).
+- **Prerequisites:** Language 3
+- **Benefit:** Can attempt to decipher unknown scripts if related to languages you know (Hard task check). Subtract 1 from both dice when translating ancient or dead languages. Learn new languages in half the normal time (2 weeks instead of 4)
+- **Usage:** Passive
 
 #### Comparative Analysis (Tier 3+)
-**Prerequisites:** History 4, Investigate 4
-
-**Benefit:** When investigating ruins or artifacts similar to ones you've studied before, gain **Fortune** on all related checks (History, Investigate, Arcane, Perception). Once per session, can automatically make a connection between two seemingly unrelated clues (GM provides the link).
+- **Prerequisites:** History 4, Investigate 4
+- **Benefit:** When investigating ruins or artifacts similar to ones you've studied, gain Fortune on all related checks (History, Investigate, Arcane, Perception). Once per session, automatically make a connection between two seemingly unrelated clues
+- **Usage:** Once per session
 
 #### Speed Reader (Tier 2+)
-**Prerequisites:** Int 5, History 3 or Society 3
-
-**Benefit:** Read at 4× normal speed with full comprehension. Research tasks take half the normal time. When searching through books/archives for specific information, **subtract 1 from Investigate die** (not attribute).
-
+- **Prerequisites:** Int 5, History 3 or Society 3
+- **Benefit:** Read at 4× normal speed with full comprehension. Research tasks take half the normal time. When searching through books/archives for specific information, **subtract 1 from Investigate die** (not attribute).
+- **Usage:** Passive
 ---
 
 ### Field Agent Feats
 
 #### Deep Cover (Tier 1+)
-**Prerequisites:** Deception 3, Society 2
-
-**Benefit:** Can create and maintain believable cover identities. Spend 1 day to establish basic cover, 1 week for deep cover with documentation. When maintaining cover identity, gain **Fortune** on Deception checks. Can maintain up to 2 active cover identities at once (increases to 3 at Tier 4, 4 at Tier 7).
+- **Prerequisites:** Deception 3, Society 2
+- **Benefit:** Can create and maintain believable cover identities. Spend 1 day to establish basic cover, 1 week for deep cover with documentation. When maintaining cover identity, gain **Fortune** on Deception checks. Can maintain up to 2 active cover identities at once (increases to 3 at Tier 4, 4 at Tier 7).
 
 #### Interrogation Specialist (Tier 2+)
-**Prerequisites:** Empathy 3 or Intimidate 3
-
-**Benefit:** When questioning someone (friendly or hostile), choose your approach. Make opposed check (your Empathy or Intimidate vs their Wisdom + Luck). If you win by 1+ net successes, they reveal one specific piece of information. If you win by 2+ net successes, they reveal everything they know on the topic.
+- **Prerequisites:** Empathy 3 or Intimidate 3
+- **Benefit:** When questioning someone (friendly or hostile), choose your approach. Make opposed check (your Empathy or Intimidate vs their Wisdom + Luck). If you win by 1+ net successes, they reveal one specific piece of information. If you win by 2+ net successes, they reveal everything they know on the topic.
 
 #### Read the Room (Tier 2+)
-**Prerequisites:** Perception 4, Empathy 3
-
-**Benefit:** As [Minor] action upon entering a social situation, make Perception check. 1 success = identify most dangerous/influential person present; 2 successes = sense general mood and identify potential threats/allies.
+- **Prerequisites:** Perception 4, Empathy 3
+- **Benefit:** As [Minor] action upon entering a social situation, make Perception check. 1 success = identify most dangerous/influential person present; 2 successes = sense general mood and identify potential threats/allies.
 
 #### Shadow Network (Tier 3+)
-**Prerequisites:** Society 4, Deception 3 or Persuasion 3, Tier 3+
-
-**Benefit:** In any settlement where you spend at least 1 day, can cultivate an informant. Make Society check: 1 success = minor contact (gossip, rumors), 2 successes = valuable asset (specific information, minor favors). Can maintain up to Int score informants at once. Each provides information once per week (or once per session, whichever is longer).
-
-**Note:** This represents earned relationships through fieldwork, distinct from the Contacts trait which grants pre-existing connections.
+- **Prerequisites:** Society 4, Deception 3 or Persuasion 3, Tier 3+
+- **Benefit:** In any settlement where you spend at least 1 day, can cultivate an informant. Make Society check: 1 success = minor contact (gossip, rumors), 2 successes = valuable asset (specific information, minor favors). Can maintain up to Int score informants at once. Each provides information once per week (or once per session, whichever is longer).
 
 ---
 
 ### Delver Feats
 
 #### Structural Assessment (Tier 1+)
-**Prerequisites:** Perception 3, Athletics 2
-
-**Benefit:** Can assess building/ruin stability as [Minor] action. Make Perception check: 1 success = determine if structure is safe or dangerous; 2 successes = identify weak points, predict collapse paths, find hidden supports or escape routes. When navigating crumbling structures, gain **Fortune** on Athletics checks.
+- **Prerequisites:** Perception 3, Athletics 2
+- **Benefit:** Can assess building/ruin stability as [Minor] action. Make Perception check: 1 success = determine if structure is safe or dangerous; 2 successes = identify weak points, predict collapse paths, find hidden supports or escape routes. When navigating crumbling structures, gain **Fortune** on Athletics checks.
 
 #### Danger Sense (Tier 2+)
-**Prerequisites:** Perception 4, Devices 2
-
-**Benefit:** Your passive Perception for detecting traps **subtracts 1 from Perception die** (not attribute). When actively searching for traps, gain **Fortune**. If you fail to detect a trap and it triggers, you still get a Reflex save with **Fortune** to avoid the worst effects.
+- **Prerequisites:** Perception 4, Devices 2
+- **Benefit:** Your passive Perception for detecting traps **subtracts 1 from Perception die** (not attribute). When actively searching for traps, gain **Fortune**. If you fail to detect a trap and it triggers, you still get a Reflex save with **Fortune** to avoid the worst effects.
 
 #### Urban/Ruin Navigation (Tier 2+)
-**Prerequisites:** Investigate 3, Society 2 or Wilderness 2
-
-**Benefit:** Never become lost in cities or ruins (automatic mental mapping). When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route.
+- **Prerequisites:** Investigate 3, Society 2 or Wilderness 2
+- **Benefit:** Never become lost in cities or ruins (automatic mental mapping). When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route.
 
 #### Climber (Tier 2+)
-**Prerequisites:** Athletics 4, Acrobatics 2
-
-**Benefit:** Climb at full movement speed (no reduction). Can attempt normally impossible climbs (smooth stone, ice, ceilings) with Athletics check (Hard task). When falling during a climb, automatically get Acrobatics check to catch yourself (1 success = catch and stop fall, 2 successes = catch and don't take damage).
+- **Prerequisites:** Athletics 4, Acrobatics 2
+- **Benefit:** Climb at full movement speed (no reduction). Can attempt normally impossible climbs (smooth stone, ice, ceilings) with Athletics check (Hard task). When falling during a climb, automatically get Acrobatics check to catch yourself (1 success = catch and stop fall, 2 successes = catch and don't take damage).
 
 ---
 
 ### Arcanist Feats
 
 #### Detect Magic (At-Will) (Tier 1+)
-**Prerequisites:** Arcane 3, any magical tradition trait
-
-**Benefit:** Can sense magical auras as [Minor] action without spending Energy. Make Arcane check: 1 success = detect presence/absence of magic within 30 feet and general intensity; 2 successes = identify energy types used and general purpose (harmful/helpful, permanent/temporary). Does not reveal specific spell effects.
+- **Prerequisites:** Arcane 3, any magical tradition trait
+- **Benefit:** Sense magical auras as [Minor] action without Energy cost. Make Arcane check: 1 success = detect presence and general intensity within 30 feet; 2 successes = identify energy types and general purpose (harmful/helpful, permanent/temporary)
+- **Usage:** Passive
 
 #### Ward Analysis (Tier 2+)
-**Prerequisites:** Arcane 4, Space Mastery 2 or Time Mastery 2
-
-**Benefit:** Can analyze magical wards and barriers. Make Arcane check (opposed by ward creator's Arcane): 1 net success = identify ward type and triggering conditions; 2+ net successes = find safe bypass or temporary weakness. Attempting to dispel a ward costs 2 Energy and requires winning the opposed check.
+- **Prerequisites:** Arcane 4, Space Mastery 2 or Time Mastery 2
+- **Benefit:** Can analyze magical wards and barriers. Make Arcane check (opposed by ward creator's Arcane): 1 net success = identify ward type and triggering conditions; 2+ net successes = find safe bypass or temporary weakness. Attempting to dispel a ward costs 2 Energy and requires winning the opposed check.
 
 #### Ritual Efficiency (Tier 2+)
-**Prerequisites:** Arcane 4, any magical tradition trait with ritual casting
-
-**Benefit:** Cast rituals in half the normal time (5 minutes instead of 10). Component costs reduced by 25%. When missing a component, can make Arcane check (Hard task) to substitute similar materials. Can teach rituals to other casters (they learn in half time if you teach them).
+- **Prerequisites:** Arcane 4, any magical tradition trait with ritual casting
+- **Benefit:** Cast rituals in half the normal time (5 minutes instead of 10). Component costs reduced by 25%. When missing a component, can make Arcane check (Hard task) to substitute similar materials. Can teach rituals to other casters (they learn in half time if you teach them).
 
 #### Pneuma Sensitivity (Tier 3+)
-**Prerequisites:** Arcane 5, Religion 3, any magical tradition trait
-
-**Benefit:** Can sense ley lines and nexuses within 1 mile. Make Arcane check: 1 success = general direction and type; 2 successes = exact location and identify which energy types are strongest. When within 100 feet of daemons or undead, **subtract 1 from Perception die** to sense their presence. Can determine if a corpse possessed pneuma with Medicine or Religion check.
+- **Prerequisites:** Arcane 5, Religion 3, any magical tradition trait
+- **Benefit:** Sense ley lines and nexuses within 1 mile (Arcane check). 1 success = general direction and type; 2 successes = exact location and strongest energy types. Within 100 feet of daemons or undead, subtract 1 from Perception die to sense presence. Determine if corpse possessed pneuma with Medicine or Religion check
+- **Usage:** Passive
 
 ---
 
 ## BATTLE MAGE FEATS
 
 ### Weapon Weaver (Tier 1+)
-**Prerequisites:** Melee Combat 3, any magical tradition trait
-
-**Benefit:** When you take an Attack action with a melee weapon, can cast one Simple Weave (2 Energy cost or less) as part of the same action. You still make the normal weaving check for the weave (Potential + Mastery for each energy used). Both the attack and the weave use the same [Combat] action, and you apply the Multiple Action Penalty if you're making additional attacks this turn.
-
-**Example:** You can swing your sword (make Melee Combat check) and cast *Shocking Grasp* (make Air weaving check) as a single [Combat] action. If this is your second [Combat] action this turn, add 1 to all dice for both the attack check and the weaving check.
-
-**Note:** This feat allows you to combine a weapon attack and a Simple Weave into one action—it does not bypass the need to make weaving checks.
+- **Prerequisites:** Melee Combat 3, any magical tradition trait
+- **Description:** This feat allows you to combine a weapon attack and a Simple Weave into one action. it does not bypass the need to make weaving checks.
+- **Benefit:** When you take an Attack action with a melee weapon, can cast one Simple Weave (2 Energy cost or less) as part of the same action. You still make the normal weaving check for the weave (Potential + Mastery for each energy used). Both the attack and the weave use the same [Combat] action, and you apply the Multiple Action Penalty if you're making additional attacks this turn.
 
 ### Battle Casting (Tier 2+)
-**Prerequisites:** Weapon Weaver, any magical tradition trait, Tier 2+
-
-**Benefit:** Can cast Simple Weaves (2 Energy cost or less) as a [Minor] action instead of a full action. You still make the normal weaving check (Potential + Mastery for each energy used). This allows you to cast a Simple Weave and make weapon attacks in the same turn without combining them into a single action.
-
-**Example:** Use [Minor] action to cast *Shield* (make Space weaving check as normal), then use [Combat] action to attack twice with your sword.
-
-**Note:** Complex weaves (3+ Energy cost) still require a full action or multiple actions. All weaving checks are still required—this feat only changes the action economy, not the mechanics of weaving.
+- **Prerequisites:** Weapon Weaver, any magical tradition trait, Tier 2+
+- **Benefit:** Can cast Simple Weaves (2 Energy cost or less) as a [Minor] action instead of a full action. You still make the normal weaving check (Potential + Mastery for each energy used). This allows you to cast a Simple Weave and make weapon attacks in the same turn without combining them into a single action.
 
 ### Spellstrike (Tier 2+)
-**Prerequisites:** Weapon Weaver, any magical tradition trait, Tier 2+
-
-**Benefit:** When you hit with a melee weapon attack, can immediately make a Simple Weave (2 Energy) using one elemental energy to channel power through your weapon strike. Make a weaving check using the chosen energy's Potential + Mastery (2d8):
-
+- **Prerequisites:** Weapon Weaver, any magical tradition trait, Tier 2+
+- **Benefit:** When you hit with a melee weapon attack, can immediately make a Simple Weave (2 Energy) using one elemental energy to channel power through your weapon strike. Make a weaving check using the chosen energy's Potential + Mastery (2d8):
 - **1 success:** +1d8 elemental damage
 - **2 successes:** +2d8 elemental damage
-
 Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, Air, or Earth energy used). The weaving check uses the same action as your attack (both are part of the same [Combat] action).
-
 **Target's Defense:** Target uses their DR against the elemental damage as normal. If they have Resistance to the damage type, they gain +1 DR against it.
 
-**Example:** A battle mage with Fire Potential 5, Fire Mastery 4 hits with their longsword for 6 damage. They spend 2 Energy and roll Fire weaving check (2d8, looking for results under 5 and 4). Rolling 3 and 2 = 2 successes = +2d8 fire damage. Target has DR 3 and no fire resistance, so takes 6 physical damage - 3 DR = 3, plus 2d8 fire damage - 3 DR.
-
 ### Arcane Strike (Tier 3+)
-**Prerequisites:** Weapon Weaver, Battle Casting, Melee Combat 5, Tier 3+
-
-**Benefit:** You gain the Extra Attack ability when wielding a melee weapon. You can make 2 weapon attacks when you take the Attack action using one [Combat] action. Combined with Battle Casting, you can cast a Simple Weave as [Minor] action and then make 2 attacks as [Combat] action.
-
-**Example Turn:** [Minor] cast *Blade Ward*, [Combat] attack twice with greatsword, [Move] reposition.
-
-**Note:** This stacks with other sources of Extra Attack (such as from martial feats), but Multiple Action Penalty still applies if you take multiple [Combat] actions.
+- **Prerequisites:** Weapon Weaver, Battle Casting, Melee Combat 5, Tier 3+
+- **Benefit:** You gain the Extra Attack ability when wielding a melee weapon. You can make 2 weapon attacks when you take the Attack action using one [Combat] action. Combined with Battle Casting, you can cast a Simple Weave as [Minor] action and then make 2 attacks as [Combat] action. Multiple Action Penalty still applies if you take multiple [Combat] actions.
 
 ---
 
@@ -831,24 +797,18 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 ---
 
 ### Organizational Training (Tier 1+)
-**Prerequisites:** Background (any), affiliated with an investigative organization
-
-**Benefit:** Choose two skills from this list: Deception, Investigation, Persuasion, Society, Stealth. Gain +1 rank in each chosen skill (or +2 ranks to distribute if already trained). Once per session, can requisition specialized equipment (value up to 50 gp × your Tier) from organization safehouse or contact. Equipment must be returned or paid for at end of mission.
-
-**Roleplaying Hook:** Your organization has trained you in specific tradecraft. Describe your organization's methods and reputation when using this benefit.
+- **Prerequisites:** Background (any), affiliated with an investigative organization
+- **Description:** Your organization has trained you in specific tradecraft. Describe your organization's methods and reputation when using this benefit.
+- **Benefit:** Choose two skills from this list: Deception, Investigation, Persuasion, Society, Stealth. Gain +1 rank in each chosen skill (or +2 ranks to distribute if already trained). Once per session, can requisition specialized equipment (value up to 50 gp × your Tier) from organization safehouse or contact. Equipment must be returned or paid for at end of mission.
 
 ### Secured Identity (Tier 2+)
-**Prerequisites:** Organizational Training, Tier 2+
-
-**Benefit:** Your organization provides identity protection and operational security. Gain resistance to divination magic and truth detection (gain **Fortune** on saves against such effects). Can request your organization erase records of your activity in specific locations (takes 1 week, GM approval required). Once per mission, can call for extraction from dangerous situation (organization sends aid within 1d8 hours, GM determines form of assistance).
-
-**Roleplaying Hook:** Your organization protects its operatives. How does this manifest? False documentation? Magical wards? Political influence?
+- **Prerequisites:** Organizational Training, Tier 2+
+- **Description:** Your organization protects its operatives. How does this manifest? False documentation? Magical wards? Political influence?
+- **Benefit:** Your organization provides identity protection and operational security. Gain resistance to divination magic and truth detection (gain **Fortune** on saves against such effects). Can request your organization erase records of your activity in specific locations (takes 1 week, GM approval required). Once per mission, can call for extraction from dangerous situation (organization sends aid within 1d8 hours, GM determines form of assistance).
 
 ### Field Specialist (Tier 2+)
-**Prerequisites:** Organizational Training, Tier 2+
-
-**Benefit:** Choose a specialization based on your organization's focus:
-
+- **Prerequisites:** Organizational Training, Tier 2+
+- **Benefit:** Choose a specialization based on your organization's focus:
 **Academic Focus** (League of Antiquities, scholarly organizations)
 - Gain **Fortune** on History and Arcane checks related to artifacts
 - Access to organization's archives and research materials
@@ -870,10 +830,9 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - Backup available in organization's territory (reinforcements in 2d8 hours)
 
 ### Priority Directive (Tier 3+)
-**Prerequisites:** Field Specialist, Tier 3+
-
-**Benefit:** Once per mission, can declare an objective as "high priority" for your organization. If completed successfully, gain an Organizational Favor. Favors can be spent on:
-
+- **Prerequisites:** Field Specialist, Tier 3+
+- **Description:** Your organization values results. How do they reward success? How do they react to failure?
+- **Benefit:** Once per mission, can declare an objective as "high priority" for your organization. If completed successfully, gain an Organizational Favor. Favors can be spent on:
 **Minor Favor (1 Favor):**
 - Acquire rare information from organization's intelligence network
 - Secure meeting with important NPC through organization's influence
@@ -886,59 +845,38 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - Gain promotion within organization (increased authority and access)
 - Acquire permanent rare item or substantial monetary reward
 
-**Roleplaying Hook:** Your organization values results. How do they reward success? How do they react to failure?
-
 ### Deep Network (Tier 3+)
-**Prerequisites:** Shadow Network feat, Organizational Training, Society 5, Tier 3+
-
-**Benefit:** Your organization's resources dramatically expand your intelligence network. The number of informants you can maintain increases to (Int × 2). Additionally, you gain access to your organization's existing network:
-
+- **Prerequisites:** Shadow Network feat, Organizational Training, Society 5, Tier 3+
+- **Description:** You're plugged into your organization's broader intelligence apparatus. What does this network look like? Formal agents? Paid informants? Blackmailed assets?
+- **Benefit:** Your organization's resources dramatically expand your intelligence network. The number of informants you can maintain increases to (Int × 2). Additionally, you gain access to your organization's existing network:
 - In any major settlement, can contact organization's local operatives within 1 hour
 - Make Society check: 1 success = access to general intelligence about the area; 2 successes = access to specific, actionable intelligence or rumors
 - Once per session, can request organization use its resources to investigate a specific question (answer provided within 1 day, GM discretion on information quality)
 
-**Roleplaying Hook:** You're plugged into your organization's broader intelligence apparatus. What does this network look like? Formal agents? Paid informants? Blackmailed assets?
-
 ### Master Operative (Tier 4+)
-**Prerequisites:** Secured Identity, Priority Directive, Tier 4+
-
-**Benefit:** You've risen to a senior position within your organization. Gain the following benefits:
-
-**Authority:** Can command lower-ranking organization members (NPCs) within reason. They'll follow your orders unless they conflict with organization's primary interests.
-
-**Resources:** Equipment requisition limit increases to 100 gp × Tier per session. Can requisition specialized services (legal assistance, transportation, safe houses) as needed.
-
-**Autonomy:** Can operate independently with organization backing. Gain **Fortune** on Society checks when leveraging organization's reputation. Can assign Priority Directive to multiple objectives per mission (but still earn only one Favor per successful mission).
-
-**Intelligence Access:** Automatically know general political situation, major threats, and key players in any region where your organization operates. Can request detailed dossiers on specific individuals or groups (1 day preparation time).
-
-**Roleplaying Hook:** You're a trusted senior operative. How does this change your relationship with your organization? More freedom? More responsibility? More scrutiny?
+- **Prerequisites:** Secured Identity, Priority Directive, Tier 4+
+- **Description:** You're a trusted senior operative. How does this change your relationship with your organization? More freedom? More responsibility? More scrutiny?
+- **Benefit:** You've risen to a senior position within your organization. Gain the following benefits:
+- **Authority:** Can command lower-ranking organization members (NPCs) within reason. They'll follow your orders unless they conflict with organization's primary interests.
+- **Resources:** Equipment requisition limit increases to 100 gp × Tier per session. Can requisition specialized services (legal assistance, transportation, safe houses) as needed.
+- **Autonomy:** Can operate independently with organization backing. Gain **Fortune** on Society checks when leveraging organization's reputation. Can assign Priority Directive to multiple objectives per mission (but still earn only one Favor per successful mission).
+- **Intelligence Access:** Automatically know general political situation, major threats, and key players in any region where your organization operates. Can request detailed dossiers on specific individuals or groups (1 day preparation time).
 
 ### Compartmentalized Operations (Tier 2+)
-**Prerequisites:** Organizational Training, Int 4 or Wis 4
-
-**Benefit:** You're trained in operational security and information compartmentalization. Gain the following benefits:
-
-**Memory Partition:** Can voluntarily suppress specific memories (up to 24 hours of recent experiences). Suppressed memories cannot be extracted through interrogation, torture, or magic. Memories can be restored through specific trigger phrase or at designated organization facility. Can maintain up to 3 suppressed memory blocks at once.
-
-**Counter-Intelligence:** When someone attempts to read your thoughts or detect lies, gain **Fortune** on saves. Even if they succeed, they only access surface thoughts you choose to present.
-
-**Secure Communication:** Know coded language and cyphers used by your organization. Can encode/decode messages that appear mundane to outsiders but carry hidden meaning. Takes 10 minutes per page.
-
-**Roleplaying Hook:** Your organization values secrecy. How has compartmentalization affected your personality? Do you struggle to remember what's real?
+- **Prerequisites:** Organizational Training, Int 4 or Wis 4
+- **Description:** Your organization values secrecy. How has compartmentalization affected your personality? Do you struggle to remember what's real?
+- **Benefit:** You're trained in operational security and information compartmentalization. Gain the following benefits:
+- **Memory Partition:** Can voluntarily suppress specific memories (up to 24 hours of recent experiences). Suppressed memories cannot be extracted through interrogation, torture, or magic. Memories can be restored through specific trigger phrase or at designated organization facility. Can maintain up to 3 suppressed memory blocks at once.
+- **Counter-Intelligence:** When someone attempts to read your thoughts or detect lies, gain **Fortune** on saves. Even if they succeed, they only access surface thoughts you choose to present.
+- **Secure Communication:** Know coded language and cyphers used by your organization. Can encode/decode messages that appear mundane to outsiders but carry hidden meaning. Takes 10 minutes per page.
 
 ### Acquisition Specialist (Tier 2+)
-**Prerequisites:** Organizational Training, Persuasion 3 or Thievery 3
-
-**Benefit:** You specialize in securing valuable items for your organization. Gain the following benefits:
-
-**Appraisal Training:** Can assess item value and authenticity with Investigate or History check. 1 success = accurate value ±10%; 2 successes = exact value and identify forgeries or magical properties.
-
-**Organizational Buyers:** Your organization purchases items you recover. Sell for 75% of value instead of standard 50%. For items related to your organization's interests (ancient artifacts, magical components, intelligence documents), they pay 100% value and may offer bonuses.
-
-**Procurement Network:** Can locate rare items through organization's contacts. Make Society check to find item: Simple task for uncommon items, Hard task for rare items. Organization facilitates purchase (may require favors or missions in return for expensive items).
-
-**Roleplaying Hook:** What does your organization collect? Artifacts? Intelligence? Technology? How ruthless are they about acquisition?
+- **Prerequisites:** Organizational Training, Persuasion 3 or Thievery 3
+- **Description:** What does your organization collect? Artifacts? Intelligence? Technology? How ruthless are they about acquisition?
+- **Benefit:** You specialize in securing valuable items for your organization. Gain the following benefits:
+- **Appraisal Training:** Can assess item value and authenticity with Investigate or History check. 1 success = accurate value ±10%; 2 successes = exact value and identify forgeries or magical properties.
+- **Organizational Buyers:** Your organization purchases items you recover. Sell for 75% of value instead of standard 50%. For items related to your organization's interests (ancient artifacts, magical components, intelligence documents), they pay 100% value and may offer bonuses.
+- **Procurement Network:** Can locate rare items through organization's contacts. Make Society check to find item: Simple task for uncommon items, Hard task for rare items. Organization facilitates purchase (may require favors or missions in return for expensive items).
 
 ---
 
@@ -946,7 +884,6 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 
 ### Alchemical Infusion (Tier 2+)
 **Prerequisites:** Infuser trait, Int 5, Craft 4, Tier 2+
-
 **Benefit:** Your Imbue Item ability can now create alchemical consumables instead of weapon/armor enchantments. During a short rest, you can create alchemical items equal to your Intelligence score. Choose when creating:
 
 **Alchemical Bombs:**
@@ -967,62 +904,47 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - **Action:** Apply to weapon/armor as [Minor] action
 - **Effect:** Weapon deals +1d8 damage of chosen elemental type for next hit, or armor grants +2 DR against chosen elemental type for 1 minute
 - **Duration:** Enhancement lasts 1 hour or until used
-
-**Usage:** Can maintain total alchemical items equal to Int score at once. Creating new items during short rest replaces old ones.
+- **Usage:** Can maintain total alchemical items equal to Int score at once. Creating new items during short rest replaces old ones.
 
 ---
 
 ### Invoker Support Feats
 
 #### Master of Names (Tier 2+)
-**Prerequisites:** Invoker trait, Cha 5, Air Mastery 4
-
-**Benefit:** You've learned additional true names, expanding your magical vocabulary. Gain access to one additional energy type beyond your original 5:
+- **Prerequisites:** Invoker trait, Cha 5, Air Mastery 4
+- **Description:** You've discovered a sixth true name through research, revelation, or desperate need. The word came to you in dreams, whispered by daemons, or revealed through study of ancient texts. Speaking it feels unnatural at first—the syllables don't quite fit your tongue—but with practice, the name responds to your will.
+- **Benefit:** You've learned additional true names, expanding your magical vocabulary. Gain access to one additional energy type beyond your original 5:
 - Choose from: Earth, Fire, Water, or Negative (whichever you didn't already have)
 - Roll 1d8 for that energy's Potential (cannot exceed 8)
 - Gain the corresponding Mastery skill (starts at rank 0)
 - Your Energy Pool increases by the new Potential value
-
-**Restriction:** Can only take this feat once.
-
-**Lore:** You've discovered a sixth true name through research, revelation, or desperate need. The word came to you in dreams, whispered by daemons, or revealed through study of ancient texts. Speaking it feels unnatural at first—the syllables don't quite fit your tongue—but with practice, the name responds to your will.
+- **Restriction:** Can only take this feat once.
 
 #### Resonant Voice (Tier 2+)
-**Prerequisites:** Invoker trait, Words of Power ability, Cha 5, Air Mastery 4
-
-**Benefit:** Your Words of Power ability gains additional functionality. When you use Words of Power:
-
-**Empowerment (Allies):** As normal - all allies within 60 feet who can hear you subtract 1 from both dice on their next roll
-
-**Dissonance (Enemies):** As bonus effect - all enemies within 30 feet who can hear you add 1 to both dice on their next roll (if they can hear)
-
-**Usage:** Once per short rest (affects both allies and enemies simultaneously)
-
-**Lore:** You've learned to modulate the resonance of true names, creating harmonics that bolster allies while creating discordant vibrations that unsettle foes. The same word carries dual meaning—a blessing to those who understand, a curse to those who oppose.
+- **Prerequisites:** Invoker trait, Words of Power ability, Cha 5, Air Mastery 4
+- **Description:** You've learned to modulate the resonance of true names, creating harmonics that bolster allies while creating discordant vibrations that unsettle foes. The same word carries dual meaning—a blessing to those who understand, a curse to those who oppose.
+- **Benefit:** Your Words of Power ability gains additional functionality. When you use Words of Power:
+- **Empowerment (Allies):** As normal - all allies within 60 feet who can hear you subtract 1 from both dice on their next roll
+- **Dissonance (Enemies):** As bonus effect - all enemies within 30 feet who can hear you add 1 to both dice on their next roll (if they can hear)
+- **Usage:** Once per short rest (affects both allies and enemies simultaneously)
 
 #### Silent Names (Tier 3+)
-**Prerequisites:** Invoker trait, Cha 6, Air Mastery 5, Tier 3+
-
-**Benefit:** You've mastered the art of subvocal invocation. You can speak true names without making audible sound:
-
-**Silent Casting:**
+- **Prerequisites:** Invoker trait, Cha 6, Air Mastery 5, Tier 3+
+- **Description:** True names exist beyond sound—they are concepts given voice. You've learned to speak them directly to the pneuma, bypassing the need for physical vibration. The words resonate in the space between thoughts, heard by magic itself but not by mortal ears.
+- **Benefit:** You've mastered the art of subvocal invocation. You can speak true names without making audible sound:
+- **Silent Casting:**
 - Your weaves have no verbal component
 - Enemies cannot identify you as the caster through sound alone
 - Weaves cannot be countered by Silence effects
 - You can cast while gagged, underwater, or in vacuum
-
-**Limitation:** Still requires line of sight to targets (Invoker requirement remains)
-
-**Counterspell Resistance:** When enemy attempts to counter your weave, they add 2 to both dice (harder without hearing the invocation)
-
-**Lore:** True names exist beyond sound—they are concepts given voice. You've learned to speak them directly to the pneuma, bypassing the need for physical vibration. The words resonate in the space between thoughts, heard by magic itself but not by mortal ears.
+- **Limitation:** Still requires line of sight to targets (Invoker requirement remains)
+- **Counterspell Resistance:** When enemy attempts to counter your weave, they add 2 to both dice (harder without hearing the invocation)
 
 #### Name of Unmaking (Tier 4+)
-**Prerequisites:** Invoker trait, Cha 7, Space Mastery 5, Tier 4+
-
-**Benefit:** You know the true name of unraveling—a word that unmakes other magic. Gain counterspell ability:
-
-**Counterspell (Invoker):**
+- **Prerequisites:** Invoker trait, Cha 7, Space Mastery 5, Tier 4+
+- **Description:** This is not a true name of creation like others you know—it's a name of ending. Speaking it feels wrong, like pronouncing a word backwards while time flows in reverse. The syllables seem to erase themselves from memory even as you speak them, unwriting reality where magic was woven.
+- **Benefit:** You know the true name of unraveling—a word that unmakes other magic. Gain counterspell ability:
+- **Counterspell (Invoker):**
 - **Trigger:** Enemy casts weave you can see within 60 feet
 - **Action:** [Reaction]
 - **Cost:** No Energy required
@@ -1030,80 +952,52 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - **Effect:** If you win, their weave fails (Energy still spent by them)
 - **Usage:** Uses your Words of Power daily resource (once per short rest)
 
-**Lore:** This is not a true name of creation like others you know—it's a name of ending. Speaking it feels wrong, like pronouncing a word backwards while time flows in reverse. The syllables seem to erase themselves from memory even as you speak them, unwriting reality where magic was woven.
-
 ---
 
 ### Elemental Specialist Feats
 
 #### Fire Savant (Tier 3+)
-**Prerequisites:** Fire Mastery 6, Fire Potential 6, any magical tradition trait, Tier 3+
-
-**Benefit:** Your mastery of Fire energy grants the following abilities:
-
-**Burning Weaves:** When you cast a weave using Fire as primary energy and deal fire damage, targets that fail their save gain the **Burning** condition (see Conditions document).
-
-**Flame Immunity:** You are immune to fire damage from non-magical sources. You have Resistance (+2 DR) against magical fire damage.
-
-**Thermal Vision:** You can see heat signatures in darkness or through light obscurement (smoke, fog). Range 60 feet.
-
-**Lore:** Fire has become more than energy you channel—it's part of your pneuma. Flames bend to your will, recognizing you as kin. You feel their hunger, their rage, their cleansing fury.
+- **Prerequisites:** Fire Mastery 6, Fire Potential 6, any magical tradition trait, Tier 3+
+- **Description:** Fire has become more than energy you channel—it's part of your pneuma. Flames bend to your will, recognizing you as kin. You feel their hunger, their rage, their cleansing fury.
+- **Benefit:** Your mastery of Fire energy grants the following abilities:
+- **Burning Weaves:** When you cast a weave using Fire as primary energy and deal fire damage, targets that fail their save gain the **Burning** condition (see Conditions document).
+- **Flame Immunity:** You are immune to fire damage from non-magical sources. You have Resistance (+2 DR) against magical fire damage.
+- **Thermal Vision:** You can see heat signatures in darkness or through light obscurement (smoke, fog). Range 60 feet.
 
 #### Water Savant (Tier 3+)
-**Prerequisites:** Water Mastery 6, Water Potential 6, any magical tradition trait, Tier 3+
-
-**Benefit:** Your mastery of Water energy grants the following abilities:
-
-**Freezing Weaves:** When you cast a weave using Water as primary energy and deal cold damage, targets that fail their save gain the **Major Slowed** condition (see Conditions document) until end of their next turn.
-
-**Frost Resistance:** You are immune to cold damage from non-magical sources. You have Resistance (+2 DR) against magical cold damage.
-
-**Aquatic Adaptation:** You can breathe underwater. Gain swimming speed equal to your normal movement speed. Water-based Wilderness checks gain Fortune.
-
-**Lore:** Water flows through you as naturally as blood. You understand its paradox—fluid yet forceful, yielding yet unyielding. The ocean depths call to you, and ice forms at your command.
+- **Prerequisites:** Water Mastery 6, Water Potential 6, any magical tradition trait, Tier 3+
+- **Description:** Water flows through you as naturally as blood. You understand its paradox—fluid yet forceful, yielding yet unyielding. The ocean depths call to you, and ice forms at your command.
+- **Benefit:** Your mastery of Water energy grants the following abilities:
+- **Freezing Weaves:** When you cast a weave using Water as primary energy and deal cold damage, targets that fail their save gain the **Major Slowed** condition (see Conditions document) until end of their next turn.
+- **Frost Resistance:** You are immune to cold damage from non-magical sources. You have Resistance (+2 DR) against magical cold damage.
+- **Aquatic Adaptation:** You can breathe underwater. Gain swimming speed equal to your normal movement speed. Water-based Wilderness checks gain Fortune.
 
 #### Air Savant (Tier 3+)
-**Prerequisites:** Air Mastery 6, Air Potential 6, any magical tradition trait, Tier 3+
-
-**Benefit:** Your mastery of Air energy grants the following abilities:
-
-**Shocking Weaves:** When you cast a weave using Air as primary energy and deal lightning damage, targets that fail their save gain the **Stunned** condition (see Conditions document) until end of their next turn.
-
-**Storm Resistance:** You are immune to lightning damage from non-magical sources. You have Resistance (+2 DR) against magical lightning damage.
-
-**Windwalker:** You ignore movement penalties from difficult terrain. Can walk on water or other liquids as if solid ground. Falling damage reduced by half (cushioned by winds).
-
-**Lore:** The winds answer your call. You hear their whispers, feel their currents, ride their invisible paths. The space between breaths holds power you can grasp and shape.
+- **Prerequisites:** Air Mastery 6, Air Potential 6, any magical tradition trait, Tier 3+
+- **Description:** The winds answer your call. You hear their whispers, feel their currents, ride their invisible paths. The space between breaths holds power you can grasp and shape.
+- **Benefit:** Your mastery of Air energy grants the following abilities:
+- **Shocking Weaves:** When you cast a weave using Air as primary energy and deal lightning damage, targets that fail their save gain the **Stunned** condition (see Conditions document) until end of their next turn.
+- **Storm Resistance:** You are immune to lightning damage from non-magical sources. You have Resistance (+2 DR) against magical lightning damage.
+- **Windwalker:** You ignore movement penalties from difficult terrain. Can walk on water or other liquids as if solid ground. Falling damage reduced by half (cushioned by winds).
 
 #### Earth Savant (Tier 3+)
-**Prerequisites:** Earth Mastery 6, Earth Potential 6, any magical tradition trait, Tier 3+
-
-**Benefit:** Your mastery of Earth energy grants the following abilities:
-
-**Crushing Weaves:** When you cast a weave using Earth as primary energy and deal bludgeoning/piercing damage, targets that fail their save gain **Prone** and **Restrained** conditions (see Conditions document) until they use an action to break free (Might check, Hard task = 2 successes).
-
-**Stone Resilience:** You have natural DR 2 that stacks with armor (not magical). Your HP calculation uses Con × 9 instead of Con × 8.
-
-**Tremorsense:** You can sense vibrations through solid surfaces, detecting movement within 30 feet even if you cannot see. Ignore Blinded penalties when both you and target touch same surface.
-
-**Lore:** Stone recognizes stone. Your bones have become denser, your flesh harder. The earth itself steadies your stance, and you feel the tremors of all who walk upon it.
+- **Prerequisites:** Earth Mastery 6, Earth Potential 6, any magical tradition trait, Tier 3+
+- **Description:** Stone recognizes stone. Your bones have become denser, your flesh harder. The earth itself steadies your stance, and you feel the tremors of all who walk upon it.
+- **Benefit:** Your mastery of Earth energy grants the following abilities:
+- **Crushing Weaves:** When you cast a weave using Earth as primary energy and deal bludgeoning/piercing damage, targets that fail their save gain **Prone** and **Restrained** conditions (see Conditions document) until they use an action to break free (Might check, Hard task = 2 successes).
+- **Stone Resilience:** You have natural DR 2 that stacks with armor (not magical). Your HP calculation uses Con × 9 instead of Con × 8.
+- **Tremorsense:** You can sense vibrations through solid surfaces, detecting movement within 30 feet even if you cannot see. Ignore Blinded penalties when both you and target touch same surface.
 
 #### Death Weaver (Tier 4+)
-**Prerequisites:** Negative Mastery 7, Negative Potential 7, any magical tradition trait, Tier 4+
-
-**Benefit:** Your mastery of Negative energy grants the following abilities:
-
-**FORBIDDEN KNOWLEDGE WARNING:** This feat requires GM approval and represents mastery of forbidden arts. In most Legends campaigns, necromancy is lost First Men knowledge. Taking this feat implies your character has somehow recovered this forbidden lore.
-
-**Draining Weaves:** When you cast a weave using Negative as primary energy and deal negative damage:
+- **Prerequisites:** Negative Mastery 7, Negative Potential 7, any magical tradition trait, Tier 4+
+- **Description:** You have gazed into the void beyond death and returned changed. Negative energy flows through you like blood, and the boundary between life and death has thinned. The dead recognize you as something close to kin—neither fully alive nor fully dead, but something in between.
+- **Benefit:** Your mastery of Negative energy grants the following abilities:
+- **FORBIDDEN KNOWLEDGE WARNING:** This feat requires GM approval and represents mastery of forbidden arts. In most Legends campaigns, necromancy is lost First Men knowledge. Taking this feat implies your character has somehow recovered this forbidden lore.
+- **Draining Weaves:** When you cast a weave using Negative as primary energy and deal negative damage:
 - You heal HP equal to half the negative damage dealt
 - Targets that fail their save have Misfortune on their next attack roll (life force weakened)
-
-**Undeath Affinity:** You have Resistance (+2 DR) against negative energy damage. Undead do not automatically attack you unless commanded to. You can communicate with undead (they understand you, though they may not obey).
-
-**Corpse Sense:** You can sense the presence of corpses and undead within 60 feet. You can determine how long a corpse has been dead and whether it possessed pneuma.
-
-**Lore:** You have gazed into the void beyond death and returned changed. Negative energy flows through you like blood, and the boundary between life and death has thinned. The dead recognize you as something close to kin—neither fully alive nor fully dead, but something in between.
+- **Undeath Affinity:** You have Resistance (+2 DR) against negative energy damage. Undead do not automatically attack you unless commanded to. You can communicate with undead (they understand you, though they may not obey).
+- **Corpse Sense:** You can sense the presence of corpses and undead within 60 feet. You can determine how long a corpse has been dead and whether it possessed pneuma.
 
 ---
 
@@ -1112,10 +1006,9 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 ### Foundation Feat
 
 #### Pneuma Strike (Tier 1+)
-**Prerequisites:** Unarmed Mastery, any elemental Mastery 3+, any magical tradition trait
-
-**Benefit:** You've learned to channel elemental energy through your unarmed strikes. Choose one elemental energy (Fire, Water, Air, or Earth) when you take this feat. When you hit with an unarmed strike or monk weapon, you can spend 2 Energy to channel that element:
-
+- **Prerequisites:** Unarmed Mastery, any elemental Mastery 3+, any magical tradition trait
+- **Description:** You've discovered how to let pneuma flow through your body, not just your mind. Where spellcasters weave energy at range, you channel it through flesh and bone, releasing it at the moment of impact. Your strikes crackle with elemental fury.
+- **Benefit:** You've learned to channel elemental energy through your unarmed strikes. Choose one elemental energy (Fire, Water, Air, or Earth) when you take this feat. When you hit with an unarmed strike or monk weapon, you can spend 2 Energy to channel that element:
 - Make weaving check using chosen energy (Potential + Mastery, 2d8)
 - **1 success:** +1d8 elemental damage
 - **2 successes:** +2d8 elemental damage
@@ -1124,10 +1017,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
   - Water = Cold damage
   - Air = Lightning damage
   - Earth = Acid damage
-
-**Special:** This feat can be taken multiple times. Each time, choose a different elemental energy.
-
-**Lore:** You've discovered how to let pneuma flow through your body, not just your mind. Where spellcasters weave energy at range, you channel it through flesh and bone, releasing it at the moment of impact. Your strikes crackle with elemental fury.
+- **Special:** This feat can be taken multiple times. Each time, choose a different elemental energy.
 
 ---
 
@@ -1146,7 +1036,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
   - 0 successes (tie/lose): 1d8 elemental damage
 - **Damage type:** Based on energy (Fire/Cold/Lightning/Acid)
 
-**Lore:** Rather than focusing energy into a single strike, you release it all at once in a devastating wave. The pneuma explodes outward from your body, washing over everything in front of you.
+**Description:** Rather than focusing energy into a single strike, you release it all at once in a devastating wave. The pneuma explodes outward from your body, washing over everything in front of you.
 
 #### Elemental Reach (Tier 2+)
 **Prerequisites:** Pneuma Strike, any elemental Mastery 4+, Tier 2+
@@ -1163,7 +1053,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - **Air:** Crackling arc of lightning
 - **Earth:** Spike of stone or hurled shard
 
-**Lore:** You've learned to project pneuma beyond your physical form. The elemental energy becomes an extension of your body, reaching far beyond natural limits.
+**Description:** You've learned to project pneuma beyond your physical form. The elemental energy becomes an extension of your body, reaching far beyond natural limits.
 
 #### Flowing Defense (Tier 2+)
 **Prerequisites:** Pneuma Strike (Water), Water Mastery 4+, Mystic Defense feat, Tier 2+
@@ -1175,7 +1065,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
   - 1+ successes: Reduce damage by your Wisdom score
   - 2 successes: Reduce damage by your Wisdom score × 2
 
-**Lore:** Water adapts to any container, any pressure. Your defense flows like a river, yielding to absorb impacts and redirecting force harmlessly away.
+**Description:** Water adapts to any container, any pressure. Your defense flows like a river, yielding to absorb impacts and redirecting force harmlessly away.
 
 #### Burning Soul (Tier 2+)
 **Prerequisites:** Pneuma Strike (Fire), Fire Mastery 4+, Tier 2+
@@ -1186,7 +1076,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - **Ignited Strikes:** When you use Pneuma Strike (Fire) and deal fire damage, targets that take damage gain the **Smoldering** condition (see Conditions document) if they failed their DR by 4+ damage
 - **Heat Vision:** You can see heat signatures in darkness (as per Fire Savant feat thermal vision, 60 feet)
 
-**Lore:** The fire doesn't just flow through you—it lives within you. Your pneuma burns hot enough that even your breath carries heat. Those who strike you risk being scorched by your inner flame.
+**Description:** The fire doesn't just flow through you—it lives within you. Your pneuma burns hot enough that even your breath carries heat. Those who strike you risk being scorched by your inner flame.
 
 #### Stormborn Strike (Tier 2+)
 **Prerequisites:** Pneuma Strike (Air), Air Mastery 4+, Tier 2+
@@ -1197,7 +1087,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - **Stunning Shock:** When you use Pneuma Strike (Air) and deal lightning damage, if target takes 8+ damage from the strike, they must make Fortitude save vs your Wis + Air Mastery or gain **Dazed** condition (see Conditions document)
 - **Static Field:** You gain +1 to initiative (static charge heightens awareness)
 
-**Lore:** Lightning doesn't warn before it strikes. You move with the speed of storms, your blows landing before enemies can react, leaving them reeling from the shock.
+**Description:** Lightning doesn't warn before it strikes. You move with the speed of storms, your blows landing before enemies can react, leaving them reeling from the shock.
 
 #### Earthshaker Fist (Tier 2+)
 **Prerequisites:** Pneuma Strike (Earth), Earth Mastery 4+, Might 4+, Tier 2+
@@ -1208,7 +1098,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - **Tremor Strike:** Once per short rest, when you strike the ground (or a solid surface) with Pneuma Strike (Earth), you can affect a 10-foot radius instead of single target. All creatures in area make Reflex save or take damage and fall Prone
 - **Stone Stance:** While standing on solid ground, you have Fortune on checks to resist being moved, grappled, or knocked prone
 
-**Lore:** Your strikes carry the weight of mountains. When your fist connects, it's not flesh hitting flesh—it's the inexorable force of stone crushing everything in its path.
+**Description:** Your strikes carry the weight of mountains. When your fist connects, it's not flesh hitting flesh—it's the inexorable force of stone crushing everything in its path.
 
 ---
 
@@ -1227,7 +1117,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 
 **Special:** Can only have one Elemental Mantle active at a time.
 
-**Lore:** You don't just channel elements—you become one with them. Fire dances across your skin, ice crystallizes in your wake, lightning arcs between your fingers, or stone hardens your flesh. The boundary between you and the element blurs.
+**Description:** You don't just channel elements—you become one with them. Fire dances across your skin, ice crystallizes in your wake, lightning arcs between your fingers, or stone hardens your flesh. The boundary between you and the element blurs.
 
 #### Twin Element Strike (Tier 3+)
 **Prerequisites:** Pneuma Strike (any two elements), Int 5 or Wis 5, Tier 3+
@@ -1241,7 +1131,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 
 **Combining Effects:** If both elements would apply conditions or special effects, target suffers both (if they fail saves).
 
-**Lore:** Most spellcasters struggle to weave even two energies in careful ritual. You've learned to blend them in the chaos of combat, channeling opposing forces through a single strike. Fire and ice, lightning and stone—your pneuma harmonizes contradictions.
+**Description:** Most spellcasters struggle to weave even two energies in careful ritual. You've learned to blend them in the chaos of combat, channeling opposing forces through a single strike. Fire and ice, lightning and stone—your pneuma harmonizes contradictions.
 
 #### Pneuma Burst (Tier 4+)
 **Prerequisites:** Pneuma Strike (any element), Elemental Burst, any elemental Mastery 6+, Tier 4+
@@ -1259,7 +1149,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
   - Air: **Disoriented** condition
   - Earth: **Prone** condition
 
-**Lore:** Where once you released energy in a focused wave, now you unleash devastation. Your pneuma explodes outward like a natural disaster made manifest—a firestorm, blizzard, lightning strike, or earthquake concentrated in your fists.
+**Description:** Where once you released energy in a focused wave, now you unleash devastation. Your pneuma explodes outward like a natural disaster made manifest—a firestorm, blizzard, lightning strike, or earthquake concentrated in your fists.
 
 #### Elemental Body (Tier 5+)
 **Prerequisites:** Elemental Mantle, any elemental Mastery 7+, Tier 5+
@@ -1279,7 +1169,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 
 **Limitations:** Cannot cast weaves while transformed (all pneuma dedicated to maintaining form). Dropping to 0 HP ends transformation immediately.
 
-**Lore:** You've achieved what few martial artists ever dream of—complete unity with an element. You don't channel fire, you ARE fire. You don't manipulate water, you BECOME water. The distinction between your pneuma and elemental energy dissolves entirely.
+**Description:** You've achieved what few martial artists ever dream of—complete unity with an element. You don't channel fire, you ARE fire. You don't manipulate water, you BECOME water. The distinction between your pneuma and elemental energy dissolves entirely.
 
 ---
 
@@ -1298,7 +1188,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 
 **Efficiency:** This is more Energy-efficient than using Pneuma Strike three separate times (4 Energy vs 6 Energy), but risks all-or-nothing on single weaving check.
 
-**Lore:** Your flurry becomes a blur of elemental fury. Fire, ice, lightning, or stone—the energy flows through every strike like a continuous stream rather than separate bursts.
+**Description:** Your flurry becomes a blur of elemental fury. Fire, ice, lightning, or stone—the energy flows through every strike like a continuous stream rather than separate bursts.
 
 #### Stunning Element Strike (Tier 3+)
 **Prerequisites:** Stunning Strike feat, Pneuma Strike (any element), Tier 3+
@@ -1310,7 +1200,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - Energy courses through their paralyzed form
 - **If Stunned condition ends early:** Target takes additional 1d8 elemental damage as residual energy releases
 
-**Lore:** You don't just interrupt their pneuma flow—you flood it with elemental energy. The shock of foreign pneuma coursing through their meridians is devastating.
+**Description:** You don't just interrupt their pneuma flow—you flood it with elemental energy. The shock of foreign pneuma coursing through their meridians is devastating.
 
 ---
 

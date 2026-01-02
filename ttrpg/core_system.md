@@ -1,4 +1,4 @@
-# D8 TTRPG - Part 1: Core System
+# Core System
 
 ### Core Mechanic: Roll Under
 
@@ -26,15 +26,14 @@
 -   "Add 1 to the attribute die only" - only affects attribute die
 -   "Reroll the skill die" - only affects skill die
 
-## Fortune & Misfortune
-### Fortune (beneficial modifier):
+### Fortune (bonus):
 -   Roll 3d8 total (instead of the normal 2d8)
 -   Take the best (lowest) 2 results
 -   Assign one result to the attribute, one to the skill
 -   Count successes normally
 -   Represents favorable circumstances, superior positioning, or cosmic luck
 
-### Misfortune (detrimental modifier):
+### Misfortune (penalty):
 -   Roll 3d8 total (instead of the normal 2d8)
 -   Take the worst (highest) 2 results
 -   Assign one result to the attribute, one to the skill
@@ -50,14 +49,13 @@
 
 **Multiple sources:** Fortune and Misfortune cancel each other out on a 1-to-1 basis. If you have 2 sources of Fortune and 1 source of Misfortune, you have 1 Fortune remaining.
 
-## Critical Results
-### Critical Success: Rolling double 1s (1.56% chance)
+### Critical Success: Rolling double 1s
 -   Both dice automatically succeed (counts as 2 successes)
 -   Grants +1 additional success (total 3 successes in opposed rolls)
 -   Restore all Luck points to maximum
 -   **In combat:** 3+ success margin = maximum damage + Luck restore + apply condition
 
-### Critical Failure: Rolling double 8s (1.56% chance)
+### Critical Failure: Rolling double 8s
 -   Both dice automatically fail (0 successes)
 -   Action fails catastrophically
 -   GM determines consequences
@@ -196,10 +194,22 @@ All other keyword types can be used multiple times without penalty.
 | 7 | 1320–1560 | ~10 | Levels 18–19 |
 | 8 | 1560+ | ~10+ | Level 20 |
 
-### Feat Limits
--   **Starting:** 2 free feats at character creation
--   **Per Tier:** Can purchase up to 2 additional feats per tier
--   **Example:** Tier 3 character can have 2 starting + 6 purchased = 8 total feats
+
+##### Progression Rate: At 24 XP per session:
+-   Tier 1→2: ~5 sessions
+-   Tier 2→3: ~10 sessions
+-   Tier 3→4: ~10 sessions
+-   Tier 4→5: ~10 sessions
+-   Tier 5→6: ~10 sessions
+-   Tier 6→7: ~10 sessions
+-   Tier 7→8: ~10 sessions
+
+##### Notes on Feat Limits:
+-   The 2 starting feats are FREE and do NOT count against tier limits
+-   Tier limits apply only to feats purchased with XP
+-   This allows characters to grow from 4 feats (Tier 1) to 18 feats (Tier 8)
+-   Characters can still mix and match feat types freely (martial + magical, etc.)
+
 
 ## Success Probability Reference
 
