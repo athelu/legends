@@ -23,17 +23,18 @@
 - Includes Words of Power ability
 
 #### Innate Weaving (Sorcerous Origin Trait)
-- Innate magic use from Bloodline
-- Uses Charisma as Casting Stat
-- Bonus to Primary Magic Potential based upon Bloodline
-- Includes Sorcery points to modify weaves
+- Self-knowledge as magic source
+- Uses Wisdom as Casting Stat
+- Bonus to Primary Magic Potential based upon Manifestation (Unchanging Stone, Thread of Fate, Death's Lesson, or Perfect Self-Perception)
+- Includes Resonant Weaving (ignore first overspending penalty) and Harmonic Weaving (success manipulation)
+- Energy regenerates on long rest
 
 #### Patron Weaving (Eldritch Pact Trait)
-- Powers drawn from an otherworldy patron
+- Powers drawn from an otherworldly patron
 - Uses Charisma as Casting Stat
 - Bonus to Primary Magic Potential based upon Patron
 - Limited to 5 energies
-- Grants Eldritch blast ability
+- Pact Conduit provides passive weaving enhancement based on pact type
 
 #### Paladin Weaving (Divine Warrior Trait)
 - Spiritual warrior with an oath to protect and defend
@@ -53,11 +54,11 @@
 | Feature | Mageborn | Divine Gift | Invoker | Infuser | Sorcerous Origin | Eldritch Pact | Divine Warrior |
 |---------|----------|-------------|---------|---------|------------------|---------------|----------------|
 | **Trait** | Arcane Weaving | Divine Weaving | Invoker Weaving | Infuser Weaving | Innate Weaving | Patron Weaving | Paladin Weaving |
-| **Casting Stat** | Intelligence | Wisdom | Charisma | Intelligence | Charisma | Charisma | Charisma |
+| **Casting Stat** | Intelligence | Wisdom | Charisma | Intelligence | Wisdom | Charisma | Charisma |
 | **# of Energies** | 8 | 8 | 5 | 5 | 8 | 5 | 4 |
 | **Primary Energy** | Elemental (choice) | Divine or Elemental | Air (fixed) | Earth (fixed) | Bloodline-dependent | Patron-dependent | Oath-dependent |
 | **Fixed Energies** | None | None | Air, Positive, Space, Time | Earth, Space, Positive, Time | None | Patron-dependent | Oath-dependent |
-| **Special Ability** | Ritual Casting | Channel Divinity | Words of Power | Imbue Item | Sorcery Points | Pact Magic (short rest) | Lay on Hands |
+| **Special Ability** | Ritual Casting | Channel Divinity | Words of Power | Imbue Item | Resonant/Harmonic | Pact Conduit (short rest) | Lay on Hands |
 | **Energy Pool** | Full (8 Potentials) | Full (8 Potentials) | Limited (5 Potentials) | Limited (5 Potentials) | Full (8 Potentials) | Limited (5 Potentials) | Limited (4 Potentials) |
 | **Focus** | Versatile arcane | Divine/nature power | True names, line of sight | Object infusion, touch required | Innate bloodline magic | Otherworldly patron power | Martial divine warrior |
 | **Unique Traits** | Half-cost rituals | Channel options | Always includes Air, requires LoS | Always includes Earth, touch required | Metamagic via points | Short rest energy regen | Healing ability, short rest regen |

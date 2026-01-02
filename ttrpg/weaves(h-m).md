@@ -97,9 +97,9 @@
 
 ### Identify
 -   **Primary Energy:** Space 3 (revealing magical properties)
--   **Supporting Energy:** None (touch, instantaneous or 10-minute ritual)
+-   **Supporting Energy:** None (touch, instantaneous)
 -   **Total Cost:** 3 Energy
--   **Action:** Simple weave (1 action), takes 10 minutes as ritual
+-   **Action:** Simple weave (1 action)
 -   **Weaving Roll:** Space Potential + Space Mastery (2d8 only)
 -   **Effect:** Learn the properties of one magic item or active weave, including how to use it and any requirements. Also reveals if item is cursed (but not the curse's nature).
 -   **Saving Throw:** None (information gathering)

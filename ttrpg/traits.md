@@ -398,39 +398,65 @@ You have discovered how to channel magical energy directly into physical objects
 -   **Negative**: Withering weapons, life-draining effects, entropic decay infusions
 
 
-
 ### Sorcerous Origin (-7)
-**Requirements:** Charisma ≥ 3
+**Requirements:** Wisdom ≥ 3
 
-You are mageborn—your eyes glow with constant violet light from birth, marking your inherent connection to the planes. Unlike wizard mages who study and understand magic intellectually, your power flows from raw force of personality and unshakeable sense of self. Your pneuma is so strong, so adamantine in its certainty, that reality itself cannot deny you. You don't need to understand *how* magic works—you simply *know* it answers to your will.
+You are an Arcanisty, your eyes glow with constant violet light from birth, marking your inherent connection to the planes. Unlike Mageborn who study magic intellectually or clerics who channel divine power, your magic flows from perfect self-knowledge and unshakeable inner certainty. Your pneuma is so clear, so completely understood, that reality itself recognizes and responds to your true nature. You don't need to understand *how* magic works—you *know* what you are, and that truth manifests as power.
 
-**Visual Effects:** Your weaves crackle with wild, barely-contained energy. Violet light constantly emanates from your eyes, and when you cast, the magic erupts in dramatic bursts. Glyphs and symbols swirl chaotically around you, responding to your will rather than careful control. Your Force of Will manifestation is visible in your magic's aesthetic.
+**The Source of Power:**
+Where Mageborn study external principles and clerics channel external deities, sorcerers have achieved something rarer: **perfect internal understanding**. You've looked within and seen yourself completely—not your surface thoughts or emotions, but your fundamental nature across space, time, and probability. This enlightenment isn't intellectual (that's wizardry) or spiritual devotion (that's divine casting)—it's absolute self-perception. Reality cannot deny a truth perceived so clearly.
+
+**Visual Effects:** Your weaves flow naturally, almost effortlessly, as if reality is simply acknowledging what already is. Violet light constantly emanates from your eyes—not flickering like other mageborn, but steady, like a candle that never wavers. When you cast, magic moves through you like water finding its level, inevitable and serene. Your Force of Will manifestation determines how this manifests aesthetically.
 
 **Mechanical Benefits:**
 -   Roll **8d8**, assign to eight Magical Potentials
--   **Choose Force of Will Manifestation:** Determines which energy gets highest affinity and your magical identity
-    - **Indomitable Will:** Choose Earth or Fire = highest roll + 2 (max 8). Your sense of self is absolute and unchanging.
-    - **Destined Soul:** Choose Time or Positive = highest roll + 2 (max 8). You KNOW you have a greater purpose; fate itself aids your magic.
-    - **Triumphant Spirit:** Choose Fire or Negative = highest roll + 2 (max 8). You survived something impossible; your refusal to die awakened power.
-    - **Perfect Ego:** Choose Space or Air = highest roll + 2 (max 8). You are the center of your universe; magic manifests your perfect self-image.
+-   **Choose Force of Will Manifestation:** Determines which energy aligns with your deepest truth and grants unique benefits
+
+#### Unchanging Stone (Earth/Fire)
+**Story:** *"I know my nature completely—I am solid as stone, constant as truth"*
+**Primary Energy:** Choose Earth or Fire = highest roll + 2 (max 8)
+**Manifestation Benefits:**
+-   **Stone's Certainty:** Subtract 1 from both dice on saves against effects that would change your form or nature (polymorph, petrification, forced movement, mind control that alters personality)
+-   **Enduring Form:** +1 max HP per tier, DR = 1 when unarmored
+
+#### Thread of Fate (Time/Positive)
+**Story:** *"I perceive my place in the pattern—I see where I'm meant to be"*
+**Primary Energy:** Choose Time or Positive = highest roll + 2 (max 8)
+**Manifestation Benefits:**
+-   **Fate's Insight:** Once per long rest, reroll any attack roll, saving throw, or ability check after seeing the result
+-   **Glimpse Ahead:** Once per short rest, gain a cryptic one-sentence hint about immediate danger or opportunity in the next 10 minutes (ask GM)
+
+#### Death's Lesson (Fire/Negative)
+**Story:** *"I understand survival is my truth—I've seen death and know it's not my path"*
+**Primary Energy:** Choose Fire or Negative = highest roll + 2 (max 8)
+**Manifestation Benefits:**
+-   **Survivor's Truth:** When reduced below half HP, gain Fortune on your next weaving roll and temporary HP equal to your Wisdom (once per long rest)
+-   **Death's Defiance:** Subtract 1 from both dice when making death saves
+
+#### Perfect Self-Perception (Space/Air)
+**Story:** *"I perceive myself completely across space and time—I exist in total self-awareness"*
+**Primary Energy:** Choose Space or Air = highest roll + 2 (max 8)
+**Manifestation Benefits:**
+-   **Omnipresent Mind:** Add your Wisdom to initiative. Once per short rest, as [Free] action, perceive from any point within 60 feet for 1 round
+-   **Mental Clarity:** Subtract 1 from both dice on saves against mental effects (Charmed, Frightened, possession)
+
+**Common Mechanical Elements:**
 -   Choose **Secondary Focus** (any other energy): That Potential = any other roll + 1
--   Use **Charisma** as Casting Stat
+-   Use **Wisdom** as Casting Stat
 -   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0, untrained)
 -   Can weave sorcerous magic using all 8 energies
--   **Energy Pool:** Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
--   **Gain Sorcery Points:** Pool equal to your Charisma score. Regain all points after long rest. Can spend for metamagic effects (see Metamagic feats).
+-   **Energy Pool:** Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
 
-**Force of Will Benefits:**
--   **Indomitable Will:** +1 max HP per tier, DR = 1 when unarmored (your certainty protects you)
--   **Destined Soul:** Once per long rest, reroll any failed save or ability check (fate intervenes)
--   **Triumphant Spirit:** When reduced below half HP, gain temporary HP equal to your Charisma (once per long rest - your refusal to fall)
--   **Perfect Ego:** Subtract 1 from both dice on saving throws against mental effects (Charmed, Frightened, mind-reading)
+**Sorcerer Signature Abilities:**
+-   **Resonant Weaving (Passive):** You ignore the first point of overspending penalty on all energy types. If you have Fire Mastery 4 and spend 6 Energy (2 over), you only add +1 to both dice instead of +2
+-   **Harmonic Weaving:** When you make a weaving roll, you can declare "Harmonic" to reroll one die (Potential OR Mastery, your choice). You must take the new result. You can use this ability a number of times per long rest equal to your Wisdom + Tier
 
 **Visual Aesthetics by Manifestation:**
--   **Indomitable Will:** Weaves manifest as solid, geometric constructs—crystalline shields, perfectly straight beams of light
--   **Destined Soul:** Weaves shimmer with threads of silver light, as if pulled from the future
--   **Triumphant Spirit:** Weaves burn with defiant energy, crackling with barely-controlled fury
--   **Perfect Ego:** Weaves are beautiful, symmetrical, impossibly elegant
+-   **Unchanging Stone:** Weaves manifest as solid, geometric constructs—crystalline shields, perfectly straight beams, enduring walls of force
+-   **Thread of Fate:** Weaves shimmer with silver-white threads, as if woven from probability itself, showing glimpses of what must be
+-   **Death's Lesson:** Weaves burn with fierce, defiant energy—not chaotic but purposeful, like a forge fire that refuses to die
+-   **Perfect Self-Perception:** Weaves are impossibly precise, beautiful in their symmetry, reflecting your complete awareness of position and form
+"
 
 ### Eldritch Pact (-7)
 **Requirements:** Charisma ≥ 3
@@ -439,35 +465,49 @@ You are a diabolist—awakened to magical power through trauma rather than born 
 
 Your eyes glow with violet light only when you complete a weave, the power flowing from your pact through your pneuma at the moment of casting.
 
-**Visual Effects:** When you weave, your eyes flash with violet light and your pact's influence is unmistakable. Between castings, your eyes appear normal, but careful observers might notice subtle signs—strange reflections, unnatural shadows, or otherworldly glimmers. The nature of what you've bound yourself to manifests in your magic's appearance.
+**Visual Effects:** When you weave, your eyes flash with violet light and your pact's influence is unmistakable. Between castings, your eyes appear normal, but careful observers might notice subtle signs like strange reflections, unnatural shadows, or otherworldly glimmers. The nature of what you've bound yourself to manifests in your magic's appearance.
 
 **Mechanical Benefits:**
 -   Roll **5d8**, assign to five Magical Potentials based on pact type
 -   **Choose Survival Pact Type:** Determines energy access and how the pact manifests
-    - **The Survivor's Bargain:** Space (highest +2), Negative (any +1), Fire, Earth, Time
-        - *You should have died. You didn't. Something intervened.*
-        - Gift: When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier (survival rewarded)
-    - **The Desperate Deal:** Positive (highest +2), Space (any +1), Air, Time, Water
-        - *You promised something to someone in your darkest hour. Power came immediately.*
-        - Gift: Once per short rest, as [Combat] action, heal yourself or touched ally for HP equal to Charisma × tier (the deal sustains you)
-    - **The Answered Cry:** Air (highest +2), Negative (any +1), Space, Time, Water
-        - *You screamed into the void. The void answered.*
-        - Gift: You can communicate telepathically with any creature you can see within 30 feet (the void connects you to others' thoughts)
-    - **The Stolen Shard:** Fire (highest +2), Negative (any +1), Space, Earth, Time
-        - *You found/touched/stole something not meant for you. This power wasn't offered—you took it.*
-        - Gift: Once per short rest, as [Combat] action, target within 30 feet makes Will save. If you win, target is Frightened for 1 minute (unstable power intimidates)
+
+#### The Survivor's Bargain
+**Energies:** Space (highest +2), Negative (any +1), Fire, Earth, Time
+**Story:** *You should have died. You didn't. Something intervened.*
+**Pact Conduit - Scavenged Power:** When you reduce a hostile creature to 0 HP, immediately regain Energy equal to your tier (minimum 2). Your patron feeds on endings.
+**Pact Gift:** When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier
+
+#### The Desperate Deal
+**Energies:** Positive (highest +2), Space (any +1), Air, Time, Water
+**Story:** *You promised something to someone in your darkest hour. Power came immediately.*
+**Pact Conduit - Borrowed Vitality:** Whenever you weave using Positive energy as primary or supporting, the target (or you, if healing self) gains +4 temporary HP that lasts until your next short rest. Life borrowed is life shared.
+**Pact Gift:** Once per short rest, as [Combat] action, heal yourself or touched ally for HP equal to Charisma × tier
+
+#### The Answered Cry
+**Energies:** Air (highest +2), Negative (any +1), Space, Time, Water
+**Story:** *You screamed into the void. The void answered.*
+**Pact Conduit - Void Resonance:** Whenever you weave using Air or Space as primary energy, you can target one additional creature within range (make separate weaving rolls for each). The void spreads your intent.
+**Pact Gift:** You can communicate telepathically with any creature you can see within 30 feet
+
+#### The Stolen Shard
+**Energies:** Fire (highest +2), Negative (any +1), Space, Earth, Time
+**Story:** *You found/touched/stole something not meant for you. This power wasn't offered—you took it.*
+**Pact Conduit - Unstable Surge:** Whenever you weave using your Primary Energy (Fire), add +4 damage OR extend duration by 1 round. Power stolen doesn't flow smoothly—it erupts.
+**Pact Gift:** Once per short rest, as [Combat] action, target within 30 feet makes Will save (your Charisma + Fire Mastery vs their Wisdom + Luck). If you win by 1+ successes, target is Frightened for 1 minute (they can repeat save each turn)
+
+**Common Mechanical Elements:**
 -   Use **Charisma** as Casting Stat
 -   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 0, untrained)
 -   Can weave eldritch magic using only these 5 energies
 -   **Energy Pool:** Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
 -   **Pact Magic:** Energy regenerates on **short rest** instead of long rest
--   **Eldritch Blast:** Gain at-will ranged attack (see Eldritch Blast weave)
 
 **Pact Nature (Roleplay Guidance):**
 -   **Survivor's Bargain:** You might not even know what intervened. Could be anything. Possibly doesn't even know you exist—you may have stolen its power accidentally. Your magic feels scavenged, cobbled together.
 -   **Desperate Deal:** Something deliberately vague answered. Uses euphemisms. Never appears directly. Sends signs, omens, whispers. You agreed without reading the contract. Your magic feels like borrowed tools—functional but foreign.
 -   **Answered Cry:** Silent. Watchful. Grants power but gives no guidance. Feels like being observed constantly. You don't know if it's good/evil/neutral or what it wants from you. Your magic feels like a gift from an absent benefactor.
 -   **Stolen Shard:** Might not even be sentient—could be residual power from dead entity, trapped daemon, or lost fragment of god. You don't know if the original owner wants it back or if taking it cursed you. Your magic feels unstable, like wielding something too powerful for mortal hands.
+
 
 ### Divine Warrior (-5)
 **Requirements:** Wisdom ≥ 3, Charisma ≥ 3
