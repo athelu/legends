@@ -1,4 +1,4 @@
-# D8 TTRPG - Part 2: Character Creation
+# Character Creation
 
 ## Character Attributes
 
@@ -92,7 +92,7 @@ Roll 2d8 - first die is the "tens" digit, second die is the "ones" digit.
 
 The player must choose an ancestry from those available in the ancestry.md file. The Selction of Dwarf would require special permission from the DM due to the history of the world. 
 
-## 4. Choose Flaws & Traits
+## 4. Flaws & Traits
 
 Review the flaws.md and traits.md. You MUST choose Flaws in order to earn points to spend on Traits. All magic using characters require a trait (between 5-7 points). You may not spend more points on traits than you have earned from flaws.
 
@@ -111,19 +111,12 @@ Traits are primarily for:
 Most combat abilities, class features, and martial techniques are now available as **feats** rather than traits.
 
 
-## 5. Select Starting Feats
+## 5. Starting Feats
 
 Every character receives **2 free feats** at character creation. These represent your foundational training and abilities. Choose feats that:
--   Define your character concept (fighter, rogue, monk, etc.)
+-   Define your character concept (Martial Combatant, rogue, monk, etc.)
 -   Meet your prerequisite requirements
 -   Complement each other mechanically
-
-**Examples:**
--   Fighter concept: Action Surge + Second Wind
--   Rogue concept: Sneak Attack + Cunning Action
--   Monk concept: Unarmored Defense + Flurry of Blows
--   Barbarian concept: Rage + Unarmored Defense
--   Archer concept: Precise Shot + Hunter's Mark
 
 These starting feats do NOT count against your tier feat limits.
 
@@ -170,60 +163,3 @@ There are two options for deciding starting wealth for characters:
     1. 150 gp
     2. roll 3d8 x 10
 
-
-
-
-### Character Advancement
-
-#### Experience Points (XP)
--   XP per session: 24 XP (awarded equally to all players)
--   XP can be spent to increase attributes, skills, Potentials (if magical), or purchase feats
-
-#### Improvement Costs
-
-##### Gain New Skill: 4 xp
--   **Example:** Rank 0→1 costs 4 XP
-
-##### Increasing Skills: 8 × current rank
--   **Example:** Rank 2→3 costs 16 XP
-
-##### Attributes: 16 × current rank (double skill cost)
--   **Example:** Rank 3→4 costs 48 XP
-
-##### Potentials: 16 × current rank (same as attributes, only for characters with magical abilities)
--   **Example:** Fire Potential 5→6 costs 80 XP
-
-##### Feats: 40 XP each
--   Tier limits: Maximum purchased feats = 2 per tier
--   Starting feats (2 free) do NOT count against tier limits
--   **Example:** Tier 3 character can have 2 starting + 6 purchased = 8 total feats
-
-### Character Tiers
-
-#### Characters progress through 8 power tiers based on total XP invested:
-
-| Tier | XP Range | Sessions (24/session) | Max Feats | D&D Equivalent |
-|------|----------|----------------------|-----------|----------------|
-| 1 | 0–120 | ~5 | 2 start + 2 purchased | Levels 1–2 |
-| 2 | 120–360 | ~10 | 2 start + 4 purchased | Levels 3–5 |
-| 3 | 360–600 | ~10 | 2 start + 6 purchased | Levels 6–8 |
-| 4 | 600–840 | ~10 | 2 start + 8 purchased | Levels 9–11 |
-| 5 | 840–1080 | ~10 | 2 start + 10 purchased | Levels 12–14 |
-| 6 | 1080–1320 | ~10 | 2 start + 12 purchased | Levels 15–17 |
-| 7 | 1320–1560 | ~10 | 2 start + 14 purchased | Levels 18–19 |
-| 8 | 1560+ | ~10+ | 2 start + 16 purchased | Level 20 |
-
-##### Notes on Feat Limits:
--   The 2 starting feats are FREE and do NOT count against tier limits
--   Tier limits apply only to feats purchased with XP
--   This allows characters to grow from 4 feats (Tier 1) to 18 feats (Tier 8)
--   Characters can still mix and match feat types freely (martial + magical, etc.)
-
-##### Progression Rate: At 24 XP per session:
--   Tier 1→2: ~5 sessions
--   Tier 2→3: ~10 sessions
--   Tier 3→4: ~10 sessions
--   Tier 4→5: ~10 sessions
--   Tier 5→6: ~10 sessions
--   Tier 6→7: ~10 sessions
--   Tier 7→8: ~10 sessions

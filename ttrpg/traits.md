@@ -4,18 +4,6 @@
 
 **Design Philosophy:** Traits are reserved for abilities that grant unique resource systems (Energy pools, special points), supernatural characteristics, or features that cannot be learned through normal training. Most combat abilities and "class features" are now available as feats.
 
-## NOTES ON REMOVED TRAITS
-
-The following traits have been **removed** from the system. Their core abilities are now available as **feats** that any character can take if they meet the prerequisites:
-
-### Former Martial Traits (Now Feats)
--   **Martial Prowess** - Combat abilities like Action Surge, Second Wind, Battle Master maneuvers are now individual feats
--   **Roguish Training** - Sneak Attack, Cunning Action, etc. are now individual feats
--   **Ranger's Path** - Hunter's Mark, Favored Enemy, etc. are now individual feats  
--   **Monastic Training** - Flurry of Blows, Unarmored Defense, etc. are now individual feats
-
-This change supports the classless design philosophy: any character who meets the prerequisites can learn these abilities through training (purchasing feats with XP).
-
 ---
 
 ## WISDOM ON TRAIT SELECTION
@@ -55,32 +43,299 @@ You were born with an innate connection to the planes flowing through your pneum
 -   **Energy Pool:** Sum of 8 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)
 -   **Gain Ritual Casting ability:** Can cast any weave as a 10-minute ritual for half Energy cost (minimum 1). Cannot be used in combat.
 
-### Divine Gift (-7)
+
+## Divine Gift (-7)
 **Requirements:** Wisdom ≥ 3
 
-You have been blessed by divine forces, your pneuma opened to channel sacred power through faith and spiritual connection. Unlike mages whose eyes always glow, your eyes flash with violet light only upon the completion of each weave with the divine energies flowing through you at the moment of manifestation.
+You have dedicated yourself to the Pantheon of Eight through deep study and spiritual devotion. While you honor all eight deities, one has called to you as your patron (or you serve the pantheon equally), granting you the ability to channel divine power through your pneuma. Your eyes flash with violet light when completing each weave.
 
-**Visual Effects:** When you complete a weave, your eyes blaze with violet light. Divine symbols and holy glyphs swirl around you, and cascades of sacred energy ripple outward. Between castings, your eyes appear normal, but the moment you channel divine power, they illuminate with unmistakable radiance.
+**Choose Your Patron:**
+Select which of the Eight you primarily serve, or choose to serve the Pantheon equally as a generalist. This determines your energy affinities and grants you specific Channel Divinity options. You still worship and respect the entire pantheon.
 
 **Mechanical Benefits:**
--   Roll **8d8**, assign to eight Magical Potentials
--   **Choose Divine Path:**
-    -   **Cleric Path (Good):** Choose Positive as Divine Affinity.
-        Positive = highest roll + 2 (max 8), Negative = any other roll + 1
+- Roll **8d8**, assign to eight Magical Potentials
+- Your patron deity determines **Primary** and **Secondary** energy bonuses:
+  - **Primary Energy** = highest roll + 2 (max 8)
+  - **Secondary Energy** = second-highest roll + 1 (max 8)
+  - **Generalist** = highest roll + 1, second-highest roll + 1, third-highest roll + 1
+- Use **Wisdom** as Casting Stat
+- Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0)
+- Can weave divine magic using all 8 energies
+- **Energy Pool:** Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
+- **Channel Divinity:** 2 uses per long rest. Gain access to all Channel Divinity options for your chosen patron.
 
-    -   **Death Cleric Path (Evil):** Choose Negative as Divine Affinity.
-        Negative = highest roll + 2 (max 8), Positive = any other roll + 1
+---
 
-    -   **Druid Path (Neutral):** Choose Elemental Affinity (Earth, Air, Fire, or
-        Water) = highest roll + 2 (max 8), and choose Positive = any other roll + 1
+## The Nine Patron Choices
+## ALKIRA - God of War and Order
 
-    -   **Blight Druid Path (Evil):** Choose Elemental Affinity (Earth, Air, Fire, or
-        Water) = highest roll + 2 (max 8), and choose Negative = any other roll + 1
--   Use **Wisdom** as Casting Stat
--   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0, untrained)
--   Can weave divine magic using all 8 energies
--   **Energy Pool:** Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
--   **Gain Channel Divinity ability**
+### Guided Strike
+- **Action Cost:** 1 [Combat] action or [Reaction]
+- **Trigger (if Reaction):** An ally within 60 feet makes an attack roll
+- **Range:** 60 feet (must see target)
+- **Effect:** Choose an ally within range who is about to make or has just rolled an attack. They gain **Fortune** on that attack roll. You speak a prayer to Alkira, invoking the god of war to guide your ally's strike true.
+- **Usage:** Uses 1 Channel Divinity
+
+### Alkira's Wrath
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 30-foot radius centered on you
+- **Effect:** All enemies within range who attacked an ally since your last turn take Fire damage equal to your Tier × 8. Each target makes Reflex save (Agility + Luck). Compare your Wisdom + Fire Mastery to their save successes. Net successes determine damage:
+  - Net 0 or less: No damage (they dodge the flames)
+  - Net 1: Half damage (Tier × 4)
+  - Net 2+: Full damage (Tier × 8)
+- **Damage Type:** Fire (energy)
+- **DR Interaction:** Half DR
+- **Usage:** Uses 1 Channel Divinity
+
+### Rally the Troops
+- **Action Cost:** 1 [Combat] action
+- **Range:** 30-foot radius centered on you
+- **Effect:** All allies within range who can see or hear you gain temporary HP equal to your Wisdom score + your Tier. Your presence and Alkira's blessing fortify your companions.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## AMBIS - The Mother
+
+### Preserve Life
+- **Action Cost:** 1 [Combat] action
+- **Range:** 30 feet
+- **Effect:** Restore HP to creatures within range. Distribute HP equal to your Wisdom × your Tier among any number of creatures. Cannot heal a creature above half their maximum HP. The Mother's love flows through you to mend wounds.
+- **Usage:** Uses 1 Channel Divinity
+- **Example:** Tier 3 priest with Wisdom 5 can distribute 15 HP among allies
+
+### Mother's Embrace
+- **Action Cost:** 1 [Combat] action
+- **Range:** 30 feet
+- **Effect:** Choose up to 6 allies within range who can see you. They gain +2 DR for 1 minute. Ambis's protective blessing shields them like a mother shielding her children.
+- **Usage:** Uses 1 Channel Divinity
+
+### Sanctuary
+- **Action Cost:** 1 [Combat] action
+- **Range:** Touch
+- **Effect:** Touch a willing creature. For 1 minute, any enemy who targets them with an attack or harmful weave must make Will save (Wisdom + Luck) opposed by your Wisdom + Positive Mastery. If you win (more successes), they must choose a different target or their action is wasted. If the protected creature attacks or harms anyone, the effect ends. You invoke Ambis's sanctuary, making harming the target feel wrong.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## ATHORE - God of Justice
+
+### Divine Judgment
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 60 feet
+- **Effect:** Target one creature you can see. Make opposed check: your Wisdom + Positive Mastery vs their Wisdom + Luck (Will save). If you win by 1+ net successes, they are Stunned until end of their next turn as Athore's judgment weighs upon them. The weight of their misdeeds crushes their will.
+- **Usage:** Uses 1 Channel Divinity
+
+### Hammer of Justice
+- **Action Cost:** [Reaction]
+- **Trigger:** You see a creature attack an innocent, helpless, or defenseless target
+- **Range:** 60 feet
+- **Effect:** Deal Positive damage equal to your Tier × 8 to the attacker. No save - Athore's hammer falls instantly on those who prey upon the weak.
+- **Damage Type:** Positive (energy)
+- **DR Interaction:** Half DR
+- **Usage:** Uses 1 Channel Divinity
+
+### Zone of Truth
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 60 feet
+- **Effect:** Create a 15-foot radius zone centered on a point within range. For 10 minutes, creatures who enter or start their turn in the zone make Will save (Wisdom + Luck) opposed by your Wisdom + Positive Mastery. If you win (more successes), they cannot deliberately lie while in the zone. They may refuse to speak or be evasive, but cannot speak falsehood. They can repeat the save at the start of each of their turns. Athore demands truth.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## ENSCHEDE - Goddess of Fate
+
+### Portent
+- **Action Cost:** [Reaction]
+- **Trigger:** Any creature you can see makes a roll
+- **Range:** 60 feet (line of sight)
+- **Effect:** Force the creature to reroll all dice for that check. You choose which result they must use (original or reroll). You glimpse the thread of fate and pull it in a different direction.
+- **Usage:** Uses 1 Channel Divinity
+
+### Glimpse of Destiny
+- **Action Cost:** 1 [Minor] action
+- **Range:** 60 feet (must see target)
+- **Effect:** Grant one ally **Fortune** on their next roll within 1 minute. You see the path where they succeed and guide them toward it.
+- **Usage:** Uses 1 Channel Divinity
+
+### Kismet's Touch
+- **Action Cost:** [Reaction]
+- **Trigger:** Any roll is made (yours or another creature's) that you can see
+- **Range:** 60 feet
+- **Effect:** After seeing the result, you can declare it an automatic success (both dice count as successes) or automatic failure (both dice count as failures), regardless of the actual roll. Fate itself bends to your will for one crucial moment. This is Enschede's most powerful gift and her greatest burden.
+- **Usage:** Uses 1 Channel Divinity (can only be used once per long rest in addition to normal Channel Divinity limit)
+
+---
+
+## HIRNALOYTA - Goddess of Nature
+
+### Speak with Nature
+- **Action Cost:** 1 [Interact] action
+- **Range:** Self
+- **Effect:** For 10 minutes, you can communicate with plants and beasts. They understand your words and can respond (though beasts have limited intelligence and plants have even less). Plants can convey information about recent events in their vicinity. Beasts can describe what they've seen or sensed.
+- **Usage:** Uses 1 Channel Divinity
+
+### Nature's Wrath
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 60 feet
+- **Effect:** Choose a 20-foot square within range that contains natural vegetation. Plants animate and grasp at creatures. All creatures in area make Reflex save (Agility + Luck) opposed by your Wisdom + Earth Mastery. If you win (more net successes), they become Restrained. Creatures can use 1 [Combat] action to break free (Athletics check requiring 2 successes). Effect lasts 1 minute or until all creatures escape. Hirnaloyta's fury animates the natural world.
+- **Usage:** Uses 1 Channel Divinity
+
+### Hirnaloyta's Bounty
+- **Action Cost:** Special (during short rest)
+- **Range:** Natural surroundings
+- **Effect:** During a short rest in natural surroundings (forest, grassland, etc. - not dungeon or city), you and up to 6 allies who rest with you regain additional HP equal to your Wisdom score + your Tier. Nature nurtures those who honor it.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## NEVIL - God of the Underworld
+
+### Claim the Dead
+- **Action Cost:** 1 [Interact] action
+- **Range:** Touch
+- **Effect:** Touch a corpse. It is preserved from decay indefinitely and cannot become undead through any means. This is a funerary rite, not necromancy - you are consecrating the body and claiming the soul for Nevil's realm. The corpse is protected until you release it or it is desecrated.
+- **Usage:** Uses 1 Channel Divinity
+
+### Guide the Soul
+- **Action Cost:** 1 [Combat] action
+- **Range:** Touch
+- **Effect:** Touch a dying creature (at 0 HP or negative HP). They automatically stabilize at 0 HP. Additionally, for 1 minute, they subtract 1 from both dice on all stabilization attempts and cannot die from reaching negative HP equal to their Constitution (death threshold suspended). You ease their passage, giving them a chance to cling to life.
+- **Usage:** Uses 1 Channel Divinity
+
+### Touch of Death
+- **Action Cost:** 1 [Combat] action
+- **Range:** Touch (melee touch attack)
+- **Effect:** Make a melee touch attack (Agility + Melee Combat opposed by target's Agility + Melee Combat). On hit, deal Negative damage equal to your Tier × 8. This is the touch of natural death, not undeath - you channel Nevil's power over endings.
+- **Damage Type:** Negative (energy)
+- **DR Interaction:** Half DR
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## RUDLU - Goddess of Luck
+
+### Blessing of the Trickster
+- **Action Cost:** 1 [Minor] action
+- **Range:** 30 feet (must see target)
+- **Effect:** Grant one creature **Fortune** on their next roll. Lady Luck smiles upon them. The violet light of fortune briefly flickers around them.
+- **Usage:** Uses 1 Channel Divinity
+
+### Curse of Misfortune
+- **Action Cost:** 1 [Combat] action
+- **Range:** 60 feet (must see target)
+- **Effect:** Curse one enemy. Make opposed check: your Wisdom + Space Mastery vs their Wisdom + Luck (Will save). If you win (more successes), they have **Misfortune** on their next roll. Rudlu's capricious nature turns against them.
+- **Usage:** Uses 1 Channel Divinity
+
+### Trickster's Escape
+- **Action Cost:** [Reaction]
+- **Trigger:** An attack would hit you (after opposed roll but before damage)
+- **Range:** Self (can teleport up to 30 feet)
+- **Effect:** Teleport up to 30 feet to an unoccupied space you can see. The attack automatically misses as you vanish in a shimmer of violet light and reappear elsewhere. You cannot teleport through solid barriers.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## SHU-JAHAN - God of Wisdom
+
+### Knowledge of the Ages
+- **Action Cost:** 1 [Interact] action
+- **Range:** Self
+- **Effect:** Choose any one skill. For 10 minutes, you count as having rank 5 proficiency in that skill (use rank 5 for all checks, even if your actual rank is higher or lower). The wisdom of ages flows through you, granting you temporary mastery. If you already have rank 5+, you instead subtract 1 from both dice when using that skill for the duration.
+- **Usage:** Uses 1 Channel Divinity
+
+### Read Thoughts
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 60 feet (must see target)
+- **Effect:** Target one creature. Make opposed check: your Wisdom + Space Mastery vs their Wisdom + Luck (Will save). If you win (more successes), you can read their surface thoughts for 1 minute. You sense their emotional state and immediate intentions. You know what they're thinking about in the moment, but not deep memories or secrets unless they're actively thinking about them. They can repeat the save at the start of each of their turns.
+- **Usage:** Uses 1 Channel Divinity
+
+### Philosopher's Insight
+- **Action Cost:** 1 [Minor] action
+- **Range:** Self
+- **Effect:** For 10 minutes, you gain the following benefits:
+  - You automatically see through all illusions (no check needed)
+  - You know when creatures speak lies (though not what the truth is)
+  - You have **Fortune** on Perception and Investigate checks
+  - Your eyes glow brighter than normal as enlightenment fills you
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## PANTHEON GENERALIST - Servant of the Eight
+
+The generalist can use any of the following Channel Divinity options, choosing which deity to invoke each time:
+
+### From Alkira:
+**Guided Strike** - Grant ally Fortune on their next attack roll
+
+### From Ambis:
+**Preserve Life** - Heal creatures within 30 feet (distribute Wisdom × Tier HP, can't exceed half max)
+
+### From Athore:
+**Zone of Truth** - Create 15ft radius where creatures cannot lie (Will save to resist)
+
+### From Enschede:
+**Glimpse of Destiny** - Grant ally Fortune on their next roll within 1 minute
+
+### From Hirnaloyta:
+**Speak with Nature** - Communicate with plants and beasts for 10 minutes
+
+### From Nevil:
+**Guide the Soul** - Stabilize dying creature and improve their stabilization chances
+
+### From Rudlu:
+**Blessing of the Trickster** - Grant creature Fortune on next roll
+
+### From Shu-Jahan:
+**Philosopher's Insight** - See through illusions, detect lies, Fortune on Perception/Investigate for 10 minutes
+
+**Usage:** You still have only 2 Channel Divinity uses per long rest, but you can choose which deity to invoke each time. This versatility is the generalist's strength.
+
+---
+
+## Evil Divine Casters
+
+### Dragon Cult Devotee
+
+For evil characters who worship the ancient daemons known as Dragons instead of the Pantheon of Eight.
+
+**Patron Options (choose one of the eight dragons):**
+1. **Aq-Yin-To** - Water Dragon
+2. **Char-Talt** - Air Dragon
+3. **Har-Ten-Mo** - Earth Dragon
+4. **Kylo** - Fire Dragon
+5. **Luk-Anda** - Positive Dragon
+6. **Sein-Tuk-Tak** - Negative Dragon
+7. **Tiet-Amor** - Time Dragon
+8. **Garro-Leth** - Space Dragon
+
+**Mechanical Framework:**
+- Use the same mechanical structure as Divine Gift
+- Dragon patron determines Primary (+2) and Secondary (+1) energy based on dragon's nature
+- Channel Divinity options are corrupted/twisted versions of the Eight's abilities
+- GM should create custom Channel Divinity options reflecting the dragon's personality and goals
+
+**Flavor:** Dragon cultists believe dragons were/are the true gods, superior to the Eight. Their magic is dark, selfish, and corrupting.
+
+### Twisted Denomination
+
+For characters who worship a corrupted version of one of the Eight.
+
+**Examples:**
+- **Ja'Alkira Extremists** (Bellicose) - Believe only Alkira matters, rejecting the other seven. Mechanically identical to Alkira patron but with fanatical roleplay.
+- **Death Cult of Nevil** - Worship Nevil as god of murder and undeath rather than natural death. Same mechanics as Nevil patron but perverted purpose.
+- **Tyrant's Justice** - Athore worship twisted to oppression, cruelty, and tyranny rather than righteous justice.
+- **Dark Fortune** - Rudlu worship focused on cursing enemies and stealing luck rather than playful trickery.
+
+**Mechanical Framework:**
+- Choose one of the Eight as patron
+- Use normal Divine Gift mechanics for that deity
+- Flavor and roleplay reflect the corruption
+- GM may impose consequences for betraying the deity's true nature (loss of powers, divine retribution, etc.)
+
+---
+
 
 ### Invoker (-5)
 **Requirements:** Charisma ≥ 3
@@ -147,18 +402,17 @@ You have discovered how to channel magical energy directly into physical objects
 ### Sorcerous Origin (-7)
 **Requirements:** Charisma ≥ 3
 
-Innate magical power flows through your bloodline. You are mageborn and your eyes glow constantly with violet light from birth, marking your inherent connection to the planes. Unlike wizard mages who study and understand magic intellectually, your power flows from raw force of personality and unshakeable sense of self.
+You are mageborn—your eyes glow with constant violet light from birth, marking your inherent connection to the planes. Unlike wizard mages who study and understand magic intellectually, your power flows from raw force of personality and unshakeable sense of self. Your pneuma is so strong, so adamantine in its certainty, that reality itself cannot deny you. You don't need to understand *how* magic works—you simply *know* it answers to your will.
 
-**Visual Effects:** Your weaves crackle with wild, barely-contained energy. Violet light constantly emanates from your eyes, and when you cast, the magic erupts in dramatic bursts. Glyphs and symbols swirl chaotically around you, responding to your will rather than careful control. Your bloodline's influence is visible in your magic's aesthetic.
+**Visual Effects:** Your weaves crackle with wild, barely-contained energy. Violet light constantly emanates from your eyes, and when you cast, the magic erupts in dramatic bursts. Glyphs and symbols swirl chaotically around you, responding to your will rather than careful control. Your Force of Will manifestation is visible in your magic's aesthetic.
 
 **Mechanical Benefits:**
 -   Roll **8d8**, assign to eight Magical Potentials
--   **Choose Sorcerous Origin:** Determines which energy gets highest affinity and special abilities
-    - **Draconic Bloodline:** Choose elemental (Fire/Water/Earth/Air) = highest roll + 2 (max 8). Gain draconic resilience.
-    - **Wild Magic:** Choose any energy = highest roll + 2 (max 8). Chaos infuses your magic.
-    - **Divine Soul:** Choose Positive or Negative = highest roll + 2 (max 8). Divine power flows through you.
-    - **Storm Sorcery:** Air = highest roll + 2 (max 8). Storm magic crackles around you.
-    - **Shadow Magic:** Negative = highest roll + 2 (max 8). Darkness is your ally.
+-   **Choose Force of Will Manifestation:** Determines which energy gets highest affinity and your magical identity
+    - **Indomitable Will:** Choose Earth or Fire = highest roll + 2 (max 8). Your sense of self is absolute and unchanging.
+    - **Destined Soul:** Choose Time or Positive = highest roll + 2 (max 8). You KNOW you have a greater purpose; fate itself aids your magic.
+    - **Triumphant Spirit:** Choose Fire or Negative = highest roll + 2 (max 8). You survived something impossible; your refusal to die awakened power.
+    - **Perfect Ego:** Choose Space or Air = highest roll + 2 (max 8). You are the center of your universe; magic manifests your perfect self-image.
 -   Choose **Secondary Focus** (any other energy): That Potential = any other roll + 1
 -   Use **Charisma** as Casting Stat
 -   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0, untrained)
@@ -166,41 +420,54 @@ Innate magical power flows through your bloodline. You are mageborn and your eye
 -   **Energy Pool:** Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
 -   **Gain Sorcery Points:** Pool equal to your Charisma score. Regain all points after long rest. Can spend for metamagic effects (see Metamagic feats).
 
-**Origin Benefits:**
--   **Draconic Bloodline:** +1 max HP per tier, DR = 1 when unarmored
--   **Wild Magic:** Roll on Wild Magic table whenever you roll double 1s or 8s while weaving
--   **Divine Soul:** Can use Channel Divinity once per long rest (costs 4 Energy minimum)
--   **Storm Sorcery:** When you weave with Air energy, you can fly 10 feet without provoking opportunity attacks
--   **Shadow Magic:** Subtract 1 from both dice on Stealth checks in dim light or darkness
+**Force of Will Benefits:**
+-   **Indomitable Will:** +1 max HP per tier, DR = 1 when unarmored (your certainty protects you)
+-   **Destined Soul:** Once per long rest, reroll any failed save or ability check (fate intervenes)
+-   **Triumphant Spirit:** When reduced below half HP, gain temporary HP equal to your Charisma (once per long rest - your refusal to fall)
+-   **Perfect Ego:** Subtract 1 from both dice on saving throws against mental effects (Charmed, Frightened, mind-reading)
+
+**Visual Aesthetics by Manifestation:**
+-   **Indomitable Will:** Weaves manifest as solid, geometric constructs—crystalline shields, perfectly straight beams of light
+-   **Destined Soul:** Weaves shimmer with threads of silver light, as if pulled from the future
+-   **Triumphant Spirit:** Weaves burn with defiant energy, crackling with barely-controlled fury
+-   **Perfect Ego:** Weaves are beautiful, symmetrical, impossibly elegant
 
 ### Eldritch Pact (-7)
 **Requirements:** Charisma ≥ 3
 
-You've made a pact with an otherworldly patron for power. You are a diabolist. Awakened to magic through extraordinary circumstances rather than born with it. Your eyes glow with violet light only when you complete a weave, the power flowing from your patron through your pneuma at the moment of casting.
+You are a diabolist—awakened to magical power through trauma rather than born with it. At some moment of desperate need, when death seemed certain or loss unbearable, you reached out to *anything* that might answer. Something did. You don't fully understand what you called to, what answered, or what price you'll pay. You only know that power came when you needed it most, and now you're bound to something beyond mortal understanding.
 
-**Visual Effects:** When you weave, your eyes flash with violet light and your patron's influence is unmistakable—alien geometries, fel flames, celestial radiance, or shadowy tendrils manifest around you. Between castings, your eyes appear normal, but careful observers might notice subtle signs of your pact (strange reflections, unnatural shadows, or otherworldly glimmers).
+Your eyes glow with violet light only when you complete a weave, the power flowing from your pact through your pneuma at the moment of casting.
+
+**Visual Effects:** When you weave, your eyes flash with violet light and your pact's influence is unmistakable. Between castings, your eyes appear normal, but careful observers might notice subtle signs—strange reflections, unnatural shadows, or otherworldly glimmers. The nature of what you've bound yourself to manifests in your magic's appearance.
 
 **Mechanical Benefits:**
--   Roll **5d8**, assign to five Magical Potentials based on patron
--   **Choose Patron:** Determines energy access and grants patron gift
-    - **Archfey:** Air (highest +2), Positive (any +1), Space, Time, Earth
-    - **Fiend:** Fire (highest +2), Negative (any +1), Space, Time, Water
-    - **Great Old One:** Space (highest +2), Negative (any +1), Air, Time, Water
-    - **Celestial:** Positive (highest +2), Fire (any +1), Space, Time, Air
-    - **Hexblade:** Negative (highest +2), Space (any +1), Fire, Earth, Time
+-   Roll **5d8**, assign to five Magical Potentials based on pact type
+-   **Choose Survival Pact Type:** Determines energy access and how the pact manifests
+    - **The Survivor's Bargain:** Space (highest +2), Negative (any +1), Fire, Earth, Time
+        - *You should have died. You didn't. Something intervened.*
+        - Gift: When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier (survival rewarded)
+    - **The Desperate Deal:** Positive (highest +2), Space (any +1), Air, Time, Water
+        - *You promised something to someone in your darkest hour. Power came immediately.*
+        - Gift: Once per short rest, as [Combat] action, heal yourself or touched ally for HP equal to Charisma × tier (the deal sustains you)
+    - **The Answered Cry:** Air (highest +2), Negative (any +1), Space, Time, Water
+        - *You screamed into the void. The void answered.*
+        - Gift: You can communicate telepathically with any creature you can see within 30 feet (the void connects you to others' thoughts)
+    - **The Stolen Shard:** Fire (highest +2), Negative (any +1), Space, Earth, Time
+        - *You found/touched/stole something not meant for you. This power wasn't offered—you took it.*
+        - Gift: Once per short rest, as [Combat] action, target within 30 feet makes Will save. If you win, target is Frightened for 1 minute (unstable power intimidates)
 -   Use **Charisma** as Casting Stat
 -   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 0, untrained)
 -   Can weave eldritch magic using only these 5 energies
 -   **Energy Pool:** Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
 -   **Pact Magic:** Energy regenerates on **short rest** instead of long rest
--   **Patron Gift:** Gain special ability based on patron choice
+-   **Eldritch Blast:** Gain at-will ranged attack (see Eldritch Blast weave)
 
-**Patron Gifts:**
--   **Archfey:** Once per short rest, as 1 [Combat] action, target within 30 feet makes Will save. If you win, target is Charmed for 1 minute.
--   **Fiend:** When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier.
--   **Great Old One:** You can communicate telepathically with any creature you can see within 30 feet (no shared language needed).
--   **Celestial:** Your healing weaves restore an additional amount equal to your Charisma score.
--   **Hexblade:** You can use Charisma instead of Strength or Agility for attack and damage rolls with one chosen weapon.
+**Pact Nature (Roleplay Guidance):**
+-   **Survivor's Bargain:** You might not even know what intervened. Could be anything. Possibly doesn't even know you exist—you may have stolen its power accidentally. Your magic feels scavenged, cobbled together.
+-   **Desperate Deal:** Something deliberately vague answered. Uses euphemisms. Never appears directly. Sends signs, omens, whispers. You agreed without reading the contract. Your magic feels like borrowed tools—functional but foreign.
+-   **Answered Cry:** Silent. Watchful. Grants power but gives no guidance. Feels like being observed constantly. You don't know if it's good/evil/neutral or what it wants from you. Your magic feels like a gift from an absent benefactor.
+-   **Stolen Shard:** Might not even be sentient—could be residual power from dead entity, trapped daemon, or lost fragment of god. You don't know if the original owner wants it back or if taking it cursed you. Your magic feels unstable, like wielding something too powerful for mortal hands.
 
 ### Divine Warrior (-5)
 **Requirements:** Wisdom ≥ 3, Charisma ≥ 3

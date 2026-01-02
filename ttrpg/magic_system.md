@@ -213,10 +213,11 @@ How you determine your Magical Potentials depends on which magical trait you sel
 - **Divine Gift** (Divine Weaving)
 - **Invoker Magic** (Invoker Weaving)
 - **Sorcerous Origin** (Innate Weaving)
-- **Eldritch Pact** (Patron Weaving)
+- **Eldritch Pact** (Pact Weaving)
 - **Divine Warrior** (Paladin Weaving)
 
-Each trait specifies how many dice to roll, which energies you have access to, and which energies receive bonuses based on your chosen specialization (Elemental Affinity, Divine Path, Bloodline, Patron, or Oath).
+Each trait specifies how many dice to roll, which energies you have access to, and which energies receive bonuses based on your chosen specialization (Elemental Affinity, Divine Path, Force of Will Manifestation, Pact Type, or Oath).
+
 
 ### Weaving (Casting) Mechanics
 

@@ -415,11 +415,6 @@ Activate actions involve using items, equipment, or abilities that require delib
 ### Use Special Ability [Activate]
 - **Cost:** 1 [Activate] action (or as specified by ability)
 - **Effect:** Use a class feature, feat, or special ability that doesn't fit other categories
-- **Examples:**
-  - Activating a Barbarian's Rage
-  - Using a Rogue's Cunning Action
-  - Triggering special movement abilities
-  - Using consumable magic items
 - **Notes:**
   - Specific action cost listed in ability description
   - Some abilities may be [Free] or [Reaction] instead
@@ -438,7 +433,7 @@ Activate actions involve using items, equipment, or abilities that require delib
 - **Examples:**
   - Applying oil to a weapon
   - Throwing alchemist's fire
-  - Using a healer's kit to stabilize a dying creature
+  - Using a bandage to stabilize a dying creature
   - Setting a bear trap
 - **Notes:**
   - Some consumables may have different action costs (see item description)
