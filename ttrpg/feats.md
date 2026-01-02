@@ -489,23 +489,19 @@ When creating new feats, follow these guidelines:
 - **Prerequisites:** Any magical trait, Int OR Wis OR Cha 6
 - **Benefit:** Once per day: cast a Simple Weave (1 action) as a [Minor] action instead
 - **Usage:** Once per day
-- **Note:** Different from Sorcerer's Quickened Weave which uses Sorcery Points
+- **Note:** Different from Sorcerer feats which use Harmonic Weaving or daily limits
 
 ### Metaweaving: Empower
 - **Prerequisites:** Any magical trait, Int OR Wis OR Cha 6
 - **Benefit:** Once per day: reroll all weaving dice, must take new result
 - **Usage:** Once per day
-- **Note:** Different from Sorcerer's Empowered Weave which uses Sorcery Points
+- **Note:** Different from Sorcerer feats which use Harmonic Weaving or daily limits
 
 ### Metaweaving: Extend
 - **Prerequisites:** Any magical trait, Int OR Wis OR Cha 6
 - **Benefit:** Once per day: double duration of a weave with a duration of at least 1 minute
 - **Usage:** Once per day
-
-### Ritual Caster
-- **Prerequisites:** Any magical trait, Int OR Wis 4
-- **Benefit:** Can cast any weave you know as a ritual if it has a duration of at least 1 minute. Ritual casting takes 10 minutes longer but costs no Energy
-- **Usage:** Unlimited
+- **Note:** Different from Sorcerer feats which use Harmonic Weaving or daily limits
 
 ### War Caster
 - **Prerequisites:** Any magical trait, Con 4
@@ -547,25 +543,236 @@ When creating new feats, follow these guidelines:
 
 ### Sorcerer Specializations
 
-#### Draconic Presence
-- **Prerequisites:** Sorcerous Origin trait, Cha 6
-- **Benefit:** As 1 [Combat] action, spend 5 Sorcery Points to exude draconic terror. Each creature of your choice within 60 feet must make a Will save (opposed by your Charisma + your highest Mastery). On failure, Frightened for 1 minute (can repeat save each turn)
-- **Usage:** Costs 5 Sorcery Points
+**Design Philosophy:** Sorcerer feats emphasize perfect understanding of magic flow, success manipulation through enlightenment, and manifestation-specific powers. All abilities use existing mechanics (Harmonic Weaving uses, daily limits, or triggered effects) without introducing resource pools.
 
-#### Elemental Affinity
-- **Prerequisites:** Sorcerous Origin trait, Cha 5, chosen elemental Mastery 4
-- **Benefit:** Choose one elemental energy matching your origin. When you weave using that energy as primary, add your Charisma modifier to the damage. You gain resistance to that damage type (half damage)
-- **Usage:** Passive
+---
 
-#### Bend Luck
-- **Prerequisites:** Sorcerous Origin trait, Wild Magic origin recommended
-- **Benefit:** When another creature you can see makes an attack roll, ability check, or saving throw, you can use your reaction to spend 2 Sorcery Points to add 1d8 to or subtract 1d8 from their roll
-- **Usage:** Costs 2 Sorcery Points (reaction)
+#### CORE IDENTITY FEATS
 
-#### Tides of Chaos
-- **Prerequisites:** Sorcerous Origin trait, Wild Magic origin
-- **Benefit:** Once per long rest, gain Fortune on one attack roll, ability check, or saving throw. After you cast a weave before regaining this feature, roll on the Wild Magic Surge table
+#### Expanded Harmony
+- **Prerequisites:** Sorcerous Origin trait, Wis 5, Tier 2+
+- **Benefit:** Your Harmonic Weaving becomes more flexible. When you use Harmonic Weaving to reroll one die, you may now choose to reroll BOTH dice (Potential and Mastery) for that energy instead of just one. You still must take the new results for both dice
+- **Usage:** Uses your normal Harmonic Weaving limit (Wis + Tier per long rest)
+- **Description:** Your understanding of the weaving process deepens. You perceive not just one thread of probability, but multiple—allowing you to reshape more of reality's flow in a single moment.
+
+#### Efficient Weaving
+- **Prerequisites:** Sorcerous Origin trait, Wis 5
+- **Benefit:** Your perfect understanding of energy flow allows you to weave more efficiently. Once per long rest per point of Wisdom, reduce a weave's Energy cost by 2 (minimum cost 1). Declare before casting
+- **Usage:** Wisdom times per long rest
+- **Description:** You perceive the optimal paths for magic to flow. Where others force energy through crude channels, you guide it along lines of least resistance—achieving the same effect with less effort.
+
+#### Deep Resonance
+- **Prerequisites:** Sorcerous Origin trait, Tier 2+
+- **Benefit:** Your Resonance deepens. You now ignore the first TWO points of overspending penalty (instead of one). Example: Spending 3 over Mastery normally adds +3 to both dice; with Deep Resonance you only add +1
+- **Usage:** Passive, always on
+- **Description:** Your pneuma has become so attuned to magical energies that pushing beyond your trained limits barely strains you at all. Power flows through you like water through a clear channel.
+
+#### Certain Outcome
+- **Prerequisites:** Sorcerous Origin trait, Wis 6, Tier 2+
+- **Benefit:** Three times per long rest, when you make a weaving roll, you can declare "Certain" before rolling. Automatically achieve exactly 2 successes—don't roll at all. The weave works at full power
+- **Usage:** 3 times per long rest
+- **Description:** Some outcomes are so clear in your mind that rolling dice feels like a formality. You simply know this will work, and reality acknowledges that certainty.
+
+---
+
+#### MANIFESTATION-SPECIFIC FEATS
+
+#### Unshakeable Foundation (Unchanging Stone only)
+- **Prerequisites:** Sorcerous Origin trait (Unchanging Stone), Earth or Fire Mastery 5, Tier 3+
+- **Benefit:** Your understanding of your unchanging nature deepens:
+  - **Immovable:** Immune to forced movement (pushing, pulling, teleportation against your will). You can choose to allow such effects
+  - **Enduring Weaves:** Your defensive/protective weaves (shields, walls, armor) last twice as long
+  - **Stone Flesh:** Your manifestation's DR increases to 2 (from 1)
+- **Usage:** Passive abilities
+- **Description:** Stone does not move. Stone does not bend. You have become that truth made flesh.
+
+#### Fate Weaver (Thread of Fate only)
+- **Prerequisites:** Sorcerous Origin trait (Thread of Fate), Time or Positive Mastery 5, Tier 3+
+- **Benefit:** Your perception of probability threads sharpens:
+  - **Probability Mastery:** Twice per long rest, after making any roll (yours or an ally's within 60 feet you can see), you can retroactively change one die result to the result you need (1-8). Declare after seeing the roll
+  - **Thread Reading:** When you roll double 1s (critical), immediately regain one use of Harmonic Weaving
+  - **Inevitable Path:** Once per long rest, when you fail a weaving roll, you can declare you actually succeeded with exactly 2 successes instead
+- **Usage:** Mixed (see individual abilities)
+- **Description:** You see the branching paths of reality more clearly now. Sometimes you don't just choose the better path—you reach back and ensure you always walked it.
+
+#### Death's Defiance (Death's Lesson only)
+- **Prerequisites:** Sorcerous Origin trait (Death's Lesson), Fire or Negative Mastery 5, Tier 3+
+- **Benefit:** Your brush with death left you fundamentally changed:
+  - **Refuse to Fall:** When reduced to 0 HP, once per long rest, you can drop to 1 HP instead and immediately teleport up to 30 feet to an unoccupied space you can see
+  - **Phoenix Power:** While below half HP, all your Harmonic Weaving uses are restored (if depleted)—this can only trigger once per long rest
+  - **Defiant Casting:** While below half HP, subtract 1 from both dice on all weaving rolls (better chance of success)
+- **Usage:** Mixed (see individual abilities)
+- **Description:** You died once. You remember it clearly—and you remember choosing to return. That choice echoes through every moment of danger.
+
+#### Omnipresent Consciousness (Perfect Self-Perception only)
+- **Prerequisites:** Sorcerous Origin trait (Perfect Self-Perception), Space or Air Mastery 5, Tier 3+
+- **Benefit:** Your awareness expands beyond normal limits:
+  - **Extended Perception:** As a [Minor] action, you can perceive from any point within 120 feet for 1 minute. See around corners, through walls (but not what's inside objects), from multiple angles simultaneously. Wisdom times per long rest
+  - **Spatial Awareness:** Cannot be surprised. You're aware of all creatures within 30 feet, even invisible or hidden ones (though you may not know their exact identity)
+  - **Thought Speed:** Once per long rest, when you roll initiative, you may take your turn immediately before initiative order is determined. After this special turn, you act normally in initiative order
+- **Usage:** Mixed (see individual abilities)
+- **Description:** You exist across multiple points of perception simultaneously. Your consciousness isn't bound to your skull—it extends through space like light through crystal.
+
+---
+
+#### HARMONIC ENHANCEMENT FEATS
+
+#### Battle Harmony
+- **Prerequisites:** Sorcerous Origin trait, Wis 5, Tier 2+
+- **Benefit:** Your Harmonic Weaving becomes more responsive to combat flow. After you or an ally within 60 feet rolls a critical failure (double 8s) on any roll, you immediately regain one use of Harmonic Weaving. This can trigger multiple times per combat
+- **Usage:** Passive trigger
+- **Description:** You've learned to perceive the ebb and flow of fortune in combat. When reality denies someone completely, you feel the rebound—a ripple in probability that restores your clarity.
+
+#### Supportive Harmony
+- **Prerequisites:** Sorcerous Origin trait, Wis 6, Tier 3+
+- **Benefit:** When you use Harmonic Weaving to reroll one of your own dice, you may simultaneously grant one ally within 60 feet Fortune on their next roll within the next minute (they roll 3d8, take best 2)
+- **Usage:** Uses your normal Harmonic Weaving
+- **Description:** Your enlightenment extends outward. When you perceive the optimal path for yourself, you can show others glimpses of their own best possibilities.
+
+#### Persistent Harmony
+- **Prerequisites:** Sorcerous Origin trait, Wis 6, Tier 4+
+- **Benefit:** Once per long rest, you can enter a state of "Perfect Harmony" for 1 minute. During this time, every weave you cast automatically benefits from Harmonic Weaving (reroll one die per weave) without expending uses. You still have your normal Harmonic uses after this ends
+- **Usage:** Once per long rest, 1 minute duration
+- **Description:** For brief moments, you achieve complete alignment with the flow of magic. Every weave feels effortless, every outcome clear. Reality simply... cooperates.
+
+---
+
+#### SUCCESS MANIPULATION FEATS
+
+#### Guided Weaving
+- **Prerequisites:** Sorcerous Origin trait, Wis 5
+- **Benefit:** When an ally within 60 feet casts a weave, you can use your [Reaction] to impose Misfortune on one enemy's saving throw against that weave (they roll 3d8, take worst 2). Alternatively, you can grant the casting ally Fortune on their weaving roll
+- **Usage:** Wisdom times per long rest
+- **Description:** You perceive the flow of others' magic and can nudge it toward optimal outcomes—or twist your enemies' defenses away from success.
+
+#### Critical Insight
+- **Prerequisites:** Sorcerous Origin trait, Wis 6, Tier 3+
+- **Benefit:** When you roll double 1s (critical success) on a weaving roll, you may choose one:
+  1. Maximize one effect (damage = maximum, or duration = double)
+  2. Regain Energy equal to your Wisdom
+  3. Grant all allies within 30 feet temporary HP equal to your tier × 2
+- **Usage:** Triggered on critical (double 1s)
+- **Description:** In moments of perfect alignment, reality doesn't just cooperate—it overdelivers. Your clearest perceptions manifest in spectacular fashion.
+
+#### Flawless Execution
+- **Prerequisites:** Sorcerous Origin trait, Wis 7, any Energy Mastery 6, Tier 4+
+- **Benefit:** Once per long rest, you can cast one weave and completely ignore ALL overspending penalties. Spend as much Energy as you want (up to your Potential) with no penalties
 - **Usage:** Once per long rest
+- **Description:** Once per day, you achieve perfect flow—a moment where your understanding is so complete that limits cease to exist. Magic moves through you without resistance.
+
+#### Inevitable Mastery
+- **Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5+
+- **Benefit:** Three times per long rest, after making a weaving roll, you can retroactively set your result to exactly 3 successes (enhanced effect). Declare after seeing the roll
+- **Usage:** 3 times per long rest
+- **Description:** You've mastered the art of manifesting optimal outcomes. When you need power, reality provides—not because you force it, but because you perceive the path where it was always going to happen.
+
+#### Perfect Timing
+- **Prerequisites:** Sorcerous Origin trait, Wis 6, Tier 3+
+- **Benefit:** Once per turn, you can use a [Reaction] to grant one creature within 60 feet Fortune on their next roll (any type—attack, save, skill check, or weaving). You must declare this before they roll
+- **Usage:** Once per turn (reaction)
+- **Description:** Your perception of time and probability lets you see the exact moment when someone's action will succeed or fail. A word, a gesture, a subtle shift—and you guide them to success.
+
+---
+
+#### COMBAT & UTILITY FEATS
+
+#### Elemental Enlightenment
+- **Prerequisites:** Sorcerous Origin trait, Wis 5, chosen elemental Mastery 5
+- **Benefit:** Choose one elemental energy (Earth, Air, Fire, Water). When you weave using that energy as primary:
+  - Add your Wisdom to the damage dealt
+  - You gain resistance (+2 DR) to that damage type
+  - Your weaves using that energy ignore the first point of overspending penalty (stacks with Resonance for ignoring 2 points total)
+- **Usage:** Passive
+- **Note:** Can be taken multiple times for different elements
+- **Description:** Your understanding of this element is perfect. You know its nature so completely that it cannot harm you, and your manifestations of it are devastating.
+
+#### Weave Shaper
+- **Prerequisites:** Sorcerous Origin trait, Wis 6, Space Mastery 4, Tier 3+
+- **Benefit:** When you cast an area-effect weave, you can alter its shape as you cast. A cone can become a line, a sphere can become a cylinder, a cube can become a wall, etc. The area remains roughly the same total volume. Additionally, you can create up to 3 "gaps" in the area (5-foot cubes each) where the weave doesn't affect anything
+- **Usage:** Wisdom times per long rest
+- **Description:** The shapes other casters' magic takes are arbitrary conventions. You perceive the underlying energy and mold it precisely as needed—flowing it around allies, curving it around obstacles.
+
+#### Sorcerous Resilience
+- **Prerequisites:** Sorcerous Origin trait, Con 4, Tier 2+
+- **Benefit:** Your HP increases by 1 per tier (retroactive and ongoing). Additionally, twice per long rest when you would fail a saving throw, you can succeed instead (declare after seeing result)
+- **Usage:** HP boost passive; save success twice per long rest
+- **Description:** Your pneuma's clarity strengthens your body. You understand your physical form perfectly and can nudge it toward more favorable outcomes when threatened.
+
+#### Deny Reality
+- **Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 4+
+- **Benefit:** Twice per long rest, when an enemy within 60 feet makes a weaving roll against you or an ally, you can use your [Reaction] to force them to reroll all their weaving dice. They must take the new result
+- **Usage:** Twice per long rest (reaction)
+- **Description:** You perceive the flaw in their working—the false assumption, the misaligned energy, the imperfect understanding. With a gesture, you make reality reject their attempt.
+
+---
+
+#### ADVANCED MASTERY FEATS
+
+#### True Sight Meditation
+- **Prerequisites:** Sorcerous Origin trait, Wis 7, Space Mastery 6, Tier 5+
+- **Benefit:** Once per long rest, you can spend 10 minutes in deep meditation to activate perfect perception. For the next hour, you:
+  - See through illusions automatically
+  - Perceive invisible creatures and objects within 60 feet
+  - See into the ethereal plane within 60 feet
+  - Can see the true form of shapechanged creatures
+  - Know automatically when someone is lying to you (though not what the truth is)
+- **Usage:** Once per long rest, requires 10-minute meditation, lasts 1 hour
+- **Description:** You quiet your surface perceptions and align with deeper truth. For a time, reality's facades fall away before your enlightened awareness. You see what IS, not what appears to be.
+
+#### Harmonic Mastery
+- **Prerequisites:** Sorcerous Origin trait, Wis 8, Tier 5+
+- **Benefit:** Your mastery of Harmonic Weaving is complete. Choose one:
+  - **Option A - Abundant Harmony:** Your Harmonic Weaving uses increase to (Wisdom × 2) + Tier per long rest
+  - **Option B - Perfect Harmony:** When you use Harmonic Weaving, you can reroll ALL dice in your weaving roll (every energy's Potential + Mastery), not just one die. Uses your normal Harmonic Weaving limit
+- **Usage:** Passive enhancement to Harmonic Weaving
+- **Description:** You've achieved what few sorcerers ever reach—perfect mastery of probability manipulation. Your understanding is so complete that adjusting reality's flow is second nature.
+
+#### Enlightened Casting
+- **Prerequisites:** Sorcerous Origin trait, Wis 8, Tier 5+
+- **Benefit:** Once per long rest, you can cast one weave at maximum possible effect without rolling:
+  - Automatically achieve 4 successes (critical effect)
+  - No Energy cost
+  - No action cost (can cast as [Free] action)
+  - Must be a weave you've cast before
+- **Usage:** Once per long rest
+- **Description:** Once per day, you achieve perfect enlightenment—a moment of absolute clarity where you and the magic are one. You don't cast—you simply manifest truth.
+
+#### Reality's Favorite
+- **Prerequisites:** Sorcerous Origin trait, Wis 8, Tier 5+
+- **Benefit:** Your perfect self-knowledge has impressed reality itself. You gain permanent benefits:
+  - When you roll any saving throw, add +1 to your better die
+  - When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses
+  - When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave
+- **Usage:** Passive, always on
+- **Description:** Reality recognizes your enlightenment. You've become aligned with existence itself—and it bends in your favor more often than chance alone would suggest.
+
+---
+
+#### SUPPORTING FEATS
+
+#### Spell Penetration
+- **Prerequisites:** Sorcerous Origin trait, Wis 6, any Energy Mastery 6, Tier 4+
+- **Benefit:** When an enemy makes a saving throw against your weave, subtract 1 from their better die result (apply after they roll, before comparing successes)
+- **Usage:** Passive
+- **Description:** You perceive the subtle cracks in others' spiritual defenses and naturally thread your magic through those weaknesses. Your weaves are harder to resist.
+
+#### Meditative Recovery
+- **Prerequisites:** Sorcerous Origin trait, Wis 6, Tier 3+
+- **Benefit:** Once per long rest during a short rest, you can enter deep meditation. Restore Energy equal to your tier × 4. Additionally, restore half your expended Harmonic Weaving uses (rounded down)
+- **Usage:** Once per long rest during short rest
+- **Description:** By reconnecting with your fundamental self through meditation, you can restore both the power that flows from enlightenment and your ability to perceive optimal outcomes.
+
+#### Shared Enlightenment
+- **Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 4+
+- **Benefit:** When an ally within 30 feet makes a weaving roll, you can use your [Reaction] to spend one of your Harmonic Weaving uses to let them reroll one of their dice (their choice which). They must take the new result
+- **Usage:** Uses your Harmonic Weaving pool (reaction)
+- **Description:** Your enlightenment extends outward. You can share glimpses of perfect understanding with those close to you, guiding them toward their own optimal outcomes.
+
+#### Probability Shift
+- **Prerequisites:** Sorcerous Origin trait, Wis 6, Tier 3+
+- **Benefit:** Twice per long rest, when any creature within 60 feet (ally or enemy) rolls any dice (attack, save, skill, weaving), you can use your [Reaction] to make them reroll one die. They must take the new result
+- **Usage:** Twice per long rest (reaction)
+- **Description:** You perceive probability as malleable. A subtle mental nudge, and the dice fall differently—reality shifts along paths you can see.
 
 ---
 
@@ -595,30 +802,137 @@ When creating new feats, follow these guidelines:
 
 ### Warlock Specializations
 
-#### Agonizing Blast
-- **Prerequisites:** Eldritch Pact trait, Eldritch Blast ability
-- **Benefit:** Add your Charisma modifier to the damage of Eldritch Blast
-- **Usage:** Passive
+**Design Note:** Warlock feats emphasize the unique short-rest Energy recovery, borrowed power theme, and risk/reward pact mechanics. These feats work with the Pact Conduit system rather than providing a signature attack.
 
-#### Repelling Blast
-- **Prerequisites:** Eldritch Pact trait, Eldritch Blast ability
-- **Benefit:** When you hit a creature with Eldritch Blast, push it up to 10 feet away from you in a straight line
-- **Usage:** Passive
+---
 
-#### Devil's Sight
+#### TIER 1 WARLOCK FEATS
+
+#### Patron's Eyes
 - **Prerequisites:** Eldritch Pact trait
-- **Benefit:** You can see normally in darkness, both magical and nonmagical, to a distance of 120 feet
-- **Usage:** Passive
+- **Benefit:** You can see normally through magical and nonmagical darkness to 120 feet. Once per short rest, you can sense the direction and approximate distance to any creature that has spoken your name in the last hour (within 1 mile)
+- **Usage:** Passive darkvision; name-sense once per short rest
+- **Description:** Your patron watches through you and tells you when you're being discussed. Some say your eyes look strange in certain light—reflecting things that aren't there.
 
-#### Armor of Shadows
+#### Rapid Recovery
+- **Prerequisites:** Eldritch Pact trait, Tier 2+
+- **Benefit:** Once per long rest, you can complete a short rest in 1 minute instead of 10 minutes. Your Energy regenerates fully, but you don't regain HP or other short rest benefits
+- **Usage:** Once per long rest
+- **Description:** You can pull power from your patron in moments of desperation, rapidly recharging between conflicts.
+
+#### Pact Armor
 - **Prerequisites:** Eldritch Pact trait
-- **Benefit:** As a [Minor] action, conjure spectral armor granting DR equal to your Charisma score. Lasts until your next long rest or until dispelled
-- **Usage:** At will
+- **Benefit:** As [Minor] action, manifest spectral protection. Gain DR equal to your highest Energy Potential (Space, Negative, Fire, Air, Positive, Earth, or Time—whichever you have highest). Lasts until your next long rest. Appearance reflects your pact nature. Does not stack with worn armor—use higher DR
+- **Usage:** At will (can refresh)
+- **Description:** Your patron's power coalesces around you like borrowed skin. It protects, but you can feel it watching through you.
 
-#### Thirsting Blade
+#### Eldritch Reservoir
+- **Prerequisites:** Eldritch Pact trait, Tier 2+
+- **Benefit:** Your maximum Energy increases by **(your tier × 4)**. Additionally, once per long rest when you would run out of Energy, you can borrow Energy from your patron equal to your tier × 2—but you begin your next short rest at -4 Energy (requiring 4 Energy to reach 0 before normal regeneration begins)
+- **Usage:** Permanent Energy boost; emergency borrowing once per long rest
+- **Description:** You've deepened your connection to your patron. You can draw more freely, but overextending yourself creates a debt that must be repaid.
+
+---
+
+#### TIER 2 WARLOCK FEATS (UTILITY & CUNNING)
+
+#### Warded Ground
+- **Prerequisites:** Eldritch Pact trait, Space Mastery 4, Arcane 3
+- **Benefit:** During any rest (short or long), you can create a 30-foot radius ward around your resting place. You immediately know if any creature enters the warded area. Creatures with hostile intent must make Will save (their Wisdom + Luck vs your Charisma + Space Mastery, compare successes). If you win: They cannot enter and know they've been blocked. If they win or tie: They can enter but you're alerted. Ward lasts until you move or take damage
+- **Usage:** Once per rest
+- **Description:** You've learned to inscribe protective circles using fragments of knowledge your patron feeds you. The symbols burn with otherworldly light when triggered.
+
+#### Borrowed Knowledge
+- **Prerequisites:** Eldritch Pact trait, Cha 5
+- **Benefit:** Once per long rest, you can ask your patron for knowledge. Choose one skill—for the next hour, treat your rank in that skill as 5 (if already 5+, add +1). Your patron's knowledge feels alien and incomplete
+- **Usage:** Once per long rest
+- **Description:** Your patron whispers expertise directly into your mind. The knowledge comes easily but feels wrong, like remembering something you never learned.
+
+#### Pact Familiar
 - **Prerequisites:** Eldritch Pact trait, Tier 3+
-- **Benefit:** When you take the Attack action on your turn, you can attack twice instead of once
-- **Usage:** Passive
+- **Benefit:** During a long rest, you can summon a minor entity bound to your pact. It appears as a small creature matching your pact's nature. Use Sprite or Imp stats (GM choice), but has HP equal to your tier × 4. It acts on your initiative and follows your commands. If killed, you cannot resummon until you gain a tier. You can dismiss it as [Free] action
+- **Usage:** Summon during long rest; permanent until killed
+- **Description:** A fragment of your patron's power given semi-autonomous form. It watches you as much as it serves you.
+
+#### Contingent Escape
+- **Prerequisites:** Eldritch Pact trait, Space Mastery 5, Tier 3+
+- **Benefit:** Once per long rest during a rest, set a trigger condition (reduced to 0 HP, grappled, specific enemy appears, etc.). When triggered, automatically teleport up to 60 feet to a space you've been before in the current session. You arrive prone and Dazed until the end of your next turn
+- **Usage:** Set during rest; triggers automatically once per long rest
+- **Description:** You've pre-arranged an escape with your patron. When the condition occurs, space bends and you're pulled to safety—though the sudden transition leaves you disoriented.
+
+---
+
+#### TIER 3 WARLOCK FEATS (POWER & SACRIFICE)
+
+#### Patron's Bulwark
+- **Prerequisites:** Eldritch Pact trait, Tier 4+
+- **Benefit:** When you or an ally within 30 feet would take damage, you can use your reaction to spend 4 Energy. Choose one:
+  - **Deflect Attack:** If it's an attack roll, the attacker gains Misfortune on their attack roll (declare after seeing the attack but before damage)
+  - **Fortify Defense:** If it's a save effect, your ally gains Fortune on their save
+  - **Absorb Impact:** Reduce damage dealt by your tier × 4
+- **Usage:** Reaction, costs 4 Energy, choose effect based on situation
+- **Description:** You channel your patron's power to shield yourself or others. The intervention is visible—reality itself warps around the protected target.
+
+#### Pact Weapon
+- **Prerequisites:** Eldritch Pact trait, Tier 3+, Any combat skill 4
+- **Benefit:** As [Minor] action, manifest a melee weapon formed from your pact's energy. Choose form (any one-handed melee weapon). You are proficient with it and use Charisma for attack rolls (standard opposed melee: Charisma + Melee Combat vs target's defense). Weapon deals 6 damage + Charisma (if you win by 2+ successes). Damage type matches your pact's primary energy. Weapon is magical and lasts until dismissed. Can only have one manifested at a time
+- **Usage:** At will (manifest/dismiss)
+- **Description:** Your patron offers you a weapon forged from their essence. It feels right in your hand—too right, as if it was always meant to be there.
+
+#### Steal Essence
+- **Prerequisites:** Eldritch Pact trait, Negative Mastery 5, Tier 4+
+- **Benefit:** Once per short rest, when you reduce a creature to 0 HP with a weave, you can immediately absorb a fragment of their life force. Choose one: (1) Regain HP equal to creature's tier × 4, (2) Gain Fortune on your next weaving roll, or (3) Extend duration of one active weave by 1 minute
+- **Usage:** Once per short rest (triggered on kill)
+- **Description:** Your patron taught you to feed on defeat. The dying creature's essence flows into you like cold water, sustaining and empowering you.
+
+#### Invoke the Pact
+- **Prerequisites:** Eldritch Pact trait, Tier 5+, Cha 7
+- **Benefit:** Once per long rest, call directly upon your patron for intervention. Describe what you need (escape, knowledge, protection, power). Spend up to your tier in Energy. GM determines if patron responds and what price they demand (immediately or later). Power granted scales with Energy spent—at GM discretion, could include: massive damage boost, automatic success, summoning aid, revealing hidden information, or breaking one rule of reality
+- **Usage:** Once per long rest, major narrative power with GM collaboration
+- **Description:** You speak your patron's true name (or what you believe it to be) and beg for direct intervention. Sometimes they answer. Sometimes the price is acceptable.
+
+---
+
+#### PACT-SPECIFIC FEATS
+
+#### Survivor's Resilience (Survivor's Bargain only)
+- **Prerequisites:** Eldritch Pact trait (Survivor's Bargain), Tier 3+
+- **Benefit:** When you would be reduced to 0 HP, you can spend 6 Energy (if you have it) to instead drop to 1 HP and immediately teleport up to 30 feet to an unoccupied space you can see. You can use this even if the damage would kill you outright
+- **Usage:** Triggered when reduced to 0 HP, costs 6 Energy
+- **Description:** You didn't survive this long by fighting fair. Your patron taught you that survival trumps honor—and death is just another trap to escape.
+
+#### Shared Burden (Desperate Deal only)
+- **Prerequisites:** Eldritch Pact trait (Desperate Deal), Positive Mastery 5, Tier 3+
+- **Benefit:** Once per short rest, when an ally within 60 feet would take damage, you can use your reaction to split the damage between you and them (round down). Both of you take half. Your patron's deal was for mutual survival
+- **Usage:** Reaction, once per short rest
+- **Description:** Your bargain was for salvation—and salvation can be shared. You reach out and the damage flows through your connection, divided between souls.
+
+#### Void's Whisper (Answered Cry only)
+- **Prerequisites:** Eldritch Pact trait (Answered Cry), Air Mastery 5, Tier 3+
+- **Benefit:** Once per short rest as [Combat] action, you can speak a phrase that wasn't meant for mortal minds. Choose up to 3 creatures within 60 feet who can hear you. They must make Will save (your Charisma + Air Mastery vs their Wisdom + Luck, count successes). If you win by 1 success: Target is Dazed for 1 round. If you win by 2+ successes: Target is Stunned for 1 round. If they win or tie: They subtract 1 from both dice on their next attack or weave
+- **Usage:** Once per short rest
+- **Description:** You channel the silence between stars, the answer to your desperate cry. Those who hear it feel their thoughts fracture and scatter.
+
+#### Unleashed Power (Stolen Shard only)
+- **Prerequisites:** Eldritch Pact trait (Stolen Shard), Fire Mastery 6, Tier 4+
+- **Benefit:** Once per short rest when you weave using your Primary Energy (Fire) as primary, you can unleash the full volatile power of your stolen shard. Immediately gain +1 additional success on the weaving roll (this can give you 3 or even 4 total successes). However, the unstable power lashes back—you take damage equal to half the Energy spent on the weave (rounded up)
+- **Usage:** Once per short rest
+- **Description:** The power you stole doesn't belong to you. When you force it to its limits, it fights back—burning through your pneuma like wildfire.
+
+---
+
+#### UTILITY & SOCIAL FEATS
+
+#### Devil's Bargain
+- **Prerequisites:** Eldritch Pact trait, Deception or Persuasion 5, Tier 3+
+- **Benefit:** During a short rest, you can offer another willing creature a temporary bargain using your patron's methods. They choose one of three benefits:
+  1. **Fortune's Edge:** Fortune on their next 3 rolls
+  2. **Vital Surge:** Gain temporary HP equal to your tier × 4
+  3. **Borrowed Skill:** Treat one skill as rank 5 for next hour
+  
+  In exchange, you gain: You know their exact location for 24 hours, and once within that time you can impose Misfortune on one of their rolls (you must be able to see them when you do this)
+- **Usage:** Once per short rest per willing creature
+- **Description:** You've learned to make deals like your patron does. Small favors, binding terms, inevitable debts. The other party always underestimates the hook.
 
 ---
 
