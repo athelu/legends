@@ -282,3 +282,179 @@ Archer shoots at you behind a barrel (Half Cover):
 2. You immediately roll Reflex save (Agility + Luck) with Fortune (half cover bonus)
 3. If you get 1+ successes, you duck behind the barrel - arrow misses
 4. If you get 0 successes, arrow hits you for damage (minus any DR from armor)
+
+## Line of Sight & Targeting
+
+### What is Line of Sight?
+
+**Line of Sight (LoS) Definition:**
+You have line of sight to a target if you can draw an unblocked straight line from any point in your space to any point in the target's space.
+
+**Why LoS Matters:**
+- Required to target with most attacks and weaves
+- Determines if you can see a creature (vs Hidden)
+- Affects cover and concealment
+- Required for many abilities and reactions
+
+---
+
+### What Blocks Line of Sight
+
+**Complete LoS Blockage (Cannot Target):**
+- **Solid obstacles:** Walls, closed doors, large boulders, thick tree trunks
+- **Full cover:** Completely behind solid barrier
+- **Total darkness + no darkvision:** Pitch black conditions (creature is Hidden)
+- **Magical darkness:** Unless you have darkvision or magical sight
+- **Opaque barriers:** Solid doors, thick curtains, stone walls
+
+**Special Cases:**
+- **Invisible creatures:** You don't have LoS unless you can detect them (they are Hidden)
+- **Around corners:** No LoS to creatures on other side of wall
+- **Inside containers:** No LoS to creatures inside closed chests, boxes, etc.
+
+---
+
+### What Does NOT Block Line of Sight
+
+**You DO have LoS through/despite:**
+- **Fog, smoke, mist, rain:** Provides Concealment, doesn't block LoS
+- **Dim light or shadows:** Provides Concealment, doesn't block LoS
+- **Partial or lesser cover:** Can see target, they have cover benefits
+- **Other creatures:** Generally provide cover, don't completely block LoS (see below)
+- **Transparent barriers:** Glass, ice, magical force walls (though may block attacks)
+- **Difficult terrain:** Undergrowth, rubble, etc. (may provide Concealment)
+- **Water:** Can see through clear water (may affect attacks differently)
+
+**Important Distinction:**
+- **Blocked LoS** = Cannot target at all
+- **Concealment** = Can target but with penalties (harder to see clearly)
+- **Cover** = Can target but target has defensive benefits (physical protection)
+
+---
+
+### Creatures as Obstacles
+
+When an attack (ranged or melee) would pass through or near a square occupied by another creature before reaching your target:
+
+#### Intervening Creature Provides Cover
+
+**Size-Based Cover Determination:**
+
+**If intervening creature is same size or larger than your target:**
+- Provides **Partial Cover** to target
+  - **Against Melee Attacks:** +1 DR (fewer vulnerable areas)
+  - **Against Ranged Attacks:** Target makes Reflex save (Agi + Luck):
+    - 1+ successes: Attack misses
+    - 0 successes: Attack hits normally
+
+**If intervening creature is one size category larger than you:**
+- Provides **Half Cover** to target
+  - **Against Melee Attacks:** +2 DR
+  - **Against Ranged Attacks:** Target makes Reflex save with -1 to both dice:
+    - 1+ successes: Attack misses
+    - 0 successes: Attack hits normally
+
+**If intervening creature is two+ size categories larger than you:**
+- Provides **Three-Quarters Cover** to target
+  - **Against Melee Attacks:** +3 DR
+  - **Against Ranged Attacks:** Target makes Reflex save with -1 to both dice:
+    - 1+ successes: Attack misses
+    - 0 successes: Attack hits normally
+
+**Important Notes:**
+- The intervening creature is **NOT** at risk of being hit (you aim carefully around them)
+- This assumes you're deliberately targeting a creature beyond an ally
+- You don't want to hit your ally, so you're trying to shoot/strike around them
+
+
+#### Area Effect Weaves
+
+**Area effects are different:**
+- Fireball, Lightning Bolt, and other AOE weaves affect **all creatures in area**
+- Intervening creatures do **NOT** provide cover against area effects
+
+
+---
+
+### Targeting Hidden Creatures
+
+**If a creature is Hidden:**
+- You **do not have LoS** to them (you don't know where they are)
+- You **cannot** make attack rolls against them
+- You **cannot** target them with single-target weaves
+- You **can** target their general area with AOE effects (if you know/guess where they might be)
+
+**To gain LoS to Hidden creature:**
+1. Succeed on Perception check to detect them → they become Concealed
+2. Use abilities that detect hidden creatures (Blindsight, Tremorsense, Perfect Sight) rendering them concealed
+3. Wait for them to reveal themselves (attack, make noise, leave tracks)
+
+**Once detected (Hidden → Concealed):**
+- You now have LoS (you know which square they're in)
+- You can target them, but you still have attack penalties from Concealment
+
+---
+
+### Invisible Creatures
+
+**Invisibility grants Hidden condition:**
+- You don't have LoS to invisible creatures by vision alone
+- They cannot be directly targeted
+- You must detect them by other means (sound, smell, touch, environmental clues)
+
+**If you detect invisible creature:**
+- They become Concealed (you know their location but can't see them clearly)
+- You have LoS to their square
+- You can attack with penalties from Concealment (add +1 to both attack dice)
+
+**Perfect Sight or similar abilities:**
+- Grants LoS to invisible creatures
+- You can see and target them normally
+
+---
+
+### Special Senses and LoS
+
+#### Darkvision
+- Grants normal vision in darkness and dim light
+- You have LoS through darkness that would otherwise block vision
+- Range specified (typically 60 feet)
+
+#### Blindsight
+- You can sense creatures within specified range without sight
+- You have LoS to creatures within Blindsight range, even if invisible or in total darkness
+- Does not work around corners or through solid barriers
+- Typically requires hearing (can be defeated by Silence)
+
+#### Tremorsense
+- You can detect creatures in contact with the ground within specified range
+- You have LoS to creatures on the ground within Tremorsense range
+- Works even if creature is invisible or in darkness
+- Does not detect flying or burrowing creatures
+
+#### Truesight / Perfect Sight
+- You can see invisible creatures
+- You can see through magical darkness
+- You can see through illusory effects
+- You have LoS to creatures that would otherwise be Hidden by magic
+- Range specified (typically 60-120 feet)
+
+---
+
+### Targeting Rules Summary
+
+**To target a creature with an attack or single-target weave:**
+1. You must have line of sight to the target
+2. Target must be within range of attack/weave
+3. Target cannot have Full Cover from you
+4. Target cannot be Hidden from you
+
+**If any requirement fails:**
+- You cannot target that creature
+- You must choose a different target or different action
+
+**Alternative Actions if Cannot Target:**
+- Use AOE effects to target their general area
+- Use Search action to try to find Hidden creatures
+- Move to position where you have LoS
+- Ready action to attack when target becomes visible

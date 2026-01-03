@@ -79,6 +79,192 @@
 -   Automatically ends after specified duration
 -   Some effects allow Perception check to end early
 
+### Stealth & Visibility Conditions
+
+#### Concealed
+- Your location is known, but you are difficult to see clearly
+- Attackers can target you but with penalties
+- **Attack Penalties:** Attackers add 1 to both dice when attacking you
+- **Perception Penalties:** Others add 1 to both dice when using perception checks to see details about you
+
+**Common Sources:**
+- Fog, mist, smoke
+- Heavy rain or snow
+- Dim light or shadows (not total darkness)
+- Dense foliage or undergrowth
+- Obscuring magical effects
+- Environmental conditions (sandstorm, etc.)
+
+**Does NOT Prevent Targeting:**
+- You can still be directly targeted by attacks and weaves
+- Enemies know which square you occupy
+- Different from Hidden (where location is unknown)
+
+**Stacking with Cover:**
+- Concealment and Cover can stack
+- Example: Behind low wall in fog = Partial Cover (Reflex save vs ranged) + Concealed (attacker adds +1 to both attack dice)
+
+**Duration:** 
+- Lasts as long as environmental condition persists
+- Moving into clear conditions ends Concealment
+- Bright light or magical effects (like Revealing Light) may end Concealment
+
+**Recovery:**
+- Automatically ends when you move into clear, well-lit conditions
+- Some weaves (like Radiant Sphere, Revealing Light) automatically end Concealment
+- Revealed condition prevents gaining Concealment
+
+---
+
+#### Hidden
+- Your location is unknown; enemies do not know which square you occupy
+- Enemies cannot directly target you with attacks or single-target weaves
+- You have significant tactical advantage
+
+**How to Gain Hidden:**
+
+1. **Successful Stealth Check:**
+   - Use Hide action (normally 1 [Combat] action, or 1 [Minor] with Swift Movement feat)
+   - Make Stealth check opposed by observers' Perception
+   - Must have something to hide behind (cover, concealment, etc.)
+   - Success: You gain Hidden condition
+   - Failure: Observers know your location (you may be Concealed but not Hidden)
+
+2. **Invisibility:**
+   - Invisibility weaves grant Hidden condition
+   - Observers cannot see you without magical means
+   - Can still be detected by sound, smell, touch, or environmental clues
+
+3. **Full Cover from All Observers:**
+   - If no enemy has line of sight to you, and you pass a stealth check you are Hidden from them
+   - Example: Behind a wall, around a corner, inside a closed room
+
+4. **Magical Effects:**
+   - Some weaves or abilities grant Hidden condition
+   - Darkness that prevents vision
+
+**Cannot Be Directly Targeted:**
+- Enemies cannot make attack rolls against you (don't know where you are)
+- Single-target weaves requiring line of sight cannot target you
+- Area effects can still affect you if your general area is targeted
+
+**Attacking While Hidden:**
+- You have Fortune on your first attack roll while Hidden
+- Making an attack typically reveals your position:
+  - **Standard:** Attack reveals you, you become visible
+  - **Exception:** Woodcraft feat - ranged attacks from hiding in natural terrain don't automatically reveal position (enemies must succeed Perception check)
+  - **Exception:** Perfect Invisibility - doesn't break when attacking
+
+**Detection:**
+If an observer succeeds on Perception check to detect you:
+- **Hidden → Concealed** 
+- Observer knows your approximate location (5-foot square) but may not see you clearly
+
+**Ways to Detect Hidden Creatures:**
+
+1. **Active Search [Interact action]:**
+   - Make Perception check opposed by Hidden creature's Stealth
+   - Success: Creature loses Hidden, becomes Concealed
+   - Failure: Creature remains Hidden
+
+2. **Passive Perception:**
+   - GM compares observer's Passive Perception to Hidden creature's Stealth result
+   - If Passive Perception equals or beats Stealth, creature is detected
+
+3. **Non-Visual Detection:**
+   - **Sound:** Footsteps, breathing, knocked objects, armor noise (Perception check)
+   - **Smell:** Strong scents, perfume, unwashed (Perception check, often with Misfortune)
+   - **Touch:** Bumping into invisible creature (automatic detection → Concealed)
+   - **Environmental:** Footprints in snow, ripples in water, disturbed fog, moving grass (Investigation or Perception check)
+   - **Magical:** Perfect Sight, tremorsense, blindsight, other special senses
+
+**Maintaining Hidden:**
+- Requires continued stealth
+- GM may call for new Stealth checks if you move (especially if moving quickly or across noisy terrain)
+- Broken if enemies successfully detect you
+- Automatically broken by Revealed condition
+- Broken by most offensive actions (attacks, casting obvious weaves)
+
+**Special Senses:**
+- Creatures with Blindsight can detect Hidden creatures within range reducing their benefit to conealed.
+- Creatures with Tremorsense detect Hidden creatures on the ground reducing their benefit to conealed.
+- Perfect Sight sees through invisibility and illusory effects
+
+**Area of Effect Targeting:**
+- Enemies can target your general area with AOE weaves
+- Example: "I cast Fireball centered on that cluster of barrels where I heard noise"
+- You're still affected if you're in the area, even though they can't target you directly
+
+**Duration:** 
+- Until revealed, you attack, or conditions change
+- Revealed condition immediately ends Hidden
+
+**Example Situations:**
+- Successfully hiding behind a pillar during combat
+- Invisible via Invisibility weave
+- Around a corner with no line of sight to enemies
+- In deep shadows after successful Stealth check
+
+---
+
+#### Revealed
+- Magic or effects expose your true position and prevent concealment
+- You cannot hide or benefit from obscuring effects
+- Typically caused by radiant magic or detection weaves
+
+**Effects:**
+- You immediately lose Hidden condition (if you had it)
+- You immediately lose Concealed condition (if you had it)
+- You **cannot gain** Hidden or Concealed conditions while Revealed
+- Invisibility is suppressed (you become visible)
+- Magical darkness concealing you is dispelled or rendered ineffective
+- Often accompanied by visible effect (glowing outline, radiant aura, etc.)
+
+**Common Sources:**
+- **Holy Fire** (4 successes): Target receives Revealed condition until end of target's next turn
+- **Radiant Touch** (4 successes): Target glows with radiant energy, becomes visible until end of their next turn
+- **Revealing Light** weave: Outlines creatures in violet light, prevents invisibility
+- Minor Positive Energy condition effect (magic system)
+
+**Duration:** 
+- Typically until end of target's next turn (most common)
+- Some effects specify different durations
+- Each effect specifies its own duration in the weave/ability description
+
+**Cannot Be Ended Early:**
+- No saving throw to end early (unless specified by effect)
+- Cannot be removed by mundane means
+- Magical dispelling (Unweave) can remove magical Revealed effects
+- Automatically ends after specified duration
+
+**Interaction with Other Conditions:**
+- **Overrides:** Concealed and Hidden (removes them)
+- **Prevents:** Gaining new Concealed or Hidden conditions
+- **Does NOT prevent:** Physical cover from walls, barriers, etc.
+- **Physical cover still functions:** Being Revealed doesn't negate cover from a wall or shield
+
+**Does NOT Affect:**
+- Physical cover (walls, doors, shields still provide cover)
+- Damage Resistance or DR
+- Other defensive abilities unrelated to visibility
+
+**Tactical Implications:**
+- Revealed creatures are prime targets (everyone can see and target them clearly)
+- Often used to expose invisible assassins, hidden enemies, or creatures in darkness
+- Particularly effective against stealth-based enemies
+- Radiant-based Revealed effects often deal damage AND reveal
+
+**Example Situations:**
+- Struck by Holy Fire at 4 successes, you glow with radiant energy
+- Outlined by Revealing Light, glowing with violet radiance
+- Hit by Radiant Touch, shining brightly and exposing you even in magical darkness
+
+**Recovery:**
+- Automatically ends after specified duration
+- Cannot be ended early except by magical dispelling (if from magical source)
+- Effect ends, you can attempt to hide/gain concealment again normally
+- New Revealed effects can extend duration (apply whichever has longer remaining duration)
+
 ### Physical Conditions
 
 #### Clumsy

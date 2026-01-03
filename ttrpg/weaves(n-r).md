@@ -52,7 +52,7 @@
 -   **Total Cost:** 8 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Target at touch becomes invisible. Attacks against target have Misfortune. Target has Fortune on attacks. Doesn't break when attacking or casting.
+-   **Effect:** Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on attacks and Stealth checks, and observers have Misfortune on Perception checks to detect target. Unlike normal invisibility, this weave does NOT break when target attacks or casts weaves.
 -   **Saving Throw:** None (beneficial buff, willing targets only)
 -   **Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour
 
@@ -72,9 +72,11 @@
 -   **Total Cost:** 9 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** You become invisible and create an illusory double of yourself. Can use action to move the double up to twice your speed and make it gesture, speak, and behave however you wish.
+-   **Effect:** You become invisible and gain the Hidden condition, while simultaneously creating an illusory double of yourself that appears where you were standing. You have Fortune on Stealth checks and observers have Misfortune on Perception checks to detect your true location. Can use action to move the double up to twice your speed and make it gesture, speak, and behave however you wish.
 -   **Saving Throw:** Perception vs Space Mastery (to recognize double as illusory effect)
 -   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = no concentration (8 hours)
+-   **Detection:** Observers who succeed on Perception check against your Space Mastery can recognize the double as illusory. 
+
 
 ### Phantom Doubles
 -   **Primary Energy:** Space 4 (illusory duplicates, defensive illusory effects)
