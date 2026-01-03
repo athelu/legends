@@ -100,7 +100,7 @@
 -   **Total Cost:** 7 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Target at touch becomes invisible. Attacks against target have Misfortune. Target subtracts 1 from both Stealth dice. Breaks if target uses a [Combat] action or casts a weave.
+-   **Effect:** Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on Stealth checks to remain undetected, and observers have Misfortune on Perception checks to detect target. Breaks if target uses a [Combat] action or casts a weave.
 -   **Saving Throw:** None (beneficial buff, willing targets only)
 -   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = affects 2 creatures (8 hours)
 
