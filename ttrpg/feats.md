@@ -366,110 +366,170 @@ When creating new feats, follow these guidelines:
 - **Usage:** Limited by Luck (one creature at a time)
 
 ---
+---
 
-## COMBAT FEATS - HUNTER STYLE
+## GENERAL COMBAT FEATS (Additional)
 
-### Favored Enemy
-- **Prerequisites:** Wis 4, Wilderness 3
-- **Benefit:** Choose creature type (undead, dragons, aberrations, etc.). Subtract 1 from both dice when tracking or fighting that type
-- **Usage:** Passive
-- **Note:** Can be taken multiple times for different creature types
-
-### Hunter's Mark
-- **Prerequisites:** Wis 4
-- **Benefit:** As 1 [Minor] action, mark a creature within 60 feet for 1 minute: +4 damage when you hit the marked target, subtract 1 from both dice on Perception or Wilderness checks to track it. If target drops to 0 HP, you can mark a new target
-- **Usage:** Unlimited (one marked target at a time)
-
-### Giant Slayer
-- **Prerequisites:** Wis 5
-- **Benefit:** Once per turn when you hit a creature that is below its maximum HP, deal an extra 1d8 damage
-- **Usage:** Once per turn
-
-### Pack Tactics
-- **Prerequisites:** Agi 5
+### Coordinated Strike
+- **Prerequisites:** Agi 5, any combat skill 4
 - **Benefit:** Once per turn when you make a weapon attack, you can make another attack with the same weapon against a different creature within 5 feet of the original target. Use Shared Attribute Roll: roll your Attribute die once, use that result for both attacks. Roll Combat skill die separately for each attack
 - **Usage:** Once per turn
+- **Note:** Represents fighting in coordination with allies, flowing from one opponent to the next
 
-### Multiattack Defense
-- **Prerequisites:** Agi 5
-- **Benefit:** When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn
-- **Usage:** Passive
-
-### Escape the Horde
+### Evasive Fighter
 - **Prerequisites:** Agi 6
 - **Benefit:** Opportunity attacks against you add 1 to both attack dice
 - **Usage:** Passive
+- **Note:** You've mastered moving through threats without exposing yourself
 
-### Natural Explorer
-- **Prerequisites:** Wilderness 5
-- **Benefit:** Choose one terrain type: subtract 1 from both dice on Wilderness and Perception checks in that terrain, your group can't become lost in that terrain except by magical means, you can move stealthily at normal pace in that terrain
+### Battle-Hardened
+- **Prerequisites:** Agi 5, any combat skill 4
+- **Benefit:** When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn
 - **Usage:** Passive
-- **Note:** Can be taken multiple times for different terrains
+- **Note:** After being struck once, you adapt instantly to that opponent's style
 
-### Animal Companion
-- **Prerequisites:** Wis 5, Cha 4
-- **Benefit:** Gain an animal companion using Conjure Animals rules. Can summon once per day for 1 hour with no Energy cost
-- **Usage:** Once per day
+### Exploit Vulnerability
+- **Prerequisites:** Wis 5, Perception 4
+- **Benefit:** Once per turn when you hit a creature that is below its maximum HP, deal an extra 1d8 damage
+- **Usage:** Once per turn
+- **Note:** You recognize when opponents are weakening and press the advantage
 
-### Companion's Strike
-- **Prerequisites:** Animal Companion feat
-- **Benefit:** When you take the Attack action, your animal companion can use its reaction to make one attack
-- **Usage:** Once per round (uses companion's reaction)
-
-### Hunter's Magic
-- **Prerequisites:** Wis 5, Wilderness 5, Tier 2+
-- **Benefit:** You gain limited nature magic:
-  - Roll **4d8**, assign to four Magical Potentials:
-    - **Earth Potential** = highest roll + 2 (max 8) [nature, plants, stone]
-    - Choose **Secondary Focus** (Air, Water, or Positive): second-highest + 1
-    - Assign remaining two rolls to remaining energies from: Air, Water, Positive, Space
-  - Use **Wisdom** as Casting Stat
-  - Gain **4 Magical Mastery skills** corresponding to your 4 energies (start rank 0)
-  - **Energy Pool:** Sum of 4 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
-  - Energy regenerates on **short rest**
-  - Can weave using these 4 energies
-- **Usage:** Passive (once taken, you become a half-caster hunter)
-- **Note:** This is the hunter equivalent of the paladin's Divine Warrior trait, but as an optional feat
+### Sharpshooter
+- **Prerequisites:** Ranged Combat 5, Perception 4, Wis 4, Tier 2+
+- **Benefit:** Once per turn when you make a ranged weapon attack:
+  - Before rolling, declare you're aiming for a vital spot
+  - Add 1 to both attack dice (harder to hit)
+  - On hit: deal +4 damage and target must make Fortitude save (opposed by your Wis + Ranged Combat)
+  - If you win save: target's movement speed is halved until end of their next turn
+- **Usage:** Once per turn
 
 ---
 
-## COMBAT FEATS - SACRED WARRIOR STYLE
+## WILDERNESS EXPERTISE FEATS
 
-### Divine Smite
-- **Prerequisites:** Divine Warrior trait, Positive Mastery 3
-- **Benefit:** When you hit with a melee attack, you may expend Energy to add positive damage: 2 Energy for +4 positive, 4 Energy for +8 positive, 6 Energy for +12 positive. Double damage if target is undead or fiend
-- **Usage:** Limited by Energy pool
+**Wilderness Expertise Feats** represent deep knowledge of nature, survival, and outdoor skills. These are not combat abilities but rather mastery of living and thriving in wild places.
 
-### Improved Divine Smite
-- **Prerequisites:** Divine Smite feat, Positive Mastery 5, Tier 5+
-- **Benefit:** Whenever you hit with a melee weapon, you deal an additional 4 positive damage
+### Pathfinder
+- **Prerequisites:** Wilderness 5, Wis 4
+- **Benefit:** Choose one terrain type (Forest, Mountain, Desert, Swamp, Arctic, Coast, Grassland, Underground):
+  - In chosen terrain: ignore difficult terrain penalties, move at double speed when traveling overland
+  - Subtract 1 from both dice on Wilderness and Perception checks in this terrain
+  - Your group cannot become lost in this terrain except by magical means
+  - Can find food and water for your group without checks (automatically succeed)
+  - Allies traveling with you gain half movement speed bonus
+- **Usage:** Passive
+- **Note:** Can be taken multiple times for different terrain types
+
+### Trail Reader
+- **Prerequisites:** Wis 5, Wilderness 5, Tier 2+
+- **Benefit:** When tracking creatures:
+  - Subtract 1 from both dice on Wilderness checks to track
+  - Can track across difficult terrain, water, or after days have passed
+  - With 2 successes on tracking check, learn creature's size, approximate weight, condition (healthy/injured), and how recently they passed (within hours)
+  - Against creature types you've studied (via Study Prey feat), subtract an additional 1 from Wilderness die only
 - **Usage:** Passive
 
-### Aura of Protection
-- **Prerequisites:** Divine Warrior trait, Cha 5, Tier 3+
-- **Benefit:** You and allies within 10 feet subtract 1 from both dice on all saving throws
+### Study Prey
+- **Prerequisites:** Wis 4, Wilderness 3
+- **Benefit:** Choose creature type (undead, dragons, aberrations, beasts, etc.):
+  - Subtract 1 from both dice when tracking creatures of this type
+  - Subtract 1 from one die (your choice) when fighting creatures of this type
+  - Can recall common behaviors, weaknesses, and habits of this creature type without checks
+- **Usage:** Passive
+- **Note:** Can be taken multiple times for different creature types. Represents dedicated study and experience hunting specific prey
+
+### Ambusher
+- **Prerequisites:** Wis 4, Stealth 4, Wilderness 3, Tier 2+
+- **Benefit:** When attacking from hiding in natural terrain:
+  - First attack deals +6 damage
+  - Enemies have Misfortune on Perception checks to detect your ambush setup
+  - During short rest in wilderness, can prepare simple snares/traps at one location that trigger on intruders (deal 8 damage, targets can make Reflex save for half)
+- **Usage:** Passive; snares once per short rest
+
+### Companion Bond
+- **Prerequisites:** Wis 5, Cha 4, Wilderness 4
+- **Benefit:** Through prolonged interaction (1 week), bond with one natural animal of CR 1/4 or lower:
+  - Animal becomes loyal companion (not magically summoned)
+  - Can communicate simple concepts and emotions with bonded animal
+  - Animal follows your commands without checks and fights alongside you
+  - Use standard animal companion combat rules
+  - If animal dies, can bond with new animal after 1 week of mourning
+- **Usage:** Passive (one bonded animal at a time)
+- **Note:** This is a natural relationship built through trust and training, not magical conjuration
+
+### Companion Tactics
+- **Prerequisites:** Companion Bond feat
+- **Benefit:** When you take the Attack action, your bonded animal companion can use its reaction to make one attack
+- **Usage:** Once per round (uses companion's reaction)
+
+### Woodcraft
+- **Prerequisites:** Stealth 5, Wilderness 4, Tier 2+
+- **Benefit:** In natural terrain:
+  - Can move at full speed while using Stealth (normally moving fast imposes penalties)
+  - Subtract 1 from Stealth die when moving through wilderness
+  - Ranged attacks from hiding don't automatically reveal your position (enemies must succeed Perception check to locate you)
+  - Can hide as [Minor] action instead of standard action when in natural terrain
 - **Usage:** Passive
 
-### Aura of Courage
-- **Prerequisites:** Divine Warrior trait, Cha 5, Tier 4+
-- **Benefit:** You and allies within 10 feet cannot be Frightened
+### Prepared Camp
+- **Prerequisites:** Wilderness 6, Wis 5, Tier 3+
+- **Benefit:** During short rest in wilderness, can prepare hidden campsite:
+  - Requires 10 minutes to prepare
+  - Campsite cannot be found without magic (others have Misfortune on Perception checks to find it)
+  - All party members who rest here regain +2 additional HP from the short rest
+  - Can set perimeter warnings that alert you if creatures approach within 60 feet
+  - Campsite remains hidden until you leave or 8 hours pass
+- **Usage:** Once per short rest (in wilderness only)
+
+### Field Herbalist
+- **Prerequisites:** Medicine 4, Wilderness 5
+- **Benefit:** Can forage for medicinal herbs while traveling (no extra time required):
+  - Create remedies equal to your Wisdom score
+  - Remedies replenish after long rest spent in wilderness
+  - As 1 [Combat] action, use one remedy to: cure one poison, cure one disease, OR restore 8 HP
+  - Can identify natural poisons and toxins automatically
+  - Subtract 1 from both dice on Medicine checks to treat poison or disease
+- **Usage:** Limited by Wisdom score, replenishes on long rest in wilderness
+
+### Keen Observer
+- **Prerequisites:** Study Prey feat, Wis 5, Perception 4, Tier 3+
+- **Benefit:** Against creature types you've studied (via Study Prey feat):
+  - As 1 [Combat] action, make Wisdom + Perception check to observe a studied creature type you can see
+  - 1 success: Learn highest attribute and current HP range (healthy/bloodied/critical)
+  - 2 successes: Additionally learn one resistance/immunity OR one weakness
+  - Once you've observed a specific creature this way, you remember this information for all future encounters with that individual
+  - Deal +4 damage against creatures you've observed
+  - Allies within 30 feet deal +2 damage against creatures you've observed (can share knowledge as [Minor] action)
+- **Usage:** Observation costs 1 [Combat] action, damage bonus passive once observed
+
+### Forager's Eye
+- **Prerequisites:** Wilderness 4, Wis 3
+- **Benefit:** When foraging for food, water, or materials:
+  - Automatically succeed in finding basic sustenance for your group
+  - Subtract 1 from both dice when searching for specific herbs, materials, or rare plants
+  - Can identify edible vs poisonous plants automatically
+  - Find double the normal quantity of materials when successfully foraging
+  - Takes half the normal time to forage
 - **Usage:** Passive
 
-### Cleansing Touch
-- **Prerequisites:** Divine Warrior trait, Cha 6, Tier 4+
-- **Benefit:** As 1 [Combat] action, touch a willing creature to end one weave effect or condition
-- **Usage:** Your Charisma score times per long rest
+### Weathered
+- **Prerequisites:** Wilderness 6, Con 4, Medicine 3, Tier 3+
+- **Benefit:** You've mastered survival in the harshest conditions:
+  - Can survive without food for days equal to your Constitution score (no penalties)
+  - Can survive without water for days equal to half Constitution (rounded up)
+  - Immune to natural diseases
+  - Subtract 1 from both dice on saves against poison and environmental hazards (extreme heat/cold, altitude, etc.)
+  - During long rests in wilderness, recover +4 additional HP
+- **Usage:** Passive
 
 ---
 
 ## MAGICAL FEATS
 
-**Design Note:** Most magical enhancement feats are available to all casters regardless of magical tradition. This allows for build diversity while maintaining class identity through resource-specific abilities (Sorcery Points, Channel Divinity, etc.) and signature features (Eldritch Blast, Wild Shape, etc.).
-
 ### UNIVERSAL MAGICAL ENHANCEMENTS
 
 ### Arcane Recovery
-- **Prerequisites:** Any magical trait (Mageborn, Divine Gift, Sorcerous Origin, Invoker Magic, Eldritch Pact, or Divine Warrior), Int OR Wis OR Cha 5
+- **Prerequisites:** Any magical trait (Mageborn, Divine Gift, Sorcerous Origin, Invoker Magic, or Eldritch Pact), Int OR Wis OR Cha 5
 - **Benefit:** Once per day during a short rest, regain Energy equal to your tier × 4
 - **Usage:** Once per day
 
@@ -961,30 +1021,6 @@ When creating new feats, follow these guidelines:
 - **Description:** Just as true names can inspire, they can also create protective dissonance that disrupts mental manipulation. Your words create a shield of sound that wards against fear and compulsion.
 - **Benefit:** As 1 [Combat] action, begin speaking true names in discordant patterns. This lasts until end of your next turn. You and friendly creatures within 30 feet subtract 1 from their Wisdom die on saves against being Frightened or Charmed
 - **Usage:** Unlimited
-
----
-
-### Druid Specializations
-
-#### Wild Shape
-- **Prerequisites:** Natural Conduit trait, Wis 4
-- **Benefit:** As 1 [Combat] action, magically assume the shape of a beast you have seen before with CR up to 1/3 your tier (rounded down). You can stay in beast form for hours equal to half your tier. You can revert as a [Minor] action. Stats replaced except mental attributes. Retain personality, memories, and ability to speak
-- **Usage:** 2 uses per short rest
-
-#### Wild Shape: Circle Forms
-- **Prerequisites:** Wild Shape feat, Tier 3+
-- **Benefit:** You can transform into beasts with swimming speed (Tier 3+) or flying speed (Tier 5+). CR limit increases to 1/2 your tier
-- **Usage:** Passive enhancement to Wild Shape
-
-#### Natural Recovery
-- **Prerequisites:** Natural Conduit trait, Wis 5
-- **Benefit:** During a short rest in natural surroundings, recover Energy equal to your tier × 4
-- **Usage:** Once per long rest
-
-#### Land's Stride
-- **Prerequisites:** Natural Conduit trait, Wilderness 4
-- **Benefit:** Moving through nonmagical difficult terrain costs no extra movement. You can pass through nonmagical plants without being slowed or taking damage. Advantage (subtract 1 from one die) on saves against magically created or manipulated plants
-- **Usage:** Passive
 
 ---
 

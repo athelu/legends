@@ -36,12 +36,6 @@
 - Limited to 5 energies
 - Pact Conduit provides passive weaving enhancement based on pact type
 
-#### Paladin Weaving (Divine Warrior Trait)
-- Spiritual warrior with an oath to protect and defend
-- Uses Charisma as Casting Stat
-- Attribute Bonuses from chosen Oath
-- Grants lay on hands healing ability
-
 #### Infuser Weaving (Infuser Trait)
 - Object infusion magic, intelligence-based casting
 - Uses Intelligence as Casting Stat
@@ -51,17 +45,17 @@
 
 ### Comparison of Magic Types
 
-| Feature | Mageborn | Divine Gift | Invoker | Infuser | Sorcerous Origin | Eldritch Pact | Divine Warrior |
-|---------|----------|-------------|---------|---------|------------------|---------------|----------------|
-| **Trait** | Arcane Weaving | Divine Weaving | Invoker Weaving | Infuser Weaving | Innate Weaving | Patron Weaving | Paladin Weaving |
-| **Casting Stat** | Intelligence | Wisdom | Charisma | Intelligence | Wisdom | Charisma | Charisma |
-| **# of Energies** | 8 | 8 | 5 | 5 | 8 | 5 | 4 |
-| **Primary Energy** | Elemental (choice) | Divine or Elemental | Air (fixed) | Earth (fixed) | Bloodline-dependent | Patron-dependent | Oath-dependent |
-| **Fixed Energies** | None | None | Air, Positive, Space, Time | Earth, Space, Positive, Time | None | Patron-dependent | Oath-dependent |
-| **Special Ability** | Ritual Casting | Channel Divinity | Words of Power | Imbue Item | Resonant/Harmonic | Pact Conduit (short rest) | Lay on Hands |
-| **Energy Pool** | Full (8 Potentials) | Full (8 Potentials) | Limited (5 Potentials) | Limited (5 Potentials) | Full (8 Potentials) | Limited (5 Potentials) | Limited (4 Potentials) |
-| **Focus** | Versatile arcane | Divine/nature power | True names, line of sight | Object infusion, touch required | Innate bloodline magic | Otherworldly patron power | Martial divine warrior |
-| **Unique Traits** | Half-cost rituals | Channel options | Always includes Air, requires LoS | Always includes Earth, touch required | Metamagic via points | Short rest energy regen | Healing ability, short rest regen |
+| Feature | Mageborn | Divine Gift | Invoker | Infuser | Sorcerous Origin | Eldritch Pact |
+|---------|----------|-------------|---------|---------|------------------|---------------|
+| **Trait** | Arcane Weaving | Divine Weaving | Invoker Weaving | Infuser Weaving | Innate Weaving | Patron Weaving |
+| **Casting Stat** | Intelligence | Wisdom | Charisma | Intelligence | Wisdom | Charisma |
+| **# of Energies** | 8 | 8 | 5 | 5 | 8 | 5 |
+| **Primary Energy** | Elemental (choice) | Divine or Elemental | Air (fixed) | Earth (fixed) | Identity Dependent | Patron-dependent |
+| **Fixed Energies** | None | None | Air, Positive, Space, Time | Earth, Space, Positive, Time | None | Patron-dependent |
+| **Special Ability** | Ritual Casting | Channel Divinity | Words of Power | Imbue Item | Resonant/Harmonic | Pact Conduit (short rest) |
+| **Energy Pool** | Full (8 Potentials) | Full (8 Potentials) | Limited (5 Potentials) | Limited (5 Potentials) | Full (8 Potentials) | Limited (5 Potentials) |
+| **Focus** | Versatile arcane | Divine/nature power | True names, line of sight | Object infusion, touch required | Overpowered weaves | Otherworldly patron power |
+| **Unique Traits** | Half-cost rituals | Channel options | Always includes Air, requires LoS | Always includes Earth, touch required | cast above ability | Short rest energy regen |
 
 ### Magic Effect Types & Terminology
 
@@ -215,7 +209,6 @@ How you determine your Magical Potentials depends on which magical trait you sel
 - **Invoker Magic** (Invoker Weaving)
 - **Sorcerous Origin** (Innate Weaving)
 - **Eldritch Pact** (Pact Weaving)
-- **Divine Warrior** (Paladin Weaving)
 
 Each trait specifies how many dice to roll, which energies you have access to, and which energies receive bonuses based on your chosen specialization (Elemental Affinity, Divine Path, Force of Will Manifestation, Pact Type, or Oath).
 
@@ -1005,12 +998,12 @@ Automatic for all Divine Gift characters.
 
 #### Available Channel Options by Divine Path
 
-**Good Paths (Cleric, Druid):**
+**Good Paths (Divine Gift - Good/Neutral deities):**
 - Channel Positive - HEAL Intent
 - Channel Positive - HARM Intent (undead only)
 - Channel Positive - TURN Intent (undead only)
 
-**Evil Paths (Death Cleric, Blight Druid):**
+**Evil Paths (Divine Gift - Evil deities):**
 - Channel Negative - HEAL Intent (undead only)
 - Channel Negative - HARM Intent (living creatures)
 - Channel Negative - COMMAND Intent (undead only)

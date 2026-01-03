@@ -181,6 +181,11 @@ Seekers of the Path (elven)
 
 **Symbol:** Tree, Penia Blossum (8 petal flower)
 
+**Nature Magic Through Hirnaloyta:**
+Those who dedicate themselves to Hirnaloyta through the Divine Gift trait become conduits for nature's power. They channel the eight energies through their connection to the goddess of nature, with particular affinity for Earth (stone, plants, growth) and often Water or Air (weather, seasons). These nature clerics are Hirnaloyta's chosen, bringing her wild, untamed power to protect the natural world.
+
+Alternatively, those born with magical talent (Mageborn trait) who choose Earth as their Elemental Affinity can also represent nature mages - arcanists who intellectually study and manipulate the natural world through elemental magic rather than divine faith.
+
 
 ### Nevil
 
