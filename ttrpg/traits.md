@@ -9,7 +9,7 @@
 ## WISDOM ON TRAIT SELECTION
 
 **When to take a trait:**
--   You want to play a spellcaster (Mageborn, Divine Gift, Sorcerous Origin, Eldritch Pact, Invoker, Infuser, Divine Warrior)
+-   You want to play a spellcaster (Mageborn, Divine Gift, Sorcerous Origin, Eldritch Pact, Invoker, Infuser)
 -   You want a supernatural characteristic (Immortality, Mythic Characteristic)
 -   You want a permanent passive benefit that defines your character (Eidetic Memory, Lightning Reflexes)
 -   You want a supernatural characteristic (Immortality, Mythic Characteristic)
@@ -507,42 +507,6 @@ Your eyes glow with violet light only when you complete a weave, the power flowi
 -   **Desperate Deal:** Something deliberately vague answered. Uses euphemisms. Never appears directly. Sends signs, omens, whispers. You agreed without reading the contract. Your magic feels like borrowed tools—functional but foreign.
 -   **Answered Cry:** Silent. Watchful. Grants power but gives no guidance. Feels like being observed constantly. You don't know if it's good/evil/neutral or what it wants from you. Your magic feels like a gift from an absent benefactor.
 -   **Stolen Shard:** Might not even be sentient—could be residual power from dead entity, trapped daemon, or lost fragment of god. You don't know if the original owner wants it back or if taking it cursed you. Your magic feels unstable, like wielding something too powerful for mortal hands.
-
-
-### Divine Warrior (-5)
-**Requirements:** Wisdom ≥ 3, Charisma ≥ 3
-
-Spiritual warrior bound by sacred oath. You channel divine power through faith and martial prowess, your pneuma opened through devotion to your cause. Your eyes glow with violet light only when completing a weave. Between castings your eyes appear normal, but flash with divine radiance when you channel sacred power.
-
-**Visual Effects:** When you weave or use divine abilities, your eyes blaze with violet light and holy (or unholy) symbols manifest around you. Your oath's energy crackles along your weapon and armor. Sacred (or profane) glyphs orbit your form, and divine power ripples outward with each manifestation.
-
-**Mechanical Benefits:**
-
-Spiritual warrior bound by sacred oath. Choose your **Sacred Oath:**
-
-**Good/Neutral Oaths:**
-- **Devotion:** Positive +2, Space +1 (protection, healing, positioning)
-- **Ancients:** Positive +2, Earth +1 (nature, growth, warding)
-- **Redemption:** Positive +2, Time +1 (second chances, restoration, patience)
-
-**Evil/Dark Oaths:**
-- **Conquest:** Negative +2, Fire +1 (domination, fear, destruction)
-- **Vengeance:** Negative +2, Space +1 (punishment, pursuit, relentless justice)
-- **Treachery:** Negative +2, Time +1 (betrayal, decay, entropy)
-
-**Limited Divine Weaving:**
-- Roll **4d8**, assign to four Magical Potentials based on your Oath
-  - **Primary Energy** (Positive or Negative based on oath) = highest roll + oath bonus (max 8)
-  - **Secondary Energy** (from oath) = second-highest roll + oath bonus
-  - Assign remaining two rolls to two other energies of your choice (Earth, Air, Fire, Water, Space, Time, or the opposite divine energy)
-- Use **Charisma** as Casting Stat
-- Gain **4 Magical Mastery skills** corresponding to your 4 energies (start rank 0)
-- Can weave divine magic using only these 4 energies
-- **Energy Pool:** Sum of 4 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
-- Energy regenerates on **short rest** (unlike full casters who need long rest)
-
-**Gain Lay on Hands:** You have a healing pool equal to Charisma × 5. As 1 [Combat] action, touch a creature and restore any amount from your pool (or deal negative damage for evil oaths). Pool restores after long rest.
----
 
 ## MAGICAL ENHANCEMENT TRAITS
 

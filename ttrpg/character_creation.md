@@ -105,16 +105,13 @@ Review the flaws.md and traits.md. You MUST choose Flaws in order to earn points
 #### Traits
 Traits are primarily for:
 -   **Magical abilities** - granting Energy pools, Mastery skills, and weaving capability
--   **Unique resource systems** - such as Lay on Hands pools or Sorcery Points
 -   **Exceptional characteristics** - supernatural heritage, extreme longevity, etc.
-
-Most combat abilities, class features, and martial techniques are now available as **feats** rather than traits.
 
 
 ## 5. Starting Feats
 
 Every character receives **2 free feats** at character creation. These represent your foundational training and abilities. Choose feats that:
--   Define your character concept (Martial Combatant, rogue, monk, etc.)
+-   Define your character concept
 -   Meet your prerequisite requirements
 -   Complement each other mechanically
 
