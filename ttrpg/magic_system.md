@@ -1,4 +1,4 @@
-# D8 TTRPG - Part 7: Magic System - Weaving
+# Magic System - Weaving
 
 ### Six Paths to Magic
 

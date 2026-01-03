@@ -1,6 +1,4 @@
-# D8 TTRPG - Part 4: Traits
-
-## TRAITS (Cost Points)
+# Traits
 
 **Design Philosophy:** Traits are reserved for abilities that grant unique resource systems (Energy pools, special points), supernatural characteristics, or features that cannot be learned through normal training. Most combat abilities and "class features" are now available as feats.
 
@@ -11,9 +9,9 @@
 **When to take a trait:**
 -   You want to play a spellcaster (Mageborn, Divine Gift, Sorcerous Origin, Eldritch Pact, Invoker, Infuser)
 -   You want a supernatural characteristic (Immortality, Mythic Characteristic)
--   You want a permanent passive benefit that defines your character (Eidetic Memory, Lightning Reflexes)
+-   You want a permanent passive benefit that defines your character (Eidetic Memory, Quickened Reflexes)
 -   You want a supernatural characteristic (Immortality, Mythic Characteristic)
--   You want a permanent passive benefit that defines your character (Eidetic Memory, Lightning Reflexes)
+-   You want a permanent passive benefit that defines your character (Eidetic Memory, Quickened Reflexes)
 
 **When NOT to take a trait:**
 -   You want combat abilities → Use feats instead
@@ -577,11 +575,11 @@ Subtle noises awaken easily.
 -   Not surprised while sleeping
 -   No penalty when awakened
 
-### Lightning Reflexes (-5)
-Unparalleled quickness.
--   Initiative: +2
--   All Perception: Subtract 1 from die results
--   Reflex saves: Subtract 1 from die results
+### Quickened Reflexes (-5)
+Unparalleled quickness and awareness.
+- Initiative: +2
+- All Perception: Subtract 1 from die results
+- Reflex saves: Subtract 1 from die results
 
 ### Lion Heart (-3)
 Unfaltering courage.

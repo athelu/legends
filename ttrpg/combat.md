@@ -1,4 +1,4 @@
-# D8 TTRPG - Part 6: Combat
+# Combat
 
 ## Initiative System
 
@@ -8,7 +8,7 @@ Initiative Bonus = Agility + Modifiers
 
 #### Modifiers:
 -   Alert feat: +2
--   Lightning Reflexes feat: +2
+-   Quickened Reflexes feat: +2
 -   Acute Hearing trait: +1
 -   Deafened condition: -2
 -   Other permanent/temporary modifiers

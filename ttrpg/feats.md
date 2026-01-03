@@ -1433,7 +1433,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 
 **Benefit:** You've learned to channel lightning's speed and shocking power. Gain the following benefits:
 
-- **Lightning Reflexes:** When you use Pneuma Strike (Air), your movement doesn't provoke reactions until end of your turn (lightning-fast movement)
+- **Storm Step:** When you use Pneuma Strike (Air), your movement doesn't provoke reactions until end of your turn (lightning-fast movement)
 - **Stunning Shock:** When you use Pneuma Strike (Air) and deal lightning damage, if target takes 8+ damage from the strike, they must make Fortitude save vs your Wis + Air Mastery or gain **Dazed** condition (see Conditions document)
 - **Static Field:** You gain +1 to initiative (static charge heightens awareness)
 
