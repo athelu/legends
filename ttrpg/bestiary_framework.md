@@ -174,13 +174,13 @@ This represents innate talent, specialized training, or supernatural ability.
 
 #### **Undead**
 - **Undead Immunities:** Immune to poison damage, Poisoned condition, disease, exhaustion
-- **Mindless (if applicable):** immune to enchantment effects (charm, fear, sleep), fear, psychic effects
+- **Mindless (if applicable):** immune to mind-affecting effects effects (Beguiling Weave, fear, Sleep), fear, psychic effects
 - **Does not need:** Air, food, drink, sleep
 - **Negative Healing (optional):** Healed by negative energy, harmed by positive
 
 #### **Construct**
 - **Construct Immunities:** Immune to poison, Poisoned, disease, exhaustion, Paralyzed, Petrified
-- **Mindless (if applicable):** immune to enchantment effects (charm, fear, sleep), fear, psychic effects
+- **Mindless (if applicable):** immune to mind-affecting effects effects (Beguiling Weave, fear, Sleep), fear, psychic effects
 - **Does not need:** Air, food, drink, sleep
 
 #### **Aberration**
@@ -226,7 +226,7 @@ This represents innate talent, specialized training, or supernatural ability.
 
 #### **Ooze**
 - **Ooze Immunities:** Immune to Blinded, Deafened, Exhaustion, Frightened, Prone
-- **Mindless:** immune to enchantment effects (charm, fear, sleep), fear, psychic effects
+- **Mindless:** immune to mind-affecting effects (Beguiling Weave, fear, Sleep), fear, psychic effects
 - **Amorphous:** Can squeeze through tiny spaces
 - **Corrosive (many):** Deals acid damage, dissolves equipment
 
@@ -282,10 +282,10 @@ This represents innate talent, specialized training, or supernatural ability.
 - Only works against creatures touching the ground
 - Common: Burrowing creatures, earth elementals
 
-#### **Truesight (specify range)**
+#### **Perfect Sight (specify range)**
 - Sees in normal and magical darkness
 - Sees invisible creatures and objects
-- Detects illusions and sees through them
+- Detects illusory effects and sees through them
 - Perceives true form of shapechangers
 - Sees into Ethereal Plane
 - Range typically 60 ft or 120 ft

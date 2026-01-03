@@ -152,7 +152,7 @@
 - **Note:** You're friendly and suggestible, not dominated. You won't follow commands that are obviously harmful to yourself or that go against your core values. The charmer must still convince you through normal social interaction, they just have an easier time doing so.
 
 **Example:** A charmed guard won't attack their charmer, and might be convinced to let them pass with a good story. But they won't hand over the keys to the treasury or betray their lord without exceptional persuasion - being charmed makes you friendly, not stupid.
-**See Also:** For information about enchantment effects and which creatures are immune, see **Part 7: Magic System - Magic Effect Types & Terminology**.
+**See Also:** For information about mind-affecting effects and which creatures are immune, see **Magic Effect Types & Terminology**.
 
 ### Incapacitation & Death States
 
@@ -454,7 +454,7 @@
 **Recovery:**
 -   Depends on source
 -   Some allow Will save at end of turn
--   Dispel magic removes magical slowing
+-   Unweave removes magical slowing
 -   Haste spell can counteract (if magical)
 
 **Stacking:**

@@ -10,10 +10,10 @@ Each deity's energy pairing reflects their thematic focus:
 - **Alkira:** Fire (his sunburst symbol, righteous flame) + Positive (protection, healing allies)
 - **Ambis:** Positive (healing, nurturing) + Space (sanctuary, protective barriers)
 - **Athore:** Positive (righteousness) + Fire (punishment, purification)
-- **Enschede:** Time (prophecy, fate) + Space (scrying, divination)
+- **Enschede:** Time (prophecy, fate) + Space (scrying, prophecy)
 - **Hirnaloyta:** Earth (nature, plants) + Positive (life, growth)
 - **Nevil:** Negative (death, endings) + Time (cycles, passage)
-- **Rudlu:** Space (illusion, trickery) + Air (freedom, unpredictability)
+- **Rudlu:** Space (illusory effects, trickery) + Air (freedom, unpredictability)
 - **Shu-Jahan:** Space (learning, perception) + Positive (enlightenment, teaching)
 
 **Channel Divinity Balance:**

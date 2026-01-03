@@ -297,16 +297,16 @@ Wizard Elara:
    - Ranger (ranged attacks)
 
 2. **Advanced Tactics**
-   - Shield spell (reaction)
+   - Reactive Ward (reaction)
    - Disengage action
    - Positioning/movement
    - Cover mechanics
 
 3. **More Weaves**
-   - Shocking Grasp (Simple Weave, lightning)
+   - Lightning Touch (Simple Weave, lightning)
    - Frost Touch (Simple Weave, cold)
-   - Burning Hands (AOE fire)
-   - Magic Missile (auto-hit)
+   - Flame Burst (AOE fire)
+   - Unerring Bolt (auto-hit)
 
 4. **Boss Abilities**
    - Relentless (Orc ability to survive at 1 HP)

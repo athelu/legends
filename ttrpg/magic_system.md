@@ -60,46 +60,46 @@
 ### Magic Effect Types & Terminology
 
 #### Damage Effects (Destructive Magic)
-Weaves that deal direct harm through elemental or negative energy. Uses Fire, Air, Water, Earth, or Negative as primary energy. These effects are sometimes called "evocations" in traditional wizard terminology, but in D8 TTRPG we simply refer to them as damage weaves. Key characteristic: targets take HP damage.
+Weaves that deal direct harm through elemental or negative energy.  Uses Fire, Air, Water, Earth, or Negative as primary energy. These weaves deal direct harm through elemental or negative energy and are referred to as damage weaves. Key characteristic: targets take HP damage.
 
-**Common Examples:** Fireball, lightning bolt, ice storm, acid splash, necrotic blast
+**Common Examples:** Fireball, lightning bolt, Hailstorm, acid blast, necrotic blast
 
-#### Enchantment Effects (Mind-Affecting Magic)
-Any weave that alters a creature's mental state, emotions, or thoughts without direct mind control. Typically uses Negative energy (for fear, sleep, mental assault) or Positive energy (for courage, inspiration, euphoria). Creatures immune to psychic effects or described as "mindless" are immune to enchantment effects.
+#### mind-affecting effects (Mind-Affecting Magic)
+Any weave that alters a creature's mental state, emotions, or thoughts without direct mind control. Typically uses Negative energy (for fear, sleep, mental assault) or Positive energy (for courage, inspiration, euphoria). Creatures immune to psychic effects or described as "mindless" are immune to mind-affecting effects.
 
 **Includes:** Charm, fear, sleep, emotion manipulation, mental influence
-**Does NOT include:** Direct mind control (compulsion), illusions, or physical transformations
-**Common Examples:** Charm person, sleep, cause fear, heroism
+**Does NOT include:** Direct mind control (compulsion), illusory effects, or physical transformations
+**Common Examples:** Beguiling Weave, Sleep, Terror Weave, heroism
 
-**Immunity Note:** When a creature is listed as "immune to enchantment effects" or "immune to enchantment effects (charm, fear, sleep)," they cannot be affected by any weaves that rely on mental/emotional manipulation. Constructs, undead, and mindless creatures typically have this immunity.
+**Immunity Note:** When a creature is listed as "immune to mind-affecting effects" or "immune to mind-affecting effects (charm, fear, sleep)," they cannot be affected by any weaves that rely on mental/emotional manipulation. Constructs, undead, and mindless creatures typically have this immunity.
 
-#### Illusion Effects (False Perception)
-Weaves that create false sensory information or conceal the truth. Primarily uses Space energy to manipulate perception and create false images or sounds. May also use Air energy for auditory illusions or Negative energy for shadow-based illusions.
+#### illusory effects (False Perception)
+Weaves that create false sensory information or conceal the truth. Primarily uses Space energy to manipulate perception and create false images or sounds. May also use Air energy for auditory illusory effects or Negative energy for shadow-based illusory effects.
 
 **Key Characteristic:** Creates false perceptions, doesn't change reality
-**Seeing Through Illusions:** Creatures with truesight, blindsight, or tremorsense may see through illusions automatically. Physical interaction typically reveals an illusion as false (you can pass your hand through it, it has no substance, etc.).
+**Seeing Through illusory effects:** Creatures with truesight, blindsight, or tremorsense may see through illusory effects automatically. Physical interaction typically reveals an illusory effect as false (you can pass your hand through it, it has no substance, etc.).
 
-**Common Examples:** Silent image, invisibility, disguise self, major image
+**Common Examples:** Phantom Image, invisibility, False Visage, Complex Illusion
 
 #### Protective Effects (Warding Magic)
-Weaves that create barriers, wards, or defensive magic. Primarily uses Space energy to create force barriers or shield effects. Traditional wizards call this "abjuration," but we refer to them as protective weaves or wards.
+Weaves that create barriers, wards, or defensive magic. Primarily uses Space energy to create force barriers or Reactive Ward effects. These are referred to as protective weaves or wards.
 
-**Common Examples:** Shield, mage armor, protection from energy, counterspell, dispel magic
+**Common Examples:** Reactive Ward, Force Armor, protection from energy, CounterWeave, Unweave
 
 #### Transformation Effects (Physical Alteration)
-Weaves that physically change or enhance creatures or objects. Uses elemental energies (Earth, Fire, Water, Air) to reshape matter, or Positive/Negative to enhance/wither living tissue. Traditional terminology calls this "transmutation."
+Weaves that physically change or enhance creatures or objects. Uses elemental energies (Earth, Fire, Water, Air) to reshape matter, or Positive/Negative to enhance/wither living tissue.
 
-**Common Examples:** Polymorph, enlarge/reduce, stone shape, enhance ability
+**Common Examples:** Beastial Transformation, Size Shift, stone shape, enhance ability
 
 #### Summoning & Teleportation Effects (Spatial Manipulation)
-Weaves that move creatures/objects through space or bring things from other places. Uses Space energy as primary, often with Time energy for duration of summons. Traditional wizards call this "conjuration."
+Weaves that move creatures/objects through space or bring things from other places. Uses Space energy as primary, often with Time energy for duration of summons.
 
-**Common Examples:** Teleport, dimension door, summon creature, create food and water
+**Common Examples:** Teleport, Spatial Step, summon creature, create food and water
 
-#### Information & Divination Effects (Temporal/Spatial Perception)
-Weaves that gather information, predict the future, or perceive distant locations. Uses Space energy (scrying, detection) or Time energy (foresight, prophecy). Traditional terminology calls this "divination."
+#### Information & Prophecy Effects (Temporal/Spatial Perception)
+Weaves that gather information, predict the future, or perceive distant locations. Uses Space energy (scrying, detection) or Time energy (foresight, prophecy).
 
-**Common Examples:** Detect magic, scrying, foresight, identify, locate object
+**Common Examples:** Sense Magic, scrying, foresight, identify, Object Seeking
 
 ### The Eight Magical Energies
 1.  Earth - Stone, metal, earth magic
@@ -138,7 +138,7 @@ Necromancy is not simply "death magic" or harmful spells—it is the direct mani
 Weaves marked with the **[Necromantic]** keyword are forbidden and represent lost First Men knowledge. These weaves don't merely channel Negative energy for harm—they bind, trap, reshape, or consume souls:
 
 **Examples of Necromantic Weaves:**
-- **Animate Dead** - Binding soul fragments or echoes to corpses
+- **Bind the Fallen** - Binding soul fragments or echoes to corpses
 - **Soul Cage** - Trapping a departing soul in a vessel
 - **Magic Jar** - Displacing souls between bodies
 - **Speak with Dead** - Forcing communion with departed souls
@@ -150,8 +150,8 @@ Weaves marked with the **[Necromantic]** keyword are forbidden and represent los
 The following are *not* necromantic, as they channel entropy and harm without manipulating souls:
 - **Inflict Wounds** - Channeling decay and necrotic energy
 - **Harm** - Draining life force
-- **Blight** - Withering and entropy
-- **Bestow Curse** - Imposing misfortune
+- **Withering Touch** - Withering and entropy
+- **Curse Weaving** - Imposing misfortune
 - **Shadow-based effects** - Manipulating darkness and shadow
 - **Ray of Enfeeblement** - Weakening through entropy
 
@@ -330,7 +330,7 @@ Choose the appropriate table based on what you\'re trying to accomplish.
 |-------------|---------------------------------------------------|-------------|
 | Energy Cost | Control Power                                     | Power Level |
 |             |                                                   |             |
-| 2           | Cantrip control (minor hindrance)                 | Cantrip     |
+| 2           | Simple Weave control (minor hindrance)            | Cantrip     |
 | 3           | Basic single-target (1 creature hindered)         | 1st level   |
 | 4           | Moderate single-target (1 creature incapacitated) | 2nd level   |
 | 5           | Strong area or domination                         | 3rd level   |
@@ -382,7 +382,7 @@ Choose the appropriate table based on what you\'re trying to accomplish.
 |-------------|---------------------------------------|---------------|
 | Energy Cost | Utility Power                         | Power Level   |
 |             |                                       |               |
-| 2           | Cantrip utility (minor effect)        | Cantrip       |
+| 2           | Simple Weave utility (minor effect)   | Cantrip       |
 | 3           | Basic utility (useful effect)         | 1st-2nd level |
 | 4           | Moderate utility (significant effect) | 2nd-3rd level |
 | 5           | Strong utility (major convenience)    | 3rd-4th level |
@@ -411,7 +411,7 @@ Choose the appropriate table based on what you\'re trying to accomplish.
 
 **Notes:** Duration from Supporting Energy (Time). Multiple targets need Supporting Energy (Space).
 
-9. **Primary Energy:** Divination
+9. **Primary Energy:** Scrying, Prophecy
    **Energy Type:** Space (seeing distant/hidden things)
 
 |             |                                     |               |
@@ -421,7 +421,7 @@ Choose the appropriate table based on what you\'re trying to accomplish.
 | 2           | Detect nearby (30ft)                | Cantrip-1st   |
 | 3           | Identify or basic info              | 1st-2nd level |
 | 4           | Extended sense (distant viewing)    | 2nd-3rd level |
-| 5           | Major divination (specific answers) | 3rd-5th level |
+| 5           | Major prophecy (specific answers)   | 3rd-5th level |
 | 6           | Powerful knowledge (see all)        | 5th-6th level |
 | 7           | Reality-piercing sight              | 6th-7th level |
 | 8           | Omniscient-level                    | 8th-9th level |
@@ -452,7 +452,7 @@ When a damage weave affects multiple targets through area effect:
 - Each target makes their own saving throw (if applicable)
 - Total damage dealt = Base Damage × Number of Targets
 
-**Example:** Burning Hands (Fire 3 = 16 damage base, Space 1 = 2 targets)
+**Example:** Flame Burst (Fire 3 = 16 damage base, Space 1 = 2 targets)
 - First target: 16 fire damage (makes own save)
 - Second target: 16 fire damage (makes own save)
 - Total damage dealt: 32 damage (if both hit)
@@ -506,13 +506,13 @@ Simple Weaves represent raw magical energy channeled directly through the caster
 - Limited to touch or 5-10ft range
 - Single target, instantaneous effect
 - Does NOT provoke opportunity attacks
-- Examples: Fire Burst, Shocking Grasp, Frost Touch
+- Examples: Fire Burst, Lightning Touch, Frost Touch
 
 **Complex Weave (2 actions):**
 - Uses Primary + Supporting Energy (or multiple energies)
 - Can achieve range, area effects, or duration
 - DOES provoke opportunity attacks when cast while threatened
-- Examples: Fire Bolt, Fireball, Burning Hands
+- Examples: Fire Bolt, Fireball, Flame Burst
 
 #### Step-by-Step Process:
 1.  Choose your Primary effect type (damage, healing, buff, control, etc.)
@@ -530,7 +530,7 @@ Simple Weaves represent raw magical energy channeled directly through the caster
 - Supporting: Space 3 (medium range + 20ft radius)
 - Total: 8 Energy
 
-##### Example - Cure Wounds:
+##### Example - Mend Flesh:
 - Primary: Positive 3 (8 HP healing, 1st level power)
 - Supporting: Touch (0) or +1 for Close range
 - Total: 3 Energy at touch, 4 at range
@@ -556,7 +556,7 @@ Simple Weaves represent raw magical energy channeled directly through the caster
 ##### Saving Throws
 - Fortitude (Constitution + Luck): Resists fire, cold, poison, physical effects
 - Reflex (Agility + Luck): Resists area effects, explosions
-- Will (Wisdom + Luck): Resists mind control, fear, charm, illusions
+- Will (Wisdom + Luck): Resists mind control, fear, charm, illusory effects
 
 #### Attack Weaves vs Save Weaves
 
@@ -570,9 +570,9 @@ Weaves fall into two categories based on how they interact with targets:
 - No opposed roll by target
 
 **Weave Types:**
-- Single-target ranged damage (Fire Bolt, Ray of Frost, Shocking Grasp)
+- Single-target ranged damage (Fire Bolt, Frost Ray, Lightning Touch)
 - Touch-range damage spells
-- Single-target healing (Cure Wounds, Healing Word)
+- Single-target healing (Mend Flesh, Healing Burst)
 - Single-target buffs that benefit the target
 
 **Success Determination:**
@@ -598,11 +598,11 @@ Caster rolls Fire Potential + Fire Mastery + Air Potential + Air Mastery (4d8)
 - Ongoing effects
 
 **Weave Types:**
-- Area damage (Fireball, Lightning Bolt, Burning Hands, Cone of Cold)
+- Area damage (Fireball, Lightning Bolt, Flame Burst, Freezing Blast)
 - Line effects (Lightning Bolt, Wall of Fire)
-- Control spells (Hold Person, Sleep, Slow, Fear)
+- Control spells (Binding Paralysis, Sleep, Slow, Fear)
 - Debuffs (Blindness, Curse, Poison)
-- Transformation (Polymorph, Petrification)
+- Transformation (Beastial Transformation, Petrification)
 
 **Success Determination - Opposed Roll:**
 1. **Caster rolls weaving:** Count successes normally from weaving roll
@@ -636,7 +636,7 @@ The save type is determined by the effect being resisted:
 
 **Fortitude (Constitution + Luck) - Enduring/Resisting:**
 - Poison and disease
-- Physical transformation (petrification, polymorphing)
+- Physical transformation (petrification, Beastial Transformation)
 - Death effects
 - Constitution-draining effects
 - Cold/heat endurance
@@ -645,9 +645,9 @@ The save type is determined by the effect being resisted:
 - Mind control and domination
 - Fear and morale effects
 - Charm and compulsion
-- Illusions (to disbelieve)
+- illusory effects (to disbelieve)
 - Sleep and unconsciousness effects
-- **Note:** Creatures described as "mindless" or "immune to enchantment effects" automatically succeed on Will saves against enchantment effects (charm, fear, sleep, emotion manipulation). See **Magic Effect Types & Terminology** section for details.
+- **Note:** Creatures described as "mindless" or "immune tomind-affecting effects" automatically succeed on Will saves against mind-affecting effectss (charm, fear, sleep, emotion manipulation). See **Magic Effect Types & Terminology** section for details.
 
 **When in Doubt:**
 - If it's an explosion or area damage → Reflex
@@ -656,8 +656,8 @@ The save type is determined by the effect being resisted:
 
 **Effect Type Guidelines:**
 - **Damage weaves** (destruction magic): Reflex for area effects, no save for single-target attack weaves
-- **Enchantment effects** (mind-affecting): Always Will save. Mindless creatures immune.
-- **Illusion effects** (false perception): Will save to disbelieve if suspicious. Some creatures see through automatically.
+- **mind-affecting effects** (mind-affecting): Always Will save. Mindless creatures immune.
+- **illusory effects** (false perception): Will save to disbelieve if suspicious. Some creatures see through automatically.
 - **Transformation effects** (physical alteration): Fortitude save for unwilling targets
 - **Teleportation/forced movement**: Reflex save for unwilling targets
 - **Protective effects** (buffs, wards): Usually no save (benefits target)
@@ -694,7 +694,7 @@ Physical armor and natural defenses interact differently with magical damage bas
 #### Physical Magic Damage - Full DR
 
 **Physical-based magical effects respect full DR:**
-- **Ice Storm** (physical ice chunks and hail)
+- **HailStorm** (physical ice chunks and hail)
 - **Meteor Swarm** (physical meteors with impact)
 - **Conjured Weapons** (summoned blades, magical projectiles)
 - **Stone Shape** (crushing stone)
@@ -706,7 +706,7 @@ Physical armor and natural defenses interact differently with magical damage bas
 **Formula:** Damage - DR (normal physical damage reduction)
 
 **Examples:**
-- Ice Storm 28 damage vs DR 4 → 28 - 4 = **24 damage**
+- HailStorm 28 damage vs DR 4 → 28 - 4 = **24 damage**
 - Meteor 40 damage vs DR 6 → 40 - 6 = **34 damage**
 - Conjured Blade 10 damage vs DR 3 → 10 - 3 = **7 damage**
 
@@ -716,16 +716,16 @@ Physical armor and natural defenses interact differently with magical damage bas
 
 | Damage Type | DR Application | Example Spell |
 |-------------|----------------|---------------|
-| Fire | Half DR | Fire Bolt, Fireball, Burning Hands |
-| Cold | Half DR | Ray of Frost, Cone of Cold |
-| Lightning | Half DR | Lightning Bolt, Shocking Grasp |
-| Acid | Half DR | Acid Splash, Acid Arrow |
-| Thunder | Half DR | Thunderwave, Shatter |
+| Fire | Half DR | Fire Bolt, Fireball, Flame Burst |
+| Cold | Half DR | Frost Ray, Freezing Blast |
+| Lightning | Half DR | Lightning Bolt, Lightning Touch |
+| Acid | Half DR | Acid Blast, Acid Arrow |
+| Thunder | Half DR | Thunder Burst, Shatter |
 | Negative | Half DR | Chill Touch, Blight, Vampiric Touch |
-| Positive | Half DR | Sacred Flame, Guiding Bolt |
-| Force | Half DR | Magic Missile, Eldritch Blast |
+| Positive | Half DR | Holy Fire, Radiant Bolt |
+| Force | Half DR | Unerring Bolt  |
 | Psychic | Half DR | Mind Blast, Psychic Scream |
-| Physical Ice | Full DR | Ice Storm (ice chunks) |
+| Physical Ice | Full DR | HailStorm (ice chunks) |
 | Physical Stone | Full DR | Meteor Swarm, Conjured weapons |
 | Physical Debris | Full DR | Earthquake, Avalanche |
 
@@ -740,15 +740,15 @@ Some creatures have specific elemental resistances or immunities listed in their
 
 **Example:** Red Dragon with DR 5 and Fire Immunity
 - Fireball 28 fire damage → Immune, takes 0 damage
-- Ice Storm 28 cold damage → 28 - 5 (full DR for physical ice) = 23 damage
+- HailStorm 28 cold damage → 28 - 5 (full DR for physical ice) = 23 damage
 
 **Example:** Frost Giant with DR 4 and Cold Resistance 8
-- Cone of Cold 28 damage → 28 - 2 (half DR) - 8 (resistance) = **18 damage**
+- Freezing Blast d 28 damage → 28 - 2 (half DR) - 8 (resistance) = **18 damage**
 - Fireball 28 damage → 28 - 2 (half DR) = **26 damage**
 
 #### Special Cases
 
-**Force Damage (Magic Missile, etc.):**
+**Force Damage (Unerring Bolt, etc.):**
 - Applies half DR
 - Almost never resisted (very rare to have Force Resistance)
 - Considered pure magical energy
@@ -921,7 +921,7 @@ Conditions should thematically match the primary energy used in the weave. Refer
 
 The severity of conditions that can be applied depends on the weave's Energy cost:
 
-**Cantrip Level (1-2 Energy):**
+**Simple Weave Level (1-2 Energy):**
 - Maximum at 3 successes: Minor condition only
 - Maximum at 4 successes: Major condition (single effect, not most severe)
 - No severe conditions available
@@ -953,7 +953,7 @@ Most magical conditions allow the target to attempt a save at the end of each of
 
 #### Examples in Practice
 
-**Fire Bolt (Fire 2, Cantrip):**
+**Fire Bolt (Fire 2, Simple Weave):**
 - 3 successes: 16 damage + Singed (minor - subtract 1 from next die)
 - 4 successes: 24 damage + Ignited (major - 1d8 per turn, action to extinguish)
 - 5+ successes: 32 damage + Ignited + Dazzled (multiple conditions)
@@ -963,7 +963,7 @@ Most magical conditions allow the target to attempt a save at the end of each of
 - Net 4: 44 damage + Ignited (major ongoing damage)
 - Net 5+: 52 damage + Burning (severe - 2d8 per turn, hard to extinguish)
 
-**Hold Person (Space 4, Low Level Control):**
+**Binding Paralysis (Space 4, Low Level Control):**
 - Net 2: Paralyzed for 1 minute (save each turn)
 - Net 3: Paralyzed + Misfortune on saves (harder to break)
 - Net 4: Paralyzed + affects 2 targets
