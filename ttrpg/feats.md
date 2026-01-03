@@ -579,7 +579,7 @@ When creating new feats, follow these guidelines:
 
 ### Mageborn Specializations
 
-#### Potent Cantrip
+#### Potent Simiple Weave
 - **Prerequisites:** Mageborn trait, Int 5
 - **Benefit:** When a creature succeeds on a saving throw against your weave, they still take half the weave's damage
 - **Usage:** Passive
@@ -589,15 +589,11 @@ When creating new feats, follow these guidelines:
 - **Benefit:** When you weave an area effect, choose a number of creatures equal to 1 + your Intelligence score. Chosen creatures automatically succeed on saves against the weave and take no damage
 - **Usage:** Unlimited
 
-#### Improved Abjuration
+#### Warding Mastery
 - **Prerequisites:** Mageborn trait, Negative or Space Mastery 5
 - **Benefit:** When you weave a protective or warding effect, you and allies gain temporary HP equal to your Intelligence score + your tier. These temporary HP last 1 hour
 - **Usage:** Passive
 
-#### Empowered Evocation
-- **Prerequisites:** Mageborn trait, Int 6, Fire or Air Mastery 5
-- **Benefit:** Add your Intelligence modifier to the damage roll of any evocation weave you cast
-- **Usage:** Passive
 
 ---
 
@@ -768,10 +764,10 @@ When creating new feats, follow these guidelines:
 
 #### ADVANCED MASTERY FEATS
 
-#### True Sight Meditation
+#### Perfect Sight Meditation
 - **Prerequisites:** Sorcerous Origin trait, Wis 7, Space Mastery 6, Tier 5+
 - **Benefit:** Once per long rest, you can spend 10 minutes in deep meditation to activate perfect perception. For the next hour, you:
-  - See through illusions automatically
+  - See through illusory effects automatically
   - Perceive invisible creatures and objects within 60 feet
   - See into the ethereal plane within 60 feet
   - Can see the true form of shapechanged creatures
@@ -850,7 +846,7 @@ When creating new feats, follow these guidelines:
 
 #### Channel Divinity: Radiance of Dawn
 - **Prerequisites:** Divine Gift trait, Positive Mastery 4
-- **Benefit:** As 1 [Combat] action, dispel magical darkness within 30 feet and each hostile creature within 30 feet makes a Fortitude save (opposed by your Wisdom + Positive Mastery). On failure, take positive damage equal to 2d8 + your tier. Undead and fiends have Misfortune on this save
+- **Benefit:** As 1 [Combat] action, unweave magical darkness within 30 feet and each hostile creature within 30 feet makes a Fortitude save (opposed by your Wisdom + Positive Mastery). On failure, take positive damage equal to 2d8 + your tier. Undead and fiends have Misfortune on this save
 - **Usage:** 2 uses per long rest
 
 #### Divine Strike
@@ -1091,7 +1087,7 @@ When creating new feats, follow these guidelines:
 
 ### Arcanist Feats
 
-#### Detect Magic (At-Will) (Tier 1+)
+#### Sense Magic (At-Will) (Tier 1+)
 - **Prerequisites:** Arcane 3, any magical tradition trait
 - **Benefit:** Sense magical auras as [Minor] action without Energy cost. Make Arcane check: 1 success = detect presence and general intensity within 30 feet; 2 successes = identify energy types and general purpose (harmful/helpful, permanent/temporary)
 - **Usage:** Passive
@@ -1154,7 +1150,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 ### Secured Identity (Tier 2+)
 - **Prerequisites:** Organizational Training, Tier 2+
 - **Description:** Your organization protects its operatives. How does this manifest? False documentation? Magical wards? Political influence?
-- **Benefit:** Your organization provides identity protection and operational security. Gain resistance to divination magic and truth detection (gain **Fortune** on saves against such effects). Can request your organization erase records of your activity in specific locations (takes 1 week, GM approval required). Once per mission, can call for extraction from dangerous situation (organization sends aid within 1d8 hours, GM determines form of assistance).
+- **Benefit:** Your organization provides identity protection and operational security. Gain resistance to prophecy weaves and truth detection (gain **Fortune** on saves against such effects). Can request your organization erase records of your activity in specific locations (takes 1 week, GM approval required). Once per mission, can call for extraction from dangerous situation (organization sends aid within 1d8 hours, GM determines form of assistance).
 
 ### Field Specialist (Tier 2+)
 - **Prerequisites:** Organizational Training, Tier 2+
@@ -1234,7 +1230,7 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 
 ### Alchemical Infusion (Tier 2+)
 **Prerequisites:** Infuser trait, Int 5, Craft 4, Tier 2+
-**Benefit:** Your Imbue Item ability can now create alchemical consumables instead of weapon/armor enchantments. During a short rest, you can create alchemical items equal to your Intelligence score. Choose when creating:
+**Benefit:** Your Imbue Item ability can now create alchemical consumables instead of weapon/armor enhancements. During a short rest, you can create alchemical items equal to your Intelligence score. Choose when creating:
 
 **Alchemical Bombs:**
 - **Action:** Throw as [Combat] action (range 30 feet, targets point)
@@ -1288,13 +1284,13 @@ Choose damage type from: Fire, Cold, Lightning, or Acid (based on Fire, Water, A
 - Weaves cannot be countered by Silence effects
 - You can cast while gagged, underwater, or in vacuum
 - **Limitation:** Still requires line of sight to targets (Invoker requirement remains)
-- **Counterspell Resistance:** When enemy attempts to counter your weave, they add 2 to both dice (harder without hearing the invocation)
+- **CounterWeave Resistance:** When enemy attempts to counter your weave, they add 2 to both dice (harder without hearing the invocation)
 
 #### Name of Unmaking (Tier 4+)
 - **Prerequisites:** Invoker trait, Cha 7, Space Mastery 5, Tier 4+
 - **Description:** This is not a true name of creation like others you know—it's a name of ending. Speaking it feels wrong, like pronouncing a word backwards while time flows in reverse. The syllables seem to erase themselves from memory even as you speak them, unwriting reality where magic was woven.
-- **Benefit:** You know the true name of unraveling—a word that unmakes other magic. Gain counterspell ability:
-- **Counterspell (Invoker):**
+- **Benefit:** You know the true name of unraveling—a word that unmakes other magic. Gain CounterWeave ability:
+- **CounterWeave (Invoker):**
 - **Trigger:** Enemy casts weave you can see within 60 feet
 - **Action:** [Reaction]
 - **Cost:** No Energy required

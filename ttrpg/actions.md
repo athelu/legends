@@ -52,7 +52,7 @@ All characters have access to these combat options:
 - **Requirements:** Ability to weave, sufficient Energy
 - **Range:** Touch to 5-10 feet maximum (no supporting energy for range)
 - **Effect:** Cast a single-energy weave (Primary Energy only, no Supporting Energy)
-- **Examples:** Fire Burst, Shocking Grasp, Frost Touch, Stone Fist, Shadow Touch
+- **Examples:** Fire Burst, Lightning Touch, Frost Touch, Stone Fist, Shadow Touch
 - **Weaving Roll:** Primary Energy Potential + Primary Energy Mastery (2d8 only)
 - **Notes:**
   - Subject to Multiple Action Penalty
@@ -65,7 +65,7 @@ All characters have access to these combat options:
 - **Cost:** 2 [Combat] actions
 - **Requirements:** Ability to weave, sufficient Energy
 - **Effect:** Cast a multi-energy weave using Primary + Supporting Energy
-- **Examples:** Fire Bolt, Fireball, Cure Wounds, Hold Person, Invisibility
+- **Examples:** Fire Bolt, Fireball, Mend Flesh, Binding Paralysis, Invisibility
 - **Weaving Roll:** Primary Potential + Primary Mastery + Supporting Potential + Supporting Mastery (4d8)
 - **Notes:**
   - Counts as ONE combat action for Multiple Action Penalty purposes (even though it costs 2 actions)
@@ -357,18 +357,17 @@ All characters have access to these movement options:
 ### Movement Modifiers
 
 #### Speed Increases:
-- Fleet of Foot feat: +50% speed
-- Haste weave: Gain +1 action that can be used for Move
+- Fleet of Foot feat
+- Haste weave
 - Certain magic items or abilities
 
 #### Speed Reductions:
-- Exhaustion (level 2+): Half speed
-- Exhaustion (level 4): Quarter speed
-- Grappled condition: Speed 0
-- Restrained condition: Speed 0
-- Difficult terrain: Double movement cost
-- Squeezing: Double movement cost
-- Climbing/Swimming: Double (or more) movement cost
+- Exhaustion (level 2+)
+- Grappled condition
+- Restrained condition
+- Difficult terrain
+- Squeezing
+- Climbing/Swimming
 
 ### Movement in Combat
 
@@ -697,7 +696,7 @@ All characters have access to these reactions:
 #### Counterweave [Combat]
 - **Requirements:** Ability to weave, Space energy available
 - **Trigger:** You see a creature weaving within medium range (60ft)
-- **Effect:** Attempt to counter the weave (see Counterspell in Part 10: Weaves)
+- **Effect:** Attempt to counter the weave (see CounterWeave in Weaves)
 - **Cost:** Energy equal to the weave being countered
 - **Notes:** Requires successful Arcane check to identify the weave first
 

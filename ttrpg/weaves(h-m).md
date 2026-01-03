@@ -1,5 +1,19 @@
 ## H
 
+### HailStorm
+-   **Primary Energy:** Water 5 (hailstorm, physical ice chunks)
+-   **Supporting Energy:** Space 4 (medium range 60ft + area 20ft radius)
+-   **Total Cost:** 9 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Water Potential + Water Mastery + Space Potential + Space Mastery (4d8)
+-   **Effect:** Hard ice and hail rain down in a 20-foot radius cylinder. All creatures in the area take 28 bludgeoning and cold damage (physical ice chunks). Each target takes the full listed damage and makes their own save.
+-   **Saving Throw:** Reflex (to find cover from falling ice)
+-   **Damage Type:** Physical (ice chunks) - Mixed bludgeoning and cold
+-   **DR Interaction:** FULL DR applies (28 damage vs DR 4 becomes 28 - 4 = 24 damage)
+-   **Area Effect Note:** Unlike Fireball (pure energy), HailStorm creates actual physical ice that respects armor fully. The ground becomes difficult terrain (costs double movement) until the ice melts.
+-   **Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total)
+-   **Prone Condition (at Net 4):** Target is knocked Prone by the force of falling ice in addition to taking damage.
+
 ### Haste
 -   **Primary Energy:** Time 5 (accelerating personal time, major buff)
 -   **Supporting Energy:** Time 2 (duration 1 minute, same energy type for effect and duration)
@@ -10,7 +24,7 @@
 -   **Saving Throw:** None (beneficial buff, willing targets only)
 -   **Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = no exhaustion (1 hour)
 
-### Healing Word
+### Healing Burst
 -   **Primary Energy:** Positive 3 (healing energy)
 -   **Supporting Energy:** Air 1 (close range 30ft)
 -   **Total Cost:** 4 Energy
@@ -31,40 +45,18 @@
 -   **Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = affects 2 targets at once
 -   **Note:** Invokers speak words of valor and the target's heroic true name
 
-### Hideous Laughter
--   **Primary Energy:** Negative 2 (overwhelming target with uncontrollable mirth)
--   **Supporting Energy:** Time 2 (duration up to 1 minute, concentration)
+### Holy Fire
+-   **Primary Energy:** Positive 2 (Radiant Fire, damage)
+-   **Supporting Energy:** Space 2 (medium range 60ft)
 -   **Total Cost:** 4 Energy
 -   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Negative Potential + Negative Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Target at close range (30ft) makes Will save. Compare your weaving successes to their save successes. If you have more, target falls Prone with uncontrollable laughter, becoming Incapacitated and unable to stand. Can repeat save at end of each turn (with Fortune if they took damage since last turn).
--   **Saving Throw:** Will (to resist mental effect)
--   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = no save if damaged, 4 = 10 minutes
--   **Incapacitated Condition (at Net 2+):** Target can't take actions or reactions, is Prone, and can't stand. Repeats save at end of each turn.
--   **Note:** Creatures with Intelligence 4 or less aren't affected. Invokers speak absurd fragments of the target's true name
-
-### Hold Person
--   **Primary Energy:** Space 4 (freezing target in place, paralysis)
--   **Supporting Energy:** Time 2 (duration up to 1 minute)
--   **Total Cost:** 6 Energy
--   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Humanoid target at medium range (60ft) makes Will save. Compare your weaving successes to their save successes. If you have more, target is Paralyzed. Target can repeat save at end of each turn to break free.
--   **Saving Throw:** Will (to resist mental binding)
--   **Success Scaling (Net successes = Your successes - Their successes):** 1 = Paralyzed 1 round, 2 = Paralyzed (full effect, 1 minute), 3 = target has Misfortune on saves, 4 = 10 minutes or affects 2 targets
-
-### Hypnotic Pattern
--   **Primary Energy:** Space 4 (creating mesmerizing illusion)
--   **Supporting Energy:** Time 2 (duration 1 minute, concentration)
--   **Total Cost:** 6 Energy
--   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Create a twisting pattern of colors in 30-foot cube at medium range (60ft). All creatures in area make Will saves. Compare your weaving successes to each target's save successes. Those you beat become Charmed and Incapacitated, staring at the pattern. Weave ends for a creature if it takes damage or if someone uses action to shake them. Creatures immune to charm are immune.
--   **Saving Throw:** Will (to resist hypnotic effect)
--   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 40-foot cube, 4 = 10 minutes (very hard to break)
--   **Charmed + Incapacitated Condition (at Net 2+):** Target can't take actions or move, stares at pattern. Damage or being shaken (action by ally) ends effect for that creature.
--   **Note:** Invokers weave visible sound patterns or resonant syllables into mesmerizing forms
-
+-   **Weaving Roll:** Positive Potential + Positive Mastery + Space Potential + Space Mastery (4d8)
+-   **Effect:** Target takes 8 radiant damage. This is an attack weave—no saving throw allowed.
+-   **Saving Throw:** None (attack weave, weaving successes determine hit quality)
+-   **Damage Type:** Positive (energy)
+-   **DR Interaction:** Half DR (8 Positive damage vs DR 4 becomes 8 - 2 = 6 damage)
+-   **Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)
+-   **Revealed Condition (at 4 successes):** Target's receives the Revealed condition. The target loses and cannot gain the Hidden and concealed conditions. The Revealed condition expires at the end of the target's next turn.
 
 ## I
 
@@ -81,20 +73,6 @@
 -   **Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)
 -   **Slowed Condition (at 4 successes):** Target's movement speed is halved and they have Misfortune on Reflex saves until the end of their next turn.
 
-### Ice Storm
--   **Primary Energy:** Water 5 (hailstorm, physical ice chunks)
--   **Supporting Energy:** Space 4 (medium range 60ft + area 20ft radius)
--   **Total Cost:** 9 Energy
--   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Water Potential + Water Mastery + Space Potential + Space Mastery (4d8)
--   **Effect:** Hard ice and hail rain down in a 20-foot radius cylinder. All creatures in the area take 28 bludgeoning and cold damage (physical ice chunks). Each target takes the full listed damage and makes their own save.
--   **Saving Throw:** Reflex (to find cover from falling ice)
--   **Damage Type:** Physical (ice chunks) - Mixed bludgeoning and cold
--   **DR Interaction:** FULL DR applies (28 damage vs DR 4 becomes 28 - 4 = 24 damage)
--   **Area Effect Note:** Unlike Fireball (pure energy), Ice Storm creates actual physical ice that respects armor fully. The ground becomes difficult terrain (costs double movement) until the ice melts.
--   **Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total)
--   **Prone Condition (at Net 4):** Target is knocked Prone by the force of falling ice in addition to taking damage.
-
 ### Identify
 -   **Primary Energy:** Space 3 (revealing magical properties)
 -   **Supporting Energy:** None (touch, instantaneous)
@@ -105,8 +83,19 @@
 -   **Saving Throw:** None (information gathering)
 -   **Success Scaling:** 1 = basic function only, 2 = full properties, 3 = learn curse details, 4 = learn item's history
 
+### Illusory Torment
+-   **Primary Energy:** Space 4 (illusory effect affecting one creature's mind, mental illusory effect)
+-   **Supporting Energy:** Time 2 (duration 1 minute, concentration)
+-   **Total Cost:** 6 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Create an illusory effect at medium range (60ft, 10ft cube) in one creature's mind. Target makes Will save. Compare your weaving successes to their save successes. If you have more, target perceives illusory effect as real and rationalizes illogical elements. If illusory effect could damage target, it takes 1d8 psychic damage per round. Target can use action + Perception vs your Space Mastery to recognize illusory effect.
+-   **Saving Throw:** Will (to resist mental illusory effect); Perception vs Space Mastery (to disbelieve)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect (2d8 damage), 3 = harder to disbelieve (add 1 to their Perception dice), 4 = 10 minutes or 3d8 damage
+-   **Disoriented Condition (at Net 3):** Target has Misfortune on Perception checks while illusory effect persists.
+
 ### Invisibility
--   **Primary Energy:** Space 4 (bending light around target, illusion)
+-   **Primary Energy:** Space 4 (bending light around target, illusory effect)
 -   **Supporting Energy:** Time 3 (duration 10 minutes or until broken)
 -   **Total Cost:** 7 Energy
 -   **Action:** Complex weave (2 actions)
@@ -115,30 +104,7 @@
 -   **Saving Throw:** None (beneficial buff, willing targets only)
 -   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = affects 2 creatures (8 hours)
 
-## K
-
-### Knock
--   **Primary Energy:** Space 3 (forcing locks and barriers open)
--   **Supporting Energy:** None (close range 30ft, instantaneous)
--   **Total Cost:** 3 Energy
--   **Action:** Simple weave (1 action)
--   **Weaving Roll:** Space Potential + Space Mastery (2d8 only)
--   **Effect:** One locked door, window, gate, chest, or similar object becomes unlocked. Removes Arcane Lock. Creates a loud knock audible up to 300 feet away.
--   **Saving Throw:** None (object targeted)
--   **Success Scaling:** 1 = makes loud noise but doesn't open, 2 = opens, 3 = silent, 4 = opens and disarms any traps
-
 ## L
-
-### Lesser Restoration
--   **Primary Energy:** Positive 4 (cleansing lesser afflictions)
--   **Supporting Energy:** None (touch range, instantaneous)
--   **Total Cost:** 4 Energy
--   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Positive Potential + Positive Mastery (2d8 only)
--   **Effect:** Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned.
--   **Saving Throw:** None (beneficial restoration)
--   **Success Scaling:** 1 = temporary relief (10 minutes), 2 = full effect, 3 = removes 2 conditions, 4 = affects creature at close range (30ft) instead of touch
--   **Note:** Invokers speak the creature's true name as it should be, free from affliction
 
 ### Levitate
 -   **Primary Energy:** Air 3 (lifting target into air)
@@ -173,23 +139,6 @@
 -   **Saving Throw:** Reflex (if targeting hostile creature to avoid)
 -   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or daylight brightness
 
-### Light Touch
--   **Primary Energy:** Positive 2 (radiant energy through touch, damage)
--   **Supporting Energy:** None (touch range only)
--   **Total Cost:** 2 Energy
--   **Action:** Simple weave (1 action)
--   **Weaving Roll:** Positive Potential + Positive Mastery (2d8 only)
--   **Effect:** Touch a target and channel searing radiant energy. Target takes 4 radiant damage. Deals double damage to undead creatures. This is an attack weave—no saving throw allowed.
--   **Saving Throw:** None (attack weave, weaving successes determine hit quality)
--   **Damage Type:** Radiant (energy)
--   **DR Interaction:** Half DR (4 radiant damage vs DR 4 becomes 4 - 2 = 2 damage)
--   **Success Scaling:** 0 = miss, 1 = half damage (2, or 4 vs undead), 2 = full damage (4, or 8 vs undead), 3 = +4 damage (8 total, or 16 vs undead), 4 = +8 damage (12 total, or 24 vs undead)
--   **Special:** Double damage against undead creatures
--   **Revealed Condition (at 4 successes):** If target is invisible or hidden by magical darkness, they become visible until end of their next turn as they glow with radiant energy.
--   **Tactical Note:** Does NOT provoke opportunity attacks. Touch range only. Devastating against undead.
-
--
-
 ### Lightning Bolt
 -   **Primary Energy:** Air 5 (electricity in a line, damage)
 -   **Supporting Energy:** Space 2 (self, 60ft line 5ft wide)
@@ -204,73 +153,55 @@
 -   **Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total)
 -   **Stunned Condition (at Net 4):** Target is Stunned until the end of their next turn, unable to take actions as electricity courses through their body.
 
-### Locate Object
--   **Primary Energy:** Space 4 (sensing specific object's location)
--   **Supporting Energy:** Time 2 (duration 10 minutes, concentration)
--   **Total Cost:** 6 Energy
--   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Sense the direction to a specific object you describe (must have seen it before) within 1,000 feet. If object is moving, you learn its direction of movement. Weave can't locate object if any thickness of lead blocks the path.
--   **Saving Throw:** None (divination)
--   **Success Scaling:** 1 = 100 feet range, 2 = full effect (1,000 feet), 3 = 1 mile range, 4 = can locate general type of object (e.g., "stairs" or "freshwater") instead of specific item
--   **Note:** Invokers speak the object's true name to find it
+### Lightning Touch
+-   **Primary Energy:** Air 2 (lightning through touch, damage)
+-   **Supporting Energy:** None (touch range only)
+-   **Total Cost:** 2 Energy
+-   **Action:** Simple weave (1 action)
+-   **Weaving Roll:** Air Potential + Air Mastery (2d8 only)
+-   **Effect:** Touch a target and release a jolt of electricity. Target takes 4 lightning damage. If target is wearing metal armor, you have Fortune on your weaving roll. This is an attack weave—no saving throw allowed.
+-   **Saving Throw:** None (attack weave, weaving successes determine hit quality)
+-   **Damage Type:** Lightning (energy)
+-   **DR Interaction:** Half DR (4 lightning damage vs DR 4 becomes 4 - 2 = 2 damage)
+-   **Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)
+-   **Special:** Fortune on weaving roll if target wears metal armor (better conductor)
+-   **Dazed Condition (at 4 successes):** Target has Misfortune on their next attack roll as electricity disrupts their nervous system.
+-   **Tactical Note:** Does NOT provoke opportunity attacks. Touch range only. Excellent against armored opponents.
 
 ## M
 
-### Mage Armor
--   **Primary Energy:** Space 3 (force armor)
--   **Supporting Energy:** Time 4 (duration 1 hour)
--   **Total Cost:** 7 Energy
+### Major Restoration
+-   **Primary Energy:** Positive 6 (powerful cleansing and restoration)
+-   **Supporting Energy:** Time 2 (casting time 1 minute)
+-   **Total Cost:** 8 Energy
+-   **Action:** Complex weave (2 actions), requires 1 minute to cast
+-   **Weaving Roll:** Positive Potential + Positive Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Touch a creature and end one of the following: one curse (including attunement to cursed item), petrification, reduction of attribute scores, reduction of max HP. The weave removes only one effect per casting.
+-   **Saving Throw:** None (beneficial restoration)
+-   **Success Scaling:** 1 = temporary relief (1 hour), 2 = full effect, 3 = removes 2 effects, 4 = removes all applicable effects
+-   **Note:** Invokers speak the creature's true name as it was before corruption
+
+### Malleable Form
+-   **Primary Energy:** Space 4 (manipulating physical form/appearance)
+-   **Supporting Energy:** Time 2 (duration 1 minute)
+-   **Total Cost:** 6 Energy
 -   **Action:** Complex weave (2 actions)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Target at touch gains DR 3 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities.
--   **Saving Throw:** None (beneficial buff, willing targets only)
--   **Success Scaling:** 1 = 10 minutes, 2 = 1 hour, 3 = 8 hours, 4 = DR 4 (24 hours)
+-   **Effect:** Alter your appearance, gain aquatic adaptation, or grow natural weapons (4 damage). Appearance changes are cosmetic only (height 1 foot, weight 50 lbs, features change). Natural weapons count as light weapons.
+-   **Saving Throw:** None (self-only transformation)
+-   **Success Scaling:** 1 = 1 round duration, 2 = full effect, 3 = 10 minutes, 4 = 1 hour
 
-### Mage Hand
--   **Primary Energy:** Space 2 (telekinetic force, minor effect)
--   **Supporting Energy:** Time 2 (duration 1 minute)
+### Mend Flesh
+-   **Primary Energy:** Positive 3 (healing energy)
+-   **Supporting Energy:** None (touch, instantaneous)
 -   **Total Cost:** 3 Energy
 -   **Action:** Simple weave (1 action)
--   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Create a spectral hand at close range (30ft) that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action.
--   **Saving Throw:** None (utility weave)
--   **Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 25 lbs capacity (1 hour)
+-   **Weaving Roll:** Positive Potential + Positive Mastery (2d8 only)
+-   **Effect:** Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness.
+-   **Saving Throw:** None (healing weave, no resistance)
+-   **Success Scaling:** 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8)
 
-### Magic Circle
--   **Primary Energy:** Space 5 (protective barrier)
--   **Supporting Energy:** Time 3 (duration 10 minutes)
--   **Total Cost:** 8 Energy
--   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Touch creates 10ft radius cylinder. Choose creature type (celestial, elemental, fey, fiend, undead). Creatures of that type can't enter the cylinder, can't charm/frighten/possess those inside, and have Misfortune on attacks against them. Creatures inside can't exit or affect those outside.
--   **Saving Throw:** None (creates protected zone)
--   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or 20ft radius
-
-### Magic Missile
--   **Primary Energy:** Space 3 (force bolts that always hit, base 3 darts)
--   **Supporting Energy:** None (medium range 60ft, instantaneous)
--   **Total Cost:** 3 Energy for 3 bolts
--   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Space Potential + Space Mastery (2d8 only)
--   **Effect:** Create 3 glowing darts of force that automatically hit (no roll needed). Each dart deals 4 damage. Can target same creature or divide among multiple.
--   **Saving Throw:** None (force effect, automatic hit)
--   **Damage Type:** Force (bypasses all DR)
--   **DR Interaction:** Force damage ignores DR completely
--   **Scaling:** +1 Energy for +1 dart (max 8 darts at 8 Energy)
--   **Success Scaling:** 0 = 1 dart only, 1 = 2 darts, 2 = 3 darts, 3 = 4 darts, 4 = 5 darts
-
-### Major Image
--   **Primary Energy:** Space 5 (complex illusion with sound, smell, temperature)
--   **Supporting Energy:** Time 3 (duration 10 minutes, concentration)
--   **Total Cost:** 8 Energy
--   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Create illusion at medium range (60ft, 20ft cube area) including sound, smell, and thermal elements. Illusion can move if you use action to direct it. Physical interaction reveals it as illusion. Disbelieving requires Perception check vs your Space Mastery.
--   **Saving Throw:** Perception vs Space Mastery (to disbelieve)
--   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = no concentration needed (permanent until physically interacted with)
-
-### Mass Cure Wounds
+### Mend Flesh, Mass
 -   **Primary Energy:** Positive 4 (healing energy)
 -   **Supporting Energy:** Space 3 (close range 30ft + 6 targets)
 -   **Total Cost:** 7 Energy
@@ -280,53 +211,55 @@
 -   **Saving Throw:** None (healing weave, no resistance)
 -   **Success Scaling:** 0 = no healing, 1 = 8 HP each, 2 = 16 HP each, 3 = 24 HP each, 4 = 32 HP each
 
-### Message
--   **Primary Energy:** Air 2 (transmitting sound across distance)
--   **Supporting Energy:** None (close range 30ft, instantaneous)
--   **Total Cost:** 2 Energy
--   **Action:** Simple Weave (1 action) - Does NOT provoke opportunity attacks
--   **Weaving Roll:** Air Potential + Air Mastery (2d8 only)
--   **Effect:** Point at a creature within close range (30ft) and whisper a message. Target (and only target) hears the message and can whisper a reply that only you hear. Weave transmits through most barriers but is blocked by 1 foot of stone, 1 inch of common metal, thin sheet of lead, or 3 feet of wood.
--   **Saving Throw:** None (communication)
--   **Success Scaling:** 1 = one-way message only, 2 = full effect (can reply), 3 = medium range (60ft), 4 = long range (120ft)
--   **Note:** Perfect cantrip for invokers, whispering across distance. Does NOT provoke opportunity attacks.
+### Mental Domination
+-   **Primary Energy:** Space 6 (controlling humanoid mind, major mental effect)
+-   **Supporting Energy:** Time 2 (duration 1 minute, concentration)
+-   **Total Cost:** 8 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Humanoid target at medium range (60ft) makes Will save. Compare your weaving successes to their save successes. If you have more, you control target's actions (won't take obviously harmful actions). Target can repeat save when taking damage.
+-   **Saving Throw:** Will (to resist mental domination)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour
+
+### Mesmerizing Pattern
+-   **Primary Energy:** Space 4 (creating mesmerizing illusory effects)
+-   **Supporting Energy:** Time 2 (duration 1 minute, concentration)
+-   **Total Cost:** 6 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Create a twisting pattern of colors in 30-foot cube at medium range (60ft). All creatures in area make Will saves. Compare your weaving successes to each target's save successes. Those you beat become Charmed and Incapacitated, staring at the pattern. Weave ends for a creature if it takes damage or if someone uses action to shake them. Creatures immune to charm are immune.
+-   **Saving Throw:** Will (to resist hypnotic effect)
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 40-foot cube, 4 = 10 minutes (very hard to break)
+-   **Charmed + Incapacitated Condition (at Net 2+):** Target can't take actions or move, stares at pattern. Damage or being shaken (action by ally) ends effect for that creature.
+-   **Note:** Invokers weave visible sound patterns or resonant syllables into mesmerizing forms
 
 ### Minor Illusion
--   **Primary Energy:** Space 2 (small sensory illusion, minor effect)
+-   **Primary Energy:** Space 2 (small sensory illusory effect, minor effect)
 -   **Supporting Energy:** Time 2 (duration 1 minute)
 -   **Total Cost:** 3 Energy
 -   **Action:** Simple weave (1 action)
 -   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Create a sound or image at close range (30ft) no larger than a 5ft cube. Sound can be any noise. Image is static unless you use action to move it. Physical interaction reveals illusion.
+-   **Effect:** Create a sound or image at close range (30ft) no larger than a 5ft cube. Sound can be any noise. Image is static unless you use action to move it. Physical interaction reveals illusory effect.
 -   **Saving Throw:** Perception vs Space Mastery (to disbelieve if suspicious)
 -   **Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = can include both sound and image (1 hour)
 
-### Mirror Image
--   **Primary Energy:** Space 4 (illusory duplicates, defensive illusion)
--   **Supporting Energy:** Time 2 (duration 1 minute)
--   **Total Cost:** 6 Energy
--   **Action:** Simple weave (1 action)
--   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the "hits duplicate" range.
--   **Saving Throw:** None (beneficial buff, self-only)
--   **Success Scaling:** 1 = 1 duplicate (1 round), 2 = 3 duplicates (full effect), 3 = 4 duplicates (10 minutes), 4 = 6 duplicates (1 hour)
-
-### Mislead
--   **Primary Energy:** Space 6 (invisibility + illusory double, complex illusion)
--   **Supporting Energy:** Time 3 (duration 10 minutes, concentration)
--   **Total Cost:** 9 Energy
+### Minor Restoration
+-   **Primary Energy:** Positive 4 (cleansing lesser afflictions)
+-   **Supporting Energy:** None (touch range, instantaneous)
+-   **Total Cost:** 4 Energy
 -   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
--   **Effect:** You become invisible and create an illusory double of yourself. Can use action to move the double up to twice your speed and make it gesture, speak, and behave however you wish.
--   **Saving Throw:** Perception vs Space Mastery (to recognize double as illusion)
--   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = no concentration (8 hours)
+-   **Weaving Roll:** Positive Potential + Positive Mastery (2d8 only)
+-   **Effect:** Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned.
+-   **Saving Throw:** None (beneficial restoration)
+-   **Success Scaling:** 1 = temporary relief (10 minutes), 2 = full effect, 3 = removes 2 conditions, 4 = affects creature at close range (30ft) instead of touch
+-   **Note:** Invokers speak the creature's true name as it should be, free from affliction
 
-### Mold Earth
--   **Primary Energy:** Earth 2 (manipulating soil and stone per effect)
--   **Supporting Energy:** None (close range 30ft, instantaneous or 1 hour changes)
--   **Total Cost:** 2 Energy per effect
--   **Action:** Simple weave (1 action)
--   **Weaving Roll:** Earth Potential + Earth Mastery (2d8 only)
--   **Effect:** Choose one: (1) Excavate or move up to 5ft cube of loose earth, (2) Shape earth/stone into basic forms, (3) Change color or texture of earth/stone in 5ft cube. Changes last 1 hour.
--   **Saving Throw:** None (environmental manipulation)
--   **Success Scaling:** 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent changes
+### Mist Form
+-   **Primary Energy:** Air 4 (transforming into mist)
+-   **Supporting Energy:** Time 3 (duration 10 minutes)
+-   **Total Cost:** 8 Energy
+-   **Action:** Complex weave (2 actions)
+-   **Weaving Roll:** Air Potential + Air Mastery + Time Potential + Time Mastery (4d8)
+-   **Effect:** Target at touch and equipment become a misty cloud. Fly speed 10 feet, DR 8 against nonmagical damage, can pass through small openings. Cannot attack, cast weaves, or manipulate objects.
+-   **Saving Throw:** None (beneficial transformation, willing targets only)
+-   **Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 20 feet fly speed (8 hours)

@@ -18,7 +18,7 @@ This condensed cosmology consolidates many of the traditional planes.
 ## Ethereal Plane
 
 The Ethereal Plane is a mystical, otherworldly realm that exists parallel to the Prime Material Plane and is home to a variety of beings and phenomena. It is a place of swirling mists and dimly lit landscapes, where the physical laws of the material world do not always apply.
-The Ethereal Plane is typically only accessible through magic, such as the spell Etherealness, and is often used as a means of transportation or escape by skilled spellcasters. While on the Ethereal Plane, travelers can see into the material world, but they are invisible and intangible to those on the material plane.
+The Ethereal Plane is typically only accessible through magic, such as the weave Ethereal Shift, and is often used as a means of transportation or escape by skilled spellcasters. While on the Ethereal Plane, travelers can see into the material world, but they are invisible and intangible to those on the material plane.
 It is a place of great mystery and potential danger, as travelers must navigate its strange terrain and be wary of the beings that dwell within it.
 
 ## Shadow Plane
@@ -61,7 +61,7 @@ These planes are where Athore banished the dwarves and the end of the war. Unabl
 Lines of power crisscross the surface of the planet created by the intersections of the eight external planes with the material world. Each of these planes slices cleanly through the world, creating tension in these places where the barrier between the material world and the external plane touch.
 Ley lines are invisible to the naked and untrained eye, but their location can often be discovered through studying local folklore or legends.
 Ley lines themselves are nascent but can be used to augment magics related to the plane they represent. Extensive use of these related magics while in proximity to the Ley Line will result in what is called "Ley Line Affinity".
-Once affinity has been achieved, the magic user can see the course of the Ley Line with the use of Detect Magic.
+Once affinity has been achieved, the magic user can see the course of the Ley Line with the use of Sense Magic.
 
 ## Nexus
 

@@ -7,7 +7,7 @@ Arcane and Divine connections are the opposite sides of a coin. Arcanists tap in
 While wielding these magic energies, Arcane magic users describe much the same emotions and sensations that their Divine counterparts do: Euphoria, Elation, Intoxication, Joy, Inspiration. 
 For the divine casters these feelings are felt upon the completion of the ritual or prayer. A divine caster’s eyes will glow like an arcanists, but only upon the completion of the spell. 
 Regardless of the physical changes of the magic user, all magical effects produce a violet light whether it be magical flame, magical writing, magical barriers etc. Magical weapons will likewise produce light of this color.
-Magic in this world is anything but subtle and it is the same for its practitioners. Magic effects are very showy, leaving motes of energy, symbols, and other telltale signs that can be interpreted by those who can detect magic.
+Magic in this world is anything but subtle and it is the same for its practitioners. Magic effects are very showy, leaving motes of energy, symbols, and other telltale signs that can be interpreted by those who can Sense magic.
 
 ## Necromancy
 The Necromantic arts are  lost to the current inhabitant of Athelu. Player characters should be forbidden from taking any weaves with the [Necromantic] keyword. Necromancy is a part of the knowledge of the First men that has been lost to time. It is up to the DM to determine if this knowledge can be recovered, but if I can be it should only be done during gameplay, exploration, or finding some trove of ancient knowledge.

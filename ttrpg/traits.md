@@ -252,7 +252,7 @@ Select which of the Eight you primarily serve, or choose to serve the Pantheon e
 - **Action Cost:** 1 [Minor] action
 - **Range:** Self
 - **Effect:** For 10 minutes, you gain the following benefits:
-  - You automatically see through all illusions (no check needed)
+  - You automatically see through all illusory effects (no check needed)
   - You know when creatures speak lies (though not what the truth is)
   - You have **Fortune** on Perception and Investigate checks
   - Your eyes glow brighter than normal as enlightenment fills you
@@ -286,7 +286,7 @@ The generalist can use any of the following Channel Divinity options, choosing w
 **Blessing of the Trickster** - Grant creature Fortune on next roll
 
 ### From Shu-Jahan:
-**Philosopher's Insight** - See through illusions, detect lies, Fortune on Perception/Investigate for 10 minutes
+**Philosopher's Insight** - See through illusory effects, detect lies, Fortune on Perception/Investigate for 10 minutes
 
 **Usage:** You still have only 2 Channel Divinity uses per long rest, but you can choose which deity to invoke each time. This versatility is the generalist's strength.
 
@@ -391,7 +391,7 @@ You have discovered how to channel magical energy directly into physical objects
 
 **Elemental Infusion Themes:**
 -   **Air**: Lightning-charged weapons, items that crackle with static, wind-enhanced movement
--   **Fire**: Flame-wreathed weapons, heat-radiating armor, burning enchantments
+-   **Fire**: Flame-wreathed weapons, heat-radiating armor, burning 
 -   **Water**: Frost-touched items, flowing defensive wards, adaptive protections
 -   **Negative**: Withering weapons, life-draining effects, entropic decay infusions
 
@@ -414,7 +414,7 @@ Where Mageborn study external principles and clerics channel external deities, s
 **Story:** *"I know my nature completely—I am solid as stone, constant as truth"*
 **Primary Energy:** Choose Earth or Fire = highest roll + 2 (max 8)
 **Manifestation Benefits:**
--   **Stone's Certainty:** Subtract 1 from both dice on saves against effects that would change your form or nature (polymorph, petrification, forced movement, mind control that alters personality)
+-   **Stone's Certainty:** Subtract 1 from both dice on saves against effects that would change your form or nature (Beastial Transformation, petrification, forced movement, mind control that alters personality)
 -   **Enduring Form:** +1 max HP per tier, DR = 1 when unarmored
 
 #### Thread of Fate (Time/Positive)

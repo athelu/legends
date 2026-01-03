@@ -431,10 +431,10 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
   - 1+ successes: No effect
   - Add 1 to both Will save dice (difficulty of resisting)
   - Affected creatures can repeat save at end of each turn (1 success ends early)
-- **Immutable Form:** Immune to any weave that would alter its form (transformation, polymorph, etc.)
+- **Immutable Form:** Immune to any weave that would alter its form (transformation, Beastial Transformation, etc.)
 
 **Creature Type Traits:**
-- **Construct:** Immune to poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified. Mindless: immune to enchantment effects (charm, fear, sleep), fear, psychic effects. Does not need air, food, drink, or sleep.
+- **Construct:** Immune to poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified. Mindless: immune to mind-affecting effects (Beguiling Weave, fear, Sleep), fear, psychic effects. Does not need air, food, drink, or sleep.
 
 **Resistances/Immunities:**
 - **Immunities:** Poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified, charm, fear, psychic damage, non-magical piercing and slashing damage
