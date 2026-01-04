@@ -100,6 +100,68 @@ This represents innate talent, specialized training, or supernatural ability.
 
 ---
 
+## CRITICAL DISTINCTION: Humanoids vs Monsters
+
+---
+
+### IMPORTANT: Humanoid NPCs Use PC Creation Rules
+
+**The attribute benchmarks table above applies ONLY to non-humanoid creatures** (beasts, monstrosities, undead, constructs, dragons, etc.).
+
+**Humanoid NPCs (guards, soldiers, bandits, adventurers, etc.) MUST be built using standard PC creation rules:**
+
+1. **Use PC Attribute Array:** 5, 4, 3, 3, 3, 2, 2, 2 (total 24)
+   - Assign these values based on the NPC's role
+   - Example: Guard might use Str 5, Con 4, Agi 3, Wis 3, Dex 3, Luck 2, Cha 2, Int 2
+
+2. **Follow PC Creation Process:**
+   - Choose appropriate background (Guard, Soldier, Criminal, etc.)
+   - Background provides skill ranks and bonus XP
+   - Spend XP according to threat rating tier
+   - Select 2 starting feats + purchased feats per tier limits
+   - Calculate HP = Constitution × 8
+
+3. **XP Budgets for Humanoid NPCs:**
+
+| Threat | Tier | XP Beyond Background | Max Purchased Feats |
+|--------|------|---------------------|---------------------|
+| 1/4 | Civilian | 0 (background only) | 0 |
+| 1/2 | Early T1 | 60-80 XP | 1 |
+| 1 | Mid-Late T1 | 120-180 XP | 2 |
+| 2 | T2 | 240-300 XP | 4 |
+| 3 | T3 | 480-540 XP | 6 |
+| 4 | T4 | 720-780 XP | 8 |
+
+**Why This Matters:**
+
+Humanoid NPCs represent people who could theoretically be player characters - they train, learn skills, and advance like PCs do. Using the monster attribute guidelines would create inconsistent and unbalanced humanoids that don't match the game's progression system.
+
+**Examples:**
+
+- **CORRECT - Town Guard (Threat 1):**
+  - Attributes: Str 5 / Con 3 / Agi 4 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2 (standard array)
+  - Background: Guard
+  - XP: Background skills + 120-180 additional XP
+  - Feats: 2 starting + up to 2 purchased
+
+- **INCORRECT - Town Guard:**
+  - Attributes: Str 4 / Con 4 / Agi 4 / Dex 3 / Int 2 / Wis 3 / Cha 3 / Luck 3 (total 26 - wrong!)
+  - This uses monster guidelines instead of PC rules
+
+**Exception for Threat 1/4 Civilians:**
+
+Untrained commoners (farmers, merchants, laborers) who are truly not combatants can use a reduced attribute array like (3,3,2,2,2,2,2,2) with background skills only and no additional XP. These represent genuine non-threats who would flee combat immediately.
+
+---
+
+**Summary:**
+
+- **Monsters/Creatures:** Use attribute benchmarks table based on Threat Rating
+- **Humanoid NPCs:** Use PC standard array (5,4,3,3,3,2,2,2) + PC creation rules
+- **Civilians (TR 1/4):** Can use reduced array (3,3,2,2,2,2,2,2) with background only
+
+This distinction ensures humanoid opponents feel like actual people who follow the same rules as player characters, maintaining internal consistency within the game system.
+
 ## Hit Point Calculation Tables
 
 ### HP Formula by Creature Type
