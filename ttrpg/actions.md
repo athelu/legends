@@ -184,14 +184,6 @@ These maneuvers modify or replace your standard attacks:
   - Subject to Multiple Action Penalty if you make additional combat actions
   - See Part 6 (Combat) for detailed examples
 
-##### Opportunity Attack [Combat] (Reaction)
-- **Cost:** Your reaction for the round
-- **Trigger:** A hostile creature you can see moves out of your melee reach
-- **Effect:** Make one melee attack against the triggering creature
-- **Notes:**
-  - See Reactions section for full details
-  - Movement within reach doesn't trigger
-  - Doesn't count toward Multiple Action Penalty (it's a reaction, not on your turn)
 
 ### Special Combat Actions
 
@@ -354,6 +346,26 @@ All characters have access to these movement options:
   - Enemy must be no more than one size larger than you
   - Useful for flanking or escaping surrounded positions
 
+##### Hide [Move]
+- **Cost:** 1 [Move] action
+- **Effect:** Stealth check (Agility + stealth) with the aid of partial cover or greater.
+- **Check:** Opposed by enemy's Perception (Wisdom + Perception)
+- **Success:** You use cover to successfully become hidden
+- **Failure:** You do not gain the Hidden condition from the enemy, but may have concealed from cover.
+- **Notes:**
+  - Per Enemy test, may be hidden from some (but you do not know which)
+  - **Partial Cover:** Low wall, furniture, creature, tree trunk, etc
+
+##### Stalk [Move]
+- **Cost:** Costs 2 feet of movement for every 1 foot moved.
+- **Effect:** While Hidden, you change location. Make a Stealth check (Agility + stealth).
+- **Check:** Opposed by enemy's Perception (Wisdom + Perception)
+- **Success:** You use cover to successfully change location while remaining hidden.
+- **Failure:** You lose the Hidden condition, but may have concealed from cover.
+- **Notes:**
+  - Per Enemy test, may be hidden from some (but you do not know which)
+
+
 ### Movement Modifiers
 
 #### Speed Increases:
@@ -368,6 +380,7 @@ All characters have access to these movement options:
 - Difficult terrain
 - Squeezing
 - Climbing/Swimming
+- stalk
 
 ### Movement in Combat
 
@@ -580,9 +593,8 @@ Interact actions involve manipulating objects, the environment, or simple physic
   - Looking through a chest for specific items
   - Examining a room for clues
 - **Notes:**
-  - Check difficulty set by GM
+  - GM sets number of required successes
   - May require multiple actions for larger areas
-  - Active searching vs. passive Perception
 
 ### Take Cover [Interact]
 - **Cost:** [Free] with [Move] action
@@ -681,17 +693,17 @@ All characters have access to these reactions:
 - **Notes:** 
   - Movement within your reach doesn't trigger this reaction
   - Teleportation and forced movement don't trigger this reaction
-  - The Disengage action (see below) prevents opportunity attacks
+  - The Disengage action prevents opportunity attacks
 
 #### Shield Block (requires wielding a shield)
 - **Trigger:** You are hit by a melee attack while wielding a shield
 - **Effect:** Choose one:
-  - **Force Reroll:** Attacker must reroll one of their dice (attacker chooses which die, must keep new result)
+  - **Force Reroll:** Attacker must reroll one of their success dice
   - **Increase DR:** Gain +2 DR against this attack only
 - **Notes:** 
   - Only works against melee attacks
   - Cannot be used if you've already used your reaction this round
-  - See Equipment (Part 8) for shield-specific bonus reactions
+  - See Armor for shield-specific bonus reactions
 
 #### Counterweave [Combat]
 - **Requirements:** Ability to weave, Space energy available
