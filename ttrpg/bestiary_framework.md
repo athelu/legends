@@ -106,7 +106,7 @@ This represents innate talent, specialized training, or supernatural ability.
 
 ### IMPORTANT: Humanoid NPCs Use PC Creation Rules
 
-**The attribute benchmarks table above applies ONLY to non-humanoid creatures** (beasts, monstrosities, undead, constructs, dragons, etc.).
+**The attribute benchmarks table applies ONLY to non-humanoid creatures** (beasts, monstrosities, undead, constructs, dragons, etc.).
 
 **Humanoid NPCs (guards, soldiers, bandits, adventurers, etc.) MUST be built using standard PC creation rules:**
 
@@ -123,44 +123,437 @@ This represents innate talent, specialized training, or supernatural ability.
 
 3. **XP Budgets for Humanoid NPCs:**
 
-| Threat | Tier | XP Beyond Background | Max Purchased Feats |
-|--------|------|---------------------|---------------------|
-| 1/4 | Civilian | 0 (background only) | 0 |
-| 1/2 | Early T1 | 60-80 XP | 1 |
-| 1 | Mid-Late T1 | 120-180 XP | 2 |
-| 2 | T2 | 240-300 XP | 4 |
-| 3 | T3 | 480-540 XP | 6 |
-| 4 | T4 | 720-780 XP | 8 |
+| Threat | Tier | XP Beyond Background | Max Purchased Feats | Target Success Rate* |
+|--------|------|---------------------|---------------------|---------------------|
+| 1/4 | Civilian | 0 (background only) | 0 | 55-60% |
+| 1/2 | Early T1 | 60-80 XP | 1 | 65-75% |
+| 1 | Mid-Late T1 | 120-180 XP | 2 | 80-90% |
+| 2 | T2 | 240-300 XP | 4 | 85-90% |
+| 3 | T3 | 480-540 XP | 6 | 90-95% |
+| 4 | T4 | 720-780 XP | 8 | 95-98% |
+| 5 | T5 | 960-1020 XP | 10 | 98-100% |
+| 6 | T6 | 1200-1260 XP | 12 | 100% |
+| 7 | T7 | 1440-1500 XP | 14 | 100% |
+| 8 | T8 | 1680+ XP | 16 | 100% |
 
-**Why This Matters:**
-
-Humanoid NPCs represent people who could theoretically be player characters - they train, learn skills, and advance like PCs do. Using the monster attribute guidelines would create inconsistent and unbalanced humanoids that don't match the game's progression system.
-
-**Examples:**
-
-- **CORRECT - Town Guard (Threat 1):**
-  - Attributes: Str 5 / Con 3 / Agi 4 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2 (standard array)
-  - Background: Guard
-  - XP: Background skills + 120-180 additional XP
-  - Feats: 2 starting + up to 2 purchased
-
-- **INCORRECT - Town Guard:**
-  - Attributes: Str 4 / Con 4 / Agi 4 / Dex 3 / Int 2 / Wis 3 / Cha 3 / Luck 3 (total 26 - wrong!)
-  - This uses monster guidelines instead of PC rules
-
-**Exception for Threat 1/4 Civilians:**
-
-Untrained commoners (farmers, merchants, laborers) who are truly not combatants can use a reduced attribute array like (3,3,2,2,2,2,2,2) with background skills only and no additional XP. These represent genuine non-threats who would flee combat immediately.
+*Target success rate for primary action (1+ success on primary attribute + skill roll)
 
 ---
 
-**Summary:**
+## XP SPENDING STRATEGY FOR HUMANOID NPCs
 
-- **Monsters/Creatures:** Use attribute benchmarks table based on Threat Rating
-- **Humanoid NPCs:** Use PC standard array (5,4,3,3,3,2,2,2) + PC creation rules
-- **Civilians (TR 1/4):** Can use reduced array (3,3,2,2,2,2,2,2) with background only
+The natural progression of the Legends system creates **three distinct phases** of character development. Following this rhythm creates properly scaled NPCs that match their tier expectations.
 
-This distinction ensures humanoid opponents feel like actual people who follow the same rules as player characters, maintaining internal consistency within the game system.
+### The Three Phases of Progression
+
+#### Phase 1: Journeyman (Tiers 1-2)
+**Focus: Skills first, attributes second**
+
+**Philosophy:** Characters are learning their trades. They maximize efficiency by raising skills to their attribute caps before investing in expensive attribute increases.
+
+**XP Distribution:**
+- 70-80% on skills
+- 10-20% on attributes (usually just for HP or feat prerequisites)
+- 10% on feats (2 starting + 0-2 purchased)
+
+**Typical Progression:**
+- **Tier 1/2 (TR 1/4):** Background skills only, no additional advancement
+- **Tier 1/2 (TR 1/2):** Background skills + raise primary skill from 1→3 or 2→3
+- **Tier 1 (TR 1):** Background skills + raise primary skill to cap (equal to attribute)
+
+**Example - Town Guard (TR 1):**
+- Attributes: Str 5, Con 4, Agi 3 (from initial array)
+- Skills: Melee Combat 3 (capped by Agi 3), Perception 3, Society 2
+- XP: 104 skill XP, 40 feat XP = 144 of 150-180 available
+- Success rate: ~68% (appropriate for tier)
+
+**Why this works:**
+- Skills cost 8 × rank (cheap)
+- Attributes cost 16 × rank (expensive)
+- Skills max at attribute value (no benefit from higher skills until attribute rises)
+- Creates competent but still growing combatants
+
+---
+
+#### Phase 2: Expert to Master (Tiers 3-5) ⚠️ **INFLECTION POINT**
+**Focus: Attributes + Skills in tandem**
+
+**Philosophy:** This is where the **critical transition** occurs. To continue progressing, characters MUST invest in raising attributes to enable higher skill caps. The skill-only strategy hits a wall.
+
+**XP Distribution:**
+- 40% on attributes (breaking through caps)
+- 40% on skills (keeping pace with new attribute values)
+- 20% on feats
+
+**The Mathematical Reality:**
+At Tier 3, a character with Agi 5, Melee 5 has reached their ceiling. To grow further requires:
+- Agi 5→6 = 80 XP (opens Melee 6 possibility)
+- Melee 5→6 = 40 XP
+- **Total: 120 XP investment** to gain 1 rank in combat effectiveness
+
+This is expensive but **necessary** - without it, Tier 3 characters are indistinguishable from Tier 2.
+
+**Typical Progression:**
+- **Tier 3 (TR 3):** Raise 1-2 primary attributes by 1 rank, raise skills to match
+- **Tier 4 (TR 4):** Continue raising attributes, push skills to 6-7
+- **Tier 5 (TR 5):** Achieve mastery (8/8) in primary attribute + skill
+
+**Example - Knight-Captain (TR 3):**
+- Attributes: Str 5, Con 6 (raised from 5), Agi 5 (raised from 4), other 3s and 2s
+- Skills: Melee Combat 5, Athletics 4, Intimidate 4, Perception 3
+- XP: 128 attribute XP, 232 skill XP, 160 feat XP = 520 of 480-540 available
+- Success rate: ~87% (appropriate jump from Tier 2's 81%)
+
+**Example - Master-at-Arms (TR 4):**
+- Attributes: Str 5, Con 6, Agi 5, Wis 4, other 3s and 2s
+- Skills: Melee Combat 6 (capped by Agi 5... wait for Agi 6), Athletics 5, Perception 5
+- XP: 144 attribute XP, 292 skill XP, 240 feat XP = 676 of 720-780 available
+- Success rate: ~90% (can improve further by raising Agi to 6)
+
+**Why this works:**
+- Breaks through the Tier 2 plateau (87% vs 81%)
+- Creates clear power progression
+- Attributes enable skill growth (skills can't exceed attributes)
+- Matches D&D 6-8 power level expectations
+
+---
+
+#### Phase 3: Legendary (Tiers 6-8)
+**Focus: Perfection and breadth**
+
+**Philosophy:** Primary attributes and skills have reached or are approaching 8/8 mastery. Focus shifts to perfecting secondary attributes, spreading expertise, and collecting powerful feat combinations.
+
+**XP Distribution:**
+- 30% on attributes (bringing secondaries to 7-8)
+- 30% on skills (spreading expertise broadly)
+- 40% on feats (building legendary feat trees)
+
+**Typical Progression:**
+- **Tier 6 (TR 6):** Primary at 8/8, secondary attributes at 6-7
+- **Tier 7 (TR 7):** Multiple attributes at 7-8, many skills at 6+
+- **Tier 8 (TR 8):** Multiple attributes at 8, multiple skills at 8, 18 total feats
+
+**Example - Legendary Weapon Master (TR 8):**
+- Attributes: Str 8, Con 8, Agi 8, Wis 6, Dex 5, others 3-4
+- Skills: Melee Combat 8, Ranged Combat 6, Athletics 8, Perception 6, Intimidate 6, Acrobatics 6
+- Success rate: 100% on primary actions (mastery achieved)
+
+**Why this works:**
+- Character has achieved mastery in their specialty
+- Spreading to secondaries creates well-rounded legendary figures
+- Multiple 8s represent decades/centuries of training
+- Feat collection creates unique legendary abilities
+
+---
+
+## TIER-BY-TIER XP SPENDING EXAMPLES
+
+### TR 1/4 - Civilian/Untrained (Tier 1, ~0 XP)
+**Attributes:** 5, 4, 3, 3, 3, 2, 2, 2 (initial array)
+**Background:** Farmer, Guard, Laborer, etc.
+**XP Spending:** Background skills only
+**Feats:** 0-2 starting (many don't invest in combat training)
+
+**Example:**
+- Background: Farmer (Wilderness 2, Might 2, Athletics 1, Craft 1)
+- Additional XP: 0
+- Feats: None
+- Result: Competent at farming, weak in combat
+
+---
+
+### TR 1/2 - Early Professional (Tier 1, ~70 XP)
+**XP Priority:** Skills first
+**Strategy:** Raise 1-2 primary skills from background ranks to 3
+
+**Example - Bandit:**
+- Background: Criminal (Stealth 2, Thievery 2, Deception 2, Intimidate 2, +24 XP)
+- Additional XP: 70 XP
+  - Ranged Combat 0→3 = 28 XP
+  - Melee Combat 0→2 = 12 XP
+  - Reserve: 30 XP
+- Feats: Precise Shot, Swift Movement (2 starting)
+- Result: Agi 4, Ranged 3 = ~78% success on archery
+
+---
+
+### TR 1 - Experienced Professional (Tier 1, ~150 XP)
+**XP Priority:** Skills to caps, maybe 1 attribute for prerequisites
+**Strategy:** Max out primary skill to attribute cap
+
+**Example - Guard Captain:**
+- Background: Soldier (Melee Combat 3, Athletics 1, Intimidate 1, +36 XP)
+- Additional XP: 150 XP
+  - Melee Combat 3→4 = 24 XP
+  - Athletics 1→3 = 20 XP
+  - Intimidate 1→3 = 20 XP
+  - Perception 0→3 = 28 XP
+  - Society 0→2 = 12 XP
+  - Feats: 40 XP (Power Attack)
+  - Total: 144 XP
+- Result: Agi 3, Melee 4 = ~68% success
+
+---
+
+### TR 2 - Elite Professional (Tier 2, ~270 XP)
+**XP Priority:** Still mostly skills, but hitting caps hard
+**Strategy:** Max skills, consider 1 attribute raise for HP or feats
+
+**Example - Royal Guard:**
+- Background: Soldier (Melee Combat 3, Athletics 1, Intimidate 1, +36 XP)
+- Additional XP: 270 XP
+  - Skills: Melee 3→5 (56), Athletics 1→3 (20), Intimidate 1→3 (20), Perception 0→3 (28), Society 0→2 (12) = 136 XP
+  - Attributes: Con 4→5 (64 XP) for HP boost
+  - Feats: 80 XP (Power Attack, Formation Fighting)
+  - Total: 280 XP
+- Result: Agi 4, Melee 5 = ~81% success
+- **Problem:** This is approaching the skill cap (Melee 5 capped by Agi 4)
+
+---
+
+### TR 3 - Hero (Tier 3, ~510 XP) ⚠️ **CRITICAL TIER**
+**XP Priority:** MUST raise attributes to continue progression
+**Strategy:** Raise 1-2 key attributes, raise skills to match new caps
+
+**Example - Knight-Captain:**
+- Background: Squire (Melee Combat 2, Athletics 2, Society 1, Empathy 1, +40 XP)
+- Additional XP: 510 XP
+  - **Attributes (critical investment):**
+    - Con 5→6 = 80 XP (HP and survivability)
+    - Agi 4→5 = 64 XP (enables Melee 6 in future, better defense)
+    - Cha 3→4 = 48 XP (enables Intimidating Presence feat)
+    - Total Attributes: 192 XP
+  - **Skills:**
+    - Melee Combat 2→5 = 72 XP
+    - Athletics 2→3 = 16 XP
+    - Society 1→3 = 24 XP
+    - Intimidate 0→4 = 60 XP
+    - Perception 0→3 = 28 XP
+    - Total Skills: 200 XP
+  - **Feats:** 120 XP (Shield Master, Defensive Stance, Power Attack, Formation Fighting, Devastating Charge)
+  - **Total:** 512 XP
+
+**Result:** Agi 5, Melee 5 = ~87% success (significant jump from TR 2's 81%)
+
+**Why Tier 3 is critical:**
+- Without attribute raises, stays at TR 2 performance
+- Attribute investment is expensive but essential
+- This is where "heroes" emerge from "professionals"
+
+---
+
+### TR 4 - Champion (Tier 4, ~750 XP)
+**XP Priority:** Continue attribute growth, push skills to 6-7
+**Strategy:** Get primary attribute to 6, max primary skill to 6-7
+
+**Example - Master-at-Arms:**
+- Background: Soldier (Melee Combat 3, Athletics 1, Intimidate 1, +36 XP)
+- Additional XP: 750 XP
+  - **Attributes:**
+    - Con 5→6 = 80 XP
+    - Agi 4→5 = 64 XP
+    - Total: 144 XP
+  - **Skills:**
+  - **Skills (corrected):**
+    - Melee 3→6 = 96 XP
+    - Athletics 1→5 = 80 XP
+    - Intimidate 1→3 = 24 XP
+    - Perception 0→4 = 60 XP
+    - Ranged Combat 0→3 = 28 XP
+    - Acrobatics 0→2 = 12 XP
+    - Total: 300 XP
+  - **Feats:** 8 purchased × 40 = 320 XP
+  - **Total:** 144 + 300 + 320 = 764 XP (within 750-780 budget) ✓
+
+**Result:** Agi 5, Melee 6 = ~90% success
+
+---
+
+### TR 5 - Master (Tier 5, ~990 XP)
+**XP Priority:** Push toward 8/8 in primary
+**Strategy:** Primary attribute to 7-8, primary skill to 7-8
+
+**Example - Weapon Master:**
+- Attributes: Agi 5→7 (80 + 96 = 176 XP), Con 6→7 (96 XP), Str 5→6 (80 XP)
+- Skills: Melee to 7, Athletics to 6, multiple combat skills to 5+
+- Result: Agi 7, Melee 7 = ~98% success
+
+---
+
+### TR 6-8 - Legendary (Tier 6-8, 1200+ XP)
+**XP Priority:** Multiple 8s, broad expertise
+**Strategy:** Primary at 8/8, secondaries at 6-8, massive feat collection
+
+**Example - Legendary Master (TR 8):**
+- Attributes: Str 8, Con 8, Agi 8, Wis 6, Dex 5
+- Skills: Melee 8, Athletics 8, multiple skills at 6+
+- Feats: 18 total (2 starting + 16 purchased)
+- Result: 100% success on primary actions
+
+---
+## SPELLCASTER XP SPENDING
+
+For magical humanoid NPCs (Mageborn, Divine Gift, etc.), the same three-phase progression applies with one key difference:
+
+**Mastery vs Potentials:**
+- **Mastery:** 8 × rank (same as skills - EFFICIENT)
+- **Potentials:** 16 × rank (same as attributes - EXPENSIVE)
+
+**Strategy: Prioritize Mastery over Potentials**
+
+Just like martials prioritize Skills over Attributes, casters should prioritize Mastery over Potentials.
+
+### CRITICAL: Space and Time are Universal Supporting Energies
+
+**Looking at the actual weaves in the system, nearly ALL complex weaves use:**
+- **Space** for range and area effects
+- **Time** for duration and concentration
+
+**Typical Weave Structure:**
+- Primary Energy: Fire 4 (damage effect)
+- Supporting Energy: Space 2 (medium range 60ft) + Time 1 (duration 1 round)
+- Weaving Roll: Fire Potential + Fire Mastery + Space Potential + Space Mastery + Time Potential + Time Mastery (6d8)
+
+**This means effective casters need:**
+1. **Primary specialization** (one elemental energy at high mastery)
+2. **Space Mastery** (used in almost every weave for range/area)
+3. **Time Mastery** (used in almost every weave for duration)
+4. **Secondary elements** (dabbling in 1-2 other energies at low ranks)
+
+### Revised Example - Battle Mage (TR 2)
+**Specialization: Fire with Space/Time support**
+- **Potentials:** Start with initial rolls (Fire 6, Space 5, Time 4, others 2-4) - don't raise yet
+- **Mastery priorities:**
+  - Fire Mastery 0→5 = 120 XP (primary specialization)
+  - Space Mastery 0→4 = 60 XP (universal supporting energy)
+  - Time Mastery 0→3 = 28 XP (universal supporting energy)
+  - Total Mastery: 208 XP
+- **Attributes:** Int 5→6 (80 XP) - needed for higher Fire Mastery cap
+- **Total magic XP:** 288 XP of 310 available
+- **Result:** Int 6, Fire 5, Space 4, Time 3 = effective Fire Bolt caster (rolls 6d8: Fire Pot 6 + Fire Mas 5 + Space Pot 5 + Space Mas 4 + Time Pot 4 + Time Mas 3)
+
+**Why this works:**
+- Fire Mastery 5 makes primary attack weaves powerful
+- Space Mastery 4 gives range and area coverage (used in EVERY combat weave)
+- Time Mastery 3 provides duration for buffs and control (used in most weaves)
+- This matches how weaves are actually structured in the system
+
+### Revised Example - Archmage (TR 4, 300 years of study)
+**Specialization: Fire specialist with strong Space/Time foundation**
+- **Mastery investments:**
+  - Fire Mastery 0→6 = 168 XP (primary specialization - devastating damage)
+  - Space Mastery 0→5 = 120 XP (universal support - all weaves)
+  - Time Mastery 0→4 = 60 XP (universal support - all weaves)
+  - Air Mastery 0→3 = 28 XP (secondary element - Lightning Bolt)
+  - Water Mastery 0→2 = 12 XP (tertiary element - dabbling)
+  - Total: 388 XP (highly efficient)
+- **Potential investments:**
+  - Fire 6→7 = 96 XP (enables future Mastery 7)
+  - Space 5→6 = 80 XP (critical for high-level weaves)
+  - Total: 176 XP (only raised when needed for caps)
+- **Attributes:** Int 5→6 = 80 XP
+- **Total magic investment:** 644 XP of 790 available
+
+**Result:** Three centuries of focused magical study creates:
+- **Fire Mastery 6** = devastating fire damage
+- **Space Mastery 5** = excellent range, area, and teleportation
+- **Time Mastery 4** = strong duration and concentration effects
+- This reflects actual weave construction: primary element + Space + Time
+
+### The Universal Pattern for Casters
+
+**Tier 1-2: Establish Foundation**
+- Primary Element Mastery 3-5
+- Space Mastery 2-4 (essential for range)
+- Time Mastery 1-3 (essential for duration)
+
+**Tier 3-4: Specialize and Expand**
+- Primary Element Mastery 5-6
+- Space Mastery 4-5 (advanced teleportation, area effects)
+- Time Mastery 3-4 (long durations, complex concentration)
+- Secondary Element Mastery 2-3 (versatility)
+
+**Tier 5-8: Master and Perfect**
+- Primary Element Mastery 7-8 (legendary power)
+- Space Mastery 6-7 (teleportation networks, demi-planes)
+- Time Mastery 5-6 (permanent effects, time manipulation)
+- Multiple secondary elements at 4-5 (broad expertise)
+
+### Why Space and Time Matter More Than Multiple Elements
+
+**Looking at Fire Bolt:**
+- Primary: Fire 4
+- Supporting: Space 2 (range), Time 1 (duration)
+- **Without Space Mastery:** Forced to use touch-range only (dangerous!)
+- **Without Time Mastery:** Effects are weaker, shorter duration
+
+**Looking at Fireball:**
+- Primary: Fire 6
+- Supporting: Space 3 (range + area)
+- **Without Space Mastery:** Can't create area effects or reach distant targets
+
+**Conclusion:** A Fire 6 / Space 5 / Time 4 mage is far more effective than a Fire 6 / Air 5 / Water 4 mage, because the first can actually USE their fire magic at range with area effects and duration, while the second is limited to touch-range fire with poor area coverage.
+
+---
+## KEY TAKEAWAYS FOR HUMANOID NPC DESIGN
+
+### 1. Respect the Three Phases
+- **Tiers 1-2:** Skills first (80% of XP)
+- **Tiers 3-5:** Attributes + Skills together (40%/40%)
+- **Tiers 6-8:** Breadth and mastery (30%/30%/40% feats)
+
+### 2. Tier 3 is the Inflection Point
+- Without attribute raises, TR 3 NPCs will feel like TR 2
+- Budget 80-150 XP for attribute advancement at TR 3
+- This creates the power jump expected of "heroes"
+
+### 3. Skills Cost Half What Attributes Do
+- Skill 3→4 = 24 XP
+- Attribute 5→6 = 80 XP
+- Always max skills before raising attributes (except for prerequisites or caps)
+
+### 4. For Casters: Mastery Before Potentials
+- Same principle as Skills before Attributes
+- Mastery is rolled every weave, Potentials mainly affect Energy pool
+- Three centuries of study = Mastery 6-7, not necessarily Potential 8
+
+### 5. Success Rate Progression Should Feel Smooth
+
+| Tier | Target Success (1+) | Feel |
+|------|---------------------|------|
+| 1 | 65-85% | Competent but unreliable |
+| 2 | 85-90% | Professional |
+| 3 | 90-95% | Heroic (clear jump from Tier 2) |
+| 4 | 95-98% | Champion |
+| 5-8 | 98-100% | Mastery |
+
+### 6. Don't Forget HP Scaling
+Constitution raises aren't just for casters:
+- Con 4 = 32 HP
+- Con 5 = 40 HP
+- Con 6 = 48 HP
+
+At higher tiers, NPCs should invest in Constitution to survive tier-appropriate threats.
+---
+
+
+## FINAL CHECKLIST FOR HUMANOID NPC CREATION
+
+✅ Used standard PC attribute array (5,4,3,3,3,2,2,2)
+✅ Selected appropriate background for role
+✅ Calculated XP budget: Background + Tier XP
+✅ Followed tier-appropriate XP spending strategy:
+   - Tiers 1-2: Skills first
+   - Tiers 3-5: Attributes + Skills
+   - Tiers 6-8: Breadth + Feats
+✅ Selected 2 starting feats + appropriate purchased feats (max 2 per tier)
+✅ Verified success rate matches tier expectations
+✅ HP = Constitution × 8
+✅ Equipment follows equipment.md, armor.md, weapons.md
+✅ No class restrictions on armor/weapons
+---
+
+**This framework ensures humanoid NPCs scale smoothly from Tier 1 through Tier 8, matching player character progression and creating appropriately challenging encounters at every tier.**
 
 ## Hit Point Calculation Tables
 
