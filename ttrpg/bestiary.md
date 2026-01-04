@@ -2,7 +2,7 @@
 
 ## Using These Stat Blocks
 
-These monsters follow the Bestiary Framework guidelines and demonstrate proper monster design for the D8 TTRPG system.
+These monsters follow the Bestiary Framework guidelines and demonstrate proper monster design for the Legends system.
 
 ---
 
