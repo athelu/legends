@@ -45,68 +45,68 @@
 - **Special:** Primarily a siege/defensive weapon, awkward in mobile combat
 - **Cost:** 40 gp
 
-## Armor Categories
+## Armor Types
 ---
-### Light Armor
 
 #### Aketon/Light Padded - DR 2
 - **Weakness:** Piercing (DR 1)
 - **Resistance:** Bludgeoning (DR 3)
 - **Stealth:** No penalty
-- **Noise:** Very quiet
 - **Cost:** 15 gp
+- **Keyword:** [LightArmor]
 
-#### Cuir Bouilli (Hardened Leather) - DR 3
-- **Weakness:** Piercing (DR 1)
-- **Resistance:** Bludgeoning (DR 4)
-- **Stealth:** No penalty
-- **Noise:** Quiet
-- **Description:** Boiled and hardened leather plates, shaped and rigid
+#### Brigandine/Coat of Plates - DR 6
+- **Weakness:** None
+- **Resistance:** None
+- **Cost:** 400 gp
+- **Keyword:** [MediumArmor], [Noisy]
+
+#### Chain Mail - DR 5
+- **Weakness:** Bludgeoning (DR 2)
+- **Resistance:** Slashing (DR 6)
 - **Cost:** 200 gp
-
-### Medium Armor
+- **Keyword:** [MediumArmor], [Noisy]
 
 #### Gambeson - DR 4
 - **Weakness:** Piercing (DR 2)
 - **Resistance:** Bludgeoning (DR 5)
 - **Stealth:** No penalty
 - **Cost:** 40 gp
+- **Keyword:** [MediumArmor]
 
-#### Chain Mail - DR 5
-- **Weakness:** Bludgeoning (DR 2)
-- **Resistance:** Slashing (DR 6)
-- **Stealth:** -1 penalty
+#### Leather Armor/Cuir Bouilli (Hardened Leather) - DR 3
+- **Weakness:** Piercing (DR 1)
+- **Resistance:** Bludgeoning (DR 4)
+- **Stealth:** No penalty
+- **Description:** Boiled and hardened leather plates, shaped and rigid
 - **Cost:** 200 gp
+- **Keyword:** [LightArmor]
+
+#### Plate, Full - DR 8
+- **Weakness:** Bludgeoning (DR 4)
+- **Resistance:** Slashing (DR 9)
+- **Cost:** 750 gp
+- **Keyword:** [HeavyArmor], [Loud]
 
 #### Scale Mail - DR 5
 - **Weakness:** Bludgeoning (DR 2)
 - **Resistance:** Slashing (DR 6)
-- **Stealth:** -1 penalty
 - **Cost:** 250 gp
-
-#### Brigandine/Coat of Plates - DR 6
-- **Weakness:** None
-- **Resistance:** None
-- **Stealth:** -1 penalty
-- **Cost:** 400 gp
-
-### Heavy Armor
+- **Keyword:** [MediumArmor], [Noisy]
 
 #### Splint Mail - DR 7
 - **Weakness:** Bludgeoning (DR 3)
 - **Resistance:** Slashing (DR 8)
-- **Stealth:** -2 penalty
 - **Cost:** 500 gp
+- **Keyword:** [HeavyArmor], [Loud]
 
-#### Full Plate - DR 8
-- **Weakness:** Bludgeoning (DR 4)
-- **Resistance:** Slashing (DR 9)
-- **Stealth:** -2 penalty
-- **Cost:** 750 gp
 ---
 ### Armor Properties
 - Movement: Armor does NOT reduce movement speed or impose Agility/Dexterity penalties
-- Stealth: Armor may impose stealth check penalties
-- Noise: Detection difficulty based on armor type
-- Swimming: Medium armor -1 Athletics, half swim speed; Heavy armor -2 Athletics, quarter swim speed
-- Fatigue: Heavy armor worn 8+ hours in extreme conditions may require Constitution check or gain Exhaustion condition.
+
+[Noisy] - Armor with this keyword imparts a +1 penalty to the stealth skill die.
+[Loud] - Armor with this keyword imparts a +2 penalty to the stealth skill die.
+[LightArmor] - Armor with this Keyword requires 1 minute to don/doff
+[MediumArmor] - Armor with this keyword impart a +1 to athletics die on swimming checks. Swim speed is reduced to 1/3 movement speed. This armor requires 5 minute to don, 1 minute to doff
+[HeavyArmor] - Armor with this keyword impart a +2 to athletics die on swimming checks. Swim speed is reduced to 1/4 movement speed. Heavy armor worn 8+ hours in extreme conditions or contant battle require Constitution checks or gain Exhaustion. This armor requires 10 minutes to don, 5 minutes to doff
+
