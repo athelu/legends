@@ -698,11 +698,10 @@ All characters have access to these reactions:
 #### Shield Block (requires wielding a shield)
 - **Trigger:** You are hit by a melee attack while wielding a shield
 - **Effect:** Choose one:
-  - **Force Reroll:** Attacker must reroll one of their success dice
-  - **Increase DR:** Gain +2 DR against this attack only
+  - **Force Reroll:** [Reaction] once per round, Attacker must reroll one of their success dice
+  - **Increase DR:** [Reaction] once per round, Gain +2 DR against this attack only
 - **Notes:** 
   - Only works against melee attacks
-  - Cannot be used if you've already used your reaction this round
   - See Armor for shield-specific bonus reactions
 
 #### Counterweave [Combat]
