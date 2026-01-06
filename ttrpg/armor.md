@@ -3,7 +3,7 @@
 ### Buckler (Light Shield)
 - **Hand Usage:** Occupies off-hand but allows punch/pommel strikes
 - **Melee Defense:** Grants Shield Block reaction
-- **Active Parry:** Once per round as a [Free] action (no reaction cost), after seeing an incoming melee attack roll, you may force the attacker to reroll one of their dice (attacker chooses which result to keep)
+- **Active Parry:** Once per round as a [Free] action (no reaction cost), Attacker must reroll one of their success dice
 - **Special:** Can make off-hand attacks with the buckler itself (treat as light weapon, 4 damage bludgeoning) using the two-weapon combat action.
 - **Cost:** 10 gp
 
@@ -18,7 +18,7 @@
 - **Hand Usage:** Occupies off-hand completely
 - **Melee Defense:** Fortune on defensive melee combat rolls
 - **Ranged Defense:** [Reaction] - Force Misfortune on one ranged attack per round (short or medium range, up to 60ft)
-- **Special:** Better coverage than targe, traditional knightly shield
+- **Special:** Can be slung on back when not in use (takes 1 [Minor] action to ready)
 - **Cost:** 15 gp
 
 ### Kite Shield (Heavy Shield)
@@ -31,6 +31,8 @@
 
 ### Tower Shield (Heavy Shield)
 - **Hand Usage:** Occupies off-hand completely
+- **Melee Defense:** Fortune on defensive melee combat rolls
+- **Ranged Defense:** [Reaction] - Force Misfortune on one ranged attack per round (any range)
 - **Requirements:** Strength 4 minimum
 - **Special:** Provides Full Cover when crouching
 - **Cost:** 25 gp
@@ -40,7 +42,7 @@
 - **Planted Mode:** Use 1 [Move] action to plant shield. While planted:
     - Provides full cover against ranged attacks from one direction (choose direction when planting)
     - Use 1 [Move] action to retrieve it from planted
-- **Carried Mode:** Functions as Kite Shield but with Misfortune on your attacks
+- **Carried Mode:** Functions as Tower Shield but with Misfortune on your attacks
 - **Requirements:** Strength 4 minimum
 - **Special:** Primarily a siege/defensive weapon, awkward in mobile combat
 - **Cost:** 40 gp
@@ -102,11 +104,10 @@
 
 ---
 ### Armor Properties
-- Movement: Armor does NOT reduce movement speed or impose Agility/Dexterity penalties
-
-[Noisy] - Armor with this keyword imparts a +1 penalty to the stealth skill die.
-[Loud] - Armor with this keyword imparts a +2 penalty to the stealth skill die.
-[LightArmor] - Armor with this Keyword requires 1 minute to don/doff
-[MediumArmor] - Armor with this keyword impart a +1 to athletics die on swimming checks. Swim speed is reduced to 1/3 movement speed. This armor requires 5 minute to don, 1 minute to doff
-[HeavyArmor] - Armor with this keyword impart a +2 to athletics die on swimming checks. Swim speed is reduced to 1/4 movement speed. Heavy armor worn 8+ hours in extreme conditions or contant battle require Constitution checks or gain Exhaustion. This armor requires 10 minutes to don, 5 minutes to doff
+- **Movement:** Armor does NOT reduce movement speed or impose Agility/Dexterity penalties
+- **[Noisy]** - Armor with this keyword imparts a +1 penalty to the stealth skill die.
+- **[Loud]** - Armor with this keyword imparts a +2 penalty to the stealth skill die.
+- **[LightArmor]** - Armor with this Keyword requires 1 minute to don/doff
+- **[MediumArmor]** - Armor with this keyword impart a +1 to athletics die on swimming checks. Swim speed is reduced to 1/3 movement speed. This armor requires 5 minute to don, 1 minute to doff
+- **[HeavyArmor]** - Armor with this keyword impart a +2 to athletics die on swimming checks. Swim speed is reduced to 1/4 movement speed. Heavy armor worn 8+ hours in extreme conditions or contant battle require Constitution checks or gain Exhaustion. This armor requires 10 minutes to don, 5 minutes to doff
 

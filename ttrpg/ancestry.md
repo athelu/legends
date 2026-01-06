@@ -3,15 +3,18 @@
 Humans are creative, imaginative and inventive. There are distinct differences in the various human ethnicities, but they tend to be only differences of physical appearance and do not change the general makeup of humans.  
 
 ### Human Characteristics
-    | Characteristic | Male | Female |
-    |---|---|---|
-    | Height | 5'-7" | 5'-7' |
-    | Height (Average) | 5'9" | 5'4" |
-    | Weight | 90-300 lbs | 90-300 lbs |
-    | Weight (Average) | 175 lbs | 120 lbs |
-    | Eyes | Blue, Brown, Green, Gray, Amber |
-    | Hair | Black, Brown, Red, Blonde |
-    | Lifespan | 70 years |
+| Characteristics | Male | Female |
+|---|---|---|
+| Height | 5'-7" | 5'-7' |
+| Height (Average) | 5'9" | 5'4" |
+| Weight | 90-300 lbs | 90-300 lbs |
+| Weight (Average) | 175 lbs | 120 lbs |
+
+| Characteristics | |
+|---|---|
+| Eyes | Blue, Brown, Green, Gray, Amber |
+| Hair | Black, Brown, Red, Blonde |
+| Lifespan | 70 years |
 
 #### Optional
 
@@ -160,6 +163,8 @@ Abbas, Abbir, Ali, Anzor, Avraham, Binur, Bodi, Dabar, Daud, Deshi, Farrukh, Gam
 
 Aldeshi, Aleeza, Aminah, Arishat, Ayesha, Basimah, Batnam, Besho, Chava, Eldeshi, Farah, Fatima, Girgishi, Hayfa, Heled, Huld, Kabidit, Kamilah, Malikah, Phamea, Salma, Shulamit, Tennit, Toara, Tovah, Yasmin, Zahava
 
+---
+
 # Elves
 In the Third Age, the Goddess Hirnaloyta brought elves into the world of Athelu. Crafted in her image, she imbued in them a love for the world and all its creatures. Elves explored and settled Estaea, building remarkable cities and works of art that blended harmoniously with the nature of the world. The reign of elves was brought short however by the dwarven wars. 
 
@@ -173,15 +178,18 @@ The humans of the Meresaw Kingdom welcomed the elven kingdom, offering peace and
 Elves are tall, thin, fair skinned humanoids with pointed ears. They have a delicate and beautiful way about them. Elves may grow light facial hair (mustache or goatee).
 
 #### Elven Characteristics
-    | Characteristic | Male     | Female   |
-    |----------------|----------|----------|
-    | Height         | 6’-7’    | 6’-7’    |
-    | Average        | 6’6”     | 6’2”     |
-    | Weight         | 120-200  | 120-200  |
-    | Average        | 175      | 150      |
-    | Eyes           | blue, brown, green, gray, amber, violet, orange, and slight tints of these colors |
-    | Hair           | black, brown, red, blonde, white, grey |
-    | Lifespan       | 200-400 years |
+| Characteristics | Male     | Female   |
+|----------------|----------|----------|
+| Height         | 6’-7’    | 6’-7’    |
+| Average        | 6’6”     | 6’2”     |
+| Weight         | 120-200  | 120-200  |
+| Average        | 175      | 150      |
+
+| Characteristics |     |
+|----------------|-----------|
+| Eyes           | blue, brown, green, gray, amber, violet, orange, and slight tints of these colors |
+| Hair           | black, brown, red, blonde, white, grey |
+| Lifespan       | 200-400 years |
 
 #### Optional
 
@@ -268,19 +276,24 @@ Magical wards and guards were placed to eliminate any who dared entered Llewelyn
 Ultimately it was decided that the Kuhlar did need to see what was happening beyond Llewelyn. Agents were groomed and trained to act as spies and informants. The information these agents provided was world changing to the Kuhlar, particularly toward the existence of the Haiden elves. 
 Factions cried for the eradication of these elves while others wanted to bring them back to the Kuhlar way, and still others who wanted to join them. The high elders do their best to appease these groups, settling on a path of intrigue and influence, leveraging the Haiden elf community to place Kuhlar agents in places of influence. 
 
+---
+
 # Dwarves
 Dwarves are a rough and durable race. They are short and stocky and very often have full facial hair. Dwarves are very persistent and tend to choose singular careers and excel in them until they can go no further.
 
 ### Dwarven Characteristics
-    | Characteristic | Male | Female |
-    |---|---|---|
-    | Height | 4'-5' | 4'-5' |
-    | Average | 4'5" | 4'2" |
-    | Weight | 120-200 | 120-200 |
-    | Average | 160 | 140 |
-    | Eyes | blue, brown, green, gray, amber, violet, orange, and slight tints of these colors |
-    | Hair | black, brown, red, blonde, white, grey |
-    | Lifespan | 300-400 years |
+| Characteristics | Male | Female |
+|----------------|------|--------|
+| Height         | 4'-5'|  4'-5' |
+| Average        | 4'5" |  4'-2" |
+| Weight         | 120-200 | 120-200 |
+| Average        | 160  | 140    |
+
+| Characteristics |  |
+|----------------|------|
+| Eyes           | blue, brown, green, gray, amber, violet, orange, and slight tints of these colors |
+| Hair           | black, brown, red, blonde, white, grey |
+| Lifespan       | 300-400 years |
 
 #### Optional
 
@@ -354,9 +367,12 @@ Roll 1d8 to determine hair color:
 
 ---
 
-The Dwarven race has been in isolation and confinement since the rash actions of King Derhagar.  The Elven and Dwarven races had not always been at war, in fact they had been allies and partners for many centuries.  Dwarves had been the natural artisans of the two races- performing much of the building and trade skills for both races.  Dwarves have long since been renowned for their skill in stone and metal work.  The exquisiteness with which they build is unsurpassed, the beauty of their creations is unbelievable.  The Elves Continued to ask for greater and greater works from the dwarves. 
+The Dwarven race has been in isolation and confinement since the rash actions of King Derhagar.  The Elven and Dwarven races had not always been at war, in fact they had been allies and partners for many centuries.  Dwarves had been the natural artisans of the two races- performing much of the building and trade skills for both races.  Dwarves have long since been renowned for their skill in stone and metal work.  The exquisiteness with which they build is unsurpassed, the beauty of their creations is unbelievable.  The Elves Continued to ask for greater and greater works from the dwarves.
+
 King Derhagar, always spiteful and brought his jealousy and rage into the Dwarven kingdom when he came into power, He set his goals to create artifacts that would allow the dwarves to be as powerful in magic as the elves.  Derhagar dedicated his life's work to bringing magic to the dwarves. He sent countless designs and plans to his artisans and smiths with no success. The breakthrough of rune Magic was the key. None outside of those who had been working on it knew how it was created or where the inspiration for it had come - other than it was passed down in a fervor from the King.  With these artifacts any dwarf could manipulate magic on a scale that would make the most powerful Elven Mage shudder.  Derhegar had his high Chiefs bestowed with weaponry and armor crafted with the new runic techniques. Many new uses and devices were crafted that were able to harness the runic magic energy, producing miraculous effects and improvements throughout dwarven society. Derhegar hoarded his knowledge from the elves. He became ever more suspicious of his interactions with them, always believing they wanted nothing more than the secret of the runes.
+
 His paranoia, and that of his chieftains reached ever higher levels. Eventually, after only receiving only a minor insult from the Elven Empire, he unleashed his Dwarven army equipped with these runic artifacts.  The Eight great Jarls stood shoulder to shoulder with their king, encased in runic armor and wielding massive runic weapons. Each swing and strike of these warlords in their battle glory destroyed regiments of opposing warriors. The air and even the very firmament of the world quivered with the destruction each blow wrought. In places where battle raged the hardest the effects of the use of so much magical power are still felt. Great plains of dead magic still are found, and other places have been transformed to areas almost not of this world, where unpredictable energies seep. 
+
 Facing this, The Elven Empire was utterly crushed Dwarven army marched to the coast, leveling, and destroying everything in their path.  Entire Elven settlements and cities were reduced to rubble and ash in their wake. Derhagar reveled in his victory over the Elven Empire for only a short time before he felt the sentence from the God Athore. The King and his generals, safe within their holds, were struck; disintegrated completely. However, it even the wrath of Athore could not unmake the runic creations of the dwarves and realizing this he sealed these artifacts within the holds themselves, to prevent them from being used ever again.
 
 ### The Diaspora
@@ -367,6 +383,8 @@ The many realms of the dwarves were isolated and trapped. Some pushed mile benea
 ### Exploration
 
 The walls of the prisons the dwarves found themselves in were not airtight or impenetrable. After many years, ways were found in and out of these isolated reaches. However, the worlds that they reached were not their own. Escaping from their isolation brought the few that left into alien realms, unfamiliar and unknown to them. Some pathfinders and rangers would find a new life in these exploits. 
+
+---
 
 ### Eight Great Realms of the Dwarves
 
