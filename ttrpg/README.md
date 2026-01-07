@@ -13,7 +13,7 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 - Success counting creates gradients
 - Resource management (Luck, Energy) creates tactical decisions
 - **True classless system:** Any character can learn any ability if they meet prerequisites
-- Feats replace class features, allowing unlimited customization
+- Characters are specialists, not jack-of-all-trades. 
 
 ### Key Features
 
@@ -21,16 +21,15 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 - Static HP: Combat remains dangerous at all Tiers (levels)
 - XP Spending: XP Gained is directly spent into improving your character
 - Luck depletion: use luck to adjust dice rolls
-- Elemental Energy Magic System: Combining energies increases power ceiling
-- Opposed combat: Every fight tactical, and players activley affect outcome
-- Armor matters: DR instead of AC. Opposed combat means not "target" number to hit
+- Elemental Energy Magic System: ad-hoc spell creation (templates provided for common spells)
+- Opposed combat: Attacks are opposed rolls, negating or reducing the damage.
+- Armor matters: DR instead of AC. Armor protects you from damage, not from being hit.
 
 
 ### Character Building Philosophy
 
 **Feats** provide:
 - Combat techniques and abilities
-- Class-like features (Rage, Sneak Attack, Flurry of Blows, etc.)
 - Skill expertise and specializations
 - Magical enhancements
 
@@ -52,8 +51,6 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 - Traits represent magical abilities, unique resource systems, and supernatural characteristics
 - Traits range in value from 1 - 10
 - Some Traits require DM Approval
-- **Note:** Most "class features" are now feats, not traits
-
 
 ### Experience System
 
@@ -78,17 +75,17 @@ legends/ttrpg/
 ├── backgrounds.md
 ├── bestiary.md
 ├── bestiary_framework.md
-├── character-creation.md
+├── character_creation.md
 ├── combat.md
 ├── conditions.md
-├── core-system.md
+├── core_system.md
 ├── daemon.md
 ├── equipment.md
 ├── faith.md
 ├── feats.md
 ├── flaws.md
 ├── history.md
-├── magic-system.md
+├── magic_system.md
 ├── magic.md
 ├── number8.md
 ├── README.md

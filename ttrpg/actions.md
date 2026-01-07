@@ -45,7 +45,6 @@ All characters have access to these combat options:
   - Unopposed roll (target doesn't roll defense)
   - Subject to Multiple Action Penalty
   - Making a ranged attack while threatened (enemy within 5 feet) add 1 to both attack dice
-  - subtract 1 from both dice when making a ranged attack into a meleet combat
 
 ##### Simple Weave [Combat]
 - **Cost:** 1 [Combat] action
@@ -59,7 +58,7 @@ All characters have access to these combat options:
   - Limited to touch or very close range (raw energy emanation)
   - Cannot achieve area effects or duration without supporting energy
   - Single target, instantaneous effects only
-  - See Part 7 (Magic System) for full weaving rules and Simple Weave limitations
+  - See (Magic System) for full weaving rules and Simple Weave limitations
 
 ##### Complex Weave [Combat]
 - **Cost:** 2 [Combat] actions
@@ -70,7 +69,7 @@ All characters have access to these combat options:
 - **Notes:**
   - Counts as ONE combat action for Multiple Action Penalty purposes (even though it costs 2 actions)
   - Requires Supporting Energy to achieve range beyond touch, area effects, or duration
-  - See Part 7 (Magic System) for full weaving rules
+  - See (Magic System) for full weaving rules
   - Complex weaves typically have area effects, require saves, affect range/duration, or involve complex energy manipulation
 
 ### Weaving While Threatened
@@ -82,14 +81,13 @@ All characters have access to these combat options:
   - Raw energy emanations, not shaped projectiles
   
 - **Complex Weaves (2 actions):** Provoke Opportunity Attacks
-  - Require concentration, gestures, shaping, and time
+  - Require gestures, shaping, and time
   - Use supporting energies to achieve range/area/duration
   - Enemy gets opportunity attack before weave completes
 
 ##### Tactical Options:
 - **In melee:** Use Simple Weaves (don't provoke) or use Disengage first
 - **At range:** Use Complex Weaves freely (more damage, better range)
-- **High Mastery casters:** Consider War Caster feat (Complex Weaves don't provoke)
 - **Positioning:** Stay at range to avoid being threatened
 - **Party tactics:** Have allies protect you while weaving
 
@@ -103,7 +101,7 @@ All characters have access to these combat options:
 - **Notes:**
   - Counts as ONE combat action for Multiple Action Penalty purposes
   - Indiscriminate area effect (affects friends and foes)
-  - See Part 7 (Magic System) for Channel Divinity details
+  - See (Magic System) for Channel Divinity details
 
 ### Combat Maneuvers
 
@@ -117,11 +115,10 @@ These maneuvers modify or replace your standard attacks:
 - **Notes:**
   - Declare before rolling
   - Subject to Multiple Action Penalty
-  - Higher risk, higher reward
 
 ##### Power Attack [Combat]
 - **Cost:** 1 [Combat] action (replaces normal attack)
-- **Requirements:** Power Attack feat, Str 4, Melee 3
+- **Requirements:** Power Attack feat, Str 3, Melee 3
 - **Effect:** Add 1 to both attack die results, but deal +1d8 bonus damage on hit
 - **Notes:**
   - Declare before rolling
@@ -182,21 +179,21 @@ These maneuvers modify or replace your standard attacks:
 - **Notes:**
   - Both attacks made as part of single [Combat] action
   - Subject to Multiple Action Penalty if you make additional combat actions
-  - See Part 6 (Combat) for detailed examples
+  - See (Combat) for detailed examples
 
 
 ### Special Combat Actions
 
 ##### Ready an Action [Combat]
 - **Cost:** 1 or 2 actions (depending on what you're readying)
-- **Effect:** Choose a trigger and an action. When the trigger occurs before your next turn, you can use your reaction to perform the readied action
+- **Effect:** Choose a trigger and an action. When the trigger occurs before your next turn, you can use your [Reaction] to perform the readied action
 - **Examples:**
   - "I ready an attack for when the orc comes through the door" (1 action)
   - "I ready a Fireball for when enemies cluster together" (2 actions)
 - **Notes:**
   - You must specify the trigger clearly
   - If trigger doesn't occur, the action is lost
-  - Performing the readied action uses your reaction
+  - Performing the readied action uses your [Reaction]
   - Readied weaves that aren't used still consume Energy
 
 ##### Aid Another [Combat]
@@ -222,8 +219,7 @@ These maneuvers modify or replace your standard attacks:
 - **Benefit:** All attacks against you have Misfortune
 - **Notes:**
   - Cannot take any other actions this turn
-  - Can still take your reaction
-  - Useful when severely wounded or retreating
+  - Can still take your [Reaction]
 
 ### Important Clarifications
 
@@ -272,7 +268,6 @@ All characters have access to these movement options:
 - **Notes:**
   - If your speed is 0, you cannot stand up
   - Standing up doesn't provoke Opportunity Attacks
-  - You can stand and move in the same turn by spending 2 [Move] actions
 
 ##### Disengage [Move]
 - **Cost:** 2 [Move] action
@@ -322,12 +317,12 @@ All characters have access to these movement options:
   - Falling damage applies if you fail by 2+ successes
 
 ##### Swim [Move]
-- **Cost:** Costs 2 feet of movement for every 1 foot swum (3 feet if wearing medium armor, 4 feet if wearing heavy armor)
+- **Cost:** Costs 2 feet of movement for every 1 foot swum
 - **Effect:** Move through water
 - **Check:** Athletics check required for rough water, strong currents, or swimming while armored
 - **Notes:**
   - Holding breath: Can hold breath for (Constitution) minutes
-  - After that: Must make Fortitude save each round (DC increases) or begin drowning
+  - After that: Must make Fortitude save each round or begin drowning
 
 ##### Crawl [Move]
 - **Cost:** Costs 2 feet of movement for every 1 foot crawled
