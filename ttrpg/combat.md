@@ -199,7 +199,7 @@ Cover provides physical protection from attacks through defensive positioning.
 ##### Partial Cover (¼ to ½ body covered)
 -   Low wall, furniture, creature, tree trunk
 -   **Against Melee Attacks:** +1 DR (fewer vulnerable areas to strike)
--   **Against Ranged Attacks:** Make Reflex save (Agility + Luck) to duck behind cover
+-   **Against Ranged Attacks:** Make Reflex save to duck behind cover
     -   1+ successes: Attack misses
     -   0 successes: Attack hits normally
 -   Examples: Standing behind a 3-foot wall, leaning around a corner, ally partially blocking line of sight
@@ -207,7 +207,7 @@ Cover provides physical protection from attacks through defensive positioning.
 ##### Half Cover (½ to ¾ body covered)
 -   Portcullis, arrow slit, thick tree trunk
 -   **Against Melee Attacks:** +2 DR (significantly fewer vulnerable areas)
--   **Against Ranged Attacks:** Make Reflex save (Agility + Luck) to duck behind cover
+-   **Against Ranged Attacks:** Make Reflex save to duck behind cover
     -   Subtract 1 from both Reflex save die results
     -   1+ successes: Attack misses
     -   0 successes: Attack hits normally
@@ -216,7 +216,7 @@ Cover provides physical protection from attacks through defensive positioning.
 ##### Three-Quarters Cover (¾ or more body covered)
 -   Murder hole, small window, only small part visible
 -   **Against Melee Attacks:** +3 DR (minimal exposed areas to strike)
--   **Against Ranged Attacks:** Make Reflex save (Agility + Luck) to duck behind cover
+-   **Against Ranged Attacks:** Make Reflex save to duck behind cover
     -   Subtract 1 from both Reflex save die results
     -   1+ successes: Attack misses
     -   0 successes: Attack hits normally
@@ -265,13 +265,12 @@ Cover provides physical protection from attacks through defensive positioning.
     -   Prone + Partial Cover = Half Cover
     -   Prone + Half Cover = Three-Quarters Cover
 -   Against Melee Attacks: Being Prone does NOT provide DR
--   Melee attacks against prone targets have subtract 1 from both attack dice
 
 #### Cover Tactics
 
 **Best Practices:**
 -   Seek cover before enemy ranged combatants act
--   Half cover or better gives you Fortune or bonuses on Reflex saves
+-   Half cover or better gives you bonuses on Reflex saves
 -   Full cover completely protects but you can't attack either
 -   Move between cover positions using Disengage to avoid Opportunity Attacks
 -   Prone + Cover stacks for excellent ranged defense (but vulnerable to melee)
@@ -279,7 +278,7 @@ Cover provides physical protection from attacks through defensive positioning.
 **Cover Example:**
 Archer shoots at you behind a barrel (Half Cover):
 1. Archer rolls Dexterity + Ranged Combat, gets 2 successes (hit at medium range)
-2. You immediately roll Reflex save (Agility + Luck) with Fortune (half cover bonus)
+2. You immediately roll Reflex save (Agility + Luck) with half cover bonus
 3. If you get 1+ successes, you duck behind the barrel - arrow misses
 4. If you get 0 successes, arrow hits you for damage (minus any DR from armor)
 
@@ -342,24 +341,12 @@ When an attack (ranged or melee) would pass through or near a square occupied by
 
 **If intervening creature is same size or larger than your target:**
 - Provides **Partial Cover** to target
-  - **Against Melee Attacks:** +1 DR (fewer vulnerable areas)
-  - **Against Ranged Attacks:** Target makes Reflex save (Agi + Luck):
-    - 1+ successes: Attack misses
-    - 0 successes: Attack hits normally
 
 **If intervening creature is one size category larger than you:**
 - Provides **Half Cover** to target
-  - **Against Melee Attacks:** +2 DR
-  - **Against Ranged Attacks:** Target makes Reflex save with -1 to both dice:
-    - 1+ successes: Attack misses
-    - 0 successes: Attack hits normally
 
 **If intervening creature is two+ size categories larger than you:**
 - Provides **Three-Quarters Cover** to target
-  - **Against Melee Attacks:** +3 DR
-  - **Against Ranged Attacks:** Target makes Reflex save with -1 to both dice:
-    - 1+ successes: Attack misses
-    - 0 successes: Attack hits normally
 
 **Important Notes:**
 - The intervening creature is **NOT** at risk of being hit (you aim carefully around them)
@@ -385,15 +372,11 @@ When an attack (ranged or melee) would pass through or near a square occupied by
 - You **can** target their general area with AOE effects (if you know/guess where they might be)
 
 **To gain LoS to Hidden creature:**
-1. Succeed on Perception check to detect them → they become Concealed
+1. Succeed on Perception check to detect them → they become visible
 2. Use abilities that detect hidden creatures (Blindsight, Tremorsense, Perfect Sight) rendering them concealed
 3. Wait for them to reveal themselves (attack, make noise, leave tracks)
 
-**Once detected (Hidden → Concealed):**
-- You now have LoS (you know which square they're in)
-- You can target them, but you still have attack penalties from Concealment
-
----
+--
 
 ### Invisible Creatures
 
@@ -405,7 +388,7 @@ When an attack (ranged or melee) would pass through or near a square occupied by
 **If you detect invisible creature:**
 - They become Concealed (you know their location but can't see them clearly)
 - You have LoS to their square
-- You can attack with penalties from Concealment (add +1 to both attack dice)
+- You can attack with penalties from Concealment
 
 **Perfect Sight or similar abilities:**
 - Grants LoS to invisible creatures

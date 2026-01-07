@@ -125,13 +125,13 @@ All eight energies flow *through* pneuma as a conduit, but standard weaving does
 
 #### Necromancy: The Forbidden Art
 
-Necromancy is not simply "death magic" or harmful spells—it is the direct manipulation, binding, trapping, or consumption of pneuma (souls) themselves. This forbidden knowledge:
+Necromancy is not simply "death magic" or harmful spells. Necromancy is the direct manipulation, binding, trapping, or consumption of pneuma (souls) themselves. This forbidden knowledge:
 
 - **Was mastered by the First Men** through their study of pneuma and its connection to the outer realms
 - **Has been lost to time** and is unknown to current inhabitants of Athelu
 - **Tarnishes the caster's pneuma**, attracting malevolent daemons and corrupting the soul
 - **Requires GM permission** and significant story justification to learn
-- **Cannot be taken at character creation**—it must be discovered through gameplay
+- **Cannot be taken at character creation** it must be discovered through gameplay
 
 #### The [Necromantic] Keyword
 
@@ -263,7 +263,7 @@ Each trait specifies how many dice to roll, which energies you have access to, a
 
 ##### PRIMARY ENERGY TABLES
 Primary Energy determines the core effect and power level of your weave.
-Choose the appropriate table based on what you\'re trying to accomplish.
+Choose the appropriate table based on what you're trying to accomplish.
 
 1. **Primary Energy:** Damage
    **Energy Types:** Fire, Air, Water, Earth, Negative
@@ -450,12 +450,10 @@ When a damage weave affects multiple targets through area effect:
 - **Each target in the area takes the full listed damage**
 - Damage is NOT divided among targets
 - Each target makes their own saving throw (if applicable)
-- Total damage dealt = Base Damage × Number of Targets
 
 **Example:** Flame Burst (Fire 3 = 16 damage base, Space 1 = 2 targets)
 - First target: 16 fire damage (makes own save)
 - Second target: 16 fire damage (makes own save)
-- Total damage dealt: 32 damage (if both hit)
 
 ##### Supporting Energy: Duration (typically Time or element)
 - 0 points: Instantaneous
@@ -467,8 +465,6 @@ When a damage weave affects multiple targets through area effect:
 - 6 points: 12 hours
 - 7 points: 1 day
 - 8 points: 1 week
-
-**Note:** Concentration-required effects typically use durations of 1 minute to 1 hour and cost 1-2 less Energy than non-concentration effects of the same duration.
 
 ##### Supporting Energy: Simple Weaves
 Simple Weaves use only a single energy type (no supporting energy) and are limited in scope:
@@ -554,9 +550,9 @@ Simple Weaves represent raw magical energy channeled directly through the caster
   - 4: Overwhelming/maximum effect
 
 ##### Saving Throws
-- Fortitude (Constitution + Luck): Resists fire, cold, poison, physical effects
-- Reflex (Agility + Luck): Resists area effects, explosions
-- Will (Wisdom + Luck): Resists mind control, fear, charm, illusory effects
+- Fortitude : Resists fire, cold, poison, physical effects
+- Reflex : Resists area effects, explosions
+- Will : Resists mind control, fear, charm, illusory effects
 
 #### Attack Weaves vs Save Weaves
 

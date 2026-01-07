@@ -6,7 +6,7 @@
 -   All rolls: Add 1 to die results while the source of fear is perceived
 -   Can act normally but suffers the penalty
 -   Can choose to flee or stand and fight
--   **Recovery:** At the end of each turn, make Will save (Wisdom + Luck):
+-   **Recovery:** At the end of each turn, make Will save:
     -   1 success: Condition ends
     -   0 successes: Remains Frightened
 
@@ -20,7 +20,7 @@
 -   All rolls: Add 1 to die results
 -   Cannot willingly move closer to the fear source
 -   Can defend if cornered or attacked, but cannot make attacks against the fear source
--   Can engage other threats that aren\'t the source of fear (though still add 1 to die results)
+-   Can engage other threats that aren't the source of fear (though still add 1 to die results)
 -   **Recovery:** At the end of each turn, make Will save:
     -   2 successes: Condition ends completely
     -   1 success: Downgrade to Frightened
@@ -28,11 +28,11 @@
 
 -   **Ally Assistance:** An ally within 5 feet can use an [Interact] action with Persuasion or Intimidate check:
     -   2 successes: Downgrade to Frightened
-    -   1 success: May reroll next recovery save
+    -   1 success: Target may reroll next recovery save
 
 #### Cowering (Severe Fear/Broken Morale)
--   Cannot take any actions except defensive reactions
--   Cannot move voluntarily
+-   Cannot take [Combat] actions
+-   Cannot take [Move] actions
 -   Attacks against you have Fortune
 -   **Recovery:** At the end of each turn, make Will save:
     -   2 successes: Downgrade to Frightened
@@ -54,6 +54,7 @@
 #### Blinded
 -   Cannot see
 -   Vision-based Perception checks automatically fail
+-   Initiative: -4
 -   Attacks against you have Fortune
 -   Your attacks have Misfortune
 
@@ -64,8 +65,7 @@
 -   Cannot benefit from verbal communication or warnings
 
 #### Dazzled
--   Vision impaired by bright light, spots, disorientation, or
-    overstimulation
+-   Vision impaired by bright light, spots, disorientation, or overstimulation
 -   Vision-based Perception checks: Add 1 to die results
 -   Attack rolls: Add 1 to die results
 
@@ -102,7 +102,7 @@
 
 **Stacking with Cover:**
 - Concealment and Cover can stack
-- Example: Behind low wall in fog = Partial Cover (Reflex save vs ranged) + Concealed (attacker adds +1 to both attack dice)
+- Example: Behind low wall in fog = Partial Cover + Concealed 
 
 **Duration:** 
 - Lasts as long as environmental condition persists
@@ -157,14 +157,13 @@
 
 **Detection:**
 If an observer succeeds on Perception check to detect you:
-- **Hidden → Concealed** 
-- Observer knows your approximate location (5-foot square) but may not see you clearly
+- **Hidden → Visible** 
 
 **Ways to Detect Hidden Creatures:**
 
 1. **Active Search [Interact action]:**
    - Make Perception check opposed by Hidden creature's Stealth
-   - Success: Creature loses Hidden, becomes Concealed
+   - Success: Creature loses Hidden, becomes Visible
    - Failure: Creature remains Hidden
 
 2. **Passive Perception:**
@@ -186,8 +185,8 @@ If an observer succeeds on Perception check to detect you:
 - Broken by most offensive actions (attacks, casting obvious weaves)
 
 **Special Senses:**
-- Creatures with Blindsight can detect Hidden creatures within range reducing their benefit to conealed.
-- Creatures with Tremorsense detect Hidden creatures on the ground reducing their benefit to conealed.
+- Creatures with Blindsight can detect Hidden creatures within range reducing their benefit to concealed.
+- Creatures with Tremorsense detect Hidden creatures on the ground reducing their benefit to concealed.
 - Perfect Sight sees through invisibility and illusory effects
 
 **Area of Effect Targeting:**
@@ -248,12 +247,6 @@ If an observer succeeds on Perception check to detect you:
 - Damage Resistance or DR
 - Other defensive abilities unrelated to visibility
 
-**Tactical Implications:**
-- Revealed creatures are prime targets (everyone can see and target them clearly)
-- Often used to expose invisible assassins, hidden enemies, or creatures in darkness
-- Particularly effective against stealth-based enemies
-- Radiant-based Revealed effects often deal damage AND reveal
-
 **Example Situations:**
 - Struck by Holy Fire at 4 successes, you glow with radiant energy
 - Outlined by Revealing Light, glowing with violet radiance
@@ -269,12 +262,12 @@ If an observer succeeds on Perception check to detect you:
 
 #### Clumsy
 -   Physical coordination impaired
--   Dexterity and Agility checks: Add 1 to die results
+-   Dexterity and Agility based skill checks: Add 1 to die results
 -   Reflex saves: Add 1 to die results
 
 #### Weakened
 -   Physical strength impaired
--   Strength checks and Athletics: Add 1 to die results
+-   Strength based skill checks: Add 1 to die results
 -   Melee damage: Reduce by 2 (minimum 1)
 -   Carrying capacity: Halved
 -   Duration: Typically 1 minute to 1 hour unless specified otherwise
@@ -287,11 +280,10 @@ If an observer succeeds on Perception check to detect you:
 -   Constitution and bodily functions impaired
 -   Fortitude saves: Add 1 to die results
 -   Cannot benefit from food or drink
--   Concentration on weaves requires check (1 success)
 -   Duration: Typically 10 minutes to 1 hour unless specified otherwise
 **Recovery:**
 -   Automatically ends after specified duration
--   Medicine check (2 successes) can end early
+-   Medicine check (1 success) can end early
 -   Magical healing removes condition
 
 #### Prone
@@ -320,6 +312,27 @@ If an observer succeeds on Perception check to detect you:
 -   Automatically ends after your next turn completes
 -   No save typically required
 **Note:** Dazed is less severe than Stunned (which prevents all actions)
+
+### Stunned
+#### Effect:
+-   Cannot take actions or reactions for 1 round
+-   Automatically fail Reflex saves
+-   Attacks against you have Fortune
+-   You can still speak and perceive surroundings
+
+#### Duration:
+-   Typically lasts until the end of your next turn
+-   Some effects specify longer duration
+
+#### Recovery:
+-   Automatically ends after specified duration
+-   Some stun effects allow Fortitude save at end of turn to end early
+
+#### Common Sources:
+-   Critical hits from bludgeoning weapons (optional rule)
+-   Thunder/sonic damage weaves
+-   Special monster abilities
+-   Certain combat maneuvers
 
 
 ### Mental & Social Conditions
@@ -449,27 +462,6 @@ If an observer succeeds on Perception check to detect you:
 -   Deadly Poison: Add 2 to all dice, 2d8 damage per hour, requires
     Fortitude save each hour or die
 
-### Stunned
-#### Effect:
--   Cannot take actions or reactions for 1 round
--   Automatically fail Reflex saves
--   Attacks against you have Fortune
--   You can still speak and perceive surroundings
-
-#### Duration:
--   Typically lasts until the end of your next turn
--   Some effects specify longer duration
-
-#### Recovery:
--   Automatically ends after specified duration
--   Some stun effects allow Fortitude save at end of turn to end early
-
-#### Common Sources:
--   Critical hits from bludgeoning weapons (optional rule)
--   Thunder/sonic damage weaves
--   Special monster abilities
--   Certain combat maneuvers
-
 ### Grappled
 #### Effect:
 -   Movement speed reduced to 0
@@ -509,10 +501,8 @@ If an observer succeeds on Perception check to detect you:
 ### Bleeding
 #### Effect:
 -   Take 2 damage per stack at the end of each of your turns
--   Stacks: Multiple bleeding effects add together (2 stacks = 4 damage
-    per turn, 3 stacks = 6 damage per turn)
--   Bleeding damage occurs at the end of your turn, even if you received
-    healing (unless the bleeding condition itself was removed)
+-   Stacks: Multiple bleeding effects add together (2 stacks = 4 damage per turn, 3 stacks = 6 damage per turn)
+-   Bleeding damage occurs at the end of your turn, even if you received healing (unless the bleeding condition itself was removed)
 
 #### Bleeding While Dying:
 
@@ -548,11 +538,10 @@ If an observer succeeds on Perception check to detect you:
 
 #### Ignited
 -   Character is on fire
--   Take 1d8 fire damage at the start of each of your turns
--   Damage occurs before you can act
+-   Take 1d8 fire damage at the end of each of your turns
 -   Duration: Until extinguished
 **Extinguishing Fire (Choose one):**
--   Use 1 [Action] to drop and roll: Make Reflex save (Agility + Luck)
+-   Use 1 [Action] to drop and roll: Make Reflex save
     -   1 success: Ignited ends
     -   0 successes: Remains Ignited
 -   Ally within 5 feet can use 1 [Action]: Automatic extinguish
@@ -561,7 +550,7 @@ If an observer succeeds on Perception check to detect you:
 
 #### Burning (Severe Fire)
 -   Character is engulfed in intense flames
--   Take 2d8 fire damage at the start of each of your turns
+-   Take 2d8 fire damage at the end of each of your turns
 -   All actions: Add 1 to die results (panic and pain)
 -   Duration: Until extinguished
 **Extinguishing Severe Fire:**
@@ -581,7 +570,7 @@ If an observer succeeds on Perception check to detect you:
 -   Duration: One turn only (not ongoing)
 **Recovery:**
 -   Automatically ends after taking the 2 damage
--   Can be extinguished early as action (no roll required)
+-   Ally within 5 feet can use 1 [Action]: Automatic extinguish
 
 #### Singed
 -   Hair or clothing lightly burned, minor distraction
@@ -592,16 +581,15 @@ If an observer succeeds on Perception check to detect you:
 
 #### Chilled
 -   Cold has numbed extremities and slowed reactions slightly
--   Agility checks: Subtract 1 from one die on your next action
+-   Agility based skill checks: Subtract 1 from one die on your next action
 -   Initiative: -1 for this round only
 -   Duration: Until end of your next turn
 **Recovery:**
 -   Automatically ends after specified duration
--   Fire/heat source removes immediately
 
 #### Numbed (Severe Cold)
 -   Extremities significantly numbed, fine motor control impaired
--   Dexterity checks: Add 1 to one die
+-   Dexterity based skill checks: Add 1 to one die
 -   Attacks with weapons: Add 1 to one die
 -   Duration: 1 minute unless specified otherwise
 **Recovery:**
@@ -611,7 +599,7 @@ If an observer succeeds on Perception check to detect you:
 #### Frosted
 -   Ice has formed on skin and clothing, movement impaired
 -   Movement speed: Halved
--   Clumsy condition active (add 1 to Agility/Dexterity dice)
+-   Clumsy condition active
 -   Duration: 1 minute unless specified otherwise
 **Recovery:**
 -   Automatically ends after 1 minute
@@ -620,8 +608,8 @@ If an observer succeeds on Perception check to detect you:
 
 #### Frozen (Extreme Cold)
 -   Body encased in ice or frozen solid
--   Restrained condition active (cannot move, add 2 to all dice, auto-fail Reflex)
--   Take 1d8 cold damage per turn (frostbite)
+-   Restrained condition active 
+-   Take 1d8 cold damage  at the end of your turn (frostbite)
 -   Duration: Until ice breaks or melts
 **Escaping Frozen:**
 -   Self: Use 1 [Action] to make Athletics check

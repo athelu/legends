@@ -1,7 +1,7 @@
 # Feats
 
 ## Feat System Overview
-Feats are the primary way characters gain special abilities, combat techniques, and class-like features. Unlike the old system where traits gated access to abilities, feats are now available to any character who meets the prerequisites.
+Feats are the primary way characters gain special abilities and combat techniques. Feats are now available to any character who meets the prerequisites.
 
 ### Feat Costs and Limits
 -   **Cost:** 40 XP per feat
@@ -47,6 +47,7 @@ When creating new feats, follow these guidelines:
 #### Acrobatic Defense
 **Tier:** 2
 **Prerequisites:** Agi 4, Acrobatics 4
+**Description:** Your agility is your armor. While others trust steel and leather, you trust your ability to simply not be where the attack lands. It's worked so far (mostly).
 **Benefit:** When unarmored, subtract 1 from both defense dice
 **Usage:** Passive
 **Keyword:** [Combat], [Defense]
@@ -54,6 +55,7 @@ When creating new feats, follow these guidelines:
 #### Air Savant
 **Tier:** 3
 **Prerequisites:** Air Mastery 6, Air Potential 6, any magical tradition trait
+**Description:** The wind answers your call like an old friend. You've transcended mere manipulation of air and you've become part of the storm itself. Lightning courses through your veins, and gravity is more of a suggestion than a law.
 **Benefit:** Your mastery of Air energy grants the following abilities:
 - **Shocking Weaves:** When you cast a weave using Air as primary energy and deal lightning damage, targets that fail their save gain the **Stunned** condition until end of their next turn
 - **Storm Resistance:** You are immune to lightning damage from non-magical sources. You have Resistance (+2 DR) against magical lightning damage
@@ -65,6 +67,7 @@ When creating new feats, follow these guidelines:
 #### Alert
 **Tier:** 1
 **Prerequisites:** Wis 3, Perception 3
+**Description:** Danger rarely announces itself politely. You've learned to read the subtle signs. By the time others realize there's a threat, you're already moving.
 **Benefit:** Initiative: +2, cannot be surprised
 **Usage:** Passive
 **Keyword:** [Initiative], [General]
@@ -72,6 +75,7 @@ When creating new feats, follow these guidelines:
 #### Arcane Recovery
 **Tier:** 2
 **Prerequisites:** Int 4, any magical tradition trait
+**Description:** Your understanding of magical theory goes beyond just weaving. You know how to coax energy back from the edges of dissipation, reclaiming what would otherwise fade into the cosmos. 
 **Benefit:** Once per day during short rest, recover Energy equal to your Intelligence × 2
 **Usage:** Once per day during short rest
 **Keyword:** [Magic]
@@ -95,12 +99,14 @@ When creating new feats, follow these guidelines:
 #### Beast Whisperer
 **Tier:** 2
 **Prerequisites:** Wis 4, Animal Handling 4
+**Description:** Animals don't speak your language, but you've learned to speak theirs. Most creatures just want to be left alone, and you know how to communicate that you're not a threat.
 **Benefit:** Can communicate simple concepts to beasts. Beasts that aren't hostile have their attitude improved by one step. Can attempt to calm hostile beast (opposed Will save, your Wis + Animal Handling vs beast's Wis + Luck)
 **Usage:** Passive communication, action to calm
 **Keyword:** [Wilderness]
 
 #### Blindsense
 **Tier:** 6
+**Description:** Sight is useful, but it's also limiting. You've learned to perceive the world through sound, air pressure, and vibration. Darkness is no longer an obstacle; it's just a different kind of light.
 **Prerequisites:** Perception 7, Tier 6
 **Benefit:** You can sense the location of any hidden or invisible creature within 10 feet, reducing their condition to concealed
 **Usage:** Passive
@@ -109,6 +115,7 @@ When creating new feats, follow these guidelines:
 #### Brutal Critical
 **Tier:** 3
 **Prerequisites:** Str 5, Melee 5, Primal Fury feat
+**Description:** When rage and opportunity align perfectly, your strikes don't just wound, they devastate. In that moment of fury and focus, you hit with enough force to shatter bone and end fights decisively. Subtlety is for people who aren't winning.
 **Benefit:** While in Primal Fury, when you roll double 1s on a melee attack (critical success), roll weapon damage twice and add both together
 **Usage:** Passive, requires Primal Fury active
 **Keyword:** [Combat], [Savage]
@@ -116,6 +123,7 @@ When creating new feats, follow these guidelines:
 #### Charming
 **Tier:** 2
 **Prerequisites:** Cha 4, Persuasion 4
+**Description:** Some people just have a way with words. You're one of them. It doesn't always work, but when it matters most, it usually does.
 **Benefit:** Once per session reroll failed social check; double 1s count as ally success
 **Usage:** Once per session
 **Keyword:** [Skill], [General]
@@ -123,6 +131,7 @@ When creating new feats, follow these guidelines:
 #### Climber
 **Tier:** 2
 **Prerequisites:** Athletics 4, Acrobatics 2
+**Description:** Walls are just vertical floors to you. Falling is still dangerous, of course, but you've gotten good at catching yourself.
 **Benefit:** Climb at full movement speed (no reduction). Can attempt normally impossible climbs (smooth stone, ice, ceilings) with Athletics check (Hard task). When falling during a climb, automatically get Acrobatics check to catch yourself (1 success = catch and stop fall, 2 successes = catch and don't take damage)
 **Usage:** Passive
 **Keyword:** [Skill]
@@ -130,6 +139,7 @@ When creating new feats, follow these guidelines:
 #### Combat Assessment
 **Tier:** 3
 **Prerequisites:** Wis 4
+**Description:** A moment of observation tells you everything you need to know. Knowledge, as they say, is half the battle. The other half is hitting them where it hurts.
 **Benefit:** As 1 [Combat] action, make a Wisdom + Perception check opposed by target's Wisdom + Deception.
 - ***1 success:*** learn its current HP range (Healthy 75%+/Bloodied 25-75%/Critical <25%), highest attribute, and any damage resistances or immunities.
 - ***2 successes:*** your next attack against it this combat subtracts 1 from one die (your choice)
@@ -162,6 +172,7 @@ When creating new feats, follow these guidelines:
 #### Counter Strike
 **Tier:** 3
 **Prerequisites:** Agi 5, Melee 5
+**Description:** They thought missing was safe. They were wrong. You've learned to exploit that instant, turning their mistake into your opportunity.
 **Benefit:** When a creature misses you with a melee attack, as a [Reaction] you may make one melee weapon attack against that creature
 **Usage:** Once per round (reaction)
 **Keyword:** [Combat], [Maneuver], [Reaction]
@@ -169,6 +180,7 @@ When creating new feats, follow these guidelines:
 #### Counterspell
 **Tier:** 3
 **Prerequisites:** Arcana 5, any magical tradition trait
+**Description:** Magic follows patterns, and you know them intimately. When you see someone beginning to weave, you recognize the structure they're building and know exactly where to pull the thread to make it all unravel.
 **Benefit:** When you see a creature within 60 feet casting a weave, you can use your reaction to attempt to counter it. Make opposed Arcana check. If you win by 1+ net success, the weave fails. Costs Energy equal to half the weave's cost (minimum 2)
 **Usage:** Reaction
 **Keyword:** [Magic], [Skill], [Reacion]
@@ -176,6 +188,7 @@ When creating new feats, follow these guidelines:
 #### Critical Insight
 **Tier:** 3
 **Prerequisites:** Sorcerous Origin trait, Wis 5
+**Description:** When your magic flows perfectly, you see possibilities others miss. That moment of perfect execution opens doors allowing you to channel the excess energy into greater power, reclaim it for yourself, or share it with your allies.
 **Benefit:** When you roll double 1s (critical success) on a weaving roll, you may choose one:
   1. Maximize one effect (damage = maximum, or duration = double)
   2. Regain Energy equal to your Wisdom
@@ -187,6 +200,7 @@ When creating new feats, follow these guidelines:
 #### Danger Sense
 **Tier:** 1
 **Prerequisites:** Wis 3
+**Description:** Reflexes only work if you see the danger coming. Your instincts are sharper than most. You can't always avoid trouble entirely, but you're rarely caught completely flat-footed.
 **Benefit:** Subtract 1 from both dice on Reflex saves against effects you can see
 **Usage:** Passive
 **Keyword:** [Combat], [Savage]
@@ -194,6 +208,7 @@ When creating new feats, follow these guidelines:
 #### Deflect Missiles
 **Tier:** 2
 **Prerequisites:** Agi 4, Mystic Defense feat
+**Description:** The old masters claimed that a true warrior could pluck arrows from the air. Most people assumed that was metaphor. You've managed it, though catching them is still more impressive when you're not desperately trying to avoid being shot.
 **Benefit:** When hit by a ranged weapon attack, you may use a [Reaction] to reduce damage by 1d8 + Dex + Wis. If you reduce damage to 0, you can catch the projectile. If you catch it, you can spend 1 Luck to make a ranged attack with it as part of same reaction (range 20/60 ft)
 **Usage:** Reaction (catching and throwing costs Luck)
 **Keyword:** [Combat], [Ascetic], [Reaction]
@@ -201,6 +216,7 @@ When creating new feats, follow these guidelines:
 #### Defensive Stance
 **Tier:** 1
 **Prerequisites:** Agi 3, Melee 3
+**Description:** Sometimes the best offense is not getting hit. You can shift your entire fighting style to focus on defense, making yourself a harder target at the cost of offensive capability.
 **Benefit:** You can enter a defensive stance: opponents add 1 to both attack dice when attacking you. You can enter or leave this stance at the start of your turn
 **Usage:** Toggle on/off
 **Keyword:** [Combat], [Defense]
@@ -208,6 +224,7 @@ When creating new feats, follow these guidelines:
 #### Devastating Charge
 **Tier:** 2
 **Prerequisites:** Str 4
+**Description:** Momentum is a weapon all its own. When you build up speed and slam into an opponent, the impact is tremendous.
 **Benefit:** If you move at least 20 feet straight toward a target before making a melee attack on your turn, you can choose one: either subtract 1 from both attack dice, or make a shove attempt as part of the same action (both use same action)
 **Usage:** Unlimited
 **Keyword:** [Combat], [Move]
@@ -215,6 +232,7 @@ When creating new feats, follow these guidelines:
 #### Devastating Exploit
 **Tier:** 3
 **Prerequisites:** Exploit Weakness feat, Dex 5
+**Description:** Finding weaknesses is good. Exploiting them mercilessly is better. Precision is nice, but devastating precision is an art form.
 **Benefit:** Your Exploit Weakness damage increases to Dexterity × 2
 **Usage:** Passive
 **Keyword:** [Combat], [Shadow]
@@ -222,6 +240,7 @@ When creating new feats, follow these guidelines:
 #### Diamond Soul
 **Tier:** 4
 **Prerequisites:** Wis 5, Mystic Defense feat, Tier 4
+**Description:** Your training has refined your spirit to crystalline perfection. Where others rely on toughness or resistance, your fundamental resilience makes even reality's harshest effects slide off you like water from stone.
 **Benefit:** Gain proficiency in all saving throws. When you fail a saving throw, you can spend 1 Luck to reroll and must take the new result
 **Usage:** Passive proficiency + reaction costs Luck
 **Keyword:** [Save], [Ascetic]
@@ -229,6 +248,7 @@ When creating new feats, follow these guidelines:
 #### Disarming Technique
 **Tier:** 2
 **Prerequisites:** Str or Agi 4, chosen combat skill 5
+**Description:** A weapon in hand is dangerous. A weapon on the ground is just metal. You've mastered the art of separating enemies from their armaments.
 **Benefit:** When you hit with a weapon attack, force target to make a Fortitude save (opposed by your attack). If you win by 1+ successes, target drops one held item of your choice
 **Usage:** Once per turn
 **Keyword:** [Combat], [Maneuver]
@@ -236,6 +256,7 @@ When creating new feats, follow these guidelines:
 #### Earth Savant
 **Tier:** 3
 **Prerequisites:** Earth Mastery 6, Earth Potential 6, any magical tradition trait
+**Description:** Your mastery of earth has made you immovable, unbreakable and as inevitable as a mountain.
 **Benefit:** Your mastery of Earth energy grants the following abilities:
   - **Crushing Weaves:** When you cast a weave using Earth as primary energy and deal bludgeoning/piercing damage, targets that fail their save gain **Prone** and **Restrained** conditions until they use an action to break free
   - **Stone Resilience:** You have natural DR 2 that stacks with armor. Your HP calculation uses Con × 9 instead of Con × 8
@@ -247,6 +268,7 @@ When creating new feats, follow these guidelines:
 #### Eldritch Strike
 **Tier:** 2
 **Prerequisites:** Weapon Weaver feat, any combat skill 4
+**Description:** When your blade finds its mark, it leaves more than just a wound, it leaves an opening. The combination is elegant, efficient, and terrifying.
 **Benefit:** When you hit a creature with a weapon attack, the next weave you cast against that creature before end of your next turn has the target subtract 1 from both saving throw dice
 **Usage:** Passive trigger
 **Keyword:** [Combat], [Magic]
@@ -254,6 +276,7 @@ When creating new feats, follow these guidelines:
 #### Elemental Body
 **Tier:** 5
 **Prerequisites:** Elemental Mantle, any elemental Mastery 6, Tier 5
+**Description:** For a brief time, your flesh transforms into pure elemental energy, granting you its strengths and shedding your mortal limitations.
 **Benefit:** You can temporarily transform into living elemental energy. As [Combat] action, spend 6 Energy and choose one elemental energy you have Pneuma Strike for:
   - **Duration:** 1 minute (concentration)
   - **Transformation:** Your body becomes pure elemental energy
@@ -268,6 +291,7 @@ When creating new feats, follow these guidelines:
 #### Elemental Burst
 **Tier:** 3
 **Prerequisites:** Pneuma Strike (any element), any elemental Mastery 5
+**Description:** When enemies cluster together, you can release all your accumulated elemental energy in one explosive discharge. 
 **Benefit:** Once per short rest, can spend 6 Energy to release a devastating elemental burst in a 15-foot cone:
   - Choose one element you have Pneuma Strike for
   - Make weaving check for that element
@@ -282,6 +306,7 @@ When creating new feats, follow these guidelines:
 #### Elemental Enlightenment
 **Tier:** 2
 **Prerequisites:** Sorcerous Origin trait, Wis 4, chosen elemental Mastery 5
+**Description:** Your connection to one element has deepened beyond mere technique into true understanding.
 **Benefit:** Choose one elemental energy (Earth, Air, Fire, Water). When you weave using that energy as primary:
   - Add your Wisdom to the damage dealt
   - You gain resistance (+2 DR) to that damage type
@@ -370,6 +395,7 @@ When creating new feats, follow these guidelines:
 #### Exploit Weakness
 **Tier:** 1
 **Prerequisites:** Agi 4, Stealth or Thievery 3
+**Description:** Every defense has a gap, and you're good at finding them and turning glancing blows into serious wounds. Precision beats power every time.
 **Benefit:** Once per round, when you attack with an ally within 5 feet of your target OR you subtract from your attack dice (from any source), add your Dexterity score to damage
 **Usage:** Once per round
 **Keyword:** [Combat], [Shadow]
@@ -391,6 +417,7 @@ When creating new feats, follow these guidelines:
 #### Fire Savant
 **Tier:** 3
 **Prerequisites:** Fire Mastery 6, Fire Potential 6, any magical tradition trait
+**Description:** You've embraced the passion, fire and destruciton becoming a living conduit for flame. When you command fire, it doesn't just burn, it consumes. Ordinary heat no longer bothers you.
 **Benefit:** Your mastery of Fire energy grants the following abilities:
   - **Igniting Weaves:** When you cast a weave using Fire as primary energy and deal fire damage, targets that fail their save gain the **Ignited** condition until they spend an action to extinguish
   - **Flame Resistance:** You are immune to fire damage from non-magical sources. You have Resistance (+2 DR) against magical fire damage
@@ -546,6 +573,7 @@ When creating new feats, follow these guidelines:
 #### Mystic Defense
 **Tier:** 1
 **Prerequisites:** Wis 3
+**Description:** You've learned to defend yourself through awareness and supernatural positioning. It requires constant vigilance, but the freedom of movement makes it worthwhile.
 **Benefit:** While wearing no armor and not using a shield, your disciplined mind and body harmony grant DR equal to your Wisdom score
 **Usage:** Passive
 **Note:** Can be combined with Savage Resilience if you meet both prerequisites; use the better DR
@@ -637,6 +665,7 @@ When creating new feats, follow these guidelines:
 #### Power Attack
 **Tier:** 1
 **Prerequisites:** Str 3, Melee 3
+**Description:** Precision is nice. Power is better. When you swing your weapon, you fully commit, putting your entire body behind the blow with enough force to crack armor and break bones.
 **Benefit:** Declare before rolling: add 1 to both die results and deal +1d8 damage on hit
 **Usage:** Unlimited
 **Keyword:** [Combat]
@@ -658,6 +687,7 @@ When creating new feats, follow these guidelines:
 #### Primal Fury
 **Tier:** 1
 **Prerequisites:** Str or Con 4, Melee 3
+**Description:** Rage sharpens rather than clouds your mind. You have developed a focused, directed fury that makes you hit harder, move faster, and shrug off wounds that would stop others.
 **Benefit:** As 1 [Combat] action, enter Primal Fury for 1 minute: gain temporary HP equal to your Constitution score, +2 damage on melee attacks, +2 DR against physical damage, subtract 1 from both dice on Fortitude saves. Cannot cast weaves while in Primal Fury (all pneuma used to fuel rage). Ends early if you fall Unconscious. Once it ends, you gain one level of Exhaustion. Can only use once per long rest
 **Usage:** Once per long rest, lasts 1 minute
 **Keyword:** [Combat], [Savage]
@@ -770,6 +800,7 @@ When creating new feats, follow these guidelines:
 #### Sharpshooter
 **Tier:** 2
 **Prerequisites:** Ranged Combat 4, Perception 4, Wis 3
+**Description:** Wind, range, or moving targets; you have learned to account for everything instinctively, putting arrows or bolts exactly where they need to be.
 **Benefit:** Once per turn when you make a ranged weapon attack:
   - Before rolling, declare you're aiming for a vital spot
   - Add 1 to both attack dice (harder to hit)
@@ -782,6 +813,7 @@ When creating new feats, follow these guidelines:
 #### Shield Master
 **Tier:** 1
 **Prerequisites:** Str 3, Melee 3, must be using a shield
+**Description:** You've mastered the shield, turning that disc of metal or wood into reliable protection that can mean the difference between injury and death.
 **Benefit:** Subtract 1 from both dice on Reflex saves while using a shield. Once per combat as a [Reaction], completely negate one attack that would hit you
 **Usage:** Passive + once per combat reaction
 **Keyword:** [Combat], [Reaction]
@@ -789,6 +821,7 @@ When creating new feats, follow these guidelines:
 #### Skill Mastery
 **Tier:** 3
 **Prerequisites:** Any skill rank 6
+**Description:** There are tasks so routine, so fundamental to what you do, that failure isn't even a possibility anymore. 
 **Benefit:** Once per session, automatically succeed with 2 successes on a skill check (no roll required) if both your attribute and skill are 4 or higher
 **Usage:** Once per session
 **Keyword:** [Skill]
@@ -796,6 +829,7 @@ When creating new feats, follow these guidelines:
 #### Skirmisher
 **Tier:** 3
 **Prerequisites:** Agi 5
+**Description:** You've perfected the art of hitting and moving, never giving opponents the chance to retaliate. By the time they realize they should attack you, you're already out of range and moving on to your next target.
 **Benefit:** When you make a melee attack against a creature, that creature cannot make opportunity attacks against you for the rest of your turn
 **Usage:** Passive
 **Keyword:** [Combat], [Defense], [Move]
@@ -803,6 +837,7 @@ When creating new feats, follow these guidelines:
 #### Slow Fall
 **Tier:** 1
 **Prerequisites:** Agi 4
+**Description:** Through training or instinct, you've learned to control your descent that sheer drops are no longer a challenge,  always landing in ways that distribute impact. 
 **Benefit:** Reduce falling damage by an amount equal to 5 × your Tier
 **Usage:** Passive
 **Keyword:** [Ascetic], [Reaction]
@@ -810,6 +845,7 @@ When creating new feats, follow these guidelines:
 #### Spell Penetration
 **Tier:** 4
 **Prerequisites:** Any magical tradition trait, Wis 5, any Energy Mastery 6, Tier 4
+**Description:** Through perfect understanding of magical theory and ruthless application of will, your spells bypass defenses that would stop lesser practitioners.
 **Benefit:** When an enemy makes a saving throw against your weave, add 1 to their better die result (apply after they roll, before comparing successes)
 **Usage:** Passive
 **Keyword:** [Magic], [Save]
@@ -817,6 +853,7 @@ When creating new feats, follow these guidelines:
 #### Stunning Element Strike
 **Tier:** 3
 **Prerequisites:** Stunning Strike feat, Pneuma Strike (any element)
+**Description:** After stunning an opponent, you infuse them with elemental energy. Burning through their nerves, freezing their blood, shocking their system. Even when they recover, the energy lingers.
 **Benefit:** When you successfully Stun an opponent with Stunning Strike, you can spend an additional 2 Energy to infuse them with elemental energy:
   - Choose one element you have Pneuma Strike for
   - Target immediately takes 2d8 elemental damage (no weaving check, ignores DR)
@@ -829,6 +866,7 @@ When creating new feats, follow these guidelines:
 #### Stunning Strike
 **Tier:** 2
 **Prerequisites:** Agi 4, Wis 4, Melee 4
+**Description:** Although difficult to accomplish, repetitive precise strikes to pressure points and areas of the head cand render a foe temporarily helpless.
 **Benefit:** When you hit the same creature 2+ times in one turn, you may attempt to stun: opposed Will save (your Wisdom + Melee Combat vs target's Wisdom + Luck). If you win target is Stunned until the end of your next turn
 **Usage:** Once per turn
 **Keyword:** [Combat], [Ascetic], [Unarmed]
@@ -844,6 +882,7 @@ When creating new feats, follow these guidelines:
 #### Supreme Stealth
 **Tier:** 2
 **Prerequisites:** Stealth 5
+**Description:** Through perfect understanding of shadows, sound, and sightlines, you can make yourself effectively invisible without magic.
 **Benefit:** Subtract 1 from both Stealth dice when attempting to hide
 **Usage:** Passive
 **Keyword:** [Skill], [Shadow]
@@ -851,6 +890,7 @@ When creating new feats, follow these guidelines:
 #### Swift Movement
 **Tier:** 1
 **Prerequisites:** Agi 4
+**Description:** You can perform defensive maneuvers with minimal effort, allowing you to slip away from threats or seek cover in a fraction of the time it takes others.
 **Benefit:** You can Disengage or Hide using only 1 [Minor] action instead of a full action
 **Usage:** Unlimited
 **Keyword:** [Combat], [Move] [Shadow]
@@ -858,6 +898,7 @@ When creating new feats, follow these guidelines:
 #### Tracker
 **Tier:** 1
 **Prerequisites:** Survival 3, Perception 3
+**Description:** Every creature leaves a trail and you can read these signs like a book, following trails that others wouldn't even notice exist.
 **Benefit:** Subtract 1 from both dice when tracking. Can track across difficult terrain at normal speed. Can determine number, size, and condition of tracked creatures
 **Usage:** Passive
 **Keyword:** [Wilderness], [Skill]
@@ -865,6 +906,7 @@ When creating new feats, follow these guidelines:
 #### Tripping Strike
 **Tier:** 2
 **Prerequisites:** Str 4, Melee 5
+**Description:** With a sweep of the legs here, a strike to the knee there, you mastered the art of attacks that don't just wound but also knock opponents off their feet.
 **Benefit:** When you hit with a melee weapon attack, force target to make a Reflex save (opposed by your attack). If you win by 1+ successes, target falls Prone
 **Usage:** Once per turn
 **Keyword:** [Combat], [Maneuver]
@@ -872,6 +914,7 @@ When creating new feats, follow these guidelines:
 #### Two-Weapon Fighting
 **Tier:** 1
 **Prerequisites:** Agi 4, Dex 3
+**Description:** Extensive training with a blade in each hand allows you to maintain a relentless offense that overwhelms defenses. The second strike might not be as clean as the first, but it's still effective.
 **Benefit:** When making dual-weapon attacks in a single [Combat] action, first attack is normal, second attack adds 1 to skill die only (instead of adding to both dice). Both attacks use Shared Attribute Roll
 **Usage:** Passive
 **Keyword:** [Combat], [Dual]
@@ -879,6 +922,7 @@ When creating new feats, follow these guidelines:
 #### Unarmed Mastery
 **Tier:** 1
 **Prerequisites:** Agi 3, Melee 3
+**Description:** Your body is a weapon. Fists, elbows, knees, and feet all honed into effective tools for violence, you are never unarmed.
 **Benefit:** Your unarmed strikes deal 6 damage (same as standard weapons). Additionally, all weapons with the **Monk** property count as monk weapons for your abilities
 **Usage:** Passive
 **Keyword:** [Combat], [Ascetic], [Unarmed]
@@ -886,6 +930,7 @@ When creating new feats, follow these guidelines:
 #### Urban Tracker
 **Tier:** 2
 **Prerequisites:** Investigation 4, Society 3
+**Description:** Being able to track prey through the urban wilderness, inside crowds and alleys instead of forests and fields. The patterns and principles are much the same.
 **Benefit:** In urban environments, can track people through crowds using Investigation. Learn useful information about neighborhoods (safe houses, gang territories, guard patrols) with Society check. When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route
 **Usage:** Passive
 **Keyword:** [Skill]
@@ -893,6 +938,7 @@ When creating new feats, follow these guidelines:
 #### War Weaver
 **Tier:** 3
 **Prerequisites:** Weapon Weaver feat, Melee 5, any Energy Mastery 5
+**Description:** Expanding your Weapon Weaver technique to work with more complex spells, seamlessly blending steel and sorcery in combinations that shouldn't be possible.
 **Benefit:** Your Weapon Weaver ability can now combine with weaves costing up to 4 Energy (instead of just 2 Energy or less)
 **Usage:** Passive enhancement
 **Keyword:** [Combat], [Magic]
@@ -900,6 +946,7 @@ When creating new feats, follow these guidelines:
 #### Ward Analysis
 **Tier:** 2
 **Prerequisites:** Arcana 4, Space Mastery 2 or Time Mastery 2
+**Description:** Intrinsic understanding of weaves and wards allows you to perceive their structure, finding the patterns and logic behind their construction, locating their triggers and weaknesses
 **Benefit:** Can analyze magical wards and barriers. Make Arcana check (opposed by ward creator's Arcana): 1 net success = identify ward type and triggering conditions; 2+ net successes = find safe bypass or temporary weakness. Attempting to dispel a ward costs 2 Energy and requires winning the opposed check
 **Usage:** Active
 **Keyword:** [Magic], [Skill]
@@ -907,6 +954,7 @@ When creating new feats, follow these guidelines:
 #### Weapon Specialization
 **Tier:** 2
 **Prerequisites:** Chosen combat skill 5
+**Description:** This weapon is like an extension of your body.In your hands, this weapon becomes significantly more dangerous than it would be for anyone else.
 **Benefit:** Choose one weapon type (longswords, bows, spears, etc.). When attacking with that weapon type, subtract 1 from your combat skill die result before comparing (minimum 1). Can be taken multiple times for different weapon types
 **Usage:** Passive
 **Keyword:** [Combat]
@@ -914,7 +962,7 @@ When creating new feats, follow these guidelines:
 #### Weapon Weaver
 **Tier:** 1
 **Prerequisites:** Melee Combat 3, any magical tradition trait
-**Description:** This feat allows you to combine a weapon attack and a Simple Weave into one action. It does not bypass the need to make weaving checks.
+**Description:** You may combine a weapon attack and a Simple Weave into a single action. It does not bypass the need to make weaving checks.
 **Benefit:** When you take a [Combat] action with a melee weapon, can cast one Simple Weave (2 Energy cost or less) as part of the same action. You still make the normal weaving check for the weave (Potential + Mastery for each energy used). Both the attack and the weave use the same [Combat] action
 **Usage:** Passive
 **Keyword:** [Combat], [Magic]
@@ -922,6 +970,7 @@ When creating new feats, follow these guidelines:
 #### Whirlwind Strike
 **Tier:** 3
 **Prerequisites:** Str or Agi 5, Melee 5
+**Description:** One devastating rotation of your weapon strikes every enemy within reach, turning encirclement from a tactical advantage for them into a very serious problem.
 **Benefit:** As a [Combat] action, make a single melee weapon attack roll (one Attribute die, one Melee Combat skill die) and compare against every hostile creature within your reach
 **Usage:** Once per turn
 **Keyword:** [Combat]
@@ -929,6 +978,7 @@ When creating new feats, follow these guidelines:
 #### Water Savant
 **Tier:** 3
 **Prerequisites:** Water Mastery 6, Water Potential 6, any magical tradition trait
+**Description:** Embracing the patient and adaptable nature of water your weaves have become as fluid and unstoppable as the ocean itself.
 **Benefit:** Your mastery of Water energy grants the following abilities:
   - **Freezing Weaves:** When you cast a weave using Water as primary energy and deal cold damage, targets that fail their save have movement speed halved until end of their next turn
   - **Frost Resistance:** You are immune to cold damage from non-magical sources. You have Resistance (+2 DR) against magical cold damage
@@ -940,6 +990,7 @@ When creating new feats, follow these guidelines:
 #### Tough
 **Tier:** 1
 **Prerequisites:** Con 3
+**Description:** Some people are just harder to kill. You are more resilient, allowying you to take punishment that would drop others.
 **Benefit:** Gain HP equal to Con × current Tier
 **Usage:** Passive
 **Keyword:** [General]
