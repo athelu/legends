@@ -141,12 +141,12 @@
           <div class="item-damage">Damage</div>
           <div class="item-controls"></div>
         </li>
-        {{#each weapons as |item id|}}
+      {{#each weapons as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image">
+          <div class="item-image rollable" data-roll-type="item">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
-          <h4 class="item-name">{{item.name}}</h4>
+          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
           <div class="item-damage">{{item.system.damage.base}} {{item.system.damage.type}}</div>
           <div class="item-controls">
             <a class="item-control item-equip" title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
@@ -327,23 +327,53 @@
       </div>
     </div>
 
-    {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="biography">
-      <div class="biography-fields">
-        <div class="form-group">
-          <label>Ancestry</label>
-          <input type="text" name="system.biography.ancestry" value="{{system.biography.ancestry}}" />
-        </div>
-        <div class="form-group">
-          <label>Background</label>
-          <input type="text" name="system.biography.background" value="{{system.biography.background}}" />
-        </div>
+  
+  {{!-- Background Section --}}
+  <h3>Background</h3>
+  <ol class="items-list background-list">
+    {{#each backgrounds as |item id|}}
+    <li class="item flexrow" data-item-id="{{item._id}}">
+      <div class="item-image rollable" data-roll-type="item">
+        <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
       </div>
-      
-      <div class="editor-content">
-        {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
+      <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+      <div class="item-controls">
+        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
       </div>
-    </div>
-
+    </li>
+    {{/each}}
+  </ol>
+  <div class="item-create">
+    <button type="button" data-type="background"><i class="fas fa-plus"></i> Add Background</button>
+  </div>
+  
+  {{!-- Ancestry Section --}}
+  <h3>Ancestry</h3>
+  <ol class="items-list ancestry-list">
+    {{#each ancestries as |item id|}}
+    <li class="item flexrow" data-item-id="{{item._id}}">
+      <div class="item-image rollable" data-roll-type="item">
+        <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+      </div>
+      <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+      <div class="item-controls">
+        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+      </div>
+    </li>
+    {{/each}}
+  </ol>
+  <div class="item-create">
+    <button type="button" data-type="ancestry"><i class="fas fa-plus"></i> Add Ancestry</button>
+  </div>
+  
+  {{!-- Biography Text Editor --}}
+  <h3>Biography</h3>
+  <div class="editor-content">
+    {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
+  </div>
+</div>
   </section>
 </form>
