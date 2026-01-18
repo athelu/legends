@@ -74,46 +74,47 @@
           </div>
 
           <h3>Resources</h3>
-          <div class="resources-list">
+          <div class="resources">
             <div class="resource-row">
-              <label>Max HP</label>
-              <span class="resource-value">{{system.hp.max}}</span>
+              <label>Hit Points</label>
+              <div class="resource-values">
+                <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" class="resource-input"/>
+                <span class="resource-sep">/</span>
+                <span class="resource-max">{{system.hp.max}}</span>
+              </div>
             </div>
+            
             <div class="resource-row">
-              <label>Current HP</label>
-              <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" />
+              <label>Luck</label>
+              <div class="resource-values">
+                <input type="number" name="system.luck.current" value="{{system.luck.current}}" data-dtype="Number" class="resource-input"/>
+                <span class="resource-sep">/</span>
+                <span class="resource-max">{{system.luck.max}}</span>
+              </div>
             </div>
+            
             <div class="resource-row">
-              <label>Temp HP</label>
-              <input type="number" name="system.hp.temp" value="{{system.hp.temp}}" data-dtype="Number" />
-            </div>
-            <div class="resource-row">
-              <label>Initiative</label>
-              <span class="resource-value">Agi + Luck + Skill</span>
-            </div>
-            <div class="resource-row">
-              <label>Current Luck</label>
-              <input type="number" name="system.luck.current" value="{{system.luck.current}}" data-dtype="Number" />
-              <span class="resource-max">/ {{system.luck.max}}</span>
+              <label>Damage Reduction</label>
+              <span class="dr-value">{{system.dr.value}}</span>
             </div>
           </div>
 
-          <h3>Saves</h3>
-          <div class="saves-list">
-            <div class="save-row">
-              <button type="button" class="save-roll" data-save="reflex">
-                <i class="fas fa-running"></i> Reflex
-              </button>
-              <span class="save-formula">(Agi + Luck)</span>
-            </div>
-            <div class="save-row">
-              <button type="button" class="save-roll" data-save="fortitude">
+          <h3>Saving Throws</h3>
+          <div class="saves-grid">
+            <div class="save-item">
+              <button type="button" class="save-roll" data-save="fortitude" title="Roll Fortitude Save">
                 <i class="fas fa-shield-alt"></i> Fortitude
               </button>
               <span class="save-formula">(Con + Luck)</span>
             </div>
-            <div class="save-row">
-              <button type="button" class="save-roll" data-save="will">
+            <div class="save-item">
+              <button type="button" class="save-roll" data-save="reflex" title="Roll Reflex Save">
+                <i class="fas fa-running"></i> Reflex
+              </button>
+              <span class="save-formula">(Agi + Luck)</span>
+            </div>
+            <div class="save-item">
+              <button type="button" class="save-roll" data-save="will" title="Roll Willpower Save">
                 <i class="fas fa-brain"></i> Willpower
               </button>
               <span class="save-formula">(Wis + Luck)</span>
@@ -141,7 +142,7 @@
           <div class="item-damage">Damage</div>
           <div class="item-controls"></div>
         </li>
-      {{#each weapons as |item id|}}
+        {{#each weapons as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
           <div class="item-image rollable" data-roll-type="item">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
@@ -158,11 +159,11 @@
         </li>
         {{/each}}
       </ol>
-        <div class="compendium-browse">
-          <button type="button" class="open-compendium" data-compendium="weapon">
-            <i class="fas fa-book"></i> Browse Weapons
-          </button>
-        </div>
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="weapon">
+          <i class="fas fa-book"></i> Browse Weapons
+        </button>
+      </div>
       
       <h3>Armor</h3>
       <ol class="items-list armor-list">
@@ -183,11 +184,12 @@
         </li>
         {{/each}}
       </ol>
-        <div class="compendium-browse">
-          <button type="button" class="open-compendium" data-compendium="armor">
-            <i class="fas fa-book"></i> Browse Armor
-          </button>
-        </div>
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="armor">
+          <i class="fas fa-book"></i> Browse Armor
+        </button>
+      </div>
+    </div>
 
     {{!-- Magic Tab --}}
     {{#if system.energy}}
@@ -244,7 +246,7 @@
           <i class="fas fa-book"></i> Browse Weaves
         </button>
       </div>
-
+    </div>
     {{/if}}
 
     {{!-- Features Tab --}}
@@ -264,11 +266,11 @@
         </li>
         {{/each}}
       </ol>
-        <div class="compendium-browse">
-          <button type="button" class="open-compendium" data-compendium="feat">
-            <i class="fas fa-book"></i> Browse feats
-          </button>
-        </div>
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="feat">
+          <i class="fas fa-book"></i> Browse Feats
+        </button>
+      </div>
       
       <h3>Traits</h3>
       <ol class="items-list traits-list">
@@ -285,11 +287,11 @@
         </li>
         {{/each}}
       </ol>
-        <div class="compendium-browse">
-          <button type="button" class="open-compendium" data-compendium="trait">
-            <i class="fas fa-book"></i> Browse Traits
-          </button>
-        </div>
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="trait">
+          <i class="fas fa-book"></i> Browse Traits
+        </button>
+      </div>
       
       <h3>Flaws</h3>
       <ol class="items-list flaws-list">
@@ -311,7 +313,7 @@
           <i class="fas fa-book"></i> Browse Flaws
         </button>
       </div>
-
+    </div>
 
     {{!-- Equipment Tab --}}
     <div class="tab equipment" data-group="primary" data-tab="equipment">
@@ -336,67 +338,66 @@
         </li>
         {{/each}}
       </ol>
-        <div class="compendium-browse">
-          <button type="button" class="open-compendium" data-compendium="equipment">
-            <i class="fas fa-book"></i> Browse Equipment
-          </button>
-        </div>
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="equipment">
+          <i class="fas fa-book"></i> Browse Equipment
+        </button>
+      </div>
+    </div>
 
+    {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="biography">
-  
-  {{!-- Biography Tab --}}
-<div class="tab biography" data-group="primary" data-tab="biography">
-  
-  {{!-- Background Section --}}
-  <h3>Background</h3>
-  <ol class="items-list background-list">
-    {{#each backgrounds as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-image rollable" data-roll-type="item">
-        <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+      
+      {{!-- Background Section --}}
+      <h3>Background</h3>
+      <ol class="items-list background-list">
+        {{#each backgrounds as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image rollable" data-roll-type="item">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          </div>
+          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+          <div class="item-controls">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="background" {{#if backgrounds.length}}disabled{{/if}}>
+          <i class="fas fa-book"></i> Browse Backgrounds
+        </button>
       </div>
-      <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
-      <div class="item-controls">
-        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+      
+      {{!-- Ancestry Section --}}
+      <h3>Ancestry</h3>
+      <ol class="items-list ancestry-list">
+        {{#each ancestries as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image rollable" data-roll-type="item">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          </div>
+          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+          <div class="item-controls">
+            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="ancestry" {{#if ancestries.length}}disabled{{/if}}>
+          <i class="fas fa-book"></i> Browse Ancestries
+        </button>
       </div>
-    </li>
-    {{/each}}
-  </ol>
-  <div class="compendium-browse">
-    <button type="button" class="open-compendium" data-compendium="background" {{#if backgrounds.length}}disabled{{/if}}>
-      <i class="fas fa-book"></i> Browse Backgrounds
-    </button>
-  </div>
+      
+      {{!-- Biography Text Editor --}}
+      <h3>Character Biography</h3>
+      <div class="editor-content">
+        {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
+      </div>
+    </div>
 
-  {{!-- Ancestry Section --}}
-  <h3>Ancestry</h3>
-  <ol class="items-list ancestry-list">
-    {{#each ancestries as |item id|}}
-    <li class="item flexrow" data-item-id="{{item._id}}">
-      <div class="item-image rollable" data-roll-type="item">
-        <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-      </div>
-      <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
-      <div class="item-controls">
-        <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-        <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-      </div>
-    </li>
-    {{/each}}
-  </ol>
-  <div class="compendium-browse">
-    <button type="button" class="open-compendium" data-compendium="ancestry" {{#if ancestries.length}}disabled{{/if}}>
-      <i class="fas fa-book"></i> Browse Ancestries
-    </button>
-  </div>
-  
-  
-{{!-- Biography Text Editor --}}
-<h3>Character Biography</h3>
-<div class="editor-content">
-  {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
-</div>
-</div>
   </section>
 </form>

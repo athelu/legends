@@ -31,7 +31,7 @@ export async function rollD8Check(options = {}) {
   if (netMisfortune > 0) numDice = 3;
   
   // Roll the dice
-  const roll = new Roll(`${numDice}d8`);
+  const roll = new Roll(`${numDice}d8`); 
   await roll.evaluate();
   
   const results = roll.dice[0].results.map(r => r.result);
@@ -88,38 +88,114 @@ export async function rollD8Check(options = {}) {
     successes = 0;
   }
   
-  // Create chat message
-  await ChatMessage.create({
+// Store roll data for interactive luck spending
+  const messageData = {
+    actor: actor,
+    attrValue: attrValue,
+    skillValue: skillValue,
+    attrLabel: attrLabel,
+    skillLabel: skillLabel,
+    originalAttrDie: attrDie,
+    originalSkillDie: skillDie,
+    currentAttrDie: attrDie,
+    currentSkillDie: skillDie,
+    modifier: modifier,
+    fortune: fortune,
+    misfortune: misfortune,
+    netFortune: netFortune,
+    netMisfortune: netMisfortune,
+    discarded: (netFortune > 0 || netMisfortune > 0) ? results[2] : null,
+    isSave: isSave,
+    luckSpent: 0,
+    allResults: results
+  };
+  
+  // Render the chat card
+  const content = await renderRollResult(messageData);
+  
+  // Create chat message with stored data
+  const message = await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
-    content: await renderRollResult({
-      attrLabel,
-      skillLabel,
-      attrValue,
-      skillValue,
-      attrDie: modifiedAttrDie,
-      skillDie: modifiedSkillDie,
-      rawAttrDie: attrDie,
-      rawSkillDie: skillDie,
-      allResults: results,
-      successes,
-      criticalSuccess,
-      criticalFailure,
-      fortune: netFortune,
-      misfortune: netMisfortune,
-      modifier,
-      isSave
-    })
+    content: content,
+    flags: {
+      'legends.rollData': messageData
+    }
   });
+  
+  // Handle critical success - restore luck
+  const result = calculateSuccesses(messageData);
+  if (result.criticalSuccess) {
+    const maxLuck = actor.system.attributes.luck.value;
+    await actor.update({ 'system.luck.current': maxLuck });
+    
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<div class="d8-luck-restore">${actor.name}'s Luck restored to ${maxLuck}!</div>`
+    });
+  }
+  
+  return {
+    message: message,
+    ...result
+  };
+}
+/**
+ * Calculate successes from roll data
+ * @param {Object} data - Roll data object
+ * @returns {Object} Success counts and crit flags
+ */
+function calculateSuccesses(data) {
+  const {
+    attrValue,
+    skillValue,
+    currentAttrDie,
+    currentSkillDie,
+    originalAttrDie,
+    originalSkillDie,
+    modifier
+  } = data;
+  
+  // Apply modifiers
+  const modifiedAttrDie = currentAttrDie + modifier;
+  const modifiedSkillDie = currentSkillDie + modifier;
+  
+  // Count successes (roll under target, natural 1 always succeeds, 8 always fails)
+  let successes = 0;
+  
+  // Attribute die (check original value for natural 1/8)
+  if (originalAttrDie === 1) {
+    successes++;
+  } else if (originalAttrDie !== 8 && modifiedAttrDie < attrValue) {
+    successes++;
+  }
+  
+  // Skill die (check original value for natural 1/8)
+  if (originalSkillDie === 1) {
+    successes++;
+  } else if (originalSkillDie !== 8 && modifiedSkillDie < skillValue) {
+    successes++;
+  }
+  
+  // Check for critical success (double 1s on ORIGINAL rolls)
+  const criticalSuccess = (originalAttrDie === 1 && originalSkillDie === 1);
+  if (criticalSuccess) {
+    successes = Math.max(successes, 3); // Minimum 3 successes on crit
+  }
+  
+  // Check for critical failure (double 8s on ORIGINAL rolls)
+  const criticalFailure = (originalAttrDie === 8 && originalSkillDie === 8);
+  if (criticalFailure) {
+    successes = 0;
+  }
   
   return {
     successes,
     criticalSuccess,
     criticalFailure,
-    attrDie: modifiedAttrDie,
-    skillDie: modifiedSkillDie
+    modifiedAttrDie,
+    modifiedSkillDie
   };
 }
-
 /**
  * Roll a weave check (magic casting)
  * @param {Object} options - Weave rolling options
@@ -238,6 +314,31 @@ export async function rollWeaveCheck(options = {}) {
  * Render a skill check result
  */
 async function renderRollResult(data) {
+  const {
+    attrLabel,
+    skillLabel,
+    attrValue,
+    skillValue,
+    currentAttrDie,
+    currentSkillDie,
+    originalAttrDie,
+    originalSkillDie,
+    allResults,
+    modifier,
+    fortune,
+    misfortune,
+    netFortune,
+    netMisfortune,
+    isSave,
+    discarded
+  } = data;
+  
+  // Calculate current results
+  const result = calculateSuccesses(data);
+  const { successes, criticalSuccess, criticalFailure } = result;
+  const modifiedAttrDie = currentAttrDie + modifier;
+  const modifiedSkillDie = currentSkillDie + modifier;
+  
   const fortuneText = data.fortune > 0 ? `<span class="fortune">Fortune (${data.fortune})</span>` : '';
   const misfortuneText = data.misfortune > 0 ? `<span class="misfortune">Misfortune (${data.misfortune})</span>` : '';
   const modifierText = data.modifier !== 0 ? `<span class="modifier">Modifier: ${data.modifier > 0 ? '+' : ''}${data.modifier}</span>` : '';
