@@ -47,55 +47,65 @@ export class D8CharacterSheet extends ActorSheet {
    * Organize and classify Items for Character sheets
    */
   _prepareItems(context) {
-    const weapons = [];
-    const armor = [];
-    const equipment = [];
-    const weaves = [];
-    const feats = [];
-    const traits = [];
-    const flaws = [];
+  const weapons = [];
+  const armor = [];
+  const equipment = [];
+  const weaves = [];
+  const feats = [];
+  const traits = [];
+  const flaws = [];
+  const backgrounds = [];
+  const ancestries = [];
+  
+  for (let item of context.items) {
+    item.img = item.img || DEFAULT_TOKEN;
     
-    for (let item of context.items) {
-      item.img = item.img || DEFAULT_TOKEN;
-      
-      switch (item.type) {
-        case 'weapon':
-          weapons.push(item);
-          break;
-        case 'armor':
-          armor.push(item);
-          break;
-        case 'equipment':
-          equipment.push(item);
-          break;
-        case 'weave':
-          weaves.push(item);
-          break;
-        case 'feat':
-          feats.push(item);
-          break;
-        case 'trait':
-          traits.push(item);
-          break;
-        case 'flaw':
-          flaws.push(item);
-          break;
-      }
+    switch (item.type) {
+      case 'weapon':
+        weapons.push(item);
+        break;
+      case 'armor':
+        armor.push(item);
+        break;
+      case 'equipment':
+        equipment.push(item);
+        break;
+      case 'weave':
+        weaves.push(item);
+        break;
+      case 'feat':
+        feats.push(item);
+        break;
+      case 'trait':
+        traits.push(item);
+        break;
+      case 'flaw':
+        flaws.push(item);
+        break;
+      case 'background':
+        backgrounds.push(item);
+        break;
+      case 'ancestry':
+        ancestries.push(item);
+        break;
     }
-    
-    context.weapons = weapons;
-    context.armor = armor;
-    context.equipment = equipment;
-    context.weaves = weaves;
-    context.feats = feats;
-    context.traits = traits;
-    context.flaws = flaws;
   }
+  
+  context.weapons = weapons;
+  context.armor = armor;
+  context.equipment = equipment;
+  context.weaves = weaves;
+  context.feats = feats;
+  context.traits = traits;
+  context.flaws = flaws;
+  context.backgrounds = backgrounds;
+  context.ancestries = ancestries;
+}
   
   /**
    * Prepare skills with labels
    */
-  _prepareSkills(context) {
+    _prepareSkills(context) {
     const skills = context.system.skills;
     const skillLabels = {
       athletics: "Athletics",
@@ -124,12 +134,15 @@ export class D8CharacterSheet extends ActorSheet {
       deception: "Deception"
     };
     
-    context.skillList = Object.keys(skills).map(key => ({
-      key,
-      label: skillLabels[key] || key,
-      value: skills[key].value,
-      attr: skills[key].attr
-    }));
+    // Map skills to objects with labels, then sort alphabetically by label
+    context.skillList = Object.keys(skills)
+      .map(key => ({
+        key,
+        label: skillLabels[key] || key,
+        value: skills[key].value,
+        attr: skills[key].attr
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label));
   }
   
   /**
