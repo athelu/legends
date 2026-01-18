@@ -329,6 +329,9 @@
 
     <div class="tab biography" data-group="primary" data-tab="biography">
   
+  {{!-- Biography Tab --}}
+<div class="tab biography" data-group="primary" data-tab="biography">
+  
   {{!-- Background Section --}}
   <h3>Background</h3>
   <ol class="items-list background-list">
@@ -345,10 +348,12 @@
     </li>
     {{/each}}
   </ol>
-  <div class="item-create">
-    <button type="button" data-type="background"><i class="fas fa-plus"></i> Add Background</button>
+  <div class="compendium-browse">
+    <button type="button" class="open-compendium" data-compendium="background" {{#if backgrounds.length}}disabled{{/if}}>
+      <i class="fas fa-book"></i> Browse Backgrounds
+    </button>
   </div>
-  
+
   {{!-- Ancestry Section --}}
   <h3>Ancestry</h3>
   <ol class="items-list ancestry-list">
@@ -365,15 +370,18 @@
     </li>
     {{/each}}
   </ol>
-  <div class="item-create">
-    <button type="button" data-type="ancestry"><i class="fas fa-plus"></i> Add Ancestry</button>
+  <div class="compendium-browse">
+    <button type="button" class="open-compendium" data-compendium="ancestry" {{#if ancestries.length}}disabled{{/if}}>
+      <i class="fas fa-book"></i> Browse Ancestries
+    </button>
   </div>
   
-  {{!-- Biography Text Editor --}}
-  <h3>Biography</h3>
-  <div class="editor-content">
-    {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
-  </div>
+  
+{{!-- Biography Text Editor --}}
+<h3>Character Biography</h3>
+<div class="editor-content">
+  {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
+</div>
 </div>
   </section>
 </form>
