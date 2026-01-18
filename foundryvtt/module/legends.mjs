@@ -60,17 +60,10 @@ Hooks.once('init', async function() {
   });
 
   // Preload Handlebars templates
+// Preload Handlebars templates
   await loadTemplates([
-    "systems/legends/templates/actor/parts/character-header.hbs",
-    "systems/legends/templates/actor/parts/character-attributes.hbs",
-    "systems/legends/templates/actor/parts/character-skills.hbs",
-    "systems/legends/templates/actor/parts/character-combat.hbs",
-    "systems/legends/templates/actor/parts/character-magic.hbs",
-    "systems/legends/templates/actor/parts/character-features.hbs",
-    "systems/legends/templates/actor/parts/character-equipment.hbs",
-    "systems/legends/templates/actor/parts/character-biography.hbs"
+    // Template partials can be added here if needed
   ]);
-
   // Register Handlebars helpers
   registerHandlebarsHelpers();
   
