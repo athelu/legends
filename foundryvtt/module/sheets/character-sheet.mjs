@@ -349,7 +349,14 @@ export class D8CharacterSheet extends ActorSheet {
     // Map to the actual compendium pack
     const packMap = {
       'background': 'legends.backgrounds',
-      'ancestry': 'legends.ancestries'
+      'ancestry': 'legends.ancestries',
+      'weapon': 'legends.weapons',
+      'armor': 'legends.armor',
+      'equipment': 'legends.equipment',
+      'weave': 'legends.weaves',
+      'feat': 'legends.feats',
+      'trait': 'legends.traits',
+      'flaw': 'legends.flaws'
     };
     
     const packName = packMap[compendiumType];

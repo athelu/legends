@@ -31,7 +31,8 @@ Hooks.once('init', async function() {
     rollSkillCheck,
     rollSavingThrow,
     rollInitiative,
-    rollWeave
+    rollWeave,
+    spendLuckOnRoll: dice.spendLuckOnRoll
   };
 
   // Define custom Document classes
@@ -72,6 +73,9 @@ Hooks.once('init', async function() {
 
   // Register Handlebars helpers
   registerHandlebarsHelpers();
+  
+  // Initialize luck spending handlers
+  dice.initializeLuckHandlers();
 });
 
 /* -------------------------------------------- */
@@ -114,7 +118,8 @@ export async function rollSkillCheck(actor, skillKey, options = {}) {
     skillLabel: game.i18n.localize(`D8.Skills.${skillKey}`),
     fortune: options.fortune || 0,
     misfortune: options.misfortune || 0,
-    modifier: options.modifier || 0
+    modifier: options.modifier || 0,
+    label: options.label
   });
 }
 
@@ -130,15 +135,15 @@ export async function rollSavingThrow(actor, saveType, options = {}) {
   switch(saveType) {
     case 'fortitude':
       attrKey = 'constitution';
-      attrLabel = 'Fortitude (Con + Luck)';
+      attrLabel = 'Constitution';
       break;
     case 'reflex':
       attrKey = 'agility';
-      attrLabel = 'Reflex (Agi + Luck)';
+      attrLabel = 'Agility';
       break;
     case 'will':
       attrKey = 'wisdom';
-      attrLabel = 'Will (Wis + Luck)';
+      attrLabel = 'Wisdom';
       break;
   }
   
@@ -154,7 +159,8 @@ export async function rollSavingThrow(actor, saveType, options = {}) {
     fortune: options.fortune || 0,
     misfortune: options.misfortune || 0,
     modifier: options.modifier || 0,
-    isSave: true
+    isSave: true,
+    label: options.label || `${attrLabel} Save`
   });
 }
 
