@@ -34,6 +34,17 @@ export class D8CharacterSheet extends ActorSheet {
     // Add tier information
     context.tier = this._getTierInfo(context.system.tier?.xp || 0);
     
+    // Update header fields from background/ancestry items
+    const backgroundItem = this.actor.items.find(i => i.type === 'background');
+    const ancestryItem = this.actor.items.find(i => i.type === 'ancestry');
+    
+    if (backgroundItem) {
+      context.system.biography.background = backgroundItem.name;
+    }
+    if (ancestryItem) {
+      context.system.biography.ancestry = ancestryItem.name;
+    }
+    
     // Enrich biography HTML
     context.enrichedBiography = await TextEditor.enrichHTML(context.system.biography.value, {
       secrets: this.actor.isOwner,
@@ -47,65 +58,65 @@ export class D8CharacterSheet extends ActorSheet {
    * Organize and classify Items for Character sheets
    */
   _prepareItems(context) {
-  const weapons = [];
-  const armor = [];
-  const equipment = [];
-  const weaves = [];
-  const feats = [];
-  const traits = [];
-  const flaws = [];
-  const backgrounds = [];
-  const ancestries = [];
-  
-  for (let item of context.items) {
-    item.img = item.img || DEFAULT_TOKEN;
+    const weapons = [];
+    const armor = [];
+    const equipment = [];
+    const weaves = [];
+    const feats = [];
+    const traits = [];
+    const flaws = [];
+    const backgrounds = [];
+    const ancestries = [];
     
-    switch (item.type) {
-      case 'weapon':
-        weapons.push(item);
-        break;
-      case 'armor':
-        armor.push(item);
-        break;
-      case 'equipment':
-        equipment.push(item);
-        break;
-      case 'weave':
-        weaves.push(item);
-        break;
-      case 'feat':
-        feats.push(item);
-        break;
-      case 'trait':
-        traits.push(item);
-        break;
-      case 'flaw':
-        flaws.push(item);
-        break;
-      case 'background':
-        backgrounds.push(item);
-        break;
-      case 'ancestry':
-        ancestries.push(item);
-        break;
+    for (let item of context.items) {
+      item.img = item.img || DEFAULT_TOKEN;
+      
+      switch (item.type) {
+        case 'weapon':
+          weapons.push(item);
+          break;
+        case 'armor':
+          armor.push(item);
+          break;
+        case 'equipment':
+          equipment.push(item);
+          break;
+        case 'weave':
+          weaves.push(item);
+          break;
+        case 'feat':
+          feats.push(item);
+          break;
+        case 'trait':
+          traits.push(item);
+          break;
+        case 'flaw':
+          flaws.push(item);
+          break;
+        case 'background':
+          backgrounds.push(item);
+          break;
+        case 'ancestry':
+          ancestries.push(item);
+          break;
+      }
     }
+    
+    context.weapons = weapons;
+    context.armor = armor;
+    context.equipment = equipment;
+    context.weaves = weaves;
+    context.feats = feats;
+    context.traits = traits;
+    context.flaws = flaws;
+    context.backgrounds = backgrounds;
+    context.ancestries = ancestries;
   }
-  
-  context.weapons = weapons;
-  context.armor = armor;
-  context.equipment = equipment;
-  context.weaves = weaves;
-  context.feats = feats;
-  context.traits = traits;
-  context.flaws = flaws;
-  context.backgrounds = backgrounds;
-  context.ancestries = ancestries;
-}
   
   /**
    * Prepare skills with labels
    */
-    _prepareSkills(context) {
+  _prepareSkills(context) {
     const skills = context.system.skills;
     const skillLabels = {
       athletics: "Athletics",
@@ -206,6 +217,9 @@ export class D8CharacterSheet extends ActorSheet {
     html.find('.item-edit').click(this._onItemEdit.bind(this));
     html.find('.item-delete').click(this._onItemDelete.bind(this));
     html.find('.item-equip').click(this._onItemEquip.bind(this));
+    
+    // Compendium browser buttons
+    html.find('.open-compendium').click(this._onOpenCompendium.bind(this));
     
     // Drag events for macros
     if (this.actor.isOwner) {
@@ -326,6 +340,35 @@ export class D8CharacterSheet extends ActorSheet {
   }
   
   /**
+   * Handle opening a compendium browser
+   */
+  async _onOpenCompendium(event) {
+    event.preventDefault();
+    const compendiumType = event.currentTarget.dataset.compendium;
+    
+    // Map to the actual compendium pack
+    const packMap = {
+      'background': 'legends.backgrounds',
+      'ancestry': 'legends.ancestries'
+    };
+    
+    const packName = packMap[compendiumType];
+    if (!packName) {
+      console.warn(`Unknown compendium type: ${compendiumType}`);
+      return;
+    }
+    
+    const pack = game.packs.get(packName);
+    if (!pack) {
+      ui.notifications.warn(`Compendium "${packName}" not found!`);
+      return;
+    }
+    
+    // Open the compendium
+    pack.render(true);
+  }
+  
+  /**
    * Handle creating a new Owned Item
    */
   async _onItemCreate(event) {
@@ -383,5 +426,35 @@ export class D8CharacterSheet extends ActorSheet {
     const item = this.actor.items.get(li.dataset.itemId);
     
     return item.update({ 'system.equipped': !item.system.equipped });
+  }
+  
+  /**
+   * Override drop handler to enforce single background/ancestry
+   */
+  async _onDropItem(event, data) {
+    if (!this.actor.isOwner) return false;
+    
+    const item = await Item.implementation.fromDropData(data);
+    const itemData = item.toObject();
+    
+    // Enforce single background/ancestry
+    if (itemData.type === 'background') {
+      const existing = this.actor.items.find(i => i.type === 'background');
+      if (existing) {
+        ui.notifications.warn("Character already has a background. Remove the existing one first.");
+        return false;
+      }
+    }
+    
+    if (itemData.type === 'ancestry') {
+      const existing = this.actor.items.find(i => i.type === 'ancestry');
+      if (existing) {
+        ui.notifications.warn("Character already has an ancestry. Remove the existing one first.");
+        return false;
+      }
+    }
+    
+    // Proceed with the standard drop handling
+    return super._onDropItem(event, data);
   }
 }
