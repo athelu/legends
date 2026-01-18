@@ -158,9 +158,11 @@
         </li>
         {{/each}}
       </ol>
-      <div class="item-create">
-        <button type="button" data-type="weapon"><i class="fas fa-plus"></i> Add Weapon</button>
-      </div>
+        <div class="compendium-browse">
+          <button type="button" class="open-compendium" data-compendium="weapon">
+            <i class="fas fa-book"></i> Browse Weapons
+          </button>
+        </div>
       
       <h3>Armor</h3>
       <ol class="items-list armor-list">
@@ -181,10 +183,11 @@
         </li>
         {{/each}}
       </ol>
-      <div class="item-create">
-        <button type="button" data-type="armor"><i class="fas fa-plus"></i> Add Armor</button>
-      </div>
-    </div>
+        <div class="compendium-browse">
+          <button type="button" class="open-compendium" data-compendium="armor">
+            <i class="fas fa-book"></i> Browse Armor
+          </button>
+        </div>
 
     {{!-- Magic Tab --}}
     {{#if system.energy}}
@@ -236,10 +239,12 @@
         </li>
         {{/each}}
       </ol>
-      <div class="item-create">
-        <button type="button" data-type="weave"><i class="fas fa-plus"></i> Add Weave</button>
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="weave">
+          <i class="fas fa-book"></i> Browse Weaves
+        </button>
       </div>
-    </div>
+
     {{/if}}
 
     {{!-- Features Tab --}}
@@ -259,9 +264,11 @@
         </li>
         {{/each}}
       </ol>
-      <div class="item-create">
-        <button type="button" data-type="feat"><i class="fas fa-plus"></i> Add Feat</button>
-      </div>
+        <div class="compendium-browse">
+          <button type="button" class="open-compendium" data-compendium="feat">
+            <i class="fas fa-book"></i> Browse feats
+          </button>
+        </div>
       
       <h3>Traits</h3>
       <ol class="items-list traits-list">
@@ -278,9 +285,11 @@
         </li>
         {{/each}}
       </ol>
-      <div class="item-create">
-        <button type="button" data-type="trait"><i class="fas fa-plus"></i> Add Trait</button>
-      </div>
+        <div class="compendium-browse">
+          <button type="button" class="open-compendium" data-compendium="trait">
+            <i class="fas fa-book"></i> Browse Traits
+          </button>
+        </div>
       
       <h3>Flaws</h3>
       <ol class="items-list flaws-list">
@@ -297,7 +306,12 @@
         </li>
         {{/each}}
       </ol>
-    </div>
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="flaw">
+          <i class="fas fa-book"></i> Browse Flaws
+        </button>
+      </div>
+
 
     {{!-- Equipment Tab --}}
     <div class="tab equipment" data-group="primary" data-tab="equipment">
@@ -322,10 +336,11 @@
         </li>
         {{/each}}
       </ol>
-      <div class="item-create">
-        <button type="button" data-type="equipment"><i class="fas fa-plus"></i> Add Equipment</button>
-      </div>
-    </div>
+        <div class="compendium-browse">
+          <button type="button" class="open-compendium" data-compendium="equipment">
+            <i class="fas fa-book"></i> Browse Equipment
+          </button>
+        </div>
 
     <div class="tab biography" data-group="primary" data-tab="biography">
   

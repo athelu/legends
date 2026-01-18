@@ -986,3 +986,193 @@
 .legends .sheet-body::-webkit-scrollbar-thumb:hover {
   background: var(--d8-gold);
 }
+
+/* Luck Spending in Chat Cards */
+
+.d8-roll {
+  background: var(--d8-bg-light);
+  border: 2px solid var(--d8-border);
+  border-radius: 8px;
+  padding: 15px;
+  margin: 5px 0;
+}
+
+.d8-roll.critical-success {
+  border-color: var(--d8-success);
+  background: linear-gradient(to bottom, var(--d8-bg-light), #e6f7e6);
+}
+
+.d8-roll.critical-failure {
+  border-color: var(--d8-danger);
+  background: linear-gradient(to bottom, var(--d8-bg-light), #fde6e6);
+}
+
+.d8-roll h3 {
+  margin: 0 0 10px 0;
+  color: var(--d8-text);
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 1px solid var(--d8-border);
+  padding-bottom: 5px;
+}
+
+.d8-roll .roll-info {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.d8-roll .fortune {
+  background: var(--d8-success);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.d8-roll .misfortune {
+  background: var(--d8-danger);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.d8-roll .modifier {
+  background: var(--d8-secondary);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.d8-roll .discarded-die {
+  font-size: 12px;
+  color: var(--d8-secondary);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.d8-roll .dice-results {
+  display: grid;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.d8-roll .die-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.d8-roll .die-label {
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.d8-roll .die-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--d8-primary);
+  min-width: 50px;
+  text-align: right;
+}
+
+.d8-roll .die-value.natural-one {
+  color: var(--d8-success);
+}
+
+.d8-roll .die-value.natural-eight {
+  color: var(--d8-danger);
+}
+
+.d8-roll .result {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--d8-border);
+  font-size: 16px;
+  text-align: center;
+}
+
+.d8-roll .crit-text {
+  display: block;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 5px;
+  color: var(--d8-gold);
+}
+
+.d8-roll .luck-restore {
+  background: var(--d8-gold);
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.d8-roll .luck-spent {
+  background: var(--d8-warning);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+.d8-roll .luck-spending {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border: 1px dashed var(--d8-border);
+  border-radius: 5px;
+}
+
+.d8-roll .luck-header {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--d8-primary);
+}
+
+.d8-roll .luck-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.d8-roll .spend-luck-btn {
+  background: var(--d8-accent);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.d8-roll .spend-luck-btn:hover {
+  background: var(--d8-gold);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.d8-roll .spend-luck-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.d8-roll .spend-luck-btn i {
+  font-size: 14px;
+}
