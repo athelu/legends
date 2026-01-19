@@ -240,6 +240,12 @@ function registerHandlebarsHelpers() {
   Handlebars.registerHelper('eq', function(a, b) {
     return a === b;
   });
+
+  Handlebars.registerHelper('contains', function(array, value) {
+   if (!array) return false;
+   if (!Array.isArray(array)) return false;
+   return array.includes(value);
+  });
   
   Handlebars.registerHelper('add', function(a, b) {
     return a + b;

@@ -23,7 +23,7 @@
       <!-- Armor Type -->
       <div class="form-group">
         <label>Armor Type</label>
-        <select name="system.armorType">
+        <select name="system.armorType" class="armor-type-select">
           <option value="light" {{#if (eq system.armorType "light")}}selected{{/if}}>Light Armor</option>
           <option value="medium" {{#if (eq system.armorType "medium")}}selected{{/if}}>Medium Armor</option>
           <option value="heavy" {{#if (eq system.armorType "heavy")}}selected{{/if}}>Heavy Armor</option>
@@ -31,92 +31,155 @@
         </select>
       </div>
 
-      <!-- Damage Reduction -->
-      <h3>Damage Reduction (DR)</h3>
-      <div class="form-group-row">
+      <!-- ARMOR-ONLY FIELDS (hidden for shields) -->
+      <div class="armor-only-fields" {{#if (eq system.armorType "shield")}}style="display:none;"{{/if}}>
+        
+        <!-- Damage Reduction -->
+        <h3>Damage Reduction (DR)</h3>
+        <div class="form-group-row">
+          <div class="form-group">
+            <label>Base DR</label>
+            <input type="number" name="system.dr.value" value="{{system.dr.value}}" data-dtype="Number" min="0" />
+          </div>
+        </div>
+
+        <!-- Resistances & Weaknesses -->
+        <h3>Resistances & Weaknesses</h3>
         <div class="form-group">
-          <label>Base DR</label>
-          <input type="number" name="system.dr.value" value="{{system.dr.value}}" data-dtype="Number" min="0" />
+          <label>Weakness (Damage Type)</label>
+          <select name="system.weakness.type">
+            <option value="" {{#unless system.weakness.type}}selected{{/unless}}>None</option>
+            <option value="slashing" {{#if (eq system.weakness.type "slashing")}}selected{{/if}}>Slashing</option>
+            <option value="piercing" {{#if (eq system.weakness.type "piercing")}}selected{{/if}}>Piercing</option>
+            <option value="bludgeoning" {{#if (eq system.weakness.type "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Weakness DR Value</label>
+          <input type="number" name="system.weakness.value" value="{{system.weakness.value}}" data-dtype="Number" min="0" placeholder="Reduced DR" />
+        </div>
+
+        <div class="form-group">
+          <label>Resistance (Damage Type)</label>
+          <select name="system.resistance.type">
+            <option value="" {{#unless system.resistance.type}}selected{{/unless}}>None</option>
+            <option value="slashing" {{#if (eq system.resistance.type "slashing")}}selected{{/if}}>Slashing</option>
+            <option value="piercing" {{#if (eq system.resistance.type "piercing")}}selected{{/if}}>Piercing</option>
+            <option value="bludgeoning" {{#if (eq system.resistance.type "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Resistance DR Value</label>
+          <input type="number" name="system.resistance.value" value="{{system.resistance.value}}" data-dtype="Number" min="0" placeholder="Increased DR" />
+        </div>
+
+        <!-- Properties -->
+        <h3>Properties</h3>
+        <div class="properties-grid">
+          <label class="checkbox">
+            <input type="checkbox" name="system.properties" value="noisy" {{#if (contains system.properties "noisy")}}checked{{/if}} />
+            Noisy (+1 Stealth penalty)
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" name="system.properties" value="loud" {{#if (contains system.properties "loud")}}checked{{/if}} />
+            Loud (+2 Stealth penalty)
+          </label>
+        </div>
+
+        <!-- Don/Doff Time -->
+        <h3>Don/Doff Time</h3>
+        <div class="form-group-row">
+          <div class="form-group">
+            <label>Don Time</label>
+            <input type="text" name="system.donTime" value="{{system.donTime}}" placeholder="e.g., 1 minute, 5 minutes" />
+          </div>
+          <div class="form-group">
+            <label>Doff Time</label>
+            <input type="text" name="system.doffTime" value="{{system.doffTime}}" placeholder="e.g., 1 minute" />
+          </div>
         </div>
       </div>
 
-      <!-- Resistances & Weaknesses -->
-      <h3>Resistances & Weaknesses</h3>
-      <div class="form-group">
-        <label>Weakness (Damage Type)</label>
-        <select name="system.weakness.type">
-          <option value="" {{#unless system.weakness.type}}selected{{/unless}}>None</option>
-          <option value="slashing" {{#if (eq system.weakness.type "slashing")}}selected{{/if}}>Slashing</option>
-          <option value="piercing" {{#if (eq system.weakness.type "piercing")}}selected{{/if}}>Piercing</option>
-          <option value="bludgeoning" {{#if (eq system.weakness.type "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Weakness DR Value</label>
-        <input type="number" name="system.weakness.value" value="{{system.weakness.value}}" data-dtype="Number" min="0" placeholder="Reduced DR" />
-      </div>
-
-      <div class="form-group">
-        <label>Resistance (Damage Type)</label>
-        <select name="system.resistance.type">
-          <option value="" {{#unless system.resistance.type}}selected{{/unless}}>None</option>
-          <option value="slashing" {{#if (eq system.resistance.type "slashing")}}selected{{/if}}>Slashing</option>
-          <option value="piercing" {{#if (eq system.resistance.type "piercing")}}selected{{/if}}>Piercing</option>
-          <option value="bludgeoning" {{#if (eq system.resistance.type "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Resistance DR Value</label>
-        <input type="number" name="system.resistance.value" value="{{system.resistance.value}}" data-dtype="Number" min="0" placeholder="Increased DR" />
-      </div>
-
-      <!-- Shield Properties (if applicable) -->
-      {{#if (eq system.armorType "shield")}}
-      <h3>Shield Properties</h3>
-      <div class="form-group">
-        <label>Shield Type</label>
-        <select name="system.shieldType">
-          <option value="buckler" {{#if (eq system.shieldType "buckler")}}selected{{/if}}>Buckler (Light Shield)</option>
-          <option value="targe" {{#if (eq system.shieldType "targe")}}selected{{/if}}>Targe (Round Shield)</option>
-          <option value="heater" {{#if (eq system.shieldType "heater")}}selected{{/if}}>Heater Shield</option>
-          <option value="kite" {{#if (eq system.shieldType "kite")}}selected{{/if}}>Kite Shield</option>
-          <option value="tower" {{#if (eq system.shieldType "tower")}}selected{{/if}}>Tower Shield</option>
-          <option value="pavise" {{#if (eq system.shieldType "pavise")}}selected{{/if}}>Pavise</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Strength Requirement</label>
-        <input type="number" name="system.strengthReq" value="{{system.strengthReq}}" data-dtype="Number" min="0" placeholder="0" />
-      </div>
-      {{/if}}
-
-      <!-- Properties -->
-      <h3>Properties</h3>
-      <div class="properties-grid">
-        <label class="checkbox">
-          <input type="checkbox" name="system.properties" value="noisy" {{#if (contains system.properties "noisy")}}checked{{/if}} />
-          Noisy (+1 Stealth penalty)
-        </label>
-        <label class="checkbox">
-          <input type="checkbox" name="system.properties" value="loud" {{#if (contains system.properties "loud")}}checked{{/if}} />
-          Loud (+2 Stealth penalty)
-        </label>
-      </div>
-
-      <!-- Don/Doff Time -->
-      <h3>Don/Doff Time</h3>
-      <div class="form-group-row">
+      <!-- SHIELD-ONLY FIELDS (hidden for armor) -->
+      <div class="shield-only-fields" {{#unless (eq system.armorType "shield")}}style="display:none;"{{/unless}}>
+        <h3>Shield Properties</h3>
+        
         <div class="form-group">
-          <label>Don Time</label>
-          <input type="text" name="system.donTime" value="{{system.donTime}}" placeholder="e.g., 1 minute, 5 minutes" />
+          <label>Shield Type</label>
+          <select name="system.shieldType" class="shield-type-select">
+            <option value="" {{#unless system.shieldType}}selected{{/unless}}>Select Shield Type</option>
+            <option value="buckler" {{#if (eq system.shieldType "buckler")}}selected{{/if}}>Buckler (Light Shield)</option>
+            <option value="targe" {{#if (eq system.shieldType "targe")}}selected{{/if}}>Targe (Round Shield)</option>
+            <option value="heater" {{#if (eq system.shieldType "heater")}}selected{{/if}}>Heater Shield</option>
+            <option value="kite" {{#if (eq system.shieldType "kite")}}selected{{/if}}>Kite Shield</option>
+            <option value="tower" {{#if (eq system.shieldType "tower")}}selected{{/if}}>Tower Shield</option>
+            <option value="pavise" {{#if (eq system.shieldType "pavise")}}selected{{/if}}>Pavise</option>
+          </select>
         </div>
+
+        <!-- Shield Abilities (auto-populated based on shield type) -->
+        <div class="form-group shield-abilities-display">
+          <label>Shield Abilities</label>
+          <div class="shield-abilities-info" data-shield-type="{{system.shieldType}}">
+            {{#if (eq system.shieldType "buckler")}}
+            <p><strong>Hand Usage:</strong> Occupies off-hand but allows punch/pommel strikes</p>
+            <p><strong>Melee Defense:</strong> Grants Shield Block reaction</p>
+            <p><strong>Active Parry:</strong> Once per round as [Free] action (no reaction cost), attacker must reroll one success die</p>
+            <p><strong>Special:</strong> Can attack with buckler (4 damage bludgeoning) using two-weapon combat action</p>
+            {{else if (eq system.shieldType "targe")}}
+            <p><strong>Hand Usage:</strong> Occupies off-hand completely</p>
+            <p><strong>Melee Defense:</strong> Grants Shield Block reaction</p>
+            <p><strong>Melee Defense:</strong> Fortune on defensive melee combat rolls</p>
+            <p><strong>Ranged Defense:</strong> [Reaction] - Force Misfortune on one ranged attack per round (short range only, 30ft)</p>
+            <p><strong>Special:</strong> Can be slung on back (1 [Minor] action to ready)</p>
+            {{else if (eq system.shieldType "heater")}}
+            <p><strong>Hand Usage:</strong> Occupies off-hand completely</p>
+            <p><strong>Melee Defense:</strong> Grants Shield Block reaction</p>
+            <p><strong>Melee Defense:</strong> Fortune on defensive melee combat rolls</p>
+            <p><strong>Ranged Defense:</strong> [Reaction] - Force Misfortune on one ranged attack per round (up to 60ft)</p>
+            <p><strong>Special:</strong> Can be slung on back (1 [Minor] action to ready)</p>
+            {{else if (eq system.shieldType "kite")}}
+            <p><strong>Hand Usage:</strong> Occupies off-hand completely</p>
+            <p><strong>Melee Defense:</strong> Grants Shield Block reaction</p>
+            <p><strong>Melee Defense:</strong> Fortune on defensive melee combat rolls</p>
+            <p><strong>Ranged Defense:</strong> [Reaction] - Force Misfortune on one ranged attack per round (any range)</p>
+            <p><strong>Requirements:</strong> Strength 3 minimum or suffer Misfortune on attacks</p>
+            <p><strong>Special:</strong> Provides Partial Cover when crouching</p>
+            {{else if (eq system.shieldType "tower")}}
+            <p><strong>Hand Usage:</strong> Occupies off-hand completely</p>
+            <p><strong>Melee Defense:</strong> Grants Shield Block reaction</p>
+            <p><strong>Melee Defense:</strong> Fortune on defensive melee combat rolls</p>
+            <p><strong>Ranged Defense:</strong> [Reaction] - Force Misfortune on one ranged attack per round (any range)</p>
+            <p><strong>Requirements:</strong> Strength 4 minimum</p>
+            <p><strong>Special:</strong> Provides Full Cover when crouching</p>
+            {{else if (eq system.shieldType "pavise")}}
+            <p><strong>Hand Usage:</strong> Requires both hands to move/position, but can be planted</p>
+            <p><strong>Melee Defense:</strong> Grants Shield Block reaction</p>
+            <p><strong>Planted Mode:</strong> Use 1 [Move] action to plant. Provides full cover from one direction. Use 1 [Move] to retrieve.</p>
+            <p><strong>Carried Mode:</strong> Functions as Tower Shield but with Misfortune on attacks</p>
+            <p><strong>Requirements:</strong> Strength 4 minimum</p>
+            <p><strong>Special:</strong> Primarily a siege/defensive weapon</p>
+            {{else}}
+            <p class="hint"><em>Select a shield type to see its abilities</em></p>
+            {{/if}}
+          </div>
+        </div>
+
         <div class="form-group">
-          <label>Doff Time</label>
-          <input type="text" name="system.doffTime" value="{{system.doffTime}}" placeholder="e.g., 1 minute" />
+          <label>Strength Requirement</label>
+          <input type="number" name="system.strengthReq" value="{{system.strengthReq}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+          <small>Minimum Strength needed to use without penalty</small>
+        </div>
+
+        <!-- DR for shields -->
+        <div class="form-group">
+          <label>Shield DR Bonus</label>
+          <input type="number" name="system.dr.value" value="{{system.dr.value}}" data-dtype="Number" min="0" placeholder="0" />
+          <small>Some shields may provide DR bonus when equipped</small>
         </div>
       </div>
 
-      <!-- Physical Properties -->
+      <!-- Physical Properties (both armor and shields) -->
       <h3>Physical Properties</h3>
       <div class="form-group-row">
         <div class="form-group">
@@ -126,10 +189,6 @@
         <div class="form-group">
           <label>Cost (gp)</label>
           <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
-        </div>
-        <div class="form-group">
-          <label>Quantity</label>
-          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
         </div>
       </div>
 
