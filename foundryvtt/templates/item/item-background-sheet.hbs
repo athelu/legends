@@ -2,14 +2,77 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Background Name"/></h1>
     </div>
   </header>
 
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
   <section class="sheet-body">
-    <div class="form-group">
-      <label>Description</label>
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <!-- Starting XP -->
+      <div class="form-group">
+        <label>Starting XP</label>
+        <input type="number" name="system.startingXP" value="{{system.startingXP}}" data-dtype="Number" min="0" />
+        <small>Amount of XP the character starts with from this background</small>
+      </div>
+
+      <!-- Skill Bonuses -->
+      <h3>Skill Bonuses</h3>
+      <div class="form-group">
+        <label>Trained Skills (comma-separated, format: skill_name:rank)</label>
+        <textarea name="system.skillBonuses" rows="3" placeholder="melee_combat:2, athletics:1, intimidate:1">{{system.skillBonuses}}</textarea>
+        <small>Example: melee_combat:2, athletics:1, intimidate:1</small>
+      </div>
+
+      <!-- Starting Equipment -->
+      <h3>Starting Equipment</h3>
+      <div class="form-group">
+        <label>Equipment List</label>
+        <textarea name="system.startingEquipment" rows="5" placeholder="List the starting equipment for this background, one item per line">{{system.startingEquipment}}</textarea>
+        <small>One item per line. Include quantities if applicable.</small>
+      </div>
+
+      <!-- Suggested Feats -->
+      <div class="form-group">
+        <label>Suggested Feats</label>
+        <textarea name="system.suggestedFeats" rows="3" placeholder="Feats that work well with this background">{{system.suggestedFeats}}</textarea>
+      </div>
+
+      <!-- Background Features -->
+      <div class="form-group">
+        <label>Special Features</label>
+        <textarea name="system.features" rows="4" placeholder="Any special abilities or features granted by this background">{{system.features}}</textarea>
+      </div>
+
+      <!-- Sample Names -->
+      <div class="form-group">
+        <label>Sample Names (optional)</label>
+        <textarea name="system.sampleNames" rows="2" placeholder="Appropriate names for characters with this background">{{system.sampleNames}}</textarea>
+      </div>
+
+      <!-- Characteristic Traits -->
+      <div class="form-group">
+        <label>Characteristic Traits</label>
+        <textarea name="system.traits" rows="3" placeholder="Personality traits, ideals, bonds, or flaws common to this background">{{system.traits}}</textarea>
+      </div>
+
+      <!-- Special Notes -->
+      <div class="form-group">
+        <label>Special Notes</label>
+        <textarea name="system.notes" rows="3" placeholder="Any additional information about this background">{{system.notes}}</textarea>
+      </div>
+
     </div>
   </section>
 </form>

@@ -2,14 +2,173 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Weapon Name"/></h1>
     </div>
   </header>
 
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
   <section class="sheet-body">
-    <div class="form-group">
-      <label>Description</label>
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <!-- Basic Info -->
+      <div class="form-group">
+        <label>Weapon Type</label>
+        <select name="system.weaponType">
+          <option value="simple" {{#if (eq system.weaponType "simple")}}selected{{/if}}>Simple</option>
+          <option value="martial" {{#if (eq system.weaponType "martial")}}selected{{/if}}>Martial</option>
+          <option value="exotic" {{#if (eq system.weaponType "exotic")}}selected{{/if}}>Exotic</option>
+        </select>
+      </div>
+
+      <!-- Damage -->
+      <h3>Damage</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Base Damage</label>
+          <input type="number" name="system.damage.base" value="{{system.damage.base}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Damage Type</label>
+          <select name="system.damage.type">
+            <option value="slashing" {{#if (eq system.damage.type "slashing")}}selected{{/if}}>Slashing</option>
+            <option value="piercing" {{#if (eq system.damage.type "piercing")}}selected{{/if}}>Piercing</option>
+            <option value="bludgeoning" {{#if (eq system.damage.type "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Versatile Damage (if applicable) -->
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Versatile Damage (two-handed)</label>
+          <input type="number" name="system.damage.versatile" value="{{system.damage.versatile}}" data-dtype="Number" min="0" placeholder="Optional" />
+        </div>
+      </div>
+
+      <!-- Alternate Strike (if applicable) -->
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Alternate Damage</label>
+          <input type="number" name="system.damage.alternate" value="{{system.damage.alternate}}" data-dtype="Number" min="0" placeholder="Optional" />
+        </div>
+        <div class="form-group">
+          <label>Alternate Damage Type</label>
+          <select name="system.damage.alternateType">
+            <option value="" {{#unless system.damage.alternateType}}selected{{/unless}}>None</option>
+            <option value="slashing" {{#if (eq system.damage.alternateType "slashing")}}selected{{/if}}>Slashing</option>
+            <option value="piercing" {{#if (eq system.damage.alternateType "piercing")}}selected{{/if}}>Piercing</option>
+            <option value="bludgeoning" {{#if (eq system.damage.alternateType "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Range (for ranged/thrown weapons) -->
+      <h3>Range</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Short Range</label>
+          <input type="number" name="system.range.short" value="{{system.range.short}}" data-dtype="Number" min="0" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Medium Range</label>
+          <input type="number" name="system.range.medium" value="{{system.range.medium}}" data-dtype="Number" min="0" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Long Range</label>
+          <input type="number" name="system.range.long" value="{{system.range.long}}" data-dtype="Number" min="0" placeholder="0" />
+        </div>
+      </div>
+
+      <!-- Properties -->
+      <h3>Properties</h3>
+      <div class="properties-grid">
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="light" {{#if (contains system.properties "light")}}checked{{/if}} />
+          Light
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="standard" {{#if (contains system.properties "standard")}}checked{{/if}} />
+          Standard
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="versatile" {{#if (contains system.properties "versatile")}}checked{{/if}} />
+          Versatile
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="two-handed" {{#if (contains system.properties "two-handed")}}checked{{/if}} />
+          Two-Handed
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="finesse" {{#if (contains system.properties "finesse")}}checked{{/if}} />
+          Finesse
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="alternate-strike" {{#if (contains system.properties "alternate-strike")}}checked{{/if}} />
+          Alternate-Strike
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="multi-type" {{#if (contains system.properties "multi-type")}}checked{{/if}} />
+          Multi-Type
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="ranged" {{#if (contains system.properties "ranged")}}checked{{/if}} />
+          Ranged
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="thrown" {{#if (contains system.properties "thrown")}}checked{{/if}} />
+          Thrown
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="reach" {{#if (contains system.properties "reach")}}checked{{/if}} />
+          Reach
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" name="system.properties" value="monk" {{#if (contains system.properties "monk")}}checked{{/if}} />
+          Monk
+        </label>
+      </div>
+
+      <!-- Physical Properties -->
+      <h3>Physical Properties</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Weight (lbs)</label>
+          <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Cost (gp)</label>
+          <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+
+      <!-- Equipped Status -->
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} />
+          Equipped
+        </label>
+      </div>
+
+      <!-- Notes -->
+      <div class="form-group">
+        <label>Notes</label>
+        <textarea name="system.notes" rows="3">{{system.notes}}</textarea>
+      </div>
+
     </div>
   </section>
 </form>

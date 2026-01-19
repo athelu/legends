@@ -2,14 +2,142 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Ancestry Name"/></h1>
     </div>
   </header>
 
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
   <section class="sheet-body">
-    <div class="form-group">
-      <label>Description</label>
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <!-- Size -->
+      <div class="form-group">
+        <label>Size</label>
+        <select name="system.size">
+          <option value="tiny" {{#if (eq system.size "tiny")}}selected{{/if}}>Tiny</option>
+          <option value="small" {{#if (eq system.size "small")}}selected{{/if}}>Small</option>
+          <option value="medium" {{#if (eq system.size "medium")}}selected{{/if}}>Medium</option>
+          <option value="large" {{#if (eq system.size "large")}}selected{{/if}}>Large</option>
+          <option value="huge" {{#if (eq system.size "huge")}}selected{{/if}}>Huge</option>
+        </select>
+      </div>
+
+      <!-- Speed -->
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Base Speed (ft)</label>
+          <input type="number" name="system.speed" value="{{system.speed}}" data-dtype="Number" min="0" placeholder="30" />
+        </div>
+      </div>
+
+      <!-- Attribute Bonuses -->
+      <h3>Attribute Bonuses</h3>
+      <div class="prerequisites-grid">
+        <div class="form-group">
+          <label>Strength</label>
+          <input type="number" name="system.bonuses.attributes.strength" value="{{system.bonuses.attributes.strength}}" data-dtype="Number" min="-2" max="2" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Constitution</label>
+          <input type="number" name="system.bonuses.attributes.constitution" value="{{system.bonuses.attributes.constitution}}" data-dtype="Number" min="-2" max="2" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Agility</label>
+          <input type="number" name="system.bonuses.attributes.agility" value="{{system.bonuses.attributes.agility}}" data-dtype="Number" min="-2" max="2" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Dexterity</label>
+          <input type="number" name="system.bonuses.attributes.dexterity" value="{{system.bonuses.attributes.dexterity}}" data-dtype="Number" min="-2" max="2" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Intelligence</label>
+          <input type="number" name="system.bonuses.attributes.intelligence" value="{{system.bonuses.attributes.intelligence}}" data-dtype="Number" min="-2" max="2" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Wisdom</label>
+          <input type="number" name="system.bonuses.attributes.wisdom" value="{{system.bonuses.attributes.wisdom}}" data-dtype="Number" min="-2" max="2" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Charisma</label>
+          <input type="number" name="system.bonuses.attributes.charisma" value="{{system.bonuses.attributes.charisma}}" data-dtype="Number" min="-2" max="2" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Luck</label>
+          <input type="number" name="system.bonuses.attributes.luck" value="{{system.bonuses.attributes.luck}}" data-dtype="Number" min="-2" max="2" placeholder="0" />
+        </div>
+      </div>
+
+      <!-- Ancestry Traits -->
+      <h3>Ancestry Traits</h3>
+      <div class="form-group">
+        <label>Racial Traits (comma-separated)</label>
+        <textarea name="system.traits" rows="3" placeholder="Darkvision, Stonecunning, Dwarven Resilience">{{system.traits}}</textarea>
+        <small>List the names of traits granted by this ancestry</small>
+      </div>
+
+      <!-- Languages -->
+      <div class="form-group">
+        <label>Languages</label>
+        <textarea name="system.languages" rows="2" placeholder="Common, Dwarvish">{{system.languages}}</textarea>
+      </div>
+
+      <!-- Special Abilities -->
+      <div class="form-group">
+        <label>Special Abilities</label>
+        <textarea name="system.specialAbilities" rows="5" placeholder="Describe any special abilities or features granted by this ancestry">{{system.specialAbilities}}</textarea>
+      </div>
+
+      <!-- Senses -->
+      <div class="form-group">
+        <label>Special Senses</label>
+        <input type="text" name="system.senses" value="{{system.senses}}" placeholder="Darkvision 60 ft" />
+      </div>
+
+      <!-- Lifespan -->
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Average Lifespan (years)</label>
+          <input type="number" name="system.lifespan" value="{{system.lifespan}}" data-dtype="Number" min="0" placeholder="80" />
+        </div>
+      </div>
+
+      <!-- Cultural Information -->
+      <h3>Cultural Information</h3>
+      <div class="form-group">
+        <label>Typical Alignment/Culture</label>
+        <textarea name="system.culture" rows="3" placeholder="Cultural norms and typical alignments">{{system.culture}}</textarea>
+      </div>
+
+      <!-- Physical Description -->
+      <div class="form-group">
+        <label>Physical Description</label>
+        <textarea name="system.physicalDescription" rows="4" placeholder="Typical height, weight, appearance, etc.">{{system.physicalDescription}}</textarea>
+      </div>
+
+      <!-- Requires Approval -->
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.requiresGMApproval" {{#if system.requiresGMApproval}}checked{{/if}} />
+          Requires GM Approval (e.g., Dwarf ancestry)
+        </label>
+      </div>
+
+      <!-- Special Notes -->
+      <div class="form-group">
+        <label>Special Notes</label>
+        <textarea name="system.notes" rows="3" placeholder="Any additional information about this ancestry">{{system.notes}}</textarea>
+      </div>
+
     </div>
   </section>
 </form>

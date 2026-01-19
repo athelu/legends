@@ -2,14 +2,135 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Feat Name"/></h1>
     </div>
   </header>
 
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
   <section class="sheet-body">
-    <div class="form-group">
-      <label>Description</label>
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
+      <div class="form-group">
+        <label>Flavor Text</label>
+        <textarea name="system.flavorText" rows="3" placeholder="Descriptive text about the feat">{{system.flavorText}}</textarea>
+      </div>
+      
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <!-- Basic Info -->
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Tier</label>
+          <input type="number" name="system.tier" value="{{system.tier}}" data-dtype="Number" min="1" max="8" />
+        </div>
+        <div class="form-group">
+          <label>XP Cost</label>
+          <input type="number" name="system.xpCost" value="{{system.xpCost}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+
+      <!-- Prerequisites -->
+      <h3>Prerequisites</h3>
+      
+      <!-- Attribute Prerequisites -->
+      <h4>Attributes</h4>
+      <div class="prerequisites-grid">
+        <div class="form-group">
+          <label>Strength</label>
+          <input type="number" name="system.prerequisites.attributes.strength" value="{{system.prerequisites.attributes.strength}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Constitution</label>
+          <input type="number" name="system.prerequisites.attributes.constitution" value="{{system.prerequisites.attributes.constitution}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Agility</label>
+          <input type="number" name="system.prerequisites.attributes.agility" value="{{system.prerequisites.attributes.agility}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Dexterity</label>
+          <input type="number" name="system.prerequisites.attributes.dexterity" value="{{system.prerequisites.attributes.dexterity}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Intelligence</label>
+          <input type="number" name="system.prerequisites.attributes.intelligence" value="{{system.prerequisites.attributes.intelligence}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Wisdom</label>
+          <input type="number" name="system.prerequisites.attributes.wisdom" value="{{system.prerequisites.attributes.wisdom}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Charisma</label>
+          <input type="number" name="system.prerequisites.attributes.charisma" value="{{system.prerequisites.attributes.charisma}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+        </div>
+        <div class="form-group">
+          <label>Luck</label>
+          <input type="number" name="system.prerequisites.attributes.luck" value="{{system.prerequisites.attributes.luck}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+        </div>
+      </div>
+
+      <!-- Skill Prerequisites -->
+      <h4>Skills</h4>
+      <div class="form-group">
+        <label>Required Skills (format: skill_name:rank, e.g., "melee_combat:5, athletics:3")</label>
+        <textarea name="system.prerequisites.skills" rows="2" placeholder="melee_combat:5, athletics:3">{{system.prerequisites.skills}}</textarea>
+      </div>
+
+      <!-- Other Prerequisites -->
+      <div class="form-group">
+        <label>Feat Prerequisites (comma-separated feat names)</label>
+        <input type="text" name="system.prerequisites.feats" value="{{system.prerequisites.feats}}" placeholder="Weapon Focus, Shield Mastery" />
+      </div>
+
+      <div class="form-group">
+        <label>Minimum Tier</label>
+        <input type="number" name="system.prerequisites.tier" value="{{system.prerequisites.tier}}" data-dtype="Number" min="0" max="8" placeholder="0" />
+      </div>
+
+      <div class="form-group">
+        <label>Other Prerequisites (text)</label>
+        <input type="text" name="system.prerequisites.other" value="{{system.prerequisites.other}}" placeholder="Must be a spellcaster" />
+      </div>
+
+      <!-- Benefits -->
+      <h3>Benefits</h3>
+      <div class="form-group">
+        <label>Mechanical Benefits</label>
+        <textarea name="system.benefits" rows="4" placeholder="Describe the mechanical benefits this feat provides">{{system.benefits}}</textarea>
+      </div>
+
+      <!-- Usage -->
+      <div class="form-group">
+        <label>Usage Type</label>
+        <select name="system.usageType">
+          <option value="passive" {{#if (eq system.usageType "passive")}}selected{{/if}}>Passive</option>
+          <option value="active" {{#if (eq system.usageType "active")}}selected{{/if}}>Active</option>
+          <option value="reaction" {{#if (eq system.usageType "reaction")}}selected{{/if}}>Reaction</option>
+          <option value="free" {{#if (eq system.usageType "free")}}selected{{/if}}>Free Action</option>
+          <option value="special" {{#if (eq system.usageType "special")}}selected{{/if}}>Special</option>
+        </select>
+      </div>
+
+      <!-- Keywords/Tags -->
+      <div class="form-group">
+        <label>Keywords (comma-separated)</label>
+        <input type="text" name="system.keywords" value="{{system.keywords}}" placeholder="[Combat], [Magic], [Skill]" />
+      </div>
+
+      <!-- Special Notes -->
+      <div class="form-group">
+        <label>Special Notes</label>
+        <textarea name="system.notes" rows="3" placeholder="Any special rules or clarifications">{{system.notes}}</textarea>
+      </div>
+
     </div>
   </section>
 </form>

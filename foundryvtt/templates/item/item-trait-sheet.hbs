@@ -2,14 +2,131 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Trait Name"/></h1>
     </div>
   </header>
 
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
   <section class="sheet-body">
-    <div class="form-group">
-      <label>Description</label>
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <!-- Basic Info -->
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Point Cost</label>
+          <input type="number" name="system.pointCost" value="{{system.pointCost}}" data-dtype="Number" />
+          <small>Negative values indicate this trait GRANTS points (advantages). Positive values indicate cost.</small>
+        </div>
+      </div>
+
+      <!-- Trait Type -->
+      <div class="form-group">
+        <label>Trait Type</label>
+        <select name="system.traitType">
+          <option value="magical" {{#if (eq system.traitType "magical")}}selected{{/if}}>Magical</option>
+          <option value="divine" {{#if (eq system.traitType "divine")}}selected{{/if}}>Divine</option>
+          <option value="physical" {{#if (eq system.traitType "physical")}}selected{{/if}}>Physical</option>
+          <option value="mental" {{#if (eq system.traitType "mental")}}selected{{/if}}>Mental</option>
+          <option value="social" {{#if (eq system.traitType "social")}}selected{{/if}}>Social</option>
+          <option value="luck" {{#if (eq system.traitType "luck")}}selected{{/if}}>Luck</option>
+          <option value="supernatural" {{#if (eq system.traitType "supernatural")}}selected{{/if}}>Supernatural</option>
+          <option value="background" {{#if (eq system.traitType "background")}}selected{{/if}}>Background</option>
+        </select>
+      </div>
+
+      <!-- Prerequisites -->
+      <h3>Prerequisites</h3>
+      <div class="form-group">
+        <label>Requirements</label>
+        <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="e.g., Intelligence ≥ 3, GM Approval" />
+      </div>
+
+      <!-- For Magical Traits -->
+      {{#if (eq system.traitType "magical")}}
+      <h3>Magical Properties</h3>
+      
+      <div class="form-group">
+        <label>Casting Stat</label>
+        <select name="system.castingStat">
+          <option value="" {{#unless system.castingStat}}selected{{/unless}}>None</option>
+          <option value="intelligence" {{#if (eq system.castingStat "intelligence")}}selected{{/if}}>Intelligence</option>
+          <option value="wisdom" {{#if (eq system.castingStat "wisdom")}}selected{{/if}}>Wisdom</option>
+          <option value="charisma" {{#if (eq system.castingStat "charisma")}}selected{{/if}}>Charisma</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Elemental Affinity</label>
+        <select name="system.elementalAffinity">
+          <option value="" {{#unless system.elementalAffinity}}selected{{/unless}}>None</option>
+          <option value="earth" {{#if (eq system.elementalAffinity "earth")}}selected{{/if}}>Earth</option>
+          <option value="air" {{#if (eq system.elementalAffinity "air")}}selected{{/if}}>Air</option>
+          <option value="fire" {{#if (eq system.elementalAffinity "fire")}}selected{{/if}}>Fire</option>
+          <option value="water" {{#if (eq system.elementalAffinity "water")}}selected{{/if}}>Water</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.grantsEnergyPool" {{#if system.grantsEnergyPool}}checked{{/if}} />
+          Grants Energy Pool
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.grantsMasterySkills" {{#if system.grantsMasterySkills}}checked{{/if}} />
+          Grants Mastery Skills (8 magical mastery skills)
+        </label>
+      </div>
+
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.grantsRitualCasting" {{#if system.grantsRitualCasting}}checked{{/if}} />
+          Grants Ritual Casting
+        </label>
+      </div>
+      {{/if}}
+
+      <!-- Visual Effects (for magical traits) -->
+      {{#if (eq system.traitType "magical")}}
+      <div class="form-group">
+        <label>Visual Effects</label>
+        <textarea name="system.visualEffects" rows="3" placeholder="Describe how this trait's magic appears">{{system.visualEffects}}</textarea>
+      </div>
+      {{/if}}
+
+      <!-- Benefits -->
+      <h3>Mechanical Benefits</h3>
+      <div class="form-group">
+        <label>Benefits</label>
+        <textarea name="system.benefits" rows="6" placeholder="Describe all mechanical benefits this trait provides">{{system.benefits}}</textarea>
+      </div>
+
+      <!-- GM Approval -->
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.requiresGMApproval" {{#if system.requiresGMApproval}}checked{{/if}} />
+          Requires GM Approval
+        </label>
+      </div>
+
+      <!-- Special Notes -->
+      <div class="form-group">
+        <label>Special Notes</label>
+        <textarea name="system.notes" rows="3" placeholder="Any additional rules or clarifications">{{system.notes}}</textarea>
+      </div>
+
     </div>
   </section>
 </form>
