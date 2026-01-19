@@ -158,16 +158,15 @@
     },
     "weapon": {
       "templates": ["common", "physical"],
-      "weaponType": "simple",
       "damage": {
         "base": 6,
         "type": "slashing",
-        "versatile": 0,
         "alternate": 0,
-        "alternateType": ""
+        "alternateType": "",
+        "multiType": ""
       },
       "range": {
-        "short": 0,
+        "normal": 0,
         "medium": 0,
         "long": 0
       },

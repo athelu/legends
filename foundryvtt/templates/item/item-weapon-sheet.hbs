@@ -4,22 +4,24 @@
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Weapon Name"/></h1>
       
-      <!-- Property Tags (only show if properties array has items) -->
-      <div class="weapon-tags">
-        {{#if (hasItems system.properties)}}
+      <!-- Property Tags - DYNAMICALLY BUILT, NO EMPTY BOXES -->
+      {{#if system.properties}}
+        {{#if system.properties.length}}
+        <div class="weapon-tags">
           {{#each system.properties as |prop|}}
           <span class="tag property-tag">{{uppercase prop}}</span>
           {{/each}}
+          
+          {{#if system.damage.type}}
+          <span class="tag damage-tag">{{uppercase system.damage.type}}</span>
+          {{/if}}
+          
+          {{#if (gt system.range.normal 0)}}
+          <span class="tag range-tag">{{system.range.normal}} FT</span>
+          {{/if}}
+        </div>
         {{/if}}
-        
-        {{#if system.damage.type}}
-        <span class="tag damage-tag">{{uppercase system.damage.type}}</span>
-        {{/if}}
-        
-        {{#if (gt system.range.normal 0)}}
-        <span class="tag range-tag">{{system.range.normal}} FT</span>
-        {{/if}}
-      </div>
+      {{/if}}
       
       <!-- Quick Summary Stats in Header -->
       <div class="weapon-summary-row">
@@ -94,10 +96,10 @@
         <ul>
           <li><strong>Margin 0 (Tie):</strong> Defender wins, no damage</li>
           <li><strong>Margin 1:</strong> Base weapon damage</li>
-          <li><strong>Margin 2:</strong> Base weapon damage + Attribute value</li>
-          <li><strong>Margin 3+ (Critical):</strong> Base weapon damage + Attribute value + Condition</li>
+          <li><strong>Margin 2:</strong> Base weapon damage + Ability value</li>
+          <li><strong>Margin 3+ (Critical):</strong> Base weapon damage + Ability value + Condition</li>
         </ul>
-        <p><small>Attribute value (Strength for melee, Dexterity for ranged. Strength for thrown).</small></p>
+        <p><small>Ability value depends on the weapon skill used (Ranged use Dexterity, melee use Strength, Thrown use Strength).</small></p>
       </div>
 
       <!-- Range (for ranged/thrown weapons) -->
@@ -153,7 +155,7 @@
             <input type="checkbox" name="system.properties" value="versatile" {{#if (contains system.properties "versatile")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Versatile</span>
-              <span class="property-desc">Base damage 8 (1H) or 9 (2H). Can use one or two hands.</span>
+              <span class="property-desc">Base damage 8 (1H) or 9 (2H). Can equip with one or two hands (tracked on actor).</span>
             </div>
           </label>
           
@@ -224,7 +226,7 @@
             <input type="checkbox" name="system.properties" value="alternate-strike" {{#if (contains system.properties "alternate-strike")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Alternate Strike</span>
-              <span class="property-desc">Can deal an alternate damage type (specify in notes).</span>
+              <span class="property-desc">Can deal an alternate damage type with different base damage.</span>
             </div>
           </label>
           
@@ -237,6 +239,46 @@
           </label>
         </div>
       </div>
+
+      <!-- Alternate Strike Details (conditional) -->
+      {{#if (contains system.properties "alternate-strike")}}
+      <div class="section-header">
+        <h3>Alternate Strike Details</h3>
+      </div>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Alternate Damage Type</label>
+          <select name="system.damage.alternateType">
+            <option value="" {{#unless system.damage.alternateType}}selected{{/unless}}>Select Type</option>
+            <option value="slashing" {{#if (eq system.damage.alternateType "slashing")}}selected{{/if}}>Slashing</option>
+            <option value="piercing" {{#if (eq system.damage.alternateType "piercing")}}selected{{/if}}>Piercing</option>
+            <option value="bludgeoning" {{#if (eq system.damage.alternateType "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Alternate Base Damage</label>
+          <input type="number" name="system.damage.alternate" value="{{system.damage.alternate}}" data-dtype="Number" min="0" placeholder="0" />
+          <small>Base damage when using alternate strike mode</small>
+        </div>
+      </div>
+      {{/if}}
+
+      <!-- Multi-Type Details (conditional) -->
+      {{#if (contains system.properties "multi-type")}}
+      <div class="section-header">
+        <h3>Multi-Type Details</h3>
+      </div>
+      <div class="form-group">
+        <label>Additional Damage Type</label>
+        <select name="system.damage.multiType">
+          <option value="" {{#unless system.damage.multiType}}selected{{/unless}}>Select Additional Type</option>
+          <option value="slashing" {{#if (eq system.damage.multiType "slashing")}}selected{{/if}}>Slashing</option>
+          <option value="piercing" {{#if (eq system.damage.multiType "piercing")}}selected{{/if}}>Piercing</option>
+          <option value="bludgeoning" {{#if (eq system.damage.multiType "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
+        </select>
+        <small>Weapon deals both primary and additional damage type simultaneously</small>
+      </div>
+      {{/if}}
 
       <!-- Physical Properties -->
       <div class="section-header">
@@ -256,14 +298,6 @@
           <label>Quantity</label>
           <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
         </div>
-      </div>
-
-      <!-- Equipped Status -->
-      <div class="form-group">
-        <label class="checkbox">
-          <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} />
-          <strong>Equipped</strong>
-        </label>
       </div>
 
       <!-- Additional Notes -->
