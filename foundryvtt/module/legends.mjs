@@ -103,16 +103,13 @@ export async function rollSkillCheck(actor, skillKey, options = {}) {
   const skill = actor.system.skills[skillKey];
   const attr = actor.system.attributes[skill.attr];
   
-  return dice.rollD8Check({
+  // Show roll dialog instead of rolling immediately
+  return dice.showRollDialog({
     actor,
     attrValue: attr.value,
     skillValue: skill.value,
     attrLabel: attr.label,
-    skillLabel: game.i18n.localize(`D8.Skills.${skillKey}`),
-    fortune: options.fortune || 0,
-    misfortune: options.misfortune || 0,
-    modifier: options.modifier || 0,
-    label: options.label
+    skillLabel: game.i18n.localize(`D8.Skills.${skillKey}`)
   });
 }
 

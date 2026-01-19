@@ -4,6 +4,350 @@
  */
 
 /**
+ * Show roll configuration dialog
+ * @param {Object} options - Roll options (actor, attrValue, skillValue, etc.)
+ * @returns {Promise<void>}
+ */
+async function showRollDialog(options) {
+  const { actor, attrValue, skillValue, attrLabel, skillLabel } = options;
+  
+  return new Promise((resolve) => {
+    new Dialog({
+      title: `Roll: ${skillLabel}`,
+      content: `
+        <form class="legends-roll-dialog">
+          <div class="form-group">
+            <label><strong>${attrLabel} ${attrValue} + ${skillLabel} ${skillValue}</strong></label>
+          </div>
+          
+          <div class="form-group">
+            <label>Modifier:</label>
+            <input type="number" name="modifier" value="0" step="1" style="width: 60px; text-align: center;"/>
+          </div>
+          
+          <div class="form-group" style="margin-left: 20px;">
+            <label>
+              <input type="checkbox" name="applyToAttr" checked/>
+              Apply to ${attrLabel} die
+            </label>
+          </div>
+          
+          <div class="form-group" style="margin-left: 20px;">
+            <label>
+              <input type="checkbox" name="applyToSkill" checked/>
+              Apply to ${skillLabel} die
+            </label>
+          </div>
+          
+          <hr style="margin: 15px 0;"/>
+          
+          <div class="form-group">
+            <p style="font-size: 12px; color: #666; margin: 0;">
+              <strong>Fortune:</strong> Roll 3d8, choose best 2 to assign<br/>
+              <strong>Misfortune:</strong> Roll 3d8, choose worst 2 to assign
+            </p>
+          </div>
+        </form>
+      `,
+      buttons: {
+        roll: {
+          icon: '<i class="fas fa-dice-d8"></i>',
+          label: "Roll",
+          callback: (html) => {
+            const modifier = parseInt(html.find('[name="modifier"]').val()) || 0;
+            const applyToAttr = html.find('[name="applyToAttr"]').is(':checked');
+            const applyToSkill = html.find('[name="applyToSkill"]').is(':checked');
+            
+            // Normal roll with modifiers
+            rollD8Check({
+              ...options,
+              modifier: modifier,
+              applyToAttr: applyToAttr,
+              applyToSkill: applyToSkill,
+              fortune: 0,
+              misfortune: 0
+            });
+            resolve();
+          }
+        },
+        fortune: {
+          icon: '<i class="fas fa-dice"></i>',
+          label: "Fortune",
+          callback: (html) => {
+            const modifier = parseInt(html.find('[name="modifier"]').val()) || 0;
+            const applyToAttr = html.find('[name="applyToAttr"]').is(':checked');
+            const applyToSkill = html.find('[name="applyToSkill"]').is(':checked');
+            
+            // Show dice assignment dialog for Fortune
+            showDiceAssignmentDialog({
+              ...options,
+              modifier: modifier,
+              applyToAttr: applyToAttr,
+              applyToSkill: applyToSkill,
+              isFortune: true
+            });
+            resolve();
+          }
+        },
+        misfortune: {
+          icon: '<i class="fas fa-dice"></i>',
+          label: "Misfortune",
+          callback: (html) => {
+            const modifier = parseInt(html.find('[name="modifier"]').val()) || 0;
+            const applyToAttr = html.find('[name="applyToAttr"]').is(':checked');
+            const applyToSkill = html.find('[name="applyToSkill"]').is(':checked');
+            
+            // Show dice assignment dialog for Misfortune
+            showDiceAssignmentDialog({
+              ...options,
+              modifier: modifier,
+              applyToAttr: applyToAttr,
+              applyToSkill: applyToSkill,
+              isFortune: false
+            });
+            resolve();
+          }
+        }
+      },
+      default: "roll",
+      close: () => resolve()
+    }, {
+      width: 400
+    }).render(true);
+  });
+}
+
+/**
+ * Show dice assignment dialog for Fortune/Misfortune
+ * @param {Object} options - Roll options including isFortune flag
+ * @returns {Promise<void>}
+ */
+async function showDiceAssignmentDialog(options) {
+  const { actor, attrLabel, skillLabel, isFortune } = options;
+  
+  // Roll 3d8
+  const roll = new Roll('3d8');
+  await roll.evaluate();
+  const results = roll.dice[0].results.map(r => r.result);
+  
+  // Sort to help player see best/worst options
+  const sorted = [...results].sort((a, b) => a - b);
+  const hint = isFortune 
+    ? `Best 2: ${sorted[0]}, ${sorted[1]}` 
+    : `Worst 2: ${sorted[1]}, ${sorted[2]}`;
+  
+  return new Promise((resolve) => {
+    new Dialog({
+      title: `${isFortune ? 'Fortune' : 'Misfortune'} - Assign Dice`,
+      content: `
+        <form class="legends-dice-assignment">
+          <div class="form-group">
+            <p style="margin-bottom: 10px;">
+              <strong>Rolled 3d8:</strong> ${results.join(', ')}
+            </p>
+            <p style="font-size: 12px; color: #666; margin-bottom: 15px;">
+              ${hint}
+            </p>
+          </div>
+          
+          <div class="form-group">
+            <label>Assign to ${attrLabel}:</label>
+            <select name="attrDie" style="width: 100%; padding: 5px;">
+              ${results.map((die, idx) => `<option value="${idx}">${die}</option>`).join('')}
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label>Assign to ${skillLabel}:</label>
+            <select name="skillDie" style="width: 100%; padding: 5px;">
+              ${results.map((die, idx) => `<option value="${idx}">${die}</option>`).join('')}
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <p style="font-size: 11px; color: #999; margin-top: 10px;">
+              Choose which 2 dice to use and assign them to attribute and skill.
+            </p>
+          </div>
+        </form>
+      `,
+      buttons: {
+        confirm: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Confirm Assignment",
+          callback: (html) => {
+            const attrIdx = parseInt(html.find('[name="attrDie"]').val());
+            const skillIdx = parseInt(html.find('[name="skillDie"]').val());
+            
+            if (attrIdx === skillIdx) {
+              ui.notifications.error("Must assign different dice to attribute and skill!");
+              return;
+            }
+            
+            const attrDie = results[attrIdx];
+            const skillDie = results[skillIdx];
+            
+            // Find the discarded die
+            const usedIndices = new Set([attrIdx, skillIdx]);
+            const discardedIdx = results.findIndex((_, idx) => !usedIndices.has(idx));
+            const discarded = results[discardedIdx];
+            
+            // Execute roll with assigned dice
+            rollD8CheckWithAssignedDice({
+              ...options,
+              attrDie: attrDie,
+              skillDie: skillDie,
+              discarded: discarded,
+              allResults: results,
+              fortune: isFortune ? 1 : 0,
+              misfortune: isFortune ? 0 : 1
+            });
+            resolve();
+          }
+        },
+        cancel: {
+          icon: '<i class="fas fa-times"></i>',
+          label: "Cancel",
+          callback: () => resolve()
+        }
+      },
+      default: "confirm"
+    }, {
+      width: 350
+    }).render(true);
+  });
+}
+
+/**
+ * Roll with pre-assigned dice (for Fortune/Misfortune)
+ * @param {Object} options - Roll options with assigned dice
+ */
+async function rollD8CheckWithAssignedDice(options) {
+  const {
+    actor,
+    attrValue,
+    skillValue,
+    attrLabel,
+    skillLabel,
+    attrDie,
+    skillDie,
+    discarded,
+    allResults,
+    modifier = 0,
+    applyToAttr = true,
+    applyToSkill = true,
+    fortune = 0,
+    misfortune = 0,
+    isSave = false
+  } = options;
+  
+  // Apply modifiers based on checkboxes
+  const attrModifier = applyToAttr ? modifier : 0;
+  const skillModifier = applyToSkill ? modifier : 0;
+  
+  const modifiedAttrDie = attrDie + attrModifier;
+  const modifiedSkillDie = skillDie + skillModifier;
+  
+  // Count successes
+  let successes = 0;
+  
+  if (attrDie === 1) {
+    successes++;
+  } else if (attrDie !== 8 && modifiedAttrDie < attrValue) {
+    successes++;
+  }
+  
+  if (skillDie === 1) {
+    successes++;
+  } else if (skillDie !== 8 && modifiedSkillDie < skillValue) {
+    successes++;
+  }
+  
+  // Critical success/failure
+  const criticalSuccess = (attrDie === 1 && skillDie === 1);
+  if (criticalSuccess) {
+    successes = Math.max(successes, 3);
+  }
+  
+  const criticalFailure = (attrDie === 8 && skillDie === 8);
+  if (criticalFailure) {
+    successes = 0;
+  }
+  
+  // Create message data
+  const messageData = {
+    actor: actor,
+    actorId: actor.id,
+    attrValue: attrValue,
+    skillValue: skillValue,
+    attrLabel: attrLabel,
+    skillLabel: skillLabel,
+    originalAttrDie: attrDie,
+    originalSkillDie: skillDie,
+    currentAttrDie: attrDie,
+    currentSkillDie: skillDie,
+    modifier: modifier,
+    fortune: fortune,
+    misfortune: misfortune,
+    netFortune: fortune,
+    netMisfortune: misfortune,
+    discarded: discarded,
+    isSave: isSave,
+    luckSpent: 0,
+    allResults: allResults
+  };
+  
+  // Render and create message (same as rollD8Check)
+  const content = await renderRollResult(messageData);
+  const serializableData = {
+    actorId: actor.id,
+    attrValue: attrValue,
+    skillValue: skillValue,
+    attrLabel: attrLabel,
+    skillLabel: skillLabel,
+    originalAttrDie: attrDie,
+    originalSkillDie: skillDie,
+    currentAttrDie: attrDie,
+    currentSkillDie: skillDie,
+    modifier: modifier,
+    fortune: fortune,
+    misfortune: misfortune,
+    netFortune: fortune,
+    netMisfortune: misfortune,
+    discarded: discarded,
+    isSave: isSave,
+    luckSpent: 0,
+    allResults: allResults
+  };
+  
+  const message = await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: content,
+    flags: {
+      'legends.rollData': serializableData
+    }
+  });
+  
+  // Handle critical success
+  if (criticalSuccess) {
+    const maxLuck = actor.system.attributes.luck.value;
+    await actor.update({ 'system.luck.current': maxLuck });
+    
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<div class="d8-luck-restore">${actor.name}'s Luck restored to ${maxLuck}!</div>`
+    });
+  }
+  
+  return {
+    message: message,
+    successes,
+    criticalSuccess,
+    criticalFailure
+  };
+}
+
+/**
  * Roll a standard D8 check (attribute + skill)
  * @param {Object} options - Rolling options
  * @returns {Object} Roll result with successes
@@ -89,8 +433,9 @@ export async function rollD8Check(options = {}) {
   }
   
 // Store roll data for interactive luck spending
+// Store roll data for rendering (includes actor object)
   const messageData = {
-    actor: actor,        // Keep for initial render
+    actor: actor,
     actorId: actor.id,
     attrValue: attrValue,
     skillValue: skillValue,
@@ -113,18 +458,41 @@ export async function rollD8Check(options = {}) {
   
   // Render the chat card
   const content = await renderRollResult(messageData);
-
-  // Create a clean copy without the actor object for serialization
-  const { actor: _, ...serializableData } = messageData;
   
-  // Create chat message with stored data
+  // Create serializable data WITHOUT actor object
+  const serializableData = {
+    actorId: actor.id,
+    attrValue: attrValue,
+    skillValue: skillValue,
+    attrLabel: attrLabel,
+    skillLabel: skillLabel,
+    originalAttrDie: attrDie,
+    originalSkillDie: skillDie,
+    currentAttrDie: attrDie,
+    currentSkillDie: skillDie,
+    modifier: modifier,
+    fortune: fortune,
+    misfortune: misfortune,
+    netFortune: netFortune,
+    netMisfortune: netMisfortune,
+    discarded: (netFortune > 0 || netMisfortune > 0) ? results[2] : null,
+    isSave: isSave,
+    luckSpent: 0,
+    allResults: results
+  };
+ 
+  console.log("Serializable Data:", serializableData);
+
+  // Create chat message with serializable data
   const message = await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
     content: content,
     flags: {
-      'legends.rollData': serializableData  // ← FIX: save without actor object
+      'legends.rollData': serializableData
     }
   });
+
+  console.log("Message saved, flags are:", message.flags);
   
   // Handle critical success - restore luck
   const result = calculateSuccesses(messageData);
@@ -395,7 +763,7 @@ export async function rollWeaveCheck(options = {}) {
   
   return `
     <div class="d8-roll ${critClass}">
-      <h3>${attrLabel} + ${skillLabel} ${isSave ? '(Save)' : ''}</h3>
+      <h3>${skillLabel}${isSave ? ' Save' : ''}</h3>
       <div class="dice-results">
         <div class="die-result">
           <span class="die-label">${attrLabel} (${attrValue})</span>
@@ -491,7 +859,7 @@ export async function spendLuckOnRoll(messageId, target) {
   const message = game.messages.get(messageId);
   if (!message) return;
   
-  const rollData = message.flags['legends.rollData'];
+  const rollData = message.flags.legends?.rollData;
   if (!rollData) return;
   
   const actor = game.actors.get(rollData.actorId);
