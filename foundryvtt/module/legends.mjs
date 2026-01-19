@@ -218,7 +218,6 @@ export async function rollWeave(actor, weave) {
     supportingMastery
   });
 }
-
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */
 /* -------------------------------------------- */
@@ -240,11 +239,42 @@ function registerHandlebarsHelpers() {
   Handlebars.registerHelper('eq', function(a, b) {
     return a === b;
   });
-
+  
+  // Check if an array contains a value
   Handlebars.registerHelper('contains', function(array, value) {
-   if (!array) return false;
-   if (!Array.isArray(array)) return false;
-   return array.includes(value);
+    if (!array) return false;
+    if (!Array.isArray(array)) return false;
+    return array.includes(value);
+  });
+  
+  // Capitalize first letter of each word
+  Handlebars.registerHelper('capitalize', function(str) {
+    if (!str) return '';
+    return str.split(' ').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    ).join(' ');
+  });
+  
+  // Uppercase entire string
+  Handlebars.registerHelper('uppercase', function(str) {
+    if (!str) return '';
+    return str.toUpperCase();
+  });
+  
+  // Greater than comparison
+  Handlebars.registerHelper('gt', function(a, b) {
+    return a > b;
+  });
+  
+  // Less than comparison
+  Handlebars.registerHelper('lt', function(a, b) {
+    return a < b;
+  });
+  
+  // Lookup value in object
+  Handlebars.registerHelper('lookup', function(obj, key) {
+    if (!obj) return '';
+    return obj[key] || '';
   });
   
   Handlebars.registerHelper('add', function(a, b) {
@@ -255,6 +285,7 @@ function registerHandlebarsHelpers() {
     return a - b;
   });
 }
+
 
 /* -------------------------------------------- */
 /*  Macro Functions                             */
