@@ -4,11 +4,13 @@
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Weapon Name"/></h1>
       
-      <!-- Property Tags (dynamically shown based on checkboxes) -->
+      <!-- Property Tags (only show if properties exist) -->
       <div class="weapon-tags">
-        {{#each system.properties as |prop|}}
-        <span class="tag property-tag">{{uppercase prop}}</span>
-        {{/each}}
+        {{#if system.properties}}
+          {{#each system.properties as |prop|}}
+          <span class="tag property-tag">{{uppercase prop}}</span>
+          {{/each}}
+        {{/if}}
         
         {{#if system.damage.type}}
         <span class="tag damage-tag">{{uppercase system.damage.type}}</span>
@@ -34,6 +36,11 @@
         <div class="summary-stat">
           <label>Cost</label>
           <span class="value">{{system.cost}} gp</span>
+        </div>
+        
+        <div class="summary-stat">
+          <label>Quantity</label>
+          <span class="value">{{system.quantity}}</span>
         </div>
         
         {{#if (gt system.range.normal 0)}}
@@ -68,8 +75,9 @@
       
       <div class="form-group-row">
         <div class="form-group">
-          <label>Base Damage</label>
+          <label>Base Damage (Static)</label>
           <input type="number" name="system.damage.base" value="{{system.damage.base}}" data-dtype="Number" min="0" />
+          <small>Light: 4, Standard: 6, Heavy 1H: 8, Two-Handed: 10</small>
         </div>
         <div class="form-group">
           <label>Damage Type</label>
@@ -81,12 +89,15 @@
         </div>
       </div>
 
-      <div class="form-group-row">
-        <div class="form-group">
-          <label>Critical Damage Bonus</label>
-          <input type="number" name="system.damage.critical" value="{{system.damage.critical}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>Additional damage on critical hits</small>
-        </div>
+      <div class="damage-explanation">
+        <h4>Damage Resolution (Opposed Rolls)</h4>
+        <ul>
+          <li><strong>Margin 0 (Tie):</strong> Defender wins, no damage</li>
+          <li><strong>Margin 1:</strong> Base weapon damage</li>
+          <li><strong>Margin 2:</strong> Base weapon damage + Strength modifier</li>
+          <li><strong>Margin 3+ (Critical):</strong> Maximum damage (base + Strength)</li>
+        </ul>
+        <p><small>Ranged attacks use similar margin system with Dexterity modifier instead of Strength.</small></p>
       </div>
 
       <!-- Range (for ranged/thrown weapons) -->
@@ -96,16 +107,19 @@
       
       <div class="form-group-row">
         <div class="form-group">
-          <label>Normal Range</label>
+          <label>Short Range</label>
           <input type="number" name="system.range.normal" value="{{system.range.normal}}" data-dtype="Number" min="0" placeholder="0" />
+          <small>1 success needed for base damage</small>
         </div>
         <div class="form-group">
           <label>Medium Range</label>
           <input type="number" name="system.range.medium" value="{{system.range.medium}}" data-dtype="Number" min="0" placeholder="0" />
+          <small>2 successes needed</small>
         </div>
         <div class="form-group">
           <label>Long Range</label>
           <input type="number" name="system.range.long" value="{{system.range.long}}" data-dtype="Number" min="0" placeholder="0" />
+          <small>2 successes, +1 to both dice</small>
         </div>
       </div>
 
@@ -123,7 +137,7 @@
             <input type="checkbox" name="system.properties" value="light" {{#if (contains system.properties "light")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Light</span>
-              <span class="property-desc">Can dual wield without penalty. Use d6 for attacks.</span>
+              <span class="property-desc">Base damage 4. Can dual wield without penalty.</span>
             </div>
           </label>
           
@@ -131,7 +145,7 @@
             <input type="checkbox" name="system.properties" value="standard" {{#if (contains system.properties "standard")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Standard</span>
-              <span class="property-desc">Normal one-handed weapon. Use d8 for attacks.</span>
+              <span class="property-desc">Base damage 6. Normal one-handed weapon.</span>
             </div>
           </label>
           
@@ -139,7 +153,7 @@
             <input type="checkbox" name="system.properties" value="versatile" {{#if (contains system.properties "versatile")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Versatile</span>
-              <span class="property-desc">Can use one or two hands. Use d8 (1H) or d10 (2H).</span>
+              <span class="property-desc">Base damage 8 (1H) or 10 (2H). Can use one or two hands.</span>
             </div>
           </label>
           
@@ -147,7 +161,7 @@
             <input type="checkbox" name="system.properties" value="two-handed" {{#if (contains system.properties "two-handed")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Two-Handed</span>
-              <span class="property-desc">Requires both hands. Use d10 for attacks.</span>
+              <span class="property-desc">Base damage 10. Requires both hands.</span>
             </div>
           </label>
         </div>
