@@ -66,7 +66,7 @@ Hooks.once('init', async function() {
   ]);
   // Register Handlebars helpers
   registerHandlebarsHelpers();
-  
+   
   // Initialize luck spending handlers
   dice.initializeLuckHandlers();
 });

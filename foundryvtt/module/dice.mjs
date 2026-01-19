@@ -1,5 +1,5 @@
 /**
- * D8 TTRPG Dice Rolling Functions
+ * Legends D8 TTRPG Dice Rolling Functions
  * Implements the roll-under 2d8 success counting system
  */
 
@@ -91,6 +91,7 @@ export async function rollD8Check(options = {}) {
 // Store roll data for interactive luck spending
   const messageData = {
     actor: actor,
+    actorId: actor.id,
     attrValue: attrValue,
     skillValue: skillValue,
     attrLabel: attrLabel,
@@ -309,11 +310,9 @@ export async function rollWeaveCheck(options = {}) {
     supportingSuccesses
   };
 }
-
-/**
- * Render a skill check result
- */
-async function renderRollResult(data) {
+// Render a skill check result
+ async function renderRollResult(data) {
+  // Extract values from data object
   const {
     attrLabel,
     skillLabel,
@@ -333,37 +332,78 @@ async function renderRollResult(data) {
     discarded
   } = data;
   
+  // Get actor - handle both full actor object and actorId
+  const actor = data.actor ? data.actor : game.actors.get(data.actorId);
+  const currentLuck = actor.system.luck?.current ?? actor.system.attributes.luck.value;
+  
+  // ... rest of function stays the same
+  
   // Calculate current results
   const result = calculateSuccesses(data);
   const { successes, criticalSuccess, criticalFailure } = result;
   const modifiedAttrDie = currentAttrDie + modifier;
   const modifiedSkillDie = currentSkillDie + modifier;
   
-  const fortuneText = data.fortune > 0 ? `<span class="fortune">Fortune (${data.fortune})</span>` : '';
-  const misfortuneText = data.misfortune > 0 ? `<span class="misfortune">Misfortune (${data.misfortune})</span>` : '';
-  const modifierText = data.modifier !== 0 ? `<span class="modifier">Modifier: ${data.modifier > 0 ? '+' : ''}${data.modifier}</span>` : '';
+  const fortuneText = netFortune > 0 ? `<span class="fortune">Fortune (${netFortune})</span>` : '';
+  const misfortuneText = netMisfortune > 0 ? `<span class="misfortune">Misfortune (${netMisfortune})</span>` : '';
+  const modifierText = modifier !== 0 ? `<span class="modifier">Modifier: ${modifier > 0 ? '+' : ''}${modifier}</span>` : '';
   
-  const critClass = data.criticalSuccess ? 'critical-success' : (data.criticalFailure ? 'critical-failure' : '');
+  const critClass = criticalSuccess ? 'critical-success' : (criticalFailure ? 'critical-failure' : '');
   
   let allDiceText = '';
-  if (data.allResults.length > 2) {
-    allDiceText = `<div class="all-dice">All rolls: ${data.allResults.join(', ')}</div>`;
+  if (allResults && allResults.length > 2) {
+    allDiceText = `<div class="all-dice">All rolls: ${allResults.join(', ')}</div>`;
+  }
+
+  // Luck spending UI
+  let luckSpentText = '';
+  if (data.luckSpent > 0) {
+    luckSpentText = `<div class="luck-spent"><i class="fas fa-coins"></i> Luck Spent: ${data.luckSpent}</div>`;
+  }
+  
+  // Luck restore notification
+  let luckRestoreText = '';
+  if (criticalSuccess) {
+    luckRestoreText = '<div class="luck-restore"><i class="fas fa-star"></i> All Luck Restored!</div>';
+  }
+  
+  // Show luck spending buttons only if player has luck and can reduce dice
+  const canSpendOnAttr = currentLuck > data.luckSpent && currentAttrDie > 1 && originalAttrDie !== 1 && originalAttrDie !== 8;
+  const canSpendOnSkill = currentLuck > data.luckSpent && currentSkillDie > 1 && originalSkillDie !== 1 && originalSkillDie !== 8;
+  
+  let luckButtons = '';
+  if (canSpendOnAttr || canSpendOnSkill) {
+    luckButtons = `
+      <div class="luck-spending">
+        <div class="luck-header">
+          <strong>Spend Luck?</strong> (Current: ${currentLuck})
+        </div>
+        <div class="luck-buttons">
+          ${canSpendOnAttr ? `<button class="spend-luck-btn" data-target="attr" data-message-id="{{messageId}}">
+            <i class="fas fa-arrow-down"></i> Reduce ${attrLabel} die (${currentAttrDie} → ${currentAttrDie - 1})
+          </button>` : ''}
+          ${canSpendOnSkill ? `<button class="spend-luck-btn" data-target="skill" data-message-id="{{messageId}}">
+            <i class="fas fa-arrow-down"></i> Reduce ${skillLabel} die (${currentSkillDie} → ${currentSkillDie - 1})
+          </button>` : ''}
+        </div>
+      </div>
+    `;
   }
   
   return `
     <div class="d8-roll ${critClass}">
-      <h3>${data.attrLabel} + ${data.skillLabel} ${data.isSave ? '(Save)' : ''}</h3>
+      <h3>${attrLabel} + ${skillLabel} ${isSave ? '(Save)' : ''}</h3>
       <div class="dice-results">
         <div class="die-result">
-          <span class="die-label">${data.attrLabel} (${data.attrValue})</span>
-          <span class="die-value ${data.rawAttrDie === 1 ? 'natural-one' : data.rawAttrDie === 8 ? 'natural-eight' : ''}">
-            ${data.attrDie}${data.rawAttrDie !== data.attrDie ? ` (${data.rawAttrDie})` : ''}
+          <span class="die-label">${attrLabel} (${attrValue})</span>
+          <span class="die-value ${originalAttrDie === 1 ? 'natural-one' : originalAttrDie === 8 ? 'natural-eight' : ''}">
+            ${currentAttrDie}${currentAttrDie !== originalAttrDie ? ` (was ${originalAttrDie})` : ''}
           </span>
         </div>
         <div class="die-result">
-          <span class="die-label">${data.skillLabel} (${data.skillValue})</span>
-          <span class="die-value ${data.rawSkillDie === 1 ? 'natural-one' : data.rawSkillDie === 8 ? 'natural-eight' : ''}">
-            ${data.skillDie}${data.rawSkillDie !== data.skillDie ? ` (${data.rawSkillDie})` : ''}
+          <span class="die-label">${skillLabel} (${skillValue})</span>
+          <span class="die-value ${originalSkillDie === 1 ? 'natural-one' : originalSkillDie === 8 ? 'natural-eight' : ''}">
+            ${currentSkillDie}${currentSkillDie !== originalSkillDie ? ` (was ${originalSkillDie})` : ''}
           </span>
         </div>
       </div>
@@ -373,19 +413,20 @@ async function renderRollResult(data) {
         ${misfortuneText}
         ${modifierText}
       </div>
-      <div class="successes ${data.criticalSuccess ? 'critical' : ''}">
-        <strong>Successes:</strong> ${data.successes}
-        ${data.criticalSuccess ? '<span class="crit-text">CRITICAL SUCCESS!</span>' : ''}
-        ${data.criticalFailure ? '<span class="crit-text">CRITICAL FAILURE!</span>' : ''}
+      <div class="successes ${criticalSuccess ? 'critical' : ''}">
+        <strong>Successes:</strong> ${successes}
+        ${criticalSuccess ? '<span class="crit-text">CRITICAL SUCCESS!</span>' : ''}
+        ${criticalFailure ? '<span class="crit-text">CRITICAL FAILURE!</span>' : ''}
       </div>
+      ${luckRestoreText}
+      ${luckSpentText}
+      ${luckButtons}
     </div>
   `;
 }
 
-/**
- * Render a weave result
- */
-async function renderWeaveResult(data) {
+// Render a weave result
+ async function renderWeaveResult(data) {
   const primaryOverspendText = data.primaryOverspend > 0 ? 
     `<span class="overspend">Overspending: +${data.primaryOverspend} to dice</span>` : '';
   const supportingOverspendText = data.supportingOverspend > 0 ? 
@@ -437,4 +478,73 @@ async function renderWeaveResult(data) {
       </div>
     </div>
   `;
+}
+/**
+ * Handle spending luck on a roll
+ * @param {string} messageId - Chat message ID
+ * @param {string} target - Which die to reduce ('attr' or 'skill')
+ */
+export async function spendLuckOnRoll(messageId, target) {
+  const message = game.messages.get(messageId);
+  if (!message) return;
+  
+  const rollData = message.flags['legends.rollData'];
+  if (!rollData) return;
+  
+  const actor = game.actors.get(rollData.actorId);
+  if (!actor) return;
+  
+  // Check if actor has luck
+  const currentLuck = actor.system.luck?.current ?? actor.system.attributes.luck.value;
+  if (currentLuck < 1) {
+    ui.notifications.warn("Not enough Luck!");
+    return;
+  }
+  
+  // Determine which die to reduce
+  if (target === 'attr') {
+    if (rollData.currentAttrDie <= 1 || rollData.originalAttrDie === 1 || rollData.originalAttrDie === 8) {
+      ui.notifications.warn("Cannot reduce this die further!");
+      return;
+    }
+    rollData.currentAttrDie -= 1;
+  } else if (target === 'skill') {
+    if (rollData.currentSkillDie <= 1 || rollData.originalSkillDie === 1 || rollData.originalSkillDie === 8) {
+      ui.notifications.warn("Cannot reduce this die further!");
+      return;
+    }
+    rollData.currentSkillDie -= 1;
+  }
+  
+  rollData.luckSpent += 1;
+  
+  // Update actor's luck
+  await actor.update({ 'system.luck.current': currentLuck - 1 });
+  
+  // Re-render the message
+  const newContent = await renderRollResult(rollData);
+  await message.update({
+    content: newContent.replace('{{messageId}}', messageId),
+    flags: {
+      'legends.rollData': rollData
+    }
+  });
+  
+  ui.notifications.info(`Spent 1 Luck. ${currentLuck - 1} remaining.`);
+}
+
+/**
+ * Initialize luck spending button handlers
+ */
+export function initializeLuckHandlers() {
+  Hooks.on('renderChatMessage', (message, html, data) => {
+    html.find('.spend-luck-btn').click(async (event) => {
+      event.preventDefault();
+      const button = event.currentTarget;
+      const target = button.dataset.target;
+      const messageId = message.id;
+      
+      await spendLuckOnRoll(messageId, target);
+    });
+  });
 }
