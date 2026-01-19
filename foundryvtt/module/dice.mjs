@@ -90,7 +90,7 @@ export async function rollD8Check(options = {}) {
   
 // Store roll data for interactive luck spending
   const messageData = {
-    actor: actor,
+    actor: actor,        // Keep for initial render
     actorId: actor.id,
     attrValue: attrValue,
     skillValue: skillValue,
@@ -113,13 +113,16 @@ export async function rollD8Check(options = {}) {
   
   // Render the chat card
   const content = await renderRollResult(messageData);
+
+  // Create a clean copy without the actor object for serialization
+  const { actor: _, ...serializableData } = messageData;
   
   // Create chat message with stored data
   const message = await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
     content: content,
     flags: {
-      'legends.rollData': messageData
+      'legends.rollData': serializableData  // ← FIX: save without actor object
     }
   });
   
