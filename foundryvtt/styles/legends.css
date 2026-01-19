@@ -1,158 +1,419 @@
-/* D8 TTRPG System Styles - Clean Two-Column Layout */
+/* ========================================
+   LEGENDS TTRPG SYSTEM - CLEAN CSS
+   Duplicates removed, conflicts resolved
+   ======================================== */
 
-/* === Color Palette === */
+/* === CSS Variables === */
 :root {
-  --d8-primary: #4a5568;
-  --d8-secondary: #718096;
-  --d8-accent: #3182ce;
-  --d8-success: #38a169;
-  --d8-danger: #e53e3e;
-  --d8-warning: #d69e2e;
-  --d8-bg: #f7f4ed;
-  --d8-bg-light: #ffffff;
-  --d8-text: #392300;
-  --d8-border: #392300;
-  --d8-gold: #b8860b;
+  --d8-primary: #8B4513;
+  --d8-secondary: #CD853F;
+  --d8-accent: #D2691E;
+  --d8-gold: #DAA520;
+  --d8-bg: #F5DEB3;
+  --d8-bg-light: #FAF0E6;
+  --d8-text: #2C1810;
+  --d8-border: #8B7355;
 }
 
-/* === Window Styling === */
-.legends.sheet {
-  font-family: "Signika", "Trebuchet MS", sans-serif;
+/* === Base Sheet Styles === */
+.legends {
+  font-family: "Signika", sans-serif;
   background: var(--d8-bg);
   color: var(--d8-text);
-  height: 100%;
 }
 
 .legends .window-content {
   background: var(--d8-bg);
   padding: 0;
-  height: 100%;
 }
 
-.legends.sheet form {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* === Sheet Header === */
 .legends .sheet-header {
-  background: var(--d8-bg-light);
-  border-bottom: 2px solid var(--d8-border);
-  padding: 10px 20px;
-  flex: 0 0 auto;
-}
-
-.legends .header-info {
-  max-width: 900px;
-  margin: 0 auto;
-  background: var(--d8-bg-light);
-}
-
-.legends .info-line {
+  background: linear-gradient(to bottom, var(--d8-primary), var(--d8-accent));
+  color: white;
+  padding: 15px;
+  border-bottom: 3px solid var(--d8-gold);
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 5px;
+  gap: 15px;
 }
 
-.legends .info-line label {
-  font-weight: bold;
-  min-width: 100px;
-  font-size: 13px;
-}
-
-.legends .info-line input[type="text"],
-.legends .info-line input[type="number"] {
-  flex: 1;
-  border: none;
-  border-bottom: 1px solid var(--d8-border);
-  background: transparent;
-  padding: 3px;
-  font-size: 13px;
-}
-
-.legends .info-line input[name="name"] {
-  font-size: 16px;
-  font-weight: bold;
-  border-bottom: 2px solid var(--d8-border);
-}
-
-.legends .tier-display {
-  font-weight: bold;
-  color: var(--d8-accent);
-  font-size: 14px;
-}
-
-.legends .xp-label {
-  font-weight: bold;
-  margin-left: 15px;
-  min-width: auto;
-  font-size: 13px;
-}
-
-.legends .xp-input {
-  width: 80px;
-  flex: 0 0 80px;
-}
-
-/* === Tabs === */
-.legends .tabs {
-  height: 32px;
-  border-bottom: 2px solid var(--d8-border);
-  display: flex;
-  background: var(--d8-bg-light);
-  flex: 0 0 auto;
-}
-
-.legends .tabs .item {
-  flex: 1;
-  text-align: center;
-  padding: 6px 8px;
-  border-bottom: 3px solid transparent;
-  color: var(--d8-secondary);
+.legends .sheet-header .profile-img {
+  border: 3px solid var(--d8-gold);
+  border-radius: 4px;
   cursor: pointer;
-  transition: all 0.2s;
+}
+
+.legends .sheet-header input {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.legends .sheet-tabs {
+  flex: 0 0 40px;
+  border-bottom: 2px solid var(--d8-border);
+  background: var(--d8-bg-light);
+}
+
+.legends .sheet-tabs .item {
+  padding: 10px 20px;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 11px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
 }
 
-.legends .tabs .item.active {
-  border-bottom-color: var(--d8-gold);
-  color: var(--d8-text);
-  background: var(--d8-bg);
+.legends .sheet-tabs .item:hover {
+  background: rgba(139, 69, 19, 0.1);
 }
 
-.legends .tabs .item:hover {
-  color: var(--d8-text);
+.legends .sheet-tabs .item.active {
+  background: linear-gradient(to bottom, #4a5568, #2d3748);
+  color: #fff;
+  border-bottom: 3px solid var(--d8-gold);
 }
 
-/* === Sheet Body === */
 .legends .sheet-body {
   flex: 1;
+  overflow: hidden;
+}
+
+.legends .tab {
+  padding: 10px;
   overflow-y: auto;
+  height: 100%;
 }
 
-.legends .sheet-body .tab {
-  padding: 15px;
-  display: none;
+.legends .tab.description {
+  padding: 0;
 }
 
-.legends .sheet-body .tab.active {
+/* === Form Elements === */
+.legends .form-group {
+  margin-bottom: 10px;
+}
+
+.legends .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #2d3748;
+  font-size: 12px;
+}
+
+.legends .form-group small {
+  display: block;
+  color: #718096;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+.legends .form-group input[type="number"],
+.legends .form-group input[type="text"],
+.legends .form-group select,
+.legends .form-group textarea {
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid #cbd5e0;
+  border-radius: 3px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 13px;
+}
+
+.legends .form-group input:focus,
+.legends .form-group select:focus,
+.legends .form-group textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.legends .form-group-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.legends .form-group-row .form-group {
+  flex: 1;
+}
+
+/* === Section Headers === */
+.legends .section-header {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.legends .section-header:first-child {
+  margin-top: 0;
+}
+
+.legends .section-header h3 {
+  margin: 0;
+  padding: 6px 10px;
+  background: linear-gradient(to bottom, #4a5568, #2d3748);
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* === Checkbox Labels === */
+.legends label.checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.legends label.checkbox input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.legends label.checkbox strong {
+  font-size: 14px;
+  color: #2d3748;
+}
+
+/* ========================================
+   WEAPON SHEET SPECIFIC
+   ======================================== */
+
+/* Header for Weapons */
+.legends.sheet.item .sheet-header {
+  flex: 0 0 auto;
+  padding: 10px;
+  border-bottom: 2px solid #7a7971;
+}
+
+.legends.sheet.item .header-fields {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.legends.sheet.item .charname {
+  margin: 0;
+}
+
+.legends.sheet.item .charname input {
+  font-size: 24px;
+  font-weight: bold;
+  border: none;
+  background: transparent;
+  width: 100%;
+}
+
+/* Visual Tags in Header */
+.legends.sheet .weapon-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 8px 0;
+  min-height: 24px;
+}
+
+.legends.sheet .weapon-tags .tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  color: #fff;
+  background: #666;
+  border: 1px solid #444;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.legends.sheet .weapon-tags .tag.property-tag {
+  background: linear-gradient(to bottom, #4299e1, #3182ce);
+  border-color: #2c5282;
+}
+
+.legends.sheet .weapon-tags .tag.damage-tag {
+  background: linear-gradient(to bottom, #fc8181, #f56565);
+  border-color: #c53030;
+}
+
+.legends.sheet .weapon-tags .tag.range-tag {
+  background: linear-gradient(to bottom, #68d391, #48bb78);
+  border-color: #38a169;
+}
+
+/* Summary Stats Row in Header */
+.legends.sheet .weapon-summary-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: 1px solid #cbd5e0;
+}
+
+.legends.sheet .summary-stat {
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+}
+
+.legends.sheet .summary-stat label {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #718096;
+  margin-bottom: 2px;
+}
+
+.legends.sheet .summary-stat .value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+/* Property Categories - FIXED LAYOUT */
+.legends.sheet .properties-grid {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.legends.sheet .property-category {
+  padding: 10px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+}
+
+.legends.sheet .property-category h4 {
+  margin: 0 0 10px 0;
+  padding: 5px 8px;
+  background: #f7fafc;
+  border-left: 4px solid #4299e1;
+  font-size: 12px;
+  font-weight: bold;
+  color: #2d3748;
+}
+
+/* Checkbox Property Layout - CORRECT */
+.legends.sheet .checkbox-property {
+  display: flex;
+  align-items: flex-start;
+  padding: 8px;
+  margin: 5px 0;
+  background: #fafafa;
+  border: 1px solid #e2e8f0;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.legends.sheet .checkbox-property:hover {
+  background: #f7fafc;
+  border-color: #4299e1;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.legends.sheet .checkbox-property input[type="checkbox"] {
+  margin: 2px 8px 0 0;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.legends.sheet .checkbox-property .property-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.legends.sheet .checkbox-property .property-name {
+  font-weight: 600;
+  color: #2d3748;
+  font-size: 13px;
+  margin-bottom: 3px;
   display: block;
 }
 
-.legends .sheet-body h3 {
-  margin: 20px 0 10px 0;
-  padding-bottom: 5px;
-  border-bottom: 2px solid var(--d8-border);
-  color: var(--d8-border);
-  font-size: 16px;
-  text-transform: uppercase;
+.legends.sheet .checkbox-property .property-desc {
+  color: #718096;
+  font-size: 11px;
+  line-height: 1.4;
+  display: block;
 }
 
-/* === Main Tab Two-Column Layout === */
+.legends.sheet .checkbox-property input[type="checkbox"]:checked ~ .property-info .property-name {
+  color: #2b6cb0;
+  font-weight: bold;
+}
+
+/* Text Editor */
+.legends.sheet .tab.description .editor {
+  min-height: 300px;
+}
+
+.legends.sheet .editor {
+  min-height: 200px;
+  margin-bottom: 10px;
+}
+
+.legends.sheet .editor .editor-content {
+  min-height: 150px;
+  border: 1px solid #7a7971;
+  border-radius: 3px;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* ========================================
+   ARMOR SHEET SPECIFIC
+   ======================================== */
+
+/* Armor/Shield Conditional Display */
+.legends.sheet .armor-only-fields,
+.legends.sheet .shield-only-fields {
+  transition: all 0.3s ease;
+}
+
+.legends.sheet .shield-abilities-display {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f7fafc;
+  border-radius: 4px;
+  border: 1px solid #e2e8f0;
+}
+
+.legends.sheet .shield-abilities-info p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.legends.sheet .shield-abilities-info p strong {
+  color: #2d3748;
+}
+
+.legends.sheet .shield-abilities-info .hint {
+  color: #999;
+  font-style: italic;
+}
+
+/* ========================================
+   CHARACTER SHEET SPECIFIC
+   ======================================== */
+
 .legends .main-layout {
   display: grid;
   grid-template-columns: 1fr 350px;
@@ -170,7 +431,6 @@
   text-transform: uppercase;
 }
 
-/* === Skills Column === */
 .legends .skills-column {
   min-width: 0;
 }
@@ -228,14 +488,12 @@
   background: var(--d8-gold);
 }
 
-/* === Stats Column === */
 .legends .stats-column {
   display: flex;
   flex-direction: column;
   gap: 25px;
 }
 
-/* Attributes List */
 .legends .attributes-list {
   display: grid;
   gap: 6px;
@@ -269,7 +527,6 @@
   padding: 4px;
 }
 
-/* Resources List */
 .legends .resources-list {
   display: grid;
   gap: 6px;
@@ -286,1349 +543,10 @@
   padding: 8px 12px;
 }
 
-.legends .resource-row label {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.legends .resource-row input {
-  width: 100%;
-  text-align: center;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--d8-border);
-  color: var(--d8-text);
-  font-size: 18px;
-  font-weight: bold;
-  padding: 4px;
-}
-
-.legends .resource-value {
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: var(--d8-accent);
-}
-
-.legends .resource-max {
-  color: var(--d8-secondary);
-  font-size: 14px;
-}
-
-/* Saves List */
-.legends .saves-list {
-  display: grid;
-  gap: 8px;
-}
-
-.legends .save-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px;
-  align-items: center;
-}
-
-.legends .save-roll {
-  width: 100%;
-  padding: 10px;
-  background: var(--d8-bg-light);
-  border: 2px solid var(--d8-border);
-  border-radius: 4px;
-  color: var(--d8-text);
-  cursor: pointer;
-  transition: all 0.2s;
-  font-weight: bold;
-  text-align: left;
-}
-
-.legends .save-roll:hover {
-  background: var(--d8-accent);
-  border-color: var(--d8-accent);
-  color: white;
-}
-
-.legends .save-formula {
-  font-size: 11px;
-  color: var(--d8-secondary);
-  font-style: italic;
-  white-space: nowrap;
-}
-
-/* Rest Buttons */
-.legends .rest-buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.legends .short-rest,
-.legends .long-rest {
-  padding: 10px;
-  background: var(--d8-success);
-  border: none;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s;
-}
-
-.legends .long-rest {
-  background: var(--d8-accent);
-}
-
-.legends .short-rest:hover,
-.legends .long-rest:hover {
-  background: var(--d8-gold);
-}
-
-/* === Octagonal Energy Layout (Magic Tab) === */
-.legends .magic-resources {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-
-.legends .energies-octagon-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
-}
-
-.legends .energies-octagon {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  gap: 12px;
-  padding: 40px;
-}
-
-.legends .energy-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.legends .energy-box label {
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: var(--d8-border);
-  margin-bottom: 5px;
-}
-
-.legends .energy-split {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.legends .energy-split input {
-  width: 45px;
-  height: 50px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: bold;
-  background: transparent;
-  border: none;
-  color: var(--d8-text);
-}
-
-.legends .energy-split .divider {
-  width: 2px;
-  height: 40px;
-  background: var(--d8-border);
-}
-
-/* Positioning for octagonal energy layout - adjusted for better alignment */
-.legends .energy-fire { grid-column: 2; grid-row: 1; }
-.legends .energy-earth { grid-column: 1; grid-row: 1; transform: translate(25px, 20px); }
-.legends .energy-positive { grid-column: 3; grid-row: 1; transform: translate(-25px, 20px); }
-.legends .energy-space { grid-column: 1; grid-row: 2; }
-.legends .energy-time { grid-column: 3; grid-row: 2; }
-.legends .energy-water { grid-column: 1; grid-row: 3; transform: translate(25px, -20px); }
-.legends .energy-negative { grid-column: 2; grid-row: 3; }
-.legends .energy-air { grid-column: 3; grid-row: 3; transform: translate(-25px, -20px); }
-
-/* === Items List === */
-.legends .items-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.legends .items-header {
-  font-weight: bold;
-  border-bottom: 2px solid var(--d8-border);
-  padding: 5px;
-  background: var(--d8-bg-light);
-}
-
-.legends .item {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  border-bottom: 1px solid var(--d8-border);
-  gap: 10px;
-  background: var(--d8-bg-light);
-  margin-bottom: 2px;
-}
-
-.legends .item:hover {
-  background: rgba(184, 134, 11, 0.1);
-}
-
-.legends .item-image {
-  flex: 0 0 24px;
-}
-
-.legends .item-image img {
-  border: none;
-  border-radius: 3px;
-}
-
-.legends .item-name {
-  flex: 1;
-  margin: 0;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.legends .item-controls {
-  display: flex;
-  gap: 8px;
-}
-
-.legends .item-control {
-  font-size: 14px;
-  color: var(--d8-secondary);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.legends .item-control:hover {
-  color: var(--d8-gold);
-}
-
-.legends .item-create {
-  margin-top: 10px;
-}
-
-.legends .item-create button {
-  width: 100%;
-  padding: 8px;
-  background: var(--d8-accent);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s;
-}
-
-.legends .item-create button:hover {
-  background: var(--d8-gold);
-}
-
-/* === Chat Messages === */
-.d8-roll {
-  background: var(--d8-bg-light);
-  border: 2px solid var(--d8-border);
-  border-radius: 6px;
-  padding: 15px;
-  margin: 10px 0;
-}
-
-.d8-roll h3 {
-  margin: 0 0 10px 0;
-  color: var(--d8-accent);
-  border-bottom: 1px solid var(--d8-border);
-  padding-bottom: 5px;
-}
-
-.d8-roll.critical-success {
-  border-color: var(--d8-success);
-  background: rgba(56, 161, 105, 0.1);
-}
-
-.d8-roll.critical-failure {
-  border-color: var(--d8-danger);
-  background: rgba(229, 62, 62, 0.1);
-}
-
-.d8-roll .dice-results {
-  display: flex;
-  gap: 15px;
-  margin: 10px 0;
-  justify-content: center;
-}
-
-.d8-roll .die-result {
-  flex: 0 1 auto;
-  text-align: center;
-  padding: 10px;
-  background: var(--d8-bg);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-  min-width: 80px;
-}
-
-.d8-roll .die-label {
-  display: block;
-  font-size: 11px;
-  color: var(--d8-secondary);
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.d8-roll .die-value {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.d8-roll .natural-one {
-  color: var(--d8-success);
-}
-
-.d8-roll .natural-eight {
-  color: var(--d8-danger);
-}
-
-.d8-roll .successes {
-  margin-top: 15px;
-  padding: 10px;
-  background: var(--d8-bg);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.d8-roll .successes.critical {
-  background: rgba(56, 161, 105, 0.2);
-  border-color: var(--d8-success);
-}
-
-.d8-roll .crit-text {
-  display: block;
-  color: var(--d8-success);
-  font-weight: bold;
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-.d8-roll .fortune {
-  color: var(--d8-success);
-}
-
-.d8-roll .misfortune {
-  color: var(--d8-danger);
-}
-
-.d8-roll .overspend {
-  color: var(--d8-warning);
-}
-
-/* === Weave Rolls === */
-.d8-roll.weave-roll .energy-section {
-  margin: 15px 0;
-  padding: 10px;
-  background: var(--d8-bg);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-}
-
-.d8-roll.weave-roll h4 {
-  margin: 0 0 10px 0;
-  color: var(--d8-accent);
-}
-
-.d8-roll.weave-roll .energy-successes {
-  margin-top: 10px;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* === Rollable Elements === */
-.rollable {
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.rollable:hover {
-  color: var(--d8-gold);
-  text-shadow: 0 0 5px rgba(184, 134, 11, 0.3);
-}
-
-/* === Scrollbar === */
-.legends .sheet-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-.legends .sheet-body::-webkit-scrollbar-track {
-  background: var(--d8-bg);
-}
-
-.legends .sheet-body::-webkit-scrollbar-thumb {
-  background: var(--d8-border);
-  border-radius: 4px;
-}
-
-.legends .sheet-body::-webkit-scrollbar-thumb:hover {
-  background: var(--d8-gold);
-}
-
-/* === Magic Tab === */
-.legends .magic-header {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 20px;
-  padding: 15px;
-  background: var(--d8-bg-light);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-}
-
-.legends .energy-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.legends .energy-info label {
-  font-weight: bold;
-}
-
-.legends .energy-info input {
-  width: 80px;
-  text-align: center;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--d8-border);
-  font-size: 16px;
-  font-weight: bold;
-  padding: 4px;
-}
-
-.legends .energy-value {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--d8-accent);
-}
-
-.legends .energies-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 8px;
-  margin-bottom: 20px;
-}
-
-.legends .energy-row {
-  display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 10px;
-  align-items: center;
-  background: var(--d8-bg-light);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-  padding: 8px 12px;
-}
-
-.legends .energy-row label {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.legends .energy-row input {
-  width: 100%;
-  text-align: center;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid var(--d8-border);
-  color: var(--d8-text);
-  font-size: 16px;
-  font-weight: bold;
-  padding: 4px;
-}
-
-/* === Items List === */
-.legends .items-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.legends .items-header {
-  font-weight: bold;
-  border-bottom: 2px solid var(--d8-border);
-  padding: 5px;
-  background: var(--d8-bg-light);
-}
-
-.legends .item {
-  display: flex;
-  align-items: center;
-  padding: 8px;
-  border-bottom: 1px solid var(--d8-border);
-  gap: 10px;
-  background: var(--d8-bg-light);
-  margin-bottom: 2px;
-}
-
-.legends .item:hover {
-  background: rgba(184, 134, 11, 0.1);
-}
-
-.legends .item-image {
-  flex: 0 0 24px;
-}
-
-.legends .item-image img {
-  border: none;
-  border-radius: 3px;
-}
-
-.legends .item-name {
-  flex: 1;
-  margin: 0;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.legends .item-controls {
-  display: flex;
-  gap: 8px;
-}
-
-.legends .item-control {
-  font-size: 14px;
-  color: var(--d8-secondary);
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.legends .item-control:hover {
-  color: var(--d8-gold);
-}
-
-.legends .item-create {
-  margin-top: 10px;
-}
-
-.legends .item-create button {
-  width: 100%;
-  padding: 8px;
-  background: var(--d8-accent);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.2s;
-}
-
-.legends .item-create button:hover {
-  background: var(--d8-gold);
-}
-
-/* === Chat Messages === */
-.d8-roll {
-  background: var(--d8-bg-light);
-  border: 2px solid var(--d8-border);
-  border-radius: 6px;
-  padding: 15px;
-  margin: 10px 0;
-}
-
-.d8-roll h3 {
-  margin: 0 0 10px 0;
-  color: var(--d8-accent);
-  border-bottom: 1px solid var(--d8-border);
-  padding-bottom: 5px;
-}
-
-.d8-roll.critical-success {
-  border-color: var(--d8-success);
-  background: rgba(56, 161, 105, 0.1);
-}
-
-.d8-roll.critical-failure {
-  border-color: var(--d8-danger);
-  background: rgba(229, 62, 62, 0.1);
-}
-
-.d8-roll .dice-results {
-  display: flex;
-  gap: 15px;
-  margin: 10px 0;
-  justify-content: center;
-}
-
-.d8-roll .die-result {
-  flex: 0 1 auto;
-  text-align: center;
-  padding: 10px;
-  background: var(--d8-bg);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-  min-width: 80px;
-}
-
-.d8-roll .die-label {
-  display: block;
-  font-size: 11px;
-  color: var(--d8-secondary);
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.d8-roll .die-value {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.d8-roll .natural-one {
-  color: var(--d8-success);
-}
-
-.d8-roll .natural-eight {
-  color: var(--d8-danger);
-}
-
-.d8-roll .successes {
-  margin-top: 15px;
-  padding: 10px;
-  background: var(--d8-bg);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-  text-align: center;
-  font-size: 18px;
-}
-
-.d8-roll .successes.critical {
-  background: rgba(56, 161, 105, 0.2);
-  border-color: var(--d8-success);
-}
-
-.d8-roll .crit-text {
-  display: block;
-  color: var(--d8-success);
-  font-weight: bold;
-  margin-top: 5px;
-  font-size: 14px;
-}
-
-.d8-roll .fortune {
-  color: var(--d8-success);
-}
-
-.d8-roll .misfortune {
-  color: var(--d8-danger);
-}
-
-.d8-roll .overspend {
-  color: var(--d8-warning);
-}
-
-.d8-roll.weave-roll .energy-section {
-  margin: 15px 0;
-  padding: 10px;
-  background: var(--d8-bg);
-  border: 1px solid var(--d8-border);
-  border-radius: 4px;
-}
-
-.d8-roll.weave-roll h4 {
-  margin: 0 0 10px 0;
-  color: var(--d8-accent);
-}
-
-.d8-roll.weave-roll .energy-successes {
-  margin-top: 10px;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* === Rollable Elements === */
-.rollable {
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.rollable:hover {
-  color: var(--d8-gold);
-}
-
-/* === Scrollbar === */
-.legends .sheet-body::-webkit-scrollbar {
-  width: 8px;
-}
-
-.legends .sheet-body::-webkit-scrollbar-track {
-  background: var(--d8-bg);
-}
-
-.legends .sheet-body::-webkit-scrollbar-thumb {
-  background: var(--d8-border);
-  border-radius: 4px;
-}
-
-.legends .sheet-body::-webkit-scrollbar-thumb:hover {
-  background: var(--d8-gold);
-}
-
-/* ============================================
-   LUCK SPENDING - ENHANCED STYLES
-   ============================================ */
-
-/* Luck Restore Banner (Critical Success) */
-.d8-roll .luck-restore {
-  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
-  color: #ffffff;
-  padding: 12px;
-  border-radius: 6px;
-  text-align: center;
-  margin: 15px 0 10px 0;
-  font-weight: bold;
-  font-size: 14px;
-  box-shadow: 0 2px 8px rgba(253, 160, 133, 0.4);
-  animation: pulse 2s ease-in-out infinite;
-}
-
-.d8-roll .luck-restore i {
-  margin-right: 6px;
-  color: #fff59d;
-  font-size: 16px;
-}
-
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.02); }
-}
-
-/* Luck Spent Badge */
-.d8-roll .luck-spent {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  text-align: center;
-  margin: 12px 0;
-  font-size: 13px;
-  font-weight: 600;
-  box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
-  display: inline-block;
-  width: 100%;
-}
-
-.d8-roll .luck-spent i {
-  margin-right: 6px;
-  color: #ffd700;
-}
-
-/* Luck Spending Container */
-.d8-roll .luck-spending {
-  margin-top: 15px;
-  padding: 15px;
-  background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
-  border: 2px dashed var(--d8-accent);
-  border-radius: 8px;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-/* Luck Header */
-.d8-roll .luck-header {
-  margin-bottom: 12px;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--d8-primary);
-  text-align: center;
-  padding-bottom: 8px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-/* Luck Buttons Container */
-.d8-roll .luck-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-/* Spend Luck Button */
-.d8-roll .spend-luck-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 13px;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  box-shadow: 0 4px 6px rgba(102, 126, 234, 0.3);
-  position: relative;
-  overflow: hidden;
-}
-
-.d8-roll .spend-luck-btn::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transition: left 0.5s;
-}
-
-.d8-roll .spend-luck-btn:hover::before {
-  left: 100%;
-}
-
-.d8-roll .spend-luck-btn:hover {
-  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
-}
-
-.d8-roll .spend-luck-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.3);
-}
-
-.d8-roll .spend-luck-btn i {
-  font-size: 16px;
-  animation: bounce 2s ease-in-out infinite;
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
-}
-
-/* Enhanced Die Display */
-.d8-roll .die-result {
-  flex: 0 1 auto;
-  text-align: center;
-  padding: 12px;
-  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
-  border: 2px solid var(--d8-border);
-  border-radius: 6px;
-  min-width: 90px;
-  transition: all 0.3s ease;
-}
-
-.d8-roll .die-result:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.d8-roll .die-label {
-  display: block;
-  font-size: 11px;
-  color: var(--d8-secondary);
-  margin-bottom: 6px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.d8-roll .die-value {
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--d8-primary);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Natural 1s - Success Glow */
-.d8-roll .die-value.natural-one {
-  color: var(--d8-success);
-  text-shadow: 0 0 10px rgba(56, 161, 105, 0.6);
-  animation: glow-success 2s ease-in-out infinite;
-}
-
-@keyframes glow-success {
-  0%, 100% { text-shadow: 0 0 10px rgba(56, 161, 105, 0.6); }
-  50% { text-shadow: 0 0 20px rgba(56, 161, 105, 0.9); }
-}
-
-/* Natural 8s - Failure Glow */
-.d8-roll .die-value.natural-eight {
-  color: var(--d8-danger);
-  text-shadow: 0 0 10px rgba(229, 62, 62, 0.6);
-  animation: glow-danger 2s ease-in-out infinite;
-}
-
-@keyframes glow-danger {
-  0%, 100% { text-shadow: 0 0 10px rgba(229, 62, 62, 0.6); }
-  50% { text-shadow: 0 0 20px rgba(229, 62, 62, 0.9); }
-}
-
-/* Success Box Enhancement */
-.d8-roll .successes {
-  margin-top: 15px;
-  padding: 15px;
-  background: linear-gradient(to bottom, #ffffff, #f8f9fa);
-  border: 2px solid var(--d8-border);
-  border-radius: 6px;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.d8-roll .successes.critical {
-  background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
-  border-color: var(--d8-success);
-  box-shadow: 0 4px 12px rgba(56, 161, 105, 0.4);
-  animation: success-pulse 2s ease-in-out infinite;
-}
-
-@keyframes success-pulse {
-  0%, 100% { box-shadow: 0 4px 12px rgba(56, 161, 105, 0.4); }
-  50% { box-shadow: 0 6px 16px rgba(56, 161, 105, 0.6); }
-}
-
-.d8-roll .successes strong {
-  color: var(--d8-primary);
-  font-size: 20px;
-}
-
-.d8-roll .successes .crit-text {
-  display: block;
-  color: var(--d8-success);
-  font-weight: 800;
-  margin-top: 8px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  animation: flash 1.5s ease-in-out infinite;
-}
-
-@keyframes flash {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
-/* Modified Die Display (when luck was spent) */
-.d8-roll .die-value {
-  position: relative;
-}
-
-/* Critical Success/Failure Card Styling */
-.d8-roll.critical-success {
-  border-color: var(--d8-success);
-  background: linear-gradient(to bottom, rgba(212, 252, 121, 0.1), rgba(150, 230, 161, 0.1));
-  box-shadow: 0 4px 12px rgba(56, 161, 105, 0.2);
-}
-
-.d8-roll.critical-failure {
-  border-color: var(--d8-danger);
-  background: linear-gradient(to bottom, rgba(253, 230, 230, 0.3), rgba(252, 129, 129, 0.1));
-  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.2);
-}
-
-/* Modifiers Display */
-.d8-roll .modifiers {
-  display: flex;
-  gap: 8px;
-  justify-content: center;
-  margin: 10px 0;
-  flex-wrap: wrap;
-}
-
-.d8-roll .fortune,
-.d8-roll .misfortune,
-.d8-roll .modifier {
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 12px;
-  color: white;
-}
-
-.d8-roll .fortune {
-  background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-  box-shadow: 0 2px 4px rgba(132, 250, 176, 0.3);
-}
-
-.d8-roll .misfortune {
-  background: linear-gradient(135deg, #fc4a1a 0%, #f7b733 100%);
-  box-shadow: 0 2px 4px rgba(252, 74, 26, 0.3);
-}
-
-.d8-roll .modifier {
-  background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-  color: var(--d8-primary);
-  box-shadow: 0 2px 4px rgba(168, 237, 234, 0.3);
-}
-
-/* All Dice Display */
-.d8-roll .all-dice {
-  text-align: center;
-  font-size: 12px;
-  color: var(--d8-secondary);
-  margin: 8px 0;
-  font-style: italic;
-  padding: 6px;
-  background: rgba(0, 0, 0, 0.03);
-  border-radius: 4px;
-}
-
-/* Responsive Design */
-@media (max-width: 500px) {
-  .d8-roll .dice-results {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .d8-roll .die-result {
-    min-width: 120px;
-  }
-  
-  .d8-roll .luck-buttons {
-    gap: 8px;
-  }
-  
-  .d8-roll .spend-luck-btn {
-    padding: 10px 12px;
-    font-size: 12px;
-  }
-}
 /* ========================================
-   WEAPON SHEET - LEGENDS SYSTEM
-   Property-based tags and organization
+   UTILITY CLASSES
    ======================================== */
 
-/* Visual Tags in Header */
-.legends.sheet .weapon-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin-top: 8px;
-  min-height: 24px;
-}
-
-.legends.sheet .weapon-tags .tag {
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 3px;
-  font-size: 11px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  color: #fff;
-  background: #666;
-  border: 1px solid #444;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-/* Property Tags (Light, Standard, Versatile, etc.) */
-.legends.sheet .weapon-tags .tag.property-tag {
-  background: linear-gradient(to bottom, #4299e1, #3182ce);
-  border-color: #2c5282;
-}
-
-/* Damage Type Tags */
-.legends.sheet .weapon-tags .tag.damage-tag {
-  background: linear-gradient(to bottom, #fc8181, #f56565);
-  border-color: #c53030;
-}
-
-/* Range Tags */
-.legends.sheet .weapon-tags .tag.range-tag {
-  background: linear-gradient(to bottom, #68d391, #48bb78);
-  border-color: #38a169;
-}
-
-/* Summary Tab Layout */
-.legends.sheet .tab.summary {
-  padding: 10px;
-}
-
-.legends.sheet .summary-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.legends.sheet .stat-block {
-  background: rgba(0, 0, 0, 0.05);
-  border: 1px solid #7a7971;
-  border-radius: 4px;
-  padding: 8px;
-  text-align: center;
-}
-
-.legends.sheet .stat-block label {
-  display: block;
-  font-size: 11px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #666;
-  margin-bottom: 4px;
-}
-
-.legends.sheet .stat-block .stat-value {
-  font-size: 16px;
-  font-weight: bold;
-  color: #000;
-}
-
-/* Properties Summary */
-.legends.sheet .properties-summary {
-  margin-bottom: 20px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.02);
-  border-radius: 4px;
-  border: 1px solid #ddd;
-}
-
-.legends.sheet .properties-summary h3 {
-  margin: 0 0 10px 0;
-  border-bottom: 2px solid #7a7971;
-  padding-bottom: 5px;
-}
-
-.legends.sheet .properties-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.legends.sheet .properties-list li {
-  padding: 4px 0;
-  border-bottom: 1px solid #eee;
-}
-
-.legends.sheet .properties-list li:last-child {
-  border-bottom: none;
-}
-
-.legends.sheet .hint {
-  color: #999;
-  font-style: italic;
-  margin: 10px 0;
-}
-
-/* Quick Description Preview */
-.legends.sheet .quick-description {
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.02);
-  border-radius: 4px;
-  border: 1px solid #ddd;
-}
-
-.legends.sheet .quick-description h3 {
-  margin: 0 0 10px 0;
-  border-bottom: 2px solid #7a7971;
-  padding-bottom: 5px;
-}
-
-.legends.sheet .description-preview {
-  max-height: 200px;
-  overflow-y: auto;
-  line-height: 1.5;
-}
-
-/* Section Headers */
-.legends.sheet .section-header {
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-.legends.sheet .section-header h3 {
-  margin: 0;
-  padding: 5px 10px;
-  background: linear-gradient(to bottom, #4a5568, #2d3748);
-  color: #fff;
-  border-radius: 3px;
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.legends.sheet .section-header:first-child {
-  margin-top: 0;
-}
-
-/* Property Categories */
-.legends.sheet .properties-grid {
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.02);
-  border-radius: 4px;
-}
-
-.legends.sheet .property-category {
-  margin-bottom: 15px;
-  padding: 10px;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.legends.sheet .property-category:last-child {
-  margin-bottom: 0;
-}
-
-.legends.sheet .property-category h4 {
-  margin: 0 0 10px 0;
-  padding: 5px;
-  background: #f7fafc;
-  border-left: 4px solid #4299e1;
-  font-size: 13px;
-  font-weight: bold;
-  color: #2d3748;
-}
-
-.legends.sheet .property-category label.checkbox {
-  display: flex;
-  flex-direction: column;
-  padding: 8px;
-  margin: 5px 0;
-  background: #fafafa;
-  border: 1px solid #e2e8f0;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.legends.sheet .property-category label.checkbox:hover {
-  background: #f7fafc;
-  border-color: #4299e1;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.legends.sheet .property-category label.checkbox input[type="checkbox"] {
-  margin-right: 8px;
-  vertical-align: middle;
-}
-
-.legends.sheet .property-category label.checkbox input[type="checkbox"]:checked ~ .property-name {
-  color: #2b6cb0;
-  font-weight: bold;
-}
-
-.legends.sheet .property-category .property-name {
-  font-weight: 600;
-  color: #2d3748;
-  margin-bottom: 2px;
-}
-
-.legends.sheet .property-category small {
-  color: #718096;
-  font-size: 11px;
-  margin-left: 24px;
-  margin-top: 2px;
-  line-height: 1.3;
-}
-
-/* Form Group Rows */
-.legends.sheet .form-group-row {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.legends.sheet .form-group-row .form-group {
-  flex: 1;
-}
-
-.legends.sheet .form-group {
-  margin-bottom: 10px;
-}
-
-.legends.sheet .form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 4px;
-  color: #2d3748;
-}
-
-.legends.sheet .form-group small {
-  display: block;
-  color: #718096;
-  font-size: 11px;
-  margin-top: 2px;
-}
-
-.legends.sheet .form-group input[type="number"],
-.legends.sheet .form-group input[type="text"],
-.legends.sheet .form-group select,
-.legends.sheet .form-group textarea {
-  width: 100%;
-  padding: 4px 8px;
-  border: 1px solid #cbd5e0;
-  border-radius: 3px;
-  background: #fff;
-  font-family: inherit;
-}
-
-.legends.sheet .form-group input:focus,
-.legends.sheet .form-group select:focus,
-.legends.sheet .form-group textarea:focus {
-  outline: none;
-  border-color: #4299e1;
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
-}
-
-/* Tab Navigation Enhancement */
-.legends.sheet .sheet-tabs {
-  flex: 0 0 40px;
-  border-bottom: 2px solid #7a7971;
-  margin-bottom: 0;
-}
-
-.legends.sheet .sheet-tabs .item {
-  padding: 8px 16px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.legends.sheet .sheet-tabs .item:hover {
-  background: rgba(66, 153, 225, 0.1);
-}
-
-.legends.sheet .sheet-tabs .item.active {
-  background: linear-gradient(to bottom, #4a5568, #2d3748);
-  color: #fff;
-  border-bottom: 3px solid #4299e1;
-}
-
-/* Details Tab Spacing */
-.legends.sheet .tab.details {
-  padding: 10px;
-  max-height: calc(100vh - 300px);
-  overflow-y: auto;
-}
-
-/* Checkbox Enhancement */
-.legends.sheet label.checkbox strong {
-  font-size: 14px;
-  color: #2d3748;
-}
-
-/* Capitalize helper for display */
 .capitalize {
   text-transform: capitalize;
 }
@@ -1637,313 +555,8 @@
   text-transform: uppercase;
 }
 
-/* ========================================
-   WEAPON SHEET - FIXED LAYOUT
-   ======================================== */
-
-/* Header Expansion for Summary */
-.legends.sheet.item .sheet-header {
-  flex: 0 0 auto;
-  padding: 10px;
-  border-bottom: 2px solid #7a7971;
-}
-
-.legends.sheet.item .header-fields {
-  flex: 1;
-  margin-left: 10px;
-}
-
-.legends.sheet.item .charname {
-  margin: 0;
-}
-
-.legends.sheet.item .charname input {
-  font-size: 24px;
-  font-weight: bold;
-  border: none;
-  background: transparent;
-  width: 100%;
-}
-
-/* Visual Tags in Header */
-.legends.sheet .weapon-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  margin: 8px 0;
-  min-height: 24px;
-}
-
-.legends.sheet .weapon-tags .tag {
-  display: inline-block;
-  padding: 3px 8px;
-  border-radius: 3px;
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  white-space: nowrap;
-  color: #fff;
-  background: #666;
-  border: 1px solid #444;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-/* Property Tags (Light, Standard, Versatile, etc.) */
-.legends.sheet .weapon-tags .tag.property-tag {
-  background: linear-gradient(to bottom, #4299e1, #3182ce);
-  border-color: #2c5282;
-}
-
-/* Damage Type Tags */
-.legends.sheet .weapon-tags .tag.damage-tag {
-  background: linear-gradient(to bottom, #fc8181, #f56565);
-  border-color: #c53030;
-}
-
-/* Range Tags */
-.legends.sheet .weapon-tags .tag.range-tag {
-  background: linear-gradient(to bottom, #68d391, #48bb78);
-  border-color: #38a169;
-}
-
-/* Summary Stats Row in Header */
-.legends.sheet .weapon-summary-row {
-  display: flex;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 8px;
-  padding: 8px;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 4px;
-  border: 1px solid #cbd5e0;
-}
-
-.legends.sheet .summary-stat {
-  display: flex;
-  flex-direction: column;
-  min-width: 80px;
-}
-
-.legends.sheet .summary-stat label {
-  font-size: 10px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: #718096;
-  margin-bottom: 2px;
-}
-
-.legends.sheet .summary-stat .value {
-  font-size: 14px;
-  font-weight: bold;
-  color: #2d3748;
-}
-
-/* Section Headers */
-.legends.sheet .section-header {
-  margin-top: 15px;
-  margin-bottom: 10px;
-}
-
-.legends.sheet .section-header:first-child {
-  margin-top: 0;
-}
-
-.legends.sheet .section-header h3 {
-  margin: 0;
-  padding: 6px 10px;
-  background: linear-gradient(to bottom, #4a5568, #2d3748);
-  color: #fff;
-  border-radius: 3px;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Property Categories */
-.legends.sheet .properties-grid {
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.02);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.legends.sheet .property-category {
-  padding: 10px;
-  background: #fff;
-  border: 1px solid #e2e8f0;
-  border-radius: 4px;
-}
-
-.legends.sheet .property-category h4 {
-  margin: 0 0 10px 0;
-  padding: 5px 8px;
-  background: #f7fafc;
-  border-left: 4px solid #4299e1;
-  font-size: 12px;
-  font-weight: bold;
-  color: #2d3748;
-}
-
-/* Checkbox Property Layout - FIXED */
-.legends.sheet .checkbox-property {
-  display: flex;
-  align-items: flex-start;
-  padding: 8px;
-  margin: 5px 0;
-  background: #fafafa;
-  border: 1px solid #e2e8f0;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.legends.sheet .checkbox-property:hover {
-  background: #f7fafc;
-  border-color: #4299e1;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-}
-
-.legends.sheet .checkbox-property input[type="checkbox"] {
-  margin: 2px 8px 0 0;
-  flex-shrink: 0;
-  cursor: pointer;
-}
-
-.legends.sheet .checkbox-property .property-info {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.legends.sheet .checkbox-property .property-name {
-  font-weight: 600;
-  color: #2d3748;
-  font-size: 13px;
-  margin-bottom: 3px;
-  display: block;
-}
-
-.legends.sheet .checkbox-property .property-desc {
-  color: #718096;
-  font-size: 11px;
-  line-height: 1.4;
-  display: block;
-}
-
-.legends.sheet .checkbox-property input[type="checkbox"]:checked ~ .property-info .property-name {
-  color: #2b6cb0;
-  font-weight: bold;
-}
-
-/* Form Groups */
-.legends.sheet .form-group-row {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.legends.sheet .form-group-row .form-group {
-  flex: 1;
-}
-
-.legends.sheet .form-group {
-  margin-bottom: 10px;
-}
-
-.legends.sheet .form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 4px;
-  color: #2d3748;
-  font-size: 12px;
-}
-
-.legends.sheet .form-group small {
-  display: block;
-  color: #718096;
-  font-size: 11px;
-  margin-top: 2px;
-}
-
-.legends.sheet .form-group input[type="number"],
-.legends.sheet .form-group input[type="text"],
-.legends.sheet .form-group select,
-.legends.sheet .form-group textarea {
-  width: 100%;
-  padding: 5px 8px;
-  border: 1px solid #cbd5e0;
-  border-radius: 3px;
-  background: #fff;
-  font-family: inherit;
-  font-size: 13px;
-}
-
-.legends.sheet .form-group input:focus,
-.legends.sheet .form-group select:focus,
-.legends.sheet .form-group textarea:focus {
-  outline: none;
-  border-color: #4299e1;
-  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
-}
-
-/* Tab Navigation */
-.legends.sheet .sheet-tabs {
-  flex: 0 0 40px;
-  border-bottom: 2px solid #7a7971;
-  margin-bottom: 0;
-}
-
-.legends.sheet .sheet-tabs .item {
-  padding: 10px 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 11px;
-  letter-spacing: 0.5px;
-  cursor: pointer;
-  transition: all 0.2s;
-}
-
-.legends.sheet .sheet-tabs .item:hover {
-  background: rgba(66, 153, 225, 0.1);
-}
-
-.legends.sheet .sheet-tabs .item.active {
-  background: linear-gradient(to bottom, #4a5568, #2d3748);
-  color: #fff;
-  border-bottom: 3px solid #4299e1;
-}
-
-/* Tab Content */
-.legends.sheet .tab {
-  padding: 10px;
-  overflow-y: auto;
-}
-
-.legends.sheet .tab.description {
-  padding: 0;
-}
-
-/* Checkbox Labels */
-.legends.sheet label.checkbox {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  padding: 5px;
-}
-
-.legends.sheet label.checkbox input[type="checkbox"] {
-  margin-right: 8px;
-}
-
-.legends.sheet label.checkbox strong {
-  font-size: 14px;
-  color: #2d3748;
-}
-
-/* Text Editor in Description Tab */
-.legends.sheet .tab.description .editor {
-  min-height: 300px;
+.hint {
+  color: #999;
+  font-style: italic;
+  margin: 10px 0;
 }
