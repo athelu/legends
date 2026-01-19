@@ -20,6 +20,8 @@
 
 **[Thrown]** Can be thrown using Ranged Combat skill, retains damage type and value.
 
+**[Reach]** add +5 feet to melee range.
+
 
 ## Weapon Table
 
@@ -29,14 +31,14 @@
 |                |          |        |                                            |                                        |                            |
 | Battleaxe      |  40 gp   |  8/9   | [Versatile]                                | [Slashing]                             |                            |
 | Buckler        |  10 gp   |  4     | [Light], [Standard], [Finesse]             | [Bludgeoning]                          | Shield used as weapon      |
-| Club           |   5 gp   |  4     | [Light], [Standard]                        | [Bludgeoning]                          |                            |
+| Club           |   5 gp   |  4/5   | [Versatile]                                | [Bludgeoning]                          |                            |
 | Dagger         |  15 gp   |  4     | [Light], [Multi-Type], [Thrown], [Finesse] | [Piercing], [Slashing]                 | Range 30/60 when thrown    |
 | Flail          |  15 gp   |  6     | [Standard]                                 | [Bludgeoning]                          |                            |
 | Greataxe       |  40 gp   |  10    | [Two-Handed]                               | [Slashing]                             |                            |
 | Greatsword     |  50 gp   |  10    | [Two-Handed], [Alternate-Strike]           | [Slashing], [Bludgeoning] (8)          |                            |
 | Hand Axe       |  15 gp   |  4     | [Light], [Thrown]                          | [Slashing]                             | Range 30/60 when thrown    |
 | Kama           |  10 gp   |  4     | [Light], [Finesse]                         | [Slashing]                             |                            |
-| Katana         |  40 gp   |  8     | [Versatile]                                | [Slashing], [Piercing]                 |                            |
+| Katana         |  40 gp   |  8/9   | [Versatile]                                | [Slashing], [Piercing]                 |                            |
 | Nunchaku       |  12 gp   |  6     | [Light], [Finesse]                         | [Bludgeoning]                          |                            |
 | Heavy Crossbow |  75 gp   |  8     | [Two-Handed], [Ranged]                     | [Piercing]                             | Range 80/160/320, reload 2 actions |
 | Light Crossbow |  65 gp   |  6     | [Two-Handed], [Ranged]                     | [Piercing]                             | Range 60/120/240, reload 1 action |
@@ -45,28 +47,28 @@
 | Mace           |  10 gp   |  6     | [Standard]                                 | [Bludgeoning]                          |                            |
 | Maul           |  30 gp   |  10    | [Two-Handed]                               | [Bludgeoning]                          |                            |
 | Morningstar    |  20 gp   |  8     | [Standard], [Multi-Type]                   | [Bludgeoning],[Piercing]               |                            |
-| Naginata       |  12 gp   |  6/7   | [Versatile], [Alternate-Strike], [Thrown]  | [Piercing], [Blundgeoning] (4)         | Range 30/60 when thrown    |
-| Poleaxe        |  50 gp   |  10    | [Two-Handed], [Multi-Type]                 | [Slashing], [Piercing], [Blundgeoning] |                            |
-| Quarterstaff   |  10 gp   |  6     | [Two-Handed], [Finesse]                    | [Blundgeoning]                         |                            |
+| Naginata       |  12 gp   |  6/7   | [Versatile], [Alternate-Strike], [Thrown], [Reach]  | [Piercing], [Bludgeoning] (4)          | Range 30/60 when thrown    |
+| Poleaxe        |  50 gp   |  10    | [Two-Handed], [Multi-Type], [Reach]        | [Slashing], [Piercing], [Bludgeoning]  |                            |
+| Quarterstaff   |  10 gp   |  6     | [Two-Handed], [Finesse]                    | [Bludgeoning]                          |                            |
 | Rapier         |  30 gp   |  8     | [Standard], [Finesse]                      | [Piercing]                             |                            |
-| Sap            |  5 gp    |  4     | [Light], [Standard], [Finesse]             | [Blundgeoning]                         |                            |
+| Sap            |  5 gp    |  4     | [Light], [Standard], [Finesse]             | [Bludgeoning]                          |                            |
 | Sai            |  10 gp   |  6     | [Light], [Finesse], [Thrown]               | [Piercing]                             | Range 20/40 when thrown    |
 | Scimitar       |  30 gp   |  6     | [Light], [Multi-Type], [Finesse]           | [Slashing], [Piercing]                 |                            |
 | Shortbow       |  25 gp   |  6     | [Two-Handed], [Ranged]                     | [Piercing]                             | Range 60/120/240           |
 | Shortsword     |  18 gp   |  6     | [Light], [Multi-Type], [Finesse]           | [Slashing], [Piercing]                 |                            |
-| Sling          |  1 gp    |  4     | [Ranged]                                   | [Blundgeoning]                         | Range 40/80/160            |
-| Spear          |  12 gp   |  6/7   | [Versatile], [Alternate-Strike], [Thrown]  | [Piercing] [Blundgeoning] (4)          | Range 30/60 when thrown    |
-| Tetsubo        |  30 gp   |  10    | [Two-Handed]                               | [Blundgeoning]                         |                            |
+| Sling          |  1 gp    |  4     | [Ranged]                                   | [Blundgeoning]                         | Range 40/80/160, reload 1 action |
+| Spear          |  12 gp   |  6/7   | [Versatile], [Alternate-Strike], [Thrown], [Reach]  | [Piercing] [Bludgeoning] (4)           | Range 30/60 when thrown    |
+| Tetsubo        |  30 gp   |  10    | [Two-Handed]                               | [Bludgeoning]                          |                            |
 | Wakizashi      |  30 gp   |  6     | [Light], [Multi-Type], [Finesse]           | [Slashing], [Piercing]                 |                            |
-| War Pick       |  30 gp   |  8     | [Standard], [Multi-Type]                   | [Piercing], [Blundgeoning]             |                            |
-| Warhammer      |  25 gp   |  8     | [Standard]                                 | [Blundgeoning]                         |                            |
-| Warhammer (spiked) |  30 gp   |  8 | [Standard], [Multi-Type]                   | [Blundgeoning], [Piercing]             |                            |
-| Whip           |  30 gp   |  4     | [Standard], [Finesse]                      | [Slashing]                             | Reach 10ft                 |
+| War Pick       |  30 gp   |  8     | [Standard], [Multi-Type]                   | [Piercing], [Bludgeoning]              |                            |
+| Warhammer      |  25 gp   |  8     | [Standard]                                 | [Bludgeoning]                          |                            |
+| Warhammer (spiked) |  30 gp   |  8 | [Standard], [Multi-Type]                   | [Bludgeoning], [Piercing]              |                            |
+| Whip           |  30 gp   |  4     | [Standard], [Finesse], [Reach]             | [Slashing]                             | Reach 10ft                 |
 
 
 ### Weapon Damage Keywords
 
-**[Blundgeoning]** Blunt damage, relying on crushing, smashing, and often weight to deal damage.
+**[Bludgeoning]** Blunt damage, relying on crushing, smashing, and often weight to deal damage.
 **[Slashing]** Cutting, hacking, slicing, where the sharp edge is drawn across the target.
 **[Piercing]** Power concentrated at the tip of the weapon, with thrusts or propulsion.
 
