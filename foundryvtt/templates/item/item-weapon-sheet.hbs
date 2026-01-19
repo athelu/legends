@@ -94,10 +94,10 @@
         <ul>
           <li><strong>Margin 0 (Tie):</strong> Defender wins, no damage</li>
           <li><strong>Margin 1:</strong> Base weapon damage</li>
-          <li><strong>Margin 2:</strong> Base weapon damage + Strength modifier</li>
-          <li><strong>Margin 3+ (Critical):</strong> Maximum damage (base + Strength)</li>
+          <li><strong>Margin 2:</strong> Base weapon damage + Attribute value</li>
+          <li><strong>Margin 3+ (Critical):</strong> Base weapon damage + Attribute value + Condition</li>
         </ul>
-        <p><small>Ranged attacks use similar margin system with Dexterity modifier instead of Strength.</small></p>
+        <p><small>Attribute value (Strength for melee, Dexterity for ranged. Strength for thrown).</small></p>
       </div>
 
       <!-- Range (for ranged/thrown weapons) -->
@@ -109,17 +109,17 @@
         <div class="form-group">
           <label>Short Range</label>
           <input type="number" name="system.range.normal" value="{{system.range.normal}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>1 success needed for base damage</small>
+          <small>1 net success needed to hit for base damage</small>
         </div>
         <div class="form-group">
           <label>Medium Range</label>
           <input type="number" name="system.range.medium" value="{{system.range.medium}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>2 successes needed</small>
+          <small>2 net successes needed to hit for base damage</small>
         </div>
         <div class="form-group">
           <label>Long Range</label>
           <input type="number" name="system.range.long" value="{{system.range.long}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>2 successes, +1 to both dice</small>
+          <small>2 net successes to hit for base damage, +1 to both dice</small>
         </div>
       </div>
 
@@ -137,7 +137,7 @@
             <input type="checkbox" name="system.properties" value="light" {{#if (contains system.properties "light")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Light</span>
-              <span class="property-desc">Base damage 4. Can dual wield without penalty.</span>
+              <span class="property-desc">Base damage 4. Only option for off-hand.</span>
             </div>
           </label>
           
@@ -153,7 +153,7 @@
             <input type="checkbox" name="system.properties" value="versatile" {{#if (contains system.properties "versatile")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Versatile</span>
-              <span class="property-desc">Base damage 8 (1H) or 10 (2H). Can use one or two hands.</span>
+              <span class="property-desc">Base damage 8 (1H) or 9 (2H). Can use one or two hands.</span>
             </div>
           </label>
           
