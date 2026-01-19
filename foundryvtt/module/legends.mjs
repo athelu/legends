@@ -120,37 +120,37 @@ export async function rollSkillCheck(actor, skillKey, options = {}) {
  * @param {Object} options - Additional rolling options
  */
 export async function rollSavingThrow(actor, saveType, options = {}) {
-  let attrKey, attrLabel;
+  let attrKey, attrLabel, skillLabel;
   
   switch(saveType) {
     case 'fortitude':
       attrKey = 'constitution';
       attrLabel = 'Constitution';
+      skillLabel = 'Fortitude Save';
       break;
     case 'reflex':
       attrKey = 'agility';
       attrLabel = 'Agility';
+      skillLabel = 'Reflex Save';
       break;
     case 'will':
       attrKey = 'wisdom';
       attrLabel = 'Wisdom';
+      skillLabel = 'Willpower Save';
       break;
   }
   
   const attr = actor.system.attributes[attrKey];
   const luckCurrent = actor.system.luck?.current ?? actor.system.attributes.luck.value;
   
-  return dice.rollD8Check({
+  // Show roll dialog for saves too
+  return dice.showRollDialog({
     actor,
     attrValue: attr.value,
     skillValue: luckCurrent,
     attrLabel,
-    skillLabel: 'Luck',
-    fortune: options.fortune || 0,
-    misfortune: options.misfortune || 0,
-    modifier: options.modifier || 0,
-    isSave: true,
-    label: options.label || `${attrLabel} Save`
+    skillLabel,
+    isSave: true
   });
 }
 
