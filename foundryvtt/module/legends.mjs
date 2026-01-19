@@ -284,14 +284,14 @@ function registerHandlebarsHelpers() {
   Handlebars.registerHelper('subtract', function(a, b) {
     return a - b;
   });
-}
 
-// Check if an array has any items (not empty)
-Handlebars.registerHelper('hasItems', function(array) {
-  if (!array) return false;
-  if (!Array.isArray(array)) return false;
-  return array.length > 0;
-});
+  // Check if an array has any items (not empty)
+  Handlebars.registerHelper('hasItems', function(array) {
+    if (!array) return false;
+    if (!Array.isArray(array)) return false;
+    return array.length > 0;
+  });
+}
 
 /* -------------------------------------------- */
 /*  Macro Functions                             */
