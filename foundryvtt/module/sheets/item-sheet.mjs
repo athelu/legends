@@ -2,6 +2,7 @@
  * D8 TTRPG Item Sheet
  */
 const { ItemSheet } = foundry.appv1.sheets;
+
 export class D8ItemSheet extends ItemSheet {
   
   /** @override */
@@ -28,14 +29,18 @@ export class D8ItemSheet extends ItemSheet {
     context.system = itemData.system;
     context.flags = itemData.flags;
     
+    // CRITICAL: Set these for the editor helper
+    context.owner = this.item.isOwner;
+    context.editable = this.isEditable;
+    
     // Enrich description
     const TextEditor = foundry.applications.ux.TextEditor.implementation;
-      context.enrichedDescription = await TextEditor.enrichHTML(
-        context.system.description?.value || "", 
-        {
-          secrets: this.item.isOwner,
-          async: true
-        }
+    context.enrichedDescription = await TextEditor.enrichHTML(
+      context.system.description?.value || "", 
+      {
+        secrets: this.item.isOwner,
+        async: true
+      }
     );
     
     // Add type-specific data
@@ -75,6 +80,12 @@ export class D8ItemSheet extends ItemSheet {
     
     // Roll item
     html.find('.item-roll').click(this._onItemRoll.bind(this));
+    
+    // ===================================================================
+    // ARMOR CONDITIONAL DISPLAY - Added from armor-conditional-display.mjs
+    // Handle armor type changes to show/hide relevant fields
+    // ===================================================================
+    html.find('.armor-type-select').change(this._onArmorTypeChange.bind(this));
   }
   
   /**
@@ -83,5 +94,25 @@ export class D8ItemSheet extends ItemSheet {
   async _onItemRoll(event) {
     event.preventDefault();
     return this.item.roll();
+  }
+  
+  /**
+   * Handle armor type changes to show/hide relevant fields
+   * This is triggered when the armor type dropdown changes
+   */
+  _onArmorTypeChange(event) {
+    const armorType = event.currentTarget.value;
+    const form = $(event.currentTarget).closest('form');
+    
+    const armorFields = form.find('.armor-only-fields');
+    const shieldFields = form.find('.shield-only-fields');
+    
+    if (armorType === 'shield') {
+      armorFields.hide();
+      shieldFields.show();
+    } else {
+      armorFields.show();
+      shieldFields.hide();
+    }
   }
 }
