@@ -4,24 +4,25 @@
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Weapon Name"/></h1>
       
-      <!-- Property Tags - DYNAMICALLY BUILT, NO EMPTY BOXES -->
-      {{#if system.properties}}
-        {{#if system.properties.length}}
-        <div class="weapon-tags">
-          {{#each system.properties as |prop|}}
-          <span class="tag property-tag">{{uppercase prop}}</span>
-          {{/each}}
-          
-          {{#if system.damage.type}}
-          <span class="tag damage-tag">{{uppercase system.damage.type}}</span>
-          {{/if}}
-          
-          {{#if (gt system.range.normal 0)}}
-          <span class="tag range-tag">{{system.range.normal}} FT</span>
-          {{/if}}
+      <!-- Property Tags - NO EMPTY BOXES! -->
+      {{#each system.properties as |prop|}}
+        {{#if @first}}<div class="weapon-tags">{{/if}}
+        <span class="tag property-tag">{{uppercase prop}}</span>
+        {{#if @last}}
+          {{#if ../system.damage.type}}<span class="tag damage-tag">{{uppercase ../system.damage.type}}</span>{{/if}}
+          {{#if (gt ../system.range.normal 0)}}<span class="tag range-tag">{{../system.range.normal}} FT</span>{{/if}}
         </div>
         {{/if}}
-      {{/if}}
+      {{else}}
+        {{#if system.damage.type}}
+        <div class="weapon-tags">
+          <span class="tag damage-tag">{{uppercase system.damage.type}}</span>
+          {{#if (gt system.range.normal 0)}}<span class="tag range-tag">{{system.range.normal}} FT</span>{{/if}}
+        </div>
+        {{else}}{{#if (gt system.range.normal 0)}}
+        <div class="weapon-tags"><span class="tag range-tag">{{system.range.normal}} FT</span></div>
+        {{/if}}{{/if}}
+      {{/each}}
       
       <!-- Quick Summary Stats in Header -->
       <div class="weapon-summary-row">

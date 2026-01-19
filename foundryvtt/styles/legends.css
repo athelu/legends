@@ -5,14 +5,10 @@
 
 /* === CSS Variables === */
 :root {
-  --d8-primary: #8B4513;
-  --d8-secondary: #CD853F;
-  --d8-accent: #D2691E;
-  --d8-gold: #DAA520;
-  --d8-bg: #F5DEB3;
-  --d8-bg-light: #FAF0E6;
-  --d8-text: #2C1810;
-  --d8-border: #8B7355;
+  --d8-primary: #4a5568;  /* Gray */
+  --d8-accent: #2d3748;   /* Dark gray */
+  --d8-bg: #FFFFFF;       /* White */
+  --d8-bg-light: #F7FAFC; /* Light gray */
 }
 
 /* === Base Sheet Styles === */
