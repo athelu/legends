@@ -2,14 +2,163 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Equipment Name"/></h1>
     </div>
   </header>
 
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
   <section class="sheet-body">
-    <div class="form-group">
-      <label>Description</label>
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <!-- Equipment Type -->
+      <div class="form-group">
+        <label>Equipment Category</label>
+        <select name="system.equipmentType">
+          <option value="adventuring-gear" {{#if (eq system.equipmentType "adventuring-gear")}}selected{{/if}}>Adventuring Gear</option>
+          <option value="tools" {{#if (eq system.equipmentType "tools")}}selected{{/if}}>Tools</option>
+          <option value="clothing" {{#if (eq system.equipmentType "clothing")}}selected{{/if}}>Clothing</option>
+          <option value="consumable" {{#if (eq system.equipmentType "consumable")}}selected{{/if}}>Consumable</option>
+          <option value="container" {{#if (eq system.equipmentType "container")}}selected{{/if}}>Container</option>
+          <option value="mount" {{#if (eq system.equipmentType "mount")}}selected{{/if}}>Mount/Vehicle</option>
+          <option value="light-source" {{#if (eq system.equipmentType "light-source")}}selected{{/if}}>Light Source</option>
+          <option value="trade-goods" {{#if (eq system.equipmentType "trade-goods")}}selected{{/if}}>Trade Goods</option>
+          <option value="magic-item" {{#if (eq system.equipmentType "magic-item")}}selected{{/if}}>Magic Item</option>
+          <option value="other" {{#if (eq system.equipmentType "other")}}selected{{/if}}>Other</option>
+        </select>
+      </div>
+
+      <!-- Physical Properties -->
+      <h3>Physical Properties</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Weight (lbs)</label>
+          <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Cost (gp)</label>
+          <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+
+      <!-- Container Properties (if applicable) -->
+      {{#if (eq system.equipmentType "container")}}
+      <h3>Container Properties</h3>
+      <div class="form-group">
+        <label>Capacity</label>
+        <input type="text" name="system.capacity" value="{{system.capacity}}" placeholder="e.g., 30 lbs, 1 cubic ft" />
+      </div>
+      {{/if}}
+
+      <!-- Light Source Properties (if applicable) -->
+      {{#if (eq system.equipmentType "light-source")}}
+      <h3>Light Properties</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Bright Light Radius (ft)</label>
+          <input type="number" name="system.brightLight" value="{{system.brightLight}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Dim Light Radius (ft)</label>
+          <input type="number" name="system.dimLight" value="{{system.dimLight}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Duration</label>
+        <input type="text" name="system.duration" value="{{system.duration}}" placeholder="e.g., 6 hours, permanent" />
+      </div>
+      {{/if}}
+
+      <!-- Consumable Properties (if applicable) -->
+      {{#if (eq system.equipmentType "consumable")}}
+      <h3>Consumable Properties</h3>
+      <div class="form-group">
+        <label>Uses/Charges</label>
+        <input type="number" name="system.uses.value" value="{{system.uses.value}}" data-dtype="Number" min="0" />
+        <span class="sep">/</span>
+        <input type="number" name="system.uses.max" value="{{system.uses.max}}" data-dtype="Number" min="0" />
+      </div>
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.consumable" {{#if system.consumable}}checked{{/if}} />
+          Single Use Item
+        </label>
+      </div>
+      {{/if}}
+
+      <!-- Tool Properties (if applicable) -->
+      {{#if (eq system.equipmentType "tools")}}
+      <h3>Tool Properties</h3>
+      <div class="form-group">
+        <label>Associated Skill</label>
+        <input type="text" name="system.associatedSkill" value="{{system.associatedSkill}}" placeholder="e.g., Craft, Devices" />
+      </div>
+      <div class="form-group">
+        <label>Tool Bonus</label>
+        <input type="number" name="system.toolBonus" value="{{system.toolBonus}}" data-dtype="Number" placeholder="Bonus to skill checks" />
+      </div>
+      {{/if}}
+
+      <!-- Magic Item Properties (if applicable) -->
+      {{#if (eq system.equipmentType "magic-item")}}
+      <h3>Magic Item Properties</h3>
+      <div class="form-group">
+        <label>Rarity</label>
+        <select name="system.rarity">
+          <option value="common" {{#if (eq system.rarity "common")}}selected{{/if}}>Common</option>
+          <option value="uncommon" {{#if (eq system.rarity "uncommon")}}selected{{/if}}>Uncommon</option>
+          <option value="rare" {{#if (eq system.rarity "rare")}}selected{{/if}}>Rare</option>
+          <option value="very-rare" {{#if (eq system.rarity "very-rare")}}selected{{/if}}>Very Rare</option>
+          <option value="legendary" {{#if (eq system.rarity "legendary")}}selected{{/if}}>Legendary</option>
+          <option value="artifact" {{#if (eq system.rarity "artifact")}}selected{{/if}}>Artifact</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.requiresAttunement" {{#if system.requiresAttunement}}checked{{/if}} />
+          Requires Attunement
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Magical Properties</label>
+        <textarea name="system.magicalProperties" rows="4" placeholder="Describe the magical effects and properties">{{system.magicalProperties}}</textarea>
+      </div>
+      {{/if}}
+
+      <!-- General Properties -->
+      <h3>General Properties</h3>
+      <div class="form-group">
+        <label>Special Properties</label>
+        <textarea name="system.properties" rows="3" placeholder="Any special rules or properties">{{system.properties}}</textarea>
+      </div>
+
+      <!-- Equipped/Carried Status -->
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.equipped" {{#if system.equipped}}checked{{/if}} />
+          Equipped/Active
+        </label>
+      </div>
+
+      <!-- Notes -->
+      <div class="form-group">
+        <label>Notes</label>
+        <textarea name="system.notes" rows="3" placeholder="Additional notes about this equipment">{{system.notes}}</textarea>
+      </div>
+
     </div>
   </section>
 </form>

@@ -2,14 +2,95 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
     <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Flaw Name"/></h1>
     </div>
   </header>
 
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
   <section class="sheet-body">
-    <div class="form-group">
-      <label>Description</label>
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <!-- Basic Info -->
+      <div class="form-group">
+        <label>Point Value</label>
+        <input type="number" name="system.pointValue" value="{{system.pointValue}}" data-dtype="Number" min="0" />
+        <small>Points granted by taking this flaw (used to buy traits)</small>
+      </div>
+
+      <!-- Flaw Type -->
+      <div class="form-group">
+        <label>Flaw Type</label>
+        <select name="system.flawType">
+          <option value="physical" {{#if (eq system.flawType "physical")}}selected{{/if}}>Physical</option>
+          <option value="mental" {{#if (eq system.flawType "mental")}}selected{{/if}}>Mental</option>
+          <option value="social" {{#if (eq system.flawType "social")}}selected{{/if}}>Social</option>
+          <option value="supernatural" {{#if (eq system.flawType "supernatural")}}selected{{/if}}>Supernatural</option>
+          <option value="combat" {{#if (eq system.flawType "combat")}}selected{{/if}}>Combat</option>
+        </select>
+      </div>
+
+      <!-- Severity -->
+      <div class="form-group">
+        <label>Severity</label>
+        <select name="system.severity">
+          <option value="minor" {{#if (eq system.severity "minor")}}selected{{/if}}>Minor (1-2 points)</option>
+          <option value="moderate" {{#if (eq system.severity "moderate")}}selected{{/if}}>Moderate (3-5 points)</option>
+          <option value="major" {{#if (eq system.severity "major")}}selected{{/if}}>Major (6+ points)</option>
+        </select>
+      </div>
+
+      <!-- Mechanical Effects -->
+      <h3>Mechanical Effects</h3>
+      <div class="form-group">
+        <label>Game Effects</label>
+        <textarea name="system.mechanicalEffects" rows="5" placeholder="Describe the mechanical penalties or restrictions this flaw imposes">{{system.mechanicalEffects}}</textarea>
+      </div>
+
+      <!-- Roleplaying Impact -->
+      <div class="form-group">
+        <label>Roleplaying Impact</label>
+        <textarea name="system.roleplayingImpact" rows="4" placeholder="How does this flaw affect character roleplay and interactions?">{{system.roleplayingImpact}}</textarea>
+      </div>
+
+      <!-- Can Be Overcome -->
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.canBeOvercome" {{#if system.canBeOvercome}}checked{{/if}} />
+          Can Be Overcome/Bought Off
+        </label>
+      </div>
+
+      {{#if system.canBeOvercome}}
+      <div class="form-group">
+        <label>How to Overcome</label>
+        <textarea name="system.overcomeMethod" rows="3" placeholder="Describe how this flaw can be overcome or bought off">{{system.overcomeMethod}}</textarea>
+      </div>
+      {{/if}}
+
+      <!-- GM Approval -->
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.requiresGMApproval" {{#if system.requiresGMApproval}}checked{{/if}} />
+          Requires GM Approval
+        </label>
+      </div>
+
+      <!-- Special Notes -->
+      <div class="form-group">
+        <label>Special Notes</label>
+        <textarea name="system.notes" rows="3" placeholder="Any additional rules or clarifications">{{system.notes}}</textarea>
+      </div>
+
     </div>
   </section>
 </form>
