@@ -915,7 +915,8 @@ export async function spendLuckOnRoll(messageId, target) {
  */
 export function initializeLuckHandlers() {
   Hooks.on('renderChatMessageHTML', (message, html) => {
-    html.find('.spend-luck-btn').click(async (event) => {
+    const $html = html instanceof jQuery ? html : $(html);
+    $html.find('.spend-luck-btn').click(async (event) => {
       event.preventDefault();
       const button = event.currentTarget;
       const target = button.dataset.target;
