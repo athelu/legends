@@ -420,14 +420,44 @@
   font-size: 11px;
 }
 
-/* Empty Tags Fix - Don't show weapon-tags div if no properties */
-.legends.sheet .weapon-tags:empty {
-  display: none;
-  min-height: 0;
+/* Editable Quantity in Header */
+.legends.sheet .summary-stat.editable {
+  position: relative;
 }
 
-/* But keep minimum height when tags exist */
+.legends.sheet .summary-stat .qty-input {
+  width: 50px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2d3748;
+  border: 1px solid transparent;
+  background: transparent;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.legends.sheet .summary-stat .qty-input:hover {
+  border-color: #cbd5e0;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.legends.sheet .summary-stat .qty-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.1);
+}
+
+/* Hide weapon-tags div completely when empty */
+.legends.sheet .weapon-tags:empty {
+  display: none !important;
+}
+
+/* Show weapon-tags when it has content */
 .legends.sheet .weapon-tags:not(:empty) {
+  display: flex;
   min-height: 24px;
 }
 

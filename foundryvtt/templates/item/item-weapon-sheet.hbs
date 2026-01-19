@@ -4,9 +4,9 @@
     <div class="header-fields">
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Weapon Name"/></h1>
       
-      <!-- Property Tags (only show if properties exist) -->
+      <!-- Property Tags (only show if properties array has items) -->
       <div class="weapon-tags">
-        {{#if system.properties}}
+        {{#if (hasItems system.properties)}}
           {{#each system.properties as |prop|}}
           <span class="tag property-tag">{{uppercase prop}}</span>
           {{/each}}
@@ -38,9 +38,9 @@
           <span class="value">{{system.cost}} gp</span>
         </div>
         
-        <div class="summary-stat">
-          <label>Quantity</label>
-          <span class="value">{{system.quantity}}</span>
+        <div class="summary-stat editable">
+          <label>Qty</label>
+          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" class="qty-input" />
         </div>
         
         {{#if (gt system.range.normal 0)}}
