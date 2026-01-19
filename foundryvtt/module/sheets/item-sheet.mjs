@@ -43,7 +43,31 @@ export class D8ItemSheet extends ItemSheet {
       }
     );
     
-    // Add type-specific data
+    // Add property descriptions for weapons (Legends system)
+    if (this.item.type === 'weapon') {
+      context.propertyDescriptions = {
+        // Hand Usage Properties
+        'light': 'Can dual wield without penalty. Use d6 for attack rolls.',
+        'standard': 'Normal one-handed weapon. Use d8 for attack rolls.',
+        'versatile': 'Can use one or two hands. Use d8 (1H) or d10 (2H) for attack rolls.',
+        'two-handed': 'Requires both hands to use. Use d10 for attack rolls.',
+        
+        // Combat Properties
+        'finesse': 'Use Agility instead of Strength for attack rolls',
+        'reach': 'Extends melee range by 5 feet',
+        'monk': 'Usable with martial arts techniques',
+        
+        // Attack Type Properties
+        'ranged': 'Attacks at distance (requires range values)',
+        'thrown': 'Can be thrown as a ranged attack',
+        
+        // Special Properties
+        'alternate-strike': 'Can deal an alternate damage type (specify in notes)',
+        'multi-type': 'Deals multiple damage types simultaneously'
+      };
+    }
+    
+    // Add type-specific data for weaves
     if (this.item.type === 'weave') {
       context.energyTypes = {
         earth: "Earth",
@@ -71,7 +95,7 @@ export class D8ItemSheet extends ItemSheet {
     
     return context;
   }
-  
+
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
