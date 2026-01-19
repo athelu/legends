@@ -15,88 +15,43 @@
         {{/if}}
         
         {{#if (gt system.range.normal 0)}}
-        <span class="tag range-tag">RANGE {{system.range.normal}} FT.</span>
+        <span class="tag range-tag">{{system.range.normal}} FT</span>
+        {{/if}}
+      </div>
+      
+      <!-- Quick Summary Stats in Header -->
+      <div class="weapon-summary-row">
+        <div class="summary-stat">
+          <label>Damage</label>
+          <span class="value">{{system.damage.base}} {{system.damage.type}}</span>
+        </div>
+        
+        <div class="summary-stat">
+          <label>Weight</label>
+          <span class="value">{{system.weight}} lbs</span>
+        </div>
+        
+        <div class="summary-stat">
+          <label>Cost</label>
+          <span class="value">{{system.cost}} gp</span>
+        </div>
+        
+        {{#if (gt system.range.normal 0)}}
+        <div class="summary-stat">
+          <label>Range</label>
+          <span class="value">{{system.range.normal}}/{{system.range.medium}}/{{system.range.long}}</span>
+        </div>
         {{/if}}
       </div>
     </div>
   </header>
 
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="summary">Summary</a>
     <a class="item" data-tab="description">Description</a>
     <a class="item" data-tab="details">Details</a>
   </nav>
 
   <section class="sheet-body">
-    
-    <!-- SUMMARY Tab -->
-    <div class="tab summary" data-group="primary" data-tab="summary">
-      <div class="summary-grid">
-        
-        <!-- Quick Stats -->
-        <div class="stat-block">
-          <label>Damage</label>
-          <div class="stat-value">{{system.damage.base}} {{system.damage.type}}</div>
-        </div>
-        
-        <div class="stat-block">
-          <label>Hands</label>
-          <div class="stat-value">
-            {{#if (contains system.properties "light")}}Light (1H)
-            {{else if (contains system.properties "standard")}}Standard (1H)
-            {{else if (contains system.properties "versatile")}}Versatile (1H/2H)
-            {{else if (contains system.properties "two-handed")}}Two-Handed (2H)
-            {{else}}1 Hand{{/if}}
-          </div>
-        </div>
-        
-        {{#if (gt system.range.normal 0)}}
-        <div class="stat-block">
-          <label>Range</label>
-          <div class="stat-value">{{system.range.normal}} / {{system.range.medium}} / {{system.range.long}} ft</div>
-        </div>
-        {{/if}}
-        
-        <div class="stat-block">
-          <label>Weight</label>
-          <div class="stat-value">{{system.weight}} lbs</div>
-        </div>
-        
-        <div class="stat-block">
-          <label>Cost</label>
-          <div class="stat-value">{{system.cost}} gp</div>
-        </div>
-        
-        <div class="stat-block">
-          <label>Quantity</label>
-          <div class="stat-value">{{system.quantity}}</div>
-        </div>
-      </div>
-      
-      <!-- Active Properties -->
-      <div class="properties-summary">
-        <h3>Active Properties</h3>
-        {{#if system.properties.length}}
-        <ul class="properties-list">
-          {{#each system.properties as |prop|}}
-          <li><strong>{{capitalize prop}}:</strong> {{lookup ../propertyDescriptions prop}}</li>
-          {{/each}}
-        </ul>
-        {{else}}
-        <p class="hint"><em>No special properties</em></p>
-        {{/if}}
-      </div>
-      
-      <!-- Quick Description -->
-      {{#if system.description.value}}
-      <div class="quick-description">
-        <h3>Description</h3>
-        <div class="description-preview">
-          {{{enrichedDescription}}}
-        </div>
-      </div>
-      {{/if}}
-    </div>
 
     <!-- DESCRIPTION Tab -->
     <div class="tab description" data-group="primary" data-tab="description">
@@ -164,28 +119,36 @@
         <div class="property-category">
           <h4>Hand Usage (Choose One)</h4>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="light" {{#if (contains system.properties "light")}}checked{{/if}} />
-            <span class="property-name">Light</span>
-            <small>Can dual wield without penalty. Use d6 for attacks.</small>
+            <div class="property-info">
+              <span class="property-name">Light</span>
+              <span class="property-desc">Can dual wield without penalty. Use d6 for attacks.</span>
+            </div>
           </label>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="standard" {{#if (contains system.properties "standard")}}checked{{/if}} />
-            <span class="property-name">Standard</span>
-            <small>Normal one-handed weapon. Use d8 for attacks.</small>
+            <div class="property-info">
+              <span class="property-name">Standard</span>
+              <span class="property-desc">Normal one-handed weapon. Use d8 for attacks.</span>
+            </div>
           </label>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="versatile" {{#if (contains system.properties "versatile")}}checked{{/if}} />
-            <span class="property-name">Versatile</span>
-            <small>Can use one or two hands. Use d8 (1H) or d10 (2H).</small>
+            <div class="property-info">
+              <span class="property-name">Versatile</span>
+              <span class="property-desc">Can use one or two hands. Use d8 (1H) or d10 (2H).</span>
+            </div>
           </label>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="two-handed" {{#if (contains system.properties "two-handed")}}checked{{/if}} />
-            <span class="property-name">Two-Handed</span>
-            <small>Requires both hands. Use d10 for attacks.</small>
+            <div class="property-info">
+              <span class="property-name">Two-Handed</span>
+              <span class="property-desc">Requires both hands. Use d10 for attacks.</span>
+            </div>
           </label>
         </div>
 
@@ -193,22 +156,28 @@
         <div class="property-category">
           <h4>Combat Properties</h4>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="finesse" {{#if (contains system.properties "finesse")}}checked{{/if}} />
-            <span class="property-name">Finesse</span>
-            <small>Use Agility instead of Strength for attack rolls.</small>
+            <div class="property-info">
+              <span class="property-name">Finesse</span>
+              <span class="property-desc">Use Agility instead of Strength for attack rolls.</span>
+            </div>
           </label>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="reach" {{#if (contains system.properties "reach")}}checked{{/if}} />
-            <span class="property-name">Reach</span>
-            <small>Extends melee range by 5ft.</small>
+            <div class="property-info">
+              <span class="property-name">Reach</span>
+              <span class="property-desc">Extends melee range by 5ft.</span>
+            </div>
           </label>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="monk" {{#if (contains system.properties "monk")}}checked{{/if}} />
-            <span class="property-name">Monk</span>
-            <small>Usable with martial arts techniques.</small>
+            <div class="property-info">
+              <span class="property-name">Monk</span>
+              <span class="property-desc">Usable with martial arts techniques.</span>
+            </div>
           </label>
         </div>
 
@@ -216,16 +185,20 @@
         <div class="property-category">
           <h4>Attack Types</h4>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="ranged" {{#if (contains system.properties "ranged")}}checked{{/if}} />
-            <span class="property-name">Ranged</span>
-            <small>Attacks at distance (requires range values).</small>
+            <div class="property-info">
+              <span class="property-name">Ranged</span>
+              <span class="property-desc">Attacks at distance (requires range values).</span>
+            </div>
           </label>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="thrown" {{#if (contains system.properties "thrown")}}checked{{/if}} />
-            <span class="property-name">Thrown</span>
-            <small>Can be thrown as ranged attack.</small>
+            <div class="property-info">
+              <span class="property-name">Thrown</span>
+              <span class="property-desc">Can be thrown as a ranged attack.</span>
+            </div>
           </label>
         </div>
 
@@ -233,16 +206,20 @@
         <div class="property-category">
           <h4>Special Properties</h4>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="alternate-strike" {{#if (contains system.properties "alternate-strike")}}checked{{/if}} />
-            <span class="property-name">Alternate Strike</span>
-            <small>Can deal an alternate damage type (specify in notes).</small>
+            <div class="property-info">
+              <span class="property-name">Alternate Strike</span>
+              <span class="property-desc">Can deal an alternate damage type (specify in notes).</span>
+            </div>
           </label>
           
-          <label class="checkbox">
+          <label class="checkbox-property">
             <input type="checkbox" name="system.properties" value="multi-type" {{#if (contains system.properties "multi-type")}}checked{{/if}} />
-            <span class="property-name">Multi-Type</span>
-            <small>Deals multiple damage types simultaneously.</small>
+            <div class="property-info">
+              <span class="property-name">Multi-Type</span>
+              <span class="property-desc">Deals multiple damage types simultaneously.</span>
+            </div>
           </label>
         </div>
       </div>
