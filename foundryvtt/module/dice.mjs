@@ -8,7 +8,7 @@
  * @param {Object} options - Roll options (actor, attrValue, skillValue, etc.)
  * @returns {Promise<void>}
  */
-async function showRollDialog(options) {
+export async function showRollDialog(options) {
   const { actor, attrValue, skillValue, attrLabel, skillLabel } = options;
   
   return new Promise((resolve) => {
@@ -398,10 +398,16 @@ export async function rollD8Check(options = {}) {
     attrDie = results[0];
     skillDie = results[1];
   }
+    
+// Apply modifiers based on flags (from dialog)
+  const applyToAttr = options.applyToAttr !== undefined ? options.applyToAttr : true;
+  const applyToSkill = options.applyToSkill !== undefined ? options.applyToSkill : true;
   
-  // Apply modifiers
-  const modifiedAttrDie = attrDie + modifier;
-  const modifiedSkillDie = skillDie + modifier;
+  const attrModifier = applyToAttr ? modifier : 0;
+  const skillModifier = applyToSkill ? modifier : 0;
+  
+  const modifiedAttrDie = attrDie + attrModifier;
+  const modifiedSkillDie = skillDie + skillModifier;
   
   // Count successes (roll under target, natural 1 always succeeds, 8 always fails)
   let successes = 0;
