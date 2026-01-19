@@ -1,6 +1,7 @@
 /**
  * D8 TTRPG Character Sheet
  */
+const { ActorSheet } = foundry.appv1.sheets;
 export class D8CharacterSheet extends ActorSheet {
   
   /** @override */
@@ -46,10 +47,14 @@ export class D8CharacterSheet extends ActorSheet {
     }
     
     // Enrich biography HTML
-    context.enrichedBiography = await TextEditor.enrichHTML(context.system.biography.value, {
-      secrets: this.actor.isOwner,
-      async: true
-    });
+     const TextEditor = foundry.applications.ux.TextEditor.implementation;
+      context.enrichedBiography = await TextEditor.enrichHTML(
+        context.system.biography.value, 
+        {
+          secrets: this.actor.isOwner,
+          async: true
+        }
+    );
     
     return context;
   }

@@ -1,6 +1,7 @@
 /**
  * D8 TTRPG Item Sheet
  */
+const { ItemSheet } = foundry.appv1.sheets;
 export class D8ItemSheet extends ItemSheet {
   
   /** @override */
@@ -28,10 +29,14 @@ export class D8ItemSheet extends ItemSheet {
     context.flags = itemData.flags;
     
     // Enrich description
-    context.enrichedDescription = await TextEditor.enrichHTML(context.system.description?.value || "", {
-      secrets: this.item.isOwner,
-      async: true
-    });
+    const TextEditor = foundry.applications.ux.TextEditor.implementation;
+      context.enrichedDescription = await TextEditor.enrichHTML(
+        context.system.description?.value || "", 
+        {
+          secrets: this.item.isOwner,
+          async: true
+        }
+    );
     
     // Add type-specific data
     if (this.item.type === 'weave') {

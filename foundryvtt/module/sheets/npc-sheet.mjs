@@ -1,6 +1,7 @@
 /**
  * D8 TTRPG NPC Sheet
  */
+const { ActorSheet } = foundry.appv1.sheets;
 export class D8NPCSheet extends ActorSheet {
   
   /** @override */

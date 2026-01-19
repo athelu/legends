@@ -40,12 +40,12 @@ Hooks.once('init', async function() {
   CONFIG.Item.documentClass = D8Item;
 
   // Register sheet application classes
-  Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("legends", D8CharacterSheet, {
-    types: ["character"],
-    makeDefault: true,
-    label: "D8.SheetLabels.Character"
-  });
+foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
+foundry.documents.collections.Actors.registerSheet("legends", D8CharacterSheet, {
+  types: ["character"],
+  makeDefault: true,
+  label: "D8.SheetLabels.Character"
+});
   
   Actors.registerSheet("legends", D8NPCSheet, {
     types: ["npc"],
@@ -53,15 +53,15 @@ Hooks.once('init', async function() {
     label: "D8.SheetLabels.NPC"
   });
 
-  Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("legends", D8ItemSheet, {
-    makeDefault: true,
-    label: "D8.SheetLabels.Item"
-  });
+foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
+foundry.documents.collections.Items.registerSheet("legends", D8ItemSheet, {
+  makeDefault: true,
+  label: "D8.SheetLabels.Item"
+});
 
   // Preload Handlebars templates
 // Preload Handlebars templates
-  await loadTemplates([
+await foundry.applications.handlebars.loadTemplates([
     // Template partials can be added here if needed
   ]);
   // Register Handlebars helpers

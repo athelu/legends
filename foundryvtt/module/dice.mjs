@@ -408,7 +408,7 @@ export async function rollD8Check(options = {}) {
   
   const modifiedAttrDie = attrDie + attrModifier;
   const modifiedSkillDie = skillDie + skillModifier;
-  
+
   // Count successes (roll under target, natural 1 always succeeds, 8 always fails)
   let successes = 0;
   
@@ -914,7 +914,7 @@ export async function spendLuckOnRoll(messageId, target) {
  * Initialize luck spending button handlers
  */
 export function initializeLuckHandlers() {
-  Hooks.on('renderChatMessage', (message, html, data) => {
+  Hooks.on('renderChatMessageHTML', (message, html) => {
     html.find('.spend-luck-btn').click(async (event) => {
       event.preventDefault();
       const button = event.currentTarget;
