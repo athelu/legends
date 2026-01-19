@@ -47,11 +47,11 @@ foundry.documents.collections.Actors.registerSheet("legends", D8CharacterSheet, 
   label: "D8.SheetLabels.Character"
 });
   
-  Actors.registerSheet("legends", D8NPCSheet, {
-    types: ["npc"],
-    makeDefault: true,
-    label: "D8.SheetLabels.NPC"
-  });
+foundry.documents.collections.Actors.registerSheet("legends", D8NPCSheet, {
+  types: ["npc"],
+  makeDefault: true,
+  label: "D8.SheetLabels.NPC"
+});
 
 foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
 foundry.documents.collections.Items.registerSheet("legends", D8ItemSheet, {
