@@ -504,6 +504,85 @@
 }
 
 /* ========================================
+   ARMOR SHEET TAG STYLES
+   Add this after the weapon sheet styles in legends.css
+   ======================================== */
+
+/* Armor Tags in Header */
+.legends.sheet .armor-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin: 8px 0;
+  min-height: 24px;
+}
+
+.legends.sheet .armor-tags .tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  color: #fff;
+  border: 1px solid #444;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Armor Type Tags */
+.legends.sheet .armor-tags .tag.armor-type-tag {
+  background: linear-gradient(to bottom, #a0aec0, #718096);
+  border-color: #4a5568;
+}
+
+/* Shield Type Tag */
+.legends.sheet .armor-tags .tag.shield-type-tag {
+  background: linear-gradient(to bottom, #4299e1, #3182ce);
+  border-color: #2c5282;
+}
+
+/* Stealth Penalty Tags (Noisy/Loud) */
+.legends.sheet .armor-tags .tag.stealth-tag {
+  background: linear-gradient(to bottom, #fc8181, #f56565);
+  border-color: #c53030;
+}
+
+/* DR Tag */
+.legends.sheet .armor-tags .tag.dr-tag {
+  background: linear-gradient(to bottom, #68d391, #48bb78);
+  border-color: #38a169;
+}
+
+/* Armor Summary Stats Row in Header */
+.legends.sheet .armor-summary-row {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  border: 1px solid #cbd5e0;
+}
+
+/* Make armor summary stats readable on dark header (if using gray theme) */
+.legends .sheet-header .armor-summary-row .summary-stat label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.legends .sheet-header .armor-summary-row .summary-stat .value {
+  color: #FFFFFF;
+}
+
+.legends .sheet-header .armor-summary-row {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+/* ========================================
    CHARACTER SHEET SPECIFIC
    ======================================== */
 
