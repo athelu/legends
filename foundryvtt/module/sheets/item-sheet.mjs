@@ -45,6 +45,13 @@ export class D8ItemSheet extends ItemSheet {
     
     // Add property descriptions for weapons (Legends system)
     if (this.item.type === 'weapon') {
+      // FILTER OUT EMPTY PROPERTY VALUES!
+      if (context.system.properties && Array.isArray(context.system.properties)) {
+        context.system.properties = context.system.properties.filter(prop => 
+          prop && typeof prop === 'string' && prop.trim() !== ''
+        );
+      }
+      
       context.propertyDescriptions = {
         // Hand Usage Properties
         'light': 'Can dual wield without penalty. Use d6 for attack rolls.',
