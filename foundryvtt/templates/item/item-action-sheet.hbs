@@ -1,0 +1,104 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  
+  {{!-- Header --}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="80" width="80"/>
+    <div class="header-fields">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Action Name"/>
+      </h1>
+      
+      {{!-- Action Tags --}}
+      <div class="action-tags">
+        {{#if system.actionType}}
+        <span class="tag action-type-tag">{{system.actionType}}</span>
+        {{/if}}
+        {{#if system.actionCost}}
+        <span class="tag cost-tag">{{system.actionCost}} Action(s)</span>
+        {{/if}}
+        {{#each system.keywords}}
+        <span class="tag keyword-tag">{{this}}</span>
+        {{/each}}
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tabs --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    
+    {{!-- Description Tab --}}
+    <div class="tab description" data-group="primary" data-tab="description">
+      <div class="form-group">
+        <label>Description</label>
+        {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <div class="form-group">
+        <label>Action Type</label>
+        <select name="system.actionType">
+          <option value="combat" {{#if (eq system.actionType "combat")}}selected{{/if}}>Combat</option>
+          <option value="move" {{#if (eq system.actionType "move")}}selected{{/if}}>Move</option>
+          <option value="interact" {{#if (eq system.actionType "interact")}}selected{{/if}}>Interact</option>
+          <option value="activate" {{#if (eq system.actionType "activate")}}selected{{/if}}>Activate</option>
+          <option value="free" {{#if (eq system.actionType "free")}}selected{{/if}}>Free</option>
+          <option value="reaction" {{#if (eq system.actionType "reaction")}}selected{{/if}}>Reaction</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Action Cost</label>
+        <input type="text" name="system.actionCost" value="{{system.actionCost}}" placeholder="e.g., 1, 2, Free"/>
+      </div>
+
+      <div class="form-group">
+        <label>Keywords (comma-separated)</label>
+        <input type="text" name="system.keywords" value="{{system.keywords}}" placeholder="e.g., Combat, Attack, Melee"/>
+        <small>Enter keywords separated by commas</small>
+      </div>
+
+      <div class="form-group">
+        <label>Trigger (for reactions)</label>
+        <input type="text" name="system.trigger" value="{{system.trigger}}" placeholder="e.g., When an enemy leaves your reach"/>
+      </div>
+
+      <div class="form-group">
+        <label>Range</label>
+        <input type="text" name="system.range" value="{{system.range}}" placeholder="e.g., 5 ft, 30 ft, Touch"/>
+      </div>
+
+      <div class="form-group">
+        <label>Target</label>
+        <input type="text" name="system.target" value="{{system.target}}" placeholder="e.g., One creature, Self, 20-ft radius"/>
+      </div>
+
+      <div class="form-group">
+        <label>Frequency</label>
+        <input type="text" name="system.frequency" value="{{system.frequency}}" placeholder="e.g., Once per round, At will, 1/day"/>
+      </div>
+
+      <div class="form-group">
+        <label>Effect</label>
+        <textarea name="system.effect" rows="4">{{system.effect}}</textarea>
+        <small>Mechanical effect of this action</small>
+      </div>
+
+      <div class="form-group">
+        <label>Special</label>
+        <textarea name="system.special" rows="3">{{system.special}}</textarea>
+        <small>Special notes or clarifications</small>
+      </div>
+      
+    </div>
+
+  </section>
+</form>

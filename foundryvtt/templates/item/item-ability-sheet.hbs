@@ -1,0 +1,96 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  
+  {{!-- Header --}}
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="80" width="80"/>
+    <div class="header-fields">
+      <h1 class="charname">
+        <input name="name" type="text" value="{{item.name}}" placeholder="Ability Name"/>
+      </h1>
+      
+      {{!-- Ability Tags --}}
+      <div class="ability-tags">
+        {{#if system.abilityType}}
+        <span class="tag ability-type-tag">{{system.abilityType}}</span>
+        {{/if}}
+        {{#if system.source}}
+        <span class="tag source-tag">{{system.source}}</span>
+        {{/if}}
+        {{#if system.isActive}}
+        <span class="tag active-tag">Active</span>
+        {{/if}}
+        {{#each system.keywords}}
+        <span class="tag keyword-tag">{{this}}</span>
+        {{/each}}
+      </div>
+    </div>
+  </header>
+
+  {{!-- Sheet Tabs --}}
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
+  {{!-- Sheet Body --}}
+  <section class="sheet-body">
+    
+    {{!-- Description Tab --}}
+    <div class="tab description" data-group="primary" data-tab="description">
+      <div class="form-group">
+        <label>Description</label>
+        {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+      </div>
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <div class="form-group">
+        <label>Ability Type</label>
+        <select name="system.abilityType">
+          <option value="passive" {{#if (eq system.abilityType "passive")}}selected{{/if}}>Passive</option>
+          <option value="triggered" {{#if (eq system.abilityType "triggered")}}selected{{/if}}>Triggered</option>
+          <option value="active" {{#if (eq system.abilityType "active")}}selected{{/if}}>Active</option>
+          <option value="reaction" {{#if (eq system.abilityType "reaction")}}selected{{/if}}>Reaction</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Source</label>
+        <input type="text" name="system.source" value="{{system.source}}" placeholder="e.g., Buckler Shield, Magic Item, Feat"/>
+        <small>What grants this ability</small>
+      </div>
+
+      <div class="form-group">
+        <label>Keywords (comma-separated)</label>
+        <input type="text" name="system.keywords" value="{{system.keywords}}" placeholder="e.g., Shield, Defense, Reaction"/>
+        <small>Enter keywords separated by commas</small>
+      </div>
+
+      <div class="form-group">
+        <label>Trigger (for triggered abilities)</label>
+        <input type="text" name="system.trigger" value="{{system.trigger}}" placeholder="e.g., When you are hit by a melee attack"/>
+      </div>
+
+      <div class="form-group">
+        <label>Frequency</label>
+        <input type="text" name="system.frequency" value="{{system.frequency}}" placeholder="e.g., Once per round, At will, Passive"/>
+      </div>
+
+      <div class="form-group">
+        <label>Effect</label>
+        <textarea name="system.effect" rows="4">{{system.effect}}</textarea>
+        <small>Mechanical effect of this ability</small>
+      </div>
+
+      <div class="form-group">
+        <label>Currently Active</label>
+        <input type="checkbox" name="system.isActive" {{checked system.isActive}}/>
+        <small>Is this ability currently active on the character?</small>
+      </div>
+      
+    </div>
+
+  </section>
+</form>
