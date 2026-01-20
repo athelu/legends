@@ -74,6 +74,16 @@ export class D8ItemSheet extends ItemSheet {
       };
     }
     
+    // Filter empty properties for armor too
+    if (this.item.type === 'armor') {
+      // FILTER OUT EMPTY PROPERTY VALUES!
+      if (context.system.properties && Array.isArray(context.system.properties)) {
+        context.system.properties = context.system.properties.filter(prop => 
+          prop && typeof prop === 'string' && prop.trim() !== ''
+        );
+      }
+    }
+    
     // Add type-specific data for weaves
     if (this.item.type === 'weave') {
       context.energyTypes = {
