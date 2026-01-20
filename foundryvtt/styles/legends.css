@@ -246,6 +246,19 @@
   border-color: #38a169;
 }
 
+.legends .sheet-header .weapon-summary-row .summary-stat label {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.legends .sheet-header .weapon-summary-row .summary-stat .value {
+  color: #FFFFFF !important;
+}
+
+.legends .sheet-header .weapon-summary-row {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
 /* Summary Stats Row in Header */
 .legends.sheet .weapon-summary-row {
   display: flex;
