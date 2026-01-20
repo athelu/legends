@@ -1,315 +1,149 @@
-<form class="{{cssClass}} flexcol" autocomplete="off">
-  <header class="sheet-header">
-    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
-    <div class="header-fields">
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Weapon Name"/></h1>
+/**
+ * D8 TTRPG Item Sheet
+ */
+const { ItemSheet } = foundry.appv1.sheets;
+
+export class D8ItemSheet extends ItemSheet {
+  
+  /** @override */
+  static get defaultOptions() {
+    return foundry.utils.mergeObject(super.defaultOptions, {
+      classes: ["legends", "sheet", "item"],
+      width: 520,
+      height: 480,
+      tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
+    });
+  }
+  
+  /** @override */
+  get template() {
+    const path = "systems/legends/templates/item";
+    return `${path}/item-${this.item.type}-sheet.hbs`;
+  }
+  
+  /** @override */
+  async getData() {
+    const context = super.getData();
+    const itemData = this.item.toObject(false);
+    
+    context.system = itemData.system;
+    context.flags = itemData.flags;
+    
+    // CRITICAL: Set these for the editor helper
+    context.owner = this.item.isOwner;
+    context.editable = this.isEditable;
+    
+    // Enrich description
+    const TextEditor = foundry.applications.ux.TextEditor.implementation;
+    context.enrichedDescription = await TextEditor.enrichHTML(
+      context.system.description?.value || "", 
+      {
+        secrets: this.item.isOwner,
+        async: true
+      }
+    );
+    
+    // Add property descriptions for weapons (Legends system)
+    if (this.item.type === 'weapon') {
+      // FILTER OUT EMPTY PROPERTY VALUES!
+      if (context.system.properties && Array.isArray(context.system.properties)) {
+        context.system.properties = context.system.properties.filter(prop => 
+          prop && typeof prop === 'string' && prop.trim() !== ''
+        );
+      }
       
-      <!-- Property Tags - NO EMPTY BOXES! -->
-      {{#each system.properties as |prop|}}
-        {{#if @first}}<div class="weapon-tags">{{/if}}
-        <span class="tag property-tag">{{uppercase prop}}</span>
-        {{#if @last}}
-          {{#if ../system.damage.type}}<span class="tag damage-tag">{{uppercase ../system.damage.type}}</span>{{/if}}
-          {{#if (gt ../system.range.normal 0)}}<span class="tag range-tag">{{../system.range.normal}} FT</span>{{/if}}
-        </div>
-        {{/if}}
-      {{else}}
-        {{#if system.damage.type}}
-        <div class="weapon-tags">
-          <span class="tag damage-tag">{{uppercase system.damage.type}}</span>
-          {{#if (gt system.range.normal 0)}}<span class="tag range-tag">{{system.range.normal}} FT</span>{{/if}}
-        </div>
-        {{else}}{{#if (gt system.range.normal 0)}}
-        <div class="weapon-tags"><span class="tag range-tag">{{system.range.normal}} FT</span></div>
-        {{/if}}{{/if}}
-      {{/each}}
-      
-      <!-- Quick Summary Stats in Header -->
-      <div class="weapon-summary-row">
-        <div class="summary-stat">
-          <label>Damage</label>
-          <span class="value">{{system.damage.base}} {{system.damage.type}}</span>
-        </div>
+      context.propertyDescriptions = {
+        // Hand Usage Properties
+        'light': 'Can dual wield without penalty. Use d6 for attack rolls.',
+        'standard': 'Normal one-handed weapon. Use d8 for attack rolls.',
+        'versatile': 'Can use one or two hands. Use d8 (1H) or d10 (2H) for attack rolls.',
+        'two-handed': 'Requires both hands to use. Use d10 for attack rolls.',
         
-        <div class="summary-stat">
-          <label>Weight</label>
-          <span class="value">{{system.weight}} lbs</span>
-        </div>
+        // Combat Properties
+        'finesse': 'Use Agility instead of Strength for attack rolls',
+        'reach': 'Extends melee range by 5 feet',
+        'monk': 'Usable with martial arts techniques',
         
-        <div class="summary-stat">
-          <label>Cost</label>
-          <span class="value">{{system.cost}} gp</span>
-        </div>
+        // Attack Type Properties
+        'ranged': 'Attacks at distance (requires range values)',
+        'thrown': 'Can be thrown as a ranged attack',
         
-        <div class="summary-stat editable">
-          <label>Qty</label>
-          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" class="qty-input" />
-        </div>
-        
-        {{#if (gt system.range.normal 0)}}
-        <div class="summary-stat">
-          <label>Range</label>
-          <span class="value">{{system.range.normal}}/{{system.range.medium}}/{{system.range.long}}</span>
-        </div>
-        {{/if}}
-      </div>
-    </div>
-  </header>
-
-  <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="description">Description</a>
-    <a class="item" data-tab="details">Details</a>
-  </nav>
-
-  <section class="sheet-body">
-
-    <!-- DESCRIPTION Tab -->
-    <div class="tab description" data-group="primary" data-tab="description">
-      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
-    </div>
-
-    <!-- DETAILS Tab -->
-    <div class="tab details" data-group="primary" data-tab="details">
+        // Special Properties
+        'alternate-strike': 'Can deal an alternate damage type (specify in notes)',
+        'multi-type': 'Deals multiple damage types simultaneously'
+      };
+    }
+    
+    // Add type-specific data for weaves
+    if (this.item.type === 'weave') {
+      context.energyTypes = {
+        earth: "Earth",
+        air: "Air",
+        fire: "Fire",
+        water: "Water",
+        positive: "Positive",
+        negative: "Negative",
+        time: "Time",
+        space: "Space"
+      };
       
-      <!-- Damage -->
-      <div class="section-header">
-        <h3>Damage</h3>
-      </div>
-      
-      <div class="form-group-row">
-        <div class="form-group">
-          <label>Base Damage (Static)</label>
-          <input type="number" name="system.damage.base" value="{{system.damage.base}}" data-dtype="Number" min="0" />
-          <small>Light: 4, Standard: 6, Heavy 1H: 8, Two-Handed: 10</small>
-        </div>
-        <div class="form-group">
-          <label>Damage Type</label>
-          <select name="system.damage.type">
-            <option value="slashing" {{#if (eq system.damage.type "slashing")}}selected{{/if}}>Slashing</option>
-            <option value="piercing" {{#if (eq system.damage.type "piercing")}}selected{{/if}}>Piercing</option>
-            <option value="bludgeoning" {{#if (eq system.damage.type "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
-          </select>
-        </div>
-      </div>
+      context.effectTypes = {
+        damage: "Damage",
+        healing: "Healing",
+        buff: "Buff/Debuff",
+        control: "Control",
+        summon: "Summon",
+        transformation: "Transformation",
+        utility: "Utility",
+        protection: "Protection",
+        divination: "Divination"
+      };
+    }
+    
+    return context;
+  }
 
-      <div class="damage-explanation">
-        <h4>Damage Resolution (Opposed Rolls)</h4>
-        <ul>
-          <li><strong>Margin 0 (Tie):</strong> Defender wins, no damage</li>
-          <li><strong>Margin 1:</strong> Base weapon damage</li>
-          <li><strong>Margin 2:</strong> Base weapon damage + Ability value</li>
-          <li><strong>Margin 3+ (Critical):</strong> Base weapon damage + Ability value + Condition</li>
-        </ul>
-        <p><small>Ability value depends on the weapon skill used (Ranged use Dexterity, melee use Strength, Thrown use Strength).</small></p>
-      </div>
-
-      <!-- Range (for ranged/thrown weapons) -->
-      <div class="section-header">
-        <h3>Range</h3>
-      </div>
-      
-      <div class="form-group-row">
-        <div class="form-group">
-          <label>Short Range</label>
-          <input type="number" name="system.range.normal" value="{{system.range.normal}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>1 net success needed to hit for base damage</small>
-        </div>
-        <div class="form-group">
-          <label>Medium Range</label>
-          <input type="number" name="system.range.medium" value="{{system.range.medium}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>2 net successes needed to hit for base damage</small>
-        </div>
-        <div class="form-group">
-          <label>Long Range</label>
-          <input type="number" name="system.range.long" value="{{system.range.long}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>2 net successes to hit for base damage, +1 to both dice</small>
-        </div>
-      </div>
-
-      <!-- Properties -->
-      <div class="section-header">
-        <h3>Properties</h3>
-      </div>
-      
-      <div class="properties-grid">
-        <!-- Hand Usage Properties (Mutually Exclusive) -->
-        <div class="property-category">
-          <h4>Hand Usage (Choose One)</h4>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="light" {{#if (contains system.properties "light")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Light</span>
-              <span class="property-desc">Base damage 4. Only option for off-hand.</span>
-            </div>
-          </label>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="standard" {{#if (contains system.properties "standard")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Standard</span>
-              <span class="property-desc">Base damage 6. Normal one-handed weapon.</span>
-            </div>
-          </label>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="versatile" {{#if (contains system.properties "versatile")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Versatile</span>
-              <span class="property-desc">Base damage 8 (1H) or 9 (2H). Can equip with one or two hands (tracked on actor).</span>
-            </div>
-          </label>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="two-handed" {{#if (contains system.properties "two-handed")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Two-Handed</span>
-              <span class="property-desc">Base damage 10. Requires both hands.</span>
-            </div>
-          </label>
-        </div>
-
-        <!-- Combat Properties -->
-        <div class="property-category">
-          <h4>Combat Properties</h4>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="finesse" {{#if (contains system.properties "finesse")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Finesse</span>
-              <span class="property-desc">Use Agility instead of Strength for attack rolls.</span>
-            </div>
-          </label>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="reach" {{#if (contains system.properties "reach")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Reach</span>
-              <span class="property-desc">Extends melee range by 5ft.</span>
-            </div>
-          </label>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="monk" {{#if (contains system.properties "monk")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Monk</span>
-              <span class="property-desc">Usable with martial arts techniques.</span>
-            </div>
-          </label>
-        </div>
-
-        <!-- Attack Type Properties -->
-        <div class="property-category">
-          <h4>Attack Types</h4>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="ranged" {{#if (contains system.properties "ranged")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Ranged</span>
-              <span class="property-desc">Attacks at distance (requires range values).</span>
-            </div>
-          </label>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="thrown" {{#if (contains system.properties "thrown")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Thrown</span>
-              <span class="property-desc">Can be thrown as a ranged attack.</span>
-            </div>
-          </label>
-        </div>
-
-        <!-- Special Properties -->
-        <div class="property-category">
-          <h4>Special Properties</h4>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="alternate-strike" {{#if (contains system.properties "alternate-strike")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Alternate Strike</span>
-              <span class="property-desc">Can deal an alternate damage type with different base damage.</span>
-            </div>
-          </label>
-          
-          <label class="checkbox-property">
-            <input type="checkbox" name="system.properties" value="multi-type" {{#if (contains system.properties "multi-type")}}checked{{/if}} />
-            <div class="property-info">
-              <span class="property-name">Multi-Type</span>
-              <span class="property-desc">Deals multiple damage types simultaneously.</span>
-            </div>
-          </label>
-        </div>
-      </div>
-
-      <!-- Alternate Strike Details (conditional) -->
-      {{#if (contains system.properties "alternate-strike")}}
-      <div class="section-header">
-        <h3>Alternate Strike Details</h3>
-      </div>
-      <div class="form-group-row">
-        <div class="form-group">
-          <label>Alternate Damage Type</label>
-          <select name="system.damage.alternateType">
-            <option value="" {{#unless system.damage.alternateType}}selected{{/unless}}>Select Type</option>
-            <option value="slashing" {{#if (eq system.damage.alternateType "slashing")}}selected{{/if}}>Slashing</option>
-            <option value="piercing" {{#if (eq system.damage.alternateType "piercing")}}selected{{/if}}>Piercing</option>
-            <option value="bludgeoning" {{#if (eq system.damage.alternateType "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Alternate Base Damage</label>
-          <input type="number" name="system.damage.alternate" value="{{system.damage.alternate}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>Base damage when using alternate strike mode</small>
-        </div>
-      </div>
-      {{/if}}
-
-      <!-- Multi-Type Details (conditional) -->
-      {{#if (contains system.properties "multi-type")}}
-      <div class="section-header">
-        <h3>Multi-Type Details</h3>
-      </div>
-      <div class="form-group">
-        <label>Additional Damage Type</label>
-        <select name="system.damage.multiType">
-          <option value="" {{#unless system.damage.multiType}}selected{{/unless}}>Select Additional Type</option>
-          <option value="slashing" {{#if (eq system.damage.multiType "slashing")}}selected{{/if}}>Slashing</option>
-          <option value="piercing" {{#if (eq system.damage.multiType "piercing")}}selected{{/if}}>Piercing</option>
-          <option value="bludgeoning" {{#if (eq system.damage.multiType "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
-        </select>
-        <small>Weapon deals both primary and additional damage type simultaneously</small>
-      </div>
-      {{/if}}
-
-      <!-- Physical Properties -->
-      <div class="section-header">
-        <h3>Physical Properties</h3>
-      </div>
-      
-      <div class="form-group-row">
-        <div class="form-group">
-          <label>Weight (lbs)</label>
-          <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
-        </div>
-        <div class="form-group">
-          <label>Cost (gp)</label>
-          <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
-        </div>
-        <div class="form-group">
-          <label>Quantity</label>
-          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
-        </div>
-      </div>
-
-      <!-- Additional Notes -->
-      <div class="section-header">
-        <h3>Special Rules & Notes</h3>
-      </div>
-      
-      <div class="form-group">
-        <textarea name="system.notes" rows="4" placeholder="Any special rules or notes about this weapon">{{system.notes}}</textarea>
-      </div>
-
-    </div>
-  </section>
-</form>
+  /** @override */
+  activateListeners(html) {
+    super.activateListeners(html);
+    
+    if (!this.isEditable) return;
+    
+    // Roll item
+    html.find('.item-roll').click(this._onItemRoll.bind(this));
+    
+    // ===================================================================
+    // ARMOR CONDITIONAL DISPLAY - Added from armor-conditional-display.mjs
+    // Handle armor type changes to show/hide relevant fields
+    // ===================================================================
+    html.find('.armor-type-select').change(this._onArmorTypeChange.bind(this));
+  }
+  
+  /**
+   * Handle item rolls
+   */
+  async _onItemRoll(event) {
+    event.preventDefault();
+    return this.item.roll();
+  }
+  
+  /**
+   * Handle armor type changes to show/hide relevant fields
+   * This is triggered when the armor type dropdown changes
+   */
+  _onArmorTypeChange(event) {
+    const armorType = event.currentTarget.value;
+    const form = $(event.currentTarget).closest('form');
+    
+    const armorFields = form.find('.armor-only-fields');
+    const shieldFields = form.find('.shield-only-fields');
+    
+    if (armorType === 'shield') {
+      armorFields.hide();
+      shieldFields.show();
+    } else {
+      armorFields.show();
+      shieldFields.hide();
+    }
+  }
+}
