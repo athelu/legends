@@ -142,6 +142,24 @@ async function showDiceAssignmentDialog(options) {
     ? `Best 2: ${sorted[0]}, ${sorted[1]}` 
     : `Worst 2: ${sorted[1]}, ${sorted[2]}`;
   
+  // Pre-select appropriate defaults based on fortune/misfortune
+  let defaultAttrIdx, defaultSkillIdx;
+  if (isFortune) {
+    // For fortune, assign the two lowest
+    const sortedIndices = results
+      .map((val, idx) => ({ val, idx }))
+      .sort((a, b) => a.val - b.val);
+    defaultAttrIdx = sortedIndices[0].idx;
+    defaultSkillIdx = sortedIndices[1].idx;
+  } else {
+    // For misfortune, assign the two highest
+    const sortedIndices = results
+      .map((val, idx) => ({ val, idx }))
+      .sort((a, b) => b.val - a.val);
+    defaultAttrIdx = sortedIndices[0].idx;
+    defaultSkillIdx = sortedIndices[1].idx;
+  }
+  
   return new Promise((resolve) => {
     new Dialog({
       title: `${isFortune ? 'Fortune' : 'Misfortune'} - Assign Dice`,
@@ -159,20 +177,28 @@ async function showDiceAssignmentDialog(options) {
           <div class="form-group">
             <label>Assign to ${attrLabel}:</label>
             <select name="attrDie" style="width: 100%; padding: 5px;">
-              ${results.map((die, idx) => `<option value="${idx}">${die}</option>`).join('')}
+              ${results.map((die, idx) => 
+                `<option value="${idx}" ${idx === defaultAttrIdx ? 'selected' : ''}>
+                  Die #${idx + 1}: ${die}
+                </option>`
+              ).join('')}
             </select>
           </div>
           
           <div class="form-group">
             <label>Assign to ${skillLabel}:</label>
             <select name="skillDie" style="width: 100%; padding: 5px;">
-              ${results.map((die, idx) => `<option value="${idx}">${die}</option>`).join('')}
+              ${results.map((die, idx) => 
+                `<option value="${idx}" ${idx === defaultSkillIdx ? 'selected' : ''}>
+                  Die #${idx + 1}: ${die}
+                </option>`
+              ).join('')}
             </select>
           </div>
           
           <div class="form-group">
             <p style="font-size: 11px; color: #999; margin-top: 10px;">
-              Choose which 2 dice to use and assign them to attribute and skill.
+              Choose which 2 dice positions to use. Each die can only be used once.
             </p>
           </div>
         </form>
@@ -186,7 +212,10 @@ async function showDiceAssignmentDialog(options) {
             const skillIdx = parseInt(html.find('[name="skillDie"]').val());
             
             if (attrIdx === skillIdx) {
-              ui.notifications.error("Must assign different dice to attribute and skill!");
+              ui.notifications.error("Must assign different dice positions! Die #" + (attrIdx + 1) + " cannot be used twice.");
+              // Re-open the dialog with the same options
+              showDiceAssignmentDialog(options);
+              resolve();
               return;
             }
             
@@ -219,7 +248,7 @@ async function showDiceAssignmentDialog(options) {
       },
       default: "confirm"
     }, {
-      width: 350
+      width: 400
     }).render(true);
   });
 }
