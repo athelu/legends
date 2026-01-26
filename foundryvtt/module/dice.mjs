@@ -128,6 +128,12 @@ async function showDiceAssignmentDialog(options) {
   // Roll 3d8
   const roll = new Roll('3d8');
   await roll.evaluate();
+  
+  // Show the dice animation
+  if (game.dice3d) {
+    await game.dice3d.showForRoll(roll, game.user, true);
+  }
+  
   const results = roll.dice[0].results.map(r => r.result);
   
   // Sort to help player see best/worst options
@@ -319,10 +325,24 @@ async function rollD8CheckWithAssignedDice(options) {
     luckSpent: 0,
     allResults: allResults
   };
+
+  const fakeRoll = Roll.fromData({
+      class: "Roll",
+      formula: `3d8`,
+      terms: [{
+        class: "Die",
+        number: 3,
+        faces: 8,
+        results: allResults.map(r => ({ result: r, active: true }))
+      }],
+      total: allResults.reduce((a, b) => a + b, 0),
+      evaluated: true
+    });
   
   const message = await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
     content: content,
+    rolls: [fakeRoll],  // Pass the roll for Dice So Nice
     flags: {
       'legends.rollData': serializableData
     }
@@ -493,6 +513,7 @@ export async function rollD8Check(options = {}) {
   const message = await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
     content: content,
+    rolls: [roll], 
     flags: {
       'legends.rollData': serializableData
     }
@@ -613,9 +634,10 @@ export async function rollWeaveCheck(options = {}) {
   
   let supportingSuccesses = 0;
   let supportingResults = [];
+  let supportingRoll = null;  // ADD THIS LINE
   
   if (supportingCost > 0 && supportingPotential > 0) {
-    const supportingRoll = new Roll('2d8');
+    supportingRoll = new Roll('2d8');  // CHANGE: assign to supportingRoll
     await supportingRoll.evaluate();
     supportingResults = supportingRoll.dice[0].results.map(r => r.result);
     
@@ -656,6 +678,10 @@ export async function rollWeaveCheck(options = {}) {
     await actor.update({ 'system.energy.value': Math.max(0, currentEnergy - totalEnergyCost) });
   }
   
+  // Collect all rolls for Dice So Nice
+  const allRolls = [primaryRoll];
+  if (supportingRoll) allRolls.push(supportingRoll);
+  
   // Create chat message
   await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
@@ -677,7 +703,8 @@ export async function rollWeaveCheck(options = {}) {
       criticalSuccess,
       primaryOverspend,
       supportingOverspend
-    })
+    }),  // ADD COMMA HERE
+    rolls: allRolls  // Now allRolls is defined
   });
   
   return {
