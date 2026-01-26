@@ -128,6 +128,12 @@ async function showDiceAssignmentDialog(options) {
   // Roll 3d8
   const roll = new Roll('3d8');
   await roll.evaluate();
+  
+  // Show the dice animation
+  if (game.dice3d) {
+    await game.dice3d.showForRoll(roll, game.user, true);
+  }
+  
   const results = roll.dice[0].results.map(r => r.result);
   
   // Sort to help player see best/worst options
@@ -135,6 +141,24 @@ async function showDiceAssignmentDialog(options) {
   const hint = isFortune 
     ? `Best 2: ${sorted[0]}, ${sorted[1]}` 
     : `Worst 2: ${sorted[1]}, ${sorted[2]}`;
+  
+  // Pre-select appropriate defaults based on fortune/misfortune
+  let defaultAttrIdx, defaultSkillIdx;
+  if (isFortune) {
+    // For fortune, assign the two lowest
+    const sortedIndices = results
+      .map((val, idx) => ({ val, idx }))
+      .sort((a, b) => a.val - b.val);
+    defaultAttrIdx = sortedIndices[0].idx;
+    defaultSkillIdx = sortedIndices[1].idx;
+  } else {
+    // For misfortune, assign the two highest
+    const sortedIndices = results
+      .map((val, idx) => ({ val, idx }))
+      .sort((a, b) => b.val - a.val);
+    defaultAttrIdx = sortedIndices[0].idx;
+    defaultSkillIdx = sortedIndices[1].idx;
+  }
   
   return new Promise((resolve) => {
     new Dialog({
@@ -153,20 +177,28 @@ async function showDiceAssignmentDialog(options) {
           <div class="form-group">
             <label>Assign to ${attrLabel}:</label>
             <select name="attrDie" style="width: 100%; padding: 5px;">
-              ${results.map((die, idx) => `<option value="${idx}">${die}</option>`).join('')}
+              ${results.map((die, idx) => 
+                `<option value="${idx}" ${idx === defaultAttrIdx ? 'selected' : ''}>
+                  Die #${idx + 1}: ${die}
+                </option>`
+              ).join('')}
             </select>
           </div>
           
           <div class="form-group">
             <label>Assign to ${skillLabel}:</label>
             <select name="skillDie" style="width: 100%; padding: 5px;">
-              ${results.map((die, idx) => `<option value="${idx}">${die}</option>`).join('')}
+              ${results.map((die, idx) => 
+                `<option value="${idx}" ${idx === defaultSkillIdx ? 'selected' : ''}>
+                  Die #${idx + 1}: ${die}
+                </option>`
+              ).join('')}
             </select>
           </div>
           
           <div class="form-group">
             <p style="font-size: 11px; color: #999; margin-top: 10px;">
-              Choose which 2 dice to use and assign them to attribute and skill.
+              Choose which 2 dice positions to use. Each die can only be used once.
             </p>
           </div>
         </form>
@@ -180,7 +212,10 @@ async function showDiceAssignmentDialog(options) {
             const skillIdx = parseInt(html.find('[name="skillDie"]').val());
             
             if (attrIdx === skillIdx) {
-              ui.notifications.error("Must assign different dice to attribute and skill!");
+              ui.notifications.error("Must assign different dice positions! Die #" + (attrIdx + 1) + " cannot be used twice.");
+              // Re-open the dialog with the same options
+              showDiceAssignmentDialog(options);
+              resolve();
               return;
             }
             
@@ -213,7 +248,7 @@ async function showDiceAssignmentDialog(options) {
       },
       default: "confirm"
     }, {
-      width: 350
+      width: 400
     }).render(true);
   });
 }
@@ -319,10 +354,24 @@ async function rollD8CheckWithAssignedDice(options) {
     luckSpent: 0,
     allResults: allResults
   };
+
+  const fakeRoll = Roll.fromData({
+      class: "Roll",
+      formula: `3d8`,
+      terms: [{
+        class: "Die",
+        number: 3,
+        faces: 8,
+        results: allResults.map(r => ({ result: r, active: true }))
+      }],
+      total: allResults.reduce((a, b) => a + b, 0),
+      evaluated: true
+    });
   
   const message = await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
     content: content,
+    rolls: [fakeRoll],  // Pass the roll for Dice So Nice
     flags: {
       'legends.rollData': serializableData
     }
@@ -493,6 +542,7 @@ export async function rollD8Check(options = {}) {
   const message = await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
     content: content,
+    rolls: [roll], 
     flags: {
       'legends.rollData': serializableData
     }
@@ -613,9 +663,10 @@ export async function rollWeaveCheck(options = {}) {
   
   let supportingSuccesses = 0;
   let supportingResults = [];
+  let supportingRoll = null;  // ADD THIS LINE
   
   if (supportingCost > 0 && supportingPotential > 0) {
-    const supportingRoll = new Roll('2d8');
+    supportingRoll = new Roll('2d8');  // CHANGE: assign to supportingRoll
     await supportingRoll.evaluate();
     supportingResults = supportingRoll.dice[0].results.map(r => r.result);
     
@@ -656,6 +707,10 @@ export async function rollWeaveCheck(options = {}) {
     await actor.update({ 'system.energy.value': Math.max(0, currentEnergy - totalEnergyCost) });
   }
   
+  // Collect all rolls for Dice So Nice
+  const allRolls = [primaryRoll];
+  if (supportingRoll) allRolls.push(supportingRoll);
+  
   // Create chat message
   await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
@@ -677,7 +732,8 @@ export async function rollWeaveCheck(options = {}) {
       criticalSuccess,
       primaryOverspend,
       supportingOverspend
-    })
+    }),  // ADD COMMA HERE
+    rolls: allRolls  // Now allRolls is defined
   });
   
   return {
@@ -743,10 +799,11 @@ export async function rollWeaveCheck(options = {}) {
   if (criticalSuccess) {
     luckRestoreText = '<div class="luck-restore"><i class="fas fa-star"></i> All Luck Restored!</div>';
   }
-  
-  // Show luck spending buttons only if player has luck and can reduce dice
-  const canSpendOnAttr = currentLuck > data.luckSpent && currentAttrDie > 1 && originalAttrDie !== 1 && originalAttrDie !== 8;
-  const canSpendOnSkill = currentLuck > data.luckSpent && currentSkillDie > 1 && originalSkillDie !== 1 && originalSkillDie !== 8;
+
+  // Show luck spending buttons only if PLAYER CHARACTER has luck and can reduce dice
+  const isPlayerCharacter = actor.type === "character" && actor.hasPlayerOwner;
+  const canSpendOnAttr = isPlayerCharacter && currentLuck > data.luckSpent && currentAttrDie > 1 && originalAttrDie !== 1 && originalAttrDie !== 8;
+  const canSpendOnSkill = isPlayerCharacter && currentLuck > data.luckSpent && currentSkillDie > 1 && originalSkillDie !== 1 && originalSkillDie !== 8;
   
   let luckButtons = '';
   if (canSpendOnAttr || canSpendOnSkill) {
@@ -871,8 +928,13 @@ export async function spendLuckOnRoll(messageId, target) {
   const actor = game.actors.get(rollData.actorId);
   if (!actor) return;
   
+  if (actor.type !== "character" || !actor.hasPlayerOwner) {
+    ui.notifications.warn("NPCs cannot spend Luck!");
+  return;
+  }
+
   // Check if actor has luck
-  const currentLuck = actor.system.luck?.current ?? actor.system.attributes.luck.value;
+    const currentLuck = actor.system.luck?.current ?? actor.system.attributes.luck.value;
   if (currentLuck < 1) {
     ui.notifications.warn("Not enough Luck!");
     return;

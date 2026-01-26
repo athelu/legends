@@ -142,7 +142,7 @@
     }
   },
   "Item": {
-    "types": ["weapon", "armor", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry"],
+    "types": ["weapon", "armor", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry", "action", "ability"],
     "templates": {
       "common": {
         "description": {
@@ -165,13 +165,22 @@
         "alternateType": "",
         "multiType": ""
       },
-      "range": {
-        "normal": 0,
-        "medium": 0,
-        "long": 0
-      },
       "properties": [],
-      "notes": ""
+      "notes": "",
+       "attackModes": [
+        {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "melee",
+        "damageAttr": "strength",
+        "defenseType": "melee",
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      }
+    ]
     },
     "armor": {
       "templates": ["common", "physical"],
@@ -183,167 +192,90 @@
         "type": "",
         "value": 0
       },
-      "resistance": {
-        "type": "",
-        "value": 0
-      },
+      "stealthPenalty": "",
       "shieldType": "",
-      "strengthReq": 0,
       "donTime": "",
-      "doffTime": "",
-      "properties": [],
-      "notes": ""
+      "doffTime": ""
     },
     "equipment": {
-      "templates": ["common", "physical"],
-      "equipmentType": "adventuring-gear",
-      "capacity": "",
-      "brightLight": 0,
-      "dimLight": 0,
-      "duration": "",
-      "uses": {
-        "value": 0,
-        "max": 0
-      },
-      "consumable": false,
-      "associatedSkill": "",
-      "toolBonus": 0,
-      "rarity": "common",
-      "requiresAttunement": false,
-      "magicalProperties": "",
-      "properties": "",
-      "notes": ""
+      "templates": ["common", "physical"]
     },
     "weave": {
       "templates": ["common"],
-      "weaveType": "simple",
-      "actionCost": 1,
       "energyCost": {
         "primary": {
           "type": "fire",
-          "cost": 2
+          "cost": 0
         },
         "supporting": {
           "type": "",
           "cost": 0
         }
       },
-      "school": "evocation",
-      "range": {
-        "value": "touch",
-        "distance": 0
-      },
-      "target": "single",
-      "areaSize": "",
-      "duration": "instantaneous",
-      "durationDetail": "",
-      "saveType": "none",
-      "saveEffect": "",
+      "range": "",
+      "duration": "",
+      "target": "",
+      "savingThrow": "",
+      "effect": "",
       "effectType": "damage",
-      "damage": {
-        "base": 8,
-        "type": "fire",
-        "drInteraction": "half",
-        "scaling": ""
-      },
-      "healing": {
-        "base": 0,
-        "scaling": ""
-      },
-      "conditions": "",
-      "successEffects": "",
-      "specialProperties": "",
-      "heightening": ""
+      "weaveType": "simple"
     },
     "feat": {
       "templates": ["common"],
       "tier": 1,
-      "xpCost": 40,
-      "flavorText": "",
-      "prerequisites": {
-        "attributes": {
-          "strength": 0,
-          "constitution": 0,
-          "agility": 0,
-          "dexterity": 0,
-          "intelligence": 0,
-          "wisdom": 0,
-          "charisma": 0,
-          "luck": 0
-        },
-        "skills": "",
-        "feats": "",
-        "tier": 0,
-        "other": ""
-      },
+      "prerequisites": "",
       "benefits": "",
-      "usageType": "passive",
-      "keywords": "",
-      "notes": ""
+      "usage": "",
+      "keywords": []
     },
     "trait": {
       "templates": ["common"],
-      "pointCost": 0,
-      "traitType": "magical",
-      "requirements": "",
-      "castingStat": "",
-      "elementalAffinity": "",
-      "grantsEnergyPool": false,
-      "grantsMasterySkills": false,
-      "grantsRitualCasting": false,
-      "visualEffects": "",
+      "tier": 1,
+      "prerequisites": "",
       "benefits": "",
-      "requiresGMApproval": false,
-      "notes": ""
+      "usage": "",
+      "keywords": []
     },
     "flaw": {
       "templates": ["common"],
-      "pointValue": 0,
-      "flawType": "physical",
+      "xpGain": 5,
       "severity": "minor",
-      "mechanicalEffects": "",
-      "roleplayingImpact": "",
-      "canBeOvercome": false,
-      "overcomeMethod": "",
-      "requiresGMApproval": false,
-      "notes": ""
+      "mechanicalEffect": ""
     },
     "background": {
       "templates": ["common"],
       "startingXP": 0,
-      "skillBonuses": "",
-      "startingEquipment": "",
-      "suggestedFeats": "",
-      "features": "",
-      "sampleNames": "",
-      "traits": "",
-      "notes": ""
+      "skillBonuses": {},
+      "startingEquipment": []
     },
     "ancestry": {
       "templates": ["common"],
       "size": "medium",
       "speed": 30,
-      "bonuses": {
-        "attributes": {
-          "strength": 0,
-          "constitution": 0,
-          "agility": 0,
-          "dexterity": 0,
-          "intelligence": 0,
-          "wisdom": 0,
-          "charisma": 0,
-          "luck": 0
-        }
-      },
-      "traits": "",
-      "languages": "",
-      "specialAbilities": "",
-      "senses": "",
-      "lifespan": 80,
-      "culture": "",
-      "physicalDescription": "",
-      "requiresGMApproval": false,
-      "notes": ""
+      "traits": [],
+      "abilityModifiers": {}
+    },
+    "action": {
+      "templates": ["common"],
+      "actionType": "combat",
+      "actionCost": "1",
+      "trigger": "",
+      "effect": "",
+      "keywords": [],
+      "range": "",
+      "target": "",
+      "frequency": "",
+      "special": ""
+    },
+    "ability": {
+      "templates": ["common"],
+      "abilityType": "passive",
+      "trigger": "",
+      "effect": "",
+      "frequency": "",
+      "source": "",
+      "keywords": [],
+      "isActive": false
     }
   }
 }

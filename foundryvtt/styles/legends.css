@@ -470,6 +470,60 @@
   min-height: 24px;
 }
 
+.attack-modes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.attack-mode-item {
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  padding: 10px;
+  background: var(--d8-bg-light);
+}
+
+.mode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--d8-border);
+}
+
+.mode-header h4 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.remove-attack-mode {
+  background: var(--d8-danger);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.add-attack-mode {
+  background: var(--d8-accent);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+}
+
+.add-attack-mode:hover,
+.remove-attack-mode:hover {
+  opacity: 0.8;
+}
 
 /* ========================================
    ARMOR SHEET SPECIFIC

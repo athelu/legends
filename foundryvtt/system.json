@@ -82,6 +82,20 @@
       "path": "packs/legends/weaves",
       "type": "Item",
       "system": "legends"
+    },
+    {
+      "name": "actions",
+      "label": "Actions",
+      "path": "packs/actions",
+      "type": "Item",
+      "system": "legends"
+    },
+    {
+      "name": "abilities",
+      "label": "Abilities",
+      "path": "packs/abilities",
+      "type": "Item",
+      "system": "legends"
     }
   ],
   "languages": [

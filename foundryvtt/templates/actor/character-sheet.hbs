@@ -29,7 +29,8 @@
   {{!-- Sheet Tab Navigation --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="main">Main</a>
-    <a class="item" data-tab="combat">Combat</a>
+    <a class="item" data-tab="weapons">Weapons</a>
+    <a class="item" data-tab="actions">Actions</a>
     {{#if system.energy}}
     <a class="item" data-tab="magic">Magic</a>
     {{/if}}
@@ -68,80 +69,53 @@
             {{#each system.attributes as |attr key|}}
             <div class="attribute-row" data-attribute="{{key}}">
               <label>{{attr.label}}</label>
-              <input type="number" name="system.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="Number" />
+              <input type="number" name="system.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="Number" class="attribute-value"/>
+              <button type="button" class="attribute-roll rollable" data-attribute="{{key}}" title="Roll {{attr.label}}">
+                <i class="fas fa-dice-d8"></i>
+              </button>
             </div>
             {{/each}}
           </div>
 
           <h3>Resources</h3>
-          <div class="resources">
-            <div class="resource-row">
+          <div class="resources-grid">
+            <div class="resource hp">
               <label>Hit Points</label>
-              <div class="resource-values">
-                <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" class="resource-input"/>
-                <span class="resource-sep">/</span>
-                <span class="resource-max">{{system.hp.max}}</span>
+              <div class="resource-value">
+                <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" />
+                <span class="sep">/</span>
+                <span class="max">{{system.hp.max}}</span>
               </div>
             </div>
-            
-            <div class="resource-row">
+
+            <div class="resource luck">
               <label>Luck</label>
-              <div class="resource-values">
-                <input type="number" name="system.luck.current" value="{{system.luck.current}}" data-dtype="Number" class="resource-input"/>
-                <span class="resource-sep">/</span>
-                <span class="resource-max">{{system.luck.max}}</span>
+              <div class="resource-value">
+                <input type="number" name="system.luck.current" value="{{system.luck.current}}" data-dtype="Number" />
+                <span class="sep">/</span>
+                <span class="max">{{system.luck.max}}</span>
               </div>
             </div>
-            
-            <div class="resource-row">
-              <label>Damage Reduction</label>
-              <span class="dr-value">{{system.dr.value}}</span>
-            </div>
-          </div>
 
-          <h3>Saving Throws</h3>
-          <div class="saves-grid">
-            <div class="save-item">
-              <button type="button" class="save-roll" data-save="fortitude" title="Roll Fortitude Save">
-                <i class="fas fa-shield-alt"></i> Fortitude
-              </button>
-              <span class="save-formula">(Con + Luck)</span>
+            {{#if system.energy}}
+            <div class="resource energy">
+              <label>Energy</label>
+              <div class="resource-value">
+                <input type="number" name="system.energy.current" value="{{system.energy.current}}" data-dtype="Number" />
+                <span class="sep">/</span>
+                <span class="max">{{system.energy.max}}</span>
+              </div>
             </div>
-            <div class="save-item">
-              <button type="button" class="save-roll" data-save="reflex" title="Roll Reflex Save">
-                <i class="fas fa-running"></i> Reflex
-              </button>
-              <span class="save-formula">(Agi + Luck)</span>
-            </div>
-            <div class="save-item">
-              <button type="button" class="save-roll" data-save="will" title="Roll Willpower Save">
-                <i class="fas fa-brain"></i> Willpower
-              </button>
-              <span class="save-formula">(Wis + Luck)</span>
-            </div>
-          </div>
-
-          <div class="rest-buttons">
-            <button type="button" class="short-rest">
-              <i class="fas fa-hourglass-half"></i> Short Rest
-            </button>
-            <button type="button" class="long-rest">
-              <i class="fas fa-bed"></i> Long Rest
-            </button>
+            {{/if}}
           </div>
         </div>
       </div>
     </div>
 
-    {{!-- Combat Tab --}}
-    <div class="tab combat" data-group="primary" data-tab="combat">
+    {{!-- Weapons Tab (renamed from Combat) --}}
+    <div class="tab weapons" data-group="primary" data-tab="weapons">
       <h3>Weapons</h3>
-      <ol class="items-list weapons-list">
-        <li class="item flexrow items-header">
-          <div class="item-name">Weapon</div>
-          <div class="item-damage">Damage</div>
-          <div class="item-controls"></div>
-        </li>
+      <ol class="items-list weapon-list">
         {{#each weapons as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
           <div class="item-image rollable" data-roll-type="item">
@@ -191,49 +165,131 @@
       </div>
     </div>
 
+    {{!-- Actions Tab (NEW) --}}
+    <div class="tab actions" data-group="primary" data-tab="actions">
+      
+      <h3>Actions</h3>
+      <p class="tab-description">Standard actions you can take during combat. Add actions from the compendium for quick reference.</p>
+      
+      {{!-- Combat Actions --}}
+      <div class="action-category">
+        <h4 class="category-header">Combat Actions</h4>
+        <ol class="items-list action-list">
+          {{#each combatActions as |item id|}}
+          <li class="item flexrow action-item" data-item-id="{{item._id}}">
+            <div class="item-image">
+              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            </div>
+            <div class="item-details">
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-info">
+                {{#if item.system.actionCost}}<span class="action-cost">{{item.system.actionCost}}</span>{{/if}}
+                {{#if item.system.range}}<span class="action-range">Range: {{item.system.range}}</span>{{/if}}
+              </div>
+            </div>
+            <div class="item-controls">
+              <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+              <a class="item-control item-delete" title="Remove from Sheet"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      {{!-- Movement Actions --}}
+      <div class="action-category">
+        <h4 class="category-header">Movement Actions</h4>
+        <ol class="items-list action-list">
+          {{#each movementActions as |item id|}}
+          <li class="item flexrow action-item" data-item-id="{{item._id}}">
+            <div class="item-image">
+              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            </div>
+            <div class="item-details">
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-info">
+                {{#if item.system.actionCost}}<span class="action-cost">{{item.system.actionCost}}</span>{{/if}}
+              </div>
+            </div>
+            <div class="item-controls">
+              <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+              <a class="item-control item-delete" title="Remove from Sheet"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      {{!-- Reactions --}}
+      <div class="action-category">
+        <h4 class="category-header">Reactions</h4>
+        <ol class="items-list action-list">
+          {{#each reactions as |item id|}}
+          <li class="item flexrow action-item" data-item-id="{{item._id}}">
+            <div class="item-image">
+              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            </div>
+            <div class="item-details">
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-info">
+                {{#if item.system.trigger}}<span class="action-trigger">Trigger: {{item.system.trigger}}</span>{{/if}}
+              </div>
+            </div>
+            <div class="item-controls">
+              <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+              <a class="item-control item-delete" title="Remove from Sheet"><i class="fas fa-trash"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      {{!-- Active Abilities (Granted by Equipment/Feats) --}}
+      <div class="action-category abilities-section">
+        <h4 class="category-header">Active Abilities</h4>
+        <p class="category-note">Abilities granted by equipment, feats, or other sources</p>
+        <ol class="items-list ability-list">
+          {{#each abilities as |item id|}}
+          <li class="item flexrow ability-item {{#unless item.system.isActive}}inactive{{/unless}}" data-item-id="{{item._id}}">
+            <div class="item-image">
+              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            </div>
+            <div class="item-details">
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-info">
+                {{#if item.system.source}}<span class="ability-source">Source: {{item.system.source}}</span>{{/if}}
+                {{#if item.system.frequency}}<span class="ability-frequency">{{item.system.frequency}}</span>{{/if}}
+              </div>
+            </div>
+            <div class="item-controls">
+              <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+              <a class="item-control item-view" title="View Details"><i class="fas fa-eye"></i></a>
+            </div>
+          </li>
+          {{/each}}
+        </ol>
+      </div>
+
+      <div class="compendium-browse">
+        <button type="button" class="open-compendium" data-compendium="actions">
+          <i class="fas fa-book"></i> Browse Actions
+        </button>
+      </div>
+    </div>
+
     {{!-- Magic Tab --}}
     {{#if system.energy}}
     <div class="tab magic" data-group="primary" data-tab="magic">
-      <div class="magic-header">
-        <div class="energy-info">
-          <label>Max Energy:</label>
-          <span class="energy-value">{{system.energy.max}}</span>
-        </div>
-        <div class="energy-info">
-          <label>Current Energy:</label>
-          <input type="number" name="system.energy.value" value="{{system.energy.value}}" data-dtype="Number"/>
-        </div>
-      </div>
-      
-      <h3>Potentials</h3>
-      <div class="energies-grid">
-        {{#each system.potentials as |potential key|}}
-        <div class="energy-row">
-          <label>{{potential.label}}</label>
-          <input type="number" name="system.potentials.{{key}}.value" value="{{potential.value}}" data-dtype="Number" />
-        </div>
-        {{/each}}
-      </div>
-      
-      <h3>Mastery</h3>
-      <div class="energies-grid">
-        {{#each system.mastery as |mastery key|}}
-        <div class="energy-row">
-          <label>{{mastery.label}}</label>
-          <input type="number" name="system.mastery.{{key}}.value" value="{{mastery.value}}" data-dtype="Number" />
-        </div>
-        {{/each}}
-      </div>
-      
       <h3>Weaves</h3>
-      <ol class="items-list weaves-list">
+      <ol class="items-list weave-list">
         {{#each weaves as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
           <div class="item-image rollable" data-roll-type="item">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
           <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
-          <div class="item-cost">{{item.system.totalEnergyCost}} Energy</div>
+          <div class="item-energy">{{item.system.totalEnergyCost}} Energy</div>
+          <div class="item-type">{{item.system.weaveType}}</div>
           <div class="item-controls">
             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -251,14 +307,17 @@
 
     {{!-- Features Tab --}}
     <div class="tab features" data-group="primary" data-tab="features">
+      
+      {{!-- Feats Section --}}
       <h3>Feats</h3>
-      <ol class="items-list feats-list">
+      <ol class="items-list feat-list">
         {{#each feats as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image rollable" data-roll-type="item">
+          <div class="item-image">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
-          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-tier">Tier {{item.system.tier}}</div>
           <div class="item-controls">
             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -271,15 +330,17 @@
           <i class="fas fa-book"></i> Browse Feats
         </button>
       </div>
-      
+
+      {{!-- Traits Section --}}
       <h3>Traits</h3>
-      <ol class="items-list traits-list">
+      <ol class="items-list trait-list">
         {{#each traits as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image rollable" data-roll-type="item">
+          <div class="item-image">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
-          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-tier">Tier {{item.system.tier}}</div>
           <div class="item-controls">
             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -292,15 +353,17 @@
           <i class="fas fa-book"></i> Browse Traits
         </button>
       </div>
-      
+
+      {{!-- Flaws Section --}}
       <h3>Flaws</h3>
-      <ol class="items-list flaws-list">
+      <ol class="items-list flaw-list">
         {{#each flaws as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image rollable" data-roll-type="item">
+          <div class="item-image">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
-          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-xp">+{{item.system.xpGain}} XP</div>
           <div class="item-controls">
             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -365,20 +428,20 @@
         {{/each}}
       </ol>
       <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="background" {{#if backgrounds.length}}disabled{{/if}}>
+        <button type="button" class="open-compendium" data-compendium="background">
           <i class="fas fa-book"></i> Browse Backgrounds
         </button>
       </div>
-      
+
       {{!-- Ancestry Section --}}
       <h3>Ancestry</h3>
       <ol class="items-list ancestry-list">
         {{#each ancestries as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image rollable" data-roll-type="item">
+          <div class="item-image">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
-          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+          <h4 class="item-name">{{item.name}}</h4>
           <div class="item-controls">
             <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
             <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
@@ -387,14 +450,14 @@
         {{/each}}
       </ol>
       <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="ancestry" {{#if ancestries.length}}disabled{{/if}}>
+        <button type="button" class="open-compendium" data-compendium="ancestry">
           <i class="fas fa-book"></i> Browse Ancestries
         </button>
       </div>
-      
-      {{!-- Biography Text Editor --}}
-      <h3>Character Biography</h3>
-      <div class="editor-content">
+
+      {{!-- Biography Text --}}
+      <h3>Biography & Notes</h3>
+      <div class="form-group">
         {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
       </div>
     </div>

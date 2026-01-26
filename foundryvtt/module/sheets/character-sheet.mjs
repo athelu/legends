@@ -47,13 +47,13 @@ export class D8CharacterSheet extends ActorSheet {
     }
     
     // Enrich biography HTML
-     const TextEditor = foundry.applications.ux.TextEditor.implementation;
-      context.enrichedBiography = await TextEditor.enrichHTML(
-        context.system.biography.value, 
-        {
-          secrets: this.actor.isOwner,
-          async: true
-        }
+    const TextEditor = foundry.applications.ux.TextEditor.implementation;
+    context.enrichedBiography = await TextEditor.enrichHTML(
+      context.system.biography.value, 
+      {
+        secrets: this.actor.isOwner,
+        async: true
+      }
     );
     
     return context;
@@ -72,6 +72,15 @@ export class D8CharacterSheet extends ActorSheet {
     const flaws = [];
     const backgrounds = [];
     const ancestries = [];
+    
+    // Actions categorized by type
+    const combatActions = [];
+    const movementActions = [];
+    const reactions = [];
+    const otherActions = [];
+    
+    // Abilities
+    const abilities = [];
     
     for (let item of context.items) {
       item.img = item.img || DEFAULT_TOKEN;
@@ -104,6 +113,21 @@ export class D8CharacterSheet extends ActorSheet {
         case 'ancestry':
           ancestries.push(item);
           break;
+        case 'action':
+          // Categorize actions by type
+          if (item.system.actionType === 'combat') {
+            combatActions.push(item);
+          } else if (item.system.actionType === 'move') {
+            movementActions.push(item);
+          } else if (item.system.actionType === 'reaction') {
+            reactions.push(item);
+          } else {
+            otherActions.push(item);
+          }
+          break;
+        case 'ability':
+          abilities.push(item);
+          break;
       }
     }
     
@@ -116,6 +140,15 @@ export class D8CharacterSheet extends ActorSheet {
     context.flaws = flaws;
     context.backgrounds = backgrounds;
     context.ancestries = ancestries;
+    
+    // Action categories
+    context.combatActions = combatActions;
+    context.movementActions = movementActions;
+    context.reactions = reactions;
+    context.otherActions = otherActions;
+    
+    // Abilities
+    context.abilities = abilities;
   }
   
   /**
@@ -140,82 +173,97 @@ export class D8CharacterSheet extends ActorSheet {
       arcane: "Arcane",
       society: "Society",
       perception: "Perception",
-      empathy: "Empathy",
-      medicine: "Medicine",
-      wilderness: "Wilderness",
-      religion: "Religion",
+      survival: "Survival",
       persuasion: "Persuasion",
+      deception: "Deception",
       intimidate: "Intimidate",
       perform: "Perform",
-      deception: "Deception"
+      insight: "Insight",
+      medicine: "Medicine",
+      animalHandling: "Animal Handling"
     };
     
-    // Map skills to objects with labels, then sort alphabetically by label
-    context.skillList = Object.keys(skills)
-      .map(key => ({
-        key,
-        label: skillLabels[key] || key,
-        value: skills[key].value,
-        attr: skills[key].attr
-      }))
-      .sort((a, b) => a.label.localeCompare(b.label));
+    const skillAttributes = {
+      athletics: "str",
+      might: "str",
+      devices: "dex",
+      thievery: "dex",
+      writing: "dex",
+      rangedCombat: "dex",
+      craft: "dex",
+      acrobatics: "agi",
+      meleeCombat: "agi",
+      stealth: "agi",
+      investigate: "int",
+      language: "int",
+      history: "int",
+      arcane: "int",
+      society: "int",
+      perception: "wis",
+      survival: "wis",
+      persuasion: "cha",
+      deception: "cha",
+      intimidate: "cha",
+      perform: "cha",
+      insight: "wis",
+      medicine: "wis",
+      animalHandling: "wis"
+    };
+    
+    const skillList = [];
+    for (let [key, label] of Object.entries(skillLabels)) {
+      skillList.push({
+        key: key,
+        label: label,
+        value: skills[key] || 0,
+        attr: skillAttributes[key]
+      });
+    }
+    
+    context.skillList = skillList;
   }
   
   /**
-   * Get tier information based on XP
+   * Get tier information from XP
    */
   _getTierInfo(xp) {
     const tiers = [
-      { tier: 1, min: 0, max: 120, maxFeats: 4 },
-      { tier: 2, min: 120, max: 360, maxFeats: 6 },
-      { tier: 3, min: 360, max: 600, maxFeats: 8 },
-      { tier: 4, min: 600, max: 840, maxFeats: 10 },
-      { tier: 5, min: 840, max: 1080, maxFeats: 12 },
-      { tier: 6, min: 1080, max: 1320, maxFeats: 14 },
-      { tier: 7, min: 1320, max: 1560, maxFeats: 16 },
-      { tier: 8, min: 1560, max: 99999, maxFeats: 18 }
+      { tier: 1, xp: 0 },
+      { tier: 2, xp: 100 },
+      { tier: 3, xp: 200 },
+      { tier: 4, xp: 400 },
+      { tier: 5, xp: 800 },
+      { tier: 6, xp: 1600 }
     ];
     
-    for (let t of tiers) {
-      if (xp >= t.min && xp < t.max) {
-        return {
-          current: t.tier,
-          xp: xp,
-          xpInTier: xp - t.min,
-          xpToNext: t.max - xp,
-          maxFeats: t.maxFeats
-        };
+    let currentTier = 1;
+    for (let i = tiers.length - 1; i >= 0; i--) {
+      if (xp >= tiers[i].xp) {
+        currentTier = tiers[i].tier;
+        break;
       }
     }
     
-    return { current: 1, xp: 0, xpInTier: 0, xpToNext: 120, maxFeats: 4 };
+    return {
+      current: currentTier,
+      xp: xp
+    };
   }
   
   /** @override */
   activateListeners(html) {
     super.activateListeners(html);
     
-    // Everything below here is only needed if the sheet is editable
     if (!this.isEditable) return;
     
-    // Rollable abilities
-    html.find('.rollable').click(this._onRoll.bind(this));
-    
-    // Attribute rolls
+    // Rollable attributes
     html.find('.attribute-roll').click(this._onAttributeRoll.bind(this));
     
-    // Skill rolls
+    // Rollable skills
     html.find('.skill-roll').click(this._onSkillRoll.bind(this));
     
-    // Saving throws
-    html.find('.save-roll').click(this._onSaveRoll.bind(this));
-    
-    // Rest buttons
-    html.find('.short-rest').click(this._onShortRest.bind(this));
-    html.find('.long-rest').click(this._onLongRest.bind(this));
-    
-    // Spend luck
-    html.find('.spend-luck').click(this._onSpendLuck.bind(this));
+    // Rollable items
+    html.find('.item-roll, .rollable[data-roll-type="item"]').click(this._onItemRoll.bind(this));
     
     // Item controls
     html.find('.item-create').click(this._onItemCreate.bind(this));
@@ -223,47 +271,14 @@ export class D8CharacterSheet extends ActorSheet {
     html.find('.item-delete').click(this._onItemDelete.bind(this));
     html.find('.item-equip').click(this._onItemEquip.bind(this));
     
-    // Compendium browser buttons
+    // Open compendium browsing
     html.find('.open-compendium').click(this._onOpenCompendium.bind(this));
     
-    // Drag events for macros
-    if (this.actor.isOwner) {
-      let handler = ev => this._onDragStart(ev);
-      html.find('li.item').each((i, li) => {
-        if (li.classList.contains("inventory-header")) return;
-        li.setAttribute("draggable", true);
-        li.addEventListener("dragstart", handler, false);
-      });
-    }
-  }
-  
-  /**
-   * Handle clickable rolls
-   */
-  _onRoll(event) {
-    event.preventDefault();
-    const element = event.currentTarget;
-    const dataset = element.dataset;
+    // Item chat (post to chat)
+    html.find('.item-chat').click(this._onItemChat.bind(this));
     
-    if (dataset.rollType) {
-      if (dataset.rollType === 'item') {
-        const itemId = element.closest('.item').dataset.itemId;
-        const item = this.actor.items.get(itemId);
-        if (item) return item.roll();
-      }
-    }
-    
-    // Handle other roll types
-    if (dataset.roll) {
-      let label = dataset.label ? `${dataset.label}` : '';
-      let roll = new Roll(dataset.roll, this.actor.getRollData());
-      roll.toMessage({
-        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-        flavor: label,
-        rollMode: game.settings.get('core', 'rollMode'),
-      });
-      return roll;
-    }
+    // Item view (open sheet in view mode)
+    html.find('.item-view').click(this._onItemView.bind(this));
   }
   
   /**
@@ -271,14 +286,8 @@ export class D8CharacterSheet extends ActorSheet {
    */
   async _onAttributeRoll(event) {
     event.preventDefault();
-    const attr = event.currentTarget.dataset.attribute;
-    
-    // For now, just display the attribute value
-    // In the future, this could roll d8 against the attribute
-    ChatMessage.create({
-      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
-      content: `<div class="d8-roll"><h3>${attr.charAt(0).toUpperCase() + attr.slice(1)}</h3><p>Value: ${this.actor.system.attributes[attr].value}</p></div>`
-    });
+    const attribute = event.currentTarget.dataset.attribute;
+    return game.d8.rollAttributeCheck(this.actor, attribute);
   }
   
   /**
@@ -291,56 +300,59 @@ export class D8CharacterSheet extends ActorSheet {
   }
   
   /**
-   * Handle saving throw rolls
+   * Handle item rolls
    */
-  async _onSaveRoll(event) {
+  async _onItemRoll(event) {
     event.preventDefault();
-    const saveType = event.currentTarget.dataset.save;
-    return game.d8.rollSavingThrow(this.actor, saveType);
+    const itemId = event.currentTarget.closest('.item').dataset.itemId;
+    const item = this.actor.items.get(itemId);
+    if (item) return item.roll();
   }
   
   /**
-   * Handle short rest
+   * Handle creating a new item
    */
-  async _onShortRest(event) {
+  async _onItemCreate(event) {
     event.preventDefault();
-    return this.actor.shortRest();
+    const header = event.currentTarget;
+    const type = header.dataset.type;
+    const data = {
+      name: `New ${type.capitalize()}`,
+      type: type,
+      system: {}
+    };
+    return await Item.create(data, {parent: this.actor});
   }
   
   /**
-   * Handle long rest
+   * Handle editing an item
    */
-  async _onLongRest(event) {
+  _onItemEdit(event) {
     event.preventDefault();
-    return this.actor.longRest();
+    const li = event.currentTarget.closest(".item");
+    const item = this.actor.items.get(li.dataset.itemId);
+    item.sheet.render(true);
   }
   
   /**
-   * Handle spending luck
+   * Handle deleting an item
    */
-  async _onSpendLuck(event) {
+  async _onItemDelete(event) {
     event.preventDefault();
-    
-    // Prompt for amount
-    const amount = await Dialog.prompt({
-      title: "Spend Luck",
-      content: `
-        <form>
-          <div class="form-group">
-            <label>Amount to spend:</label>
-            <input type="number" name="amount" value="1" min="1" max="${this.actor.system.luck.current}" />
-          </div>
-        </form>
-      `,
-      callback: html => {
-        const form = html[0].querySelector("form");
-        return parseInt(form.amount.value);
-      },
-      rejectClose: false
-    });
-    
-    if (amount) {
-      return this.actor.spendLuck(amount);
+    const li = event.currentTarget.closest(".item");
+    const item = this.actor.items.get(li.dataset.itemId);
+    if (item) return item.delete();
+  }
+  
+  /**
+   * Handle equipping/unequipping an item
+   */
+  async _onItemEquip(event) {
+    event.preventDefault();
+    const li = event.currentTarget.closest(".item");
+    const item = this.actor.items.get(li.dataset.itemId);
+    if (item) {
+      return item.update({ 'system.equipped': !item.system.equipped });
     }
   }
   
@@ -351,122 +363,67 @@ export class D8CharacterSheet extends ActorSheet {
     event.preventDefault();
     const compendiumType = event.currentTarget.dataset.compendium;
     
-    // Map to the actual compendium pack
-    const packMap = {
-      'background': 'legends.backgrounds',
-      'ancestry': 'legends.ancestries',
+    // Map compendium type to pack name
+    const packNames = {
       'weapon': 'legends.weapons',
       'armor': 'legends.armor',
       'equipment': 'legends.equipment',
       'weave': 'legends.weaves',
       'feat': 'legends.feats',
       'trait': 'legends.traits',
-      'flaw': 'legends.flaws'
+      'flaw': 'legends.flaws',
+      'background': 'legends.backgrounds',
+      'ancestry': 'legends.ancestries',
+      'actions': 'legends.actions',
+      'abilities': 'legends.abilities'
     };
     
-    const packName = packMap[compendiumType];
-    if (!packName) {
-      console.warn(`Unknown compendium type: ${compendiumType}`);
-      return;
-    }
-    
-    const pack = game.packs.get(packName);
-    if (!pack) {
-      ui.notifications.warn(`Compendium "${packName}" not found!`);
-      return;
-    }
-    
-    // Open the compendium
-    pack.render(true);
-  }
-  
-  /**
-   * Handle creating a new Owned Item
-   */
-  async _onItemCreate(event) {
-    event.preventDefault();
-    const header = event.currentTarget;
-    const type = header.dataset.type;
-    const data = duplicate(header.dataset);
-    const name = `New ${type.capitalize()}`;
-    const itemData = {
-      name: name,
-      type: type,
-      system: data
-    };
-    delete itemData.system["type"];
-    
-    return await Item.create(itemData, {parent: this.actor});
-  }
-  
-  /**
-   * Handle editing an Item
-   */
-  _onItemEdit(event) {
-    event.preventDefault();
-    const li = event.currentTarget.closest(".item");
-    const item = this.actor.items.get(li.dataset.itemId);
-    return item.sheet.render(true);
-  }
-  
-  /**
-   * Handle deleting an Item
-   */
-  async _onItemDelete(event) {
-    event.preventDefault();
-    const li = event.currentTarget.closest(".item");
-    const item = this.actor.items.get(li.dataset.itemId);
-    
-    const confirmed = await Dialog.confirm({
-      title: `Delete ${item.name}?`,
-      content: `<p>Are you sure you want to delete <strong>${item.name}</strong>?</p>`,
-      defaultYes: false
-    });
-    
-    if (confirmed) {
-      await item.delete();
-      li.slideUp(200, () => this.render(false));
-    }
-  }
-  
-  /**
-   * Handle equipping/unequipping an Item
-   */
-  async _onItemEquip(event) {
-    event.preventDefault();
-    const li = event.currentTarget.closest(".item");
-    const item = this.actor.items.get(li.dataset.itemId);
-    
-    return item.update({ 'system.equipped': !item.system.equipped });
-  }
-  
-  /**
-   * Override drop handler to enforce single background/ancestry
-   */
-  async _onDropItem(event, data) {
-    if (!this.actor.isOwner) return false;
-    
-    const item = await Item.implementation.fromDropData(data);
-    const itemData = item.toObject();
-    
-    // Enforce single background/ancestry
-    if (itemData.type === 'background') {
-      const existing = this.actor.items.find(i => i.type === 'background');
-      if (existing) {
-        ui.notifications.warn("Character already has a background. Remove the existing one first.");
-        return false;
+    const packName = packNames[compendiumType];
+    if (packName) {
+      const pack = game.packs.get(packName);
+      if (pack) {
+        pack.render(true);
+      } else {
+        ui.notifications.warn(`Compendium pack "${packName}" not found.`);
       }
     }
+  }
+  
+  /**
+   * Handle posting item to chat
+   */
+  async _onItemChat(event) {
+    event.preventDefault();
+    const li = event.currentTarget.closest(".item");
+    const item = this.actor.items.get(li.dataset.itemId);
     
-    if (itemData.type === 'ancestry') {
-      const existing = this.actor.items.find(i => i.type === 'ancestry');
-      if (existing) {
-        ui.notifications.warn("Character already has an ancestry. Remove the existing one first.");
-        return false;
-      }
+    if (item) {
+      const description = item.system.description?.value || item.system.effect || "No description available.";
+      
+      ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+        content: `
+          <div class="legends-item-card">
+            <h3>${item.name}</h3>
+            <div class="item-description">${description}</div>
+            ${item.system.trigger ? `<p><strong>Trigger:</strong> ${item.system.trigger}</p>` : ''}
+            ${item.system.frequency ? `<p><strong>Frequency:</strong> ${item.system.frequency}</p>` : ''}
+            ${item.system.actionCost ? `<p><strong>Cost:</strong> ${item.system.actionCost}</p>` : ''}
+          </div>
+        `
+      });
     }
-    
-    // Proceed with the standard drop handling
-    return super._onDropItem(event, data);
+  }
+  
+  /**
+   * Handle viewing item details
+   */
+  _onItemView(event) {
+    event.preventDefault();
+    const li = event.currentTarget.closest(".item");
+    const item = this.actor.items.get(li.dataset.itemId);
+    if (item) {
+      item.sheet.render(true, { editable: false });
+    }
   }
 }
