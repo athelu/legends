@@ -799,10 +799,11 @@ export async function rollWeaveCheck(options = {}) {
   if (criticalSuccess) {
     luckRestoreText = '<div class="luck-restore"><i class="fas fa-star"></i> All Luck Restored!</div>';
   }
-  
-  // Show luck spending buttons only if player has luck and can reduce dice
-  const canSpendOnAttr = currentLuck > data.luckSpent && currentAttrDie > 1 && originalAttrDie !== 1 && originalAttrDie !== 8;
-  const canSpendOnSkill = currentLuck > data.luckSpent && currentSkillDie > 1 && originalSkillDie !== 1 && originalSkillDie !== 8;
+
+  // Show luck spending buttons only if PLAYER CHARACTER has luck and can reduce dice
+  const isPlayerCharacter = actor.type === "character" && actor.hasPlayerOwner;
+  const canSpendOnAttr = isPlayerCharacter && currentLuck > data.luckSpent && currentAttrDie > 1 && originalAttrDie !== 1 && originalAttrDie !== 8;
+  const canSpendOnSkill = isPlayerCharacter && currentLuck > data.luckSpent && currentSkillDie > 1 && originalSkillDie !== 1 && originalSkillDie !== 8;
   
   let luckButtons = '';
   if (canSpendOnAttr || canSpendOnSkill) {
@@ -927,8 +928,13 @@ export async function spendLuckOnRoll(messageId, target) {
   const actor = game.actors.get(rollData.actorId);
   if (!actor) return;
   
+  if (actor.type !== "character" || !actor.hasPlayerOwner) {
+    ui.notifications.warn("NPCs cannot spend Luck!");
+  return;
+  }
+
   // Check if actor has luck
-  const currentLuck = actor.system.luck?.current ?? actor.system.attributes.luck.value;
+    const currentLuck = actor.system.luck?.current ?? actor.system.attributes.luck.value;
   if (currentLuck < 1) {
     ui.notifications.warn("Not enough Luck!");
     return;

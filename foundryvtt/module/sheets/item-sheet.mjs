@@ -117,6 +117,16 @@ export class D8ItemSheet extends ItemSheet {
   activateListeners(html) {
     super.activateListeners(html);
     
+  // Everything uses jQuery
+  if (typeof html.find !== 'function') {
+    html = $(html);
+  }
+ 
+  // Attack mode management
+  html.find('.add-attack-mode').click(this._onAddAttackMode.bind(this));
+  html.find('.remove-attack-mode').click(this._onRemoveAttackMode.bind(this));
+
+
     if (!this.isEditable) return;
     
     // Roll item
@@ -155,5 +165,37 @@ export class D8ItemSheet extends ItemSheet {
       armorFields.show();
       shieldFields.hide();
     }
+  }
+
+    /**
+   * Handle adding a new attack mode
+   */
+  async _onAddAttackMode(event) {
+    event.preventDefault();
+    const modes = this.item.system.attackModes || [];
+    
+    modes.push({
+      name: "New Mode",
+      type: "melee",
+      skill: "melee",
+      damageAttr: "strength",
+      defenseType: "melee",
+      range: { normal: 0, medium: 0, long: 0 }
+    });
+    
+    await this.item.update({ 'system.attackModes': modes });
+  }
+
+  /**
+   * Handle removing an attack mode
+   */
+  async _onRemoveAttackMode(event) {
+    event.preventDefault();
+    const index = parseInt(event.currentTarget.dataset.index);
+    const modes = foundry.utils.duplicate(this.item.system.attackModes || []);
+    
+    modes.splice(index, 1);
+    
+    await this.item.update({ 'system.attackModes': modes });
   }
 }

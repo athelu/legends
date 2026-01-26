@@ -40,9 +40,22 @@ export class D8Item extends Item {
     if (!systemData.damage.type) {
       systemData.damage.type = 'slashing';
     }
+    
+    // Ensure attackModes array exists with at least one mode
+    if (!systemData.attackModes || systemData.attackModes.length === 0) {
+      systemData.attackModes = [
+        {
+          name: "Melee",
+          type: "melee",
+          skill: "melee",
+          damageAttr: "strength",
+          defenseType: "melee",
+          range: { normal: 0, medium: 0, long: 0 }
+        }
+      ];
+    }
   }
-  
-  /**
+    /**
    * Prepare Armor-specific data
    */
   _prepareArmorData(itemData) {

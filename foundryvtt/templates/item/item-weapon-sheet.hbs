@@ -103,27 +103,82 @@
         <p><small>Ability value depends on the weapon skill used (Ranged use Dexterity, melee use Strength, Thrown use Strength).</small></p>
       </div>
 
-      <!-- Range (for ranged/thrown weapons) -->
+      <!-- Attack Modes -->
       <div class="section-header">
-        <h3>Range</h3>
+        <h3>Attack Modes</h3>
       </div>
-      
-      <div class="form-group-row">
-        <div class="form-group">
-          <label>Short Range</label>
-          <input type="number" name="system.range.normal" value="{{system.range.normal}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>1 net success needed to hit for base damage</small>
+
+      <div class="attack-modes-list">
+        {{#each system.attackModes as |mode index|}}
+        <div class="attack-mode-item" data-index="{{index}}">
+          <div class="mode-header">
+            <h4>Mode {{add index 1}}: <input type="text" name="system.attackModes.{{index}}.name" value="{{mode.name}}" placeholder="Melee/Ranged/Thrown" style="width: 150px;" /></h4>
+            {{#if (gt ../system.attackModes.length 1)}}
+            <button type="button" class="remove-attack-mode" data-index="{{index}}">
+              <i class="fas fa-trash"></i> Remove
+            </button>
+            {{/if}}
+          </div>
+          
+          <div class="form-group-row">
+            <div class="form-group">
+              <label>Type</label>
+              <select name="system.attackModes.{{index}}.type">
+                <option value="melee" {{#if (eq mode.type "melee")}}selected{{/if}}>Melee</option>
+                <option value="ranged" {{#if (eq mode.type "ranged")}}selected{{/if}}>Ranged</option>
+                <option value="thrown" {{#if (eq mode.type "thrown")}}selected{{/if}}>Thrown</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Attack Skill</label>
+              <select name="system.attackModes.{{index}}.skill">
+                <option value="melee" {{#if (eq mode.skill "melee")}}selected{{/if}}>Melee Combat</option>
+                <option value="ranged" {{#if (eq mode.skill "ranged")}}selected{{/if}}>Ranged Combat</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Damage Attribute</label>
+              <select name="system.attackModes.{{index}}.damageAttr">
+                <option value="strength" {{#if (eq mode.damageAttr "strength")}}selected{{/if}}>Strength</option>
+                <option value="dexterity" {{#if (eq mode.damageAttr "dexterity")}}selected{{/if}}>Dexterity</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group-row">
+            <div class="form-group">
+              <label>Defense Type</label>
+              <select name="system.attackModes.{{index}}.defenseType">
+                <option value="melee" {{#if (eq mode.defenseType "melee")}}selected{{/if}}>Melee (Opposed Roll)</option>
+                <option value="ranged-reflex" {{#if (eq mode.defenseType "ranged-reflex")}}selected{{/if}}>Ranged (Reflex if Cover)</option>
+                <option value="none" {{#if (eq mode.defenseType "none")}}selected{{/if}}>None (Autohit)</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="form-group-row">
+            <div class="form-group">
+              <label>Short Range</label>
+              <input type="number" name="system.attackModes.{{index}}.range.normal" value="{{mode.range.normal}}" data-dtype="Number" min="0" placeholder="0" />
+              <small>0 for melee weapons</small>
+            </div>
+            <div class="form-group">
+              <label>Medium Range</label>
+              <input type="number" name="system.attackModes.{{index}}.range.medium" value="{{mode.range.medium}}" data-dtype="Number" min="0" placeholder="0" />
+            </div>
+            <div class="form-group">
+              <label>Long Range</label>
+              <input type="number" name="system.attackModes.{{index}}.range.long" value="{{mode.range.long}}" data-dtype="Number" min="0" placeholder="0" />
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label>Medium Range</label>
-          <input type="number" name="system.range.medium" value="{{system.range.medium}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>2 net successes needed to hit for base damage</small>
-        </div>
-        <div class="form-group">
-          <label>Long Range</label>
-          <input type="number" name="system.range.long" value="{{system.range.long}}" data-dtype="Number" min="0" placeholder="0" />
-          <small>2 net successes to hit for base damage, +1 to both dice</small>
-        </div>
+        {{/each}}
+        
+        <button type="button" class="add-attack-mode">
+          <i class="fas fa-plus"></i> Add Attack Mode
+        </button>
       </div>
 
       <!-- Properties -->

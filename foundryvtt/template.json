@@ -165,13 +165,22 @@
         "alternateType": "",
         "multiType": ""
       },
-      "range": {
-        "normal": 0,
-        "medium": 0,
-        "long": 0
-      },
       "properties": [],
-      "notes": ""
+      "notes": "",
+       "attackModes": [
+        {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "melee",
+        "damageAttr": "strength",
+        "defenseType": "melee",
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      }
+    ]
     },
     "armor": {
       "templates": ["common", "physical"],
