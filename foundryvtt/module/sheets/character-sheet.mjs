@@ -256,8 +256,9 @@ export class D8CharacterSheet extends ActorSheet {
     
     if (!this.isEditable) return;
     
-    // Rollable attributes
-    html.find('.attribute-roll').click(this._onAttributeRoll.bind(this));
+    // Rest buttons
+    html.find('.short-rest-button').click(this._onShortRest.bind(this));
+    html.find('.long-rest-button').click(this._onLongRest.bind(this));
     
     // Rollable skills
     html.find('.skill-roll').click(this._onSkillRoll.bind(this));
@@ -281,21 +282,38 @@ export class D8CharacterSheet extends ActorSheet {
     html.find('.item-view').click(this._onItemView.bind(this));
   }
   
-  /**
-   * Handle attribute rolls
-   */
-  async _onAttributeRoll(event) {
-    event.preventDefault();
-    const attribute = event.currentTarget.dataset.attribute;
-    return game.legends.rollAttributeCheck(this.actor, attribute);
-  }
-  
+
   /**
    * Handle skill rolls
    */
   async _onSkillRoll(event) {
     event.preventDefault();
-    const skill = event.currentTarget.dataset.skill;
+    const button = event.currentTarget;
+    
+    // Try to get skill from button first, then from parent row
+    let skill = button.dataset.skill;
+    if (!skill) {
+      const row = button.closest('.skill-row');
+      if (row) {
+        skill = row.dataset.skill;
+      }
+    }
+    
+    if (!skill) {
+      console.error('No skill found for roll button', button);
+      ui.notifications.error('Could not determine which skill to roll');
+      return;
+    }
+    
+    console.log(`Rolling skill: ${skill}`);
+    
+    // Make sure the roll function exists
+    if (!game.legends || !game.legends.rollSkillCheck) {
+      console.error('game.legends.rollSkillCheck not found');
+      ui.notifications.error('Skill rolling system not initialized');
+      return;
+    }
+    
     return game.legends.rollSkillCheck(this.actor, skill);
   }
   
@@ -359,9 +377,18 @@ export class D8CharacterSheet extends ActorSheet {
   /**
    * Handle opening a compendium browser
    */
+
   async _onOpenCompendium(event) {
     event.preventDefault();
-    const compendiumType = event.currentTarget.dataset.compendium;
+    const button = event.currentTarget;
+    const compendiumType = button.dataset.compendium;
+    
+    // Check if compendium type is specified
+    if (!compendiumType) {
+      console.warn("No compendium type specified on button:", button);
+      ui.notifications.warn("Button is missing data-compendium attribute.");
+      return;
+    }
     
     // Map compendium type to pack name
     const packNames = {
@@ -379,13 +406,20 @@ export class D8CharacterSheet extends ActorSheet {
     };
     
     const packName = packNames[compendiumType];
-    if (packName) {
-      const pack = game.packs.get(packName);
-      if (pack) {
-        pack.render(true);
-      } else {
-        ui.notifications.warn(`Compendium pack "${packName}" not found.`);
-      }
+    
+    if (!packName) {
+      console.warn(`Unknown compendium type: "${compendiumType}"`);
+      ui.notifications.warn(`No compendium configured for type: ${compendiumType}`);
+      return;
+    }
+    
+    const pack = game.packs.get(packName);
+    
+    if (pack) {
+      pack.render(true);
+    } else {
+      console.warn(`Compendium pack "${packName}" not found.`);
+      ui.notifications.warn(`Compendium pack "${packName}" not found. Check system.json configuration.`);
     }
   }
   
@@ -426,4 +460,59 @@ export class D8CharacterSheet extends ActorSheet {
       item.sheet.render(true, { editable: false });
     }
   }
+
+    /**
+   * Handle short rest button click
+   */
+  async _onShortRest(event) {
+    event.preventDefault();
+    
+    // Confirm the action
+    const confirmed = await Dialog.confirm({
+      title: "Short Rest",
+      content: `<p>Take a short rest (10 minutes)?</p>
+                <p>You will regain <strong>${this.actor.system.attributes.constitution.value} HP</strong> and <strong>1 Luck</strong>.</p>`,
+      yes: () => true,
+      no: () => false
+    });
+    
+    if (!confirmed) return;
+    
+    // Call the actor's shortRest method
+    return this.actor.shortRest();
+  }
+
+  /**
+   * Handle long rest button click
+   */
+  async _onLongRest(event) {
+    event.preventDefault();
+    
+    const con = this.actor.system.attributes.constitution.value;
+    const hpRestore = con * 4;
+    
+    // Build the content message
+    let content = `<p>Take a long rest (8 hours)?</p>
+                  <p>You will regain <strong>${hpRestore} HP</strong> and restore all <strong>Luck</strong> to maximum.`;
+    
+    if (this.actor.system.energy) {
+      content += ` All <strong>Energy</strong> will also be restored.`;
+    }
+    
+    content += `</p>`;
+    
+    // Confirm the action
+    const confirmed = await Dialog.confirm({
+      title: "Long Rest",
+      content: content,
+      yes: () => true,
+      no: () => false
+    });
+    
+    if (!confirmed) return;
+    
+    // Call the actor's longRest method
+    return this.actor.longRest();
+  }
 }
+

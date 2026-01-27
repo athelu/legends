@@ -116,7 +116,22 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
  */
 export async function rollSkillCheck(actor, skillKey, options = {}) {
   const skill = actor.system.skills[skillKey];
-  const attr = actor.system.attributes[skill.attr];
+  
+  // Map short attribute codes to full attribute names
+  const attrMap = {
+    'str': 'strength',
+    'con': 'constitution',
+    'agi': 'agility',
+    'dex': 'dexterity',
+    'int': 'intelligence',
+    'wis': 'wisdom',
+    'cha': 'charisma',
+    'lck': 'luck'
+  };
+  
+  // Get the attribute key - handle both short codes and full names
+  const attrKey = attrMap[skill.attr] || skill.attr;
+  const attr = actor.system.attributes[attrKey];
   
   // Show roll dialog instead of rolling immediately
   return dice.showRollDialog({
