@@ -381,12 +381,14 @@ export class D8CharacterSheet extends ActorSheet {
   async _onOpenCompendium(event) {
     event.preventDefault();
     const button = event.currentTarget;
-    const compendiumType = button.dataset.compendium;
+    
+    // Check both data-compendium and data-type (for backwards compatibility)
+    const compendiumType = button.dataset.compendium || button.dataset.type;
     
     // Check if compendium type is specified
     if (!compendiumType) {
       console.warn("No compendium type specified on button:", button);
-      ui.notifications.warn("Button is missing data-compendium attribute.");
+      ui.notifications.warn("Button is missing data-compendium or data-type attribute.");
       return;
     }
     
