@@ -36,6 +36,167 @@ export async function rollWeaponAttack(actor, weapon) {
 }
 
 /**
+ * Show comprehensive attack options dialog based on weapon properties
+ * @param {Actor} actor - The attacking actor
+ * @param {Item} weapon - The weapon item
+ * @param {Object} attackMode - The selected attack mode
+ * @returns {Promise<Object>} Attack configuration or null if cancelled
+ */
+async function showAttackOptionsDialog(actor, weapon, attackMode) {
+  const properties = weapon.system.properties || [];
+  
+  // Determine what options to show
+  const hasVersatile = properties.includes('versatile');
+  const hasMultiType = properties.includes('multi-type');
+  const hasAlternateStrike = properties.includes('alternate-strike');
+  const hasFinesse = properties.includes('finesse');
+  
+  // If no special options, return default config
+  if (!hasVersatile && !hasMultiType && !hasAlternateStrike && !hasFinesse) {
+    return {
+      damageBase: weapon.system.damage.base,
+      damageType: weapon.system.damage.type,
+      damageAttr: attackMode.damageAttr,
+      label: attackMode.name
+    };
+  }
+  
+  // Build dialog content
+  let content = `<form class="legends-attack-options" style="padding: 10px;">`;
+  
+  // Versatile: 1H vs 2H
+  if (hasVersatile) {
+    const baseDamage = weapon.system.damage.base;
+    content += `
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px;"><strong>Grip:</strong></label>
+        <select name="grip" style="width: 100%; padding: 5px;">
+          <option value="1h">One-Handed (${baseDamage} damage)</option>
+          <option value="2h">Two-Handed (${baseDamage + 1} damage)</option>
+        </select>
+      </div>
+    `;
+  }
+  
+  // Multi-Type: Choose damage type
+  if (hasMultiType) {
+    const primaryType = weapon.system.damage.type;
+    const secondaryType = weapon.system.damage.multiType;
+    
+    content += `
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px;"><strong>Damage Type:</strong></label>
+        <select name="damageType" style="width: 100%; padding: 5px;">
+          <option value="${primaryType}">${primaryType.charAt(0).toUpperCase() + primaryType.slice(1)}</option>
+          ${secondaryType ? `<option value="${secondaryType}">${secondaryType.charAt(0).toUpperCase() + secondaryType.slice(1)}</option>` : ''}
+        </select>
+      </div>
+    `;
+  }
+  
+  // Alternate Strike: Normal vs alternate
+  if (hasAlternateStrike) {
+    const alternateDamage = weapon.system.damage.alternate || (weapon.system.damage.base - 2);
+    const alternateType = weapon.system.damage.alternateType || 'bludgeoning';
+    
+    content += `
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px;"><strong>Attack Mode:</strong></label>
+        <select name="strikeMode" style="width: 100%; padding: 5px;">
+          <option value="normal">Normal (${weapon.system.damage.base} ${weapon.system.damage.type})</option>
+          <option value="alternate">Alternate Strike (${alternateDamage} ${alternateType})</option>
+        </select>
+      </div>
+    `;
+  }
+  
+  // Finesse: Strength vs Agility
+  if (hasFinesse) {
+    const str = actor.system.attributes.strength.value;
+    const agi = actor.system.attributes.agility.value;
+    
+    content += `
+      <div class="form-group" style="margin-bottom: 15px;">
+        <label style="display: block; margin-bottom: 5px;"><strong>Damage Attribute:</strong></label>
+        <select name="finesseAttr" style="width: 100%; padding: 5px;">
+          <option value="strength">Strength (${str})</option>
+          <option value="agility">Agility (${agi})</option>
+        </select>
+      </div>
+    `;
+  }
+  
+  content += `</form>`;
+  
+  // Show dialog and get results
+  return new Promise((resolve) => {
+    new Dialog({
+      title: `${weapon.name} - Attack Options`,
+      content: content,
+      buttons: {
+        attack: {
+          icon: '<i class="fas fa-sword"></i>',
+          label: "Attack",
+          callback: (html) => {
+            // Parse all selections
+            const grip = html.find('[name="grip"]').val();
+            const damageType = html.find('[name="damageType"]').val();
+            const strikeMode = html.find('[name="strikeMode"]').val();
+            const finesseAttr = html.find('[name="finesseAttr"]').val();
+            
+            // Calculate final values
+            let finalDamage = weapon.system.damage.base;
+            let finalType = weapon.system.damage.type;
+            let finalAttr = attackMode.damageAttr;
+            let label = attackMode.name;
+            
+            // Apply versatile
+            if (grip === '2h') {
+              finalDamage += 1;
+              label += " (Two-Handed)";
+            } else if (grip === '1h') {
+              label += " (One-Handed)";
+            }
+            
+            // Apply multi-type
+            if (damageType) {
+              finalType = damageType;
+            }
+            
+            // Apply alternate strike
+            if (strikeMode === 'alternate') {
+              finalDamage = weapon.system.damage.alternate || (weapon.system.damage.base - 2);
+              finalType = weapon.system.damage.alternateType || 'bludgeoning';
+              label += " (Alternate)";
+            }
+            
+            // Apply finesse
+            if (finesseAttr) {
+              finalAttr = finesseAttr;
+            }
+            
+            resolve({
+              damageBase: finalDamage,
+              damageType: finalType,
+              damageAttr: finalAttr,
+              label: label
+            });
+          }
+        },
+        cancel: {
+          icon: '<i class="fas fa-times"></i>',
+          label: "Cancel",
+          callback: () => resolve(null)
+        }
+      },
+      default: "attack"
+    }, {
+      width: 400
+    }).render(true);
+  });
+}
+
+/**
  * Show dialog to select attack mode
  * @param {Item} weapon - The weapon
  * @param {Array} attackModes - Available attack modes
@@ -91,15 +252,21 @@ async function showAttackModeDialog(weapon, attackModes) {
  * @param {Token} target - The targeted token (or null)
  */
 async function executeWeaponAttack(actor, weapon, attackMode, target) {
+  // Show attack options dialog for weapon properties
+  const attackConfig = await showAttackOptionsDialog(actor, weapon, attackMode);
+  
+  if (!attackConfig) return; // User cancelled
+  
   // Determine which skill to use
   const skillKey = attackMode.skill === 'melee' ? 'meleeCombat' : 'rangedCombat';
   const skill = actor.system.skills[skillKey];
   
-  // Determine which attribute to use (Agility for melee, Dexterity for ranged/thrown)
+  // Determine which attribute to use for attack roll
+  // Melee: Agility, Ranged/Thrown: Dexterity
   const attrKey = attackMode.skill === 'melee' ? 'agility' : 'dexterity';
   const attribute = actor.system.attributes[attrKey];
   
-  // Show the roll dialog - this will create the dice roll chat card
+  // Show the roll dialog
   await showRollDialog({
     actor: actor,
     attrValue: attribute.value,
@@ -107,19 +274,20 @@ async function executeWeaponAttack(actor, weapon, attackMode, target) {
     attrLabel: attribute.label,
     skillLabel: 'Combat',
     onRollComplete: async (rollResult) => {
-      // IMPORTANT: Wait a tiny bit for the dice roll message to post first
+      // Wait for the dice roll message to post first
       await new Promise(resolve => setTimeout(resolve, 100));
       
-      // Create attack chat card with targeting info AFTER dice roll posts
+      // Create attack chat card with configuration
       await createAttackChatCard({
         actor: actor,
         weapon: weapon,
         attackMode: attackMode,
+        attackConfig: attackConfig, // Pass the config
         target: target,
         rollResult: rollResult,
         skillKey: skillKey,
-        attrKey: attrKey,
-        attackRollMessageId: rollResult.message?.id  // Store the dice roll message ID
+        attrKey: attackConfig.damageAttr, // Use configured damage attribute
+        attackRollMessageId: rollResult.message?.id
       });
     }
   });
@@ -134,6 +302,7 @@ async function createAttackChatCard(options) {
     actor,
     weapon,
     attackMode,
+    attackConfig,
     target,
     rollResult,
     skillKey,
@@ -150,6 +319,9 @@ async function createAttackChatCard(options) {
   
   // Show successes from the roll
   const successesInfo = `<div class="attack-successes"><strong>Attack Successes:</strong> ${rollResult.successes}</div>`;
+  
+  // Build attack mode display with configuration details
+  const modeInfo = `<div class="attack-mode"><strong>Mode:</strong> ${attackConfig.label}</div>`;
   
   // Build defense button (only if target selected)
   const defenseButton = target 
@@ -172,11 +344,11 @@ async function createAttackChatCard(options) {
   const content = `
     <div class="legends-attack-card">
       <h3><i class="fas fa-sword"></i> ${weapon.name} Attack</h3>
-      <div class="attack-mode"><strong>Mode:</strong> ${attackMode.name}</div>
+      ${modeInfo}
       ${targetInfo}
       ${successesInfo}
       <div class="attack-damage">
-        <strong>Base Damage:</strong> ${weapon.system.damage.base} ${weapon.system.damage.type}
+        <strong>Base Damage:</strong> ${attackConfig.damageBase} ${attackConfig.damageType}
       </div>
       ${defenseButton}
     </div>
@@ -192,9 +364,9 @@ async function createAttackChatCard(options) {
         attackMode: attackMode,
         targetId: target?.actor?.id,  // FIXED: Use actor ID, not token ID
         attackSuccesses: rollResult.successes,
-        baseDamage: weapon.system.damage.base,
-        damageType: weapon.system.damage.type,
-        damageAttr: attackMode.damageAttr,
+        baseDamage: attackConfig.damageBase,
+        damageType: attackConfig.damageType,
+        damageAttr: attackConfig.damageAttr,
         defenseType: attackMode.defenseType,
         attackRollMessageId: attackRollMessageId
       }
@@ -509,7 +681,7 @@ export async function applyDamage(targetId, damage, damageType) {
     content: `
       <div class="legends-damage-applied">
         <i class="fas fa-heart-broken"></i> <strong>${target.name}</strong> took ${finalDamage} ${damageType} damage!
-        ${dr > 0 ? `<br/><small>(${damage} damage - ${dr} DR = ${finalDamage} applied)</small>` : ''}
+         ${dr > 0 ? `<br/><small>(${damage} damage - ${dr} DR = ${finalDamage} applied)</small>` : ''}
       </div>
     `
   });
