@@ -9,7 +9,7 @@
  * @returns {Promise<void>}
  */
 export async function showRollDialog(options) {
-  const { actor, attrValue, skillValue, attrLabel, skillLabel } = options;
+  const { actor, attrValue, skillValue, attrLabel, skillLabel, onRollComplete } = options;
   
   return new Promise((resolve) => {
     new Dialog({
@@ -53,13 +53,13 @@ export async function showRollDialog(options) {
         roll: {
           icon: '<i class="fas fa-dice-d8"></i>',
           label: "Roll",
-          callback: (html) => {
+          callback: async (html) => {
             const modifier = parseInt(html.find('[name="modifier"]').val()) || 0;
             const applyToAttr = html.find('[name="applyToAttr"]').is(':checked');
             const applyToSkill = html.find('[name="applyToSkill"]').is(':checked');
             
             // Normal roll with modifiers
-            rollD8Check({
+            const result = await rollD8Check({
               ...options,
               modifier: modifier,
               applyToAttr: applyToAttr,
@@ -67,45 +67,53 @@ export async function showRollDialog(options) {
               fortune: 0,
               misfortune: 0
             });
-            resolve();
+            
+            // Call the completion callback if provided
+            if (onRollComplete) {
+              await onRollComplete(result);
+            }
+            
+            resolve(result);
           }
         },
         fortune: {
           icon: '<i class="fas fa-dice"></i>',
           label: "Fortune",
-          callback: (html) => {
+          callback: async (html) => {
             const modifier = parseInt(html.find('[name="modifier"]').val()) || 0;
             const applyToAttr = html.find('[name="applyToAttr"]').is(':checked');
             const applyToSkill = html.find('[name="applyToSkill"]').is(':checked');
             
             // Show dice assignment dialog for Fortune
-            showDiceAssignmentDialog({
+            const result = await showDiceAssignmentDialog({
               ...options,
               modifier: modifier,
               applyToAttr: applyToAttr,
               applyToSkill: applyToSkill,
-              isFortune: true
+              isFortune: true,
+              onRollComplete: onRollComplete
             });
-            resolve();
+            resolve(result);
           }
         },
         misfortune: {
           icon: '<i class="fas fa-dice"></i>',
           label: "Misfortune",
-          callback: (html) => {
+          callback: async (html) => {
             const modifier = parseInt(html.find('[name="modifier"]').val()) || 0;
             const applyToAttr = html.find('[name="applyToAttr"]').is(':checked');
             const applyToSkill = html.find('[name="applyToSkill"]').is(':checked');
             
             // Show dice assignment dialog for Misfortune
-            showDiceAssignmentDialog({
+            const result = await showDiceAssignmentDialog({
               ...options,
               modifier: modifier,
               applyToAttr: applyToAttr,
               applyToSkill: applyToSkill,
-              isFortune: false
+              isFortune: false,
+              onRollComplete: onRollComplete
             });
-            resolve();
+            resolve(result);
           }
         }
       },
@@ -116,6 +124,7 @@ export async function showRollDialog(options) {
     }).render(true);
   });
 }
+
 
 /**
  * Show dice assignment dialog for Fortune/Misfortune
@@ -207,37 +216,41 @@ async function showDiceAssignmentDialog(options) {
         confirm: {
           icon: '<i class="fas fa-check"></i>',
           label: "Confirm Assignment",
-          callback: (html) => {
-            const attrIdx = parseInt(html.find('[name="attrDie"]').val());
-            const skillIdx = parseInt(html.find('[name="skillDie"]').val());
-            
-            if (attrIdx === skillIdx) {
-              ui.notifications.error("Must assign different dice positions! Die #" + (attrIdx + 1) + " cannot be used twice.");
-              // Re-open the dialog with the same options
-              showDiceAssignmentDialog(options);
-              resolve();
-              return;
-            }
-            
-            const attrDie = results[attrIdx];
-            const skillDie = results[skillIdx];
-            
-            // Find the discarded die
-            const usedIndices = new Set([attrIdx, skillIdx]);
-            const discardedIdx = results.findIndex((_, idx) => !usedIndices.has(idx));
-            const discarded = results[discardedIdx];
-            
-            // Execute roll with assigned dice
-            rollD8CheckWithAssignedDice({
-              ...options,
-              attrDie: attrDie,
-              skillDie: skillDie,
-              discarded: discarded,
-              allResults: results,
-              fortune: isFortune ? 1 : 0,
-              misfortune: isFortune ? 0 : 1
-            });
+        callback: async (html) => {
+          const attrIdx = parseInt(html.find('[name="attrDie"]').val());
+          const skillIdx = parseInt(html.find('[name="skillDie"]').val());
+          
+          if (attrIdx === skillIdx) {
+            ui.notifications.error("Must assign different dice positions! Die #" + (attrIdx + 1) + " cannot be used twice.");
+            showDiceAssignmentDialog(options);
             resolve();
+            return;
+          }
+          
+          const attrDie = results[attrIdx];
+          const skillDie = results[skillIdx];
+          
+          const usedIndices = new Set([attrIdx, skillIdx]);
+          const discardedIdx = results.findIndex((_, idx) => !usedIndices.has(idx));
+          const discarded = results[discardedIdx];
+          
+          // Execute roll with assigned dice
+          const result = await rollD8CheckWithAssignedDice({
+            ...options,
+            attrDie: attrDie,
+            skillDie: skillDie,
+            discarded: discarded,
+            allResults: results,
+            fortune: isFortune ? 1 : 0,
+            misfortune: isFortune ? 0 : 1
+          });
+          
+          // Call completion callback if provided
+          if (options.onRollComplete) {
+            await options.onRollComplete(result);
+          }
+          
+          resolve(result);
           }
         },
         cancel: {
@@ -298,11 +311,11 @@ async function rollD8CheckWithAssignedDice(options) {
     successes++;
   }
   
-  // Critical success/failure
-  const criticalSuccess = (attrDie === 1 && skillDie === 1);
-  if (criticalSuccess) {
-    successes = Math.max(successes, 3);
-  }
+// Check for critical success (double 1s)
+const criticalSuccess = (attrDie === 1 && skillDie === 1);
+if (criticalSuccess) {
+  successes += 1; // Add +1 bonus success for critical
+}
   
   const criticalFailure = (attrDie === 8 && skillDie === 8);
   if (criticalFailure) {
@@ -475,12 +488,11 @@ export async function rollD8Check(options = {}) {
     successes++;
   }
   
-  // Check for critical success (double 1s)
   const criticalSuccess = (attrDie === 1 && skillDie === 1);
   if (criticalSuccess) {
-    successes = Math.max(successes, 3); // Minimum 3 successes on crit
+    successes += 1; // Add +1 bonus success for critical
   }
-  
+    
   // Check for critical failure (double 8s)
   const criticalFailure = (attrDie === 8 && skillDie === 8);
   if (criticalFailure) {
@@ -605,11 +617,10 @@ function calculateSuccesses(data) {
   }
   
   // Check for critical success (double 1s on ORIGINAL rolls)
-  const criticalSuccess = (originalAttrDie === 1 && originalSkillDie === 1);
-  if (criticalSuccess) {
-    successes = Math.max(successes, 3); // Minimum 3 successes on crit
-  }
-  
+const criticalSuccess = (originalAttrDie === 1 && originalSkillDie === 1);
+if (criticalSuccess) {
+  successes += 1; // Add +1 bonus success for critical
+}
   // Check for critical failure (double 8s on ORIGINAL rolls)
   const criticalFailure = (originalAttrDie === 8 && originalSkillDie === 8);
   if (criticalFailure) {
@@ -680,20 +691,22 @@ export async function rollWeaveCheck(options = {}) {
     }
   }
   
-  const totalSuccesses = primarySuccesses + supportingSuccesses;
-  
+  let totalSuccesses = primarySuccesses + supportingSuccesses;
+
   // Check for critical
   const criticalSuccess = (primaryResults[0] === 1 && primaryResults[1] === 1) ||
                           (supportingResults.length > 0 && supportingResults[0] === 1 && supportingResults[1] === 1);
-  
+
   if (criticalSuccess) {
+    // Add +1 bonus success for critical
+    totalSuccesses += 1;
+    
     // Restore luck
     if (actor.system.luck) {
       await actor.update({ 'system.luck.current': actor.system.luck.max });
       ui.notifications.info(`${actor.name} rolled a critical success! All Luck restored!`);
     }
   }
-  
   // Deduct energy
   const totalEnergyCost = primaryCost + supportingCost;
   const currentEnergy = actor.system.energy.value;
