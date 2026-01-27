@@ -16,6 +16,7 @@ import { D8ItemSheet } from "./sheets/item-sheet.mjs";
 // Import helpers
 import * as dice from "./dice.mjs";
 import * as chat from "./chat.mjs";
+import * as combat from "./combat.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -32,7 +33,8 @@ Hooks.once('init', async function() {
     rollSavingThrow,
     rollInitiative,
     rollWeave,
-    spendLuckOnRoll: dice.spendLuckOnRoll
+    spendLuckOnRoll: dice.spendLuckOnRoll,
+    combat: combat
   };
 
   // Define custom Document classes
@@ -69,6 +71,9 @@ await foundry.applications.handlebars.loadTemplates([
    
   // Initialize luck spending handlers
   dice.initializeLuckHandlers();
+
+  // Initialize combat handlers
+  combat.initializeCombatSystem();
 });
 
 /* -------------------------------------------- */

@@ -116,18 +116,14 @@ export class D8Item extends Item {
   /**
    * Roll a weapon attack
    */
+  * Roll a weapon attack
+  */
   async _rollWeapon() {
     const actor = this.actor;
     const item = this;
     
-    // Determine if melee or ranged
-    const isMelee = item.system.weaponType === 'melee';
-    const skillKey = isMelee ? 'meleeCombat' : 'rangedCombat';
-    
-    // Roll the attack
-    game.d8.rollSkillCheck(actor, skillKey, {
-      label: `${item.name} Attack`
-    });
+    // Use the new combat system
+    return game.legends.combat.rollWeaponAttack(actor, item);
   }
   
   /**
