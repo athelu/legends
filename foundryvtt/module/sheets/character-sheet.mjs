@@ -377,19 +377,18 @@ export class D8CharacterSheet extends ActorSheet {
   /**
    * Handle opening a compendium browser
    */
+
   async _onOpenCompendium(event) {
     event.preventDefault();
     const button = event.currentTarget;
-    
-    // FIXED: Use data-compendium instead of data-type
     const compendiumType = button.dataset.compendium;
     
+    // Check if compendium type is specified
     if (!compendiumType) {
-      console.error('No compendium type specified on button');
+      console.warn("No compendium type specified on button:", button);
+      ui.notifications.warn("Button is missing data-compendium attribute.");
       return;
     }
-    
-    console.log(`Opening compendium: ${compendiumType}`);
     
     // Map compendium type to pack name
     const packNames = {
@@ -407,16 +406,20 @@ export class D8CharacterSheet extends ActorSheet {
     };
     
     const packName = packNames[compendiumType];
-    if (packName) {
-      const pack = game.packs.get(packName);
-      if (pack) {
-        pack.render(true);
-      } else {
-        ui.notifications.warn(`Compendium pack "${packName}" not found.`);
-        console.error(`Pack not found: ${packName}. Check your system.json packs configuration.`);
-      }
+    
+    if (!packName) {
+      console.warn(`Unknown compendium type: "${compendiumType}"`);
+      ui.notifications.warn(`No compendium configured for type: ${compendiumType}`);
+      return;
+    }
+    
+    const pack = game.packs.get(packName);
+    
+    if (pack) {
+      pack.render(true);
     } else {
-      ui.notifications.warn(`Unknown compendium type: ${compendiumType}`);
+      console.warn(`Compendium pack "${packName}" not found.`);
+      ui.notifications.warn(`Compendium pack "${packName}" not found. Check system.json configuration.`);
     }
   }
   

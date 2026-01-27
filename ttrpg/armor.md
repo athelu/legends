@@ -64,7 +64,7 @@
 - **Keyword:** [MediumArmor], [Noisy]
 
 #### Chain Mail - DR 5
-- **Weakness:** Bludgeoning (DR 2)
+- **Weakness:** Bludgeoning (DR 4)
 - **Resistance:** Slashing (DR 6)
 - **Cost:** 200 gp
 - **Keyword:** [MediumArmor], [Noisy]
@@ -77,7 +77,7 @@
 - **Keyword:** [MediumArmor]
 
 #### Leather Armor/Cuir Bouilli (Hardened Leather) - DR 3
-- **Weakness:** Piercing (DR 1)
+- **Weakness:** Piercing (DR 2)
 - **Resistance:** Bludgeoning (DR 4)
 - **Stealth:** No penalty
 - **Description:** Boiled and hardened leather plates, shaped and rigid
@@ -85,19 +85,19 @@
 - **Keyword:** [LightArmor]
 
 #### Plate, Full - DR 8
-- **Weakness:** Bludgeoning (DR 4)
+- **Weakness:** Bludgeoning (DR 6)
 - **Resistance:** Slashing (DR 9)
 - **Cost:** 750 gp
 - **Keyword:** [HeavyArmor], [Loud]
 
 #### Scale Mail - DR 5
-- **Weakness:** Bludgeoning (DR 2)
+- **Weakness:** Bludgeoning (DR 4)
 - **Resistance:** Slashing (DR 6)
 - **Cost:** 250 gp
 - **Keyword:** [MediumArmor], [Noisy]
 
 #### Splint Mail - DR 7
-- **Weakness:** Bludgeoning (DR 3)
+- **Weakness:** Bludgeoning (DR 6)
 - **Resistance:** Slashing (DR 8)
 - **Cost:** 500 gp
 - **Keyword:** [HeavyArmor], [Loud]

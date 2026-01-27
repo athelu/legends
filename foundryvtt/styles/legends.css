@@ -1196,6 +1196,67 @@
   color: #FFFFFF;
 }
 
+/* Weakness Tag - Orange gradient */
+.legends.sheet .armor-tags .tag.weakness-tag {
+  background: linear-gradient(to bottom, #f6ad55, #ed8936);
+  border-color: #c05621;
+  text-transform: capitalize;
+}
+
+/* Resistance Tag - Blue gradient */
+.legends.sheet .armor-tags .tag.resistance-tag {
+  background: linear-gradient(to bottom, #4299e1, #3182ce);
+  border-color: #2c5282;
+  text-transform: capitalize;
+}
+
+/* Help section styling for armor DR explanation */
+.legends.sheet .help-section {
+  background: #f7fafc;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 10px 0;
+  border: 1px solid #e2e8f0;
+}
+
+.legends.sheet .help-section h4 {
+  margin: 0 0 5px 0;
+  color: #2d3748;
+  font-size: 13px;
+}
+
+.legends.sheet .help-section ul {
+  margin: 5px 0;
+  padding-left: 20px;
+  font-size: 12px;
+  list-style-type: disc;
+}
+
+.legends.sheet .help-section ul li {
+  margin: 3px 0;
+  color: #4a5568;
+}
+
+.legends.sheet .help-section p {
+  margin: 5px 0;
+  font-size: 11px;
+  font-style: italic;
+  color: #718096;
+}
+
+/* Hint text for base DR display */
+.legends.sheet .hint {
+  color: #666;
+  font-size: 12px;
+  margin: 5px 0;
+  font-style: normal;
+}
+
+.legends.sheet .hint strong {
+  color: #2d3748;
+  font-weight: bold;
+}
+
 /* ========================================
    TEXT EDITOR
    ======================================== */

@@ -23,7 +23,7 @@
         {{/if}}
         
         <!-- Property Tags (Noisy/Loud) -->
-        {{#each system.properties as |prop|}}
+        {{#each system.properties as |prop|}}a
           {{#if (eq prop "noisy")}}
           <span class="tag stealth-tag">NOISY</span>
           {{/if}}
@@ -35,6 +35,16 @@
         <!-- DR Tag -->
         {{#if system.dr.value}}
         <span class="tag dr-tag">DR {{system.dr.value}}</span>
+        {{/if}}
+        
+        <!-- Weakness Tag -->
+        {{#if system.weakness.type}}
+        <span class="tag weakness-tag">{{system.weakness.type}}: DR {{system.weakness.dr}}</span>
+        {{/if}}
+        
+        <!-- Resistance Tag -->
+        {{#if system.resistance.type}}
+        <span class="tag resistance-tag">{{system.resistance.type}}: DR {{system.resistance.dr}}</span>
         {{/if}}
       </div>
       
@@ -97,11 +107,27 @@
           <div class="form-group">
             <label>Base DR</label>
             <input type="number" name="system.dr.value" value="{{system.dr.value}}" data-dtype="Number" min="0" />
+            <small>Default DR against all damage types</small>
           </div>
         </div>
 
         <!-- Resistances/Weaknesses -->
-        <h3>Resistances & Weaknesses</h3>
+        <h3>Damage Type Variants</h3>
+        <p class="hint">Base DR: <strong>{{system.dr.value}}</strong> (applies to all damage types unless specified below)</p>
+        
+        <!-- Help Section -->
+        <div class="help-section" style="background: #f7fafc; padding: 10px; border-radius: 4px; margin: 10px 0;">
+          <h4 style="margin: 0 0 5px 0;">How Armor DR Works</h4>
+          <ul style="margin: 5px 0; padding-left: 20px; font-size: 12px;">
+            <li><strong>Base DR</strong> applies to all damage types unless overridden below</li>
+            <li><strong>Weakness</strong>: Enter the LOWER DR value this armor has against that damage type</li>
+            <li><strong>Resistance</strong>: Enter the HIGHER DR value this armor has against that damage type</li>
+          </ul>
+          <p style="margin: 5px 0; font-size: 11px; font-style: italic;">
+            Example: Chain Mail has DR 5, but only DR 2 vs Bludgeoning and DR 6 vs Slashing
+          </p>
+        </div>
+
         <div class="form-group-row">
           <div class="form-group">
             <label>Weakness (Damage Type)</label>
@@ -113,8 +139,9 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Weakness DR</label>
-            <input type="number" name="system.weakness.dr" value="{{system.weakness.dr}}" data-dtype="Number" min="0" placeholder="Reduced DR" />
+            <label>Actual DR vs {{#if system.weakness.type}}{{system.weakness.type}}{{else}}weakness{{/if}}</label>
+            <input type="number" name="system.weakness.dr" value="{{system.weakness.dr}}" data-dtype="Number" min="0" placeholder="e.g. 2" />
+            <small>Lower than base DR ({{system.dr.value}})</small>
           </div>
         </div>
 
@@ -129,8 +156,9 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Resistance DR</label>
-            <input type="number" name="system.resistance.dr" value="{{system.resistance.dr}}" data-dtype="Number" min="0" placeholder="Increased DR" />
+            <label>Actual DR vs {{#if system.resistance.type}}{{system.resistance.type}}{{else}}resistance{{/if}}</label>
+            <input type="number" name="system.resistance.dr" value="{{system.resistance.dr}}" data-dtype="Number" min="0" placeholder="e.g. 6" />
+            <small>Higher than base DR ({{system.dr.value}})</small>
           </div>
         </div>
 
