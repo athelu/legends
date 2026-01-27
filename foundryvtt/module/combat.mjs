@@ -99,7 +99,7 @@ async function executeWeaponAttack(actor, weapon, attackMode, target) {
   const attrKey = attackMode.skill === 'melee' ? 'agility' : 'dexterity';
   const attribute = actor.system.attributes[attrKey];
   
-  // Show the roll dialog
+  // Show the roll dialog - this will create the dice roll chat card
   await showRollDialog({
     actor: actor,
     attrValue: attribute.value,
@@ -107,7 +107,10 @@ async function executeWeaponAttack(actor, weapon, attackMode, target) {
     attrLabel: attribute.label,
     skillLabel: 'Combat',
     onRollComplete: async (rollResult) => {
-      // Create attack chat card with targeting info
+      // IMPORTANT: Wait a tiny bit for the dice roll message to post first
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      // Create attack chat card with targeting info AFTER dice roll posts
       await createAttackChatCard({
         actor: actor,
         weapon: weapon,
@@ -115,7 +118,8 @@ async function executeWeaponAttack(actor, weapon, attackMode, target) {
         target: target,
         rollResult: rollResult,
         skillKey: skillKey,
-        attrKey: attrKey
+        attrKey: attrKey,
+        attackRollMessageId: rollResult.message?.id  // Store the dice roll message ID
       });
     }
   });
@@ -133,7 +137,8 @@ async function createAttackChatCard(options) {
     target,
     rollResult,
     skillKey,
-    attrKey
+    attrKey,
+    attackRollMessageId
   } = options;
   
   const speaker = ChatMessage.getSpeaker({ actor });
@@ -142,6 +147,9 @@ async function createAttackChatCard(options) {
   const targetInfo = target 
     ? `<div class="attack-target"><strong>Target:</strong> ${target.name}</div>`
     : '';
+  
+  // Show successes from the roll
+  const successesInfo = `<div class="attack-successes"><strong>Attack Successes:</strong> ${rollResult.successes}</div>`;
   
   // Build defense button (only if target selected)
   const defenseButton = target 
@@ -153,7 +161,8 @@ async function createAttackChatCard(options) {
                 data-weapon-id="${weapon.id}"
                 data-attack-mode="${encodeURIComponent(JSON.stringify(attackMode))}"
                 data-target-id="${target.id}"
-                data-attack-successes="${rollResult.successes}">
+                data-attack-successes="${rollResult.successes}"
+                data-attack-roll-message-id="${attackRollMessageId}">
           <i class="fas fa-shield-alt"></i> Defend (${target.name})
         </button>
       </div>
@@ -165,6 +174,7 @@ async function createAttackChatCard(options) {
       <h3><i class="fas fa-sword"></i> ${weapon.name} Attack</h3>
       <div class="attack-mode"><strong>Mode:</strong> ${attackMode.name}</div>
       ${targetInfo}
+      ${successesInfo}
       <div class="attack-damage">
         <strong>Base Damage:</strong> ${weapon.system.damage.base} ${weapon.system.damage.type}
       </div>
@@ -185,7 +195,8 @@ async function createAttackChatCard(options) {
         baseDamage: weapon.system.damage.base,
         damageType: weapon.system.damage.type,
         damageAttr: attackMode.damageAttr,
-        defenseType: attackMode.defenseType
+        defenseType: attackMode.defenseType,
+        attackRollMessageId: attackRollMessageId
       }
     }
   });
@@ -224,8 +235,6 @@ export async function handleDefenseClick(messageId, attackData) {
     await rollMeleeDefense(defender, attackData, messageId);
   } else if (defenseType === 'ranged-reflex') {
     // Ranged attack - check if in cover, if so allow Reflex save
-    // For now, we'll assume no cover and auto-hit (simplified)
-    // TODO: Implement cover checking
     await handleRangedDefense(defender, attackData, messageId);
   } else if (defenseType === 'none') {
     // Auto-hit, proceed to damage
@@ -251,6 +260,9 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
     skillLabel: 'Melee Defense',
     isSave: false,
     onRollComplete: async (rollResult) => {
+      // Wait for defense roll to post
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
       // Calculate margin and damage
       await calculateDamage(
         attackData,
@@ -294,6 +306,9 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
             skillLabel: 'Luck',
             isSave: true,
             onRollComplete: async (rollResult) => {
+              // Wait for defense roll to post
+              await new Promise(resolve => setTimeout(resolve, 100));
+              
               await calculateDamage(
                 attackData,
                 attackMessageId,
@@ -334,6 +349,12 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
   const attacker = game.actors.get(attackData.actorId);
   const defender = game.actors.get(attackData.targetId);
   
+  if (!attacker || !defender) {
+    ui.notifications.error("Could not find attacker or defender!");
+    console.error("Missing actors:", { attacker, defender, attackData });
+    return;
+  }
+  
   let damageAmount = 0;
   let damageDescription = '';
   
@@ -348,7 +369,7 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
     // Base damage + attribute modifier
     const attrValue = attacker.system.attributes[attackData.damageAttr].value;
     damageAmount = attackData.baseDamage + attrValue;
-    damageDescription = `${damageAmount} ${attackData.damageType} damage (base + ${attrValue} ${attackData.damageAttr})`;
+    damageDescription = `${damageAmount} ${attackData.damageType} damage (base ${attackData.baseDamage} + ${attrValue} ${attackData.damageAttr})`;
   }
   
   // Create comparison result card
