@@ -114,34 +114,65 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
  * @param {string} skillKey - The skill being tested
  * @param {Object} options - Additional rolling options
  */
-export async function rollSkillCheck(actor, skillKey, options = {}) {
-  const skill = actor.system.skills[skillKey];
-  
-  // Map short attribute codes to full attribute names
-  const attrMap = {
-    'str': 'strength',
-    'con': 'constitution',
-    'agi': 'agility',
-    'dex': 'dexterity',
-    'int': 'intelligence',
-    'wis': 'wisdom',
-    'cha': 'charisma',
-    'lck': 'luck'
-  };
-  
-  // Get the attribute key - handle both short codes and full names
-  const attrKey = attrMap[skill.attr] || skill.attr;
-  const attr = actor.system.attributes[attrKey];
-  
-  // Show roll dialog instead of rolling immediately
-  return dice.showRollDialog({
-    actor,
-    attrValue: attr.value,
-    skillValue: skill.value,
-    attrLabel: attr.label,
-    skillLabel: game.i18n.localize(`D8.Skills.${skillKey}`)
-  });
-}
+  export async function rollSkillCheck(actor, skillKey, options = {}) {
+    // Get skill value (it's stored as a simple number in actor.system.skills)
+    const skillValue = actor.system.skills[skillKey] || 0;
+    
+    // Map skill keys to their governing attributes
+    const skillToAttribute = {
+      athletics: 'strength',
+      might: 'strength',
+      devices: 'dexterity',
+      thievery: 'dexterity',
+      writing: 'dexterity',
+      rangedCombat: 'dexterity',
+      craft: 'dexterity',
+      acrobatics: 'agility',
+      meleeCombat: 'agility',
+      stealth: 'agility',
+      investigate: 'intelligence',
+      language: 'intelligence',
+      history: 'intelligence',
+      arcane: 'intelligence',
+      society: 'intelligence',
+      perception: 'wisdom',
+      survival: 'wisdom',
+      persuasion: 'charisma',
+      deception: 'charisma',
+      intimidate: 'charisma',
+      perform: 'charisma',
+      insight: 'wisdom',
+      medicine: 'wisdom',
+      animalHandling: 'wisdom'
+    };
+    
+    // Get the attribute key for this skill
+    const attrKey = skillToAttribute[skillKey];
+    
+    if (!attrKey) {
+      console.error(`Unknown skill: ${skillKey}`);
+      ui.notifications.error(`Unknown skill: ${skillKey}`);
+      return;
+    }
+    
+    const attr = actor.system.attributes[attrKey];
+    
+    if (!attr) {
+      console.error(`Attribute not found: ${attrKey}`);
+      ui.notifications.error(`Attribute not found: ${attrKey}`);
+      return;
+    }
+    
+    // Show roll dialog instead of rolling immediately
+    return dice.showRollDialog({
+      actor,
+      attrValue: attr.value,
+      skillValue: skillValue,
+      attrLabel: attr.label,
+      skillLabel: game.i18n.localize(`D8.Skills.${skillKey}`)
+    });
+  }
+
 
 /**
  * Roll a saving throw
