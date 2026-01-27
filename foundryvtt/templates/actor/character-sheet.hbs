@@ -53,7 +53,7 @@
             <div class="skill-row" data-skill="{{key}}">
               <label class="skill-name">{{label}}</label>
               <span class="skill-attr">&lt;{{attr}}&gt;</span>
-              <input type="number" name="system.skills.{{key}}.value" value="{{value}}" data-dtype="Number" class="skill-rank"/>
+              <input type="number" name="system.skills.{{key}}" value="{{value}}" data-dtype="Number" class="skill-rank"/>
               <button type="button" class="skill-roll rollable" data-skill="{{key}}" title="Roll {{label}}">
                 <i class="fas fa-dice-d8"></i>
               </button>
@@ -70,397 +70,338 @@
             <div class="attribute-row" data-attribute="{{key}}">
               <label>{{attr.label}}</label>
               <input type="number" name="system.attributes.{{key}}.value" value="{{attr.value}}" data-dtype="Number" class="attribute-value"/>
-              <button type="button" class="attribute-roll rollable" data-attribute="{{key}}" title="Roll {{attr.label}}">
-                <i class="fas fa-dice-d8"></i>
-              </button>
             </div>
             {{/each}}
           </div>
 
           <h3>Resources</h3>
-          <div class="resources-grid">
-            <div class="resource hp">
-              <label>Hit Points</label>
-              <div class="resource-value">
-                <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" />
-                <span class="sep">/</span>
-                <span class="max">{{system.hp.max}}</span>
-              </div>
+          <div class="resources-section">
+            {{!-- HP --}}
+            <div class="resource-row hp-row">
+              <label>HP</label>
+              <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" class="resource-current"/>
+              <span class="sep">/</span>
+              <span class="resource-max">{{system.hp.max}}</span>
+              <span class="temp-hp-display">
+                {{#if system.hp.temp}}
+                  +{{system.hp.temp}} temp
+                {{/if}}
+              </span>
             </div>
 
-            <div class="resource luck">
+            {{!-- Luck --}}
+            <div class="resource-row luck-row">
               <label>Luck</label>
-              <div class="resource-value">
-                <input type="number" name="system.luck.current" value="{{system.luck.current}}" data-dtype="Number" />
-                <span class="sep">/</span>
-                <span class="max">{{system.luck.max}}</span>
-              </div>
+              <input type="number" name="system.luck.current" value="{{system.luck.current}}" data-dtype="Number" class="resource-current"/>
+              <span class="sep">/</span>
+              <span class="resource-max">{{system.luck.max}}</span>
             </div>
 
+            {{!-- Energy (if caster) --}}
             {{#if system.energy}}
-            <div class="resource energy">
+            <div class="resource-row energy-row">
               <label>Energy</label>
-              <div class="resource-value">
-                <input type="number" name="system.energy.current" value="{{system.energy.current}}" data-dtype="Number" />
-                <span class="sep">/</span>
-                <span class="max">{{system.energy.max}}</span>
-              </div>
+              <input type="number" name="system.energy.value" value="{{system.energy.value}}" data-dtype="Number" class="resource-current"/>
+              <span class="sep">/</span>
+              <span class="resource-max">{{system.energy.max}}</span>
             </div>
             {{/if}}
+
+            {{!-- DR --}}
+            <div class="resource-row dr-row">
+              <label>DR</label>
+              <span class="dr-value">{{system.dr.total}}</span>
+            </div>
+          </div>
+
+          {{!-- Rest Buttons --}}
+          <div class="rest-buttons">
+            <button type="button" class="short-rest-button" title="Short Rest (10 minutes): Regain Con HP + 1 Luck">
+              <i class="fas fa-moon"></i> Short Rest
+            </button>
+            <button type="button" class="long-rest-button" title="Long Rest (8 hours): Regain (Con × 4) HP, restore all Luck & Energy">
+              <i class="fas fa-bed"></i> Long Rest
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    {{!-- Weapons Tab (renamed from Combat) --}}
+    {{!-- Weapons Tab --}}
     <div class="tab weapons" data-group="primary" data-tab="weapons">
-      <h3>Weapons</h3>
+      <div class="inventory-header">
+        <h3>Weapons</h3>
+        <button type="button" class="open-compendium" data-type="weapon" title="Add from Compendium">
+          <i class="fas fa-atlas"></i> Add Weapon
+        </button>
+      </div>
       <ol class="items-list weapon-list">
+        <li class="items-header flexrow">
+          <div class="item-name">Name</div>
+          <div class="item-detail">Attack</div>
+          <div class="item-detail">Damage</div>
+          <div class="item-controls"></div>
+        </li>
         {{#each weapons as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image rollable" data-roll-type="item">
+          <div class="item-image">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
-          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
-          <div class="item-damage">{{item.system.damage.base}} {{item.system.damage.type}}</div>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-detail">
+            <button type="button" class="item-roll" title="Attack">
+              <i class="fas fa-dice-d8"></i>
+            </button>
+          </div>
+          <div class="item-detail">{{item.system.damage.dice}}</div>
           <div class="item-controls">
-            <a class="item-control item-equip" title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
-              <i class="{{#if item.system.equipped}}fas{{else}}far{{/if}} fa-circle"></i>
+            <a class="item-control item-equip {{#if item.system.equipped}}equipped{{/if}}" title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
+              <i class="fas fa-hand-fist"></i>
             </a>
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete"><i class="fas fa-trash"></i></a>
           </div>
         </li>
         {{/each}}
       </ol>
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="weapon">
-          <i class="fas fa-book"></i> Browse Weapons
+    </div>
+
+    {{!-- Actions Tab --}}
+    <div class="tab actions" data-group="primary" data-tab="actions">
+      <div class="inventory-header">
+        <h3>Actions & Abilities</h3>
+        <button type="button" class="open-compendium" data-type="action" title="Add from Compendium">
+          <i class="fas fa-atlas"></i> Add Action
+        </button>
+      </div>
+      <ol class="items-list action-list">
+        <li class="items-header flexrow">
+          <div class="item-name">Name</div>
+          <div class="item-detail">Cost</div>
+          <div class="item-controls"></div>
+        </li>
+        {{#each actions as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          </div>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-detail action-cost">
+            {{#if item.system.cost.actions}}{{item.system.cost.actions}} <i class="fas fa-running"></i>{{/if}}
+            {{#if item.system.cost.energy}}{{item.system.cost.energy}} <i class="fas fa-bolt"></i>{{/if}}
+            {{#if item.system.cost.luck}}{{item.system.cost.luck}} <i class="fas fa-clover"></i>{{/if}}
+          </div>
+          <div class="item-controls">
+            <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+            <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+
+    {{!-- Magic Tab --}}
+    {{#if system.energy}}
+    <div class="tab magic" data-group="primary" data-tab="magic">
+      <div class="inventory-header">
+        <h3>Weaves</h3>
+        <button type="button" class="open-compendium" data-type="weave" title="Add from Compendium">
+          <i class="fas fa-atlas"></i> Add Weave
         </button>
       </div>
       
-      <h3>Armor</h3>
+      {{!-- Weave Energies --}}
+      <div class="weave-energies">
+        <h4>Weaving Proficiencies</h4>
+        <div class="energy-grid">
+          {{#each system.energies as |energy key|}}
+          <div class="energy-item" data-energy="{{key}}">
+            <label>{{energy.label}}</label>
+            <input type="number" name="system.energies.{{key}}.value" value="{{energy.value}}" data-dtype="Number" min="0" max="10"/>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+
+      {{!-- Weaves List --}}
+      <ol class="items-list weave-list">
+        <li class="items-header flexrow">
+          <div class="item-name">Name</div>
+          <div class="item-detail">Energy</div>
+          <div class="item-detail">Cost</div>
+          <div class="item-controls"></div>
+        </li>
+        {{#each weaves as |item id|}}
+        <li class="item flexrow" data-item-id="{{item._id}}">
+          <div class="item-image">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          </div>
+          <h4 class="item-name">{{item.name}}</h4>
+          <div class="item-detail">{{item.system.energy}}</div>
+          <div class="item-detail">{{item.system.energyCost}}</div>
+          <div class="item-controls">
+            <a class="item-control item-roll" title="Cast Weave"><i class="fas fa-dice-d8"></i></a>
+            <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+            <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+          </div>
+        </li>
+        {{/each}}
+      </ol>
+    </div>
+    {{/if}}
+
+    {{!-- Features Tab --}}
+    <div class="tab features" data-group="primary" data-tab="features">
+      <div class="features-layout">
+        {{!-- Feats --}}
+        <div class="feature-section">
+          <div class="inventory-header">
+            <h3>Feats</h3>
+            <button type="button" class="open-compendium" data-type="feat" title="Add from Compendium">
+              <i class="fas fa-atlas"></i> Add Feat
+            </button>
+          </div>
+          <ol class="items-list feat-list">
+            {{#each feats as |item id|}}
+            <li class="item flexrow" data-item-id="{{item._id}}">
+              <div class="item-image">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+              </div>
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-controls">
+                <a class="item-control item-view" title="View"><i class="fas fa-eye"></i></a>
+                <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+              </div>
+            </li>
+            {{/each}}
+          </ol>
+        </div>
+
+        {{!-- Traits --}}
+        <div class="feature-section">
+          <div class="inventory-header">
+            <h3>Traits</h3>
+            <button type="button" class="open-compendium" data-type="trait" title="Add from Compendium">
+              <i class="fas fa-atlas"></i> Add Trait
+            </button>
+          </div>
+          <ol class="items-list trait-list">
+            {{#each traits as |item id|}}
+            <li class="item flexrow" data-item-id="{{item._id}}">
+              <div class="item-image">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+              </div>
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-controls">
+                <a class="item-control item-view" title="View"><i class="fas fa-eye"></i></a>
+                <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+              </div>
+            </li>
+            {{/each}}
+          </ol>
+        </div>
+
+        {{!-- Flaws --}}
+        <div class="feature-section">
+          <div class="inventory-header">
+            <h3>Flaws</h3>
+            <button type="button" class="open-compendium" data-type="flaw" title="Add from Compendium">
+              <i class="fas fa-atlas"></i> Add Flaw
+            </button>
+          </div>
+          <ol class="items-list flaw-list">
+            {{#each flaws as |item id|}}
+            <li class="item flexrow" data-item-id="{{item._id}}">
+              <div class="item-image">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+              </div>
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-controls">
+                <a class="item-control item-view" title="View"><i class="fas fa-eye"></i></a>
+                <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control item-delete" title="Delete"><i class="fas fa-trash"></i></a>
+              </div>
+            </li>
+            {{/each}}
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    {{!-- Equipment Tab --}}
+    <div class="tab equipment" data-group="primary" data-tab="equipment">
+      {{!-- Armor Section --}}
+      <div class="inventory-header">
+        <h3>Armor</h3>
+        <button type="button" class="open-compendium" data-type="armor" title="Add from Compendium">
+          <i class="fas fa-atlas"></i> Add Armor
+        </button>
+      </div>
       <ol class="items-list armor-list">
+        <li class="items-header flexrow">
+          <div class="item-name">Name</div>
+          <div class="item-detail">DR</div>
+          <div class="item-detail">Penalty</div>
+          <div class="item-controls"></div>
+        </li>
         {{#each armor as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
           <div class="item-image">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
           <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-dr">DR {{item.system.dr.value}}</div>
+          <div class="item-detail">{{item.system.dr}}</div>
+          <div class="item-detail">{{item.system.stealthPenalty}}</div>
           <div class="item-controls">
-            <a class="item-control item-equip" title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
-              <i class="{{#if item.system.equipped}}fas{{else}}far{{/if}} fa-circle"></i>
+            <a class="item-control item-equip {{#if item.system.equipped}}equipped{{/if}}" title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
+              <i class="fas fa-shield-alt"></i>
             </a>
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete"><i class="fas fa-trash"></i></a>
           </div>
         </li>
         {{/each}}
       </ol>
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="armor">
-          <i class="fas fa-book"></i> Browse Armor
+
+      {{!-- Other Equipment Section --}}
+      <div class="inventory-header">
+        <h3>Equipment</h3>
+        <button type="button" class="open-compendium" data-type="equipment" title="Add from Compendium">
+          <i class="fas fa-atlas"></i> Add Equipment
         </button>
       </div>
-    </div>
-
-    {{!-- Actions Tab (NEW) --}}
-    <div class="tab actions" data-group="primary" data-tab="actions">
-      
-      <h3>Actions</h3>
-      <p class="tab-description">Standard actions you can take during combat. Add actions from the compendium for quick reference.</p>
-      
-      {{!-- Combat Actions --}}
-      <div class="action-category">
-        <h4 class="category-header">Combat Actions</h4>
-        <ol class="items-list action-list">
-          {{#each combatActions as |item id|}}
-          <li class="item flexrow action-item" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-            </div>
-            <div class="item-details">
-              <h4 class="item-name">{{item.name}}</h4>
-              <div class="item-info">
-                {{#if item.system.actionCost}}<span class="action-cost">{{item.system.actionCost}}</span>{{/if}}
-                {{#if item.system.range}}<span class="action-range">Range: {{item.system.range}}</span>{{/if}}
-              </div>
-            </div>
-            <div class="item-controls">
-              <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control item-delete" title="Remove from Sheet"><i class="fas fa-trash"></i></a>
-            </div>
-          </li>
-          {{/each}}
-        </ol>
-      </div>
-
-      {{!-- Movement Actions --}}
-      <div class="action-category">
-        <h4 class="category-header">Movement Actions</h4>
-        <ol class="items-list action-list">
-          {{#each movementActions as |item id|}}
-          <li class="item flexrow action-item" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-            </div>
-            <div class="item-details">
-              <h4 class="item-name">{{item.name}}</h4>
-              <div class="item-info">
-                {{#if item.system.actionCost}}<span class="action-cost">{{item.system.actionCost}}</span>{{/if}}
-              </div>
-            </div>
-            <div class="item-controls">
-              <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control item-delete" title="Remove from Sheet"><i class="fas fa-trash"></i></a>
-            </div>
-          </li>
-          {{/each}}
-        </ol>
-      </div>
-
-      {{!-- Reactions --}}
-      <div class="action-category">
-        <h4 class="category-header">Reactions</h4>
-        <ol class="items-list action-list">
-          {{#each reactions as |item id|}}
-          <li class="item flexrow action-item" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-            </div>
-            <div class="item-details">
-              <h4 class="item-name">{{item.name}}</h4>
-              <div class="item-info">
-                {{#if item.system.trigger}}<span class="action-trigger">Trigger: {{item.system.trigger}}</span>{{/if}}
-              </div>
-            </div>
-            <div class="item-controls">
-              <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control item-delete" title="Remove from Sheet"><i class="fas fa-trash"></i></a>
-            </div>
-          </li>
-          {{/each}}
-        </ol>
-      </div>
-
-      {{!-- Active Abilities (Granted by Equipment/Feats) --}}
-      <div class="action-category abilities-section">
-        <h4 class="category-header">Active Abilities</h4>
-        <p class="category-note">Abilities granted by equipment, feats, or other sources</p>
-        <ol class="items-list ability-list">
-          {{#each abilities as |item id|}}
-          <li class="item flexrow ability-item {{#unless item.system.isActive}}inactive{{/unless}}" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-            </div>
-            <div class="item-details">
-              <h4 class="item-name">{{item.name}}</h4>
-              <div class="item-info">
-                {{#if item.system.source}}<span class="ability-source">Source: {{item.system.source}}</span>{{/if}}
-                {{#if item.system.frequency}}<span class="ability-frequency">{{item.system.frequency}}</span>{{/if}}
-              </div>
-            </div>
-            <div class="item-controls">
-              <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control item-view" title="View Details"><i class="fas fa-eye"></i></a>
-            </div>
-          </li>
-          {{/each}}
-        </ol>
-      </div>
-
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="actions">
-          <i class="fas fa-book"></i> Browse Actions
-        </button>
-      </div>
-    </div>
-
-    {{!-- Magic Tab --}}
-    {{#if system.energy}}
-    <div class="tab magic" data-group="primary" data-tab="magic">
-      <h3>Weaves</h3>
-      <ol class="items-list weave-list">
-        {{#each weaves as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image rollable" data-roll-type="item">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-          </div>
-          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
-          <div class="item-energy">{{item.system.totalEnergyCost}} Energy</div>
-          <div class="item-type">{{item.system.weaveType}}</div>
-          <div class="item-controls">
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-          </div>
-        </li>
-        {{/each}}
-      </ol>
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="weave">
-          <i class="fas fa-book"></i> Browse Weaves
-        </button>
-      </div>
-    </div>
-    {{/if}}
-
-    {{!-- Features Tab --}}
-    <div class="tab features" data-group="primary" data-tab="features">
-      
-      {{!-- Feats Section --}}
-      <h3>Feats</h3>
-      <ol class="items-list feat-list">
-        {{#each feats as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-          </div>
-          <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-tier">Tier {{item.system.tier}}</div>
-          <div class="item-controls">
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-          </div>
-        </li>
-        {{/each}}
-      </ol>
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="feat">
-          <i class="fas fa-book"></i> Browse Feats
-        </button>
-      </div>
-
-      {{!-- Traits Section --}}
-      <h3>Traits</h3>
-      <ol class="items-list trait-list">
-        {{#each traits as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-          </div>
-          <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-tier">Tier {{item.system.tier}}</div>
-          <div class="item-controls">
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-          </div>
-        </li>
-        {{/each}}
-      </ol>
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="trait">
-          <i class="fas fa-book"></i> Browse Traits
-        </button>
-      </div>
-
-      {{!-- Flaws Section --}}
-      <h3>Flaws</h3>
-      <ol class="items-list flaw-list">
-        {{#each flaws as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-          </div>
-          <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-xp">+{{item.system.xpGain}} XP</div>
-          <div class="item-controls">
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-          </div>
-        </li>
-        {{/each}}
-      </ol>
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="flaw">
-          <i class="fas fa-book"></i> Browse Flaws
-        </button>
-      </div>
-    </div>
-
-    {{!-- Equipment Tab --}}
-    <div class="tab equipment" data-group="primary" data-tab="equipment">
-      <div class="currency">
-        <label>Gold Pieces</label>
-        <input type="number" name="system.currency.gp" value="{{system.currency.gp}}" data-dtype="Number" />
-      </div>
-      
-      <h3>Equipment</h3>
       <ol class="items-list equipment-list">
+        <li class="items-header flexrow">
+          <div class="item-name">Name</div>
+          <div class="item-detail">Qty</div>
+          <div class="item-controls"></div>
+        </li>
         {{#each equipment as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
           <div class="item-image">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
           <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-quantity">Qty: {{item.system.quantity}}</div>
+          <div class="item-detail">
+            <input type="number" name="items.{{item._id}}.system.quantity" value="{{item.system.quantity}}" data-dtype="Number" min="0"/>
+          </div>
           <div class="item-controls">
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a class="item-control item-chat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+            <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control item-delete" title="Delete"><i class="fas fa-trash"></i></a>
           </div>
         </li>
         {{/each}}
       </ol>
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="equipment">
-          <i class="fas fa-book"></i> Browse Equipment
-        </button>
-      </div>
     </div>
 
     {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="biography">
-      
-      {{!-- Background Section --}}
-      <h3>Background</h3>
-      <ol class="items-list background-list">
-        {{#each backgrounds as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image rollable" data-roll-type="item">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-          </div>
-          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
-          <div class="item-controls">
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-          </div>
-        </li>
-        {{/each}}
-      </ol>
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="background">
-          <i class="fas fa-book"></i> Browse Backgrounds
-        </button>
-      </div>
-
-      {{!-- Ancestry Section --}}
-      <h3>Ancestry</h3>
-      <ol class="items-list ancestry-list">
-        {{#each ancestries as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-          </div>
-          <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-controls">
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
-          </div>
-        </li>
-        {{/each}}
-      </ol>
-      <div class="compendium-browse">
-        <button type="button" class="open-compendium" data-compendium="ancestry">
-          <i class="fas fa-book"></i> Browse Ancestries
-        </button>
-      </div>
-
-      {{!-- Biography Text --}}
-      <h3>Biography & Notes</h3>
-      <div class="form-group">
-        {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
-      </div>
+      {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
     </div>
-
   </section>
 </form>
