@@ -139,7 +139,7 @@ export class D8Item extends Item {
     }
     
     // Roll the weave
-    game.d8.rollWeave(actor, item);
+    game.legends.rollWeave(actor, item);
   }
   
   /**

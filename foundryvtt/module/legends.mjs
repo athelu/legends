@@ -25,47 +25,57 @@ import * as combat from "./combat.mjs";
 Hooks.once('init', async function() {
   console.log('Legends | Initializing Legends System');
 
-  // Add custom constants
-  game.d8 = {
+  // Create the main game.legends namespace
+  game.legends = {
+    // Document classes
     D8Actor,
     D8Item,
+    
+    // Rolling functions
     rollSkillCheck,
     rollSavingThrow,
     rollInitiative,
     rollWeave,
-    spendLuckOnRoll: dice.spendLuckOnRoll,
-    combat: combat
+    
+    // Module references
+    dice,
+    chat,
+    combat
   };
+
+  // DEPRECATED: Backward compatibility alias
+  // Remove this in a future major version
+  game.d8 = game.legends;
 
   // Define custom Document classes
   CONFIG.Actor.documentClass = D8Actor;
   CONFIG.Item.documentClass = D8Item;
 
   // Register sheet application classes
-foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
-foundry.documents.collections.Actors.registerSheet("legends", D8CharacterSheet, {
-  types: ["character"],
-  makeDefault: true,
-  label: "D8.SheetLabels.Character"
-});
+  foundry.documents.collections.Actors.unregisterSheet("core", foundry.appv1.sheets.ActorSheet);
+  foundry.documents.collections.Actors.registerSheet("legends", D8CharacterSheet, {
+    types: ["character"],
+    makeDefault: true,
+    label: "D8.SheetLabels.Character"
+  });
   
-foundry.documents.collections.Actors.registerSheet("legends", D8NPCSheet, {
-  types: ["npc"],
-  makeDefault: true,
-  label: "D8.SheetLabels.NPC"
-});
+  foundry.documents.collections.Actors.registerSheet("legends", D8NPCSheet, {
+    types: ["npc"],
+    makeDefault: true,
+    label: "D8.SheetLabels.NPC"
+  });
 
-foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
-foundry.documents.collections.Items.registerSheet("legends", D8ItemSheet, {
-  makeDefault: true,
-  label: "D8.SheetLabels.Item"
-});
+  foundry.documents.collections.Items.unregisterSheet("core", foundry.appv1.sheets.ItemSheet);
+  foundry.documents.collections.Items.registerSheet("legends", D8ItemSheet, {
+    makeDefault: true,
+    label: "D8.SheetLabels.Item"
+  });
 
   // Preload Handlebars templates
-// Preload Handlebars templates
-await foundry.applications.handlebars.loadTemplates([
+  await foundry.applications.handlebars.loadTemplates([
     // Template partials can be added here if needed
   ]);
+  
   // Register Handlebars helpers
   registerHandlebarsHelpers();
    
@@ -223,6 +233,7 @@ export async function rollWeave(actor, weave) {
     supportingMastery
   });
 }
+
 /* -------------------------------------------- */
 /*  Handlebars Helpers                          */
 /* -------------------------------------------- */
@@ -306,7 +317,7 @@ async function createItemMacro(data, slot) {
   const item = await fromUuid(data.uuid);
   if (!item) return ui.notifications.warn("Could not find item");
   
-  const command = `game.d8.rollItemMacro("${item.name}");`;
+  const command = `game.legends.rollItemMacro("${item.name}");`;
   let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
   
   if (!macro) {
