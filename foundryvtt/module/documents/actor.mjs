@@ -53,21 +53,38 @@ export class D8Actor extends Actor {
     if (actorData.type === 'npc') this._prepareNPCData(actorData);
   }
   
-  /**
-   * Prepare Character-specific data
-   */
-  _prepareCharacterData(actorData) {
-    const systemData = actorData.system;
-    
-    // Calculate DR from equipped armor
-    let totalDR = 0;
-    for (let item of actorData.items) {
-      if (item.type === 'armor' && item.system.equipped) {
-        totalDR += item.system.dr.value;
-      }
+/**
+ * Prepare Character-specific data
+ */
+_prepareCharacterData(actorData) {
+  const systemData = actorData.system;
+  
+  // Calculate base DR from equipped armor
+  let baseDR = 0;
+  
+  // Store armor pieces for damage-type-specific DR calculation
+  systemData.equippedArmor = [];
+  
+  for (let item of actorData.items) {
+    if (item.type === 'armor' && item.system.equipped) {
+      baseDR += item.system.dr?.value || 0;
+      
+      // Store armor data for damage-type-specific calculations
+      systemData.equippedArmor.push({
+        name: item.name,
+        baseDR: item.system.dr?.value || 0,
+        weakness: item.system.weakness || {},
+        resistance: item.system.resistance || {}
+      });
     }
-    systemData.dr.value = totalDR + (systemData.dr.bonus || 0);
   }
+  
+  // Store base DR (used for display purposes)
+  if (!systemData.dr) {
+    systemData.dr = { value: 0, bonus: 0 };
+  }
+  systemData.dr.value = baseDR + (systemData.dr.bonus || 0);
+}
   
   /**
    * Prepare NPC-specific data

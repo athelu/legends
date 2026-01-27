@@ -190,7 +190,7 @@ async function createAttackChatCard(options) {
         actorId: actor.id,
         weaponId: weapon.id,
         attackMode: attackMode,
-        targetId: target?.id,
+        targetId: target?.actor?.id,  // FIXED: Use actor ID, not token ID
         attackSuccesses: rollResult.successes,
         baseDamage: weapon.system.damage.base,
         damageType: weapon.system.damage.type,
@@ -214,7 +214,7 @@ async function createAttackChatCard(options) {
  */
 export async function handleDefenseClick(messageId, attackData) {
   const attacker = game.actors.get(attackData.actorId);
-  const defender = canvas.tokens.get(attackData.targetId)?.actor;
+  const defender = game.actors.get(attackData.targetId);  // FIXED: Get actor directly
   
   if (!defender) {
     ui.notifications.error("Target not found!");
@@ -412,13 +412,59 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
 }
 
 /**
+ * Calculate DR for a specific damage type
+ * @param {Actor} target - The target actor
+ * @param {string} damageType - The damage type (slashing, piercing, bludgeoning)
+ * @returns {number} The effective DR against this damage type
+ */
+function calculateEffectiveDR(target, damageType) {
+  let effectiveDR = 0;
+  
+  // Get equipped armor data
+  const equippedArmor = target.system.equippedArmor || [];
+  
+  // If no equipped armor data, fall back to base DR
+  if (equippedArmor.length === 0) {
+    return target.system.dr?.value || 0;
+  }
+  
+  // Calculate DR for each armor piece
+  for (let armor of equippedArmor) {
+    let armorDR = armor.baseDR;
+    
+    // Check for weakness against this damage type
+    if (armor.weakness?.type === damageType && armor.weakness?.dr !== undefined) {
+      armorDR = armor.weakness.dr;
+    }
+    
+    // Check for resistance against this damage type
+    else if (armor.resistance?.type === damageType && armor.resistance?.dr !== undefined) {
+      armorDR = armor.resistance.dr;
+    }
+    
+    effectiveDR += armorDR;
+  }
+  
+  // Add any bonus DR
+  effectiveDR += target.system.dr?.bonus || 0;
+  
+  return effectiveDR;
+}
+
+/**
  * Apply damage to a target
  * @param {string} targetId - The target actor ID
  * @param {number} damage - The damage amount
  * @param {string} damageType - The damage type
  */
 export async function applyDamage(targetId, damage, damageType) {
-  const target = game.actors.get(targetId);
+  // Try to find the token actor first (handles unlinked tokens with separate HP)
+  let target = canvas.tokens.placeables.find(t => t.actor?.id === targetId)?.actor;
+  
+  // Fallback to base actor if no token found
+  if (!target) {
+    target = game.actors.get(targetId);
+  }
   
   if (!target) {
     ui.notifications.error("Target not found!");
@@ -431,37 +477,39 @@ export async function applyDamage(targetId, damage, damageType) {
     return;
   }
   
-  // Get current HP and DR
+  // Get CURRENT HP
   const currentHP = target.system.hp.value;
-  const dr = target.system.dr.value;
   
-  // Apply DR based on damage type
-  let finalDamage = damage;
+  // Calculate effective DR based on damage type
+  let dr = 0;
   
-  // Physical damage types get full DR
+  // Physical damage types: check armor weakness/resistance
   if (['slashing', 'piercing', 'bludgeoning'].includes(damageType)) {
-    finalDamage = Math.max(0, damage - dr);
+    dr = calculateEffectiveDR(target, damageType);
   } else {
-    // Energy damage types get half DR
-    finalDamage = Math.max(0, damage - Math.floor(dr / 2));
+    // Energy damage types: use half of base DR
+    const baseDR = target.system.dr?.value || 0;
+    dr = Math.floor(baseDR / 2);
   }
+  
+  // Apply DR
+  const finalDamage = Math.max(0, damage - dr);
   
   const newHP = Math.max(0, currentHP - finalDamage);
   
   await target.update({ 'system.hp.value': newHP });
   
   ui.notifications.info(
-    `${target.name} takes ${finalDamage} ${damageType} damage (${damage} - ${damage - finalDamage} DR). HP: ${currentHP} → ${newHP}`
+    `${target.name} takes ${finalDamage} ${damageType} damage${dr > 0 ? ` (${damage} - ${dr} DR)` : ''}`
   );
   
-  // Post damage notification to chat
+  // Post damage notification to chat (without revealing HP totals)
   await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor: target }),
     content: `
       <div class="legends-damage-applied">
         <i class="fas fa-heart-broken"></i> <strong>${target.name}</strong> took ${finalDamage} ${damageType} damage!
-        ${dr > 0 ? `<br/><small>(${damage} damage - ${damage - finalDamage} DR = ${finalDamage} applied)</small>` : ''}
-        <br/><strong>HP:</strong> ${currentHP} → ${newHP}
+        ${dr > 0 ? `<br/><small>(${damage} damage - ${dr} DR = ${finalDamage} applied)</small>` : ''}
       </div>
     `
   });
