@@ -116,8 +116,6 @@ export class D8Item extends Item {
   /**
    * Roll a weapon attack
    */
-  * Roll a weapon attack
-  */
   async _rollWeapon() {
     const actor = this.actor;
     const item = this;
