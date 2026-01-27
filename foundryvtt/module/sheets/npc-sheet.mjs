@@ -92,7 +92,7 @@ export class D8NPCSheet extends ActorSheet {
   async _onSkillRoll(event) {
     event.preventDefault();
     const skill = event.currentTarget.dataset.skill;
-    return game.d8.rollSkillCheck(this.actor, skill);
+    return game.legends.rollSkillCheck(this.actor, skill);
   }
   
   /**
@@ -101,7 +101,7 @@ export class D8NPCSheet extends ActorSheet {
   async _onSaveRoll(event) {
     event.preventDefault();
     const saveType = event.currentTarget.dataset.save;
-    return game.d8.rollSavingThrow(this.actor, saveType);
+    return game.legends.rollSavingThrow(this.actor, saveType);
   }
   
   async _onItemCreate(event) {

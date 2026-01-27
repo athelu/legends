@@ -287,7 +287,7 @@ export class D8CharacterSheet extends ActorSheet {
   async _onAttributeRoll(event) {
     event.preventDefault();
     const attribute = event.currentTarget.dataset.attribute;
-    return game.d8.rollAttributeCheck(this.actor, attribute);
+    return game.legends.rollAttributeCheck(this.actor, attribute);
   }
   
   /**
@@ -296,7 +296,7 @@ export class D8CharacterSheet extends ActorSheet {
   async _onSkillRoll(event) {
     event.preventDefault();
     const skill = event.currentTarget.dataset.skill;
-    return game.d8.rollSkillCheck(this.actor, skill);
+    return game.legends.rollSkillCheck(this.actor, skill);
   }
   
   /**
