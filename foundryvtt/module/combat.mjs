@@ -99,7 +99,7 @@ async function executeWeaponAttack(actor, weapon, attackMode, target) {
   const attrKey = attackMode.skill === 'melee' ? 'agility' : 'dexterity';
   const attribute = actor.system.attributes[attrKey];
   
-  // Show the roll dialog
+  // Show the roll dialog - this will create the dice roll chat card
   await showRollDialog({
     actor: actor,
     attrValue: attribute.value,
@@ -107,7 +107,10 @@ async function executeWeaponAttack(actor, weapon, attackMode, target) {
     attrLabel: attribute.label,
     skillLabel: 'Combat',
     onRollComplete: async (rollResult) => {
-      // Create attack chat card with targeting info
+      // IMPORTANT: Wait a tiny bit for the dice roll message to post first
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      // Create attack chat card with targeting info AFTER dice roll posts
       await createAttackChatCard({
         actor: actor,
         weapon: weapon,
@@ -115,7 +118,8 @@ async function executeWeaponAttack(actor, weapon, attackMode, target) {
         target: target,
         rollResult: rollResult,
         skillKey: skillKey,
-        attrKey: attrKey
+        attrKey: attrKey,
+        attackRollMessageId: rollResult.message?.id  // Store the dice roll message ID
       });
     }
   });
@@ -133,7 +137,8 @@ async function createAttackChatCard(options) {
     target,
     rollResult,
     skillKey,
-    attrKey
+    attrKey,
+    attackRollMessageId
   } = options;
   
   const speaker = ChatMessage.getSpeaker({ actor });
@@ -142,6 +147,9 @@ async function createAttackChatCard(options) {
   const targetInfo = target 
     ? `<div class="attack-target"><strong>Target:</strong> ${target.name}</div>`
     : '';
+  
+  // Show successes from the roll
+  const successesInfo = `<div class="attack-successes"><strong>Attack Successes:</strong> ${rollResult.successes}</div>`;
   
   // Build defense button (only if target selected)
   const defenseButton = target 
@@ -153,7 +161,8 @@ async function createAttackChatCard(options) {
                 data-weapon-id="${weapon.id}"
                 data-attack-mode="${encodeURIComponent(JSON.stringify(attackMode))}"
                 data-target-id="${target.id}"
-                data-attack-successes="${rollResult.successes}">
+                data-attack-successes="${rollResult.successes}"
+                data-attack-roll-message-id="${attackRollMessageId}">
           <i class="fas fa-shield-alt"></i> Defend (${target.name})
         </button>
       </div>
@@ -165,6 +174,7 @@ async function createAttackChatCard(options) {
       <h3><i class="fas fa-sword"></i> ${weapon.name} Attack</h3>
       <div class="attack-mode"><strong>Mode:</strong> ${attackMode.name}</div>
       ${targetInfo}
+      ${successesInfo}
       <div class="attack-damage">
         <strong>Base Damage:</strong> ${weapon.system.damage.base} ${weapon.system.damage.type}
       </div>
@@ -180,12 +190,13 @@ async function createAttackChatCard(options) {
         actorId: actor.id,
         weaponId: weapon.id,
         attackMode: attackMode,
-        targetId: target?.id,
+        targetId: target?.actor?.id,  // FIXED: Use actor ID, not token ID
         attackSuccesses: rollResult.successes,
         baseDamage: weapon.system.damage.base,
         damageType: weapon.system.damage.type,
         damageAttr: attackMode.damageAttr,
-        defenseType: attackMode.defenseType
+        defenseType: attackMode.defenseType,
+        attackRollMessageId: attackRollMessageId
       }
     }
   });
@@ -203,7 +214,7 @@ async function createAttackChatCard(options) {
  */
 export async function handleDefenseClick(messageId, attackData) {
   const attacker = game.actors.get(attackData.actorId);
-  const defender = canvas.tokens.get(attackData.targetId)?.actor;
+  const defender = game.actors.get(attackData.targetId);  // FIXED: Get actor directly
   
   if (!defender) {
     ui.notifications.error("Target not found!");
@@ -224,8 +235,6 @@ export async function handleDefenseClick(messageId, attackData) {
     await rollMeleeDefense(defender, attackData, messageId);
   } else if (defenseType === 'ranged-reflex') {
     // Ranged attack - check if in cover, if so allow Reflex save
-    // For now, we'll assume no cover and auto-hit (simplified)
-    // TODO: Implement cover checking
     await handleRangedDefense(defender, attackData, messageId);
   } else if (defenseType === 'none') {
     // Auto-hit, proceed to damage
@@ -251,6 +260,9 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
     skillLabel: 'Melee Defense',
     isSave: false,
     onRollComplete: async (rollResult) => {
+      // Wait for defense roll to post
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
       // Calculate margin and damage
       await calculateDamage(
         attackData,
@@ -294,6 +306,9 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
             skillLabel: 'Luck',
             isSave: true,
             onRollComplete: async (rollResult) => {
+              // Wait for defense roll to post
+              await new Promise(resolve => setTimeout(resolve, 100));
+              
               await calculateDamage(
                 attackData,
                 attackMessageId,
@@ -334,6 +349,12 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
   const attacker = game.actors.get(attackData.actorId);
   const defender = game.actors.get(attackData.targetId);
   
+  if (!attacker || !defender) {
+    ui.notifications.error("Could not find attacker or defender!");
+    console.error("Missing actors:", { attacker, defender, attackData });
+    return;
+  }
+  
   let damageAmount = 0;
   let damageDescription = '';
   
@@ -348,7 +369,7 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
     // Base damage + attribute modifier
     const attrValue = attacker.system.attributes[attackData.damageAttr].value;
     damageAmount = attackData.baseDamage + attrValue;
-    damageDescription = `${damageAmount} ${attackData.damageType} damage (base + ${attrValue} ${attackData.damageAttr})`;
+    damageDescription = `${damageAmount} ${attackData.damageType} damage (base ${attackData.baseDamage} + ${attrValue} ${attackData.damageAttr})`;
   }
   
   // Create comparison result card
@@ -391,13 +412,59 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
 }
 
 /**
+ * Calculate DR for a specific damage type
+ * @param {Actor} target - The target actor
+ * @param {string} damageType - The damage type (slashing, piercing, bludgeoning)
+ * @returns {number} The effective DR against this damage type
+ */
+function calculateEffectiveDR(target, damageType) {
+  let effectiveDR = 0;
+  
+  // Get equipped armor data
+  const equippedArmor = target.system.equippedArmor || [];
+  
+  // If no equipped armor data, fall back to base DR
+  if (equippedArmor.length === 0) {
+    return target.system.dr?.value || 0;
+  }
+  
+  // Calculate DR for each armor piece
+  for (let armor of equippedArmor) {
+    let armorDR = armor.baseDR;
+    
+    // Check for weakness against this damage type
+    if (armor.weakness?.type === damageType && armor.weakness?.dr !== undefined) {
+      armorDR = armor.weakness.dr;
+    }
+    
+    // Check for resistance against this damage type
+    else if (armor.resistance?.type === damageType && armor.resistance?.dr !== undefined) {
+      armorDR = armor.resistance.dr;
+    }
+    
+    effectiveDR += armorDR;
+  }
+  
+  // Add any bonus DR
+  effectiveDR += target.system.dr?.bonus || 0;
+  
+  return effectiveDR;
+}
+
+/**
  * Apply damage to a target
  * @param {string} targetId - The target actor ID
  * @param {number} damage - The damage amount
  * @param {string} damageType - The damage type
  */
 export async function applyDamage(targetId, damage, damageType) {
-  const target = game.actors.get(targetId);
+  // Try to find the token actor first (handles unlinked tokens with separate HP)
+  let target = canvas.tokens.placeables.find(t => t.actor?.id === targetId)?.actor;
+  
+  // Fallback to base actor if no token found
+  if (!target) {
+    target = game.actors.get(targetId);
+  }
   
   if (!target) {
     ui.notifications.error("Target not found!");
@@ -410,37 +477,39 @@ export async function applyDamage(targetId, damage, damageType) {
     return;
   }
   
-  // Get current HP and DR
+  // Get CURRENT HP
   const currentHP = target.system.hp.value;
-  const dr = target.system.dr.value;
   
-  // Apply DR based on damage type
-  let finalDamage = damage;
+  // Calculate effective DR based on damage type
+  let dr = 0;
   
-  // Physical damage types get full DR
+  // Physical damage types: check armor weakness/resistance
   if (['slashing', 'piercing', 'bludgeoning'].includes(damageType)) {
-    finalDamage = Math.max(0, damage - dr);
+    dr = calculateEffectiveDR(target, damageType);
   } else {
-    // Energy damage types get half DR
-    finalDamage = Math.max(0, damage - Math.floor(dr / 2));
+    // Energy damage types: use half of base DR
+    const baseDR = target.system.dr?.value || 0;
+    dr = Math.floor(baseDR / 2);
   }
+  
+  // Apply DR
+  const finalDamage = Math.max(0, damage - dr);
   
   const newHP = Math.max(0, currentHP - finalDamage);
   
   await target.update({ 'system.hp.value': newHP });
   
   ui.notifications.info(
-    `${target.name} takes ${finalDamage} ${damageType} damage (${damage} - ${damage - finalDamage} DR). HP: ${currentHP} → ${newHP}`
+    `${target.name} takes ${finalDamage} ${damageType} damage${dr > 0 ? ` (${damage} - ${dr} DR)` : ''}`
   );
   
-  // Post damage notification to chat
+  // Post damage notification to chat (without revealing HP totals)
   await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor: target }),
     content: `
       <div class="legends-damage-applied">
         <i class="fas fa-heart-broken"></i> <strong>${target.name}</strong> took ${finalDamage} ${damageType} damage!
-        ${dr > 0 ? `<br/><small>(${damage} damage - ${damage - finalDamage} DR = ${finalDamage} applied)</small>` : ''}
-        <br/><strong>HP:</strong> ${currentHP} → ${newHP}
+        ${dr > 0 ? `<br/><small>(${damage} damage - ${dr} DR = ${finalDamage} applied)</small>` : ''}
       </div>
     `
   });

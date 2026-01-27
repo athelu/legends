@@ -76,6 +76,10 @@
         "value": 16,
         "max": 16
       },
+      "dr": {
+        "value": 0,
+        "bonus": 0
+    },
       "luck": {
         "current": 2,
         "max": 2
@@ -130,7 +134,8 @@
         "max": 16
       },
       "dr": {
-        "value": 0
+        "value": 0,
+        "bonus": 0
       },
       "luck": {
         "current": 2,
