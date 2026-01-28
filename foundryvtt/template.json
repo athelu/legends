@@ -195,12 +195,18 @@
       },
       "weakness": {
         "type": "",
-        "value": 0
+        "dr": 0
       },
+      "resistance": {
+        "type": "",
+        "dr": 0
+      },
+      "properties": [],
       "stealthPenalty": "",
       "shieldType": "",
       "donTime": "",
-      "doffTime": ""
+      "doffTime": "",
+      "notes": ""
     },
     "equipment": {
       "templates": ["common", "physical"]

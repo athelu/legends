@@ -447,7 +447,7 @@ export class D8CharacterSheet extends ActorSheet {
       'flaw': 'legends.flaws',
       'background': 'legends.backgrounds',
       'ancestry': 'legends.ancestries',
-      'actions': 'legends.actions',
+      'actions': 'legends.action',
       'abilities': 'legends.abilities'
     };
     
