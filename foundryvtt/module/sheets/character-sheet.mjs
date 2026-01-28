@@ -264,7 +264,7 @@ export class D8CharacterSheet extends ActorSheet {
     html.find('.skill-roll').click(this._onSkillRoll.bind(this));
     
     // Rollable items
-    html.find('.item-roll, .rollable[data-roll-type="item"]').click(this._onItemRoll.bind(this));
+    html.find('.weapon-attack-btn').click(this._onWeaponAttack.bind(this));
     
     // Item controls
     html.find('.item-create').click(this._onItemCreate.bind(this));
@@ -282,6 +282,50 @@ export class D8CharacterSheet extends ActorSheet {
     html.find('.item-view').click(this._onItemView.bind(this));
   }
   
+  
+  /**
+   * Handle weapon attack button clicks
+   * @param {Event} event - The click event
+   */
+  async _onWeaponAttack(event) {
+    event.preventDefault();
+    const button = event.currentTarget;
+    const li = button.closest('.weapon-item');
+    const itemId = li.dataset.itemId;
+    const modeIndex = parseInt(button.dataset.modeIndex);
+    
+    const weapon = this.actor.items.get(itemId);
+    
+    if (!weapon) {
+      console.error('Weapon not found:', itemId);
+      ui.notifications.error('Weapon not found');
+      return;
+    }
+    
+    const attackMode = weapon.system.attackModes[modeIndex];
+    
+    if (!attackMode) {
+      console.error('Attack mode not found:', modeIndex);
+      ui.notifications.error('Attack mode not found');
+      return;
+    }
+    
+    console.log(`Attacking with ${weapon.name} using mode:`, attackMode.name);
+    
+    // Call the combat system directly with the selected mode
+    if (!game.legends || !game.legends.combat) {
+      console.error('Combat system not initialized');
+      ui.notifications.error('Combat system not initialized');
+      return;
+    }
+    
+    // Get selected target
+    const targets = Array.from(game.user.targets);
+    const target = targets.length > 0 ? targets[0] : null;
+    
+    // Execute the attack with the specific mode (bypasses mode selection dialog)
+    return game.legends.combat.executeWeaponAttack(this.actor, weapon, attackMode, target);
+  }
 
   /**
    * Handle skill rolls

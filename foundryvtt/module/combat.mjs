@@ -66,13 +66,12 @@ async function showAttackOptionsDialog(actor, weapon, attackMode) {
   
   // Versatile: 1H vs 2H
   if (hasVersatile) {
-    const baseDamage = weapon.system.damage.base;
     content += `
       <div class="form-group" style="margin-bottom: 15px;">
         <label style="display: block; margin-bottom: 5px;"><strong>Grip:</strong></label>
         <select name="grip" style="width: 100%; padding: 5px;">
-          <option value="1h">One-Handed (${baseDamage} damage)</option>
-          <option value="2h">Two-Handed (${baseDamage + 1} damage)</option>
+          <option value="1h">One-Handed</option>
+          <option value="2h">Two-Handed (+1 damage)</option>
         </select>
       </div>
     `;
@@ -150,17 +149,15 @@ async function showAttackOptionsDialog(actor, weapon, attackMode) {
             let finalAttr = attackMode.damageAttr;
             let label = attackMode.name;
             
-            // Apply versatile
+            // IMPORTANT: Track if using 2H for versatile bonus
+            let versatileBonus = 0;
+            
+            // Apply versatile FIRST to get the bonus
             if (grip === '2h') {
-              finalDamage += 1;
+              versatileBonus = 1;
               label += " (Two-Handed)";
             } else if (grip === '1h') {
               label += " (One-Handed)";
-            }
-            
-            // Apply multi-type
-            if (damageType) {
-              finalType = damageType;
             }
             
             // Apply alternate strike
@@ -168,6 +165,17 @@ async function showAttackOptionsDialog(actor, weapon, attackMode) {
               finalDamage = weapon.system.damage.alternate || (weapon.system.damage.base - 2);
               finalType = weapon.system.damage.alternateType || 'bludgeoning';
               label += " (Alternate)";
+              
+              // APPLY VERSATILE BONUS TO ALTERNATE STRIKE DAMAGE
+              finalDamage += versatileBonus;
+            } else {
+              // Normal strike - apply versatile bonus
+              finalDamage += versatileBonus;
+            }
+            
+            // Apply multi-type
+            if (damageType) {
+              finalType = damageType;
             }
             
             // Apply finesse
@@ -251,7 +259,7 @@ async function showAttackModeDialog(weapon, attackModes) {
  * @param {Object} attackMode - The selected attack mode
  * @param {Token} target - The targeted token (or null)
  */
-async function executeWeaponAttack(actor, weapon, attackMode, target) {
+export async function executeWeaponAttack(actor, weapon, attackMode, target) {
   // Show attack options dialog for weapon properties
   const attackConfig = await showAttackOptionsDialog(actor, weapon, attackMode);
   

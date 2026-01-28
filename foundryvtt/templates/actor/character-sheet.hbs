@@ -127,36 +127,61 @@
       </div>
     </div>
 
-    {{!-- Weapons Tab --}}
+    {{!-- Weapons Tab   --}}
     <div class="tab weapons" data-group="primary" data-tab="weapons">
       <div class="inventory-header">
         <h3>Weapons</h3>
-        <button type="button" class="open-compendium" data-type="weapon" title="Add from Compendium">
-          <i class="fas fa-atlas"></i> Add Weapon
+        <button type="button" class="open-compendium" data-type="weapon" title="Add Weapon">
+          <i class="fas fa-plus"></i> Add
         </button>
       </div>
+      
       <ol class="items-list weapon-list">
         <li class="items-header flexrow">
           <div class="item-name">Name</div>
-          <div class="item-detail">Attack</div>
-          <div class="item-detail">Damage</div>
+          <div class="item-attack">Attack</div>
+          <div class="item-damage">Damage</div>
           <div class="item-controls"></div>
         </li>
+        
         {{#each weapons as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
+        <li class="item flexrow weapon-item" data-item-id="{{item._id}}">
           <div class="item-image">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
+          
           <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-detail">
-            <button type="button" class="item-roll" title="Attack">
-              <i class="fas fa-dice-d8"></i>
-            </button>
+          
+          <div class="item-attack">
+            {{!-- Show attack buttons based on attack modes --}}
+            {{#each item.system.attackModes as |mode modeIndex|}}
+              {{#if (eq mode.type "melee")}}
+                <button type="button" 
+                        class="weapon-attack-btn melee-attack" 
+                        data-mode-index="{{modeIndex}}"
+                        title="Melee Attack">
+                  <i class="fas fa-hand-fist"></i>
+                </button>
+              {{/if}}
+              {{#if (or (eq mode.type "ranged") (eq mode.type "thrown"))}}
+                <button type="button" 
+                        class="weapon-attack-btn ranged-attack" 
+                        data-mode-index="{{modeIndex}}"
+                        title="{{#if (eq mode.type 'thrown')}}Throw{{else}}Ranged Attack{{/if}}">
+                  <i class="fas fa-bullseye"></i>
+                </button>
+              {{/if}}
+            {{/each}}
           </div>
-          <div class="item-detail">{{item.system.damage.dice}}</div>
+          
+          <div class="item-damage">
+            {{item.system.damage.base}} {{item.system.damage.type}}
+          </div>
+          
           <div class="item-controls">
-            <a class="item-control item-equip {{#if item.system.equipped}}equipped{{/if}}" title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
-              <i class="fas fa-hand-fist"></i>
+            <a class="item-control item-equip {{#if item.system.equipped}}equipped{{/if}}" 
+              title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
+              <i class="{{#if item.system.equipped}}fas{{else}}far{{/if}} fa-circle"></i>
             </a>
             <a class="item-control item-edit" title="Edit"><i class="fas fa-edit"></i></a>
             <a class="item-control item-delete" title="Delete"><i class="fas fa-trash"></i></a>
