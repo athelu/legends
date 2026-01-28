@@ -494,6 +494,10 @@
   border-radius: 2px;
 }
 
+.legends .items-header .item-name {
+  color: white;
+}
+
 .legends .item-name {
   flex: 2;
   margin: 0;
@@ -805,7 +809,124 @@
    WEAPON SHEET SPECIFIC
    ======================================== */
 
-/* Visual Tags in Header */
+/* Weapons list - proper column widths */
+.legends .weapon-list {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.legends .weapon-list .items-header,
+.legends .weapon-list .weapon-item {
+  display: table-row;
+}
+
+.legends .weapon-list .item-name,
+.legends .weapon-list .item-attack,
+.legends .weapon-list .item-damage,
+.legends .weapon-list .item-controls {
+  display: table-cell;
+  padding: 8px;
+  vertical-align: middle;
+}
+
+/* Column widths */
+.legends .weapon-list .item-name {
+  width: 40%;
+}
+
+.legends .weapon-list .item-attack {
+  width: 20%;
+  text-align: center;
+}
+
+.legends .weapon-list .item-damage {
+  width: 25%;
+  text-align: center;
+}
+
+.legends .weapon-list .item-controls {
+  width: 15%;
+  text-align: right;
+}
+
+/* Attack buttons styling */
+.legends .weapon-attack-btn {
+  padding: 6px 10px;
+  margin: 0 2px;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  color: var(--d8-text);
+}
+
+.legends .weapon-attack-btn:hover {
+  background: rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 0, 0, 0.3);
+  transform: translateY(-1px);
+}
+
+.legends .weapon-attack-btn:active {
+  transform: translateY(0);
+}
+
+/* Melee attack button */
+.legends .weapon-attack-btn.melee-attack {
+  color: #dc2626;
+}
+
+.legends .weapon-attack-btn.melee-attack:hover {
+  background: rgba(220, 38, 38, 0.1);
+  border-color: rgba(220, 38, 38, 0.3);
+}
+
+/* Ranged attack button */
+.legends .weapon-attack-btn.ranged-attack {
+  color: #2563eb;
+}
+
+.legends .weapon-attack-btn.ranged-attack:hover {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: rgba(37, 99, 235, 0.3);
+}
+
+
+.legends .weapon-item .item-name {
+  display: inline;
+}
+
+/* Equip indicator */
+.legends .weapon-item .item-equip.equipped i {
+  color: #10b981;
+}
+
+.legends .weapon-item .item-equip:not(.equipped) i {
+  color: #6b7280;
+}
+
+/* Item controls spacing */
+.legends .weapon-item .item-controls {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.legends .weapon-item .item-controls .item-control {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.legends .weapon-item .item-controls .item-control:hover {
+  opacity: 1;
+}
+
+
+   /* Visual Tags in Header */
 .legends.sheet .weapon-tags {
   display: flex;
   flex-wrap: wrap;
