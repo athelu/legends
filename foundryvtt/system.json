@@ -84,15 +84,15 @@
       "system": "legends"
     },
     {
-      "name": "actions",
-      "label": "Actions",
-      "path": "packs/actions",
+      "name": "action",
+      "label": "Legends - Actions",
+      "path": "packs/action",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "abilities",
-      "label": "Abilities",
+      "label": "Legends - Abilities",
       "path": "packs/abilities",
       "type": "Item",
       "system": "legends"
