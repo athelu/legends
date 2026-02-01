@@ -433,6 +433,13 @@ Choose the appropriate table based on what you're trying to accomplish.
 
 Supporting Energy modifies the delivery and scope of your Primary effect.
 
+**Range Energy:** Space.
+**Area Energy:** Space
+**Duration Energy:** Time.
+**Range/Area and Duration:** Supporting Space energy covers the cost of both (add costs together).
+***Exception***
+   When your Primary Energy IS Space, add the area/range and Duration cost to the primary energy cost.
+
 ##### Supporting Energy: Range (typically Air or Space)
 - 0 points: Touch
 - 1 point: Close (30 feet)
@@ -489,6 +496,30 @@ Simple Weaves use only a single energy type (no supporting energy) and are limit
 - When caught in melee: Use Simple Weaves to avoid opportunity attacks
 - When at range: Use Complex Weaves for better damage and range
 - Risk/Reward: Simple Weaves require close proximity but don't provoke
+
+### Extended Casting Time
+
+When casting a weave with duration (using Time or Space for duration component), you can extend the casting time to reduce the duration energy cost:
+
+**Duration Energy Reduction:**
+- **1 minute casting time:** -2 to duration energy cost
+- **10 minutes casting time:** -4 to duration energy cost  
+- **1 hour casting time:** -6 to duration energy cost
+
+**Rules:**
+- Only reduces the energy spent on duration (Time cost, or the duration portion of Space cost)
+- Cannot reduce duration cost below 0
+- Cannot be used in combat or while threatened
+- Interruption causes failure and wastes half the total Energy (rounded up)
+
+**Interaction with Ritual Casting (Mageborn):**
+The Mageborn Ritual Casting trait (half total Energy for 10-minute ritual) is separate and more powerful. If both could apply, use whichever is better.
+
+**Example: Barkward for All-Day Protection**
+- Standard: Earth 4 + Space 2 (touch + 1 minute) = 6 Energy, 2 actions
+- All-day prep: Earth 4 + Space 7 (touch + 1 day) = 11 Energy base
+  - With 1 hour casting: Space 7 - 6 = Space 1 for duration portion
+  - Final: Earth 4 + Space 1 = 5 Energy, requires 1 hour
 
 **Design Philosophy:**
 Simple Weaves represent raw magical energy channeled directly through the caster's body without the time, concentration, and shaping required for Complex Weaves. They are instinctive bursts of power rather than carefully crafted effects.
