@@ -28,17 +28,17 @@ Each weave entry includes:
 
 ### Acid Blast
 -   **Primary Energy:** Water 2 (acidic vapor damage)
--   **Supporting Energy:** Air 1 (close range 30ft)
+-   **Supporting Energy:** Space 1 (close range 30ft)
 -   **Total Cost:** 3 Energy
 -   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Water Potential + Water Mastery + Air Potential + Air Mastery (4d8)
+-   **Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery (4d8)
 -   **Effect:** Target takes 8 acid damage. This is an attack weave—no saving throw allowed.
 -   **Saving Throw:** None (attack weave, weaving successes determine hit quality)
 -   **Damage Type:** Acid (energy)
 -   **DR Interaction:** Half DR (8 acid damage vs DR 4 becomes 8 - 2 = 6 damage)
 -   **Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)
 -   **Scaling Option:** Can add Space 1 to affect 2 targets (total 4 Energy)
--   **Sickened Condition (at 4 successes):** Target has Misfortune on their next attack roll as acid burns and nauseates them.
+-   **Sickened Condition (at 5 successes):** Target has Misfortune on their next attack roll as acid burns and nauseates them.
 
 ## B
 
@@ -47,31 +47,31 @@ Each weave entry includes:
 -   **Supporting Energy:** Time 2 (duration 1 minute)
 -   **Total Cost:** 8 Energy
 -   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)
+-   **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery (4d8)
 -   **Effect:** Target at medium range (60ft) makes Will save. Compare your weaving successes to their save successes. If you have more, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends.
 -   **Saving Throw:** Will (to resist planar banishment)
--   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = permanent banishment
+-   **Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour 
 
 ### Barkward
 -   **Primary Energy:** Earth 4 (hardening skin like tree bark)
 -   **Supporting Energy:** Time 2 (duration 1 minute)
 -   **Total Cost:** 6 Energy
 -   **Action:** Complex weave (2 actions)
--   **Weaving Roll:** Earth Potential + Earth Mastery + Time Potential + Time Mastery (4d8)
+-   **Weaving Roll:** Earth Potential + Earth Mastery / Time Potential + Time Mastery (4d8)
 -   **Effect:** Target's DR increases by 2 (doesn't stack with armor). Touch range by default.
 -   **Saving Throw:** None (beneficial buff, willing targets only)
 -   **Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour
 
 ### Beast Courier
--   **Primary Energy:** Positive 2 (animating natural creature with purpose)
--   **Supporting Energy:** Time 3 (duration up to 24 hours)
+-   **Primary Energy:** Positive 3 (animating natural creature with purpose)
+-   **Supporting Energy:** Space 3 (duration up to 24 hours)
 -   **Total Cost:** 5 Energy
 -   **Action:** Complex weave (2 actions), requires 1 minute to cast
--   **Weaving Roll:** Positive Potential + Positive Mastery + Time Potential + Time Mastery (4d8)
+-   **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery (4d8)
 -   **Effect:** Target one Tiny beast you can see within close range (30ft). The beast travels to a location you specify (must be familiar to you) and delivers a message of up to 25 words to a creature you describe. The beast travels at 50 miles per day (fly) or 25 miles per day (ground).
 -   **Saving Throw:** None (beast is willing messenger)
 -   **Success Scaling:** 1 = 12 hours duration, 2 = 24 hours, 3 = 48 hours, 4 = 7 days (beast can travel much farther)
--   **Note:** Perfect for invokers who speak to creatures using fragments of their true names
+
 
 ### Beastial Transformation
 -   **Primary Energy:** Space 6 (transforming into another creature, major transformation)
