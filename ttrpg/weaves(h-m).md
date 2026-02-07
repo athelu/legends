@@ -14,7 +14,6 @@
 **DR Interaction:** FULL DR applies (28 damage vs DR 4 becomes 28 - 4 = 24 damage)  
 **Success Scaling:** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total)  
 **Prone Condition (at Net 4):** Target is knocked Prone by the force of falling ice in addition to taking damage.  
-**Note:** Unlike Fireball (pure energy), HailStorm creates actual physical ice that respects armor fully.
 
 ### Haste
 **Primary Energy:** Time 5 (accelerating personal time, major buff)  
@@ -123,6 +122,7 @@
 **Effect:** Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on Stealth checks to remain undetected, and observers have Misfortune on Perception checks to detect target. Breaks if target uses a [Combat] action or casts a weave.  
 **Saving Throw:** None (beneficial buff, willing targets only)  
 **Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = affects 2 creatures (8 hours)
+
 ## L
 
 ### Levitate
@@ -178,7 +178,6 @@
 **DR Interaction:** Half DR (28 lightning damage vs DR 4 becomes 28 - 2 = 26 damage)  
 **Success Scaling:** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total)  
 **Stunned Condition (at Net 4):** Target is Stunned until the end of their next turn, unable to take actions as electricity courses through their body.  
-**Note:** Line affects all creatures in its path (typically 2-4 targets). Unlike Fireball's radius, enemies can avoid being in the line through positioning.
 
 ### Lightning Touch
 **Primary Energy:** Air 2 (lightning through touch, damage)  
@@ -195,7 +194,6 @@
 **Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)  
 **Special:** Fortune on weaving roll if target wears metal armor (better conductor)  
 **Dazed Condition (at 4 successes):** Target has Misfortune on their next attack roll as electricity disrupts their nervous system.  
-**Tactical Note:** Does NOT provoke opportunity attacks. Touch range only. Excellent against armored opponents.
 
 
 ## M
@@ -211,7 +209,6 @@
 **Effect:** Touch a creature and end one of the following: one curse (including attunement to cursed item), petrification, reduction of attribute scores, reduction of max HP. The weave removes only one effect per casting.  
 **Saving Throw:** None (beneficial restoration)  
 **Success Scaling:** 0 = fails, 1 = temporary relief (1 hour), 2 = full effect, 3 = removes 2 effects, 4 = removes all applicable effects  
-**Note:** Invokers speak the creature's true name as it was before corruption
 
 ### Malleable Form
 **Primary Energy:** Space 4 (manipulating physical form/appearance)  
@@ -273,7 +270,6 @@
 **Saving Throw:** Will (to resist hypnotic effect)  
 **Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 40-foot cube, 4 = 10 minutes (very hard to break)  
 **Charmed + Incapacitated Condition (at Net 2+):** Target can't take actions or move, stares at pattern. Damage or being shaken (action by ally) ends effect for that creature.  
-**Note:** Invokers weave visible sound patterns or resonant syllables into mesmerizing forms
 
 ### Minor Illusion
 **Primary Energy:** Space 3 (small sensory illusion + close range)  
@@ -298,7 +294,6 @@
 **Effect:** Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned.  
 **Saving Throw:** None (beneficial restoration)  
 **Success Scaling:** 0 = fails, 1 = temporary relief (10 minutes), 2 = full effect, 3 = removes 2 conditions, 4 = affects creature at close range (30ft) instead of touch  
-**Note:** Invokers speak the creature's true name as it should be, free from affliction
 
 ### Mist Form
 **Primary Energy:** Air 4 (transforming into mist)  

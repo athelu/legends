@@ -38,7 +38,6 @@
 **Effect:** Sense the direction to a specific object you describe (must have seen it before) within 1,000 feet. If object is moving, you learn its direction of movement. Weave can't locate object if any thickness of lead blocks the path.  
 **Saving Throw:** None (scrying)  
 **Success Scaling:** 0 = fails, 1 = 100 feet range, 2 = full effect (1,000 feet), 3 = 1 mile range, 4 = can locate general type of object (e.g., "stairs" or "freshwater") instead of specific item  
-**Note:** Invokers speak the object's true name to find it
 
 ## P
 
@@ -194,7 +193,6 @@
 **Success Scaling:** 0 = miss, 1 = half damage (2, or 4 vs undead), 2 = full damage (4, or 8 vs undead), 3 = +4 damage (8 total, or 16 vs undead), 4 = +8 damage (12 total, or 24 vs undead)  
 **Special:** Double damage against undead creatures  
 **Revealed Condition (at 4 successes):** If target is invisible or hidden by magical darkness, they become visible until end of their next turn as they glow with radiant energy.  
-**Tactical Note:** Does NOT provoke opportunity attacks. Touch range only. Devastating against undead.
 
 ### Reactive Ward
 **Primary Energy:** Space 2 (force barrier)  
@@ -219,4 +217,3 @@
 **Effect:** All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make Reflex save. Compare your weaving successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.  
 **Saving Throw:** Reflex (to avoid being outlined)  
 **Success Scaling:** 0 = no effect, 1 = dim light only, 2 = full effect, 3 = 30-foot cube, 4 = 10 minutes duration  
-**Note:** The violet light reveals the true form beneath illusory effects
