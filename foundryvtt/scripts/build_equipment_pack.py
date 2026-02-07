@@ -6,7 +6,7 @@ Equipment items are typically manually created or imported from Foundry
 since they don't have a dedicated markdown file.
 
 To create equipment:
-1. Create JSON files in foundryvtt/packs/legends/equipment/_source/
+1. Create JSON files in foundryvtt/packs/equipment/_source/
 2. Example format:
    {
      "_id": "equipment-id",
@@ -32,7 +32,7 @@ def main():
     
     # Build the pack from existing _source/ JSON files
     print("Building equipment pack...")
-    pack_dir = script_dir / "foundryvtt" / "packs" / "legends" / "equipment"
+    pack_dir = script_dir / "foundryvtt" / "packs" / "equipment"
     
     source_dir = pack_dir / "_source"
     if not source_dir.exists() or not any(source_dir.glob('*.json')):

@@ -1,0 +1,10 @@
+{
+  "_id": "1abd0a252eaa4034",
+  "name": "Spectral Grasp",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 6 (force construct + medium range)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Medium, 60 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create a Large hand of force at medium range. Can use action to command it: Grapple (opposed Athletics using your Space Mastery), Shove (move target 10 feet), or Interpose (grant target subtract 1 from both defense dice). Hand has HP = Space Potential × 4.  \n**Saving Throw:** Athletics vs Space Mastery (if grappling)  \n**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = Huge hand (double HP, 1 hour)\n\n---"
+  },
+  "effects": []
+}

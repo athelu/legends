@@ -32,8 +32,8 @@ def main():
     )
     parser.add_argument(
         "--packs-dir",
-        default="packs/legends",
-        help="Path to packs directory (default: packs/legends)"
+        default="packs",
+        help="Path to packs directory (default: packs)"
     )
     
     args = parser.parse_args()

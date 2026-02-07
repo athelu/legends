@@ -1,0 +1,10 @@
+{
+  "_id": "89bf68ba55574a7d",
+  "name": "Touch of Evil (3)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Bloodline tainted with darkness.\n- Persuasion with good-aligned NPCs: Add 2 to die results\n- Intimidate: Subtract 2 from die results"
+  },
+  "effects": []
+}

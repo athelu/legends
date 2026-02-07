@@ -1,0 +1,10 @@
+{
+  "_id": "8251a36dd60d4413",
+  "name": "Toxic Mist",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Water 2 (toxic mist) or Negative 2 (negative poison)  \n**Supporting Energy:** Space 1 (touch or 10 feet)  \n**Range:** Touch or 10 feet  \n**Duration:** Instantaneous  \n**Total Cost:** 3 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Water/Negative Potential + Water/Negative Mastery / Space Potential + Space Mastery  \n**Effect:** Target takes 8 poison damage. Target makes Fortitude save to reduce damage.  \n**Saving Throw:** Fortitude (to resist poison)  \n**Damage Type:** Poison (special - follows energy type used)  \n**DR Interaction:** Half DR if using Water/Negative energy (8 poison damage vs DR 4 becomes 8 - 2 = 6 damage)  \n**Success Scaling:** 0 = no damage, 1 = half (4), 2 = full (8), 3 = +8 and Poisoned (16 total), 4 = +16 and Poisoned (24 total)  \n**Poisoned Condition (at Net 3+):** Target has Misfortune on all rolls until the end of their next turn. At Net 4, duration extends to 1 minute (can save at end of each turn, 1 success ends).\n\n---\n\n## U"
+  },
+  "effects": []
+}

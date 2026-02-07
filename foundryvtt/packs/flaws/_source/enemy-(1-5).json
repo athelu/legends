@@ -1,0 +1,10 @@
+{
+  "_id": "e52b95f16a074cb9",
+  "name": "Enemy (1-5)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Someone/group has animosity toward you.\n- Minor (1): Occasional trouble\n- Powerful (3): Significant threat\n- Group/Extremely Powerful (5): Organized, constant danger"
+  },
+  "effects": []
+}

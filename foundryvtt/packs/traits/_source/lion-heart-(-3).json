@@ -1,0 +1,10 @@
+{
+  "_id": "3081d34199b540f5",
+  "name": "Lion Heart (-3)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "Unfaltering courage.\n-   Will saves: Subtract 1 from die results\n-   Subtract 1 from both fear save dice\n\n---"
+  },
+  "effects": []
+}

@@ -142,8 +142,8 @@ def main():
     )
     parser.add_argument(
         "--packs-dir",
-        default="packs/legends",
-        help="Path to packs directory (default: packs/legends)"
+        default="foundryvtt/packs",
+        help="Path to packs directory (default: foundryvtt/packs)"
     )
     parser.add_argument(
         "--verbose",

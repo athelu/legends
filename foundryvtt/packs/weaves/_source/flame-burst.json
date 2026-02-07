@@ -1,0 +1,10 @@
+{
+  "_id": "fd7666ef33cc4f15",
+  "name": "Flame Burst",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Fire 3 (cone of flames, damage)\n**Supporting Energy:** Space 1 (self, 15ft cone affecting 2 targets)\n**Total Cost:** 4 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Fire Potential + Fire Mastery + Space Potential + Space Mastery (4d8)\n**Effect:** A cone of flames shoots from your hands. All creatures in a 15-foot cone take 16 fire damage. Each target takes the full listed damage and makes their own save.\n**Saving Throw:** Reflex (to reduce damage)\n**Damage Type:** Fire (energy)\n**DR Interaction:** Half DR (16 fire damage vs DR 4 becomes 16 - 2 = 14 damage)\n**Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half damage (8), 2 = full damage (16), 3 = +8 damage (24 total), 4 = +16 damage (32 total)\n**Ignited Condition (at Net 4):** Target takes 1d8 fire damage at the start of each of their turns. Target can use 1 action to make a Reflex save (1 success ends condition) or an ally can use 1 action to extinguish the flames."
+  },
+  "effects": []
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "98beb55ac2564c5f",
+  "name": "Unchanging Stone (Earth/Fire)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "**Story:** *\"I know my nature completely—I am solid as stone, constant as truth\"*\n**Primary Energy:** Choose Earth or Fire = highest roll + 2 (max 8)\n**Manifestation Benefits:**\n-   **Stone's Certainty:** Subtract 1 from both dice on saves against effects that would change your form or nature (Beastial Transformation, petrification, forced movement, mind control that alters personality)\n-   **Enduring Form:** +1 max HP per tier, DR = 1 when unarmored"
+  },
+  "effects": []
+}

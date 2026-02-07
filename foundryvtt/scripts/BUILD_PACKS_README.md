@@ -9,7 +9,7 @@ Foundry compendiums are stored as `.db` files, which use a line-delimited JSON f
 ## Directory Structure
 
 ```
-packs/legends/
+packs/
 ├── armor/
 │   ├── armor.db              # Generated pack file (committed to repo)
 │   └── _source/

@@ -433,7 +433,7 @@ def create_source_files(output_dir: Path, items: List[Dict[str, Any]], pack_type
 def main():
     """Main entry point."""
     ttrpg_dir = Path("ttrpg")
-    packs_dir = Path("foundryvtt/packs/legends")
+    packs_dir = Path("foundryvtt/packs")
     
     if not ttrpg_dir.exists():
         print(f"Error: ttrpg directory not found at {ttrpg_dir}")

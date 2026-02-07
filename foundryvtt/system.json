@@ -23,77 +23,77 @@
     {
       "name": "backgrounds",
       "label": "Legends - Backgrounds",
-      "path": "packs/legends/backgrounds",
+      "path": "packs/backgrounds",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "ancestries",
       "label": "Legends - Ancestries",
-      "path": "packs/legends/ancestries",
+      "path": "packs/ancestries",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "traits",
       "label": "Legends - Traits",
-      "path": "packs/legends/traits",
+      "path": "packs/traits",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "flaws",
       "label": "Legends - Flaws",
-      "path": "packs/legends/flaws",
+      "path": "packs/flaws",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "feats",
       "label": "Legends - Feats",
-      "path": "packs/legends/feats",
+      "path": "packs/feats",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "weapons",
       "label": "Legends - Weapons",
-      "path": "packs/legends/weapons",
+      "path": "packs/weapons",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "armor",
       "label": "Legends - Armor",
-      "path": "packs/legends/armor",
+      "path": "packs/armor",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "equipment",
       "label": "Legends - Equipment",
-      "path": "packs/legends/equipment",
+      "path": "packs/equipment",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "weaves",
       "label": "Legends - Weaves",
-      "path": "packs/legends/weaves",
+      "path": "packs/weaves",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "action",
       "label": "Legends - Actions",
-      "path": "packs/legends/action",
+      "path": "packs/action",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "abilities",
       "label": "Legends - Abilities",
-      "path": "packs/legends/abilities",
+      "path": "packs/abilities",
       "type": "Item",
       "system": "legends"
     }

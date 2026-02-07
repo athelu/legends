@@ -18,7 +18,7 @@ if (!pack) {
 
 let backgrounds;
 try {
-  const response = await fetch("systems/legends/packs/legends/backgrounds/_source/backgrounds.json");
+  const response = await fetch("systems/legends/packs/backgrounds/_source/backgrounds.json");
   backgrounds = await response.json();
   console.log(`✓ Loaded ${backgrounds.length} backgrounds`);
 } catch (err) {

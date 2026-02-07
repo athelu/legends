@@ -1,0 +1,10 @@
+{
+  "_id": "1484dd7648b242cb",
+  "name": "Blind (7)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Lost sight in both eyes.\n- Permanently Blinded (see Blinded condition)"
+  },
+  "effects": []
+}

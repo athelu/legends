@@ -1,0 +1,10 @@
+{
+  "_id": "4017af8e679541f2",
+  "name": "The Survivor's Bargain",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "**Energies:** Space (highest +2), Negative (any +1), Fire, Earth, Time\n**Story:** *You should have died. You didn't. Something intervened.*\n**Pact Conduit - Scavenged Power:** When you reduce a hostile creature to 0 HP, immediately regain Energy equal to your tier (minimum 2). Your patron feeds on endings.\n**Pact Gift:** When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier"
+  },
+  "effects": []
+}

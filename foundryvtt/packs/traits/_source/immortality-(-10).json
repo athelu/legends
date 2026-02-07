@@ -1,0 +1,10 @@
+{
+  "_id": "38005228f68a4e46",
+  "name": "Immortality (-10)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "Eternal lifespan.\n-   Don't die of natural causes/disease\n-   Age to race's prime and stop\n-   Can be killed by violence/magic\n-   **Requires GM approval**"
+  },
+  "effects": []
+}

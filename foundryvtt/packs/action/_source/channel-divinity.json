@@ -1,0 +1,19 @@
+{
+  "_id": "1936b1f468274cb6",
+  "name": "Channel Divinity",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "Divine Gift Trait\n- **Range:** 30-foot radius centered on you\n- **Effect:** Automatically succeeds for Heal/Harm intents (see Part 7 for full details)\n- **Types:** Heal, Harm, Turn (undead), Command (undead)\n- **Energy Cost:** Minimum 4 Energy, can spend more\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes\n  - Indiscriminate area effect (affects friends and foes)\n  - See (Magic System) for Channel Divinity details\n\n### Combat Maneuvers\n\nThese maneuvers modify or replace your standard attacks:",
+    "actionType": "combat",
+    "actionCost": "2 [Combat] actions",
+    "trigger": "",
+    "effect": "Automatically succeeds for Heal/Harm intents (see Part 7 for full details)\n- **Types:** Heal, Harm, Turn (undead), Command (undead)\n- **Energy Cost:** Minimum 4 Energy, can spend more\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes\n  - Indiscriminate area effect (affects friends and foes)\n  - See (Magic System) for Channel Divinity details\n\n### Combat Maneuvers\n\nThese maneuvers modify or replace your standard attacks:",
+    "keywords": [],
+    "range": "30-foot radius centered on you",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

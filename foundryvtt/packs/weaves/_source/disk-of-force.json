@@ -1,0 +1,10 @@
+{
+  "_id": "c2332874c94d4f0a",
+  "name": "Disk of Force",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 3 (force platform)\n**Supporting Energy:** Time 3 (duration 10 minutes)\n**Total Cost:** 6 Energy\n**Action:** Simple weave (1 action)\n**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)\n**Effect:** Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends.\n**Saving Throw:** None (utility weave)\n**Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours and 1000 lbs capacity\n\n## E"
+  },
+  "effects": []
+}

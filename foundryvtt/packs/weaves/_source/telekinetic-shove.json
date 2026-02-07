@@ -1,0 +1,10 @@
+{
+  "_id": "2af84e34e0b74ad3",
+  "name": "Telekinetic Shove",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 2 (force push/pull)  \n**Supporting Energy:** Space 1 (close range)  \n**Range:** Close, 30 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 3 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery  \n**Effect:** Push or pull one creature/object up to 10 feet. Target makes Fortitude save to resist (if creature). Can also be used to knock prone (Reflex save). Compare your weaving successes to their save successes.  \n**Saving Throw:** Fortitude (to resist forced movement) or Reflex (to avoid being knocked prone)  \n**Success Scaling:** 0 = no effect, 1 = 5 feet, 2 = 10 feet, 3 = 15 feet, 4 = 20 feet or knock prone\n\n---"
+  },
+  "effects": []
+}

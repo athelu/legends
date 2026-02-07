@@ -72,7 +72,7 @@ def main():
         print(f"  Extracted {len(items)} ancestry items from documentation")
         
         # Save to _source/
-        source_dir = script_dir / "foundryvtt" / "packs" / "legends" / "ancestries" / "_source"
+        source_dir = script_dir / "foundryvtt" / "packs" / "ancestries" / "_source"
         source_dir.mkdir(parents=True, exist_ok=True)
         
         for item in items:
@@ -83,7 +83,7 @@ def main():
     
     # Build the pack
     print("\nBuilding ancestries pack...")
-    pack_dir = script_dir / "foundryvtt" / "packs" / "legends" / "ancestries"
+    pack_dir = script_dir / "foundryvtt" / "packs" / "ancestries"
     success = build_pack_from_source(pack_dir, "ancestries")
     
     return 0 if success else 1

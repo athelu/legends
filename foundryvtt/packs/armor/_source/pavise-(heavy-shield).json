@@ -1,0 +1,19 @@
+{
+  "_id": "83ecf72802e548d1",
+  "name": "Pavise (Heavy Shield)",
+  "type": "shield",
+  "img": "** `icons/equipment/shield/pavise-wood-steel.webp`",
+  "system": {
+    "description": "- **Image:** `icons/equipment/shield/pavise-wood-steel.webp`",
+    "shieldType": "",
+    "handUsage": "",
+    "meleeDefense": "",
+    "requirements": "",
+    "specialAbilities": "",
+    "plantedMode": false,
+    "reactions": [],
+    "weight": "",
+    "cost": "** 40 gp"
+  },
+  "effects": []
+}

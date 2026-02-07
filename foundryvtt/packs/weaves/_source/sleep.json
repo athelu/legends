@@ -1,0 +1,10 @@
+{
+  "_id": "ee782645bd144dc0",
+  "name": "Sleep",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Positive 3 (inducing magical slumber)  \n**Supporting Energy:** Space 3 (medium range + 10ft radius)  \n**Range:** Medium, 60 ft. (10-foot radius)  \n**Duration:** 1 minute (or until awakened)  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  \n**Effect:** Creatures in area make Will saves. Starting with lowest HP targets, compare your weaving successes to their save successes. Those you beat fall Unconscious for 1 minute. Awakens if damaged or shaken (action). Doesn't affect constructs or undead.  \n**Saving Throw:** Will (to resist Sleep)  \n**Success Scaling:** Your weaving successes vs each creature's Will save. Higher your successes = affect more/tougher creatures. Resolve lowest HP first.\n\n---"
+  },
+  "effects": []
+}

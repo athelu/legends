@@ -1,0 +1,10 @@
+{
+  "_id": "10b7ccab36314a1d",
+  "name": "Preserve Remains",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Positive 2 (preserving deceased)  \n**Supporting Energy:** Time 4 (duration 1 hour or until dispelled)  \n**Range:** Touch  \n**Duration:** 1 hour (or until dispelled)  \n**Total Cost:** 6 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery  \n**Effect:** Corpse at touch is protected from decay and cannot become undead. Extends time limit for resurrection magic.  \n**Saving Throw:** None (corpse has no will)  \n**Success Scaling:** 0 = fails, 1 = 10 minutes, 2 = 1 hour, 3 = 24 hours, 4 = 10 days"
+  },
+  "effects": []
+}

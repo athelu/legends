@@ -1,0 +1,10 @@
+{
+  "_id": "dde488b1ebe7418d",
+  "name": "Banishment",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 6 (forcibly ejecting to another plane)\n**Supporting Energy:** Time 2 (duration 1 minute)\n**Range:** Medium, 60 ft.  \n**Duration:** 1 minute\n**Total Cost:** 8 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery (4d8)\n**Effect:** Target at medium range (60ft) makes Will save. Compare your weaving successes to their save successes. If you have more, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends.\n**Saving Throw:** Will (to resist planar banishment)\n**Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
+  },
+  "effects": []
+}

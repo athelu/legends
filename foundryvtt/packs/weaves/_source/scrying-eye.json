@@ -1,0 +1,10 @@
+{
+  "_id": "b3d7e62502424e6e",
+  "name": "Scrying Eye",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 5 (creating remote sensory projection)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Special (moves up to 30 feet per round)  \n**Duration:** 10 minutes  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create an invisible, intangible eye that you can see through. The eye moves up to 30 feet per round and can pass through openings as small as 1 inch. You can see and hear through the eye as if you were there.  \n**Saving Throw:** None (sensory weave)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours\n\n---"
+  },
+  "effects": []
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "0da6daf9e9fe460b",
+  "name": "Traits",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "**Design Philosophy:** Traits are reserved for abilities that grant unique resource systems (Energy pools, special points), supernatural characteristics, or features that cannot be learned through normal training. Most combat abilities and \"class features\" are now available as feats.\n\n---"
+  },
+  "effects": []
+}

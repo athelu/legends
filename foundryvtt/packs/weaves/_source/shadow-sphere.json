@@ -1,0 +1,10 @@
+{
+  "_id": "38eda104fa6649d7",
+  "name": "Shadow Sphere",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Negative 3 (creating magical darkness)  \n**Supporting Energy:** Space 4 (medium range + 15ft radius) / Time 3 (duration 10 minutes)  \n**Range:** Medium, 60 ft. (15-foot radius sphere)  \n**Duration:** 10 minutes  \n**Total Cost:** 10 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Magical darkness fills a 15ft radius sphere at medium range. Blocks normal and magical light (unless from higher energy weave). Creatures inside are Blinded to creatures outside.  \n**Saving Throw:** None (creates zone of darkness)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 30ft radius (1 hour), 4 = 60ft radius (8 hours)\n\n---"
+  },
+  "effects": []
+}

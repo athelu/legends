@@ -32,14 +32,14 @@ These scripts parse markdown documentation and extract items automatically.
 #### `build_armor_pack.py`
 - Parses: `ttrpg/armor.md`
 - Creates: Armor items + Shield items (auto-detected by name)
-- Generates: `foundryvtt/packs/legends/armor/armor.db`
+  - Generates: `foundryvtt/packs/armor/armor.db`
 - Detects shields by checking if "shield" is in the item name
 - Automatically determines armor type (light/medium/heavy)
 
 #### `build_weapons_pack.py`
 - Parses: `ttrpg/weapons.md`
 - Creates: Weapon items
-- Generates: `foundryvtt/packs/legends/weapons/weapons.db`
+  - Generates: `foundryvtt/packs/weapons/weapons.db`
 
 #### `build_traits_pack.py`
 - Parses: `ttrpg/traits.md`, `ttrpg/flaws.md`, `ttrpg/feats.md`
@@ -49,14 +49,14 @@ These scripts parse markdown documentation and extract items automatically.
 #### `build_action_pack.py`
 - Parses: `ttrpg/actions.md`
 - Creates: Action items with type categorization
-- Generates: `foundryvtt/packs/legends/action/action.db`
+  - Generates: `foundryvtt/packs/action/action.db`
 - Extracts action type from markdown headers (e.g., `[Combat]`, `[Movement]`)
 - Parses cost, requirements, effect, range, trigger, etc.
 
 #### `build_ability_pack.py`
-- Builds from: `foundryvtt/packs/legends/abilities/_source/*.json`
+  - Builds from: `foundryvtt/packs/abilities/_source/*.json`
 - Creates: Ability items
-- Generates: `foundryvtt/packs/legends/abilities/abilities.db`
+  - Generates: `foundryvtt/packs/abilities/abilities.db`
 - Abilities are manually created JSON files (no automatic parsing)
 
 ### General Purpose
@@ -134,7 +134,7 @@ Optional but recommended:
 
 To add custom abilities:
 
-1. Create a JSON file in `foundryvtt/packs/legends/abilities/_source/`
+1. Create a JSON file in `foundryvtt/packs/abilities/_source/`
 2. Follow the template:
    ```json
    {

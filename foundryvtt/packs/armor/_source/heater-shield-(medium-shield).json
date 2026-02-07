@@ -1,0 +1,19 @@
+{
+  "_id": "bdd52e5abab54de7",
+  "name": "Heater Shield (Medium Shield)",
+  "type": "shield",
+  "img": "** `icons/equipment/shield/heater-marked-red.webp`",
+  "system": {
+    "description": "- **Image:** `icons/equipment/shield/heater-marked-red.webp`",
+    "shieldType": "",
+    "handUsage": "",
+    "meleeDefense": "",
+    "requirements": "",
+    "specialAbilities": "",
+    "plantedMode": false,
+    "reactions": [],
+    "weight": "",
+    "cost": "** 15 gp"
+  },
+  "effects": []
+}

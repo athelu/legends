@@ -1,0 +1,10 @@
+{
+  "_id": "d0677e72cd8d4aaa",
+  "name": "Compulsive Behavior (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Irresistible activity (gambling, lying, collecting, counting, etc.).\n- Must make Will save (1 success required) to resist when opportunity arises\n- Specify the compulsion when taking this flaw"
+  },
+  "effects": []
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "c139a7da86264447",
+  "name": "Unerring Bolt",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 3 (force bolts that always hit)  \n**Supporting Energy:** Space 2 (medium range)  \n**Range:** Medium, 60 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 5 Energy for 3 bolts  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery  \n**Effect:** Create 3 glowing darts of force that automatically hit (no roll needed). Each dart deals 4 damage. Can target same creature or divide among multiple.  \n**Saving Throw:** None (force effect, automatic hit)  \n**Damage Type:** Force (bypasses all DR)  \n**DR Interaction:** Force damage ignores DR completely  \n**Scaling:** +1 Energy for +1 dart (max 8 darts at 10 Energy)  \n**Success Scaling:** 0 = 1 dart only, 1 = 2 darts, 2 = 3 darts, 3 = 4 darts, 4 = 5 darts\n\n---"
+  },
+  "effects": []
+}

@@ -74,7 +74,7 @@ def main():
         print(f"  Extracted {len(items)} trait items from documentation")
         
         # Save to _source/
-        source_dir = script_dir / "foundryvtt" / "packs" / "legends" / "traits" / "_source"
+        source_dir = script_dir / "foundryvtt" / "packs" / "traits" / "_source"
         source_dir.mkdir(parents=True, exist_ok=True)
         
         for item in items:
@@ -85,7 +85,7 @@ def main():
     
     # Build the pack
     print("\nBuilding traits pack...")
-    pack_dir = script_dir / "foundryvtt" / "packs" / "legends" / "traits"
+    pack_dir = script_dir / "foundryvtt" / "packs" / "traits"
     success = build_pack_from_source(pack_dir, "traits")
     
     return 0 if success else 1

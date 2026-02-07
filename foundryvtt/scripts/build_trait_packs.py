@@ -85,7 +85,7 @@ def build_pack(md_file, item_type, pack_name):
         return False
     
     # Save to _source/
-    source_dir = script_dir / "foundryvtt" / "packs" / "legends" / pack_name / "_source"
+    source_dir = script_dir / "foundryvtt" / "packs" / pack_name / "_source"
     source_dir.mkdir(parents=True, exist_ok=True)
     
     for item in items:
@@ -96,7 +96,7 @@ def build_pack(md_file, item_type, pack_name):
     
     # Build the pack
     print(f"\nBuilding {pack_name} pack...")
-    pack_dir = script_dir / "foundryvtt" / "packs" / "legends" / pack_name
+    pack_dir = script_dir / "foundryvtt" / "packs" / pack_name
     return build_pack_from_source(pack_dir, pack_name)
 
 

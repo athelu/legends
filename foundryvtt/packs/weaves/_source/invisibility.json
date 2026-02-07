@@ -1,0 +1,10 @@
+{
+  "_id": "896b91d1f7e141fc",
+  "name": "Invisibility",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 4 (bending light around target)  \n**Supporting Energy:** Time 3 (duration 10 minutes or until broken)  \n**Range:** Touch  \n**Duration:** 10 minutes (or until broken)  \n**Total Cost:** 7 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on Stealth checks to remain undetected, and observers have Misfortune on Perception checks to detect target. Breaks if target uses a [Combat] action or casts a weave.  \n**Saving Throw:** None (beneficial buff, willing targets only)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = affects 2 creatures (8 hours)\n\n## L"
+  },
+  "effects": []
+}

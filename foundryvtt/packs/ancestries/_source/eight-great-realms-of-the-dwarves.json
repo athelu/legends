@@ -1,0 +1,10 @@
+{
+  "_id": "a7aa19f202084f99",
+  "name": "Eight Great Realms of the Dwarves",
+  "type": "ancestry",
+  "img": "icons/svg/person.svg",
+  "system": {
+    "description": "#### Cold Stones Hold\nThis realm contained all of the Agrash Arms range and Claimed the Corinth Peninsula\n**Ruler:** Jarl Jal, Son of Holt, Son of Jorn\n\n#### Black Ore\nThis realm held the Lackabier Point and Kollish Downs\n**Ruler:** Jarl Brann, Son of Aune, Son of Kjell\n\n#### Whitglas Peak\nThis realm stretched from the Center of the Lackabier peaks, to the peninsula of the east.\n**Ruler:** Jarl Aulg, Son of Ness, Son of Olav, Thain\n \n#### Deep Waters March\nThis realm stretched from the Fens of the West, through Griffons Eye and as far south as The tip of the peaks.\n**Ruler:** Jarl Hlor, Son of Ols, Son of Ove\n**Cities:** SeaHold, Bakars Run, Elsk Isle, Vargs Hollow\n\n#### Blackmouth Weir\nThis realm ran from the Arbican Delta through the Onseth Jungles.\n**Ruler:** Jarl Kulm, Son of Lars, Son of Alf\n\n#### Goldmynd Hallow\nThis realm nested in the foothills of the Lackabier Range, and across the Orsumnd Valley\n**Ruler:** Jarl Frex, Son of Halver, Son of Bragg\n\n#### Greystone Mond\nThis realm consisted of the Lackabier Handle and parts of the Genmoth plains.\n**Ruler:** Jarl Sdor, Son of Peder,  Son of Arne\n\n#### Shirdown\nThis realm occupied the valley and plains south of Deep Waters, between Agrash arms and the Lackabier range. \n**Ruler:** Jarl Thask, Son of Ander, Son of Eskil"
+  },
+  "effects": []
+}

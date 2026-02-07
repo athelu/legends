@@ -1,0 +1,10 @@
+{
+  "_id": "e10b8aa2312143a5",
+  "name": "Grasping Vines",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Earth 3 (animating plants to restrain)  \n**Supporting Energy:** Space 6 (medium range + 20ft square + 1 minute)  \n**Range:** Medium, 60 ft. (20-foot square)  \n**Duration:** 1 minute  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  \n**Effect:** Plants in area animate and grasp at creatures. Creatures in area when cast or entering make Reflex save. Compare your weaving successes to their save successes. If you have more, target becomes Restrained. Can use action + Athletics check (2 successes needed) to break free, or repeat save at end of turn (1 success ends effect).  \n**Saving Throw:** Reflex (to avoid being grasped)  \n**Success Scaling:** 0 = no effect, 1 = 1 round (10ft square), 2 = full effect (20ft square, 1 minute), 3 = 30ft square (10 minutes), 4 = 40ft square (1 hour)  \n**Restrained Condition:** See conditions document. Target cannot move, has Misfortune on attacks, attackers have Fortune against them, Misfortune on Reflex saves."
+  },
+  "effects": []
+}

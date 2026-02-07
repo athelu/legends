@@ -1,0 +1,19 @@
+{
+  "_id": "f5582915212e47aa",
+  "name": "Kite Shield (Heavy Shield)",
+  "type": "shield",
+  "img": "** `icons/equipment/shield/kite-steel-blue.webp`",
+  "system": {
+    "description": "- **Image:** `icons/equipment/shield/kite-steel-blue.webp`",
+    "shieldType": "",
+    "handUsage": "",
+    "meleeDefense": "",
+    "requirements": "",
+    "specialAbilities": "",
+    "plantedMode": false,
+    "reactions": [],
+    "weight": "",
+    "cost": "** 20 gp"
+  },
+  "effects": []
+}

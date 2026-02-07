@@ -1,0 +1,10 @@
+{
+  "_id": "19b1354e241443d7",
+  "name": "Silence",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Air 3 (creating zone of absolute quiet)  \n**Supporting Energy:** Space 3 (close range + 20ft radius) / Time 2 (duration 10 minutes)  \n**Range:** Close, 30 ft. (20-foot radius sphere)  \n**Duration:** 10 minutes  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create 20-foot radius sphere of silence centered on a point at close range. No sound can be created within or pass through the sphere. Creatures inside are Deafened. Verbal components of weaves can't be performed inside (blocks invokers and most casters). Can cast on object; sphere moves with object.  \n**Saving Throw:** None (creates environmental effect)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 30-foot radius  \n\n---"
+  },
+  "effects": []
+}
