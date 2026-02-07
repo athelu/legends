@@ -2,6 +2,9 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
     <div class="header-fields">
+<<<<<<< Updated upstream
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
+=======
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Armor Name"/></h1>
       
       <!-- Armor Property Tags -->
@@ -32,27 +35,17 @@
           {{/if}}
         {{/each}}
         
-        <!-- DR Tag -->
-        {{#if system.dr.value}}
-        <span class="tag dr-tag">DR {{system.dr.value}}</span>
-        {{/if}}
-        
-        <!-- Weakness Tag -->
-        {{#if system.weakness.type}}
-        <span class="tag weakness-tag">{{system.weakness.type}}: DR {{system.weakness.dr}}</span>
-        {{/if}}
-        
-        <!-- Resistance Tag -->
-        {{#if system.resistance.type}}
-        <span class="tag resistance-tag">{{system.resistance.type}}: DR {{system.resistance.dr}}</span>
-        {{/if}}
+        <!-- DR Tags -->
+        <span class="tag dr-tag">S:{{system.dr.slashing}} P:{{system.dr.piercing}} B:{{system.dr.bludgeoning}}</span>
       </div>
       
       <!-- Quick Summary Stats in Header -->
       <div class="armor-summary-row">
         <div class="summary-stat">
           <label>DR</label>
-          <span class="value">{{system.dr.value}}</span>
+          <span class="value">
+            S:{{system.dr.slashing}} P:{{system.dr.piercing}} B:{{system.dr.bludgeoning}}
+          </span>
         </div>
         
         <div class="summary-stat">
@@ -70,6 +63,7 @@
           <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" class="qty-input" />
         </div>
       </div>
+>>>>>>> Stashed changes
     </div>
   </header>
 
@@ -83,6 +77,8 @@
     <div class="tab description" data-group="primary" data-tab="description">
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
     </div>
+<<<<<<< Updated upstream
+=======
 
     <!-- Details Tab -->
     <div class="tab details" data-group="primary" data-tab="details">
@@ -105,61 +101,31 @@
         <h3>Damage Reduction (DR)</h3>
         <div class="form-group-row">
           <div class="form-group">
-            <label>Base DR</label>
-            <input type="number" name="system.dr.value" value="{{system.dr.value}}" data-dtype="Number" min="0" />
-            <small>Default DR against all damage types</small>
+            <label>Slashing DR</label>
+            <input type="number" name="system.dr.slashing" value="{{system.dr.slashing}}" data-dtype="Number" min="0" />
+            <small>Default damage type</small>
+          </div>
+          <div class="form-group">
+            <label>Piercing DR</label>
+            <input type="number" name="system.dr.piercing" value="{{system.dr.piercing}}" data-dtype="Number" min="0" />
+          </div>
+          <div class="form-group">
+            <label>Bludgeoning DR</label>
+            <input type="number" name="system.dr.bludgeoning" value="{{system.dr.bludgeoning}}" data-dtype="Number" min="0" />
           </div>
         </div>
 
-        <!-- Resistances/Weaknesses -->
-        <h3>Damage Type Variants</h3>
-        <p class="hint">Base DR: <strong>{{system.dr.value}}</strong> (applies to all damage types unless specified below)</p>
-        
         <!-- Help Section -->
         <div class="help-section" style="background: #f7fafc; padding: 10px; border-radius: 4px; margin: 10px 0;">
-          <h4 style="margin: 0 0 5px 0;">How Armor DR Works</h4>
+          <h4 style="margin: 0 0 5px 0;">Armor DR Values</h4>
           <ul style="margin: 5px 0; padding-left: 20px; font-size: 12px;">
-            <li><strong>Base DR</strong> applies to all damage types unless overridden below</li>
-            <li><strong>Weakness</strong>: Enter the LOWER DR value this armor has against that damage type</li>
-            <li><strong>Resistance</strong>: Enter the HIGHER DR value this armor has against that damage type</li>
+            <li><strong>Slashing DR</strong>: Default protection (primary damage type)</li>
+            <li><strong>Piercing DR</strong>: Protection against piercing damage</li>
+            <li><strong>Bludgeoning DR</strong>: Protection against bludgeoning damage</li>
           </ul>
           <p style="margin: 5px 0; font-size: 11px; font-style: italic;">
-            Example: Chain Mail has DR 5, but only DR 2 vs Bludgeoning and DR 6 vs Slashing
+            Example: Chain Mail has Slashing DR 5, Piercing DR 5, Bludgeoning DR 4
           </p>
-        </div>
-
-        <div class="form-group-row">
-          <div class="form-group">
-            <label>Weakness (Damage Type)</label>
-            <select name="system.weakness.type">
-              <option value="" {{#unless system.weakness.type}}selected{{/unless}}>None</option>
-              <option value="slashing" {{#if (eq system.weakness.type "slashing")}}selected{{/if}}>Slashing</option>
-              <option value="piercing" {{#if (eq system.weakness.type "piercing")}}selected{{/if}}>Piercing</option>
-              <option value="bludgeoning" {{#if (eq system.weakness.type "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Actual DR vs {{#if system.weakness.type}}{{system.weakness.type}}{{else}}weakness{{/if}}</label>
-            <input type="number" name="system.weakness.dr" value="{{system.weakness.dr}}" data-dtype="Number" min="0" placeholder="e.g. 2" />
-            <small>Lower than base DR ({{system.dr.value}})</small>
-          </div>
-        </div>
-
-        <div class="form-group-row">
-          <div class="form-group">
-            <label>Resistance (Damage Type)</label>
-            <select name="system.resistance.type">
-              <option value="" {{#unless system.resistance.type}}selected{{/unless}}>None</option>
-              <option value="slashing" {{#if (eq system.resistance.type "slashing")}}selected{{/if}}>Slashing</option>
-              <option value="piercing" {{#if (eq system.resistance.type "piercing")}}selected{{/if}}>Piercing</option>
-              <option value="bludgeoning" {{#if (eq system.resistance.type "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Actual DR vs {{#if system.resistance.type}}{{system.resistance.type}}{{else}}resistance{{/if}}</label>
-            <input type="number" name="system.resistance.dr" value="{{system.resistance.dr}}" data-dtype="Number" min="0" placeholder="e.g. 6" />
-            <small>Higher than base DR ({{system.dr.value}})</small>
-          </div>
         </div>
 
         <!-- Properties -->
@@ -260,5 +226,6 @@
       </div>
 
     </div>
+>>>>>>> Stashed changes
   </section>
 </form>
