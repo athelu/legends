@@ -1,0 +1,10 @@
+{
+  "_id": "2a6654297e914a25",
+  "name": "Fear",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Negative 5 (projecting terror, mental effect)  \n**Supporting Energy:** Space 4 (self + 30ft cone + 1 minute)  \n**Range:** Self (30-foot cone)  \n**Duration:** 1 minute  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery  \n**Effect:** All creatures in cone make Will saves. Compare your weaving successes to each target's save successes. Based on net successes: 1 = Frightened, 2 = Fleeing, 3+ = Cowering. Creatures can make saves at end of turn to downgrade/end (1 success downgrades or ends).  \n**Saving Throw:** Will (to resist fear)  \n**Success Scaling:** 0 = no effect, 1 = Frightened (1 round), 2 = Fleeing (1 minute), 3 = Cowering, 4 = Paralyzed with fear (10 minutes)  \n**Frightened/Fleeing/Cowering Conditions:** See conditions document for full mechanics."
+  },
+  "effects": []
+}

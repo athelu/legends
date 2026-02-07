@@ -1,0 +1,10 @@
+{
+  "_id": "2b419130468443af",
+  "name": "Balanced Channeler (-1)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "**Requirements:** Must have Mageborn or Divine Gift\n\nPredictable magical talent.\n-   Use fixed array: 5,4,3,3,2,2,1,1\n-   Trait bonuses still apply\n\n---"
+  },
+  "effects": []
+}

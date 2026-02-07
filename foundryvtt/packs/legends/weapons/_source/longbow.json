@@ -1,0 +1,15 @@
+{
+  "_id": "253bc859",
+  "name": "Longbow",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 8,
+    "damageTwoHand": 8,
+    "damageType": "[Piercing]",
+    "properties": "[Two-Handed], [Ranged]",
+    "cost": 60,
+    "quantity": 1
+  },
+  "effects": []
+}

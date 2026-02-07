@@ -1,0 +1,10 @@
+{
+  "_id": "70e4db3ed4a44ddb",
+  "name": "Feat Costs and Limits",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "-   **Cost:** 40 XP per feat\n-   **Starting Feats:** Every character receives 2 free feats at creation\n-   **Tier Limits:** Can purchase up to 2 feats per tier (starting feats don't count)\n-   **Total by Tier 8:** 2 starting + 16 purchased = 18 feats maximum\n\n---\n\n## FEAT BUILDING GUIDE FOR GMs\n\nWhen creating new feats, follow these guidelines:"
+  },
+  "effects": []
+}

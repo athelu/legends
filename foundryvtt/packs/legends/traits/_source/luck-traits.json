@@ -1,0 +1,10 @@
+{
+  "_id": "297f2ccde9b24799",
+  "name": "LUCK TRAITS",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": ""
+  },
+  "effects": []
+}

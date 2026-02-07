@@ -1,0 +1,15 @@
+{
+  "_id": "87816491",
+  "name": "Sap",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 4,
+    "damageTwoHand": 4,
+    "damageType": "[Bludgeoning]",
+    "properties": "[Light], [Standard], [Finesse]",
+    "cost": 5,
+    "quantity": 1
+  },
+  "effects": []
+}

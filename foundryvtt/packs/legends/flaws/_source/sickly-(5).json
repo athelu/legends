@@ -1,0 +1,10 @@
+{
+  "_id": "6eaa0b50ce604237",
+  "name": "Sickly (5)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Incurable debilitating illness.\n- Constitution: Permanently -2 (minimum 1)"
+  },
+  "effects": []
+}

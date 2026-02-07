@@ -1,0 +1,10 @@
+{
+  "_id": "6e6de114",
+  "name": "From Enschede:",
+  "type": "trait",
+  "system": {
+    "description": "**Glimpse of Destiny** - Grant ally Fortune on their next roll within 1 minute",
+    "quantity": 1
+  },
+  "effects": []
+}

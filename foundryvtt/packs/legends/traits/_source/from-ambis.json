@@ -1,0 +1,10 @@
+{
+  "_id": "85c8ed44",
+  "name": "From Ambis:",
+  "type": "trait",
+  "system": {
+    "description": "**Preserve Life** - Heal creatures within 30 feet (distribute Wisdom × Tier HP, can't exceed half max)",
+    "quantity": 1
+  },
+  "effects": []
+}

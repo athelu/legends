@@ -1,0 +1,10 @@
+{
+  "_id": "a277fcc0d0174b4b",
+  "name": "Radiant Bolt",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Positive 4 (radiant energy, damage)  \n**Supporting Energy:** Space 2 (medium range) / Time 1 (duration 1 round)  \n**Range:** Medium, 60 ft.  \n**Duration:** 1 round (nimbus effect)  \n**Total Cost:** 7 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** A bolt of radiant energy strikes the target. Target takes 8 radiant damage. A nimbus of light surrounds the target for one round. The next person to attack the target before the duration ends has Fortune. The nimbus disappears afterward. This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Positive (energy)  \n**DR Interaction:** Half DR (8 radiant damage vs DR 4 becomes 8 - 2 = 6 damage)  \n**Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)  \n**Blinded Condition (at 4 successes):** Target gains the Blinded condition. Can use 1 action to make Fortitude save (1 success ends)."
+  },
+  "effects": []
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "1c5bca2419be40c2",
+  "name": "Sanctuary",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "- **Action Cost:** 1 [Combat] action\n- **Range:** Touch\n- **Effect:** Touch a willing creature. For 1 minute, any enemy who targets them with an attack or harmful weave must make Will save (Wisdom + Luck) opposed by your Wisdom + Positive Mastery. If you win (more successes), they must choose a different target or their action is wasted. If the protected creature attacks or harms anyone, the effect ends. You invoke Ambis's sanctuary, making harming the target feel wrong.\n- **Usage:** Uses 1 Channel Divinity\n\n---"
+  },
+  "effects": []
+}

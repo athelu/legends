@@ -1,0 +1,18 @@
+{
+  "_id": "aff1fc90",
+  "name": "Aketon/Light Padded",
+  "type": "armor",
+  "system": {
+    "description": "Aketon/Light Padded",
+    "armorType": "light",
+    "dr": {
+      "slashing": 2,
+      "piercing": 1,
+      "bludgeoning": 3
+    },
+    "stealthPenalty": "none",
+    "cost": 15,
+    "quantity": 1
+  },
+  "effects": []
+}

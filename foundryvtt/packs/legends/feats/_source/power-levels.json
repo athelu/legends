@@ -1,0 +1,10 @@
+{
+  "_id": "6201cc49325f431b",
+  "name": "Power Levels",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "- **Basic feat:** Single +1-2 bonus or minor ability\n- **Standard feat:** Core class feature, reliable combat ability\n- **Advanced feat:** Requires previous feat, significant power boost\n- **Capstone feat:** Tier 5+, game-changing ability"
+  },
+  "effects": []
+}

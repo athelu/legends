@@ -1,0 +1,10 @@
+{
+  "_id": "45c7a8d5",
+  "name": "Gifted Mage (-2)",
+  "type": "trait",
+  "system": {
+    "description": "**Requirements:** Must have Mageborn or Divine Gift\n\nEnhanced magical talent.\n-   Roll 9d8, drop lowest\n-   Trait bonuses still apply",
+    "quantity": 1
+  },
+  "effects": []
+}

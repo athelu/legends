@@ -1,0 +1,10 @@
+{
+  "_id": "1aebbb68792e499c",
+  "name": "Spectral Hand",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 3 (telekinetic force + close range)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 5 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action.  \n**Saving Throw:** None (utility weave)  \n**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 25 lbs capacity (1 hour)\n\n---"
+  },
+  "effects": []
+}

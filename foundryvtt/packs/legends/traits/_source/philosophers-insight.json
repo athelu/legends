@@ -1,0 +1,10 @@
+{
+  "_id": "7aef139e",
+  "name": "Philosopher's Insight",
+  "type": "trait",
+  "system": {
+    "description": "- **Action Cost:** 1 [Minor] action\n- **Range:** Self\n- **Effect:** For 10 minutes, you gain the following benefits:\n  - You automatically see through all illusory effects (no check needed)\n  - You know when creatures speak lies (though not what the truth is)\n  - You have **Fortune** on Perception and Investigate checks\n  - Your eyes glow brighter than normal as enlightenment fills you\n- **Usage:** Uses 1 Channel Divinity\n\n---\n\n## PANTHEON GENERALIST - Servant of the Eight\n\nThe generalist can us",
+    "quantity": 1
+  },
+  "effects": []
+}

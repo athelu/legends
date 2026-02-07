@@ -1,0 +1,15 @@
+{
+  "_id": "3d4620f9",
+  "name": "Katana",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 8,
+    "damageTwoHand": 9,
+    "damageType": "[Slashing], [Piercing]",
+    "properties": "[Versatile]",
+    "cost": 40,
+    "quantity": 1
+  },
+  "effects": []
+}

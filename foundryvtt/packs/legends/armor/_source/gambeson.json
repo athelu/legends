@@ -1,0 +1,18 @@
+{
+  "_id": "a43d0756",
+  "name": "Gambeson",
+  "type": "armor",
+  "system": {
+    "description": "Gambeson",
+    "armorType": "medium",
+    "dr": {
+      "slashing": 4,
+      "piercing": 2,
+      "bludgeoning": 5
+    },
+    "stealthPenalty": "none",
+    "cost": 40,
+    "quantity": 1
+  },
+  "effects": []
+}

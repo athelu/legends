@@ -1,0 +1,15 @@
+{
+  "_id": "ee8a3f52",
+  "name": "Greataxe",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 10,
+    "damageTwoHand": 10,
+    "damageType": "[Slashing]",
+    "properties": "[Two-Handed]",
+    "cost": 40,
+    "quantity": 1
+  },
+  "effects": []
+}

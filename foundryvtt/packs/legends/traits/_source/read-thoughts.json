@@ -1,0 +1,10 @@
+{
+  "_id": "a753ca50f1304dcd",
+  "name": "Read Thoughts",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "- **Action Cost:** 2 [Combat] actions\n- **Range:** 60 feet (must see target)\n- **Effect:** Target one creature. Make opposed check: your Wisdom + Space Mastery vs their Wisdom + Luck (Will save). If you win (more successes), you can read their surface thoughts for 1 minute. You sense their emotional state and immediate intentions. You know what they're thinking about in the moment, but not deep memories or secrets unless they're actively thinking about them. They can repeat the save at the start of each of their turns.\n- **Usage:** Uses 1 Channel Divinity"
+  },
+  "effects": []
+}

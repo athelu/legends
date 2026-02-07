@@ -1,0 +1,10 @@
+{
+  "_id": "3cd1e2a3267d48d8",
+  "name": "Pyromania (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "You are fascinated by fire and have an urge to set things ablaze.\n- Make Will save (1 success required) to resist starting fires or using fire-based solutions when they arise"
+  },
+  "effects": []
+}

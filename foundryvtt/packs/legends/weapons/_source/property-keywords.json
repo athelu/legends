@@ -1,0 +1,15 @@
+{
+  "_id": "d9604a9e38934130",
+  "name": "Property Keywords",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "**[Light]** Easily wielded in the off-hand. Required for off-hand in Two-Weapon Fighting.",
+    "damage": "Type",
+    "range": "30/60 when thrown",
+    "weight": "",
+    "cost": "",
+    "properties": []
+  },
+  "effects": []
+}

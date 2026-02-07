@@ -1,0 +1,10 @@
+{
+  "_id": "a289d534b94a499d",
+  "name": "SPECIAL TRAITS (GM Approval Required)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": ""
+  },
+  "effects": []
+}

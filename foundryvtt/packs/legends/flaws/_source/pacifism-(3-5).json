@@ -1,0 +1,10 @@
+{
+  "_id": "5e16e026489642ce",
+  "name": "Pacifism (3-5)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "You are opposed to violence.\n- **Restrained Violence (3):** Will not attack non-combatants, surrendered foes, or clearly innocent people. Make Will save (1 success required) to harm anyone who hasn't directly threatened you.\n- **Absolute Non-Violence (5):** Will never deal lethal damage. All your attacks must be non-lethal, and you cannot deliver killing blows even to defeated enemies."
+  },
+  "effects": []
+}

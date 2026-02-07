@@ -1,0 +1,15 @@
+{
+  "_id": "cc8cf7ef",
+  "name": "Flail",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 6,
+    "damageTwoHand": 6,
+    "damageType": "[Bludgeoning]",
+    "properties": "[Standard]",
+    "cost": 15,
+    "quantity": 1
+  },
+  "effects": []
+}

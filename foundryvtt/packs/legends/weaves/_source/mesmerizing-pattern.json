@@ -1,0 +1,10 @@
+{
+  "_id": "18c374d8b39a412e",
+  "name": "Mesmerizing Pattern",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 9 (mesmerizing illusion + medium range + 30ft cube)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Medium, 60 ft. (30-foot cube)  \n**Duration:** 1 minute  \n**Total Cost:** 11 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create a twisting pattern of colors in 30-foot cube at medium range. All creatures in area make Will saves. Compare your weaving successes to each target's save successes. Those you beat become Charmed and Incapacitated, staring at the pattern. Weave ends for a creature if it takes damage or if someone uses action to shake them (1 success ends effect). Creatures immune to charm are immune.  \n**Saving Throw:** Will (to resist hypnotic effect)  \n**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 40-foot cube, 4 = 10 minutes (very hard to break)  \n**Charmed + Incapacitated Condition (at Net 2+):** Target can't take actions or move, stares at pattern. Damage or being shaken (action by ally) ends effect for that creature."
+  },
+  "effects": []
+}

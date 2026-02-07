@@ -1,0 +1,10 @@
+{
+  "_id": "20b3dcd1a5844beb",
+  "name": "Project Image",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 8 (illusory duplicate + medium range)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Medium, 60 ft. (can move up to 120 feet away)  \n**Duration:** 10 minutes  \n**Total Cost:** 11 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create an illusory duplicate of yourself that you can see and hear through (can move up to 120 feet away). Can cast weaves from duplicate's location. Duplicate can move and speak. Physical interaction reveals it as illusory effect.  \n**Saving Throw:** Perception vs Space Mastery (to recognize as illusory effect)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = long range (240 feet, 8 hours)"
+  },
+  "effects": []
+}

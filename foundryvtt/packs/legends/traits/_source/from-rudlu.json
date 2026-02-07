@@ -1,0 +1,10 @@
+{
+  "_id": "02da80f9",
+  "name": "From Rudlu:",
+  "type": "trait",
+  "system": {
+    "description": "**Blessing of the Trickster** - Grant creature Fortune on next roll",
+    "quantity": 1
+  },
+  "effects": []
+}

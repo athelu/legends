@@ -1,0 +1,10 @@
+{
+  "_id": "c921ac29b00442f4",
+  "name": "ATHORE - God of Justice",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": ""
+  },
+  "effects": []
+}

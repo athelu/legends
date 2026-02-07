@@ -1,0 +1,10 @@
+{
+  "_id": "01c273eab40e4472",
+  "name": "Dragon Cult Devotee",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "For evil characters who worship the ancient daemons known as Dragons instead of the Pantheon of Eight.\n\n**Patron Options (choose one of the eight dragons):**\n1. **Aq-Yin-To** - Water Dragon\n2. **Char-Talt** - Air Dragon\n3. **Har-Ten-Mo** - Earth Dragon\n4. **Kylo** - Fire Dragon\n5. **Luk-Anda** - Positive Dragon\n6. **Sein-Tuk-Tak** - Negative Dragon\n7. **Tiet-Amor** - Time Dragon\n8. **Garro-Leth** - Space Dragon\n\n**Mechanical Framework:**\n- Use the same mechanical structure as Divine Gift\n- Dragon patron determines Primary (+2) and Secondary (+1) energy based on dragon's nature\n- Channel Divinity options are corrupted/twisted versions of the Eight's abilities\n- GM should create custom Channel Divinity options reflecting the dragon's personality and goals\n\n**Flavor:** Dragon cultists believe dragons were/are the true gods, superior to the Eight. Their magic is dark, selfish, and corrupting."
+  },
+  "effects": []
+}

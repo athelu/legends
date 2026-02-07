@@ -1,0 +1,19 @@
+{
+  "_id": "969261366f8849b8",
+  "name": "Hide",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "",
+    "actionType": "movement",
+    "actionCost": "1 [Move] action",
+    "trigger": "",
+    "effect": "Stealth check (Agility + stealth) with the aid of partial cover or greater.\n- **Check:** Opposed by enemy's Perception (Wisdom + Perception)\n- **Success:** You use cover to successfully become hidden\n- **Failure:** You do not gain the Hidden condition from the enemy, but may have concealed from cover.\n- **Notes:**\n  - Per Enemy test, may be hidden from some (but you do not know which)\n  - **Partial Cover:** Low wall, furniture, creature, tree trunk, etc",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

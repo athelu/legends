@@ -1,0 +1,10 @@
+{
+  "_id": "988e5e56274a4941",
+  "name": "Ethereal Shift",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 7 (shifting to ethereal plane)\n**Supporting Energy:** Time 4 (duration 1 hour)\n**Total Cost:** 9 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)\n**Effect:** You step into the border of the Ethereal Plane. You can see and hear the material plane (dim and muted). Can move through objects and creatures. Cannot affect or be affected by anything on material plane. Can end early as [Free] action.\n**Saving Throw:** None (self-only planar shift)\n**Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 8 hours, 4 = 24 hours or bring 1 willing creature"
+  },
+  "effects": []
+}

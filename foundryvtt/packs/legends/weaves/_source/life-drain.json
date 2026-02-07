@@ -1,0 +1,10 @@
+{
+  "_id": "d5fe80e7b9b24555",
+  "name": "Life Drain",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Negative 2 (siphoning life force)  \n**Supporting Energy:** Space 1 (close range)  \n**Range:** Close, 30 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 3 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery  \n**Effect:** Target takes 8 negative damage. You heal HP equal to half the damage dealt. This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Negative (energy)  \n**DR Interaction:** Half DR (8 negative damage vs DR 4 becomes 8 - 2 = 6 damage)  \n**Success Scaling:** 0 = miss, 1 = half (4 damage, heal 2), 2 = full (8 damage, heal 4), 3 = +8 damage (16 total, heal 8), 4 = +16 damage (24 total, heal 12)  \n**Weakened Condition (at 4 successes):** Target has Misfortune on their next attack roll as their life force ebbs."
+  },
+  "effects": []
+}

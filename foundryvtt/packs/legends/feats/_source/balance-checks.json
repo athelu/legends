@@ -1,0 +1,10 @@
+{
+  "_id": "808b019aa9424777",
+  "name": "Balance Checks",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "- Does it overshadow multiple feats combined?\n- Does it trivialize challenges?\n- Does it require meaningful choice/tradeoff?\n- Could multiple characters benefit, or is it too niche?"
+  },
+  "effects": []
+}

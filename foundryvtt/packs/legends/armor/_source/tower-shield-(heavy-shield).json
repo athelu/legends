@@ -1,0 +1,19 @@
+{
+  "_id": "f71c18011db84679",
+  "name": "Tower Shield (Heavy Shield)",
+  "type": "shield",
+  "img": "** `icons/equipment/shield/tower-wood-blue.webp`",
+  "system": {
+    "description": "- **Image:** `icons/equipment/shield/tower-wood-blue.webp`",
+    "shieldType": "",
+    "handUsage": "",
+    "meleeDefense": "",
+    "requirements": "",
+    "specialAbilities": "",
+    "plantedMode": false,
+    "reactions": [],
+    "weight": "",
+    "cost": "** 25 gp"
+  },
+  "effects": []
+}

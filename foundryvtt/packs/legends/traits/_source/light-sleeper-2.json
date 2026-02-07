@@ -1,0 +1,10 @@
+{
+  "_id": "6928340f",
+  "name": "Light Sleeper (-2)",
+  "type": "trait",
+  "system": {
+    "description": "Subtle noises awaken easily.\n-   Not surprised while sleeping\n-   No penalty when awakened",
+    "quantity": 1
+  },
+  "effects": []
+}

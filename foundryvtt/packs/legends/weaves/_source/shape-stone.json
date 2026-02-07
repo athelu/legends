@@ -1,0 +1,10 @@
+{
+  "_id": "05a15af294e142d6",
+  "name": "Shape Stone",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Earth 3 (reshaping worked stone)  \n**Supporting Energy:** None (touch, instantaneous/permanent)  \n**Range:** Touch  \n**Duration:** Instantaneous (permanent)  \n**Total Cost:** 3 Energy per 5ft cube  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Earth Potential + Earth Mastery  \n**Effect:** Reshape stone into any form (doors, pillars, crude weapon). Can create hinges and latches. Cannot make complex mechanisms. Changes are permanent.  \n**Saving Throw:** None (object manipulation)  \n**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = 20ft cube or create detailed carvings\n\n---"
+  },
+  "effects": []
+}

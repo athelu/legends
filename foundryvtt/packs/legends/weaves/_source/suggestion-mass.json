@@ -1,0 +1,10 @@
+{
+  "_id": "d38a0e628ead4cb3",
+  "name": "Suggestion, Mass",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Negative 6 (planting compulsion in multiple minds)  \n**Supporting Energy:** Space 3 (medium range + up to 12 targets) / Time 4 (duration 24 hours)  \n**Range:** Medium, 60 ft. (up to 12 creatures)  \n**Duration:** 24 hours (or until completed)  \n**Total Cost:** 13 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Up to 12 creatures you can see at medium range make Will saves. Compare your weaving successes to each target's save successes. Those you beat follow your suggested course of activity (1-2 sentences) that sounds reasonable. Targets pursue activity for 24 hours or until completing it. Obviously harmful suggestions end weave for that target. Creatures immune to charm are immune.  \n**Saving Throw:** Will (to resist mental compulsion)  \n**Success Scaling:** 0 = no effect (per target), 1 = 1 hour, 2 = 24 hours, 3 = 10 days, 4 = 30 days (extremely powerful compulsion)  \n\n---"
+  },
+  "effects": []
+}

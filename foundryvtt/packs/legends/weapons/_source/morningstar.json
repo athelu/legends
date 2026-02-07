@@ -1,0 +1,15 @@
+{
+  "_id": "2cade7c6",
+  "name": "Morningstar",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 8,
+    "damageTwoHand": 8,
+    "damageType": "[Bludgeoning],[Piercing]",
+    "properties": "[Standard], [Multi-Type]",
+    "cost": 20,
+    "quantity": 1
+  },
+  "effects": []
+}

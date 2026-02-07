@@ -1,0 +1,15 @@
+{
+  "_id": "c3d42053",
+  "name": "Naginata",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 6,
+    "damageTwoHand": 7,
+    "damageType": "[Piercing], [Bludgeoning] (4)",
+    "properties": "[Versatile], [Alternate-Strike], [Thrown], [Reach]",
+    "cost": 12,
+    "quantity": 1
+  },
+  "effects": []
+}

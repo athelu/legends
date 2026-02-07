@@ -1,0 +1,15 @@
+{
+  "_id": "5c693dfe",
+  "name": "Wakizashi",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 6,
+    "damageTwoHand": 6,
+    "damageType": "[Slashing], [Piercing]",
+    "properties": "[Light], [Multi-Type], [Finesse]",
+    "cost": 30,
+    "quantity": 1
+  },
+  "effects": []
+}

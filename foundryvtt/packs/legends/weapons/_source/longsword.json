@@ -1,0 +1,15 @@
+{
+  "_id": "81de512b",
+  "name": "Longsword",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 8,
+    "damageTwoHand": 9,
+    "damageType": "[Slashing], [Bludgeoning] (6)",
+    "properties": "[Versatile], [Alternate-Strike]",
+    "cost": 40,
+    "quantity": 1
+  },
+  "effects": []
+}

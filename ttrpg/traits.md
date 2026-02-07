@@ -25,6 +25,7 @@ The trait system is now focused and purposeful, reserving its mechanical weight 
 ## MAGICAL TRAITS
 
 ### Mageborn (-7)
+**Image:** `icons/skills/arcane/wand-sparks-purple.webp`
 **Requirements:** Intelligence ≥ 3
 
 You were born with an innate connection to the planes flowing through your pneuma. Your eyes glow with constant violet light, marking you as a mage from birth. Through careful study and understanding of magical theory, you have learned to channel the eight energies through precise intellectual control.
@@ -43,6 +44,7 @@ You were born with an innate connection to the planes flowing through your pneum
 
 
 ## Divine Gift (-7)
+**Image:** `icons/skills/holy/halo-divine-light.webp`
 **Requirements:** Wisdom ≥ 3
 
 You have dedicated yourself to the Pantheon of Eight through deep study and spiritual devotion. While you honor all eight deities, one has called to you as your patron (or you serve the pantheon equally), granting you the ability to channel divine power through your pneuma. Your eyes flash with violet light when completing each weave.

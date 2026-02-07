@@ -1,0 +1,10 @@
+{
+  "_id": "3bdadb05",
+  "name": "Longevity (-5)",
+  "type": "trait",
+  "system": {
+    "description": "Longer lifespan.\n-   Double race's maximum age",
+    "quantity": 1
+  },
+  "effects": []
+}

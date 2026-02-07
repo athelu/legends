@@ -1,0 +1,10 @@
+{
+  "_id": "c442879c33c54768",
+  "name": "Kismet's Touch",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "- **Action Cost:** [Reaction]\n- **Trigger:** Any roll is made (yours or another creature's) that you can see\n- **Range:** 60 feet\n- **Effect:** After seeing the result, you can declare it an automatic success (both dice count as successes) or automatic failure (both dice count as failures), regardless of the actual roll. Fate itself bends to your will for one crucial moment. This is Enschede's most powerful gift and her greatest burden.\n- **Usage:** Uses 1 Channel Divinity (can only be used once per long rest in addition to normal Channel Divinity limit)\n\n---"
+  },
+  "effects": []
+}

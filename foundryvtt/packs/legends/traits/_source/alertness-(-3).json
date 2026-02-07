@@ -1,0 +1,10 @@
+{
+  "_id": "58019750bbce427f",
+  "name": "Alertness (-3)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "Aware of surroundings.\n-   Initiative: +1\n-   All Perception: Subtract 1 from die results"
+  },
+  "effects": []
+}

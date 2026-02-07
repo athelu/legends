@@ -1,0 +1,10 @@
+{
+  "_id": "08e77095c23b47b6",
+  "name": "Hirnaloyta's Bounty",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "- **Action Cost:** Special (during short rest)\n- **Range:** Natural surroundings\n- **Effect:** During a short rest in natural surroundings (forest, grassland, etc. - not dungeon or city), you and up to 6 allies who rest with you regain additional HP equal to your Wisdom score + your Tier. Nature nurtures those who honor it.\n- **Usage:** Uses 1 Channel Divinity\n\n---"
+  },
+  "effects": []
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "66ecd8f59a47427b",
+  "name": "Hard of Hearing (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "- Sound-based Perception: Add 1 to die results\n- Initiative: -1"
+  },
+  "effects": []
+}
