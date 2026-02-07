@@ -61,14 +61,8 @@
 - **Cost:** 400 gp
 - **Keyword:** [MediumArmor], [Noisy]
 
-<<<<<<< Updated upstream
-#### Chain Mail - DR 5
-- **Weakness:** Bludgeoning (DR 2)
-- **Resistance:** Slashing (DR 6)
-=======
 #### Chain Mail
 - **DR:** Slashing 6, Piercing 5, Bludgeoning 4
->>>>>>> Stashed changes
 - **Cost:** 200 gp
 - **Keyword:** [MediumArmor], [Noisy]
 
@@ -78,36 +72,13 @@
 - **Cost:** 40 gp
 - **Keyword:** [MediumArmor]
 
-<<<<<<< Updated upstream
-#### Leather Armor/Cuir Bouilli (Hardened Leather) - DR 3
-- **Weakness:** Piercing (DR 1)
-- **Resistance:** Bludgeoning (DR 4)
-=======
 #### Leather Armor/Cuir Bouilli (Hardened Leather)
 - **DR:** Slashing 3, Piercing 2, Bludgeoning 4
->>>>>>> Stashed changes
 - **Stealth:** No penalty
 - **Description:** Boiled and hardened leather plates, shaped and rigid
 - **Cost:** 200 gp
 - **Keyword:** [LightArmor]
 
-<<<<<<< Updated upstream
-#### Plate, Full - DR 8
-- **Weakness:** Bludgeoning (DR 4)
-- **Resistance:** Slashing (DR 9)
-- **Cost:** 750 gp
-- **Keyword:** [HeavyArmor], [Loud]
-
-#### Scale Mail - DR 5
-- **Weakness:** Bludgeoning (DR 2)
-- **Resistance:** Slashing (DR 6)
-- **Cost:** 250 gp
-- **Keyword:** [MediumArmor], [Noisy]
-
-#### Splint Mail - DR 7
-- **Weakness:** Bludgeoning (DR 3)
-- **Resistance:** Slashing (DR 8)
-=======
 #### Plate, Full
 - **DR:** Slashing 9, Piercing 8, Bludgeoning 6
 - **Cost:** 750 gp
@@ -120,7 +91,6 @@
 
 #### Splint Mail
 - **DR:** Slashing 8, Piercing 7, Bludgeoning 6
->>>>>>> Stashed changes
 - **Cost:** 500 gp
 - **Keyword:** [HeavyArmor], [Loud]
 
