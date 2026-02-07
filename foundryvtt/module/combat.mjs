@@ -408,17 +408,62 @@ export async function handleDefenseClick(messageId, attackData) {
   }
   
   const defenseType = attackData.defenseType;
-  
-  // Determine defense roll based on defenseType
+  // Before rolling defenses, offer shield reactions if available
+  try {
+    if (game.legends?.shields === undefined) {
+      const mod = await import('./shields.mjs');
+      mod.initializeShieldHelpers();
+    }
+  } catch (err) {
+    // ignore
+  }
+
+  const shieldAbilities = game.legends?.shields?.getShieldReactionsForActor(defender) || [];
+
+  if (shieldAbilities.length > 0) {
+    // Build dialog content listing available shield reactions
+    let content = `<p>Select a shield reaction to use (or Skip to continue):</p><ul>`;
+    for (let i = 0; i < shieldAbilities.length; i++) {
+      const a = shieldAbilities[i];
+      content += `<li><strong>${a.reaction.name || a.reaction.type}</strong> — from <em>${a.shieldName}</em>: ${a.reaction.description || ''}</li>`;
+    }
+    content += `</ul>`;
+
+    new Dialog({
+      title: 'Shield Reaction',
+      content: content,
+      buttons: Object.fromEntries([
+        ...shieldAbilities.map((a, idx) => [
+          `use_${idx}`,
+          {
+            icon: '<i class="fas fa-shield-alt"></i>',
+            label: `Use: ${a.reaction.name || a.reaction.type}`,
+            callback: async () => {
+              const result = await game.legends.shields.applyShieldReaction(defender, a, { damage: attackData.baseDamage, damageType: attackData.damageType, attacker: attackData.actorId });
+              attackData._shieldEffect = result;
+              // Continue to defense flow
+              await _continueDefenseFlow(defenseType, defender, attackData, messageId);
+            }
+          }
+        ]),
+        ['skip', { icon: '<i class="fas fa-times"></i>', label: 'Skip', callback: async () => { await _continueDefenseFlow(defenseType, defender, attackData, messageId); } }]
+      ]) ,
+      default: 'skip'
+    }).render(true);
+    return;
+  }
+
+  // No shield abilities or none chosen — continue
+  await _continueDefenseFlow(defenseType, defender, attackData, messageId);
+}
+
+async function _continueDefenseFlow(defenseType, defender, attackData, messageId) {
   if (defenseType === 'melee') {
-    // Opposed melee roll
     await rollMeleeDefense(defender, attackData, messageId);
   } else if (defenseType === 'ranged-reflex') {
-    // Ranged attack - check if in cover, if so allow Reflex save
     await handleRangedDefense(defender, attackData, messageId);
   } else if (defenseType === 'none') {
-    // Auto-hit, proceed to damage
-    await calculateDamage(attackData, messageId, 0, attackData.attackSuccesses);
+    await calculateDamage(attackData, messageId, 0, attackData.attackSuccesses, attackData._shieldEffect);
   }
 }
 
@@ -448,7 +493,8 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
         attackData,
         attackMessageId,
         rollResult.successes,
-        attackData.attackSuccesses
+        attackData.attackSuccesses,
+        attackData._shieldEffect
       );
     }
   });
@@ -493,7 +539,8 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
                 attackData,
                 attackMessageId,
                 rollResult.successes,
-                attackData.attackSuccesses
+                attackData.attackSuccesses,
+                attackData._shieldEffect
               );
             }
           });
@@ -507,7 +554,8 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
             attackData,
             attackMessageId,
             0,
-            attackData.attackSuccesses
+            attackData.attackSuccesses,
+            attackData._shieldEffect
           );
         }
       }
@@ -523,7 +571,7 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
  * @param {number} defenseSuccesses - Defender's successes
  * @param {number} attackSuccesses - Attacker's successes
  */
-async function calculateDamage(attackData, attackMessageId, defenseSuccesses, attackSuccesses) {
+async function calculateDamage(attackData, attackMessageId, defenseSuccesses, attackSuccesses, shieldEffect=null) {
   const margin = attackSuccesses - defenseSuccesses;
   
   const attacker = game.actors.get(attackData.actorId);
@@ -552,6 +600,16 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
     damageDescription = `${damageAmount} ${attackData.damageType} damage (base ${attackData.baseDamage} + ${attrValue} ${attackData.damageAttr})`;
   }
   
+  // Apply shield effect (if any)
+  let _shieldNote = '';
+  if (shieldEffect && shieldEffect.applied && (shieldEffect.reduction || shieldEffect.reduction === 0)) {
+    const red = Number(shieldEffect.reduction) || 0;
+    const prev = damageAmount;
+    damageAmount = Math.max(0, damageAmount - red);
+    damageDescription += ` (reduced by ${red} from shield${shieldEffect.reason ? `: ${shieldEffect.reason}` : ''})`;
+    _shieldNote = `<div class="shield-note"><strong>Shield:</strong> ${shieldEffect.reason || ''} (-${red} damage)</div>`;
+  }
+
   // Create comparison result card
   const content = `
     <div class="legends-combat-result">
@@ -572,6 +630,7 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
       <div class="damage-result">
         <strong>Result:</strong> ${damageDescription}
       </div>
+      ${_shieldNote}
       ${damageAmount > 0 ? `
         <div class="damage-buttons">
           <button class="apply-damage-btn" 
@@ -603,29 +662,32 @@ function calculateEffectiveDR(target, damageType) {
   // Get equipped armor data
   const equippedArmor = target.system.equippedArmor || [];
   
-  // If no equipped armor data, fall back to base DR
+  // If no equipped armor data, fall back to base DR summary
   if (equippedArmor.length === 0) {
-    return target.system.dr?.value || 0;
+    return target.system.dr?.total || 0;
   }
   
   // Calculate DR for each armor piece
   for (let armor of equippedArmor) {
-    let armorDR = armor.baseDR;
-    
-    // Check for weakness against this damage type
-    if (armor.weakness?.type === damageType && armor.weakness?.dr !== undefined) {
-      armorDR = armor.weakness.dr;
+    // New format: armor.dr is an object with per-type values
+    if (armor.dr && typeof armor.dr === 'object') {
+      effectiveDR += armor.dr[damageType] || 0;
     }
-    
-    // Check for resistance against this damage type
-    else if (armor.resistance?.type === damageType && armor.resistance?.dr !== undefined) {
-      armorDR = armor.resistance.dr;
+    // Legacy format: baseDR with optional weakness/resistance
+    else if (armor.baseDR !== undefined) {
+      let armorDR = armor.baseDR;
+      if (armor.weakness?.type === damageType && armor.weakness?.dr !== undefined) {
+        armorDR = armor.weakness.dr;
+      } else if (armor.resistance?.type === damageType && armor.resistance?.dr !== undefined) {
+        armorDR = armor.resistance.dr;
+      }
+      effectiveDR += armorDR;
     }
-    
-    effectiveDR += armorDR;
+
+    // Shield abilities are reaction-based and do not automatically add static DR here.
   }
   
-  // Add any bonus DR
+  // Add any bonus DR (legacy field)
   effectiveDR += target.system.dr?.bonus || 0;
   
   return effectiveDR;
@@ -667,8 +729,8 @@ export async function applyDamage(targetId, damage, damageType) {
   if (['slashing', 'piercing', 'bludgeoning'].includes(damageType)) {
     dr = calculateEffectiveDR(target, damageType);
   } else {
-    // Energy damage types: use half of base DR
-    const baseDR = target.system.dr?.value || 0;
+    // Energy damage types: use half of base DR summary
+    const baseDR = target.system.dr?.total || 0;
     dr = Math.floor(baseDR / 2);
   }
   
@@ -714,6 +776,17 @@ export function initializeCombatSystem() {
     // Handle apply damage button clicks
     html.find('.apply-damage-btn').click(async (event) => {
       event.preventDefault();
+
+      // Initialize shield helpers if available
+      try {
+        if (game.legends?.shields === undefined) {
+          // lazy-load initializer if module available
+          const mod = await import('./shields.mjs');
+          mod.initializeShieldHelpers();
+        }
+      } catch (err) {
+        // ignore - shields helper not critical here
+      }
       const button = event.currentTarget;
       const targetId = button.dataset.targetId;
       const damage = parseInt(button.dataset.damage);

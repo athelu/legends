@@ -76,8 +76,10 @@ export class D8CharacterSheet extends ActorSheet {
     // Actions categorized by type
     const combatActions = [];
     const movementActions = [];
+    const activateActions = [];
+    const interactActions = [];
+    const freeActions = [];
     const reactions = [];
-    const otherActions = [];
     
     // Abilities
     const abilities = [];
@@ -117,12 +119,16 @@ export class D8CharacterSheet extends ActorSheet {
           // Categorize actions by type
           if (item.system.actionType === 'combat') {
             combatActions.push(item);
-          } else if (item.system.actionType === 'move') {
+          } else if (item.system.actionType === 'move' || item.system.actionType === 'movement') {
             movementActions.push(item);
+          } else if (item.system.actionType === 'activate') {
+            activateActions.push(item);
+          } else if (item.system.actionType === 'interact') {
+            interactActions.push(item);
+          } else if (item.system.actionType === 'free') {
+            freeActions.push(item);
           } else if (item.system.actionType === 'reaction') {
             reactions.push(item);
-          } else {
-            otherActions.push(item);
           }
           break;
         case 'ability':
@@ -144,8 +150,10 @@ export class D8CharacterSheet extends ActorSheet {
     // Action categories
     context.combatActions = combatActions;
     context.movementActions = movementActions;
+    context.activateActions = activateActions;
+    context.interactActions = interactActions;
+    context.freeActions = freeActions;
     context.reactions = reactions;
-    context.otherActions = otherActions;
     
     // Abilities
     context.abilities = abilities;

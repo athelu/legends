@@ -1,0 +1,136 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Shield Name"/></h1>
+      
+      <!-- Shield Property Tags -->
+      <div class="shield-tags">
+        {{#if system.shieldType}}
+          <span class="tag shield-type-tag">{{system.shieldType}}</span>
+        {{/if}}
+        {{#if system.requirements}}
+          <span class="tag requirements-tag">{{system.requirements}}</span>
+        {{/if}}
+      </div>
+      
+      <!-- Quick Summary Stats in Header -->
+      <div class="shield-summary-row">
+        <div class="summary-stat">
+          <label>Hand Usage</label>
+          <span class="value">{{system.handUsage}}</span>
+        </div>
+        
+        <div class="summary-stat">
+          <label>Weight</label>
+          <span class="value">{{system.weight}} lbs</span>
+        </div>
+        
+        <div class="summary-stat">
+          <label>Cost</label>
+          <span class="value">{{system.cost}} gp</span>
+        </div>
+        
+        <div class="summary-stat editable">
+          <label>Qty</label>
+          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" class="qty-input" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
+  <section class="sheet-body">
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
+      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+      
+      <!-- Shield Type -->
+      <div class="form-group">
+        <label>Shield Type</label>
+        <select name="system.shieldType" class="shield-type-select">
+          <option value="buckler" {{#if (eq system.shieldType "buckler")}}selected{{/if}}>Buckler (Light Shield)</option>
+          <option value="targe" {{#if (eq system.shieldType "targe")}}selected{{/if}}>Targe (Round Shield)</option>
+          <option value="heater" {{#if (eq system.shieldType "heater")}}selected{{/if}}>Heater Shield</option>
+          <option value="kite" {{#if (eq system.shieldType "kite")}}selected{{/if}}>Kite Shield</option>
+          <option value="tower" {{#if (eq system.shieldType "tower")}}selected{{/if}}>Tower Shield</option>
+          <option value="pavise" {{#if (eq system.shieldType "pavise")}}selected{{/if}}>Pavise (Planted Shield)</option>
+        </select>
+      </div>
+
+      <!-- Hand Usage -->
+      <div class="form-group">
+        <label>Hand Usage</label>
+        <input type="text" name="system.handUsage" value="{{system.handUsage}}" placeholder="e.g., Occupies off-hand completely" />
+        <small>Describe how the shield occupies hands/slots</small>
+      </div>
+
+      <!-- Melee Defense -->
+      <div class="form-group">
+        <label>Melee Defense Benefit</label>
+        <input type="text" name="system.meleeDefense" value="{{system.meleeDefense}}" placeholder="e.g., Fortune on defensive melee combat rolls" />
+        <small>Passive melee defense bonus or ability</small>
+      </div>
+
+      <!-- Reactions -->
+      <h3>Shield Reactions</h3>
+      <div class="form-group">
+        <label>Reactions (JSON array)</label>
+        <textarea name="system.reactions" rows="4" placeholder='[{"name":"Shield Block","type":"melee","description":"Force Misfortune on one attack"},{"name":"Ranged Defense","type":"ranged","description":"Force Misfortune on ranged attacks"}]'>{{json system.reactions}}</textarea>
+        <small>Define reactions as JSON objects with name, type, and description</small>
+      </div>
+
+      <!-- Requirements -->
+      <div class="form-group">
+        <label>Requirements</label>
+        <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="e.g., Strength 3 minimum" />
+        <small>Attribute or skill requirements to use this shield</small>
+      </div>
+
+      <!-- Special Abilities -->
+      <div class="form-group">
+        <label>Special Abilities</label>
+        <textarea name="system.specialAbilities" rows="3" placeholder="e.g., Can be slung on back (1 Minor action to ready)">{{system.specialAbilities}}</textarea>
+        <small>Unique abilities or properties of this shield</small>
+      </div>
+
+      <!-- Planted Mode (for Pavise) -->
+      <div class="form-group">
+        <label>Has Planted Mode</label>
+        <input type="checkbox" name="system.plantedMode" value="true" {{#if system.plantedMode}}checked{{/if}} />
+        <small>Check if this shield has a planted/stationary mode</small>
+      </div>
+
+      <!-- Physical Properties -->
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Weight (lbs)</label>
+          <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Cost (gp)</label>
+          <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+
+      <!-- Notes -->
+      <div class="form-group">
+        <label>Notes</label>
+        <textarea name="system.notes" rows="3" placeholder="Additional notes about this shield">{{system.notes}}</textarea>
+      </div>
+
+    </div>
+  </section>
+</form>

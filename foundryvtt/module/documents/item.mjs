@@ -22,6 +22,7 @@ export class D8Item extends Item {
     // Make calculations specific to item types
     if (itemData.type === 'weapon') this._prepareWeaponData(itemData);
     if (itemData.type === 'armor') this._prepareArmorData(itemData);
+    if (itemData.type === 'shield') this._prepareShieldData(itemData);
     if (itemData.type === 'weave') this._prepareWeaveData(itemData);
   }
   
@@ -75,6 +76,54 @@ export class D8Item extends Item {
     }
     if (systemData.dr.bludgeoning === undefined || systemData.dr.bludgeoning === null) {
       systemData.dr.bludgeoning = 0;
+    }
+    
+    // Initialize stealth penalty
+    if (!systemData.stealthPenalty) {
+      systemData.stealthPenalty = 'none';
+    }
+    
+    // Auto-compute don/doff times and swim penalties based on armor type
+    const armorType = systemData.armorType || 'light';
+    const armorProperties = {
+      'light': { don: '1 minute', doff: '1 minute', swim: 'No penalty' },
+      'medium': { don: '5 minutes', doff: '1 minute', swim: '+1 athletics die, swim speed 1/3' },
+      'heavy': { don: '10 minutes', doff: '5 minutes', swim: '+2 athletics die, swim speed 1/4' }
+    };
+    
+    const props = armorProperties[armorType] || armorProperties['light'];
+    systemData.donTime = props.don;
+    systemData.doffTime = props.doff;
+    systemData.swimPenalty = props.swim;
+    
+    // Initialize shield metadata for shield items
+    if (systemData.isShield === undefined || systemData.isShield === null) {
+      systemData.isShield = false;
+    }
+    if (!Array.isArray(systemData.shieldAbilities)) {
+      systemData.shieldAbilities = [];
+    }
+  }
+
+  /**
+   * Prepare Shield-specific data
+   */
+  _prepareShieldData(itemData) {
+    const systemData = itemData.system;
+    
+    // Initialize shield type
+    if (!systemData.shieldType) {
+      systemData.shieldType = 'buckler';
+    }
+    
+    // Ensure reactions array exists
+    if (!Array.isArray(systemData.reactions)) {
+      systemData.reactions = [];
+    }
+    
+    // Ensure planted mode flag exists
+    if (systemData.plantedMode === undefined) {
+      systemData.plantedMode = false;
     }
   }
   

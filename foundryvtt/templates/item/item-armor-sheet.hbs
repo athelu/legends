@@ -2,9 +2,6 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
     <div class="header-fields">
-<<<<<<< Updated upstream
-      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Item Name"/></h1>
-=======
       <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Armor Name"/></h1>
       
       <!-- Armor Property Tags -->
@@ -20,13 +17,10 @@
           {{#if (eq system.armorType "heavy")}}
           <span class="tag armor-type-tag">HEAVY ARMOR</span>
           {{/if}}
-          {{#if (eq system.armorType "shield")}}
-          <span class="tag shield-type-tag">SHIELD</span>
-          {{/if}}
         {{/if}}
         
         <!-- Property Tags (Noisy/Loud) -->
-        {{#each system.properties as |prop|}}a
+        {{#each system.properties as |prop|}}
           {{#if (eq prop "noisy")}}
           <span class="tag stealth-tag">NOISY</span>
           {{/if}}
@@ -34,9 +28,6 @@
           <span class="tag stealth-tag">LOUD</span>
           {{/if}}
         {{/each}}
-        
-        <!-- DR Tags -->
-        <span class="tag dr-tag">S:{{system.dr.slashing}} P:{{system.dr.piercing}} B:{{system.dr.bludgeoning}}</span>
       </div>
       
       <!-- Quick Summary Stats in Header -->
@@ -63,7 +54,6 @@
           <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" class="qty-input" />
         </div>
       </div>
->>>>>>> Stashed changes
     </div>
   </header>
 
@@ -77,8 +67,6 @@
     <div class="tab description" data-group="primary" data-tab="description">
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
     </div>
-<<<<<<< Updated upstream
-=======
 
     <!-- Details Tab -->
     <div class="tab details" data-group="primary" data-tab="details">
@@ -90,12 +78,11 @@
           <option value="light" {{#if (eq system.armorType "light")}}selected{{/if}}>Light Armor</option>
           <option value="medium" {{#if (eq system.armorType "medium")}}selected{{/if}}>Medium Armor</option>
           <option value="heavy" {{#if (eq system.armorType "heavy")}}selected{{/if}}>Heavy Armor</option>
-          <option value="shield" {{#if (eq system.armorType "shield")}}selected{{/if}}>Shield</option>
         </select>
       </div>
 
       <!-- ARMOR-ONLY FIELDS (hidden for shields) -->
-      <div class="armor-only-fields" {{#if (eq system.armorType "shield")}}style="display:none;"{{/if}}>
+      <div class="armor-only-fields">
         
         <!-- Damage Reduction -->
         <h3>Damage Reduction (DR)</h3>
@@ -128,78 +115,39 @@
           </p>
         </div>
 
-        <!-- Properties -->
-        <h3>Properties</h3>
-        <div class="properties-grid">
-          <label class="checkbox">
-            <input type="checkbox" name="system.properties" value="noisy" {{#if (contains system.properties "noisy")}}checked{{/if}} />
-            Noisy (+1 Stealth penalty)
-          </label>
-          <label class="checkbox">
-            <input type="checkbox" name="system.properties" value="loud" {{#if (contains system.properties "loud")}}checked{{/if}} />
-            Loud (+2 Stealth penalty)
-          </label>
+        <!-- Stealth Penalty -->
+        <h3>Stealth Penalty</h3>
+        <div class="form-group">
+          <label>Stealth Penalty Type</label>
+          <select name="system.stealthPenalty" class="stealth-penalty-select">
+            <option value="none" {{#if (eq system.stealthPenalty "none")}}selected{{/if}}>None (No penalty)</option>
+            <option value="noisy" {{#if (eq system.stealthPenalty "noisy")}}selected{{/if}}>Noisy (+1 to both dice on Stealth checks)</option>
+            <option value="loud" {{#if (eq system.stealthPenalty "loud")}}selected{{/if}}>Loud (+2 to both dice on Stealth checks)</option>
+          </select>
+          <small>Stealth penalty applies when wearing this armor</small>
         </div>
 
         <!-- Don/Doff Time -->
         <h3>Don/Doff Time</h3>
+        <p style="font-size: 12px; margin-bottom: 10px;">Don/Doff times and swim penalties are auto-determined by armor type.</p>
         <div class="form-group-row">
           <div class="form-group">
             <label>Don Time</label>
-            <input type="text" name="system.donTime" value="{{system.donTime}}" placeholder="e.g., 1 minute, 5 minutes" />
+            <input type="text" name="system.donTime" value="{{system.donTime}}" placeholder="Auto-computed" readonly />
+            <small>Automatically set by armor type</small>
           </div>
           <div class="form-group">
             <label>Doff Time</label>
-            <input type="text" name="system.doffTime" value="{{system.doffTime}}" placeholder="e.g., 1 minute" />
+            <input type="text" name="system.doffTime" value="{{system.doffTime}}" placeholder="Auto-computed" readonly />
+            <small>Automatically set by armor type</small>
           </div>
         </div>
-      </div>
 
-      <!-- SHIELD-ONLY FIELDS (hidden for armor) -->
-      <div class="shield-only-fields" {{#unless (eq system.armorType "shield")}}style="display:none;"{{/unless}}>
-        <h3>Shield Properties</h3>
-        
+        <!-- Swim Penalty -->
         <div class="form-group">
-          <label>Shield Type</label>
-          <select name="system.shieldType" class="shield-type-select">
-            <option value="" {{#unless system.shieldType}}selected{{/unless}}>Select Shield Type</option>
-            <option value="buckler" {{#if (eq system.shieldType "buckler")}}selected{{/if}}>Buckler (Light Shield)</option>
-            <option value="targe" {{#if (eq system.shieldType "targe")}}selected{{/if}}>Targe (Round Shield)</option>
-            <option value="heater" {{#if (eq system.shieldType "heater")}}selected{{/if}}>Heater Shield</option>
-            <option value="kite" {{#if (eq system.shieldType "kite")}}selected{{/if}}>Kite Shield</option>
-            <option value="tower" {{#if (eq system.shieldType "tower")}}selected{{/if}}>Tower Shield</option>
-            <option value="pavise" {{#if (eq system.shieldType "pavise")}}selected{{/if}}>Pavise (Planted Shield)</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label>Shield DR Bonus</label>
-          <input type="number" name="system.dr.value" value="{{system.dr.value}}" data-dtype="Number" min="0" />
-          <small>DR bonus provided by this shield</small>
-        </div>
-
-        <!-- Shield Abilities Display -->
-        <div class="shield-abilities-display">
-          <div class="shield-abilities-info">
-            {{#if (eq system.shieldType "buckler")}}
-            <p><strong>Buckler:</strong> +1 DR bonus. Use [Defense] action for +2 DR total.</p>
-            {{/if}}
-            {{#if (eq system.shieldType "targe")}}
-            <p><strong>Targe:</strong> +2 DR bonus. Use [Defense] action for +3 DR total.</p>
-            {{/if}}
-            {{#if (eq system.shieldType "heater")}}
-            <p><strong>Heater Shield:</strong> +2 DR bonus. Use [Defense] action for +4 DR total.</p>
-            {{/if}}
-            {{#if (eq system.shieldType "kite")}}
-            <p><strong>Kite Shield:</strong> +3 DR bonus. Use [Defense] action for +5 DR total. Misfortune on your attacks.</p>
-            {{/if}}
-            {{#if (eq system.shieldType "tower")}}
-            <p><strong>Tower Shield:</strong> +4 DR bonus. Use [Defense] action for +6 DR total. Misfortune on your attacks. Requires Strength 3+.</p>
-            {{/if}}
-            {{#if (eq system.shieldType "pavise")}}
-            <p><strong>Pavise:</strong> Planted mode provides full cover. Carried mode functions as Tower Shield with Misfortune. Requires Strength 4+.</p>
-            {{/if}}
-          </div>
+          <label>Swim Penalty</label>
+          <input type="text" name="system.swimPenalty" value="{{system.swimPenalty}}" placeholder="Auto-computed" readonly />
+          <small>Automatically determined by armor type</small>
         </div>
       </div>
 
@@ -226,6 +174,5 @@
       </div>
 
     </div>
->>>>>>> Stashed changes
   </section>
 </form>

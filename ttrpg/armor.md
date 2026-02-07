@@ -1,30 +1,48 @@
 ## Shields
 ---
+### Shield Reactions
+Depending on the type of shield wielded, certain reactions are granted to the character. The individual shields will list the reactions granted.
+
+#### Ranged Defense
+- **Trigger:** You are targeted by a Ranged attack while wielding a shield.
+- **Effect:** [Reaction] - Force Misfortune on one ranged attack per round.
+- **Notes:** 
+  - Only works against ranged attacks
+
+#### Shield Block
+- **Trigger:** You are hit by a melee attack while wielding a shield
+- **Effect:** Choose one:
+  - **Force Reroll:** [Reaction] once per round, Attacker must reroll one of their success dice
+  - **Increase DR:** [Reaction] once per round, Gain +2 DR against this attack only
+- **Notes:** 
+  - Only works against melee attacks
+
+
 ### Buckler (Light Shield)
 - **Hand Usage:** Occupies off-hand but allows punch/pommel strikes
-- **Melee Defense:** Grants Shield Block reaction
+- **Reactions:** Shield Block
 - **Active Parry:** Once per round as a [Free] action (no reaction cost), Attacker must reroll one of their success dice
 - **Special:** Can make off-hand attacks with the buckler itself (treat as light weapon, 4 damage bludgeoning) using the two-weapon combat action.
 - **Cost:** 10 gp
 
 ### Targe (Round Shield - Medium Shield)
-- **Hand Usage:** Occupies off-hand completely
-- **Melee Defense:** Fortune on defensive melee combat rolls
-- **Ranged Defense:** [Reaction] - Force Misfortune on one ranged attack per round (short range only, 30ft)
-- **Special:** Can be slung on back when not in use (takes 1 [Minor] action to ready)
+- **Hand Usage:** Occupies off-hand completely.
+- **Melee Defense:** Fortune on defensive melee combat rolls.
+- **Reactions:** Shield Block, Ranged Defense
+- **Special:** Can be slung on back when not in use (takes 1 [Minor] action to ready).
 - **Cost:** 10 gp
 
 ### Heater Shield (Medium Shield)
 - **Hand Usage:** Occupies off-hand completely
 - **Melee Defense:** Fortune on defensive melee combat rolls
-- **Ranged Defense:** [Reaction] - Force Misfortune on one ranged attack per round (short or medium range, up to 60ft)
+- **Reactions:** Shield Block, Ranged Defense
 - **Special:** Can be slung on back when not in use (takes 1 [Minor] action to ready)
 - **Cost:** 15 gp
 
 ### Kite Shield (Heavy Shield)
 - **Hand Usage:** Occupies off-hand completely
 - **Melee Defense:** Fortune on defensive melee combat rolls
-- **Ranged Defense:** [Reaction] - Force Misfortune on one ranged attack per round (any range)
+- **Reactions:** Shield Block, Ranged Defense
 - **Requirements:** Strength 3 minimum or suffer Misfortune on your own attacks
 - **Special:** Provides Partial Cover when crouching
 - **Cost:** 20 gp
@@ -32,7 +50,7 @@
 ### Tower Shield (Heavy Shield)
 - **Hand Usage:** Occupies off-hand completely
 - **Melee Defense:** Fortune on defensive melee combat rolls
-- **Ranged Defense:** [Reaction] - Force Misfortune on one ranged attack per round (any range)
+- **Reactions:** Shield Block, Ranged Defense
 - **Requirements:** Strength 4 minimum
 - **Special:** Provides Full Cover when crouching
 - **Cost:** 25 gp

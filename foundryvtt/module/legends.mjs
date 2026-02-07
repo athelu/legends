@@ -353,6 +353,13 @@ function registerHandlebarsHelpers() {
     if (!Array.isArray(array)) return false;
     return array.length > 0;
   });
+
+  // Register JSON stringify helper for serializing arrays/objects in templates
+  Handlebars.registerHelper('json', function(context) {
+    if (!context) return '';
+    if (typeof context === 'string') return context;
+    return JSON.stringify(context, null, 2);
+  });
 }
 
 /* -------------------------------------------- */
