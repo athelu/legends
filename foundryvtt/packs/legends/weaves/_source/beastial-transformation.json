@@ -1,0 +1,10 @@
+{
+  "_id": "0c830d2b63b14d03",
+  "name": "Beastial Transformation",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 7 (transforming into another creature, major transformation, 30 ft. range)\n**Supporting Energy:** Time 3 (duration up to 10 minutes)\n**Range:** touch or self  \n**Duration:** 10 minutes\n**Total Cost:** 10 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery (4d8)\n**Effect:** Transform target at close range (30ft) into a beast. Target gains beast's HP (temporary), physical stats, and abilities. Keeps mental stats and personality. Unwilling targets get Fortitude save. Compare your weaving successes to their save successes. Reverts when reaching 0 HP or weave ends (returns to previous HP total).\n**Saving Throw:** Fortitude (if unwilling, to resist transformation)\n**Success Scaling (Net successes if unwilling = Your successes - Their successes):** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours"
+  },
+  "effects": []
+}

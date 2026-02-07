@@ -1,0 +1,10 @@
+{
+  "_id": "4abe8c53bd1045a0",
+  "name": "Zone of Truth",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "- **Action Cost:** 2 [Combat] actions\n- **Range:** 60 feet\n- **Effect:** Create a 15-foot radius zone centered on a point within range. For 10 minutes, creatures who enter or start their turn in the zone make Will save (Wisdom + Luck) opposed by your Wisdom + Positive Mastery. If you win (more successes), they cannot deliberately lie while in the zone. They may refuse to speak or be evasive, but cannot speak falsehood. They can repeat the save at the start of each of their turns. Athore demands truth.\n- **Usage:** Uses 1 Channel Divinity\n\n---"
+  },
+  "effects": []
+}

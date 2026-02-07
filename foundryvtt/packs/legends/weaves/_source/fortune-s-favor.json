@@ -1,0 +1,10 @@
+{
+  "_id": "0690ddc873e1401c",
+  "name": "Fortune's Favor",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Positive 3 (divine blessing)  \n**Supporting Energy:** Space 5 (close range + 3 targets + 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  \n**Effect:** Up to 3 targets subtract 1 from one die (their choice) on each roll they make.  \n**Saving Throw:** None (beneficial buff, willing targets only)  \n**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
+  },
+  "effects": []
+}

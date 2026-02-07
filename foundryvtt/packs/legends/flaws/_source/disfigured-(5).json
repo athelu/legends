@@ -1,0 +1,10 @@
+{
+  "_id": "04665f62d29d4634",
+  "name": "Disfigured (5)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Missing appendage (hand, foot, arm, leg).\n- Missing hand/foot: Add 2 to related skill die results\n- Missing arm/leg: Related skills impossible or add 4 to die results"
+  },
+  "effects": []
+}

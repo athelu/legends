@@ -152,7 +152,8 @@
       "common": {
         "description": {
           "value": ""
-        }
+        },
+        "img": "icons/svg/item-bag.svg"
       },
       "physical": {
         "weight": 0,

@@ -1,0 +1,10 @@
+{
+  "_id": "65c0e6de6ab54e78",
+  "name": "Light Sensitive (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Not accustomed to bright light.\n- Permanently Dazzled in daylight (see Dazzled condition)\n- Normal at twilight/night with artificial light"
+  },
+  "effects": []
+}

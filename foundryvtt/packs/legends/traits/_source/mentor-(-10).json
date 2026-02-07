@@ -1,0 +1,10 @@
+{
+  "_id": "b74cac36cb904e7e",
+  "name": "Mentor (-10)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "Youth mentor trained you extensively.\n-   +40 XP at character creation\n-   Choose one skill to start at rank 5\n-   **Requires GM approval and backstory**"
+  },
+  "effects": []
+}

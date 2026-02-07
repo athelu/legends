@@ -1,0 +1,15 @@
+{
+  "_id": "88bb8a2e",
+  "name": "Hand Axe",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 4,
+    "damageTwoHand": 4,
+    "damageType": "[Slashing]",
+    "properties": "[Light], [Thrown]",
+    "cost": 15,
+    "quantity": 1
+  },
+  "effects": []
+}

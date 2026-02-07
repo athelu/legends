@@ -1,0 +1,19 @@
+{
+  "_id": "67265832978f4978",
+  "name": "Tumble Through",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "",
+    "actionType": "movement",
+    "actionCost": "1 [Move] action",
+    "trigger": "",
+    "effect": "Acrobatics check (Agility + Acrobatics) to move through an enemy's space\n- **Check:** Opposed by enemy's Reflex save (Agility + Luck)\n- **Success:** You move through their space without provoking Opportunity Attacks\n- **Failure:** Movement ends, you provoke Opportunity Attack\n- **Notes:**\n  - Enemy must be no more than one size larger than you\n  - Useful for flanking or escaping surrounded positions",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

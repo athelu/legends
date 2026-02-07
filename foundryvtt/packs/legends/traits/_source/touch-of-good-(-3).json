@@ -1,0 +1,10 @@
+{
+  "_id": "37c5f8769a3b43b0",
+  "name": "Touch of Good (-3)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "From surprisingly good family stock.\n-   Persuasion: Subtract 1 from die results\n-   NPCs start with favorable impression\n\n---"
+  },
+  "effects": []
+}

@@ -1,0 +1,15 @@
+{
+  "_id": "6347d51b",
+  "name": "Rapier",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 8,
+    "damageTwoHand": 8,
+    "damageType": "[Piercing]",
+    "properties": "[Standard], [Finesse]",
+    "cost": 30,
+    "quantity": 1
+  },
+  "effects": []
+}

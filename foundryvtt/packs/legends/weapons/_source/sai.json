@@ -1,0 +1,15 @@
+{
+  "_id": "dbc03d8b",
+  "name": "Sai",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 6,
+    "damageTwoHand": 6,
+    "damageType": "[Piercing]",
+    "properties": "[Light], [Finesse], [Thrown]",
+    "cost": 10,
+    "quantity": 1
+  },
+  "effects": []
+}

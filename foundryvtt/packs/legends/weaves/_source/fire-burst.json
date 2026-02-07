@@ -1,0 +1,10 @@
+{
+  "_id": "265a02ec55944f49",
+  "name": "Fire Burst",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Fire 2 (burst of flame from palm, damage)\n**Supporting Energy:** None (touch to 5ft range)\n**Total Cost:** 2 Energy\n**Action:** Simple weave (1 action)\n**Weaving Roll:** Fire Potential + Fire Mastery (2d8 only)\n**Effect:** Channel flames through your palm to burn a target within 5 feet. Target takes 4 fire damage. This is an attack weave—no saving throw allowed.\n**Saving Throw:** None (attack weave, weaving successes determine hit quality)\n**Damage Type:** Fire (energy)\n**DR Interaction:** Half DR (4 fire damage vs DR 4 becomes 4 - 2 = 2 damage)\n**Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)\n**Tactical Note:** Does NOT provoke opportunity attacks. Ideal for melee situations where Fire Bolt would provoke."
+  },
+  "effects": []
+}

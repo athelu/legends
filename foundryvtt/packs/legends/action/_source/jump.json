@@ -1,0 +1,19 @@
+{
+  "_id": "77b3f2a1dcca428d",
+  "name": "Jump",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "",
+    "actionType": "movement",
+    "actionCost": "Part of your movement (consumes feet of movement)",
+    "trigger": "",
+    "effect": "",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

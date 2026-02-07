@@ -1,0 +1,10 @@
+{
+  "_id": "19b00df520a74edc",
+  "name": "Black Sheep (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Family has disowned you. No family support."
+  },
+  "effects": []
+}

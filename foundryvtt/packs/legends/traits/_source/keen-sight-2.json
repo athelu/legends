@@ -1,0 +1,10 @@
+{
+  "_id": "7bdcd471",
+  "name": "Keen Sight (-2)",
+  "type": "trait",
+  "system": {
+    "description": "Vision better than normal.\n-   Vision-based Perception: Subtract 1 from die results",
+    "quantity": 1
+  },
+  "effects": []
+}

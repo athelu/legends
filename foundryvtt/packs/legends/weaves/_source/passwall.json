@@ -1,0 +1,10 @@
+{
+  "_id": "633f3643632f4bc4",
+  "name": "Passwall",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Earth 6 (creating temporary passage)  \n**Supporting Energy:** Space 1 (close range) / Time 2 (duration 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create a passage at close range up to 5 feet wide, 8 feet tall, and 20 feet deep through wood, plaster, or stone. When weave ends, creatures still in passage are ejected safely.  \n**Saving Throw:** None (environmental manipulation)  \n**Success Scaling:** 0 = fails, 1 = 10 feet deep (1 round), 2 = full effect, 3 = 40 feet deep (10 minutes), 4 = permanent passage"
+  },
+  "effects": []
+}

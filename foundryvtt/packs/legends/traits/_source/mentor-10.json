@@ -1,0 +1,10 @@
+{
+  "_id": "1957e51c",
+  "name": "Mentor (-10)",
+  "type": "trait",
+  "system": {
+    "description": "Youth mentor trained you extensively.\n-   +40 XP at character creation\n-   Choose one skill to start at rank 5\n-   **Requires GM approval and backstory**",
+    "quantity": 1
+  },
+  "effects": []
+}

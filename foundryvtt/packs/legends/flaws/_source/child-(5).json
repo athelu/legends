@@ -1,0 +1,10 @@
+{
+  "_id": "fd99f0aeb10644a0",
+  "name": "Child (5)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Begin below minimum age, inexperienced.\n- Reduce all attributes by 1 (minimum 1)\n- Do no select a background\n- +24 XP at creation to spend on advancement"
+  },
+  "effects": []
+}

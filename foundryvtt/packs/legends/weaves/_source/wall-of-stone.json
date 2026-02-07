@@ -1,0 +1,10 @@
+{
+  "_id": "6380b565f2ae46ff",
+  "name": "Wall of Stone",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Earth 6 (solid stone barrier)  \n**Supporting Energy:** Space 2 (medium range + wall area)  \n**Range:** Medium, 60 ft. (60 feet long, 20 feet high)  \n**Duration:** Permanent  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  \n**Effect:** Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 4. Can shape into crenellations, bridges, etc.  \n**Saving Throw:** None (creates barrier)  \n**Success Scaling:** 0 = fails, 1 = 1 minute duration only, 2 = permanent, 3 = double HP, 4 = triple HP and can create complex shapes\n\n---"
+  },
+  "effects": []
+}

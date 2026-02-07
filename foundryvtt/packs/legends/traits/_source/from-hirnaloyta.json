@@ -1,0 +1,10 @@
+{
+  "_id": "518fa467",
+  "name": "From Hirnaloyta:",
+  "type": "trait",
+  "system": {
+    "description": "**Speak with Nature** - Communicate with plants and beasts for 10 minutes",
+    "quantity": 1
+  },
+  "effects": []
+}

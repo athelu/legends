@@ -1,0 +1,10 @@
+{
+  "_id": "5f3355f2589d4086",
+  "name": "Evil Divine Casters",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": ""
+  },
+  "effects": []
+}

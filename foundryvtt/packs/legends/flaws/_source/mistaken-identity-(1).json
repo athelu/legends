@@ -1,0 +1,10 @@
+{
+  "_id": "39026a19f20b49c3",
+  "name": "Mistaken Identity (1)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Common appearance, often mistaken for others."
+  },
+  "effects": []
+}

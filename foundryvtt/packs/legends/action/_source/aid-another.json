@@ -1,0 +1,19 @@
+{
+  "_id": "a7a46a85030b46cc",
+  "name": "Aid Another",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "",
+    "actionType": "combat",
+    "actionCost": "1 [Combat] action",
+    "trigger": "",
+    "effect": "Make a skill check to help an ally with their action\n- **Success (1+):** Your ally gains Fortune on their next roll for that task\n- **Notes:**\n  - Must be able to meaningfully help (GM discretion)\n  - Can aid attacks, skill checks, or other actions\n  - Subject to Multiple Action Penalty",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

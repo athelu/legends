@@ -1,0 +1,22 @@
+{
+  "_id": "7fced6d9198a47a0",
+  "name": "Armor Properties",
+  "type": "armor",
+  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "system": {
+    "description": "- **Movement:** Armor does NOT reduce movement speed or impose Agility/Dexterity penalties",
+    "armorType": "",
+    "dr": {
+      "slashing": 0,
+      "piercing": 0,
+      "bludgeoning": 0
+    },
+    "stealthPenalty": "none",
+    "swimPenalty": "",
+    "donTime": "",
+    "doffTime": "",
+    "weight": "",
+    "cost": ""
+  },
+  "effects": []
+}

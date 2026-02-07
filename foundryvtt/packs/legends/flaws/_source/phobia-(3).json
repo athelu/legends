@@ -1,0 +1,10 @@
+{
+  "_id": "0daff878eb3d4591",
+  "name": "Phobia (3)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Deathly afraid of something. Make Will save (1 success required) or flee/cower when confronted."
+  },
+  "effects": []
+}

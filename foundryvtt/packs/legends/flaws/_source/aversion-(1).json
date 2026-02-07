@@ -1,0 +1,10 @@
+{
+  "_id": "00de2060555a4c22",
+  "name": "Aversion (1)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Particular dislike for one thing. Will remove it from your presence."
+  },
+  "effects": []
+}

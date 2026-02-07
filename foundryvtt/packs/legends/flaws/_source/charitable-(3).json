@@ -1,0 +1,10 @@
+{
+  "_id": "644b930c826e4b51",
+  "name": "Charitable (3)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "You can't stand to see others suffer.\n- Make Will save (1 success required) to refuse reasonable requests for help, even from enemies\n- Must give to beggars and help wounded, even at personal risk\n- Put others' needs before your own safety"
+  },
+  "effects": []
+}

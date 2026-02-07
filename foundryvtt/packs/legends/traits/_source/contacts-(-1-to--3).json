@@ -1,0 +1,10 @@
+{
+  "_id": "b6a0031ceaa84fdb",
+  "name": "Contacts (-1 to -3)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "Associates or influential people for information/favors.\n-   One Contact (-1)\n-   Two Contacts (-2)\n-   Three Contacts (-3)"
+  },
+  "effects": []
+}

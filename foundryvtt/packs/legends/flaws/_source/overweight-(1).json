@@ -1,0 +1,10 @@
+{
+  "_id": "cd3ce50c407a4582",
+  "name": "Overweight (1)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "You carry extra weight that affects your mobility.\n- Choose one when taking this flaw:\n  - **Athletics Penalty:** Add 1 to Athletics die results\n  - **Acrobatics Penalty:** Add 1 to Acrobatics die results"
+  },
+  "effects": []
+}

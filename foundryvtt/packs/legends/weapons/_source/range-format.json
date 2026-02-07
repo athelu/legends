@@ -1,0 +1,15 @@
+{
+  "_id": "f30bec5a1d9041c7",
+  "name": "Range Format",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "Ranges listed as Short/Medium/Long (e.g., 60/120/240 means short range 60ft, medium 120ft, long 240ft)",
+    "damage": "",
+    "range": "",
+    "weight": "",
+    "cost": "",
+    "properties": []
+  },
+  "effects": []
+}

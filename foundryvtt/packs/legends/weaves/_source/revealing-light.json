@@ -1,0 +1,10 @@
+{
+  "_id": "9b35450ec40449a9",
+  "name": "Revealing Light",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Positive 2 (revealing light outlining creatures)  \n**Supporting Energy:** Space 4 (medium range + 20ft cube + 1 minute)  \n**Range:** Medium, 60 ft. (20-foot cube)  \n**Duration:** 1 minute  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  \n**Effect:** All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make Reflex save. Compare your weaving successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.  \n**Saving Throw:** Reflex (to avoid being outlined)  \n**Success Scaling:** 0 = no effect, 1 = dim light only, 2 = full effect, 3 = 30-foot cube, 4 = 10 minutes duration"
+  },
+  "effects": []
+}

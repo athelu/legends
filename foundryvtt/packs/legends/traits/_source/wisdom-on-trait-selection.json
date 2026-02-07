@@ -1,0 +1,10 @@
+{
+  "_id": "6c9b51dd710f49bd",
+  "name": "WISDOM ON TRAIT SELECTION",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "**When to take a trait:**\n-   You want to play a spellcaster (Mageborn, Divine Gift, Sorcerous Origin, Eldritch Pact, Invoker, Infuser)\n-   You want a supernatural characteristic (Immortality, Mythic Characteristic)\n-   You want a permanent passive benefit that defines your character (Eidetic Memory, Quickened Reflexes)\n-   You want a supernatural characteristic (Immortality, Mythic Characteristic)\n-   You want a permanent passive benefit that defines your character (Eidetic Memory, Quickened Reflexes)\n\n**When NOT to take a trait:**\n-   You want combat abilities → Use feats instead\n-   You want class features → Use feats instead\n-   You want skills → Use XP and backgrounds instead\n\nThe trait system is now focused and purposeful, reserving its mechanical weight for truly exceptional or supernatural capabilities.\n\n---"
+  },
+  "effects": []
+}

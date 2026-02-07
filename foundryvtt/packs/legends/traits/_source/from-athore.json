@@ -1,0 +1,10 @@
+{
+  "_id": "5126ff71",
+  "name": "From Athore:",
+  "type": "trait",
+  "system": {
+    "description": "**Zone of Truth** - Create 15ft radius where creatures cannot lie (Will save to resist)",
+    "quantity": 1
+  },
+  "effects": []
+}

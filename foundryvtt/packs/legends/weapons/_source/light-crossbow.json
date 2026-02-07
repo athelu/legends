@@ -1,0 +1,15 @@
+{
+  "_id": "fd654659",
+  "name": "Light Crossbow",
+  "type": "weapon",
+  "system": {
+    "description": "",
+    "damageOneHand": 6,
+    "damageTwoHand": 6,
+    "damageType": "[Piercing]",
+    "properties": "[Two-Handed], [Ranged]",
+    "cost": 65,
+    "quantity": 1
+  },
+  "effects": []
+}

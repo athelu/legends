@@ -1,0 +1,10 @@
+{
+  "_id": "d9978895adf148f1",
+  "name": "Divine Gift (-7)",
+  "type": "trait",
+  "img": "** `icons/skills/holy/halo-divine-light.webp`",
+  "system": {
+    "description": "**Image:** `icons/skills/holy/halo-divine-light.webp`\n**Requirements:** Wisdom ≥ 3\n\nYou have dedicated yourself to the Pantheon of Eight through deep study and spiritual devotion. While you honor all eight deities, one has called to you as your patron (or you serve the pantheon equally), granting you the ability to channel divine power through your pneuma. Your eyes flash with violet light when completing each weave.\n\n**Choose Your Patron:**\nSelect which of the Eight you primarily serve, or choose to serve the Pantheon equally as a generalist. This determines your energy affinities and grants you specific Channel Divinity options. You still worship and respect the entire pantheon.\n\n**Mechanical Benefits:**\n- Roll **8d8**, assign to eight Magical Potentials\n- Your patron deity determines **Primary** and **Secondary** energy bonuses:\n  - **Primary Energy** = highest roll + 2 (max 8)\n  - **Secondary Energy** = second-highest roll + 1 (max 8)\n  - **Generalist** = highest roll + 1, second-highest roll + 1, third-highest roll + 1\n- Use **Wisdom** as Casting Stat\n- Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0)\n- Can weave divine magic using all 8 energies\n- **Energy Pool:** Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)\n- **Channel Divinity:** 2 uses per long rest. Gain access to all Channel Divinity options for your chosen patron.\n\n---"
+  },
+  "effects": []
+}

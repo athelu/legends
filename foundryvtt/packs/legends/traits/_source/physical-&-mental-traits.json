@@ -1,0 +1,10 @@
+{
+  "_id": "56a73ddbeebb49d9",
+  "name": "PHYSICAL & MENTAL TRAITS",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": ""
+  },
+  "effects": []
+}

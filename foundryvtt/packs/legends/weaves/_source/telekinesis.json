@@ -1,0 +1,10 @@
+{
+  "_id": "39429c4d70544ded",
+  "name": "Telekinesis",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 6 (moving objects with force + medium range)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Medium, 60 ft.  \n**Duration:** 10 minutes  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions), then action each round to maintain control  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Move object up to 500 lbs up to 30 feet per round at medium range. Can use to restrain creature (opposed check: your Space Mastery vs their Athletics). Restrained creature can retry each round (1 success escapes).  \n**Saving Throw:** Athletics vs Space Mastery (if restraining creature)  \n**Success Scaling:** 0 = fails, 1 = 100 lbs (1 minute), 2 = 500 lbs (full effect), 3 = 1000 lbs (1 hour), 4 = 2000 lbs and can fine manipulate (8 hours)\n\n---"
+  },
+  "effects": []
+}

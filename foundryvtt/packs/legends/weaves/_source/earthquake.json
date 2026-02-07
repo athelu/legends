@@ -1,0 +1,10 @@
+{
+  "_id": "e99f227f49684116",
+  "name": "Earthquake",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Earth 8 (major terrain disruption)  \n**Supporting Energy:** Space 7 (medium range + 50ft radius + 1 minute)  \n**Range:** Medium, 60 ft. (50-foot radius)  \n**Duration:** 1 minute  \n**Total Cost:** 15 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  \n**Effect:** Ground shakes violently in area. All creatures make Reflex save. Compare your weaving successes to their save successes. If you have more, creatures fall Prone. Structures may collapse (GM discretion). Area becomes difficult terrain.  \n**Saving Throw:** Reflex (to avoid falling prone)  \n**Success Scaling:** 0 = no effect, 1 = 1 round (25ft radius), 2 = full effect (50ft radius, 1 minute), 3 = 100ft radius, 4 = major structural damage, fissures open (200ft radius)  \n**Prone + Restrained Condition (at Net 4):** Targets not only fall Prone but may become partially buried (Restrained) if near collapsing structures."
+  },
+  "effects": []
+}

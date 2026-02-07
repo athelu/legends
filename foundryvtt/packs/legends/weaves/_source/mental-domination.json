@@ -1,0 +1,10 @@
+{
+  "_id": "3461ad4be19340f7",
+  "name": "Mental Domination",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 8 (controlling mind + medium range)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Medium, 60 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 10 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Humanoid target at medium range makes Will save. Compare your weaving successes to their save successes. If you have more, you control target's actions (won't take obviously harmful actions). Target can repeat save when taking damage (1 success ends effect).  \n**Saving Throw:** Will (to resist mental domination)  \n**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
+  },
+  "effects": []
+}

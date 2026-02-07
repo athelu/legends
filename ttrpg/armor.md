@@ -19,6 +19,7 @@ Depending on the type of shield wielded, certain reactions are granted to the ch
 
 
 ### Buckler (Light Shield)
+- **Image:** `icons/equipment/shield/buckler-metal-blue.webp`
 - **Hand Usage:** Occupies off-hand but allows punch/pommel strikes
 - **Reactions:** Shield Block
 - **Active Parry:** Once per round as a [Free] action (no reaction cost), Attacker must reroll one of their success dice
@@ -26,6 +27,7 @@ Depending on the type of shield wielded, certain reactions are granted to the ch
 - **Cost:** 10 gp
 
 ### Targe (Round Shield - Medium Shield)
+- **Image:** `icons/equipment/shield/round-wood-reinforced.webp`
 - **Hand Usage:** Occupies off-hand completely.
 - **Melee Defense:** Fortune on defensive melee combat rolls.
 - **Reactions:** Shield Block, Ranged Defense
@@ -33,6 +35,7 @@ Depending on the type of shield wielded, certain reactions are granted to the ch
 - **Cost:** 10 gp
 
 ### Heater Shield (Medium Shield)
+- **Image:** `icons/equipment/shield/heater-marked-red.webp`
 - **Hand Usage:** Occupies off-hand completely
 - **Melee Defense:** Fortune on defensive melee combat rolls
 - **Reactions:** Shield Block, Ranged Defense
@@ -40,6 +43,7 @@ Depending on the type of shield wielded, certain reactions are granted to the ch
 - **Cost:** 15 gp
 
 ### Kite Shield (Heavy Shield)
+- **Image:** `icons/equipment/shield/kite-steel-blue.webp`
 - **Hand Usage:** Occupies off-hand completely
 - **Melee Defense:** Fortune on defensive melee combat rolls
 - **Reactions:** Shield Block, Ranged Defense
@@ -48,6 +52,7 @@ Depending on the type of shield wielded, certain reactions are granted to the ch
 - **Cost:** 20 gp
 
 ### Tower Shield (Heavy Shield)
+- **Image:** `icons/equipment/shield/tower-wood-blue.webp`
 - **Hand Usage:** Occupies off-hand completely
 - **Melee Defense:** Fortune on defensive melee combat rolls
 - **Reactions:** Shield Block, Ranged Defense
@@ -56,6 +61,7 @@ Depending on the type of shield wielded, certain reactions are granted to the ch
 - **Cost:** 25 gp
 
 ### Pavise (Heavy Shield)
+- **Image:** `icons/equipment/shield/pavise-wood-steel.webp`
 - **Hand Usage:** Requires both hands to move/position, but can be planted
 - **Planted Mode:** Use 1 [Move] action to plant shield. While planted:
     - Provides full cover against ranged attacks from one direction (choose direction when planting)

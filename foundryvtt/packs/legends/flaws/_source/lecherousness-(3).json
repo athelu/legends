@@ -1,0 +1,10 @@
+{
+  "_id": "16469c37316b44b6",
+  "name": "Lecherousness (3)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "**GM Approval Required - Mature Tables Only**\n\nYou are constantly seeking romantic/sexual attention.\n- Make Will save (1 success required) to avoid making advances, even in inappropriate situations\n- Can result in damaged relationships, jealous rivals, or unwanted complications\n- GM determines appropriateness for table"
+  },
+  "effects": []
+}

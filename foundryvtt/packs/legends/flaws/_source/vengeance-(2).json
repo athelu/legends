@@ -1,0 +1,10 @@
+{
+  "_id": "e1c1836583ac446c",
+  "name": "Vengeance (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Someone wronged you terribly. Life devoted to revenge.\n\n---\n\n## FLAWS REQUIRING GM APPROVAL\n\nSome flaws require GM approval due to their extreme nature, potential to disrupt the campaign, or need for mature roleplaying."
+  },
+  "effects": []
+}

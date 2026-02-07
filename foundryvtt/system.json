@@ -86,14 +86,14 @@
     {
       "name": "action",
       "label": "Legends - Actions",
-      "path": "packs/action",
+      "path": "packs/legends/action",
       "type": "Item",
       "system": "legends"
     },
     {
       "name": "abilities",
       "label": "Legends - Abilities",
-      "path": "packs/abilities",
+      "path": "packs/legends/abilities",
       "type": "Item",
       "system": "legends"
     }
@@ -113,13 +113,16 @@
     "Item": {
       "weapon": {},
       "armor": {},
+      "shield": {},
       "equipment": {},
       "weave": {},
       "feat": {},
       "trait": {},
       "flaw": {},
       "background": {},
-      "ancestry": {}
+      "ancestry": {},
+      "action": {},
+      "ability": {}
     }
   },
   "socket": false,

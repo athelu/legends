@@ -1,0 +1,10 @@
+{
+  "_id": "61ff8da06e004c28",
+  "name": "Intuition (-3)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "Overdeveloped sixth sense.\n-   Perception and Investigate: Subtract 1 from die results\n-   GM may give \"hunches\""
+  },
+  "effects": []
+}

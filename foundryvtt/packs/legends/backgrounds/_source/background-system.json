@@ -1,0 +1,10 @@
+{
+  "_id": "4ef0a690",
+  "name": "Background System",
+  "type": "background",
+  "system": {
+    "description": "Each character chooses one background during character creation. Backgrounds represent your life before adventuring and provide:\n- Skill Training: A set of skills with specific ranks (48 XP value)\n- Starting Equipment: Basic tools and gear for your profession\n- Background Feature: A special ability or social benefit (primarily roleplay-focused)\n\n### Background Patterns\n\nAll backgrounds provide exactly 48 XP worth of skills, distributed in one of four patterns, plus additional XP for customizatio",
+    "quantity": 1
+  },
+  "effects": []
+}

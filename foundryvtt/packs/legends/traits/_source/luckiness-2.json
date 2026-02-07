@@ -1,0 +1,10 @@
+{
+  "_id": "b84f8819",
+  "name": "Luckiness (-2)",
+  "type": "trait",
+  "system": {
+    "description": "Fortune favors you.\n-   Start each session with 2 bonus Luck points beyond attribute\n\n---\n\n## SPECIAL TRAITS (GM Approval Required)",
+    "quantity": 1
+  },
+  "effects": []
+}

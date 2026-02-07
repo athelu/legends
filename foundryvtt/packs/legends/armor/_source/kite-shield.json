@@ -1,0 +1,31 @@
+{
+  "_id": "149d7eed",
+  "name": "Kite Shield",
+  "type": "shield",
+  "system": {
+    "description": "Kite Shield shield",
+    "shieldType": "kite",
+    "handUsage": "off-hand",
+    "meleeDefense": "Fortune on defensive melee combat rolls",
+    "reactions": [
+      {
+        "name": "Shield Block",
+        "type": "reaction",
+        "trigger": "You are hit by a melee attack",
+        "description": "Choose: Force Reroll OR Gain +2 DR (once per round)"
+      },
+      {
+        "name": "Ranged Defense",
+        "type": "reaction",
+        "trigger": "You are targeted by ranged attack",
+        "description": "Force Misfortune on one ranged attack (once per round)"
+      }
+    ],
+    "requirements": "Strength 3 minimum or suffer Misfortune on attacks",
+    "specialAbilities": "Provides Partial Cover when crouching",
+    "cost": 20,
+    "plantedMode": false,
+    "quantity": 1
+  },
+  "effects": []
+}

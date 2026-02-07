@@ -1,0 +1,10 @@
+{
+  "_id": "724b4167f2ae4f30",
+  "name": "SOCIAL & BACKGROUND TRAITS",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": ""
+  },
+  "effects": []
+}

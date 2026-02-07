@@ -1,0 +1,19 @@
+{
+  "_id": "fd655025250748d5",
+  "name": "Called Shot",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "",
+    "actionType": "combat",
+    "actionCost": "1 [Combat] action (replaces normal attack)",
+    "trigger": "",
+    "effect": "Add 1 to both attack die results, but on hit choose one:\n  - Bypass half DR (rounded down)\n  - Apply specific condition (Bleeding, Dazzled, etc. - GM approval required)\n  - Deny shield Ranged Defense [Reaction]\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

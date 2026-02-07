@@ -1,0 +1,10 @@
+{
+  "_id": "989c63daa3ac4d51",
+  "name": "Disintegrate",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Negative 8 (reducing matter to dust, extreme damage)\n**Supporting Energy:** Space 2 (medium range 60ft)\n**Total Cost:** 10 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Negative Potential + Negative Mastery + Space Potential + Space Mastery (4d8)\n**Effect:** Thin green ray. Target takes 40 negative damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target is disintegrated (turned to dust). Only resurrection magic can restore them.\n**Saving Throw:** Fortitude (to reduce damage)\n**Damage Type:** Negative (energy)\n**DR Interaction:** Half DR (40 negative damage vs DR 4 becomes 40 - 2 = 38 damage)\n**Success Scaling (Net successes = Your successes - Their successes):** 0 = half damage (20), 1 = 3/4 damage (30), 2 = full damage (40), 3 = +8 damage (48 total), 4 = +16 damage (56 total, instant disintegration if reduced to 0)"
+  },
+  "effects": []
+}

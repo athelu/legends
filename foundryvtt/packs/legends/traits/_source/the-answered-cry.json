@@ -1,0 +1,10 @@
+{
+  "_id": "43af74df10c84c1d",
+  "name": "The Answered Cry",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "**Energies:** Air (highest +2), Negative (any +1), Space, Time, Water\n**Story:** *You screamed into the void. The void answered.*\n**Pact Conduit - Void Resonance:** Whenever you weave using Air or Space as primary energy, you can target one additional creature within range (make separate weaving rolls for each). The void spreads your intent.\n**Pact Gift:** You can communicate telepathically with any creature you can see within 30 feet"
+  },
+  "effects": []
+}
