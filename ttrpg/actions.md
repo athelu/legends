@@ -112,6 +112,7 @@ These maneuvers modify or replace your standard attacks:
 - **Effect:** Add 1 to both attack die results, but on hit choose one:
   - Bypass half DR (rounded down)
   - Apply specific condition (Bleeding, Dazzled, etc. - GM approval required)
+  - Deny shield Ranged Defense [Reaction]
 - **Notes:**
   - Declare before rolling
   - Subject to Multiple Action Penalty
@@ -689,15 +690,6 @@ All characters have access to these reactions:
   - Movement within your reach doesn't trigger this reaction
   - Teleportation and forced movement don't trigger this reaction
   - The Disengage action prevents opportunity attacks
-
-#### Shield Block (requires wielding a shield)
-- **Trigger:** You are hit by a melee attack while wielding a shield
-- **Effect:** Choose one:
-  - **Force Reroll:** [Reaction] once per round, Attacker must reroll one of their success dice
-  - **Increase DR:** [Reaction] once per round, Gain +2 DR against this attack only
-- **Notes:** 
-  - Only works against melee attacks
-  - See Armor for shield-specific bonus reactions
 
 #### Counterweave [Combat]
 - **Requirements:** Ability to weave, Space energy available

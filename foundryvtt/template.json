@@ -147,7 +147,7 @@
     }
   },
   "Item": {
-    "types": ["weapon", "armor", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry", "action", "ability"],
+    "types": ["weapon", "armor", "shield", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry", "action", "ability"],
     "templates": {
       "common": {
         "description": {
@@ -187,26 +187,30 @@
       }
     ]
     },
-    "armor": {
+      "armor": {
       "templates": ["common", "physical"],
       "armorType": "light",
       "dr": {
-<<<<<<< Updated upstream
-        "value": 0
-      },
-      "properties": []
-=======
         "slashing": 0,
         "piercing": 0,
         "bludgeoning": 0
       },
-      "properties": [],
-      "stealthPenalty": "",
-      "shieldType": "",
+      "stealthPenalty": "none",
+      "swimPenalty": "",
       "donTime": "",
       "doffTime": "",
       "notes": ""
->>>>>>> Stashed changes
+    },
+    "shield": {
+      "templates": ["common", "physical"],
+      "shieldType": "buckler",
+      "handUsage": "",
+      "meleeDefense": "",
+      "reactions": [],
+      "requirements": "",
+      "specialAbilities": "",
+      "plantedMode": false,
+      "notes": ""
     },
     "equipment": {
       "templates": ["common", "physical"]

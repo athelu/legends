@@ -58,32 +58,54 @@ export class D8Actor extends Actor {
  */
 _prepareCharacterData(actorData) {
   const systemData = actorData.system;
-  
-  // Calculate base DR from equipped armor
-  let baseDR = 0;
-  
-  // Store armor pieces for damage-type-specific DR calculation
+  // Aggregate DR per damage type from equipped armor
+  let slashingTotal = 0;
+  let piercingTotal = 0;
+  let bludgeoningTotal = 0;
+
+  // Store armor pieces for reference
   systemData.equippedArmor = [];
-  
+
   for (let item of actorData.items) {
     if (item.type === 'armor' && item.system.equipped) {
-      baseDR += item.system.dr?.value || 0;
-      
-      // Store armor data for damage-type-specific calculations
+      // If armor uses per-type DR object, add those. If legacy single value exists, apply to all types.
+      if (item.system.dr && typeof item.system.dr === 'object') {
+        slashingTotal += item.system.dr.slashing || 0;
+        piercingTotal += item.system.dr.piercing || 0;
+        bludgeoningTotal += item.system.dr.bludgeoning || 0;
+      } else if (item.system.dr && (item.system.dr.value !== undefined)) {
+        // legacy single-value DR (apply to all types)
+        const v = item.system.dr.value || 0;
+        slashingTotal += v;
+        piercingTotal += v;
+        bludgeoningTotal += v;
+      }
+
       systemData.equippedArmor.push({
         name: item.name,
-        baseDR: item.system.dr?.value || 0,
-        weakness: item.system.weakness || {},
-        resistance: item.system.resistance || {}
+        dr: item.system.dr || {},
+        isShield: false
+      });
+    }
+    
+    // Shields are tracked separately, not included in armor DR aggregation
+    if (item.type === 'shield' && item.system.equipped) {
+      if (!systemData.equippedShields) systemData.equippedShields = [];
+      systemData.equippedShields.push({
+        name: item.name,
+        shieldType: item.system.shieldType,
+        reactions: item.system.reactions || []
       });
     }
   }
-  
-  // Store base DR (used for display purposes)
-  if (!systemData.dr) {
-    systemData.dr = { value: 0, bonus: 0 };
-  }
-  systemData.dr.value = baseDR + (systemData.dr.bonus || 0);
+
+  // Store aggregated DR totals and a simple summary value
+  if (!systemData.dr) systemData.dr = {};
+  systemData.dr.slashing = slashingTotal;
+  systemData.dr.piercing = piercingTotal;
+  systemData.dr.bludgeoning = bludgeoningTotal;
+  // summary: best protection
+  systemData.dr.total = Math.max(slashingTotal, piercingTotal, bludgeoningTotal);
 }
   
   /**
