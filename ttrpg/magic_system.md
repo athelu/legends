@@ -433,13 +433,17 @@ Choose the appropriate table based on what you're trying to accomplish.
 
 Supporting Energy modifies the delivery and scope of your Primary effect.
 
+<<<<<<< Updated upstream
+=======
 **Range Energy:** Space.
 **Area Energy:** Space
 **Duration Energy:** Time.
 **Range/Area and Duration:** Supporting Space energy covers the cost of both (add costs together).
-***Exception***
-   When your Primary Energy IS Space, add the area/range and Duration cost to the primary energy cost.
+- ***Exception***
+      When your Primary Energy IS Space, add the area/range cost to the primary energy cost.
+      use time for the duration cost. 
 
+>>>>>>> Stashed changes
 ##### Supporting Energy: Range (typically Air or Space)
 - 0 points: Touch
 - 1 point: Close (30 feet)

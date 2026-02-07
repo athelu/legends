@@ -50,55 +50,47 @@
 ## Armor Types
 ---
 
-#### Aketon/Light Padded - DR 2
-- **Weakness:** Piercing (DR 1)
-- **Resistance:** Bludgeoning (DR 3)
+#### Aketon/Light Padded
+- **DR:** Slashing 2, Piercing 1, Bludgeoning 3
 - **Stealth:** No penalty
 - **Cost:** 15 gp
 - **Keyword:** [LightArmor]
 
-#### Brigandine/Coat of Plates - DR 6
-- **Weakness:** None
-- **Resistance:** None
+#### Brigandine/Coat of Plates
+- **DR:** Slashing 6, Piercing 6, Bludgeoning 6
 - **Cost:** 400 gp
 - **Keyword:** [MediumArmor], [Noisy]
 
-#### Chain Mail - DR 5
-- **Weakness:** Bludgeoning (DR 4)
-- **Resistance:** Slashing (DR 6)
+#### Chain Mail
+- **DR:** Slashing 6, Piercing 5, Bludgeoning 4
 - **Cost:** 200 gp
 - **Keyword:** [MediumArmor], [Noisy]
 
-#### Gambeson - DR 4
-- **Weakness:** Piercing (DR 2)
-- **Resistance:** Bludgeoning (DR 5)
+#### Gambeson
+- **DR:** Slashing 4, Piercing 2, Bludgeoning 5
 - **Stealth:** No penalty
 - **Cost:** 40 gp
 - **Keyword:** [MediumArmor]
 
-#### Leather Armor/Cuir Bouilli (Hardened Leather) - DR 3
-- **Weakness:** Piercing (DR 2)
-- **Resistance:** Bludgeoning (DR 4)
+#### Leather Armor/Cuir Bouilli (Hardened Leather)
+- **DR:** Slashing 3, Piercing 2, Bludgeoning 4
 - **Stealth:** No penalty
 - **Description:** Boiled and hardened leather plates, shaped and rigid
 - **Cost:** 200 gp
 - **Keyword:** [LightArmor]
 
-#### Plate, Full - DR 8
-- **Weakness:** Bludgeoning (DR 6)
-- **Resistance:** Slashing (DR 9)
+#### Plate, Full
+- **DR:** Slashing 9, Piercing 8, Bludgeoning 6
 - **Cost:** 750 gp
 - **Keyword:** [HeavyArmor], [Loud]
 
-#### Scale Mail - DR 5
-- **Weakness:** Bludgeoning (DR 4)
-- **Resistance:** Slashing (DR 6)
+#### Scale Mail
+- **DR:** Slashing 6, Piercing 5, Bludgeoning 4
 - **Cost:** 250 gp
 - **Keyword:** [MediumArmor], [Noisy]
 
-#### Splint Mail - DR 7
-- **Weakness:** Bludgeoning (DR 6)
-- **Resistance:** Slashing (DR 8)
+#### Splint Mail
+- **DR:** Slashing 8, Piercing 7, Bludgeoning 6
 - **Cost:** 500 gp
 - **Keyword:** [HeavyArmor], [Loud]
 
