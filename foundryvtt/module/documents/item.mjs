@@ -48,9 +48,20 @@ export class D8Item extends Item {
   _prepareArmorData(itemData) {
     const systemData = itemData.system;
     
-    // Set default DR if not specified
-    if (!systemData.dr.value) {
-      systemData.dr.value = 0;
+    // Initialize DR structure with all three damage types
+    if (!systemData.dr) {
+      systemData.dr = {};
+    }
+    
+    // Ensure all damage types have values
+    if (systemData.dr.slashing === undefined || systemData.dr.slashing === null) {
+      systemData.dr.slashing = 0;
+    }
+    if (systemData.dr.piercing === undefined || systemData.dr.piercing === null) {
+      systemData.dr.piercing = 0;
+    }
+    if (systemData.dr.bludgeoning === undefined || systemData.dr.bludgeoning === null) {
+      systemData.dr.bludgeoning = 0;
     }
   }
   

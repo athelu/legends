@@ -175,9 +175,22 @@
       "templates": ["common", "physical"],
       "armorType": "light",
       "dr": {
+<<<<<<< Updated upstream
         "value": 0
       },
       "properties": []
+=======
+        "slashing": 0,
+        "piercing": 0,
+        "bludgeoning": 0
+      },
+      "properties": [],
+      "stealthPenalty": "",
+      "shieldType": "",
+      "donTime": "",
+      "doffTime": "",
+      "notes": ""
+>>>>>>> Stashed changes
     },
     "equipment": {
       "templates": ["common", "physical"]
