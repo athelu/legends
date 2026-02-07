@@ -1,0 +1,19 @@
+{
+  "_id": "37b13495a7854218",
+  "name": "Ranged Attack",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "Ranged weapon, target within range\n- **Effect:** Make an attack roll (Dexterity + Ranged Combat)\n- **Range Bands:**\n  - **Short range:** 1 success needed for base damage, 2 successes for base + Dexterity modifier\n  - **Medium range:** 2 successes needed for base + Dexterity modifier\n  - **Long range:** 2 successes needed, Add 1 to both die results\n- **Shooting into Melee:** Add 1 to both die results (unless you have Precise Shot feat)\n- **Notes:**\n  - Unopposed roll (target doesn't roll defense)\n  - Subject to Multiple Action Penalty\n  - Making a ranged attack while threatened (enemy within 5 feet) add 1 to both attack dice",
+    "actionType": "combat",
+    "actionCost": "1 [Combat] action",
+    "trigger": "",
+    "effect": "Make an attack roll (Dexterity + Ranged Combat)\n- **Range Bands:**\n  - **Short range:** 1 success needed for base damage, 2 successes for base + Dexterity modifier\n  - **Medium range:** 2 successes needed for base + Dexterity modifier\n  - **Long range:** 2 successes needed, Add 1 to both die results\n- **Shooting into Melee:** Add 1 to both die results (unless you have Precise Shot feat)\n- **Notes:**\n  - Unopposed roll (target doesn't roll defense)\n  - Subject to Multiple Action Penalty\n  - Making a ranged attack while threatened (enemy within 5 feet) add 1 to both attack dice",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

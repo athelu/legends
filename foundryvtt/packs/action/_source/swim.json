@@ -1,0 +1,19 @@
+{
+  "_id": "c57e00fe63f948f2",
+  "name": "Swim",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "",
+    "actionType": "movement",
+    "actionCost": "Costs 2 feet of movement for every 1 foot swum",
+    "trigger": "",
+    "effect": "Move through water\n- **Check:** Athletics check required for rough water, strong currents, or swimming while armored\n- **Notes:**\n  - Holding breath: Can hold breath for (Constitution) minutes\n  - After that: Must make Fortitude save each round or begin drowning",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

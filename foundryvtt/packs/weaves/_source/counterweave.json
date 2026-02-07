@@ -1,0 +1,10 @@
+{
+  "_id": "d33f0db738d74b1d",
+  "name": "CounterWeave",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 4 (disrupting magical energy)\n**Supporting Energy:** None (medium range 60ft, reaction)\n**Total Cost:** 4 Energy base (must match or exceed target weave cost)\n**Action:** Reaction (when you see a weave being cast)\n**Weaving Roll:** Space Potential + Space Mastery (2d8 only)\n**Effect:** Attempt to interrupt a weave being cast. Must spend Energy equal to or greater than the weave you're countering. Compare your weaving successes to their weaving successes. If you have more, their weave fails.\n**Saving Throw:** Opposed weaving check (Your Space weaving vs Their weaving)\n**Success Scaling (Net successes = Your successes - Their successes):** 1+ = Counter successful (weave fails)"
+  },
+  "effects": []
+}

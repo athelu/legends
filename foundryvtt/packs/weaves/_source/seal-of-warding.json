@@ -1,0 +1,10 @@
+{
+  "_id": "139a4a8d641d4f5b",
+  "name": "Seal of Warding",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 4 (creating magical barrier on object)  \n**Supporting Energy:** Time 4 (duration 1 hour/permanent until dispelled)  \n**Range:** Touch  \n**Duration:** 1 hour (or permanent until dispelled)  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Magically seal one door, window, gate, chest, or similar closure. Add 4 to die results for anyone attempting to open it. You and designated creatures can open freely.  \n**Saving Throw:** None (object targeted)  \n**Success Scaling:** 0 = fails, 1 = 10 minutes, 2 = until dispelled, 3 = add 2 additional penalty (+6 total), 4 = cannot be opened except by you\n\n---"
+  },
+  "effects": []
+}

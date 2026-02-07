@@ -1,0 +1,19 @@
+{
+  "_id": "76ab4be505fb467d",
+  "name": "Advance",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "",
+    "actionType": "movement",
+    "actionCost": "1 [Move] action",
+    "trigger": "",
+    "effect": "Move up to your speed in feet\n- **Notes:**\n  - Can be split between other actions\n  - Advancing through difficult terrain (rubble, shallow water, undergrowth) costs double\n  - Advancing through another creature's space requires their permission or an Acrobatics check (GM discretion)\n  - Moving Diagonally more than once during an advance costs 7.5 ft.",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

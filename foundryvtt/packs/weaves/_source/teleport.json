@@ -1,0 +1,10 @@
+{
+  "_id": "3a77bc57a3bb4d67",
+  "name": "Teleport",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 7 (long-range teleportation)  \n**Supporting Energy:** None (touch, instantaneous, up to 8 willing creatures)  \n**Range:** Touch (up to 8 willing creatures)  \n**Duration:** Instantaneous  \n**Total Cost:** 7 Energy base (more for longer distances or more creatures)  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery  \n**Effect:** Instantly transport to destination on same plane. Success depends on familiarity: Very familiar (2 successes needed): home, place visited often; Seen casually (3 successes): seen a few times; Viewed once (4 successes): seen once or through scrying; Description only (4 successes, Misfortune): never seen, described only.  \n**Saving Throw:** None (willing targets only)  \n**Success Scaling:** Roll determines accuracy: 4+ successes = exact spot, 2-3 = general area, 1 = far off target, 0 = mishap (GM determines where you arrive)\n\n---"
+  },
+  "effects": []
+}

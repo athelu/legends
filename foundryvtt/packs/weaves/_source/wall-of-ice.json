@@ -1,0 +1,10 @@
+{
+  "_id": "2f39b66271724c09",
+  "name": "Wall of Ice",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Water 5 (barrier of solid ice)  \n**Supporting Energy:** Space 4 (medium range + wall area) / Time 2 (duration 1 minute)  \n**Range:** Medium, 60 ft. (60 feet long, 20 feet high OR hemisphere 10 feet diameter)  \n**Duration:** 1 minute  \n**Total Cost:** 11 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create wall of ice at medium range up to 60 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter). Each 10ft section has HP = 12 + Water Potential, DR 2 vs nonmagical damage. Creatures within area when created make Reflex save or take 8 cold damage. Wall melts naturally over time.  \n**Saving Throw:** Reflex (when wall is created in your space)  \n**Damage Type:** Cold (energy)  \n**DR Interaction:** Half DR (8 cold damage vs DR 4 becomes 8 - 2 = 6 damage)  \n**Success Scaling:**  \n- **Duration/HP:** 0 = fails, 1 = 1 round (6 HP sections), 2 = full effect (12 HP sections), 3 = 10 minutes (24 HP, double), 4 = 1 hour (36 HP, triple, DR 4)  \n- **Initial damage:** 0 = no damage, 1 = half (4), 2 = full (8), 3 = +8 (16), 4 = +16 (24)\n\n---"
+  },
+  "effects": []
+}

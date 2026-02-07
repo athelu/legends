@@ -1,0 +1,10 @@
+{
+  "_id": "a06c92a816a043a0",
+  "name": "Unweave",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 4 (negating magical effects)  \n**Supporting Energy:** Space 2 (medium range)  \n**Range:** Medium, 60 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery  \n**Effect:** End one magical effect on a creature, object, or area. Compare your weaving successes to the original caster's successes. If you equal or beat them, effect ends. Can target multiple effects (weakest first).  \n**Saving Throw:** Opposed weaving check (Your Space weaving vs Original caster's weaving)  \n**Success Scaling:** Must equal or exceed original weaving successes to dispel\n\n---\n\n## V"
+  },
+  "effects": []
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "3c24684411a8444c",
+  "name": "Complex Illusion",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 6 (complex illusion + medium range + 20ft cube area)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Medium, 60 ft. (20-foot cube)  \n**Duration:** 10 minutes  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create an illusion of an object, creature, or phenomenon within a 20-foot cube at medium range. The illusion includes sight, sound, smell, and temperature effects. Physical interaction reveals it as an illusion.  \n**Saving Throw:** Perception vs Space Mastery (to disbelieve if suspicious)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or can include tactile sensations"
+  },
+  "effects": []
+}

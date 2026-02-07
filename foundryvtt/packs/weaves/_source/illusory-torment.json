@@ -1,0 +1,10 @@
+{
+  "_id": "ca13f1a6955f4c0c",
+  "name": "Illusory Torment",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 7 (illusory effect + medium range + 10ft cube)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Medium, 60 ft. (10-foot cube)  \n**Duration:** 1 minute  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create an illusory effect at medium range in one creature's mind. Target makes Will save. Compare your weaving successes to their save successes. If you have more, target perceives illusory effect as real and rationalizes illogical elements. If illusory effect could damage target, it takes 1d8 psychic damage per round. Target can use action + Perception vs your Space Mastery to recognize illusory effect.  \n**Saving Throw:** Will (to resist mental illusory effect); Perception vs Space Mastery (to disbelieve)  \n**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect (2d8 damage), 3 = harder to disbelieve (add 1 to their Perception dice), 4 = 10 minutes or 3d8 damage  \n**Disoriented Condition (at Net 3):** Target has Misfortune on Perception checks while illusory effect persists."
+  },
+  "effects": []
+}

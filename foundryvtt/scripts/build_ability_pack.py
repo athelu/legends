@@ -8,7 +8,7 @@ they should be created as JSON files in _source/ and this script will build
 them into a pack.
 
 To create abilities:
-1. Create JSON files in foundryvtt/packs/legends/abilities/_source/
+1. Create JSON files in foundryvtt/packs/abilities/_source/
 2. Example format:
    {
      "_id": "ability-id-here",
@@ -32,7 +32,7 @@ def main():
     
     # Build the pack from existing _source/ JSON files
     print("Building abilities pack...")
-    pack_dir = script_dir / "foundryvtt" / "packs" / "legends" / "abilities"
+    pack_dir = script_dir / "foundryvtt" / "packs" / "abilities"
     
     source_dir = pack_dir / "_source"
     if not source_dir.exists() or not any(source_dir.glob('*.json')):

@@ -1,0 +1,10 @@
+{
+  "_id": "e1987d7c0ef14061",
+  "name": "Tongues",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Air 3 (granting understanding of all speech)  \n**Supporting Energy:** Time 3 (duration 1 hour)  \n**Range:** Touch  \n**Duration:** 1 hour  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Air Potential + Air Mastery / Time Potential + Time Mastery  \n**Effect:** Touch a creature. For the duration, target can understand and speak any language. Doesn't help with written languages.  \n**Saving Throw:** None (beneficial enhancement)  \n**Success Scaling:** 0 = fails, 1 = 10 minutes (understand only), 2 = full effect, 3 = 8 hours, 4 = can read/write all languages too  \n\n---"
+  },
+  "effects": []
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "bf2819c3c8ba468a",
+  "name": "Holy Fire",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Positive 2 (radiant fire, damage)  \n**Supporting Energy:** Space 2 (medium range)  \n**Range:** Medium, 60 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 4 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  \n**Effect:** Target takes 8 radiant damage. This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Positive (energy)  \n**DR Interaction:** Half DR (8 positive damage vs DR 4 becomes 8 - 2 = 6 damage)  \n**Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)  \n**Revealed Condition (at 4 successes):** Target receives the Revealed condition. The target loses and cannot gain the Hidden and concealed conditions. The Revealed condition expires at the end of the target's next turn.\n\n\n## I"
+  },
+  "effects": []
+}

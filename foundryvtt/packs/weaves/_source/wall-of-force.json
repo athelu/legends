@@ -1,0 +1,10 @@
+{
+  "_id": "c2c1439ea9fb4e96",
+  "name": "Wall of Force",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 8 (barrier of pure force + medium range)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Medium, 60 ft. (80 feet long OR hemisphere/sphere 10 feet diameter)  \n**Duration:** 10 minutes  \n**Total Cost:** 11 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create invisible wall of force at medium range up to 80 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter, or sphere 10 feet diameter). Totally blocks physical and magical effects. Can't be dispelled but Disintegrate destroys it. Nothing can pass through.  \n**Saving Throw:** None (creates barrier)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours\n\n---"
+  },
+  "effects": []
+}

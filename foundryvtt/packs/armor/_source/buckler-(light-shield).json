@@ -1,0 +1,19 @@
+{
+  "_id": "4e7dc86ee7914b26",
+  "name": "Buckler (Light Shield)",
+  "type": "shield",
+  "img": "** `icons/equipment/shield/buckler-metal-blue.webp`",
+  "system": {
+    "description": "- **Image:** `icons/equipment/shield/buckler-metal-blue.webp`",
+    "shieldType": "",
+    "handUsage": "",
+    "meleeDefense": "",
+    "requirements": "",
+    "specialAbilities": "",
+    "plantedMode": false,
+    "reactions": [],
+    "weight": "",
+    "cost": "** 10 gp"
+  },
+  "effects": []
+}

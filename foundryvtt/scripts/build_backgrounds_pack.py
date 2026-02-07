@@ -72,7 +72,7 @@ def main():
         print(f"  Extracted {len(items)} background items from documentation")
         
         # Save to _source/
-        source_dir = script_dir / "foundryvtt" / "packs" / "legends" / "backgrounds" / "_source"
+        source_dir = script_dir / "foundryvtt" / "packs" / "backgrounds" / "_source"
         source_dir.mkdir(parents=True, exist_ok=True)
         
         for item in items:
@@ -83,7 +83,7 @@ def main():
     
     # Build the pack
     print("\nBuilding backgrounds pack...")
-    pack_dir = script_dir / "foundryvtt" / "packs" / "legends" / "backgrounds"
+    pack_dir = script_dir / "foundryvtt" / "packs" / "backgrounds"
     success = build_pack_from_source(pack_dir, "backgrounds")
     
     return 0 if success else 1

@@ -1,0 +1,10 @@
+{
+  "_id": "d4369586ae2d48a7",
+  "name": "Double-Jointed (-3)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "Hyper-extend joints.\n-   Acrobatics starts at rank 3 at creation\n-   Reflex saves: Subtract 1 from die results"
+  },
+  "effects": []
+}

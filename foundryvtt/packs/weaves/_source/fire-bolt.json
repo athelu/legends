@@ -1,0 +1,10 @@
+{
+  "_id": "38fa4ea77bf34791",
+  "name": "Fire Bolt",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Fire 2 (bolt of flame, damage)  \n**Supporting Energy:** Space 1 (close range)  \n**Range:** Close, 30 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 3 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Fire Potential + Fire Mastery / Space Potential + Space Mastery  \n**Effect:** You hurl a mote of fire at a creature or object within range. Target takes 8 fire damage. This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Fire (energy)  \n**DR Interaction:** Half DR (8 fire damage vs DR 4 becomes 8 - 2 = 6 damage)  \n**Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)  \n**Ignited Condition (at 4 successes):** Target takes 1d8 fire damage at start of each turn. Can use 1 action to make Reflex save (1 success ends) or ally can use 1 action to extinguish."
+  },
+  "effects": []
+}

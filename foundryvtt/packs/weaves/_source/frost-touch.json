@@ -1,0 +1,10 @@
+{
+  "_id": "8f1490937bbc41ca",
+  "name": "Frost Touch",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Water 2 (freezing touch, damage)\n**Supporting Energy:** None (touch range only)\n**Total Cost:** 2 Energy\n**Action:** Simple weave (1 action)\n**Weaving Roll:** Water Potential + Water Mastery (2d8 only)\n**Effect:** Touch a target and channel freezing energy into them. Target takes 4 cold damage. This is an attack weave—no saving throw allowed.\n**Saving Throw:** None (attack weave, weaving successes determine hit quality)\n**Damage Type:** Cold (energy)\n**DR Interaction:** Half DR (4 cold damage vs DR 4 becomes 4 - 2 = 2 damage)\n**Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)\n**Slowed Condition (at 4 successes):** Target's movement is halved until end of their next turn as ice crystals form on their body.\n**Tactical Note:** Does NOT provoke opportunity attacks. Touch range requires being adjacent to target.\n\n## G"
+  },
+  "effects": []
+}

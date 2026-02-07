@@ -1,0 +1,10 @@
+{
+  "_id": "a22f5ca2457647b0",
+  "name": "Freezing Blast",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Water 6 (freezing blast, high damage)\n**Supporting Energy:** Space 3 (self, 60ft cone)\n**Total Cost:** 9 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Water Potential + Water Mastery + Space Potential + Space Mastery (4d8)\n**Effect:** A blast of cold air erupts from your hands. All creatures in a 60-foot cone take 40 cold damage. Each target takes the full listed damage and makes their own save.\n**Saving Throw:** Reflex (to reduce damage)\n**Damage Type:** Cold (energy)\n**DR Interaction:** Half DR (40 cold damage vs DR 4 becomes 40 - 2 = 38 damage)\n**Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half damage (20), 2 = full damage (40), 3 = +8 damage (48 total), 4 = +16 damage (56 total)\n**Slowed Condition (at Net 4):** Target's movement speed is halved and they have Misfortune on Reflex saves until the end of their next turn."
+  },
+  "effects": []
+}

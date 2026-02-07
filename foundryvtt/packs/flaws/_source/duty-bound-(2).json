@@ -1,0 +1,10 @@
+{
+  "_id": "4ee575b0942a4fe1",
+  "name": "Duty Bound (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "True to your word. Avoid lies, must keep promises.\n- Different from Honesty: Duty Bound is about keeping your word and promises, Honesty is about following laws/rules\n- Example: A Duty Bound character might break into a building to save someone they promised to protect. An Honest character couldn't do that because it's illegal."
+  },
+  "effects": []
+}

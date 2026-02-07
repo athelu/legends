@@ -1,0 +1,10 @@
+{
+  "_id": "deacd486853e4cd3",
+  "name": "Glimpse of Destiny",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": "- **Action Cost:** 1 [Minor] action\n- **Range:** 60 feet (must see target)\n- **Effect:** Grant one ally **Fortune** on their next roll within 1 minute. You see the path where they succeed and guide them toward it.\n- **Usage:** Uses 1 Channel Divinity"
+  },
+  "effects": []
+}

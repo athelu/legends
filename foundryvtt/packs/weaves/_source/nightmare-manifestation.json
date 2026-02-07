@@ -1,0 +1,10 @@
+{
+  "_id": "9a7a89e18ca0406f",
+  "name": "Nightmare Manifestation",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Space 8 (terrifying mental illusion + medium range)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Medium, 60 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 10 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Target at medium range makes Will save. Compare your weaving successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes 3d8 psychic damage at start of each turn. Can repeat Will save each round to end effect (1 success ends effect).  \n**Saving Throw:** Will (to resist fear manifestation)  \n**Success Scaling:** 0 = no effect, 1 = Frightened only (no damage), 2 = full effect (Frightened + 3d8 damage), 3 = 4d8 damage, 4 = Fleeing instead of Frightened (5d8 damage)  \n**Frightened/Fleeing Conditions:** See conditions document for full mechanics. Target can repeat save at end of each turn."
+  },
+  "effects": []
+}

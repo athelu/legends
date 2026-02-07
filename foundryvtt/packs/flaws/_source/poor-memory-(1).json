@@ -1,0 +1,10 @@
+{
+  "_id": "86dfe6badae54880",
+  "name": "Poor Memory (1)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Cannot remember faces, names, times, dates, places.\n- Cannot benefit from Eidetic Memory\n- History and Society: Add 2 to die results"
+  },
+  "effects": []
+}

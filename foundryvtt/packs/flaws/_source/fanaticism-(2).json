@@ -1,0 +1,10 @@
+{
+  "_id": "b7fa847bcb05437b",
+  "name": "Fanaticism (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "Zealot about one belief. Take offense when insulted."
+  },
+  "effects": []
+}

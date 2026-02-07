@@ -1,0 +1,10 @@
+{
+  "_id": "758b4b7ef9114cb1",
+  "name": "Stone Fist",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Earth 2 (hardening fist to stone, damage)  \n**Supporting Energy:** None (touch range only)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 2 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Earth Potential + Earth Mastery  \n**Effect:** Harden your fist to stone and strike a target within touch range. Target takes 4 bludgeoning damage. This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Bludgeoning (physical)  \n**DR Interaction:** Full DR applies (4 bludgeoning damage vs DR 4 becomes 4 - 4 = 0 damage)  \n**Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)  \n**Prone Condition (at 4 successes):** Target must make Fortitude save or be knocked Prone by the force of the blow (1 success avoids).  \n\n---"
+  },
+  "effects": []
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "fb04cb3d28054868",
+  "name": "Mageborn (-7)",
+  "type": "trait",
+  "img": "** `icons/skills/arcane/wand-sparks-purple.webp`",
+  "system": {
+    "description": "**Image:** `icons/skills/arcane/wand-sparks-purple.webp`\n**Requirements:** Intelligence ≥ 3\n\nYou were born with an innate connection to the planes flowing through your pneuma. Your eyes glow with constant violet light, marking you as a mage from birth. Through careful study and understanding of magical theory, you have learned to channel the eight energies through precise intellectual control.\n\n**Visual Effects:** Your weaves manifest with orbiting glyphs, bright flashes of violet light, and cascading magical symbols. Motes of energy trail from your gestures, and your magic leaves shimmering afterimages in the air. Your eyes never stop glowing—the violet light is constant, marking you as mageborn to all who see you.\n\n**Mechanical Benefits:**\n-   Roll **8d8**, assign to eight Magical Potentials\n-   Choose **Elemental Affinity** (Earth/Air/Fire/Water): That Potential = highest roll + 2 (max 8)\n-   Choose **Secondary Focus** (any other energy): That Potential = any other roll + 1\n-   Use **Intelligence** as Casting Stat\n-   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0, untrained)\n-   Can weave arcane magic using all 8 energies\n-   **Energy Pool:** Sum of 8 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)\n-   **Gain Ritual Casting ability:** Can cast any weave as a 10-minute ritual for half Energy cost (minimum 1). Cannot be used in combat."
+  },
+  "effects": []
+}

@@ -1,0 +1,10 @@
+{
+  "_id": "7a8cd5ebf14049dc",
+  "name": "Bind the Fallen **[Necromantic]**",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Negative 6 (binding soul fragments to corpses)\n**Supporting Energy:** Time 4 (duration 1 hour of control)\n**Range:** Touch\n**Duration:** 1 hour\n**Total Cost:** 10 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery (4d8)\n**Effect:** **[FORBIDDEN KNOWLEDGE]** Bind soul fragments or echoes to 1 corpse, animating it as a skeleton or zombie under your control. Undead has HP equal to your Negative Potential × 4, deals 6 damage, uses your Negative Mastery for attacks. Can command as [Free] action.\n**Saving Throw:** None (corpse has no will)\n**Scaling:** +2 Energy per additional undead (max = Negative Mastery)\n**Success Scaling:** 1 = 1 round control, 2 = full effect, 3 = 24 hours control, 4 = permanent until destroyed\n**Necromantic Warning:** This weave manipulates pneuma (soul essence) and represents lost First Men knowledge. It cannot be learned at character creation and requires GM permission. Regular use may attract malevolent daemons and corrupt the caster's soul."
+  },
+  "effects": []
+}

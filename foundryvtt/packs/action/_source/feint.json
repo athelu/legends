@@ -1,0 +1,19 @@
+{
+  "_id": "ee6a9079c43a4234",
+  "name": "Feint",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": "",
+    "actionType": "combat",
+    "actionCost": "1 [Combat] action",
+    "trigger": "",
+    "effect": "Make opposed Deception check (Charisma + Deception vs target's Empathy + Wisdom)\n- **Success:** Your next attack against that target this turn has Fortune\n- **Notes:**\n  - Only works against creatures that can see and understand you\n  - Subject to Multiple Action Penalty",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

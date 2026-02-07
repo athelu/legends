@@ -68,7 +68,7 @@ def main():
         print(f"  Extracted {len(items)} feat items from documentation")
         
         # Save to _source/
-        source_dir = script_dir / "foundryvtt" / "packs" / "legends" / "feats" / "_source"
+        source_dir = script_dir / "foundryvtt" / "packs" / "feats" / "_source"
         source_dir.mkdir(parents=True, exist_ok=True)
         
         for item in items:
@@ -79,7 +79,7 @@ def main():
     
     # Build the pack
     print("\nBuilding feats pack...")
-    pack_dir = script_dir / "foundryvtt" / "packs" / "legends" / "feats"
+    pack_dir = script_dir / "foundryvtt" / "packs" / "feats"
     success = build_pack_from_source(pack_dir, "feats")
     
     return 0 if success else 1

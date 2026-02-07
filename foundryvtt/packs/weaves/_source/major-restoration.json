@@ -1,0 +1,10 @@
+{
+  "_id": "d6bc793302f04c6f",
+  "name": "Major Restoration",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Positive 6 (powerful cleansing and restoration)  \n**Supporting Energy:** None (touch, instantaneous, requires 1 minute to cast)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions), requires 1 minute to cast  \n**Weaving Roll:** Positive Potential + Positive Mastery  \n**Effect:** Touch a creature and end one of the following: one curse (including attunement to cursed item), petrification, reduction of attribute scores, reduction of max HP. The weave removes only one effect per casting.  \n**Saving Throw:** None (beneficial restoration)  \n**Success Scaling:** 0 = fails, 1 = temporary relief (1 hour), 2 = full effect, 3 = removes 2 effects, 4 = removes all applicable effects"
+  },
+  "effects": []
+}

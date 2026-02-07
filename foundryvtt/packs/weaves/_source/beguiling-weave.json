@@ -1,0 +1,10 @@
+{
+  "_id": "26558ff3080047d6",
+  "name": "Beguiling Weave",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Positive 2 (creating friendly feelings, minor mental effect)  \n**Supporting Energy:** Space 5 (close range + 1 hour)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 hour  \n**Total Cost:** 7 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  \n**Effect:** Humanoid target makes Will save. Compare your weaving successes to their save successes. If you have more, target regards you as a friendly acquaintance. Lasts 1 hour or until you or allies harm target. Target knows it was charmed when weave ends.  \n**Saving Throw:** Will (to resist mental influence)  \n**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect (1 hour), 3 = 8 hours, 4 = 24 hours"
+  },
+  "effects": []
+}

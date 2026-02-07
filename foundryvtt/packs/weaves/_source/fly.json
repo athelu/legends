@@ -1,0 +1,10 @@
+{
+  "_id": "b2bd0a8ebe944c90",
+  "name": "Fly",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": "**Primary Energy:** Air 5 (levitation and propulsion, flight)\n**Supporting Energy:** Time 3 (duration 10 minutes)\n**Total Cost:** 8 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Air Potential + Air Mastery + Time Potential + Time Mastery (4d8)\n**Effect:** Target at touch gains flying speed equal to their normal movement speed. If weave ends while airborne, target falls.\n**Saving Throw:** None (beneficial buff, willing targets only)\n**Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or double speed"
+  },
+  "effects": []
+}

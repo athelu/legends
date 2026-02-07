@@ -1,0 +1,10 @@
+{
+  "_id": "574f89cad702413c",
+  "name": "Curious (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": "You are naturally inquisitive and must investigate anything unusual.\n- Make Will save (1 success required) to avoid examining strange items, investigating sounds, or pursuing mysteries even when dangerous"
+  },
+  "effects": []
+}
