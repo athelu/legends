@@ -1,0 +1,13 @@
+{
+  "_id": "1daa0f0a0ea04079",
+  "name": "Saddlebags",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A pair of leather bags designed to hang over a mount's back, providing significant storage capacity for travel.",
+    "weight": "8 lbs",
+    "cost": "25 gp"
+  },
+  "effects": [],
+  "_key": "!items!1daa0f0a0ea04079"
+}

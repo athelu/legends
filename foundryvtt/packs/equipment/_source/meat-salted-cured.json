@@ -1,0 +1,13 @@
+{
+  "_id": "25b437fd24f34061",
+  "name": "Meat, Salted/Cured",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Preserved meat suitable for travel. One pound provides protein for one day.",
+    "weight": "1 lb",
+    "cost": "3 sp"
+  },
+  "effects": [],
+  "_key": "!items!25b437fd24f34061"
+}

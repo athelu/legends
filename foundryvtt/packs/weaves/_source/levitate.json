@@ -1,10 +1,11 @@
 {
-  "_id": "c5bb3453c38d415c",
+  "_id": "934a41e1f10b433a",
   "name": "Levitate",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Air 3 (lifting target into air)  \n**Supporting Energy:** Space 4 (close range + 10 minutes)  \n**Range:** Close, 30 ft.  \n**Duration:** 10 minutes  \n**Total Cost:** 7 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  \n**Effect:** Target at close range rises vertically up to 20 feet (your choice). Can change altitude by 20 feet each round. Target can't move horizontally except by pushing off objects. Unwilling targets get Fortitude save to resist.  \n**Saving Throw:** Fortitude (if unwilling, to resist being lifted)  \n**Success Scaling:** 0 = no effect (if unwilling), 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = can move horizontally (8 hours)"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!934a41e1f10b433a"
 }

@@ -1,0 +1,13 @@
+{
+  "_id": "12de4ed2d6d04d82",
+  "name": "Rucksack",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A large canvas pack with a wooden frame, capable of carrying up to 40 lbs of equipment.",
+    "weight": "3 lbs",
+    "cost": "12 gp"
+  },
+  "effects": [],
+  "_key": "!items!12de4ed2d6d04d82"
+}

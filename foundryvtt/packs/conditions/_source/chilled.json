@@ -1,0 +1,29 @@
+{
+  "_id": "3995ac4d7f0540bb",
+  "name": "Chilled",
+  "type": "condition",
+  "img": "icons/svg/frozen.svg",
+  "system": {
+    "label": "Chilled",
+    "category": "magic",
+    "description": "-   Cold has numbed extremities and slowed reactions slightly\n-   Agility based skill checks: Subtract 1 from one die on your next action\n-   Initiative: -1 for this round only\n-   Duration: Until end of your next turn\n**Recovery:**\n-   Automatically ends after specified duration",
+    "tokenIcon": "icons/svg/frozen.svg",
+    "activeEffects": [
+      {
+        "key": "initiative.flat",
+        "mode": "add",
+        "value": -1,
+        "notes": "-1 to initiative"
+      }
+    ],
+    "stacking": "replace",
+    "severity": "minor",
+    "overlayPriority": 10,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true
+    }
+  },
+  "flags": {},
+  "_key": "!items!3995ac4d7f0540bb"
+}

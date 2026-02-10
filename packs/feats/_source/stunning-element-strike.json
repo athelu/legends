@@ -1,0 +1,31 @@
+{
+  "name": "Stunning Element Strike",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 3\n**Prerequisites:** Stunning Strike feat, Pneuma Strike (any element)\n**Description:** After stunning an opponent, you infuse them with elemental energy. Burning through their nerves, freezing their blood, shocking their system. Even when they recover, the energy lingers.\n**Benefit:** When you successfully Stun an opponent with Stunning Strike, you can spend an additional 2 Energy to infuse them with elemental energy:\n- Choose one element you have Pneuma Strike for\n- Target immediately takes 2d8 elemental damage (no weaving check, ignores DR)\n- Energy courses through their paralyzed form\n\n**Usage:** Additional cost when Stunning Strike succeeds\n**Keyword:** [Combat], [Ascetic], [Unarmed], [Magic]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "2d8",
+        "apply": "dice",
+        "description": "2d8"
+      },
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "1d8",
+        "apply": "dice",
+        "description": "1d8"
+      }
+    ]
+  },
+  "flags": {}
+}

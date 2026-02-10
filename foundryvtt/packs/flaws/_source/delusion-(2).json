@@ -1,10 +1,11 @@
 {
-  "_id": "4dfb88318e124c3e",
+  "_id": "6474e02afe7f4d14",
   "name": "Delusion (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Believe something blatantly false. Cannot be convinced otherwise."
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!6474e02afe7f4d14"
 }

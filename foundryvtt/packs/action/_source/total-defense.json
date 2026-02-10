@@ -1,19 +1,22 @@
 {
-  "_id": "31995a0bfc5b4a92",
+  "_id": "d637bea5040e42c7",
   "name": "Total Defense",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "",
+    "description": {
+      "value": "- **Cost:** 3\n- **Effect:** Focus entirely on defense until your next turn\n- **Benefit:** All attacks against you have Misfortune\n- **Notes:**\n  - Cannot take any other actions this turn\n  - Can still take your [Reaction]"
+    },
     "actionType": "combat",
-    "actionCost": "All 3 of your actions",
+    "actionCost": "3",
     "trigger": "",
-    "effect": "Focus entirely on defense until your next turn\n- **Benefit:** All attacks against you have Misfortune\n- **Notes:**\n  - Cannot take any other actions this turn\n  - Can still take your [Reaction]\n\n### Important Clarifications",
-    "keywords": [],
+    "effect": "Focus entirely on defense until your next turn\n- **Benefit:** All attacks against you have Misfortune\n- **Notes:**\n  - Cannot take any other actions this turn\n  - Can still take your [Reaction]\n\n\n## Movement Actions\nMovement actions allow you to reposition, navigate terrain, and control the battlefield.\n\n#### Basic Movement Mechanics:\n- **Speed:** Your base movement speed is 30 feet per round (unless modified by race, conditions, or abilities)\n- **Cost:** Advance costs 1 [Move] action per increment up to your speed\n- **Cost:** Advance costs 1 per increment up to your speed\n- **Terrain:** Difficult terrain costs 2 feet of movement for every 1 foot traveled\n- **Multiple Movements:** You can take multiple [Move] actions in a turn, spending your actions as needed\n- **Splitting Movement:** You can split your movement between other actions (move 15 feet, attack, move 15 feet more)\n\n#### Standard Movement Actions\n\n### Movement in Combat\n\n#### Opportunity Attacks:\n- Moving out of an enemy's reach provokes Opportunity Attacks (see Reactions)\n- Forced movement (shoved, pushed by spells) doesn't provoke\n- Teleportation doesn't provoke\n\n#### Flanking (Optional Rule):\n- When you and an ally are on opposite sides of an enemy (with both in melee reach)\n- Both you and your ally subtract 1 from both dice when making attacks\n- Enemy must be no more than one size larger than you\n\n### Important Clarifications",
+    "keywords": "Reaction, Move",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!d637bea5040e42c7"
 }

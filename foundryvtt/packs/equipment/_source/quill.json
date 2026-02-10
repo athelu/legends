@@ -1,0 +1,13 @@
+{
+  "_id": "0c3d8628d64f4b63",
+  "name": "Quill",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A writing instrument made from a bird's feather, cut and shaped for dipping in ink.",
+    "weight": "0.1 lbs",
+    "cost": "1 gp"
+  },
+  "effects": [],
+  "_key": "!items!0c3d8628d64f4b63"
+}

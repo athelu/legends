@@ -1,10 +1,11 @@
 {
-  "_id": "76f50b44e8d14f6d",
+  "_id": "7afc9204a43b456a",
   "name": "Cowardice (4)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Must make Will save (1 success required) when confronted with combat/fear or become Cowering."
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!7afc9204a43b456a"
 }

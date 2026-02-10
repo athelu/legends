@@ -1,0 +1,13 @@
+{
+  "_id": "219f07c7624b4046",
+  "name": "Air Savant",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Air Mastery 6, Air Potential 6, any magical tradition trait\n**Description:** The wind answers your call like an old friend. You've transcended mere manipulation of air and you've become part of the storm itself. Lightning courses through your veins, and gravity is more of a suggestion than a law.\n**Benefit:** Your mastery of Air energy grants the following abilities:\n- **Shocking Weaves:** When you cast a weave using Air as primary energy and deal lightning damage, targets that fail their save gain the **Stunned** condition until end of their next turn\n- **Storm Resistance:** You are immune to lightning damage from non-magical sources. You have Resistance (+2 DR) against magical lightning damage\n- **Windwalker:** You ignore movement penalties from difficult terrain. Can walk on water or other liquids as if solid ground. Falling damage reduced by half\n\n**Usage:** Passive\n**Keyword:** [Magic]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!219f07c7624b4046"
+}

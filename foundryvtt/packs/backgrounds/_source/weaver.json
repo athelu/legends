@@ -1,0 +1,11 @@
+{
+  "_id": "1f8011194f2f4049",
+  "name": "Weaver",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "Thread became cloth under your practiced hands, patterns emerging from careful planning and patient work. You understand materials and construction in ways that prove surprisingly useful when you need to improvise or understand how something was made.\n**Skills:** Craft 2, Perception 2, Society 1, Devices 1, +40 XP\n**Equipment:** Common clothes, shoes, scissors, sewing kit\n**Feature** - Textile Expertise: You understand fabrics and their properties. Can identify quality, origin, and uses of textiles, and create useful cloth items with proper materials."
+  },
+  "effects": [],
+  "_key": "!items!1f8011194f2f4049"
+}

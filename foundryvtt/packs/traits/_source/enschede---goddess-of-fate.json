@@ -1,10 +1,11 @@
 {
-  "_id": "6a71a7bf647b4b2b",
+  "_id": "2963484b80e34672",
   "name": "ENSCHEDE - Goddess of Fate",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!2963484b80e34672"
 }

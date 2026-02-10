@@ -1,0 +1,13 @@
+{
+  "_id": "2bf52f49bedb4fa4",
+  "name": "Resilient",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Con 4\n**Benefit:** Fortitude saves: subtract 1 from die results; success on ongoing effect ends it\n**Usage:** Passive\n**Keyword:** [Save], [General]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!2bf52f49bedb4fa4"
+}

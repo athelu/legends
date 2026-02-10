@@ -1,0 +1,13 @@
+{
+  "_id": "fea7d22d9a564489",
+  "name": "Elemental Enlightenment",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Sorcerous Origin trait, Wis 4, chosen elemental Mastery 5\n**Description:** Your connection to one element has deepened beyond mere technique into true understanding.\n**Benefit:** Choose one elemental energy (Earth, Air, Fire, Water). When you weave using that energy as primary:\n  - Add your Wisdom to the damage dealt\n  - You gain resistance (+2 DR) to that damage type\n  - Your weaves using that energy ignore the first point of overspending penalty\n\n**Usage:** Passive\n**Note:** Can be taken multiple times for different elements\n**Keyword:** [Magic], [Sorcerer]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!fea7d22d9a564489"
+}

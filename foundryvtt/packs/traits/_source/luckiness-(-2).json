@@ -1,10 +1,11 @@
 {
-  "_id": "4ee55601be774e27",
+  "_id": "ba7a31e473de4a37",
   "name": "Luckiness (-2)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "Fortune favors you.\n-   Start each session with 2 bonus Luck points beyond attribute\n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!ba7a31e473de4a37"
 }

@@ -1,10 +1,11 @@
 {
-  "_id": "5eed6288b6fc453d",
+  "_id": "b1cc61cad4294c4c",
   "name": "Warding Sphere",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 7 (spherical magical barrier)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Self  \n**Duration:** 10 minutes  \n**Total Cost:** 10 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Creates a 10ft radius sphere around you. Weaves using 4 or fewer Energy cannot affect anything inside the globe (neither in nor out). You can move, sphere moves with you.  \n**Saving Throw:** None (creates protective barrier)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = blocks weaves of 6 Energy or less (8 hours)\n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!b1cc61cad4294c4c"
 }

@@ -1,10 +1,11 @@
 {
-  "_id": "d7155842ce8f48c4",
+  "_id": "c5050317cd67405e",
   "name": "Cutting Words",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Negative 2 (psychic assault through cruel words)  \n**Supporting Energy:** Space 2 (medium range)  \n**Range:** Medium, 60 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 4 Energy  \n**Action:** Simple Weave (1 action) - Does NOT provoke opportunity attacks  \n**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery  \n**Effect:** Speak cutting words at one creature you can see within medium range. Target takes 4 psychic damage and makes Will save. Compare your weaving successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn.  \n**Saving Throw:** Will (to resist psychic damage and demoralization)  \n**Damage Type:** Psychic (mental)  \n**DR Interaction:** Half DR (4 psychic damage vs DR 4 becomes 4 - 2 = 2 damage)  \n**Success Scaling:** 0 = no damage, 1 = half damage (2), 2 = full damage (4) + penalty on attack, 3 = +4 damage (8 total) + penalty on attack, 4 = +8 damage (12 total) + penalty applies to all rolls until end of their next turn  \n\n## D"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!c5050317cd67405e"
 }

@@ -1,0 +1,27 @@
+{
+  "_id": "3157f9652a8946ba",
+  "name": "Poisoned",
+  "type": "condition",
+  "img": "icons/svg/poison.svg",
+  "system": {
+    "label": "Poisoned",
+    "category": "damage-over-time",
+    "description": "#### Standard Poison Effect:\n-   All attribute dice: Add 1 to die results (makes all rolls harder)\n-   Fortitude saves: Add 1 to die results (harder to resist)\n-   HP regeneration from short/long rests reduced by half\n\n#### Duration:\n-   Depends on poison type (typically 1 hour to 24 hours)\n-   Some poisons require saves each hour or worsen\n\n#### Recovery:\n-   Fortitude save at end of duration to shake off poison\n-   Medicine check (2 successes) can end Poisoned early with proper treatment\n-   Magical healing removes poison\n-   Antidotes (if available) automatically remove poison\n\n#### Poison Types (Optional):\n-   Weak Poison: Add 1 to attribute dice, duration 1 hour\n-   Strong Poison: Add 2 to attribute dice, duration 4 hours, 1d8 damage per hour\n-   Deadly Poison: Add 2 to all dice, 2d8 damage per hour, requires\n    Fortitude save each hour or die",
+    "tokenIcon": "icons/svg/poison.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "fortitude"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Fortitude save to recover from Poisoned"
+    }
+  },
+  "flags": {},
+  "_key": "!items!3157f9652a8946ba"
+}

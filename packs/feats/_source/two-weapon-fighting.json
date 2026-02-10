@@ -1,0 +1,16 @@
+{
+  "name": "Two-Weapon Fighting",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 1\n**Prerequisites:** Agi 4, Dex 3\n**Description:** Extensive training with a blade in each hand allows you to maintain a relentless offense that overwhelms defenses. The second strike might not be as clean as the first, but it's still effective.\n**Benefit:** When making dual-weapon attacks in a single [Combat] action, first attack is normal, second attack adds 1 to skill die only (instead of adding to both dice). Both attacks use Shared Attribute Roll\n**Usage:** Passive\n**Keyword:** [Combat], [Dual]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

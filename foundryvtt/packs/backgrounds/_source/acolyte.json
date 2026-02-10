@@ -1,0 +1,11 @@
+{
+  "_id": "7947bebf2fe84182",
+  "name": "Acolyte",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You spent your early days in a religious monastery or cloister. You may have traveled out into the world to spread the message of your faith or because you cast away the teachings of your religion, but deep down you'll always carry within you the lessons you learned. Whether those lessons bring you comfort or haunt you probably depends on the day.\n**Skills:** Religion 3, Empathy 1, History 1, +36 XP\n**Equipment:** Iron Holy symbol, prayer book, Robe, incense stick x 10, common clothes, shoes\n**Feature** - Shelter of the Faithful: You can receive free healing and care at temples of your faith."
+  },
+  "effects": [],
+  "_key": "!items!7947bebf2fe84182"
+}

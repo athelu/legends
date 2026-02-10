@@ -1,0 +1,42 @@
+{
+  "_id": "93b1d2d85e9b4bed",
+  "name": "Burning",
+  "type": "condition",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "label": "Burning",
+    "category": "magic",
+    "description": "-   Character is engulfed in intense flames\n-   Take 2d8 fire damage at the end of each of your turns\n-   All actions: Add 1 to die results (panic and pain)\n-   Duration: Until extinguished\n**Extinguishing Severe Fire:**\n-   Use 1 [Action] to drop and roll: Make Reflex save\n    -   2 successes: Burning ends completely\n    -   1 success: Downgrade to Ignited\n    -   0 successes: Remains Burning\n-   Ally can use 1 [Action]: Make Reflex save\n    -   2 successes: Burning ends\n    -   1 success: Downgrade to Ignited\n-   Immerse in water: Automatic extinguish\n-   Take 8+ cold damage: Automatic downgrade to Ignited",
+    "tokenIcon": "icons/svg/fire.svg",
+    "activeEffects": [],
+    "stacking": "duration-merge",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": {
+      "frequency": "endOfTurn",
+      "formula": "2d8",
+      "save": {
+        "type": "reflex",
+        "effectOnSuccess": "end"
+      },
+      "showInChat": true,
+      "chatMessage": "Take 2d8 fire damage from Burning"
+    },
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "reflex"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Reflex save to recover from Burning",
+      "downgrades": {
+        "1_success": "Ignited",
+        "2_success": null,
+        "0_success": "Burning"
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!93b1d2d85e9b4bed"
+}

@@ -1,10 +1,11 @@
 {
-  "_id": "3a9991337a30472e",
+  "_id": "475618c16147467a",
   "name": "Breach",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 3 (forcing locks and barriers open)\n**Supporting Energy:** None (close range 30ft, instantaneous)\n**Total Cost:** 3 Energy\n**Action:** Simple weave (1 action)\n**Weaving Roll:** Space Potential + Space Mastery (2d8 only)\n**Effect:** One locked door, window, gate, chest, or similar object becomes unlocked. Removes Arcane Lock. Creates a loud bang audible up to 300 feet away.\n**Saving Throw:** None (object targeted)\n**Success Scaling:** 1 = makes loud noise but doesn't open, 2 = opens, 3 = silent, 4 = opens and disarms any traps\n\n\n## C"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!475618c16147467a"
 }

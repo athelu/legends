@@ -1,0 +1,13 @@
+{
+  "_id": "616f6316887646eb",
+  "name": "Boots, Low",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Comfortable leather boots that end at or below the ankle, suitable for everyday wear.",
+    "weight": "2 lbs",
+    "cost": "25 gp"
+  },
+  "effects": [],
+  "_key": "!items!616f6316887646eb"
+}

@@ -1,0 +1,11 @@
+{
+  "_id": "acba978d7da44c59",
+  "name": "Bellicosian",
+  "type": "ancestry",
+  "img": "icons/svg/person.svg",
+  "system": {
+    "description": "Bellicosians tend to be slightly taller on average, and of fair/pale complexion. Building and clothing styles are Asiatic in inspiration. Bellicosian names follow traditional Germanic and Slavic styles, but fantasy derived names are acceptable as well."
+  },
+  "effects": [],
+  "_key": "!items!acba978d7da44c59"
+}

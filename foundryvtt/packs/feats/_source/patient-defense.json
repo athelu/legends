@@ -1,0 +1,13 @@
+{
+  "_id": "37814ef272444601",
+  "name": "Patient Defense",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 1\n**Prerequisites:** Wis 3\n**Benefit:** As 1 [Combat] action, enter defensive meditation until start of your next turn: attacks against you add 1 to both attack dice. When an attack misses you while in Patient Defense, you can spend 1 Luck to make an immediate unarmed strike as a [Reacion]\n**Usage:** Unlimited (entering stance), reaction costs Luck\n**Keyword:** [Defense], [Ascetic], [Reacion]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!37814ef272444601"
+}

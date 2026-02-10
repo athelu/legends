@@ -1,0 +1,11 @@
+{
+  "_id": "d6b966aa3d974017",
+  "name": "Courier",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "Time was always your enemy. You raced against weather, bandits, and deadlines, carrying messages and packages that others deemed too valuable to trust to slower methods. The pay was decent, the life was exciting, and you saw more of the world than most people dream of. Adventuring is just a logical extension and now at least you can fight back when someone tries to rob you.\n**Skills:** Athletics 2, Society 2, Perception 1, Wilderness 1, +40 XP\n**Equipment:** Traveler's clothes, map case, riding boots\n**Feature** - Swift Delivery: You know the fastest routes between settlements and can navigate unfamiliar cities quickly."
+  },
+  "effects": [],
+  "_key": "!items!d6b966aa3d974017"
+}

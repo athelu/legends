@@ -1,0 +1,11 @@
+{
+  "_id": "a6cd4cfb78954be2",
+  "name": "Tailor",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "Fabric, thread, and needle were your tools, and with them you created everything from simple work clothes to elaborate gowns. You learned that clothes speak volumes about the wearers status, wealth, taste, even personality. This eye for detail serves you well in any situation.\n**Skills:** Craft 2, Society 2, Perception 1, Persuasion 1, +40 XP\n**Equipment:** Sewing kit, fine clothes, shoes\n**Feature** - Fashion Sense: You understand clothing and status. Can identify someone's social position by their attire, create convincing disguises, and know current fashion trends."
+  },
+  "effects": [],
+  "_key": "!items!a6cd4cfb78954be2"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "8f4c94f1bea347ce",
+  "name": "Skill Mastery",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Any skill rank 6\n**Description:** There are tasks so routine, so fundamental to what you do, that failure isn't even a possibility anymore. \n**Benefit:** Once per session, automatically succeed with 2 successes on a skill check (no roll required) if both your attribute and skill are 4 or higher\n**Usage:** Once per session\n**Keyword:** [Skill]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!8f4c94f1bea347ce"
+}

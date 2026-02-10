@@ -1,6 +1,8 @@
 /**
  * Extend the base Actor class for D8 TTRPG
  */
+import * as featEffects from "../feat-effects.mjs";
+
 export class D8Actor extends Actor {
   
   /** @override */
@@ -105,7 +107,30 @@ _prepareCharacterData(actorData) {
   systemData.dr.piercing = piercingTotal;
   systemData.dr.bludgeoning = bludgeoningTotal;
   // summary: best protection
-  systemData.dr.total = Math.max(slashingTotal, piercingTotal, bludgeoningTotal);
+    // Incorporate feat-provided DR and other modifiers
+    const featMods = featEffects.computeFeatModifiers(this);
+    systemData.dr.slashing = slashingTotal + (featMods.dr.slashing || 0);
+    systemData.dr.piercing = piercingTotal + (featMods.dr.piercing || 0);
+    systemData.dr.bludgeoning = bludgeoningTotal + (featMods.dr.bludgeoning || 0);
+    systemData.dr.total = Math.max(systemData.dr.slashing, systemData.dr.piercing, systemData.dr.bludgeoning);
+
+    // Apply skill and attribute effective values from feats
+    systemData.skillsEffective = {};
+    for (const [k, v] of Object.entries(systemData.skills || {})) {
+      const mod = featMods.skills[k] || 0;
+      systemData.skillsEffective[k] = (typeof v === 'object' ? (v.value ?? 0) : v) + mod;
+    }
+
+    systemData.attributesEffective = {};
+    for (const [attrKey, attrObj] of Object.entries(systemData.attributes || {})) {
+      const base = attrObj?.value ?? 0;
+      const mod = featMods.attributes[attrKey] || 0;
+      systemData.attributesEffective[attrKey] = base + mod;
+    }
+
+    // Attach computed actions/reactions for UI
+    systemData.featActions = featMods.actions || [];
+    systemData.featReactions = featMods.reactions || [];
 }
   
   /**

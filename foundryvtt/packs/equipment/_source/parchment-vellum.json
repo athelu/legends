@@ -1,0 +1,13 @@
+{
+  "_id": "992a507e5da148d9",
+  "name": "Parchment, Vellum",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A single sheet of high-quality vellum writing material made from treated animal skin, durable and smooth.",
+    "weight": "0.1 lbs",
+    "cost": "5 sp"
+  },
+  "effects": [],
+  "_key": "!items!992a507e5da148d9"
+}

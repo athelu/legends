@@ -1,0 +1,11 @@
+{
+  "_id": "c1bdfb6a1b5543ac",
+  "name": "Servant",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You served in a noble household or wealthy establishment, learning to be efficient, discreet, and above all, invisible. A good servant sees everything and says nothing; at least not where their employer can hear. You might have left seeking independence, or you learned something that made staying dangerous. You have learned how to blend in and how to listen, skills that prove surprisingly useful in adventuring.\n**Skills:** Empathy 2, Society 2, Perception 2, Stealth 2, +24 XP\n**Equipment:** Uniform or livery, common clothes, shoes\n**Feature** - Invisible Presence: Servants are often overlooked. You can blend into servile settings and gain access to places where servants are expected but not noticed."
+  },
+  "effects": [],
+  "_key": "!items!c1bdfb6a1b5543ac"
+}

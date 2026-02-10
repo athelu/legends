@@ -1,19 +1,22 @@
 {
-  "_id": "cbd5f46beba34d74",
+  "_id": "112383d36fc54406",
   "name": "Ready an Action",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "",
+    "description": {
+      "value": "- **Cost:** 1 or 2\n- **Effect:** Choose a trigger and an action. When the trigger occurs before your next turn, you can use your [Reaction] to perform the readied action\n- **Examples:**\n  - \"I ready an attack for when the orc comes through the door\" (1 action)\n  - \"I ready a Fireball for when enemies cluster together\" (2 actions)\n- **Notes:**\n  - You must specify the trigger clearly\n  - If trigger doesn't occur, the action is lost\n  - Performing the readied action uses your [Reaction]\n  - Readied weaves that aren't used still consume Energy"
+    },
     "actionType": "combat",
-    "actionCost": "1 or 2 actions (depending on what you're readying)",
+    "actionCost": "1",
     "trigger": "",
     "effect": "Choose a trigger and an action. When the trigger occurs before your next turn, you can use your [Reaction] to perform the readied action\n- **Examples:**\n  - \"I ready an attack for when the orc comes through the door\" (1 action)\n  - \"I ready a Fireball for when enemies cluster together\" (2 actions)\n- **Notes:**\n  - You must specify the trigger clearly\n  - If trigger doesn't occur, the action is lost\n  - Performing the readied action uses your [Reaction]\n  - Readied weaves that aren't used still consume Energy",
-    "keywords": [],
+    "keywords": "Reaction",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!112383d36fc54406"
 }

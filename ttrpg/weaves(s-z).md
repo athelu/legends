@@ -1,7 +1,7 @@
 # Corrected Weaves (S-Z)
 
 ## S
-
+<!-- PACK:weaves -->
 ### Scrying
 **Primary Energy:** Space 6 (remote viewing of specific target)  
 **Supporting Energy:** Time 3 (duration 10 minutes)  

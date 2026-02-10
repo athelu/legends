@@ -1,10 +1,11 @@
 {
-  "_id": "d3d89c7f9bcc451a",
+  "_id": "8120a79dba804e5d",
   "name": "Deep Sleeper (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Difficult to awaken.\n- Require 2 successes to wake\n- First round after waking: Add 2 to all die results"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!8120a79dba804e5d"
 }

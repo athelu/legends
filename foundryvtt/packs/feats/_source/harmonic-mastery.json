@@ -1,0 +1,13 @@
+{
+  "_id": "4eda886ccd704658",
+  "name": "Harmonic Mastery",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 5\n**Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5\n**Benefit:** Your mastery of Harmonic Weaving is complete. Choose one:\n  - **Option A - Abundant Harmony:** Your Harmonic Weaving uses increase to (Wisdom × 2) + Tier per long rest\n  - **Option B - Perfect Harmony:** When you use Harmonic Weaving, you can reroll ALL dice in your weaving roll (every energy's Potential + Mastery), not just one die. Uses your normal Harmonic Weaving limit\n\n**Usage:** Passive enhancement to Harmonic Weaving\n**Keyword:** [Magic], [Sorcerer]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!4eda886ccd704658"
+}

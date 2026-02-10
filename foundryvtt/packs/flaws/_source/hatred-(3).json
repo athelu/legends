@@ -1,10 +1,11 @@
 {
-  "_id": "1ada6e5bfd3a405a",
+  "_id": "074c6b84c6a74884",
   "name": "Hatred (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Overpowering contempt for someone/something. Hatred overrides other emotions."
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!074c6b84c6a74884"
 }

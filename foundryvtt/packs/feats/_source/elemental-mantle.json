@@ -1,0 +1,13 @@
+{
+  "_id": "870cfe0cf4244b44",
+  "name": "Elemental Mantle",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Pneuma Strike (any element), chosen elemental Mastery 4\n**Description:** Rather than releasing pneuma in bursts, you maintain a constant flow around your body. The element clings to you like a second skin\n**Benefit:** For one element you have Pneuma Strike, you can spend 4 Energy as a [Combat] action to shroud yourself in that element for 1 minute:\n  - **Fire:** Deal 1d8 fire damage to creatures that hit you with melee attacks\n  - **Water:** Gain +2 DR and resistance to fire damage\n  - **Air:** Your movement doesn't provoke opportunity attacks\n  - **Earth:** Gain +4 DR but movement speed reduced by 10 feet\n\n**Usage:** Costs 4 Energy, lasts 1 minute\n**Keyword:** [Combat], [Ascetic], [Magic]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!870cfe0cf4244b44"
+}

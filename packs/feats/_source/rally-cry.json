@@ -1,0 +1,16 @@
+{
+  "name": "Rally Cry",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Cha 4\n**Benefit:** During a short rest, you can give a rousing speech to inspire your companions. Choose up to 6 allies who can hear and understand you. Each gains temporary HP equal to your Tier + your Charisma score. These temporary HP last until their next long rest\n**Usage:** Once per short rest\n**Keyword:** [Morale]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

@@ -1,15 +1,17 @@
 {
-  "_id": "96d09ad6856348ec",
+  "_id": "496717e79c594943",
   "name": "Disengage",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "",
-    "actionType": "movement",
-    "actionCost": "2 [Move] action",
+    "description": {
+      "value": "- **Cost:** 2 [Move] action\n- **Effect:** Your movement doesn't provoke Opportunity Attacks for the rest of your turn\n- **Restriction:** You cannot end your movement within melee reach of an enemy creature\n- **Notes:**\n  - You can still move your full speed after disengaging (using additional [Move] actions)\n  - Useful for tactical repositioning without taking free attacks"
+    },
+    "actionType": "move",
+    "actionCost": "2",
     "trigger": "",
     "effect": "Your movement doesn't provoke Opportunity Attacks for the rest of your turn\n- **Restriction:** You cannot end your movement within melee reach of an enemy creature\n- **Notes:**\n  - You can still move your full speed after disengaging (using additional [Move] actions)\n  - Useful for tactical repositioning without taking free attacks",
-    "keywords": [],
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",

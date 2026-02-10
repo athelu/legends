@@ -1,0 +1,25 @@
+{
+  "_id": "2f9710f5573c4fd2",
+  "name": "Smoldering",
+  "type": "condition",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "label": "Smoldering",
+    "category": "magic",
+    "description": "-   Character has embers or minor burns continuing\n-   Take 2 fire damage at the start of your next turn only\n-   Duration: One turn only (not ongoing)\n**Recovery:**\n-   Automatically ends after taking the 2 damage\n-   Ally within 5 feet can use 1 [Action]: Automatic extinguish",
+    "tokenIcon": "icons/svg/fire.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "assistance": {
+        "range": 5
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!2f9710f5573c4fd2"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "e1822c11ae984c1f",
+  "name": "Scissors",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A metal cutting tool with two blades, useful for cutting cloth, parchment, or hair.",
+    "weight": "0.5 lbs",
+    "cost": "20 gp"
+  },
+  "effects": [],
+  "_key": "!items!e1822c11ae984c1f"
+}

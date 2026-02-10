@@ -1,0 +1,13 @@
+{
+  "_id": "c9fe2a902ba545a7",
+  "name": "Relentless Fury",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Con 5, Primal Fury feat\n**Benefit:** While in Primal Fury, if you drop to 0 HP you can make a Fortitude save (Hard task = 2 successes). On success, drop to 1 HP instead. Each time you use this after the first, add 1 to both dice. Resets after long rest\n**Usage:** While in Primal Fury\n**Keyword:** [Combat], [Savage]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!c9fe2a902ba545a7"
+}

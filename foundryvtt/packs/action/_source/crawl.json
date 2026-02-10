@@ -1,19 +1,22 @@
 {
-  "_id": "3b5e5de15de74b77",
+  "_id": "538e252b33bc46e1",
   "name": "Crawl",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "",
-    "actionType": "movement",
-    "actionCost": "Costs 2 feet of movement for every 1 foot crawled",
+    "description": {
+      "value": "- **Cost:** Costs 2 feet of movement for every 1 foot crawled\n- **Effect:** Move while Prone\n- **Notes:**\n  - All the penalties of being Prone still apply\n  - Useful for moving under low obstacles or staying in cover"
+    },
+    "actionType": "move",
+    "actionCost": "2",
     "trigger": "",
     "effect": "Move while Prone\n- **Notes:**\n  - All the penalties of being Prone still apply\n  - Useful for moving under low obstacles or staying in cover",
-    "keywords": [],
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!538e252b33bc46e1"
 }

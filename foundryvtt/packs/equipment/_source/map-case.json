@@ -1,0 +1,13 @@
+{
+  "_id": "9470eb74c8d24f84",
+  "name": "Map Case",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A cylindrical leather case designed to protect maps and scrolls from damage during travel.",
+    "weight": "1 lb",
+    "cost": "10 gp"
+  },
+  "effects": [],
+  "_key": "!items!9470eb74c8d24f84"
+}

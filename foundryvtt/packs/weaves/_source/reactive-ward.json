@@ -1,10 +1,11 @@
 {
-  "_id": "2b8d6de027194e72",
+  "_id": "02c8f048aec5477c",
   "name": "Reactive Ward",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 2 (force barrier)  \n**Supporting Energy:** None (self, instant reaction)  \n**Range:** Self  \n**Duration:** Until end of next turn  \n**Total Cost:** 2 Energy  \n**Action:** [Reaction]  \n**Weaving Roll:** Space Potential + Space Mastery  \n**Effect:** When hit by an attack or targeted by Unerring Bolt, gain Fortune on your defense roll (or automatically block Unerring Bolt). Applies to the triggering attack and any others until end of your next turn.  \n**Saving Throw:** None (defensive reaction)  \n**Success Scaling:** 0 = fails, 1 = triggering attack only, 2 = until end of next turn, 3 = +2 DR instead of Fortune, 4 = +4 DR (1 minute)"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!02c8f048aec5477c"
 }

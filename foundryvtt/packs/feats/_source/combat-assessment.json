@@ -1,0 +1,13 @@
+{
+  "_id": "52420568ad29420f",
+  "name": "Combat Assessment",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Wis 4\n**Description:** A moment of observation tells you everything you need to know. Knowledge, as they say, is half the battle. The other half is hitting them where it hurts.\n**Benefit:** As 1 [Combat] action, make a Wisdom + Perception check opposed by target's Wisdom + Deception.\n- ***1 success:*** learn its current HP range (Healthy 75%+/Bloodied 25-75%/Critical <25%), highest attribute, and any damage resistances or immunities.\n- ***2 successes:*** your next attack against it this combat subtracts 1 from one die (your choice)\n\n**Usage:** Unlimited (costs action)\n**Keyword:** [Combat]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!52420568ad29420f"
+}

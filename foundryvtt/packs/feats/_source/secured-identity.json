@@ -1,0 +1,13 @@
+{
+  "_id": "9b3b5976897a42da",
+  "name": "Secured Identity",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Organizational Training\n**Description:** Your organization protects its operatives\n**Benefit:** Your organization provides identity protection and operational security. Gain **Fortune** on saves against prophecy weaves and truth detection. Can request your organization erase records of your activity in specific locations (takes 1 week, GM approval required). Once per mission, can call for extraction from dangerous situation\n**Usage:** Passive + special requests\n**Keyword:** [Faction], [Save]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!9b3b5976897a42da"
+}

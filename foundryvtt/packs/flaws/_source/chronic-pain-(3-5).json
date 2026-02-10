@@ -1,10 +1,11 @@
 {
-  "_id": "16ac1ec9414f4531",
+  "_id": "446380785f534de8",
   "name": "Chronic Pain (3-5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "You suffer from persistent pain that flares during stress.\n- **Mild (3):** At start of combat or during extended physical activity, make Will save (1 success required). On failure, add 1 to all die results for 1d8 rounds.\n- **Severe (5):** As Mild, but Will save is at Misfortune (1 success required). On failure, add 2 to all die results for 2d8 rounds."
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!446380785f534de8"
 }

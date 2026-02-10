@@ -1,0 +1,13 @@
+{
+  "_id": "2a1d850e29fc41f7",
+  "name": "Evasive Fighter",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Agi 5\n**Description:** You've mastered moving through threats without exposing yourself\n**Benefit:** Opportunity attacks against you add 1 to both attack dice\n**Usage:** Passive\n**Keyword:** [Combat], [Defense]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!2a1d850e29fc41f7"
+}

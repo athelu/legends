@@ -1,0 +1,13 @@
+{
+  "_id": "c2e5eeb98f404d20",
+  "name": "Knife, Belt",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A general-purpose utility knife carried on the belt, useful for cutting rope, preparing food, and various tasks.",
+    "weight": "0.5 lbs",
+    "cost": "8 gp"
+  },
+  "effects": [],
+  "_key": "!items!c2e5eeb98f404d20"
+}

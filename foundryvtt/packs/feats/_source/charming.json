@@ -1,0 +1,13 @@
+{
+  "_id": "f099c20c81984479",
+  "name": "Charming",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Cha 4, Persuasion 4\n**Description:** Some people just have a way with words. You're one of them. It doesn't always work, but when it matters most, it usually does.\n**Benefit:** Once per session reroll failed social check; double 1s count as ally success\n**Usage:** Once per session\n**Keyword:** [Skill], [General]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!f099c20c81984479"
+}

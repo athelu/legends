@@ -1,0 +1,13 @@
+{
+  "_id": "38e6f2ae282f4380",
+  "name": "Quiver",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A container designed to hold arrows or bolts, worn on the back or hip. Holds up to 20 arrows.",
+    "weight": "1 lb",
+    "cost": "7 gp"
+  },
+  "effects": [],
+  "_key": "!items!38e6f2ae282f4380"
+}

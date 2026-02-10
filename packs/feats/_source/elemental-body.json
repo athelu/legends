@@ -1,0 +1,31 @@
+{
+  "name": "Elemental Body",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 5\n**Prerequisites:** Elemental Mantle, any elemental Mastery 6, Tier 5\n**Description:** For a brief time, your flesh transforms into pure elemental energy, granting you its strengths and shedding your mortal limitations.\n**Benefit:** You can temporarily transform into living elemental energy. As [Combat] action, spend 6 Energy and choose one elemental energy you have Pneuma Strike for:\n**Limitations:** Cannot cast weaves while transformed. Dropping to 0 HP ends transformation immediately\n**Usage:** Costs 6 Energy, lasts 1 minute\n**Keyword:** [Combat], [Ascetic], [Magic]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "resistance",
+        "target": "all non",
+        "value": 4,
+        "apply": "dr",
+        "description": "Resistance (+4 DR) to all non"
+      },
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "3d8",
+        "apply": "dice",
+        "description": "+3d8"
+      }
+    ]
+  },
+  "flags": {}
+}

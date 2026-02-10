@@ -1,0 +1,13 @@
+{
+  "_id": "ee464b8eba004321",
+  "name": "Hat, Basic",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A simple cloth or straw hat providing basic protection from sun and rain.",
+    "weight": "0.5 lbs",
+    "cost": "2 gp"
+  },
+  "effects": [],
+  "_key": "!items!ee464b8eba004321"
+}

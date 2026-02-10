@@ -1,10 +1,11 @@
 {
-  "_id": "e884061e756c4e32",
+  "_id": "fa50c0b9a0cb4fb9",
   "name": "RUDLU - Goddess of Luck",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!fa50c0b9a0cb4fb9"
 }

@@ -1,0 +1,25 @@
+{
+  "_id": "cd63e01b29cd4c91",
+  "name": "Deafened",
+  "type": "condition",
+  "img": "icons/svg/deaf.svg",
+  "system": {
+    "label": "Deafened",
+    "category": "sensory",
+    "description": "-   Cannot hear\n-   Sound-based Perception checks automatically fail\n-   Initiative: -2\n-   Cannot benefit from verbal communication or warnings",
+    "tokenIcon": "icons/svg/deaf.svg",
+    "activeEffects": [
+      {
+        "key": "initiative.flat",
+        "mode": "add",
+        "value": -2,
+        "notes": "-2 to initiative"
+      }
+    ],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20
+  },
+  "flags": {},
+  "_key": "!items!cd63e01b29cd4c91"
+}

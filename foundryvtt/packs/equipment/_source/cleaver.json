@@ -1,0 +1,13 @@
+{
+  "_id": "dd00f78a03ba4f2a",
+  "name": "Cleaver",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A heavy-bladed knife used for butchering meat and other food preparation tasks.",
+    "weight": "2 lbs",
+    "cost": "8 gp"
+  },
+  "effects": [],
+  "_key": "!items!dd00f78a03ba4f2a"
+}

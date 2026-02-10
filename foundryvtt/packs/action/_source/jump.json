@@ -1,19 +1,22 @@
 {
-  "_id": "4d2aa5ede8114fc8",
+  "_id": "300984b26e224af2",
   "name": "Jump",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "",
-    "actionType": "movement",
+    "description": {
+      "value": "- **Cost:** Part of your movement (consumes feet of movement)\n- **Long Jump:** \n  - Running start (10+ feet): Jump up to your Strength score in feet\n  - Standing jump: Jump up to half your Strength score in feet\n- **High Jump:**\n  - Running start (10+ feet): Jump up to 3 + (Strength ÷ 2, rounded down) feet\n  - Standing jump: Jump up to half that distance\n- **Notes:**\n  - Athletics check may be required for difficult jumps (GM discretion)\n  - Landing in difficult terrain may require Acrobatics check to avoid falling prone"
+    },
+    "actionType": "move",
     "actionCost": "Part of your movement (consumes feet of movement)",
     "trigger": "",
     "effect": "",
-    "keywords": [],
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!300984b26e224af2"
 }

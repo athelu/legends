@@ -1,0 +1,13 @@
+{
+  "_id": "51b71de866db4153",
+  "name": "Fast Healer",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Con 4\n**Benefit:** Short rest: gain +Con HP; long rest: gain double HP\n**Usage:** Passive\n**Keyword:** [Heal], [General]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!51b71de866db4153"
+}

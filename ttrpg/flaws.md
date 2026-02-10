@@ -9,7 +9,7 @@ Flaws represent physical, mental, and social disadvantages that limit your chara
 - Some flaws require GM approval
 
 ---
-
+<!-- PACK:flaws -->
 ## PHYSICAL FLAWS
 
 ### Bad Luck (6)

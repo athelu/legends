@@ -1,3 +1,4 @@
+<!-- PACK:action:Combat,Move,Activate,Interact,Free,Reaction -->
 ## Action Types
 ### Combat Actions
 Combat actions represent attacks, weaves, and tactical maneuvers used to engage enemies.
@@ -20,7 +21,7 @@ Combat actions represent attacks, weaves, and tactical maneuvers used to engage 
 All characters have access to these combat options:
 
 ##### Melee Attack [Combat]
-- **Cost:** 1 [Combat] action
+ - **Cost:** 1
 - **Requirements:** Target must be within your melee reach (typically 5 feet)
 - **Effect:** Make an opposed attack roll (Agility + Melee Combat vs opponent's Agility + Melee Combat)
 - **Damage on Success:**
@@ -33,7 +34,7 @@ All characters have access to these combat options:
   - Can be modified by combat maneuvers (see below)
 
 ##### Ranged Attack [Combat]
-- **Cost:** 1 [Combat] action
+ - **Cost:** 1
 - **Requirements:** Ranged weapon, target within range
 - **Effect:** Make an attack roll (Dexterity + Ranged Combat)
 - **Range Bands:**
@@ -47,7 +48,7 @@ All characters have access to these combat options:
   - Making a ranged attack while threatened (enemy within 5 feet) add 1 to both attack dice
 
 ##### Simple Weave [Combat]
-- **Cost:** 1 [Combat] action
+ - **Cost:** 1
 - **Requirements:** Ability to weave, sufficient Energy
 - **Range:** Touch to 5-10 feet maximum (no supporting energy for range)
 - **Effect:** Cast a single-energy weave (Primary Energy only, no Supporting Energy)
@@ -61,7 +62,7 @@ All characters have access to these combat options:
   - See (Magic System) for full weaving rules and Simple Weave limitations
 
 ##### Complex Weave [Combat]
-- **Cost:** 2 [Combat] actions
+ - **Cost:** 2
 - **Requirements:** Ability to weave, sufficient Energy
 - **Effect:** Cast a multi-energy weave using Primary + Supporting Energy
 - **Examples:** Fire Bolt, Fireball, Mend Flesh, Binding Paralysis, Invisibility
@@ -72,27 +73,8 @@ All characters have access to these combat options:
   - See (Magic System) for full weaving rules
   - Complex weaves typically have area effects, require saves, affect range/duration, or involve complex energy manipulation
 
-### Weaving While Threatened
-
-##### Opportunity Attacks from Weaving:
-- **Simple Weaves (1 action):** Don't provoke Opportunity Attacks
-  - Quick, instinctive magical effects channeled through the body
-  - Limited to touch/close range (5-10ft)
-  - Raw energy emanations, not shaped projectiles
-  
-- **Complex Weaves (2 actions):** Provoke Opportunity Attacks
-  - Require gestures, shaping, and time
-  - Use supporting energies to achieve range/area/duration
-  - Enemy gets opportunity attack before weave completes
-
-##### Tactical Options:
-- **In melee:** Use Simple Weaves (don't provoke) or use Disengage first
-- **At range:** Use Complex Weaves freely (more damage, better range)
-- **Positioning:** Stay at range to avoid being threatened
-- **Party tactics:** Have allies protect you while weaving
-
 ##### Channel Divinity [Combat]
-- **Cost:** 2 [Combat] actions
+ - **Cost:** 2
 - **Requirements:** Divine Gift Trait
 - **Range:** 30-foot radius centered on you
 - **Effect:** Automatically succeeds for Heal/Harm intents (see Part 7 for full details)
@@ -103,12 +85,9 @@ All characters have access to these combat options:
   - Indiscriminate area effect (affects friends and foes)
   - See (Magic System) for Channel Divinity details
 
-### Combat Maneuvers
-
-These maneuvers modify or replace your standard attacks:
 
 ##### Called Shot [Combat]
-- **Cost:** 1 [Combat] action (replaces normal attack)
+ - **Cost:** 1
 - **Effect:** Add 1 to both attack die results, but on hit choose one:
   - Bypass half DR (rounded down)
   - Apply specific condition (Bleeding, Dazzled, etc. - GM approval required)
@@ -118,7 +97,7 @@ These maneuvers modify or replace your standard attacks:
   - Subject to Multiple Action Penalty
 
 ##### Power Attack [Combat]
-- **Cost:** 1 [Combat] action (replaces normal attack)
+ - **Cost:** 1
 - **Requirements:** Power Attack feat, Str 3, Melee 3
 - **Effect:** Add 1 to both attack die results, but deal +1d8 bonus damage on hit
 - **Notes:**
@@ -127,7 +106,7 @@ These maneuvers modify or replace your standard attacks:
   - Only works with melee attacks
 
 ##### Disarm Attempt [Combat]
-- **Cost:** 1 [Combat] action (replaces normal attack)
+ - **Cost:** 1
 - **Effect:** Make normal attack roll against opponent
 - **Success:**
   - Margin 1: No damage, target drops one held item (your choice)
@@ -138,7 +117,7 @@ These maneuvers modify or replace your standard attacks:
   - Target must be holding the item
 
 ##### Trip Attempt [Combat]
-- **Cost:** 1 [Combat] action (replaces normal attack)
+ - **Cost:** 1
 - **Effect:** Make normal attack roll against opponent
 - **Success:**
   - Margin 1: No damage, target falls Prone
@@ -149,7 +128,7 @@ These maneuvers modify or replace your standard attacks:
   - Target must be no more than one size larger than you
 
 ##### Shove [Combat]
-- **Cost:** 1 [Combat] action
+ - **Cost:** 1
 - **Effect:** Make opposed Athletics check (Strength + Athletics vs target's Athletics or Acrobatics)
 - **Success:** Push target 5 feet away from you OR knock them Prone (your choice)
 - **Notes:**
@@ -158,7 +137,7 @@ These maneuvers modify or replace your standard attacks:
   - Doesn't deal damage
 
 ##### Grapple [Combat]
-- **Cost:** 1 [Combat] action
+ - **Cost:** 1
 - **Effect:** Make opposed Athletics check (Strength + Athletics vs target's Athletics or Acrobatics)
 - **Success:** Target becomes Grappled (see Conditions)
 - **Notes:**
@@ -168,7 +147,7 @@ These maneuvers modify or replace your standard attacks:
   - Subject to Multiple Action Penalty
 
 ##### Two-Weapon Fighting [Combat]
-- **Cost:** 1 [Combat] action for both attacks
+ - **Cost:** 1
 - **Requirements:** Wielding two weapons, off-hand weapon must have Light property
 - **Without Feat:**
   - Use Shared Attribute Roll (roll attribute once for both attacks)
@@ -182,11 +161,8 @@ These maneuvers modify or replace your standard attacks:
   - Subject to Multiple Action Penalty if you make additional combat actions
   - See (Combat) for detailed examples
 
-
-### Special Combat Actions
-
 ##### Ready an Action [Combat]
-- **Cost:** 1 or 2 actions (depending on what you're readying)
+ - **Cost:** 1 or 2
 - **Effect:** Choose a trigger and an action. When the trigger occurs before your next turn, you can use your [Reaction] to perform the readied action
 - **Examples:**
   - "I ready an attack for when the orc comes through the door" (1 action)
@@ -198,7 +174,7 @@ These maneuvers modify or replace your standard attacks:
   - Readied weaves that aren't used still consume Energy
 
 ##### Aid Another [Combat]
-- **Cost:** 1 [Combat] action
+ - **Cost:** 1
 - **Effect:** Make a skill check to help an ally with their action
 - **Success (1+):** Your ally gains Fortune on their next roll for that task
 - **Notes:**
@@ -207,7 +183,7 @@ These maneuvers modify or replace your standard attacks:
   - Subject to Multiple Action Penalty
 
 ##### Feint [Combat]
-- **Cost:** 1 [Combat] action
+ - **Cost:** 1
 - **Effect:** Make opposed Deception check (Charisma + Deception vs target's Empathy + Wisdom)
 - **Success:** Your next attack against that target this turn has Fortune
 - **Notes:**
@@ -215,30 +191,13 @@ These maneuvers modify or replace your standard attacks:
   - Subject to Multiple Action Penalty
 
 ##### Total Defense [Combat]
-- **Cost:** All 3 of your actions
+ - **Cost:** 3
 - **Effect:** Focus entirely on defense until your next turn
 - **Benefit:** All attacks against you have Misfortune
 - **Notes:**
   - Cannot take any other actions this turn
   - Can still take your [Reaction]
 
-### Important Clarifications
-
-**You cannot:**
-- Make attacks of opportunity on your own turn
-- Use [Combat] actions if you're Unconscious, Paralyzed, or Stunned
-- Target creatures you cannot perceive (unless using specific senses or abilities)
-
-**You can:**
-- Mix [Combat] actions with [Move], [Activate], and [Interact] actions freely
-- Take multiple [Combat] actions, but each adds to the penalty
-- Delay effects of the Multiple Action Penalty don't stack with other sources that add to die results
-- Choose not to attack even when you could
-
-**Multiple Action Penalty applies to:**
-- All actions with the [Combat] keyword
-- Stacks cumulatively throughout your turn
-- Resets at the start of your next turn
 
 ## Movement Actions
 Movement actions allow you to reposition, navigate terrain, and control the battlefield.
@@ -246,16 +205,58 @@ Movement actions allow you to reposition, navigate terrain, and control the batt
 #### Basic Movement Mechanics:
 - **Speed:** Your base movement speed is 30 feet per round (unless modified by race, conditions, or abilities)
 - **Cost:** Advance costs 1 [Move] action per increment up to your speed
+- **Cost:** Advance costs 1 per increment up to your speed
 - **Terrain:** Difficult terrain costs 2 feet of movement for every 1 foot traveled
 - **Multiple Movements:** You can take multiple [Move] actions in a turn, spending your actions as needed
 - **Splitting Movement:** You can split your movement between other actions (move 15 feet, attack, move 15 feet more)
 
 #### Standard Movement Actions
 
+### Movement in Combat
+
+#### Opportunity Attacks:
+- Moving out of an enemy's reach provokes Opportunity Attacks (see Reactions)
+- Forced movement (shoved, pushed by spells) doesn't provoke
+- Teleportation doesn't provoke
+
+#### Flanking (Optional Rule):
+- When you and an ally are on opposite sides of an enemy (with both in melee reach)
+- Both you and your ally subtract 1 from both dice when making attacks
+- Enemy must be no more than one size larger than you
+
+### Important Clarifications
+
+**You cannot:**
+- Move through an enemy's space unless you Tumble Through or have special permission
+- Move if your speed is reduced to 0 (Grappled, Restrained, etc.)
+- Split a single [Move] action between multiple turns
+
+**You can:**
+- Split your movement between different actions in the same turn
+- Take multiple [Move] actions per turn if you have actions available
+- Choose not to use all your available movement
+- Move through allies' spaces (costs normal movement)
+
+### Movement Modifiers
+
+#### Speed Increases:
+- Fleet of Foot feat
+- Haste weave
+- Certain magic items or abilities
+
+#### Speed Reductions:
+- Exhaustion (level 2+)
+- Grappled condition
+- Restrained condition
+- Difficult terrain
+- Squeezing
+- Climbing/Swimming
+- stalk
+
 All characters have access to these movement options:
 
-##### Advance [Move]
-- **Cost:** 1 [Move] action
+-##### Advance [Move]
+- **Cost:** 1
 - **Effect:** Move up to your speed in feet
 - **Notes:**
   - Can be split between other actions
@@ -263,31 +264,31 @@ All characters have access to these movement options:
   - Advancing through another creature's space requires their permission or an Acrobatics check (GM discretion)
   - Moving Diagonally more than once during an advance costs 7.5 ft.
 
-##### Stand from Prone [Move]
-- **Cost:** 1 [Move] action
+-##### Stand from Prone [Move]
+- **Cost:** 1
 - **Effect:** Stand up from the Prone condition
 - **Notes:**
   - If your speed is 0, you cannot stand up
   - Standing up doesn't provoke Opportunity Attacks
 
-##### Disengage [Move]
-- **Cost:** 2 [Move] action
+-##### Disengage [Move]
+- **Cost:** 2
 - **Effect:** Your movement doesn't provoke Opportunity Attacks for the rest of your turn
 - **Restriction:** You cannot end your movement within melee reach of an enemy creature
 - **Notes:**
   - You can still move your full speed after disengaging (using additional [Move] actions)
   - Useful for tactical repositioning without taking free attacks
 
-##### Mount/Dismount [Move]
-- **Cost:** 1 [Move] action
+-##### Mount/Dismount [Move]
+- **Cost:** 1
 - **Effect:** Mount or dismount a creature/vehicle
 - **Notes:**
   - The mount must be within 5 feet and willing
   - Mounting/dismounting doesn't provoke Opportunity Attacks
   - While mounted, you use the mount's speed instead of your own
 
-##### Squeeze [Move]
-- **Cost:** 1 [Move] action
+-##### Squeeze [Move]
+- **Cost:** 1
 - **Effect:** Move through a space one size smaller than you
 - **Speed:** Costs 2 feet of movement for every 1 foot traveled
 - **Penalties:** While squeezing:
@@ -333,7 +334,7 @@ All characters have access to these movement options:
   - Useful for moving under low obstacles or staying in cover
 
 ##### Tumble Through [Move]
-- **Cost:** 1 [Move] action
+- **Cost:** 1
 - **Effect:** Acrobatics check (Agility + Acrobatics) to move through an enemy's space
 - **Check:** Opposed by enemy's Reflex save (Agility + Luck)
 - **Success:** You move through their space without provoking Opportunity Attacks
@@ -343,7 +344,7 @@ All characters have access to these movement options:
   - Useful for flanking or escaping surrounded positions
 
 ##### Hide [Move]
-- **Cost:** 1 [Move] action
+- **Cost:** 1
 - **Effect:** Stealth check (Agility + stealth) with the aid of partial cover or greater.
 - **Check:** Opposed by enemy's Perception (Wisdom + Perception)
 - **Success:** You use cover to successfully become hidden
@@ -362,53 +363,12 @@ All characters have access to these movement options:
   - Per Enemy test, may be hidden from some (but you do not know which)
 
 
-### Movement Modifiers
-
-#### Speed Increases:
-- Fleet of Foot feat
-- Haste weave
-- Certain magic items or abilities
-
-#### Speed Reductions:
-- Exhaustion (level 2+)
-- Grappled condition
-- Restrained condition
-- Difficult terrain
-- Squeezing
-- Climbing/Swimming
-- stalk
-
-### Movement in Combat
-
-#### Opportunity Attacks:
-- Moving out of an enemy's reach provokes Opportunity Attacks (see Reactions)
-- Forced movement (shoved, pushed by spells) doesn't provoke
-- Teleportation doesn't provoke
-
-#### Flanking (Optional Rule):
-- When you and an ally are on opposite sides of an enemy (with both in melee reach)
-- Both you and your ally subtract 1 from both dice when making attacks
-- Enemy must be no more than one size larger than you
-
-### Important Clarifications
-
-**You cannot:**
-- Move through an enemy's space unless you Tumble Through or have special permission
-- Move if your speed is reduced to 0 (Grappled, Restrained, etc.)
-- Split a single [Move] action between multiple turns
-
-**You can:**
-- Split your movement between different actions in the same turn
-- Take multiple [Move] actions per turn if you have actions available
-- Choose not to use all your available movement
-- Move through allies' spaces (costs normal movement)
-
 ## Activate Actions
 
 Activate actions involve using items, equipment, or abilities that require deliberate triggering or operation. These actions represent more complex interactions than simple manipulation.
 
 ### Activate Magic Item [Activate]
-- **Cost:** 1 [Activate] action (or as specified by item)
+ - **Cost:** 1 (or as specified by item)
 - **Effect:** Trigger a magic item's power or property
 - **Examples:**
   - Speaking a command word to activate a magic sword's flame ability
@@ -421,14 +381,14 @@ Activate actions involve using items, equipment, or abilities that require delib
   - See the item's description for specific activation requirements
 
 ### Use Special Ability [Activate]
-- **Cost:** 1 [Activate] action (or as specified by ability)
+ - **Cost:** 1 (or as specified by ability)
 - **Effect:** Use a class feature, feat, or special ability that doesn't fit other categories
 - **Notes:**
   - Specific action cost listed in ability description
   - Some abilities may be [Free] or [Reaction] instead
 
 ### Drink Potion [Activate]
-- **Cost:** 1 [Activate] action
+ - **Cost:** 1
 - **Effect:** Consume a potion and gain its effects
 - **Notes:**
   - Administering a potion to another creature requires 1 [Activate] action
@@ -436,7 +396,7 @@ Activate actions involve using items, equipment, or abilities that require delib
   - Drinking while threatened provokes Opportunity Attacks (unless you use Disengage first)
 
 ### Use Consumable [Activate]
-- **Cost:** 1 [Activate] action
+ - **Cost:** 1
 - **Effect:** Use a consumable item (oil, poison, alchemical item, etc.)
 - **Examples:**
   - Applying oil to a weapon
@@ -448,7 +408,7 @@ Activate actions involve using items, equipment, or abilities that require delib
   - Applying poison to a weapon requires 1 [Activate] action
 
 ### Read Scroll [Activate]
-- **Cost:** 2 [Activate] actions
+ - **Cost:** 2
 - **Requirements:** Ability to read, appropriate magical knowledge
 - **Effect:** Cast the spell contained in the scroll
 - **Check:** Arcane check required if spell level exceeds your weaving capability
@@ -458,7 +418,7 @@ Activate actions involve using items, equipment, or abilities that require delib
   - Failure may destroy the scroll
 
 ### Don/Doff Shield [Activate]
-- **Cost:** 1 [Activate] action
+ - **Cost:** 1
 - **Effect:** Equip or remove a shield
 - **Notes:**
   - Drawing/stowing a shield requires focused effort (not quick like a weapon)
@@ -468,15 +428,6 @@ Activate actions involve using items, equipment, or abilities that require delib
 ### Don/Doff Armor [Activate]
 - **Cost:** Variable (see table below)
 - **Effect:** Put on or take off armor
-- **Timing:**
-
-| Armor Type | Don (Put On) | Doff (Remove) |
-|------------|--------------|---------------|
-| Light Armor | 1 minute | 1 minute |
-| Medium Armor | 5 minutes | 1 minute |
-| Heavy Armor | 10 minutes | 5 minutes |
-| Shield | 1 action | 1 action |
-
 - **Notes:**
   - Requires assistance to halve the time for medium/heavy armor
   - Cannot be done during combat rounds (too time-consuming)
@@ -487,7 +438,7 @@ Activate actions involve using items, equipment, or abilities that require delib
 Interact actions involve manipulating objects, the environment, or simple physical tasks that don't require specialized skills. Many Interact actions can be combined with movement for efficiency.
 
 ### Interact with Object [Interact]
-- **Cost:** 1 [Interact] action (or [Free] with [Move] action, GM discretion)
+- **Cost:** 1 (or Free with Move action, GM discretion)
 - **Effect:** Manipulate an object or environmental feature
 - **Examples:**
   - Open or close a door
@@ -502,7 +453,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
   - GM determines if action can be done as [Free] during movement
 
 ### Draw/Stow Weapon [Interact]
-- **Cost:** [Free] with [Move] action, or 1 [Interact] action if standing still
+- **Cost:** Free with Move action, or 1 if standing still
 - **Effect:** Draw a weapon or stow it in its sheath/holster
 - **Examples:**
   - Drawing a sword from scabbard
@@ -516,7 +467,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
   - Cannot draw/stow weapons while Grappled (hands not free)
 
 ### Pick Up/Drop Item [Interact]
-- **Cost:** [Free] to drop, [Free] with [Move] to pick up (or 1 [Interact] action)
+- **Cost:** Free to drop, Free with Move to pick up (or 1)
 - **Effect:** Retrieve or release an item
 - **Examples:**
   - Picking up a dropped weapon
@@ -529,7 +480,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
   - Item must be within reach (typically 5 feet)
 
 ### Manipulate Object [Interact]
-- **Cost:** 1 [Interact] action
+- **Cost:** 1
 - **Effect:** Perform a more complex object manipulation
 - **Examples:**
   - Tying a rope to a grappling hook
@@ -543,7 +494,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
   - GM determines if task requires multiple actions
 
 ### Hand Off Item [Interact]
-- **Cost:** [Free] action
+- **Cost:** Free
 - **Effect:** Pass an item to an adjacent willing creature
 - **Requirements:** Both creatures must have at least one free hand
 - **Notes:**
@@ -553,7 +504,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
   - Doesn't provoke Opportunity Attacks
 
 ### Extinguish Flames [Interact]
-- **Cost:** 1 [Interact] action
+- **Cost:** 1
 - **Effect:** Put out flames on yourself or an adjacent creature
 - **Examples:**
   - Stop, drop, and roll
@@ -565,7 +516,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
   - Uses your action but could save significant HP
 
 ### Use Tool/Kit [Interact]
-- **Cost:** Variable (typically 1-10 [Interact] actions)
+- **Cost:** Variable (typically 1-10)
 - **Effect:** Use thieves' tools, healer's kit, artisan's tools, etc.
 - **Examples:**
   - Picking a lock (1-10 actions, requires skill check)
@@ -593,7 +544,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
   - May require multiple actions for larger areas
 
 ### Take Cover [Interact]
-- **Cost:** [Free] with [Move] action
+ - **Cost:** Free with Move action
 - **Effect:** Position yourself to gain cover benefits
 - **Notes:**
   - Must have cover available (wall, boulder, etc.)
@@ -601,7 +552,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
   - Enemies may have Misfortune attacking you depending on cover quality
 
 ### Speak/Signal [Interact]
-- **Cost:** [Free] action
+ - **Cost:** Free
 - **Effect:** Communicate briefly with allies or enemies
 - **Examples:**
   - Shouting a warning
@@ -617,8 +568,13 @@ Interact actions involve manipulating objects, the environment, or simple physic
 
 Free actions require no significant time or effort and can be performed alongside other actions.
 
+#### Free Action Limits
+- **Limit:** You can take a reasonable number of [Free] actions per turn (typically 1-3), subject to GM discretion
+- **Abuse Prevention:** GM may rule that excessive free actions (like dropping 20 items) require actual action costs
+- **Timing:** Free actions can typically be taken at any point during your turn
+
 ### Drop Item [Free]
-- **Cost:** [Free] action
+ - **Cost:** Free
 - **Effect:** Release an item from your hand
 - **Notes:**
   - Item falls in your space
@@ -626,7 +582,7 @@ Free actions require no significant time or effort and can be performed alongsid
   - Can drop multiple items per turn if necessary (GM discretion)
 
 ### Brief Communication [Free]
-- **Cost:** [Free] action
+ - **Cost:** Free
 - **Effect:** Say a few words (3-5 words maximum)
 - **Examples:**
   - "Look out!"
@@ -638,7 +594,7 @@ Free actions require no significant time or effort and can be performed alongsid
   - Silenced creatures cannot speak
 
 ### End Concentration [Free]
-- **Cost:** [Free] action
+ - **Cost:** Free
 - **Effect:** Stop concentrating on a weave/spell
 - **Notes:**
   - The weave immediately ends
@@ -646,7 +602,7 @@ Free actions require no significant time or effort and can be performed alongsid
   - Useful for ending harmful weaves or switching concentration
 
 ### Release Grapple [Free]
-- **Cost:** [Free] action
+ - **Cost:** Free
 - **Effect:** Stop grappling a creature you're currently grappling
 - **Notes:**
   - The target is no longer Grappled by you
@@ -654,17 +610,12 @@ Free actions require no significant time or effort and can be performed alongsid
   - Doesn't require a check
 
 ### Drop Prone [Free]
-- **Cost:** [Free] action
+ - **Cost:** Free
 - **Effect:** Fall prone in your current space
 - **Notes:**
   - Doesn't provoke Opportunity Attacks
   - Useful for gaining cover against ranged attacks (enemies have Misfortune)
   - Remember: Enemies have Fortune on melee attacks against you while prone
-
-#### Free Action Limits
-- **Limit:** You can take a reasonable number of [Free] actions per turn (typically 1-3), subject to GM discretion
-- **Abuse Prevention:** GM may rule that excessive free actions (like dropping 20 items) require actual action costs
-- **Timing:** Free actions can typically be taken at any point during your turn
 
 ## Reactions
 Reactions are special responses triggered by specific circumstances that occur outside your turn.
@@ -677,26 +628,6 @@ Reactions are special responses triggered by specific circumstances that occur o
 - **Action Cost:** Reactions don't count against your 3 actions per turn
 - **Choice:** If you have access to multiple reactions, you must choose which one to use when triggered
 - **Additional Reactions:** Some feats, equipment, and weaves grant additional reaction options beyond those listed here
-
-### Universal Reactions
-
-All characters have access to these reactions:
-
-#### Opportunity Attack [Combat] (Reaction)
-- **Trigger:** A hostile creature you can see moves out of your melee reach
-- **Effect:** Make one melee attack against the triggering creature
-- **Resolution:** Roll your Melee Combat skill normally. This attack uses your reaction for the round.
-- **Notes:** 
-  - Movement within your reach doesn't trigger this reaction
-  - Teleportation and forced movement don't trigger this reaction
-  - The Disengage action prevents opportunity attacks
-
-#### Counterweave [Combat]
-- **Requirements:** Ability to weave, Space energy available
-- **Trigger:** You see a creature weaving within medium range (60ft)
-- **Effect:** Attempt to counter the weave (see CounterWeave in Weaves)
-- **Cost:** Energy equal to the weave being countered
-- **Notes:** Requires successful Arcane check to identify the weave first
 
 ### Reaction Priority and Timing
 
@@ -716,3 +647,40 @@ When multiple creatures have reactions that could trigger simultaneously:
 - Use your reaction before your first turn in initiative order (unless Surprised)
 - Choose not to use your reaction when triggered
 - Use different reactions on different rounds (if you have access to multiple reaction types)
+
+### Reactions
+
+#### Ranged Defense
+- **Trigger:** You are targeted by a Ranged attack while wielding a shield.
+- **Effect:** [Reaction] - Force Misfortune on one ranged attack per round.
+- **Notes:** 
+  - Only works against ranged attacks
+
+#### Shield Block
+- **Trigger:** You are hit by a melee attack while wielding a shield
+- **Effect:** Choose one:
+  - **Force Reroll:** [Reaction] once per round, Attacker must reroll one of their success dice
+  - **Increase DR:** [Reaction] once per round, Gain +2 DR against this attack only
+- **Notes:** 
+  - Only works against melee attacks
+
+
+### Universal Reactions
+All characters have access to these reactions:
+
+#### Opportunity Attack [Combat] (Reaction)
+- **Trigger:** A hostile creature you can see moves out of your melee reach
+- **Effect:** Make one melee attack against the triggering creature
+- **Resolution:** Roll your Melee Combat skill normally. This attack uses your reaction for the round.
+- **Notes:** 
+  - Movement within your reach doesn't trigger this reaction
+  - Teleportation and forced movement don't trigger this reaction
+  - The Disengage action prevents opportunity attacks
+
+#### Counterweave [Combat]
+- **Requirements:** Ability to weave, Space energy available
+- **Trigger:** You see a creature weaving within medium range (60ft)
+- **Effect:** Attempt to counter the weave (see CounterWeave in Weaves)
+- **Cost:** Energy equal to the weave being countered
+- **Notes:** Requires successful Arcane check to identify the weave first
+

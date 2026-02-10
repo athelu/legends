@@ -1,0 +1,13 @@
+{
+  "_id": "d87385df9a4e4abe",
+  "name": "Comb",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A wooden or bone implement for grooming hair and maintaining personal appearance.",
+    "weight": "0.1 lbs",
+    "cost": "2 sp"
+  },
+  "effects": [],
+  "_key": "!items!d87385df9a4e4abe"
+}

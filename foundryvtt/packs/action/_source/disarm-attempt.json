@@ -1,19 +1,22 @@
 {
-  "_id": "c9149fef57184018",
+  "_id": "de51814128384412",
   "name": "Disarm Attempt",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "",
+    "description": {
+      "value": "- **Cost:** 1\n- **Effect:** Make normal attack roll against opponent\n- **Success:**\n  - Margin 1: No damage, target drops one held item (your choice)\n  - Margin 2+: Base weapon damage AND target drops item\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty\n  - Target must be holding the item"
+    },
     "actionType": "combat",
-    "actionCost": "1 [Combat] action (replaces normal attack)",
+    "actionCost": "1",
     "trigger": "",
     "effect": "Make normal attack roll against opponent\n- **Success:**\n  - Margin 1: No damage, target drops one held item (your choice)\n  - Margin 2+: Base weapon damage AND target drops item\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty\n  - Target must be holding the item",
-    "keywords": [],
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!de51814128384412"
 }

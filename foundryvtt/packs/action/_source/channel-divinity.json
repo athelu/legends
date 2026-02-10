@@ -1,19 +1,22 @@
 {
-  "_id": "1936b1f468274cb6",
+  "_id": "2c8ca200d7a64352",
   "name": "Channel Divinity",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "Divine Gift Trait\n- **Range:** 30-foot radius centered on you\n- **Effect:** Automatically succeeds for Heal/Harm intents (see Part 7 for full details)\n- **Types:** Heal, Harm, Turn (undead), Command (undead)\n- **Energy Cost:** Minimum 4 Energy, can spend more\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes\n  - Indiscriminate area effect (affects friends and foes)\n  - See (Magic System) for Channel Divinity details\n\n### Combat Maneuvers\n\nThese maneuvers modify or replace your standard attacks:",
+    "description": {
+      "value": "Divine Gift Trait\n- **Range:** 30-foot radius centered on you\n- **Effect:** Automatically succeeds for Heal/Harm intents (see Part 7 for full details)\n- **Types:** Heal, Harm, Turn (undead), Command (undead)\n- **Energy Cost:** Minimum 4 Energy, can spend more\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes\n  - Indiscriminate area effect (affects friends and foes)\n  - See (Magic System) for Channel Divinity details"
+    },
     "actionType": "combat",
-    "actionCost": "2 [Combat] actions",
+    "actionCost": "2",
     "trigger": "",
-    "effect": "Automatically succeeds for Heal/Harm intents (see Part 7 for full details)\n- **Types:** Heal, Harm, Turn (undead), Command (undead)\n- **Energy Cost:** Minimum 4 Energy, can spend more\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes\n  - Indiscriminate area effect (affects friends and foes)\n  - See (Magic System) for Channel Divinity details\n\n### Combat Maneuvers\n\nThese maneuvers modify or replace your standard attacks:",
-    "keywords": [],
+    "effect": "Automatically succeeds for Heal/Harm intents (see Part 7 for full details)\n- **Types:** Heal, Harm, Turn (undead), Command (undead)\n- **Energy Cost:** Minimum 4 Energy, can spend more\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes\n  - Indiscriminate area effect (affects friends and foes)\n  - See (Magic System) for Channel Divinity details",
+    "keywords": "",
     "range": "30-foot radius centered on you",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!2c8ca200d7a64352"
 }

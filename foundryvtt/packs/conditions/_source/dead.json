@@ -1,0 +1,18 @@
+{
+  "_id": "83ed876646e148e4",
+  "name": "Dead",
+  "type": "condition",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "label": "Dead",
+    "category": "incapacitation",
+    "description": "-   Character is deceased\n-   Cannot be affected by normal healing\n-   Requires resurrection magic or special circumstances",
+    "tokenIcon": "icons/svg/skull.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "severe",
+    "overlayPriority": 30
+  },
+  "flags": {},
+  "_key": "!items!83ed876646e148e4"
+}

@@ -45,6 +45,7 @@ def main():
         "build_ability_pack.py",
         "build_backgrounds_pack.py",
         "build_ancestries_pack.py",
+        "build_conditions_pack.py",
         "build_weaves_pack.py",
         "build_equipment_pack.py",
     ]
@@ -68,11 +69,18 @@ def main():
         print(f"  [{status}] {script}")
     
     print(f"\nTotal: {successful}/{total} successful")
-    
+
     if successful < total:
         return 1
     else:
         print("\nAll packs built successfully!")
+        print("\n" + "="*60)
+        print("NEXT STEPS")
+        print("="*60)
+        print("1. Review the generated _source/*.json files")
+        print("2. Run 'npm run pack:all' to compile .db files with Foundry CLI")
+        print("3. Deploy to Foundry using: bash deploy_to_foundry.sh")
+        print("="*60 + "\n")
         return 0
 
 

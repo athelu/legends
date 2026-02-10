@@ -1,0 +1,13 @@
+{
+  "_id": "ba08a86417804ce6",
+  "name": "Shovel",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A wooden-handled tool with an iron blade, used for digging and moving earth or other materials.",
+    "weight": "5 lbs",
+    "cost": "8 gp"
+  },
+  "effects": [],
+  "_key": "!items!ba08a86417804ce6"
+}

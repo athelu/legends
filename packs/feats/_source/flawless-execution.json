@@ -1,0 +1,16 @@
+{
+  "name": "Flawless Execution",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 4\n**Prerequisites:** Sorcerous Origin trait, Wis 6, any Energy Mastery 6, Tier 4\n**Benefit:** Once per long rest, you can cast one weave and completely ignore ALL overspending penalties. Spend as much Energy as you want (up to your Potential) with no penalties\n**Usage:** Once per long rest\n**Keyword:** [Magic], [Sorcerer]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Mystic Defense",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 1\n**Prerequisites:** Wis 3\n**Description:** You've learned to defend yourself through awareness and supernatural positioning. It requires constant vigilance, but the freedom of movement makes it worthwhile.\n**Benefit:** While wearing no armor and not using a shield, your disciplined mind and body harmony grant DR equal to your Wisdom score\n**Usage:** Passive\n**Note:** Can be combined with Savage Resilience if you meet both prerequisites; use the better DR\n**Keyword:** [Defense], [Ascetic]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

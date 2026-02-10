@@ -1,0 +1,13 @@
+{
+  "_id": "24e6b9a3d3e54272",
+  "name": "Magnifying Glass",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A ground glass lens in a metal frame that can magnify small objects or text, useful for detailed examination and investigation.",
+    "weight": "0.5 lbs",
+    "cost": "100 gp"
+  },
+  "effects": [],
+  "_key": "!items!24e6b9a3d3e54272"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "dbb43ae7649a4446",
+  "name": "Grain, Dried",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Preserved grain suitable for cooking or use as animal feed. One pound provides basic sustenance for one day.",
+    "weight": "1 lb",
+    "cost": "5 cp"
+  },
+  "effects": [],
+  "_key": "!items!dbb43ae7649a4446"
+}

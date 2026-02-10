@@ -1,10 +1,11 @@
 {
-  "_id": "271842dda51b470c",
+  "_id": "b7fb363865514d7e",
   "name": "Fireball",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Fire 5 (exploding ball of flame, damage)\n**Supporting Energy:** Space 4 (medium range 60ft + area 20ft radius)\n**Total Cost:** 9 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Fire Potential + Fire Mastery + Space Potential + Space Mastery (4d8)\n**Effect:** A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. All creatures in a 20-foot radius sphere take 28 fire damage. Each target takes the full listed damage and makes their own save.\n**Saving Throw:** Reflex (to reduce damage)\n**Damage Type:** Fire (energy)\n**DR Interaction:** Half DR (28 fire damage vs DR 4 becomes 28 - 2 = 26 damage)\n**Area Effect Note:** With Space 4, this affects all creatures in a 20ft radius (approximately 4-6 targets in typical combat). Each target is resolved individually—some may take full damage while others dodge for reduced or no damage.\n**Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total)\n**Ignited Condition (at Net 4):** Target takes 1d8 fire damage at start of each turn. Can use 1 action to make Reflex save (1 success ends) or ally can use 1 action to extinguish."
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!b7fb363865514d7e"
 }

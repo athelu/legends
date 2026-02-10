@@ -1,0 +1,13 @@
+{
+  "_id": "5f99bcb828b74366",
+  "name": "Lantern, Bullseye",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A directional lantern that projects bright light in a 60-foot cone and dim light for an additional 60 feet. Burns for 6 hours on one pint of oil.",
+    "weight": "3 lbs",
+    "cost": "15 gp"
+  },
+  "effects": [],
+  "_key": "!items!5f99bcb828b74366"
+}

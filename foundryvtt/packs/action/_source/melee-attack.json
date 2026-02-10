@@ -1,19 +1,22 @@
 {
-  "_id": "33f922ee9d9a4e98",
+  "_id": "a7b42a55339445ed",
   "name": "Melee Attack",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "Target must be within your melee reach (typically 5 feet)\n- **Effect:** Make an opposed attack roll (Agility + Melee Combat vs opponent's Agility + Melee Combat)\n- **Damage on Success:**\n  - Margin 0 (Tie): Defender wins, no damage\n  - Margin 1: Base weapon damage\n  - Margin 2+: Base weapon damage + Strength modifier\n- **Notes:**\n  - Uses Agility + Melee Combat skill\n  - Subject to Multiple Action Penalty\n  - Can be modified by combat maneuvers (see below)",
+    "description": {
+      "value": "Target must be within your melee reach (typically 5 feet)\n- **Effect:** Make an opposed attack roll (Agility + Melee Combat vs opponent's Agility + Melee Combat)\n- **Damage on Success:**\n  - Margin 0 (Tie): Defender wins, no damage\n  - Margin 1: Base weapon damage\n  - Margin 2+: Base weapon damage + Strength modifier\n- **Notes:**\n  - Uses Agility + Melee Combat skill\n  - Subject to Multiple Action Penalty\n  - Can be modified by combat maneuvers (see below)"
+    },
     "actionType": "combat",
-    "actionCost": "1 [Combat] action",
+    "actionCost": "1",
     "trigger": "",
     "effect": "Make an opposed attack roll (Agility + Melee Combat vs opponent's Agility + Melee Combat)\n- **Damage on Success:**\n  - Margin 0 (Tie): Defender wins, no damage\n  - Margin 1: Base weapon damage\n  - Margin 2+: Base weapon damage + Strength modifier\n- **Notes:**\n  - Uses Agility + Melee Combat skill\n  - Subject to Multiple Action Penalty\n  - Can be modified by combat maneuvers (see below)",
-    "keywords": [],
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!a7b42a55339445ed"
 }

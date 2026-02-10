@@ -1,0 +1,12 @@
+{
+  "_id": "35dc5e87866c454a",
+  "name": "Active Parry",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "Once per round as a [Free] action (no reaction cost), Attacker must reroll one of their success dice."
+    }
+  },
+  "effects": []
+}

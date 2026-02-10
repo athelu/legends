@@ -1,0 +1,13 @@
+{
+  "_id": "da16b8cfee1f40f1",
+  "name": "Herbalism Kit",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A collection of pouches, vials, and tools for identifying, harvesting, and preparing medicinal herbs and natural remedies.",
+    "weight": "3 lbs",
+    "cost": "30 gp"
+  },
+  "effects": [],
+  "_key": "!items!da16b8cfee1f40f1"
+}

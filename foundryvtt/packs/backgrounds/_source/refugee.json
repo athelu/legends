@@ -1,0 +1,11 @@
+{
+  "_id": "bbf547cedc174e9b",
+  "name": "Refugee",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You fled your homeland due to war, disaster, or persecution. Everything you knew was torn away, but somehow you survived. You could be searching for a new home, or maybe you're trying to earn enough to reclaim what was lost. The experience taught you that survival requires both strength and flexibility, and you learned never to take safety for granted.\n**Skills:** Stealth 2, Wilderness 2, Empathy 1, Society 1, +40 XP\n**Equipment:** Common clothes, bedroll, shoes\n**Feature** - Survivor's Instinct: You know how to avoid danger and find help. Can identify safe havens and sympathetic people in unfamiliar places."
+  },
+  "effects": [],
+  "_key": "!items!bbf547cedc174e9b"
+}

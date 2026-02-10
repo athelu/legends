@@ -1,0 +1,13 @@
+{
+  "_id": "503a3d76f7be4c18",
+  "name": "Iron Will",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 5\n**Prerequisites:** Wis 5, Tier 5\n**Benefit:** Subtract 1 from both dice on Willpower saving throws\n**Usage:** Passive\n**Keyword:** [Save], [Ascetic]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!503a3d76f7be4c18"
+}

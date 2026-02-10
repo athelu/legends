@@ -1,0 +1,13 @@
+{
+  "_id": "0060a56b5e48462c",
+  "name": "Pneuma Burst",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 4\n**Prerequisites:** Pneuma Strike (any element), Elemental Burst, any elemental Mastery 6, Tier 4\n**Benefit:** Your Elemental Burst ability improves:\n  - **Increased Area:** 30-foot cone (instead of 15-foot)\n  - **Increased Damage:** \n    - 2 successes: 5d8 elemental damage (instead of 3d8)\n    - 1 success: 3d8 elemental damage (instead of 2d8)\n    - 0 successes: 2d8 elemental damage (instead of 1d8)\n  - **Lingering Effect:** Creatures that fail their save also gain appropriate condition\n\n**Usage:** Enhancement to Elemental Burst\n**Keyword:** [Combat], [Ascetic], [Magic]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!0060a56b5e48462c"
+}

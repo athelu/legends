@@ -1,0 +1,13 @@
+{
+  "_id": "4375469c40c74799",
+  "name": "Clothes, Fine",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Well-made clothing from quality materials with decorative elements, suitable for social occasions or those of higher status.",
+    "weight": "3 lbs",
+    "cost": "30 gp"
+  },
+  "effects": [],
+  "_key": "!items!4375469c40c74799"
+}

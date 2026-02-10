@@ -1,0 +1,66 @@
+{
+  "_id": "6bfdb56837e04b10",
+  "name": "Shortbow",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A compact bow designed for mobility and ease of use. While less powerful than the longbow, the shortbow's lighter draw weight allows for rapid shooting and use on horseback. This category includes recurve bows, nomad bows, and similar compact designs. Popular with scouts, skirmishers, and mounted archers who value versatility over raw power.",
+    "damage": {
+      "base": 6,
+      "alternate": null,
+      "raw": "6",
+      "type": [
+        "piercing"
+      ]
+    },
+    "range": "60/120/240",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "strength",
+        "defenseType": "melee",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      },
+      {
+        "name": "Ranged",
+        "type": "ranged",
+        "skill": "rangedCombat",
+        "damageAttr": "agility",
+        "defenseType": "ranged",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 60,
+          "medium": 120,
+          "long": 240
+        }
+      }
+    ],
+    "weight": {
+      "raw": "2 lbs",
+      "lbs": 2.0
+    },
+    "cost": {
+      "raw": "25 gp",
+      "gp": 25.0
+    },
+    "properties": [
+      "Two-Handed",
+      "Ranged"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!6bfdb56837e04b10"
+}

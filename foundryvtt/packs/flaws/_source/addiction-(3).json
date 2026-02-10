@@ -1,10 +1,11 @@
 {
-  "_id": "d4f300ba06794471",
+  "_id": "85e152143fd34798",
   "name": "Addiction (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Substance has hold over you.\n- When deprived: Add 1 to all attribute die results"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!85e152143fd34798"
 }

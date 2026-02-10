@@ -1,10 +1,11 @@
 {
-  "_id": "4b6ac56f5723464a",
+  "_id": "177db12bd9d541b1",
   "name": "Warding Circle",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 5 (protective barrier)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Touch  \n**Duration:** 10 minutes  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Touch creates 10ft radius cylinder. Choose creature type (celestial, elemental, fey, fiend, undead). Creatures of that type can't enter the cylinder, can't charm/frighten/possess those inside, and have Misfortune on attacks against them. Creatures inside can't exit or affect those outside.  \n**Saving Throw:** None (creates protected zone)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or 20ft radius\n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!177db12bd9d541b1"
 }

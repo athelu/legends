@@ -1,0 +1,31 @@
+{
+  "name": "Water Savant",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 3\n**Prerequisites:** Water Mastery 6, Water Potential 6, any magical tradition trait\n**Description:** Embracing the patient and adaptable nature of water your weaves have become as fluid and unstoppable as the ocean itself.\n**Benefit:** Your mastery of Water energy grants the following abilities:\n\n**Usage:** Passive\n**Keyword:** [Magic]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "resistance",
+        "target": "all",
+        "value": 2,
+        "apply": "dr",
+        "description": "Resistance (+2 DR)"
+      },
+      {
+        "type": "resistance",
+        "target": "cold",
+        "value": "immune",
+        "apply": "immune",
+        "description": "immune to cold damage"
+      }
+    ]
+  },
+  "flags": {}
+}

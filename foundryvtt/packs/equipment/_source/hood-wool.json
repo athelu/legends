@@ -1,0 +1,13 @@
+{
+  "_id": "9f62cc68e9bc4971",
+  "name": "Hood, Wool",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A warm woolen hood that can be worn separately or attached to a cloak for additional head protection.",
+    "weight": "0.5 lbs",
+    "cost": "5 gp"
+  },
+  "effects": [],
+  "_key": "!items!9f62cc68e9bc4971"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "1d128d4846bd4339",
+  "name": "Lamp",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "An oil-burning lamp that provides bright light in a 15-foot radius and dim light for an additional 15 feet. Burns for 6 hours on one pint of oil.",
+    "weight": "1 lb",
+    "cost": "7 gp"
+  },
+  "effects": [],
+  "_key": "!items!1d128d4846bd4339"
+}

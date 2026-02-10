@@ -1,10 +1,11 @@
 {
-  "_id": "ed5846ebffb14bc2",
+  "_id": "15c8790c611e4d4d",
   "name": "Orphan (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Forsaken as child, raised on streets/by others/in orphanage."
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!15c8790c611e4d4d"
 }

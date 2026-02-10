@@ -1,10 +1,11 @@
 {
-  "_id": "75be4085092a41c3",
+  "_id": "28560f127d6b4a2c",
   "name": "Phantom Doubles",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 4 (illusory duplicates)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Self  \n**Duration:** 1 minute  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (1 action)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the \"hits duplicate\" range.  \n**Saving Throw:** None (beneficial buff, self-only)  \n**Success Scaling:** 0 = fails, 1 = 1 duplicate (1 round), 2 = 3 duplicates (full effect), 3 = 4 duplicates (10 minutes), 4 = 6 duplicates (1 hour)"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!28560f127d6b4a2c"
 }

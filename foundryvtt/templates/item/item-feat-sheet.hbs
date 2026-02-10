@@ -9,6 +9,7 @@
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="description">Description</a>
     <a class="item" data-tab="details">Details</a>
+    <a class="item" data-tab="effects">Effects</a>
   </nav>
 
   <section class="sheet-body">
@@ -131,6 +132,127 @@
         <textarea name="system.notes" rows="3" placeholder="Any special rules or clarifications">{{system.notes}}</textarea>
       </div>
 
+    </div>
+
+    <!-- Effects Tab -->
+    <div class="tab effects" data-group="primary" data-tab="effects">
+      <h3>Effects Builder</h3>
+      <p>Define structured effects this feat provides. Use generic types so the system can map them to handlers.</p>
+
+      <div class="form-group">
+        <button type="button" class="add-effect">Add Effect</button>
+      </div>
+
+      <div class="effects-list">
+        {{#if (hasItems system.effects)}}
+          {{#each system.effects}}
+            <div class="effect-entry" data-index="{{@index}}">
+              <h4>Effect {{add @index 1}}</h4>
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label>Type</label>
+                  <select name="system.effects.{{@index}}.type">
+                    <option value="skill.modify" {{#if (eq this.type "skill.modify")}}selected{{/if}}>Skill Bonus</option>
+                    <option value="attribute.modify" {{#if (eq this.type "attribute.modify")}}selected{{/if}}>Attribute Bonus</option>
+                    <option value="defense.modify" {{#if (eq this.type "defense.modify")}}selected{{/if}}>Defense Modifier</option>
+                    <option value="save.modify" {{#if (eq this.type "save.modify")}}selected{{/if}}>Save Modifier</option>
+                    <option value="damage.add" {{#if (eq this.type "damage.add")}}selected{{/if}}>Add Damage</option>
+                    <option value="resist.add" {{#if (eq this.type "resist.add")}}selected{{/if}}>Add Resistance</option>
+                    <option value="condition.apply" {{#if (eq this.type "condition.apply")}}selected{{/if}}>Apply Condition</option>
+                    <option value="action.add" {{#if (eq this.type "action.add")}}selected{{/if}}>Add Action</option>
+                    <option value="reaction.add" {{#if (eq this.type "reaction.add")}}selected{{/if}}>Add Reaction</option>
+                    <option value="custom" {{#if (eq this.type "custom")}}selected{{/if}}>Custom / Text</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Target (skill/attribute/condition) — use comma to assign multiple</label>
+                  <input type="text" list="effects-targets" name="system.effects.{{@index}}.target" value="{{this.target}}" placeholder="e.g. acrobatics, agility, reflex" />
+                </div>
+                <div class="form-group">
+                  <label>Value</label>
+                  <input type="text" name="system.effects.{{@index}}.value" value="{{this.value}}" placeholder="e.g. 1, +2, 1d8, 'Stunned'" />
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-group">
+                  <label>Action Type</label>
+                  <select name="system.effects.{{@index}}.actionType">
+                    <option value="passive" {{#if (eq this.actionType "passive")}}selected{{/if}}>Passive</option>
+                    <option value="combat" {{#if (eq this.actionType "combat")}}selected{{/if}}>Combat Action</option>
+                    <option value="minor" {{#if (eq this.actionType "minor")}}selected{{/if}}>Minor</option>
+                    <option value="reaction" {{#if (eq this.actionType "reaction")}}selected{{/if}}>Reaction</option>
+                    <option value="shortrest" {{#if (eq this.actionType "shortrest")}}selected{{/if}}>Short Rest</option>
+                    <option value="longrest" {{#if (eq this.actionType "longrest")}}selected{{/if}}>Long Rest</option>
+                    <option value="special" {{#if (eq this.actionType "special")}}selected{{/if}}>Special</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Condition (optional)</label>
+                  <input type="text" name="system.effects.{{@index}}.condition" value="{{this.condition}}" placeholder="e.g. unarmored, while_in_fury" />
+                </div>
+                <div class="form-group">
+                  <label>Apply</label>
+                  <select name="system.effects.{{@index}}.apply">
+                    <option value="both" {{#if (eq this.apply "both")}}selected{{/if}}>Apply to Both Dice</option>
+                    <option value="attr" {{#if (eq this.apply "attr")}}selected{{/if}}>Apply to Attribute Die</option>
+                    <option value="skill" {{#if (eq this.apply "skill")}}selected{{/if}}>Apply to Skill Die</option>
+                    <option value="rank" {{#if (eq this.apply "rank")}}selected{{/if}}>Modify Skill/Attribute Rank</option>
+                    <option value="flat" {{#if (eq this.apply "flat")}}selected{{/if}}>Flat Numeric Modifier</option>
+                    <option value="immune" {{#if (eq this.apply "immune")}}selected{{/if}}>Immune / Special</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Description / Notes</label>
+                <textarea name="system.effects.{{@index}}.description" rows="2">{{this.description}}</textarea>
+              </div>
+
+              <div class="form-group">
+                <button type="button" class="remove-effect" data-index="{{@index}}">Remove Effect</button>
+              </div>
+              <hr/>
+            </div>
+          {{/each}}
+        {{else}}
+          <p>No effects defined.</p>
+        {{/if}}
+      </div>
+      
+      <datalist id="effects-targets">
+        <!-- Attributes -->
+        <option value="strength">Strength</option>
+        <option value="constitution">Constitution</option>
+        <option value="agility">Agility</option>
+        <option value="dexterity">Dexterity</option>
+        <option value="intelligence">Intelligence</option>
+        <option value="wisdom">Wisdom</option>
+        <option value="charisma">Charisma</option>
+        <option value="luck">Luck</option>
+        <!-- Skills -->
+        <option value="athletics">Athletics</option>
+        <option value="acrobatics">Acrobatics</option>
+        <option value="meleeCombat">Melee Combat</option>
+        <option value="rangedCombat">Ranged Combat</option>
+        <option value="stealth">Stealth</option>
+        <option value="perception">Perception</option>
+        <option value="investigate">Investigate</option>
+        <option value="arcane">Arcane</option>
+        <option value="survival">Survival</option>
+        <option value="persuasion">Persuasion</option>
+        <option value="deception">Deception</option>
+        <option value="intimidate">Intimidate</option>
+        <option value="medicine">Medicine</option>
+        <option value="animalHandling">Animal Handling</option>
+        <option value="craft">Craft</option>
+        <option value="thievery">Thievery</option>
+        <option value="devices">Devices</option>
+        <option value="language">Language</option>
+        <option value="history">History</option>
+        <option value="society">Society</option>
+        <option value="perform">Perform</option>
+      </datalist>
     </div>
   </section>
 </form>

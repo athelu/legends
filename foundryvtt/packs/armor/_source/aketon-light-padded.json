@@ -1,0 +1,27 @@
+{
+  "_id": "ff8b7e1fe82a4914",
+  "name": "Aketon/Light Padded",
+  "type": "armor",
+  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "armorType": "light",
+    "dr": {
+      "slashing": 2,
+      "piercing": 1,
+      "bludgeoning": 3
+    },
+    "stealthPenalty": "none",
+    "swimPenalty": "",
+    "donTime": "",
+    "doffTime": "",
+    "weight": 0,
+    "cost": 15.0,
+    "quantity": 1,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!ff8b7e1fe82a4914"
+}

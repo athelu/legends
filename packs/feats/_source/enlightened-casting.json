@@ -1,0 +1,16 @@
+{
+  "name": "Enlightened Casting",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 5\n**Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5\n**Benefit:** Once per long rest, you can cast one weave at maximum possible effect without rolling:\n- Automatically achieve 4 successes (critical effect)\n- No Energy cost\n- No action cost (can cast as [Free] action)\n- Must be a weave you've cast before\n\n**Usage:** Once per long rest\n**Keyword:** [Magic], [Sorcerer]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

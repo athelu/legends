@@ -1,10 +1,11 @@
 {
-  "_id": "e1b56870ccb046f3",
+  "_id": "9d76c95eb6884c9a",
   "name": "Truthfulness (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "You hate lying and must make Will save (1 success required) to deceive, even by omission.\n- Automatically fail Deception checks to lie directly\n- Can mislead by telling literal truth"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!9d76c95eb6884c9a"
 }

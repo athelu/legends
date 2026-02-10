@@ -1,0 +1,13 @@
+{
+  "_id": "6b095d4934884861",
+  "name": "Reality's Favorite",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 5\n**Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5\n**Benefit:** Your perfect self-knowledge has impressed reality itself. You gain permanent benefits:\n  - When you roll any saving throw, subract 1 from your highest die\n  - When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses\n  - When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave\n\n**Usage:** Passive, always on\n**Keyword:** [Magic], [Sorcerer]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!6b095d4934884861"
+}

@@ -1,10 +1,11 @@
 {
-  "_id": "1e59823d67eb47dd",
+  "_id": "9f3304728d7a4b3d",
   "name": "Weak Willed (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Hard time with mentally taxing/redundant tasks.\n- Will saves: Add 1 to die results\n- Cannot attempt same failed task more than 3 times"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!9f3304728d7a4b3d"
 }

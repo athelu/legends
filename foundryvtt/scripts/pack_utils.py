@@ -12,6 +12,17 @@ def generate_id():
     return uuid.uuid4().hex[:16]
 
 
+def ensure_key(item):
+    """Ensure the item has a _key field required by the Foundry CLI (ClassicLevel).
+
+    The _key format is '!items!<_id>' for item-type documents.
+    """
+    if '_key' not in item:
+        _id = item.get('_id', generate_id())
+        item['_key'] = f"!items!{_id}"
+    return item
+
+
 def load_json_files(source_dir):
     """
     Load all JSON files from a source directory.
@@ -29,8 +40,19 @@ def load_json_files(source_dir):
         print(f"  Source directory not found: {source_dir}")
         return items
     
-    # Load individual JSON files
-    for json_file in sorted(source_path.glob("*.json")):
+    # Load individual JSON files (accept both .json and .JSON)
+    json_files = sorted(source_path.glob("*.json")) + sorted(source_path.glob("*.JSON"))
+    # Deduplicate while preserving order (some filesystems match both globs)
+    seen = set()
+    unique_files = []
+    for p in json_files:
+        key = str(p.resolve())
+        if key in seen:
+            continue
+        seen.add(key)
+        unique_files.append(p)
+
+    for json_file in unique_files:
         try:
             with open(json_file, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -64,6 +86,9 @@ def validate_items(items):
         # Ensure _id exists
         if '_id' not in item:
             item['_id'] = generate_id()
+
+        # Ensure _key exists (required by Foundry CLI ClassicLevel packer)
+        ensure_key(item)
             
         # Ensure name exists
         if 'name' not in item:
@@ -127,6 +152,7 @@ def build_pack_from_source(pack_dir, pack_name=None):
     db_file = pack_dir / f"{pack_dir.name}.db"
     
     print(f"\nBuilding pack: {pack_name}")
+    print(f"  Source directory: {source_dir.resolve()}")
     
     items = load_json_files(source_dir)
     

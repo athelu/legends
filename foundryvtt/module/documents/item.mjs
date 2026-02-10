@@ -24,6 +24,37 @@ export class D8Item extends Item {
     if (itemData.type === 'armor') this._prepareArmorData(itemData);
     if (itemData.type === 'shield') this._prepareShieldData(itemData);
     if (itemData.type === 'weave') this._prepareWeaveData(itemData);
+    if (itemData.type === 'feat') this._prepareFeatData(itemData);
+  }
+
+  /**
+   * Prepare Feat-specific data
+   */
+  _prepareFeatData(itemData) {
+    const systemData = itemData.system || {};
+
+    // Ensure prerequisites object shape
+    if (!systemData.prerequisites || typeof systemData.prerequisites !== 'object') {
+      systemData.prerequisites = {
+        attributes: {},
+        skills: {},
+        feats: [],
+        tier: 0,
+        other: ''
+      };
+    } else {
+      if (!systemData.prerequisites.attributes) systemData.prerequisites.attributes = {};
+      if (!systemData.prerequisites.skills) systemData.prerequisites.skills = {};
+      if (!systemData.prerequisites.feats) systemData.prerequisites.feats = [];
+    }
+
+    // Ensure effects array exists
+    if (!Array.isArray(systemData.effects)) systemData.effects = [];
+
+    // Normalize usage fields if missing
+    if (!systemData.usage) systemData.usage = { mode: 'passive', uses: null, recharge: null };
+
+    itemData.system = systemData;
   }
   
   /**

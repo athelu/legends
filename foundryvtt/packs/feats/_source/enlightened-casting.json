@@ -1,0 +1,13 @@
+{
+  "_id": "208a9acf5c834578",
+  "name": "Enlightened Casting",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 5\n**Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5\n**Benefit:** Once per long rest, you can cast one weave at maximum possible effect without rolling:\n  - Automatically achieve 4 successes (critical effect)\n  - No Energy cost\n  - No action cost (can cast as [Free] action)\n  - Must be a weave you've cast before\n\n**Usage:** Once per long rest\n**Keyword:** [Magic], [Sorcerer]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!208a9acf5c834578"
+}

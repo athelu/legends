@@ -1,19 +1,22 @@
 {
-  "_id": "a78314220d44415b",
+  "_id": "e530946ac77541a9",
   "name": "Grapple",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "",
+    "description": {
+      "value": "- **Cost:** 1\n- **Effect:** Make opposed Athletics check (Strength + Athletics vs target's Athletics or Acrobatics)\n- **Success:** Target becomes Grappled (see Conditions)\n- **Notes:**\n  - Requires at least one free hand\n  - You are also grappling (can't move unless you drag target)\n  - Target can use action to attempt escape (opposed check)\n  - Subject to Multiple Action Penalty"
+    },
     "actionType": "combat",
-    "actionCost": "1 [Combat] action",
+    "actionCost": "1",
     "trigger": "",
     "effect": "Make opposed Athletics check (Strength + Athletics vs target's Athletics or Acrobatics)\n- **Success:** Target becomes Grappled (see Conditions)\n- **Notes:**\n  - Requires at least one free hand\n  - You are also grappling (can't move unless you drag target)\n  - Target can use action to attempt escape (opposed check)\n  - Subject to Multiple Action Penalty",
-    "keywords": [],
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!e530946ac77541a9"
 }

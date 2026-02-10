@@ -1,0 +1,13 @@
+{
+  "_id": "ae5a37f6ce2f47dd",
+  "name": "Hose",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Fitted leg coverings worn under other garments, typically made of wool or linen.",
+    "weight": "0.5 lbs",
+    "cost": "2 gp"
+  },
+  "effects": [],
+  "_key": "!items!ae5a37f6ce2f47dd"
+}

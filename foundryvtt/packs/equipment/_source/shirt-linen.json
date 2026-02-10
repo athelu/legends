@@ -1,0 +1,13 @@
+{
+  "_id": "219e2e80c24e46b8",
+  "name": "Shirt, Linen",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A comfortable linen shirt suitable for wear under armor or as everyday clothing.",
+    "weight": "0.5 lbs",
+    "cost": "10 gp"
+  },
+  "effects": [],
+  "_key": "!items!219e2e80c24e46b8"
+}

@@ -1,10 +1,11 @@
 {
-  "_id": "2322cf2045d342a1",
+  "_id": "8b1c5d1782dc4f9f",
   "name": "Stubbornness (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "You refuse to change your mind easily.\n- Once committed to course of action or opinion, make Will save (1 success required) to admit you were wrong or change plans, even when presented with clear evidence"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!8b1c5d1782dc4f9f"
 }

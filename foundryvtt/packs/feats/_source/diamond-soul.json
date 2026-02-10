@@ -1,0 +1,13 @@
+{
+  "_id": "520d701eec584b51",
+  "name": "Diamond Soul",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 4\n**Prerequisites:** Wis 5, Mystic Defense feat, Tier 4\n**Description:** Your training has refined your spirit to crystalline perfection. Where others rely on toughness or resistance, your fundamental resilience makes even reality's harshest effects slide off you like water from stone.\n**Benefit:** Gain proficiency in all saving throws. When you fail a saving throw, you can spend 1 Luck to reroll and must take the new result\n**Usage:** Passive proficiency + reaction costs Luck\n**Keyword:** [Save], [Ascetic]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!520d701eec584b51"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "ffcd14532ae443ac",
+  "name": "Playing Cards",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A deck of illustrated cards used for various games of chance and skill.",
+    "weight": "0.1 lbs",
+    "cost": "5 sp"
+  },
+  "effects": [],
+  "_key": "!items!ffcd14532ae443ac"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Pneuma Strike (Elemental)",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 1\n**Prerequisites:** Unarmed Mastery feat, chosen elemental Mastery 3\n**Description:** You've learned to channel elemental pneuma through your strikes. Fire, ice, lightning, or stone—you make the energy flow through your meridians and release it at the point of impact\n**Benefit:** Choose one elemental energy (Fire, Water, Air, or Earth) when taking this feat. Once per turn when you hit with an unarmed strike or monk weapon, you can spend 2 Energy to empower the strike:\n- Make weaving check for chosen element (Potential + Mastery). Can take multiple times for different elements\n\n**Usage:** Once per turn, costs 2 Energy\n**Keyword:** [Combat], [Ascetic], [Magic]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "1d8",
+        "apply": "dice",
+        "description": "+1d8"
+      },
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "2d8",
+        "apply": "dice",
+        "description": "+2d8"
+      }
+    ]
+  },
+  "flags": {}
+}

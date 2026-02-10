@@ -1,0 +1,11 @@
+{
+  "_id": "3b01337e7c464070",
+  "name": "Ward",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You were raised in a noble or wealthy household, educated and cared for but never quite family. The experience gave you access to privilege while reminding you constantly that it could be taken away. You learned etiquette, history, and the subtle art of navigating high society from the margins. Now you're free to make your own way, though whether that freedom is liberating or terrifying probably depends on the day.\n**Skills:** Society 2, History 2, Empathy 1, Perception 1, +40 XP\n**Equipment:** Fine clothes, general topic book, quill, ink, vellum parchment x2, shoes\n**Feature** - Noble Education: You were raised in a noble household and understand etiquette and high society, though you lack the full privileges and recognition that true nobles command."
+  },
+  "effects": [],
+  "_key": "!items!3b01337e7c464070"
+}

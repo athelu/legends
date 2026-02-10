@@ -1,0 +1,49 @@
+{
+  "_id": "6d51bd75294643bb",
+  "name": "Flail",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A hinged weapon consisting of a weighted head attached to a handle by a chain or rope. The flexible connection makes the flail particularly effective against shields and can wrap around defensive guards. This category includes various one-handed flails, such as the peasant flail (agricultural origins) and military flails with spiked or studded heads.",
+    "damage": {
+      "base": 6,
+      "alternate": null,
+      "raw": "6",
+      "type": [
+        "bludgeoning"
+      ]
+    },
+    "range": "",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "strength",
+        "defenseType": "melee",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      }
+    ],
+    "weight": {
+      "raw": "4 lbs",
+      "lbs": 4.0
+    },
+    "cost": {
+      "raw": "15 gp",
+      "gp": 15.0
+    },
+    "properties": [
+      "Standard"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!6d51bd75294643bb"
+}

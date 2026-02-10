@@ -1,0 +1,13 @@
+{
+  "_id": "d6af24a2c7eb488b",
+  "name": "Hammer",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A metal-headed tool used for driving nails, breaking objects, or as an improvised weapon.",
+    "weight": "3 lbs",
+    "cost": "10 gp"
+  },
+  "effects": [],
+  "_key": "!items!d6af24a2c7eb488b"
+}

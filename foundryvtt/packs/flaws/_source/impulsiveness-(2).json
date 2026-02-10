@@ -1,10 +1,11 @@
 {
-  "_id": "bb60006c16754ca7",
+  "_id": "9b7dfe2402e54541",
   "name": "Impulsiveness (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "You have trouble thinking before acting.\n- When presented with interesting opportunity, temptation, or challenge, make Will save (1 success required) to avoid acting immediately without considering consequences"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!9b7dfe2402e54541"
 }

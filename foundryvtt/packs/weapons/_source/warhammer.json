@@ -1,0 +1,49 @@
+{
+  "_id": "1b0dceed884e4e5d",
+  "name": "Warhammer",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A military hammer designed for one-handed use, featuring a heavy metal head optimized for crushing armor and delivering concussive blows. The warhammer's concentrated weight makes it devastatingly effective against armored opponents. This category includes various one-handed military hammers and similar percussive weapons. The weapon's effectiveness led to it becoming a favored choice for mounted and foot knights.",
+    "damage": {
+      "base": 8,
+      "alternate": null,
+      "raw": "8",
+      "type": [
+        "bludgeoning"
+      ]
+    },
+    "range": "",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "strength",
+        "defenseType": "melee",
+        "damage": {
+          "base": 8,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      }
+    ],
+    "weight": {
+      "raw": "5 lbs",
+      "lbs": 5.0
+    },
+    "cost": {
+      "raw": "25 gp",
+      "gp": 25.0
+    },
+    "properties": [
+      "Standard"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!1b0dceed884e4e5d"
+}

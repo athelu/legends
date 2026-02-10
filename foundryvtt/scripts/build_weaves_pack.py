@@ -14,7 +14,7 @@ This script will parse all of them.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file
+from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key
 
 
 def _safe_filename(name: str) -> str:
@@ -111,6 +111,7 @@ def main():
             filename = _safe_filename(item['name']) + '.json'
             json_file = source_dir / filename
             with open(json_file, 'w', encoding='utf-8') as f:
+                ensure_key(item)
                 json.dump(item, f, indent=2, ensure_ascii=False)
             print(f"  Saved {json_file.name}")
     

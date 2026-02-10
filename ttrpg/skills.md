@@ -12,55 +12,8 @@ The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents
 - Easy tasks require 1 success
 - Hard tasks require 2 successes
 
----
-
-## Skills by Attribute
-
-### Strength Skills (2)
-- Athletics
-- Might
-
-### Dexterity Skills (5)
-- Craft
-- Devices
-- Ranged Combat
-- Thievery
-- Writing
-
-### Agility Skills (3)
-- Acrobatics
-- Melee Combat
-- Stealth
-
-### Intelligence Skills (5)
-- Arcane
-- History
-- Investigate
-- Language
-- Society
-
-### Wisdom Skills (5)
-- Empathy
-- Medicine
-- Perception
-- Religion
-- Wilderness
-
-### Charisma Skills (4)
-- Deception
-- Intimidate
-- Perform
-- Persuasion
-
-### Constitution
-No associated skills. Used for HP calculation and Fortitude saves.
-
-### Luck
-No associated skills. Used for Luck pool and all saving throws.
-
----
-
-## Alphabetized Skill Descriptions
+<!-- PACK:skills -->
+## Skills
 
 ### Acrobatics (Agility)
 **Description:** Balance, tumbling, contortion, and coordinated movement. Used for maintaining footing on difficult terrain, performing gymnastic feats, and moving with precision.

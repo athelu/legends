@@ -22,8 +22,8 @@ Luck represents cosmic favor, synchronicity, and the mysterious force that tips 
 ## Character Creation Steps
 
 1. **Determine Attributes**
-2. **Choose Background**
-3. **Choose Ancestry**
+2. **Choose Ancestry**
+3. **Choose Background**
 4. **Select Traits and Flaws**
 5. **Select 2 Starting Feats**
 6. **Spend Starting XP**
@@ -31,17 +31,16 @@ Luck represents cosmic favor, synchronicity, and the mysterious force that tips 
 8. **Select Starting Equipment**
 
 
-## 1. Determine Attributes
 
-### Random roll
-8d8, assign as desired
+## Step 1: Determine Attributes
+There are two standard methods available for determining your characters eight core attributes.
+**Random roll:** Roll 8d8. This becomes your attribute pool. You may assign as desired to the core attributes.
+**Standard Array:** Players assign the following values to their core attributes: 5, 4, 3, 3, 3, 2, 2, 2
 
-### Starting Attribute Array
+## Step 2. Determine Ancestry
+The player must choose an ancestry from those available in the ancestry section.
 
-Players assign the following values to their eight attributes: 5, 4, 3, 3, 3, 2, 2, 2
-
-## 2. Choose Background
-
+## Step 3. Choose Background
 Characters must choose a background from the ones available in the Background section or they may roll for a random background. This will determine some starting gear as well as skills.
 
 ### Random Background Table (d88)
@@ -83,87 +82,27 @@ Roll 2d8 - first die is the "tens" digit, second die is the "ones" digit.
 | 47 | Miner | 87 | Reroll (Player's Choice) |
 | 48 | Noble | 88 | Reroll (Player's Choice) |
 
-**How to Use:**
-1. Roll 2d8 (different colors recommended - one for "tens", one for "ones")
-2. First die = tens digit (1-8), second die = ones digit (1-8)
-3. Combine for your result (e.g., rolling 3 and 5 = 35 = Fisher)
-4. If you roll 71-88, reroll or choose any background that fits your character concept
+## Step 4. Flaws & Traits
+Review the Flaws and Traits section. You MUST choose Flaws in order to earn points to spend on Traits. All magic using characters require a trait that costs between 5-7 points. You may not spend more points on traits than you have earned from flaws.
+To take a trait, you must have equal or greater flaw points. Traits and Flaws are ONLY available during Character creation, and cannot be taken after initial creation.
+Traits are primarily for Magical abilities, granting Energy pools, Mastery skills, and weaving capability and for Exceptional characteristics such as supernatural heritage, extreme longevity, etc.
 
-**Examples:**
-- Roll 4 and 2 = 42 = Hunter
-- Roll 1 and 8 = 18 = Barkeep  
-- Roll 6 and 3 = 63 = Squire
-- Roll 7 and 5 = 75 = Reroll (pick any background)
-
-## 3. Determine Ancestry
-
-The player must choose an ancestry from those available in the ancestry.md file. The Selction of Dwarf would require special permission from the DM due to the history of the world. 
-
-## 4. Flaws & Traits
-
-Review the flaws.md and traits.md. You MUST choose Flaws in order to earn points to spend on Traits. All magic using characters require a trait (between 5-7 points). You may not spend more points on traits than you have earned from flaws.
-
-#### Core Rule
--   Traits cost points
--   Flaws grant points
--   To take a trait, you must have equal or greater flaw points
--   Character creation only - cannot be taken after initial creation
-
-#### Traits
-Traits are primarily for:
--   **Magical abilities** - granting Energy pools, Mastery skills, and weaving capability
--   **Exceptional characteristics** - supernatural heritage, extreme longevity, etc.
-
-
-## 5. Starting Feats
-
-Every character receives **2 free feats** at character creation. These represent your foundational training and abilities. Choose feats that:
--   Define your character concept
--   Meet your prerequisite requirements
--   Complement each other mechanically
-
+## Step 5. Starting Feats
+Every character receives 2 free feats at character creation. These represent your foundational training and abilities. Choose feats that define your character concept and help you meet your prerequisite requirements for the type of character that you have in mind. Many feats complement each other mechanically, or build upon each other.
 These starting feats do NOT count against your tier feat limits.
 
-## 6. Spend starting XP
-
-Each character will have XP to spend that varies based upon the background selected. 
-
-All skills begin at rank 0 (untrained). Your chosen Background (see Part 9: Backgrounds) provides skill training.
-
+## Step 6. Spend starting XP
+Each character will have XP to spend during their character creation. This is how you choose specific improvements to aid in your character concept. The amount of XP you will have to spend varies based upon the background selected.
 This XP can be spent in the following ways:
+- **Gain New Skill:** 4 xp
+- **Increasing Skill rank:** 8 × current rank
+- **Attributes:** 16 × current rank
+- **Potentials:** 16 × current rank
+- **Feats:** 40 XP each
 
-##### Gain New Skill: 4 xp
--   **Example:** Rank 0→1 costs 4 XP
-
-##### Increasing Skills: 8 × current rank
--   **Example:** Rank 2→3 costs 16 XP
--   **Note:** Skill CANNOT exceed the value of the linked Attribute. Skills max at 8 ranks
-
-##### Attributes: 16 × current rank (double skill cost)
--   **Example:** Rank 3→4 costs 48 XP
--   **Note:** Attribute cannot exceed 8
-
-##### Potentials: 16 × current rank (same as attributes, only for characters with magical abilities)
--   **Example:** Fire Potential 5→6 costs 80 XP
--   **Note:** Mastery CANNOT exceed the value of the engery Potential. Mastery max at 8 ranks
-
-##### Feats: 40 XP each
--   Tier limits: Maximum purchased feats = 2 per tier
--   Starting feats (2 free) do NOT count against tier limits
--   **Example:** Tier 3 character can have 2 starting + 6 purchased = 8 total feats
-
-
-## 7. Calculate Hit Points
-
-### Hit Points
+## Step 7. Calculate Hit Points
 HP = Constitution × 8
-
 Hit points do NOT increase with level/tier. Characters become harder to hit (better skills/attributes) rather than able to sustain more damage.
 
-
-## 8. Select Starting Equipment
-
-There are two options for deciding starting wealth for characters:
-    1. 150 gp
-    2. roll 3d8 x 10
-
+## Step 8. Select Starting Equipment
+There are two options for deciding starting wealth for characters: Default 150 gp pr roll 3d8 x 10 gp.

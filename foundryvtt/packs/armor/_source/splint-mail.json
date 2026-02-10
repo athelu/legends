@@ -1,0 +1,27 @@
+{
+  "_id": "12871b96fe4b458d",
+  "name": "Splint Mail",
+  "type": "armor",
+  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "armorType": "",
+    "dr": {
+      "slashing": 8,
+      "piercing": 7,
+      "bludgeoning": 6
+    },
+    "stealthPenalty": "none",
+    "swimPenalty": "",
+    "donTime": "",
+    "doffTime": "",
+    "weight": 0,
+    "cost": 500.0,
+    "quantity": 1,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!12871b96fe4b458d"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "a290a4f9c9ae420f",
+  "name": "Robe",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A long, flowing garment often worn by scholars, magistrates, or religious figures.",
+    "weight": "3 lbs",
+    "cost": "12 gp"
+  },
+  "effects": [],
+  "_key": "!items!a290a4f9c9ae420f"
+}

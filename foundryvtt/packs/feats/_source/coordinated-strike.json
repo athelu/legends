@@ -1,0 +1,13 @@
+{
+  "_id": "59cade4c005a45ee",
+  "name": "Coordinated Strike",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Agi 4, any combat skill 4\n**Description:** Represents fighting in coordination with allies, flowing from one opponent to the next\n**Benefit:** Once per turn when you make a weapon attack, you can make another attack with the same weapon against a different creature within 5 feet of the original target. Use Shared Attribute Roll: roll your Attribute die once, use that result for both attacks. Roll Combat skill die separately for each attack\n**Usage:** Once per turn\n**Keyword:** [Combat]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!59cade4c005a45ee"
+}

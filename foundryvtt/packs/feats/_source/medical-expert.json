@@ -1,0 +1,13 @@
+{
+  "_id": "36bd5da41cd649ff",
+  "name": "Medical Expert",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Wis 4, Medicine 4\n**Benefit:** Subtract 1 from both dice on Medicine checks and heal 1d8 additional HP\n**Usage:** Passive\n**Keyword:** [Skill]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!36bd5da41cd649ff"
+}

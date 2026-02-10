@@ -1,0 +1,11 @@
+{
+  "_id": "098e1b6e917b49f5",
+  "name": "Nomad",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "Traveling far and wide, you picked up basic tactics for surviving on the road and in unknown lands, getting by with few supplies and even fewer comforts. As an adventurer, you travel still, often into even more dangerous places. The difference is that now you have companions and you're not sure yet whether that makes things easier or more complicated.\n**Skills:** Wilderness 2, Athletics 2, Perception 1, Society 1, +40 XP\n**Equipment:** Tent, traveler's clothes, hemp rope, waterskin, work boots\n**Feature** - Wanderer's Knowledge: You know routes and shortcuts across wilderness and can find nomadic communities for trade or information."
+  },
+  "effects": [],
+  "_key": "!items!098e1b6e917b49f5"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Fortune's Favorite",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 3\n**Prerequisites:** Luck 5\n**Benefit:** Once per session, after seeing any roll result (yours or an enemy's), force a reroll and choose which result to use\n**Usage:** Once per session\n**Keyword:** [Skill]. [General]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

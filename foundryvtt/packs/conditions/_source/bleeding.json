@@ -1,0 +1,18 @@
+{
+  "_id": "960c175629a34969",
+  "name": "Bleeding",
+  "type": "condition",
+  "img": "icons/svg/blood.svg",
+  "system": {
+    "label": "Bleeding",
+    "category": "damage-over-time",
+    "description": "#### Effect:\n-   Take 2 damage per stack at the end of each of your turns\n-   Stacks: Multiple bleeding effects add together (2 stacks = 4 damage per turn, 3 stacks = 6 damage per turn)\n-   Bleeding damage occurs at the end of your turn, even if you received healing (unless the bleeding condition itself was removed)\n\n#### Bleeding While Dying:\n\n-   If at 0 HP or below, bleeding damage stops (no damage taken while dying)\n-   However, add your total bleeding stack count to both dice when making stabilization saves.\n\n-   **Example:** At -2 HP with 2 bleeding stacks, you add 2 (from bleeding stacks) = add 2 total to both your Constitution die and Luck die when attempting to stabilize\n-   This makes it much harder to stabilize.\n\n#### Stopping Bleeding:\n-   Medicine check (1 action, 1 success): Stop 1 bleeding stack on adjacent ally\n-   Self-treatment (1 action, 2 successes): Stop 1 bleeding stack on yourself\n-   Magical healing: Automatically stops all bleeding stacks\n-   Pressure/Bandages: Can attempt Medicine check even without training\n-   Short rest: Automatically stops 1 bleeding stack\n\n#### Duration:\n-   Continues until stopped by Medicine check, magic, or rest\n-   Each stack must be treated separately\n\n#### Gaining Bleeding:\n-   Critical hits with slashing weapons (optional rule)\n-   Special monster abilities (claws, teeth)\n-   Called shots to cause bleeding\n-   Certain environments (barbed wire, thorns)\n\n##### Example:\n-   Character takes a critical hit and gains 2 bleeding stacks\n-   On their turn, they can use an action to attempt self-treatment (2 successes needed)\n-   At the end of their turn, if bleeding wasn\\'t stopped, they take 4 damage",
+    "tokenIcon": "icons/svg/blood.svg",
+    "activeEffects": [],
+    "stacking": "stack",
+    "severity": "moderate",
+    "overlayPriority": 20
+  },
+  "flags": {},
+  "_key": "!items!960c175629a34969"
+}

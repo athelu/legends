@@ -1,10 +1,11 @@
 {
-  "_id": "c3fb7d7dcaf74f8a",
+  "_id": "629325d254ab4354",
   "name": "Extraplanar Binding",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 6 (binding extraplanar creature, major binding)\n**Supporting Energy:** Time 4 (duration 1 hour or until service completed)\n**Total Cost:** 10 Energy\n**Action:** Complex weave (2 actions), takes 1 hour to cast\n**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)\n**Effect:** Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes Will save. Compare your weaving successes to their save successes. If you have more, creature must serve you for duration or until completing one task. Must negotiate payment/service.\n**Saving Throw:** Will (to resist binding)\n**Success Scaling (Net successes = Your successes - Their successes):** 1 = 10 minutes service, 2 = 1 hour, 3 = 24 hours, 4 = 10 days or complex task\n\n\n## F"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!629325d254ab4354"
 }

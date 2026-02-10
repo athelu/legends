@@ -1,0 +1,13 @@
+{
+  "_id": "64836a885ea24ce9",
+  "name": "Combined Elements Strike",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Pneuma Strike (two different elements)\n**Description:** Most spellcasters struggle to weave even two energies in careful ritual. You've learned to blend them in the chaos of combat\n**Benefit:** When using Pneuma Strike, you can spend 4 Energy (instead of 2) to channel two elements simultaneously:\n  - Make weaving checks for BOTH elements\n  - Count total successes across both checks\n    - **3-4 total successes:** Deal +3d8 damage, choose damage type or split\n    - **1-2 total successes:** Deal +2d8 damage, choose damage type or split\n    - **0 successes:** Deal +1d8, choose type\n\n**Usage:** Replaces normal Pneuma Strike usage, costs 4 Energy\n**Keyword:** [Combat], [Ascetic], [Magic]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!64836a885ea24ce9"
+}

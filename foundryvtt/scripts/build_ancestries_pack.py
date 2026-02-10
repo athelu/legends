@@ -6,7 +6,7 @@ Build ancestries compendium pack from parsed ancestry.md documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file
+from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key
 
 
 def parse_ancestries_md(md_file):
@@ -19,6 +19,10 @@ def parse_ancestries_md(md_file):
     """
     with open(md_file, 'r', encoding='utf-8') as f:
         content = f.read()
+
+    m = re.search(r"<!--\s*PACK:ancestries\s*-->", content, flags=re.IGNORECASE)
+    if m:
+        content = content[m.end():]
     
     items = []
     
@@ -78,6 +82,7 @@ def main():
         for item in items:
             json_file = source_dir / f"{item['name'].lower().replace(' ', '-').replace('/', '-')}.json"
             with open(json_file, 'w', encoding='utf-8') as f:
+                ensure_key(item)
                 json.dump(item, f, indent=2, ensure_ascii=False)
             print(f"  Saved {json_file.name}")
     

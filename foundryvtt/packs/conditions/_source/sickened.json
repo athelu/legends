@@ -1,0 +1,27 @@
+{
+  "_id": "1c857a99ce3042a0",
+  "name": "Sickened",
+  "type": "condition",
+  "img": "icons/svg/acid.svg",
+  "system": {
+    "label": "Sickened",
+    "category": "physical",
+    "description": "-   Constitution and bodily functions impaired\n-   Fortitude saves: Add 1 to die results\n-   Cannot benefit from food or drink\n-   Duration: Typically 10 minutes to 1 hour unless specified otherwise\n**Recovery:**\n-   Automatically ends after specified duration\n-   Medicine check (1 success) can end early\n-   Magical healing removes condition",
+    "tokenIcon": "icons/svg/acid.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "fortitude"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Fortitude save to recover from Sickened"
+    }
+  },
+  "flags": {},
+  "_key": "!items!1c857a99ce3042a0"
+}

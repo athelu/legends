@@ -1,0 +1,13 @@
+{
+  "_id": "6ab7a9f1ccf24111",
+  "name": "Abacus",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A wooden calculating device with beads on rods, useful for merchants and anyone needing to perform quick mathematical calculations.",
+    "weight": "2 lbs",
+    "cost": "15 gp"
+  },
+  "effects": [],
+  "_key": "!items!6ab7a9f1ccf24111"
+}

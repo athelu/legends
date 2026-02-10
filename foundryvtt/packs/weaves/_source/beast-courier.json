@@ -1,10 +1,11 @@
 {
-  "_id": "37710e8fe66f4c27",
+  "_id": "3688aad3102d46b4",
   "name": "Beast Courier",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Positive 3 (animating natural creature with purpose)  \n**Supporting Energy:** Space 6 (close range + 24 hours with 1-min casting reduction)  \n**Range:** Close, 30 ft.  \n**Duration:** Up to 24 hours  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions), requires 1 minute to cast  \n**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  \n**Effect:** Target one Tiny beast you can see within close range. The beast travels to a location you specify (must be familiar to you) and delivers a message of up to 25 words to a creature you describe. The beast travels at 50 miles per day (fly) or 25 miles per day (ground).  \n**Saving Throw:** None (beast is willing messenger)  \n**Success Scaling:** 0 = fails, 1 = 12 hours duration, 2 = 24 hours, 3 = 48 hours, 4 = 7 days (beast can travel much farther)"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!3688aad3102d46b4"
 }

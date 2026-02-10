@@ -1,0 +1,13 @@
+{
+  "_id": "e5844bdfe41a4c04",
+  "name": "Boots, High",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Sturdy leather boots that extend above the ankle, providing good support and protection for the feet and lower legs.",
+    "weight": "3 lbs",
+    "cost": "40 gp"
+  },
+  "effects": [],
+  "_key": "!items!e5844bdfe41a4c04"
+}

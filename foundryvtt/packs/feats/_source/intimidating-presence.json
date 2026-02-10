@@ -1,0 +1,13 @@
+{
+  "_id": "3cf68b287cc64979",
+  "name": "Intimidating Presence",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Cha 4\n**Benefit:** As 1 [Combat] action, choose one creature within 30 feet that can see or hear you. Target makes Will save (opposed by your Charisma + Intimidation). If you win, target is Frightened until end of your next turn\n**Usage:** Unlimited\n**Keyword:** [Combat], [Savage]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!3cf68b287cc64979"
+}

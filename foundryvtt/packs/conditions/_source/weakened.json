@@ -1,0 +1,22 @@
+{
+  "_id": "3943496912094814",
+  "name": "Weakened",
+  "type": "condition",
+  "img": "icons/svg/downgrade.svg",
+  "system": {
+    "label": "Weakened",
+    "category": "physical",
+    "description": "-   Physical strength impaired\n-   Strength based skill checks: Add 1 to die results\n-   Melee damage: Reduce by 2 (minimum 1)\n-   Carrying capacity: Halved\n-   Duration: Typically 1 minute to 1 hour unless specified otherwise\n**Recovery:**\n-   Automatically ends after specified duration\n-   Magical healing can remove (if from magical source)\n-   Rest removes non-magical weakness",
+    "tokenIcon": "icons/svg/downgrade.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true
+    }
+  },
+  "flags": {},
+  "_key": "!items!3943496912094814"
+}

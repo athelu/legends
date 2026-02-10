@@ -6,7 +6,7 @@ Build feats compendium pack from parsed feats.md documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id
+from pack_utils import build_pack_from_source, generate_id, ensure_key
 
 
 def parse_feats_md(md_file):
@@ -19,11 +19,17 @@ def parse_feats_md(md_file):
     """
     with open(md_file, 'r', encoding='utf-8') as f:
         content = f.read()
+
+    m = re.search(r"<!--\s*PACK:feats\s*-->", content, flags=re.IGNORECASE)
+    if m:
+        content = content[m.end():]
     
     items = []
     
-    # Split by feat sections (### Heading)
-    sections = re.split(r'^### ', content, flags=re.MULTILINE)[1:]
+    # Prefer level-4 headings (####) for individual feats; fall back to level-3 if none found
+    sections = re.split(r'^####\s+', content, flags=re.MULTILINE)[1:]
+    if not sections:
+        sections = re.split(r'^###\s+', content, flags=re.MULTILINE)[1:]
     
     for section in sections:
         lines = section.split('\n')
@@ -38,14 +44,15 @@ def parse_feats_md(md_file):
             'type': 'feat',
             'img': 'icons/skills/melee/blade-damage.webp',
             'system': {
-                'description': ''
+                # Use description object matching other builders
+                'description': {'value': ''}
             },
             'effects': []
         }
         
         # Extract description
         description = '\n'.join(lines[1:]).strip()
-        item['system']['description'] = description
+        item['system']['description']['value'] = description
         
         # Extract image path if specified
         img_match = re.search(r'Image[:\s]+([^\n|]+)', description)
@@ -53,8 +60,19 @@ def parse_feats_md(md_file):
             item['img'] = img_match.group(1).strip()
         
         items.append(item)
-    
-    return items
+    # Filter out non-feat sections: require at least one of 'Tier', 'Benefit', 'Usage', or 'Keyword' in the description
+    filtered = []
+    for it in items:
+        desc = (it.get('system', {}).get('description', {}).get('value') if isinstance(it.get('system', {}).get('description'), dict) else it.get('system', {}).get('description', ''))
+        if not desc:
+            desc = ''
+        if re.search(r'\b(tier|benefit|usage|keyword|prerequisites)\b', desc, flags=re.IGNORECASE):
+            filtered.append(it)
+
+    # Alphabetize by name
+    filtered.sort(key=lambda x: x.get('name', '').lower())
+
+    return filtered
 
 
 def main():
@@ -74,6 +92,7 @@ def main():
         for item in items:
             json_file = source_dir / f"{item['name'].lower().replace(' ', '-').replace('/', '-')}.json"
             with open(json_file, 'w', encoding='utf-8') as f:
+                ensure_key(item)
                 json.dump(item, f, indent=2, ensure_ascii=False)
             print(f"  Saved {json_file.name}")
     

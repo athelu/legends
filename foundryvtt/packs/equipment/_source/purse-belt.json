@@ -1,0 +1,13 @@
+{
+  "_id": "daf370b0e78b490b",
+  "name": "Purse, Belt",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A drawstring pouch specifically designed for carrying coins and small valuables. Holds up to 3 lbs.",
+    "weight": "0.3 lbs",
+    "cost": "4 gp"
+  },
+  "effects": [],
+  "_key": "!items!daf370b0e78b490b"
+}

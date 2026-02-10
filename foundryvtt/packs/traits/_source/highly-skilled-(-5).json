@@ -1,10 +1,11 @@
 {
-  "_id": "9db96a0262d74e8b",
+  "_id": "f61753f0c1e041e8",
   "name": "Highly Skilled (-5)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "Excellent education in focus area.\n-   Choose one skill to start at rank 4 at creation\n-   That skill's governing attribute: +1"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!f61753f0c1e041e8"
 }

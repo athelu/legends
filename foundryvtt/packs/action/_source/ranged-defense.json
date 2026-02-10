@@ -1,0 +1,21 @@
+{
+  "_id": "8b2ef106302f4ba3",
+  "name": "Ranged Defense",
+  "type": "action",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "description": {
+      "value": "Reaction provided by Tower Shield (Heavy Shield) shield."
+    },
+    "actionType": "reaction",
+    "actionCost": "Reaction",
+    "trigger": "",
+    "effect": "Reaction provided by Tower Shield (Heavy Shield) shield.",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

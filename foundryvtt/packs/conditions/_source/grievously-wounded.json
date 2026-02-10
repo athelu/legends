@@ -1,0 +1,26 @@
+{
+  "_id": "8f078ef3877f47e1",
+  "name": "Grievously Wounded",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "label": "Grievously Wounded",
+    "category": "physical",
+    "description": "-   Applied when you regain consciousness at 0 HP or below\n-   Clumsy condition active\n-   Dazzled condition active\n-   Can only take one action per turn (move OR standard action, not both)\n-   Cannot take reactions\n-   **Recovery:** Condition ends when healed above 1 HP",
+    "tokenIcon": "",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true
+    },
+    "appliesConditions": [
+      "Clumsy",
+      "Dazzled"
+    ]
+  },
+  "flags": {},
+  "_key": "!items!8f078ef3877f47e1"
+}

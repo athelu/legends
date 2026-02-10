@@ -1,0 +1,13 @@
+{
+  "_id": "2ee6dc6e3beb4f2e",
+  "name": "Journal",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A small bound book with blank pages, ideal for personal notes, sketches, or travel records.",
+    "weight": "1 lb",
+    "cost": "10 gp"
+  },
+  "effects": [],
+  "_key": "!items!2ee6dc6e3beb4f2e"
+}

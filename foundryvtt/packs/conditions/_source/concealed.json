@@ -1,0 +1,22 @@
+{
+  "_id": "42c5f10873144c41",
+  "name": "Concealed",
+  "type": "condition",
+  "img": "icons/svg/fog.svg",
+  "system": {
+    "label": "Concealed",
+    "category": "visibility",
+    "description": "- Your location is known, but you are difficult to see clearly\n- Attackers can target you but with penalties\n- **Attack Penalties:** Attackers add 1 to both dice when attacking you\n- **Perception Penalties:** Others add 1 to both dice when using perception checks to see details about you\n\n**Common Sources:**\n- Fog, mist, smoke\n- Heavy rain or snow\n- Dim light or shadows (not total darkness)\n- Dense foliage or undergrowth\n- Obscuring magical effects\n- Environmental conditions (sandstorm, etc.)\n\n**Does NOT Prevent Targeting:**\n- You can still be directly targeted by attacks and weaves\n- Enemies know which square you occupy\n- Different from Hidden (where location is unknown)\n\n**Stacking with Cover:**\n- Concealment and Cover can stack\n- Example: Behind low wall in fog = Partial Cover + Concealed \n\n**Duration:** \n- Lasts as long as environmental condition persists\n- Moving into clear conditions ends Concealment\n- Bright light or magical effects (like Revealing Light) may end Concealment\n\n**Recovery:**\n- Automatically ends when you move into clear, well-lit conditions\n- Some weaves (like Radiant Sphere, Revealing Light) automatically end Concealment\n- Revealed condition prevents gaining Concealment\n\n---",
+    "tokenIcon": "icons/svg/fog.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true
+    }
+  },
+  "flags": {},
+  "_key": "!items!42c5f10873144c41"
+}

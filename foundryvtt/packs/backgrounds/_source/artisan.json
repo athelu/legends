@@ -1,0 +1,11 @@
+{
+  "_id": "e818a5b981dc42b9",
+  "name": "Artisan",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith's apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships. Your guild connections remain strong which is useful when you need work, materials, or a favor.\n**Skills:** Craft 2, Society 2, Persuasion 1, Devices 1, +40 XP\n**Equipment:** Artisan's tools (choose type), common clothes, belt pouch, shoes\n**Feature** - Guild Membership: You have connections with artisan guilds. Can find work, get fair prices on materials, and access guild resources in cities."
+  },
+  "effects": [],
+  "_key": "!items!e818a5b981dc42b9"
+}

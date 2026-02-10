@@ -1,10 +1,11 @@
 {
-  "_id": "7ede0f7d847b4380",
+  "_id": "1b0a0be6ae2b487d",
   "name": "Guide the Soul",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "- **Action Cost:** 1 [Combat] action\n- **Range:** Touch\n- **Effect:** Touch a dying creature (at 0 HP or negative HP). They automatically stabilize at 0 HP. Additionally, for 1 minute, they subtract 1 from both dice on all stabilization attempts and cannot die from reaching negative HP equal to their Constitution (death threshold suspended). You ease their passage, giving them a chance to cling to life.\n- **Usage:** Uses 1 Channel Divinity"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!1b0a0be6ae2b487d"
 }

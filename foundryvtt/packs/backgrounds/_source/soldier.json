@@ -1,0 +1,11 @@
+{
+  "_id": "2a33fbefa1b5416d",
+  "name": "Soldier",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "In your younger days, you waded into battle as part of an organized military force. You might have wanted to break out from the regimented structure of these forces, or you could have always been as independent a warrior as you are now. The discipline remains, though, along with the understanding that sometimes the only way forward is straight through. Your service taught you that courage and stupidity often look the same from the outside.\n**Skills:** Melee Combat 3, Athletics 1, Intimidate 1, +36 XP\n**Equipment:** Uniform, weapon of choice, bedroll, high boots, common clothes\n**Feature** - Military Rank: You have (or had) rank in an army. Can secure lodging at military posts, understand military protocols, and could be recognized by fellow soldiers."
+  },
+  "effects": [],
+  "_key": "!items!2a33fbefa1b5416d"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "d9f9975854534afe",
+  "name": "Signet Ring",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A metal ring bearing a unique seal or crest, used to stamp documents and prove identity or authority.",
+    "weight": "0.1 lbs",
+    "cost": "50 gp"
+  },
+  "effects": [],
+  "_key": "!items!d9f9975854534afe"
+}

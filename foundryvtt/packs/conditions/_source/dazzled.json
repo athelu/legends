@@ -1,0 +1,18 @@
+{
+  "_id": "282a3ce80f1b4509",
+  "name": "Dazzled",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "label": "Dazzled",
+    "category": "sensory",
+    "description": "-   Vision impaired by bright light, spots, disorientation, or overstimulation\n-   Vision-based Perception checks: Add 1 to die results\n-   Attack rolls: Add 1 to die results",
+    "tokenIcon": "",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20
+  },
+  "flags": {},
+  "_key": "!items!282a3ce80f1b4509"
+}

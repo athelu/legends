@@ -1,0 +1,13 @@
+{
+  "_id": "722335384ac24418",
+  "name": "Counter Strike",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Agi 5, Melee 5\n**Description:** They thought missing was safe. They were wrong. You've learned to exploit that instant, turning their mistake into your opportunity.\n**Benefit:** When a creature misses you with a melee attack, as a [Reaction] you may make one melee weapon attack against that creature\n**Usage:** Once per round (reaction)\n**Keyword:** [Combat], [Maneuver], [Reaction]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!722335384ac24418"
+}

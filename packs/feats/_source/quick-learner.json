@@ -1,0 +1,16 @@
+{
+  "name": "Quick Learner",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Int 4\n**Benefit:** All skill improvements cost 2 less XP\n**Usage:** Passive\n**Keyword:** [Skill]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

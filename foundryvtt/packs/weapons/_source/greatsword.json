@@ -1,0 +1,51 @@
+{
+  "_id": "1b475add2cb546b1",
+  "name": "Greatsword",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A large two-handed sword with an extended blade and handle designed for powerful sweeping cuts. The pommel and crossguard can be used for bludgeoning strikes (the \"murder stroke\"). This category includes zweihänders, claymores, montantes, and similar large battlefield swords. Often wielded by elite infantry, these weapons require significant training but offer exceptional reach and power.",
+    "damage": {
+      "base": 10,
+      "alternate": null,
+      "raw": "10",
+      "type": [
+        "slashing",
+        "bludgeoning"
+      ]
+    },
+    "range": "",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "strength",
+        "defenseType": "melee",
+        "damage": {
+          "base": 10,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      }
+    ],
+    "weight": {
+      "raw": "10 lbs",
+      "lbs": 10.0
+    },
+    "cost": {
+      "raw": "50 gp",
+      "gp": 50.0
+    },
+    "properties": [
+      "Two-Handed",
+      "Alternate-Strike"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!1b475add2cb546b1"
+}

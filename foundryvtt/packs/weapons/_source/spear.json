@@ -1,0 +1,69 @@
+{
+  "_id": "fdbb7de90e8f4af0",
+  "name": "Spear",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A pointed blade or head mounted on a long shaft, creating humanity's oldest and most ubiquitous weapon. The spear offers reach, throwing capability, and the shaft can deliver bludgeoning strikes. This category includes javelins (lighter throwing spears), lances (cavalry-focused), pilums, assegai, and similar hafted piercing weapons. Universal across cultures, the spear's simplicity belies its effectiveness.",
+    "damage": {
+      "base": 6,
+      "alternate": null,
+      "raw": "6",
+      "type": [
+        "piercing",
+        "bludgeoning"
+      ]
+    },
+    "range": "30/60 when thrown",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "strength",
+        "defenseType": "melee",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      },
+      {
+        "name": "Ranged",
+        "type": "ranged",
+        "skill": "rangedCombat",
+        "damageAttr": "agility",
+        "defenseType": "ranged",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 30,
+          "medium": 60,
+          "long": 120
+        }
+      }
+    ],
+    "weight": {
+      "raw": "5 lbs",
+      "lbs": 5.0
+    },
+    "cost": {
+      "raw": "12 gp",
+      "gp": 12.0
+    },
+    "properties": [
+      "Versatile",
+      "Alternate-Strike",
+      "Thrown",
+      "Reach"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!fdbb7de90e8f4af0"
+}

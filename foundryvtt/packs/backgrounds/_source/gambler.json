@@ -1,0 +1,11 @@
+{
+  "_id": "b524aa5c83964837",
+  "name": "Gambler",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "The thrill of the win drew you into games of chance, though you know that in the long run, the house always wins, that is unless you cheat, and you definitely know how to do that. Adventuring could be a way out of debt or buy-in to the next big game. At least when you gamble with your life, the odds are more honest.\n**Skills:** Deception 2, Empathy 2, Perception 1, Society 1, +40 XP\n**Equipment:** Dice set, playing cards, common clothes, shoes\n**Feature** - Never Tell the Odds: You have a knack for reading people during games of chance and can often spot loaded dice or marked cards."
+  },
+  "effects": [],
+  "_key": "!items!b524aa5c83964837"
+}

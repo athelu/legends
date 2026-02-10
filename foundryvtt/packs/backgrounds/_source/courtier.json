@@ -1,0 +1,11 @@
+{
+  "_id": "1939371c9ef24535",
+  "name": "Courtier",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "To the common folk, court life seems like an endless parade of balls and banquets. You know better. Every smile hides an agenda, every compliment is calculated, and one misstep can mean social death, or sometimes the regular kind. You learned to navigate these treacherous waters with grace, though whether you're fleeing court intrigue or pursuing it in a new arena is anyone's guess.\n**Skills:** Persuasion 2, Society 2, Empathy 2, Perform 2, +24 XP\n**Equipment:** Fine clothes, signet ring, perfume, shoes\n**Feature** - Court Connections: You know how to navigate noble society. Can gain audience with important figures and understand court politics."
+  },
+  "effects": [],
+  "_key": "!items!1939371c9ef24535"
+}

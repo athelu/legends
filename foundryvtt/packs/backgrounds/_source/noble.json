@@ -1,0 +1,11 @@
+{
+  "_id": "c0988f35819a4192",
+  "name": "Noble",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "To the common folk, the life of a noble seems one of idyllic luxury, but growing up as a noble or member of the aspiring gentry, you know the reality: a noble's lot is obligation and intrigue. Whether you seek to escape your duties by adventuring or to better your station, you have traded silks and pageantry for an adventurer's life. The question is whether your family sees this as honorable service or scandalous rebellion.\n**Skills:** Society 3, Persuasion 1, History 1, +36 XP\n**Equipment:** Fine clothes, signet ring, shoes\n**Feature** - Position of Privilege: You are of noble birth. Common folk defer to you, and you can secure audiences with authorities, though this may also make you a target."
+  },
+  "effects": [],
+  "_key": "!items!c0988f35819a4192"
+}

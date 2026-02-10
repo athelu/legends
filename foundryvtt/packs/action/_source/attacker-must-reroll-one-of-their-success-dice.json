@@ -1,0 +1,21 @@
+{
+  "_id": "e34bf3dbf36a46d1",
+  "name": "Attacker must reroll one of their success dice",
+  "type": "action",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "description": {
+      "value": "Reaction provided by Buckler (Light Shield) shield."
+    },
+    "actionType": "reaction",
+    "actionCost": "Reaction",
+    "trigger": "",
+    "effect": "Reaction provided by Buckler (Light Shield) shield.",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": []
+}

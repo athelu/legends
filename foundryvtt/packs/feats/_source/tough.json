@@ -1,0 +1,13 @@
+{
+  "_id": "ac9c5102fc6f4246",
+  "name": "Tough",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 1\n**Prerequisites:** Con 3\n**Description:** Some people are just harder to kill. You are more resilient, allowying you to take punishment that would drop others.\n**Benefit:** Gain HP equal to Con × current Tier\n**Usage:** Passive\n**Keyword:** [General]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!ac9c5102fc6f4246"
+}

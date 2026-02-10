@@ -1,0 +1,11 @@
+{
+  "_id": "dcdb011d2eff416e",
+  "name": "Shepherd",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You spent long days and nights watching over flocks, responsible for their safety in all weather and against all threats. You might have left when the flock was lost, or you simply realized that protecting people pays better than protecting sheep. The principles are the same, though people complain more.\n**Skills:** Wilderness 2, Perception 2, Athletics 1, Medicine 1, +40 XP\n**Equipment:** Sling, common clothes, waterskin, blanket, shoes\n**Feature** - Animal Empathy: You understand animal behavior and can calm domesticated animals, predict their actions, and gain their trust more easily."
+  },
+  "effects": [],
+  "_key": "!items!dcdb011d2eff416e"
+}

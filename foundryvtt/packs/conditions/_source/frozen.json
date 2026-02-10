@@ -1,0 +1,27 @@
+{
+  "_id": "1b62206fbcde485e",
+  "name": "Frozen",
+  "type": "condition",
+  "img": "icons/svg/frozen.svg",
+  "system": {
+    "label": "Frozen",
+    "category": "magic",
+    "description": "-   Body encased in ice or frozen solid\n-   Restrained condition active \n-   Take 1d8 cold damage  at the end of your turn (frostbite)\n-   Duration: Until ice breaks or melts\n**Escaping Frozen:**\n-   Self: Use 1 [Action] to make Athletics check\n    -   2 successes: Break free completely\n    -   1 success: Damage the ice, subtract 1 from next attempt\n    -   0 successes: Remain Frozen\n-   Ally: Can make Athletics check to break ally free (same thresholds)\n-   Fire damage of 8+: Automatic freedom\n-   Time: Melts naturally after 10 minutes (environmental temperature dependent)",
+    "tokenIcon": "icons/svg/frozen.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": {
+      "frequency": "endOfTurn",
+      "formula": "1d8",
+      "showInChat": true,
+      "chatMessage": "Take 1d8 cold damage from Frozen"
+    },
+    "appliesConditions": [
+      "Restrained"
+    ]
+  },
+  "flags": {},
+  "_key": "!items!1b62206fbcde485e"
+}

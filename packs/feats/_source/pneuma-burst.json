@@ -1,0 +1,45 @@
+{
+  "name": "Pneuma Burst",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 4\n**Prerequisites:** Pneuma Strike (any element), Elemental Burst, any elemental Mastery 6, Tier 4\n**Benefit:** Your Elemental Burst ability improves:\n- 2 successes: 5d8 elemental damage (instead of 3d8)\n- 1 success: 3d8 elemental damage (instead of 2d8)\n- 0 successes: 2d8 elemental damage (instead of 1d8)\n\n**Usage:** Enhancement to Elemental Burst\n**Keyword:** [Combat], [Ascetic], [Magic]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "5d8",
+        "apply": "dice",
+        "description": "5d8"
+      },
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "3d8",
+        "apply": "dice",
+        "description": "3d8"
+      },
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "2d8",
+        "apply": "dice",
+        "description": "2d8"
+      },
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "1d8",
+        "apply": "dice",
+        "description": "1d8"
+      }
+    ]
+  },
+  "flags": {}
+}

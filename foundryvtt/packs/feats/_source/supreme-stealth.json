@@ -1,0 +1,13 @@
+{
+  "_id": "3c973c664604413d",
+  "name": "Supreme Stealth",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Stealth 5\n**Description:** Through perfect understanding of shadows, sound, and sightlines, you can make yourself effectively invisible without magic.\n**Benefit:** Subtract 1 from both Stealth dice when attempting to hide\n**Usage:** Passive\n**Keyword:** [Skill], [Shadow]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!3c973c664604413d"
+}

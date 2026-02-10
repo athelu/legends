@@ -1,10 +1,11 @@
 {
-  "_id": "3f8b93be8b1041a4",
+  "_id": "b46ca7f4048e4fa2",
   "name": "Comprehend Languages",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Air 2 (understanding spoken communication)  \n**Supporting Energy:** Time 4 (duration 1 hour)  \n**Range:** Self  \n**Duration:** 1 hour  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Air Potential + Air Mastery / Time Potential + Time Mastery  \n**Effect:** For the duration, you understand the literal meaning of any spoken language you hear. You also understand written languages you see, but must touch the surface on which words are written. Reading takes about 1 minute per page.  \n**Saving Throw:** None (personal enhancement)  \n**Success Scaling:** 0 = fails, 1 = 10 minutes (spoken only), 2 = full effect, 3 = 8 hours, 4 = can speak (not just understand) all languages for duration"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!b46ca7f4048e4fa2"
 }

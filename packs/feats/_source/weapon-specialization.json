@@ -1,0 +1,16 @@
+{
+  "name": "Weapon Specialization",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Chosen combat skill 5\n**Description:** This weapon is like an extension of your body.In your hands, this weapon becomes significantly more dangerous than it would be for anyone else.\n**Benefit:** Choose one weapon type (longswords, bows, spears, etc.). When attacking with that weapon type, subtract 1 from your combat skill die result before comparing (minimum 1). Can be taken multiple times for different weapon types\n**Usage:** Passive\n**Keyword:** [Combat]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

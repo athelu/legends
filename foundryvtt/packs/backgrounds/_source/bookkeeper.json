@@ -1,0 +1,11 @@
+{
+  "_id": "3acac4d7d51f4f57",
+  "name": "Bookkeeper",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "Numbers don't lie, but the people who record them often do. You spent your days tracking accounts and managing ledgers, developing an eye for discrepancies that most people miss. Adventure is certainly more exciting than balance sheets, though sometimes the pay isn't as reliable.\n**Skills:** Society 2, Investigate 2, Writing 1, Perception 1, +40 XP\n**Equipment:** Journal, ink, quill, abacus, fine clothes, shoes\n**Feature** - Head for Numbers: You can quickly assess financial records and spot discrepancies or patterns in accounts."
+  },
+  "effects": [],
+  "_key": "!items!3acac4d7d51f4f57"
+}

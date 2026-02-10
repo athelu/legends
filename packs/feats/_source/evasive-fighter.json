@@ -1,0 +1,24 @@
+{
+  "name": "Evasive Fighter",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Agi 5\n**Description:** You've mastered moving through threats without exposing yourself\n**Benefit:** Opportunity attacks against you add 1 to both attack dice\n**Usage:** Passive\n**Keyword:** [Combat], [Defense]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "dice.modify",
+        "target": "attack",
+        "value": 1,
+        "apply": "both",
+        "description": "add 1 to both attack dice"
+      }
+    ]
+  },
+  "flags": {}
+}

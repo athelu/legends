@@ -1,0 +1,16 @@
+{
+  "name": "Skirmisher",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 3\n**Prerequisites:** Agi 5\n**Description:** You've perfected the art of hitting and moving, never giving opponents the chance to retaliate. By the time they realize they should attack you, you're already out of range and moving on to your next target.\n**Benefit:** When you make a melee attack against a creature, that creature cannot make opportunity attacks against you for the rest of your turn\n**Usage:** Passive\n**Keyword:** [Combat], [Defense], [Move]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

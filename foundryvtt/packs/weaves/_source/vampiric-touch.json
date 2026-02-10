@@ -1,10 +1,11 @@
 {
-  "_id": "8e920ecd6f934e04",
+  "_id": "a8462b3f91e3462c",
   "name": "Vampiric Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Negative 4 (draining life force)  \n**Supporting Energy:** Time 2 (duration of charge, 1 minute)  \n**Range:** Touch  \n**Duration:** 1 minute (charge duration)  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions) to cast, then complex weave (2 actions) to discharge  \n**Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery  \n**Effect:** Your touch deals 12 negative damage. You heal HP equal to half damage dealt. Can hold the charge for up to 1 minute and attack multiple times if charge remains. This is an attack weave when discharging—no saving throw on the touch.  \n**Saving Throw:** None (attack weave when touching, weaving successes determine hit quality)  \n**Damage Type:** Negative (energy)  \n**DR Interaction:** Half DR (12 negative damage vs DR 4 becomes 12 - 2 = 10 damage)  \n**Success Scaling:** 0 = no charge created, 1 = 8 damage (heal 4), 2 = 12 damage (heal 6), 3 = 16 damage (heal 8), 4 = 24 damage (heal 12, 10 minutes)  \n**Weakened Condition (at 3+ successes):** Target has Misfortune on Strength checks and saves until end of their next turn.\n\n---\n\n## W"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!a8462b3f91e3462c"
 }

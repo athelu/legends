@@ -1,0 +1,11 @@
+{
+  "_id": "759bec9456524723",
+  "name": "Smith",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "Fire, hammer, and patience were your tools and your teachers. You shaped metal into tools, weapons, and art, learning that true craftsmanship cannot be rushed. It could be that you tired of making swords for others to wield, or the business was no longer supporting you. You understand the value of good equipment, and you know how to keep it maintained in the field. Your companions will thank you for that.\n**Skills:** Craft 3, Might 2, +32 XP\n**Equipment:** Smith's tools, hammer, apron, work gloves, work clothes, work boots\n**Feature** - Master Craftsman: You can repair weapons and armor in the field, assess metal quality and craftsmanship, and create or modify metal items with proper materials and time."
+  },
+  "effects": [],
+  "_key": "!items!759bec9456524723"
+}

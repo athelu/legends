@@ -1,10 +1,11 @@
 {
-  "_id": "85446337c4e54aef",
+  "_id": "60e648536b064d2f",
   "name": "Sorcerous Origin (-7)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "**Requirements:** Wisdom ≥ 3\n\nYou are an Arcanisty, your eyes glow with constant violet light from birth, marking your inherent connection to the planes. Unlike Mageborn who study magic intellectually or clerics who channel divine power, your magic flows from perfect self-knowledge and unshakeable inner certainty. Your pneuma is so clear, so completely understood, that reality itself recognizes and responds to your true nature. You don't need to understand *how* magic works—you *know* what you are, and that truth manifests as power.\n\n**The Source of Power:**\nWhere Mageborn study external principles and clerics channel external deities, sorcerers have achieved something rarer: **perfect internal understanding**. You've looked within and seen yourself completely—not your surface thoughts or emotions, but your fundamental nature across space, time, and probability. This enlightenment isn't intellectual (that's wizardry) or spiritual devotion (that's divine casting)—it's absolute self-perception. Reality cannot deny a truth perceived so clearly.\n\n**Visual Effects:** Your weaves flow naturally, almost effortlessly, as if reality is simply acknowledging what already is. Violet light constantly emanates from your eyes—not flickering like other mageborn, but steady, like a candle that never wavers. When you cast, magic moves through you like water finding its level, inevitable and serene. Your Force of Will manifestation determines how this manifests aesthetically.\n\n**Mechanical Benefits:**\n-   Roll **8d8**, assign to eight Magical Potentials\n-   **Choose Force of Will Manifestation:** Determines which energy aligns with your deepest truth and grants unique benefits"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!60e648536b064d2f"
 }

@@ -1,0 +1,13 @@
+{
+  "_id": "8025f89a0dc64bb7",
+  "name": "Bedroll",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A padded sleeping mat that rolls up for easy transport, providing basic comfort and insulation when sleeping outdoors or in rough accommodations.",
+    "weight": "5 lbs",
+    "cost": "10 gp"
+  },
+  "effects": [],
+  "_key": "!items!8025f89a0dc64bb7"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "2e87438f305a42d9",
+  "name": "Artisan's Tools",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Specialized tools for a specific craft (specify type: blacksmith, carpenter, cobbler, etc.). These tools are necessary to practice a trade and create items related to that profession.",
+    "weight": "5 lbs",
+    "cost": "50 gp"
+  },
+  "effects": [],
+  "_key": "!items!2e87438f305a42d9"
+}

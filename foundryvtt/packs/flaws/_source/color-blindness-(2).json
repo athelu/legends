@@ -1,10 +1,11 @@
 {
-  "_id": "249ff75029d24a14",
+  "_id": "76eb6c795e31471e",
   "name": "Color Blindness (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Cannot distinguish colors.\n- Perception where color matters: Add 1 to die results"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!76eb6c795e31471e"
 }

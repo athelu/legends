@@ -1,0 +1,11 @@
+{
+  "_id": "93c50d9725404338",
+  "name": "Sailor",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You heard the call of the sea from a young age. Maybe you signed onto a merchant's vessel, joined the navy, or even fell in with a crew of pirates and scalawags. Life at sea taught you to work as part of a crew and stay steady when solid ground is just a memory. You might be on land now, but the ocean never really lets go of those who've sailed her waters.\n**Skills:** Athletics 2, Acrobatics 2, Perception 1, Wilderness 1, +40 XP\n**Equipment:** Lime bast rope, common clothes, belt knife, shoes\n**Feature** - Ship Passage: You can secure free or reduced passage on ships and are welcomed in port taverns. Sailors recognize and trust one of their own."
+  },
+  "effects": [],
+  "_key": "!items!93c50d9725404338"
+}

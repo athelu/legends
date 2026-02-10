@@ -1,0 +1,16 @@
+{
+  "name": "Whirlwind Strike",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 3\n**Prerequisites:** Str or Agi 5, Melee 5\n**Description:** One devastating rotation of your weapon strikes every enemy within reach, turning encirclement from a tactical advantage for them into a very serious problem.\n**Benefit:** As a [Combat] action, make a single melee weapon attack roll (one Attribute die, one Melee Combat skill die) and compare against every hostile creature within your reach\n**Usage:** Once per turn\n**Keyword:** [Combat]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

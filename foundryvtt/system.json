@@ -96,6 +96,13 @@
       "path": "packs/abilities",
       "type": "Item",
       "system": "legends"
+    },
+    {
+      "name": "conditions",
+      "label": "Legends - Conditions",
+      "path": "packs/conditions",
+      "type": "Item",
+      "system": "legends"
     }
   ],
   "languages": [
@@ -122,7 +129,8 @@
       "background": {},
       "ancestry": {},
       "action": {},
-      "ability": {}
+      "ability": {},
+      "condition": {}
     }
   },
   "socket": false,

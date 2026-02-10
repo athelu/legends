@@ -1,0 +1,13 @@
+{
+  "_id": "9e9a5bebba3f4508",
+  "name": "Belt",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A leather or cloth belt used to secure clothing and carry pouches, weapons, or tools.",
+    "weight": "0.5 lbs",
+    "cost": "7 gp"
+  },
+  "effects": [],
+  "_key": "!items!9e9a5bebba3f4508"
+}

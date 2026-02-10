@@ -1,0 +1,24 @@
+{
+  "name": "Forager",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 1\n**Prerequisites:** Survival 3\n**Benefit:** Find food and water for 6 people per day with Survival check (Simple task). 2 successes = find medicinal herbs worth 1d8 × 5 gp\n**Usage:** Once per day\n**Keyword:** [Wilderness], [Skill]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "1d8",
+        "apply": "dice",
+        "description": "1d8"
+      }
+    ]
+  },
+  "flags": {}
+}

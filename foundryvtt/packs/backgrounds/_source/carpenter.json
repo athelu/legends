@@ -1,0 +1,11 @@
+{
+  "_id": "42be82b421084741",
+  "name": "Carpenter",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "Every beam tells a story about stress and weight, every joint reveals the skill of its maker. You shaped wood into structures that will outlast you, learning patience and precision in equal measure. Adventuring might represent a departure from your careful craft, but the ability to assess a structure's integrity has saved your life more than once. Wood isn't the only thing that breaks in predictable ways.\n**Skills:** Craft 2, Might 2, Devices 1, Perception 1, +40 XP\n**Equipment:** Carpenter's tools, work clothes, work boots, work gloves\n**Feature** - Structural Assessment: You can quickly evaluate the integrity of wooden structures and identify construction methods."
+  },
+  "effects": [],
+  "_key": "!items!42be82b421084741"
+}
