@@ -1,0 +1,13 @@
+{
+  "_id": "0005bc9912c94921",
+  "name": "Hardtack",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Rock-hard biscuits that store indefinitely. One pound provides minimal but adequate nutrition for one day.",
+    "weight": "0.5 lbs",
+    "cost": "5 cp"
+  },
+  "effects": [],
+  "_key": "!items!0005bc9912c94921"
+}

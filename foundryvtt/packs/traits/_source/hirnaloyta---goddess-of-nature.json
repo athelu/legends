@@ -1,10 +1,11 @@
 {
-  "_id": "9c2c42cbe977490b",
+  "_id": "e395877210e84040",
   "name": "HIRNALOYTA - Goddess of Nature",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!e395877210e84040"
 }

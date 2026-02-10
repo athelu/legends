@@ -1,0 +1,13 @@
+{
+  "_id": "9ed9886f0afb4968",
+  "name": "Scabbard, Great",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A leather sheath designed to hold a greatsword or other large two-handed blade.",
+    "weight": "3 lbs",
+    "cost": "125 gp"
+  },
+  "effects": [],
+  "_key": "!items!9ed9886f0afb4968"
+}

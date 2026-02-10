@@ -1,10 +1,11 @@
 {
-  "_id": "152eee82d4224ba4",
+  "_id": "eb9b3a1d1de74159",
   "name": "Rally the Troops",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "- **Action Cost:** 1 [Combat] action\n- **Range:** 30-foot radius centered on you\n- **Effect:** All allies within range who can see or hear you gain temporary HP equal to your Wisdom score + your Tier. Your presence and Alkira's blessing fortify your companions.\n- **Usage:** Uses 1 Channel Divinity\n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!eb9b3a1d1de74159"
 }

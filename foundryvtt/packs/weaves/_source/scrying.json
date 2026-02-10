@@ -1,10 +1,11 @@
 {
-  "_id": "1465914fdb754ee7",
+  "_id": "21f94e73747f4e54",
   "name": "Scrying",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 6 (remote viewing of specific target)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Special (anywhere on same plane)  \n**Duration:** 10 minutes  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions), takes 10 minutes to cast  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create invisible sensor near target creature you choose. Target makes Will save (apply Fortune/Misfortune based on familiarity). Compare your weaving successes to their save successes. If you have more, you can see and hear through sensor. Target has vague feeling of being watched.  \n**Saving Throw:** Will (to resist scrying, modified by familiarity)  \n**Success Scaling:** 0 = no effect, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = target doesn't sense you (8 hours)\n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!21f94e73747f4e54"
 }

@@ -1,0 +1,12 @@
+{
+  "_id": "9e88d21a01c14b0d",
+  "name": "Shield Defense",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "Grants Fortune on defensive melee combat rolls."
+    }
+  },
+  "effects": []
+}

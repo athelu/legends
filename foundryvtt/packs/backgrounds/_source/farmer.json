@@ -1,0 +1,11 @@
+{
+  "_id": "e10df28fcf404904",
+  "name": "Farmer",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "With a strong back and an understanding of seasonal cycles, you tilled the land and tended crops. Your farm could have been razed by invaders, you could have lost the family tying you to the land, or you might have simply tired of the drudgery. Whatever the reason, you still find yourself reading the weather and judging soil quality out of habit.\n**Skills:** Wilderness 2, Might 2, Athletics 1, Craft 1, +40 XP\n**Equipment:** Common clothes, work gloves, work boots\n**Feature** - Rural Knowledge: You understand seasons, weather, and crops, gaining useful insights about agricultural communities."
+  },
+  "effects": [],
+  "_key": "!items!e10df28fcf404904"
+}

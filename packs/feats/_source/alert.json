@@ -1,0 +1,30 @@
+{
+  "name": "Alert",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 1\n**Prerequisites:** Wis 3, Perception 3\n**Description:** Danger rarely announces itself politely. You've learned to read the subtle signs. By the time others realize there's a threat, you're already moving.\n**Benefit:** Initiative: +2, cannot be surprised\n**Usage:** Passive\n**Keyword:** [Initiative], [General]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "initiative.modify",
+        "target": "initiative",
+        "value": 2,
+        "apply": "flat",
+        "description": "Initiative: +2"
+      },
+      {
+        "type": "condition.immunity",
+        "target": "surprised",
+        "apply": "immune",
+        "description": "cannot be surprised"
+      }
+    ]
+  },
+  "flags": {}
+}

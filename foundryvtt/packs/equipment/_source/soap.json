@@ -1,0 +1,13 @@
+{
+  "_id": "8e00752de55b40aa",
+  "name": "Soap",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A bar of cleaning soap used for washing body, clothes, or equipment.",
+    "weight": "0.5 lbs",
+    "cost": "2 sp"
+  },
+  "effects": [],
+  "_key": "!items!8e00752de55b40aa"
+}

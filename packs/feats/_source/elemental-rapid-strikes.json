@@ -1,0 +1,31 @@
+{
+  "name": "Elemental Rapid Strikes",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 3\n**Prerequisites:** Rapid Strikes feat, Pneuma Strike (any element)\n**Benefit:** You can channel elemental energy through your Rapid Strikes flurry. When using Rapid Strikes (3 attacks in one action):\n- Choose to spend 4 Energy total (instead of 2 per strike)\n- Make ONE weaving check for your chosen element\n- Apply the weaving result to ALL THREE strikes\n\n**Usage:** When using Rapid Strikes, costs 4 Energy total\n**Keyword:** [Combat], [Ascetic], [Magic]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "1d8",
+        "apply": "dice",
+        "description": "+1d8"
+      },
+      {
+        "type": "damage.add",
+        "target": "weapon",
+        "value": "2d8",
+        "apply": "dice",
+        "description": "+2d8"
+      }
+    ]
+  },
+  "flags": {}
+}

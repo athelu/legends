@@ -1,0 +1,16 @@
+{
+  "name": "Danger Sense",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 1\n**Prerequisites:** Wis 3\n**Description:** Reflexes only work if you see the danger coming. Your instincts are sharper than most. You can't always avoid trouble entirely, but you're rarely caught completely flat-footed.\n**Benefit:** Subtract 1 from both dice on Reflex saves against effects you can see\n**Usage:** Passive\n**Keyword:** [Combat], [Savage]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

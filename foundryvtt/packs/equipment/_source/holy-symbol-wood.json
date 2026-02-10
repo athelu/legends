@@ -1,0 +1,13 @@
+{
+  "_id": "5191d354cd6e49c7",
+  "name": "Holy Symbol, Wood",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A simple wooden religious symbol representing a deity or faith, often carved by hand.",
+    "weight": "0.2 lbs",
+    "cost": "2 sp"
+  },
+  "effects": [],
+  "_key": "!items!5191d354cd6e49c7"
+}

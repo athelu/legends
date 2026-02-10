@@ -1,0 +1,13 @@
+{
+  "_id": "0da83a1dbae342dd",
+  "name": "Expertise",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Any skill rank 5\n**Benefit:** For chosen skill, subtract 1 from both dice when making checks\n**Usage:** Passive\n**Note:** Can be taken multiple times for different skills\n**Keyword:** [Skill]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!0da83a1dbae342dd"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "29ca217619be422b",
+  "name": "Cloak",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A long outer garment with sleeves or armholes that provides warmth and protection from the elements.",
+    "weight": "3 lbs",
+    "cost": "8 gp"
+  },
+  "effects": [],
+  "_key": "!items!29ca217619be422b"
+}

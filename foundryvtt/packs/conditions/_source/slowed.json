@@ -1,0 +1,34 @@
+{
+  "_id": "8b0d6a2f71a240b1",
+  "name": "Slowed",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "label": "Slowed",
+    "category": "magic",
+    "description": "-   Actions and movement reduced by temporal or physical effects\n-   **Minor Slowed:** Movement speed reduced by 10 feet, initiative -1\n-   **Major Slowed:** Can only take 2 actions per turn (instead of 3)\n-   Duration: Varies by source (typically 1 round to 1 minute)\n**Recovery:**\n-   Depends on source\n-   Some allow Will save at end of turn\n-   Unweave removes magical slowing\n-   Haste spell can counteract (if magical)\n\n**Stacking:**\n-   Minor Slowed + Major Slowed = Major Slowed only (use worse effect)\n-   Multiple Major Slowed effects = Only 1 action per turn (GM discretion)",
+    "tokenIcon": "",
+    "activeEffects": [
+      {
+        "key": "initiative.flat",
+        "mode": "add",
+        "value": -1,
+        "notes": "-1 to initiative"
+      }
+    ],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "will"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Will save to recover from Slowed"
+    }
+  },
+  "flags": {},
+  "_key": "!items!8b0d6a2f71a240b1"
+}

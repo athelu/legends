@@ -1,0 +1,18 @@
+{
+  "_id": "2c54a151c4584382",
+  "name": "Restrained",
+  "type": "condition",
+  "img": "icons/svg/net.svg",
+  "system": {
+    "label": "Restrained",
+    "category": "movement",
+    "description": "#### Effect:\n-   Movement speed reduced to 0\n-   Cannot take [Move] actions\n-   All attacks and skill checks: Add 2 to die results\n-   Attacks against you have Fortune\n-   Automatically fail Reflex saves\n\n#### Common Sources:\n-   Nets, chains, magical bindings\n-   Special monster abilities (web, constrict)\n-   Space weaves (force cage)\n\n#### Escaping Restrained:\n-   Depends on source\n-   Physical bonds: Athletics or Devices check (typically 2 successes)\n-   Magical bonds: Usually requires dispelling or breaking concentration",
+    "tokenIcon": "icons/svg/net.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20
+  },
+  "flags": {},
+  "_key": "!items!2c54a151c4584382"
+}

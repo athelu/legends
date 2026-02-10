@@ -1,0 +1,11 @@
+{
+  "_id": "df353f2fbe1d40f2",
+  "name": "Urjack",
+  "type": "ancestry",
+  "img": "icons/svg/person.svg",
+  "system": {
+    "description": "The Urjack are a solitary people who inhabit the Lackabier peaks mountain range in eastern Estaea. They are taller and broader than most humans from the other realms. Light eye color is common, as well as blonde hair, but browns and reds occur as well."
+  },
+  "effects": [],
+  "_key": "!items!df353f2fbe1d40f2"
+}

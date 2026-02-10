@@ -1,0 +1,24 @@
+{
+  "name": "Devastating Charge",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Str 4\n**Description:** Momentum is a weapon all its own. When you build up speed and slam into an opponent, the impact is tremendous.\n**Benefit:** If you move at least 20 feet straight toward a target before making a melee attack on your turn, you can choose one: either subtract 1 from both attack dice, or make a shove attempt as part of the same action (both use same action)\n**Usage:** Unlimited\n**Keyword:** [Combat], [Move]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "dice.modify",
+        "target": "attack",
+        "value": -1,
+        "apply": "both",
+        "description": "subtract 1 from both attack dice"
+      }
+    ]
+  },
+  "flags": {}
+}

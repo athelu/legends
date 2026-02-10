@@ -1,0 +1,22 @@
+{
+  "_id": "f2e327fdeadf4c79",
+  "name": "Revealed",
+  "type": "condition",
+  "img": "icons/svg/light.svg",
+  "system": {
+    "label": "Revealed",
+    "category": "visibility",
+    "description": "- Magic or effects expose your true position and prevent concealment\n- You cannot hide or benefit from obscuring effects\n- Typically caused by radiant magic or detection weaves\n\n**Effects:**\n- You immediately lose Hidden condition (if you had it)\n- You immediately lose Concealed condition (if you had it)\n- You **cannot gain** Hidden or Concealed conditions while Revealed\n- Invisibility is suppressed (you become visible)\n- Magical darkness concealing you is dispelled or rendered ineffective\n- Often accompanied by visible effect (glowing outline, radiant aura, etc.)\n\n**Common Sources:**\n- **Holy Fire** (4 successes): Target receives Revealed condition until end of target's next turn\n- **Radiant Touch** (4 successes): Target glows with radiant energy, becomes visible until end of their next turn\n- **Revealing Light** weave: Outlines creatures in violet light, prevents invisibility\n- Minor Positive Energy condition effect (magic system)\n\n**Duration:** \n- Typically until end of target's next turn (most common)\n- Some effects specify different durations\n- Each effect specifies its own duration in the weave/ability description\n\n**Cannot Be Ended Early:**\n- No saving throw to end early (unless specified by effect)\n- Cannot be removed by mundane means\n- Magical dispelling (Unweave) can remove magical Revealed effects\n- Automatically ends after specified duration\n\n**Interaction with Other Conditions:**\n- **Overrides:** Concealed and Hidden (removes them)\n- **Prevents:** Gaining new Concealed or Hidden conditions\n- **Does NOT prevent:** Physical cover from walls, barriers, etc.\n- **Physical cover still functions:** Being Revealed doesn't negate cover from a wall or shield\n\n**Does NOT Affect:**\n- Physical cover (walls, doors, shields still provide cover)\n- Damage Resistance or DR\n- Other defensive abilities unrelated to visibility\n\n**Example Situations:**\n- Struck by Holy Fire at 4 successes, you glow with radiant energy\n- Outlined by Revealing Light, glowing with violet radiance\n- Hit by Radiant Touch, shining brightly and exposing you even in magical darkness\n\n**Recovery:**\n- Automatically ends after specified duration\n- Cannot be ended early except by magical dispelling (if from magical source)\n- Effect ends, you can attempt to hide/gain concealment again normally\n- New Revealed effects can extend duration (apply whichever has longer remaining duration)",
+    "tokenIcon": "icons/svg/light.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true
+    }
+  },
+  "flags": {},
+  "_key": "!items!f2e327fdeadf4c79"
+}

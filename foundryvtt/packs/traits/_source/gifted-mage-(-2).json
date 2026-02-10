@@ -1,10 +1,11 @@
 {
-  "_id": "ea6512365eed4cde",
+  "_id": "be419e06944342ab",
   "name": "Gifted Mage (-2)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "**Requirements:** Must have Mageborn or Divine Gift\n\nEnhanced magical talent.\n-   Roll 9d8, drop lowest\n-   Trait bonuses still apply"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!be419e06944342ab"
 }

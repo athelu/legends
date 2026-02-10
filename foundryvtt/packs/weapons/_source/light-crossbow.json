@@ -1,0 +1,67 @@
+{
+  "_id": "bbafbc58b6e7491f",
+  "name": "Light Crossbow",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A mechanical bow with a lighter draw weight, allowing for faster reloading than its heavier cousin. The light crossbow balances power with practicality, requiring minimal strength to use effectively. This category includes  hunting crossbows, and similar lighter mechanical bows. Popular with guards, hunters, and those who value accuracy over raw power.",
+    "damage": {
+      "base": 6,
+      "alternate": null,
+      "raw": "6",
+      "type": [
+        "piercing"
+      ]
+    },
+    "range": "60/120/240",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "strength",
+        "defenseType": "melee",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      },
+      {
+        "name": "Ranged",
+        "type": "ranged",
+        "skill": "rangedCombat",
+        "damageAttr": "agility",
+        "defenseType": "ranged",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 60,
+          "medium": 120,
+          "long": 240
+        }
+      }
+    ],
+    "weight": {
+      "raw": "8 lbs",
+      "lbs": 8.0
+    },
+    "cost": {
+      "raw": "65 gp",
+      "gp": 65.0
+    },
+    "properties": [
+      "Two-Handed",
+      "Ranged"
+    ],
+    "reload": "1 action"
+  },
+  "effects": [],
+  "_key": "!items!bbafbc58b6e7491f"
+}

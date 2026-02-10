@@ -1,19 +1,22 @@
 {
-  "_id": "4d04fc2248ef489d",
+  "_id": "2d2c150217874a82",
   "name": "Power Attack",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "Power Attack feat, Str 3, Melee 3\n- **Effect:** Add 1 to both attack die results, but deal +1d8 bonus damage on hit\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty\n  - Only works with melee attacks",
+    "description": {
+      "value": "Power Attack feat, Str 3, Melee 3\n- **Effect:** Add 1 to both attack die results, but deal +1d8 bonus damage on hit\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty\n  - Only works with melee attacks"
+    },
     "actionType": "combat",
-    "actionCost": "1 [Combat] action (replaces normal attack)",
+    "actionCost": "1",
     "trigger": "",
     "effect": "Add 1 to both attack die results, but deal +1d8 bonus damage on hit\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty\n  - Only works with melee attacks",
-    "keywords": [],
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!2d2c150217874a82"
 }

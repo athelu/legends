@@ -1,19 +1,35 @@
 {
-  "_id": "4e7dc86ee7914b26",
+  "_id": "d55f8c4ba5b94ed9",
   "name": "Buckler (Light Shield)",
   "type": "shield",
-  "img": "** `icons/equipment/shield/buckler-metal-blue.webp`",
+  "img": "icons/equipment/shield/buckler-metal-blue.webp",
   "system": {
-    "description": "- **Image:** `icons/equipment/shield/buckler-metal-blue.webp`",
+    "description": {
+      "value": "Hand Usage: Occupies off-hand but allows punch/pommel strikes\n- Granted Reactions: Shield Block\n- Granted Ability: Active Parry\n- Special: Can make off-hand attacks with the buckler itself (treat as light weapon, 4 damage bludgeoning) using the two-weapon combat action."
+    },
     "shieldType": "",
     "handUsage": "",
     "meleeDefense": "",
     "requirements": "",
     "specialAbilities": "",
     "plantedMode": false,
-    "reactions": [],
-    "weight": "",
-    "cost": "** 10 gp"
+    "reactions": [
+      {
+        "name": "Shield Block",
+        "_id": "45e65108620442e1"
+      }
+    ],
+    "weight": 0,
+    "cost": 10.0,
+    "quantity": 1,
+    "notes": "",
+    "linkedAbilities": [
+      {
+        "name": "Active Parry",
+        "_id": "35dc5e87866c454a"
+      }
+    ],
+    "armorType": "light"
   },
   "effects": []
 }

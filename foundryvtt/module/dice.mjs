@@ -9,7 +9,7 @@
  * @returns {Promise<void>}
  */
 export async function showRollDialog(options) {
-  const { actor, attrValue, skillValue, attrLabel, skillLabel, onRollComplete } = options;
+  const { actor, attrValue, skillValue, attrLabel, skillLabel, onRollComplete, defaultModifier = 0, defaultApplyToAttr = true, defaultApplyToSkill = true } = options;
   
   return new Promise((resolve) => {
     new Dialog({
@@ -22,19 +22,19 @@ export async function showRollDialog(options) {
           
           <div class="form-group">
             <label>Modifier:</label>
-            <input type="number" name="modifier" value="0" step="1" style="width: 60px; text-align: center;"/>
+            <input type="number" name="modifier" value="${defaultModifier}" step="1" style="width: 60px; text-align: center;"/>
           </div>
           
           <div class="form-group" style="margin-left: 20px;">
             <label>
-              <input type="checkbox" name="applyToAttr" checked/>
+              <input type="checkbox" name="applyToAttr" ${defaultApplyToAttr ? 'checked' : ''}/>
               Apply to ${attrLabel} die
             </label>
           </div>
           
           <div class="form-group" style="margin-left: 20px;">
             <label>
-              <input type="checkbox" name="applyToSkill" checked/>
+              <input type="checkbox" name="applyToSkill" ${defaultApplyToSkill ? 'checked' : ''}/>
               Apply to ${skillLabel} die
             </label>
           </div>

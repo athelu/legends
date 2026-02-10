@@ -1,0 +1,16 @@
+{
+  "name": "Tough",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 1\n**Prerequisites:** Con 3\n**Description:** Some people are just harder to kill. You are more resilient, allowying you to take punishment that would drop others.\n**Benefit:** Gain HP equal to Con × current Tier\n**Usage:** Passive\n**Keyword:** [General]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

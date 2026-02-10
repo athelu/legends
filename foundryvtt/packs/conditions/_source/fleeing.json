@@ -1,0 +1,42 @@
+{
+  "_id": "5a71da99493e4474",
+  "name": "Fleeing",
+  "type": "condition",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "label": "Fleeing",
+    "category": "fear",
+    "description": "-   Must use movement to get away from the fear source by the safest\n    route available\n-   All rolls: Add 1 to die results\n-   Cannot willingly move closer to the fear source\n-   Can defend if cornered or attacked, but cannot make attacks against the fear source\n-   Can engage other threats that aren't the source of fear (though still add 1 to die results)\n-   **Recovery:** At the end of each turn, make Will save:\n    -   2 successes: Condition ends completely\n    -   1 success: Downgrade to Frightened\n    -   0 successes: Remains Fleeing\n\n-   **Ally Assistance:** An ally within 5 feet can use an [Interact] action with Persuasion or Intimidate check:\n    -   2 successes: Downgrade to Frightened\n    -   1 success: Target may reroll next recovery save",
+    "tokenIcon": "icons/svg/terror.svg",
+    "activeEffects": [
+      {
+        "key": "diceMod.allRolls",
+        "mode": "add",
+        "value": 1,
+        "notes": "Add 1 to all die results"
+      }
+    ],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "will"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Will save to recover from Fleeing",
+      "assistance": {
+        "range": 5
+      },
+      "downgrades": {
+        "1_success": "Frightened",
+        "2_success": null,
+        "0_success": "Fleeing"
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!5a71da99493e4474"
+}

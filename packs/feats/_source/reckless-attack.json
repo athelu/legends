@@ -1,0 +1,24 @@
+{
+  "name": "Reckless Attack",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 1\n**Prerequisites:** Str 4, Melee 3\n**Benefit:** When you make a melee weapon attack, you can choose to subtract 1 from both attack dice. If you do, attacks against you also subtract 1 from both dice until start of your next turn\n**Usage:** Unlimited\n**Keyword:** [Combat], [Savage]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "dice.modify",
+        "target": "attack",
+        "value": -1,
+        "apply": "both",
+        "description": "subtract 1 from both attack dice"
+      }
+    ]
+  },
+  "flags": {}
+}

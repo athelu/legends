@@ -1,0 +1,11 @@
+{
+  "_id": "4d78e9036f2c4d6f",
+  "name": "Cook",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You transformed ingredients into something that warmed both body and spirit. Whether you worked in a noble's kitchen with exotic spices or a roadside inn with whatever was available, you understand that a good meal creates community. Adventuring might pay better than kitchen work, but you still find yourself feeding your companions.\n**Skills:** Craft 2, Wilderness 2, Perception 1, Society 1, +40 XP\n**Equipment:** Apron, work clothes, shoes\n**Feature** - Comfort Food: Meals you prepare during rests grant one additional HP recovery (once per rest, applies to whole party)."
+  },
+  "effects": [],
+  "_key": "!items!4d78e9036f2c4d6f"
+}

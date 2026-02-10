@@ -1,10 +1,11 @@
 {
-  "_id": "7f86f9a86a9c48ab",
+  "_id": "42e9a2edcf1b4121",
   "name": "Barkward",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Earth 4 (hardening skin like tree bark)\n**Supporting Energy:** Time 2 (duration 1 minute)\n**Range:** touch or self  \n**Duration:** 1 minute\n**Total Cost:** 6 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Earth Potential + Earth Mastery / Time Potential + Time Mastery (4d8)\n**Effect:** Target's DR increases by 2 (doesn't stack with armor). Touch range by default.\n**Saving Throw:** None (beneficial buff, willing targets only)\n**Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!42e9a2edcf1b4121"
 }

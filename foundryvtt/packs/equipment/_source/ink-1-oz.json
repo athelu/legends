@@ -1,0 +1,13 @@
+{
+  "_id": "3f8f8e8fc2944fd0",
+  "name": "Ink, 1 oz",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "One ounce of black ink sufficient for writing approximately 50 pages of text.",
+    "weight": "0.1 lbs",
+    "cost": "7 sp"
+  },
+  "effects": [],
+  "_key": "!items!3f8f8e8fc2944fd0"
+}

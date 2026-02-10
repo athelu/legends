@@ -1,0 +1,13 @@
+{
+  "_id": "b129ed5dd2624f12",
+  "name": "Meat Hook",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A large iron hook used for hanging meat, but also useful as a grappling tool or improvised weapon.",
+    "weight": "2 lbs",
+    "cost": "4 gp"
+  },
+  "effects": [],
+  "_key": "!items!b129ed5dd2624f12"
+}

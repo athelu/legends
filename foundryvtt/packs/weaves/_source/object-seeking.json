@@ -1,10 +1,11 @@
 {
-  "_id": "9b84e74b33f94308",
+  "_id": "4264147dca5c4d6e",
   "name": "Object Seeking",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 4 (sensing specific object's location)  \n**Supporting Energy:** Time 2 (duration 10 minutes)  \n**Range:** Self (1,000 feet sensing range)  \n**Duration:** 10 minutes  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Sense the direction to a specific object you describe (must have seen it before) within 1,000 feet. If object is moving, you learn its direction of movement. Weave can't locate object if any thickness of lead blocks the path.  \n**Saving Throw:** None (scrying)  \n**Success Scaling:** 0 = fails, 1 = 100 feet range, 2 = full effect (1,000 feet), 3 = 1 mile range, 4 = can locate general type of object (e.g., \"stairs\" or \"freshwater\") instead of specific item  \n\n## P"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!4264147dca5c4d6e"
 }

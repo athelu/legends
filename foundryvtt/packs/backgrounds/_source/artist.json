@@ -1,0 +1,11 @@
+{
+  "_id": "bb76de5e8556438f",
+  "name": "Artist",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "Your art is your greatest passion, whatever form it takes. You may adventure for inspiration, or maybe you're just trying to survive until the world recognizes your genius. You have discovered that wealthy patrons are more interested in artists who have exciting stories to tell and nothing makes for a better story than a brush with death.\n**Skills:** Perform 3, Perception 2, +32 XP\n**Equipment:** Artist's tools, fine clothes, shoes\n**Feature** - Artistic Reputation: Your work is recognized in certain circles. Can earn money through commissions and gain access to wealthy patrons."
+  },
+  "effects": [],
+  "_key": "!items!bb76de5e8556438f"
+}

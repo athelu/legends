@@ -1,0 +1,16 @@
+{
+  "name": "Primal Multiattack",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 3\n**Prerequisites:** Primal Fury feat, Melee 5\n**Benefit:** While in Primal Fury, can make two melee attacks as 1 [Combat] action. Use Shared Attribute Roll: roll Attribute once, apply to both attacks. Roll Melee skill die separately for each attack. This counts as 1 action for multiple action penalty\n**Usage:** While in Primal Fury, once per turn\n**Keyword:** [Combat], [Savage]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

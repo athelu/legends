@@ -1,0 +1,13 @@
+{
+  "_id": "0aeb91f75d674d74",
+  "name": "Harmonic Weaving",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 1\n**Prerequisites:** Sorcerous Origin trait\n**Description:** Your enlightened state grants moments of perfect clarity where you perceive the optimal weave before it happens\n**Benefit:** This is the core ability of Sorcerous Origin, automatically gained with the trait. When you cast a weave, you can reroll one die (either a Potential die or Mastery die) and take the better result. Can use this Wisdom times per long rest\n**Usage:** Wisdom times per long rest\n**Keyword:** [Magic], [Sorcerer]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!0aeb91f75d674d74"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Precision Duelist",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Agi 4, Melee 4\n**Benefit:** When wielding a melee weapon in one hand with your other hand free (no shield, no second weapon), you gain +2 to damage and subtract 1 from your Agility die result when making attacks (minimum 1)\n**Usage:** Passive\n**Keyword:** [Combat]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

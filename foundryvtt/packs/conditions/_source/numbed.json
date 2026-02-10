@@ -1,0 +1,22 @@
+{
+  "_id": "9fff005b3b754b8b",
+  "name": "Numbed",
+  "type": "condition",
+  "img": "icons/svg/frozen.svg",
+  "system": {
+    "label": "Numbed",
+    "category": "magic",
+    "description": "-   Extremities significantly numbed, fine motor control impaired\n-   Dexterity based skill checks: Add 1 to one die\n-   Attacks with weapons: Add 1 to one die\n-   Duration: 1 minute unless specified otherwise\n**Recovery:**\n-   Automatically ends after 1 minute\n-   Warming by fire or heat source: Immediate recovery",
+    "tokenIcon": "icons/svg/frozen.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true
+    }
+  },
+  "flags": {},
+  "_key": "!items!9fff005b3b754b8b"
+}

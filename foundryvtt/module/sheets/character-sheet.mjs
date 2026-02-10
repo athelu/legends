@@ -220,10 +220,11 @@ export class D8CharacterSheet extends ActorSheet {
     
     const skillList = [];
     for (let [key, label] of Object.entries(skillLabels)) {
+      const effective = context.system.skillsEffective?.[key] ?? skills[key] ?? 0;
       skillList.push({
         key: key,
         label: label,
-        value: skills[key] || 0,
+        value: effective,
         attr: skillAttributes[key]
       });
     }

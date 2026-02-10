@@ -1,10 +1,11 @@
 {
-  "_id": "c14135ea1884407d",
+  "_id": "dc22f047b8994e90",
   "name": "Uncontrollable Laughter",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Negative 2 (overwhelming with uncontrollable mirth)  \n**Supporting Energy:** Space 1 (close range) / Time 2 (duration up to 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 minute (until save succeeds)  \n**Total Cost:** 5 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Target at close range makes Will save. Compare your weaving successes to their save successes. If you have more, target falls Prone with uncontrollable laughter, becoming Incapacitated and unable to stand. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect).  \n**Saving Throw:** Will (to resist mental effect)  \n**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = no save if damaged, 4 = 10 minutes  \n**Incapacitated Condition (at Net 2+):** Target can't take actions or reactions, is Prone, and can't stand. Repeats save at end of each turn.  \n**Note:** Creatures with Intelligence 1 aren't affected.\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!dc22f047b8994e90"
 }

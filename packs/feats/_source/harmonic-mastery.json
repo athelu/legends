@@ -1,0 +1,16 @@
+{
+  "name": "Harmonic Mastery",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 5\n**Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5\n**Benefit:** Your mastery of Harmonic Weaving is complete. Choose one:\n\n**Usage:** Passive enhancement to Harmonic Weaving\n**Keyword:** [Magic], [Sorcerer]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

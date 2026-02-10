@@ -24,6 +24,7 @@ Increase Duration: +1 Energy per duration step (instant/1 round/1minute/10 minut
 Overspending Penalty Remember: Spending Energy beyond your Mastery in that energy type adds +1 to both dice per point over. Plan your weaves within your capabilities or accept the penalty for heroic moments!
 These weaves are guidelines. Work with your GM to create unique effects by combining energies in new ways. The eight energies are tools
 
+<!-- PACK:weaves -->
 ## A
 
 ### Acid Blast
@@ -281,7 +282,7 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Saving Throw:** Fortitude (to resist death energy)
 **Damage Type:** Negative (energy)
 **DR Interaction:** Half DR (40 negative damage vs DR 4 becomes 40 - 2 = 38 damage)
-**Success Scaling (Net successes = Your successes - Their successes):** 0 = half damage (20), 1 = 3/4 damage (30), 2 = full damage (40), 3 = +8 damage (48 total), 4 = +16 damage (56 total, instant death if reduced to -Constitution)
+**Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = 1/2 damage (20), 2 = full damage (40), 3 = +8 damage (48 total), 4 = +16 damage (56 total, instant death if reduced to -Constitution)
 **Necromantic Warning:** The soul-binding component of this weave (raising the slain as undead) represents lost First Men knowledge. Cannot be learned at character creation, requires GM permission. The damage portion is standard Negative energy, but the automatic raising effect manipulates pneuma.
 
 ### Dimensional Refuge
@@ -304,7 +305,7 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Saving Throw:** Fortitude (to reduce damage)
 **Damage Type:** Negative (energy)
 **DR Interaction:** Half DR (40 negative damage vs DR 4 becomes 40 - 2 = 38 damage)
-**Success Scaling (Net successes = Your successes - Their successes):** 0 = half damage (20), 1 = 3/4 damage (30), 2 = full damage (40), 3 = +8 damage (48 total), 4 = +16 damage (56 total, instant disintegration if reduced to 0)
+**Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage , 1 = 1/2 damage (20), 2 = full damage (40), 3 = +8 damage (48 total), 4 = +16 damage (56 total, instant disintegration if reduced to 0)
 
 ### Disk of Force
 **Primary Energy:** Space 3 (force platform)

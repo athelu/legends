@@ -1,0 +1,18 @@
+{
+  "_id": "f415763c249843f1",
+  "name": "Full Cover",
+  "type": "condition",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "label": "Full Cover",
+    "category": "defense",
+    "description": "Completely behind solid obstacle. Cannot be directly targeted by attacks or most weaves.",
+    "tokenIcon": "icons/svg/shield.svg",
+    "activeEffects": [],
+    "stacking": "highest",
+    "severity": "minor",
+    "overlayPriority": 15
+  },
+  "flags": {},
+  "_key": "!items!f415763c249843f1"
+}

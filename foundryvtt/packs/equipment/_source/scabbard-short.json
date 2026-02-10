@@ -1,0 +1,13 @@
+{
+  "_id": "26156bd981d243da",
+  "name": "Scabbard, Short",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A leather sheath designed to hold a shortsword, dagger, or similar small blade.",
+    "weight": "1 lb",
+    "cost": "25 gp"
+  },
+  "effects": [],
+  "_key": "!items!26156bd981d243da"
+}

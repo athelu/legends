@@ -1,0 +1,13 @@
+{
+  "_id": "bcbcd9c631dd415b",
+  "name": "Manacles",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Iron shackles designed to restrain a prisoner's hands or feet. Includes a lock and two keys.",
+    "weight": "6 lbs",
+    "cost": "20 gp"
+  },
+  "effects": [],
+  "_key": "!items!bcbcd9c631dd415b"
+}

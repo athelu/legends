@@ -1,0 +1,71 @@
+{
+  "_id": "38881191657e4662",
+  "name": "Naginata",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A curved blade mounted on a long pole, creating a versatile slashing and thrusting polearm. The shaft can deliver bludgeoning strikes and the reach advantage makes it excellent for keeping opponents at distance. This category includes various bladed polearms with curved blades such as the glaive-guisarme and similar weapons. Though capable of being thrown, this is typically a last resort due to the weapon's value.",
+    "damage": {
+      "base": 6,
+      "alternate": null,
+      "raw": "6",
+      "type": [
+        "slashing",
+        "piercing",
+        "bludgeoning"
+      ]
+    },
+    "range": "30/60 when thrown",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "strength",
+        "defenseType": "melee",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      },
+      {
+        "name": "Ranged",
+        "type": "ranged",
+        "skill": "rangedCombat",
+        "damageAttr": "agility",
+        "defenseType": "ranged",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 30,
+          "medium": 60,
+          "long": 120
+        }
+      }
+    ],
+    "weight": {
+      "raw": "7 lbs",
+      "lbs": 7.0
+    },
+    "cost": {
+      "raw": "12 gp",
+      "gp": 12.0
+    },
+    "properties": [
+      "Versatile",
+      "Alternate-Strike",
+      "Multi-type",
+      "Thrown",
+      "Reach"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!38881191657e4662"
+}

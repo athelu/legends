@@ -1,0 +1,16 @@
+{
+  "name": "Balance Checks",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "- Does it overshadow multiple feats combined?\n- Does it trivialize challenges?\n- Does it require meaningful choice/tradeoff?\n- Could multiple characters benefit, or is it too niche?"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

@@ -1,10 +1,11 @@
 {
-  "_id": "d4173e90017f4860",
+  "_id": "11f105778c3d4ab8",
   "name": "Light Sleeper (-2)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "Subtle noises awaken easily.\n-   Not surprised while sleeping\n-   No penalty when awakened"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!11f105778c3d4ab8"
 }

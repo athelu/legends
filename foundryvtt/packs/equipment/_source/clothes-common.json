@@ -1,0 +1,13 @@
+{
+  "_id": "d282cab1ec9940d7",
+  "name": "Clothes, Common",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Simple, practical clothing suitable for everyday wear by common folk. Includes basic shirt, pants or skirt, and undergarments.",
+    "weight": "2 lbs",
+    "cost": "5 gp"
+  },
+  "effects": [],
+  "_key": "!items!d282cab1ec9940d7"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "6dfdb1603e0246cc",
+  "name": "Lantern",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "An enclosed oil lamp with glass or horn panels that protects the flame from wind. Provides bright light in a 15-foot radius and dim light for an additional 15 feet. Burns for 6 hours on one pint of oil.",
+    "weight": "2 lbs",
+    "cost": "8 gp"
+  },
+  "effects": [],
+  "_key": "!items!6dfdb1603e0246cc"
+}

@@ -1,10 +1,11 @@
 {
-  "_id": "63468bcb710b47b4",
+  "_id": "1929a97eecec459a",
   "name": "Quickened Reflexes (-5)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "Unparalleled quickness and awareness.\n- Initiative: +2\n- All Perception: Subtract 1 from die results\n- Reflex saves: Subtract 1 from die results"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!1929a97eecec459a"
 }

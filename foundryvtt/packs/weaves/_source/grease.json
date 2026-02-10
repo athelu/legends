@@ -1,10 +1,11 @@
 {
-  "_id": "3536b425bc0f45ae",
+  "_id": "1ad6dfce85bc4134",
   "name": "Grease",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Water 2 (slippery oil/grease, effect)  \n**Supporting Energy:** Space 4 (close range + 10ft square + 1 minute)  \n**Range:** Close, 30 ft. (10-foot square)  \n**Duration:** 1 minute  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery  \n**Effect:** Area becomes slippery difficult terrain. Creatures entering or starting turn in area make Reflex save or fall Prone. Those running must save or fall. Compare your weaving successes to their save successes.  \n**Saving Throw:** Reflex (to avoid falling prone)  \n**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 20ft square (10 minutes), 4 = 30ft square (1 hour)"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!1ad6dfce85bc4134"
 }

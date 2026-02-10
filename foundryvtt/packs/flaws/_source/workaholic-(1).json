@@ -1,10 +1,11 @@
 {
-  "_id": "bba10d4f36c5491c",
+  "_id": "b7607316099d43b3",
   "name": "Workaholic (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "You work obsessively and have trouble relaxing.\n- During downtime, must make Will save (1 success required) to avoid working on projects, training, or research instead of resting or socializing\n\n---\n\n## SOCIAL FLAWS"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!b7607316099d43b3"
 }

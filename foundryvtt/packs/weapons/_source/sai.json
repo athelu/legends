@@ -1,0 +1,67 @@
+{
+  "_id": "e9347cb977e44098",
+  "name": "Sai",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A three-pronged piercing weapon with a central blade and two curved prongs for trapping and breaking weapons. The sai excels at defensive techniques while delivering precise thrusts. This category includes similar pronged weapons designed for weapon catching and control. Traditionally wielded in pairs, the sai offers both offensive and defensive capabilities in skilled hands.",
+    "damage": {
+      "base": 6,
+      "alternate": null,
+      "raw": "6",
+      "type": [
+        "piercing"
+      ]
+    },
+    "range": "20/40 when thrown",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "agility",
+        "defenseType": "melee",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      },
+      {
+        "name": "Ranged",
+        "type": "ranged",
+        "skill": "rangedCombat",
+        "damageAttr": "agility",
+        "defenseType": "ranged",
+        "damage": {
+          "base": 6,
+          "alternate": null
+        },
+        "range": {
+          "normal": 20,
+          "medium": 40,
+          "long": 80
+        }
+      }
+    ],
+    "weight": {
+      "raw": "2 lbs",
+      "lbs": 2.0
+    },
+    "cost": {
+      "raw": "10 gp",
+      "gp": 10.0
+    },
+    "properties": [
+      "Light",
+      "Finesse",
+      "Thrown"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!e9347cb977e44098"
+}

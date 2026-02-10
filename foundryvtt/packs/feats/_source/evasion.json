@@ -1,0 +1,13 @@
+{
+  "_id": "2d30bd9f66da4df6",
+  "name": "Evasion",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Agi 5\n**Benefit:** When subjected to an effect allowing Reflex save: if you win (1+ successes) take no damage; if you lose (0 successes) take half damage\n**Usage:** Passive\n**Keyword:** [Defense], [Shadow]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!2d30bd9f66da4df6"
+}

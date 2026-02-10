@@ -1,10 +1,11 @@
 {
-  "_id": "119c80c064b64ca0",
+  "_id": "cd196da376954a31",
   "name": "Minor Restoration",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Positive 4 (cleansing lesser afflictions)  \n**Supporting Energy:** None (touch range, instantaneous)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 4 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Positive Potential + Positive Mastery  \n**Effect:** Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned.  \n**Saving Throw:** None (beneficial restoration)  \n**Success Scaling:** 0 = fails, 1 = temporary relief (10 minutes), 2 = full effect, 3 = removes 2 conditions, 4 = affects creature at close range (30ft) instead of touch"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!cd196da376954a31"
 }

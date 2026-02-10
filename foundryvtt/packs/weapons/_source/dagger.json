@@ -1,0 +1,69 @@
+{
+  "_id": "e3aa47b3ae3b4878",
+  "name": "Dagger",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A short-bladed weapon equally suited to stabbing, slashing, and throwing. Daggers are favored for their versatility and concealability. This category includes dirks, stilettos, poniards, parrying daggers, and similar double-edged or single-edged short blades. Some cultures favor specific styles: the rondel for armor-piercing, the misericorde for finishing blows, or the main gauche for off-hand use in dueling.",
+    "damage": {
+      "base": 4,
+      "alternate": null,
+      "raw": "4",
+      "type": [
+        "piercing",
+        "slashing"
+      ]
+    },
+    "range": "30/60 when thrown",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "agility",
+        "defenseType": "melee",
+        "damage": {
+          "base": 4,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      },
+      {
+        "name": "Ranged",
+        "type": "ranged",
+        "skill": "rangedCombat",
+        "damageAttr": "agility",
+        "defenseType": "ranged",
+        "damage": {
+          "base": 4,
+          "alternate": null
+        },
+        "range": {
+          "normal": 30,
+          "medium": 60,
+          "long": 120
+        }
+      }
+    ],
+    "weight": {
+      "raw": "1 lb",
+      "lbs": 1.0
+    },
+    "cost": {
+      "raw": "15 gp",
+      "gp": 15.0
+    },
+    "properties": [
+      "Light",
+      "Multi-Type",
+      "Thrown",
+      "Finesse"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!e3aa47b3ae3b4878"
+}

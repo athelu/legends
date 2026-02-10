@@ -1,0 +1,13 @@
+{
+  "_id": "6a9fa52803ac4515",
+  "name": "Master Craftsman",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Dex 5, Craft 5\n**Benefit:** Work twice as fast on crafting projects and produce enhanced quality items\n**Usage:** Passive\n**Keyword:** [Skill]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!6a9fa52803ac4515"
+}

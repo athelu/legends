@@ -1,10 +1,11 @@
 {
-  "_id": "80bb84035a2b47b3",
+  "_id": "04d10c732d514193",
   "name": "Mist Form",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Air 4 (transforming into mist)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Touch  \n**Duration:** 10 minutes  \n**Total Cost:** 7 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Air Potential + Air Mastery / Time Potential + Time Mastery  \n**Effect:** Target at touch and equipment become a misty cloud. Fly speed 10 feet, DR 8 against nonmagical damage, can pass through small openings. Cannot attack, cast weaves, or manipulate objects.  \n**Saving Throw:** None (beneficial transformation, willing targets only)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 20 feet fly speed (8 hours)"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!04d10c732d514193"
 }

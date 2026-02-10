@@ -1,10 +1,11 @@
 {
-  "_id": "3b76c755358d4a69",
+  "_id": "3c4876133f1047d4",
   "name": "Thunder Burst",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Air 3 (wave of thunderous force)  \n**Supporting Energy:** Space 1 (15-foot cube area)  \n**Range:** Self (15-foot cube)  \n**Duration:** Instantaneous  \n**Total Cost:** 4 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  \n**Effect:** All creatures in 15-foot cube originating from you take 12 thunder damage and make Fortitude saves. Compare your weaving successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.  \n**Saving Throw:** Fortitude (to resist force and reduce damage)  \n**Damage Type:** Thunder (sonic energy)  \n**DR Interaction:** Full DR applies (12 thunder damage vs DR 4 becomes 12 - 4 = 8 damage)  \n**Success Scaling:** 0 = half damage (6), no push, 1 = 3/4 damage (9), pushed 5 feet, 2 = full damage (12), pushed 10 feet, 3 = +8 damage (20 total), pushed 15 feet, 4 = +8 damage (20 total), pushed 20 feet + Prone  \n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!3c4876133f1047d4"
 }

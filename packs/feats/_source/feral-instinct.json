@@ -1,0 +1,23 @@
+{
+  "name": "Feral Instinct",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Wis 4, Primal Fury feat\n**Benefit:** +2 to initiative. You cannot be surprised while conscious. When Primal Fury ends, you don't gain Exhaustion if you win a Fortitude save (1 success)\n**Usage:** Passive\n**Keyword:** [Combat], [Savage]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "condition.immunity",
+        "target": "surprised",
+        "apply": "immune",
+        "description": "cannot be surprised"
+      }
+    ]
+  },
+  "flags": {}
+}

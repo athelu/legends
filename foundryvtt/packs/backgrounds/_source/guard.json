@@ -1,0 +1,11 @@
+{
+  "_id": "6147ca4f9550420c",
+  "name": "Guard",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You served in the guard, standing watch while others slept. You know the boredom of endless patrols punctuated by moments of sudden terror. Whether you left because of corruption in the ranks, disagreements with your commander, or simple wanderlust, you still think like a guard. Old habits die hard, and honestly, they've kept you alive more than once.\n**Skills:** Melee Combat 2, Perception 2, Intimidate 1, Society 1, +40 XP\n**Equipment:** Spear or club, uniform, manacles, work gloves, work boots\n**Feature** - Watchful Eye: You're trained to spot trouble and know typical guard procedures in most settlements."
+  },
+  "effects": [],
+  "_key": "!items!6147ca4f9550420c"
+}

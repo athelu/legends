@@ -1,0 +1,13 @@
+{
+  "_id": "ccbc596935f24113",
+  "name": "Holy Symbol, Iron",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "An iron religious symbol representing a deity or faith, the most basic form of holy symbol.",
+    "weight": "1 lb",
+    "cost": "5 sp"
+  },
+  "effects": [],
+  "_key": "!items!ccbc596935f24113"
+}

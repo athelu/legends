@@ -1,0 +1,13 @@
+{
+  "_id": "bc50bdd827fa4a09",
+  "name": "Rapid Strikes",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Agi 4, Wis 3, Melee 4, Unarmed Mastery feat\n**Benefit:** Once per turn when you make an unarmed attack or monk weapon attack, you may make three strikes as a single [Combat] action:\n  - **Use Shared Attribute Roll:** Roll your Agility die once, use that result for all three attacks\n  - **Roll Melee Combat skill die separately** for each attack\n  - **Apply penalties to skill die only:**\n    - First attack: Normal\n    - Second attack: Add 1 to skill die\n    - Third attack: Add 2 to skill die\n  - All three attacks count as one [Combat] action for multiple action penalty purposes\n\n**Usage:** Once per turn\n**Keyword:** [Combat], [Ascetic], [Unarmed]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!bc50bdd827fa4a09"
+}

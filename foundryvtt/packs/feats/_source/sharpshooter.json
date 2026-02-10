@@ -1,0 +1,13 @@
+{
+  "_id": "9628e468731045e2",
+  "name": "Sharpshooter",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Ranged Combat 4, Perception 4, Wis 3\n**Description:** Wind, range, or moving targets; you have learned to account for everything instinctively, putting arrows or bolts exactly where they need to be.\n**Benefit:** Once per turn when you make a ranged weapon attack:\n  - Before rolling, declare you're aiming for a vital spot\n  - Add 1 to both attack dice (harder to hit)\n  - On hit: deal +4 damage and target must make Fortitude save (opposed by your Wis + Ranged Combat)\n  - If you win save: target's movement speed is halved until end of their next turn\n\n**Usage:** Once per turn\n**Keyword:** [Combat], [Ranged]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!9628e468731045e2"
+}

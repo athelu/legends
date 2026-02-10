@@ -1,10 +1,11 @@
 {
-  "_id": "958bc591ffb14879",
+  "_id": "46044d05b58e47b5",
   "name": "Trickster's Escape",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "- **Action Cost:** [Reaction]\n- **Trigger:** An attack would hit you (after opposed roll but before damage)\n- **Range:** Self (can teleport up to 30 feet)\n- **Effect:** Teleport up to 30 feet to an unoccupied space you can see. The attack automatically misses as you vanish in a shimmer of violet light and reappear elsewhere. You cannot teleport through solid barriers.\n- **Usage:** Uses 1 Channel Divinity\n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!46044d05b58e47b5"
 }

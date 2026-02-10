@@ -1,10 +1,11 @@
 {
-  "_id": "62483134bed44473",
+  "_id": "fa7c60aa4a764f0b",
   "name": "Stone Shape",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Earth 4 (reshaping natural stone)  \n**Supporting Energy:** None (touch, instantaneous/permanent)  \n**Range:** Touch  \n**Duration:** Instantaneous (permanent)  \n**Total Cost:** 4 Energy per 5ft cube  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Earth Potential + Earth Mastery  \n**Effect:** Reshape natural stone into any form (crude weapons, doors, passages). More effective than Shape Stone on natural stone. Changes are permanent.  \n**Saving Throw:** None (environmental manipulation)  \n**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = 20ft cube\n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!fa7c60aa4a764f0b"
 }

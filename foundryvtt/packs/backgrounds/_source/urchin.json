@@ -1,0 +1,11 @@
+{
+  "_id": "9ea4b73b2b664d56",
+  "name": "Urchin",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You eked out a living by picking pockets or pan-handling on the streets of a major city, never knowing where you'd find your next meal. While some folk adventure for the glory, you do so to survive. The streets were your teacher, and they taught you lessons that no school could provide. Most of them involved running.\n**Skills:** Stealth 2, Thievery 2, Acrobatics 2, Society 2, +24 XP\n**Equipment:** Common clothes, belt knife\n**Feature** - Street Connections: You know the streets and alleys of cities. Can find urchin informants, navigate urban areas quickly, and identify safe places to hide or sleep."
+  },
+  "effects": [],
+  "_key": "!items!9ea4b73b2b664d56"
+}

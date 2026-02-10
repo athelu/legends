@@ -1,10 +1,11 @@
 {
-  "_id": "87aea99c57bd4a81",
+  "_id": "f0c5d311bf0a4640",
   "name": "Plague (7)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Spread disease to others.\n- Immune yourself\n- All within 10 feet must make daily Fortitude saves or contract disease"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!f0c5d311bf0a4640"
 }

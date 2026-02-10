@@ -1,10 +1,11 @@
 {
-  "_id": "72ba6d612bbb4530",
+  "_id": "3b94ab8d08c14363",
   "name": "Deafness (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Totally deaf.\n- Permanently Deafened (see Deafened condition)"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!3b94ab8d08c14363"
 }

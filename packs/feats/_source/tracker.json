@@ -1,0 +1,16 @@
+{
+  "name": "Tracker",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 1\n**Prerequisites:** Survival 3, Perception 3\n**Description:** Every creature leaves a trail and you can read these signs like a book, following trails that others wouldn't even notice exist.\n**Benefit:** Subtract 1 from both dice when tracking. Can track across difficult terrain at normal speed. Can determine number, size, and condition of tracked creatures\n**Usage:** Passive\n**Keyword:** [Wilderness], [Skill]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

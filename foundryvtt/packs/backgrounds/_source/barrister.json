@@ -1,0 +1,11 @@
+{
+  "_id": "1aff45af742041a9",
+  "name": "Barrister",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "Piles of legal manuals, stern teachers, and experience in the courtroom have instructed you in legal matters. You're capable of mounting a prosecution or defense in court, and you tend to keep abreast of local laws. You never know when you might need to talk your way out of trouble on short notice. Or talk your friends out of it, for that matter.\n**Skills:** Society 3, Persuasion 2, +32 XP\n**Equipment:** Fine clothes, quill, ink, vellum parchment x5, shoes\n**Feature** - Legal Knowledge: You understand laws and courts. Can navigate legal systems and provide counsel (though not always successfully)."
+  },
+  "effects": [],
+  "_key": "!items!1aff45af742041a9"
+}

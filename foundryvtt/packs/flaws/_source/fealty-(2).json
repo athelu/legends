@@ -1,10 +1,11 @@
 {
-  "_id": "824e1c108ccc471a",
+  "_id": "56ae8779041e4b02",
   "name": "Fealty (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Sworn allegiance to political faction. Must honor it."
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!56ae8779041e4b02"
 }

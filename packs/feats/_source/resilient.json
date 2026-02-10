@@ -1,0 +1,16 @@
+{
+  "name": "Resilient",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Con 4\n**Benefit:** Fortitude saves: subtract 1 from die results; success on ongoing effect ends it\n**Usage:** Passive\n**Keyword:** [Save], [General]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

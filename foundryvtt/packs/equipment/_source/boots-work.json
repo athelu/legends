@@ -1,0 +1,13 @@
+{
+  "_id": "0b7d3e8a45a74d28",
+  "name": "Boots, Work",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Heavy-duty leather boots with reinforced soles and toes, designed to withstand the rigors of manual labor.",
+    "weight": "4 lbs",
+    "cost": "45 gp"
+  },
+  "effects": [],
+  "_key": "!items!0b7d3e8a45a74d28"
+}

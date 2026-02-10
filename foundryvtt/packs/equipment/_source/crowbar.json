@@ -1,0 +1,13 @@
+{
+  "_id": "7312dd6b03384470",
+  "name": "Crowbar",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "An iron bar used for prying open doors, crates, and other objects. Can also serve as an improvised weapon.",
+    "weight": "5 lbs",
+    "cost": "10 gp"
+  },
+  "effects": [],
+  "_key": "!items!7312dd6b03384470"
+}

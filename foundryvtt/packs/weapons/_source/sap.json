@@ -1,0 +1,51 @@
+{
+  "_id": "b29548a6ae494ddb",
+  "name": "Sap",
+  "type": "weapon",
+  "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
+  "system": {
+    "description": "A small leather pouch filled with dense material (sand, metal shot, or lead) designed to deliver non-lethal blows. The sap's flexible construction distributes impact force, making it ideal for subduing rather than killing. This category includes blackjacks, coshes, and similar flexible impact weapons. Favored by city guards, thieves, and those who need to incapacitate without causing permanent harm.",
+    "damage": {
+      "base": 4,
+      "alternate": null,
+      "raw": "4",
+      "type": [
+        "bludgeoning"
+      ]
+    },
+    "range": "",
+    "attackModes": [
+      {
+        "name": "Melee",
+        "type": "melee",
+        "skill": "meleeCombat",
+        "damageAttr": "agility",
+        "defenseType": "melee",
+        "damage": {
+          "base": 4,
+          "alternate": null
+        },
+        "range": {
+          "normal": 0,
+          "medium": 0,
+          "long": 0
+        }
+      }
+    ],
+    "weight": {
+      "raw": "1 lb",
+      "lbs": 1.0
+    },
+    "cost": {
+      "raw": "5 gp",
+      "gp": 5.0
+    },
+    "properties": [
+      "Light",
+      "Standard",
+      "Finesse"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!b29548a6ae494ddb"
+}

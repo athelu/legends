@@ -1,0 +1,13 @@
+{
+  "_id": "8477a63a1b094864",
+  "name": "Smith's Tools",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A comprehensive set of metalworking tools including hammers, tongs, files, and other implements needed for blacksmithing.",
+    "weight": "10 lbs",
+    "cost": "60 gp"
+  },
+  "effects": [],
+  "_key": "!items!8477a63a1b094864"
+}

@@ -1,19 +1,22 @@
 {
-  "_id": "29bf8c7541c4452c",
+  "_id": "baf74589be224923",
   "name": "Complex Weave",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "Ability to weave, sufficient Energy\n- **Effect:** Cast a multi-energy weave using Primary + Supporting Energy\n- **Examples:** Fire Bolt, Fireball, Mend Flesh, Binding Paralysis, Invisibility\n- **Weaving Roll:** Primary Potential + Primary Mastery + Supporting Potential + Supporting Mastery (4d8)\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes (even though it costs 2 actions)\n  - Requires Supporting Energy to achieve range beyond touch, area effects, or duration\n  - See (Magic System) for full weaving rules\n  - Complex weaves typically have area effects, require saves, affect range/duration, or involve complex energy manipulation\n\n### Weaving While Threatened",
+    "description": {
+      "value": "Ability to weave, sufficient Energy\n- **Effect:** Cast a multi-energy weave using Primary + Supporting Energy\n- **Examples:** Fire Bolt, Fireball, Mend Flesh, Binding Paralysis, Invisibility\n- **Weaving Roll:** Primary Potential + Primary Mastery + Supporting Potential + Supporting Mastery (4d8)\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes (even though it costs 2 actions)\n  - Requires Supporting Energy to achieve range beyond touch, area effects, or duration\n  - See (Magic System) for full weaving rules\n  - Complex weaves typically have area effects, require saves, affect range/duration, or involve complex energy manipulation"
+    },
     "actionType": "combat",
-    "actionCost": "2 [Combat] actions",
+    "actionCost": "2",
     "trigger": "",
-    "effect": "Cast a multi-energy weave using Primary + Supporting Energy\n- **Examples:** Fire Bolt, Fireball, Mend Flesh, Binding Paralysis, Invisibility\n- **Weaving Roll:** Primary Potential + Primary Mastery + Supporting Potential + Supporting Mastery (4d8)\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes (even though it costs 2 actions)\n  - Requires Supporting Energy to achieve range beyond touch, area effects, or duration\n  - See (Magic System) for full weaving rules\n  - Complex weaves typically have area effects, require saves, affect range/duration, or involve complex energy manipulation\n\n### Weaving While Threatened",
-    "keywords": [],
+    "effect": "Cast a multi-energy weave using Primary + Supporting Energy\n- **Examples:** Fire Bolt, Fireball, Mend Flesh, Binding Paralysis, Invisibility\n- **Weaving Roll:** Primary Potential + Primary Mastery + Supporting Potential + Supporting Mastery (4d8)\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes (even though it costs 2 actions)\n  - Requires Supporting Energy to achieve range beyond touch, area effects, or duration\n  - See (Magic System) for full weaving rules\n  - Complex weaves typically have area effects, require saves, affect range/duration, or involve complex energy manipulation",
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!baf74589be224923"
 }

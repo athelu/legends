@@ -1,0 +1,13 @@
+{
+  "_id": "e385b2110f6e4a9b",
+  "name": "Spell Penetration",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 4\n**Prerequisites:** Any magical tradition trait, Wis 5, any Energy Mastery 6, Tier 4\n**Description:** Through perfect understanding of magical theory and ruthless application of will, your spells bypass defenses that would stop lesser practitioners.\n**Benefit:** When an enemy makes a saving throw against your weave, add 1 to their better die result (apply after they roll, before comparing successes)\n**Usage:** Passive\n**Keyword:** [Magic], [Save]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!e385b2110f6e4a9b"
+}

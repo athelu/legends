@@ -1,0 +1,13 @@
+{
+  "_id": "dc5f3b3c129d4c06",
+  "name": "Battle-Hardened",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Agi 4, any combat skill 4\n**Description:** After being struck once, you adapt instantly to that opponent's style\n**Benefit:** When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn\n**Usage:** Passive\n**Keyword:** [Combat], [Defense]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!dc5f3b3c129d4c06"
+}

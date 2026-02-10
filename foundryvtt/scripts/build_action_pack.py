@@ -6,7 +6,7 @@ Build actions compendium pack from parsed actions.md documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file
+from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key
 
 
 def parse_actions_md(md_file):
@@ -22,19 +22,42 @@ def parse_actions_md(md_file):
     """
     with open(md_file, 'r', encoding='utf-8') as f:
         content = f.read()
+
+    # Look for PACK marker with optional type filters, e.g.:
+    # <!-- PACK:action -->
+    # <!-- PACK:action:Combat,Move -->
+    pack_marker = re.search(r"<!--\s*PACK:action(?::([^>]+))?\s*-->", content, flags=re.IGNORECASE)
+    types_filter_raw = None
+    if pack_marker:
+        types_filter_raw = pack_marker.group(1)
+        # If no explicit types provided, import everything after the marker
+        content = content[pack_marker.end():]
     
     items = []
     
-    # Map action type abbreviations to full names
+    # Map action type abbreviations to canonical full names used by the sheets
     action_type_map = {
         'Combat': 'combat',
-        'Move': 'movement',
-        'Movement': 'movement',
+        'Move': 'move',
+        'Movement': 'move',
         'Activate': 'activate',
         'Interact': 'interact',
         'Free': 'free',
         'Reaction': 'reaction'
     }
+
+    # Build allowed types set from PACK marker if provided
+    allowed_types = None
+    if types_filter_raw:
+        allowed = set()
+        for t in [x.strip() for x in types_filter_raw.split(',') if x.strip()]:
+            low = t.lower()
+            allowed.add(low)
+            # also add mapped internal name if present
+            mapped = action_type_map.get(t, None)
+            if mapped:
+                allowed.add(mapped.lower())
+        allowed_types = allowed
     
     # Split by action sections (##### Heading for individual actions)
     action_sections = re.split(r'^##### ', content, flags=re.MULTILINE)[1:]
@@ -42,11 +65,12 @@ def parse_actions_md(md_file):
     for action_section in action_sections:
         lines = action_section.split('\n')
         action_line = lines[0].strip()
-        
+
         if not action_line:
             continue
-        
+
         # Parse action name and type from "Action Name [ActionType]"
+        action_type_key = None
         match = re.match(r'^(.+?)\s*\[(\w+)\]', action_line)
         if match:
             action_name = match.group(1).strip()
@@ -55,6 +79,12 @@ def parse_actions_md(md_file):
         else:
             action_name = action_line.strip()
             action_type = 'combat'
+
+        # If an allowed_types filter exists, skip items not in the list
+        if allowed_types is not None:
+            key_check = (action_type_key.lower() if action_type_key else action_type).lower()
+            if key_check not in allowed_types:
+                continue
         
         # Initialize action item
         item = {
@@ -63,12 +93,15 @@ def parse_actions_md(md_file):
             'type': 'action',
             'img': 'icons/skills/melee/blade-damage.webp',
             'system': {
-                'description': '',
+                # Foundry templates expect description.value
+                'description': {'value': ''},
                 'actionType': action_type,
+                # Normalized cost (e.g. "1", "2", "Free")
                 'actionCost': '',
                 'trigger': '',
                 'effect': '',
-                'keywords': [],
+                # Store keywords as a comma-separated string for sheet input
+                'keywords': '',
                 'range': '',
                 'target': '',
                 'frequency': '',
@@ -84,16 +117,27 @@ def parse_actions_md(md_file):
         img_match = re.search(r'Image[:\s]+([^\n|]+)', section_text)
         if img_match:
             item['img'] = img_match.group(1).strip()
-        
-        # Extract cost
+
+        # Extract cost and normalize to a simple token (1, 2, Free)
         cost_match = re.search(r'\*\*Cost:\*\*\s+([^\n]+)', section_text)
         if cost_match:
-            item['system']['actionCost'] = cost_match.group(1).strip()
-        
+            raw_cost = cost_match.group(1).strip()
+            if re.search(r'free', raw_cost, flags=re.IGNORECASE):
+                norm_cost = 'Free'
+            else:
+                m = re.search(r'(\d+)', raw_cost)
+                norm_cost = m.group(1) if m else raw_cost
+            item['system']['actionCost'] = norm_cost
+
         # Extract requirements (description)
         requirements_match = re.search(r'\*\*Requirements:\*\*\s+([^\n]+(?:\n(?!\*\*)[^\n]*)*)', section_text)
         if requirements_match:
-            item['system']['description'] = requirements_match.group(1).strip()
+            item['system']['description']['value'] = requirements_match.group(1).strip()
+        else:
+            # Fallback: use the first paragraph of the section as the description
+            first_para = section_text.strip().split('\n\n', 1)[0].strip()
+            if first_para:
+                item['system']['description']['value'] = first_para
         
         # Extract effect
         effect_match = re.search(r'\*\*Effect:\*\*\s+([^\n]+(?:\n(?!\*\*)[^\n]*)*)', section_text)
@@ -114,6 +158,18 @@ def parse_actions_md(md_file):
         trigger_match = re.search(r'\*\*Trigger:\*\*\s+([^\n]+)', section_text)
         if trigger_match:
             item['system']['trigger'] = trigger_match.group(1).strip()
+
+        # Extract bracketed keywords anywhere in the section (excluding the action type)
+        raw_keywords = [k.strip() for k in re.findall(r'\[([^\]]+)\]', action_section)]
+        # Remove the type token if present (e.g., the [Combat] in the header)
+        keywords = []
+        for k in raw_keywords:
+            if action_type_key and k.lower() == action_type_key.lower():
+                continue
+            if k and k not in keywords:
+                keywords.append(k)
+        if keywords:
+            item['system']['keywords'] = ', '.join(keywords)
         
         items.append(item)
     
@@ -137,6 +193,7 @@ def main():
         for item in items:
             json_file = source_dir / f"{item['name'].lower().replace(' ', '-').replace('/', '-')}.json"
             with open(json_file, 'w', encoding='utf-8') as f:
+                ensure_key(item)
                 json.dump(item, f, indent=2, ensure_ascii=False)
             print(f"  Saved {json_file.name}")
     

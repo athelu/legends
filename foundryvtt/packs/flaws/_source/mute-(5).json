@@ -1,10 +1,11 @@
 {
-  "_id": "813ed61f17a14705",
+  "_id": "177999e74b20488b",
   "name": "Mute (5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Cannot vocalize.\n- Speech-based social skills automatically fail"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!177999e74b20488b"
 }

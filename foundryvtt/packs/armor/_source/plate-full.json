@@ -1,0 +1,27 @@
+{
+  "_id": "bba0d4bdffb442bc",
+  "name": "Plate, Full",
+  "type": "armor",
+  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "armorType": "",
+    "dr": {
+      "slashing": 9,
+      "piercing": 8,
+      "bludgeoning": 6
+    },
+    "stealthPenalty": "none",
+    "swimPenalty": "",
+    "donTime": "",
+    "doffTime": "",
+    "weight": 0,
+    "cost": 750.0,
+    "quantity": 1,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!bba0d4bdffb442bc"
+}

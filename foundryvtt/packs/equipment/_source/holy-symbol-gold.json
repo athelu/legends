@@ -1,0 +1,13 @@
+{
+  "_id": "857dc96ce0ca4ad6",
+  "name": "Holy Symbol, Gold",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A gold religious symbol representing a deity or faith, used as a focus for divine magic and religious devotion.",
+    "weight": "0.5 lbs",
+    "cost": "10 gp"
+  },
+  "effects": [],
+  "_key": "!items!857dc96ce0ca4ad6"
+}

@@ -1,0 +1,11 @@
+{
+  "_id": "267ac00e9e314a1c",
+  "name": "Teacher",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You dedicated yourself to sharing knowledge with others, whether in a formal school or as a private tutor. The work taught you patience, clarity, and the understanding that every student learns differently. Even when not teaching you still find yourself explaining things to your companions.\n**Skills:** Society 2, History 2, Persuasion 1, Empathy 1, +40 XP\n**Equipment:** General topic book, quill, ink, robe, papyrus parchment x5, shoes\n**Feature** - Educator: You can explain complex topics simply and effectively. When teaching skills to others, they learn faster (GM discretion on mechanical benefits)."
+  },
+  "effects": [],
+  "_key": "!items!267ac00e9e314a1c"
+}

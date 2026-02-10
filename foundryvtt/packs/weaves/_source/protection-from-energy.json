@@ -1,10 +1,11 @@
 {
-  "_id": "788e489423854219",
+  "_id": "505161beaa2c431a",
   "name": "Protection from Energy",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 5 (protective barrier against energy)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Touch  \n**Duration:** 10 minutes  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Target at touch gains Resistance (+1 DR) against one chosen damage type (fire, cold, acid, lightning, thunder).  \n**Saving Throw:** None (beneficial buff, willing targets only)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = Greater Resistance (+2 DR, 8 hours)\n\n## R"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!505161beaa2c431a"
 }

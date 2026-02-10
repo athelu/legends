@@ -1,0 +1,16 @@
+{
+  "name": "Arcane Recovery",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Int 4, any magical tradition trait\n**Description:** Your understanding of magical theory goes beyond just weaving. You know how to coax energy back from the edges of dissipation, reclaiming what would otherwise fade into the cosmos.\n**Benefit:** Once per day during short rest, recover Energy equal to your Intelligence × 2\n**Usage:** Once per day during short rest\n**Keyword:** [Magic]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

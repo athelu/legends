@@ -1,0 +1,16 @@
+{
+  "name": "Savage Resilience",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Con 4\n**Benefit:** While wearing no armor and not using a shield, your thick skin and conditioning grant DR equal to half your Constitution (rounded down)\n**Usage:** Passive\n**Note:** Can be combined with Mystic Defense if you meet both prerequisites; use the better DR\n**Keyword:** [Combat], [Savage]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

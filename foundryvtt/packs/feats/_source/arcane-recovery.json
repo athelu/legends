@@ -1,0 +1,13 @@
+{
+  "_id": "e1c3c415cc4c4602",
+  "name": "Arcane Recovery",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Int 4, any magical tradition trait\n**Description:** Your understanding of magical theory goes beyond just weaving. You know how to coax energy back from the edges of dissipation, reclaiming what would otherwise fade into the cosmos. \n**Benefit:** Once per day during short rest, recover Energy equal to your Intelligence × 2\n**Usage:** Once per day during short rest\n**Keyword:** [Magic]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!e1c3c415cc4c4602"
+}

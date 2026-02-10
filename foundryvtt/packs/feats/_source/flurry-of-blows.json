@@ -1,0 +1,13 @@
+{
+  "_id": "4882a04a61a14ee1",
+  "name": "Flurry of Blows",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Rapid Strikes feat\n**Benefit:** When you use Rapid Strikes, you can spend 2 Luck to make a fourth attack as part of the same action (add 3 to the skill die for this attack). All four attacks still count as one [Combat] action\n**Usage:** Costs 2 Luck when using Rapid Strikes\n**Keyword:** [Combat], [Ascetic], [Unarmed]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!4882a04a61a14ee1"
+}

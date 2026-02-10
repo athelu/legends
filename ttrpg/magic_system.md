@@ -259,6 +259,26 @@ Each trait specifies how many dice to roll, which energies you have access to, a
 - Utility: Double duration or overwhelming power
 
 
+### Weaving While Threatened
+
+##### Opportunity Attacks from Weaving:
+- **Simple Weaves (1 action):** Don't provoke Opportunity Attacks
+  - Quick, instinctive magical effects channeled through the body
+  - Limited to touch/close range (5-10ft)
+  - Raw energy emanations, not shaped projectiles
+  
+- **Complex Weaves (2 actions):** Provoke Opportunity Attacks
+  - Require gestures, shaping, and time
+  - Use supporting energies to achieve range/area/duration
+  - Enemy gets opportunity attack before weave completes
+
+##### Tactical Options:
+- **In melee:** Use Simple Weaves (don't provoke) or use Disengage first
+- **At range:** Use Complex Weaves freely (more damage, better range)
+- **Positioning:** Stay at range to avoid being threatened
+- **Party tactics:** Have allies protect you while weaving
+
+
 #### Weave Effect Scaling Tables
 
 ##### PRIMARY ENERGY TABLES

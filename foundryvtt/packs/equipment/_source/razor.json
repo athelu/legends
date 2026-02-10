@@ -1,0 +1,13 @@
+{
+  "_id": "2e2ae8ea5e954047",
+  "name": "Razor",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A sharp blade used for shaving facial hair, maintained in a folding handle or case.",
+    "weight": "0.2 lbs",
+    "cost": "5 gp"
+  },
+  "effects": [],
+  "_key": "!items!2e2ae8ea5e954047"
+}

@@ -55,6 +55,61 @@ export async function applyShieldReaction(defender, reactionEntry, context={}) {
 }
 
 /**
+ * Grant linked abilities/actions from a shield item onto an actor.
+ * Created items are flagged so they can be removed when the shield is unequipped.
+ * @param {Actor} actor
+ * @param {Item} shield
+ */
+export async function grantLinkedItemsFromShield(actor, shield) {
+  if (!actor || !shield) return;
+  const linked = (shield.system?.linkedAbilities || []).concat(shield.system?.reactions || []);
+  if (!linked.length) return;
+
+  for (const entry of linked) {
+    const name = entry.name;
+    // Try to find the item in any compendium by name or id
+    let found = null;
+    for (const pack of game.packs.values()) {
+      try {
+        const idx = await pack.getIndex();
+        const e = idx.find(i => (entry._id && (i.id === entry._id || i._id === entry._id)) || i.name === name);
+        if (e) {
+          try {
+            const doc = await pack.getDocument(e.id || e._id || e._doc);
+            if (doc) {
+              found = { pack, doc };
+              break;
+            }
+          } catch (err) {}
+        }
+      } catch (err) {}
+    }
+
+    if (found && found.doc) {
+      // Create a copy on the actor and tag it as granted by this shield
+      const copy = duplicate(found.doc.toObject());
+      copy.flags = copy.flags || {};
+      copy.flags.legends = copy.flags.legends || {};
+      copy.flags.legends.grantedBy = { shieldId: shield.id, shieldName: shield.name, sourcePack: found.pack.collection, sourceId: found.doc.id };
+      await actor.createEmbeddedDocuments('Item', [copy]);
+    }
+  }
+}
+
+/**
+ * Revoke any items on the actor that were granted by a shield.
+ * @param {Actor} actor
+ * @param {Item} shield
+ */
+export async function revokeLinkedItemsFromShield(actor, shield) {
+  if (!actor || !shield) return;
+  const granted = actor.items.filter(i => i?.flags?.legends?.grantedBy?.shieldId === shield.id);
+  if (!granted.length) return;
+  const ids = granted.map(i => i.id);
+  await actor.deleteEmbeddedDocuments('Item', ids);
+}
+
+/**
  * Simple initializer to expose an API on game.legends.shields
  */
 export function initializeShieldHelpers() {

@@ -1612,3 +1612,266 @@
   font-style: italic;
   margin: 10px 0;
 }
+
+/* ========================================
+   CONDITION SYSTEM
+   ======================================== */
+
+/* Token Condition Overlay */
+.legends-condition-overlay {
+  pointer-events: auto;
+  z-index: 1000;
+  position: fixed;
+}
+
+.legends-condition-overlay .condition-chip {
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #444;
+  border-radius: 4px;
+  padding: 4px 8px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #fff;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease-in;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.legends-condition-overlay .condition-chip:hover {
+  background: rgba(0, 0, 0, 0.95);
+  border-color: #666;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.7);
+}
+
+.legends-condition-overlay .condition-chip:active {
+  transform: scale(0.98);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.legends-condition-overlay .condition-chip img {
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+}
+
+/* Condition Chat Cards */
+.d8-condition-applied,
+.d8-condition-removed {
+  padding: 10px;
+  border-left: 4px solid var(--d8-info);
+  background: var(--d8-bg-light);
+  border-radius: 4px;
+  margin: 5px 0;
+}
+
+.d8-condition-applied {
+  border-left-color: var(--d8-warning);
+}
+
+.d8-condition-removed {
+  border-left-color: var(--d8-success);
+}
+
+/* Condition Damage Cards */
+.d8-condition-damage {
+  padding: 12px;
+  border: 2px solid var(--d8-danger);
+  border-radius: 5px;
+  background: #fff5f5;
+}
+
+.d8-condition-damage h3 {
+  margin: 0 0 10px 0;
+  color: var(--d8-danger);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.d8-condition-damage .dice-roll {
+  margin: 10px 0;
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid var(--d8-border);
+}
+
+.d8-condition-damage .dice-formula {
+  font-size: 14px;
+  color: var(--d8-text);
+  margin-bottom: 5px;
+}
+
+.d8-condition-damage .dice-total {
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--d8-danger);
+  margin: 5px 0;
+}
+
+.d8-condition-damage p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  color: var(--d8-text);
+}
+
+/* Condition Recovery Cards */
+.d8-condition-recovery {
+  padding: 12px;
+  border: 2px solid var(--d8-info);
+  border-radius: 5px;
+  background: #ebf8ff;
+}
+
+.d8-condition-recovery h3 {
+  margin: 0 0 10px 0;
+  color: var(--d8-info);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.d8-condition-recovery p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: var(--d8-text);
+}
+
+.d8-condition-recovery .recovery-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.d8-condition-recovery button {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.d8-condition-recovery .recovery-roll {
+  background: linear-gradient(to bottom, var(--d8-info), #3182ce);
+  color: white;
+}
+
+.d8-condition-recovery .recovery-roll:hover {
+  background: linear-gradient(to bottom, #3182ce, #2c5282);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.d8-condition-recovery .recovery-assist {
+  background: linear-gradient(to bottom, var(--d8-success), #38a169);
+  color: white;
+}
+
+.d8-condition-recovery .recovery-assist:hover {
+  background: linear-gradient(to bottom, #38a169, #2f855a);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Condition Save Cards */
+.d8-condition-save {
+  padding: 12px;
+  border: 2px solid var(--d8-warning);
+  border-radius: 5px;
+  background: #fffaf0;
+}
+
+.d8-condition-save h3 {
+  margin: 0 0 10px 0;
+  color: var(--d8-warning);
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.d8-condition-save p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: var(--d8-text);
+}
+
+.d8-condition-save button {
+  width: 100%;
+  padding: 10px 15px;
+  background: linear-gradient(to bottom, var(--d8-warning), #dd6b20);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 10px;
+}
+
+.d8-condition-save button:hover {
+  background: linear-gradient(to bottom, #dd6b20, #c05621);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Condition List in Character Sheet */
+.legends .conditions-section {
+  margin-bottom: 15px;
+}
+
+.legends .conditions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legends .condition-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  background: #fff8dc;
+  border-radius: 4px;
+  border: 1px solid var(--d8-warning);
+  border-left: 4px solid var(--d8-warning);
+}
+
+.legends .condition-item .condition-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 3px;
+}
+
+.legends .condition-item .condition-name {
+  flex: 1;
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--d8-text);
+}
+
+.legends .condition-item .condition-remove {
+  padding: 4px 8px;
+  background: var(--d8-danger);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: all 0.2s;
+}
+
+.legends .condition-item .condition-remove:hover {
+  background: #c53030;
+  transform: translateY(-1px);
+}

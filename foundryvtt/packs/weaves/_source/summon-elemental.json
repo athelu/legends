@@ -1,10 +1,11 @@
 {
-  "_id": "5339876144074ec7",
+  "_id": "7c0fe7a6fd674008",
   "name": "Summon Elemental",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Matching elemental energy (Earth/Air/Fire/Water) 6  \n**Supporting Energy:** Space 1 (close range) / Time 3 (duration 10 minutes)  \n**Range:** Close, 30 ft.  \n**Duration:** 10 minutes  \n**Total Cost:** 10 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Primary Potential + Primary Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Summon an elemental matching your Primary Energy at close range. Elemental has HP = (Your Potential × 6), deals 10 damage, uses your Mastery for attacks, and has special abilities based on type. You can command it as [Free] action. If concentration breaks, elemental acts independently.  \n**Saving Throw:** None (summoning weave)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or 2 elementals\n\n---\n\n## T"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!7c0fe7a6fd674008"
 }

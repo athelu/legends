@@ -1,10 +1,11 @@
 {
-  "_id": "44aa92a96b614555",
+  "_id": "d8fc05fc090d4805",
   "name": "Shadow Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Negative 2 (necrotic energy through touch, damage)  \n**Supporting Energy:** None (touch range only)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 2 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Negative Potential + Negative Mastery  \n**Effect:** Touch a target and drain their life force with necrotic energy. Target takes 4 necrotic damage. You regain HP equal to half the damage dealt (rounded down). This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Necrotic (energy)  \n**DR Interaction:** Half DR (4 necrotic damage vs DR 4 becomes 4 - 2 = 2 damage)  \n**Success Scaling:** 0 = miss (no healing), 1 = half damage (2, heal 1 HP), 2 = full damage (4, heal 2 HP), 3 = +4 damage (8 total, heal 4 HP), 4 = +8 damage (12 total, heal 6 HP)  \n**Weakened Condition (at 4 successes):** Target has Misfortune on Strength-based checks until end of their next turn.  \n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!d8fc05fc090d4805"
 }

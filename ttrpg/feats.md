@@ -43,7 +43,7 @@ When creating new feats, follow these guidelines:
 - **Once per day/week:** Campaign-defining
 
 ---
-
+<!-- PACK:feats -->
 #### Acrobatic Defense
 **Tier:** 2
 **Prerequisites:** Agi 4, Acrobatics 4

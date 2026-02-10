@@ -1,0 +1,41 @@
+{
+  "_id": "433ade7b73ee437d",
+  "name": "Frightened",
+  "type": "condition",
+  "img": "icons/svg/terror.svg",
+  "system": {
+    "label": "Frightened",
+    "category": "fear",
+    "description": "-   All rolls: Add 1 to die results while the source of fear is perceived\n-   Can act normally but suffers the penalty\n-   Can choose to flee or stand and fight\n-   **Recovery:** At the end of each turn, make Will save:\n    -   1 success: Condition ends\n    -   0 successes: Remains Frightened\n\n-   Ally Assistance: An ally within 5 feet can use an [Interact]\n    action with Persuasion or Intimidate check:\n    -   1+ successes: Condition ends",
+    "tokenIcon": "icons/svg/terror.svg",
+    "activeEffects": [
+      {
+        "key": "diceMod.allRolls",
+        "mode": "add",
+        "value": 1,
+        "notes": "Add 1 to all die results"
+      }
+    ],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "will"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Will save to recover from Frightened",
+      "assistance": {
+        "range": 5
+      },
+      "downgrades": {
+        "1_success": null,
+        "0_success": "Frightened"
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!433ade7b73ee437d"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "6f1e75db435c4d05",
+  "name": "Boots, Riding",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Specialized boots with reinforced heels and soles designed for comfort and control while riding horses or other mounts.",
+    "weight": "3 lbs",
+    "cost": "50 gp"
+  },
+  "effects": [],
+  "_key": "!items!6f1e75db435c4d05"
+}

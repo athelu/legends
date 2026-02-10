@@ -1,0 +1,13 @@
+{
+  "_id": "741343442ecb440a",
+  "name": "Carpenter's Tools",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A set of specialized woodworking tools including saws, chisels, planes, and measuring devices necessary for carpentry work.",
+    "weight": "6 lbs",
+    "cost": "40 gp"
+  },
+  "effects": [],
+  "_key": "!items!741343442ecb440a"
+}

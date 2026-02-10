@@ -1,10 +1,11 @@
 {
-  "_id": "e890e8d5131a441a",
+  "_id": "74f71f2d2bf84193",
   "name": "Keen Sight (-2)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "Vision better than normal.\n-   Vision-based Perception: Subtract 1 from die results"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!74f71f2d2bf84193"
 }

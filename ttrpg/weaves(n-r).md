@@ -1,5 +1,5 @@
 ## N
-
+<!-- PACK:weaves -->
 ### Nightmare Manifestation
 **Primary Energy:** Space 8 (terrifying mental illusion + medium range)  
 **Supporting Energy:** Time 2 (duration 1 minute)  

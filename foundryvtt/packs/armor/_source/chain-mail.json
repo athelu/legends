@@ -1,0 +1,27 @@
+{
+  "_id": "d2bb64f6536e4822",
+  "name": "Chain Mail",
+  "type": "armor",
+  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "armorType": "",
+    "dr": {
+      "slashing": 6,
+      "piercing": 5,
+      "bludgeoning": 4
+    },
+    "stealthPenalty": "none",
+    "swimPenalty": "",
+    "donTime": "",
+    "doffTime": "",
+    "weight": 0,
+    "cost": 200.0,
+    "quantity": 1,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!d2bb64f6536e4822"
+}

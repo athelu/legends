@@ -1,10 +1,11 @@
 {
-  "_id": "051d715fbc7b42d5",
+  "_id": "fc495cad07af4b48",
   "name": "Acute Hearing (-2)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": "Ranges of sound increased.\n-   Initiative: +1\n-   Sound-based Perception: Subtract 1 from die results"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!fc495cad07af4b48"
 }

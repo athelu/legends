@@ -1,0 +1,11 @@
+{
+  "_id": "debcb35a73fb4cfd",
+  "name": "Investigator",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You made your living uncovering truths that others wanted hidden. You developed a reputation for finding answers. Your skills at noticing details and following leads are invaluable, even if your companions find your constant questions irritating.\n**Skills:** Investigate 3, Perception 2, +32 XP\n**Equipment:** Magnifying glass, journal, ink, quill, fine clothes, shoes\n**Feature** - Keen Mind: When examining a crime scene or mystery, the GM will provide one crucial clue or detail others might miss."
+  },
+  "effects": [],
+  "_key": "!items!debcb35a73fb4cfd"
+}

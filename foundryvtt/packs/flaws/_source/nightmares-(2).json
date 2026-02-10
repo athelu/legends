@@ -1,10 +1,11 @@
 {
-  "_id": "d5a02b0b8cf04f56",
+  "_id": "16e92f48baa947d7",
   "name": "Nightmares (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Horrible nightmares prevent restful sleep.\n- Long rest only restores half Luck (rounded down)"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!16e92f48baa947d7"
 }

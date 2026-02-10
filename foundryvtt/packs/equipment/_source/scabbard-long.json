@@ -1,0 +1,13 @@
+{
+  "_id": "462cf18276d04966",
+  "name": "Scabbard, Long",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A leather sheath designed to hold a longsword or similar one-handed blade.",
+    "weight": "2 lbs",
+    "cost": "75 gp"
+  },
+  "effects": [],
+  "_key": "!items!462cf18276d04966"
+}

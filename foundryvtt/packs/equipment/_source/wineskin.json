@@ -1,0 +1,13 @@
+{
+  "_id": "542ba9e00d0a4ff9",
+  "name": "Wineskin",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A leather container for holding liquids, typically water or wine. Holds approximately 1 gallon.",
+    "weight": "1 lb (empty), 5 lbs (full)",
+    "cost": "4 gp"
+  },
+  "effects": [],
+  "_key": "!items!542ba9e00d0a4ff9"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Battle Harmony",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Sorcerous Origin trait, Wis 4\n**Description:** You've learned to perceive the ebb and flow of fortune in combat. When reality denies someone completely, you feel the rebound\n**Benefit:** Your Harmonic Weaving becomes more responsive to combat flow. After you or an ally within 60 feet rolls a critical failure (double 8s) on any roll, you immediately regain one use of Harmonic Weaving. This can trigger multiple times per combat\n**Usage:** Passive trigger\n**Keyword:** [Magic], [Sorcerer], [Combat]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

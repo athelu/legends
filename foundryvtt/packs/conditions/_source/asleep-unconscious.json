@@ -1,0 +1,31 @@
+{
+  "_id": "feaf304838c84592",
+  "name": "Asleep/Unconscious",
+  "type": "condition",
+  "img": "icons/svg/unconscious.svg",
+  "system": {
+    "label": "Asleep/Unconscious",
+    "category": "incapacitation",
+    "description": "-   Cannot take actions or reactions\n-   Cannot move\n-   Blinded condition active\n-   Prone condition active\n-   Automatically fail Fortitude and Reflex saves\n-   Attacks against you have Fortune\n-   **Recovery (Asleep):**\n    -   Loud noises or physical contact: Make Perception check (1 success to wake)\n    -   Deep Sleeper flaw: Requires 2 successes to wake, add 2 to all\n        die results first round after waking\n    -   Light Sleeper trait: Automatically wake to subtle noises, no\n        penalties\n\n-   **Recovery (Unconscious):** Depends on cause (damage, poison, magic, etc.)",
+    "tokenIcon": "icons/svg/unconscious.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "severe",
+    "overlayPriority": 30,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "reflex"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Reflex save to recover from Asleep/Unconscious"
+    },
+    "appliesConditions": [
+      "Blinded",
+      "Prone"
+    ]
+  },
+  "flags": {},
+  "_key": "!items!feaf304838c84592"
+}

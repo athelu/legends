@@ -1,10 +1,11 @@
 {
-  "_id": "ecce36d5d0174a14",
+  "_id": "f3ac6c2a261848dd",
   "name": "Identify",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 3 (revealing magical properties)  \n**Supporting Energy:** None (touch, instantaneous)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 3 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Space Potential + Space Mastery  \n**Effect:** Learn the properties of one magic item or active weave, including how to use it and any requirements. Also reveals if item is cursed (but not the curse's nature).  \n**Saving Throw:** None (information gathering)  \n**Success Scaling:** 0 = fails, 1 = basic function only, 2 = full properties, 3 = learn curse details, 4 = learn item's history"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!f3ac6c2a261848dd"
 }

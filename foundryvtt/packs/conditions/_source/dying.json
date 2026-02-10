@@ -1,0 +1,23 @@
+{
+  "_id": "f1f7e87e93424ae5",
+  "name": "Dying",
+  "type": "condition",
+  "img": "icons/svg/unconscious.svg",
+  "system": {
+    "label": "Dying",
+    "category": "incapacitation",
+    "description": "-   At 0 HP or below\n-   Cannot take actions, reactions, or move\n-   Unconscious condition active\n-   Blinded condition active\n-   Prone condition active\n-   See Dying Mechanic section in Core Rules for full details",
+    "tokenIcon": "icons/svg/unconscious.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "severe",
+    "overlayPriority": 30,
+    "appliesConditions": [
+      "Unconscious",
+      "Blinded",
+      "Prone"
+    ]
+  },
+  "flags": {},
+  "_key": "!items!f1f7e87e93424ae5"
+}

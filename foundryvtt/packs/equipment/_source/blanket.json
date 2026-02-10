@@ -1,0 +1,13 @@
+{
+  "_id": "ec0bc5831f68457b",
+  "name": "Blanket",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A warm woolen blanket suitable for sleeping or staying warm in cold weather.",
+    "weight": "3 lbs",
+    "cost": "5 sp"
+  },
+  "effects": [],
+  "_key": "!items!ec0bc5831f68457b"
+}

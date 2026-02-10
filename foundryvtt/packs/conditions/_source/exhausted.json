@@ -1,0 +1,29 @@
+{
+  "_id": "3034ca1d7f4540dc",
+  "name": "Exhausted",
+  "type": "condition",
+  "img": "icons/svg/sleep.svg",
+  "system": {
+    "label": "Exhausted",
+    "category": "combat",
+    "description": "##### Level 1 - Fatigued:\n-   All skill checks: Add 1 to die results\n-   Cannot benefit from short rests for HP recovery (still recover Luck)\n-   Recovery: Long rest removes 1 level of Exhaustion\n\n##### Level 2 - Exhausted:\n-   All skill checks: Add 2 to die results\n-   Movement speed reduced by half\n-   Cannot benefit from short rests at all\n-   Recovery: Long rest removes 1 level of Exhaustion\n\n##### Level 3 - Severely Exhausted:\n-   All rolls (including attacks and saves): Add 2 to die results\n-   Movement speed reduced by half\n-   Can only take 2 actions per turn instead of 3\n-   Cannot benefit from short rests\n-   Recovery: Long rest removes 1 level of Exhaustion\n\n##### Level 4 - Near Collapse:\n-   All rolls: Add 3 to die results\n-   Movement speed reduced to quarter\n-   Can only take 1 action per turn\n-   Cannot take reactions\n-   Recovery: Long rest removes 1 level of Exhaustion\n\n##### Level 5 - Collapse:\n-   Character becomes Unconscious\n-   Cannot be awakened until Exhaustion reduced below level 5\n-   Recovery: Long rest removes 1 level of Exhaustion",
+    "tokenIcon": "icons/svg/sleep.svg",
+    "activeEffects": [
+      {
+        "key": "diceMod.allRolls",
+        "mode": "add",
+        "value": 3,
+        "notes": "Add 3 to all die results"
+      }
+    ],
+    "stacking": "stack",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true
+    }
+  },
+  "flags": {},
+  "_key": "!items!3034ca1d7f4540dc"
+}

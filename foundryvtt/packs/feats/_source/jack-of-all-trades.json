@@ -1,0 +1,13 @@
+{
+  "_id": "8a1d3b197482468c",
+  "name": "Jack of All Trades",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Int 4, five skills at 3+\n**Benefit:** Rank 1 skills count as rank 2\n**Usage:** Passive\n**Keyword:** [Skill]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!8a1d3b197482468c"
+}

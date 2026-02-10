@@ -1,0 +1,13 @@
+{
+  "_id": "865a760cc0424649",
+  "name": "Piton",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "An iron spike hammered into rock or wood to support climbing ropes or secure items.",
+    "weight": "0.5 lbs",
+    "cost": "2 sp"
+  },
+  "effects": [],
+  "_key": "!items!865a760cc0424649"
+}

@@ -1,19 +1,39 @@
 {
-  "_id": "bdd52e5abab54de7",
+  "_id": "3d10d648f2214752",
   "name": "Heater Shield (Medium Shield)",
   "type": "shield",
-  "img": "** `icons/equipment/shield/heater-marked-red.webp`",
+  "img": "icons/equipment/shield/heater-marked-red.webp",
   "system": {
-    "description": "- **Image:** `icons/equipment/shield/heater-marked-red.webp`",
+    "description": {
+      "value": "Hand Usage: Occupies off-hand completely\n- Granted Ability: Shield Defense\n- Granted Reactions: Shield Block, Ranged Defense\n- Special: Can be slung on back when not in use (takes 1 [Minor] action to ready)"
+    },
     "shieldType": "",
     "handUsage": "",
     "meleeDefense": "",
     "requirements": "",
     "specialAbilities": "",
     "plantedMode": false,
-    "reactions": [],
-    "weight": "",
-    "cost": "** 15 gp"
+    "reactions": [
+      {
+        "name": "Shield Block",
+        "_id": "45e65108620442e1"
+      },
+      {
+        "name": "Ranged Defense",
+        "_id": "8b2ef106302f4ba3"
+      }
+    ],
+    "weight": 0,
+    "cost": 15.0,
+    "quantity": 1,
+    "notes": "",
+    "linkedAbilities": [
+      {
+        "name": "Shield Defense",
+        "_id": "9e88d21a01c14b0d"
+      }
+    ],
+    "armorType": "medium"
   },
   "effects": []
 }

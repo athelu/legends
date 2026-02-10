@@ -1,0 +1,13 @@
+{
+  "_id": "ea973704e0e44947",
+  "name": "Scrollcase",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A cylindrical leather or wood case designed to protect scrolls and documents during travel. Holds up to 10 rolled sheets.",
+    "weight": "0.5 lbs",
+    "cost": "3 gp"
+  },
+  "effects": [],
+  "_key": "!items!ea973704e0e44947"
+}

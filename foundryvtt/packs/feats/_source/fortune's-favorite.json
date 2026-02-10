@@ -1,0 +1,13 @@
+{
+  "_id": "6985fbd6ff3f4c5c",
+  "name": "Fortune's Favorite",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Luck 5\n**Benefit:** Once per session, after seeing any roll result (yours or an enemy's), force a reroll and choose which result to use\n**Usage:** Once per session\n**Keyword:** [Skill]. [General]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!6985fbd6ff3f4c5c"
+}

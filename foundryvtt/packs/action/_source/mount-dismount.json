@@ -1,15 +1,17 @@
 {
-  "_id": "e3b6db27ff50484c",
+  "_id": "904946472f0e4e1e",
   "name": "Mount/Dismount",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "",
-    "actionType": "movement",
-    "actionCost": "1 [Move] action",
+    "description": {
+      "value": "- **Cost:** 1 [Move] action\n- **Effect:** Mount or dismount a creature/vehicle\n- **Notes:**\n  - The mount must be within 5 feet and willing\n  - Mounting/dismounting doesn't provoke Opportunity Attacks\n  - While mounted, you use the mount's speed instead of your own"
+    },
+    "actionType": "move",
+    "actionCost": "1",
     "trigger": "",
     "effect": "Mount or dismount a creature/vehicle\n- **Notes:**\n  - The mount must be within 5 feet and willing\n  - Mounting/dismounting doesn't provoke Opportunity Attacks\n  - While mounted, you use the mount's speed instead of your own",
-    "keywords": [],
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",

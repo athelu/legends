@@ -1,5 +1,5 @@
 ## H
-
+<!-- PACK:weaves -->
 ### HailStorm
 **Primary Energy:** Water 5 (hailstorm, physical ice chunks)  
 **Supporting Energy:** Space 4 (medium range + 20ft radius)  

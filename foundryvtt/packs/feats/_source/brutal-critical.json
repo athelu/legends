@@ -1,0 +1,13 @@
+{
+  "_id": "bd13c9b4f9bb47df",
+  "name": "Brutal Critical",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 3\n**Prerequisites:** Str 5, Melee 5, Primal Fury feat\n**Description:** When rage and opportunity align perfectly, your strikes don't just wound, they devastate. In that moment of fury and focus, you hit with enough force to shatter bone and end fights decisively. Subtlety is for people who aren't winning.\n**Benefit:** While in Primal Fury, when you roll double 1s on a melee attack (critical success), roll weapon damage twice and add both together\n**Usage:** Passive, requires Primal Fury active\n**Keyword:** [Combat], [Savage]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!bd13c9b4f9bb47df"
+}

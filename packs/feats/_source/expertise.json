@@ -1,0 +1,16 @@
+{
+  "name": "Expertise",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Any skill rank 5\n**Benefit:** For chosen skill, subtract 1 from both dice when making checks\n**Usage:** Passive\n**Note:** Can be taken multiple times for different skills\n**Keyword:** [Skill]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

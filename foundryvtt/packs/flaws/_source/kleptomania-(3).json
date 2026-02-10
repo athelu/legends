@@ -1,10 +1,11 @@
 {
-  "_id": "3cede6fee5514ab9",
+  "_id": "1204014fc7934651",
   "name": "Kleptomania (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "You have an irresistible urge to steal.\n- Make Will save (1 success required) when encountering interesting, valuable, or unusual items\n- Success means you resist, failure means you must attempt to take it"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!1204014fc7934651"
 }

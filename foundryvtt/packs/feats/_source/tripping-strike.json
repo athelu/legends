@@ -1,0 +1,13 @@
+{
+  "_id": "412e7144a7084711",
+  "name": "Tripping Strike",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Str 4, Melee 5\n**Description:** With a sweep of the legs here, a strike to the knee there, you mastered the art of attacks that don't just wound but also knock opponents off their feet.\n**Benefit:** When you hit with a melee weapon attack, force target to make a Reflex save (opposed by your attack). If you win by 1+ successes, target falls Prone\n**Usage:** Once per turn\n**Keyword:** [Combat], [Maneuver]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!412e7144a7084711"
+}

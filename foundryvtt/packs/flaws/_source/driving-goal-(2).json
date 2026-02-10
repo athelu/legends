@@ -1,10 +1,11 @@
 {
-  "_id": "acba93ae0d8a4907",
+  "_id": "4b3ad5a52f5b44d9",
   "name": "Driving Goal (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Always-just-out-of-reach goal you constantly pursue."
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!4b3ad5a52f5b44d9"
 }

@@ -1,0 +1,29 @@
+{
+  "_id": "2febb96769fe4abb",
+  "name": "Disoriented",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "label": "Disoriented",
+    "category": "sensory",
+    "description": "-   Spatial awareness or balance impaired\n-   Perception checks: Add 1 to die results\n-   Initiative: -1\n-   Cannot determine exact positions of creatures/objects (GM may require check)\n-   Duration: Typically 1 round unless specified otherwise\n**Recovery:**\n-   Automatically ends after specified duration\n-   Some effects allow Perception check to end early",
+    "tokenIcon": "",
+    "activeEffects": [
+      {
+        "key": "initiative.flat",
+        "mode": "add",
+        "value": -1,
+        "notes": "-1 to initiative"
+      }
+    ],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true
+    }
+  },
+  "flags": {},
+  "_key": "!items!2febb96769fe4abb"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "Supreme Stealth",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Stealth 5\n**Description:** Through perfect understanding of shadows, sound, and sightlines, you can make yourself effectively invisible without magic.\n**Benefit:** Subtract 1 from both Stealth dice when attempting to hide\n**Usage:** Passive\n**Keyword:** [Skill], [Shadow]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": [
+      {
+        "type": "dice.modify",
+        "target": "Stealth",
+        "value": -1,
+        "apply": "both",
+        "description": "Subtract 1 from both Stealth dice"
+      }
+    ]
+  },
+  "flags": {}
+}

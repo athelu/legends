@@ -1,0 +1,13 @@
+{
+  "_id": "b90e5d837ceb4b52",
+  "name": "Rope, Jute/Hemp",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "50 feet of sturdy rope capable of supporting up to 1,000 lbs. Suitable for climbing, securing loads, or making simple traps.",
+    "weight": "10 lbs",
+    "cost": "3 gp"
+  },
+  "effects": [],
+  "_key": "!items!b90e5d837ceb4b52"
+}

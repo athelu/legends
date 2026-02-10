@@ -1,0 +1,13 @@
+{
+  "_id": "340a06430e9f4d14",
+  "name": "Musical Instrument, Basic",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A simple musical instrument such as a flute, drum, or lyre of basic construction and sound quality.",
+    "weight": "2-6 lbs",
+    "cost": "30 gp"
+  },
+  "effects": [],
+  "_key": "!items!340a06430e9f4d14"
+}

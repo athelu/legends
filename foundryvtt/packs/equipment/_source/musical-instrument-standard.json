@@ -1,0 +1,13 @@
+{
+  "_id": "ba5e79983c154ba8",
+  "name": "Musical Instrument, Standard",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A well-made musical instrument of decent quality suitable for professional performance.",
+    "weight": "2-8 lbs",
+    "cost": "60 gp"
+  },
+  "effects": [],
+  "_key": "!items!ba5e79983c154ba8"
+}

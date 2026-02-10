@@ -1,0 +1,13 @@
+{
+  "_id": "cf5b00402aae480a",
+  "name": "Rope, Lime Bast",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "50 feet of high-quality rope made from lime tree fibers, stronger and more flexible than hemp. Supports up to 1,500 lbs.",
+    "weight": "8 lbs",
+    "cost": "7 gp"
+  },
+  "effects": [],
+  "_key": "!items!cf5b00402aae480a"
+}

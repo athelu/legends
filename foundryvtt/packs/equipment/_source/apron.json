@@ -1,0 +1,13 @@
+{
+  "_id": "71159d1ef40f419c",
+  "name": "Apron",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A practical garment worn over clothing to protect from dirt, stains, and minor hazards during work or craft activities.",
+    "weight": "1 lb",
+    "cost": "5 gp"
+  },
+  "effects": [],
+  "_key": "!items!71159d1ef40f419c"
+}

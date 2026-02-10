@@ -1,0 +1,13 @@
+{
+  "_id": "c81705ca671a4dcc",
+  "name": "Urban Tracker",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Investigation 4, Society 3\n**Description:** Being able to track prey through the urban wilderness, inside crowds and alleys instead of forests and fields. The patterns and principles are much the same.\n**Benefit:** In urban environments, can track people through crowds using Investigation. Learn useful information about neighborhoods (safe houses, gang territories, guard patrols) with Society check. When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route\n**Usage:** Passive\n**Keyword:** [Skill]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!c81705ca671a4dcc"
+}

@@ -1,10 +1,11 @@
 {
-  "_id": "85aa87460b4f4f15",
+  "_id": "2e2edebcf95e4871",
   "name": "Gentle Descent",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Air 2 (slowing fall with updraft)  \n**Supporting Energy:** Space 5 (close range + 5 creatures + up to 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** Up to 1 minute (until they land)  \n**Total Cost:** 7 Energy  \n**Action:** [Reaction] when you or creature within close range falls  \n**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  \n**Effect:** Up to 5 falling creatures within close range descend 60 feet per round and take no falling damage. Weave lasts until they land (up to 1 minute).  \n**Saving Throw:** None (beneficial effect)  \n**Success Scaling:** 0 = fails, 1 = 1 creature, 2 = 5 creatures, 3 = 10 creatures, 4 = can cast as [Free] reaction without spending action"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!2e2edebcf95e4871"
 }

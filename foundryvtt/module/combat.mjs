@@ -4,6 +4,7 @@
  */
 
 import { rollD8Check, showRollDialog } from './dice.mjs';
+import * as featEffects from './feat-effects.mjs';
 
 /**
  * Roll a weapon attack with targeting support
@@ -267,18 +268,18 @@ export async function executeWeaponAttack(actor, weapon, attackMode, target) {
   
   // Determine which skill to use
   const skillKey = attackMode.skill === 'melee' ? 'meleeCombat' : 'rangedCombat';
-  const skill = actor.system.skills[skillKey];
+  const skill = actor.system.skillsEffective?.[skillKey] ?? actor.system.skills[skillKey] ?? 0;
   
   // Determine which attribute to use for attack roll
   // Melee: Agility, Ranged/Thrown: Dexterity
   const attrKey = attackMode.skill === 'melee' ? 'agility' : 'dexterity';
-  const attribute = actor.system.attributes[attrKey];
+  const attribute = actor.system.attributesEffective?.[attrKey] ? { value: actor.system.attributesEffective[attrKey], label: actor.system.attributes[attrKey]?.label || attrKey } : actor.system.attributes[attrKey];
   
   // Show the roll dialog
   await showRollDialog({
     actor: actor,
     attrValue: attribute.value,
-    skillValue: skill.value,
+    skillValue: (typeof skill === 'object' ? skill.value ?? skill : skill),
     attrLabel: attribute.label,
     skillLabel: 'Combat',
     onRollComplete: async (rollResult) => {
@@ -734,15 +735,30 @@ export async function applyDamage(targetId, damage, damageType) {
     dr = Math.floor(baseDR / 2);
   }
   
+  // Apply feat-provided resistances (e.g., from savant feats or others)
+  let resistance = 0;
+  try {
+    const featMods = featEffects.computeFeatModifiers(target);
+    const r = featMods.resistances?.[damageType];
+    if (r === 'immune') {
+      // Full immunity
+      resistance = damage;
+    } else {
+      resistance = r || 0;
+    }
+  } catch (err) {
+    // ignore
+  }
+  
   // Apply DR
-  const finalDamage = Math.max(0, damage - dr);
+  const finalDamage = Math.max(0, damage - dr - (isNaN(resistance) ? 0 : resistance));
   
   const newHP = Math.max(0, currentHP - finalDamage);
   
   await target.update({ 'system.hp.value': newHP });
   
   ui.notifications.info(
-    `${target.name} takes ${finalDamage} ${damageType} damage${dr > 0 ? ` (${damage} - ${dr} DR)` : ''}`
+    `${target.name} takes ${finalDamage} ${damageType} damage${dr > 0 ? ` (${damage} - ${dr} DR` : ''}${resistance > 0 ? ` - ${resistance} resist` : ''}${dr > 0 ? `)` : ''}`
   );
   
   // Post damage notification to chat (without revealing HP totals)
@@ -751,7 +767,7 @@ export async function applyDamage(targetId, damage, damageType) {
     content: `
       <div class="legends-damage-applied">
         <i class="fas fa-heart-broken"></i> <strong>${target.name}</strong> took ${finalDamage} ${damageType} damage!
-         ${dr > 0 ? `<br/><small>(${damage} damage - ${dr} DR = ${finalDamage} applied)</small>` : ''}
+         ${dr > 0 ? `<br/><small>(${damage} damage - ${dr} DR${resistance > 0 ? ` - ${resistance} resist` : ''} = ${finalDamage} applied)</small>` : ''}
       </div>
     `
   });

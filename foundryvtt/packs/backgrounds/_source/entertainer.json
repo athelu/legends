@@ -1,0 +1,11 @@
+{
+  "_id": "4fd97f06f68a4c42",
+  "name": "Entertainer",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": "You might have been an actor, a dancer, a musician, a street magician, or any other sort of performer. Adventuring offers new audiences and new material and every narrow escape is another dramatic moment for future performances.\n**Skills:** Perform 2, Persuasion 2, Acrobatics 1, Perception 1, +40 XP\n**Equipment:** Basic musical instrument, common clothes, disguise kit, shoes\n**Feature** - By Popular Demand: You can find performance venues and earn money entertaining in most settlements."
+  },
+  "effects": [],
+  "_key": "!items!4fd97f06f68a4c42"
+}

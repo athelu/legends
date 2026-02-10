@@ -1,0 +1,31 @@
+{
+  "_id": "15d524347dda460a",
+  "name": "Paralyzed",
+  "type": "condition",
+  "img": "icons/svg/paralysis.svg",
+  "system": {
+    "label": "Paralyzed",
+    "category": "incapacitation",
+    "description": "-   Cannot take actions, reactions, or move\n-   Cannot speak\n-   Automatically fail Fortitude and Reflex saves\n-   Attacks against you have Fortune\n-   May be aware of surroundings through senses\n-   **Recovery:** At the end of each turn, make Fortitude save (Constitution + Current Luck):\n    -   2 successes: Condition ends\n    -   1 success: Subtract 1 from next recovery save die results\n    -   0 successes: Remains Paralyzed",
+    "tokenIcon": "icons/svg/paralysis.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "severe",
+    "overlayPriority": 30,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "fortitude"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Fortitude save to recover from Paralyzed",
+      "downgrades": {
+        "2_success": null,
+        "0_success": "Paralyzed"
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!15d524347dda460a"
+}

@@ -1,10 +1,11 @@
 {
-  "_id": "17094f5d4a64493b",
+  "_id": "ed28ef05422443a6",
   "name": "Shape Earth",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Earth 2 (manipulating soil and stone)  \n**Supporting Energy:** Space 1 (close range)  \n**Range:** Close, 30 ft.  \n**Duration:** Instantaneous (or 1 hour for changes)  \n**Total Cost:** 3 Energy per effect  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  \n**Effect:** Choose one: (1) Excavate or move up to 5ft cube of loose earth, (2) Shape earth/stone into basic forms, (3) Change color or texture of earth/stone in 5ft cube. Changes last 1 hour.  \n**Saving Throw:** None (environmental manipulation)  \n**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent changes\n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!ed28ef05422443a6"
 }

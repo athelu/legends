@@ -1,0 +1,13 @@
+{
+  "_id": "f6b9e294e3cd4b16",
+  "name": "Master Archer",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Dex 5, Ranged 5\n**Benefit:** When using ranged weapons: +2 damage, attacking at long range doesn't add to your dice, and you ignore half cover and three-quarters cover\n**Usage:** Passive\n**Keyword:** [Combat], [Ranged]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!f6b9e294e3cd4b16"
+}

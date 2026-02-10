@@ -1,0 +1,13 @@
+{
+  "_id": "a9a2ff021e9c42ab",
+  "name": "Beast Whisperer",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 2\n**Prerequisites:** Wis 4, Animal Handling 4\n**Description:** Animals don't speak your language, but you've learned to speak theirs. Most creatures just want to be left alone, and you know how to communicate that you're not a threat.\n**Benefit:** Can communicate simple concepts to beasts. Beasts that aren't hostile have their attitude improved by one step. Can attempt to calm hostile beast (opposed Will save, your Wis + Animal Handling vs beast's Wis + Luck)\n**Usage:** Passive communication, action to calm\n**Keyword:** [Wilderness]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!a9a2ff021e9c42ab"
+}

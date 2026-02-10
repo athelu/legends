@@ -1,0 +1,13 @@
+{
+  "_id": "30c545a03a6c4a07",
+  "name": "Swift Movement",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 1\n**Prerequisites:** Agi 4\n**Description:** You can perform defensive maneuvers with minimal effort, allowing you to slip away from threats or seek cover in a fraction of the time it takes others.\n**Benefit:** You can Disengage or Hide using only 1 [Minor] action instead of a full action\n**Usage:** Unlimited\n**Keyword:** [Combat], [Move] [Shadow]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!30c545a03a6c4a07"
+}

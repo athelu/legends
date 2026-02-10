@@ -1,0 +1,13 @@
+{
+  "_id": "eef8cb2357f1462f",
+  "name": "Shoes",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Basic leather footwear suitable for everyday wear, less protective than boots but more comfortable for indoor use.",
+    "weight": "1 lb",
+    "cost": "10 gp"
+  },
+  "effects": [],
+  "_key": "!items!eef8cb2357f1462f"
+}

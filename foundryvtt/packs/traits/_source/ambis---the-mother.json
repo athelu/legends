@@ -1,10 +1,11 @@
 {
-  "_id": "38a3ed3b5b974bc1",
+  "_id": "8e1e8b6bd63d4f65",
   "name": "AMBIS - The Mother",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!8e1e8b6bd63d4f65"
 }

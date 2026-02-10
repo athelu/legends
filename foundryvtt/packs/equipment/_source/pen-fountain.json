@@ -1,0 +1,13 @@
+{
+  "_id": "2e307b83b7ba4ce4",
+  "name": "Pen, Fountain",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A metal pen with an internal ink reservoir, allowing for extended writing without frequent dipping.",
+    "weight": "0.1 lbs",
+    "cost": "7 gp"
+  },
+  "effects": [],
+  "_key": "!items!2e307b83b7ba4ce4"
+}

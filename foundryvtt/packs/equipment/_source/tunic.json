@@ -1,0 +1,13 @@
+{
+  "_id": "dd87bb91e5d34d98",
+  "name": "Tunic",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A simple pullover garment worn as a primary layer, typically extending to mid-thigh.",
+    "weight": "1 lb",
+    "cost": "5 gp"
+  },
+  "effects": [],
+  "_key": "!items!dd87bb91e5d34d98"
+}

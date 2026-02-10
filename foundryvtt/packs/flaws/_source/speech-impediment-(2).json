@@ -1,10 +1,11 @@
 {
-  "_id": "67a20f89ea7d4ce5",
+  "_id": "e426af4c38ac4e38",
   "name": "Speech Impediment (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Serious stutter/lisp/defect.\n- Persuasion, Perform, Deception when speaking: Add 2 to die results\n\n---\n\n## MENTAL FLAWS"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!e426af4c38ac4e38"
 }

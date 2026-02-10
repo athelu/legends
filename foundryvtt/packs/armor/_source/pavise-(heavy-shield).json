@@ -1,19 +1,39 @@
 {
-  "_id": "83ecf72802e548d1",
+  "_id": "c816462d936c441a",
   "name": "Pavise (Heavy Shield)",
   "type": "shield",
-  "img": "** `icons/equipment/shield/pavise-wood-steel.webp`",
+  "img": "icons/equipment/shield/pavise-wood-steel.webp",
   "system": {
-    "description": "- **Image:** `icons/equipment/shield/pavise-wood-steel.webp`",
+    "description": {
+      "value": "Hand Usage: Requires both hands to move/position, but can be planted\n- Granted Ability: Shield Defense\n- Granted Reactions: Shield Block, Ranged Defense\n- Planted Mode: Use 1 [Move] action to plant shield. While planted:\n    - Provides full cover against ranged attacks from one direction (choose direction when planting)\n    - Use 1 [Move] action to retrieve it from planted\n- Carried Mode: Functions as Tower Shield but with Misfortune on your attacks\n- Requirements: Strength 4 minimum\n- Special: Primarily a siege/defensive weapon, awkward in mobile combat\n- \n## Armor Types"
+    },
     "shieldType": "",
     "handUsage": "",
     "meleeDefense": "",
-    "requirements": "",
+    "requirements": "** Strength 4 minimum",
     "specialAbilities": "",
     "plantedMode": false,
-    "reactions": [],
-    "weight": "",
-    "cost": "** 40 gp"
+    "reactions": [
+      {
+        "name": "Shield Block",
+        "_id": "45e65108620442e1"
+      },
+      {
+        "name": "Ranged Defense",
+        "_id": "8b2ef106302f4ba3"
+      }
+    ],
+    "weight": 0,
+    "cost": 40.0,
+    "quantity": 1,
+    "notes": "",
+    "linkedAbilities": [
+      {
+        "name": "Shield Defense",
+        "_id": "9e88d21a01c14b0d"
+      }
+    ],
+    "armorType": "heavy"
   },
   "effects": []
 }

@@ -1,10 +1,11 @@
 {
-  "_id": "c9f540bc15f24a2f",
+  "_id": "65bcac476ae8402a",
   "name": "Poor Eyesight (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Myopia/hyperopia. Without corrective lenses:\n- Vision-based Perception: Add 2 to die results\n- Ranged Combat: Add 1 to die results"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!65bcac476ae8402a"
 }

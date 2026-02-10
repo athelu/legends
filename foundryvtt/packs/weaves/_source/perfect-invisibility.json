@@ -1,10 +1,11 @@
 {
-  "_id": "3a23c83408df484a",
+  "_id": "56b43f5d268b43c1",
   "name": "Perfect Invisibility",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 6 (bending light completely)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Touch  \n**Duration:** 1 minute  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on attacks and Stealth checks, and observers have Misfortune on Perception checks to detect target. Unlike normal invisibility, this weave does NOT break when target attacks or casts weaves.  \n**Saving Throw:** None (beneficial buff, willing targets only)  \n**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!56b43f5d268b43c1"
 }

@@ -1,0 +1,13 @@
+{
+  "_id": "1b915322cb194461",
+  "name": "Tent",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A canvas shelter that can accommodate two people and their equipment, providing protection from weather.",
+    "weight": "15 lbs",
+    "cost": "25 gp"
+  },
+  "effects": [],
+  "_key": "!items!1b915322cb194461"
+}

@@ -1,0 +1,13 @@
+{
+  "_id": "324c5b2ccdf34cf7",
+  "name": "Sewing Kit",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A collection of needles, thread, scissors, and other materials needed for repairing or creating clothing.",
+    "weight": "1 lb",
+    "cost": "15 gp"
+  },
+  "effects": [],
+  "_key": "!items!324c5b2ccdf34cf7"
+}

@@ -1,0 +1,25 @@
+{
+  "_id": "be2d238344004f74",
+  "name": "Blinded",
+  "type": "condition",
+  "img": "icons/svg/blind.svg",
+  "system": {
+    "label": "Blinded",
+    "category": "sensory",
+    "description": "-   Cannot see\n-   Vision-based Perception checks automatically fail\n-   Initiative: -4\n-   Attacks against you have Fortune\n-   Your attacks have Misfortune",
+    "tokenIcon": "icons/svg/blind.svg",
+    "activeEffects": [
+      {
+        "key": "initiative.flat",
+        "mode": "add",
+        "value": -4,
+        "notes": "-4 to initiative"
+      }
+    ],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20
+  },
+  "flags": {},
+  "_key": "!items!be2d238344004f74"
+}

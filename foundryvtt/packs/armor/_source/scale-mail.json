@@ -1,0 +1,27 @@
+{
+  "_id": "88f2d31f942647d3",
+  "name": "Scale Mail",
+  "type": "armor",
+  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "system": {
+    "description": {
+      "value": ""
+    },
+    "armorType": "",
+    "dr": {
+      "slashing": 6,
+      "piercing": 5,
+      "bludgeoning": 4
+    },
+    "stealthPenalty": "none",
+    "swimPenalty": "",
+    "donTime": "",
+    "doffTime": "",
+    "weight": 0,
+    "cost": 250.0,
+    "quantity": 1,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!88f2d31f942647d3"
+}

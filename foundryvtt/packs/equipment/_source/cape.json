@@ -1,0 +1,13 @@
+{
+  "_id": "f0d5270a83484508",
+  "name": "Cape",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A sleeveless outer garment that drapes over the shoulders and back, providing some protection from weather.",
+    "weight": "2 lbs",
+    "cost": "7 gp"
+  },
+  "effects": [],
+  "_key": "!items!f0d5270a83484508"
+}

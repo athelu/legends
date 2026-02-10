@@ -1,0 +1,13 @@
+{
+  "_id": "75f5ff99b7a44ab4",
+  "name": "Forager",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 1\n**Prerequisites:** Survival 3\n**Benefit:** Find food and water for 6 people per day with Survival check (Simple task). 2 successes = find medicinal herbs worth 1d8 × 5 gp\n**Usage:** Once per day\n**Keyword:** [Wilderness], [Skill]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!75f5ff99b7a44ab4"
+}

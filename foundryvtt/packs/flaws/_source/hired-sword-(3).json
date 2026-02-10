@@ -1,10 +1,11 @@
 {
-  "_id": "83d27cb27f4946f7",
+  "_id": "bb025d532cde432d",
   "name": "Hired Sword (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": "Mercenary reputation. Will do anything for price. No loyalty possible."
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!bb025d532cde432d"
 }

@@ -6,7 +6,7 @@ Build backgrounds compendium pack from parsed backgrounds.md documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file
+from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key
 
 
 def parse_backgrounds_md(md_file):
@@ -19,11 +19,16 @@ def parse_backgrounds_md(md_file):
     """
     with open(md_file, 'r', encoding='utf-8') as f:
         content = f.read()
+
+    # If a PACK marker is present, only import content after it.
+    m = re.search(r"<!--\s*PACK:backgrounds\s*-->", content, flags=re.IGNORECASE)
+    if m:
+        content = content[m.end():]
     
     items = []
     
-    # Split by background sections (### Heading)
-    sections = re.split(r'^### ', content, flags=re.MULTILINE)[1:]
+    # Split by background sections (#### Heading used for individual backgrounds)
+    sections = re.split(r'^#### ', content, flags=re.MULTILINE)[1:]
     
     for section in sections:
         lines = section.split('\n')
@@ -78,6 +83,7 @@ def main():
         for item in items:
             json_file = source_dir / f"{item['name'].lower().replace(' ', '-').replace('/', '-')}.json"
             with open(json_file, 'w', encoding='utf-8') as f:
+                ensure_key(item)
                 json.dump(item, f, indent=2, ensure_ascii=False)
             print(f"  Saved {json_file.name}")
     

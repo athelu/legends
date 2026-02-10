@@ -1,10 +1,11 @@
 {
-  "_id": "d00ef470ffe54af7",
+  "_id": "e14ae23ce2b241e5",
   "name": "Lightning Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Air 2 (lightning through touch, damage)  \n**Supporting Energy:** None (touch range only)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 2 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Air Potential + Air Mastery  \n**Effect:** Touch a target and release a jolt of electricity. Target takes 4 lightning damage. If target is wearing metal armor, you have Fortune on your weaving roll. This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Lightning (energy)  \n**DR Interaction:** Half DR (4 lightning damage vs DR 4 becomes 4 - 2 = 2 damage)  \n**Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)  \n**Special:** Fortune on weaving roll if target wears metal armor (better conductor)  \n**Dazed Condition (at 4 successes):** Target has Misfortune on their next attack roll as electricity disrupts their nervous system.  \n\n\n## M"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!e14ae23ce2b241e5"
 }

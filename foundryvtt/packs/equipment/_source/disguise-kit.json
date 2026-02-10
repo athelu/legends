@@ -1,0 +1,13 @@
+{
+  "_id": "5544a322ec364428",
+  "name": "Disguise Kit",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A collection of cosmetics, hair dye, false facial hair, and other materials used to alter one's appearance.",
+    "weight": "3 lbs",
+    "cost": "35 gp"
+  },
+  "effects": [],
+  "_key": "!items!5544a322ec364428"
+}

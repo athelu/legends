@@ -1,0 +1,13 @@
+{
+  "_id": "e65ebf8165474509",
+  "name": "Parchment, Papyrus",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A single sheet of papyrus writing material, less durable than vellum but adequate for most purposes.",
+    "weight": "0.1 lbs",
+    "cost": "5 cp"
+  },
+  "effects": [],
+  "_key": "!items!e65ebf8165474509"
+}

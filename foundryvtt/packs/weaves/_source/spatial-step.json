@@ -1,10 +1,11 @@
 {
-  "_id": "8031abd27259468f",
+  "_id": "8aa8a1bbf7cd4366",
   "name": "Spatial Step",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": "**Primary Energy:** Space 5 (short-range teleportation)  \n**Supporting Energy:** None (self + 1 willing creature, 500ft)  \n**Range:** Self (500 feet teleportation)  \n**Duration:** Instantaneous  \n**Total Cost:** 5 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery  \n**Effect:** Instantly teleport yourself and one willing creature to a spot you can see or describe (direction and distance) within 500 feet. Arriving in occupied space causes 1d8 damage and teleports to nearest open space.  \n**Saving Throw:** None (willing targets only)  \n**Success Scaling:** 0 = fails, 1 = 100 feet, 2 = 500 feet, 3 = 1000 feet, 4 = 1 mile\n\n---"
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!8aa8a1bbf7cd4366"
 }

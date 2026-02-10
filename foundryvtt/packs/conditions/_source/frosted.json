@@ -1,0 +1,30 @@
+{
+  "_id": "c61b3d81f18c4fc6",
+  "name": "Frosted",
+  "type": "condition",
+  "img": "icons/svg/frozen.svg",
+  "system": {
+    "label": "Frosted",
+    "category": "magic",
+    "description": "-   Ice has formed on skin and clothing, movement impaired\n-   Movement speed: Halved\n-   Clumsy condition active\n-   Duration: 1 minute unless specified otherwise\n**Recovery:**\n-   Automatically ends after 1 minute\n-   Fire damage or intense heat: Immediate recovery\n-   Can attempt Fortitude save at end of each turn (2 successes ends condition)",
+    "tokenIcon": "icons/svg/frozen.svg",
+    "activeEffects": [],
+    "stacking": "replace",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "fortitude"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Fortitude save to recover from Frosted"
+    },
+    "appliesConditions": [
+      "Clumsy"
+    ]
+  },
+  "flags": {},
+  "_key": "!items!c61b3d81f18c4fc6"
+}

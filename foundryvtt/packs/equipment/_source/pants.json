@@ -1,0 +1,13 @@
+{
+  "_id": "28104398968449c6",
+  "name": "Pants",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Basic leg coverings made of cloth or leather, worn as everyday clothing.",
+    "weight": "1 lb",
+    "cost": "6 gp"
+  },
+  "effects": [],
+  "_key": "!items!28104398968449c6"
+}

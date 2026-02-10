@@ -1,0 +1,13 @@
+{
+  "_id": "74ad0d5b2c0e4477",
+  "name": "Candle, Beeswax",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A high-quality candle made from beeswax that burns cleanly for 1 hour, providing bright light in a 10-foot radius and dim light for an additional 10 feet.",
+    "weight": "0.1 lbs",
+    "cost": "5 sp"
+  },
+  "effects": [],
+  "_key": "!items!74ad0d5b2c0e4477"
+}

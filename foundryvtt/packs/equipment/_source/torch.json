@@ -1,0 +1,13 @@
+{
+  "_id": "879cbaec6a5c4086",
+  "name": "Torch",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A wooden stick wrapped in oil-soaked cloth that burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet.",
+    "weight": "1 lb",
+    "cost": "1 sp"
+  },
+  "effects": [],
+  "_key": "!items!879cbaec6a5c4086"
+}

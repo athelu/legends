@@ -1,0 +1,13 @@
+{
+  "_id": "49ee07a14b674772",
+  "name": "Musical Instrument, Fine",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A masterwork musical instrument crafted from quality materials with excellent tonal properties.",
+    "weight": "2-10 lbs",
+    "cost": "200 gp"
+  },
+  "effects": [],
+  "_key": "!items!49ee07a14b674772"
+}

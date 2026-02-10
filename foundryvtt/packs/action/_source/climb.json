@@ -1,19 +1,22 @@
 {
-  "_id": "3592efcc6d70487d",
+  "_id": "28cacae2dc324ef2",
   "name": "Climb",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
-    "description": "",
-    "actionType": "movement",
-    "actionCost": "Costs 2 feet of movement for every 1 foot climbed",
+    "description": {
+      "value": "- **Cost:** Costs 2 feet of movement for every 1 foot climbed\n- **Effect:** Move along a vertical surface\n- **Check:** Athletics check required for difficult climbs (smooth walls, overhangs)\n- **Notes:**\n  - Slippery or unstable surfaces may impose Misfortune\n  - Falling damage applies if you fail by 2+ successes"
+    },
+    "actionType": "move",
+    "actionCost": "2",
     "trigger": "",
     "effect": "Move along a vertical surface\n- **Check:** Athletics check required for difficult climbs (smooth walls, overhangs)\n- **Notes:**\n  - Slippery or unstable surfaces may impose Misfortune\n  - Falling damage applies if you fail by 2+ successes",
-    "keywords": [],
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!28cacae2dc324ef2"
 }

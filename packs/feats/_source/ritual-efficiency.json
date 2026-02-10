@@ -1,0 +1,16 @@
+{
+  "name": "Ritual Efficiency",
+  "type": "feat",
+  "img": "icons/svg/d20.svg",
+  "system": {
+    "tier": 1,
+    "prerequisites": [],
+    "benefit": {
+      "text": "**Tier:** 2\n**Prerequisites:** Arcana 4, any magical tradition trait with ritual casting\n**Benefit:** Cast rituals in half the normal time (5 minutes instead of 10). Component costs reduced by 25%. When missing a component, can make Arcana check (Hard task) to substitute similar materials. Can teach rituals to other casters (they learn in half time if you teach them)\n**Usage:** Passive\n**Keyword:** [Magic]"
+    },
+    "usage": "",
+    "keywords": [],
+    "effects": []
+  },
+  "flags": {}
+}

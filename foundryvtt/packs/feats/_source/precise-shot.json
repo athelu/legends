@@ -1,0 +1,13 @@
+{
+  "_id": "cfd0e4cab99742df",
+  "name": "Precise Shot",
+  "type": "feat",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "**Tier:** 1\n**Prerequisites:** Dex 3, Ranged 3\n**Benefit:** Ignore penalties for shooting into melee or partial cover\n**Usage:** Passive\n**Keyword:** [Combat], [Ranged]"
+    }
+  },
+  "effects": [],
+  "_key": "!items!cfd0e4cab99742df"
+}

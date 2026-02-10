@@ -1,0 +1,13 @@
+{
+  "_id": "cdbee46ab71546c8",
+  "name": "Book, General Topic",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "A bound volume covering a specific topic such as history, science, philosophy, or regional lore. May provide useful reference information.",
+    "weight": "3 lbs",
+    "cost": "50 gp"
+  },
+  "effects": [],
+  "_key": "!items!cdbee46ab71546c8"
+}

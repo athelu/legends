@@ -1,27 +1,5 @@
 # Traits
-
-**Design Philosophy:** Traits are reserved for abilities that grant unique resource systems (Energy pools, special points), supernatural characteristics, or features that cannot be learned through normal training. Most combat abilities and "class features" are now available as feats.
-
----
-
-## WISDOM ON TRAIT SELECTION
-
-**When to take a trait:**
--   You want to play a spellcaster (Mageborn, Divine Gift, Sorcerous Origin, Eldritch Pact, Invoker, Infuser)
--   You want a supernatural characteristic (Immortality, Mythic Characteristic)
--   You want a permanent passive benefit that defines your character (Eidetic Memory, Quickened Reflexes)
--   You want a supernatural characteristic (Immortality, Mythic Characteristic)
--   You want a permanent passive benefit that defines your character (Eidetic Memory, Quickened Reflexes)
-
-**When NOT to take a trait:**
--   You want combat abilities → Use feats instead
--   You want class features → Use feats instead
--   You want skills → Use XP and backgrounds instead
-
-The trait system is now focused and purposeful, reserving its mechanical weight for truly exceptional or supernatural capabilities.
-
----
-
+<!-- PACK:traits -->
 ## MAGICAL TRAITS
 
 ### Mageborn (-7)

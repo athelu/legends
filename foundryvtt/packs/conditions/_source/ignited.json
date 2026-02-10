@@ -1,0 +1,44 @@
+{
+  "_id": "40cb734b72234ea8",
+  "name": "Ignited",
+  "type": "condition",
+  "img": "icons/svg/fire.svg",
+  "system": {
+    "label": "Ignited",
+    "category": "magic",
+    "description": "-   Character is on fire\n-   Take 1d8 fire damage at the end of each of your turns\n-   Duration: Until extinguished\n**Extinguishing Fire (Choose one):**\n-   Use 1 [Action] to drop and roll: Make Reflex save\n    -   1 success: Ignited ends\n    -   0 successes: Remains Ignited\n-   Ally within 5 feet can use 1 [Action]: Automatic extinguish\n-   Jump in water or smother flames: Automatic extinguish\n-   Take cold damage of any amount: Automatic extinguish",
+    "tokenIcon": "icons/svg/fire.svg",
+    "activeEffects": [],
+    "stacking": "duration-merge",
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": {
+      "frequency": "endOfTurn",
+      "formula": "1d8",
+      "save": {
+        "type": "reflex",
+        "effectOnSuccess": "end"
+      },
+      "showInChat": true,
+      "chatMessage": "Take 1d8 fire damage from Ignited"
+    },
+    "recovery": {
+      "trigger": "endOfTurn",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "reflex"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a Reflex save to recover from Ignited",
+      "assistance": {
+        "range": 5
+      },
+      "downgrades": {
+        "1_success": null,
+        "0_success": "Ignited"
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!40cb734b72234ea8"
+}
