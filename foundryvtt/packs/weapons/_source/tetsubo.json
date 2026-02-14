@@ -1,19 +1,24 @@
 {
-  "_id": "8b680b5e5d6c4918",
+  "_id": "0bf73c410bc640b3",
   "name": "Tetsubo",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A massive wooden or iron club studded with metal rivets or spikes, designed to crush armor and bones with overwhelming force. The tetsubo's weight and studded surface make it particularly effective against heavily armored opponents. This category includes kanabō, great clubs, and similar heavy two-handed studded bludgeons. Associated with legendary strength, wielding a tetsubo effectively demonstrates raw power.",
+    "description": {
+      "value": "<p>A massive wooden or iron club studded with metal rivets or spikes, designed to crush armor and bones with overwhelming force. The tetsubo's weight and studded surface make it particularly effective against heavily armored opponents. This category includes kanabō, great clubs, and similar heavy two-handed studded bludgeons. Associated with legendary strength, wielding a tetsubo effectively demonstrates raw power.</p>"
+    },
     "damage": {
       "base": 10,
+      "type": "bludgeoning",
       "alternate": null,
-      "raw": "10",
-      "type": [
-        "bludgeoning"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,18 +37,14 @@
         }
       }
     ],
-    "weight": {
-      "raw": "12 lbs",
-      "lbs": 12.0
-    },
-    "cost": {
-      "raw": "30 gp",
-      "gp": 30.0
-    },
+    "weight": 12.0,
+    "cost": 30.0,
+    "quantity": 1,
     "properties": [
-      "Two-Handed"
-    ]
+      "two-handed"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!8b680b5e5d6c4918"
+  "_key": "!items!0bf73c410bc640b3"
 }

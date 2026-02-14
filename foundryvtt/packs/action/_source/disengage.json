@@ -1,11 +1,11 @@
 {
-  "_id": "496717e79c594943",
+  "_id": "36a7dabd04f34f8a",
   "name": "Disengage",
   "type": "action",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 2 [Move] action\n- **Effect:** Your movement doesn't provoke Opportunity Attacks for the rest of your turn\n- **Restriction:** You cannot end your movement within melee reach of an enemy creature\n- **Notes:**\n  - You can still move your full speed after disengaging (using additional [Move] actions)\n  - Useful for tactical repositioning without taking free attacks"
+      "value": "<ul>\n<li><strong>Cost:</strong> 2</li>\n<li><strong>Effect:</strong> Your movement doesn't provoke Opportunity Attacks for the rest of your turn</li>\n<li><strong>Restriction:</strong> You cannot end your movement within melee reach of an enemy creature</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>You can still move your full speed after disengaging (using additional [Move] actions)</li>\n<li>Useful for tactical repositioning without taking free attacks</li>\n</ul></li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "2",
@@ -17,5 +17,6 @@
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!36a7dabd04f34f8a"
 }

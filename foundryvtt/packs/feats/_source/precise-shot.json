@@ -1,13 +1,29 @@
 {
-  "_id": "cfd0e4cab99742df",
+  "_id": "2468974d714f4082",
   "name": "Precise Shot",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Dex 3, Ranged 3\n**Benefit:** Ignore penalties for shooting into melee or partial cover\n**Usage:** Passive\n**Keyword:** [Combat], [Ranged]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 3
+      },
+      "skills": "rangedCombat:3",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>Ignore penalties for shooting into melee or partial cover</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Ranged]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!cfd0e4cab99742df"
+  "_key": "!items!2468974d714f4082"
 }

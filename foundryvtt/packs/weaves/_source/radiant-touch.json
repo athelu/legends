@@ -1,11 +1,51 @@
 {
-  "_id": "90b019b5046e4577",
+  "_id": "5d77e2161eb2420b",
   "name": "Radiant Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Positive 2 (radiant energy through touch, damage)  \n**Supporting Energy:** None (touch range only)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 2 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Positive Potential + Positive Mastery  \n**Effect:** Touch a target and channel searing radiant energy. Target takes 4 radiant damage. Deals double damage to undead creatures. This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Radiant (energy)  \n**DR Interaction:** Half DR (4 radiant damage vs DR 4 becomes 4 - 2 = 2 damage)  \n**Success Scaling:** 0 = miss, 1 = half damage (2, or 4 vs undead), 2 = full damage (4, or 8 vs undead), 3 = +4 damage (8 total, or 16 vs undead), 4 = +8 damage (12 total, or 24 vs undead)  \n**Special:** Double damage against undead creatures  \n**Revealed Condition (at 4 successes):** If target is invisible or hidden by magical darkness, they become visible until end of their next turn as they glow with radiant energy."
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Positive 2 (radiant energy through touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Touch a target and channel searing radiant energy. Target takes [[/damage 4 type=radiant]] damage. Deals double damage to undead creatures. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Radiant (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=radiant]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2, or 4 vs undead), 2 = full damage (4, or 8 vs undead), 3 = +[[/damage 4]] damage (8 total, or 16 vs undead), 4 = +[[/damage 8]] damage (12 total, or 24 vs undead) <strong>Special:</strong> Double damage against undead creatures <strong>Revealed Condition (at 4 successes):</strong> If target is invisible or hidden by magical darkness, they become visible until end of their next turn as they glow with radiant energy.</p>"
+    },
+    "weaveType": "simple",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "positive",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "",
+        "cost": 0
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!90b019b5046e4577"
+  "_key": "!items!5d77e2161eb2420b"
 }

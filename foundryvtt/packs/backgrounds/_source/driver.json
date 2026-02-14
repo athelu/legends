@@ -1,11 +1,21 @@
 {
-  "_id": "434ebabbadda4aaa",
+  "_id": "0dbc81bd7067468a",
   "name": "Driver",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "Whether hauling cargo for merchants or transporting passengers, you developed a reputation for getting through when others turned back. The work was steady but monotonous, and eventually, you decided that if you were going to risk your life on dangerous roads anyway, you might as well do it for more interesting reasons.\n**Skills:** Wilderness 2, Athletics 2, Society 1, Perception 1, +40 XP\n**Equipment:** Whip, traveler's clothes, bedroll, work gloves, work boots\n**Feature** - Beast Handler: You have expertise with draft animals and vehicles, gaining Fortune when working with them."
+    "description": {
+      "value": "<p>Whether hauling cargo for merchants or transporting passengers, you developed a reputation for getting through when others turned back. The work was steady but monotonous, and eventually, you decided that if you were going to risk your life on dangerous roads anyway, you might as well do it for more interesting reasons. <strong>Skills:</strong> Wilderness 2, Athletics 2, Society 1, Perception 1, +40 XP <strong>Equipment:</strong> Whip, traveler's clothes, bedroll, work gloves, work boots <strong>Feature</strong> - Beast Handler: You have expertise with draft animals and vehicles, gaining Fortune when working with them.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!434ebabbadda4aaa"
+  "_key": "!items!0dbc81bd7067468a"
 }

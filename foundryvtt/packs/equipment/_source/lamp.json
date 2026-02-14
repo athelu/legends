@@ -1,13 +1,20 @@
 {
-  "_id": "1d128d4846bd4339",
+  "_id": "ff4b3326df2544bb",
   "name": "Lamp",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "An oil-burning lamp that provides bright light in a 15-foot radius and dim light for an additional 15 feet. Burns for 6 hours on one pint of oil.",
-    "weight": "1 lb",
-    "cost": "7 gp"
+    "description": {
+      "value": "<p>An oil-burning lamp that provides bright light in a 15-foot radius and dim light for an additional 15 feet. Burns for 6 hours on one pint of oil.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 7.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!1d128d4846bd4339"
+  "_key": "!items!ff4b3326df2544bb"
 }

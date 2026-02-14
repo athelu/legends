@@ -1,11 +1,21 @@
 {
-  "_id": "17a689124ed24a51",
+  "_id": "5579a8e4b77c479f",
   "name": "Pyromania (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You are fascinated by fire and have an urge to set things ablaze.\n- Make Will save (1 success required) to resist starting fires or using fire-based solutions when they arise"
+    "description": {
+      "value": "<p>You are fascinated by fire and have an urge to set things ablaze.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) to resist starting fires or using fire-based solutions when they arise</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!17a689124ed24a51"
+  "_key": "!items!5579a8e4b77c479f"
 }

@@ -1,12 +1,14 @@
 {
-  "_id": "feaf304838c84592",
+  "_id": "d981f343fdf940ad",
   "name": "Asleep/Unconscious",
   "type": "condition",
   "img": "icons/svg/unconscious.svg",
   "system": {
     "label": "Asleep/Unconscious",
     "category": "incapacitation",
-    "description": "-   Cannot take actions or reactions\n-   Cannot move\n-   Blinded condition active\n-   Prone condition active\n-   Automatically fail Fortitude and Reflex saves\n-   Attacks against you have Fortune\n-   **Recovery (Asleep):**\n    -   Loud noises or physical contact: Make Perception check (1 success to wake)\n    -   Deep Sleeper flaw: Requires 2 successes to wake, add 2 to all\n        die results first round after waking\n    -   Light Sleeper trait: Automatically wake to subtle noises, no\n        penalties\n\n-   **Recovery (Unconscious):** Depends on cause (damage, poison, magic, etc.)",
+    "description": {
+      "value": "<ul>\n<li>Cannot take actions or reactions</li>\n<li>Cannot move</li>\n<li>Blinded condition active</li>\n<li>Prone condition active</li>\n<li>Automatically fail Fortitude and Reflex saves</li>\n<li>Attacks against you have Fortune</li>\n<li><strong>Recovery (Asleep):</strong>\n<ul>\n<li>Loud noises or physical contact: Make [[/check skill=perception]] (1 success to wake)</li>\n<li>Deep Sleeper flaw: Requires 2 successes to wake, add 2 to all die results first round after waking</li>\n<li>Light Sleeper trait: Automatically wake to subtle noises, no penalties</li>\n</ul></li>\n<li><strong>Recovery (Unconscious):</strong> Depends on cause (damage, poison, magic, etc.)</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/unconscious.svg",
     "activeEffects": [],
     "stacking": "replace",
@@ -19,7 +21,7 @@
         "type": "reflex"
       },
       "promptPlayer": true,
-      "chatMessage": "Make a Reflex save to recover from Asleep/Unconscious"
+      "chatMessage": "Make a [[/save type=reflex]] to recover from Asleep/Unconscious"
     },
     "appliesConditions": [
       "Blinded",
@@ -27,5 +29,5 @@
     ]
   },
   "flags": {},
-  "_key": "!items!feaf304838c84592"
+  "_key": "!items!d981f343fdf940ad"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "2c107dfca29c4810",
+  "_id": "874c4337c8fd4acf",
   "name": "Child (5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Begin below minimum age, inexperienced.\n- Reduce all attributes by 1 (minimum 1)\n- Do no select a background\n- +24 XP at creation to spend on advancement"
+    "description": {
+      "value": "<p>Begin below minimum age, inexperienced.</p>\n<ul>\n<li>Reduce all attributes by 1 (minimum 1)</li>\n<li>Do no select a background</li>\n<li>+24 XP at creation to spend on advancement</li>\n</ul>"
+    },
+    "pointValue": 5,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!2c107dfca29c4810"
+  "_key": "!items!874c4337c8fd4acf"
 }

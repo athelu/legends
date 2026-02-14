@@ -1,13 +1,29 @@
 {
-  "_id": "916a626afc84494b",
+  "_id": "ea54dc5af04743fa",
   "name": "Savage Resilience",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Con 4\n**Benefit:** While wearing no armor and not using a shield, your thick skin and conditioning grant DR equal to half your Constitution (rounded down)\n**Usage:** Passive\n**Note:** Can be combined with Mystic Defense if you meet both prerequisites; use the better DR\n**Keyword:** [Combat], [Savage]"
-    }
+      "value": "<p><strong>Note:</strong> Can be combined with Mystic Defense if you meet both prerequisites; use the better DR</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "constitution": 4
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>While wearing no armor and not using a shield, your thick skin and conditioning grant DR equal to half your Constitution (rounded down)</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Savage]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!916a626afc84494b"
+  "_key": "!items!ea54dc5af04743fa"
 }

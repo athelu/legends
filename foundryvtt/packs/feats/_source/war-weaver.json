@@ -1,13 +1,29 @@
 {
-  "_id": "817067176a864b58",
+  "_id": "108ba1e9ad204b9a",
   "name": "War Weaver",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Weapon Weaver feat, Melee 5, any Energy Mastery 5\n**Description:** Expanding your Weapon Weaver technique to work with more complex spells, seamlessly blending steel and sorcery in combinations that shouldn't be possible.\n**Benefit:** Your Weapon Weaver ability can now combine with weaves costing up to 4 Energy (instead of just 2 Energy or less)\n**Usage:** Passive enhancement\n**Keyword:** [Combat], [Magic]"
-    }
+      "value": "<p>Expanding your Weapon Weaver technique to work with more complex spells, seamlessly blending steel and sorcery in combinations that shouldn't be possible.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "meleeCombat:5",
+      "feats": [
+        "Weapon Weaver"
+      ],
+      "tier": 3,
+      "other": "any Energy Mastery 5"
+    },
+    "benefits": "<p>Your Weapon Weaver ability can now combine with weaves costing up to 4 Energy (instead of just 2 Energy or less)</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Magic]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!817067176a864b58"
+  "_key": "!items!108ba1e9ad204b9a"
 }

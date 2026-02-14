@@ -1,13 +1,20 @@
 {
-  "_id": "6718d2f1aab34baf",
+  "_id": "7c63d6d4402047a8",
   "name": "Satchel",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A shoulder bag with a strap, suitable for carrying books, papers, and light equipment. Holds up to 15 lbs.",
-    "weight": "2 lbs",
-    "cost": "10 gp"
+    "description": {
+      "value": "<p>A shoulder bag with a strap, suitable for carrying books, papers, and light equipment. Holds up to 15 lbs.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 2.0,
+    "cost": 10.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!6718d2f1aab34baf"
+  "_key": "!items!7c63d6d4402047a8"
 }

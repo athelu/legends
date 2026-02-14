@@ -1,6 +1,7 @@
 /**
  * Legends D8 TTRPG Combat System
  * Handles weapon attacks, defense reactions, and damage application
+ * Foundry VTT V13 - Uses renderChatMessageHTML hook (native DOM, not jQuery)
  */
 
 import { rollD8Check, showRollDialog } from './dice.mjs';
@@ -128,80 +129,78 @@ async function showAttackOptionsDialog(actor, weapon, attackMode) {
   
   content += `</form>`;
   
-  // Show dialog and get results
-  return new Promise((resolve) => {
-    new Dialog({
-      title: `${weapon.name} - Attack Options`,
-      content: content,
-      buttons: {
-        attack: {
-          icon: '<i class="fas fa-sword"></i>',
-          label: "Attack",
-          callback: (html) => {
-            // Parse all selections
-            const grip = html.find('[name="grip"]').val();
-            const damageType = html.find('[name="damageType"]').val();
-            const strikeMode = html.find('[name="strikeMode"]').val();
-            const finesseAttr = html.find('[name="finesseAttr"]').val();
-            
-            // Calculate final values
-            let finalDamage = weapon.system.damage.base;
-            let finalType = weapon.system.damage.type;
-            let finalAttr = attackMode.damageAttr;
-            let label = attackMode.name;
-            
-            // IMPORTANT: Track if using 2H for versatile bonus
-            let versatileBonus = 0;
-            
-            // Apply versatile FIRST to get the bonus
-            if (grip === '2h') {
-              versatileBonus = 1;
-              label += " (Two-Handed)";
-            } else if (grip === '1h') {
-              label += " (One-Handed)";
-            }
-            
-            // Apply alternate strike
-            if (strikeMode === 'alternate') {
-              finalDamage = weapon.system.damage.alternate || (weapon.system.damage.base - 2);
-              finalType = weapon.system.damage.alternateType || 'bludgeoning';
-              label += " (Alternate)";
-              
-              // APPLY VERSATILE BONUS TO ALTERNATE STRIKE DAMAGE
-              finalDamage += versatileBonus;
-            } else {
-              // Normal strike - apply versatile bonus
-              finalDamage += versatileBonus;
-            }
-            
-            // Apply multi-type
-            if (damageType) {
-              finalType = damageType;
-            }
-            
-            // Apply finesse
-            if (finesseAttr) {
-              finalAttr = finesseAttr;
-            }
-            
-            resolve({
-              damageBase: finalDamage,
-              damageType: finalType,
-              damageAttr: finalAttr,
-              label: label
-            });
+  // Show dialog and get results (DialogV2)
+  return foundry.applications.api.DialogV2.wait({
+    window: { title: `${weapon.name} - Attack Options` },
+    position: { width: 400 },
+    rejectClose: false,
+    content: content,
+    buttons: [
+      {
+        action: "attack",
+        label: "Attack",
+        default: true,
+        callback: (event, button, dialog) => {
+          // Parse all selections (native DOM) - dialog is a DialogV2 instance, use .element for DOM
+          const el = dialog.element;
+          const grip = el.querySelector('[name="grip"]')?.value;
+          const damageType = el.querySelector('[name="damageType"]')?.value;
+          const strikeMode = el.querySelector('[name="strikeMode"]')?.value;
+          const finesseAttr = el.querySelector('[name="finesseAttr"]')?.value;
+
+          // Calculate final values
+          let finalDamage = weapon.system.damage.base;
+          let finalType = weapon.system.damage.type;
+          let finalAttr = attackMode.damageAttr;
+          let label = attackMode.name;
+
+          // IMPORTANT: Track if using 2H for versatile bonus
+          let versatileBonus = 0;
+
+          // Apply versatile FIRST to get the bonus
+          if (grip === '2h') {
+            versatileBonus = 1;
+            label += " (Two-Handed)";
+          } else if (grip === '1h') {
+            label += " (One-Handed)";
           }
-        },
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: "Cancel",
-          callback: () => resolve(null)
+
+          // Apply alternate strike
+          if (strikeMode === 'alternate') {
+            finalDamage = weapon.system.damage.alternate || (weapon.system.damage.base - 2);
+            finalType = weapon.system.damage.alternateType || 'bludgeoning';
+            label += " (Alternate)";
+
+            // APPLY VERSATILE BONUS TO ALTERNATE STRIKE DAMAGE
+            finalDamage += versatileBonus;
+          } else {
+            // Normal strike - apply versatile bonus
+            finalDamage += versatileBonus;
+          }
+
+          // Apply multi-type
+          if (damageType) {
+            finalType = damageType;
+          }
+
+          // Apply finesse
+          if (finesseAttr) {
+            finalAttr = finesseAttr;
+          }
+
+          return {
+            damageBase: finalDamage,
+            damageType: finalType,
+            damageAttr: finalAttr,
+            label: label
+          };
         }
       },
-      default: "attack"
-    }, {
-      width: 400
-    }).render(true);
+      {
+        action: "cancel",
+        label: "Cancel"
+      }
+    ]
   });
 }
 
@@ -212,44 +211,41 @@ async function showAttackOptionsDialog(actor, weapon, attackMode) {
  * @returns {Promise<Object>} Selected attack mode or null if cancelled
  */
 async function showAttackModeDialog(weapon, attackModes) {
-  return new Promise((resolve) => {
-    new Dialog({
-      title: `${weapon.name} - Select Attack Mode`,
-      content: `
-        <form class="legends-attack-mode-dialog">
-          <div class="form-group">
-            <label><strong>Choose how to attack with ${weapon.name}:</strong></label>
-            <select name="attackMode" style="width: 100%; padding: 5px; margin-top: 10px;">
-              ${attackModes.map((mode, idx) => `
-                <option value="${idx}">
-                  ${mode.name} 
-                  (${mode.skill === 'melee' ? 'Melee Combat' : 'Ranged Combat'}
-                  ${mode.range.normal > 0 ? `, Range: ${mode.range.normal}/${mode.range.medium}/${mode.range.long}` : ''})
-                </option>
-              `).join('')}
-            </select>
-          </div>
-        </form>
-      `,
-      buttons: {
-        attack: {
-          icon: '<i class="fas fa-sword"></i>',
-          label: "Attack",
-          callback: (html) => {
-            const idx = parseInt(html.find('[name="attackMode"]').val());
-            resolve(attackModes[idx]);
-          }
-        },
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: "Cancel",
-          callback: () => resolve(null)
+  return foundry.applications.api.DialogV2.wait({
+    window: { title: `${weapon.name} - Select Attack Mode` },
+    position: { width: 400 },
+    rejectClose: false,
+    content: `
+      <form class="legends-attack-mode-dialog">
+        <div class="form-group">
+          <label><strong>Choose how to attack with ${weapon.name}:</strong></label>
+          <select name="attackMode" style="width: 100%; padding: 5px; margin-top: 10px;">
+            ${attackModes.map((mode, idx) => `
+              <option value="${idx}">
+                ${mode.name}
+                (${mode.skill === 'melee' ? 'Melee Combat' : 'Ranged Combat'}
+                ${mode.range.normal > 0 ? `, Range: ${mode.range.normal}/${mode.range.medium}/${mode.range.long}` : ''})
+              </option>
+            `).join('')}
+          </select>
+        </div>
+      </form>
+    `,
+    buttons: [
+      {
+        action: "attack",
+        label: "Attack",
+        default: true,
+        callback: (event, button, dialog) => {
+          const idx = parseInt(dialog.element.querySelector('[name="attackMode"]').value);
+          return attackModes[idx];
         }
       },
-      default: "attack"
-    }, {
-      width: 400
-    }).render(true);
+      {
+        action: "cancel",
+        label: "Cancel"
+      }
+    ]
   });
 }
 
@@ -430,27 +426,30 @@ export async function handleDefenseClick(messageId, attackData) {
     }
     content += `</ul>`;
 
-    new Dialog({
-      title: 'Shield Reaction',
+    await foundry.applications.api.DialogV2.wait({
+      window: { title: 'Shield Reaction' },
+      rejectClose: false,
       content: content,
-      buttons: Object.fromEntries([
-        ...shieldAbilities.map((a, idx) => [
-          `use_${idx}`,
-          {
-            icon: '<i class="fas fa-shield-alt"></i>',
-            label: `Use: ${a.reaction.name || a.reaction.type}`,
-            callback: async () => {
-              const result = await game.legends.shields.applyShieldReaction(defender, a, { damage: attackData.baseDamage, damageType: attackData.damageType, attacker: attackData.actorId });
-              attackData._shieldEffect = result;
-              // Continue to defense flow
-              await _continueDefenseFlow(defenseType, defender, attackData, messageId);
-            }
+      buttons: [
+        ...shieldAbilities.map((a, idx) => ({
+          action: `use_${idx}`,
+          label: `Use: ${a.reaction.name || a.reaction.type}`,
+          callback: async () => {
+            const result = await game.legends.shields.applyShieldReaction(defender, a, { damage: attackData.baseDamage, damageType: attackData.damageType, attacker: attackData.actorId });
+            attackData._shieldEffect = result;
+            await _continueDefenseFlow(defenseType, defender, attackData, messageId);
           }
-        ]),
-        ['skip', { icon: '<i class="fas fa-times"></i>', label: 'Skip', callback: async () => { await _continueDefenseFlow(defenseType, defender, attackData, messageId); } }]
-      ]) ,
-      default: 'skip'
-    }).render(true);
+        })),
+        {
+          action: "skip",
+          label: "Skip",
+          default: true,
+          callback: async () => {
+            await _continueDefenseFlow(defenseType, defender, attackData, messageId);
+          }
+        }
+      ]
+    });
     return;
   }
 
@@ -510,21 +509,22 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
 async function handleRangedDefense(defender, attackData, attackMessageId) {
   // For now, simplified: check if they want to attempt Reflex save (if in cover)
   // TODO: Implement cover detection
-  
-  new Dialog({
-    title: "Ranged Defense",
+
+  await foundry.applications.api.DialogV2.wait({
+    window: { title: "Ranged Defense" },
+    rejectClose: false,
     content: `
       <p>You are being attacked by a ranged weapon.</p>
       <p>Are you in cover? If yes, you can attempt a Reflex save.</p>
     `,
-    buttons: {
-      cover: {
-        icon: '<i class="fas fa-shield"></i>',
+    buttons: [
+      {
+        action: "cover",
         label: "I'm in Cover (Reflex Save)",
         callback: async () => {
           const agility = defender.system.attributes.agility;
           const currentLuck = defender.system.luck?.current ?? defender.system.attributes.luck.value;
-          
+
           await showRollDialog({
             actor: defender,
             attrValue: agility.value,
@@ -533,9 +533,8 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
             skillLabel: 'Luck',
             isSave: true,
             onRollComplete: async (rollResult) => {
-              // Wait for defense roll to post
               await new Promise(resolve => setTimeout(resolve, 100));
-              
+
               await calculateDamage(
                 attackData,
                 attackMessageId,
@@ -547,9 +546,10 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
           });
         }
       },
-      noCover: {
-        icon: '<i class="fas fa-times"></i>',
+      {
+        action: "noCover",
         label: "No Cover (Auto-hit)",
+        default: true,
         callback: async () => {
           await calculateDamage(
             attackData,
@@ -560,9 +560,8 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
           );
         }
       }
-    },
-    default: "noCover"
-  }).render(true);
+    ]
+  });
 }
 
 /**
@@ -777,38 +776,41 @@ export async function applyDamage(targetId, damage, damageType) {
  * Initialize combat system hooks
  */
 export function initializeCombatSystem() {
-  // Handle defense button clicks
-  Hooks.on('renderChatMessage', (message, html) => {
-    html.find('.defense-button').click(async (event) => {
-      event.preventDefault();
-      const button = event.currentTarget;
-      const attackData = message.flags.legends?.attackData;
-      
-      if (attackData) {
-        await handleDefenseClick(message.id, attackData);
-      }
-    });
-    
-    // Handle apply damage button clicks
-    html.find('.apply-damage-btn').click(async (event) => {
-      event.preventDefault();
+  // Handle defense button clicks (V2 hook: html is HTMLElement, not jQuery)
+  Hooks.on('renderChatMessageHTML', (message, html) => {
+    html.querySelectorAll('.defense-button').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const attackData = message.flags.legends?.attackData;
 
-      // Initialize shield helpers if available
-      try {
-        if (game.legends?.shields === undefined) {
-          // lazy-load initializer if module available
-          const mod = await import('./shields.mjs');
-          mod.initializeShieldHelpers();
+        if (attackData) {
+          await handleDefenseClick(message.id, attackData);
         }
-      } catch (err) {
-        // ignore - shields helper not critical here
-      }
-      const button = event.currentTarget;
-      const targetId = button.dataset.targetId;
-      const damage = parseInt(button.dataset.damage);
-      const damageType = button.dataset.damageType;
-      
-      await applyDamage(targetId, damage, damageType);
+      });
+    });
+
+    // Handle apply damage button clicks
+    html.querySelectorAll('.apply-damage-btn').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.preventDefault();
+
+        // Initialize shield helpers if available
+        try {
+          if (game.legends?.shields === undefined) {
+            // lazy-load initializer if module available
+            const mod = await import('./shields.mjs');
+            mod.initializeShieldHelpers();
+          }
+        } catch (err) {
+          // ignore - shields helper not critical here
+        }
+        const button = event.currentTarget;
+        const targetId = button.dataset.targetId;
+        const damage = parseInt(button.dataset.damage);
+        const damageType = button.dataset.damageType;
+
+        await applyDamage(targetId, damage, damageType);
+      });
     });
   });
 }

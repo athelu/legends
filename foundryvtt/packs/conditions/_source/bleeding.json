@@ -1,18 +1,26 @@
 {
-  "_id": "960c175629a34969",
+  "_id": "cbfc57d0e0be4194",
   "name": "Bleeding",
   "type": "condition",
   "img": "icons/svg/blood.svg",
   "system": {
     "label": "Bleeding",
     "category": "damage-over-time",
-    "description": "#### Effect:\n-   Take 2 damage per stack at the end of each of your turns\n-   Stacks: Multiple bleeding effects add together (2 stacks = 4 damage per turn, 3 stacks = 6 damage per turn)\n-   Bleeding damage occurs at the end of your turn, even if you received healing (unless the bleeding condition itself was removed)\n\n#### Bleeding While Dying:\n\n-   If at 0 HP or below, bleeding damage stops (no damage taken while dying)\n-   However, add your total bleeding stack count to both dice when making stabilization saves.\n\n-   **Example:** At -2 HP with 2 bleeding stacks, you add 2 (from bleeding stacks) = add 2 total to both your Constitution die and Luck die when attempting to stabilize\n-   This makes it much harder to stabilize.\n\n#### Stopping Bleeding:\n-   Medicine check (1 action, 1 success): Stop 1 bleeding stack on adjacent ally\n-   Self-treatment (1 action, 2 successes): Stop 1 bleeding stack on yourself\n-   Magical healing: Automatically stops all bleeding stacks\n-   Pressure/Bandages: Can attempt Medicine check even without training\n-   Short rest: Automatically stops 1 bleeding stack\n\n#### Duration:\n-   Continues until stopped by Medicine check, magic, or rest\n-   Each stack must be treated separately\n\n#### Gaining Bleeding:\n-   Critical hits with slashing weapons (optional rule)\n-   Special monster abilities (claws, teeth)\n-   Called shots to cause bleeding\n-   Certain environments (barbed wire, thorns)\n\n##### Example:\n-   Character takes a critical hit and gains 2 bleeding stacks\n-   On their turn, they can use an action to attempt self-treatment (2 successes needed)\n-   At the end of their turn, if bleeding wasn\\'t stopped, they take 4 damage",
+    "description": {
+      "value": "<h4>Effect:</h4>\n<ul>\n<li>Take [[/damage 2]] damage per stack at the end of each of your turns</li>\n<li>Stacks: Multiple bleeding effects add together (2 stacks = [[/damage 4]] damage per turn, 3 stacks = [[/damage 6]] damage per turn)</li>\n<li>Bleeding damage occurs at the end of your turn, even if you received healing (unless the bleeding condition itself was removed)</li>\n</ul>\n<h4>Bleeding While Dying:</h4>\n<ul>\n<li>If at 0 HP or below, bleeding damage stops (no damage taken while dying)</li>\n<li>However, add your total bleeding stack count to both dice when making stabilization saves.</li>\n</ul>\n<ul>\n<li><strong>Example:</strong> At -2 HP with 2 bleeding stacks, you add 2 (from bleeding stacks) = add 2 total to both your Constitution die and Luck die when attempting to stabilize</li>\n<li>This makes it much harder to stabilize.</li>\n</ul>\n<h4>Stopping Bleeding:</h4>\n<ul>\n<li>[[/check skill=medicine]] (1 action, 1 success): Stop 1 bleeding stack on adjacent ally</li>\n<li>Self-treatment (1 action, 2 successes): Stop 1 bleeding stack on yourself</li>\n<li>Magical healing: Automatically stops all bleeding stacks</li>\n<li>Pressure/Bandages: Can attempt [[/check skill=medicine]] even without training</li>\n<li>Short rest: Automatically stops 1 bleeding stack</li>\n</ul>\n<h4>Duration:</h4>\n<ul>\n<li>Continues until stopped by [[/check skill=medicine]], magic, or rest</li>\n<li>Each stack must be treated separately</li>\n</ul>\n<h4>Gaining Bleeding:</h4>\n<ul>\n<li>Critical hits with slashing weapons (optional rule)</li>\n<li>Special monster abilities (claws, teeth)</li>\n<li>Called shots to cause bleeding</li>\n<li>Certain environments (barbed wire, thorns)</li>\n</ul>\n<h5>Example:</h5>\n<ul>\n<li>Character takes a critical hit and gains 2 bleeding stacks</li>\n<li>On their turn, they can use an action to attempt self-treatment (2 successes needed)</li>\n<li>At the end of their turn, if bleeding wasn\\'t stopped, they take [[/damage 4]] damage</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/blood.svg",
     "activeEffects": [],
     "stacking": "stack",
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": {
+      "frequency": "endOfTurn",
+      "formula": "2",
+      "showInChat": true,
+      "chatMessage": "Take [[/damage 2]] damage per stack from Bleeding"
+    }
   },
   "flags": {},
-  "_key": "!items!960c175629a34969"
+  "_key": "!items!cbfc57d0e0be4194"
 }

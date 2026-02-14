@@ -1,13 +1,29 @@
 {
-  "_id": "2d30bd9f66da4df6",
+  "_id": "3d4704fd86824646",
   "name": "Evasion",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/equipment/shield/shield-cross-bronze.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Agi 5\n**Benefit:** When subjected to an effect allowing Reflex save: if you win (1+ successes) take no damage; if you lose (0 successes) take half damage\n**Usage:** Passive\n**Keyword:** [Defense], [Shadow]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 5
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 3,
+      "other": ""
+    },
+    "benefits": "<p>When subjected to an effect allowing [[/save type=reflex]]: if you win (1+ successes) take no damage; if you lose (0 successes) take half damage</p>",
+    "usageType": "passive",
+    "keywords": "[Defense], [Shadow]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!2d30bd9f66da4df6"
+  "_key": "!items!3d4704fd86824646"
 }

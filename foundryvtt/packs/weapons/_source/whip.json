@@ -1,19 +1,24 @@
 {
-  "_id": "f0ca906e736e4823",
+  "_id": "fec7a61889e748e3",
   "name": "Whip",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A long leather cord or series of cords designed to deliver slashing strikes at extended range. The whip's reach and ability to strike around defenses make it unique among melee weapons. This category includes bullwhips, cat-o'-nine-tails, scourges, and similar flexible striking weapons. While less damaging than rigid weapons, the whip's range and trip/disarm potential offer tactical advantages.",
+    "description": {
+      "value": "<p>A long leather cord or series of cords designed to deliver slashing strikes at extended range. The whip's reach and ability to strike around defenses make it unique among melee weapons. This category includes bullwhips, cat-o'-nine-tails, scourges, and similar flexible striking weapons. While less damaging than rigid weapons, the whip's range and trip/disarm potential offer tactical advantages.</p>"
+    },
     "damage": {
       "base": 4,
+      "type": "slashing",
       "alternate": null,
-      "raw": "4",
-      "type": [
-        "slashing"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,20 +37,16 @@
         }
       }
     ],
-    "weight": {
-      "raw": "2 lbs",
-      "lbs": 2.0
-    },
-    "cost": {
-      "raw": "30 gp",
-      "gp": 30.0
-    },
+    "weight": 2.0,
+    "cost": 30.0,
+    "quantity": 1,
     "properties": [
-      "Standard",
-      "Finesse",
-      "Reach"
-    ]
+      "standard",
+      "finesse",
+      "reach"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!f0ca906e736e4823"
+  "_key": "!items!fec7a61889e748e3"
 }

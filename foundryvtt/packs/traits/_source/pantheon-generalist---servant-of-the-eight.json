@@ -1,11 +1,21 @@
 {
-  "_id": "f5b2d4d89ca34c8d",
+  "_id": "7bf1933ef1ba4d5a",
   "name": "PANTHEON GENERALIST - Servant of the Eight",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "The generalist can use any of the following Channel Divinity options, choosing which deity to invoke each time:"
+    "description": {
+      "value": "<p>The generalist can use any of the following Channel Divinity options, choosing which deity to invoke each time:</p>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!f5b2d4d89ca34c8d"
+  "_key": "!items!7bf1933ef1ba4d5a"
 }

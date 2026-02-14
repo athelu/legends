@@ -1,19 +1,24 @@
 {
-  "_id": "7f27f733ba3c40fe",
+  "_id": "89e371afba6c4838",
   "name": "Quarterstaff",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A simple wooden staff wielded in both hands for rapid strikes from either end. Despite its humble origins, the quarterstaff is an effective weapon in trained hands, offering defensive capabilities and surprising striking power. This category includes bo staffs, walking staves, and similar long wooden poles. Popular with travelers, monks, and those seeking a non-lethal option, the staff's reach and speed make it formidable.",
+    "description": {
+      "value": "<p>A simple wooden staff wielded in both hands for rapid strikes from either end. Despite its humble origins, the quarterstaff is an effective weapon in trained hands, offering defensive capabilities and surprising striking power. This category includes bo staffs, walking staves, and similar long wooden poles. Popular with travelers, monks, and those seeking a non-lethal option, the staff's reach and speed make it formidable.</p>"
+    },
     "damage": {
       "base": 6,
+      "type": "bludgeoning",
       "alternate": null,
-      "raw": "6",
-      "type": [
-        "bludgeoning"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,19 +37,15 @@
         }
       }
     ],
-    "weight": {
-      "raw": "4 lbs",
-      "lbs": 4.0
-    },
-    "cost": {
-      "raw": "10 gp",
-      "gp": 10.0
-    },
+    "weight": 4.0,
+    "cost": 10.0,
+    "quantity": 1,
     "properties": [
-      "Two-Handed",
-      "Finesse"
-    ]
+      "two-handed",
+      "finesse"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!7f27f733ba3c40fe"
+  "_key": "!items!89e371afba6c4838"
 }

@@ -1,13 +1,29 @@
 {
-  "_id": "131650a3465147d1",
+  "_id": "5c04c3e4e8b34643",
   "name": "Rally Cry",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-star-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Cha 4\n**Benefit:** During a short rest, you can give a rousing speech to inspire your companions. Choose up to 6 allies who can hear and understand you. Each gains temporary HP equal to your Tier + your Charisma score. These temporary HP last until their next long rest\n**Usage:** Once per short rest\n**Keyword:** [Morale]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>During a short rest, you can give a rousing speech to inspire your companions. Choose up to 6 allies who can hear and understand you. Each gains temporary HP equal to your Tier + your Charisma score. These temporary HP last until their next long rest</p>",
+    "usageType": "once",
+    "keywords": "[Morale]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!131650a3465147d1"
+  "_key": "!items!5c04c3e4e8b34643"
 }

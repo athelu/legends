@@ -24,7 +24,7 @@ To create abilities:
 
 import json
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, ensure_key
+from pack_utils import build_pack_from_source, generate_id, ensure_key, md_to_html, apply_enrichers
 import re
 import json
 
@@ -76,7 +76,14 @@ def main():
                 'type': 'ability',
                 'img': 'icons/svg/magic.svg',
                 'system': {
-                    'description': {'value': body}
+                    'description': {'value': apply_enrichers(md_to_html(body))},
+                    'abilityType': 'passive',
+                    'source': '',
+                    'keywords': '',
+                    'trigger': '',
+                    'frequency': '',
+                    'effect': '',
+                    'isActive': False
                 },
                 'effects': []
             }

@@ -1,13 +1,20 @@
 {
-  "_id": "ce8e2c35519b4f7e",
+  "_id": "17d78479f7704298",
   "name": "Gloves, Work",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Heavy leather gloves designed to protect hands during manual labor.",
-    "weight": "0.5 lbs",
-    "cost": "4 gp"
+    "description": {
+      "value": "<p>Heavy leather gloves designed to protect hands during manual labor.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.5,
+    "cost": 4.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!ce8e2c35519b4f7e"
+  "_key": "!items!17d78479f7704298"
 }

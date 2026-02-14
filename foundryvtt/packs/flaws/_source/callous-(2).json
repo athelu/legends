@@ -1,11 +1,21 @@
 {
-  "_id": "ea26a0da22ca4885",
+  "_id": "27f6085b20dc40c1",
   "name": "Callous (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You are merciless and don't care about others' feelings.\n- Cannot provide comfort or emotional support effectively\n- Persuasion checks to empathize or console: Add 2 to die results\n- May receive bonuses to Intimidate in certain situations (GM discretion)"
+    "description": {
+      "value": "<p>You are merciless and don't care about others' feelings.</p>\n<ul>\n<li>Cannot provide comfort or emotional support effectively</li>\n<li>Persuasion checks to empathize or console: Add 2 to die results</li>\n<li>May receive bonuses to Intimidate in certain situations (GM discretion)</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!ea26a0da22ca4885"
+  "_key": "!items!27f6085b20dc40c1"
 }

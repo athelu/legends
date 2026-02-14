@@ -1,13 +1,20 @@
 {
-  "_id": "49ee07a14b674772",
+  "_id": "37f4aa21f9fa43b5",
   "name": "Musical Instrument, Fine",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A masterwork musical instrument crafted from quality materials with excellent tonal properties.",
-    "weight": "2-10 lbs",
-    "cost": "200 gp"
+    "description": {
+      "value": "<p>A masterwork musical instrument crafted from quality materials with excellent tonal properties.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 2.0,
+    "cost": 200.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!49ee07a14b674772"
+  "_key": "!items!37f4aa21f9fa43b5"
 }

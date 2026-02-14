@@ -1,19 +1,24 @@
 {
-  "_id": "c1639be4f55d4b03",
+  "_id": "49e59f77def54e3c",
   "name": "Kama",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A sickle-like weapon with a short curved blade mounted perpendicular to the handle. Originally an agricultural tool, the kama has been refined into an effective slashing weapon favoring speed and precision. This category includes sickles, kusarigama (without the chain), and similar curved hand tools adapted for combat. Often wielded in pairs by skilled martial artists.",
+    "description": {
+      "value": "<p>A sickle-like weapon with a short curved blade mounted perpendicular to the handle. Originally an agricultural tool, the kama has been refined into an effective slashing weapon favoring speed and precision. This category includes sickles, kusarigama (without the chain), and similar curved hand tools adapted for combat. Often wielded in pairs by skilled martial artists.</p>"
+    },
     "damage": {
       "base": 4,
+      "type": "slashing",
       "alternate": null,
-      "raw": "4",
-      "type": [
-        "slashing"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,19 +37,15 @@
         }
       }
     ],
-    "weight": {
-      "raw": "2 lbs",
-      "lbs": 2.0
-    },
-    "cost": {
-      "raw": "10 gp",
-      "gp": 10.0
-    },
+    "weight": 2.0,
+    "cost": 10.0,
+    "quantity": 1,
     "properties": [
-      "Light",
-      "Finesse"
-    ]
+      "light",
+      "finesse"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!c1639be4f55d4b03"
+  "_key": "!items!49e59f77def54e3c"
 }

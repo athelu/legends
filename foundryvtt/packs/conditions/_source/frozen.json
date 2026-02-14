@@ -1,27 +1,29 @@
 {
-  "_id": "1b62206fbcde485e",
+  "_id": "c9ae17b839f94fb3",
   "name": "Frozen",
   "type": "condition",
   "img": "icons/svg/frozen.svg",
   "system": {
     "label": "Frozen",
     "category": "magic",
-    "description": "-   Body encased in ice or frozen solid\n-   Restrained condition active \n-   Take 1d8 cold damage  at the end of your turn (frostbite)\n-   Duration: Until ice breaks or melts\n**Escaping Frozen:**\n-   Self: Use 1 [Action] to make Athletics check\n    -   2 successes: Break free completely\n    -   1 success: Damage the ice, subtract 1 from next attempt\n    -   0 successes: Remain Frozen\n-   Ally: Can make Athletics check to break ally free (same thresholds)\n-   Fire damage of 8+: Automatic freedom\n-   Time: Melts naturally after 10 minutes (environmental temperature dependent)",
+    "description": {
+      "value": "<ul>\n<li>Body encased in ice or frozen solid</li>\n<li>Restrained condition active</li>\n<li>Take [[/damage 1d8 type=cold]] damage at the start of your turn (frostbite)</li>\n<li>Duration: Until ice breaks or melts</li>\n</ul>\n<p><strong>Escaping Frozen:</strong></p>\n<ul>\n<li>Self: Use 1 [Action] to make [[/check skill=athletics]]\n<ul>\n<li>2 successes: Break free completely</li>\n<li>1 success: Damage the ice, subtract 1 from next attempt</li>\n<li>0 successes: Remain Frozen</li>\n</ul></li>\n<li>Ally: Can make [[/check skill=athletics]] to break ally free (same thresholds)</li>\n<li>Fire damage of 8+: Automatic freedom</li>\n<li>Time: Melts naturally after 10 minutes (environmental temperature dependent)</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/frozen.svg",
     "activeEffects": [],
     "stacking": "replace",
     "severity": "moderate",
     "overlayPriority": 20,
     "damageTick": {
-      "frequency": "endOfTurn",
+      "frequency": "startOfTurn",
       "formula": "1d8",
       "showInChat": true,
-      "chatMessage": "Take 1d8 cold damage from Frozen"
+      "chatMessage": "Take [[/damage 1d8 type=cold]] damage from Frozen"
     },
     "appliesConditions": [
       "Restrained"
     ]
   },
   "flags": {},
-  "_key": "!items!1b62206fbcde485e"
+  "_key": "!items!c9ae17b839f94fb3"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "0294d3f582fb45ce",
+  "_id": "5ba83f67b466408e",
   "name": "Hard of Hearing (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "- Sound-based Perception: Add 1 to die results\n- Initiative: -1"
+    "description": {
+      "value": "<ul>\n<li>Sound-based Perception: Add 1 to die results</li>\n<li>Initiative: -1</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!0294d3f582fb45ce"
+  "_key": "!items!5ba83f67b466408e"
 }

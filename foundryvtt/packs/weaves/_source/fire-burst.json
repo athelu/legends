@@ -1,11 +1,51 @@
 {
-  "_id": "e29ffcea577242bd",
+  "_id": "f1aea839b72c40a7",
   "name": "Fire Burst",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Fire 2 (burst of flame from palm, damage)\n**Supporting Energy:** None (touch to 5ft range)\n**Total Cost:** 2 Energy\n**Action:** Simple weave (1 action)\n**Weaving Roll:** Fire Potential + Fire Mastery (2d8 only)\n**Effect:** Channel flames through your palm to burn a target within 5 feet. Target takes 4 fire damage. This is an attack weave—no saving throw allowed.\n**Saving Throw:** None (attack weave, weaving successes determine hit quality)\n**Damage Type:** Fire (energy)\n**DR Interaction:** Half DR (4 fire damage vs DR 4 becomes 4 - 2 = 2 damage)\n**Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)\n**Tactical Note:** Does NOT provoke opportunity attacks. Ideal for melee situations where Fire Bolt would provoke."
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Fire 2 (burst of flame from palm, damage) <strong>Supporting Energy:</strong> None (touch to 5ft range) <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery (2d8 only) <strong>Effect:</strong> Channel flames through your palm to burn a target within 5 feet. Target takes [[/damage 4 type=fire]] damage. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=fire]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +[[/damage 4]] damage (8 total), 4 = +[[/damage 8]] damage (12 total) <strong>Tactical Note:</strong> Does NOT provoke opportunity attacks. Ideal for melee situations where Fire Bolt would provoke.</p>"
+    },
+    "weaveType": "simple",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "fire",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "",
+        "cost": 0
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!e29ffcea577242bd"
+  "_key": "!items!f1aea839b72c40a7"
 }

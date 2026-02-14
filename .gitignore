@@ -1,5 +1,8 @@
 # Legends TTRPG Foundry System Repository
 
+/.claude/
+/pf2e/
+
 # Build artifacts
 build/
 releases/

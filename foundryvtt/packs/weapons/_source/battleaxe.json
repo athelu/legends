@@ -1,19 +1,24 @@
 {
-  "_id": "298a77897f404ef5",
+  "_id": "83f2c1ac39a04f21",
   "name": "Battleaxe",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A single-bladed axe designed for war, with a sturdy haft and a heavy, curved blade. Can be wielded in one hand for versatile combat or two-handed for devastating strikes. This category includes bearded axes, Danish axes, and similar military-grade single-bladed axes. The balanced design makes it equally effective mounted or on foot.",
+    "description": {
+      "value": "<p>A single-bladed axe designed for war, with a sturdy haft and a heavy, curved blade. Can be wielded in one hand for versatile combat or two-handed for devastating strikes. This category includes bearded axes, Danish axes, and similar military-grade single-bladed axes. The balanced design makes it equally effective mounted or on foot.</p>"
+    },
     "damage": {
       "base": 8,
+      "type": "slashing",
       "alternate": null,
-      "raw": "8",
-      "type": [
-        "slashing"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,18 +37,14 @@
         }
       }
     ],
-    "weight": {
-      "raw": "6 lbs",
-      "lbs": 6.0
-    },
-    "cost": {
-      "raw": "40 gp",
-      "gp": 40.0
-    },
+    "weight": 6.0,
+    "cost": 40.0,
+    "quantity": 1,
     "properties": [
-      "Versatile"
-    ]
+      "versatile"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!298a77897f404ef5"
+  "_key": "!items!83f2c1ac39a04f21"
 }

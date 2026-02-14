@@ -1,13 +1,31 @@
 {
-  "_id": "c9fe2a902ba545a7",
+  "_id": "8353834184fc46e7",
   "name": "Relentless Fury",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Con 5, Primal Fury feat\n**Benefit:** While in Primal Fury, if you drop to 0 HP you can make a Fortitude save (Hard task = 2 successes). On success, drop to 1 HP instead. Each time you use this after the first, add 1 to both dice. Resets after long rest\n**Usage:** While in Primal Fury\n**Keyword:** [Combat], [Savage]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "constitution": 5
+      },
+      "skills": "",
+      "feats": [
+        "Primal Fury"
+      ],
+      "tier": 3,
+      "other": ""
+    },
+    "benefits": "<p>While in Primal Fury, if you drop to 0 HP you can make a [[/save type=fortitude]] (Hard task = 2 successes). On success, drop to 1 HP instead. Each time you use this after the first, add 1 to both dice. Resets after long rest</p>",
+    "usageType": "while",
+    "keywords": "[Combat], [Savage]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!c9fe2a902ba545a7"
+  "_key": "!items!8353834184fc46e7"
 }

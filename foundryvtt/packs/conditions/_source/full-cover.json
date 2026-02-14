@@ -1,12 +1,14 @@
 {
-  "_id": "f415763c249843f1",
+  "_id": "97aef9dfafc04066",
   "name": "Full Cover",
   "type": "condition",
   "img": "icons/svg/shield.svg",
   "system": {
     "label": "Full Cover",
     "category": "defense",
-    "description": "Completely behind solid obstacle. Cannot be directly targeted by attacks or most weaves.",
+    "description": {
+      "value": "<p>Completely behind solid obstacle. Cannot be directly targeted by attacks or most weaves.</p>"
+    },
     "tokenIcon": "icons/svg/shield.svg",
     "activeEffects": [],
     "stacking": "highest",
@@ -14,5 +16,5 @@
     "overlayPriority": 15
   },
   "flags": {},
-  "_key": "!items!f415763c249843f1"
+  "_key": "!items!97aef9dfafc04066"
 }

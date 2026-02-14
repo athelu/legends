@@ -1,13 +1,29 @@
 {
-  "_id": "5e5e65571d75440d",
+  "_id": "d91bba01dce4458a",
   "name": "Danger Sense",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Wis 3\n**Description:** Reflexes only work if you see the danger coming. Your instincts are sharper than most. You can't always avoid trouble entirely, but you're rarely caught completely flat-footed.\n**Benefit:** Subtract 1 from both dice on Reflex saves against effects you can see\n**Usage:** Passive\n**Keyword:** [Combat], [Savage]"
-    }
+      "value": "<p>Reflexes only work if you see the danger coming. Your instincts are sharper than most. You can't always avoid trouble entirely, but you're rarely caught completely flat-footed.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 3
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>Subtract 1 from both dice on Reflex saves against effects you can see</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Savage]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!5e5e65571d75440d"
+  "_key": "!items!d91bba01dce4458a"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "85e152143fd34798",
+  "_id": "6d1f150618c44d54",
   "name": "Addiction (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Substance has hold over you.\n- When deprived: Add 1 to all attribute die results"
+    "description": {
+      "value": "<p>Substance has hold over you.</p>\n<ul>\n<li>When deprived: Add 1 to all attribute die results</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!85e152143fd34798"
+  "_key": "!items!6d1f150618c44d54"
 }

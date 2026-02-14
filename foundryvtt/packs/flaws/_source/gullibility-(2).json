@@ -1,11 +1,21 @@
 {
-  "_id": "23187386119f4324",
+  "_id": "87ab179084064725",
   "name": "Gullibility (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You believe what people tell you.\n- Make Will save (1 success required) to disbelieve lies or doubt stated intentions\n- Insight and Investigate checks to detect lies: Add 2 to die results"
+    "description": {
+      "value": "<p>You believe what people tell you.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) to disbelieve lies or doubt stated intentions</li>\n<li>Insight and Investigate checks to detect lies: Add 2 to die results</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!23187386119f4324"
+  "_key": "!items!87ab179084064725"
 }

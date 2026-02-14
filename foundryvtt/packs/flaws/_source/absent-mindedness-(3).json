@@ -1,11 +1,21 @@
 {
-  "_id": "27545eeb052c4413",
+  "_id": "514050dd0a214073",
   "name": "Absent Mindedness (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Mind wanders frequently, making it hard to focus on boring tasks.\n- Initiative: -1\n- When performing mundane tasks (reloading weapons after combat, buying supplies before travel, maintaining equipment during downtime), make Will save (1 success required) or forget to complete the task"
+    "description": {
+      "value": "<p>Mind wanders frequently, making it hard to focus on boring tasks.</p>\n<ul>\n<li>Initiative: -1</li>\n<li>When performing mundane tasks (reloading weapons after combat, buying supplies before travel, maintaining equipment during downtime), make [[/save type=will]] (1 success required) or forget to complete the task</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!27545eeb052c4413"
+  "_key": "!items!514050dd0a214073"
 }

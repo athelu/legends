@@ -1,12 +1,14 @@
 {
-  "_id": "269103cc69ea4177",
+  "_id": "4e92820bd9b1472c",
   "name": "Grappled",
   "type": "condition",
   "img": "icons/svg/net.svg",
   "system": {
     "label": "Grappled",
     "category": "movement",
-    "description": "#### Effect:\n-   Movement speed reduced to 0\n-   Cannot take [Move] actions\n-   Attacks and skill checks: Add 1 to die results\n-   Can still attack and act normally otherwise\n-   Attacks against you: No modifier\n\n#### Initiating Grapple:\n-   Use 1 [Combat] action\n-   Make opposed Athletics (Str + Athletics) check vs target's choice of Athletics or Acrobatics\n-   If you win: Target becomes Grappled\n-   Both you and target are grappling (you cannot move either, but can release as [Free] action)\n\n#### Escaping Grapple:\n-   Use 1 action to make opposed Athletics or Acrobatics check\n-   If you equal or exceed grappler's successes: Escape and can move normally",
+    "description": {
+      "value": "<h4>Effect:</h4>\n<ul>\n<li>Movement speed reduced to 0</li>\n<li>Cannot take [Move] actions</li>\n<li>Attacks and skill checks: Add 1 to die results</li>\n<li>Can still attack and act normally otherwise</li>\n<li>Attacks against you: No modifier</li>\n</ul>\n<h4>Initiating Grapple:</h4>\n<ul>\n<li>Use 1 [Combat] action</li>\n<li>Make opposed Athletics (Str + Athletics) check vs target's choice of Athletics or Acrobatics</li>\n<li>If you win: Target becomes Grappled</li>\n<li>Both you and target are grappling (you cannot move either, but can release as [Free] action)</li>\n</ul>\n<h4>Escaping Grapple:</h4>\n<ul>\n<li>Use 1 action to make opposed Athletics or [[/check skill=acrobatics]]</li>\n<li>If you equal or exceed grappler's successes: Escape and can move normally</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/net.svg",
     "activeEffects": [],
     "stacking": "replace",
@@ -14,5 +16,5 @@
     "overlayPriority": 20
   },
   "flags": {},
-  "_key": "!items!269103cc69ea4177"
+  "_key": "!items!4e92820bd9b1472c"
 }

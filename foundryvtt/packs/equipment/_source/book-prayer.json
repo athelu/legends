@@ -1,13 +1,20 @@
 {
-  "_id": "9a9be565b5784059",
+  "_id": "054d5233ebe84e15",
   "name": "Book, Prayer",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A religious text containing prayers, hymns, and devotional writings dedicated to a specific deity or faith.",
-    "weight": "2 lbs",
-    "cost": "5 gp"
+    "description": {
+      "value": "<p>A religious text containing prayers, hymns, and devotional writings dedicated to a specific deity or faith.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 2.0,
+    "cost": 5.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!9a9be565b5784059"
+  "_key": "!items!054d5233ebe84e15"
 }

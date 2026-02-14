@@ -6,7 +6,7 @@ Build weapons compendium pack from parsed weapons.md documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, ensure_key
+from pack_utils import build_pack_from_source, generate_id, ensure_key, md_to_html, apply_enrichers
 
 
 def slugify(name: str) -> str:
@@ -52,25 +52,21 @@ def parse_weapons_md(md_file):
             'type': 'weapon',
             'img': 'icons/weapons/swords/sword-long-crossguard-brown.webp',
             'system': {
-                'description': '',
-                # structured damage object
+                'description': {'value': ''},
                 'damage': {
-                    'base': None,
+                    'base': 0,
+                    'type': '',
                     'alternate': None,
-                    'raw': ''
+                    'alternateType': '',
+                    'multiType': ''
                 },
-                # human-readable range and parsed attackModes
-                'range': '',
+                'range': {'normal': 0, 'medium': 0, 'long': 0},
                 'attackModes': [],
-                'weight': {
-                    'raw': '',
-                    'lbs': None
-                },
-                'cost': {
-                    'raw': '',
-                    'gp': None
-                },
-                'properties': []
+                'weight': 0,
+                'cost': 0,
+                'quantity': 1,
+                'properties': [],
+                'notes': ''
             },
             'effects': []
         }
@@ -95,16 +91,15 @@ def parse_weapons_md(md_file):
         # Parse properties into a list of bracketed tokens
         properties = []
         if properties_raw:
-            properties = [p.strip() for p in re.findall(r"\[([^\]]+)\]", properties_raw)]
+            properties = [p.strip().lower() for p in re.findall(r"\[([^\]]+)\]", properties_raw)]
 
         # Remove metadata lines from the description
         description = re.sub(r"\*\*(?:Cost|Weight|Damage|Properties|Damage Type|Range|Reload|Requirements):\*\*[^\n]*", "", section_text).strip()
         # Also remove standalone metadata lines like '**Damage Type:** ...' leftover
         description = description.strip('\n').strip()
 
-        item['system']['description'] = description
+        item['system']['description'] = {'value': apply_enrichers(md_to_html(description))}
         item['system']['properties'] = properties
-        item['system']['range'] = range_raw or ''
 
         # parse cost (convert to gp)
         def parse_cost_to_gp(text):
@@ -123,8 +118,7 @@ def parse_weapons_md(md_file):
                 return val / 100.0
             return None
 
-        item['system']['cost']['raw'] = cost or ''
-        item['system']['cost']['gp'] = parse_cost_to_gp(cost or '')
+        item['system']['cost'] = parse_cost_to_gp(cost or '') or 0
 
         # parse weight (lbs)
         def parse_weight_lbs(text):
@@ -141,8 +135,7 @@ def parse_weapons_md(md_file):
                 return None
             return float(m.group(1))
 
-        item['system']['weight']['raw'] = weight or ''
-        item['system']['weight']['lbs'] = parse_weight_lbs(weight or '')
+        item['system']['weight'] = parse_weight_lbs(weight or '') or 0
 
         # parse damage string into base/alternate
         def parse_damage(text):
@@ -163,15 +156,37 @@ def parse_weapons_md(md_file):
             return (base, alt)
 
         base, alt = parse_damage(damage)
-        item['system']['damage']['base'] = base
+        item['system']['damage']['base'] = base or 0
         item['system']['damage']['alternate'] = alt
-        item['system']['damage']['raw'] = damage or ''
 
-        # damage type tokens
+        # damage type parsing
+        # Format: [Type1], [Type2], [AltType] (N)
+        # The type followed by (N) is the alternate-strike type with alternate damage N
+        # All other types beyond the first are multi-type (same damage, player chooses)
         dmg_types = []
+        alt_strike_type = None
+        alt_strike_dmg = None
         if damage_type:
+            # Find the alternate-strike type: a bracketed type followed by (N)
+            alt_match = re.search(r'\[([^\]]+)\]\s*\((\d+)\)', damage_type)
+            if alt_match and 'alternate-strike' in properties:
+                alt_strike_type = alt_match.group(1).strip().lower()
+                alt_strike_dmg = int(alt_match.group(2))
+            # Extract all bracketed damage types
             dmg_types = [d.strip().lower() for d in re.findall(r"\[([^\]]+)\]", damage_type)]
-        item['system']['damage']['type'] = dmg_types
+
+        item['system']['damage']['type'] = dmg_types[0] if dmg_types else ''
+
+        # Assign alternate-strike and multi-type from remaining types
+        multi_types = []
+        for dt in dmg_types[1:]:
+            if dt == alt_strike_type:
+                item['system']['damage']['alternateType'] = dt
+                item['system']['damage']['alternate'] = alt_strike_dmg
+            else:
+                multi_types.append(dt)
+        if multi_types:
+            item['system']['damage']['multiType'] = ', '.join(multi_types)
 
         # additional metadata
         if reload_raw:
@@ -223,7 +238,13 @@ def parse_weapons_md(md_file):
             attack_modes.append(ranged_mode)
 
         item['system']['attackModes'] = attack_modes
-        
+
+        # Set top-level range from ranged attack mode if present
+        for mode in attack_modes:
+            if mode['type'] in ('ranged', 'thrown') and mode['range']['normal'] > 0:
+                item['system']['range'] = mode['range']
+                break
+
         items.append(item)
     
     return items

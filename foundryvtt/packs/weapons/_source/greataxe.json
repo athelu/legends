@@ -1,19 +1,24 @@
 {
-  "_id": "4bfd5d8be1124ee7",
+  "_id": "17aeab3c87924cd7",
   "name": "Greataxe",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A massive two-handed axe designed for sweeping, devastating blows. The heavy blade requires strength to wield but delivers tremendous cutting power. This category includes executioner's axes, broad axes, and similar oversized single- or double-bladed axes. Often associated with barbarians and berserkers, the greataxe trades finesse for raw destructive capability.",
+    "description": {
+      "value": "<p>A massive two-handed axe designed for sweeping, devastating blows. The heavy blade requires strength to wield but delivers tremendous cutting power. This category includes executioner's axes, broad axes, and similar oversized single- or double-bladed axes. Often associated with barbarians and berserkers, the greataxe trades finesse for raw destructive capability.</p>"
+    },
     "damage": {
       "base": 10,
+      "type": "slashing",
       "alternate": null,
-      "raw": "10",
-      "type": [
-        "slashing"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,18 +37,14 @@
         }
       }
     ],
-    "weight": {
-      "raw": "12 lbs",
-      "lbs": 12.0
-    },
-    "cost": {
-      "raw": "40 gp",
-      "gp": 40.0
-    },
+    "weight": 12.0,
+    "cost": 40.0,
+    "quantity": 1,
     "properties": [
-      "Two-Handed"
-    ]
+      "two-handed"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!4bfd5d8be1124ee7"
+  "_key": "!items!17aeab3c87924cd7"
 }

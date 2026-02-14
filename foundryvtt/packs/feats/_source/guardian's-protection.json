@@ -1,13 +1,29 @@
 {
-  "_id": "fc28dc42d6ab4a70",
+  "_id": "ce06e082e2c64537",
   "name": "Guardian's Protection",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Str 3, Melee 3, must be using a shield\n**Benefit:** When an ally within 5 feet is hit by an attack, you can use your [Reaction] to grant them +2 DR against that attack. Additionally, when a creature within 5 feet attacks an ally, you can use your [Reaction] to make a melee weapon attack against that creature\n**Usage:** Passive (uses reactions)\n**Keyword:** [Combat], [Reaction]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "strength": 3
+      },
+      "skills": "meleeCombat:3",
+      "feats": [],
+      "tier": 1,
+      "other": "must be using a shield"
+    },
+    "benefits": "<p>When an ally within 5 feet is hit by an attack, you can use your [Reaction] to grant them +2 DR against that attack. Additionally, when a creature within 5 feet attacks an ally, you can use your [Reaction] to make a melee weapon attack against that creature</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Reaction]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!fc28dc42d6ab4a70"
+  "_key": "!items!ce06e082e2c64537"
 }

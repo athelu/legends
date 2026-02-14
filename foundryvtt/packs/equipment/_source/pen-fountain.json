@@ -1,13 +1,20 @@
 {
-  "_id": "2e307b83b7ba4ce4",
+  "_id": "81e8b5ba0cb64c0e",
   "name": "Pen, Fountain",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A metal pen with an internal ink reservoir, allowing for extended writing without frequent dipping.",
-    "weight": "0.1 lbs",
-    "cost": "7 gp"
+    "description": {
+      "value": "<p>A metal pen with an internal ink reservoir, allowing for extended writing without frequent dipping.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.1,
+    "cost": 7.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!2e307b83b7ba4ce4"
+  "_key": "!items!81e8b5ba0cb64c0e"
 }

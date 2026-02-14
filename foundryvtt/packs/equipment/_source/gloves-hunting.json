@@ -1,13 +1,20 @@
 {
-  "_id": "07ca180259d74eb0",
+  "_id": "afca5065c633439f",
   "name": "Gloves, Hunting",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Leather gloves designed for handling weapons and outdoor activities, providing protection and grip.",
-    "weight": "0.5 lbs",
-    "cost": "10 gp"
+    "description": {
+      "value": "<p>Leather gloves designed for handling weapons and outdoor activities, providing protection and grip.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.5,
+    "cost": 10.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!07ca180259d74eb0"
+  "_key": "!items!afca5065c633439f"
 }

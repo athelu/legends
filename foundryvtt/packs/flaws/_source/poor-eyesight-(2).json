@@ -1,11 +1,21 @@
 {
-  "_id": "65bcac476ae8402a",
+  "_id": "23e25c8aa7d4432e",
   "name": "Poor Eyesight (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Myopia/hyperopia. Without corrective lenses:\n- Vision-based Perception: Add 2 to die results\n- Ranged Combat: Add 1 to die results"
+    "description": {
+      "value": "<p>Myopia/hyperopia. Without corrective lenses:</p>\n<ul>\n<li>Vision-based Perception: Add 2 to die results</li>\n<li>Ranged Combat: Add 1 to die results</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!65bcac476ae8402a"
+  "_key": "!items!23e25c8aa7d4432e"
 }

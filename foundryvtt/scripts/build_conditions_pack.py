@@ -7,7 +7,7 @@ Also extracts cover conditions from combat.md.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, ensure_key
+from pack_utils import build_pack_from_source, generate_id, ensure_key, md_to_html, apply_enrichers
 
 
 def create_condition_item(condition_name, condition_text, current_category):
@@ -37,7 +37,12 @@ def create_condition_item(condition_name, condition_text, current_category):
         r'poison types',
         r'stun conditions:?\s*$',
         r'movement conditions:?\s*$',
-        r'.*:\s*$'  # Skip anything ending with just a colon
+        r'exhaustion conditions:?\s*$',
+        r'.*:\s*$',  # Skip anything ending with just a colon
+        r'^fatigued$',  # Skip individual exhaustion levels (handled by exhausted.json)
+        r'^severely exhausted$',
+        r'^near collapse$',
+        r'^collapse$'
     ]
 
     if any(re.match(pattern, name_lower) for pattern in skip_patterns):
@@ -51,6 +56,9 @@ def create_condition_item(condition_name, condition_text, current_category):
     if len(condition_text) < 20:
         return None
 
+    # Convert markdown description to HTML and apply enricher syntax
+    html_desc = apply_enrichers(md_to_html(condition_text))
+
     # Create base item
     item = {
         '_id': generate_id(),
@@ -60,7 +68,7 @@ def create_condition_item(condition_name, condition_text, current_category):
         'system': {
             'label': condition_name,
             'category': current_category,
-            'description': condition_text,
+            'description': {'value': html_desc},
             'tokenIcon': '',
             'activeEffects': [],
             'stacking': 'replace',
@@ -201,8 +209,8 @@ def create_condition_item(condition_name, condition_text, current_category):
         # Add chat prompt for damage ticks
         # This tells Foundry to show damage in chat at the appropriate time
         damage_tick['showInChat'] = True
-        damage_type_text = f"{damage_type} " if damage_type else ''
-        damage_tick['chatMessage'] = f"Take {formula} {damage_type_text}damage from {condition_name}"
+        damage_type_text = f" type={damage_type}" if damage_type else ''
+        damage_tick['chatMessage'] = f"Take [[/damage {formula}{damage_type_text}]] damage from {condition_name}"
 
     if damage_tick:
         item['system']['damageTick'] = damage_tick
@@ -227,8 +235,8 @@ def create_condition_item(condition_name, condition_text, current_category):
         # This tells Foundry to generate a chat card for the player
         if recovery.get('save'):
             recovery['promptPlayer'] = True
-            save_type = recovery['save']['type'].capitalize()
-            recovery['chatMessage'] = f"Make a {save_type} save to recover from {condition_name}"
+            save_type = recovery['save']['type']
+            recovery['chatMessage'] = f"Make a [[/save type={save_type}]] to recover from {condition_name}"
 
         # Check for ally assistance
         if re.search(r'ally.*(?:within|range)\s+(\d+)', condition_text, re.IGNORECASE):
@@ -563,7 +571,7 @@ def parse_cover_conditions(combat_md_file):
         'system': {
             'label': 'Covered',
             'category': 'defense',
-            'description': 'The creature benefits from cover: improved defenses against attacks based on degree of cover. See Cover rules in Combat chapter for details.',
+            'description': {'value': '<p>The creature benefits from cover: improved defenses against attacks based on degree of cover. See Cover rules in Combat chapter for details.</p>'},
             'tokenIcon': 'icons/svg/shield.svg',
             'activeEffects': [],
             'stacking': 'highest',
@@ -579,25 +587,25 @@ def parse_cover_conditions(combat_md_file):
     cover_degrees = [
         {
             'name': 'Partial Cover',
-            'description': 'Low wall, furniture, creature, tree trunk (¼ to ½ body covered). Against Melee: +1 DR. Against Ranged: Make Reflex save to duck behind cover (1+ successes = miss).',
+            'description': '<p>Low wall, furniture, creature, tree trunk (\u00bc to \u00bd body covered). Against Melee: +1 DR. Against Ranged: Make [[/save type=reflex]]{Reflex save} to duck behind cover (1+ successes = miss).</p>',
             'dr_bonus': 1,
             'reflex_bonus': 0
         },
         {
             'name': 'Half Cover',
-            'description': 'Portcullis, arrow slit, thick tree trunk (½ to ¾ body covered). Against Melee: +2 DR. Against Ranged: Make Reflex save (subtract 1 from both dice) to duck behind cover (1+ successes = miss).',
+            'description': '<p>Portcullis, arrow slit, thick tree trunk (\u00bd to \u00be body covered). Against Melee: +2 DR. Against Ranged: Make [[/save type=reflex]]{Reflex save} (subtract 1 from both dice) to duck behind cover (1+ successes = miss).</p>',
             'dr_bonus': 2,
             'reflex_bonus': -1
         },
         {
             'name': 'Three-Quarters Cover',
-            'description': 'Murder hole, small window, only small part visible (¾+ body covered). Against Melee: +3 DR. Against Ranged: Make Reflex save (subtract 1 from both dice) to duck behind cover (1+ successes = miss).',
+            'description': '<p>Murder hole, small window, only small part visible (\u00be+ body covered). Against Melee: +3 DR. Against Ranged: Make [[/save type=reflex]]{Reflex save} (subtract 1 from both dice) to duck behind cover (1+ successes = miss).</p>',
             'dr_bonus': 3,
             'reflex_bonus': -1
         },
         {
             'name': 'Full Cover',
-            'description': 'Completely behind solid obstacle. Cannot be directly targeted by attacks or most weaves.',
+            'description': '<p>Completely behind solid obstacle. Cannot be directly targeted by attacks or most weaves.</p>',
             'dr_bonus': 0,
             'reflex_bonus': 0
         }
@@ -612,7 +620,7 @@ def parse_cover_conditions(combat_md_file):
             'system': {
                 'label': cover['name'],
                 'category': 'defense',
-                'description': cover['description'],
+                'description': {'value': cover['description']},
                 'tokenIcon': 'icons/svg/shield.svg',
                 'activeEffects': [],
                 'stacking': 'highest',

@@ -1,11 +1,21 @@
 {
-  "_id": "fbd6407b18eb47c3",
+  "_id": "78269262b4b04605",
   "name": "Fisher",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "The water was your livelihood and your teacher. You might have left because the catches grew thin, or perhaps you realized the biggest fish weren't in the water at all. Either way, patience is a virtue you've mastered, and the sea's lessons apply to more than just fishing.\n**Skills:** Wilderness 2, Athletics 2, Perception 1, Craft 1, +40 XP\n**Equipment:** Net, common clothes, shoes\n**Feature** - Water Sense: You understand water, tides, and aquatic life, gaining Fortune on related skill checks."
+    "description": {
+      "value": "<p>The water was your livelihood and your teacher. You might have left because the catches grew thin, or perhaps you realized the biggest fish weren't in the water at all. Either way, patience is a virtue you've mastered, and the sea's lessons apply to more than just fishing. <strong>Skills:</strong> Wilderness 2, Athletics 2, Perception 1, Craft 1, +40 XP <strong>Equipment:</strong> Net, common clothes, shoes <strong>Feature</strong> - Water Sense: You understand water, tides, and aquatic life, gaining Fortune on related skill checks.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!fbd6407b18eb47c3"
+  "_key": "!items!78269262b4b04605"
 }

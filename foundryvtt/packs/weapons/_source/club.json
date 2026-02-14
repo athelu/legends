@@ -1,19 +1,24 @@
 {
-  "_id": "a62647eb03b4427d",
+  "_id": "1f4e6907b9c545ac",
   "name": "Club",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A simple yet effective weapon consisting of a heavy, weighted end on a shorter handle. Clubs can be carved from a single piece of hardwood or feature a stone or metal head. This category includes cudgels, truncheons, shillelaghs, and similar basic bludgeoning implements. Their simplicity makes them easy to craft and wield, while their effectiveness should not be underestimated.",
+    "description": {
+      "value": "<p>A simple yet effective weapon consisting of a heavy, weighted end on a shorter handle. Clubs can be carved from a single piece of hardwood or feature a stone or metal head. This category includes cudgels, truncheons, shillelaghs, and similar basic bludgeoning implements. Their simplicity makes them easy to craft and wield, while their effectiveness should not be underestimated.</p>"
+    },
     "damage": {
       "base": 4,
+      "type": "bludgeoning",
       "alternate": null,
-      "raw": "4",
-      "type": [
-        "bludgeoning"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,18 +37,14 @@
         }
       }
     ],
-    "weight": {
-      "raw": "3 lbs",
-      "lbs": 3.0
-    },
-    "cost": {
-      "raw": "5 gp",
-      "gp": 5.0
-    },
+    "weight": 3.0,
+    "cost": 5.0,
+    "quantity": 1,
     "properties": [
-      "Versatile"
-    ]
+      "versatile"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!a62647eb03b4427d"
+  "_key": "!items!1f4e6907b9c545ac"
 }

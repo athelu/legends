@@ -1,13 +1,27 @@
 {
-  "_id": "0da83a1dbae342dd",
+  "_id": "80eda077fccd4e63",
   "name": "Expertise",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Any skill rank 5\n**Benefit:** For chosen skill, subtract 1 from both dice when making checks\n**Usage:** Passive\n**Note:** Can be taken multiple times for different skills\n**Keyword:** [Skill]"
-    }
+      "value": "<p><strong>Note:</strong> Can be taken multiple times for different skills</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": "Any skill rank 5"
+    },
+    "benefits": "<p>For chosen skill, subtract 1 from both dice when making checks</p>",
+    "usageType": "passive",
+    "keywords": "[Skill]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!0da83a1dbae342dd"
+  "_key": "!items!80eda077fccd4e63"
 }

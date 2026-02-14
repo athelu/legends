@@ -1,13 +1,29 @@
 {
-  "_id": "cd2746ed77ac4ba0",
+  "_id": "f74bafaa0ff74f44",
   "name": "Defensive Stance",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Agi 3, Melee 3\n**Description:** Sometimes the best offense is not getting hit. You can shift your entire fighting style to focus on defense, making yourself a harder target at the cost of offensive capability.\n**Benefit:** You can enter a defensive stance: opponents add 1 to both attack dice when attacking you. You can enter or leave this stance at the start of your turn\n**Usage:** Toggle on/off\n**Keyword:** [Combat], [Defense]"
-    }
+      "value": "<p>Sometimes the best offense is not getting hit. You can shift your entire fighting style to focus on defense, making yourself a harder target at the cost of offensive capability.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 3
+      },
+      "skills": "meleeCombat:3",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>You can enter a defensive stance: opponents add 1 to both attack dice when attacking you. You can enter or leave this stance at the start of your turn</p>",
+    "usageType": "toggle",
+    "keywords": "[Combat], [Defense]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!cd2746ed77ac4ba0"
+  "_key": "!items!f74bafaa0ff74f44"
 }

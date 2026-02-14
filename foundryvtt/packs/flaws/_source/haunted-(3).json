@@ -1,11 +1,21 @@
 {
-  "_id": "2a5d784ab61d44dd",
+  "_id": "36bfd7dbb7c54acc",
   "name": "Haunted (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Spirit only you see berates you.\n- Once per session, GM imposes Misfortune on a roll"
+    "description": {
+      "value": "<p>Spirit only you see berates you.</p>\n<ul>\n<li>Once per session, GM imposes Misfortune on a roll</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!2a5d784ab61d44dd"
+  "_key": "!items!36bfd7dbb7c54acc"
 }

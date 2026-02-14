@@ -1,11 +1,51 @@
 {
-  "_id": "c5050317cd67405e",
+  "_id": "4cf38cd0d3f14100",
   "name": "Cutting Words",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Negative 2 (psychic assault through cruel words)  \n**Supporting Energy:** Space 2 (medium range)  \n**Range:** Medium, 60 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 4 Energy  \n**Action:** Simple Weave (1 action) - Does NOT provoke opportunity attacks  \n**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery  \n**Effect:** Speak cutting words at one creature you can see within medium range. Target takes 4 psychic damage and makes Will save. Compare your weaving successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn.  \n**Saving Throw:** Will (to resist psychic damage and demoralization)  \n**Damage Type:** Psychic (mental)  \n**DR Interaction:** Half DR (4 psychic damage vs DR 4 becomes 4 - 2 = 2 damage)  \n**Success Scaling:** 0 = no damage, 1 = half damage (2), 2 = full damage (4) + penalty on attack, 3 = +4 damage (8 total) + penalty on attack, 4 = +8 damage (12 total) + penalty applies to all rolls until end of their next turn  \n\n## D"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Negative 2 (psychic assault through cruel words) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Simple Weave (1 action) - Does NOT provoke opportunity attacks <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Speak cutting words at one creature you can see within medium range. Target takes [[/damage 4 type=psychic]] damage and makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn. <strong>Saving Throw:</strong> Will (to resist psychic damage and demoralization) <strong>Damage Type:</strong> Psychic (mental) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=psychic]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (2), 2 = full damage (4) + penalty on attack, 3 = +[[/damage 4]] damage (8 total) + penalty on attack, 4 = +[[/damage 8]] damage (12 total) + penalty applies to all rolls until end of their next turn</p>\n<h2>D</h2>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "negative",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!c5050317cd67405e"
+  "_key": "!items!4cf38cd0d3f14100"
 }

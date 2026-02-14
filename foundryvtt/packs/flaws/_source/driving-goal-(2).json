@@ -1,11 +1,21 @@
 {
-  "_id": "4b3ad5a52f5b44d9",
+  "_id": "0cc2f1bb63a24e87",
   "name": "Driving Goal (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Always-just-out-of-reach goal you constantly pursue."
+    "description": {
+      "value": "<p>Always-just-out-of-reach goal you constantly pursue.</p>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!4b3ad5a52f5b44d9"
+  "_key": "!items!0cc2f1bb63a24e87"
 }

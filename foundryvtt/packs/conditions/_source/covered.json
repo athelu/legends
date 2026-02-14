@@ -1,12 +1,14 @@
 {
-  "_id": "bba40ea846b44968",
+  "_id": "663e89c411c94c1d",
   "name": "Covered",
   "type": "condition",
   "img": "icons/svg/shield.svg",
   "system": {
     "label": "Covered",
     "category": "defense",
-    "description": "The creature benefits from cover: improved defenses against attacks based on degree of cover. See Cover rules in Combat chapter for details.",
+    "description": {
+      "value": "<p>The creature benefits from cover: improved defenses against attacks based on degree of cover. See Cover rules in Combat chapter for details.</p>"
+    },
     "tokenIcon": "icons/svg/shield.svg",
     "activeEffects": [],
     "stacking": "highest",
@@ -14,5 +16,5 @@
     "overlayPriority": 15
   },
   "flags": {},
-  "_key": "!items!bba40ea846b44968"
+  "_key": "!items!663e89c411c94c1d"
 }

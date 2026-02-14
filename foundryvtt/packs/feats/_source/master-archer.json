@@ -1,13 +1,29 @@
 {
-  "_id": "f6b9e294e3cd4b16",
+  "_id": "b02b60b883b44d7e",
   "name": "Master Archer",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Dex 5, Ranged 5\n**Benefit:** When using ranged weapons: +2 damage, attacking at long range doesn't add to your dice, and you ignore half cover and three-quarters cover\n**Usage:** Passive\n**Keyword:** [Combat], [Ranged]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 5
+      },
+      "skills": "rangedCombat:5",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>When using ranged weapons: +[[/damage 2]] damage, attacking at long range doesn't add to your dice, and you ignore half cover and three-quarters cover</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Ranged]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!f6b9e294e3cd4b16"
+  "_key": "!items!b02b60b883b44d7e"
 }

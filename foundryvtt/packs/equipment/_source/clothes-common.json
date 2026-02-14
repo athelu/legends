@@ -1,13 +1,20 @@
 {
-  "_id": "d282cab1ec9940d7",
+  "_id": "d41c4ba208b940f8",
   "name": "Clothes, Common",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Simple, practical clothing suitable for everyday wear by common folk. Includes basic shirt, pants or skirt, and undergarments.",
-    "weight": "2 lbs",
-    "cost": "5 gp"
+    "description": {
+      "value": "<p>Simple, practical clothing suitable for everyday wear by common folk. Includes basic shirt, pants or skirt, and undergarments.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 2.0,
+    "cost": 5.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!d282cab1ec9940d7"
+  "_key": "!items!d41c4ba208b940f8"
 }

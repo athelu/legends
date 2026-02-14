@@ -1,13 +1,27 @@
 {
-  "_id": "35331e58a3ee4ea8",
+  "_id": "b44442a8dc284bd8",
   "name": "Organizational Training",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Background (any), affiliated with an investigative organization\n**Description:** Your organization has trained you in specific tradecraft\n**Benefit:** Choose two skills from this list: Deception, Investigation, Persuasion, Society, Stealth. Gain +1 rank in each chosen skill (or +2 ranks to distribute if already trained). Once per session, can requisition specialized equipment (value up to 50 gp × your Tier) from organization safehouse or contact\n**Usage:** Passive + once per session requisition\n**Keyword:** [Faction], [Skill]"
-    }
+      "value": "<p>Your organization has trained you in specific tradecraft</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "",
+      "feats": [],
+      "tier": 1,
+      "other": "Background (any), affiliated with an investigative organization"
+    },
+    "benefits": "<p>Choose two skills from this list: Deception, Investigation, Persuasion, Society, Stealth. Gain +1 rank in each chosen skill (or +2 ranks to distribute if already trained). Once per session, can requisition specialized equipment (value up to 50 gp × your Tier) from organization safehouse or contact</p>",
+    "usageType": "passive",
+    "keywords": "[Faction], [Skill]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!35331e58a3ee4ea8"
+  "_key": "!items!b44442a8dc284bd8"
 }

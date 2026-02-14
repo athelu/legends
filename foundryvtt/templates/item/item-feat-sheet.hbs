@@ -15,12 +15,19 @@
   <section class="sheet-body">
     <!-- Description Tab -->
     <div class="tab description" data-group="primary" data-tab="description">
-      <div class="form-group">
-        <label>Flavor Text</label>
-        <textarea name="system.flavorText" rows="3" placeholder="Descriptive text about the feat">{{system.flavorText}}</textarea>
+      <div class="feat-description-section">
+        <h3>Description</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+        </div>
       </div>
-      
-      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+
+      <div class="feat-benefits-section">
+        <h3>Benefits</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedBenefits target="system.benefits" button=true owner=owner editable=editable}}
+        </div>
+      </div>
     </div>
 
     <!-- Details Tab -->
@@ -28,10 +35,6 @@
       
       <!-- Basic Info -->
       <div class="form-group-row">
-        <div class="form-group">
-          <label>Tier</label>
-          <input type="number" name="system.tier" value="{{system.tier}}" data-dtype="Number" min="1" max="8" />
-        </div>
         <div class="form-group">
           <label>XP Cost</label>
           <input type="number" name="system.xpCost" value="{{system.xpCost}}" data-dtype="Number" min="0" />
@@ -101,13 +104,6 @@
         <input type="text" name="system.prerequisites.other" value="{{system.prerequisites.other}}" placeholder="Must be a spellcaster" />
       </div>
 
-      <!-- Benefits -->
-      <h3>Benefits</h3>
-      <div class="form-group">
-        <label>Mechanical Benefits</label>
-        <textarea name="system.benefits" rows="4" placeholder="Describe the mechanical benefits this feat provides">{{system.benefits}}</textarea>
-      </div>
-
       <!-- Usage -->
       <div class="form-group">
         <label>Usage Type</label>
@@ -136,19 +132,21 @@
 
     <!-- Effects Tab -->
     <div class="tab effects" data-group="primary" data-tab="effects">
-      <h3>Effects Builder</h3>
-      <p>Define structured effects this feat provides. Use generic types so the system can map them to handlers.</p>
-
-      <div class="form-group">
-        <button type="button" class="add-effect">Add Effect</button>
+      <div class="effects-header">
+        <h3>Effects Builder</h3>
+        <button type="button" data-action="addEffect"><i class="fas fa-plus"></i> Add Effect</button>
       </div>
 
       <div class="effects-list">
         {{#if (hasItems system.effects)}}
           {{#each system.effects}}
             <div class="effect-entry" data-index="{{@index}}">
-              <h4>Effect {{add @index 1}}</h4>
-              <div class="form-group-row">
+              <div class="effect-entry-header">
+                <span class="effect-number">Effect {{add @index 1}}</span>
+                <button type="button" data-action="removeEffect" data-index="{{@index}}" title="Remove Effect"><i class="fas fa-trash"></i></button>
+              </div>
+
+              <div class="effect-grid">
                 <div class="form-group">
                   <label>Type</label>
                   <select name="system.effects.{{@index}}.type">
@@ -165,16 +163,13 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label>Target (skill/attribute/condition) — use comma to assign multiple</label>
-                  <input type="text" list="effects-targets" name="system.effects.{{@index}}.target" value="{{this.target}}" placeholder="e.g. acrobatics, agility, reflex" />
+                  <label>Target</label>
+                  <input type="text" list="effects-targets" name="system.effects.{{@index}}.target" value="{{this.target}}" placeholder="e.g. acrobatics, agility" />
                 </div>
                 <div class="form-group">
                   <label>Value</label>
-                  <input type="text" name="system.effects.{{@index}}.value" value="{{this.value}}" placeholder="e.g. 1, +2, 1d8, 'Stunned'" />
+                  <input type="text" name="system.effects.{{@index}}.value" value="{{this.value}}" placeholder="e.g. 1, +2, 1d8" />
                 </div>
-              </div>
-
-              <div class="form-group-row">
                 <div class="form-group">
                   <label>Action Type</label>
                   <select name="system.effects.{{@index}}.actionType">
@@ -188,35 +183,30 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <label>Condition (optional)</label>
-                  <input type="text" name="system.effects.{{@index}}.condition" value="{{this.condition}}" placeholder="e.g. unarmored, while_in_fury" />
+                  <label>Condition</label>
+                  <input type="text" name="system.effects.{{@index}}.condition" value="{{this.condition}}" placeholder="e.g. unarmored" />
                 </div>
                 <div class="form-group">
-                  <label>Apply</label>
+                  <label>Apply To</label>
                   <select name="system.effects.{{@index}}.apply">
-                    <option value="both" {{#if (eq this.apply "both")}}selected{{/if}}>Apply to Both Dice</option>
-                    <option value="attr" {{#if (eq this.apply "attr")}}selected{{/if}}>Apply to Attribute Die</option>
-                    <option value="skill" {{#if (eq this.apply "skill")}}selected{{/if}}>Apply to Skill Die</option>
-                    <option value="rank" {{#if (eq this.apply "rank")}}selected{{/if}}>Modify Skill/Attribute Rank</option>
-                    <option value="flat" {{#if (eq this.apply "flat")}}selected{{/if}}>Flat Numeric Modifier</option>
+                    <option value="both" {{#if (eq this.apply "both")}}selected{{/if}}>Both Dice</option>
+                    <option value="attr" {{#if (eq this.apply "attr")}}selected{{/if}}>Attribute Die</option>
+                    <option value="skill" {{#if (eq this.apply "skill")}}selected{{/if}}>Skill Die</option>
+                    <option value="rank" {{#if (eq this.apply "rank")}}selected{{/if}}>Rank Modifier</option>
+                    <option value="flat" {{#if (eq this.apply "flat")}}selected{{/if}}>Flat Modifier</option>
                     <option value="immune" {{#if (eq this.apply "immune")}}selected{{/if}}>Immune / Special</option>
                   </select>
                 </div>
               </div>
 
-              <div class="form-group">
-                <label>Description / Notes</label>
-                <textarea name="system.effects.{{@index}}.description" rows="2">{{this.description}}</textarea>
+              <div class="form-group effect-notes">
+                <label>Notes</label>
+                <textarea name="system.effects.{{@index}}.description" rows="1" placeholder="Optional notes about this effect">{{this.description}}</textarea>
               </div>
-
-              <div class="form-group">
-                <button type="button" class="remove-effect" data-index="{{@index}}">Remove Effect</button>
-              </div>
-              <hr/>
             </div>
           {{/each}}
         {{else}}
-          <p>No effects defined.</p>
+          <p class="no-items">No effects defined. Click "Add Effect" to create one.</p>
         {{/if}}
       </div>
       

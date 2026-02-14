@@ -1,11 +1,21 @@
 {
-  "_id": "25e832a4efa04f68",
+  "_id": "0c73ce76d8c84d1e",
   "name": "Criminal",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "As an unscrupulous independent or as a member of an underworld organization, you lived a life of crime. You might have become an adventurer to seek redemption, to escape the law, or simply to get access to bigger and better loot. Your old contacts remain useful, though maintaining those relationships means you're never quite free of your past.\n**Skills:** Stealth 2, Thievery 2, Deception 2, Intimidate 2, +24 XP\n**Equipment:** Crowbar, common clothes, belt pouch, wool hood, low boots\n**Feature** - Criminal Contact: You have a reliable contact in the criminal underworld who can provide information or fence stolen goods."
+    "description": {
+      "value": "<p>As an unscrupulous independent or as a member of an underworld organization, you lived a life of crime. You might have become an adventurer to seek redemption, to escape the law, or simply to get access to bigger and better loot. Your old contacts remain useful, though maintaining those relationships means you're never quite free of your past. <strong>Skills:</strong> Stealth 2, Thievery 2, Deception 2, Intimidate 2, +24 XP <strong>Equipment:</strong> Crowbar, common clothes, belt pouch, wool hood, low boots <strong>Feature</strong> - Criminal Contact: You have a reliable contact in the criminal underworld who can provide information or fence stolen goods.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!25e832a4efa04f68"
+  "_key": "!items!0c73ce76d8c84d1e"
 }

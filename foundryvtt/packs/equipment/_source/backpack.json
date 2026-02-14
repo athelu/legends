@@ -1,13 +1,20 @@
 {
-  "_id": "e44408cbbcd740c4",
+  "_id": "26a3868e86734613",
   "name": "Backpack",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A leather or canvas pack with shoulder straps, capable of carrying up to 30 lbs of equipment. Features multiple compartments for organization.",
-    "weight": "2 lbs",
-    "cost": "15 gp"
+    "description": {
+      "value": "<p>A leather or canvas pack with shoulder straps, capable of carrying up to 30 lbs of equipment. Features multiple compartments for organization.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 2.0,
+    "cost": 15.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!e44408cbbcd740c4"
+  "_key": "!items!26a3868e86734613"
 }

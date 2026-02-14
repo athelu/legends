@@ -1,11 +1,51 @@
 {
-  "_id": "1e4de6425dcf4d0c",
+  "_id": "e46e1dd015a34273",
   "name": "Spectral Servant",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 4 (creating invisible force servant + close range)  \n**Supporting Energy:** Time 3 (duration 1 hour)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 hour  \n**Total Cost:** 7 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create invisible, mindless, shapeless force within close range. Has AC/DR 2, 4 HP, Strength 2, can't attack. Can perform simple tasks: fetch, clean, mend, fold, light fires, serve food. Can carry 30 lbs or drag 60 lbs. Command as [Minor] action. Moves 15 feet per round. Vanishes if reduced to 0 HP or when weave ends.  \n**Saving Throw:** None (creates servant)  \n**Success Scaling:** 0 = fails, 1 = 10 minutes, 2 = full effect, 3 = 8 hours, 4 = can create 2 servants (or 1 servant with Strength 4)  \n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 4 (creating invisible force servant + close range) <strong>Supporting Energy:</strong> Time 3 (duration 1 hour) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create invisible, mindless, shapeless force within close range. Has AC/DR 2, 4 HP, Strength 2, can't attack. Can perform simple tasks: fetch, clean, mend, fold, light fires, serve food. Can carry 30 lbs or drag 60 lbs. Command as [Minor] action. Moves 15 feet per round. Vanishes if reduced to 0 HP or when weave ends. <strong>Saving Throw:</strong> None (creates servant) <strong>Success Scaling:</strong> 0 = fails, 1 = 10 minutes, 2 = full effect, 3 = 8 hours, 4 = can create 2 servants (or 1 servant with Strength 4)</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!1e4de6425dcf4d0c"
+  "_key": "!items!e46e1dd015a34273"
 }

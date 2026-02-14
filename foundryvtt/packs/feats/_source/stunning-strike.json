@@ -1,13 +1,30 @@
 {
-  "_id": "4af1602acc2942df",
+  "_id": "de0887f545384d22",
   "name": "Stunning Strike",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Agi 4, Wis 4, Melee 4\n**Description:** Although difficult to accomplish, repetitive precise strikes to pressure points and areas of the head cand render a foe temporarily helpless.\n**Benefit:** When you hit the same creature 2+ times in one turn, you may attempt to stun: opposed Will save (your Wisdom + Melee Combat vs target's Wisdom + Luck). If you win target is Stunned until the end of your next turn\n**Usage:** Once per turn\n**Keyword:** [Combat], [Ascetic], [Unarmed]"
-    }
+      "value": "<p>Although difficult to accomplish, repetitive precise strikes to pressure points and areas of the head cand render a foe temporarily helpless.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 4,
+        "wisdom": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>When you hit the same creature 2+ times in one turn, you may attempt to stun: opposed [[/save type=will]] (your Wisdom + Melee Combat vs target's Wisdom + Luck). If you win target is Stunned until the end of your next turn</p>",
+    "usageType": "once",
+    "keywords": "[Combat], [Ascetic], [Unarmed]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!4af1602acc2942df"
+  "_key": "!items!de0887f545384d22"
 }

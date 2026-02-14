@@ -1,27 +1,31 @@
 {
-  "_id": "d2bb64f6536e4822",
+  "_id": "1d36fd0bccbc4cf2",
   "name": "Chain Mail",
   "type": "armor",
-  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
   "system": {
     "description": {
       "value": ""
     },
-    "armorType": "",
+    "armorType": "medium",
     "dr": {
       "slashing": 6,
       "piercing": 5,
       "bludgeoning": 4
     },
-    "stealthPenalty": "none",
+    "stealthPenalty": "noisy",
     "swimPenalty": "",
     "donTime": "",
     "doffTime": "",
     "weight": 0,
     "cost": 200.0,
     "quantity": 1,
-    "notes": ""
+    "notes": "",
+    "keywords": [
+      "MediumArmor",
+      "Noisy"
+    ]
   },
   "effects": [],
-  "_key": "!items!d2bb64f6536e4822"
+  "_key": "!items!1d36fd0bccbc4cf2"
 }

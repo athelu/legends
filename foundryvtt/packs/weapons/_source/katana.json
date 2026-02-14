@@ -1,20 +1,24 @@
 {
-  "_id": "a4f610b174124713",
+  "_id": "b6e24114a68b491a",
   "name": "Katana",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A curved, single-edged sword with a distinctive two-handed grip and elegant design. The katana's superior craftsmanship allows for devastating cuts while the point can thrust effectively. This category includes tachi, uchigatana, and similar curved blades of exceptional quality. The blade's curve and differential tempering create a weapon capable of both slashing and piercing with deadly efficiency.",
+    "description": {
+      "value": "<p>A curved, single-edged sword with a distinctive two-handed grip and elegant design. The katana's superior craftsmanship allows for devastating cuts while the point can thrust effectively. This category includes tachi, uchigatana, and similar curved blades of exceptional quality. The blade's curve and differential tempering create a weapon capable of both slashing and piercing with deadly efficiency.</p>"
+    },
     "damage": {
       "base": 8,
+      "type": "slashing",
       "alternate": null,
-      "raw": "8",
-      "type": [
-        "slashing",
-        "piercing"
-      ]
+      "alternateType": "",
+      "multiType": "piercing"
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -33,18 +37,14 @@
         }
       }
     ],
-    "weight": {
-      "raw": "5 lbs",
-      "lbs": 5.0
-    },
-    "cost": {
-      "raw": "40 gp",
-      "gp": 40.0
-    },
+    "weight": 5.0,
+    "cost": 40.0,
+    "quantity": 1,
     "properties": [
-      "Versatile"
-    ]
+      "versatile"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!a4f610b174124713"
+  "_key": "!items!b6e24114a68b491a"
 }

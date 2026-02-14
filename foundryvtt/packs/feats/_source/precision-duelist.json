@@ -1,13 +1,29 @@
 {
-  "_id": "a4e800410a22451f",
+  "_id": "cb1774abf5334372",
   "name": "Precision Duelist",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Agi 4, Melee 4\n**Benefit:** When wielding a melee weapon in one hand with your other hand free (no shield, no second weapon), you gain +2 to damage and subtract 1 from your Agility die result when making attacks (minimum 1)\n**Usage:** Passive\n**Keyword:** [Combat]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>When wielding a melee weapon in one hand with your other hand free (no shield, no second weapon), you gain +[[/damage 2 type=to]] damage and subtract 1 from your Agility die result when making attacks (minimum 1)</p>",
+    "usageType": "passive",
+    "keywords": "[Combat]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!a4e800410a22451f"
+  "_key": "!items!cb1774abf5334372"
 }

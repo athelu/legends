@@ -1,22 +1,22 @@
 {
-  "_id": "112383d36fc54406",
+  "_id": "34b0ebd2dec74413",
   "name": "Ready an Action",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1 or 2\n- **Effect:** Choose a trigger and an action. When the trigger occurs before your next turn, you can use your [Reaction] to perform the readied action\n- **Examples:**\n  - \"I ready an attack for when the orc comes through the door\" (1 action)\n  - \"I ready a Fireball for when enemies cluster together\" (2 actions)\n- **Notes:**\n  - You must specify the trigger clearly\n  - If trigger doesn't occur, the action is lost\n  - Performing the readied action uses your [Reaction]\n  - Readied weaves that aren't used still consume Energy"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1 or 2</li>\n<li><strong>Effect:</strong> Choose a trigger and an action. When the trigger occurs before your next turn, you can use your [Reaction] to perform the readied action</li>\n<li><strong>Examples:</strong>\n<ul>\n<li>\"I ready an attack for when the orc comes through the door\" (1 action)</li>\n<li>\"I ready a Fireball for when enemies cluster together\" (2 actions)</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>You must specify the trigger clearly</li>\n<li>If trigger doesn't occur, the action is lost</li>\n<li>Performing the readied action uses your [Reaction]</li>\n<li>Readied weaves that aren't used still consume Energy</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
     "trigger": "",
     "effect": "Choose a trigger and an action. When the trigger occurs before your next turn, you can use your [Reaction] to perform the readied action\n- **Examples:**\n  - \"I ready an attack for when the orc comes through the door\" (1 action)\n  - \"I ready a Fireball for when enemies cluster together\" (2 actions)\n- **Notes:**\n  - You must specify the trigger clearly\n  - If trigger doesn't occur, the action is lost\n  - Performing the readied action uses your [Reaction]\n  - Readied weaves that aren't used still consume Energy",
-    "keywords": "Reaction",
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!112383d36fc54406"
+  "_key": "!items!34b0ebd2dec74413"
 }

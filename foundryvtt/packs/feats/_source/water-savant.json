@@ -1,13 +1,27 @@
 {
-  "_id": "4a9c3bbdc57d47fa",
+  "_id": "1328b27ab1cf4ab6",
   "name": "Water Savant",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Water Mastery 6, Water Potential 6, any magical tradition trait\n**Description:** Embracing the patient and adaptable nature of water your weaves have become as fluid and unstoppable as the ocean itself.\n**Benefit:** Your mastery of Water energy grants the following abilities:\n  - **Freezing Weaves:** When you cast a weave using Water as primary energy and deal cold damage, targets that fail their save have movement speed halved until end of their next turn\n  - **Frost Resistance:** You are immune to cold damage from non-magical sources. You have Resistance (+2 DR) against magical cold damage\n  - **Aquatic Adaptation:** You can breathe underwater. Gain swimming speed equal to your normal movement speed. Water-based Wilderness checks gain Fortune\n\n**Usage:** Passive\n**Keyword:** [Magic]"
-    }
+      "value": "<p>Embracing the patient and adaptable nature of water your weaves have become as fluid and unstoppable as the ocean itself.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "",
+      "feats": [],
+      "tier": 3,
+      "other": "Water Mastery 6, Water Potential 6, any magical tradition trait"
+    },
+    "benefits": "<p>Your mastery of Water energy grants the following abilities:</p>\n<ul>\n<li><strong>Freezing Weaves:</strong> When you cast a weave using Water as primary energy and deal cold damage, targets that fail their save have movement speed halved until end of their next turn</li>\n<li><strong>Frost Resistance:</strong> You are immune to cold damage from non-magical sources. You have Resistance (+2 DR) against magical cold damage</li>\n<li><strong>Aquatic Adaptation:</strong> You can breathe underwater. Gain swimming speed equal to your normal movement speed. Water-based Wilderness checks gain Fortune</li>\n</ul>",
+    "usageType": "passive",
+    "keywords": "[Magic]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!4a9c3bbdc57d47fa"
+  "_key": "!items!1328b27ab1cf4ab6"
 }

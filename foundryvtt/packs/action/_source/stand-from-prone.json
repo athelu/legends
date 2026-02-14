@@ -1,11 +1,11 @@
 {
-  "_id": "580be020110446d1",
+  "_id": "70c891c62d6249f4",
   "name": "Stand from Prone",
   "type": "action",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1 [Move] action\n- **Effect:** Stand up from the Prone condition\n- **Notes:**\n  - If your speed is 0, you cannot stand up\n  - Standing up doesn't provoke Opportunity Attacks"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Stand up from the Prone condition</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>If your speed is 0, you cannot stand up</li>\n<li>Standing up doesn't provoke Opportunity Attacks</li>\n</ul></li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "1",
@@ -17,5 +17,6 @@
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!70c891c62d6249f4"
 }

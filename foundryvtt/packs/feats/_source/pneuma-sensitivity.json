@@ -1,13 +1,27 @@
 {
-  "_id": "cb5763d42ada4fb8",
+  "_id": "2b32886c8cd74a89",
   "name": "Pneuma Sensitivity",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Arcana 5, Religion 3, any magical tradition trait\n**Benefit:** Sense ley lines and nexuses within 1 mile (Arcana check). 1 success = general direction and type; 2 successes = exact location and strongest energy types. Within 100 feet of daemons or undead, subtract 1 from Perception die to sense presence. Determine if corpse possessed pneuma with Medicine or Religion check\n**Usage:** Passive\n**Keyword:** [Magic], [Skill]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "arcane:5",
+      "feats": [],
+      "tier": 3,
+      "other": "Religion 3, any magical tradition trait"
+    },
+    "benefits": "<p>Sense ley lines and nexuses within 1 mile ([[/check skill=arcane]]). 1 success = general direction and type; 2 successes = exact location and strongest energy types. Within 100 feet of daemons or undead, subtract 1 from Perception die to sense presence. Determine if corpse possessed pneuma with Medicine or Religion check</p>",
+    "usageType": "passive",
+    "keywords": "[Magic], [Skill]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!cb5763d42ada4fb8"
+  "_key": "!items!2b32886c8cd74a89"
 }

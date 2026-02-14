@@ -1,11 +1,11 @@
 {
-  "_id": "55b212ee69f046e3",
+  "_id": "eae3e05f3c3c43d6",
   "name": "Aid Another",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1\n- **Effect:** Make a skill check to help an ally with their action\n- **Success (1+):** Your ally gains Fortune on their next roll for that task\n- **Notes:**\n  - Must be able to meaningfully help (GM discretion)\n  - Can aid attacks, skill checks, or other actions\n  - Subject to Multiple Action Penalty"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Make a skill check to help an ally with their action</li>\n<li><strong>Success (1+):</strong> Your ally gains Fortune on their next roll for that task</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Must be able to meaningfully help (GM discretion)</li>\n<li>Can aid attacks, skill checks, or other actions</li>\n<li>Subject to Multiple Action Penalty</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!55b212ee69f046e3"
+  "_key": "!items!eae3e05f3c3c43d6"
 }

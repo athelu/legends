@@ -1,13 +1,27 @@
 {
-  "_id": "3c973c664604413d",
+  "_id": "122a59acfa2f4478",
   "name": "Supreme Stealth",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Stealth 5\n**Description:** Through perfect understanding of shadows, sound, and sightlines, you can make yourself effectively invisible without magic.\n**Benefit:** Subtract 1 from both Stealth dice when attempting to hide\n**Usage:** Passive\n**Keyword:** [Skill], [Shadow]"
-    }
+      "value": "<p>Through perfect understanding of shadows, sound, and sightlines, you can make yourself effectively invisible without magic.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "stealth:5",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>Subtract 1 from both Stealth dice when attempting to hide</p>",
+    "usageType": "passive",
+    "keywords": "[Skill], [Shadow]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!3c973c664604413d"
+  "_key": "!items!122a59acfa2f4478"
 }

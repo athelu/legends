@@ -1,13 +1,31 @@
 {
-  "_id": "512a523a7b3e413a",
+  "_id": "02881a2ab18d4d2e",
   "name": "Feral Instinct",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Wis 4, Primal Fury feat\n**Benefit:** +2 to initiative. You cannot be surprised while conscious. When Primal Fury ends, you don't gain Exhaustion if you win a Fortitude save (1 success)\n**Usage:** Passive\n**Keyword:** [Combat], [Savage]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 4
+      },
+      "skills": "",
+      "feats": [
+        "Primal Fury"
+      ],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>+2 to initiative. You cannot be surprised while conscious. When Primal Fury ends, you don't gain Exhaustion if you win a [[/save type=fortitude]] (1 success)</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Savage]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!512a523a7b3e413a"
+  "_key": "!items!02881a2ab18d4d2e"
 }

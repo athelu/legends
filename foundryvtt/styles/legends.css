@@ -30,6 +30,8 @@
 
 /* ========================================
    BASE SHEET STYLES
+   AppV2 applies its own chrome. We override
+   to preserve the Legends look and feel.
    ======================================== */
 
 .legends {
@@ -41,16 +43,70 @@
 .legends .window-content {
   background: var(--d8-bg);
   padding: 0;
+  color: var(--d8-text);
 }
 
-/* Window Title Bar Fix */
-.legends.window-app .window-title {
+/* Ensure all inputs/selects inherit dark text (override AppV2 defaults) */
+.legends input,
+.legends select,
+.legends textarea,
+.legends label,
+.legends span,
+.legends h3,
+.legends h4 {
+  color: var(--d8-text);
+}
+
+/* ========================================
+   DIALOG BUTTON LAYOUT (DialogV2)
+   ======================================== */
+
+/* Fix button layout for roll dialogs - make buttons wrap properly */
+.dialog .dialog-buttons,
+.application .dialog-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+/* Roll dialog buttons: 3 per row for attack buttons, then 2 for fortune/misfortune */
+.dialog .dialog-buttons button,
+.application .dialog-buttons button {
+  flex: 0 0 calc(33.333% - 4px);
+  min-width: 120px;
+}
+
+/* Fortune and Misfortune buttons on second row take up more space */
+.dialog .dialog-buttons button:nth-child(4),
+.dialog .dialog-buttons button:nth-child(5),
+.application .dialog-buttons button:nth-child(4),
+.application .dialog-buttons button:nth-child(5) {
+  flex: 0 0 calc(50% - 3px);
+}
+
+/* Window Title Bar Fix - works for both V1 and V2 */
+.legends .window-header {
+  background: linear-gradient(to bottom, var(--d8-primary), var(--d8-accent)) !important;
+}
+
+.legends .window-title {
   color: #f0f0f0 !important;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
 }
 
-.legends .window-header {
-  background: none;
+/* AppV2 window controls (close, minimize buttons) */
+.legends .window-header .header-control {
+  color: #f0f0f0 !important;
+}
+
+/* Tab content visibility: only active tab is shown */
+.legends .sheet-body > .tab {
+  display: none;
+}
+
+.legends .sheet-body > .tab.active {
+  display: block;
 }
 
 /* ========================================
@@ -63,16 +119,25 @@
   padding: 6px 10px;
   border-bottom: 2px solid var(--d8-gold);
   display: flex;
-  max-height: 140px;
-  flex-direction: column;
-  gap: 3px;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
   margin-bottom: 0;
+}
+
+.legends.sheet.actor.character .sheet-header .profile-img {
+  border: 2px solid var(--d8-gold);
+  border-radius: 4px;
+  cursor: pointer;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .legends .header-info {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  flex: 1;
 }
 
 .legends .header-info .info-line {
@@ -157,6 +222,7 @@
   cursor: pointer;
   transition: all 0.2s;
   border-bottom: 3px solid transparent;
+  color: var(--d8-secondary);
 }
 
 .legends .sheet-tabs .item:hover {
@@ -175,13 +241,35 @@
 
 .legends .sheet-body {
   flex: 1;
+  display: flex;
   overflow: hidden;
 }
 
 .legends .tab {
   padding: 10px;
   overflow-y: auto;
-  height: 100%;
+  flex: 1;
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--d8-border) transparent; /* Firefox */
+}
+
+/* Webkit browsers (Chrome, Safari, Edge) - force scrollbar visibility */
+.legends .tab::-webkit-scrollbar {
+  width: 10px;
+}
+
+.legends .tab::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.legends .tab::-webkit-scrollbar-thumb {
+  background: var(--d8-border);
+  border-radius: 4px;
+}
+
+.legends .tab::-webkit-scrollbar-thumb:hover {
+  background: var(--d8-accent);
 }
 
 .legends .tab.description {
@@ -252,17 +340,43 @@
   font-style: italic;
 }
 
-.legends .skill-row .skill-rank {
-  width: 40px;
+
+.legends .skill-row .skill-base {
+  width: 38px;
   padding: 2px 4px;
   text-align: center;
   border: 1px solid var(--d8-border);
   border-radius: 3px;
   background: white;
   font-weight: bold;
+  color: var(--d8-text);
 }
 
-.legends .skill-row .skill-roll {
+.legends .skill-row .skill-bonus {
+  width: 32px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--d8-info);
+  font-weight: 500;
+  cursor: help;
+  border-radius: 2px;
+  background: #e6f0fa;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.legends .skill-row .skill-total {
+  width: 38px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--d8-success);
+  font-weight: bold;
+  background: #f0fff4;
+  border-radius: 2px;
+  margin-left: 2px;
+}
+
+.legends .skill-row [data-action="skillRoll"] {
   padding: 3px 6px;
   max-width: 28px;
   height: 24px;
@@ -277,20 +391,20 @@
   justify-content: center;
 }
 
-.legends .skill-row .skill-roll i {
+.legends .skill-row [data-action="skillRoll"] i {
   font-size: 12px;
   margin: 0;
 }
 
-.legends .skill-row .skill-roll:hover {
+.legends .skill-row [data-action="skillRoll"]:hover {
   background: linear-gradient(to bottom, var(--d8-accent), #1a202c);
   transform: translateY(-1px);
 }
 /* === Attributes Section === */
 .legends .attributes-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
   margin-bottom: 15px;
 }
 
@@ -312,13 +426,38 @@
 }
 
 .legends .attribute-row .attribute-value {
-  width: 50px;
+  width: 48px;
   padding: 2px 6px;
   text-align: center;
   border: 1px solid var(--d8-border);
   border-radius: 3px;
   background: white;
   font-weight: bold;
+  color: var(--d8-text);
+}
+
+.legends .attribute-row .attribute-bonus {
+  width: 32px;
+  text-align: center;
+  font-size: 11px;
+  color: var(--d8-info);
+  font-weight: 500;
+  cursor: help;
+  border-radius: 2px;
+  background: #e6f0fa;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.legends .attribute-row .attribute-total {
+  width: 38px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--d8-success);
+  font-weight: bold;
+  background: #f0fff4;
+  border-radius: 2px;
+  margin-left: 2px;
 }
 
 /* === Resources Section === */
@@ -352,6 +491,7 @@
   border-radius: 3px;
   background: white;
   font-weight: bold;
+  color: var(--d8-text);
 }
 
 .legends .resource-row .sep {
@@ -364,11 +504,30 @@
   color: var(--d8-text);
 }
 
-.legends .resource-row .temp-hp-display {
+.legends .resource-row .temp-hp-section {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legends .resource-row .temp-hp-section .temp-label {
+  font-size: 10px;
+  color: var(--d8-success);
+  font-weight: 600;
+  min-width: auto;
+}
+
+.legends .resource-row .temp-hp-section .temp-hp-input {
+  width: 50px;
+  padding: 2px 4px;
+  text-align: center;
+  border: 1px solid var(--d8-success);
+  border-radius: 3px;
+  background: #f0fff4;
+  font-weight: bold;
   color: var(--d8-success);
   font-size: 11px;
-  font-weight: bold;
 }
 
 .legends .resource-row.hp-row {
@@ -416,25 +575,25 @@
   gap: 8px;
 }
 
-.legends .short-rest-button {
+.legends .rest-buttons [data-action="shortRest"] {
   background: linear-gradient(to bottom, var(--d8-info), #3182ce);
   color: white;
   border-color: #2c5282;
 }
 
-.legends .short-rest-button:hover {
+.legends .rest-buttons [data-action="shortRest"]:hover {
   background: linear-gradient(to bottom, #3182ce, #2c5282);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.legends .long-rest-button {
+.legends .rest-buttons [data-action="longRest"] {
   background: linear-gradient(to bottom, #805ad5, #6b46c1);
   color: white;
   border-color: #553c9a;
 }
 
-.legends .long-rest-button:hover {
+.legends .rest-buttons [data-action="longRest"]:hover {
   background: linear-gradient(to bottom, #6b46c1, #553c9a);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -532,15 +691,16 @@
   color: var(--d8-accent);
 }
 
-.legends .item-control.item-equip.equipped {
+.legends .item-control.equipped,
+.legends [data-action="itemEquip"].equipped {
   color: var(--d8-success);
 }
 
-.legends .item-control.item-roll {
+.legends [data-action="itemRoll"] {
   color: var(--d8-info);
 }
 
-.legends .item-control.item-delete {
+.legends [data-action="itemDelete"] {
   color: var(--d8-danger);
 }
 
@@ -806,6 +966,175 @@
 }
 
 /* ========================================
+   FEAT SHEET SPECIFIC
+   ======================================== */
+
+/* Description tab: constrain editor heights so benefits is visible */
+.legends.sheet.item .feat-description-section,
+.legends.sheet.item .feat-benefits-section {
+  margin-bottom: 8px;
+}
+
+.legends.sheet.item .feat-description-section h3,
+.legends.sheet.item .feat-benefits-section h3 {
+  margin: 0 0 4px 0;
+  padding: 4px 8px;
+  background: linear-gradient(to bottom, var(--d8-primary), var(--d8-accent));
+  color: #fff;
+  border-radius: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.legends.sheet.item .feat-editor-wrap {
+  max-height: 140px;
+  overflow-y: auto;
+  border: 1px solid var(--d8-border);
+  border-radius: 3px;
+}
+
+.legends.sheet.item .feat-editor-wrap .editor {
+  min-height: 60px;
+}
+
+/* Prerequisites grid: 4 columns */
+.legends .prerequisites-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.legends .prerequisites-grid .form-group {
+  margin-bottom: 0;
+}
+
+.legends .prerequisites-grid label {
+  font-size: 11px;
+  color: var(--d8-secondary);
+}
+
+.legends .prerequisites-grid input {
+  width: 100%;
+}
+
+/* Effects builder */
+.legends.sheet.item .effects-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 10px;
+  background: linear-gradient(to bottom, var(--d8-primary), var(--d8-accent));
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.legends.sheet.item .effects-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.legends.sheet.item .effects-header .add-effect {
+  padding: 4px 12px;
+  background: var(--d8-success);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.legends.sheet.item .effects-header .add-effect:hover {
+  background: #38a169;
+}
+
+.legends.sheet.item .effect-entry {
+  background: var(--d8-bg-light);
+  border: 1px solid var(--d8-border);
+  border-left: 3px solid var(--d8-info);
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-bottom: 8px;
+}
+
+.legends.sheet.item .effect-entry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.legends.sheet.item .effect-entry-header .effect-number {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--d8-info);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.legends.sheet.item .effect-entry-header .remove-effect {
+  padding: 2px 8px;
+  background: var(--d8-danger);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background 0.2s;
+}
+
+.legends.sheet.item .effect-entry-header .remove-effect:hover {
+  background: #c53030;
+}
+
+.legends.sheet.item .effect-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.legends.sheet.item .effect-grid .form-group {
+  margin-bottom: 0;
+}
+
+.legends.sheet.item .effect-grid label {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--d8-secondary);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.legends.sheet.item .effect-grid select,
+.legends.sheet.item .effect-grid input {
+  width: 100%;
+  font-size: 12px;
+  padding: 3px 5px;
+}
+
+.legends.sheet.item .effect-notes label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--d8-secondary);
+  text-transform: uppercase;
+}
+
+.legends.sheet.item .effect-notes textarea {
+  width: 100%;
+  font-size: 12px;
+  padding: 3px 5px;
+  resize: vertical;
+}
+
+/* ========================================
    WEAPON SHEET SPECIFIC
    ======================================== */
 
@@ -950,11 +1279,11 @@
 }
 
 /* Equip indicator */
-.legends .weapon-item .item-equip.equipped i {
+.legends .weapon-item [data-action="itemEquip"].equipped i {
   color: #10b981;
 }
 
-.legends .weapon-list .item-equip:not(.equipped) i {
+.legends .weapon-list [data-action="itemEquip"]:not(.equipped) i {
   color: #9ca3af;
 }
 /* Item controls spacing */
@@ -965,12 +1294,12 @@
   align-items: center;
 }
 /* Edit button */
-.legends .weapon-list .item-edit i {
+.legends .weapon-list [data-action="itemEdit"] i {
   color: #3b82f6;
 }
 
 /* Delete button */
-.legends .weapon-list .item-delete i {
+.legends .weapon-list [data-action="itemDelete"] i {
   color: #ef4444;
 }
 
@@ -1875,3 +2204,497 @@
   background: #c53030;
   transform: translateY(-1px);
 }
+
+/* -------------------------------------------- */
+/*  Inline Roll Enrichers                       */
+/* -------------------------------------------- */
+
+a.legends-roll-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: var(--d8-info, #4299e1);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9em;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+a.legends-roll-link:hover {
+  background: #2b6cb0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: #fff;
+}
+
+a.legends-roll-link i {
+  font-size: 0.85em;
+}
+
+span.legends-damage-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 1px 5px;
+  border-radius: 3px;
+  background: var(--d8-danger, #f56565);
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9em;
+  white-space: nowrap;
+}
+
+span.legends-damage-tag i {
+  font-size: 0.85em;
+}
+
+/* ========================================
+   MAGICAL TRAIT SETUP
+   ======================================== */
+
+.magical-trait-section {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 2px solid var(--d8-border);
+  border-radius: 8px;
+  background: var(--d8-bg-light);
+}
+
+.magical-trait-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 1.3em;
+  color: var(--d8-accent);
+  border-bottom: 2px solid var(--d8-gold);
+  padding-bottom: 8px;
+}
+
+.magic-setup-required {
+  text-align: center;
+  padding: 20px;
+}
+
+.setup-info h4 {
+  color: var(--d8-gold);
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.trait-preview {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  margin: 15px 0;
+  border-left: 4px solid var(--d8-gold);
+}
+
+.trait-preview .trait-name {
+  font-weight: bold;
+  color: var(--d8-accent);
+  font-size: 1.1em;
+}
+
+.modifier-badge {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 8px;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+.modifier-badge.gifted {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.modifier-badge.balanced {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.setup-instructions {
+  margin: 15px 0;
+  color: var(--d8-secondary);
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.setup-magical-traits-btn {
+  padding: 12px 24px;
+  font-size: 1.1em;
+  font-weight: bold;
+  background: linear-gradient(135deg, var(--d8-gold) 0%, #b8860b 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.setup-magical-traits-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.setup-magical-traits-btn i {
+  margin-right: 8px;
+}
+
+.magic-stats-display {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.energy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 8px 0;
+  border-bottom: 2px solid var(--d8-border);
+}
+
+.energy-header h4 {
+  margin: 0;
+  flex: 1;
+}
+
+.casting-stat-inline {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9em;
+}
+
+.casting-stat-inline label {
+  font-weight: bold;
+  color: var(--d8-accent);
+}
+
+.channel-uses {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9em;
+}
+
+.channel-uses label {
+  font-weight: bold;
+  color: var(--d8-accent);
+}
+
+.uses-input {
+  width: 40px !important;
+  text-align: center;
+  padding: 2px 4px !important;
+  border: 1px solid var(--d8-border) !important;
+  border-radius: 3px !important;
+  background: #fff !important;
+  font-size: 0.9em;
+}
+
+.max-value {
+  font-weight: bold;
+  color: var(--d8-secondary);
+}
+
+.casting-stat {
+  font-size: 1.2em;
+  color: var(--d8-gold);
+  font-weight: bold;
+}
+
+.potentials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.potential-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  border: 2px solid var(--d8-border);
+}
+
+.potential-item label {
+  font-size: 0.85em;
+  color: var(--d8-secondary);
+  margin-bottom: 5px;
+}
+
+.potential-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--d8-accent);
+}
+
+.mastery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.mastery-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid var(--d8-border);
+}
+
+.mastery-item label {
+  font-size: 0.9em;
+  color: var(--d8-secondary);
+  font-weight: 600;
+}
+
+.mastery-input {
+  width: 60px;
+  text-align: center;
+  font-weight: bold;
+  padding: 4px;
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+}
+
+/* Combined Energy Potentials/Mastery Grid */
+.energy-potentials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+  max-width: 100%;
+}
+
+.energy-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 8px;
+  background: white;
+  border-radius: 6px;
+  border: 2px solid var(--d8-border);
+  min-width: 0;
+}
+
+.energy-label {
+  font-size: 0.9em;
+  color: var(--d8-secondary);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 6px;
+  white-space: nowrap;
+}
+
+.energy-values {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+}
+
+.energy-values .energy-input {
+  width: 45px !important;
+  text-align: center !important;
+  font-weight: bold;
+  padding: 4px 2px !important;
+  border: 1px solid var(--d8-border) !important;
+  border-radius: 3px !important;
+  background: #fff !important;
+  font-size: 1em;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.energy-values .energy-input:focus {
+  outline: none !important;
+  border-color: var(--d8-info) !important;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.1) !important;
+}
+
+.energy-values .separator {
+  font-size: 1.1em;
+  color: var(--d8-border);
+  font-weight: bold;
+  margin: 0 2px;
+}
+
+/* ========================================
+   WEAVE LIST EXPANDABLE STYLING
+   ======================================== */
+
+.weave-list .item.collapsible {
+  border: 1px solid var(--d8-border);
+  margin-bottom: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.weave-list .item.expanded {
+  border-color: var(--d8-accent);
+}
+
+.weave-list .expandable {
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.weave-list .expand-caret {
+  font-size: 0.8em;
+  transition: transform 0.2s ease;
+}
+
+.weave-list .energy-display {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 60px;
+  justify-content: center;
+}
+
+.weave-list .energy-display img {
+  flex-shrink: 0;
+}
+
+.weave-list .item-details {
+  grid-column: 1 / -1;
+  padding: 12px;
+  background: rgba(0,0,0,0.05);
+  border-top: 1px solid var(--d8-border);
+}
+
+.weave-list .weave-expanded {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.weave-list .detail-row {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.weave-list .detail-row strong {
+  min-width: 120px;
+  color: var(--d8-accent);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.weave-list .description-text {
+  margin-top: 4px;
+  padding: 8px;
+  background: white;
+  border-radius: 4px;
+  border: 1px solid var(--d8-border);
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+/* ========================================
+   CHAT CARD STYLING  
+   ======================================== */
+
+.legends-item-card {
+  border: 2px solid var(--d8-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.legends-item-card .card-header {
+  background: var(--d8-accent);
+  color: white;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.legends-item-card .card-header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.legends-item-card .card-header h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.legends-item-card .card-content {
+  padding: 12px;
+}
+
+.legends-item-card .weave-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.legends-item-card .energy-line,
+.legends-item-card .weave-property {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.legends-item-card .energy-line strong,
+.legends-item-card .weave-property strong {
+  min-width: 120px;
+  color: var(--d8-accent);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.legends-item-card .item-description {
+  margin-top: 12px;
+  padding: 10px;
+  background: rgba(0,0,0,0.05);
+  border-radius: 6px;
+  border-left: 4px solid var(--d8-info);
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.channel-divinity-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  border-left: 4px solid var(--d8-info);
+  margin-top: 10px;
+}
+
+.channel-divinity-row label {
+  font-weight: bold;
+  color: var(--d8-accent);
+}
+

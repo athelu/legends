@@ -12,8 +12,10 @@ You were born with an innate connection to the planes flowing through your pneum
 
 **Mechanical Benefits:**
 -   Roll **8d8**, assign to eight Magical Potentials
--   Choose **Elemental Affinity** (Earth/Air/Fire/Water): That Potential = highest roll + 2 (max 8)
--   Choose **Secondary Focus** (any other energy): That Potential = any other roll + 1
+-   Choose **Elemental Affinity** (Earth/Air/Fire/Water): Apply +2 bonus (max 8 total)
+-   Choose **Secondary Focus** (any other energy): Apply +1 bonus (max 8 total)
+-   Assign rolls strategically to maximize bonuses without waste
+-   Example: Rolling [8,7,6,5...] → Affinity gets 6+2=8, Secondary gets 7+1=8, third energy gets natural 8
 -   Use **Intelligence** as Casting Stat
 -   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0, untrained)
 -   Can weave arcane magic using all 8 energies
@@ -33,9 +35,11 @@ Select which of the Eight you primarily serve, or choose to serve the Pantheon e
 **Mechanical Benefits:**
 - Roll **8d8**, assign to eight Magical Potentials
 - Your patron deity determines **Primary** and **Secondary** energy bonuses:
-  - **Primary Energy** = highest roll + 2 (max 8)
-  - **Secondary Energy** = second-highest roll + 1 (max 8)
-  - **Generalist** = highest roll + 1, second-highest roll + 1, third-highest roll + 1
+  - **Primary Energy:** Apply +2 bonus to one energy (max 8 total)
+  - **Secondary Energy:** Apply +1 bonus to one energy (max 8 total)
+  - **Generalist:** Apply +1 bonus to each of three energies (each max 8 total)
+  - Assign rolls strategically to maximize bonuses without waste
+  - Example: Rolling [8,7,6,5...] with Fire/Positive patron → Fire gets 6+2=8, Positive gets 7+1=8, third energy gets natural 8
 - Use **Wisdom** as Casting Stat
 - Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0)
 - Can weave divine magic using all 8 energies
@@ -326,11 +330,13 @@ You have discovered the connection between spoken words and magic. You are a dia
 
 **Mechanical Benefits:**
 -   Roll **5d8**, assign to five Magical Potentials:
--   **Air Potential** = highest roll + 2 (max 8) [always primary - sound, voice, resonance]
--   **Positive Potential** = second-highest roll + 1 [true names of healing and life]
--   **Space Potential** = any remaining roll [names of distance and perception]
--   **Time Potential** = any remaining roll [names of duration and causality]
--   **Choose one Elemental or Conceptual energy** (Earth, Fire, Water, or Negative): assign final roll
+-   **Air Potential:** Apply +2 bonus (max 8 total) [always primary - sound, voice, resonance]
+-   **Positive Potential:** Apply +1 bonus (max 8 total) [true names of healing and life]
+-   **Space Potential:** No bonus [names of distance and perception]
+-   **Time Potential:** No bonus [names of duration and causality]
+-   **Choose one Elemental or Conceptual energy** (Earth, Fire, Water, or Negative): assign final roll, no bonus
+-   Assign rolls strategically to maximize bonuses
+-   Example: Rolling [8,7,6,5,4] → Air gets 6+2=8, Positive gets 7+1=8, other energies get 8/5/4
 -   Use **Charisma** as Casting Stat
 -   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 0, untrained)
 -   Can weave invoker magic using only these 5 energies
@@ -356,11 +362,13 @@ You have discovered how to channel magical energy directly into physical objects
 
 **Mechanical Benefits:**
 -   Roll **5d8**, assign to five Magical Potentials:
--   **Earth Potential** = highest roll + 2 (max 8) [always primary - matter, material, physical permanence]
--   **Space Potential** = second-highest roll + 1 [barriers, protection, containment]
--   **Positive Potential** = any remaining roll [enhancement, strengthening, preservation]
--   **Time Potential** = any remaining roll [duration, maintaining effects]
--   **Choose one Elemental or Conceptual energy** (Air, Fire, Water, or Negative): assign final roll
+-   **Earth Potential:** Apply +2 bonus (max 8 total) [always primary - matter, material, physical permanence]
+-   **Space Potential:** Apply +1 bonus (max 8 total) [barriers, protection, containment]
+-   **Positive Potential:** No bonus [enhancement, strengthening, preservation]
+-   **Time Potential:** No bonus [duration, maintaining effects]
+-   **Choose one Elemental or Conceptual energy** (Air, Fire, Water, or Negative): assign final roll, no bonus
+-   Assign rolls strategically to maximize bonuses
+-   Example: Rolling [8,7,6,5,4] → Earth gets 6+2=8, Space gets 7+1=8, other energies get 8/5/4
 -   Use **Intelligence** as Casting Stat
 -   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 0, untrained)
 -   Can weave infuser magic using only these 5 energies
@@ -392,34 +400,34 @@ Where Mageborn study external principles and clerics channel external deities, s
 
 #### Unchanging Stone (Earth/Fire)
 **Story:** *"I know my nature completely—I am solid as stone, constant as truth"*
-**Primary Energy:** Choose Earth or Fire = highest roll + 2 (max 8)
+**Primary Energy:** Choose Earth or Fire → Apply +2 bonus to reach 8 maximum (assign roll strategically)
 **Manifestation Benefits:**
 -   **Stone's Certainty:** Subtract 1 from both dice on saves against effects that would change your form or nature (Beastial Transformation, petrification, forced movement, mind control that alters personality)
 -   **Enduring Form:** +1 max HP per tier, DR = 1 when unarmored
 
 #### Thread of Fate (Time/Positive)
 **Story:** *"I perceive my place in the pattern—I see where I'm meant to be"*
-**Primary Energy:** Choose Time or Positive = highest roll + 2 (max 8)
+**Primary Energy:** Choose Time or Positive → Apply +2 bonus to reach 8 maximum (assign roll strategically)
 **Manifestation Benefits:**
 -   **Fate's Insight:** Once per long rest, reroll any attack roll, saving throw, or ability check after seeing the result
 -   **Glimpse Ahead:** Once per short rest, gain a cryptic one-sentence hint about immediate danger or opportunity in the next 10 minutes (ask GM)
 
 #### Death's Lesson (Fire/Negative)
 **Story:** *"I understand survival is my truth—I've seen death and know it's not my path"*
-**Primary Energy:** Choose Fire or Negative = highest roll + 2 (max 8)
+**Primary Energy:** Choose Fire or Negative → Apply +2 bonus to reach 8 maximum (assign roll strategically)
 **Manifestation Benefits:**
 -   **Survivor's Truth:** When reduced below half HP, gain Fortune on your next weaving roll and temporary HP equal to your Wisdom (once per long rest)
 -   **Death's Defiance:** Subtract 1 from both dice when making death saves
 
 #### Perfect Self-Perception (Space/Air)
 **Story:** *"I perceive myself completely across space and time—I exist in total self-awareness"*
-**Primary Energy:** Choose Space or Air = highest roll + 2 (max 8)
+**Primary Energy:** Choose Space or Air → Apply +2 bonus to reach 8 maximum (assign roll strategically)
 **Manifestation Benefits:**
 -   **Omnipresent Mind:** Add your Wisdom to initiative. Once per short rest, as [Free] action, perceive from any point within 60 feet for 1 round
 -   **Mental Clarity:** Subtract 1 from both dice on saves against mental effects (Charmed, Frightened, possession)
 
 **Common Mechanical Elements:**
--   Choose **Secondary Focus** (any other energy): That Potential = any other roll + 1
+-   Choose **Secondary Focus** (any other energy): Apply +1 bonus to reach 8 maximum (assign roll strategically)
 -   Use **Wisdom** as Casting Stat
 -   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0, untrained)
 -   Can weave sorcerous magic using all 8 energies
@@ -448,27 +456,32 @@ Your eyes glow with violet light only when you complete a weave, the power flowi
 **Mechanical Benefits:**
 -   Roll **5d8**, assign to five Magical Potentials based on pact type
 -   **Choose Survival Pact Type:** Determines energy access and how the pact manifests
+-   Your pact type determines Primary and Secondary energies:
+    -   **Primary Energy:** Apply +2 bonus to reach 8 maximum
+    -   **Secondary Energy:** Apply +1 bonus to reach 8 maximum
+    -   Assign rolls strategically to maximize bonuses
+-   Example: Rolling [8,7,6,5,4] for Survivor's Bargain → Space gets 6+2=8, Negative gets 7+1=8, others get 8/5/4
 
 #### The Survivor's Bargain
-**Energies:** Space (highest +2), Negative (any +1), Fire, Earth, Time
+**Energies:** Space (Primary), Negative (Secondary), Fire, Earth, Time
 **Story:** *You should have died. You didn't. Something intervened.*
 **Pact Conduit - Scavenged Power:** When you reduce a hostile creature to 0 HP, immediately regain Energy equal to your tier (minimum 2). Your patron feeds on endings.
 **Pact Gift:** When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier
 
 #### The Desperate Deal
-**Energies:** Positive (highest +2), Space (any +1), Air, Time, Water
+**Energies:** Positive (Primary), Space (Secondary), Air, Time, Water
 **Story:** *You promised something to someone in your darkest hour. Power came immediately.*
 **Pact Conduit - Borrowed Vitality:** Whenever you weave using Positive energy as primary or supporting, the target (or you, if healing self) gains +4 temporary HP that lasts until your next short rest. Life borrowed is life shared.
 **Pact Gift:** Once per short rest, as [Combat] action, heal yourself or touched ally for HP equal to Charisma × tier
 
 #### The Answered Cry
-**Energies:** Air (highest +2), Negative (any +1), Space, Time, Water
+**Energies:** Air (Primary), Negative (Secondary), Space, Time, Water
 **Story:** *You screamed into the void. The void answered.*
 **Pact Conduit - Void Resonance:** Whenever you weave using Air or Space as primary energy, you can target one additional creature within range (make separate weaving rolls for each). The void spreads your intent.
 **Pact Gift:** You can communicate telepathically with any creature you can see within 30 feet
 
 #### The Stolen Shard
-**Energies:** Fire (highest +2), Negative (any +1), Space, Earth, Time
+**Energies:** Fire (Primary), Negative (Secondary), Space, Earth, Time
 **Story:** *You found/touched/stole something not meant for you. This power wasn't offered—you took it.*
 **Pact Conduit - Unstable Surge:** Whenever you weave using your Primary Energy (Fire), add +4 damage OR extend duration by 1 round. Power stolen doesn't flow smoothly—it erupts.
 **Pact Gift:** Once per short rest, as [Combat] action, target within 30 feet makes Will save (your Charisma + Fire Mastery vs their Wisdom + Luck). If you win by 1+ successes, target is Frightened for 1 minute (they can repeat save each turn)
@@ -489,16 +502,12 @@ Your eyes glow with violet light only when you complete a weave, the power flowi
 ## MAGICAL ENHANCEMENT TRAITS
 
 ### Gifted Mage (-2)
-**Requirements:** Must have Mageborn or Divine Gift
-
-Enhanced magical talent.
+Enhanced magical talent - add this trait BEFORE applying Mageborn or Divine Gift.
 -   Roll 9d8, drop lowest
 -   Trait bonuses still apply
 
 ### Balanced Channeler (-1)
-**Requirements:** Must have Mageborn or Divine Gift
-
-Predictable magical talent.
+Predictable magical talent - add this trait BEFORE applying Mageborn or Divine Gift.
 -   Use fixed array: 5,4,3,3,2,2,1,1
 -   Trait bonuses still apply
 

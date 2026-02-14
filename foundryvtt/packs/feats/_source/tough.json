@@ -1,13 +1,29 @@
 {
-  "_id": "ac9c5102fc6f4246",
+  "_id": "f1f89a6ab4fe4d80",
   "name": "Tough",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-star-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Con 3\n**Description:** Some people are just harder to kill. You are more resilient, allowying you to take punishment that would drop others.\n**Benefit:** Gain HP equal to Con × current Tier\n**Usage:** Passive\n**Keyword:** [General]"
-    }
+      "value": "<p>Some people are just harder to kill. You are more resilient, allowying you to take punishment that would drop others.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "constitution": 3
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>Gain HP equal to Con × current Tier</p>",
+    "usageType": "passive",
+    "keywords": "[General]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!ac9c5102fc6f4246"
+  "_key": "!items!f1f89a6ab4fe4d80"
 }

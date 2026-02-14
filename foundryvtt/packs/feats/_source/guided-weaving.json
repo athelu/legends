@@ -1,13 +1,29 @@
 {
-  "_id": "a725bf23faaa451d",
+  "_id": "d3f065cf62c941d0",
   "name": "Guided Weaving",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Sorcerous Origin trait, Wis 4\n**Benefit:** When an ally within 60 feet casts a weave, you can use your [Reaction] to impose Misfortune on one enemy's saving throw against that weave (they roll 3d8, take worst 2). Alternatively, you can grant the casting ally Fortune on their weaving roll\n**Usage:** Wisdom times per long rest\n**Keyword:** [Magic], [Sorcerer], [Reaction]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 4
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": "Sorcerous Origin trait"
+    },
+    "benefits": "<p>When an ally within 60 feet casts a weave, you can use your [Reaction] to impose Misfortune on one enemy's saving throw against that weave (they roll 3d8, take worst 2). Alternatively, you can grant the casting ally Fortune on their weaving roll</p>",
+    "usageType": "wisdom",
+    "keywords": "[Magic], [Sorcerer], [Reaction]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!a725bf23faaa451d"
+  "_key": "!items!d3f065cf62c941d0"
 }

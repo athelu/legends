@@ -1,13 +1,27 @@
 {
-  "_id": "5875ca2fb38b41e6",
+  "_id": "54850f21beb24d13",
   "name": "Mounted Combatant",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Riding 4\n**Benefit:** Attacks against your mount add 1 to both dice. If mount is hit, you can redirect attack to yourself instead. While mounted, melee attacks against creatures smaller than your mount subtract 1 from both dice\n**Usage:** Passive\n**Keyword:** [Combat], [Mounted]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": "Riding 4"
+    },
+    "benefits": "<p>Attacks against your mount add 1 to both dice. If mount is hit, you can redirect attack to yourself instead. While mounted, melee attacks against creatures smaller than your mount subtract 1 from both dice</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Mounted]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!5875ca2fb38b41e6"
+  "_key": "!items!54850f21beb24d13"
 }

@@ -1,13 +1,20 @@
 {
-  "_id": "f846800d590d4807",
+  "_id": "abd6953001ce42f4",
   "name": "Fruit, Dried",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Preserved fruit suitable for travel rations. One pound provides one day's worth of fruit nutrition.",
-    "weight": "0.5 lbs",
-    "cost": "5 cp"
+    "description": {
+      "value": "<p>Preserved fruit suitable for travel rations. One pound provides one day's worth of fruit nutrition.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.5,
+    "cost": 0.05,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!f846800d590d4807"
+  "_key": "!items!abd6953001ce42f4"
 }

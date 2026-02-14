@@ -1,11 +1,21 @@
 {
-  "_id": "8120a79dba804e5d",
+  "_id": "40b1b579c2944456",
   "name": "Deep Sleeper (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Difficult to awaken.\n- Require 2 successes to wake\n- First round after waking: Add 2 to all die results"
+    "description": {
+      "value": "<p>Difficult to awaken.</p>\n<ul>\n<li>Require 2 successes to wake</li>\n<li>First round after waking: Add 2 to all die results</li>\n</ul>"
+    },
+    "pointValue": 1,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!8120a79dba804e5d"
+  "_key": "!items!40b1b579c2944456"
 }

@@ -1,11 +1,51 @@
 {
-  "_id": "ed28ef05422443a6",
+  "_id": "861ec4ec18c74148",
   "name": "Shape Earth",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Earth 2 (manipulating soil and stone)  \n**Supporting Energy:** Space 1 (close range)  \n**Range:** Close, 30 ft.  \n**Duration:** Instantaneous (or 1 hour for changes)  \n**Total Cost:** 3 Energy per effect  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  \n**Effect:** Choose one: (1) Excavate or move up to 5ft cube of loose earth, (2) Shape earth/stone into basic forms, (3) Change color or texture of earth/stone in 5ft cube. Changes last 1 hour.  \n**Saving Throw:** None (environmental manipulation)  \n**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent changes\n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Earth 2 (manipulating soil and stone) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous (or 1 hour for changes) <strong>Total Cost:</strong> 3 Energy per effect <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Choose one: (1) Excavate or move up to 5ft cube of loose earth, (2) Shape earth/stone into basic forms, (3) Change color or texture of earth/stone in 5ft cube. Changes last 1 hour. <strong>Saving Throw:</strong> None (environmental manipulation) <strong>Success Scaling:</strong> 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent changes</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "earth",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 1
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!ed28ef05422443a6"
+  "_key": "!items!861ec4ec18c74148"
 }

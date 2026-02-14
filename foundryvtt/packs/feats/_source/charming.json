@@ -1,13 +1,29 @@
 {
-  "_id": "f099c20c81984479",
+  "_id": "c91ff1c1caea4229",
   "name": "Charming",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Cha 4, Persuasion 4\n**Description:** Some people just have a way with words. You're one of them. It doesn't always work, but when it matters most, it usually does.\n**Benefit:** Once per session reroll failed social check; double 1s count as ally success\n**Usage:** Once per session\n**Keyword:** [Skill], [General]"
-    }
+      "value": "<p>Some people just have a way with words. You're one of them. It doesn't always work, but when it matters most, it usually does.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "persuasion:4",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>Once per session reroll failed social check; double 1s count as ally success</p>",
+    "usageType": "once",
+    "keywords": "[Skill], [General]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!f099c20c81984479"
+  "_key": "!items!c91ff1c1caea4229"
 }

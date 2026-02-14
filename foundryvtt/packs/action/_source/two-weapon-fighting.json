@@ -1,11 +1,11 @@
 {
-  "_id": "c82cc30981994e42",
+  "_id": "a67d6545f2284ff9",
   "name": "Two-Weapon Fighting",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "Wielding two weapons, off-hand weapon must have Light property\n- **Without Feat:**\n  - Use Shared Attribute Roll (roll attribute once for both attacks)\n  - First attack: Add 1 to both die results\n  - Second attack: Add 2 to both die results\n- **With Two-Weapon Fighting Feat:**\n  - First attack: Normal (no penalty)\n  - Second attack: Add 1 to both die results\n- **Notes:**\n  - Both attacks made as part of single [Combat] action\n  - Subject to Multiple Action Penalty if you make additional combat actions\n  - See (Combat) for detailed examples"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Requirements:</strong> Wielding two weapons, off-hand weapon must have Light property</li>\n<li><strong>Without Feat:</strong>\n<ul>\n<li>Use Shared Attribute Roll (roll attribute once for both attacks)</li>\n<li>First attack: Add 1 to both die results</li>\n<li>Second attack: Add 2 to both die results</li>\n</ul></li>\n<li><strong>With Two-Weapon Fighting Feat:</strong>\n<ul>\n<li>First attack: Normal (no penalty)</li>\n<li>Second attack: Add 1 to both die results</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Both attacks made as part of single [Combat] action</li>\n<li>Subject to Multiple Action Penalty if you make additional combat actions</li>\n<li>See (Combat) for detailed examples</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!c82cc30981994e42"
+  "_key": "!items!a67d6545f2284ff9"
 }

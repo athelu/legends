@@ -292,6 +292,7 @@ If an observer succeeds on Perception check to detect you:
 -   Ranged attacks against you have Misfortune
 -   Your melee attacks have Misfortune
 -   Your ranged attacks have Misfortune (unless weapon can be used prone)
+**Recovery:**
 -   Standing up from prone costs 1 [Move] action
 
 #### Grievously Wounded
@@ -300,42 +301,30 @@ If an observer succeeds on Perception check to detect you:
 -   Dazzled condition active
 -   Can only take one action per turn (move OR standard action, not both)
 -   Cannot take reactions
--   **Recovery:** Condition ends when healed above 1 HP
+**Recovery:**
+-   Condition ends when healed above 1 HP
 
 #### Dazed
 -   Mental processing slowed, disoriented or stunned briefly
 -   Next action taken: Add 1 to both dice
 -   Initiative: -1 for the round
 -   Cannot take reactions until after your next turn
--   Duration: Until end of your next turn (typically)
 **Recovery:**
 -   Automatically ends after your next turn completes
--   No save typically required
-**Note:** Dazed is less severe than Stunned (which prevents all actions)
 
-### Stunned
-#### Effect:
+
+#### Stunned
 -   Cannot take actions or reactions for 1 round
 -   Automatically fail Reflex saves
 -   Attacks against you have Fortune
 -   You can still speak and perceive surroundings
-
-#### Duration:
+**Recovery:**
+-   Automatically ends after specified duration
+-   Some stun effects allow Fortitude save at end of turn to end early
+**Duration:**
 -   Typically lasts until the end of your next turn
 -   Some effects specify longer duration
 
-#### Recovery:
--   Automatically ends after specified duration
--   Some stun effects allow Fortitude save at end of turn to end early
-
-#### Common Sources:
--   Critical hits from bludgeoning weapons (optional rule)
--   Thunder/sonic damage weaves
--   Special monster abilities
--   Certain combat maneuvers
-
-
-### Mental & Social Conditions
 
 #### Charmed
 - You regard the charmer as a friendly acquaintance
@@ -343,42 +332,37 @@ If an observer succeeds on Perception check to detect you:
 - You cannot attack the charmer or target them with harmful abilities/weaves
 - You can still act freely otherwise and defend yourself
 - You interpret the charmer's words and actions in the most favorable way possible
-- **Does NOT grant:** Mind control, forced obedience, or compulsion to follow commands
-- **Recovery:** 
-  - Condition ends immediately if charmer or their allies harm you
-  - Some charm effects allow Will save at end of each turn to end early
-  - Effect ends when duration expires
-- **Note:** You're friendly and suggestible, not dominated. You won't follow commands that are obviously harmful to yourself or that go against your core values. The charmer must still convince you through normal social interaction, they just have an easier time doing so.
+**Recovery:** 
+-   Condition ends immediately if charmer or their allies harm you
+-   Some charm effects allow Will save at end of each turn to end early
+-   Effect ends when duration expires
+**Note:** You're friendly and suggestible, not dominated. You won't follow commands that are obviously harmful to yourself or that go against your core values. The charmer must still convince you through normal social interaction, they just have an easier time doing so.
 
-**Example:** A charmed guard won't attack their charmer, and might be convinced to let them pass with a good story. But they won't hand over the keys to the treasury or betray their lord without exceptional persuasion - being charmed makes you friendly, not stupid.
-**See Also:** For information about mind-affecting effects and which creatures are immune, see **Magic Effect Types & Terminology**.
 
-### Incapacitation & Death States
-
-#### Asleep/Unconscious (Incapacitated)
+#### Asleep/Unconscious
 -   Cannot take actions or reactions
 -   Cannot move
 -   Blinded condition active
 -   Prone condition active
 -   Automatically fail Fortitude and Reflex saves
 -   Attacks against you have Fortune
--   **Recovery (Asleep):**
-    -   Loud noises or physical contact: Make Perception check (1 success to wake)
-    -   Deep Sleeper flaw: Requires 2 successes to wake, add 2 to all
-        die results first round after waking
-    -   Light Sleeper trait: Automatically wake to subtle noises, no
-        penalties
-
--   **Recovery (Unconscious):** Depends on cause (damage, poison, magic, etc.)
+**Recovery (Asleep):**
+-   Loud noises or physical contact: Make Perception check (1 success to wake)
+-   Deep Sleeper flaw: Requires 2 successes to wake, add 2 to all
+    die results first round after waking
+-   Light Sleeper trait: Automatically wake to subtle noises, no
+    penalties
+**Recovery (Unconscious):**
+-   Depends on cause (damage, poison, magic, etc.)
 
 #### Paralyzed
-
 -   Cannot take actions, reactions, or move
 -   Cannot speak
 -   Automatically fail Fortitude and Reflex saves
 -   Attacks against you have Fortune
 -   May be aware of surroundings through senses
--   **Recovery:** At the end of each turn, make Fortitude save (Constitution + Current Luck):
+**Recovery:**
+-   At the end of each turn, make Fortitude save (Constitution + Current Luck):
     -   2 successes: Condition ends
     -   1 success: Subtract 1 from next recovery save die results
     -   0 successes: Remains Paralyzed
@@ -389,158 +373,124 @@ If an observer succeeds on Perception check to detect you:
 -   Unconscious condition active
 -   Blinded condition active
 -   Prone condition active
+**Recovery:**
 -   See Dying Mechanic section in Core Rules for full details
 
 #### Dead
 -   Character is deceased
 -   Cannot be affected by normal healing
+**Recovery:**
 -   Requires resurrection magic or special circumstances
 
-### Combat Conditions
+
 #### Surprised
 -   Cannot act during the surprise round
 -   Defense: Add 2 to die results until your first turn
+**Recovery:**
 -   After surprise round ends, act normally
 
-#### Exhausted (Multiple Levels)
 
-##### Level 1 - Fatigued:
+#### Fatigued
 -   All skill checks: Add 1 to die results
 -   Cannot benefit from short rests for HP recovery (still recover Luck)
--   Recovery: Long rest removes 1 level of Exhaustion
+**Recovery:**
+-   Long rest removes 1 level of Exhaustion
 
-##### Level 2 - Exhausted:
+#### Exhausted
 -   All skill checks: Add 2 to die results
 -   Movement speed reduced by half
 -   Cannot benefit from short rests at all
--   Recovery: Long rest removes 1 level of Exhaustion
+**Recovery:**
+-   Long rest removes 1 level of Exhaustion
 
-##### Level 3 - Severely Exhausted:
+#### Severely Exhausted
 -   All rolls (including attacks and saves): Add 2 to die results
 -   Movement speed reduced by half
 -   Can only take 2 actions per turn instead of 3
 -   Cannot benefit from short rests
--   Recovery: Long rest removes 1 level of Exhaustion
+**Recovery:**
+-   Long rest removes 1 level of Exhaustion
 
-##### Level 4 - Near Collapse:
+#### Near Collapse
 -   All rolls: Add 3 to die results
 -   Movement speed reduced to quarter
 -   Can only take 1 action per turn
 -   Cannot take reactions
--   Recovery: Long rest removes 1 level of Exhaustion
+**Recovery:**
+-   Long rest removes 1 level of Exhaustion
 
 ##### Level 5 - Collapse:
 -   Character becomes Unconscious
 -   Cannot be awakened until Exhaustion reduced below level 5
--   Recovery: Long rest removes 1 level of Exhaustion
+**Recovery:**
+-   Long rest removes 1 level of Exhaustion
 
-#### Gaining Exhaustion:
+**Gaining Exhaustion:**
 -   Marching for 8+ hours without rest: Fortitude save or gain 1 level
 -   Going without sleep for 24 hours: Automatic 1 level
 -   Extreme environmental conditions (heat, cold): Fortitude save per hour or gain 1 level
 -   Certain spells, poisons, or abilities
 
-### Poisoned
-#### Standard Poison Effect:
+#### Poisoned
 -   All attribute dice: Add 1 to die results (makes all rolls harder)
 -   Fortitude saves: Add 1 to die results (harder to resist)
 -   HP regeneration from short/long rests reduced by half
-
-#### Duration:
--   Depends on poison type (typically 1 hour to 24 hours)
--   Some poisons require saves each hour or worsen
-
-#### Recovery:
+**Recovery:**
 -   Fortitude save at end of duration to shake off poison
 -   Medicine check (2 successes) can end Poisoned early with proper treatment
 -   Magical healing removes poison
 -   Antidotes (if available) automatically remove poison
-
-#### Poison Types (Optional):
+**Duration:**
+-   Depends on poison type (typically 1 hour to 24 hours)
+-   Some poisons require saves each hour or worsen
+**Poison Types (Optional):**
 -   Weak Poison: Add 1 to attribute dice, duration 1 hour
 -   Strong Poison: Add 2 to attribute dice, duration 4 hours, 1d8 damage per hour
 -   Deadly Poison: Add 2 to all dice, 2d8 damage per hour, requires
     Fortitude save each hour or die
 
-### Grappled
-#### Effect:
+#### Grappled
 -   Movement speed reduced to 0
 -   Cannot take [Move] actions
 -   Attacks and skill checks: Add 1 to die results
 -   Can still attack and act normally otherwise
 -   Attacks against you: No modifier
-
-#### Initiating Grapple:
--   Use 1 [Combat] action
--   Make opposed Athletics (Str + Athletics) check vs target's choice of Athletics or Acrobatics
--   If you win: Target becomes Grappled
--   Both you and target are grappling (you cannot move either, but can release as [Free] action)
-
-#### Escaping Grapple:
+**Recovery:**
 -   Use 1 action to make opposed Athletics or Acrobatics check
 -   If you equal or exceed grappler's successes: Escape and can move normally
 
-### Restrained (More Severe)
-#### Effect:
+#### Restrained (More Severe)
 -   Movement speed reduced to 0
 -   Cannot take [Move] actions
 -   All attacks and skill checks: Add 2 to die results
 -   Attacks against you have Fortune
 -   Automatically fail Reflex saves
+**Recovery:**
+-   Athletics or Devices check (typically 2 successes)
 
-#### Common Sources:
--   Nets, chains, magical bindings
--   Special monster abilities (web, constrict)
--   Space weaves (force cage)
 
-#### Escaping Restrained:
--   Depends on source
--   Physical bonds: Athletics or Devices check (typically 2 successes)
--   Magical bonds: Usually requires dispelling or breaking concentration
-
-### Bleeding
-#### Effect:
+#### Bleeding
 -   Take 2 damage per stack at the end of each of your turns
 -   Stacks: Multiple bleeding effects add together (2 stacks = 4 damage per turn, 3 stacks = 6 damage per turn)
 -   Bleeding damage occurs at the end of your turn, even if you received healing (unless the bleeding condition itself was removed)
-
-#### Bleeding While Dying:
-
--   If at 0 HP or below, bleeding damage stops (no damage taken while dying)
--   However, add your total bleeding stack count to both dice when making stabilization saves.
-
--   **Example:** At -2 HP with 2 bleeding stacks, you add 2 (from bleeding stacks) = add 2 total to both your Constitution die and Luck die when attempting to stabilize
--   This makes it much harder to stabilize.
-
-#### Stopping Bleeding:
+**Recovery:**
 -   Medicine check (1 action, 1 success): Stop 1 bleeding stack on adjacent ally
 -   Self-treatment (1 action, 2 successes): Stop 1 bleeding stack on yourself
 -   Magical healing: Automatically stops all bleeding stacks
 -   Pressure/Bandages: Can attempt Medicine check even without training
 -   Short rest: Automatically stops 1 bleeding stack
-
-#### Duration:
+**Bleeding While Dying:**
+-   If at 0 HP or below, bleeding damage stops (no damage taken while dying)
+-   However, add your total bleeding stack count to both dice when making stabilization saves.
+**Duration:**
 -   Continues until stopped by Medicine check, magic, or rest
 -   Each stack must be treated separately
 
-#### Gaining Bleeding:
--   Critical hits with slashing weapons (optional rule)
--   Special monster abilities (claws, teeth)
--   Called shots to cause bleeding
--   Certain environments (barbed wire, thorns)
-
-##### Example:
--   Character takes a critical hit and gains 2 bleeding stacks
--   On their turn, they can use an action to attempt self-treatment (2 successes needed)
--   At the end of their turn, if bleeding wasn\'t stopped, they take 4 damage
-
-### Magic-Specific Conditions
-
 #### Ignited
 -   Character is on fire
--   Take 1d8 fire damage at the end of each of your turns
+-   Take 1d8 fire damage at the beginning of each of your turns
 -   Duration: Until extinguished
-**Extinguishing Fire (Choose one):**
+**Recovery::**
 -   Use 1 [Action] to drop and roll: Make Reflex save
     -   1 success: Ignited ends
     -   0 successes: Remains Ignited
@@ -550,10 +500,10 @@ If an observer succeeds on Perception check to detect you:
 
 #### Burning (Severe Fire)
 -   Character is engulfed in intense flames
--   Take 2d8 fire damage at the end of each of your turns
+-   Take 2d8 fire damage at the beginning of each of your turns
 -   All actions: Add 1 to die results (panic and pain)
 -   Duration: Until extinguished
-**Extinguishing Severe Fire:**
+**Recovery:**
 -   Use 1 [Action] to drop and roll: Make Reflex save
     -   2 successes: Burning ends completely
     -   1 success: Downgrade to Ignited
@@ -564,9 +514,9 @@ If an observer succeeds on Perception check to detect you:
 -   Immerse in water: Automatic extinguish
 -   Take 8+ cold damage: Automatic downgrade to Ignited
 
-#### Smoldering (Minor Fire)
+#### Smoldering
 -   Character has embers or minor burns continuing
--   Take 2 fire damage at the start of your next turn only
+-   Take 2 fire damage at the beginning of your next turn only
 -   Duration: One turn only (not ongoing)
 **Recovery:**
 -   Automatically ends after taking the 2 damage
@@ -587,7 +537,7 @@ If an observer succeeds on Perception check to detect you:
 **Recovery:**
 -   Automatically ends after specified duration
 
-#### Numbed (Severe Cold)
+#### Numbed
 -   Extremities significantly numbed, fine motor control impaired
 -   Dexterity based skill checks: Add 1 to one die
 -   Attacks with weapons: Add 1 to one die
@@ -606,12 +556,12 @@ If an observer succeeds on Perception check to detect you:
 -   Fire damage or intense heat: Immediate recovery
 -   Can attempt Fortitude save at end of each turn (2 successes ends condition)
 
-#### Frozen (Extreme Cold)
+#### Frozen
 -   Body encased in ice or frozen solid
 -   Restrained condition active 
--   Take 1d8 cold damage  at the end of your turn (frostbite)
+-   Take 1d8 cold damage at the beginning of your turn
 -   Duration: Until ice breaks or melts
-**Escaping Frozen:**
+**Recovery:**
 -   Self: Use 1 [Action] to make Athletics check
     -   2 successes: Break free completely
     -   1 success: Damage the ice, subtract 1 from next attempt
@@ -630,7 +580,6 @@ If an observer succeeds on Perception check to detect you:
 -   Some allow Will save at end of turn
 -   Unweave removes magical slowing
 -   Haste spell can counteract (if magical)
-
 **Stacking:**
 -   Minor Slowed + Major Slowed = Major Slowed only (use worse effect)
 -   Multiple Major Slowed effects = Only 1 action per turn (GM discretion)
@@ -651,3 +600,6 @@ Dazed (penalties on next action) < Stunned (no actions 1 round) < Paralyzed (no 
 
 #### Movement Conditions:
 Grappled (speed 0, add 1 to dice) < Restrained (speed 0, add 2 to dice, auto-fail Reflex) < Paralyzed (complete immobility)
+
+#### Exhaustion Conditions:
+Fatigued < Exhausted < Severely Exhausted < Near Collapse < Collapse

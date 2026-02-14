@@ -1,11 +1,51 @@
 {
-  "_id": "f5c0b95e52044491",
+  "_id": "f54bfaa7e51a4b57",
   "name": "Banishment",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 6 (forcibly ejecting to another plane)\n**Supporting Energy:** Time 2 (duration 1 minute)\n**Range:** Medium, 60 ft.  \n**Duration:** 1 minute\n**Total Cost:** 8 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery (4d8)\n**Effect:** Target at medium range (60ft) makes Will save. Compare your weaving successes to their save successes. If you have more, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends.\n**Saving Throw:** Will (to resist planar banishment)\n**Success Scaling (Net successes = Your successes - Their successes):** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 6 (forcibly ejecting to another plane) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target at medium range (60ft) makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends. <strong>Saving Throw:</strong> Will (to resist planar banishment) <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 6
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!f5c0b95e52044491"
+  "_key": "!items!f54bfaa7e51a4b57"
 }

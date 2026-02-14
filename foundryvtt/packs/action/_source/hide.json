@@ -1,11 +1,11 @@
 {
-  "_id": "a20e63b8f0084893",
+  "_id": "ef8822da51314bcd",
   "name": "Hide",
   "type": "action",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1\n- **Effect:** Stealth check (Agility + stealth) with the aid of partial cover or greater.\n- **Check:** Opposed by enemy's Perception (Wisdom + Perception)\n- **Success:** You use cover to successfully become hidden\n- **Failure:** You do not gain the Hidden condition from the enemy, but may have concealed from cover.\n- **Notes:**\n  - Per Enemy test, may be hidden from some (but you do not know which)\n  - **Partial Cover:** Low wall, furniture, creature, tree trunk, etc"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> [[/check skill=stealth]] (Agility + stealth) with the aid of partial cover or greater.</li>\n<li><strong>Check:</strong> Opposed by enemy's Perception (Wisdom + Perception)</li>\n<li><strong>Success:</strong> You use cover to successfully become hidden</li>\n<li><strong>Failure:</strong> You do not gain the Hidden condition from the enemy, but may have concealed from cover.</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Per Enemy test, may be hidden from some (but you do not know which)</li>\n<li><strong>Partial Cover:</strong> Low wall, furniture, creature, tree trunk, etc</li>\n</ul></li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "1",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!a20e63b8f0084893"
+  "_key": "!items!ef8822da51314bcd"
 }

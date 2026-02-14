@@ -1,22 +1,22 @@
 {
-  "_id": "d637bea5040e42c7",
+  "_id": "1cc67fba86954b30",
   "name": "Total Defense",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 3\n- **Effect:** Focus entirely on defense until your next turn\n- **Benefit:** All attacks against you have Misfortune\n- **Notes:**\n  - Cannot take any other actions this turn\n  - Can still take your [Reaction]"
+      "value": "<ul>\n<li><strong>Cost:</strong> 3</li>\n<li><strong>Effect:</strong> Focus entirely on defense until your next turn</li>\n<li><strong>Benefit:</strong> All attacks against you have Misfortune</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Cannot take any other actions this turn</li>\n<li>Can still take your [Reaction]</li>\n</ul></li>\n</ul>\n<h2>Movement Actions</h2>\n<p>Movement actions allow you to reposition, navigate terrain, and control the battlefield.</p>\n<h4>Basic Movement Mechanics:</h4>\n<ul>\n<li><strong>Speed:</strong> Your base movement speed is 30 feet per round (unless modified by race, conditions, or abilities)</li>\n<li><strong>Cost:</strong> Advance costs 1 [Move] action per increment up to your speed</li>\n<li><strong>Cost:</strong> Advance costs 1 per increment up to your speed</li>\n<li><strong>Terrain:</strong> Difficult terrain costs 2 feet of movement for every 1 foot traveled</li>\n<li><strong>Multiple Movements:</strong> You can take multiple [Move] actions in a turn, spending your actions as needed</li>\n<li><strong>Splitting Movement:</strong> You can split your movement between other actions (move 15 feet, attack, move 15 feet more)</li>\n</ul>\n<h4>Standard Movement Actions</h4>\n<h3>Movement in Combat</h3>\n<h4>Opportunity Attacks:</h4>\n<ul>\n<li>Moving out of an enemy's reach provokes Opportunity Attacks (see Reactions)</li>\n<li>Forced movement (shoved, pushed by spells) doesn't provoke</li>\n<li>Teleportation doesn't provoke</li>\n</ul>\n<h4>Flanking (Optional Rule):</h4>\n<ul>\n<li>When you and an ally are on opposite sides of an enemy (with both in melee reach)</li>\n<li>Both you and your ally subtract 1 from both dice when making attacks</li>\n<li>Enemy must be no more than one size larger than you</li>\n</ul>\n<h3>Important Clarifications</h3>\n<p><strong>You cannot:</strong></p>\n<ul>\n<li>Move through an enemy's space unless you Tumble Through or have special permission</li>\n<li>Move if your speed is reduced to 0 (Grappled, Restrained, etc.)</li>\n<li>Split a single [Move] action between multiple turns</li>\n</ul>\n<p><strong>You can:</strong></p>\n<ul>\n<li>Split your movement between different actions in the same turn</li>\n<li>Take multiple [Move] actions per turn if you have actions available</li>\n<li>Choose not to use all your available movement</li>\n<li>Move through allies' spaces (costs normal movement)</li>\n</ul>\n<h3>Movement Modifiers</h3>\n<h4>Speed Increases:</h4>\n<ul>\n<li>Fleet of Foot feat</li>\n<li>Haste weave</li>\n<li>Certain magic items or abilities</li>\n</ul>\n<h4>Speed Reductions:</h4>\n<ul>\n<li>Exhaustion (level 2+)</li>\n<li>Grappled condition</li>\n<li>Restrained condition</li>\n<li>Difficult terrain</li>\n<li>Squeezing</li>\n<li>Climbing/Swimming</li>\n<li>stalk</li>\n</ul>\n<p>All characters have access to these movement options:</p>"
     },
     "actionType": "combat",
     "actionCost": "3",
     "trigger": "",
     "effect": "Focus entirely on defense until your next turn\n- **Benefit:** All attacks against you have Misfortune\n- **Notes:**\n  - Cannot take any other actions this turn\n  - Can still take your [Reaction]\n\n\n## Movement Actions\nMovement actions allow you to reposition, navigate terrain, and control the battlefield.\n\n#### Basic Movement Mechanics:\n- **Speed:** Your base movement speed is 30 feet per round (unless modified by race, conditions, or abilities)\n- **Cost:** Advance costs 1 [Move] action per increment up to your speed\n- **Cost:** Advance costs 1 per increment up to your speed\n- **Terrain:** Difficult terrain costs 2 feet of movement for every 1 foot traveled\n- **Multiple Movements:** You can take multiple [Move] actions in a turn, spending your actions as needed\n- **Splitting Movement:** You can split your movement between other actions (move 15 feet, attack, move 15 feet more)\n\n#### Standard Movement Actions\n\n### Movement in Combat\n\n#### Opportunity Attacks:\n- Moving out of an enemy's reach provokes Opportunity Attacks (see Reactions)\n- Forced movement (shoved, pushed by spells) doesn't provoke\n- Teleportation doesn't provoke\n\n#### Flanking (Optional Rule):\n- When you and an ally are on opposite sides of an enemy (with both in melee reach)\n- Both you and your ally subtract 1 from both dice when making attacks\n- Enemy must be no more than one size larger than you\n\n### Important Clarifications",
-    "keywords": "Reaction, Move",
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!d637bea5040e42c7"
+  "_key": "!items!1cc67fba86954b30"
 }

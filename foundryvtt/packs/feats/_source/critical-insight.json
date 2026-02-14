@@ -1,13 +1,29 @@
 {
-  "_id": "fb61925dc0434556",
+  "_id": "59e3e85875bc4301",
   "name": "Critical Insight",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Sorcerous Origin trait, Wis 5\n**Description:** When your magic flows perfectly, you see possibilities others miss. That moment of perfect execution opens doors allowing you to channel the excess energy into greater power, reclaim it for yourself, or share it with your allies.\n**Benefit:** When you roll double 1s (critical success) on a weaving roll, you may choose one:\n  1. Maximize one effect (damage = maximum, or duration = double)\n  2. Regain Energy equal to your Wisdom\n  3. Grant all allies within 30 feet temporary HP equal to your tier × 2\n\n**Usage:** Triggered on critical (double 1s)\n**Keyword:** [Magic], [Sorcerer]"
-    }
+      "value": "<p>When your magic flows perfectly, you see possibilities others miss. That moment of perfect execution opens doors allowing you to channel the excess energy into greater power, reclaim it for yourself, or share it with your allies.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 5
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 3,
+      "other": "Sorcerous Origin trait"
+    },
+    "benefits": "<p>When you roll double 1s (critical success) on a weaving roll, you may choose one:</p>\n<ol>\n<li>Maximize one effect (damage = maximum, or duration = double)</li>\n<li>Regain Energy equal to your Wisdom</li>\n<li>Grant all allies within 30 feet temporary HP equal to your tier × 2</li>\n</ol>",
+    "usageType": "triggered",
+    "keywords": "[Magic], [Sorcerer]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!fb61925dc0434556"
+  "_key": "!items!59e3e85875bc4301"
 }

@@ -1,19 +1,24 @@
 {
-  "_id": "706c0a0d808d4981",
+  "_id": "ee46ed40a374444b",
   "name": "Longbow",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A tall bow, often as high as the archer, requiring significant strength to draw. The longbow's power comes from the long draw length and heavy draw weight. This category includes English longbows, Welsh longbows, and similar tall self-bows or composite bows. Legendary for battlefield effectiveness, the longbow can deliver arrows with armor-piercing force at considerable distance.",
+    "description": {
+      "value": "<p>A tall bow, often as high as the archer, requiring significant strength to draw. The longbow's power comes from the long draw length and heavy draw weight. This category includes English longbows, Welsh longbows, and similar tall self-bows or composite bows. Legendary for battlefield effectiveness, the longbow can deliver arrows with armor-piercing force at considerable distance.</p>"
+    },
     "damage": {
       "base": 8,
+      "type": "piercing",
       "alternate": null,
-      "raw": "8",
-      "type": [
-        "piercing"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "80/160/320",
+    "range": {
+      "normal": 80,
+      "medium": 160,
+      "long": 320
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -48,20 +53,16 @@
         }
       }
     ],
-    "weight": {
-      "raw": "3 lbs",
-      "lbs": 3.0
-    },
-    "cost": {
-      "raw": "60 gp",
-      "gp": 60.0
-    },
+    "weight": 3.0,
+    "cost": 60.0,
+    "quantity": 1,
     "properties": [
-      "Two-Handed",
-      "Ranged"
+      "two-handed",
+      "ranged"
     ],
+    "notes": "",
     "requirements": "Strength 3"
   },
   "effects": [],
-  "_key": "!items!706c0a0d808d4981"
+  "_key": "!items!ee46ed40a374444b"
 }

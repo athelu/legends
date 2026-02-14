@@ -1,13 +1,20 @@
 {
-  "_id": "2e2ae8ea5e954047",
+  "_id": "1bc497e0bbc04ba4",
   "name": "Razor",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A sharp blade used for shaving facial hair, maintained in a folding handle or case.",
-    "weight": "0.2 lbs",
-    "cost": "5 gp"
+    "description": {
+      "value": "<p>A sharp blade used for shaving facial hair, maintained in a folding handle or case.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.2,
+    "cost": 5.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!2e2ae8ea5e954047"
+  "_key": "!items!1bc497e0bbc04ba4"
 }

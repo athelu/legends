@@ -1,13 +1,20 @@
 {
-  "_id": "340a06430e9f4d14",
+  "_id": "6bcdef9405bd4e44",
   "name": "Musical Instrument, Basic",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A simple musical instrument such as a flute, drum, or lyre of basic construction and sound quality.",
-    "weight": "2-6 lbs",
-    "cost": "30 gp"
+    "description": {
+      "value": "<p>A simple musical instrument such as a flute, drum, or lyre of basic construction and sound quality.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 2.0,
+    "cost": 30.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!340a06430e9f4d14"
+  "_key": "!items!6bcdef9405bd4e44"
 }

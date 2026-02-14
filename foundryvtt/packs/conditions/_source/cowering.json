@@ -1,12 +1,14 @@
 {
-  "_id": "8fbd5ab52f354336",
+  "_id": "cd53925fb1fd421a",
   "name": "Cowering",
   "type": "condition",
   "img": "icons/svg/terror.svg",
   "system": {
     "label": "Cowering",
     "category": "fear",
-    "description": "-   Cannot take [Combat] actions\n-   Cannot take [Move] actions\n-   Attacks against you have Fortune\n-   **Recovery:** At the end of each turn, make Will save:\n    -   2 successes: Downgrade to Frightened\n    -   1 success: Downgrade to Fleeing\n    -   0 successes: Remains Cowering\n\n-   **Ally Assistance:** An ally within 5 feet can use an [Interact] action with Persuasion or Intimidate check:\n    -   2 successes: Downgrade to Frightened\n    -   1 success: Downgrade to Fleeing",
+    "description": {
+      "value": "<ul>\n<li>Cannot take [Combat] actions</li>\n<li>Cannot take [Move] actions</li>\n<li>Attacks against you have Fortune</li>\n<li><strong>Recovery:</strong> At the end of each turn, make [[/save type=will]]:\n<ul>\n<li>2 successes: Downgrade to Frightened</li>\n<li>1 success: Downgrade to Fleeing</li>\n<li>0 successes: Remains Cowering</li>\n</ul></li>\n<li><strong>Ally Assistance:</strong> An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]]:\n<ul>\n<li>2 successes: Downgrade to Frightened</li>\n<li>1 success: Downgrade to Fleeing</li>\n</ul></li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/terror.svg",
     "activeEffects": [],
     "stacking": "replace",
@@ -19,7 +21,7 @@
         "type": "will"
       },
       "promptPlayer": true,
-      "chatMessage": "Make a Will save to recover from Cowering",
+      "chatMessage": "Make a [[/save type=will]] to recover from Cowering",
       "assistance": {
         "range": 5
       },
@@ -31,5 +33,5 @@
     }
   },
   "flags": {},
-  "_key": "!items!8fbd5ab52f354336"
+  "_key": "!items!cd53925fb1fd421a"
 }

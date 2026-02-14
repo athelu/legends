@@ -1,11 +1,21 @@
 {
-  "_id": "e12a102a78a04550",
+  "_id": "02a5479a6bdf4b11",
   "name": "Smuggler",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "You learned to move goods past customs agents, border guards, and other obstacles that stand between supply and demand. The work required nerve, connections, and intimate knowledge of routes that authorities don't patrol. Knowing how to slip past authority has its uses, even in an honest profession. If such a thing exists.\n**Skills:** Stealth 2, Deception 2, Society 1, Perception 1, +40 XP\n**Equipment:** Common clothes, hemp rope, low boots\n**Feature** - Hidden Routes: You know smuggling routes, secret passages, and which officials can be bribed in settlements you've worked in. Can find black market contacts."
+    "description": {
+      "value": "<p>You learned to move goods past customs agents, border guards, and other obstacles that stand between supply and demand. The work required nerve, connections, and intimate knowledge of routes that authorities don't patrol. Knowing how to slip past authority has its uses, even in an honest profession. If such a thing exists. <strong>Skills:</strong> Stealth 2, Deception 2, Society 1, Perception 1, +40 XP <strong>Equipment:</strong> Common clothes, hemp rope, low boots <strong>Feature</strong> - Hidden Routes: You know smuggling routes, secret passages, and which officials can be bribed in settlements you've worked in. Can find black market contacts.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!e12a102a78a04550"
+  "_key": "!items!02a5479a6bdf4b11"
 }

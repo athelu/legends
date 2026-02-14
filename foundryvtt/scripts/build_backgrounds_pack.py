@@ -6,7 +6,7 @@ Build backgrounds compendium pack from parsed backgrounds.md documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key
+from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key, md_to_html, apply_enrichers
 
 
 def parse_backgrounds_md(md_file):
@@ -47,17 +47,25 @@ def parse_backgrounds_md(md_file):
             'type': 'background',
             'img': 'icons/svg/book.svg',
             'system': {
-                'description': ''
+                'description': {'value': ''},
+                'startingXP': 0,
+                'skillBonuses': '',
+                'startingEquipment': '',
+                'suggestedFeats': '',
+                'features': '',
+                'sampleNames': '',
+                'traits': '',
+                'notes': ''
             },
             'effects': []
         }
-        
+
         # Extract description and all content
         description = '\n'.join(lines[1:]).strip()
-        item['system']['description'] = description
+        item['system']['description'] = {'value': apply_enrichers(md_to_html(description))}
         
         # Extract image path if specified
-        img_match = re.search(r'Image[:\s]+([^\n|]+)', description)
+        img_match = re.search(r'\*?\*?Image:?\*?\*?\s*`?([^`\n|]+)`?', description)
         if img_match:
             item['img'] = img_match.group(1).strip()
         

@@ -1,13 +1,20 @@
 {
-  "_id": "a99816df8ba64d49",
+  "_id": "2bf1cf7f471845f9",
   "name": "Net",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A woven net with weights along the edges, useful for fishing, trapping, or entangling opponents.",
-    "weight": "3 lbs",
-    "cost": "15 gp"
+    "description": {
+      "value": "<p>A woven net with weights along the edges, useful for fishing, trapping, or entangling opponents.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 15.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!a99816df8ba64d49"
+  "_key": "!items!2bf1cf7f471845f9"
 }

@@ -1,11 +1,51 @@
 {
-  "_id": "fddf799f1ceb4073",
+  "_id": "926cd5b5f3eb4bd1",
   "name": "Frost Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Water 2 (freezing touch, damage)\n**Supporting Energy:** None (touch range only)\n**Total Cost:** 2 Energy\n**Action:** Simple weave (1 action)\n**Weaving Roll:** Water Potential + Water Mastery (2d8 only)\n**Effect:** Touch a target and channel freezing energy into them. Target takes 4 cold damage. This is an attack weave—no saving throw allowed.\n**Saving Throw:** None (attack weave, weaving successes determine hit quality)\n**Damage Type:** Cold (energy)\n**DR Interaction:** Half DR (4 cold damage vs DR 4 becomes 4 - 2 = 2 damage)\n**Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)\n**Slowed Condition (at 4 successes):** Target's movement is halved until end of their next turn as ice crystals form on their body.\n**Tactical Note:** Does NOT provoke opportunity attacks. Touch range requires being adjacent to target.\n\n## G"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Water 2 (freezing touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Water Potential + Water Mastery (2d8 only) <strong>Effect:</strong> Touch a target and channel freezing energy into them. Target takes [[/damage 4 type=cold]] damage. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Cold (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=cold]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +[[/damage 4]] damage (8 total), 4 = +[[/damage 8]] damage (12 total) <strong>Slowed Condition (at 4 successes):</strong> Target's movement is halved until end of their next turn as ice crystals form on their body. <strong>Tactical Note:</strong> Does NOT provoke opportunity attacks. Touch range requires being adjacent to target.</p>\n<h2>G</h2>"
+    },
+    "weaveType": "simple",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "water",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "",
+        "cost": 0
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!fddf799f1ceb4073"
+  "_key": "!items!926cd5b5f3eb4bd1"
 }

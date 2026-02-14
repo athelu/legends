@@ -1,13 +1,20 @@
 {
-  "_id": "24e6b9a3d3e54272",
+  "_id": "f67730e5b22b4b70",
   "name": "Magnifying Glass",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A ground glass lens in a metal frame that can magnify small objects or text, useful for detailed examination and investigation.",
-    "weight": "0.5 lbs",
-    "cost": "100 gp"
+    "description": {
+      "value": "<p>A ground glass lens in a metal frame that can magnify small objects or text, useful for detailed examination and investigation.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.5,
+    "cost": 100.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!24e6b9a3d3e54272"
+  "_key": "!items!f67730e5b22b4b70"
 }

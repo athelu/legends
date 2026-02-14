@@ -37,14 +37,14 @@ export class D8Item extends Item {
     if (!systemData.prerequisites || typeof systemData.prerequisites !== 'object') {
       systemData.prerequisites = {
         attributes: {},
-        skills: {},
+        skills: '',
         feats: [],
         tier: 0,
         other: ''
       };
     } else {
       if (!systemData.prerequisites.attributes) systemData.prerequisites.attributes = {};
-      if (!systemData.prerequisites.skills) systemData.prerequisites.skills = {};
+      if (!systemData.prerequisites.skills || typeof systemData.prerequisites.skills !== 'string') systemData.prerequisites.skills = '';
       if (!systemData.prerequisites.feats) systemData.prerequisites.feats = [];
     }
 
@@ -238,14 +238,22 @@ export class D8Item extends Item {
    */
   async _displayFeature() {
     const item = this;
-    
+    const TextEditor = foundry.applications.ux.TextEditor.implementation;
+    const descRaw = typeof item.system.description === 'string'
+      ? item.system.description
+      : (item.system.description?.value || '');
+    const enrichedDesc = await TextEditor.enrichHTML(descRaw, { async: true });
+    const enrichedBenefits = item.system.benefits
+      ? await TextEditor.enrichHTML(item.system.benefits, { async: true })
+      : '';
+
     ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content: `
         <div class="d8-feature">
           <h3>${item.name}</h3>
-          <div class="description">${item.system.description.value}</div>
-          ${item.system.benefits ? `<div class="benefits"><strong>Benefits:</strong> ${item.system.benefits}</div>` : ''}
+          <div class="description">${enrichedDesc}</div>
+          ${enrichedBenefits ? `<div class="benefits"><strong>Benefits:</strong> ${enrichedBenefits}</div>` : ''}
         </div>
       `
     });
@@ -256,18 +264,23 @@ export class D8Item extends Item {
    */
   async _displayDescription() {
     const item = this;
-    
+    const TextEditor = foundry.applications.ux.TextEditor.implementation;
+    const descRaw = typeof item.system.description === 'string'
+      ? item.system.description
+      : (item.system.description?.value || '');
+    const enrichedDesc = await TextEditor.enrichHTML(descRaw, { async: true });
+
     ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       content: `
         <div class="d8-item">
           <h3>${item.name}</h3>
-          <div class="description">${item.system.description.value}</div>
+          <div class="description">${enrichedDesc}</div>
         </div>
       `
     });
   }
-  
+
   /**
    * Handle creating an owned item
    */

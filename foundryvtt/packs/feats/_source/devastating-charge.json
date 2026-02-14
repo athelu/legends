@@ -1,13 +1,29 @@
 {
-  "_id": "50edbb946552412e",
+  "_id": "140f28fcc21f40c4",
   "name": "Devastating Charge",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Str 4\n**Description:** Momentum is a weapon all its own. When you build up speed and slam into an opponent, the impact is tremendous.\n**Benefit:** If you move at least 20 feet straight toward a target before making a melee attack on your turn, you can choose one: either subtract 1 from both attack dice, or make a shove attempt as part of the same action (both use same action)\n**Usage:** Unlimited\n**Keyword:** [Combat], [Move]"
-    }
+      "value": "<p>Momentum is a weapon all its own. When you build up speed and slam into an opponent, the impact is tremendous.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "strength": 4
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>If you move at least 20 feet straight toward a target before making a melee attack on your turn, you can choose one: either subtract 1 from both attack dice, or make a shove attempt as part of the same action (both use same action)</p>",
+    "usageType": "unlimited",
+    "keywords": "[Combat], [Move]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!50edbb946552412e"
+  "_key": "!items!140f28fcc21f40c4"
 }

@@ -1,12 +1,14 @@
 {
-  "_id": "8c176b46c97b4ee5",
+  "_id": "eced8d17c278435b",
   "name": "Singed",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
     "label": "Singed",
     "category": "magic",
-    "description": "-   Hair or clothing lightly burned, minor distraction\n-   Subtract 1 from one die on your next action only\n-   Duration: One action only\n**Recovery:**\n-   Automatically ends after your next action",
+    "description": {
+      "value": "<ul>\n<li>Hair or clothing lightly burned, minor distraction</li>\n<li>Subtract 1 from one die on your next action only</li>\n<li>Duration: One action only</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends after your next action</li>\n</ul>"
+    },
     "tokenIcon": "",
     "activeEffects": [],
     "stacking": "replace",
@@ -18,5 +20,5 @@
     }
   },
   "flags": {},
-  "_key": "!items!8c176b46c97b4ee5"
+  "_key": "!items!eced8d17c278435b"
 }

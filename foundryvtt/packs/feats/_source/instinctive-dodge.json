@@ -1,13 +1,29 @@
 {
-  "_id": "e40ec75ff0c447ff",
+  "_id": "95476a2b76664c11",
   "name": "Instinctive Dodge",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Agi 5\n**Benefit:** When an attacker you can see hits you with an attack, you can use your reaction to halve the attack's damage against you\n**Usage:** Once per round (reaction)\n**Keyword:** [Combat], [Defense], [Shadow]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 5
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>When an attacker you can see hits you with an attack, you can use your reaction to halve the attack's damage against you</p>",
+    "usageType": "once",
+    "keywords": "[Combat], [Defense], [Shadow]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!e40ec75ff0c447ff"
+  "_key": "!items!95476a2b76664c11"
 }

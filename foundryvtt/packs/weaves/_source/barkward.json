@@ -1,11 +1,51 @@
 {
-  "_id": "42e9a2edcf1b4121",
+  "_id": "85eb84dfd35340e4",
   "name": "Barkward",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Earth 4 (hardening skin like tree bark)\n**Supporting Energy:** Time 2 (duration 1 minute)\n**Range:** touch or self  \n**Duration:** 1 minute\n**Total Cost:** 6 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Earth Potential + Earth Mastery / Time Potential + Time Mastery (4d8)\n**Effect:** Target's DR increases by 2 (doesn't stack with armor). Touch range by default.\n**Saving Throw:** None (beneficial buff, willing targets only)\n**Success Scaling:** 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Earth 4 (hardening skin like tree bark) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> touch or self <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target's DR increases by 2 (doesn't stack with armor). Touch range by default. <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "earth",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!42e9a2edcf1b4121"
+  "_key": "!items!85eb84dfd35340e4"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "6a6a825db7e9491b",
+  "_id": "3d1b81491d754e48",
   "name": "Light Sensitive (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Not accustomed to bright light.\n- Permanently Dazzled in daylight (see Dazzled condition)\n- Normal at twilight/night with artificial light"
+    "description": {
+      "value": "<p>Not accustomed to bright light.</p>\n<ul>\n<li>Permanently Dazzled in daylight (see Dazzled condition)</li>\n<li>Normal at twilight/night with artificial light</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!6a6a825db7e9491b"
+  "_key": "!items!3d1b81491d754e48"
 }

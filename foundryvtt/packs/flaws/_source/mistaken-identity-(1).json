@@ -1,11 +1,21 @@
 {
-  "_id": "8502fffb3e40411b",
+  "_id": "6015a179dfcb4df1",
   "name": "Mistaken Identity (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Common appearance, often mistaken for others."
+    "description": {
+      "value": "<p>Common appearance, often mistaken for others.</p>"
+    },
+    "pointValue": 1,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!8502fffb3e40411b"
+  "_key": "!items!6015a179dfcb4df1"
 }

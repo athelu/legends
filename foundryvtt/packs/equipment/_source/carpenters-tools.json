@@ -1,13 +1,20 @@
 {
-  "_id": "741343442ecb440a",
+  "_id": "bbc677dc28de4691",
   "name": "Carpenter's Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A set of specialized woodworking tools including saws, chisels, planes, and measuring devices necessary for carpentry work.",
-    "weight": "6 lbs",
-    "cost": "40 gp"
+    "description": {
+      "value": "<p>A set of specialized woodworking tools including saws, chisels, planes, and measuring devices necessary for carpentry work.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 6.0,
+    "cost": 40.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!741343442ecb440a"
+  "_key": "!items!bbc677dc28de4691"
 }

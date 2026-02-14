@@ -1,11 +1,21 @@
 {
-  "_id": "bfa1aa417ac3462a",
+  "_id": "43adf34f46bd49a0",
   "name": "Hammer of Justice",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "- **Action Cost:** [Reaction]\n- **Trigger:** You see a creature attack an innocent, helpless, or defenseless target\n- **Range:** 60 feet\n- **Effect:** Deal Positive damage equal to your Tier × 8 to the attacker. No save - Athore's hammer falls instantly on those who prey upon the weak.\n- **Damage Type:** Positive (energy)\n- **DR Interaction:** Half DR\n- **Usage:** Uses 1 Channel Divinity"
+    "description": {
+      "value": "<ul>\n<li><strong>Action Cost:</strong> [Reaction]</li>\n<li><strong>Trigger:</strong> You see a creature attack an innocent, helpless, or defenseless target</li>\n<li><strong>Range:</strong> 60 feet</li>\n<li><strong>Effect:</strong> Deal Positive damage equal to your Tier × 8 to the attacker. No save - Athore's hammer falls instantly on those who prey upon the weak.</li>\n<li><strong>Damage Type:</strong> Positive (energy)</li>\n<li><strong>DR Interaction:</strong> Half DR</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!bfa1aa417ac3462a"
+  "_key": "!items!43adf34f46bd49a0"
 }

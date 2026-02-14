@@ -1,11 +1,21 @@
 {
-  "_id": "177999e74b20488b",
+  "_id": "aa10a747588e4d46",
   "name": "Mute (5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Cannot vocalize.\n- Speech-based social skills automatically fail"
+    "description": {
+      "value": "<p>Cannot vocalize.</p>\n<ul>\n<li>Speech-based social skills automatically fail</li>\n</ul>"
+    },
+    "pointValue": 5,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!177999e74b20488b"
+  "_key": "!items!aa10a747588e4d46"
 }

@@ -1,11 +1,11 @@
 {
-  "_id": "f484a5bb2bd1467d",
+  "_id": "fb08480afd7d42b5",
   "name": "Shove",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1\n- **Effect:** Make opposed Athletics check (Strength + Athletics vs target's Athletics or Acrobatics)\n- **Success:** Push target 5 feet away from you OR knock them Prone (your choice)\n- **Notes:**\n  - Target must be no more than one size larger than you\n  - Subject to Multiple Action Penalty\n  - Doesn't deal damage"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Make opposed [[/check skill=athletics]] (Strength + Athletics vs target's Athletics or Acrobatics)</li>\n<li><strong>Success:</strong> Push target 5 feet away from you OR knock them Prone (your choice)</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Target must be no more than one size larger than you</li>\n<li>Subject to Multiple Action Penalty</li>\n<li>Doesn't deal damage</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!f484a5bb2bd1467d"
+  "_key": "!items!fb08480afd7d42b5"
 }

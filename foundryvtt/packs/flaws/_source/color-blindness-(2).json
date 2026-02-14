@@ -1,11 +1,21 @@
 {
-  "_id": "76eb6c795e31471e",
+  "_id": "45828fbd3e0a4e26",
   "name": "Color Blindness (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Cannot distinguish colors.\n- Perception where color matters: Add 1 to die results"
+    "description": {
+      "value": "<p>Cannot distinguish colors.</p>\n<ul>\n<li>Perception where color matters: Add 1 to die results</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!76eb6c795e31471e"
+  "_key": "!items!45828fbd3e0a4e26"
 }

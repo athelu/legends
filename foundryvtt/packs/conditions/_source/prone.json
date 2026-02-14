@@ -1,12 +1,14 @@
 {
-  "_id": "0519e3cfe06b4473",
+  "_id": "442f34f9f0d34835",
   "name": "Prone",
   "type": "condition",
   "img": "icons/svg/falling.svg",
   "system": {
     "label": "Prone",
     "category": "physical",
-    "description": "-   Lying on the ground\n-   Melee attacks against subtract 1 from both attack dice\n-   Ranged attacks against you have Misfortune\n-   Your melee attacks have Misfortune\n-   Your ranged attacks have Misfortune (unless weapon can be used prone)\n-   Standing up from prone costs 1 [Move] action",
+    "description": {
+      "value": "<ul>\n<li>Lying on the ground</li>\n<li>Melee attacks against subtract 1 from both attack dice</li>\n<li>Ranged attacks against you have Misfortune</li>\n<li>Your melee attacks have Misfortune</li>\n<li>Your ranged attacks have Misfortune (unless weapon can be used prone)</li>\n<li>Standing up from prone costs 1 [Move] action</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/falling.svg",
     "activeEffects": [],
     "stacking": "replace",
@@ -14,5 +16,5 @@
     "overlayPriority": 20
   },
   "flags": {},
-  "_key": "!items!0519e3cfe06b4473"
+  "_key": "!items!442f34f9f0d34835"
 }

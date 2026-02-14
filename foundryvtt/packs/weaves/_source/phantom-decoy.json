@@ -1,11 +1,51 @@
 {
-  "_id": "9d3c5a512494449c",
+  "_id": "1d9e054520e14886",
   "name": "Phantom Decoy",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 6 (invisibility + illusory double)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Self  \n**Duration:** 10 minutes  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** You become invisible and gain the Hidden condition, while simultaneously creating an illusory double of yourself that appears where you were standing. You have Fortune on Stealth checks and observers have Misfortune on Perception checks to detect your true location. Can use action to move the double up to twice your speed and make it gesture, speak, and behave however you wish.  \n**Saving Throw:** Perception vs Space Mastery (to recognize double as illusory effect)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 6 (invisibility + illusory double) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Self <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> You become invisible and gain the Hidden condition, while simultaneously creating an illusory double of yourself that appears where you were standing. You have Fortune on Stealth checks and observers have Misfortune on Perception checks to detect your true location. Can use action to move the double up to twice your speed and make it gesture, speak, and behave however you wish. <strong>Saving Throw:</strong> Perception vs Space Mastery (to recognize double as illusory effect) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 6
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!9d3c5a512494449c"
+  "_key": "!items!1d9e054520e14886"
 }

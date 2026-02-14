@@ -1,11 +1,21 @@
 {
-  "_id": "9a8ccbfec5214bbf",
+  "_id": "3317c60cc3dd436a",
   "name": "Sickly (5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Incurable debilitating illness.\n- Constitution: Permanently -2 (minimum 1)"
+    "description": {
+      "value": "<p>Incurable debilitating illness.</p>\n<ul>\n<li>Constitution: Permanently -2 (minimum 1)</li>\n</ul>"
+    },
+    "pointValue": 5,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!9a8ccbfec5214bbf"
+  "_key": "!items!3317c60cc3dd436a"
 }

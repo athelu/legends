@@ -1,11 +1,21 @@
 {
-  "_id": "bb025d532cde432d",
+  "_id": "4b0b4180436845c3",
   "name": "Hired Sword (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Mercenary reputation. Will do anything for price. No loyalty possible."
+    "description": {
+      "value": "<p>Mercenary reputation. Will do anything for price. No loyalty possible.</p>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!bb025d532cde432d"
+  "_key": "!items!4b0b4180436845c3"
 }

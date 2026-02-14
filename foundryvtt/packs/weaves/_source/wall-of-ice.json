@@ -1,11 +1,51 @@
 {
-  "_id": "1875329ef50a4431",
+  "_id": "424cab3588a440fd",
   "name": "Wall of Ice",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Water 5 (barrier of solid ice)  \n**Supporting Energy:** Space 4 (medium range + wall area) / Time 2 (duration 1 minute)  \n**Range:** Medium, 60 ft. (60 feet long, 20 feet high OR hemisphere 10 feet diameter)  \n**Duration:** 1 minute  \n**Total Cost:** 11 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create wall of ice at medium range up to 60 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter). Each 10ft section has HP = 12 + Water Potential, DR 2 vs nonmagical damage. Creatures within area when created make Reflex save or take 8 cold damage. Wall melts naturally over time.  \n**Saving Throw:** Reflex (when wall is created in your space)  \n**Damage Type:** Cold (energy)  \n**DR Interaction:** Half DR (8 cold damage vs DR 4 becomes 8 - 2 = 6 damage)  \n**Success Scaling:**  \n- **Duration/HP:** 0 = fails, 1 = 1 round (6 HP sections), 2 = full effect (12 HP sections), 3 = 10 minutes (24 HP, double), 4 = 1 hour (36 HP, triple, DR 4)  \n- **Initial damage:** 0 = no damage, 1 = half (4), 2 = full (8), 3 = +8 (16), 4 = +16 (24)\n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Water 5 (barrier of solid ice) <strong>Supporting Energy:</strong> Space 4 (medium range + wall area) / Time 2 (duration 1 minute) <strong>Range:</strong> Medium, 60 ft. (60 feet long, 20 feet high OR hemisphere 10 feet diameter) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create wall of ice at medium range up to 60 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter). Each 10ft section has HP = 12 + Water Potential, DR 2 vs nonmagical damage. Creatures within area when created make [[/save type=reflex]] or take [[/damage 8 type=cold]] damage. Wall melts naturally over time. <strong>Saving Throw:</strong> Reflex (when wall is created in your space) <strong>Damage Type:</strong> Cold (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 8 type=cold]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong></p>\n<ul>\n<li><strong>Duration/HP:</strong> 0 = fails, 1 = 1 round (6 HP sections), 2 = full effect (12 HP sections), 3 = 10 minutes (24 HP, double), 4 = 1 hour (36 HP, triple, DR 4)</li>\n<li><strong>Initial damage:</strong> 0 = no damage, 1 = half (4), 2 = full (8), 3 = +8 (16), 4 = +16 (24)</li>\n</ul>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "water",
+        "cost": 5
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 4
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!1875329ef50a4431"
+  "_key": "!items!424cab3588a440fd"
 }

@@ -1,11 +1,51 @@
 {
-  "_id": "08a1fb374aa94787",
+  "_id": "586d7def443c4407",
   "name": "Shatter",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Air 4 (destructive sonic vibration)  \n**Supporting Energy:** Space 3 (medium range + 10ft radius)  \n**Range:** Medium, 60 ft. (10-foot radius sphere)  \n**Duration:** Instantaneous  \n**Total Cost:** 7 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  \n**Effect:** Create sudden loud ringing in 10-foot radius sphere. All creatures in area take 16 thunder damage. Creatures make Fortitude saves to reduce damage. Nonmagical objects made of crystal, glass, or similar material take double damage and shatter if reduced to 0 HP.  \n**Saving Throw:** Fortitude (to resist sonic vibration)  \n**Damage Type:** Thunder (sonic energy)  \n**DR Interaction:** Full DR applies (16 thunder damage vs DR 4 becomes 16 - 4 = 12 damage)  \n**Success Scaling:** 0 = half damage (8), 1 = 3/4 damage (12), 2 = full damage (16), 3 = +8 damage (24 total) + Deafened, 4 = +16 damage (32 total) + Deafened + Dazed  \n**Deafened Condition (at Net 3+):** Target is Deafened for 1 minute (can save at end of each turn, 1 success ends).  \n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Air 4 (destructive sonic vibration) <strong>Supporting Energy:</strong> Space 3 (medium range + 10ft radius) <strong>Range:</strong> Medium, 60 ft. (10-foot radius sphere) <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create sudden loud ringing in 10-foot radius sphere. All creatures in area take [[/damage 16 type=thunder]] damage. Creatures make Fortitude saves to reduce damage. Nonmagical objects made of crystal, glass, or similar material take double damage and shatter if reduced to 0 HP. <strong>Saving Throw:</strong> Fortitude (to resist sonic vibration) <strong>Damage Type:</strong> Thunder (sonic energy) <strong>DR Interaction:</strong> Full DR applies ([[/damage 16 type=thunder]] damage vs DR 4 becomes 16 - 4 = [[/damage 12]] damage) <strong>Success Scaling:</strong> 0 = half damage (8), 1 = 3/[[/damage 4]] damage (12), 2 = full damage (16), 3 = +[[/damage 8]] damage (24 total) + Deafened, 4 = +[[/damage 16]] damage (32 total) + Deafened + Dazed <strong>Deafened Condition (at Net 3+):</strong> Target is Deafened for 1 minute (can save at end of each turn, 1 success ends).</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!08a1fb374aa94787"
+  "_key": "!items!586d7def443c4407"
 }

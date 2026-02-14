@@ -1,11 +1,51 @@
 {
-  "_id": "c6c6bca8e7f74302",
+  "_id": "1668c6afbc464a8a",
   "name": "Project Image",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 8 (illusory duplicate + medium range)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Medium, 60 ft. (can move up to 120 feet away)  \n**Duration:** 10 minutes  \n**Total Cost:** 11 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create an illusory duplicate of yourself that you can see and hear through (can move up to 120 feet away). Can cast weaves from duplicate's location. Duplicate can move and speak. Physical interaction reveals it as illusory effect.  \n**Saving Throw:** Perception vs Space Mastery (to recognize as illusory effect)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = long range (240 feet, 8 hours)"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 8 (illusory duplicate + medium range) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (can move up to 120 feet away) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create an illusory duplicate of yourself that you can see and hear through (can move up to 120 feet away). Can cast weaves from duplicate's location. Duplicate can move and speak. Physical interaction reveals it as illusory effect. <strong>Saving Throw:</strong> Perception vs Space Mastery (to recognize as illusory effect) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = long range (240 feet, 8 hours)</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 8
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!c6c6bca8e7f74302"
+  "_key": "!items!1668c6afbc464a8a"
 }

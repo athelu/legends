@@ -1,13 +1,29 @@
 {
-  "_id": "dc5f3b3c129d4c06",
+  "_id": "bf3624c4231548f0",
   "name": "Battle-Hardened",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Agi 4, any combat skill 4\n**Description:** After being struck once, you adapt instantly to that opponent's style\n**Benefit:** When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn\n**Usage:** Passive\n**Keyword:** [Combat], [Defense]"
-    }
+      "value": "<p>After being struck once, you adapt instantly to that opponent's style</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 4
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": "any combat skill 4"
+    },
+    "benefits": "<p>When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Defense]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!dc5f3b3c129d4c06"
+  "_key": "!items!bf3624c4231548f0"
 }

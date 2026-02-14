@@ -1,19 +1,24 @@
 {
-  "_id": "5f48b14784a34b1f",
+  "_id": "bf7e6d25b72a47bc",
   "name": "Maul",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A massive two-handed hammer with an oversized head designed for crushing blows. Originally used for driving stakes and breaking stone, the maul's raw impact force makes it devastatingly effective in combat. This category includes sledgehammers, great hammers, and similar heavy two-handed bludgeoning implements. The tremendous weight requires significant strength but can shatter shields and armor.",
+    "description": {
+      "value": "<p>A massive two-handed hammer with an oversized head designed for crushing blows. Originally used for driving stakes and breaking stone, the maul's raw impact force makes it devastatingly effective in combat. This category includes sledgehammers, great hammers, and similar heavy two-handed bludgeoning implements. The tremendous weight requires significant strength but can shatter shields and armor.</p>"
+    },
     "damage": {
       "base": 10,
+      "type": "bludgeoning",
       "alternate": null,
-      "raw": "10",
-      "type": [
-        "bludgeoning"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,18 +37,14 @@
         }
       }
     ],
-    "weight": {
-      "raw": "15 lbs",
-      "lbs": 15.0
-    },
-    "cost": {
-      "raw": "30 gp",
-      "gp": 30.0
-    },
+    "weight": 15.0,
+    "cost": 30.0,
+    "quantity": 1,
     "properties": [
-      "Two-Handed"
-    ]
+      "two-handed"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!5f48b14784a34b1f"
+  "_key": "!items!bf7e6d25b72a47bc"
 }

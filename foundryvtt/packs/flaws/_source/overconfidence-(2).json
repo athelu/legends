@@ -1,11 +1,21 @@
 {
-  "_id": "8775e98229d94701",
+  "_id": "7c871bbef0774874",
   "name": "Overconfidence (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Believe you're best at everything.\n- Must make Will save (1 success required) to retreat from dangerous situations or admit you're wrong\n- NPCs may react negatively to your arrogance (GM discretion)"
+    "description": {
+      "value": "<p>Believe you're best at everything.</p>\n<ul>\n<li>Must make [[/save type=will]] (1 success required) to retreat from dangerous situations or admit you're wrong</li>\n<li>NPCs may react negatively to your arrogance (GM discretion)</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!8775e98229d94701"
+  "_key": "!items!7c871bbef0774874"
 }

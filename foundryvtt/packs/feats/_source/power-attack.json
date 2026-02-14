@@ -1,13 +1,29 @@
 {
-  "_id": "72b028cad01f4cc6",
+  "_id": "fb4ffa077db24213",
   "name": "Power Attack",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Str 3, Melee 3\n**Description:** Precision is nice. Power is better. When you swing your weapon, you fully commit, putting your entire body behind the blow with enough force to crack armor and break bones.\n**Benefit:** Declare before rolling: add 1 to both die results and deal +1d8 damage on hit\n**Usage:** Unlimited\n**Keyword:** [Combat]"
-    }
+      "value": "<p>Precision is nice. Power is better. When you swing your weapon, you fully commit, putting your entire body behind the blow with enough force to crack armor and break bones.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "strength": 3
+      },
+      "skills": "meleeCombat:3",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>Declare before rolling: add 1 to both die results and deal +[[/damage 1d8]] damage on hit</p>",
+    "usageType": "unlimited",
+    "keywords": "[Combat]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!72b028cad01f4cc6"
+  "_key": "!items!fb4ffa077db24213"
 }

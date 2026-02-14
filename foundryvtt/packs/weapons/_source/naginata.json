@@ -1,21 +1,24 @@
 {
-  "_id": "38881191657e4662",
+  "_id": "ffe5dee70d744536",
   "name": "Naginata",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A curved blade mounted on a long pole, creating a versatile slashing and thrusting polearm. The shaft can deliver bludgeoning strikes and the reach advantage makes it excellent for keeping opponents at distance. This category includes various bladed polearms with curved blades such as the glaive-guisarme and similar weapons. Though capable of being thrown, this is typically a last resort due to the weapon's value.",
+    "description": {
+      "value": "<p>A curved blade mounted on a long pole, creating a versatile slashing and thrusting polearm. The shaft can deliver bludgeoning strikes and the reach advantage makes it excellent for keeping opponents at distance. This category includes various bladed polearms with curved blades such as the glaive-guisarme and similar weapons. Though capable of being thrown, this is typically a last resort due to the weapon's value.</p>"
+    },
     "damage": {
       "base": 6,
-      "alternate": null,
-      "raw": "6",
-      "type": [
-        "slashing",
-        "piercing",
-        "bludgeoning"
-      ]
+      "type": "slashing",
+      "alternate": 4,
+      "alternateType": "bludgeoning",
+      "multiType": "piercing"
     },
-    "range": "30/60 when thrown",
+    "range": {
+      "normal": 30,
+      "medium": 60,
+      "long": 120
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -50,22 +53,18 @@
         }
       }
     ],
-    "weight": {
-      "raw": "7 lbs",
-      "lbs": 7.0
-    },
-    "cost": {
-      "raw": "12 gp",
-      "gp": 12.0
-    },
+    "weight": 7.0,
+    "cost": 12.0,
+    "quantity": 1,
     "properties": [
-      "Versatile",
-      "Alternate-Strike",
-      "Multi-type",
-      "Thrown",
-      "Reach"
-    ]
+      "versatile",
+      "alternate-strike",
+      "multi-type",
+      "thrown",
+      "reach"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!38881191657e4662"
+  "_key": "!items!ffe5dee70d744536"
 }

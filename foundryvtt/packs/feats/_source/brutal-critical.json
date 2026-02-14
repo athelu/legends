@@ -1,13 +1,31 @@
 {
-  "_id": "bd13c9b4f9bb47df",
+  "_id": "78c1d2b8a285437d",
   "name": "Brutal Critical",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Str 5, Melee 5, Primal Fury feat\n**Description:** When rage and opportunity align perfectly, your strikes don't just wound, they devastate. In that moment of fury and focus, you hit with enough force to shatter bone and end fights decisively. Subtlety is for people who aren't winning.\n**Benefit:** While in Primal Fury, when you roll double 1s on a melee attack (critical success), roll weapon damage twice and add both together\n**Usage:** Passive, requires Primal Fury active\n**Keyword:** [Combat], [Savage]"
-    }
+      "value": "<p>When rage and opportunity align perfectly, your strikes don't just wound, they devastate. In that moment of fury and focus, you hit with enough force to shatter bone and end fights decisively. Subtlety is for people who aren't winning.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "strength": 5
+      },
+      "skills": "meleeCombat:5",
+      "feats": [
+        "Primal Fury"
+      ],
+      "tier": 3,
+      "other": ""
+    },
+    "benefits": "<p>While in Primal Fury, when you roll double 1s on a melee attack (critical success), roll weapon damage twice and add both together</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Savage]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!bd13c9b4f9bb47df"
+  "_key": "!items!78c1d2b8a285437d"
 }

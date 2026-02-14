@@ -1,21 +1,24 @@
 {
-  "_id": "64fd1e0f5d9f49ca",
+  "_id": "e6ea4361d3874168",
   "name": "Poleaxe",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A versatile polearm combining an axe blade, hammer head, and spike on a reinforced shaft. The multi-faceted head allows the wielder to employ the optimal attack against any opponent. This category includes halberds, bec de corbin, Lucerne hammers, and similar multi-function polearms. Considered the perfect anti-armor weapon, offering cutting, crushing, and piercing options with reach advantage.",
+    "description": {
+      "value": "<p>A versatile polearm combining an axe blade, hammer head, and spike on a reinforced shaft. The multi-faceted head allows the wielder to employ the optimal attack against any opponent. This category includes halberds, bec de corbin, Lucerne hammers, and similar multi-function polearms. Considered the perfect anti-armor weapon, offering cutting, crushing, and piercing options with reach advantage.</p>"
+    },
     "damage": {
       "base": 10,
+      "type": "slashing",
       "alternate": null,
-      "raw": "10",
-      "type": [
-        "slashing",
-        "piercing",
-        "bludgeoning"
-      ]
+      "alternateType": "",
+      "multiType": "piercing, bludgeoning"
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -34,20 +37,16 @@
         }
       }
     ],
-    "weight": {
-      "raw": "10 lbs",
-      "lbs": 10.0
-    },
-    "cost": {
-      "raw": "50 gp",
-      "gp": 50.0
-    },
+    "weight": 10.0,
+    "cost": 50.0,
+    "quantity": 1,
     "properties": [
-      "Two-Handed",
-      "Multi-Type",
-      "Reach"
-    ]
+      "two-handed",
+      "multi-type",
+      "reach"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!64fd1e0f5d9f49ca"
+  "_key": "!items!e6ea4361d3874168"
 }

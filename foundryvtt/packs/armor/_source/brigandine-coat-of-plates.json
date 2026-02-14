@@ -1,27 +1,31 @@
 {
-  "_id": "18694b26b429400e",
+  "_id": "4c1e109f189c458a",
   "name": "Brigandine/Coat of Plates",
   "type": "armor",
-  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
   "system": {
     "description": {
       "value": ""
     },
-    "armorType": "",
+    "armorType": "medium",
     "dr": {
       "slashing": 6,
       "piercing": 6,
       "bludgeoning": 6
     },
-    "stealthPenalty": "none",
+    "stealthPenalty": "noisy",
     "swimPenalty": "",
     "donTime": "",
     "doffTime": "",
     "weight": 0,
     "cost": 400.0,
     "quantity": 1,
-    "notes": ""
+    "notes": "",
+    "keywords": [
+      "MediumArmor",
+      "Noisy"
+    ]
   },
   "effects": [],
-  "_key": "!items!18694b26b429400e"
+  "_key": "!items!4c1e109f189c458a"
 }

@@ -1,13 +1,13 @@
 {
-  "_id": "876a797c66b54566",
+  "_id": "bbe1ba22ac5c43c0",
   "name": "Leather Armor/Cuir Bouilli (Hardened Leather)",
   "type": "armor",
-  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
   "system": {
     "description": {
       "value": ""
     },
-    "armorType": "",
+    "armorType": "light",
     "dr": {
       "slashing": 3,
       "piercing": 2,
@@ -20,8 +20,11 @@
     "weight": 0,
     "cost": 200.0,
     "quantity": 1,
-    "notes": ""
+    "notes": "",
+    "keywords": [
+      "LightArmor"
+    ]
   },
   "effects": [],
-  "_key": "!items!876a797c66b54566"
+  "_key": "!items!bbe1ba22ac5c43c0"
 }

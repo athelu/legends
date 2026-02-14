@@ -6,7 +6,7 @@ Build flaws compendium pack from parsed flaws.md documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, ensure_key
+from pack_utils import build_pack_from_source, generate_id, ensure_key, md_to_html, apply_enrichers
 
 
 def parse_flaws_md(md_file):
@@ -42,17 +42,36 @@ def parse_flaws_md(md_file):
             'type': 'flaw',
             'img': 'icons/svg/hazard.svg',
             'system': {
-                'description': ''
+                'description': {'value': ''},
+                'pointValue': 0,
+                'flawType': '',
+                'severity': 'moderate',
+                'mechanicalEffects': '',
+                'roleplayingImpact': '',
+                'canBeOvercome': False,
+                'requiresGMApproval': False,
+                'notes': ''
             },
             'effects': []
         }
-        
+
         # Extract description
         description = '\n'.join(lines[1:]).strip()
-        item['system']['description'] = description
+        item['system']['description'] = {'value': apply_enrichers(md_to_html(description))}
+
+        # Try to extract point value from name like "Flaw Name (3)"
+        cost_match = re.search(r'\((\d+(?:-\d+)?)\)', item_name)
+        if cost_match:
+            val = cost_match.group(1)
+            # Handle ranges like "2-4" by taking the first value
+            first = val.split('-')[0]
+            try:
+                item['system']['pointValue'] = int(first)
+            except ValueError:
+                pass
         
         # Extract image path if specified
-        img_match = re.search(r'Image[:\s]+([^\n|]+)', description)
+        img_match = re.search(r'\*?\*?Image:?\*?\*?\s*`?([^`\n|]+)`?', description)
         if img_match:
             item['img'] = img_match.group(1).strip()
         

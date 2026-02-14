@@ -1,11 +1,11 @@
 {
-  "_id": "443d397e590d4b2b",
+  "_id": "f1ac35da29d143d2",
   "name": "Advance",
   "type": "action",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1 [Move] action\n- **Effect:** Move up to your speed in feet\n- **Notes:**\n  - Can be split between other actions\n  - Advancing through difficult terrain (rubble, shallow water, undergrowth) costs double\n  - Advancing through another creature's space requires their permission or an Acrobatics check (GM discretion)\n  - Moving Diagonally more than once during an advance costs 7.5 ft."
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Move up to your speed in feet</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Can be split between other actions</li>\n<li>Advancing through difficult terrain (rubble, shallow water, undergrowth) costs double</li>\n<li>Advancing through another creature's space requires their permission or an [[/check skill=acrobatics]] (GM discretion)</li>\n<li>Moving Diagonally more than once during an advance costs 7.5 ft.</li>\n</ul></li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "1",
@@ -17,5 +17,6 @@
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!f1ac35da29d143d2"
 }

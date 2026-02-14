@@ -1,11 +1,51 @@
 {
-  "_id": "6d78641b20894290",
+  "_id": "bebca849b0134839",
   "name": "Shape Water",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Water 2 (manipulating water)  \n**Supporting Energy:** Space 1 (close range)  \n**Range:** Close, 30 ft.  \n**Duration:** Instantaneous (or 1 hour for changes)  \n**Total Cost:** 3 Energy per effect  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery  \n**Effect:** Choose one: (1) Move up to 5ft cube of water up to 5 feet, (2) Shape water into simple forms that last 1 hour, (3) Change color/opacity for 1 hour, (4) Freeze water (unfrozen creatures can escape with Reflex save).  \n**Saving Throw:** Reflex (if freezing water with creatures in it, to escape)  \n**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent shape/color changes\n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Water 2 (manipulating water) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous (or 1 hour for changes) <strong>Total Cost:</strong> 3 Energy per effect <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Choose one: (1) Move up to 5ft cube of water up to 5 feet, (2) Shape water into simple forms that last 1 hour, (3) Change color/opacity for 1 hour, (4) Freeze water (unfrozen creatures can escape with [[/save type=reflex]]). <strong>Saving Throw:</strong> Reflex (if freezing water with creatures in it, to escape) <strong>Success Scaling:</strong> 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent shape/color changes</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "water",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 1
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!6d78641b20894290"
+  "_key": "!items!bebca849b0134839"
 }

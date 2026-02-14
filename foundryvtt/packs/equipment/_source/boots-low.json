@@ -1,13 +1,20 @@
 {
-  "_id": "616f6316887646eb",
+  "_id": "16458a4907d84461",
   "name": "Boots, Low",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Comfortable leather boots that end at or below the ankle, suitable for everyday wear.",
-    "weight": "2 lbs",
-    "cost": "25 gp"
+    "description": {
+      "value": "<p>Comfortable leather boots that end at or below the ankle, suitable for everyday wear.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 2.0,
+    "cost": 25.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!616f6316887646eb"
+  "_key": "!items!16458a4907d84461"
 }

@@ -1,12 +1,14 @@
 {
-  "_id": "65bc3df9aaf34dda",
+  "_id": "20d094032e3d4157",
   "name": "Surprised",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
     "label": "Surprised",
     "category": "combat",
-    "description": "-   Cannot act during the surprise round\n-   Defense: Add 2 to die results until your first turn\n-   After surprise round ends, act normally",
+    "description": {
+      "value": "<ul>\n<li>Cannot act during the surprise round</li>\n<li>Defense: Add 2 to die results until your first turn</li>\n<li>After surprise round ends, act normally</li>\n</ul>"
+    },
     "tokenIcon": "",
     "activeEffects": [],
     "stacking": "replace",
@@ -14,5 +16,5 @@
     "overlayPriority": 20
   },
   "flags": {},
-  "_key": "!items!65bc3df9aaf34dda"
+  "_key": "!items!20d094032e3d4157"
 }

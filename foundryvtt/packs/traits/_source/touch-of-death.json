@@ -1,11 +1,21 @@
 {
-  "_id": "e7a38eb19d3d4bd6",
+  "_id": "1d0f6abb1c104118",
   "name": "Touch of Death",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "- **Action Cost:** 1 [Combat] action\n- **Range:** Touch (melee touch attack)\n- **Effect:** Make a melee touch attack (Agility + Melee Combat opposed by target's Agility + Melee Combat). On hit, deal Negative damage equal to your Tier × 8. This is the touch of natural death, not undeath - you channel Nevil's power over endings.\n- **Damage Type:** Negative (energy)\n- **DR Interaction:** Half DR\n- **Usage:** Uses 1 Channel Divinity\n\n---"
+    "description": {
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> Touch (melee touch attack)</li>\n<li><strong>Effect:</strong> Make a melee touch attack (Agility + Melee Combat opposed by target's Agility + Melee Combat). On hit, deal Negative damage equal to your Tier × 8. This is the touch of natural death, not undeath - you channel Nevil's power over endings.</li>\n<li><strong>Damage Type:</strong> Negative (energy)</li>\n<li><strong>DR Interaction:</strong> Half DR</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>\n<p>---</p>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!e7a38eb19d3d4bd6"
+  "_key": "!items!1d0f6abb1c104118"
 }

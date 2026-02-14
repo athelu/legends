@@ -1,12 +1,14 @@
 {
-  "_id": "0f24f9dee90546fb",
+  "_id": "7d039a2f914a428c",
   "name": "Stunned",
   "type": "condition",
   "img": "icons/svg/stoned.svg",
   "system": {
     "label": "Stunned",
     "category": "physical",
-    "description": "#### Effect:\n-   Cannot take actions or reactions for 1 round\n-   Automatically fail Reflex saves\n-   Attacks against you have Fortune\n-   You can still speak and perceive surroundings\n\n#### Duration:\n-   Typically lasts until the end of your next turn\n-   Some effects specify longer duration\n\n#### Recovery:\n-   Automatically ends after specified duration\n-   Some stun effects allow Fortitude save at end of turn to end early\n\n#### Common Sources:\n-   Critical hits from bludgeoning weapons (optional rule)\n-   Thunder/sonic damage weaves\n-   Special monster abilities\n-   Certain combat maneuvers",
+    "description": {
+      "value": "<h4>Effect:</h4>\n<ul>\n<li>Cannot take actions or reactions for 1 round</li>\n<li>Automatically fail Reflex saves</li>\n<li>Attacks against you have Fortune</li>\n<li>You can still speak and perceive surroundings</li>\n</ul>\n<h4>Duration:</h4>\n<ul>\n<li>Typically lasts until the end of your next turn</li>\n<li>Some effects specify longer duration</li>\n</ul>\n<h4>Recovery:</h4>\n<ul>\n<li>Automatically ends after specified duration</li>\n<li>Some stun effects allow [[/save type=fortitude]] at end of turn to end early</li>\n</ul>\n<h4>Common Sources:</h4>\n<ul>\n<li>Critical hits from bludgeoning weapons (optional rule)</li>\n<li>Thunder/sonic damage weaves</li>\n<li>Special monster abilities</li>\n<li>Certain combat maneuvers</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/stoned.svg",
     "activeEffects": [],
     "stacking": "replace",
@@ -19,9 +21,9 @@
         "type": "fortitude"
       },
       "promptPlayer": true,
-      "chatMessage": "Make a Fortitude save to recover from Stunned"
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Stunned"
     }
   },
   "flags": {},
-  "_key": "!items!0f24f9dee90546fb"
+  "_key": "!items!7d039a2f914a428c"
 }

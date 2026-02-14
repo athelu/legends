@@ -1,13 +1,20 @@
 {
-  "_id": "9e9a5bebba3f4508",
+  "_id": "8a68f9896c5b4e08",
   "name": "Belt",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A leather or cloth belt used to secure clothing and carry pouches, weapons, or tools.",
-    "weight": "0.5 lbs",
-    "cost": "7 gp"
+    "description": {
+      "value": "<p>A leather or cloth belt used to secure clothing and carry pouches, weapons, or tools.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.5,
+    "cost": 7.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!9e9a5bebba3f4508"
+  "_key": "!items!8a68f9896c5b4e08"
 }

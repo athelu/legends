@@ -1,13 +1,20 @@
 {
-  "_id": "8477a63a1b094864",
+  "_id": "7e2a0c868ebe4783",
   "name": "Smith's Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A comprehensive set of metalworking tools including hammers, tongs, files, and other implements needed for blacksmithing.",
-    "weight": "10 lbs",
-    "cost": "60 gp"
+    "description": {
+      "value": "<p>A comprehensive set of metalworking tools including hammers, tongs, files, and other implements needed for blacksmithing.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 10.0,
+    "cost": 60.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!8477a63a1b094864"
+  "_key": "!items!7e2a0c868ebe4783"
 }

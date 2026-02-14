@@ -1,21 +1,22 @@
 {
-  "_id": "45e65108620442e1",
+  "_id": "083c3db43dd24c95",
   "name": "Shield Block",
   "type": "action",
-  "img": "icons/svg/d20.svg",
+  "img": "icons/skills/melee/shield-block-gray-yellow.webp",
   "system": {
     "description": {
-      "value": "Reaction provided by Tower Shield (Heavy Shield) shield."
+      "value": "<ul>\n<li><strong>Trigger:</strong> You are hit by an attack while wielding a shield</li>\n<li><strong>Effect:</strong> Once per round, Gain +6 DR against this attack only</li>\n</ul>\n<h3>Universal Reactions</h3>\n<p>All characters have access to these reactions:</p>"
     },
     "actionType": "reaction",
-    "actionCost": "Reaction",
-    "trigger": "",
-    "effect": "Reaction provided by Tower Shield (Heavy Shield) shield.",
+    "actionCost": "",
+    "trigger": "You are hit by an attack while wielding a shield",
+    "effect": "Once per round, Gain +6 DR against this attack only\n\n\n\n### Universal Reactions\nAll characters have access to these reactions:",
     "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!083c3db43dd24c95"
 }

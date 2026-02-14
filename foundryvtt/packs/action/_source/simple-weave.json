@@ -1,16 +1,16 @@
 {
-  "_id": "b251a37911e742ec",
+  "_id": "906a3484a00d4cd0",
   "name": "Simple Weave",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "Ability to weave, sufficient Energy\n- **Range:** Touch to 5-10 feet maximum (no supporting energy for range)\n- **Effect:** Cast a single-energy weave (Primary Energy only, no Supporting Energy)\n- **Examples:** Fire Burst, Lightning Touch, Frost Touch, Stone Fist, Shadow Touch\n- **Weaving Roll:** Primary Energy Potential + Primary Energy Mastery (2d8 only)\n- **Notes:**\n  - Subject to Multiple Action Penalty\n  - Limited to touch or very close range (raw energy emanation)\n  - Cannot achieve area effects or duration without supporting energy\n  - Single target, instantaneous effects only\n  - See (Magic System) for full weaving rules and Simple Weave limitations"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Requirements:</strong> Ability to weave, sufficient Energy</li>\n<li><strong>Range:</strong> Touch to 5-10 feet maximum (no supporting energy for range)</li>\n<li><strong>Effect:</strong> Cast a single-energy weave (Primary Energy only, no Supporting Energy)</li>\n<li><strong>Weaving Roll:</strong> Primary Energy Potential + Primary Energy Mastery (2d8 only)</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Subject to Multiple Action Penalty</li>\n<li>Limited to touch or very close range (raw energy emanation)</li>\n<li>Cannot achieve area effects or duration without supporting energy</li>\n<li>Single target, instantaneous effects only</li>\n<li>See (Magic System) for full weaving rules and Simple Weave limitations</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
     "trigger": "",
-    "effect": "Cast a single-energy weave (Primary Energy only, no Supporting Energy)\n- **Examples:** Fire Burst, Lightning Touch, Frost Touch, Stone Fist, Shadow Touch\n- **Weaving Roll:** Primary Energy Potential + Primary Energy Mastery (2d8 only)\n- **Notes:**\n  - Subject to Multiple Action Penalty\n  - Limited to touch or very close range (raw energy emanation)\n  - Cannot achieve area effects or duration without supporting energy\n  - Single target, instantaneous effects only\n  - See (Magic System) for full weaving rules and Simple Weave limitations",
+    "effect": "Cast a single-energy weave (Primary Energy only, no Supporting Energy)\n- **Weaving Roll:** Primary Energy Potential + Primary Energy Mastery (2d8 only)\n- **Notes:**\n  - Subject to Multiple Action Penalty\n  - Limited to touch or very close range (raw energy emanation)\n  - Cannot achieve area effects or duration without supporting energy\n  - Single target, instantaneous effects only\n  - See (Magic System) for full weaving rules and Simple Weave limitations",
     "keywords": "",
     "range": "Touch to 5-10 feet maximum (no supporting energy for range)",
     "target": "",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!b251a37911e742ec"
+  "_key": "!items!906a3484a00d4cd0"
 }

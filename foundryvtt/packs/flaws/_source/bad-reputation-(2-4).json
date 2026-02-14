@@ -1,11 +1,21 @@
 {
-  "_id": "808b81468f564815",
+  "_id": "b5b14c0a6421437f",
   "name": "Bad Reputation (2-4)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You are known for something dishonorable or embarrassing.\n- **Minor (2):** Known in your region for something embarrassing or dishonorable\n- **Major (4):** Widely known as criminal, coward, traitor, etc.\n- NPCs who know of you react negatively\n- Persuasion in social situations: Add 1-2 to die results depending on severity"
+    "description": {
+      "value": "<p>You are known for something dishonorable or embarrassing.</p>\n<ul>\n<li><strong>Minor (2):</strong> Known in your region for something embarrassing or dishonorable</li>\n<li><strong>Major (4):</strong> Widely known as criminal, coward, traitor, etc.</li>\n<li>NPCs who know of you react negatively</li>\n<li>Persuasion in social situations: Add 1-2 to die results depending on severity</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!808b81468f564815"
+  "_key": "!items!b5b14c0a6421437f"
 }

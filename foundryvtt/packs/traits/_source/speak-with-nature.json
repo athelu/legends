@@ -1,11 +1,21 @@
 {
-  "_id": "d2a17ad2a4134e0d",
+  "_id": "9b374d5736be418c",
   "name": "Speak with Nature",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "- **Action Cost:** 1 [Interact] action\n- **Range:** Self\n- **Effect:** For 10 minutes, you can communicate with plants and beasts. They understand your words and can respond (though beasts have limited intelligence and plants have even less). Plants can convey information about recent events in their vicinity. Beasts can describe what they've seen or sensed.\n- **Usage:** Uses 1 Channel Divinity"
+    "description": {
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Interact] action</li>\n<li><strong>Range:</strong> Self</li>\n<li><strong>Effect:</strong> For 10 minutes, you can communicate with plants and beasts. They understand your words and can respond (though beasts have limited intelligence and plants have even less). Plants can convey information about recent events in their vicinity. Beasts can describe what they've seen or sensed.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!d2a17ad2a4134e0d"
+  "_key": "!items!9b374d5736be418c"
 }

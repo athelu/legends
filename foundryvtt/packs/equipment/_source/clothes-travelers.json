@@ -1,13 +1,20 @@
 {
-  "_id": "52a77159f364442b",
+  "_id": "f9ceecce3c864e9b",
   "name": "Clothes, Traveler's",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Durable clothing designed for long journeys, featuring reinforced seams and practical pockets. Includes multiple layers for varying weather.",
-    "weight": "4 lbs",
-    "cost": "15 gp"
+    "description": {
+      "value": "<p>Durable clothing designed for long journeys, featuring reinforced seams and practical pockets. Includes multiple layers for varying weather.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 4.0,
+    "cost": 15.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!52a77159f364442b"
+  "_key": "!items!f9ceecce3c864e9b"
 }

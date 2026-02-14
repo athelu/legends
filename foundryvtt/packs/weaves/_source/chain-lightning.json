@@ -1,11 +1,51 @@
 {
-  "_id": "f775a4d0cb62449a",
+  "_id": "4eff8a7d8683441d",
   "name": "Chain Lightning",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Air 7 (arcing electricity, high damage)\n**Supporting Energy:** Space 3 (medium range 60ft + 4 targets)\n**Total Cost:** 10 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Air Potential + Air Mastery + Space Potential + Space Mastery (4d8)\n**Effect:** Lightning arcs to 4 targets within range (first target, then 3 others within 30ft of previous). Each target takes 40 lightning damage and makes their own save.\n**Saving Throw:** Reflex (to reduce damage)\n**Damage Type:** Lightning (energy)\n**DR Interaction:** Half DR (40 lightning damage vs DR 4 becomes 40 - 2 = 38 damage)\n**Success Scaling (Net successes = Your successes - Their successes):** 0 = no damage, 1 = half damage (20), 2 = full damage (40), 3 = +8 damage (48 total), 4 = +16 damage (56 total)\n**Stunned Condition (at Net 4):** Target is Stunned until the end of their next turn, unable to take actions as electricity courses through their body."
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Air 7 (arcing electricity, high damage) <strong>Supporting Energy:</strong> Space 3 (medium range 60ft + 4 targets) <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery + Space Potential + Space Mastery (4d8) <strong>Effect:</strong> Lightning arcs to 4 targets within range (first target, then 3 others within 30ft of previous). Each target takes [[/damage 40 type=lightning]] damage and makes their own save. <strong>Saving Throw:</strong> Reflex (to reduce damage) <strong>Damage Type:</strong> Lightning (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 40 type=lightning]] damage vs DR 4 becomes 40 - 2 = [[/damage 38]] damage) <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 0 = no damage, 1 = half damage (20), 2 = full damage (40), 3 = +[[/damage 8]] damage (48 total), 4 = +[[/damage 16]] damage (56 total) <strong>Stunned Condition (at Net 4):</strong> Target is Stunned until the end of their next turn, unable to take actions as electricity courses through their body.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 7
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!f775a4d0cb62449a"
+  "_key": "!items!4eff8a7d8683441d"
 }

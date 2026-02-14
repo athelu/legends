@@ -1,19 +1,24 @@
 {
-  "_id": "22ee01556b114be9",
+  "_id": "860785e82f314556",
   "name": "Heavy Crossbow",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A powerful mechanical bow using a crank or lever system to draw the heavy string. The heavy crossbow fires thick bolts with tremendous force capable of piercing heavy armor. This category includes arbalests, siege crossbows, and similar heavy-draw mechanical bows. The slow reload time is offset by superior penetration and the ability to be held at full draw indefinitely.",
+    "description": {
+      "value": "<p>A powerful mechanical bow using a crank or lever system to draw the heavy string. The heavy crossbow fires thick bolts with tremendous force capable of piercing heavy armor. This category includes arbalests, siege crossbows, and similar heavy-draw mechanical bows. The slow reload time is offset by superior penetration and the ability to be held at full draw indefinitely.</p>"
+    },
     "damage": {
       "base": 8,
+      "type": "piercing",
       "alternate": null,
-      "raw": "8",
-      "type": [
-        "piercing"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "80/160/320",
+    "range": {
+      "normal": 80,
+      "medium": 160,
+      "long": 320
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -48,20 +53,16 @@
         }
       }
     ],
-    "weight": {
-      "raw": "18 lbs",
-      "lbs": 18.0
-    },
-    "cost": {
-      "raw": "75 gp",
-      "gp": 75.0
-    },
+    "weight": 18.0,
+    "cost": 75.0,
+    "quantity": 1,
     "properties": [
-      "Two-Handed",
-      "Ranged"
+      "two-handed",
+      "ranged"
     ],
+    "notes": "",
     "reload": "2 actions"
   },
   "effects": [],
-  "_key": "!items!22ee01556b114be9"
+  "_key": "!items!860785e82f314556"
 }

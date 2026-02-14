@@ -1,13 +1,30 @@
 {
-  "_id": "86440434e994462f",
+  "_id": "f13220d9465b4ee7",
   "name": "Momentum Strike",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Str or Agi 4, Melee 4\n**Benefit:** When you reduce a creature to 0 HP with a melee attack, you can immediately make one additional melee attack against another creature within 5 feet. Use the same Attribute roll, roll Melee Combat skill separately. This can trigger once per turn\n**Usage:** Once per turn\n**Keyword:** [Combat]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 4,
+        "strength": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>When you reduce a creature to 0 HP with a melee attack, you can immediately make one additional melee attack against another creature within 5 feet. Use the same Attribute roll, roll Melee Combat skill separately. This can trigger once per turn</p>",
+    "usageType": "once",
+    "keywords": "[Combat]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!86440434e994462f"
+  "_key": "!items!f13220d9465b4ee7"
 }

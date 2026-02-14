@@ -1,27 +1,31 @@
 {
-  "_id": "bba0d4bdffb442bc",
+  "_id": "b05ec357681a497b",
   "name": "Plate, Full",
   "type": "armor",
-  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
   "system": {
     "description": {
       "value": ""
     },
-    "armorType": "",
+    "armorType": "heavy",
     "dr": {
       "slashing": 9,
       "piercing": 8,
       "bludgeoning": 6
     },
-    "stealthPenalty": "none",
+    "stealthPenalty": "loud",
     "swimPenalty": "",
     "donTime": "",
     "doffTime": "",
     "weight": 0,
     "cost": 750.0,
     "quantity": 1,
-    "notes": ""
+    "notes": "",
+    "keywords": [
+      "HeavyArmor",
+      "Loud"
+    ]
   },
   "effects": [],
-  "_key": "!items!bba0d4bdffb442bc"
+  "_key": "!items!b05ec357681a497b"
 }

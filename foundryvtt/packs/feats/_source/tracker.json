@@ -1,13 +1,27 @@
 {
-  "_id": "b9556b17e6bb446e",
+  "_id": "8a616ac637974da4",
   "name": "Tracker",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/environment/wilderness/tree-oak.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Survival 3, Perception 3\n**Description:** Every creature leaves a trail and you can read these signs like a book, following trails that others wouldn't even notice exist.\n**Benefit:** Subtract 1 from both dice when tracking. Can track across difficult terrain at normal speed. Can determine number, size, and condition of tracked creatures\n**Usage:** Passive\n**Keyword:** [Wilderness], [Skill]"
-    }
+      "value": "<p>Every creature leaves a trail and you can read these signs like a book, following trails that others wouldn't even notice exist.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "survival:3, perception:3",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>Subtract 1 from both dice when tracking. Can track across difficult terrain at normal speed. Can determine number, size, and condition of tracked creatures</p>",
+    "usageType": "passive",
+    "keywords": "[Wilderness], [Skill]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!b9556b17e6bb446e"
+  "_key": "!items!8a616ac637974da4"
 }

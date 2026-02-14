@@ -36,6 +36,15 @@ The build process has two main stages:
 
 ## Build Process
 
+### Important: Foundry V13 Uses LevelDB Format
+
+Foundry VTT V13 uses **LevelDB format** for compendium packs. The build process has two distinct steps:
+
+1. **Python Scripts** → Generate `_source/*.json` files from markdown documentation
+2. **Foundry CLI** → Compile `_source/*.json` into LevelDB format (creates `CURRENT`, `LOCK`, `MANIFEST-*`, `*.ldb` files)
+
+**DO NOT use the old `.db` files (line-delimited JSON) - these are from Foundry V12 and earlier.**
+
 ### Step 1: Generate Source Files from Markdown
 
 Run the master build script to parse all markdown documentation and generate `_source/*.json` files:
@@ -47,8 +56,9 @@ python foundryvtt/scripts/build_all_packs.py
 
 This will:
 - Parse markdown files from `ttrpg/*.md`
-- Generate individual JSON files in `foundryvtt/packs/*/._source/`
+- Generate individual JSON files in `foundryvtt/packs/*/_source/`
 - Validate item structure and data
+- **Does NOT create .db files or LevelDB files**
 
 **Individual Pack Scripts:**
 You can also run individual pack builders if you only need to update specific content:
@@ -57,12 +67,13 @@ You can also run individual pack builders if you only need to update specific co
 python foundryvtt/scripts/build_feats_pack.py
 python foundryvtt/scripts/build_armor_pack.py
 python foundryvtt/scripts/build_weapons_pack.py
+python foundryvtt/scripts/build_weaves_pack.py
 # etc.
 ```
 
-### Step 2: Compile Pack Files with Foundry CLI
+### Step 2: Compile Pack Files with Foundry CLI (REQUIRED)
 
-After generating source files, compile them into `.db` pack files using the official Foundry CLI:
+After generating source files, **you MUST compile them** into LevelDB format using the official Foundry CLI:
 
 ```bash
 # Compile all packs
@@ -72,15 +83,16 @@ npm run pack:all
 npm run pack:feats
 npm run pack:armor
 npm run pack:weapons
+npm run pack:weaves
 # etc.
 ```
 
-This uses the `fvtt package pack` command to compile `_source/*.json` → `.db` files.
+This uses the `fvtt package pack` command to compile `_source/*.json` → LevelDB format.
 
 **What this does:**
-- Reads JSON files from `foundryvtt/packs/*/._source/`
-- Compiles them into line-delimited JSON `.db` files
-- Ensures compatibility with your Foundry VTT version
+- Reads JSON files from `foundryvtt/packs/*/_source/`
+- Compiles them into LevelDB format (creates `CURRENT`, `LOCK`, `MANIFEST-*`, `*.ldb` files)
+- Ensures compatibility with Foundry VTT V13
 
 ## Complete Build Command
 
@@ -90,7 +102,7 @@ To rebuild everything from scratch:
 # 1. Generate source files from markdown
 python foundryvtt/scripts/build_all_packs.py
 
-# 2. Compile pack files
+# 2. Compile pack files (REQUIRED FOR FOUNDRY V13)
 npm run pack:all
 ```
 
@@ -99,6 +111,48 @@ Or use the combined npm script:
 ```bash
 npm run build:all
 ```
+
+This runs both steps automatically.
+
+## Verification
+
+To verify packs are correctly compiled, check that each pack directory contains:
+
+✅ **LevelDB files** (required for Foundry V13):
+- `CURRENT` - Points to the current manifest
+- `LOCK` - Database lock file
+- `LOG` / `LOG.old` - Write-ahead logs
+- `MANIFEST-*` - Database manifest
+- `*.ldb` - LevelDB data files
+
+❌ **NO `.db` files** - These are from older Foundry versions and are not used in V13
+
+Example of correct pack structure:
+```
+packs/feats/
+  _source/
+    feat1.json
+    feat2.json
+    ...
+  000037.log
+  000039.ldb
+  CURRENT
+  LOCK
+  LOG
+  LOG.old
+  MANIFEST-000035
+```
+
+## Troubleshooting
+
+**Issue: Compendium appears empty in Foundry**
+- Solution: Make sure you ran `npm run pack:<packname>` after the Python script
+- The Python scripts only create `_source/*.json` files
+- The Foundry CLI must be run to create the LevelDB database
+
+**Issue: I see .db files in my pack directories**
+- Solution: Delete them. They are from Foundry V12 or earlier and not used in V13
+- Run `npm run pack:all` to regenerate the correct LevelDB format
 
 ## Deployment
 

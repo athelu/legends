@@ -1,13 +1,29 @@
 {
-  "_id": "9c984f487f5b4a44",
+  "_id": "a0cc58cb1fbd47d4",
   "name": "Reckless Attack",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Str 4, Melee 3\n**Benefit:** When you make a melee weapon attack, you can choose to subtract 1 from both attack dice. If you do, attacks against you also subtract 1 from both dice until start of your next turn\n**Usage:** Unlimited\n**Keyword:** [Combat], [Savage]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "strength": 4
+      },
+      "skills": "meleeCombat:3",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>When you make a melee weapon attack, you can choose to subtract 1 from both attack dice. If you do, attacks against you also subtract 1 from both dice until start of your next turn</p>",
+    "usageType": "unlimited",
+    "keywords": "[Combat], [Savage]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!9c984f487f5b4a44"
+  "_key": "!items!a0cc58cb1fbd47d4"
 }

@@ -1,13 +1,20 @@
 {
-  "_id": "2c80c44e5a5c4a06",
+  "_id": "398588b5c2df4a91",
   "name": "Clothes, Work",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Sturdy, practical clothing designed to withstand manual labor, with reinforced knees and elbows.",
-    "weight": "3 lbs",
-    "cost": "8 gp"
+    "description": {
+      "value": "<p>Sturdy, practical clothing designed to withstand manual labor, with reinforced knees and elbows.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 8.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!2c80c44e5a5c4a06"
+  "_key": "!items!398588b5c2df4a91"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "3d89c59ead384561",
+  "_id": "0cf3e29ebe334474",
   "name": "Compulsive Behavior (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Irresistible activity (gambling, lying, collecting, counting, etc.).\n- Must make Will save (1 success required) to resist when opportunity arises\n- Specify the compulsion when taking this flaw"
+    "description": {
+      "value": "<p>Irresistible activity (gambling, lying, collecting, counting, etc.).</p>\n<ul>\n<li>Must make [[/save type=will]] (1 success required) to resist when opportunity arises</li>\n<li>Specify the compulsion when taking this flaw</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!3d89c59ead384561"
+  "_key": "!items!0cf3e29ebe334474"
 }

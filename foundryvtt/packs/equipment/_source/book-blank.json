@@ -1,13 +1,20 @@
 {
-  "_id": "734da47daa0d4a6b",
+  "_id": "4ab082b1b2b4431e",
   "name": "Book, Blank",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A bound book with empty pages, suitable for use as a journal, spellbook, or record-keeping ledger.",
-    "weight": "3 lbs",
-    "cost": "30 gp"
+    "description": {
+      "value": "<p>A bound book with empty pages, suitable for use as a journal, spellbook, or record-keeping ledger.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 30.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!734da47daa0d4a6b"
+  "_key": "!items!4ab082b1b2b4431e"
 }

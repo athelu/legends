@@ -1,11 +1,51 @@
 {
-  "_id": "206ac8735d7d4ad7",
+  "_id": "5a1dc2c3f84f4fe1",
   "name": "Size Shift",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 4 (altering size + close range)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Target at close range grows or shrinks one size category. Enlarge: add 1 to damage dice, Misfortune on Stealth. Reduce: subtract 1 from damage dice, Fortune on Stealth. Unwilling targets get Fortitude save.  \n**Saving Throw:** Fortitude (if unwilling, to resist size change)  \n**Success Scaling:** 0 = no effect (if unwilling), 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour or 2 size categories\n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 4 (altering size + close range) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at close range grows or shrinks one size category. Enlarge: add [[/damage 1 type=to]] damage dice, Misfortune on Stealth. Reduce: subtract [[/damage 1 type=from]] damage dice, Fortune on Stealth. Unwilling targets get [[/save type=fortitude]]. <strong>Saving Throw:</strong> Fortitude (if unwilling, to resist size change) <strong>Success Scaling:</strong> 0 = no effect (if unwilling), 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour or 2 size categories</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!206ac8735d7d4ad7"
+  "_key": "!items!5a1dc2c3f84f4fe1"
 }

@@ -1,11 +1,11 @@
 {
-  "_id": "2f80cc508c2743c9",
+  "_id": "602c14d739074a73",
   "name": "Trip Attempt",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1\n- **Effect:** Make normal attack roll against opponent\n- **Success:**\n  - Margin 1: No damage, target falls Prone\n  - Margin 2+: Base weapon damage AND target falls Prone\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty\n  - Target must be no more than one size larger than you"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Make normal attack roll against opponent</li>\n<li><strong>Success:</strong>\n<ul>\n<li>Margin 1: No damage, target falls Prone</li>\n<li>Margin 2+: Base weapon damage AND target falls Prone</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Declare before rolling</li>\n<li>Subject to Multiple Action Penalty</li>\n<li>Target must be no more than one size larger than you</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!2f80cc508c2743c9"
+  "_key": "!items!602c14d739074a73"
 }

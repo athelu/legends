@@ -1,13 +1,13 @@
 {
-  "_id": "ae9161716a6840ed",
+  "_id": "a308ff9dfede42fa",
   "name": "Gambeson",
   "type": "armor",
-  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
   "system": {
     "description": {
       "value": ""
     },
-    "armorType": "",
+    "armorType": "medium",
     "dr": {
       "slashing": 4,
       "piercing": 2,
@@ -20,8 +20,11 @@
     "weight": 0,
     "cost": 40.0,
     "quantity": 1,
-    "notes": ""
+    "notes": "",
+    "keywords": [
+      "MediumArmor"
+    ]
   },
   "effects": [],
-  "_key": "!items!ae9161716a6840ed"
+  "_key": "!items!a308ff9dfede42fa"
 }

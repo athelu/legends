@@ -1,11 +1,51 @@
 {
-  "_id": "344b0a45be47447e",
+  "_id": "ba9d471144eb4f0e",
   "name": "Disk of Force",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 3 (force platform)\n**Supporting Energy:** Time 3 (duration 10 minutes)\n**Total Cost:** 6 Energy\n**Action:** Simple weave (1 action)\n**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)\n**Effect:** Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends.\n**Saving Throw:** None (utility weave)\n**Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours and 1000 lbs capacity\n\n## E"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 3 (force platform) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends. <strong>Saving Throw:</strong> None (utility weave) <strong>Success Scaling:</strong> 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours and 1000 lbs capacity</p>\n<h2>E</h2>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!344b0a45be47447e"
+  "_key": "!items!ba9d471144eb4f0e"
 }

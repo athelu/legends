@@ -1,20 +1,24 @@
 {
-  "_id": "e9584e51843b4814",
+  "_id": "e317e52157a14c81",
   "name": "Longsword",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A well-balanced sword designed for both one-handed and two-handed use, featuring a cruciform hilt and straight double-edged blade. The pommel and crossguard enable bludgeoning techniques (half-swording and the murder stroke). This category includes arming swords, bastard swords, hand-and-a-half swords, and similar versatile medieval blades. The quintessential knightly weapon, offering tactical flexibility.",
+    "description": {
+      "value": "<p>A well-balanced sword designed for both one-handed and two-handed use, featuring a cruciform hilt and straight double-edged blade. The pommel and crossguard enable bludgeoning techniques (half-swording and the murder stroke). This category includes arming swords, bastard swords, hand-and-a-half swords, and similar versatile medieval blades. The quintessential knightly weapon, offering tactical flexibility.</p>"
+    },
     "damage": {
       "base": 8,
-      "alternate": null,
-      "raw": "8",
-      "type": [
-        "slashing",
-        "bludgeoning"
-      ]
+      "type": "slashing",
+      "alternate": 6,
+      "alternateType": "bludgeoning",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -33,19 +37,15 @@
         }
       }
     ],
-    "weight": {
-      "raw": "4 lbs",
-      "lbs": 4.0
-    },
-    "cost": {
-      "raw": "40 gp",
-      "gp": 40.0
-    },
+    "weight": 4.0,
+    "cost": 40.0,
+    "quantity": 1,
     "properties": [
-      "Versatile",
-      "Alternate-Strike"
-    ]
+      "versatile",
+      "alternate-strike"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!e9584e51843b4814"
+  "_key": "!items!e317e52157a14c81"
 }

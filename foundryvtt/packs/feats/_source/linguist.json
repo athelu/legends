@@ -1,13 +1,29 @@
 {
-  "_id": "9d6ea43d6521467b",
+  "_id": "f2c8257b836d4838",
   "name": "Linguist",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Int 3, Language 3\n**Benefit:** For languages known gain +2; learn new languages faster\n**Usage:** Passive\n**Keyword:** [Skill]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 3
+      },
+      "skills": "language:3",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>For languages known gain +2; learn new languages faster</p>",
+    "usageType": "passive",
+    "keywords": "[Skill]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!9d6ea43d6521467b"
+  "_key": "!items!f2c8257b836d4838"
 }

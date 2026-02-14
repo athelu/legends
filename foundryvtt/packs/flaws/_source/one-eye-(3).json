@@ -1,11 +1,21 @@
 {
-  "_id": "027830d1ba194cb5",
+  "_id": "87f34d68b8824c54",
   "name": "One Eye (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Missing one eye.\n- Add 1 to ranged attack rolls\n- Perception checks involving depth perception: Add 1 to die results\n- No peripheral vision on one side"
+    "description": {
+      "value": "<p>Missing one eye.</p>\n<ul>\n<li>Add 1 to ranged attack rolls</li>\n<li>Perception checks involving depth perception: Add 1 to die results</li>\n<li>No peripheral vision on one side</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!027830d1ba194cb5"
+  "_key": "!items!87f34d68b8824c54"
 }
