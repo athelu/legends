@@ -1,11 +1,21 @@
 {
-  "_id": "0027a3e724a14428",
+  "_id": "79694adda1f44482",
   "name": "Lecherousness (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "**GM Approval Required - Mature Tables Only**\n\nYou are constantly seeking romantic/sexual attention.\n- Make Will save (1 success required) to avoid making advances, even in inappropriate situations\n- Can result in damaged relationships, jealous rivals, or unwanted complications\n- GM determines appropriateness for table"
+    "description": {
+      "value": "<p><strong>GM Approval Required - Mature Tables Only</strong></p>\n<p>You are constantly seeking romantic/sexual attention.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) to avoid making advances, even in inappropriate situations</li>\n<li>Can result in damaged relationships, jealous rivals, or unwanted complications</li>\n<li>GM determines appropriateness for table</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!0027a3e724a14428"
+  "_key": "!items!79694adda1f44482"
 }

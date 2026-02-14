@@ -1,13 +1,20 @@
 {
-  "_id": "542ba9e00d0a4ff9",
+  "_id": "9ba5043bf77a41f3",
   "name": "Wineskin",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A leather container for holding liquids, typically water or wine. Holds approximately 1 gallon.",
-    "weight": "1 lb (empty), 5 lbs (full)",
-    "cost": "4 gp"
+    "description": {
+      "value": "<p>A leather container for holding liquids, typically water or wine. Holds approximately 1 gallon.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 4.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!542ba9e00d0a4ff9"
+  "_key": "!items!9ba5043bf77a41f3"
 }

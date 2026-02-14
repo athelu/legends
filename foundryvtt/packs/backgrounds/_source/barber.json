@@ -1,11 +1,21 @@
 {
-  "_id": "037d0200d0684f33",
+  "_id": "4d5400cd6b364fc8",
   "name": "Barber",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "You have three specialties: cutting hair, treating minor wounds, and listening to gossip. People talk freely in your chair, and you've heard everything from marital troubles to murder plots. A good barber knows which secrets to keep, which to share, and when a customer really just needs someone to listen. Your steady hands and sharp razors serve you well in any situation.\n**Skills:** Medicine 2, Society 2, Persuasion 1, Devices 1, +40 XP\n**Equipment:** Razor, scissors, comb, soap, common clothes, shoes\n**Feature** - Gossip Network: People talk freely during grooming. You hear rumors and local news before most others."
+    "description": {
+      "value": "<p>You have three specialties: cutting hair, treating minor wounds, and listening to gossip. People talk freely in your chair, and you've heard everything from marital troubles to murder plots. A good barber knows which secrets to keep, which to share, and when a customer really just needs someone to listen. Your steady hands and sharp razors serve you well in any situation. <strong>Skills:</strong> Medicine 2, Society 2, Persuasion 1, Devices 1, +40 XP <strong>Equipment:</strong> Razor, scissors, comb, soap, common clothes, shoes <strong>Feature</strong> - Gossip Network: People talk freely during grooming. You hear rumors and local news before most others.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!037d0200d0684f33"
+  "_key": "!items!4d5400cd6b364fc8"
 }

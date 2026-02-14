@@ -1,13 +1,27 @@
 {
-  "_id": "cb2734a7190d45f2",
+  "_id": "04157e64b5994a12",
   "name": "Reliable Talent",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 5\n**Prerequisites:** Tier 5\n**Benefit:** Choose two (non-combat or mastery) skills in which you have rank 5+. When you roll those skills and get a result higher than your skill rank, treat it as equal to your skill rank instead\n**Usage:** Passive\n**Keyword:** [Skill], [Shadow]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "",
+      "feats": [],
+      "tier": 5,
+      "other": ""
+    },
+    "benefits": "<p>Choose two (non-combat or mastery) skills in which you have rank 5+. When you roll those skills and get a result higher than your skill rank, treat it as equal to your skill rank instead</p>",
+    "usageType": "passive",
+    "keywords": "[Skill], [Shadow]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!cb2734a7190d45f2"
+  "_key": "!items!04157e64b5994a12"
 }

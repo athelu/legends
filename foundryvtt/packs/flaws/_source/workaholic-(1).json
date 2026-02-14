@@ -1,11 +1,21 @@
 {
-  "_id": "b7607316099d43b3",
+  "_id": "fff26b8f9f6643ec",
   "name": "Workaholic (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You work obsessively and have trouble relaxing.\n- During downtime, must make Will save (1 success required) to avoid working on projects, training, or research instead of resting or socializing\n\n---\n\n## SOCIAL FLAWS"
+    "description": {
+      "value": "<p>You work obsessively and have trouble relaxing.</p>\n<ul>\n<li>During downtime, must make [[/save type=will]] (1 success required) to avoid working on projects, training, or research instead of resting or socializing</li>\n</ul>\n<p>---</p>\n<h2>SOCIAL FLAWS</h2>"
+    },
+    "pointValue": 1,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!b7607316099d43b3"
+  "_key": "!items!fff26b8f9f6643ec"
 }

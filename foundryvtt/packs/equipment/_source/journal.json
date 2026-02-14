@@ -1,13 +1,20 @@
 {
-  "_id": "2ee6dc6e3beb4f2e",
+  "_id": "ec13ad58351044b9",
   "name": "Journal",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A small bound book with blank pages, ideal for personal notes, sketches, or travel records.",
-    "weight": "1 lb",
-    "cost": "10 gp"
+    "description": {
+      "value": "<p>A small bound book with blank pages, ideal for personal notes, sketches, or travel records.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 10.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!2ee6dc6e3beb4f2e"
+  "_key": "!items!ec13ad58351044b9"
 }

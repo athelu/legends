@@ -1,11 +1,21 @@
 {
-  "_id": "26272e9469b2497d",
+  "_id": "5e2b9ff95fa6442a",
   "name": "SHU-JAHAN - God of Wisdom",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": ""
+    "description": {
+      "value": ""
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!26272e9469b2497d"
+  "_key": "!items!5e2b9ff95fa6442a"
 }

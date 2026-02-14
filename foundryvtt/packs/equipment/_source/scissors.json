@@ -1,13 +1,20 @@
 {
-  "_id": "e1822c11ae984c1f",
+  "_id": "053077e0eab94eab",
   "name": "Scissors",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A metal cutting tool with two blades, useful for cutting cloth, parchment, or hair.",
-    "weight": "0.5 lbs",
-    "cost": "20 gp"
+    "description": {
+      "value": "<p>A metal cutting tool with two blades, useful for cutting cloth, parchment, or hair.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.5,
+    "cost": 20.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!e1822c11ae984c1f"
+  "_key": "!items!053077e0eab94eab"
 }

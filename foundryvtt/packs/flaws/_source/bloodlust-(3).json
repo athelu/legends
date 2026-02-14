@@ -1,11 +1,21 @@
 {
-  "_id": "82a139e77f114c97",
+  "_id": "ab738bcfba4348df",
   "name": "Bloodlust (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You want to see your foes dead. In battle, you go for killing blows and finish downed foes.\n- Make Will save (1 success required) to spare defeated enemies or use non-lethal methods\n- Make Will save (1 success required) to avoid attacking when violence becomes possible"
+    "description": {
+      "value": "<p>You want to see your foes dead. In battle, you go for killing blows and finish downed foes.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) to spare defeated enemies or use non-lethal methods</li>\n<li>Make [[/save type=will]] (1 success required) to avoid attacking when violence becomes possible</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!82a139e77f114c97"
+  "_key": "!items!ab738bcfba4348df"
 }

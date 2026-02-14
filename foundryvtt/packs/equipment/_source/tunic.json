@@ -1,13 +1,20 @@
 {
-  "_id": "dd87bb91e5d34d98",
+  "_id": "cf8de5ae2b1d490e",
   "name": "Tunic",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A simple pullover garment worn as a primary layer, typically extending to mid-thigh.",
-    "weight": "1 lb",
-    "cost": "5 gp"
+    "description": {
+      "value": "<p>A simple pullover garment worn as a primary layer, typically extending to mid-thigh.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 5.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!dd87bb91e5d34d98"
+  "_key": "!items!cf8de5ae2b1d490e"
 }

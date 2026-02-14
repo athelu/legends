@@ -1,13 +1,20 @@
 {
-  "_id": "28104398968449c6",
+  "_id": "c3cb368bc798468c",
   "name": "Pants",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Basic leg coverings made of cloth or leather, worn as everyday clothing.",
-    "weight": "1 lb",
-    "cost": "6 gp"
+    "description": {
+      "value": "<p>Basic leg coverings made of cloth or leather, worn as everyday clothing.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 6.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!28104398968449c6"
+  "_key": "!items!c3cb368bc798468c"
 }

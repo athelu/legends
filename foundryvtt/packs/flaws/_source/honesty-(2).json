@@ -1,11 +1,21 @@
 {
-  "_id": "7c2d5b37a7514529",
+  "_id": "40b16c52f0604f8d",
   "name": "Honesty (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You must obey the law and play by the rules.\n- Make Will save (1 success required) to break laws, even unjust ones\n- Won't steal, cheat, or bend rules (even if technically legal)\n- Different from Duty Bound: Honesty is about following laws/rules, Duty Bound is about keeping promises\n- Can mislead but won't actually break established rules or laws"
+    "description": {
+      "value": "<p>You must obey the law and play by the rules.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) to break laws, even unjust ones</li>\n<li>Won't steal, cheat, or bend rules (even if technically legal)</li>\n<li>Different from Duty Bound: Honesty is about following laws/rules, Duty Bound is about keeping promises</li>\n<li>Can mislead but won't actually break established rules or laws</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!7c2d5b37a7514529"
+  "_key": "!items!40b16c52f0604f8d"
 }

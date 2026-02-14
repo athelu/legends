@@ -1,11 +1,21 @@
 {
-  "_id": "b209de98fd4d44c5",
+  "_id": "e0a352bbf07c4ca2",
   "name": "Intolerance (2-3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You have strong prejudice against a group.\n- **Specific Group (2):** Particular ancestry, class, religion, nationality\n- **Broad Category (3):** All non-humans, all magic users, all aristocrats, etc.\n- Persuasion with disliked group: Add 2 to die results\n- May receive negative reactions from them"
+    "description": {
+      "value": "<p>You have strong prejudice against a group.</p>\n<ul>\n<li><strong>Specific Group (2):</strong> Particular ancestry, class, religion, nationality</li>\n<li><strong>Broad Category (3):</strong> All non-humans, all magic users, all aristocrats, etc.</li>\n<li>Persuasion with disliked group: Add 2 to die results</li>\n<li>May receive negative reactions from them</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!b209de98fd4d44c5"
+  "_key": "!items!e0a352bbf07c4ca2"
 }

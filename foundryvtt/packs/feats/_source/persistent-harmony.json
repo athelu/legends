@@ -1,13 +1,29 @@
 {
-  "_id": "8de5d0809c564d1c",
+  "_id": "9f6f2ca40e5b4b0d",
   "name": "Persistent Harmony",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 4\n**Prerequisites:** Sorcerous Origin trait, Wis 5, Tier 4\n**Benefit:** Once per long rest, you can enter a state of \"Perfect Harmony\" for 1 minute. During this time, every weave you cast automatically benefits from Harmonic Weaving (reroll one die per weave) without expending uses. You still have your normal Harmonic uses after this ends\n**Usage:** Once per long rest, 1 minute duration\n**Keyword:** [Magic], [Sorcerer]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 5
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 4,
+      "other": "Sorcerous Origin trait"
+    },
+    "benefits": "<p>Once per long rest, you can enter a state of \"Perfect Harmony\" for 1 minute. During this time, every weave you cast automatically benefits from Harmonic Weaving (reroll one die per weave) without expending uses. You still have your normal Harmonic uses after this ends</p>",
+    "usageType": "once",
+    "keywords": "[Magic], [Sorcerer]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!8de5d0809c564d1c"
+  "_key": "!items!9f6f2ca40e5b4b0d"
 }

@@ -1,13 +1,27 @@
 {
-  "_id": "73f2ba7f80564a00",
+  "_id": "91de0b24b9304043",
   "name": "Ritual Efficiency",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Arcana 4, any magical tradition trait with ritual casting\n**Benefit:** Cast rituals in half the normal time (5 minutes instead of 10). Component costs reduced by 25%. When missing a component, can make Arcana check (Hard task) to substitute similar materials. Can teach rituals to other casters (they learn in half time if you teach them)\n**Usage:** Passive\n**Keyword:** [Magic]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "arcane:4",
+      "feats": [],
+      "tier": 2,
+      "other": "any magical tradition trait with ritual casting"
+    },
+    "benefits": "<p>Cast rituals in half the normal time (5 minutes instead of 10). Component costs reduced by 25%. When missing a component, can make [[/check skill=arcane]] (Hard task) to substitute similar materials. Can teach rituals to other casters (they learn in half time if you teach them)</p>",
+    "usageType": "passive",
+    "keywords": "[Magic]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!73f2ba7f80564a00"
+  "_key": "!items!91de0b24b9304043"
 }

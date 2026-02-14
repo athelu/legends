@@ -1,13 +1,29 @@
 {
-  "_id": "51b71de866db4153",
+  "_id": "c510a830cd744f77",
   "name": "Fast Healer",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-star-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Con 4\n**Benefit:** Short rest: gain +Con HP; long rest: gain double HP\n**Usage:** Passive\n**Keyword:** [Heal], [General]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "constitution": 4
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>Short rest: gain +Con HP; long rest: gain double HP</p>",
+    "usageType": "passive",
+    "keywords": "[Heal], [General]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!51b71de866db4153"
+  "_key": "!items!c510a830cd744f77"
 }

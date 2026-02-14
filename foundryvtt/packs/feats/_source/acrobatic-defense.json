@@ -1,13 +1,29 @@
 {
-  "_id": "791b8f2dd49d4aa5",
+  "_id": "e8bcb40786264270",
   "name": "Acrobatic Defense",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Agi 4, Acrobatics 4\n**Description:** Your agility is your armor. While others trust steel and leather, you trust your ability to simply not be where the attack lands. It's worked so far (mostly).\n**Benefit:** When unarmored, subtract 1 from both defense dice\n**Usage:** Passive\n**Keyword:** [Combat], [Defense]"
-    }
+      "value": "<p>Your agility is your armor. While others trust steel and leather, you trust your ability to simply not be where the attack lands. It's worked so far (mostly).</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 4
+      },
+      "skills": "acrobatics:4",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>When unarmored, subtract 1 from both defense dice</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Defense]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!791b8f2dd49d4aa5"
+  "_key": "!items!e8bcb40786264270"
 }

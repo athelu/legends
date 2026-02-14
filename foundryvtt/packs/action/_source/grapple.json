@@ -1,16 +1,16 @@
 {
-  "_id": "e530946ac77541a9",
+  "_id": "d77e1e061bc64a60",
   "name": "Grapple",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1\n- **Effect:** Make opposed Athletics check (Strength + Athletics vs target's Athletics or Acrobatics)\n- **Success:** Target becomes Grappled (see Conditions)\n- **Notes:**\n  - Requires at least one free hand\n  - You are also grappling (can't move unless you drag target)\n  - Target can use action to attempt escape (opposed check)\n  - Subject to Multiple Action Penalty"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Make opposed [[/check skill=athletics]] (Strength + Athletics vs target's Athletics or Acrobatics)</li>\n<li><strong>Success:</strong> Target gains Grappled condition</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Requires at least one free hand</li>\n<li>You are also grappling (can't move unless you drag target)</li>\n<li>Target can use action to attempt escape (opposed check)</li>\n<li>Subject to Multiple Action Penalty</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
     "trigger": "",
-    "effect": "Make opposed Athletics check (Strength + Athletics vs target's Athletics or Acrobatics)\n- **Success:** Target becomes Grappled (see Conditions)\n- **Notes:**\n  - Requires at least one free hand\n  - You are also grappling (can't move unless you drag target)\n  - Target can use action to attempt escape (opposed check)\n  - Subject to Multiple Action Penalty",
+    "effect": "Make opposed Athletics check (Strength + Athletics vs target's Athletics or Acrobatics)\n- **Success:** Target gains Grappled condition\n- **Notes:**\n  - Requires at least one free hand\n  - You are also grappling (can't move unless you drag target)\n  - Target can use action to attempt escape (opposed check)\n  - Subject to Multiple Action Penalty",
     "keywords": "",
     "range": "",
     "target": "",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!e530946ac77541a9"
+  "_key": "!items!d77e1e061bc64a60"
 }

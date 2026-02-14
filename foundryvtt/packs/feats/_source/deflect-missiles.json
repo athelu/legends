@@ -1,13 +1,31 @@
 {
-  "_id": "787cb191495841db",
+  "_id": "23bd234ac9cc4251",
   "name": "Deflect Missiles",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Agi 4, Mystic Defense feat\n**Description:** The old masters claimed that a true warrior could pluck arrows from the air. Most people assumed that was metaphor. You've managed it, though catching them is still more impressive when you're not desperately trying to avoid being shot.\n**Benefit:** When hit by a ranged weapon attack, you may use a [Reaction] to reduce damage by 1d8 + Dex + Wis. If you reduce damage to 0, you can catch the projectile. If you catch it, you can spend 1 Luck to make a ranged attack with it as part of same reaction (range 20/60 ft)\n**Usage:** Reaction (catching and throwing costs Luck)\n**Keyword:** [Combat], [Ascetic], [Reaction]"
-    }
+      "value": "<p>The old masters claimed that a true warrior could pluck arrows from the air. Most people assumed that was metaphor. You've managed it, though catching them is still more impressive when you're not desperately trying to avoid being shot.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 4
+      },
+      "skills": "",
+      "feats": [
+        "Mystic Defense"
+      ],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>When hit by a ranged weapon attack, you may use a [Reaction] to reduce damage by 1d8 + Dex + Wis. If you reduce damage to 0, you can catch the projectile. If you catch it, you can spend 1 Luck to make a ranged attack with it as part of same reaction (range 20/60 ft)</p>",
+    "usageType": "reaction",
+    "keywords": "[Combat], [Ascetic], [Reaction]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!787cb191495841db"
+  "_key": "!items!23bd234ac9cc4251"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "7033acba78274d8b",
+  "_id": "1fb0eb75b4ba4859",
   "name": "Hermit",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "You lived a life of solitude. Adventuring might represent your first foray out among other people in some time. This might be a welcome reprieve from solitude or an unwanted change, but in either case, you're likely still rough around the edges.\n**Skills:** Wilderness 3, Medicine 1, Religion 1, +36 XP\n**Equipment:** Robe, herbalism kit, shoes\n**Feature** - Solitary Discovery: During your isolation, you discovered something significant (work with GM). People seek your wisdom, though they may not understand it."
+    "description": {
+      "value": "<p>You lived a life of solitude. Adventuring might represent your first foray out among other people in some time. This might be a welcome reprieve from solitude or an unwanted change, but in either case, you're likely still rough around the edges. <strong>Skills:</strong> Wilderness 3, Medicine 1, Religion 1, +36 XP <strong>Equipment:</strong> Robe, herbalism kit, shoes <strong>Feature</strong> - Solitary Discovery: During your isolation, you discovered something significant (work with GM). People seek your wisdom, though they may not understand it.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!7033acba78274d8b"
+  "_key": "!items!1fb0eb75b4ba4859"
 }

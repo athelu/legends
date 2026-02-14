@@ -1,26 +1,24 @@
 {
-  "_id": "93b1d2d85e9b4bed",
+  "_id": "aeb442b77d104ed0",
   "name": "Burning",
   "type": "condition",
   "img": "icons/svg/fire.svg",
   "system": {
     "label": "Burning",
     "category": "magic",
-    "description": "-   Character is engulfed in intense flames\n-   Take 2d8 fire damage at the end of each of your turns\n-   All actions: Add 1 to die results (panic and pain)\n-   Duration: Until extinguished\n**Extinguishing Severe Fire:**\n-   Use 1 [Action] to drop and roll: Make Reflex save\n    -   2 successes: Burning ends completely\n    -   1 success: Downgrade to Ignited\n    -   0 successes: Remains Burning\n-   Ally can use 1 [Action]: Make Reflex save\n    -   2 successes: Burning ends\n    -   1 success: Downgrade to Ignited\n-   Immerse in water: Automatic extinguish\n-   Take 8+ cold damage: Automatic downgrade to Ignited",
+    "description": {
+      "value": "<ul>\n<li>Character is engulfed in intense flames</li>\n<li>Take [[/damage 2d8 type=fire]] damage at the start of each of your turns</li>\n<li>All actions: Add 1 to die results (panic and pain)</li>\n<li>Duration: Until extinguished</li>\n</ul>\n<p><strong>Extinguishing Severe Fire:</strong></p>\n<ul>\n<li>Use 1 [Action] to drop and roll: Make [[/save type=reflex]]\n<ul>\n<li>2 successes: Burning ends completely</li>\n<li>1 success: Downgrade to Ignited</li>\n<li>0 successes: Remains Burning</li>\n</ul></li>\n<li>Ally can use 1 [Action]: Make [[/save type=reflex]]\n<ul>\n<li>2 successes: Burning ends</li>\n<li>1 success: Downgrade to Ignited</li>\n</ul></li>\n<li>Immerse in water: Automatic extinguish</li>\n<li>Take 8+ cold damage: Automatic downgrade to Ignited</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/fire.svg",
     "activeEffects": [],
     "stacking": "duration-merge",
     "severity": "moderate",
     "overlayPriority": 20,
     "damageTick": {
-      "frequency": "endOfTurn",
+      "frequency": "startOfTurn",
       "formula": "2d8",
-      "save": {
-        "type": "reflex",
-        "effectOnSuccess": "end"
-      },
       "showInChat": true,
-      "chatMessage": "Take 2d8 fire damage from Burning"
+      "chatMessage": "Take [[/damage 2d8 type=fire]] damage from Burning"
     },
     "recovery": {
       "trigger": "endOfTurn",
@@ -29,7 +27,7 @@
         "type": "reflex"
       },
       "promptPlayer": true,
-      "chatMessage": "Make a Reflex save to recover from Burning",
+      "chatMessage": "Make a [[/save type=reflex]] to recover from Burning",
       "downgrades": {
         "1_success": "Ignited",
         "2_success": null,
@@ -38,5 +36,5 @@
     }
   },
   "flags": {},
-  "_key": "!items!93b1d2d85e9b4bed"
+  "_key": "!items!aeb442b77d104ed0"
 }

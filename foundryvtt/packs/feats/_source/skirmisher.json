@@ -1,13 +1,29 @@
 {
-  "_id": "360e1ffe5eed496f",
+  "_id": "9667702822d642bb",
   "name": "Skirmisher",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Agi 5\n**Description:** You've perfected the art of hitting and moving, never giving opponents the chance to retaliate. By the time they realize they should attack you, you're already out of range and moving on to your next target.\n**Benefit:** When you make a melee attack against a creature, that creature cannot make opportunity attacks against you for the rest of your turn\n**Usage:** Passive\n**Keyword:** [Combat], [Defense], [Move]"
-    }
+      "value": "<p>You've perfected the art of hitting and moving, never giving opponents the chance to retaliate. By the time they realize they should attack you, you're already out of range and moving on to your next target.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 5
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 3,
+      "other": ""
+    },
+    "benefits": "<p>When you make a melee attack against a creature, that creature cannot make opportunity attacks against you for the rest of your turn</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Defense], [Move]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!360e1ffe5eed496f"
+  "_key": "!items!9667702822d642bb"
 }

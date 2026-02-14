@@ -1,20 +1,24 @@
 {
-  "_id": "2c90e5021dd14743",
+  "_id": "84ae1a8a1d38439d",
   "name": "Warhammer (Spiked)",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A warhammer with a piercing spike opposite the hammer head, combining armor-crushing impact with armor-piercing penetration. The dual-purpose design allows the wielder to employ the optimal attack for any situation. This category includes various hammer-and-spike combinations. The added versatility makes this slightly more expensive than the standard warhammer but significantly more tactically flexible.",
+    "description": {
+      "value": "<p>A warhammer with a piercing spike opposite the hammer head, combining armor-crushing impact with armor-piercing penetration. The dual-purpose design allows the wielder to employ the optimal attack for any situation. This category includes various hammer-and-spike combinations. The added versatility makes this slightly more expensive than the standard warhammer but significantly more tactically flexible.</p>"
+    },
     "damage": {
       "base": 8,
+      "type": "bludgeoning",
       "alternate": null,
-      "raw": "8",
-      "type": [
-        "bludgeoning",
-        "piercing"
-      ]
+      "alternateType": "",
+      "multiType": "piercing"
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -33,19 +37,15 @@
         }
       }
     ],
-    "weight": {
-      "raw": "5 lbs",
-      "lbs": 5.0
-    },
-    "cost": {
-      "raw": "30 gp",
-      "gp": 30.0
-    },
+    "weight": 5.0,
+    "cost": 30.0,
+    "quantity": 1,
     "properties": [
-      "Standard",
-      "Multi-Type"
-    ]
+      "standard",
+      "multi-type"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!2c90e5021dd14743"
+  "_key": "!items!84ae1a8a1d38439d"
 }

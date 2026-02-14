@@ -1,11 +1,11 @@
 {
-  "_id": "28cacae2dc324ef2",
+  "_id": "97740a2e445a497f",
   "name": "Climb",
   "type": "action",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** Costs 2 feet of movement for every 1 foot climbed\n- **Effect:** Move along a vertical surface\n- **Check:** Athletics check required for difficult climbs (smooth walls, overhangs)\n- **Notes:**\n  - Slippery or unstable surfaces may impose Misfortune\n  - Falling damage applies if you fail by 2+ successes"
+      "value": "<ul>\n<li><strong>Cost:</strong> Costs 2 feet of movement for every 1 foot climbed</li>\n<li><strong>Effect:</strong> Move along a vertical surface</li>\n<li><strong>Check:</strong> [[/check skill=athletics]] required for difficult climbs (smooth walls, overhangs)</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Slippery or unstable surfaces may impose Misfortune</li>\n<li>Falling damage applies if you fail by 2+ successes</li>\n</ul></li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "2",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!28cacae2dc324ef2"
+  "_key": "!items!97740a2e445a497f"
 }

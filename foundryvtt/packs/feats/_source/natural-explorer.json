@@ -1,13 +1,27 @@
 {
-  "_id": "a4b845f6e7044608",
+  "_id": "8e4201fc23e74746",
   "name": "Natural Explorer",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/environment/wilderness/tree-oak.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Survival 4\n**Benefit:** Choose terrain type (forest, mountains, swamp, etc.). In chosen terrain: difficult terrain doesn't slow travel, Fortune on initiative rolls, Wilderness checks subtract 1 from both dice, enemy ambushes add 1 to both stealth dice\n**Usage:** Passive\n**Note:** Can take multiple times for different terrains\n**Keyword:** [Wilderness]"
-    }
+      "value": "<p><strong>Note:</strong> Can take multiple times for different terrains</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "survival:4",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>Choose terrain type (forest, mountains, swamp, etc.). In chosen terrain: difficult terrain doesn't slow travel, Fortune on initiative rolls, Wilderness checks subtract 1 from both dice, enemy ambushes add 1 to both stealth dice</p>",
+    "usageType": "passive",
+    "keywords": "[Wilderness]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!a4b845f6e7044608"
+  "_key": "!items!8e4201fc23e74746"
 }

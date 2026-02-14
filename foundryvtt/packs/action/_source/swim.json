@@ -1,11 +1,11 @@
 {
-  "_id": "1855a4d63c474394",
+  "_id": "37954ceff1c14203",
   "name": "Swim",
   "type": "action",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** Costs 2 feet of movement for every 1 foot swum\n- **Effect:** Move through water\n- **Check:** Athletics check required for rough water, strong currents, or swimming while armored\n- **Notes:**\n  - Holding breath: Can hold breath for (Constitution) minutes\n  - After that: Must make Fortitude save each round or begin drowning"
+      "value": "<ul>\n<li><strong>Cost:</strong> Costs 2 feet of movement for every 1 foot swum</li>\n<li><strong>Effect:</strong> Move through water</li>\n<li><strong>Check:</strong> [[/check skill=athletics]] required for rough water, strong currents, or swimming while armored</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Holding breath: Can hold breath for (Constitution) minutes</li>\n<li>After that: Must make [[/save type=fortitude]] each round or begin drowning</li>\n</ul></li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "2",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!1855a4d63c474394"
+  "_key": "!items!37954ceff1c14203"
 }

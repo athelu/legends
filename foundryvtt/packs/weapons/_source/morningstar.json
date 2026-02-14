@@ -1,20 +1,24 @@
 {
-  "_id": "84488cf992254ffe",
+  "_id": "52ffa9d3ec284278",
   "name": "Morningstar",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A spiked mace combining crushing weight with armor-piercing spikes. The heavy head delivers bludgeoning force while the spikes concentrate impact at penetrating points. This category includes spiked maces, holy water sprinklers (multiple spiked heads), and similar combination weapons. The dual damage types make the morningstar effective against varied armor types.",
+    "description": {
+      "value": "<p>A spiked mace combining crushing weight with armor-piercing spikes. The heavy head delivers bludgeoning force while the spikes concentrate impact at penetrating points. This category includes spiked maces, holy water sprinklers (multiple spiked heads), and similar combination weapons. The dual damage types make the morningstar effective against varied armor types.</p>"
+    },
     "damage": {
       "base": 8,
+      "type": "bludgeoning",
       "alternate": null,
-      "raw": "8",
-      "type": [
-        "bludgeoning",
-        "piercing"
-      ]
+      "alternateType": "",
+      "multiType": "piercing"
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -33,19 +37,15 @@
         }
       }
     ],
-    "weight": {
-      "raw": "6 lbs",
-      "lbs": 6.0
-    },
-    "cost": {
-      "raw": "20 gp",
-      "gp": 20.0
-    },
+    "weight": 6.0,
+    "cost": 20.0,
+    "quantity": 1,
     "properties": [
-      "Standard",
-      "Multi-Type"
-    ]
+      "standard",
+      "multi-type"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!84488cf992254ffe"
+  "_key": "!items!52ffa9d3ec284278"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "b3167cc75d0a4a5d",
+  "_id": "a812c7557c1b42a6",
   "name": "Merchant",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "In a dusty shop or market stall you bartered wares for coin and trade goods. The skills you picked up still apply in the adventuring life, where a good deal on a suit of armor could prevent your death. You understand that everything has a price and knowing how to negotiate can be as important as knowing how to fight.\n**Skills:** Persuasion 2, Society 2, Empathy 2, Investigate 2, +24 XP\n**Equipment:** Fine clothes, journal, quill, ink, shoes\n**Feature** - Trade Network: You have contacts in merchant guilds and can find buyers or sellers for most goods."
+    "description": {
+      "value": "<p>In a dusty shop or market stall you bartered wares for coin and trade goods. The skills you picked up still apply in the adventuring life, where a good deal on a suit of armor could prevent your death. You understand that everything has a price and knowing how to negotiate can be as important as knowing how to fight. <strong>Skills:</strong> Persuasion 2, Society 2, Empathy 2, Investigate 2, +24 XP <strong>Equipment:</strong> Fine clothes, journal, quill, ink, shoes <strong>Feature</strong> - Trade Network: You have contacts in merchant guilds and can find buyers or sellers for most goods.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!b3167cc75d0a4a5d"
+  "_key": "!items!a812c7557c1b42a6"
 }

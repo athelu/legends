@@ -1,12 +1,14 @@
 {
-  "_id": "2c54a151c4584382",
+  "_id": "d3b05f2db4994ceb",
   "name": "Restrained",
   "type": "condition",
   "img": "icons/svg/net.svg",
   "system": {
     "label": "Restrained",
     "category": "movement",
-    "description": "#### Effect:\n-   Movement speed reduced to 0\n-   Cannot take [Move] actions\n-   All attacks and skill checks: Add 2 to die results\n-   Attacks against you have Fortune\n-   Automatically fail Reflex saves\n\n#### Common Sources:\n-   Nets, chains, magical bindings\n-   Special monster abilities (web, constrict)\n-   Space weaves (force cage)\n\n#### Escaping Restrained:\n-   Depends on source\n-   Physical bonds: Athletics or Devices check (typically 2 successes)\n-   Magical bonds: Usually requires dispelling or breaking concentration",
+    "description": {
+      "value": "<h4>Effect:</h4>\n<ul>\n<li>Movement speed reduced to 0</li>\n<li>Cannot take [Move] actions</li>\n<li>All attacks and skill checks: Add 2 to die results</li>\n<li>Attacks against you have Fortune</li>\n<li>Automatically fail Reflex saves</li>\n</ul>\n<h4>Common Sources:</h4>\n<ul>\n<li>Nets, chains, magical bindings</li>\n<li>Special monster abilities (web, constrict)</li>\n<li>Space weaves (force cage)</li>\n</ul>\n<h4>Escaping Restrained:</h4>\n<ul>\n<li>Depends on source</li>\n<li>Physical bonds: Athletics or [[/check skill=devices]] (typically 2 successes)</li>\n<li>Magical bonds: Usually requires dispelling or breaking concentration</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/net.svg",
     "activeEffects": [],
     "stacking": "replace",
@@ -14,5 +16,5 @@
     "overlayPriority": 20
   },
   "flags": {},
-  "_key": "!items!2c54a151c4584382"
+  "_key": "!items!d3b05f2db4994ceb"
 }

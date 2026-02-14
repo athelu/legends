@@ -1,13 +1,27 @@
 {
-  "_id": "870cfe0cf4244b44",
+  "_id": "d069d04aa5664510",
   "name": "Elemental Mantle",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Pneuma Strike (any element), chosen elemental Mastery 4\n**Description:** Rather than releasing pneuma in bursts, you maintain a constant flow around your body. The element clings to you like a second skin\n**Benefit:** For one element you have Pneuma Strike, you can spend 4 Energy as a [Combat] action to shroud yourself in that element for 1 minute:\n  - **Fire:** Deal 1d8 fire damage to creatures that hit you with melee attacks\n  - **Water:** Gain +2 DR and resistance to fire damage\n  - **Air:** Your movement doesn't provoke opportunity attacks\n  - **Earth:** Gain +4 DR but movement speed reduced by 10 feet\n\n**Usage:** Costs 4 Energy, lasts 1 minute\n**Keyword:** [Combat], [Ascetic], [Magic]"
-    }
+      "value": "<p>Rather than releasing pneuma in bursts, you maintain a constant flow around your body. The element clings to you like a second skin</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": "Pneuma Strike (any element), chosen elemental Mastery 4"
+    },
+    "benefits": "<p>For one element you have Pneuma Strike, you can spend 4 Energy as a [Combat] action to shroud yourself in that element for 1 minute:</p>\n<ul>\n<li><strong>Fire:</strong> Deal [[/damage 1d8 type=fire]] damage to creatures that hit you with melee attacks</li>\n<li><strong>Water:</strong> Gain +2 DR and resistance to fire damage</li>\n<li><strong>Air:</strong> Your movement doesn't provoke opportunity attacks</li>\n<li><strong>Earth:</strong> Gain +4 DR but movement speed reduced by 10 feet</li>\n</ul>",
+    "usageType": "costs",
+    "keywords": "[Combat], [Ascetic], [Magic]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!870cfe0cf4244b44"
+  "_key": "!items!d069d04aa5664510"
 }

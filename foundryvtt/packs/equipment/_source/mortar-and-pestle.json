@@ -1,13 +1,20 @@
 {
-  "_id": "ebc1cfed9b7c46be",
+  "_id": "1b29dc5e70b24358",
   "name": "Mortar and Pestle",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Stone or ceramic tools for grinding herbs, minerals, and other substances into powder or paste.",
-    "weight": "3 lbs",
-    "cost": "10 gp"
+    "description": {
+      "value": "<p>Stone or ceramic tools for grinding herbs, minerals, and other substances into powder or paste.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 10.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!ebc1cfed9b7c46be"
+  "_key": "!items!1b29dc5e70b24358"
 }

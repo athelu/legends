@@ -1,13 +1,29 @@
 {
-  "_id": "a4cb151c137e445b",
+  "_id": "0955731f3d9440ca",
   "name": "Unarmed Mastery",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Agi 3, Melee 3\n**Description:** Your body is a weapon. Fists, elbows, knees, and feet all honed into effective tools for violence, you are never unarmed.\n**Benefit:** Your unarmed strikes deal 6 damage (same as standard weapons). Additionally, all weapons with the **Monk** property count as monk weapons for your abilities\n**Usage:** Passive\n**Keyword:** [Combat], [Ascetic], [Unarmed]"
-    }
+      "value": "<p>Your body is a weapon. Fists, elbows, knees, and feet all honed into effective tools for violence, you are never unarmed.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 3
+      },
+      "skills": "meleeCombat:3",
+      "feats": [],
+      "tier": 1,
+      "other": ""
+    },
+    "benefits": "<p>Your unarmed strikes deal [[/damage 6]] damage (same as standard weapons). Additionally, all weapons with the <strong>Monk</strong> property count as monk weapons for your abilities</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Ascetic], [Unarmed]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!a4cb151c137e445b"
+  "_key": "!items!0955731f3d9440ca"
 }

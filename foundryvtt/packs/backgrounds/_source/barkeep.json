@@ -1,11 +1,21 @@
 {
-  "_id": "3e2efd071bf84edf",
+  "_id": "698c4862cfd740c3",
   "name": "Barkeep",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "You poured drinks and kept the peace in an establishment where ale flowed as freely as stories. Every regular had a tale, every stranger brought news from afar, and you were right in the middle of it all. You know how to read people and make them comfortable and those are useful skills anywhere.\n**Skills:** Empathy 2, Persuasion 2, Society 2, Perception 2, +24 XP\n**Equipment:** Apron, common clothes, shoes\n**Feature** - Tavern Talk: You know how to listen and learn. Gain Fortune on skill tests when gathering information in drinking establishments."
+    "description": {
+      "value": "<p>You poured drinks and kept the peace in an establishment where ale flowed as freely as stories. Every regular had a tale, every stranger brought news from afar, and you were right in the middle of it all. You know how to read people and make them comfortable and those are useful skills anywhere. <strong>Skills:</strong> Empathy 2, Persuasion 2, Society 2, Perception 2, +24 XP <strong>Equipment:</strong> Apron, common clothes, shoes <strong>Feature</strong> - Tavern Talk: You know how to listen and learn. Gain Fortune on skill tests when gathering information in drinking establishments.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!3e2efd071bf84edf"
+  "_key": "!items!698c4862cfd740c3"
 }

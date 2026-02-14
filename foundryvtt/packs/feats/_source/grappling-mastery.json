@@ -1,13 +1,29 @@
 {
-  "_id": "56cfd32dd0fb4d35",
+  "_id": "80460b8c0d8a49ee",
   "name": "Grappling Mastery",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Str 5, Athletics 4\n**Benefit:** Subtract 1 from both dice when making Athletics checks to grapple. When you successfully grapple a creature, you can immediately deal 4 damage [Bludgeoning]. Creatures you grapple add 1 to both dice when attempting to escape\n**Usage:** Passive\n**Keyword:** [Combat], [Grapple]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "strength": 5
+      },
+      "skills": "athletics:4",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>Subtract 1 from both dice when making Athletics checks to grapple. When you successfully grapple a creature, you can immediately deal [[/damage 4]] damage [Bludgeoning]. Creatures you grapple add 1 to both dice when attempting to escape</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Grapple]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!56cfd32dd0fb4d35"
+  "_key": "!items!80460b8c0d8a49ee"
 }

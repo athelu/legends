@@ -1,13 +1,29 @@
 {
-  "_id": "6b095d4934884861",
+  "_id": "0ef2a68b29b0409a",
   "name": "Reality's Favorite",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 5\n**Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5\n**Benefit:** Your perfect self-knowledge has impressed reality itself. You gain permanent benefits:\n  - When you roll any saving throw, subract 1 from your highest die\n  - When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses\n  - When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave\n\n**Usage:** Passive, always on\n**Keyword:** [Magic], [Sorcerer]"
-    }
+      "value": "<ul>\n<li>When you roll any saving throw, subract 1 from your highest die\n<ul>\n<li>When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses</li>\n<li>When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave</li>\n</ul></li>\n</ul>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 7
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 5,
+      "other": "Sorcerous Origin trait"
+    },
+    "benefits": "<p>Your perfect self-knowledge has impressed reality itself. You gain permanent benefits:</p>\n<ul>\n<li>When you roll any saving throw, subract 1 from your highest die</li>\n<li>When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses</li>\n<li>When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave</li>\n</ul>",
+    "usageType": "passive",
+    "keywords": "[Magic], [Sorcerer]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!6b095d4934884861"
+  "_key": "!items!0ef2a68b29b0409a"
 }

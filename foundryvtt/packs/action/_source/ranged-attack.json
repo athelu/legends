@@ -1,11 +1,11 @@
 {
-  "_id": "1cce1aa1a3c0452a",
+  "_id": "6309658984b54278",
   "name": "Ranged Attack",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "Ranged weapon, target within range\n- **Effect:** Make an attack roll (Dexterity + Ranged Combat)\n- **Range Bands:**\n  - **Short range:** 1 success needed for base damage, 2 successes for base + Dexterity modifier\n  - **Medium range:** 2 successes needed for base + Dexterity modifier\n  - **Long range:** 2 successes needed, Add 1 to both die results\n- **Shooting into Melee:** Add 1 to both die results (unless you have Precise Shot feat)\n- **Notes:**\n  - Unopposed roll (target doesn't roll defense)\n  - Subject to Multiple Action Penalty\n  - Making a ranged attack while threatened (enemy within 5 feet) add 1 to both attack dice"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Requirements:</strong> Ranged weapon, target within range</li>\n<li><strong>Effect:</strong> Make an attack roll (Dexterity + Ranged Combat)</li>\n<li><strong>Range Bands:</strong>\n<ul>\n<li><strong>Short range:</strong> 1 success needed for base damage, 2 successes for base + Dexterity modifier</li>\n<li><strong>Medium range:</strong> 2 successes needed for base + Dexterity modifier</li>\n<li><strong>Long range:</strong> 2 successes needed, Add 1 to both die results</li>\n</ul></li>\n<li><strong>Shooting into Melee:</strong> Add 1 to both die results (unless you have Precise Shot feat)</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Unopposed roll (target doesn't roll defense)</li>\n<li>Subject to Multiple Action Penalty</li>\n<li>Making a ranged attack while threatened (enemy within 5 feet) add 1 to both attack dice</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!1cce1aa1a3c0452a"
+  "_key": "!items!6309658984b54278"
 }

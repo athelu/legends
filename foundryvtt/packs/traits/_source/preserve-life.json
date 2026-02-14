@@ -1,11 +1,21 @@
 {
-  "_id": "cfcc1a1ba4314927",
+  "_id": "9b214c6630974d9d",
   "name": "Preserve Life",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "- **Action Cost:** 1 [Combat] action\n- **Range:** 30 feet\n- **Effect:** Restore HP to creatures within range. Distribute HP equal to your Wisdom × your Tier among any number of creatures. Cannot heal a creature above half their maximum HP. The Mother's love flows through you to mend wounds.\n- **Usage:** Uses 1 Channel Divinity\n- **Example:** Tier 3 priest with Wisdom 5 can distribute 15 HP among allies"
+    "description": {
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> 30 feet</li>\n<li><strong>Effect:</strong> Restore HP to creatures within range. Distribute HP equal to your Wisdom × your Tier among any number of creatures. Cannot heal a creature above half their maximum HP. The Mother's love flows through you to mend wounds.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n<li><strong>Example:</strong> Tier 3 priest with Wisdom 5 can distribute 15 HP among allies</li>\n</ul>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!cfcc1a1ba4314927"
+  "_key": "!items!9b214c6630974d9d"
 }

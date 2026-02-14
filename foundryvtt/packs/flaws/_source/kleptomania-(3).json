@@ -1,11 +1,21 @@
 {
-  "_id": "1204014fc7934651",
+  "_id": "ebbf5cd6330b4f0e",
   "name": "Kleptomania (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You have an irresistible urge to steal.\n- Make Will save (1 success required) when encountering interesting, valuable, or unusual items\n- Success means you resist, failure means you must attempt to take it"
+    "description": {
+      "value": "<p>You have an irresistible urge to steal.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) when encountering interesting, valuable, or unusual items</li>\n<li>Success means you resist, failure means you must attempt to take it</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!1204014fc7934651"
+  "_key": "!items!ebbf5cd6330b4f0e"
 }

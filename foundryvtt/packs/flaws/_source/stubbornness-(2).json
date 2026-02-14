@@ -1,11 +1,21 @@
 {
-  "_id": "8b1c5d1782dc4f9f",
+  "_id": "164b45b5ca0a450b",
   "name": "Stubbornness (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You refuse to change your mind easily.\n- Once committed to course of action or opinion, make Will save (1 success required) to admit you were wrong or change plans, even when presented with clear evidence"
+    "description": {
+      "value": "<p>You refuse to change your mind easily.</p>\n<ul>\n<li>Once committed to course of action or opinion, make [[/save type=will]] (1 success required) to admit you were wrong or change plans, even when presented with clear evidence</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!8b1c5d1782dc4f9f"
+  "_key": "!items!164b45b5ca0a450b"
 }

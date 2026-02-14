@@ -1,13 +1,20 @@
 {
-  "_id": "d87385df9a4e4abe",
+  "_id": "1ab8571b1d644356",
   "name": "Comb",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A wooden or bone implement for grooming hair and maintaining personal appearance.",
-    "weight": "0.1 lbs",
-    "cost": "2 sp"
+    "description": {
+      "value": "<p>A wooden or bone implement for grooming hair and maintaining personal appearance.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.1,
+    "cost": 0.2,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!d87385df9a4e4abe"
+  "_key": "!items!1ab8571b1d644356"
 }

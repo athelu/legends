@@ -1,11 +1,21 @@
 {
-  "_id": "9ac075b55e754d99",
+  "_id": "e880363f009d4027",
   "name": "Athlete",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "Years of competition taught you that glory is fleeting but discipline is forever. You might have retired at your peak, or perhaps an injury ended your career prematurely, but the training never really stops, it just finds new applications. At least adventuring pays better than most tournaments.\n**Skills:** Athletics 2, Acrobatics 2, Perform 1, Intimidate 1, +40 XP\n**Equipment:** Traveler's clothes, backpack, shoes\n**Feature** - Competitor's Spirit: You're known in sporting circles. Can find competitions, training facilities, and fellow athletes who respect your dedication."
+    "description": {
+      "value": "<p>Years of competition taught you that glory is fleeting but discipline is forever. You might have retired at your peak, or perhaps an injury ended your career prematurely, but the training never really stops, it just finds new applications. At least adventuring pays better than most tournaments. <strong>Skills:</strong> Athletics 2, Acrobatics 2, Perform 1, Intimidate 1, +40 XP <strong>Equipment:</strong> Traveler's clothes, backpack, shoes <strong>Feature</strong> - Competitor's Spirit: You're known in sporting circles. Can find competitions, training facilities, and fellow athletes who respect your dedication.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!9ac075b55e754d99"
+  "_key": "!items!e880363f009d4027"
 }

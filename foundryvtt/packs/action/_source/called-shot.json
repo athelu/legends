@@ -1,22 +1,22 @@
 {
-  "_id": "752c47bd2f8a4937",
+  "_id": "e86e8f04db214b90",
   "name": "Called Shot",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1\n- **Effect:** Add 1 to both attack die results, but on hit choose one:\n  - Bypass half DR (rounded down)\n  - Apply specific condition (Bleeding, Dazzled, etc. - GM approval required)\n  - Deny shield Ranged Defense [Reaction]\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Add 1 to both attack die results, but on hit choose one:\n<ul>\n<li>Bypass half DR (rounded down)</li>\n<li>Apply specific condition (Bleeding, Dazzled, etc. - GM approval required)</li>\n<li>Deny shield Ranged Defense [Reaction]</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Declare before rolling</li>\n<li>Subject to Multiple Action Penalty</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
     "trigger": "",
     "effect": "Add 1 to both attack die results, but on hit choose one:\n  - Bypass half DR (rounded down)\n  - Apply specific condition (Bleeding, Dazzled, etc. - GM approval required)\n  - Deny shield Ranged Defense [Reaction]\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty",
-    "keywords": "Reaction",
+    "keywords": "",
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!752c47bd2f8a4937"
+  "_key": "!items!e86e8f04db214b90"
 }

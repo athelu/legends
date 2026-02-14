@@ -1,11 +1,21 @@
 {
-  "_id": "fa50c0b9a0cb4fb9",
+  "_id": "513ee88393fc4807",
   "name": "RUDLU - Goddess of Luck",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": ""
+    "description": {
+      "value": ""
+    },
+    "pointCost": 0,
+    "traitType": "luck",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!fa50c0b9a0cb4fb9"
+  "_key": "!items!513ee88393fc4807"
 }

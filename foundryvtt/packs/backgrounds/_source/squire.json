@@ -1,11 +1,21 @@
 {
-  "_id": "44e02b8de1594d60",
+  "_id": "ef024ec20b2e4f3c",
   "name": "Squire",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "You served a knight or noble warrior, learning combat, chivalry, and the responsibilities that come with wielding power. The training was rigorous, the ideals were lofty, and the reality often fell short of both. Now you seek your own path or are just waiting for that moment of recognition. You carry those lessons with you, for better or worse.\n**Skills:** Melee Combat 2, Athletics 2, Society 1, Empathy 1, +40 XP\n**Equipment:** Weapon of choice, fine clothes, riding boots\n**Feature** - Knight's Training: You were trained in chivalry and combat. Recognized by noble warriors and can invoke codes of honor, though results vary by region and culture."
+    "description": {
+      "value": "<p>You served a knight or noble warrior, learning combat, chivalry, and the responsibilities that come with wielding power. The training was rigorous, the ideals were lofty, and the reality often fell short of both. Now you seek your own path or are just waiting for that moment of recognition. You carry those lessons with you, for better or worse. <strong>Skills:</strong> Melee Combat 2, Athletics 2, Society 1, Empathy 1, +40 XP <strong>Equipment:</strong> Weapon of choice, fine clothes, riding boots <strong>Feature</strong> - Knight's Training: You were trained in chivalry and combat. Recognized by noble warriors and can invoke codes of honor, though results vary by region and culture.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!44e02b8de1594d60"
+  "_key": "!items!ef024ec20b2e4f3c"
 }

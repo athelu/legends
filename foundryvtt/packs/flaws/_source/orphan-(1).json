@@ -1,11 +1,21 @@
 {
-  "_id": "15c8790c611e4d4d",
+  "_id": "fb65674bf31d41b6",
   "name": "Orphan (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Forsaken as child, raised on streets/by others/in orphanage."
+    "description": {
+      "value": "<p>Forsaken as child, raised on streets/by others/in orphanage.</p>"
+    },
+    "pointValue": 1,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!15c8790c611e4d4d"
+  "_key": "!items!fb65674bf31d41b6"
 }

@@ -1,20 +1,24 @@
 {
-  "_id": "92450bed0571468d",
+  "_id": "a01828f0a0384726",
   "name": "War Pick",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A weapon with a heavy head featuring a pointed spike on one side, designed specifically to pierce armor. The concentrated force at the spike's point can punch through even plate armor. This category includes military picks, horseman's picks, and similar one-handed armor-piercing implements. The reverse side often features a hammer head for bludgeoning attacks, making it versatile against various defenses.",
+    "description": {
+      "value": "<p>A weapon with a heavy head featuring a pointed spike on one side, designed specifically to pierce armor. The concentrated force at the spike's point can punch through even plate armor. This category includes military picks, horseman's picks, and similar one-handed armor-piercing implements. The reverse side often features a hammer head for bludgeoning attacks, making it versatile against various defenses.</p>"
+    },
     "damage": {
       "base": 8,
+      "type": "piercing",
       "alternate": null,
-      "raw": "8",
-      "type": [
-        "piercing",
-        "bludgeoning"
-      ]
+      "alternateType": "",
+      "multiType": "bludgeoning"
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -33,19 +37,15 @@
         }
       }
     ],
-    "weight": {
-      "raw": "6 lbs",
-      "lbs": 6.0
-    },
-    "cost": {
-      "raw": "30 gp",
-      "gp": 30.0
-    },
+    "weight": 6.0,
+    "cost": 30.0,
+    "quantity": 1,
     "properties": [
-      "Standard",
-      "Multi-Type"
-    ]
+      "standard",
+      "multi-type"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!92450bed0571468d"
+  "_key": "!items!a01828f0a0384726"
 }

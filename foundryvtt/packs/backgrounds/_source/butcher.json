@@ -1,11 +1,21 @@
 {
-  "_id": "59418ad2d98444f1",
+  "_id": "ad8066f5366241a2",
   "name": "Butcher",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "Your apprenticeship involved sharp knives, practical anatomy, and an understanding of how to get the best cuts. The work was bloody, demanding, and surprisingly educational. You know more about sinew and bone than most people ever will.\n**Skills:** Might 2, Medicine 2, Craft 1, Society 1, +40 XP\n**Equipment:** Cleaver, apron, meat hook, work clothes, work boots\n**Feature** - Anatomy Knowledge: You know the best cuts and methods for processing animals."
+    "description": {
+      "value": "<p>Your apprenticeship involved sharp knives, practical anatomy, and an understanding of how to get the best cuts. The work was bloody, demanding, and surprisingly educational. You know more about sinew and bone than most people ever will. <strong>Skills:</strong> Might 2, Medicine 2, Craft 1, Society 1, +40 XP <strong>Equipment:</strong> Cleaver, apron, meat hook, work clothes, work boots <strong>Feature</strong> - Anatomy Knowledge: You know the best cuts and methods for processing animals.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!59418ad2d98444f1"
+  "_key": "!items!ad8066f5366241a2"
 }

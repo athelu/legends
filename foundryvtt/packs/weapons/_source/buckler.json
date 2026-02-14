@@ -1,19 +1,24 @@
 {
-  "_id": "31e32f17bddb4bce",
+  "_id": "c53d8c6d965d415f",
   "name": "Buckler",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A small, round shield typically 12-18 inches in diameter, used both defensively and offensively. When used as a weapon, the buckler's metal boss can deliver quick, punishing strikes. Popular with duelists and skirmishers who value mobility. This category includes targe shields and other small defensive implements designed for active parrying and striking.",
+    "description": {
+      "value": "<p>A small, round shield typically 12-18 inches in diameter, used both defensively and offensively. When used as a weapon, the buckler's metal boss can deliver quick, punishing strikes. Popular with duelists and skirmishers who value mobility. This category includes targe shields and other small defensive implements designed for active parrying and striking.</p>"
+    },
     "damage": {
       "base": 4,
+      "type": "bludgeoning",
       "alternate": null,
-      "raw": "4",
-      "type": [
-        "bludgeoning"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,20 +37,16 @@
         }
       }
     ],
-    "weight": {
-      "raw": "3 lbs",
-      "lbs": 3.0
-    },
-    "cost": {
-      "raw": "10 gp",
-      "gp": 10.0
-    },
+    "weight": 3.0,
+    "cost": 10.0,
+    "quantity": 1,
     "properties": [
-      "Light",
-      "Standard",
-      "Finesse"
-    ]
+      "light",
+      "standard",
+      "finesse"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!31e32f17bddb4bce"
+  "_key": "!items!c53d8c6d965d415f"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "3b2f177747534f2d",
+  "_id": "68c8c76f731347f9",
   "name": "Laborer",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "You've spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else's command. At least now when you're risking your life there's treasure involved instead of just a silver a day and aching muscles.\n**Skills:** Might 2, Athletics 2, Devices 1, Craft 1, +40 XP\n**Equipment:** Work clothes, work gloves, work boots\n**Feature** - Hard Worker: You can find manual labor work in any settlement and are trusted by working folk."
+    "description": {
+      "value": "<p>You've spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else's command. At least now when you're risking your life there's treasure involved instead of just a silver a day and aching muscles. <strong>Skills:</strong> Might 2, Athletics 2, Devices 1, Craft 1, +40 XP <strong>Equipment:</strong> Work clothes, work gloves, work boots <strong>Feature</strong> - Hard Worker: You can find manual labor work in any settlement and are trusted by working folk.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!3b2f177747534f2d"
+  "_key": "!items!68c8c76f731347f9"
 }

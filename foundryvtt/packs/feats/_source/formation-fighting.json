@@ -1,13 +1,31 @@
 {
-  "_id": "92c3c16817644097",
+  "_id": "68bca10767a14690",
   "name": "Formation Fighting",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Str 3, Shield Master feat\n**Benefit:** When you and at least two allies adjacent to you are all wielding shields, all of you gain +2 DR. When an adjacent ally is attacked, you can use a [Reaction] to grant them +2 to both dice on their defense roll\n**Usage:** Passive + reaction\n**Keyword:** [Combat], [Defense], [Reaction]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "strength": 3
+      },
+      "skills": "",
+      "feats": [
+        "Shield Master"
+      ],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>When you and at least two allies adjacent to you are all wielding shields, all of you gain +2 DR. When an adjacent ally is attacked, you can use a [Reaction] to grant them +2 to both dice on their defense roll</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Defense], [Reaction]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!92c3c16817644097"
+  "_key": "!items!68bca10767a14690"
 }

@@ -1,13 +1,20 @@
 {
-  "_id": "ba08a86417804ce6",
+  "_id": "9758f93c8888465c",
   "name": "Shovel",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A wooden-handled tool with an iron blade, used for digging and moving earth or other materials.",
-    "weight": "5 lbs",
-    "cost": "8 gp"
+    "description": {
+      "value": "<p>A wooden-handled tool with an iron blade, used for digging and moving earth or other materials.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 5.0,
+    "cost": 8.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!ba08a86417804ce6"
+  "_key": "!items!9758f93c8888465c"
 }

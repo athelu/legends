@@ -1,5 +1,5 @@
 /**
- * D8 TTRPG Chat Message Helpers
+ * Legends D8 TTRPG Chat Message Helpers
  */
 
 /**

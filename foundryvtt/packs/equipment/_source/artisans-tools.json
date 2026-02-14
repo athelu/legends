@@ -1,13 +1,20 @@
 {
-  "_id": "2e87438f305a42d9",
+  "_id": "f58455800fac4835",
   "name": "Artisan's Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Specialized tools for a specific craft (specify type: blacksmith, carpenter, cobbler, etc.). These tools are necessary to practice a trade and create items related to that profession.",
-    "weight": "5 lbs",
-    "cost": "50 gp"
+    "description": {
+      "value": "<p>Specialized tools for a specific craft (specify type: blacksmith, carpenter, cobbler, etc.). These tools are necessary to practice a trade and create items related to that profession.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 5.0,
+    "cost": 50.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!2e87438f305a42d9"
+  "_key": "!items!f58455800fac4835"
 }

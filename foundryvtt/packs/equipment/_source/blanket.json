@@ -1,13 +1,20 @@
 {
-  "_id": "ec0bc5831f68457b",
+  "_id": "8a89523a85634d79",
   "name": "Blanket",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A warm woolen blanket suitable for sleeping or staying warm in cold weather.",
-    "weight": "3 lbs",
-    "cost": "5 sp"
+    "description": {
+      "value": "<p>A warm woolen blanket suitable for sleeping or staying warm in cold weather.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 0.5,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!ec0bc5831f68457b"
+  "_key": "!items!8a89523a85634d79"
 }

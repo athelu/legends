@@ -1,13 +1,29 @@
 {
-  "_id": "1f107b06dba94772",
+  "_id": "358f6d8d31164a60",
   "name": "Shield Master",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Str 3, Melee 3, must be using a shield\n**Description:** You've mastered the shield, turning that disc of metal or wood into reliable protection that can mean the difference between injury and death.\n**Benefit:** Subtract 1 from both dice on Reflex saves while using a shield. Once per combat as a [Reaction], completely negate one attack that would hit you\n**Usage:** Passive + once per combat reaction\n**Keyword:** [Combat], [Reaction]"
-    }
+      "value": "<p>You've mastered the shield, turning that disc of metal or wood into reliable protection that can mean the difference between injury and death.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "strength": 3
+      },
+      "skills": "meleeCombat:3",
+      "feats": [],
+      "tier": 1,
+      "other": "must be using a shield"
+    },
+    "benefits": "<p>Subtract 1 from both dice on Reflex saves while using a shield. Once per combat as a [Reaction], completely negate one attack that would hit you</p>",
+    "usageType": "passive",
+    "keywords": "[Combat], [Reaction]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!1f107b06dba94772"
+  "_key": "!items!358f6d8d31164a60"
 }

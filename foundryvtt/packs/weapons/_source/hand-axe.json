@@ -1,19 +1,24 @@
 {
-  "_id": "7ecc978629e34be8",
+  "_id": "567933e547964613",
   "name": "Hand Axe",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A small, light axe designed for one-handed use and throwing. Equally effective in melee or at range, making it a versatile choice for skirmishers. This category includes hatchets, tomahawks, franciscas, and similar light throwing axes. The compact size allows warriors to carry multiple hand axes for ranged volleys before closing to melee.",
+    "description": {
+      "value": "<p>A small, light axe designed for one-handed use and throwing. Equally effective in melee or at range, making it a versatile choice for skirmishers. This category includes hatchets, tomahawks, franciscas, and similar light throwing axes. The compact size allows warriors to carry multiple hand axes for ranged volleys before closing to melee.</p>"
+    },
     "damage": {
       "base": 4,
+      "type": "slashing",
       "alternate": null,
-      "raw": "4",
-      "type": [
-        "slashing"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "30/60 when thrown",
+    "range": {
+      "normal": 30,
+      "medium": 60,
+      "long": 120
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -48,19 +53,15 @@
         }
       }
     ],
-    "weight": {
-      "raw": "2 lbs",
-      "lbs": 2.0
-    },
-    "cost": {
-      "raw": "15 gp",
-      "gp": 15.0
-    },
+    "weight": 2.0,
+    "cost": 15.0,
+    "quantity": 1,
     "properties": [
-      "Light",
-      "Thrown"
-    ]
+      "light",
+      "thrown"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!7ecc978629e34be8"
+  "_key": "!items!567933e547964613"
 }

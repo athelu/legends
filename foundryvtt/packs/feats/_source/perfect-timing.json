@@ -1,13 +1,29 @@
 {
-  "_id": "56a8450001164194",
+  "_id": "563ba1eccfcc4e88",
   "name": "Perfect Timing",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Sorcerous Origin trait, Wis 5\n**Benefit:** Once per turn, you can use a [Reaction] to grant one creature within 60 feet Fortune on their next roll (any type—attack, save, skill check, or weaving). You must declare this before they roll\n**Usage:** Once per turn (reaction)\n**Keyword:** [Magic], [Sorcerer], [Reaction]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 5
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 3,
+      "other": "Sorcerous Origin trait"
+    },
+    "benefits": "<p>Once per turn, you can use a [Reaction] to grant one creature within 60 feet Fortune on their next roll (any type—attack, save, skill check, or weaving). You must declare this before they roll</p>",
+    "usageType": "once",
+    "keywords": "[Magic], [Sorcerer], [Reaction]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!56a8450001164194"
+  "_key": "!items!563ba1eccfcc4e88"
 }

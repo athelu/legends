@@ -1,11 +1,11 @@
 {
-  "_id": "fe4f221f3f1641e6",
+  "_id": "fa3e8fc93ba444a5",
   "name": "Squeeze",
   "type": "action",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1 [Move] action\n- **Effect:** Move through a space one size smaller than you\n- **Speed:** Costs 2 feet of movement for every 1 foot traveled\n- **Penalties:** While squeezing:\n  - All attacks and skill checks: Add 1 to die results\n  - Attacks against you have Fortune\n- **Notes:**\n  - A Medium creature can squeeze through a space at least 2.5 feet wide\n  - Exiting the tight space ends the penalties"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Move through a space one size smaller than you</li>\n<li><strong>Speed:</strong> Costs 2 feet of movement for every 1 foot traveled</li>\n<li><strong>Penalties:</strong> While squeezing:\n<ul>\n<li>All attacks and skill checks: Add 1 to die results</li>\n<li>Attacks against you have Fortune</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>A Medium creature can squeeze through a space at least 2.5 feet wide</li>\n<li>Exiting the tight space ends the penalties</li>\n</ul></li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "1",
@@ -17,5 +17,6 @@
     "frequency": "",
     "special": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!fa3e8fc93ba444a5"
 }

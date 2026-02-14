@@ -1,13 +1,20 @@
 {
-  "_id": "9946d0a2cf524e09",
+  "_id": "18e81ffebd2a4cb8",
   "name": "Dice Set",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A set of gaming dice, typically including several six-sided dice, used for gambling and entertainment.",
-    "weight": "0.1 lbs",
-    "cost": "5 sp"
+    "description": {
+      "value": "<p>A set of gaming dice, typically including several six-sided dice, used for gambling and entertainment.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.1,
+    "cost": 0.5,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!9946d0a2cf524e09"
+  "_key": "!items!18e81ffebd2a4cb8"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "ab4e44b6a94a45b2",
+  "_id": "be66964e9f9b4040",
   "name": "Squeamish (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You are disturbed by blood, gore, and corpses.\n- Make Will save (1 success required) when exposed to gruesome scenes or be unable to approach/interact with source\n- Medicine and Healing checks involving blood: Add 2 to die results"
+    "description": {
+      "value": "<p>You are disturbed by blood, gore, and corpses.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) when exposed to gruesome scenes or be unable to approach/interact with source</li>\n<li>Medicine and Healing checks involving blood: Add 2 to die results</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!ab4e44b6a94a45b2"
+  "_key": "!items!be66964e9f9b4040"
 }

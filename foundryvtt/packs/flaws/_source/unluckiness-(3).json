@@ -1,11 +1,21 @@
 {
-  "_id": "b0524bdbc26145b8",
+  "_id": "17eb513eed5c41b9",
   "name": "Unluckiness (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Nothing goes your way.\n- Once per session, GM forces reroll of successful roll, take worse result"
+    "description": {
+      "value": "<p>Nothing goes your way.</p>\n<ul>\n<li>Once per session, GM forces reroll of successful roll, take worse result</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!b0524bdbc26145b8"
+  "_key": "!items!17eb513eed5c41b9"
 }

@@ -1,27 +1,31 @@
 {
-  "_id": "88f2d31f942647d3",
+  "_id": "f28fee8eb438408c",
   "name": "Scale Mail",
   "type": "armor",
-  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
   "system": {
     "description": {
       "value": ""
     },
-    "armorType": "",
+    "armorType": "medium",
     "dr": {
       "slashing": 6,
       "piercing": 5,
       "bludgeoning": 4
     },
-    "stealthPenalty": "none",
+    "stealthPenalty": "noisy",
     "swimPenalty": "",
     "donTime": "",
     "doffTime": "",
     "weight": 0,
     "cost": 250.0,
     "quantity": 1,
-    "notes": ""
+    "notes": "",
+    "keywords": [
+      "MediumArmor",
+      "Noisy"
+    ]
   },
   "effects": [],
-  "_key": "!items!88f2d31f942647d3"
+  "_key": "!items!f28fee8eb438408c"
 }

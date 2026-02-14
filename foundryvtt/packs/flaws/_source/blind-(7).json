@@ -1,11 +1,21 @@
 {
-  "_id": "8795c84eecfe4de3",
+  "_id": "e41c11bc9fb442db",
   "name": "Blind (7)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Lost sight in both eyes.\n- Permanently Blinded (see Blinded condition)"
+    "description": {
+      "value": "<p>Lost sight in both eyes.</p>\n<ul>\n<li>Permanently Blinded (see Blinded condition)</li>\n</ul>"
+    },
+    "pointValue": 7,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!8795c84eecfe4de3"
+  "_key": "!items!e41c11bc9fb442db"
 }

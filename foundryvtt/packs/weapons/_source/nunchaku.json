@@ -1,19 +1,24 @@
 {
-  "_id": "537482699eb14c65",
+  "_id": "c35a8648d3fe4660",
   "name": "Nunchaku",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "Two hardwood or metal sticks connected by a short chain or cord, creating a flexible striking weapon. The nunchaku's spinning motion generates significant impact force while the articulated design allows strikes from unexpected angles. This category includes various flail-like striking implements connected by chains or ropes. Requires considerable skill to wield effectively without self-injury.",
+    "description": {
+      "value": "<p>Two hardwood or metal sticks connected by a short chain or cord, creating a flexible striking weapon. The nunchaku's spinning motion generates significant impact force while the articulated design allows strikes from unexpected angles. This category includes various flail-like striking implements connected by chains or ropes. Requires considerable skill to wield effectively without self-injury.</p>"
+    },
     "damage": {
       "base": 6,
+      "type": "bludgeoning",
       "alternate": null,
-      "raw": "6",
-      "type": [
-        "bludgeoning"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,19 +37,15 @@
         }
       }
     ],
-    "weight": {
-      "raw": "2 lbs",
-      "lbs": 2.0
-    },
-    "cost": {
-      "raw": "12 gp",
-      "gp": 12.0
-    },
+    "weight": 2.0,
+    "cost": 12.0,
+    "quantity": 1,
     "properties": [
-      "Light",
-      "Finesse"
-    ]
+      "light",
+      "finesse"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!537482699eb14c65"
+  "_key": "!items!c35a8648d3fe4660"
 }

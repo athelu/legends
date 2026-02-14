@@ -1,12 +1,14 @@
 {
-  "_id": "3034ca1d7f4540dc",
+  "_id": "c1a6e03aacbd47c6",
   "name": "Exhausted",
   "type": "condition",
   "img": "icons/svg/sleep.svg",
   "system": {
     "label": "Exhausted",
     "category": "combat",
-    "description": "##### Level 1 - Fatigued:\n-   All skill checks: Add 1 to die results\n-   Cannot benefit from short rests for HP recovery (still recover Luck)\n-   Recovery: Long rest removes 1 level of Exhaustion\n\n##### Level 2 - Exhausted:\n-   All skill checks: Add 2 to die results\n-   Movement speed reduced by half\n-   Cannot benefit from short rests at all\n-   Recovery: Long rest removes 1 level of Exhaustion\n\n##### Level 3 - Severely Exhausted:\n-   All rolls (including attacks and saves): Add 2 to die results\n-   Movement speed reduced by half\n-   Can only take 2 actions per turn instead of 3\n-   Cannot benefit from short rests\n-   Recovery: Long rest removes 1 level of Exhaustion\n\n##### Level 4 - Near Collapse:\n-   All rolls: Add 3 to die results\n-   Movement speed reduced to quarter\n-   Can only take 1 action per turn\n-   Cannot take reactions\n-   Recovery: Long rest removes 1 level of Exhaustion\n\n##### Level 5 - Collapse:\n-   Character becomes Unconscious\n-   Cannot be awakened until Exhaustion reduced below level 5\n-   Recovery: Long rest removes 1 level of Exhaustion",
+    "description": {
+      "value": "<h5>Level 1 - Fatigued:</h5>\n<ul>\n<li>All skill checks: Add 1 to die results</li>\n<li>Cannot benefit from short rests for HP recovery (still recover Luck)</li>\n<li>Recovery: Long rest removes 1 level of Exhaustion</li>\n</ul>\n<h5>Level 2 - Exhausted:</h5>\n<ul>\n<li>All skill checks: Add 2 to die results</li>\n<li>Movement speed reduced by half</li>\n<li>Cannot benefit from short rests at all</li>\n<li>Recovery: Long rest removes 1 level of Exhaustion</li>\n</ul>\n<h5>Level 3 - Severely Exhausted:</h5>\n<ul>\n<li>All rolls (including attacks and saves): Add 2 to die results</li>\n<li>Movement speed reduced by half</li>\n<li>Can only take 2 actions per turn instead of 3</li>\n<li>Cannot benefit from short rests</li>\n<li>Recovery: Long rest removes 1 level of Exhaustion</li>\n</ul>\n<h5>Level 4 - Near Collapse:</h5>\n<ul>\n<li>All rolls: Add 3 to die results</li>\n<li>Movement speed reduced to quarter</li>\n<li>Can only take 1 action per turn</li>\n<li>Cannot take reactions</li>\n<li>Recovery: Long rest removes 1 level of Exhaustion</li>\n</ul>\n<h5>Level 5 - Collapse:</h5>\n<ul>\n<li>Character becomes Unconscious</li>\n<li>Cannot be awakened until Exhaustion reduced below level 5</li>\n<li>Recovery: Long rest removes 1 level of Exhaustion</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/sleep.svg",
     "activeEffects": [
       {
@@ -25,5 +27,5 @@
     }
   },
   "flags": {},
-  "_key": "!items!3034ca1d7f4540dc"
+  "_key": "!items!c1a6e03aacbd47c6"
 }

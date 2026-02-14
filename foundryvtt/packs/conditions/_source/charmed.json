@@ -1,12 +1,14 @@
 {
-  "_id": "b5d7af6e498e434c",
+  "_id": "b7722196e7b64012",
   "name": "Charmed",
   "type": "condition",
   "img": "icons/svg/daze.svg",
   "system": {
     "label": "Charmed",
     "category": "mental",
-    "description": "- You regard the charmer as a friendly acquaintance\n- The charmer has Fortune (subtract 1 from both dice) on Charisma-based checks against you\n- You cannot attack the charmer or target them with harmful abilities/weaves\n- You can still act freely otherwise and defend yourself\n- You interpret the charmer's words and actions in the most favorable way possible\n- **Does NOT grant:** Mind control, forced obedience, or compulsion to follow commands\n- **Recovery:** \n  - Condition ends immediately if charmer or their allies harm you\n  - Some charm effects allow Will save at end of each turn to end early\n  - Effect ends when duration expires\n- **Note:** You're friendly and suggestible, not dominated. You won't follow commands that are obviously harmful to yourself or that go against your core values. The charmer must still convince you through normal social interaction, they just have an easier time doing so.\n\n**Example:** A charmed guard won't attack their charmer, and might be convinced to let them pass with a good story. But they won't hand over the keys to the treasury or betray their lord without exceptional persuasion - being charmed makes you friendly, not stupid.\n**See Also:** For information about mind-affecting effects and which creatures are immune, see **Magic Effect Types & Terminology**.",
+    "description": {
+      "value": "<ul>\n<li>You regard the charmer as a friendly acquaintance</li>\n<li>The charmer has Fortune (subtract 1 from both dice) on Charisma-based checks against you</li>\n<li>You cannot attack the charmer or target them with harmful abilities/weaves</li>\n<li>You can still act freely otherwise and defend yourself</li>\n<li>You interpret the charmer's words and actions in the most favorable way possible</li>\n<li><strong>Does NOT grant:</strong> Mind control, forced obedience, or compulsion to follow commands</li>\n<li><strong>Recovery:</strong>\n<ul>\n<li>Condition ends immediately if charmer or their allies harm you</li>\n<li>Some charm effects allow [[/save type=will]] at end of each turn to end early</li>\n<li>Effect ends when duration expires</li>\n</ul></li>\n<li><strong>Note:</strong> You're friendly and suggestible, not dominated. You won't follow commands that are obviously harmful to yourself or that go against your core values. The charmer must still convince you through normal social interaction, they just have an easier time doing so.</li>\n</ul>\n<p><strong>Example:</strong> A charmed guard won't attack their charmer, and might be convinced to let them pass with a good story. But they won't hand over the keys to the treasury or betray their lord without exceptional persuasion - being charmed makes you friendly, not stupid. <strong>See Also:</strong> For information about mind-affecting effects and which creatures are immune, see <strong>Magic Effect Types & Terminology</strong>.</p>"
+    },
     "tokenIcon": "icons/svg/daze.svg",
     "activeEffects": [],
     "stacking": "replace",
@@ -19,9 +21,9 @@
         "type": "will"
       },
       "promptPlayer": true,
-      "chatMessage": "Make a Will save to recover from Charmed"
+      "chatMessage": "Make a [[/save type=will]] to recover from Charmed"
     }
   },
   "flags": {},
-  "_key": "!items!b5d7af6e498e434c"
+  "_key": "!items!b7722196e7b64012"
 }

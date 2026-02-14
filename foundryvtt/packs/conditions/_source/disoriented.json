@@ -1,12 +1,14 @@
 {
-  "_id": "2febb96769fe4abb",
+  "_id": "3d0ddcd83aa044cd",
   "name": "Disoriented",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
     "label": "Disoriented",
     "category": "sensory",
-    "description": "-   Spatial awareness or balance impaired\n-   Perception checks: Add 1 to die results\n-   Initiative: -1\n-   Cannot determine exact positions of creatures/objects (GM may require check)\n-   Duration: Typically 1 round unless specified otherwise\n**Recovery:**\n-   Automatically ends after specified duration\n-   Some effects allow Perception check to end early",
+    "description": {
+      "value": "<ul>\n<li>Spatial awareness or balance impaired</li>\n<li>Perception checks: Add 1 to die results</li>\n<li>Initiative: -1</li>\n<li>Cannot determine exact positions of creatures/objects (GM may require check)</li>\n<li>Duration: Typically 1 round unless specified otherwise</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends after specified duration</li>\n<li>Some effects allow [[/check skill=perception]] to end early</li>\n</ul>"
+    },
     "tokenIcon": "",
     "activeEffects": [
       {
@@ -25,5 +27,5 @@
     }
   },
   "flags": {},
-  "_key": "!items!2febb96769fe4abb"
+  "_key": "!items!3d0ddcd83aa044cd"
 }

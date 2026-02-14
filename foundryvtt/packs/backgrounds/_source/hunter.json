@@ -1,11 +1,21 @@
 {
-  "_id": "eca0cbc942bb45d3",
+  "_id": "714fed9e61474a56",
   "name": "Hunter",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "You stalked and took down animals and other creatures of the wild. The skills transfer remarkably well regardless if you're tracking a deer or a bandit, the principles are the same. You just have to hope the prey doesn't shoot back.\n**Skills:** Wilderness 2, Ranged Combat 2, Stealth 1, Perception 1, +40 XP\n**Equipment:** Bow or crossbow, arrows/bolts, high boots, work clothes, work gloves\n**Feature** - Tracker: You can track creatures through wilderness and gain Fortune on Wilderness checks to follow trails or identify animal signs."
+    "description": {
+      "value": "<p>You stalked and took down animals and other creatures of the wild. The skills transfer remarkably well regardless if you're tracking a deer or a bandit, the principles are the same. You just have to hope the prey doesn't shoot back. <strong>Skills:</strong> Wilderness 2, Ranged Combat 2, Stealth 1, Perception 1, +40 XP <strong>Equipment:</strong> Bow or crossbow, arrows/bolts, high boots, work clothes, work gloves <strong>Feature</strong> - Tracker: You can track creatures through wilderness and gain Fortune on Wilderness checks to follow trails or identify animal signs.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!eca0cbc942bb45d3"
+  "_key": "!items!714fed9e61474a56"
 }

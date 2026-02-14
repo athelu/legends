@@ -1,13 +1,29 @@
 {
-  "_id": "feffd4385b2f4280",
+  "_id": "cc9d148552d648c8",
   "name": "Pneuma Strike (Elemental)",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 1\n**Prerequisites:** Unarmed Mastery feat, chosen elemental Mastery 3\n**Description:** You've learned to channel elemental pneuma through your strikes. Fire, ice, lightning, or stone—you make the energy flow through your meridians and release it at the point of impact\n**Benefit:** Choose one elemental energy (Fire, Water, Air, or Earth) when taking this feat. Once per turn when you hit with an unarmed strike or monk weapon, you can spend 2 Energy to empower the strike:\n  - Make weaving check for chosen element (Potential + Mastery). Can take multiple times for different elements\n  - **1 success:** Deal +1d8 elemental damage\n  - **2+ successes:** Deal +2d8 elemental damage\n\n**Usage:** Once per turn, costs 2 Energy\n**Keyword:** [Combat], [Ascetic], [Magic]"
-    }
+      "value": "<p>You've learned to channel elemental pneuma through your strikes. Fire, ice, lightning, or stone—you make the energy flow through your meridians and release it at the point of impact</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "",
+      "feats": [
+        "Unarmed Mastery"
+      ],
+      "tier": 1,
+      "other": "chosen elemental Mastery 3"
+    },
+    "benefits": "<p>Choose one elemental energy (Fire, Water, Air, or Earth) when taking this feat. Once per turn when you hit with an unarmed strike or monk weapon, you can spend 2 Energy to empower the strike:</p>\n<ul>\n<li>Make weaving check for chosen element (Potential + Mastery). Can take multiple times for different elements</li>\n<li><strong>1 success:</strong> Deal +[[/damage 1d8 type=elemental]] damage</li>\n<li><strong>2+ successes:</strong> Deal +[[/damage 2d8 type=elemental]] damage</li>\n</ul>",
+    "usageType": "once",
+    "keywords": "[Combat], [Ascetic], [Magic]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!feffd4385b2f4280"
+  "_key": "!items!cc9d148552d648c8"
 }

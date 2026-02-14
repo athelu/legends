@@ -1,11 +1,21 @@
 {
-  "_id": "7b5c8f6f9c8a43e7",
+  "_id": "a454715fef2d4679",
   "name": "Touch of Evil (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Bloodline tainted with darkness.\n- Persuasion with good-aligned NPCs: Add 2 to die results\n- Intimidate: Subtract 2 from die results"
+    "description": {
+      "value": "<p>Bloodline tainted with darkness.</p>\n<ul>\n<li>Persuasion with good-aligned NPCs: Add 2 to die results</li>\n<li>Intimidate: Subtract 2 from die results</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!7b5c8f6f9c8a43e7"
+  "_key": "!items!a454715fef2d4679"
 }

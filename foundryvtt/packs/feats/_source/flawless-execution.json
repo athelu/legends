@@ -1,13 +1,29 @@
 {
-  "_id": "f83b82785c3f45f6",
+  "_id": "271891d4840741b6",
   "name": "Flawless Execution",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 4\n**Prerequisites:** Sorcerous Origin trait, Wis 6, any Energy Mastery 6, Tier 4\n**Benefit:** Once per long rest, you can cast one weave and completely ignore ALL overspending penalties. Spend as much Energy as you want (up to your Potential) with no penalties\n**Usage:** Once per long rest\n**Keyword:** [Magic], [Sorcerer]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 6
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 4,
+      "other": "Sorcerous Origin trait, any Energy Mastery 6"
+    },
+    "benefits": "<p>Once per long rest, you can cast one weave and completely ignore ALL overspending penalties. Spend as much Energy as you want (up to your Potential) with no penalties</p>",
+    "usageType": "once",
+    "keywords": "[Magic], [Sorcerer]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!f83b82785c3f45f6"
+  "_key": "!items!271891d4840741b6"
 }

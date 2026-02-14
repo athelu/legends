@@ -1,13 +1,20 @@
 {
-  "_id": "a290a4f9c9ae420f",
+  "_id": "6b66638352c44fa6",
   "name": "Robe",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A long, flowing garment often worn by scholars, magistrates, or religious figures.",
-    "weight": "3 lbs",
-    "cost": "12 gp"
+    "description": {
+      "value": "<p>A long, flowing garment often worn by scholars, magistrates, or religious figures.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 12.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!a290a4f9c9ae420f"
+  "_key": "!items!6b66638352c44fa6"
 }

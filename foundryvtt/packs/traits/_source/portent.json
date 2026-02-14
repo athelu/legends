@@ -1,11 +1,21 @@
 {
-  "_id": "1c62741c3c724110",
+  "_id": "c534d10e9af34173",
   "name": "Portent",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "- **Action Cost:** [Reaction]\n- **Trigger:** Any creature you can see makes a roll\n- **Range:** 60 feet (line of sight)\n- **Effect:** Force the creature to reroll all dice for that check. You choose which result they must use (original or reroll). You glimpse the thread of fate and pull it in a different direction.\n- **Usage:** Uses 1 Channel Divinity"
+    "description": {
+      "value": "<ul>\n<li><strong>Action Cost:</strong> [Reaction]</li>\n<li><strong>Trigger:</strong> Any creature you can see makes a roll</li>\n<li><strong>Range:</strong> 60 feet (line of sight)</li>\n<li><strong>Effect:</strong> Force the creature to reroll all dice for that check. You choose which result they must use (original or reroll). You glimpse the thread of fate and pull it in a different direction.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!1c62741c3c724110"
+  "_key": "!items!c534d10e9af34173"
 }

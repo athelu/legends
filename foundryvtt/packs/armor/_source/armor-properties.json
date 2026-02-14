@@ -1,11 +1,11 @@
 {
-  "_id": "a9493e0163ef48bd",
+  "_id": "cae1a395f2aa4e72",
   "name": "Armor Properties",
   "type": "armor",
   "img": "icons/equipment/chest/plate-armor-gray.webp",
   "system": {
     "description": {
-      "value": "## Shields"
+      "value": "<h2>Shields</h2>"
     },
     "armorType": "",
     "dr": {
@@ -23,5 +23,5 @@
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!a9493e0163ef48bd"
+  "_key": "!items!cae1a395f2aa4e72"
 }

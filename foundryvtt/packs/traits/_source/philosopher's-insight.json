@@ -1,11 +1,21 @@
 {
-  "_id": "f60bc9221a66407f",
+  "_id": "2587b49ea04247c8",
   "name": "Philosopher's Insight",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "- **Action Cost:** 1 [Minor] action\n- **Range:** Self\n- **Effect:** For 10 minutes, you gain the following benefits:\n  - You automatically see through all illusory effects (no check needed)\n  - You know when creatures speak lies (though not what the truth is)\n  - You have **Fortune** on Perception and Investigate checks\n  - Your eyes glow brighter than normal as enlightenment fills you\n- **Usage:** Uses 1 Channel Divinity\n\n---"
+    "description": {
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Minor] action</li>\n<li><strong>Range:</strong> Self</li>\n<li><strong>Effect:</strong> For 10 minutes, you gain the following benefits:\n<ul>\n<li>You automatically see through all illusory effects (no check needed)</li>\n<li>You know when creatures speak lies (though not what the truth is)</li>\n<li>You have <strong>Fortune</strong> on Perception and Investigate checks</li>\n<li>Your eyes glow brighter than normal as enlightenment fills you</li>\n</ul></li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>\n<p>---</p>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!f60bc9221a66407f"
+  "_key": "!items!2587b49ea04247c8"
 }

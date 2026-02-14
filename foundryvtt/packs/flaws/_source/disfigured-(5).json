@@ -1,11 +1,21 @@
 {
-  "_id": "e4e38617d100409f",
+  "_id": "c657ee7969234ad0",
   "name": "Disfigured (5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Missing appendage (hand, foot, arm, leg).\n- Missing hand/foot: Add 2 to related skill die results\n- Missing arm/leg: Related skills impossible or add 4 to die results"
+    "description": {
+      "value": "<p>Missing appendage (hand, foot, arm, leg).</p>\n<ul>\n<li>Missing hand/foot: Add 2 to related skill die results</li>\n<li>Missing arm/leg: Related skills impossible or add 4 to die results</li>\n</ul>"
+    },
+    "pointValue": 5,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!e4e38617d100409f"
+  "_key": "!items!c657ee7969234ad0"
 }

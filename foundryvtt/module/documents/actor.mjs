@@ -177,20 +177,44 @@ _prepareCharacterData(actorData) {
    */
   getRollData() {
     const data = {...super.getRollData()};
-    
-    // Add convenience shortcuts
+
+    // For characters, prefer effective (computed) attribute/skill totals
     if (this.type === 'character') {
-      data.str = this.system.attributes.strength.value;
-      data.con = this.system.attributes.constitution.value;
-      data.agi = this.system.attributes.agility.value;
-      data.dex = this.system.attributes.dexterity.value;
-      data.int = this.system.attributes.intelligence.value;
-      data.wis = this.system.attributes.wisdom.value;
-      data.cha = this.system.attributes.charisma.value;
-      data.lck = this.system.attributes.luck.value;
-      data.currentLuck = this.system.luck?.current || data.lck;
+      // Clone attributes and overwrite values with effective totals when available
+      const baseAttributes = this.system.attributes || {};
+      const attrEff = this.system.attributesEffective || {};
+      const attributes = {};
+      for (const [k, v] of Object.entries(baseAttributes)) {
+        const baseVal = v?.value ?? 0;
+        const total = (attrEff[k] !== undefined) ? attrEff[k] : baseVal;
+        attributes[k] = { ...(typeof v === 'object' ? v : {}), value: total };
+      }
+      data.attributes = attributes;
+
+      // Shortcuts (totals)
+      data.str = data.attributes.strength?.value ?? 0;
+      data.con = data.attributes.constitution?.value ?? 0;
+      data.agi = data.attributes.agility?.value ?? 0;
+      data.dex = data.attributes.dexterity?.value ?? 0;
+      data.int = data.attributes.intelligence?.value ?? 0;
+      data.wis = data.attributes.wisdom?.value ?? 0;
+      data.cha = data.attributes.charisma?.value ?? 0;
+      data.lck = data.attributes.luck?.value ?? 0;
+      data.currentLuck = this.system.luck?.current ?? data.lck;
+
+      // Skills: expose totals (and preserve object shape when present)
+      const baseSkills = this.system.skills || {};
+      const skillsEff = this.system.skillsEffective || {};
+      const skills = {};
+      for (const [k, v] of Object.entries(baseSkills)) {
+        const baseVal = (typeof v === 'object') ? (v.value ?? 0) : (v ?? 0);
+        const total = (skillsEff[k] !== undefined) ? skillsEff[k] : baseVal;
+        if (typeof v === 'object') skills[k] = { ...(v || {}), value: total };
+        else skills[k] = total;
+      }
+      data.skills = skills;
     }
-    
+
     return data;
   }
   

@@ -1,13 +1,29 @@
 {
-  "_id": "c53b95b3eae64a24",
+  "_id": "cb79f72b0fd54898",
   "name": "Perception Beyond Sight",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 4\n**Prerequisites:** Sorcerous Origin trait, Wis 6, Tier 4\n**Benefit:** Once per long rest, enter deep meditation for 10 minutes. For the next hour, you:\n  - See through illusory effects automatically\n  - Perceive invisible creatures and objects within 60 feet\n  - See into the ethereal plane within 60 feet\n  - Can see the true form of shapechanged creatures\n  - Know automatically when someone is lying to you (though not what the truth is)\n\n**Usage:** Once per long rest, requires 10-minute meditation, lasts 1 hour\n**Keyword:** [Magic], [Sorcerer]"
-    }
+      "value": "<ul>\n<li>See through illusory effects automatically\n<ul>\n<li>Perceive invisible creatures and objects within 60 feet</li>\n<li>See into the ethereal plane within 60 feet</li>\n<li>Can see the true form of shapechanged creatures</li>\n<li>Know automatically when someone is lying to you (though not what the truth is)</li>\n</ul></li>\n</ul>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 6
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 4,
+      "other": "Sorcerous Origin trait"
+    },
+    "benefits": "<p>Once per long rest, enter deep meditation for 10 minutes. For the next hour, you:</p>\n<ul>\n<li>See through illusory effects automatically</li>\n<li>Perceive invisible creatures and objects within 60 feet</li>\n<li>See into the ethereal plane within 60 feet</li>\n<li>Can see the true form of shapechanged creatures</li>\n<li>Know automatically when someone is lying to you (though not what the truth is)</li>\n</ul>",
+    "usageType": "once",
+    "keywords": "[Magic], [Sorcerer]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!c53b95b3eae64a24"
+  "_key": "!items!cb79f72b0fd54898"
 }

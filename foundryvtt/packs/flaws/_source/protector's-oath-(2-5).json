@@ -1,11 +1,21 @@
 {
-  "_id": "08285b5081fa43f6",
+  "_id": "1cef65ed758a4662",
   "name": "Protector's Oath (2-5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You have sworn to defend those under your care.\n- **Personal (2):** Sworn to protect your party, family, or a specific small group\n- **Collective (3):** Oath extends to all members of your faith, nation, or organization\n- **Universal (5):** Cannot abandon or harm any sapient being; all life is sacred to you\nYou must honor your oath to protect, even at great personal risk"
+    "description": {
+      "value": "<p>You have sworn to defend those under your care.</p>\n<ul>\n<li><strong>Personal (2):</strong> Sworn to protect your party, family, or a specific small group</li>\n<li><strong>Collective (3):</strong> Oath extends to all members of your faith, nation, or organization</li>\n<li><strong>Universal (5):</strong> Cannot abandon or harm any sapient being; all life is sacred to you</li>\n</ul>\n<p>You must honor your oath to protect, even at great personal risk</p>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!08285b5081fa43f6"
+  "_key": "!items!1cef65ed758a4662"
 }

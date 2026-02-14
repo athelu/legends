@@ -1,12 +1,14 @@
 {
-  "_id": "433ade7b73ee437d",
+  "_id": "174316360b0546ac",
   "name": "Frightened",
   "type": "condition",
   "img": "icons/svg/terror.svg",
   "system": {
     "label": "Frightened",
     "category": "fear",
-    "description": "-   All rolls: Add 1 to die results while the source of fear is perceived\n-   Can act normally but suffers the penalty\n-   Can choose to flee or stand and fight\n-   **Recovery:** At the end of each turn, make Will save:\n    -   1 success: Condition ends\n    -   0 successes: Remains Frightened\n\n-   Ally Assistance: An ally within 5 feet can use an [Interact]\n    action with Persuasion or Intimidate check:\n    -   1+ successes: Condition ends",
+    "description": {
+      "value": "<ul>\n<li>All rolls: Add 1 to die results while the source of fear is perceived</li>\n<li>Can act normally but suffers the penalty</li>\n<li>Can choose to flee or stand and fight</li>\n<li><strong>Recovery:</strong> At the end of each turn, make [[/save type=will]]:\n<ul>\n<li>1 success: Condition ends</li>\n<li>0 successes: Remains Frightened</li>\n</ul></li>\n<li>Ally Assistance: An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]]:\n<ul>\n<li>1+ successes: Condition ends</li>\n</ul></li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/terror.svg",
     "activeEffects": [
       {
@@ -26,16 +28,17 @@
         "type": "will"
       },
       "promptPlayer": true,
-      "chatMessage": "Make a Will save to recover from Frightened",
+      "chatMessage": "Make a [[/save type=will]] to recover from Frightened",
       "assistance": {
         "range": 5
       },
       "downgrades": {
         "1_success": null,
+        "2_success": null,
         "0_success": "Frightened"
       }
     }
   },
   "flags": {},
-  "_key": "!items!433ade7b73ee437d"
+  "_key": "!items!174316360b0546ac"
 }

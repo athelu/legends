@@ -1,13 +1,20 @@
 {
-  "_id": "d051efe691444016",
+  "_id": "03a17589120f4b4e",
   "name": "Artist's Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A collection of paints, brushes, charcoal, and canvas or parchment needed for creating visual art.",
-    "weight": "3 lbs",
-    "cost": "40 gp"
+    "description": {
+      "value": "<p>A collection of paints, brushes, charcoal, and canvas or parchment needed for creating visual art.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 40.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!d051efe691444016"
+  "_key": "!items!03a17589120f4b4e"
 }

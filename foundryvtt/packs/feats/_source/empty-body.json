@@ -1,13 +1,31 @@
 {
-  "_id": "2a8b6da0e242404d",
+  "_id": "f615babd905b41e2",
   "name": "Empty Body",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-star-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 6\n**Prerequisites:** Wis 6, Mystic Defense feat, Tier 6\n**Benefit:** Once per long rest, can spend 10 minutes meditating to become invisible for 1 minute. While invisible, you also have resistance (+4 DR) to all damage except psychic\n**Usage:** Once per long rest\n**Keyword:** [Ascetic]"
-    }
+      "value": ""
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 6
+      },
+      "skills": "",
+      "feats": [
+        "Mystic Defense"
+      ],
+      "tier": 6,
+      "other": ""
+    },
+    "benefits": "<p>Once per long rest, can spend 10 minutes meditating to become invisible for 1 minute. While invisible, you also have resistance (+4 DR) to all damage except psychic</p>",
+    "usageType": "once",
+    "keywords": "[Ascetic]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!2a8b6da0e242404d"
+  "_key": "!items!f615babd905b41e2"
 }

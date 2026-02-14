@@ -1,20 +1,24 @@
 {
-  "_id": "f5c08cd774234bf2",
+  "_id": "852a9d7cfbb3400e",
   "name": "Shortsword",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A short-bladed sword, typically 18-24 inches in length, designed for close-quarters combat. The compact size allows for quick draws and strikes in confined spaces. This category includes gladius, xiphos, wakizashi (when not wielded as a paired weapon with katana), and similar short military swords. Often used as a sidearm or backup weapon, the shortsword's versatility makes it invaluable.",
+    "description": {
+      "value": "<p>A short-bladed sword, typically 18-24 inches in length, designed for close-quarters combat. The compact size allows for quick draws and strikes in confined spaces. This category includes gladius, xiphos, wakizashi (when not wielded as a paired weapon with katana), and similar short military swords. Often used as a sidearm or backup weapon, the shortsword's versatility makes it invaluable.</p>"
+    },
     "damage": {
       "base": 6,
+      "type": "slashing",
       "alternate": null,
-      "raw": "6",
-      "type": [
-        "slashing",
-        "piercing"
-      ]
+      "alternateType": "",
+      "multiType": "piercing"
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -33,20 +37,16 @@
         }
       }
     ],
-    "weight": {
-      "raw": "2 lbs",
-      "lbs": 2.0
-    },
-    "cost": {
-      "raw": "18 gp",
-      "gp": 18.0
-    },
+    "weight": 2.0,
+    "cost": 18.0,
+    "quantity": 1,
     "properties": [
-      "Light",
-      "Multi-Type",
-      "Finesse"
-    ]
+      "light",
+      "multi-type",
+      "finesse"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!f5c08cd774234bf2"
+  "_key": "!items!852a9d7cfbb3400e"
 }

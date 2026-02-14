@@ -1,11 +1,21 @@
 {
-  "_id": "d3314e42a5f44fdd",
+  "_id": "bd4288b3020f4024",
   "name": "Archaeologist",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "Crumbling ruins called to you louder than the comforts of civilization. You've spent years piecing together fragments of lost empires, and you know that the greatest treasures aren't gold, they're answers. Adventuring might have started as just another dig, but you've discovered that sometimes the most interesting artifacts are still being used by their current owners.\n**Skills:** History 3, Investigate 2, +32 XP\n**Equipment:** journal, map case, traveler's clothes, work boots\n**Feature** - Historical Insight: When examining ruins or artifacts, the GM will provide one useful historical fact or context clue."
+    "description": {
+      "value": "<p>Crumbling ruins called to you louder than the comforts of civilization. You've spent years piecing together fragments of lost empires, and you know that the greatest treasures aren't gold, they're answers. Adventuring might have started as just another dig, but you've discovered that sometimes the most interesting artifacts are still being used by their current owners. <strong>Skills:</strong> History 3, Investigate 2, +32 XP <strong>Equipment:</strong> journal, map case, traveler's clothes, work boots <strong>Feature</strong> - Historical Insight: When examining ruins or artifacts, the GM will provide one useful historical fact or context clue.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!d3314e42a5f44fdd"
+  "_key": "!items!bd4288b3020f4024"
 }

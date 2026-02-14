@@ -1,13 +1,30 @@
 {
-  "_id": "27985edfe2dc4753",
+  "_id": "77e46f5c3aed4e92",
   "name": "Disarming Technique",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Str or Agi 4, chosen combat skill 5\n**Description:** A weapon in hand is dangerous. A weapon on the ground is just metal. You've mastered the art of separating enemies from their armaments.\n**Benefit:** When you hit with a weapon attack, force target to make a Fortitude save (opposed by your attack). If you win by 1+ successes, target drops one held item of your choice\n**Usage:** Once per turn\n**Keyword:** [Combat], [Maneuver]"
-    }
+      "value": "<p>A weapon in hand is dangerous. A weapon on the ground is just metal. You've mastered the art of separating enemies from their armaments.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 4,
+        "strength": 4
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 2,
+      "other": "chosen combat skill 5"
+    },
+    "benefits": "<p>When you hit with a weapon attack, force target to make a [[/save type=fortitude]] (opposed by your attack). If you win by 1+ successes, target drops one held item of your choice</p>",
+    "usageType": "once",
+    "keywords": "[Combat], [Maneuver]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!27985edfe2dc4753"
+  "_key": "!items!77e46f5c3aed4e92"
 }

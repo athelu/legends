@@ -1,11 +1,21 @@
 {
-  "_id": "a3beecdc21e3499f",
+  "_id": "345266b87e984a7a",
   "name": "Herbalist",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. Adventuring gives you access to rare specimens you could never afford before.\n**Skills:** Medicine 3, Wilderness 2, +32 XP\n**Equipment:** Herbalism kit, mortar and pestle, common clothes, shoes\n**Feature** - Plant Lore: You can identify useful plants and create basic remedies. Medicine checks to treat poison have Fortune."
+    "description": {
+      "value": "<p>As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. Adventuring gives you access to rare specimens you could never afford before. <strong>Skills:</strong> Medicine 3, Wilderness 2, +32 XP <strong>Equipment:</strong> Herbalism kit, mortar and pestle, common clothes, shoes <strong>Feature</strong> - Plant Lore: You can identify useful plants and create basic remedies. Medicine checks to treat poison have Fortune.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!a3beecdc21e3499f"
+  "_key": "!items!345266b87e984a7a"
 }

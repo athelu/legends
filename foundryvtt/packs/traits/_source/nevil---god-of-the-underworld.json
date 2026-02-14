@@ -1,11 +1,21 @@
 {
-  "_id": "330d2dde69dc4f16",
+  "_id": "ea6a65ec311d4d99",
   "name": "NEVIL - God of the Underworld",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": ""
+    "description": {
+      "value": ""
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!330d2dde69dc4f16"
+  "_key": "!items!ea6a65ec311d4d99"
 }

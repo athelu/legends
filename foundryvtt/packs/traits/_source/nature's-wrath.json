@@ -1,11 +1,21 @@
 {
-  "_id": "82f30dde6ced495b",
+  "_id": "d7794593f733453a",
   "name": "Nature's Wrath",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "- **Action Cost:** 2 [Combat] actions\n- **Range:** 60 feet\n- **Effect:** Choose a 20-foot square within range that contains natural vegetation. Plants animate and grasp at creatures. All creatures in area make Reflex save (Agility + Luck) opposed by your Wisdom + Earth Mastery. If you win (more net successes), they become Restrained. Creatures can use 1 [Combat] action to break free (Athletics check requiring 2 successes). Effect lasts 1 minute or until all creatures escape. Hirnaloyta's fury animates the natural world.\n- **Usage:** Uses 1 Channel Divinity"
+    "description": {
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 2 [Combat] actions</li>\n<li><strong>Range:</strong> 60 feet</li>\n<li><strong>Effect:</strong> Choose a 20-foot square within range that contains natural vegetation. Plants animate and grasp at creatures. All creatures in area make [[/save type=reflex]] (Agility + Luck) opposed by your Wisdom + Earth Mastery. If you win (more net successes), they become Restrained. Creatures can use 1 [Combat] action to break free ([[/check skill=athletics]] requiring 2 successes). Effect lasts 1 minute or until all creatures escape. Hirnaloyta's fury animates the natural world.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!82f30dde6ced495b"
+  "_key": "!items!d7794593f733453a"
 }

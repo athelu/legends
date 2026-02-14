@@ -1,11 +1,21 @@
 {
-  "_id": "691fe3104c144896",
+  "_id": "0a5d14c1d2194af7",
   "name": "Bandit",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "You took what you needed from those who had more than enough, or at least that's what you told yourself. As a member of a gang or working alone, the outlaw life taught you skills that polite society condemns but secretly envies. You might be seeking redemption, or you might just be looking for richer targets. Perhaps it's a bit of both.\n**Skills:** Stealth 2, Intimidate 2, Wilderness 1, Melee Combat 1, +40 XP\n**Equipment:** Hemp rope, common clothes, low boots\n**Feature** - Outlaw Network: You know how to find and contact criminal elements in the wilderness and small settlements."
+    "description": {
+      "value": "<p>You took what you needed from those who had more than enough, or at least that's what you told yourself. As a member of a gang or working alone, the outlaw life taught you skills that polite society condemns but secretly envies. You might be seeking redemption, or you might just be looking for richer targets. Perhaps it's a bit of both. <strong>Skills:</strong> Stealth 2, Intimidate 2, Wilderness 1, Melee Combat 1, +40 XP <strong>Equipment:</strong> Hemp rope, common clothes, low boots <strong>Feature</strong> - Outlaw Network: You know how to find and contact criminal elements in the wilderness and small settlements.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!691fe3104c144896"
+  "_key": "!items!0a5d14c1d2194af7"
 }

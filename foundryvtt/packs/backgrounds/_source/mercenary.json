@@ -1,11 +1,21 @@
 {
-  "_id": "c5974af2b4b9494e",
+  "_id": "2fa3f5fff65b4c9a",
   "name": "Mercenary",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "Bringing in lawbreakers or fighting in petty wars lined your pockets. Maybe you had an altruistic motive and genuinely believed in your employers' causes, or maybe the coin was motivation enough. Your techniques for staying alive in combat transfer easily to adventuring, though at least now you can choose your battles. Most of the time, anyway.\n**Skills:** Melee Combat 2, Athletics 2, Intimidate 1, Wilderness 1, +40 XP\n**Equipment:** Weapon of choice, common clothes, work boots\n**Feature** - Soldier of Fortune: You can find mercenary work and may be recognized by other sellswords. Know how to negotiate contracts and identify legitimate employers."
+    "description": {
+      "value": "<p>Bringing in lawbreakers or fighting in petty wars lined your pockets. Maybe you had an altruistic motive and genuinely believed in your employers' causes, or maybe the coin was motivation enough. Your techniques for staying alive in combat transfer easily to adventuring, though at least now you can choose your battles. Most of the time, anyway. <strong>Skills:</strong> Melee Combat 2, Athletics 2, Intimidate 1, Wilderness 1, +40 XP <strong>Equipment:</strong> Weapon of choice, common clothes, work boots <strong>Feature</strong> - Soldier of Fortune: You can find mercenary work and may be recognized by other sellswords. Know how to negotiate contracts and identify legitimate employers.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!c5974af2b4b9494e"
+  "_key": "!items!2fa3f5fff65b4c9a"
 }

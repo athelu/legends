@@ -1,13 +1,20 @@
 {
-  "_id": "77f2c1d65bfa4bb7",
+  "_id": "9a9cdbcc475740a6",
   "name": "Uniform/Livery",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Distinctive clothing identifying the wearer as a member of a specific organization, military unit, or household.",
-    "weight": "3 lbs",
-    "cost": "15 gp"
+    "description": {
+      "value": "<p>Distinctive clothing identifying the wearer as a member of a specific organization, military unit, or household.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 15.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!77f2c1d65bfa4bb7"
+  "_key": "!items!9a9cdbcc475740a6"
 }

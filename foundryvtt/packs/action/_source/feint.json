@@ -1,11 +1,11 @@
 {
-  "_id": "704b6a89cd4e4401",
+  "_id": "0b47ab21a1b8426f",
   "name": "Feint",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** 1\n- **Effect:** Make opposed Deception check (Charisma + Deception vs target's Empathy + Wisdom)\n- **Success:** Your next attack against that target this turn has Fortune\n- **Notes:**\n  - Only works against creatures that can see and understand you\n  - Subject to Multiple Action Penalty"
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Make opposed [[/check skill=deception]] (Charisma + Deception vs target's Empathy + Wisdom)</li>\n<li><strong>Success:</strong> Your next attack against that target this turn has Fortune</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Only works against creatures that can see and understand you</li>\n<li>Subject to Multiple Action Penalty</li>\n</ul></li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!704b6a89cd4e4401"
+  "_key": "!items!0b47ab21a1b8426f"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "71f6b22452414f7b",
+  "_id": "8ab80e671c7d4306",
   "name": "Knowledge of the Ages",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "- **Action Cost:** 1 [Interact] action\n- **Range:** Self\n- **Effect:** Choose any one skill. For 10 minutes, you count as having rank 5 proficiency in that skill (use rank 5 for all checks, even if your actual rank is higher or lower). The wisdom of ages flows through you, granting you temporary mastery. If you already have rank 5+, you instead subtract 1 from both dice when using that skill for the duration.\n- **Usage:** Uses 1 Channel Divinity"
+    "description": {
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Interact] action</li>\n<li><strong>Range:</strong> Self</li>\n<li><strong>Effect:</strong> Choose any one skill. For 10 minutes, you count as having rank 5 proficiency in that skill (use rank 5 for all checks, even if your actual rank is higher or lower). The wisdom of ages flows through you, granting you temporary mastery. If you already have rank 5+, you instead subtract 1 from both dice when using that skill for the duration.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!71f6b22452414f7b"
+  "_key": "!items!8ab80e671c7d4306"
 }

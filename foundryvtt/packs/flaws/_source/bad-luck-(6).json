@@ -1,11 +1,21 @@
 {
-  "_id": "942829a5f7fa4cd0",
+  "_id": "11c2b6eea7b648e9",
   "name": "Bad Luck (6)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Luck is costly and inefficient.\n- Luck attribute functions normally for starting value and regeneration\n- Spending Luck costs 2 points per die reduction instead of 1\n- You still roll Luck for saves normally\n- Complications on partial success work normally"
+    "description": {
+      "value": "<p>Luck is costly and inefficient.</p>\n<ul>\n<li>Luck attribute functions normally for starting value and regeneration</li>\n<li>Spending Luck costs 2 points per die reduction instead of 1</li>\n<li>You still roll Luck for saves normally</li>\n<li>Complications on partial success work normally</li>\n</ul>"
+    },
+    "pointValue": 6,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!942829a5f7fa4cd0"
+  "_key": "!items!11c2b6eea7b648e9"
 }

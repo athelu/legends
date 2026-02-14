@@ -1,11 +1,21 @@
 {
-  "_id": "9b7dfe2402e54541",
+  "_id": "a86a018a8f084d75",
   "name": "Impulsiveness (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You have trouble thinking before acting.\n- When presented with interesting opportunity, temptation, or challenge, make Will save (1 success required) to avoid acting immediately without considering consequences"
+    "description": {
+      "value": "<p>You have trouble thinking before acting.</p>\n<ul>\n<li>When presented with interesting opportunity, temptation, or challenge, make [[/save type=will]] (1 success required) to avoid acting immediately without considering consequences</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!9b7dfe2402e54541"
+  "_key": "!items!a86a018a8f084d75"
 }

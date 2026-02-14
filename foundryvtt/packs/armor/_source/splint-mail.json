@@ -1,27 +1,31 @@
 {
-  "_id": "12871b96fe4b458d",
+  "_id": "1ef498c597fa4a7f",
   "name": "Splint Mail",
   "type": "armor",
-  "img": "icons/equipment/chest/plate-armor-gray.webp",
+  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
   "system": {
     "description": {
       "value": ""
     },
-    "armorType": "",
+    "armorType": "heavy",
     "dr": {
       "slashing": 8,
       "piercing": 7,
       "bludgeoning": 6
     },
-    "stealthPenalty": "none",
+    "stealthPenalty": "loud",
     "swimPenalty": "",
     "donTime": "",
     "doffTime": "",
     "weight": 0,
     "cost": 500.0,
     "quantity": 1,
-    "notes": ""
+    "notes": "",
+    "keywords": [
+      "HeavyArmor",
+      "Loud"
+    ]
   },
   "effects": [],
-  "_key": "!items!12871b96fe4b458d"
+  "_key": "!items!1ef498c597fa4a7f"
 }

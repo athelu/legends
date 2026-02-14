@@ -1,13 +1,20 @@
 {
-  "_id": "38e6f2ae282f4380",
+  "_id": "ca93af5fb2994845",
   "name": "Quiver",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A container designed to hold arrows or bolts, worn on the back or hip. Holds up to 20 arrows.",
-    "weight": "1 lb",
-    "cost": "7 gp"
+    "description": {
+      "value": "<p>A container designed to hold arrows or bolts, worn on the back or hip. Holds up to 20 arrows.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 7.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!38e6f2ae282f4380"
+  "_key": "!items!ca93af5fb2994845"
 }

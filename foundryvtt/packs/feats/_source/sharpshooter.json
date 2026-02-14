@@ -1,13 +1,29 @@
 {
-  "_id": "9628e468731045e2",
+  "_id": "5d3822f458df46f7",
   "name": "Sharpshooter",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Ranged Combat 4, Perception 4, Wis 3\n**Description:** Wind, range, or moving targets; you have learned to account for everything instinctively, putting arrows or bolts exactly where they need to be.\n**Benefit:** Once per turn when you make a ranged weapon attack:\n  - Before rolling, declare you're aiming for a vital spot\n  - Add 1 to both attack dice (harder to hit)\n  - On hit: deal +4 damage and target must make Fortitude save (opposed by your Wis + Ranged Combat)\n  - If you win save: target's movement speed is halved until end of their next turn\n\n**Usage:** Once per turn\n**Keyword:** [Combat], [Ranged]"
-    }
+      "value": "<p>Wind, range, or moving targets; you have learned to account for everything instinctively, putting arrows or bolts exactly where they need to be.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 3
+      },
+      "skills": "rangedCombat:4, perception:4",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>Once per turn when you make a ranged weapon attack:</p>\n<ul>\n<li>Before rolling, declare you're aiming for a vital spot</li>\n<li>Add 1 to both attack dice (harder to hit)</li>\n<li>On hit: deal +[[/damage 4]] damage and target must make [[/save type=fortitude]] (opposed by your Wis + Ranged Combat)</li>\n<li>If you win save: target's movement speed is halved until end of their next turn</li>\n</ul>",
+    "usageType": "once",
+    "keywords": "[Combat], [Ranged]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!9628e468731045e2"
+  "_key": "!items!5d3822f458df46f7"
 }

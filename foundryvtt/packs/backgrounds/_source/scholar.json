@@ -1,11 +1,21 @@
 {
-  "_id": "83980c0c1a234a78",
+  "_id": "8ab482aebf1f4c7c",
   "name": "Scholar",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
-    "description": "You pursued formal education at a university or academy, studying alongside peers and engaging in scholarly debate. Your education was broad rather than deep, covering philosophy, natural sciences, mathematics, and the arts. You've attended lectures, defended theses, and networked with the academic elite. Now you seek to apply your theoretical knowledge to real-world problems.\n**Skills:** History 3, Society 2, +32 XP\n**Equipment:** General topic book, quill, ink, papyrus parchment x5, robe, shoes\n**Feature** - Academic Network: You have connections with universities and scholars, allowing you to access libraries, seek expert advice, and be recognized in academic circles."
+    "description": {
+      "value": "<p>You pursued formal education at a university or academy, studying alongside peers and engaging in scholarly debate. Your education was broad rather than deep, covering philosophy, natural sciences, mathematics, and the arts. You've attended lectures, defended theses, and networked with the academic elite. Now you seek to apply your theoretical knowledge to real-world problems. <strong>Skills:</strong> History 3, Society 2, +32 XP <strong>Equipment:</strong> General topic book, quill, ink, papyrus parchment x5, robe, shoes <strong>Feature</strong> - Academic Network: You have connections with universities and scholars, allowing you to access libraries, seek expert advice, and be recognized in academic circles.</p>"
+    },
+    "startingXP": 0,
+    "skillBonuses": "",
+    "startingEquipment": "",
+    "suggestedFeats": "",
+    "features": "",
+    "sampleNames": "",
+    "traits": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!83980c0c1a234a78"
+  "_key": "!items!8ab482aebf1f4c7c"
 }

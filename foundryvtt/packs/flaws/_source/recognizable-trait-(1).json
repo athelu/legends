@@ -1,11 +1,21 @@
 {
-  "_id": "0747c7c5fac14892",
+  "_id": "5ee395060ec0460e",
   "name": "Recognizable Trait (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Peculiar characteristic or marking makes you easily identifiable."
+    "description": {
+      "value": "<p>Peculiar characteristic or marking makes you easily identifiable.</p>"
+    },
+    "pointValue": 1,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!0747c7c5fac14892"
+  "_key": "!items!5ee395060ec0460e"
 }

@@ -1,13 +1,29 @@
 {
-  "_id": "a9a2ff021e9c42ab",
+  "_id": "9be4240e246c4953",
   "name": "Beast Whisperer",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/environment/wilderness/tree-oak.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 2\n**Prerequisites:** Wis 4, Animal Handling 4\n**Description:** Animals don't speak your language, but you've learned to speak theirs. Most creatures just want to be left alone, and you know how to communicate that you're not a threat.\n**Benefit:** Can communicate simple concepts to beasts. Beasts that aren't hostile have their attitude improved by one step. Can attempt to calm hostile beast (opposed Will save, your Wis + Animal Handling vs beast's Wis + Luck)\n**Usage:** Passive communication, action to calm\n**Keyword:** [Wilderness]"
-    }
+      "value": "<p>Animals don't speak your language, but you've learned to speak theirs. Most creatures just want to be left alone, and you know how to communicate that you're not a threat.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 4
+      },
+      "skills": "animalHandling:4",
+      "feats": [],
+      "tier": 2,
+      "other": ""
+    },
+    "benefits": "<p>Can communicate simple concepts to beasts. Beasts that aren't hostile have their attitude improved by one step. Can attempt to calm hostile beast (opposed [[/save type=will]], your Wis + Animal Handling vs beast's Wis + Luck)</p>",
+    "usageType": "passive",
+    "keywords": "[Wilderness]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!a9a2ff021e9c42ab"
+  "_key": "!items!9be4240e246c4953"
 }

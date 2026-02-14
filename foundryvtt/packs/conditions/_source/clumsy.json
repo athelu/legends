@@ -1,12 +1,14 @@
 {
-  "_id": "d9fbf170494c412f",
+  "_id": "752b0768e30346e3",
   "name": "Clumsy",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
     "label": "Clumsy",
     "category": "physical",
-    "description": "-   Physical coordination impaired\n-   Dexterity and Agility based skill checks: Add 1 to die results\n-   Reflex saves: Add 1 to die results",
+    "description": {
+      "value": "<ul>\n<li>Physical coordination impaired</li>\n<li>Dexterity and Agility based skill checks: Add 1 to die results</li>\n<li>Reflex saves: Add 1 to die results</li>\n</ul>"
+    },
     "tokenIcon": "",
     "activeEffects": [],
     "stacking": "replace",
@@ -14,5 +16,5 @@
     "overlayPriority": 20
   },
   "flags": {},
-  "_key": "!items!d9fbf170494c412f"
+  "_key": "!items!752b0768e30346e3"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "551b06101d874683",
+  "_id": "9d453a70bd5b4dce",
   "name": "Jealousy (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "You are troubled when others have things you don't.\n- Make Will save (1 success required) to avoid acting on jealous impulses (stealing, undermining, sabotaging)\n- Applies to items, relationships, attention, or achievements"
+    "description": {
+      "value": "<p>You are troubled when others have things you don't.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) to avoid acting on jealous impulses (stealing, undermining, sabotaging)</li>\n<li>Applies to items, relationships, attention, or achievements</li>\n</ul>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!551b06101d874683"
+  "_key": "!items!9d453a70bd5b4dce"
 }

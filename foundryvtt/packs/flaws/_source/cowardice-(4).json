@@ -1,11 +1,21 @@
 {
-  "_id": "7afc9204a43b456a",
+  "_id": "fd5c54ce22b048b4",
   "name": "Cowardice (4)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Must make Will save (1 success required) when confronted with combat/fear or become Cowering."
+    "description": {
+      "value": "<p>Must make [[/save type=will]] (1 success required) when confronted with combat/fear or become Cowering.</p>"
+    },
+    "pointValue": 4,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!7afc9204a43b456a"
+  "_key": "!items!fd5c54ce22b048b4"
 }

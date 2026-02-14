@@ -1,19 +1,24 @@
 {
-  "_id": "3078c77594444782",
+  "_id": "96e20c63ed0e4365",
   "name": "Rapier",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A slender thrusting sword with an elaborate hand guard, designed for precision strikes to vital points. The rapier's needle-like point can slip between armor plates and find gaps in defenses. This category includes épées, estocs, and similar civilian dueling swords. Associated with nobility and duelists, the rapier emphasizes skill and accuracy over brute force.",
+    "description": {
+      "value": "<p>A slender thrusting sword with an elaborate hand guard, designed for precision strikes to vital points. The rapier's needle-like point can slip between armor plates and find gaps in defenses. This category includes épées, estocs, and similar civilian dueling swords. Associated with nobility and duelists, the rapier emphasizes skill and accuracy over brute force.</p>"
+    },
     "damage": {
       "base": 8,
+      "type": "piercing",
       "alternate": null,
-      "raw": "8",
-      "type": [
-        "piercing"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "",
+    "range": {
+      "normal": 0,
+      "medium": 0,
+      "long": 0
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -32,19 +37,15 @@
         }
       }
     ],
-    "weight": {
-      "raw": "3 lbs",
-      "lbs": 3.0
-    },
-    "cost": {
-      "raw": "30 gp",
-      "gp": 30.0
-    },
+    "weight": 3.0,
+    "cost": 30.0,
+    "quantity": 1,
     "properties": [
-      "Standard",
-      "Finesse"
-    ]
+      "standard",
+      "finesse"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!3078c77594444782"
+  "_key": "!items!96e20c63ed0e4365"
 }

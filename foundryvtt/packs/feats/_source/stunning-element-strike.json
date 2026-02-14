@@ -1,13 +1,29 @@
 {
-  "_id": "bdb8905b59f643e1",
+  "_id": "7291360092324781",
   "name": "Stunning Element Strike",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Stunning Strike feat, Pneuma Strike (any element)\n**Description:** After stunning an opponent, you infuse them with elemental energy. Burning through their nerves, freezing their blood, shocking their system. Even when they recover, the energy lingers.\n**Benefit:** When you successfully Stun an opponent with Stunning Strike, you can spend an additional 2 Energy to infuse them with elemental energy:\n  - Choose one element you have Pneuma Strike for\n  - Target immediately takes 2d8 elemental damage (no weaving check, ignores DR)\n  - Energy courses through their paralyzed form\n  - **If Stunned condition ends early:** Target takes additional 1d8 elemental damage as residual energy releases\n\n**Usage:** Additional cost when Stunning Strike succeeds\n**Keyword:** [Combat], [Ascetic], [Unarmed], [Magic]"
-    }
+      "value": "<p>After stunning an opponent, you infuse them with elemental energy. Burning through their nerves, freezing their blood, shocking their system. Even when they recover, the energy lingers.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "",
+      "feats": [
+        "Stunning Strike"
+      ],
+      "tier": 3,
+      "other": "Pneuma Strike (any element)"
+    },
+    "benefits": "<p>When you successfully Stun an opponent with Stunning Strike, you can spend an additional 2 Energy to infuse them with elemental energy:</p>\n<ul>\n<li>Choose one element you have Pneuma Strike for</li>\n<li>Target immediately takes [[/damage 2d8 type=elemental]] damage (no weaving check, ignores DR)</li>\n<li>Energy courses through their paralyzed form</li>\n<li><strong>If Stunned condition ends early:</strong> Target takes additional [[/damage 1d8 type=elemental]] damage as residual energy releases</li>\n</ul>",
+    "usageType": "additional",
+    "keywords": "[Combat], [Ascetic], [Unarmed], [Magic]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!bdb8905b59f643e1"
+  "_key": "!items!7291360092324781"
 }

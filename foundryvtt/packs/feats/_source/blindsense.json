@@ -1,13 +1,27 @@
 {
-  "_id": "27fcf32de3254563",
+  "_id": "425dcacfc52a4261",
   "name": "Blindsense",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/sundries/books/book-star-purple.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 6\n**Description:** Sight is useful, but it's also limiting. You've learned to perceive the world through sound, air pressure, and vibration. Darkness is no longer an obstacle; it's just a different kind of light.\n**Prerequisites:** Perception 7, Tier 6\n**Benefit:** You can sense the location of any hidden or invisible creature within 10 feet, reducing their condition to concealed\n**Usage:** Passive\n**Keyword:** [Shadow]"
-    }
+      "value": "<p>Sight is useful, but it's also limiting. You've learned to perceive the world through sound, air pressure, and vibration. Darkness is no longer an obstacle; it's just a different kind of light.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {},
+      "skills": "perception:7",
+      "feats": [],
+      "tier": 6,
+      "other": ""
+    },
+    "benefits": "<p>You can sense the location of any hidden or invisible creature within 10 feet, reducing their condition to concealed</p>",
+    "usageType": "passive",
+    "keywords": "[Shadow]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!27fcf32de3254563"
+  "_key": "!items!425dcacfc52a4261"
 }

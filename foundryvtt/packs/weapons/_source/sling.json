@@ -1,19 +1,24 @@
 {
-  "_id": "57690cfe56d04bf4",
+  "_id": "de79b25c7c094f4f",
   "name": "Sling",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
-    "description": "A simple leather strap or cord used to hurl stones or lead bullets with significant force. Despite its primitive appearance, a well-aimed sling stone can crack skulls and break bones. This category includes shepherd's slings, staff slings, and similar cordage projectile weapons. The humble sling is cheap to make and maintain, with ammunition literally lying on the ground.",
+    "description": {
+      "value": "<p>A simple leather strap or cord used to hurl stones or lead bullets with significant force. Despite its primitive appearance, a well-aimed sling stone can crack skulls and break bones. This category includes shepherd's slings, staff slings, and similar cordage projectile weapons. The humble sling is cheap to make and maintain, with ammunition literally lying on the ground.</p>"
+    },
     "damage": {
       "base": 4,
+      "type": "bludgeoning",
       "alternate": null,
-      "raw": "4",
-      "type": [
-        "bludgeoning"
-      ]
+      "alternateType": "",
+      "multiType": ""
     },
-    "range": "40/80/160",
+    "range": {
+      "normal": 40,
+      "medium": 80,
+      "long": 160
+    },
     "attackModes": [
       {
         "name": "Melee",
@@ -48,18 +53,14 @@
         }
       }
     ],
-    "weight": {
-      "raw": "0.5 lbs",
-      "lbs": 0.5
-    },
-    "cost": {
-      "raw": "1 gp",
-      "gp": 1.0
-    },
+    "weight": 0.5,
+    "cost": 1.0,
+    "quantity": 1,
     "properties": [
-      "Ranged"
-    ]
+      "ranged"
+    ],
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!57690cfe56d04bf4"
+  "_key": "!items!de79b25c7c094f4f"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "c5f592040cb84a31",
+  "_id": "167fad42e1e14dde",
   "name": "Mother's Embrace",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": "- **Action Cost:** 1 [Combat] action\n- **Range:** 30 feet\n- **Effect:** Choose up to 6 allies within range who can see you. They gain +2 DR for 1 minute. Ambis's protective blessing shields them like a mother shielding her children.\n- **Usage:** Uses 1 Channel Divinity"
+    "description": {
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> 30 feet</li>\n<li><strong>Effect:</strong> Choose up to 6 allies within range who can see you. They gain +2 DR for 1 minute. Ambis's protective blessing shields them like a mother shielding her children.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!c5f592040cb84a31"
+  "_key": "!items!167fad42e1e14dde"
 }

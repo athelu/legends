@@ -1,13 +1,20 @@
 {
-  "_id": "d0c02ca3d0274405",
+  "_id": "2612cdf83a204eca",
   "name": "Holy Symbol, Silver",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A silver religious symbol representing a deity or faith, commonly used by clerics and devoted followers.",
-    "weight": "0.5 lbs",
-    "cost": "5 gp"
+    "description": {
+      "value": "<p>A silver religious symbol representing a deity or faith, commonly used by clerics and devoted followers.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.5,
+    "cost": 5.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!d0c02ca3d0274405"
+  "_key": "!items!2612cdf83a204eca"
 }

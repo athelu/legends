@@ -1,12 +1,14 @@
 {
-  "_id": "3157f9652a8946ba",
+  "_id": "4140e43109744fdc",
   "name": "Poisoned",
   "type": "condition",
   "img": "icons/svg/poison.svg",
   "system": {
     "label": "Poisoned",
     "category": "damage-over-time",
-    "description": "#### Standard Poison Effect:\n-   All attribute dice: Add 1 to die results (makes all rolls harder)\n-   Fortitude saves: Add 1 to die results (harder to resist)\n-   HP regeneration from short/long rests reduced by half\n\n#### Duration:\n-   Depends on poison type (typically 1 hour to 24 hours)\n-   Some poisons require saves each hour or worsen\n\n#### Recovery:\n-   Fortitude save at end of duration to shake off poison\n-   Medicine check (2 successes) can end Poisoned early with proper treatment\n-   Magical healing removes poison\n-   Antidotes (if available) automatically remove poison\n\n#### Poison Types (Optional):\n-   Weak Poison: Add 1 to attribute dice, duration 1 hour\n-   Strong Poison: Add 2 to attribute dice, duration 4 hours, 1d8 damage per hour\n-   Deadly Poison: Add 2 to all dice, 2d8 damage per hour, requires\n    Fortitude save each hour or die",
+    "description": {
+      "value": "<h4>Standard Poison Effect:</h4>\n<ul>\n<li>All attribute dice: Add 1 to die results (makes all rolls harder)</li>\n<li>Fortitude saves: Add 1 to die results (harder to resist)</li>\n<li>HP regeneration from short/long rests reduced by half</li>\n</ul>\n<h4>Duration:</h4>\n<ul>\n<li>Depends on poison type (typically 1 hour to 24 hours)</li>\n<li>Some poisons require saves each hour or worsen</li>\n</ul>\n<h4>Recovery:</h4>\n<ul>\n<li>[[/save type=fortitude]] at end of duration to shake off poison</li>\n<li>[[/check skill=medicine]] (2 successes) can end Poisoned early with proper treatment</li>\n<li>Magical healing removes poison</li>\n<li>Antidotes (if available) automatically remove poison</li>\n</ul>\n<h4>Poison Types (Optional):</h4>\n<ul>\n<li>Weak Poison: Add 1 to attribute dice, duration 1 hour</li>\n<li>Strong Poison: Add 2 to attribute dice, duration 4 hours, [[/damage 1d8]] damage per hour</li>\n<li>Deadly Poison: Add 2 to all dice, [[/damage 2d8]] damage per hour, requires [[/save type=fortitude]] each hour or die</li>\n</ul>"
+    },
     "tokenIcon": "icons/svg/poison.svg",
     "activeEffects": [],
     "stacking": "replace",
@@ -19,9 +21,9 @@
         "type": "fortitude"
       },
       "promptPlayer": true,
-      "chatMessage": "Make a Fortitude save to recover from Poisoned"
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Poisoned"
     }
   },
   "flags": {},
-  "_key": "!items!3157f9652a8946ba"
+  "_key": "!items!4140e43109744fdc"
 }

@@ -1,11 +1,21 @@
 {
-  "_id": "9f3304728d7a4b3d",
+  "_id": "15d8f2a6eea44bd4",
   "name": "Weak Willed (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Hard time with mentally taxing/redundant tasks.\n- Will saves: Add 1 to die results\n- Cannot attempt same failed task more than 3 times"
+    "description": {
+      "value": "<p>Hard time with mentally taxing/redundant tasks.</p>\n<ul>\n<li>Will saves: Add 1 to die results</li>\n<li>Cannot attempt same failed task more than 3 times</li>\n</ul>"
+    },
+    "pointValue": 3,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!9f3304728d7a4b3d"
+  "_key": "!items!15d8f2a6eea44bd4"
 }

@@ -1,11 +1,11 @@
 {
-  "_id": "300984b26e224af2",
+  "_id": "d5ce1e362a08460c",
   "name": "Jump",
   "type": "action",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "- **Cost:** Part of your movement (consumes feet of movement)\n- **Long Jump:** \n  - Running start (10+ feet): Jump up to your Strength score in feet\n  - Standing jump: Jump up to half your Strength score in feet\n- **High Jump:**\n  - Running start (10+ feet): Jump up to 3 + (Strength ÷ 2, rounded down) feet\n  - Standing jump: Jump up to half that distance\n- **Notes:**\n  - Athletics check may be required for difficult jumps (GM discretion)\n  - Landing in difficult terrain may require Acrobatics check to avoid falling prone"
+      "value": "<ul>\n<li><strong>Cost:</strong> Part of your movement (consumes feet of movement)</li>\n<li><strong>Long Jump:</strong>\n<ul>\n<li>Running start (10+ feet): Jump up to your Strength score in feet</li>\n<li>Standing jump: Jump up to half your Strength score in feet</li>\n</ul></li>\n<li><strong>High Jump:</strong>\n<ul>\n<li>Running start (10+ feet): Jump up to 3 + (Strength ÷ 2, rounded down) feet</li>\n<li>Standing jump: Jump up to half that distance</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>[[/check skill=athletics]] may be required for difficult jumps (GM discretion)</li>\n<li>Landing in difficult terrain may require [[/check skill=acrobatics]] to avoid falling prone</li>\n</ul></li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "Part of your movement (consumes feet of movement)",
@@ -18,5 +18,5 @@
     "special": ""
   },
   "effects": [],
-  "_key": "!items!300984b26e224af2"
+  "_key": "!items!d5ce1e362a08460c"
 }

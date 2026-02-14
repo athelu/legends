@@ -1,11 +1,21 @@
 {
-  "_id": "e395877210e84040",
+  "_id": "cd434cabf8b94b14",
   "name": "HIRNALOYTA - Goddess of Nature",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
-    "description": ""
+    "description": {
+      "value": ""
+    },
+    "pointCost": 0,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!e395877210e84040"
+  "_key": "!items!cd434cabf8b94b14"
 }

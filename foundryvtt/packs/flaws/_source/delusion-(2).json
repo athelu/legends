@@ -1,11 +1,21 @@
 {
-  "_id": "6474e02afe7f4d14",
+  "_id": "f518e255d4e940b8",
   "name": "Delusion (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "description": "Believe something blatantly false. Cannot be convinced otherwise."
+    "description": {
+      "value": "<p>Believe something blatantly false. Cannot be convinced otherwise.</p>"
+    },
+    "pointValue": 2,
+    "flawType": "",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "requiresGMApproval": false,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!6474e02afe7f4d14"
+  "_key": "!items!f518e255d4e940b8"
 }

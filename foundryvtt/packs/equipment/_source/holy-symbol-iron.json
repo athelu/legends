@@ -1,13 +1,20 @@
 {
-  "_id": "ccbc596935f24113",
+  "_id": "cc6732901bb14b4c",
   "name": "Holy Symbol, Iron",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "An iron religious symbol representing a deity or faith, the most basic form of holy symbol.",
-    "weight": "1 lb",
-    "cost": "5 sp"
+    "description": {
+      "value": "<p>An iron religious symbol representing a deity or faith, the most basic form of holy symbol.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 0.5,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!ccbc596935f24113"
+  "_key": "!items!cc6732901bb14b4c"
 }

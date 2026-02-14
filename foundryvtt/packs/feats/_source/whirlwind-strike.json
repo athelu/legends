@@ -1,13 +1,30 @@
 {
-  "_id": "6ea121019d24421c",
+  "_id": "4da043f6ff7b4670",
   "name": "Whirlwind Strike",
   "type": "feat",
-  "img": "icons/skills/melee/blade-damage.webp",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": "**Tier:** 3\n**Prerequisites:** Str or Agi 5, Melee 5\n**Description:** One devastating rotation of your weapon strikes every enemy within reach, turning encirclement from a tactical advantage for them into a very serious problem.\n**Benefit:** As a [Combat] action, make a single melee weapon attack roll (one Attribute die, one Melee Combat skill die) and compare against every hostile creature within your reach\n**Usage:** Once per turn\n**Keyword:** [Combat]"
-    }
+      "value": "<p>One devastating rotation of your weapon strikes every enemy within reach, turning encirclement from a tactical advantage for them into a very serious problem.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 0,
+    "prerequisites": {
+      "attributes": {
+        "agility": 5,
+        "strength": 5
+      },
+      "skills": "meleeCombat:5",
+      "feats": [],
+      "tier": 3,
+      "other": ""
+    },
+    "benefits": "<p>As a [Combat] action, make a single melee weapon attack roll (one Attribute die, one Melee Combat skill die) and compare against every hostile creature within your reach</p>",
+    "usageType": "once",
+    "keywords": "[Combat]",
+    "notes": "",
+    "effects": []
   },
   "effects": [],
-  "_key": "!items!6ea121019d24421c"
+  "_key": "!items!4da043f6ff7b4670"
 }

@@ -1,13 +1,20 @@
 {
-  "_id": "0005bc9912c94921",
+  "_id": "9641b57e5e95474b",
   "name": "Hardtack",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "Rock-hard biscuits that store indefinitely. One pound provides minimal but adequate nutrition for one day.",
-    "weight": "0.5 lbs",
-    "cost": "5 cp"
+    "description": {
+      "value": "<p>Rock-hard biscuits that store indefinitely. One pound provides minimal but adequate nutrition for one day.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.5,
+    "cost": 0.05,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!0005bc9912c94921"
+  "_key": "!items!9641b57e5e95474b"
 }

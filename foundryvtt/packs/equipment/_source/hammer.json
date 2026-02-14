@@ -1,13 +1,20 @@
 {
-  "_id": "d6af24a2c7eb488b",
+  "_id": "bae1a7b156404143",
   "name": "Hammer",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
   "system": {
-    "description": "A metal-headed tool used for driving nails, breaking objects, or as an improvised weapon.",
-    "weight": "3 lbs",
-    "cost": "10 gp"
+    "description": {
+      "value": "<p>A metal-headed tool used for driving nails, breaking objects, or as an improvised weapon.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 10.0,
+    "quantity": 1,
+    "equipped": false,
+    "properties": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!d6af24a2c7eb488b"
+  "_key": "!items!bae1a7b156404143"
 }
