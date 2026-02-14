@@ -74,7 +74,8 @@
       },
       "hp": {
         "value": 16,
-        "max": 16
+        "max": 16,
+        "temp": 0
       },
       "dr": {
         "value": 0,
@@ -85,6 +86,95 @@
         "max": 2
       },
       "energy": {
+        "current": 0,
+        "max": 0
+      },
+      "potentials": {
+        "fire": {
+          "value": 0,
+          "label": "Fire"
+        },
+        "water": {
+          "value": 0,
+          "label": "Water"
+        },
+        "earth": {
+          "value": 0,
+          "label": "Earth"
+        },
+        "air": {
+          "value": 0,
+          "label": "Air"
+        },
+        "positive": {
+          "value": 0,
+          "label": "Positive"
+        },
+        "negative": {
+          "value": 0,
+          "label": "Negative"
+        },
+        "time": {
+          "value": 0,
+          "label": "Time"
+        },
+        "space": {
+          "value": 0,
+          "label": "Space"
+        }
+      },
+      "mastery": {
+        "fire": {
+          "value": 0,
+          "label": "Fire Mastery"
+        },
+        "water": {
+          "value": 0,
+          "label": "Water Mastery"
+        },
+        "earth": {
+          "value": 0,
+          "label": "Earth Mastery"
+        },
+        "air": {
+          "value": 0,
+          "label": "Air Mastery"
+        },
+        "positive": {
+          "value": 0,
+          "label": "Positive Mastery"
+        },
+        "negative": {
+          "value": 0,
+          "label": "Negative Mastery"
+        },
+        "time": {
+          "value": 0,
+          "label": "Time Mastery"
+        },
+        "space": {
+          "value": 0,
+          "label": "Space Mastery"
+        }
+      },
+      "castingStat": {
+        "value": "intelligence",
+        "label": "Casting Stat"
+      },
+      "magicalTrait": {
+        "type": "",
+        "subtype": "",
+        "elementalAffinity": "",
+        "secondaryFocus": "",
+        "patron": "",
+        "pactType": "",
+        "forceOfWill": "",
+        "chosenElement": "",
+        "availableEnergies": [],
+        "isSetup": false,
+        "setupDate": null
+      },
+      "channelDivinity": {
         "current": 0,
         "max": 0
       },
@@ -131,7 +221,8 @@
       },
       "hp": {
         "value": 16,
-        "max": 16
+        "max": 16,
+        "temp": 0
       },
       "dr": {
         "value": 0,
@@ -147,7 +238,7 @@
     }
   },
   "Item": {
-    "types": ["weapon", "armor", "shield", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry", "action", "ability"],
+    "types": ["weapon", "armor", "shield", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry", "action", "ability", "condition"],
     "templates": {
       "common": {
         "description": {
@@ -247,10 +338,16 @@
     "trait": {
       "templates": ["common"],
       "tier": 1,
+      "pointCost": 0,
+      "traitType": "physical",
+      "isMagical": false,
+      "magicalType": "",
       "prerequisites": "",
       "benefits": "",
       "usage": "",
-      "keywords": []
+      "keywords": [],
+      "requiresGMApproval": false,
+      "requiresExistingTrait": ""
     },
     "flaw": {
       "templates": ["common"],
@@ -292,6 +389,18 @@
       "source": "",
       "keywords": [],
       "isActive": false
+    },
+    "condition": {
+      "templates": ["common"],
+      "label": "",
+      "category": "",
+      "tokenIcon": "",
+      "activeEffects": [],
+      "stacking": "replace",
+      "severity": "moderate",
+      "overlayPriority": 20,
+      "damageTick": null,
+      "recovery": null
     }
   }
 }

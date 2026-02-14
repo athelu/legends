@@ -1,5 +1,5 @@
 <form class="{{cssClass}} flexcol" autocomplete="off">
-  
+
   {{!-- Header --}}
   <header class="sheet-header">
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="80" width="80"/>
@@ -11,21 +11,25 @@
           <input type="number" name="system.hp.value" value="{{system.hp.value}}" data-dtype="Number" />
           <span class="sep">/</span>
           <span class="max">{{system.hp.max}}</span>
+          <div class="temp-hp-section">
+            <label class="temp-label">Temp:</label>
+            <input type="number" name="system.hp.temp" value="{{system.hp.temp}}" data-dtype="Number" class="temp-hp-input" placeholder="0"/>
+          </div>
         </div>
-        
+
         <div class="resource luck">
           <label>Luck</label>
           <input type="number" name="system.luck.current" value="{{system.luck.current}}" data-dtype="Number" />
           <span class="sep">/</span>
           <span class="max">{{system.luck.max}}</span>
         </div>
-        
+
         <div class="resource cr">
           <label>CR</label>
           <input type="number" name="system.cr.value" value="{{system.cr.value}}" data-dtype="Number" />
         </div>
       </div>
-      
+
       <div class="dr-info">
         <label>DR</label>
         <span class="dr-value">{{system.dr.total}}</span>
@@ -41,7 +45,7 @@
 
   {{!-- Sheet Body --}}
   <section class="sheet-body">
-    
+
     {{!-- Main Tab --}}
     <div class="tab main" data-group="primary" data-tab="main">
       <div class="attributes-grid">
@@ -52,22 +56,22 @@
         </div>
         {{/each}}
       </div>
-      
+
       <div class="saves-section">
         <h3>Saving Throws</h3>
         <div class="saves-grid">
-          <button type="button" class="save-roll" data-save="fortitude">
+          <button type="button" data-action="saveRoll" data-save="fortitude">
             <i class="fas fa-shield-alt"></i> Fortitude
           </button>
-          <button type="button" class="save-roll" data-save="reflex">
+          <button type="button" data-action="saveRoll" data-save="reflex">
             <i class="fas fa-running"></i> Reflex
           </button>
-          <button type="button" class="save-roll" data-save="will">
+          <button type="button" data-action="saveRoll" data-save="will">
             <i class="fas fa-brain"></i> Will
           </button>
         </div>
       </div>
-      
+
       <div class="editor-content">
         <label>Biography</label>
         {{editor system.biography.value target="system.biography.value" button=true owner=owner editable=editable}}
@@ -86,33 +90,33 @@
           <h4 class="item-name">{{item.name}}</h4>
           <div class="item-damage">{{item.system.damage.base}} {{item.system.damage.type}}</div>
           <div class="item-controls">
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a class="item-control" data-action="itemEdit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control" data-action="itemDelete" title="Delete Item"><i class="fas fa-trash"></i></a>
           </div>
         </li>
         {{/each}}
       </ol>
-      <div class="item-create">
-        <button type="button" data-type="weapon"><i class="fas fa-plus"></i> Add Weapon</button>
+      <div class="item-create-row">
+        <button type="button" data-action="itemCreate" data-type="weapon"><i class="fas fa-plus"></i> Add Weapon</button>
       </div>
-      
+
       <h3>Features</h3>
       <ol class="items-list features-list">
         {{#each features as |item id|}}
         <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image rollable" data-roll-type="item">
+          <div class="item-image" data-action="rollItem" data-roll-type="item">
             <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
           </div>
-          <h4 class="item-name rollable" data-roll-type="item">{{item.name}}</h4>
+          <h4 class="item-name" data-action="rollItem" data-roll-type="item">{{item.name}}</h4>
           <div class="item-controls">
-            <a class="item-control item-edit" title="Edit Item"><i class="fas fa-edit"></i></a>
-            <a class="item-control item-delete" title="Delete Item"><i class="fas fa-trash"></i></a>
+            <a class="item-control" data-action="itemEdit" title="Edit Item"><i class="fas fa-edit"></i></a>
+            <a class="item-control" data-action="itemDelete" title="Delete Item"><i class="fas fa-trash"></i></a>
           </div>
         </li>
         {{/each}}
       </ol>
-      <div class="item-create">
-        <button type="button" data-type="feat"><i class="fas fa-plus"></i> Add Feature</button>
+      <div class="item-create-row">
+        <button type="button" data-action="itemCreate" data-type="feat"><i class="fas fa-plus"></i> Add Feature</button>
       </div>
     </div>
 

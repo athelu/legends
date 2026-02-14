@@ -1,11 +1,51 @@
 {
-  "_id": "4c45ddee98f64076",
+  "_id": "a71da08c64a84c00",
   "name": "Force Armor",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 3 (force armor)\n**Supporting Energy:** Time 4 (duration 1 hour)\n**Total Cost:** 7 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)\n**Effect:** Target at touch gains DR 3 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities.\n**Saving Throw:** None (beneficial buff, willing targets only)\n**Success Scaling:** 1 = 10 minutes, 2 = 1 hour, 3 = 8 hours, 4 = DR 4 (24 hours)"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 3 (force armor) <strong>Supporting Energy:</strong> Time 4 (duration 1 hour) <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target at touch gains DR 3 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities. <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 1 = 10 minutes, 2 = 1 hour, 3 = 8 hours, 4 = DR 4 (24 hours)</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 4
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!4c45ddee98f64076"
+  "_key": "!items!a71da08c64a84c00"
 }

@@ -1,11 +1,51 @@
 {
-  "_id": "cdd172af771b441d",
+  "_id": "b402b8239c7f4ea8",
   "name": "Dimensional Refuge",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 4 (creating extradimensional space)\n**Supporting Energy:** Time 3 (duration 10 minutes)\n**Total Cost:** 7 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery (4d8)\n**Effect:** Touch a surface to create an extradimensional space holding up to 8 Medium creatures. The surface may be closed like a door. From outside door and the space are invisible. Space holds up to 8 hours of air.\n**Saving Throw:** None (creates extradimensional space)\n**Success Scaling:** 1 = 1 minute (4 creatures), 2 = full effect, 3 = 1 hour (16 creatures), 4 = 8 hours (permanent until exited)"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 4 (creating extradimensional space) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Touch a surface to create an extradimensional space holding up to 8 Medium creatures. The surface may be closed like a door. From outside door and the space are invisible. Space holds up to 8 hours of air. <strong>Saving Throw:</strong> None (creates extradimensional space) <strong>Success Scaling:</strong> 1 = 1 minute (4 creatures), 2 = full effect, 3 = 1 hour (16 creatures), 4 = 8 hours (permanent until exited)</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!cdd172af771b441d"
+  "_key": "!items!b402b8239c7f4ea8"
 }

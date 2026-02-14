@@ -1,11 +1,51 @@
 {
-  "_id": "2710050d9aa14348",
+  "_id": "75e4ffca3a9344b9",
   "name": "Perfect Sight",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 6 (perceiving true forms and hidden things)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Touch  \n**Duration:** 10 minutes  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Target at touch can see through illusory effects, invisible creatures/objects, ethereal plane, darkness (magical and normal), disguises, Beastial Transformations, and see true forms of shapechangers. Can see into the Ethereal Plane up to 60 feet.  \n**Saving Throw:** None (beneficial buff, willing targets only)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or 120 feet ethereal sight"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 6 (perceiving true forms and hidden things) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at touch can see through illusory effects, invisible creatures/objects, ethereal plane, darkness (magical and normal), disguises, Beastial Transformations, and see true forms of shapechangers. Can see into the Ethereal Plane up to 60 feet. <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or 120 feet ethereal sight</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 6
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!2710050d9aa14348"
+  "_key": "!items!75e4ffca3a9344b9"
 }

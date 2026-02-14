@@ -114,7 +114,7 @@
           <div class="mode-header">
             <h4>Mode {{add index 1}}: <input type="text" name="system.attackModes.{{index}}.name" value="{{mode.name}}" placeholder="Melee/Ranged/Thrown" style="width: 150px;" /></h4>
             {{#if (gt ../system.attackModes.length 1)}}
-            <button type="button" class="remove-attack-mode" data-index="{{index}}">
+            <button type="button" data-action="removeAttackMode" data-index="{{index}}">
               <i class="fas fa-trash"></i> Remove
             </button>
             {{/if}}
@@ -176,7 +176,7 @@
         </div>
         {{/each}}
         
-        <button type="button" class="add-attack-mode">
+        <button type="button" data-action="addAttackMode">
           <i class="fas fa-plus"></i> Add Attack Mode
         </button>
       </div>

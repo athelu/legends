@@ -1,11 +1,51 @@
 {
-  "_id": "991943b26d994a7e",
+  "_id": "2dddb561a19a42ea",
   "name": "Preserve Remains",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Positive 2 (preserving deceased)  \n**Supporting Energy:** Time 4 (duration 1 hour or until dispelled)  \n**Range:** Touch  \n**Duration:** 1 hour (or until dispelled)  \n**Total Cost:** 6 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery  \n**Effect:** Corpse at touch is protected from decay and cannot become undead. Extends time limit for resurrection magic.  \n**Saving Throw:** None (corpse has no will)  \n**Success Scaling:** 0 = fails, 1 = 10 minutes, 2 = 1 hour, 3 = 24 hours, 4 = 10 days"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Positive 2 (preserving deceased) <strong>Supporting Energy:</strong> Time 4 (duration 1 hour or until dispelled) <strong>Range:</strong> Touch <strong>Duration:</strong> 1 hour (or until dispelled) <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Corpse at touch is protected from decay and cannot become undead. Extends time limit for resurrection magic. <strong>Saving Throw:</strong> None (corpse has no will) <strong>Success Scaling:</strong> 0 = fails, 1 = 10 minutes, 2 = 1 hour, 3 = 24 hours, 4 = 10 days</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "positive",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 4
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!991943b26d994a7e"
+  "_key": "!items!2dddb561a19a42ea"
 }

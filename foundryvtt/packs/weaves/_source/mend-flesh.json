@@ -1,11 +1,51 @@
 {
-  "_id": "af72cbff8e054bf7",
+  "_id": "cde249d6b5814235",
   "name": "Mend Flesh",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Positive 3 (healing energy)  \n**Supporting Energy:** None (touch, instantaneous)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 3 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Positive Potential + Positive Mastery  \n**Effect:** Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness.  \n**Saving Throw:** None (healing weave, no resistance)  \n**Success Scaling:** 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8)"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Positive 3 (healing energy) <strong>Supporting Energy:</strong> None (touch, instantaneous) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness. <strong>Saving Throw:</strong> None (healing weave, no resistance) <strong>Success Scaling:</strong> 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8)</p>"
+    },
+    "weaveType": "simple",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "positive",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "",
+        "cost": 0
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!af72cbff8e054bf7"
+  "_key": "!items!cde249d6b5814235"
 }

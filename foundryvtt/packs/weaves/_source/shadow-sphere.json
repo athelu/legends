@@ -1,11 +1,51 @@
 {
-  "_id": "499ae168a6dc4d9b",
+  "_id": "b3ff7bdbee0542e6",
   "name": "Shadow Sphere",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Negative 3 (creating magical darkness)  \n**Supporting Energy:** Space 4 (medium range + 15ft radius) / Time 3 (duration 10 minutes)  \n**Range:** Medium, 60 ft. (15-foot radius sphere)  \n**Duration:** 10 minutes  \n**Total Cost:** 10 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Magical darkness fills a 15ft radius sphere at medium range. Blocks normal and magical light (unless from higher energy weave). Creatures inside are Blinded to creatures outside.  \n**Saving Throw:** None (creates zone of darkness)  \n**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 30ft radius (1 hour), 4 = 60ft radius (8 hours)\n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Negative 3 (creating magical darkness) <strong>Supporting Energy:</strong> Space 4 (medium range + 15ft radius) / Time 3 (duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (15-foot radius sphere) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Magical darkness fills a 15ft radius sphere at medium range. Blocks normal and magical light (unless from higher energy weave). Creatures inside are Blinded to creatures outside. <strong>Saving Throw:</strong> None (creates zone of darkness) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 30ft radius (1 hour), 4 = 60ft radius (8 hours)</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "negative",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 4
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!499ae168a6dc4d9b"
+  "_key": "!items!b3ff7bdbee0542e6"
 }

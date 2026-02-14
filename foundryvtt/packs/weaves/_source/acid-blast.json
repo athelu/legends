@@ -1,11 +1,51 @@
 {
-  "_id": "4453b6dc7ce5418d",
+  "_id": "eb4eb1bd8f404a2a",
   "name": "Acid Blast",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Water 2 (acidic vapor damage)\n**Supporting Energy:** Space 1 (close range 30ft)\n**Range:** Close, 30 ft.  \n**Duration:** Instantaneous\n**Total Cost:** 3 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery (4d8)\n**Effect:** Target takes 8 acid damage. This is an attack weave—no saving throw allowed.\n**Saving Throw:** None (attack weave, weaving successes determine hit quality)\n**Damage Type:** Acid (energy)\n**DR Interaction:** Half DR (8 acid damage vs DR 4 becomes 8 - 2 = 6 damage)\n**Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)\n**Scaling Option:** Can add Space 1 to affect 2 targets (total 4 Energy)\n**Sickened Condition (at 5 successes):** Target has Misfortune on their next attack roll as acid burns and nauseates them.\n\n## B"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Water 2 (acidic vapor damage) <strong>Supporting Energy:</strong> Space 1 (close range 30ft) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery (4d8) <strong>Effect:</strong> Target takes [[/damage 8 type=acid]] damage. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Acid (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 8 type=acid]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total) <strong>Scaling Option:</strong> Can add Space 1 to affect 2 targets (total 4 Energy) <strong>Sickened Condition (at 5 successes):</strong> Target has Misfortune on their next attack roll as acid burns and nauseates them.</p>\n<h2>B</h2>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "water",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 1
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!4453b6dc7ce5418d"
+  "_key": "!items!eb4eb1bd8f404a2a"
 }

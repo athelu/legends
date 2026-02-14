@@ -2,6 +2,13 @@
 """
 Build all Legends system packs with specialized parsers.
 
+IMPORTANT: For Foundry V13, this script only generates _source/*.json files.
+After running this script, you MUST run the Foundry CLI to compile the packs:
+
+    npm run pack:all
+
+This creates the LevelDB format files required by Foundry V13.
+
 This script runs all individual pack builders in sequence:
 - build_armor_pack.py (parses armor.md, creates armor + shield items)
 - build_weapons_pack.py (parses weapons.md)
@@ -73,13 +80,22 @@ def main():
     if successful < total:
         return 1
     else:
-        print("\nAll packs built successfully!")
+        print("\n✓ All pack source files generated successfully!")
         print("\n" + "="*60)
-        print("NEXT STEPS")
+        print("⚠️  NEXT STEP REQUIRED FOR FOUNDRY V13")
         print("="*60)
-        print("1. Review the generated _source/*.json files")
-        print("2. Run 'npm run pack:all' to compile .db files with Foundry CLI")
-        print("3. Deploy to Foundry using: bash deploy_to_foundry.sh")
+        print("Run the following command to compile packs to LevelDB format:")
+        print("")
+        print("    npm run pack:all")
+        print("")
+        print("Or compile individual packs:")
+        print("    npm run pack:feats")
+        print("    npm run pack:armor")
+        print("    npm run pack:weaves")
+        print("    etc.")
+        print("")
+        print("This creates the LevelDB files (CURRENT, LOCK, MANIFEST-*, *.ldb)")
+        print("required by Foundry VTT V13.")
         print("="*60 + "\n")
         return 0
 

@@ -1,11 +1,51 @@
 {
-  "_id": "7ea6c81a4e6e474b",
+  "_id": "6e9be89a7dae42af",
   "name": "Minor Illusion",
   "type": "weave",
   "img": "is static unless you use action to move it. Physical interaction reveals illusory effect.",
   "system": {
-    "description": "**Primary Energy:** Space 3 (small sensory illusion + close range)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 5 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create a sound or image at close range no larger than a 5ft cube. Sound can be any noise. Image is static unless you use action to move it. Physical interaction reveals illusory effect.  \n**Saving Throw:** Perception vs Space Mastery (to disbelieve if suspicious)  \n**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = can include both sound and image (1 hour)"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 3 (small sensory illusion + close range) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 5 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create a sound or image at close range no larger than a 5ft cube. Sound can be any noise. Image is static unless you use action to move it. Physical interaction reveals illusory effect. <strong>Saving Throw:</strong> Perception vs Space Mastery (to disbelieve if suspicious) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = can include both sound and image (1 hour)</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!7ea6c81a4e6e474b"
+  "_key": "!items!6e9be89a7dae42af"
 }

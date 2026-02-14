@@ -1,11 +1,51 @@
 {
-  "_id": "9ab0cb28ac5049a4",
+  "_id": "e45e295cb56842a7",
   "name": "Shape Stone",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Earth 3 (reshaping worked stone)  \n**Supporting Energy:** None (touch, instantaneous/permanent)  \n**Range:** Touch  \n**Duration:** Instantaneous (permanent)  \n**Total Cost:** 3 Energy per 5ft cube  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Earth Potential + Earth Mastery  \n**Effect:** Reshape stone into any form (doors, pillars, crude weapon). Can create hinges and latches. Cannot make complex mechanisms. Changes are permanent.  \n**Saving Throw:** None (object manipulation)  \n**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = 20ft cube or create detailed carvings\n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Earth 3 (reshaping worked stone) <strong>Supporting Energy:</strong> None (touch, instantaneous/permanent) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous (permanent) <strong>Total Cost:</strong> 3 Energy per 5ft cube <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery <strong>Effect:</strong> Reshape stone into any form (doors, pillars, crude weapon). Can create hinges and latches. Cannot make complex mechanisms. Changes are permanent. <strong>Saving Throw:</strong> None (object manipulation) <strong>Success Scaling:</strong> 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = 20ft cube or create detailed carvings</p>\n<p>---</p>"
+    },
+    "weaveType": "simple",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "earth",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "",
+        "cost": 0
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!9ab0cb28ac5049a4"
+  "_key": "!items!e45e295cb56842a7"
 }

@@ -1,11 +1,51 @@
 {
-  "_id": "e14ae23ce2b241e5",
+  "_id": "7de96ef2b7e844c5",
   "name": "Lightning Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Air 2 (lightning through touch, damage)  \n**Supporting Energy:** None (touch range only)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 2 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Air Potential + Air Mastery  \n**Effect:** Touch a target and release a jolt of electricity. Target takes 4 lightning damage. If target is wearing metal armor, you have Fortune on your weaving roll. This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Lightning (energy)  \n**DR Interaction:** Half DR (4 lightning damage vs DR 4 becomes 4 - 2 = 2 damage)  \n**Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)  \n**Special:** Fortune on weaving roll if target wears metal armor (better conductor)  \n**Dazed Condition (at 4 successes):** Target has Misfortune on their next attack roll as electricity disrupts their nervous system.  \n\n\n## M"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Air 2 (lightning through touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Air Potential + Air Mastery <strong>Effect:</strong> Touch a target and release a jolt of electricity. Target takes [[/damage 4 type=lightning]] damage. If target is wearing metal armor, you have Fortune on your weaving roll. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Lightning (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=lightning]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +[[/damage 4]] damage (8 total), 4 = +[[/damage 8]] damage (12 total) <strong>Special:</strong> Fortune on weaving roll if target wears metal armor (better conductor) <strong>Dazed Condition (at 4 successes):</strong> Target has Misfortune on their next attack roll as electricity disrupts their nervous system.</p>\n<h2>M</h2>"
+    },
+    "weaveType": "simple",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "",
+        "cost": 0
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!e14ae23ce2b241e5"
+  "_key": "!items!7de96ef2b7e844c5"
 }

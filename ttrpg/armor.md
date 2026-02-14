@@ -69,28 +69,33 @@
 ---
 
 #### Aketon/Light Padded
+- **Image:** `icons/equipment/chest/breastplate-scale-grey.webp`
 - **DR:** Slashing 2, Piercing 1, Bludgeoning 3
 - **Stealth:** No penalty
 - **Cost:** 15 gp
 - **Keyword:** [LightArmor]
 
 #### Brigandine/Coat of Plates
+- **Image:** `icons/equipment/chest/breastplate-scale-grey.webp`
 - **DR:** Slashing 6, Piercing 6, Bludgeoning 6
 - **Cost:** 400 gp
 - **Keyword:** [MediumArmor], [Noisy]
 
 #### Chain Mail
+- **Image:** `icons/equipment/chest/breastplate-scale-grey.webp`
 - **DR:** Slashing 6, Piercing 5, Bludgeoning 4
 - **Cost:** 200 gp
 - **Keyword:** [MediumArmor], [Noisy]
 
 #### Gambeson
+- **Image:** `icons/equipment/chest/breastplate-scale-grey.webp`
 - **DR:** Slashing 4, Piercing 2, Bludgeoning 5
 - **Stealth:** No penalty
 - **Cost:** 40 gp
 - **Keyword:** [MediumArmor]
 
 #### Leather Armor/Cuir Bouilli (Hardened Leather)
+- **Image:** `icons/equipment/chest/breastplate-scale-grey.webp`
 - **DR:** Slashing 3, Piercing 2, Bludgeoning 4
 - **Stealth:** No penalty
 - **Description:** Boiled and hardened leather plates, shaped and rigid
@@ -98,16 +103,19 @@
 - **Keyword:** [LightArmor]
 
 #### Plate, Full
+- **Image:** `icons/equipment/chest/breastplate-scale-grey.webp`
 - **DR:** Slashing 9, Piercing 8, Bludgeoning 6
 - **Cost:** 750 gp
 - **Keyword:** [HeavyArmor], [Loud]
 
 #### Scale Mail
+- **Image:** `icons/equipment/chest/breastplate-scale-grey.webp`
 - **DR:** Slashing 6, Piercing 5, Bludgeoning 4
 - **Cost:** 250 gp
 - **Keyword:** [MediumArmor], [Noisy]
 
 #### Splint Mail
+- **Image:** `icons/equipment/chest/breastplate-scale-grey.webp`
 - **DR:** Slashing 8, Piercing 7, Bludgeoning 6
 - **Cost:** 500 gp
 - **Keyword:** [HeavyArmor], [Loud]

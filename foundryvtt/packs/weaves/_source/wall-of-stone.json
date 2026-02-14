@@ -1,11 +1,51 @@
 {
-  "_id": "480a2e79369c4cb3",
+  "_id": "08f6d0ffdb1746fb",
   "name": "Wall of Stone",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Earth 6 (solid stone barrier)  \n**Supporting Energy:** Space 2 (medium range + wall area)  \n**Range:** Medium, 60 ft. (60 feet long, 20 feet high)  \n**Duration:** Permanent  \n**Total Cost:** 8 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  \n**Effect:** Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 4. Can shape into crenellations, bridges, etc.  \n**Saving Throw:** None (creates barrier)  \n**Success Scaling:** 0 = fails, 1 = 1 minute duration only, 2 = permanent, 3 = double HP, 4 = triple HP and can create complex shapes\n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Earth 6 (solid stone barrier) <strong>Supporting Energy:</strong> Space 2 (medium range + wall area) <strong>Range:</strong> Medium, 60 ft. (60 feet long, 20 feet high) <strong>Duration:</strong> Permanent <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 4. Can shape into crenellations, bridges, etc. <strong>Saving Throw:</strong> None (creates barrier) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute duration only, 2 = permanent, 3 = double HP, 4 = triple HP and can create complex shapes</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "earth",
+        "cost": 6
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!480a2e79369c4cb3"
+  "_key": "!items!08f6d0ffdb1746fb"
 }

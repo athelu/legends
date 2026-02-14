@@ -1,11 +1,51 @@
 {
-  "_id": "8e2e3b32111a4edf",
+  "_id": "d6cdd5f970844974",
   "name": "Mental Domination",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 8 (controlling mind + medium range)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Medium, 60 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 10 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Humanoid target at medium range makes Will save. Compare your weaving successes to their save successes. If you have more, you control target's actions (won't take obviously harmful actions). Target can repeat save when taking damage (1 success ends effect).  \n**Saving Throw:** Will (to resist mental domination)  \n**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 8 (controlling mind + medium range) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Humanoid target at medium range makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, you control target's actions (won't take obviously harmful actions). Target can repeat save when taking damage (1 success ends effect). <strong>Saving Throw:</strong> Will (to resist mental domination) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 8
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!8e2e3b32111a4edf"
+  "_key": "!items!d6cdd5f970844974"
 }

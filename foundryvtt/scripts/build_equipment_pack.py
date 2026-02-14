@@ -25,7 +25,7 @@ To create equipment:
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, ensure_key
+from pack_utils import build_pack_from_source, generate_id, ensure_key, md_to_html, apply_enrichers
 
 
 def slugify(name: str) -> str:
@@ -94,15 +94,36 @@ def main():
             description = re.sub(r"\*\*Cost:\*\*[^\n]*", "", rest).strip()
             description = re.sub(r"\*\*Weight:\*\*[^\n]*", "", description).strip()
 
+            # Parse cost/weight to numbers
+            def parse_gp(text):
+                if not text: return 0
+                m2 = re.search(r"([0-9]+(?:\.[0-9]+)?)\s*(gp|sp|cp)", text)
+                if not m2: return 0
+                val = float(m2.group(1))
+                unit = m2.group(2)
+                if unit == 'sp': val /= 10.0
+                elif unit == 'cp': val /= 100.0
+                return val
+
+            def parse_lbs(text):
+                if not text: return 0
+                m2 = re.search(r"([0-9]+(?:\.[0-9]+)?)", text)
+                return float(m2.group(1)) if m2 else 0
+
             item = {
                 '_id': generate_id(),
                 'name': name,
                 'type': 'equipment',
                 'img': 'icons/svg/item-bag.svg',
                 'system': {
-                    'description': description,
-                    'weight': weight or "",
-                    'cost': cost or ""
+                    'description': {'value': apply_enrichers(md_to_html(description))},
+                    'equipmentType': 'adventuring-gear',
+                    'weight': parse_lbs(weight),
+                    'cost': parse_gp(cost),
+                    'quantity': 1,
+                    'equipped': False,
+                    'properties': '',
+                    'notes': ''
                 },
                 'effects': []
             }

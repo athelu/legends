@@ -6,7 +6,7 @@ Build traits, flaws, feats compendium packs from parsed documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file
+from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, md_to_html, apply_enrichers
 
 
 def parse_md_list(md_file, item_type):
@@ -54,10 +54,10 @@ def parse_md_list(md_file, item_type):
         
         # Extract description (everything after name until next section)
         description = '\n'.join(lines[1:]).strip()
-        item['system']['description'] = description
+        item['system']['description'] = {'value': apply_enrichers(md_to_html(description))}
         
         # Extract image path if specified
-        img_match = re.search(r'Image[:\s]+([^\n|]+)', description)
+        img_match = re.search(r'\*?\*?Image:?\*?\*?\s*`?([^`\n|]+)`?', description)
         if img_match:
             item['img'] = img_match.group(1).strip()
         

@@ -1,11 +1,51 @@
 {
-  "_id": "52a99856fef94eef",
+  "_id": "85bf7a5191b74e80",
   "name": "Null Sphere",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 8 (negating magical energies in area)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Self (10-foot radius)  \n**Duration:** 10 minutes  \n**Total Cost:** 11 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Creates a 10ft radius sphere around you that suppresses all magic. Weaves cannot be cast into or out of the field. Magical items cease functioning. Active weaves are suppressed while in the field.  \n**Saving Throw:** None (creates zone of suppression)  \n**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 1 hour, 4 = 8 hours\n\n## O"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 8 (negating magical energies in area) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Self (10-foot radius) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Creates a 10ft radius sphere around you that suppresses all magic. Weaves cannot be cast into or out of the field. Magical items cease functioning. Active weaves are suppressed while in the field. <strong>Saving Throw:</strong> None (creates zone of suppression) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 1 hour, 4 = 8 hours</p>\n<h2>O</h2>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 8
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!52a99856fef94eef"
+  "_key": "!items!85bf7a5191b74e80"
 }

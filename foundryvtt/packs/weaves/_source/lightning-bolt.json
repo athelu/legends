@@ -1,11 +1,51 @@
 {
-  "_id": "de17125cc2a24766",
+  "_id": "a598b3cc56a54e99",
   "name": "Lightning Bolt",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Air 5 (electricity in a line, damage)  \n**Supporting Energy:** Space 2 (self, 60ft line 5ft wide)  \n**Range:** Self (60-foot line, 5 feet wide)  \n**Duration:** Instantaneous  \n**Total Cost:** 7 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  \n**Effect:** A stroke of lightning forming a line 60 feet long and 5 feet wide blasts out from you. All creatures in the line take 28 lightning damage. Each target takes the full listed damage and makes their own save.  \n**Saving Throw:** Reflex (to dodge the lightning)  \n**Damage Type:** Lightning (energy)  \n**DR Interaction:** Half DR (28 lightning damage vs DR 4 becomes 28 - 2 = 26 damage)  \n**Success Scaling:** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total)  \n**Stunned Condition (at Net 4):** Target is Stunned until the end of their next turn, unable to take actions as electricity courses through their body."
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Air 5 (electricity in a line, damage) <strong>Supporting Energy:</strong> Space 2 (self, 60ft line 5ft wide) <strong>Range:</strong> Self (60-foot line, 5 feet wide) <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> A stroke of lightning forming a line 60 feet long and 5 feet wide blasts out from you. All creatures in the line take [[/damage 28 type=lightning]] damage. Each target takes the full listed damage and makes their own save. <strong>Saving Throw:</strong> Reflex (to dodge the lightning) <strong>Damage Type:</strong> Lightning (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 28 type=lightning]] damage vs DR 4 becomes 28 - 2 = [[/damage 26]] damage) <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +[[/damage 8]] damage (36 total), 4 = +[[/damage 16]] damage (44 total) <strong>Stunned Condition (at Net 4):</strong> Target is Stunned until the end of their next turn, unable to take actions as electricity courses through their body.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 5
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!de17125cc2a24766"
+  "_key": "!items!a598b3cc56a54e99"
 }

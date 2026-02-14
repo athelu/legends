@@ -1,11 +1,51 @@
 {
-  "_id": "6358a41d9fd243f7",
+  "_id": "33b9b54c03624548",
   "name": "Nightmare Manifestation",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 8 (terrifying mental illusion + medium range)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Medium, 60 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 10 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Target at medium range makes Will save. Compare your weaving successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes 3d8 psychic damage at start of each turn. Can repeat Will save each round to end effect (1 success ends effect).  \n**Saving Throw:** Will (to resist fear manifestation)  \n**Success Scaling:** 0 = no effect, 1 = Frightened only (no damage), 2 = full effect (Frightened + 3d8 damage), 3 = 4d8 damage, 4 = Fleeing instead of Frightened (5d8 damage)  \n**Frightened/Fleeing Conditions:** See conditions document for full mechanics. Target can repeat save at end of each turn."
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 8 (terrifying mental illusion + medium range) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at medium range makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes [[/damage 3d8 type=psychic]] damage at start of each turn. Can repeat [[/save type=will]] each round to end effect (1 success ends effect). <strong>Saving Throw:</strong> Will (to resist fear manifestation) <strong>Success Scaling:</strong> 0 = no effect, 1 = Frightened only (no damage), 2 = full effect (Frightened + [[/damage 3d8]] damage), 3 = [[/damage 4d8]] damage, 4 = Fleeing instead of Frightened ([[/damage 5d8]] damage) <strong>Frightened/Fleeing Conditions:</strong> See conditions document for full mechanics. Target can repeat save at end of each turn.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 8
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!6358a41d9fd243f7"
+  "_key": "!items!33b9b54c03624548"
 }

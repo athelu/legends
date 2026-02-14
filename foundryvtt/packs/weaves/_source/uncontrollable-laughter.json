@@ -1,11 +1,51 @@
 {
-  "_id": "dc22f047b8994e90",
+  "_id": "994fc46f794944a2",
   "name": "Uncontrollable Laughter",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Negative 2 (overwhelming with uncontrollable mirth)  \n**Supporting Energy:** Space 1 (close range) / Time 2 (duration up to 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 minute (until save succeeds)  \n**Total Cost:** 5 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Target at close range makes Will save. Compare your weaving successes to their save successes. If you have more, target falls Prone with uncontrollable laughter, becoming Incapacitated and unable to stand. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect).  \n**Saving Throw:** Will (to resist mental effect)  \n**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = no save if damaged, 4 = 10 minutes  \n**Incapacitated Condition (at Net 2+):** Target can't take actions or reactions, is Prone, and can't stand. Repeats save at end of each turn.  \n**Note:** Creatures with Intelligence 1 aren't affected.\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Negative 2 (overwhelming with uncontrollable mirth) <strong>Supporting Energy:</strong> Space 1 (close range) / Time 2 (duration up to 1 minute) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 1 minute (until save succeeds) <strong>Total Cost:</strong> 5 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at close range makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target falls Prone with uncontrollable laughter, becoming Incapacitated and unable to stand. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect). <strong>Saving Throw:</strong> Will (to resist mental effect) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect, 3 = no save if damaged, 4 = 10 minutes <strong>Incapacitated Condition (at Net 2+):</strong> Target can't take actions or reactions, is Prone, and can't stand. Repeats save at end of each turn. <strong>Note:</strong> Creatures with Intelligence 1 aren't affected. ---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "negative",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 1
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!dc22f047b8994e90"
+  "_key": "!items!994fc46f794944a2"
 }

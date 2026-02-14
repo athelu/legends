@@ -1,11 +1,51 @@
 {
-  "_id": "2e2edebcf95e4871",
+  "_id": "d29cd74c646b410a",
   "name": "Gentle Descent",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Air 2 (slowing fall with updraft)  \n**Supporting Energy:** Space 5 (close range + 5 creatures + up to 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** Up to 1 minute (until they land)  \n**Total Cost:** 7 Energy  \n**Action:** [Reaction] when you or creature within close range falls  \n**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  \n**Effect:** Up to 5 falling creatures within close range descend 60 feet per round and take no falling damage. Weave lasts until they land (up to 1 minute).  \n**Saving Throw:** None (beneficial effect)  \n**Success Scaling:** 0 = fails, 1 = 1 creature, 2 = 5 creatures, 3 = 10 creatures, 4 = can cast as [Free] reaction without spending action"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Air 2 (slowing fall with updraft) <strong>Supporting Energy:</strong> Space 5 (close range + 5 creatures + up to 1 minute) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Up to 1 minute (until they land) <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> [Reaction] when you or creature within close range falls <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Up to 5 falling creatures within close range descend 60 feet per round and take no falling damage. Weave lasts until they land (up to 1 minute). <strong>Saving Throw:</strong> None (beneficial effect) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 creature, 2 = 5 creatures, 3 = 10 creatures, 4 = can cast as [Free] reaction without spending action</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 5
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!2e2edebcf95e4871"
+  "_key": "!items!d29cd74c646b410a"
 }

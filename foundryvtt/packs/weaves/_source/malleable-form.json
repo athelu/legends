@@ -1,11 +1,51 @@
 {
-  "_id": "d27e106c1ab04d62",
+  "_id": "0eb4ff5386e94e8a",
   "name": "Malleable Form",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 4 (manipulating physical form/appearance)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Self  \n**Duration:** 1 minute  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Alter your appearance, gain aquatic adaptation, or grow natural weapons (4 damage). Appearance changes are cosmetic only (height 1 foot, weight 50 lbs, features change). Natural weapons count as light weapons.  \n**Saving Throw:** None (self-only transformation)  \n**Success Scaling:** 0 = fails, 1 = 1 round duration, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 4 (manipulating physical form/appearance) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Self <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Alter your appearance, gain aquatic adaptation, or grow natural weapons ([[/damage 4]] damage). Appearance changes are cosmetic only (height 1 foot, weight 50 lbs, features change). Natural weapons count as light weapons. <strong>Saving Throw:</strong> None (self-only transformation) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round duration, 2 = full effect, 3 = 10 minutes, 4 = 1 hour</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!d27e106c1ab04d62"
+  "_key": "!items!0eb4ff5386e94e8a"
 }

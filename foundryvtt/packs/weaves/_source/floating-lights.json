@@ -1,11 +1,51 @@
 {
-  "_id": "9b407a105d7d491e",
+  "_id": "9cf464dae85a4e01",
   "name": "Floating Lights",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Fire 2 (creating floating lights, minor effect)  \n**Supporting Energy:** Space 4 (medium range + 1 minute)  \n**Range:** Medium, 60 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 6 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Fire Potential + Fire Mastery / Space Potential + Space Mastery  \n**Effect:** Create up to 4 torch-sized lights at medium range that hover and shed dim light in 10ft radius. Can move lights up to 60 feet as [Free] action.  \n**Saving Throw:** None (utility weave)  \n**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Fire 2 (creating floating lights, minor effect) <strong>Supporting Energy:</strong> Space 4 (medium range + 1 minute) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create up to 4 torch-sized lights at medium range that hover and shed dim light in 10ft radius. Can move lights up to 60 feet as [Free] action. <strong>Saving Throw:</strong> None (utility weave) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "fire",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 4
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!9b407a105d7d491e"
+  "_key": "!items!9cf464dae85a4e01"
 }

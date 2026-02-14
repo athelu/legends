@@ -14,7 +14,7 @@ This script will parse all of them.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key
+from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key, md_to_html, apply_enrichers
 
 
 def _safe_filename(name: str) -> str:
@@ -74,17 +74,51 @@ def parse_weaves_md(ttrpg_dir):
                 'type': 'weave',
                 'img': 'icons/magic/abjuration/abjuration-purple.webp',
                 'system': {
-                    'description': ''
+                    'description': {'value': ''},
+                    'weaveType': '',
+                    'actionCost': 1,
+                    'energyCost': {
+                        'primary': {'type': '', 'cost': 0},
+                        'supporting': {'type': '', 'cost': 0}
+                    },
+                    'school': '',
+                    'range': {'value': '', 'distance': 0},
+                    'target': '',
+                    'areaSize': '',
+                    'duration': '',
+                    'durationDetail': '',
+                    'saveType': 'none',
+                    'saveEffect': '',
+                    'effectType': '',
+                    'damage': {'base': 0, 'type': '', 'drInteraction': '', 'scaling': ''},
+                    'healing': {'base': 0, 'scaling': ''},
+                    'conditions': '',
+                    'successEffects': '',
+                    'specialProperties': '',
+                    'heightening': ''
                 },
                 'effects': []
             }
-            
+
             # Extract description
             description = '\n'.join(lines[1:]).strip()
-            item['system']['description'] = description
+            item['system']['description'] = {'value': apply_enrichers(md_to_html(description))}
+
+            # Try to parse energy costs from description
+            primary_match = re.search(r'\*\*Primary Energy:\*\*\s*(\w+)\s+(\d+)', description)
+            if primary_match:
+                item['system']['energyCost']['primary']['type'] = primary_match.group(1).lower()
+                item['system']['energyCost']['primary']['cost'] = int(primary_match.group(2))
+            supporting_match = re.search(r'\*\*Supporting Energy:\*\*\s*(\w+)\s+(\d+)', description)
+            if supporting_match:
+                item['system']['energyCost']['supporting']['type'] = supporting_match.group(1).lower()
+                item['system']['energyCost']['supporting']['cost'] = int(supporting_match.group(2))
+                item['system']['weaveType'] = 'complex'
+            elif primary_match:
+                item['system']['weaveType'] = 'simple'
             
             # Extract image path if specified
-            img_match = re.search(r'Image[:\s]+([^\n|]+)', description)
+            img_match = re.search(r'\*?\*?Image:?\*?\*?\s*`?([^`\n|]+)`?', description)
             if img_match:
                 item['img'] = img_match.group(1).strip()
             

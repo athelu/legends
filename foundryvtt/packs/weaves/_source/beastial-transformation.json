@@ -1,11 +1,51 @@
 {
-  "_id": "8c433e61bcc94302",
+  "_id": "cfb4e4d476a941a2",
   "name": "Beastial Transformation",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 7 (transforming into another creature, major transformation, 30 ft. range)\n**Supporting Energy:** Time 3 (duration up to 10 minutes)\n**Range:** touch or self  \n**Duration:** 10 minutes\n**Total Cost:** 10 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery (4d8)\n**Effect:** Transform target at close range (30ft) into a beast. Target gains beast's HP (temporary), physical stats, and abilities. Keeps mental stats and personality. Unwilling targets get Fortitude save. Compare your weaving successes to their save successes. Reverts when reaching 0 HP or weave ends (returns to previous HP total).\n**Saving Throw:** Fortitude (if unwilling, to resist transformation)\n**Success Scaling (Net successes if unwilling = Your successes - Their successes):** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 7 (transforming into another creature, major transformation, 30 ft. range) <strong>Supporting Energy:</strong> Time 3 (duration up to 10 minutes) <strong>Range:</strong> touch or self <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Transform target at close range (30ft) into a beast. Target gains beast's HP (temporary), physical stats, and abilities. Keeps mental stats and personality. Unwilling targets get [[/save type=fortitude]]. Compare your weaving successes to their save successes. Reverts when reaching 0 HP or weave ends (returns to previous HP total). <strong>Saving Throw:</strong> Fortitude (if unwilling, to resist transformation) <strong>Success Scaling (Net successes if unwilling = Your successes - Their successes):</strong> 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 7
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!8c433e61bcc94302"
+  "_key": "!items!cfb4e4d476a941a2"
 }

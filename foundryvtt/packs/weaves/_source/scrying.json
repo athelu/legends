@@ -1,11 +1,51 @@
 {
-  "_id": "21f94e73747f4e54",
+  "_id": "f24b95d6d1e24264",
   "name": "Scrying",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 6 (remote viewing of specific target)  \n**Supporting Energy:** Time 3 (duration 10 minutes)  \n**Range:** Special (anywhere on same plane)  \n**Duration:** 10 minutes  \n**Total Cost:** 9 Energy  \n**Action:** Complex weave (2 actions), takes 10 minutes to cast  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create invisible sensor near target creature you choose. Target makes Will save (apply Fortune/Misfortune based on familiarity). Compare your weaving successes to their save successes. If you have more, you can see and hear through sensor. Target has vague feeling of being watched.  \n**Saving Throw:** Will (to resist scrying, modified by familiarity)  \n**Success Scaling:** 0 = no effect, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = target doesn't sense you (8 hours)\n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 6 (remote viewing of specific target) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Special (anywhere on same plane) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions), takes 10 minutes to cast <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create invisible sensor near target creature you choose. Target makes [[/save type=will]] (apply Fortune/Misfortune based on familiarity). Compare your weaving successes to their save successes. If you have more, you can see and hear through sensor. Target has vague feeling of being watched. <strong>Saving Throw:</strong> Will (to resist scrying, modified by familiarity) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = target doesn't sense you (8 hours)</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 6
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!21f94e73747f4e54"
+  "_key": "!items!f24b95d6d1e24264"
 }

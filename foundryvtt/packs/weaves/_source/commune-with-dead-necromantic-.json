@@ -1,11 +1,51 @@
 {
-  "_id": "7c37a60ac3bd49bd",
+  "_id": "e246bc2f620541c3",
   "name": "Commune with Dead **[Necromantic]**",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Negative 4 (forcing communion with departed soul)\n**Supporting Energy:** Time 2 (duration of questioning, 1 minute)\n**Total Cost:** 6 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Negative Potential + Negative Mastery + Time Potential + Time Mastery (4d8)\n**Effect:** **[FORBIDDEN KNOWLEDGE]** Force brief communion with the departed soul of a corpse (dead no more than 10 days) at touch. Can ask up to 5 questions. Corpse can only answer what it knew in life. Answers are usually brief, cryptic, or repetitive. Same corpse can't be questioned this way again for 10 days.\n**Saving Throw:** None (soul is forcibly contacted)\n**Success Scaling:** 1 = 2 questions, 2 = 5 questions, 3 = 8 questions, 4 = corpse dead up to 100 days (10 questions)\n**Necromantic Warning:** This weave forces interaction with departed souls against their will, representing lost First Men knowledge. Cannot be learned at character creation, requires GM permission. Regular use may corrupt the caster's pneuma and attract malevolent attention."
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Negative 4 (forcing communion with departed soul) <strong>Supporting Energy:</strong> Time 2 (duration of questioning, 1 minute) <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery + Time Potential + Time Mastery (4d8) <strong>Effect:</strong> <strong>[FORBIDDEN KNOWLEDGE]</strong> Force brief communion with the departed soul of a corpse (dead no more than 10 days) at touch. Can ask up to 5 questions. Corpse can only answer what it knew in life. Answers are usually brief, cryptic, or repetitive. Same corpse can't be questioned this way again for 10 days. <strong>Saving Throw:</strong> None (soul is forcibly contacted) <strong>Success Scaling:</strong> 1 = 2 questions, 2 = 5 questions, 3 = 8 questions, 4 = corpse dead up to 100 days (10 questions) <strong>Necromantic Warning:</strong> This weave forces interaction with departed souls against their will, representing lost First Men knowledge. Cannot be learned at character creation, requires GM permission. Regular use may corrupt the caster's pneuma and attract malevolent attention.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "negative",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!7c37a60ac3bd49bd"
+  "_key": "!items!e246bc2f620541c3"
 }

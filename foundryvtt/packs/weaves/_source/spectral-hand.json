@@ -1,11 +1,51 @@
 {
-  "_id": "8e0a6e754ca54b2c",
+  "_id": "3c9c682200d24b40",
   "name": "Spectral Hand",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 3 (telekinetic force + close range)  \n**Supporting Energy:** Time 2 (duration 1 minute)  \n**Range:** Close, 30 ft.  \n**Duration:** 1 minute  \n**Total Cost:** 5 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  \n**Effect:** Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action.  \n**Saving Throw:** None (utility weave)  \n**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 25 lbs capacity (1 hour)\n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 3 (telekinetic force + close range) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 5 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action. <strong>Saving Throw:</strong> None (utility weave) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 25 lbs capacity (1 hour)</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!8e0a6e754ca54b2c"
+  "_key": "!items!3c9c682200d24b40"
 }

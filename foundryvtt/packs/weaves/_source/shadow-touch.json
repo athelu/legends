@@ -1,11 +1,51 @@
 {
-  "_id": "d8fc05fc090d4805",
+  "_id": "1fddf11a2ee5415f",
   "name": "Shadow Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Negative 2 (necrotic energy through touch, damage)  \n**Supporting Energy:** None (touch range only)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 2 Energy  \n**Action:** Simple weave (1 action)  \n**Weaving Roll:** Negative Potential + Negative Mastery  \n**Effect:** Touch a target and drain their life force with necrotic energy. Target takes 4 necrotic damage. You regain HP equal to half the damage dealt (rounded down). This is an attack weave—no saving throw allowed.  \n**Saving Throw:** None (attack weave, weaving successes determine hit quality)  \n**Damage Type:** Necrotic (energy)  \n**DR Interaction:** Half DR (4 necrotic damage vs DR 4 becomes 4 - 2 = 2 damage)  \n**Success Scaling:** 0 = miss (no healing), 1 = half damage (2, heal 1 HP), 2 = full damage (4, heal 2 HP), 3 = +4 damage (8 total, heal 4 HP), 4 = +8 damage (12 total, heal 6 HP)  \n**Weakened Condition (at 4 successes):** Target has Misfortune on Strength-based checks until end of their next turn.  \n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Negative 2 (necrotic energy through touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery <strong>Effect:</strong> Touch a target and drain their life force with necrotic energy. Target takes [[/damage 4 type=necrotic]] damage. You regain HP equal to half the damage dealt (rounded down). This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Necrotic (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=necrotic]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss (no healing), 1 = half damage (2, heal 1 HP), 2 = full damage (4, heal 2 HP), 3 = +[[/damage 4]] damage (8 total, heal 4 HP), 4 = +[[/damage 8]] damage (12 total, heal 6 HP) <strong>Weakened Condition (at 4 successes):</strong> Target has Misfortune on Strength-based checks until end of their next turn.</p>\n<p>---</p>"
+    },
+    "weaveType": "simple",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "negative",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "",
+        "cost": 0
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!d8fc05fc090d4805"
+  "_key": "!items!1fddf11a2ee5415f"
 }

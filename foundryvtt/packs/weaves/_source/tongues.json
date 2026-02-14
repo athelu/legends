@@ -1,11 +1,51 @@
 {
-  "_id": "df43e3180df740c5",
+  "_id": "ae97ca5374504f2b",
   "name": "Tongues",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Air 3 (granting understanding of all speech)  \n**Supporting Energy:** Time 3 (duration 1 hour)  \n**Range:** Touch  \n**Duration:** 1 hour  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Air Potential + Air Mastery / Time Potential + Time Mastery  \n**Effect:** Touch a creature. For the duration, target can understand and speak any language. Doesn't help with written languages.  \n**Saving Throw:** None (beneficial enhancement)  \n**Success Scaling:** 0 = fails, 1 = 10 minutes (understand only), 2 = full effect, 3 = 8 hours, 4 = can read/write all languages too  \n\n---"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Air 3 (granting understanding of all speech) <strong>Supporting Energy:</strong> Time 3 (duration 1 hour) <strong>Range:</strong> Touch <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Touch a creature. For the duration, target can understand and speak any language. Doesn't help with written languages. <strong>Saving Throw:</strong> None (beneficial enhancement) <strong>Success Scaling:</strong> 0 = fails, 1 = 10 minutes (understand only), 2 = full effect, 3 = 8 hours, 4 = can read/write all languages too</p>\n<p>---</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!df43e3180df740c5"
+  "_key": "!items!ae97ca5374504f2b"
 }

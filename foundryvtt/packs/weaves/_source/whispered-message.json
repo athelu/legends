@@ -1,11 +1,51 @@
 {
-  "_id": "878bfb1dec074f99",
+  "_id": "63243d72b5014c02",
   "name": "Whispered Message",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Air 2 (transmitting sound across distance)  \n**Supporting Energy:** Space 1 (close range)  \n**Range:** Close, 30 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 3 Energy  \n**Action:** Simple Weave (1 action) - Does NOT provoke opportunity attacks  \n**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  \n**Effect:** Point at a creature within close range and whisper a message. Target (and only target) hears the message and can whisper a reply that only you hear. Weave transmits through most barriers but is blocked by 1 foot of stone, 1 inch of common metal, thin sheet of lead, or 3 feet of wood.  \n**Saving Throw:** None (communication)  \n**Success Scaling:** 0 = fails, 1 = one-way message only, 2 = full effect (can reply), 3 = medium range (60ft), 4 = long range (120ft)  \n\n---\n\n## Z"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Air 2 (transmitting sound across distance) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple Weave (1 action) - Does NOT provoke opportunity attacks <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Point at a creature within close range and whisper a message. Target (and only target) hears the message and can whisper a reply that only you hear. Weave transmits through most barriers but is blocked by 1 foot of stone, 1 inch of common metal, thin sheet of lead, or 3 feet of wood. <strong>Saving Throw:</strong> None (communication) <strong>Success Scaling:</strong> 0 = fails, 1 = one-way message only, 2 = full effect (can reply), 3 = medium range (60ft), 4 = long range (120ft)</p>\n<p>---</p>\n<h2>Z</h2>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 1
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!878bfb1dec074f99"
+  "_key": "!items!63243d72b5014c02"
 }

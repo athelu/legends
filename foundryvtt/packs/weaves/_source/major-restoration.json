@@ -1,11 +1,51 @@
 {
-  "_id": "e441c315e35747bc",
+  "_id": "30fdd3cf4fff48c7",
   "name": "Major Restoration",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Positive 6 (powerful cleansing and restoration)  \n**Supporting Energy:** None (touch, instantaneous, requires 1 minute to cast)  \n**Range:** Touch  \n**Duration:** Instantaneous  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions), requires 1 minute to cast  \n**Weaving Roll:** Positive Potential + Positive Mastery  \n**Effect:** Touch a creature and end one of the following: one curse (including attunement to cursed item), petrification, reduction of attribute scores, reduction of max HP. The weave removes only one effect per casting.  \n**Saving Throw:** None (beneficial restoration)  \n**Success Scaling:** 0 = fails, 1 = temporary relief (1 hour), 2 = full effect, 3 = removes 2 effects, 4 = removes all applicable effects"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Positive 6 (powerful cleansing and restoration) <strong>Supporting Energy:</strong> None (touch, instantaneous, requires 1 minute to cast) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions), requires 1 minute to cast <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Touch a creature and end one of the following: one curse (including attunement to cursed item), petrification, reduction of attribute scores, reduction of max HP. The weave removes only one effect per casting. <strong>Saving Throw:</strong> None (beneficial restoration) <strong>Success Scaling:</strong> 0 = fails, 1 = temporary relief (1 hour), 2 = full effect, 3 = removes 2 effects, 4 = removes all applicable effects</p>"
+    },
+    "weaveType": "simple",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "positive",
+        "cost": 6
+      },
+      "supporting": {
+        "type": "",
+        "cost": 0
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!e441c315e35747bc"
+  "_key": "!items!30fdd3cf4fff48c7"
 }

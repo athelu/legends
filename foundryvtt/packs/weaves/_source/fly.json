@@ -1,11 +1,51 @@
 {
-  "_id": "04995d205e8d4944",
+  "_id": "c564bac792034ca9",
   "name": "Fly",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Air 5 (levitation and propulsion, flight)\n**Supporting Energy:** Time 3 (duration 10 minutes)\n**Total Cost:** 8 Energy\n**Action:** Complex weave (2 actions)\n**Weaving Roll:** Air Potential + Air Mastery + Time Potential + Time Mastery (4d8)\n**Effect:** Target at touch gains flying speed equal to their normal movement speed. If weave ends while airborne, target falls.\n**Saving Throw:** None (beneficial buff, willing targets only)\n**Success Scaling:** 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or double speed"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Air 5 (levitation and propulsion, flight) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery + Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target at touch gains flying speed equal to their normal movement speed. If weave ends while airborne, target falls. <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or double speed</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 5
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!04995d205e8d4944"
+  "_key": "!items!c564bac792034ca9"
 }

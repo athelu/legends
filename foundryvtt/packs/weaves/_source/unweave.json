@@ -1,11 +1,51 @@
 {
-  "_id": "ab1a5b0854ba4b95",
+  "_id": "68f64c52d433494e",
   "name": "Unweave",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
-    "description": "**Primary Energy:** Space 4 (negating magical effects)  \n**Supporting Energy:** Space 2 (medium range)  \n**Range:** Medium, 60 ft.  \n**Duration:** Instantaneous  \n**Total Cost:** 6 Energy  \n**Action:** Complex weave (2 actions)  \n**Weaving Roll:** Space Potential + Space Mastery  \n**Effect:** End one magical effect on a creature, object, or area. Compare your weaving successes to the original caster's successes. If you equal or beat them, effect ends. Can target multiple effects (weakest first).  \n**Saving Throw:** Opposed weaving check (Your Space weaving vs Original caster's weaving)  \n**Success Scaling:** Must equal or exceed original weaving successes to dispel\n\n---\n\n## V"
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Space 4 (negating magical effects) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> End one magical effect on a creature, object, or area. Compare your weaving successes to the original caster's successes. If you equal or beat them, effect ends. Can target multiple effects (weakest first). <strong>Saving Throw:</strong> Opposed weaving check (Your Space weaving vs Original caster's weaving) <strong>Success Scaling:</strong> Must equal or exceed original weaving successes to dispel</p>\n<p>---</p>\n<h2>V</h2>"
+    },
+    "weaveType": "complex",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 2
+      }
+    },
+    "school": "",
+    "range": {
+      "value": "",
+      "distance": 0
+    },
+    "target": "",
+    "areaSize": "",
+    "duration": "",
+    "durationDetail": "",
+    "saveType": "none",
+    "saveEffect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": ""
+    },
+    "healing": {
+      "base": 0,
+      "scaling": ""
+    },
+    "conditions": "",
+    "successEffects": "",
+    "specialProperties": "",
+    "heightening": ""
   },
   "effects": [],
-  "_key": "!items!ab1a5b0854ba4b95"
+  "_key": "!items!68f64c52d433494e"
 }
