@@ -1,0 +1,20 @@
+{
+  "_id": "b31b62fdeeb646f6",
+  "name": "Unstable Surge (Stolen Shard)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Whenever you weave using your Primary Energy (Fire), add +[[/damage 4]] damage OR extend duration by 1 round. Power stolen doesn't flow smoothly—it erupts with raw force. This is a passive ability.</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!b31b62fdeeb646f6"
+}

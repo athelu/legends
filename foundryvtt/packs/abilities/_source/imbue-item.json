@@ -1,0 +1,20 @@
+{
+  "_id": "6004ee2d77504dcf",
+  "name": "Imbue Item",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action Range: Touch Frequency: Once per short rest Effect: Touch a weapon or piece of armor. For 1 minute, choose one benefit: Weapons deal +[[/damage 1d8]] damage on next hit, OR Armor grants +1 DR. The infusion ends after triggering once or when duration expires. Violet light flows into the item like liquid energy, and it glows faintly while holding your magic.</p>\n<h3>Sorcerous Origin Abilities</h3>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!6004ee2d77504dcf"
+}

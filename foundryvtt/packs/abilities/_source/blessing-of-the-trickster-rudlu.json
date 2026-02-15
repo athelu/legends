@@ -1,0 +1,20 @@
+{
+  "_id": "f1c4af6e2b6e457c",
+  "name": "Blessing of the Trickster (Rudlu)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Minor] action Range: 30 feet (must see target) Effect: Grant one creature Fortune on their next roll. Lady Luck smiles upon them. The violet light of fortune briefly flickers around them. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!f1c4af6e2b6e457c"
+}

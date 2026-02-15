@@ -1,0 +1,20 @@
+{
+  "_id": "8e3d1f49a1764a50",
+  "name": "Borrowed Vitality (Desperate Deal)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action Range: Touch or Self Frequency: Once per short rest Effect: Heal yourself or touched ally for HP equal to Charisma × tier. Life borrowed is life shared. Your pact allows you to channel positive energy through desperation.</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!8e3d1f49a1764a50"
+}

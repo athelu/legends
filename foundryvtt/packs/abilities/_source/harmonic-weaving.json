@@ -1,0 +1,20 @@
+{
+  "_id": "89dfe3f15cdb4218",
+  "name": "Harmonic Weaving",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: [Free] (declared when making weaving roll) Frequency: Wisdom + Tier times per long rest Effect: When you make a weaving roll, you can declare \"Harmonic\" to reroll one die (Potential OR Mastery, your choice). You must take the new result. Your perfect self-knowledge allows you to adjust reality's response to your will.</p>\n<h3>Eldritch Pact Abilities</h3>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!89dfe3f15cdb4218"
+}

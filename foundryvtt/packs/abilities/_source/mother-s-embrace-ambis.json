@@ -1,0 +1,20 @@
+{
+  "_id": "bd115ea8de5942b0",
+  "name": "Mother's Embrace (Ambis)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action Range: 30 feet Effect: Choose up to 6 allies within range who can see you. They gain +2 DR for 1 minute. Ambis's protective blessing shields them like a mother shielding her children. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!bd115ea8de5942b0"
+}

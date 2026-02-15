@@ -1,0 +1,21 @@
+{
+  "_id": "af95fb0c01b04b1b",
+  "name": "Immortality (-10)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>Eternal lifespan.</p>\n<ul>\n<li>Don't die of natural causes/disease</li>\n<li>Age to race's prime and stop</li>\n<li>Can be killed by violence/magic</li>\n<li><strong>Requires GM approval</strong></li>\n</ul>"
+    },
+    "pointCost": -10,
+    "traitType": "special",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": true,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!af95fb0c01b04b1b"
+}

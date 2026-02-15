@@ -1,0 +1,20 @@
+{
+  "_id": "e35aab6a38664f9b",
+  "name": "Sanctuary (Ambis)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action Range: Touch Effect: Touch a willing creature. For 1 minute, any enemy who targets them with an attack or harmful weave must make [[/save type=will]] (Wisdom + Luck) opposed by your Wisdom + Positive Mastery. If you win (more successes), they must choose a different target or their action is wasted. If the protected creature attacks or harms anyone, the effect ends. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!e35aab6a38664f9b"
+}

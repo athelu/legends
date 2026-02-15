@@ -1,0 +1,22 @@
+{
+  "_id": "bb86a8df7c7042ba",
+  "name": "Take Cover",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> Free with Move action</li>\n<li><strong>Effect:</strong> Position yourself to gain cover benefits</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Must have cover available (wall, boulder, etc.)</li>\n<li>See Cover rules in Combat section</li>\n<li>Enemies may have Misfortune attacking you depending on cover quality</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "Free",
+    "trigger": "",
+    "effect": "Position yourself to gain cover benefits\n- **Notes:**\n  - Must have cover available (wall, boulder, etc.)\n  - See Cover rules in Combat section\n  - Enemies may have Misfortune attacking you depending on cover quality",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!bb86a8df7c7042ba"
+}

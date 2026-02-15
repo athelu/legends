@@ -1,0 +1,20 @@
+{
+  "_id": "f7caf5c235f34dc1",
+  "name": "Void Speech (Answered Cry)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>You can communicate telepathically with any creature you can see within 30 feet. The void answered your cry and now serves as a conduit for your thoughts. This is a passive ability.</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!f7caf5c235f34dc1"
+}

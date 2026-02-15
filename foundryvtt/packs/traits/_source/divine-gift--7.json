@@ -1,0 +1,21 @@
+{
+  "_id": "0abf8a677ae54fcb",
+  "name": "Divine Gift (-7)",
+  "type": "trait",
+  "img": "icons/skills/holy/halo-divine-light.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Image:</strong> `icons/skills/holy/halo-divine-light.webp` <strong>Requirements:</strong> Wisdom ≥ 3</p>\n<p>You have dedicated yourself to the Pantheon of Eight through deep study and spiritual devotion. While you honor all eight deities, one has called to you as your patron (or you serve the pantheon equally), granting you the ability to channel divine power through your pneuma. Your eyes flash with violet light when completing each weave.</p>\n<p><strong>Choose Your Patron:</strong> Select which of the Eight you primarily serve, or choose to serve the Pantheon equally as a generalist. This determines your energy affinities and grants you specific Channel Divinity options. You still worship and respect the entire pantheon.</p>\n<p><strong>Mechanical Benefits:</strong></p>\n<ul>\n<li>Roll <strong>8d8</strong>, assign to eight Magical Potentials</li>\n<li>Your patron deity determines <strong>Primary</strong> and <strong>Secondary</strong> energy bonuses:\n<ul>\n<li><strong>Primary Energy</strong> = highest roll + 2 (max 8)</li>\n<li><strong>Secondary Energy</strong> = second-highest roll + 1 (max 8)</li>\n<li><strong>Generalist</strong> = highest roll + 1, second-highest roll + 1, third-highest roll + 1</li>\n</ul></li>\n<li>Use <strong>Wisdom</strong> as Casting Stat</li>\n<li>Gain <strong>8 Magical Mastery skills</strong> corresponding to the 8 energies (start at rank 0)</li>\n<li>Can weave divine magic using all 8 energies</li>\n<li><strong>Energy Pool:</strong> Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)</li>\n<li><strong>Channel Divinity:</strong> 2 uses per long rest. Gain access to all Channel Divinity options for your chosen patron.</li>\n</ul>\n<p>---</p>"
+    },
+    "pointCost": -7,
+    "traitType": "magical",
+    "isMagical": true,
+    "magicalType": "divine-gift",
+    "requirements": "Wisdom ≥ 3",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!0abf8a677ae54fcb"
+}

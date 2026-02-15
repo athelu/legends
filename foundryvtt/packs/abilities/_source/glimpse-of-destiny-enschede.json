@@ -1,0 +1,20 @@
+{
+  "_id": "5c771a48e5364e6a",
+  "name": "Glimpse of Destiny (Enschede)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Minor] action Range: 60 feet (must see target) Effect: Grant one ally Fortune on their next roll within 1 minute. You see the path where they succeed and guide them toward it. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!5c771a48e5364e6a"
+}

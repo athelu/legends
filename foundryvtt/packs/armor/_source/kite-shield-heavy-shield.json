@@ -1,0 +1,39 @@
+{
+  "_id": "2b34eeb7b1f24408",
+  "name": "Kite Shield (Heavy Shield)",
+  "type": "shield",
+  "img": "icons/equipment/shield/kite-steel-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p>Provides Partial Cover when crouching</p>"
+    },
+    "shieldType": "",
+    "handUsage": "Occupies off-hand completely",
+    "meleeDefense": "",
+    "requirements": "Strength 3 minimum or suffer Misfortune on your own attacks",
+    "specialAbilities": "",
+    "plantedMode": false,
+    "reactions": [
+      {
+        "name": "Shield Block",
+        "_id": "a320d75f5a1e49ec"
+      },
+      {
+        "name": "Ranged Defense",
+        "_id": "4fa98e2643ce4360"
+      }
+    ],
+    "weight": 0,
+    "cost": 20.0,
+    "quantity": 1,
+    "notes": "",
+    "linkedAbilities": [
+      {
+        "name": "Fortune on defensive melee combat rolls",
+        "_id": null
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!2b34eeb7b1f24408"
+}

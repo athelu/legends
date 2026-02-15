@@ -1,0 +1,22 @@
+{
+  "_id": "e4709818862247a4",
+  "name": "Read Scroll",
+  "type": "action",
+  "img": "icons/skills/trades/construction-gloves-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> 2</li>\n<li><strong>Requirements:</strong> Ability to read, appropriate magical knowledge</li>\n<li><strong>Effect:</strong> Cast the spell contained in the scroll</li>\n<li><strong>Check:</strong> [[/check skill=arcane]] required if spell level exceeds your weaving capability</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>The scroll is consumed after use</li>\n<li>Provokes Opportunity Attacks (like Complex Weave)</li>\n<li>Failure may destroy the scroll</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "activate",
+    "actionCost": "2",
+    "trigger": "",
+    "effect": "Cast the spell contained in the scroll\n- **Check:** Arcane check required if spell level exceeds your weaving capability\n- **Notes:**\n  - The scroll is consumed after use\n  - Provokes Opportunity Attacks (like Complex Weave)\n  - Failure may destroy the scroll",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!e4709818862247a4"
+}

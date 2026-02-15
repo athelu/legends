@@ -1,0 +1,22 @@
+{
+  "_id": "5e160193c6e24f21",
+  "name": "Ready/Stow Shield",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> See Don/Doff Shield in [Activate] actions</li>\n<li><strong>Note:</strong> Shields are substantial equipment and cannot be readied as quickly as weapons</li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "See Don/Doff Shield in [Activate] actions",
+    "trigger": "",
+    "effect": "",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!5e160193c6e24f21"
+}

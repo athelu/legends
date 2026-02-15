@@ -1,0 +1,21 @@
+{
+  "_id": "4dbd595f8e2d4c88",
+  "name": "Eldritch Pact (-7)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Requirements:</strong> Charisma ≥ 3</p>\n<p>You are a diabolist—awakened to magical power through trauma rather than born with it. At some moment of desperate need, when death seemed certain or loss unbearable, you reached out to <em>anything</em> that might answer. Something did. You don't fully understand what you called to, what answered, or what price you'll pay. You only know that power came when you needed it most, and now you're bound to something beyond mortal understanding.</p>\n<p>Your eyes glow with violet light only when you complete a weave, the power flowing from your pact through your pneuma at the moment of casting.</p>\n<p><strong>Visual Effects:</strong> When you weave, your eyes flash with violet light and your pact's influence is unmistakable. Between castings, your eyes appear normal, but careful observers might notice subtle signs like strange reflections, unnatural shadows, or otherworldly glimmers. The nature of what you've bound yourself to manifests in your magic's appearance.</p>\n<p><strong>Mechanical Benefits:</strong></p>\n<ul>\n<li>Roll <strong>5d8</strong>, assign to five Magical Potentials based on pact type</li>\n<li><strong>Choose Survival Pact Type:</strong> Determines energy access and how the pact manifests</li>\n</ul>"
+    },
+    "pointCost": -7,
+    "traitType": "magical",
+    "isMagical": true,
+    "magicalType": "eldritch-pact",
+    "requirements": "Charisma ≥ 3",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!4dbd595f8e2d4c88"
+}

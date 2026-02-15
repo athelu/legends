@@ -1,0 +1,20 @@
+{
+  "_id": "dc5882b6a47149ab",
+  "name": "Scavenged Power (Survivor's Bargain)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: [Free] (triggers when creature reduced to 0 HP) Effect: When you reduce a hostile creature to 0 HP, immediately regain Energy equal to your tier (minimum 2), and gain temporary HP equal to your Charisma + tier. Your patron feeds on endings, and so do you.</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!dc5882b6a47149ab"
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "7fc3292e3a7d4011",
+  "name": "Don/Doff Armor",
+  "type": "action",
+  "img": "icons/skills/trades/construction-gloves-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> Variable (see table below)</li>\n<li><strong>Effect:</strong> Put on or take off armor</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Requires assistance to halve the time for medium/heavy armor</li>\n<li>Cannot be done during combat rounds (too time-consuming)</li>\n<li>Sleeping in armor may cause exhaustion</li>\n</ul></li>\n</ul>\n<h2>Interact Actions</h2>\n<p>Interact actions involve manipulating objects, the environment, or simple physical tasks that don't require specialized skills. Many Interact actions can be combined with movement for efficiency.</p>"
+    },
+    "actionType": "activate",
+    "actionCost": "Variable (see table below)",
+    "trigger": "",
+    "effect": "Put on or take off armor\n- **Notes:**\n  - Requires assistance to halve the time for medium/heavy armor\n  - Cannot be done during combat rounds (too time-consuming)\n  - Sleeping in armor may cause exhaustion\n\n## Interact Actions\n\nInteract actions involve manipulating objects, the environment, or simple physical tasks that don't require specialized skills. Many Interact actions can be combined with movement for efficiency.",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!7fc3292e3a7d4011"
+}

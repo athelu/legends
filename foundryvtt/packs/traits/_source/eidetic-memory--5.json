@@ -1,0 +1,21 @@
+{
+  "_id": "af5486c1d50f417d",
+  "name": "Eidetic Memory (-5)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>Remember everything seen/heard.</p>\n<ul>\n<li>Intelligence check to recall any encountered information</li>\n<li>History, Society, Arcane: Subtract 2 from die results</li>\n</ul>"
+    },
+    "pointCost": -5,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!af5486c1d50f417d"
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "9863d969bdcc4360",
+  "name": "Philosopher's Insight (Shu-Jahan)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Minor] action Range: Self Effect: For 10 minutes, you gain the following benefits: You automatically see through all illusory effects (no check needed). You know when creatures speak lies (though not what the truth is). You have Fortune on Perception and Investigate checks. Your eyes glow brighter than normal as enlightenment fills you. Usage: Uses 1 Channel Divinity</p>\n<h3>Invoker Abilities</h3>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!9863d969bdcc4360"
+}

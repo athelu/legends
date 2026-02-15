@@ -1,0 +1,20 @@
+{
+  "_id": "552db344751e4edc",
+  "name": "Rally the Troops (Alkira)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action Range: 30-foot radius centered on you Effect: All allies within range who can see or hear you gain temporary HP equal to your Wisdom score + your Tier. Your presence and Alkira's blessing fortify your companions. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!552db344751e4edc"
+}

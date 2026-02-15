@@ -1,0 +1,22 @@
+{
+  "_id": "9ddf75718f8d442a",
+  "name": "Search",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> 1 [Interact] action</li>\n<li><strong>Effect:</strong> Make a Perception or Investigate check to find something</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>GM sets number of required successes</li>\n<li>May require multiple actions for larger areas</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "1",
+    "trigger": "",
+    "effect": "Make a Perception or Investigate check to find something\n- **Notes:**\n  - GM sets number of required successes\n  - May require multiple actions for larger areas",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!9ddf75718f8d442a"
+}

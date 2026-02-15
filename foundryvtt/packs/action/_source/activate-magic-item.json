@@ -1,0 +1,22 @@
+{
+  "_id": "77c5c8ba97eb4273",
+  "name": "Activate Magic Item",
+  "type": "action",
+  "img": "icons/skills/trades/construction-gloves-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> 1 (or as specified by item)</li>\n<li><strong>Effect:</strong> Trigger a magic item's power or property</li>\n<li><strong>Examples:</strong>\n<ul>\n<li>Speaking a command word to activate a magic sword's flame ability</li>\n<li>Rubbing a magic lamp</li>\n<li>Activating a wand or staff</li>\n<li>Triggering a ring's protective power</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Some items specify different action costs (may require 2 actions or be [Free])</li>\n<li>Command word items require you to be able to speak</li>\n<li>See the item's description for specific activation requirements</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "activate",
+    "actionCost": "1",
+    "trigger": "",
+    "effect": "Trigger a magic item's power or property\n- **Examples:**\n  - Speaking a command word to activate a magic sword's flame ability\n  - Rubbing a magic lamp\n  - Activating a wand or staff\n  - Triggering a ring's protective power\n- **Notes:**\n  - Some items specify different action costs (may require 2 actions or be [Free])\n  - Command word items require you to be able to speak\n  - See the item's description for specific activation requirements",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!77c5c8ba97eb4273"
+}

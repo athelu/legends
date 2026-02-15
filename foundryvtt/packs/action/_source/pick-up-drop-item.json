@@ -1,0 +1,22 @@
+{
+  "_id": "22084e345c074ed8",
+  "name": "Pick Up/Drop Item",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> Free to drop, Free with Move to pick up (or 1)</li>\n<li><strong>Effect:</strong> Retrieve or release an item</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Dropping an item is always [Free] and doesn't provoke</li>\n<li>Picking up an item while threatened may provoke Opportunity Attacks (GM discretion)</li>\n<li>Item must be within reach (typically 5 feet)</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "Free",
+    "trigger": "",
+    "effect": "Retrieve or release an item\n- **Notes:**\n  - Dropping an item is always [Free] and doesn't provoke\n  - Picking up an item while threatened may provoke Opportunity Attacks (GM discretion)\n  - Item must be within reach (typically 5 feet)",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!22084e345c074ed8"
+}

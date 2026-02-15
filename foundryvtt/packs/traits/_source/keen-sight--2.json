@@ -1,0 +1,21 @@
+{
+  "_id": "2323c9c9d84b424b",
+  "name": "Keen Sight (-2)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>Vision better than normal.</p>\n<ul>\n<li>Vision-based Perception: Subtract 1 from die results</li>\n</ul>"
+    },
+    "pointCost": -2,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!2323c9c9d84b424b"
+}
