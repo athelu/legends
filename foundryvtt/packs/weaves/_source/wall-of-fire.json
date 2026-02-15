@@ -1,14 +1,14 @@
 {
-  "_id": "a47e44b7d8e8440b",
+  "_id": "1c63171785d0465f",
   "name": "Wall of Fire",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 5 (curtain of flames) <strong>Supporting Energy:</strong> Space 4 (medium range + wall area) / Time 3 (duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (60 feet long, 20 feet high OR ring 20 feet diameter) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 12 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals [[/damage 16 type=fire]] damage to creatures within 10 feet (choose side when casting). Passing through wall deals [[/damage 24 type=fire]] damage. Provides total cover. <strong>Saving Throw:</strong> Reflex (when within 10 feet or passing through) <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR (16/[[/damage 24 type=fire]] damage vs DR 4 becomes 14/[[/damage 22]] damage) <strong>Success Scaling:</strong></p>\n<ul>\n<li><strong>Near wall (16 base):</strong> 0 = no damage, 1 = half (8), 2 = full (16), 3 = +8 (24), 4 = +16 (32)</li>\n<li><strong>Passing through (24 base):</strong> 0 = no damage, 1 = half (12), 2 = full (24), 3 = +8 (32), 4 = +16 (40)</li>\n</ul>\n<p><strong>Ignited Condition (at Net 4 when passing through):</strong> Target takes [[/damage 1d8 type=fire]] damage at start of each turn. Can use 1 action to make [[/save type=reflex]] (1 success ends).</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 5 (curtain of flames) <strong>Supporting Energy:</strong> Space 4 (medium range + wall area) / Time 3 (duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (60 feet long, 20 feet high OR ring 20 feet diameter) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 12 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals [[/damage 16 type=fire]] damage to creatures within 10 feet (choose side when casting). Passing through wall deals [[/damage 24 type=fire]] damage. Provides total cover. <strong>Applies Effects:</strong> ignited <strong>Saving Throw:</strong> Reflex (when within 10 feet or passing through) <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR (16/[[/damage 24 type=fire]] damage vs DR 4 becomes 14/[[/damage 22]] damage) <strong>Success Scaling:</strong></p>\n<ul>\n<li><strong>Near wall (16 base):</strong> 0 = no damage, 1 = half (8), 2 = full (16), 3 = +8 (24), 4 = +16 (32)</li>\n<li><strong>Passing through (24 base):</strong> 0 = no damage, 1 = half (12), 2 = full (24), 3 = +8 (32), 4 = +16 (40)</li>\n</ul>\n<p><strong>Ignited Condition (at Net 4 when passing through):</strong> Target takes [[/damage 1d8 type=fire]] damage at start of each turn. Can use 1 action to make [[/save type=reflex]] (1 success ends).</p>\n<p>---</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "fire",
@@ -19,33 +19,44 @@
         "cost": 4
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (60 feet long, 20 feet high OR ring 20 feet diameter)",
+    "duration": "10 minutes",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
-    "effectType": "",
+    "savingThrow": "reflex",
+    "effect": "",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
-      "drInteraction": "",
-      "scaling": ""
+      "base": 16,
+      "type": "fire",
+      "drInteraction": "half",
+      "scaling": {
+        "1": {
+          "damage": 12,
+          "description": "half damage"
+        },
+        "2": {
+          "damage": 24,
+          "description": "full damage"
+        },
+        "3": {
+          "damage": 32,
+          "description": "enhanced"
+        },
+        "4": {
+          "damage": 40,
+          "description": "enhanced"
+        }
+      }
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "ignited",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!a47e44b7d8e8440b"
+  "_key": "!items!1c63171785d0465f"
 }

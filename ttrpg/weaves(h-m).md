@@ -12,7 +12,7 @@
 **Saving Throw:** Reflex (to find cover from falling ice)  
 **Damage Type:** Physical (ice chunks) - Mixed bludgeoning and cold  
 **DR Interaction:** FULL DR applies (28 damage vs DR 4 becomes 28 - 4 = 24 damage)  
-**Success Scaling:** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total)  
+**Success Scaling:** 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +8 damage (36 total), 4 = +16 damage (44 total), 5 = +24 damage (52 total) + applies Prone
 **Prone Condition (at Net 4):** Target is knocked Prone by the force of falling ice in addition to taking damage.  
 
 ### Haste
@@ -24,20 +24,12 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Time Potential + Time Mastery  
 **Effect:** Target at touch gains +1 action per turn (can be used for Move, Attack, or Activate only), subtract 1 from both dice on Reflex saves, and subtract 1 from both dice on Agility checks. When weave ends, target gains 1 level of Exhaustion.  
-**Saving Throw:** None (beneficial buff, willing targets only)  
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = no exhaustion (1 hour)
-
-### Healing Burst
-**Primary Energy:** Positive 3 (healing energy)  
-**Supporting Energy:** Space 1 (close range)  
-**Range:** Close, 30 ft.  
-**Duration:** Instantaneous  
-**Total Cost:** 4 Energy  
+**Applies Effects:** haste
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  
 **Effect:** Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness.  
 **Saving Throw:** None (healing weave, no resistance)  
-**Success Scaling:** 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8)
+**Success Scaling:** 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8), 5 = 20 HP (8+3d8)
 
 ### Heroism
 **Primary Energy:** Positive 2 (inspiring courage and vitality)  
@@ -48,8 +40,9 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery  
 **Effect:** Touch a willing creature. For the duration, target is immune to Frightened condition and gains temporary HP equal to your Positive Potential at the start of each of its turns. When weave ends, any remaining temporary HP is lost.  
+**Applies Effects:** heroism
 **Saving Throw:** None (beneficial buff, willing target only)  
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = affects 2 targets at once  
+**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = affects 2 targets at once, 5 = affects 4 targets (1 hour)  
 
 
 ### Holy Fire
@@ -65,7 +58,7 @@
 **Damage Type:** Positive (energy)  
 **DR Interaction:** Half DR (8 positive damage vs DR 4 becomes 8 - 2 = 6 damage)  
 **Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)  
-**Revealed Condition (at 4 successes):** Target receives the Revealed condition. The target loses and cannot gain the Hidden and concealed conditions. The Revealed condition expires at the end of the target's next turn.
+**Revealed Condition (at 5 successes):** Target receives the Revealed condition. The target loses and cannot gain the Hidden and concealed conditions. The Revealed condition expires at the end of the target's next turn.
 
 
 ## I
@@ -79,11 +72,12 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery  
 **Effect:** Target takes 8 cold damage. This is an attack weave—no saving throw allowed.  
+**Applies Effects:** slowed
 **Saving Throw:** None (attack weave, weaving successes determine hit quality)  
 **Damage Type:** Cold (energy)  
 **DR Interaction:** Half DR (8 cold damage vs DR 4 becomes 8 - 2 = 6 damage)  
-**Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)  
-**Slowed Condition (at 4 successes):** Target's movement speed is halved and they have Misfortune on Reflex saves until the end of their next turn.
+**Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total), 5 = +16 damage (24 total) + applies Slowed
+**Slowed Condition (at 5 successes):** Target's movement speed is halved and they have Misfortune on Reflex saves until the end of their next turn.
 
 ### Identify
 **Primary Energy:** Space 3 (revealing magical properties)  
@@ -95,7 +89,7 @@
 **Weaving Roll:** Space Potential + Space Mastery  
 **Effect:** Learn the properties of one magic item or active weave, including how to use it and any requirements. Also reveals if item is cursed (but not the curse's nature).  
 **Saving Throw:** None (information gathering)  
-**Success Scaling:** 0 = fails, 1 = basic function only, 2 = full properties, 3 = learn curse details, 4 = learn item's history
+**Success Scaling:** 0 = fails, 1 = basic function only, 2 = full properties, 3 = learn curse details, 4 = learn item's history, 5 = learn all magical interactions
 
 ### Illusory Torment
 **Primary Energy:** Space 7 (illusory effect + medium range + 10ft cube)  
@@ -106,8 +100,9 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Create an illusory effect at medium range in one creature's mind. Target makes Will save. Compare your weaving successes to their save successes. If you have more, target perceives illusory effect as real and rationalizes illogical elements. If illusory effect could damage target, it takes 1d8 psychic damage per round. Target can use action + Perception vs your Space Mastery to recognize illusory effect.  
+**Applies Effects:** disoriented
 **Saving Throw:** Will (to resist mental illusory effect); Perception vs Space Mastery (to disbelieve)  
-**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect (2d8 damage), 3 = harder to disbelieve (add 1 to their Perception dice), 4 = 10 minutes or 3d8 damage  
+**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect (2d8 damage), 3 = harder to disbelieve (add 1 to their Perception dice), 4 = 10 minutes or 3d8 damage, 5 = 1 hour + 4d8 damage  
 **Disoriented Condition (at Net 3):** Target has Misfortune on Perception checks while illusory effect persists.
 
 
@@ -120,8 +115,9 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on Stealth checks to remain undetected, and observers have Misfortune on Perception checks to detect target. Breaks if target uses a [Combat] action or casts a weave.  
+**Applies Effects:** hidden
 **Saving Throw:** None (beneficial buff, willing targets only)  
-**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = affects 2 creatures (8 hours)
+**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = affects 2 creatures (8 hours), 5 = affects 4 creatures (24 hours)
 
 ## L
 
@@ -135,7 +131,7 @@
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  
 **Effect:** Target at close range rises vertically up to 20 feet (your choice). Can change altitude by 20 feet each round. Target can't move horizontally except by pushing off objects. Unwilling targets get Fortitude save to resist.  
 **Saving Throw:** Fortitude (if unwilling, to resist being lifted)  
-**Success Scaling:** 0 = no effect (if unwilling), 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = can move horizontally (8 hours)
+**Success Scaling:** 0 = no effect (if unwilling), 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = can move horizontally (8 hours), 5 = can lift/carry objects (24 hours)
 
 ### Life Drain
 **Primary Energy:** Negative 2 (siphoning life force)  
@@ -146,16 +142,17 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery  
 **Effect:** Target takes 8 negative damage. You heal HP equal to half the damage dealt. This is an attack weave—no saving throw allowed.  
+**Applies Effects:** weakened
 **Saving Throw:** None (attack weave, weaving successes determine hit quality)  
 **Damage Type:** Negative (energy)  
 **DR Interaction:** Half DR (8 negative damage vs DR 4 becomes 8 - 2 = 6 damage)  
-**Success Scaling:** 0 = miss, 1 = half (4 damage, heal 2), 2 = full (8 damage, heal 4), 3 = +8 damage (16 total, heal 8), 4 = +16 damage (24 total, heal 12)  
-**Weakened Condition (at 4 successes):** Target has Misfortune on their next attack roll as their life force ebbs.
+**Success Scaling:** 0 = miss, 1 = half (4 damage, heal 2), 2 = full (8 damage, heal 4), 3 = +8 damage (16 total, heal 8), 4 = +16 damage (24 total, heal 12), 5 = +16 damage (24 total, heal 12) + applies Weakened  
+**Weakened Condition (at 5 successes):** Target has Misfortune on their next attack roll as their life force ebbs.
 
 ### Light
 **Primary Energy:** Fire 2 (creating illumination, minor effect)  
 **Supporting Energy:** Time 3 (duration 10 minutes)  
-**Range:** Touch  
+**Range:** self, touch
 **Duration:** 10 minutes  
 **Total Cost:** 5 Energy  
 **Action:** Simple weave (1 action)  
@@ -166,13 +163,14 @@
 
 ### Lightning Bolt
 **Primary Energy:** Air 5 (electricity in a line, damage)  
-**Supporting Energy:** Space 2 (self, 60ft line 5ft wide)  
-**Range:** Self (60-foot line, 5 feet wide)  
+**Supporting Energy:** Space 2 ( 60ft line 5ft wide)  
+**Range:** 60-foot line, 5 feet wide
 **Duration:** Instantaneous  
 **Total Cost:** 7 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  
 **Effect:** A stroke of lightning forming a line 60 feet long and 5 feet wide blasts out from you. All creatures in the line take 28 lightning damage. Each target takes the full listed damage and makes their own save.  
+**Applies Effects:** stunned
 **Saving Throw:** Reflex (to dodge the lightning)  
 **Damage Type:** Lightning (energy)  
 **DR Interaction:** Half DR (28 lightning damage vs DR 4 becomes 28 - 2 = 26 damage)  
@@ -193,7 +191,7 @@
 **DR Interaction:** Half DR (4 lightning damage vs DR 4 becomes 4 - 2 = 2 damage)  
 **Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)  
 **Special:** Fortune on weaving roll if target wears metal armor (better conductor)  
-**Dazed Condition (at 4 successes):** Target has Misfortune on their next attack roll as electricity disrupts their nervous system.  
+**Dazed Condition (at 5 successes):** Target has Misfortune on their next attack roll as electricity disrupts their nervous system.  
 
 
 ## M
@@ -201,7 +199,7 @@
 ### Major Restoration
 **Primary Energy:** Positive 6 (powerful cleansing and restoration)  
 **Supporting Energy:** None (touch, instantaneous, requires 1 minute to cast)  
-**Range:** Touch  
+**Range:** selc, touch  
 **Duration:** Instantaneous  
 **Total Cost:** 6 Energy  
 **Action:** Complex weave (2 actions), requires 1 minute to cast  
@@ -225,7 +223,7 @@
 ### Mend Flesh
 **Primary Energy:** Positive 3 (healing energy)  
 **Supporting Energy:** None (touch, instantaneous)  
-**Range:** Touch  
+**Range:** self, touch  
 **Duration:** Instantaneous  
 **Total Cost:** 3 Energy  
 **Action:** Simple weave (1 action)  
@@ -286,7 +284,7 @@
 ### Minor Restoration
 **Primary Energy:** Positive 4 (cleansing lesser afflictions)  
 **Supporting Energy:** None (touch range, instantaneous)  
-**Range:** Touch  
+**Range:** self, touch  
 **Duration:** Instantaneous  
 **Total Cost:** 4 Energy  
 **Action:** Complex weave (2 actions)  
@@ -298,7 +296,7 @@
 ### Mist Form
 **Primary Energy:** Air 4 (transforming into mist)  
 **Supporting Energy:** Time 3 (duration 10 minutes)  
-**Range:** Touch  
+**Range:** self, touch  
 **Duration:** 10 minutes  
 **Total Cost:** 7 Energy  
 **Action:** Complex weave (2 actions)  

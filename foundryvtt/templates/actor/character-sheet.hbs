@@ -443,22 +443,34 @@
             {{!-- Combined Potentials and Mastery Display --}}
             <div class="energy-header">
               <h4>Magical Energies</h4>
-              {{#if system.castingStat.displayLabel}}
-              <div class="casting-stat-inline">
-                <label>Casting:</label>
-                <span>{{system.castingStat.displayLabel}} {{system.castingStat.displayValue}}</span>
+              <div class="magic-stats-inline">
+                {{#if system.castingStat.displayLabel}}
+                <div class="casting-stat-inline">
+                  <label>Casting Stat:</label>
+                  <span>{{system.castingStat.displayLabel}} {{system.castingStat.displayValue}}</span>
+                </div>
+                {{/if}}
+                {{#if system.energy}}
+                <div class="channel-uses">
+                  <label>Energy:</label>
+                  <input type="number" name="system.energy.value" 
+                         value="{{system.energy.value}}" data-dtype="Number" 
+                         class="uses-input" min="0" max="{{system.energy.max}}"/>
+                  <span class="sep">/</span>
+                  <span class="max-value">{{system.energy.max}}</span>
+                </div>
+                {{/if}}
+                {{#if system.channelDivinity.max}}
+                <div class="channel-uses">
+                  <label>Channel Divinity:</label>
+                  <input type="number" name="system.channelDivinity.current" 
+                         value="{{system.channelDivinity.current}}" data-dtype="Number" 
+                         class="uses-input" min="0" max="{{system.channelDivinity.max}}"/>
+                  <span class="sep">/</span>
+                  <span class="max-value">{{system.channelDivinity.max}}</span>
+                </div>
+                {{/if}}
               </div>
-              {{/if}}
-              {{#if system.channelDivinity.max}}
-              <div class="channel-uses">
-                <label>Channel Divinity:</label>
-                <input type="number" name="system.channelDivinity.current" 
-                       value="{{system.channelDivinity.current}}" data-dtype="Number" 
-                       class="uses-input" min="0" max="{{system.channelDivinity.max}}"/>
-                <span class="sep">/</span>
-                <span class="max-value">{{system.channelDivinity.max}}</span>
-              </div>
-              {{/if}}
             </div>
             
             <div class="energy-potentials-grid">
@@ -467,7 +479,7 @@
                 <label class="energy-label">{{potential.label}}</label>
                 <div class="energy-values">
                   <input type="number" name="system.mastery.{{key}}.value" 
-                         value="{{lookup ../system.mastery key 'value'}}" data-dtype="Number" 
+                         value="{{lookup (lookup ../system.mastery key) 'value'}}" data-dtype="Number" 
                          min="0" max="10" class="energy-input" title="Mastery"
                          placeholder="0"/>
                   <span class="separator">/</span>
@@ -525,18 +537,6 @@
         </button>
       </div>
       
-      {{!-- Weave Energies Grid --}}
-      <div class="weave-energies">
-        <div class="energy-grid">
-          {{#each system.energies as |energy key|}}
-          <div class="energy-item" data-energy="{{key}}">
-            <label>{{energy.label}}</label>
-            <input type="number" name="system.energies.{{key}}.value" value="{{energy.value}}" data-dtype="Number" min="0" max="10"/>
-          </div>
-          {{/each}}
-        </div>
-      </div>
-
       {{!-- Weaves List --}}
       <ol class="items-list weave-list">
         <li class="items-header">

@@ -1,14 +1,14 @@
 {
-  "_id": "eb4eb1bd8f404a2a",
+  "_id": "aeafc92f9de24ff8",
   "name": "Acid Blast",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Water 2 (acidic vapor damage) <strong>Supporting Energy:</strong> Space 1 (close range 30ft) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery (4d8) <strong>Effect:</strong> Target takes [[/damage 8 type=acid]] damage. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Acid (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 8 type=acid]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total) <strong>Scaling Option:</strong> Can add Space 1 to affect 2 targets (total 4 Energy) <strong>Sickened Condition (at 5 successes):</strong> Target has Misfortune on their next attack roll as acid burns and nauseates them.</p>\n<h2>B</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Water 2 (acidic vapor damage) <strong>Supporting Energy:</strong> Space 1 (close range 30ft) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery (4d8) <strong>Effect:</strong> Target takes [[/damage 8 type=acid]] damage. This is an attack weave—no saving throw allowed. <strong>Applies Effects:</strong> sickened <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Acid (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 8 type=acid]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total), 5 = +[[/damage 16]] damage (24 total) + applies Sickened <strong>Scaling Option:</strong> Can add Space 1 to affect 2 targets (total 4 Energy) <strong>Sickened Condition (at 5 successes):</strong> Target has Misfortune on their next attack roll as acid burns and nauseates them.</p>\n<h2>B</h2>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "water",
@@ -19,33 +19,52 @@
         "cost": 1
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Close, 30 ft.",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
-    "effectType": "",
+    "savingThrow": "none",
+    "effect": "",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
-      "drInteraction": "",
-      "scaling": ""
+      "base": 8,
+      "type": "acid",
+      "drInteraction": "half",
+      "scaling": {
+        "0": {
+          "damage": 0,
+          "description": "miss"
+        },
+        "1": {
+          "damage": 4,
+          "description": "half damage"
+        },
+        "2": {
+          "damage": 8,
+          "description": "full damage"
+        },
+        "3": {
+          "damage": 16,
+          "description": "enhanced"
+        },
+        "4": {
+          "damage": 24,
+          "description": "enhanced"
+        },
+        "5": {
+          "damage": 24,
+          "description": "enhanced"
+        }
+      }
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "sickened",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!eb4eb1bd8f404a2a"
+  "_key": "!items!aeafc92f9de24ff8"
 }

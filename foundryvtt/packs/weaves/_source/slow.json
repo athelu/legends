@@ -1,14 +1,14 @@
 {
-  "_id": "e9963bc89d5140cd",
+  "_id": "aa9d373f03344ac3",
   "name": "Slow",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Time 4 (decelerating personal time) <strong>Supporting Energy:</strong> Space 4 (medium range + 4 targets) <strong>Range:</strong> Medium, 60 ft. (up to 4 targets) <strong>Duration:</strong> 1 minute (until save succeeds) <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Time Potential + Time Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Up to 4 targets make Will saves. Compare your weaving successes to each target's save successes. Those you beat have only 2 actions per turn (instead of 3), Misfortune on Agility checks and Reflex saves, and Misfortune on attacks. Targets can repeat save at end of each turn (1 success ends effect). <strong>Saving Throw:</strong> Will (to resist temporal slowdown) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 6 targets or only 1 action per turn</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Time 4 (decelerating personal time) <strong>Supporting Energy:</strong> Space 4 (medium range + 4 targets) <strong>Range:</strong> Medium, 60 ft. (up to 4 targets) <strong>Duration:</strong> 1 minute (until save succeeds) <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Time Potential + Time Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Up to 4 targets make Will saves. Compare your weaving successes to each target's save successes. Those you beat have only 2 actions per turn (instead of 3), Misfortune on Agility checks and Reflex saves, and Misfortune on attacks. Targets can repeat save at end of each turn (1 success ends effect). <strong>Applies Effects:</strong> slowed <strong>Saving Throw:</strong> Will (to resist temporal slowdown) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 6 targets or only 1 action per turn, 5 = 1 hour + 8 targets</p>\n<p>---</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "time",
@@ -19,33 +19,27 @@
         "cost": 4
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (up to 4 targets)",
+    "duration": "1 minute (until save succeeds)",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "will",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "slowed",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!e9963bc89d5140cd"
+  "_key": "!items!aa9d373f03344ac3"
 }

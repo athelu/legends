@@ -1,14 +1,14 @@
 {
-  "_id": "7fd63341abf643f0",
+  "_id": "163a763701894068",
   "name": "Teleport",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 7 (long-range teleportation) <strong>Supporting Energy:</strong> None (touch, instantaneous, up to 8 willing creatures) <strong>Range:</strong> Touch (up to 8 willing creatures) <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy base (more for longer distances or more creatures) <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Instantly transport to destination on same plane. Success depends on familiarity: Very familiar (2 successes needed): home, place visited often; Seen casually (3 successes): seen a few times; Viewed once (4 successes): seen once or through scrying; Description only (4 successes, Misfortune): never seen, described only. <strong>Saving Throw:</strong> None (willing targets only) <strong>Success Scaling:</strong> Roll determines accuracy: 4+ successes = exact spot, 2-3 = general area, 1 = far off target, 0 = mishap (GM determines where you arrive)</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 7 (long-range teleportation) <strong>Supporting Energy:</strong> None (touch, instantaneous, up to 8 willing creatures) <strong>Range:</strong> self, touch (up to 8 willing creatures) <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy base (more for longer distances or more creatures) <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Instantly transport to destination on same plane. Success depends on familiarity: Very familiar (2 successes needed): home, place visited often; Seen casually (3 successes): seen a few times; Viewed once (4 successes): seen once or through scrying; Description only (4 successes, Misfortune): never seen, described only. <strong>Saving Throw:</strong> None (willing targets only) <strong>Success Scaling:</strong> Roll determines accuracy: 4+ successes = exact spot, 2-3 = general area, 1 = far off target, 0 = mishap (GM determines where you arrive)</p>\n<p>---</p>"
     },
     "weaveType": "simple",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,22 @@
         "cost": 0
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "self, touch (up to 8 willing creatures)",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!7fd63341abf643f0"
+  "_key": "!items!163a763701894068"
 }

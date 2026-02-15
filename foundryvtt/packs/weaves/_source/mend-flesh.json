@@ -1,11 +1,11 @@
 {
-  "_id": "cde249d6b5814235",
+  "_id": "fada5782795647ed",
   "name": "Mend Flesh",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 3 (healing energy) <strong>Supporting Energy:</strong> None (touch, instantaneous) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness. <strong>Saving Throw:</strong> None (healing weave, no resistance) <strong>Success Scaling:</strong> 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8)</p>"
+      "value": "<p><strong>Primary Energy:</strong> Positive 3 (healing energy) <strong>Supporting Energy:</strong> None (touch, instantaneous) <strong>Range:</strong> self, touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness. <strong>Saving Throw:</strong> None (healing weave, no resistance) <strong>Success Scaling:</strong> 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8)</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -19,33 +19,22 @@
         "cost": 0
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "self, touch",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!cde249d6b5814235"
+  "_key": "!items!fada5782795647ed"
 }

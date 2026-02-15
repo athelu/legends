@@ -1,0 +1,55 @@
+{
+  "_id": "fortunesfavor0001",
+  "name": "Fortune's Favor",
+  "type": "effect",
+  "img": "icons/svg/dice-target.svg",
+  "system": {
+    "label": "Fortune's Favor",
+    "category": "buff",
+    "effectType": "dice-mod",
+    "description": {
+      "value": "<p>You may subtract 1 from one die (your choice) on each roll you make.</p>"
+    },
+    "tokenIcon": "icons/svg/dice-target.svg",
+    "badge": {
+      "type": "none",
+      "value": 0,
+      "max": 0
+    },
+    "activeEffects": [
+      {
+        "key": "diceMod.fortune-minor",
+        "mode": "add",
+        "value": "-1",
+        "notes": "Subtract 1 from one die per roll"
+      }
+    ],
+    "stacking": "replace",
+    "overlayPriority": 11,
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0
+    },
+    "grantedBy": "Fortune's Favor",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 4 ? 60 : ${netSuccesses} >= 3 ? 10 : ${netSuccesses} >= 2 ? 1 : 0"
+    }
+  },
+  "flags": {},
+  "_key": "!items!fortunesfavor0001"
+}

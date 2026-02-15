@@ -1,5 +1,5 @@
 {
-  "_id": "08f6d0ffdb1746fb",
+  "_id": "0f44abf055cd4328",
   "name": "Wall of Stone",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Earth 6 (solid stone barrier) <strong>Supporting Energy:</strong> Space 2 (medium range + wall area) <strong>Range:</strong> Medium, 60 ft. (60 feet long, 20 feet high) <strong>Duration:</strong> Permanent <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 4. Can shape into crenellations, bridges, etc. <strong>Saving Throw:</strong> None (creates barrier) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute duration only, 2 = permanent, 3 = double HP, 4 = triple HP and can create complex shapes</p>\n<p>---</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "earth",
@@ -19,33 +19,22 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (60 feet long, 20 feet high)",
+    "duration": "Permanent",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!08f6d0ffdb1746fb"
+  "_key": "!items!0f44abf055cd4328"
 }

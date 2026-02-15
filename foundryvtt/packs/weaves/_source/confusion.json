@@ -1,14 +1,14 @@
 {
-  "_id": "1046511d237c4824",
+  "_id": "1f31cf39464e4030",
   "name": "Confusion",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 6 (mental chaos and discord) <strong>Supporting Energy:</strong> Space 5 (medium range + 10ft radius + 1 minute) <strong>Range:</strong> Medium, 60 ft. (10-foot radius sphere) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> All creatures in 10-foot radius sphere at medium range make Will saves. Compare your weaving successes to each target's save successes. Those you beat are confused. At the start of each confused creature's turn, roll 1d8: 1-2 = do nothing, 3-4 = no action and move random direction, 5-6 = attack nearest creature, 7-8 = act normally. Can repeat save at end of each turn (1 success ends effect). <strong>Saving Throw:</strong> Will (to resist mental chaos) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 20-foot radius, 4 = 10 minutes duration <strong>Confused Condition (Net 2+):</strong> Creature acts randomly each turn as described. Can repeat save at end of each turn to end effect. <strong>Note:</strong> Creatures immune to charm are immune to this weave</p>"
+      "value": "<p><strong>Primary Energy:</strong> Negative 6 (mental chaos and discord) <strong>Supporting Energy:</strong> Space 5 (medium range + 10ft radius + 1 minute) <strong>Range:</strong> Medium, 60 ft. (10-foot radius sphere) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> All creatures in 10-foot radius sphere at medium range make Will saves. Compare your weaving successes to each target's save successes. Those you beat are confused. At the start of each confused creature's turn, roll 1d8: 1-2 = do nothing, 3-4 = no action and move random direction, 5-6 = attack nearest creature, 7-8 = act normally. Can repeat save at end of each turn (1 success ends effect). <strong>Applies Effects:</strong> dazed <strong>Saving Throw:</strong> Will (to resist mental chaos) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 20-foot radius, 4 = 10 minutes duration, 5 = 1 hour duration + 30-foot radius <strong>Confused Condition (Net 2+):</strong> Creature acts randomly each turn as described. Can repeat save at end of each turn to end effect. <strong>Note:</strong> Creatures immune to charm are immune to this weave</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "negative",
@@ -19,33 +19,27 @@
         "cost": 5
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (10-foot radius sphere)",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "will",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "dazed",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!1046511d237c4824"
+  "_key": "!items!1f31cf39464e4030"
 }

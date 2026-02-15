@@ -238,7 +238,7 @@
     }
   },
   "Item": {
-    "types": ["weapon", "armor", "shield", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry", "action", "ability", "condition"],
+    "types": ["weapon", "armor", "shield", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry", "action", "ability", "condition", "effect"],
     "templates": {
       "common": {
         "description": {
@@ -325,7 +325,17 @@
       "savingThrow": "",
       "effect": "",
       "effectType": "damage",
-      "weaveType": "simple"
+      "weaveType": "simple",
+      "damage": {
+        "base": 0,
+        "type": "fire",
+        "drInteraction": "",
+        "scaling": {}
+      },
+      "successScaling": "",
+      "weavingRoll": "",
+      "actionCost": 1,
+      "appliesEffects": []
     },
     "feat": {
       "templates": ["common"],
@@ -401,6 +411,44 @@
       "overlayPriority": 20,
       "damageTick": null,
       "recovery": null
+    },
+    "effect": {
+      "templates": ["common"],
+      "label": "",
+      "category": "buff",
+      "effectType": "attribute-mod",
+      "tokenIcon": "",
+      "badge": {
+        "type": "none",
+        "value": 0,
+        "max": 0
+      },
+      "activeEffects": [],
+      "stacking": "replace",
+      "overlayPriority": 10,
+      "duration": {
+        "type": "rounds",
+        "value": 1,
+        "base": 1,
+        "scaling": "none",
+        "scalingFormula": "",
+        "expireOn": "turnEnd",
+        "sustaining": false
+      },
+      "damageTick": null,
+      "recovery": null,
+      "origin": {
+        "type": "",
+        "id": "",
+        "actor": "",
+        "successes": 0
+      },
+      "grantedBy": "",
+      "conditions": [],
+      "parameterized": {
+        "valueFormula": "",
+        "durationFormula": ""
+      }
     }
   }
 }

@@ -1,11 +1,11 @@
 {
-  "_id": "3285e450ee1b4530",
+  "_id": "1db508d4ab6d40e5",
   "name": "Breach",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 3 (forcing locks and barriers open) <strong>Supporting Energy:</strong> None (close range 30ft, instantaneous) <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery (2d8 only) <strong>Effect:</strong> One locked door, window, gate, chest, or similar object becomes unlocked. Removes Arcane Lock. Creates a loud bang audible up to 300 feet away. <strong>Saving Throw:</strong> None (object targeted) <strong>Success Scaling:</strong> 1 = makes loud noise but doesn't open, 2 = opens, 3 = silent, 4 = opens and disarms any traps</p>\n<h2>C</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Space 3 (forcing locks and barriers open) <strong>Supporting Energy:</strong> None (close range 30ft, instantaneous) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery (2d8 only) <strong>Effect:</strong> One locked door, window, gate, chest, or similar object becomes unlocked. Removes Arcane Lock. Creates a loud bang audible up to 300 feet away. <strong>Saving Throw:</strong> None (object targeted) <strong>Success Scaling:</strong> 1 = makes loud noise but doesn't open, 2 = opens, 3 = silent, 4 = opens and disarms any traps, 5 = affects all locks/barriers within 30 feet</p>\n<h2>C</h2>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -19,33 +19,22 @@
         "cost": 0
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Close, 30 ft.",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!3285e450ee1b4530"
+  "_key": "!items!1db508d4ab6d40e5"
 }

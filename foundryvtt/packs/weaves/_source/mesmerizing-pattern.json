@@ -1,5 +1,5 @@
 {
-  "_id": "27af5cca37704280",
+  "_id": "18c8edd8e0804221",
   "name": "Mesmerizing Pattern",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Space 9 (mesmerizing illusion + medium range + 30ft cube) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Medium, 60 ft. (30-foot cube) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create a twisting pattern of colors in 30-foot cube at medium range. All creatures in area make Will saves. Compare your weaving successes to each target's save successes. Those you beat become Charmed and Incapacitated, staring at the pattern. Weave ends for a creature if it takes damage or if someone uses action to shake them (1 success ends effect). Creatures immune to charm are immune. <strong>Saving Throw:</strong> Will (to resist hypnotic effect) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 40-foot cube, 4 = 10 minutes (very hard to break) <strong>Charmed + Incapacitated Condition (at Net 2+):</strong> Target can't take actions or move, stares at pattern. Damage or being shaken (action by ally) ends effect for that creature.</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,22 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (30-foot cube)",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "will",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!27af5cca37704280"
+  "_key": "!items!18c8edd8e0804221"
 }

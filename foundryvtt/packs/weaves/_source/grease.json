@@ -1,5 +1,5 @@
 {
-  "_id": "39bb36b77ca24347",
+  "_id": "d5e71bf8fd6047e7",
   "name": "Grease",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Water 2 (slippery oil/grease, effect) <strong>Supporting Energy:</strong> Space 4 (close range + 10ft square + 1 minute) <strong>Range:</strong> Close, 30 ft. (10-foot square) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Area becomes slippery difficult terrain. Creatures entering or starting turn in area make [[/save type=reflex]] or fall Prone. Those running must save or fall. Compare your weaving successes to their save successes. <strong>Saving Throw:</strong> Reflex (to avoid falling prone) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 20ft square (10 minutes), 4 = 30ft square (1 hour)</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "water",
@@ -19,33 +19,22 @@
         "cost": 4
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Close, 30 ft. (10-foot square)",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "reflex",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!39bb36b77ca24347"
+  "_key": "!items!d5e71bf8fd6047e7"
 }

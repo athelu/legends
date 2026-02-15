@@ -1,0 +1,55 @@
+{
+  "_id": "temphp00000000001",
+  "name": "Temporary HP",
+  "type": "effect",
+  "img": "icons/svg/heart.svg",
+  "system": {
+    "label": "Temporary HP",
+    "category": "buff",
+    "effectType": "temp-hp",
+    "description": {
+      "value": "<p>Gain temporary hit points that absorb damage before your actual HP.</p>"
+    },
+    "tokenIcon": "",
+    "badge": {
+      "type": "value",
+      "value": 10,
+      "max": 10
+    },
+    "activeEffects": [
+      {
+        "key": "system.hp.temp",
+        "mode": "add",
+        "value": "${value}",
+        "notes": "Temporary HP"
+      }
+    ],
+    "stacking": "highest",
+    "overlayPriority": 5,
+    "duration": {
+      "type": "permanent",
+      "value": 0,
+      "base": 0,
+      "scaling": "none",
+      "scalingFormula": "",
+      "expireOn": "depleted",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0
+    },
+    "grantedBy": "",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "${value}",
+      "durationFormula": ""
+    }
+  },
+  "flags": {},
+  "_key": "!items!temphp00000000001"
+}

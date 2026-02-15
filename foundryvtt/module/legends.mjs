@@ -23,6 +23,7 @@ import * as combat from "./combat.mjs";
 import * as shields from "./shields.mjs";
 import * as featEffects from "./feat-effects.mjs";
 import * as traitEffects from "./trait-effects.mjs";
+import * as effectEngine from "./effect-engine.mjs";
 import * as magicalTraits from "./magical-traits.mjs";
 import { initializeConditionEngine, initializeChatHandlers, handleRecoveryResult } from "./condition-engine.mjs";
 import { registerEnrichers } from "./enrichers.mjs";
@@ -46,6 +47,11 @@ Hooks.once('init', async function() {
     rollInitiative,
     rollWeave,
 
+    // Weave targeting functions
+    handleSaveClick,
+    handleApplyEffectClick,
+    applyWeaveDamage,
+
     // Condition management
     applyCondition,
     removeCondition,
@@ -58,7 +64,8 @@ Hooks.once('init', async function() {
     combat,
     featEffects,
     traitEffects,
-    magicalTraits
+    magicalTraits,
+    effectEngine
   };
 
   // DEPRECATED: Backward compatibility alias
@@ -116,6 +123,9 @@ Hooks.once('init', async function() {
   // Initialize condition engine
   initializeConditionEngine();
   initializeChatHandlers();
+
+  // Initialize effect engine
+  effectEngine.initializeEffectEngine();
 
   // Register custom TextEditor enrichers (inline rolls)
   registerEnrichers();
@@ -735,11 +745,14 @@ export async function rollInitiative(actor, skillKey = 'perception') {
 }
 
 /**
- * Roll a weave (spell)
+ * Roll a weave (spell) with targeting support
  * @param {Actor} actor - The actor casting the weave
  * @param {Item} weave - The weave item being cast
  */
 export async function rollWeave(actor, weave) {
+  // Get selected targets
+  const targets = Array.from(game.user.targets);
+  
   const primaryEnergy = weave.system.energyCost.primary.type;
   const supportingEnergy = weave.system.energyCost.supporting.type;
   
@@ -754,13 +767,398 @@ export async function rollWeave(actor, weave) {
     supportingMastery = actor.system.mastery[supportingEnergy].value;
   }
   
-  return dice.rollWeaveCheck({
+  // Perform the weaving check
+  const rollResult = await dice.rollWeaveCheck({
     actor,
     weave,
     primaryPotential,
     primaryMastery,
     supportingPotential,
     supportingMastery
+  });
+  
+  // Wait for dice roll message to post first
+  await new Promise(resolve => setTimeout(resolve, 100));
+  
+  // Create targeting chat card if we have targets
+  if (targets.length > 0) {
+    await createWeaveCastCard({
+      actor,
+      weave,
+      targets,
+      rollResult
+    });
+  }
+  
+  return rollResult;
+}
+
+/**
+ * Create chat card for a weave cast with targeting
+ * @param {Object} options - Cast data
+ */
+async function createWeaveCastCard(options) {
+  const { actor, weave, targets, rollResult } = options;
+  const speaker = ChatMessage.getSpeaker({ actor });
+  
+  // Build target list (for display)
+  const targetList = targets.map(t => {
+    return `
+      <div class="weave-target">
+        <div class="target-info">
+          <strong>${t.name}</strong>
+        </div>
+      </div>
+    `;
+  }).join('');
+  
+  // Add save button or note for non-save weaves
+  const savingThrow = weave.system.savingThrow;
+  const hasSave = savingThrow && savingThrow.toLowerCase() !== 'none';
+  const hasEffects = weave.system.appliesEffects?.length > 0;
+  
+  let actionButton = '';
+  if (hasSave) {
+    actionButton = `
+      <div class="save-section">
+        <p><em>Affected targets: Select your token and click below to make your save</em></p>
+        <button class="save-button" 
+                data-weave-message-id="{{MESSAGE_ID}}"
+                data-caster-id="${actor.id}"
+                data-weave-id="${weave.id}"
+                data-caster-successes="${rollResult.successes}"
+                data-save-type="${savingThrow.toLowerCase()}">
+          <i class="fas fa-shield-alt"></i> Make ${savingThrow} Save
+        </button>
+      </div>
+    `;
+  } else if (!hasEffects) {
+    // No save and no effects - show generic apply button
+    actionButton = `
+      <div class="apply-section">
+        <p><em>No save allowed. Affected targets: Select your token and click below to apply effect</em></p>
+        <button class="apply-effect-button" 
+                data-weave-message-id="{{MESSAGE_ID}}"
+                data-caster-id="${actor.id}"
+                data-weave-id="${weave.id}"
+                data-caster-successes="${rollResult.successes}">
+          <i class="fas fa-bolt"></i> Apply Effect
+        </button>
+      </div>
+    `;
+  }
+  // If no save but has effects, no button needed - just drag the effects
+  
+  // Build effect info
+  const effectInfo = weave.system.effectType === 'damage' && weave.system.damage?.base > 0
+    ? `<div class="weave-damage"><strong>Base Damage:</strong> ${weave.system.damage.base} ${weave.system.damage.type || 'untyped'}</div>`
+    : '';
+  
+  const successInfo = weave.system.successScaling
+    ? `<div class="success-scaling"><strong>Success Scaling:</strong> ${weave.system.successScaling}</div>`
+    : '';
+  
+  // Build draggable effects section
+  let effectsSection = '';
+  if (weave.system.appliesEffects?.length > 0) {
+    const effectsList = weave.system.appliesEffects.map(effectRef => {
+      const effectId = effectRef.effectId || effectRef.name;
+      return `
+        <div class="draggable-effect" 
+             draggable="true"
+             data-effect-id="${effectId}"
+             data-caster-id="${actor.id}"
+             data-weave-id="${weave.id}"
+             data-caster-successes="${rollResult.successes}"
+             data-params='${JSON.stringify(effectRef.params || {})}'>
+          <i class="fas fa-magic"></i>
+          <span>${effectId}</span>
+          <em class="drag-hint">(drag to actor)</em>
+        </div>
+      `;
+    }).join('');
+    
+    effectsSection = `
+      <div class="weave-effects-list">
+        <h4>Effects</h4>
+        <p class="effects-help"><em>Drag effects onto character tokens or sheets to apply</em></p>
+        ${effectsList}
+      </div>
+    `;
+  }
+  
+  const content = `
+    <div class="legends-weave-card">
+      <h3><i class="fas fa-magic"></i> ${weave.name}</h3>
+      <div class="weave-info">
+        <div class="weave-successes"><strong>Weaving Successes:</strong> ${rollResult.successes}</div>
+        ${effectInfo}
+        <div class="weave-effect"><strong>Effect:</strong> ${weave.system.effect || 'See weave description'}</div>
+        ${successInfo}
+      </div>
+      ${effectsSection}
+      <div class="weave-targets">
+        <h4>Targets (${targets.length})</h4>
+        ${targetList}
+      </div>
+      ${actionButton}
+    </div>
+  `;
+  
+  const message = await ChatMessage.create({
+    speaker,
+    content: content,
+    flags: {
+      'legends.weaveData': {
+        casterId: actor.id,
+        weaveId: weave.id,
+        casterSuccesses: rollResult.successes,
+        targets: targets.map(t => t.actor.id),
+        savingThrow: weave.system.savingThrow,
+        damage: weave.system.damage,
+        effectType: weave.system.effectType,
+        successScaling: weave.system.successScaling
+      }
+    }
+  });
+  
+  // Replace {{MESSAGE_ID}} in the content
+  await message.update({
+    content: content.replace(/\{\{MESSAGE_ID\}\}/g, message.id)
+  });
+}
+
+/**
+ * Handle saving throw button click
+ * @param {string} messageId - The weave message ID
+ * @param {Object} weaveData - Weave data from the message flags
+ */
+export async function handleSaveClick(messageId, weaveData) {
+  // Get the currently selected token
+  const controlled = canvas.tokens.controlled;
+  if (controlled.length === 0) {
+    ui.notifications.warn("Please select your token first!");
+    return;
+  }
+  
+  const defender = controlled[0].actor;
+  if (!defender) {
+    ui.notifications.error("Selected token has no actor!");
+    return;
+  }
+  
+  // Determine which save to make
+  const saveType = weaveData.saveType;
+  const saveMap = {
+    'fortitude': 'constitution',
+    'reflex': 'agility',
+    'will': 'wisdom'
+  };
+  
+  const attrKey = saveMap[saveType] || 'constitution';
+  const attribute = defender.system.attributes[attrKey];
+  const luck = defender.system.attributes.luck;
+  
+  // Show save dialog
+  await showRollDialog({
+    actor: defender,
+    attrValue: attribute.value,
+    skillValue: luck.value,
+    attrLabel: attribute.label,
+    skillLabel: 'Luck',
+    isSave: true,
+    onRollComplete: async (rollResult) => {
+      await new Promise(resolve => setTimeout(resolve, 100));
+      
+      await calculateWeaveEffect(
+        weaveData,
+        messageId,
+        rollResult.successes,
+        weaveData.casterSuccesses,
+        defender.id
+      );
+    }
+  });
+}
+
+/**
+ * Handle apply effect button click for weaves without saves
+ * @param {string} messageId - The weave message ID
+ * @param {Object} weaveData - Weave data from the message flags
+ */
+export async function handleApplyEffectClick(messageId, weaveData) {
+  // Get the currently selected token
+  const controlled = canvas.tokens.controlled;
+  if (controlled.length === 0) {
+    ui.notifications.warn("Please select your token first!");
+    return;
+  }
+  
+  const defender = controlled[0].actor;
+  if (!defender) {
+    ui.notifications.error("Selected token has no actor!");
+    return;
+  }
+  
+  // No save, so defender gets 0 successes (full effect)
+  await calculateWeaveEffect(
+    weaveData,
+    messageId,
+    0, // No save successes
+    weaveData.casterSuccesses,
+    defender.id
+  );
+}
+
+/**
+ * Calculate weave effect based on net successes
+ * @param {Object} weaveData - Weave data
+ * @param {string} weaveMessageId - The weave message ID
+ * @param {number} saveSuccesses - Defender's successes
+ * @param {number} casterSuccesses - Caster's successes
+ */
+async function calculateWeaveEffect(weaveData, weaveMessageId, saveSuccesses, casterSuccesses, defenderId) {
+  const caster = game.actors.get(weaveData.casterId);
+  const defender = game.actors.get(defenderId);
+  const weave = caster?.items.get(weaveData.weaveId);
+  
+  if (!caster || !defender || !weave) {
+    ui.notifications.error("Unable to calculate weave effect - missing data");
+    return;
+  }
+  
+  const netSuccesses = casterSuccesses - saveSuccesses;
+  const margin = Math.max(0, netSuccesses);
+  
+  let effectDescription = '';
+  let damageAmount = 0;
+  
+  // Determine effect based on type and net successes
+  if (weaveData.effectType === 'damage' && weaveData.damage?.base > 0) {
+    if (margin === 0) {
+      effectDescription = `${defender.name} resisted the weave! No effect.`;
+    } else if (margin === 1) {
+      // Reduced damage (half)
+      damageAmount = Math.floor(weaveData.damage.base / 2);
+      effectDescription = `${defender.name}: ${damageAmount} ${weaveData.damage.type} damage (reduced)`;
+    } else if (margin === 2) {
+      // Full damage
+      damageAmount = weaveData.damage.base;
+      effectDescription = `${defender.name}: ${damageAmount} ${weaveData.damage.type} damage`;
+    } else if (margin === 3) {
+      // Double damage (base + base)
+      damageAmount = weaveData.damage.base * 2;
+      effectDescription = `${defender.name}: ${damageAmount} ${weaveData.damage.type} damage (enhanced!)`;
+    } else {
+      // Margin 4+: Triple damage (base + base*2)
+      damageAmount = weaveData.damage.base * 3;
+      effectDescription = `${defender.name}: ${damageAmount} ${weaveData.damage.type} damage (critical!)`;
+    }
+  } else {
+    // Non-damage effect
+    if (margin === 0) {
+      effectDescription = `${defender.name} resisted the weave!`;
+    } else {
+      effectDescription = `${defender.name} is affected! Net successes: ${margin}`;
+    }
+  }
+  
+  // NOTE: Effects are NOT auto-applied here. Instead, they should be dragged from the 
+  // weave cast card onto the target actor. This gives more control and follows the PF2e pattern.
+  // The save system is primarily for damage calculation.
+  
+  // Create result card
+  const content = `
+    <div class="legends-weave-result">
+      <h3><i class="fas fa-magic"></i> Weave Result</h3>
+      <div class="result-comparison">
+        <div class="caster-result">
+          <strong>Caster:</strong> ${caster.name}<br/>
+          <strong>Weaving Successes:</strong> ${casterSuccesses}
+        </div>
+        <div class="defender-result">
+          <strong>Target:</strong> ${defender.name}<br/>
+          <strong>Save Successes:</strong> ${saveSuccesses}
+        </div>
+        <div class="margin">
+          <strong>Net Successes:</strong> ${margin}
+        </div>
+      </div>
+      <div class="effect-result">
+        <strong>Result:</strong> ${effectDescription}
+      </div>
+      ${damageAmount > 0 ? `
+        <div class="damage-buttons">
+          <p><em>${defender.name}: Select your token and click below to apply damage</em></p>
+          <button class="apply-weave-damage-btn" 
+                  data-damage="${damageAmount}"
+                  data-damage-type="${weaveData.damage.type}">
+            <i class="fas fa-heart-broken"></i> Apply ${damageAmount} ${weaveData.damage.type} Damage
+          </button>
+        </div>
+      ` : ''}
+    </div>
+  `;
+  
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: caster }),
+    content: content
+  });
+}
+
+/**
+ * Apply weave damage to the currently selected token
+ * @param {number} damage - The damage amount
+ * @param {string} damageType - The damage type
+ */
+export async function applyWeaveDamage(damage, damageType) {
+  // Get the currently selected token
+  const controlled = canvas.tokens.controlled;
+  if (controlled.length === 0) {
+    ui.notifications.warn("Please select your token first!");
+    return;
+  }
+  
+  const target = controlled[0].actor;
+  if (!target) {
+    ui.notifications.error("Selected token has no actor!");
+    return;
+  }
+  
+  if (!target.isOwner && !game.user.isGM) {
+    ui.notifications.warn("You don't have permission to modify this actor's HP!");
+    return;
+  }
+  
+  const currentHP = target.system.hp.value;
+  
+  // Calculate effective DR for energy damage
+  let dr = 0;
+  const energyTypes = ['fire', 'cold', 'acid', 'lightning', 'force', 'necrotic', 'radiant', 'psychic'];
+  
+  if (energyTypes.includes(damageType.toLowerCase())) {
+    // Energy damage: half DR
+    const baseDR = target.system.dr?.total || 0;
+    dr = Math.floor(baseDR / 2);
+  }
+  
+  const finalDamage = Math.max(0, damage - dr);
+  const newHP = Math.max(0, currentHP - finalDamage);
+  
+  await target.update({ 'system.hp.value': newHP });
+  
+  ui.notifications.info(
+    `${target.name} takes ${finalDamage} ${damageType} damage${dr > 0 ? ` (${damage} - ${dr} DR)` : ''}`
+  );
+  
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: target }),
+    content: `
+      <div class="legends-damage-applied">
+        <i class="fas fa-heart-broken"></i> <strong>${target.name}</strong> took ${finalDamage} ${damageType} damage!
+        ${dr > 0 ? `<br/><small>(${damage} damage - ${dr} DR = ${finalDamage} applied)</small>` : ''}
+      </div>
+    `
   });
 }
 

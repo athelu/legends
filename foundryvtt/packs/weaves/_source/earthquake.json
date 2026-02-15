@@ -1,14 +1,14 @@
 {
-  "_id": "2ac08560e847451a",
+  "_id": "ea73f45ebaf94902",
   "name": "Earthquake",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Earth 8 (major terrain disruption) <strong>Supporting Energy:</strong> Space 7 (medium range + 50ft radius + 1 minute) <strong>Range:</strong> Medium, 60 ft. (50-foot radius) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 15 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Ground shakes violently in area. All creatures make [[/save type=reflex]]. Compare your weaving successes to their save successes. If you have more, creatures fall Prone. Structures may collapse (GM discretion). Area becomes difficult terrain. <strong>Saving Throw:</strong> Reflex (to avoid falling prone) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round (25ft radius), 2 = full effect (50ft radius, 1 minute), 3 = 100ft radius, 4 = major structural damage, fissures open (200ft radius) <strong>Prone + Restrained Condition (at Net 4):</strong> Targets not only fall Prone but may become partially buried (Restrained) if near collapsing structures.</p>"
+      "value": "<p><strong>Primary Energy:</strong> Earth 8 (major terrain disruption) <strong>Supporting Energy:</strong> Space 7 (medium range + 50ft radius + 1 minute) <strong>Range:</strong> Medium, 60 ft. (50-foot radius) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 15 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Ground shakes violently in area. All creatures make [[/save type=reflex]]. Compare your weaving successes to their save successes. If you have more, creatures fall Prone. Structures may collapse (GM discretion). Area becomes difficult terrain. <strong>Applies Effects:</strong> prone; restrained <strong>Saving Throw:</strong> Reflex (to avoid falling prone) <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round (25ft radius), 2 = full effect (50ft radius, 1 minute), 3 = 100ft radius, 4 = major structural damage, fissures open (200ft radius) <strong>Prone + Restrained Condition (at Net 4):</strong> Targets not only fall Prone but may become partially buried (Restrained) if near collapsing structures.</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "earth",
@@ -19,33 +19,31 @@
         "cost": 7
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (50-foot radius)",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "reflex",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "prone",
+        "params": {}
+      },
+      {
+        "effectId": "restrained",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!2ac08560e847451a"
+  "_key": "!items!ea73f45ebaf94902"
 }

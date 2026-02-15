@@ -1,5 +1,5 @@
 {
-  "_id": "5089b3e24ec84823",
+  "_id": "d75ffcc19cbc49fe",
   "name": "Unerring Bolt",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Space 3 (force bolts that always hit) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 5 Energy for 3 bolts <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Create 3 glowing darts of force that automatically hit (no roll needed). Each dart deals [[/damage 4]] damage. Can target same creature or divide among multiple. <strong>Saving Throw:</strong> None (force effect, automatic hit) <strong>Damage Type:</strong> Force (bypasses all DR) <strong>DR Interaction:</strong> Force damage ignores DR completely <strong>Scaling:</strong> +1 Energy for +1 dart (max 8 darts at 10 Energy) <strong>Success Scaling:</strong> 0 = 1 dart only, 1 = 2 darts, 2 = 3 darts, 3 = 4 darts, 4 = 5 darts</p>\n<p>---</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,22 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft.",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
-      "drInteraction": "",
-      "scaling": ""
+      "drInteraction": "ignore",
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!5089b3e24ec84823"
+  "_key": "!items!d75ffcc19cbc49fe"
 }

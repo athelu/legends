@@ -12,7 +12,7 @@
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Create invisible sensor near target creature you choose. Target makes Will save (apply Fortune/Misfortune based on familiarity). Compare your weaving successes to their save successes. If you have more, you can see and hear through sensor. Target has vague feeling of being watched.  
 **Saving Throw:** Will (to resist scrying, modified by familiarity)  
-**Success Scaling:** 0 = no effect, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = target doesn't sense you (8 hours)
+**Success Scaling:** 0 = no effect, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = target doesn't sense you (8 hours), 5 = 24 hours + target doesn't sense you
 
 ---
 
@@ -40,7 +40,7 @@
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Magically seal one door, window, gate, chest, or similar closure. Add 4 to die results for anyone attempting to open it. You and designated creatures can open freely.  
 **Saving Throw:** None (object targeted)  
-**Success Scaling:** 0 = fails, 1 = 10 minutes, 2 = until dispelled, 3 = add 2 additional penalty (+6 total), 4 = cannot be opened except by you
+**Success Scaling:** 0 = fails, 1 = 10 minutes, 2 = until dispelled, 3 = add 2 additional penalty (+6 total), 4 = cannot be opened except by you, 5 = affects all locks/barriers within touch range
 
 ---
 
@@ -54,7 +54,7 @@
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Sense presence of magic within 30ft. Can use action to see a faint aura around any visible creature or object that bears magic, and learn its energy type(s).  
 **Saving Throw:** None (detection weave)  
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 60ft range (1 hour)
+**Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 60ft range (1 hour), 5 = 120ft range (8 hours)
 
 ---
 
@@ -68,7 +68,7 @@
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Magical darkness fills a 15ft radius sphere at medium range. Blocks normal and magical light (unless from higher energy weave). Creatures inside are Blinded to creatures outside.  
 **Saving Throw:** None (creates zone of darkness)  
-**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 30ft radius (1 hour), 4 = 60ft radius (8 hours)
+**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 30ft radius (1 hour), 4 = 60ft radius (8 hours), 5 = 90ft radius (24 hours)
 
 ---
 
@@ -84,8 +84,8 @@
 **Saving Throw:** None (attack weave, weaving successes determine hit quality)  
 **Damage Type:** Necrotic (energy)  
 **DR Interaction:** Half DR (4 necrotic damage vs DR 4 becomes 4 - 2 = 2 damage)  
-**Success Scaling:** 0 = miss (no healing), 1 = half damage (2, heal 1 HP), 2 = full damage (4, heal 2 HP), 3 = +4 damage (8 total, heal 4 HP), 4 = +8 damage (12 total, heal 6 HP)  
-**Weakened Condition (at 4 successes):** Target has Misfortune on Strength-based checks until end of their next turn.  
+**Success Scaling:** 0 = miss (no healing), 1 = half damage (2, heal 1 HP), 2 = full damage (4, heal 2 HP), 3 = +4 damage (8 total, heal 4 HP), 4 = +8 damage (12 total, heal 6 HP), 5 = +8 damage (12 total, heal 6 HP) + applies Weakened
+**Weakened Condition (at 5 successes):** Target has Misfortune on Strength-based checks until end of their next turn.
 
 ---
 
@@ -99,7 +99,7 @@
 **Weaving Roll:** Earth Potential + Earth Mastery  
 **Effect:** Reshape stone into any form (doors, pillars, crude weapon). Can create hinges and latches. Cannot make complex mechanisms. Changes are permanent.  
 **Saving Throw:** None (object manipulation)  
-**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = 20ft cube or create detailed carvings
+**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = 20ft cube or create detailed carvings, 5 = 40ft cube + permanent changes
 
 ---
 
@@ -113,7 +113,7 @@
 **Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery  
 **Effect:** Choose one: (1) Move up to 5ft cube of water up to 5 feet, (2) Shape water into simple forms that last 1 hour, (3) Change color/opacity for 1 hour, (4) Freeze water (unfrozen creatures can escape with Reflex save).  
 **Saving Throw:** Reflex (if freezing water with creatures in it, to escape)  
-**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent shape/color changes
+**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent shape/color changes, 5 = 20ft cube + permanent
 
 ---
 
@@ -126,10 +126,11 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  
 **Effect:** Create sudden loud ringing in 10-foot radius sphere. All creatures in area take 16 thunder damage. Creatures make Fortitude saves to reduce damage. Nonmagical objects made of crystal, glass, or similar material take double damage and shatter if reduced to 0 HP.  
+**Applies Effects:** deafened
 **Saving Throw:** Fortitude (to resist sonic vibration)  
 **Damage Type:** Thunder (sonic energy)  
 **DR Interaction:** Full DR applies (16 thunder damage vs DR 4 becomes 16 - 4 = 12 damage)  
-**Success Scaling:** 0 = half damage (8), 1 = 3/4 damage (12), 2 = full damage (16), 3 = +8 damage (24 total) + Deafened, 4 = +16 damage (32 total) + Deafened + Dazed  
+**Success Scaling:** 0 = half damage (8), 1 = 3/4 damage (12), 2 = full damage (16), 3 = +8 damage (24 total) + Deafened, 4 = +16 damage (32 total) + Deafened + Dazed, 5 = +24 damage (40 total) + Deafened + Dazed + Stunned  
 **Deafened Condition (at Net 3+):** Target is Deafened for 1 minute (can save at end of each turn, 1 success ends).  
 
 ---
@@ -144,7 +145,7 @@
 **Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  
 **Effect:** Choose one: (1) Excavate or move up to 5ft cube of loose earth, (2) Shape earth/stone into basic forms, (3) Change color or texture of earth/stone in 5ft cube. Changes last 1 hour.  
 **Saving Throw:** None (environmental manipulation)  
-**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent changes
+**Success Scaling:** 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = permanent changes, 5 = 20ft cube + permanent
 
 ---
 
@@ -158,7 +159,7 @@
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Create 20-foot radius sphere of silence centered on a point at close range. No sound can be created within or pass through the sphere. Creatures inside are Deafened. Verbal components of weaves can't be performed inside (blocks invokers and most casters). Can cast on object; sphere moves with object.  
 **Saving Throw:** None (creates environmental effect)  
-**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 30-foot radius  
+**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 30-foot radius, 5 = 1 hour + 60-foot radius  
 
 ---
 
@@ -172,7 +173,7 @@
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Target at close range grows or shrinks one size category. Enlarge: add 1 to damage dice, Misfortune on Stealth. Reduce: subtract 1 from damage dice, Fortune on Stealth. Unwilling targets get Fortitude save.  
 **Saving Throw:** Fortitude (if unwilling, to resist size change)  
-**Success Scaling:** 0 = no effect (if unwilling), 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour or 2 size categories
+**Success Scaling:** 0 = no effect (if unwilling), 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour or 2 size categories, 5 = 8 hours + 3 size categories
 
 ---
 
@@ -185,6 +186,7 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  
 **Effect:** Creatures in area make Will saves. Starting with lowest HP targets, compare your weaving successes to their save successes. Those you beat fall Unconscious for 1 minute. Awakens if damaged or shaken (action). Doesn't affect constructs or undead.  
+**Applies Effects:** asleep-unconscious
 **Saving Throw:** Will (to resist Sleep)  
 **Success Scaling:** Your weaving successes vs each creature's Will save. Higher your successes = affect more/tougher creatures. Resolve lowest HP first.
 
@@ -199,8 +201,9 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Time Potential + Time Mastery / Space Potential + Space Mastery  
 **Effect:** Up to 4 targets make Will saves. Compare your weaving successes to each target's save successes. Those you beat have only 2 actions per turn (instead of 3), Misfortune on Agility checks and Reflex saves, and Misfortune on attacks. Targets can repeat save at end of each turn (1 success ends effect).  
+**Applies Effects:** slowed
 **Saving Throw:** Will (to resist temporal slowdown)  
-**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 6 targets or only 1 action per turn
+**Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 6 targets or only 1 action per turn, 5 = 1 hour + 8 targets
 
 ---
 
@@ -214,7 +217,7 @@
 **Weaving Roll:** Space Potential + Space Mastery  
 **Effect:** Instantly teleport yourself and one willing creature to a spot you can see or describe (direction and distance) within 500 feet. Arriving in occupied space causes 1d8 damage and teleports to nearest open space.  
 **Saving Throw:** None (willing targets only)  
-**Success Scaling:** 0 = fails, 1 = 100 feet, 2 = 500 feet, 3 = 1000 feet, 4 = 1 mile
+**Success Scaling:** 0 = fails, 1 = 100 feet, 2 = 500 feet, 3 = 1000 feet, 4 = 1 mile, 5 = 10 miles
 
 ---
 
@@ -227,6 +230,7 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Create a Large hand of force at medium range. Can use action to command it: Grapple (opposed Athletics using your Space Mastery), Shove (move target 10 feet), or Interpose (grant target subtract 1 from both defense dice). Hand has HP = Space Potential × 4.  
+**Applies Effects:** grappled
 **Saving Throw:** Athletics vs Space Mastery (if grappling)  
 **Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = Huge hand (double HP, 1 hour)
 
@@ -269,11 +273,12 @@
 **Action:** Simple weave (1 action)  
 **Weaving Roll:** Earth Potential + Earth Mastery  
 **Effect:** Harden your fist to stone and strike a target within touch range. Target takes 4 bludgeoning damage. This is an attack weave—no saving throw allowed.  
+**Applies Effects:** prone
 **Saving Throw:** None (attack weave, weaving successes determine hit quality)  
 **Damage Type:** Bludgeoning (physical)  
 **DR Interaction:** Full DR applies (4 bludgeoning damage vs DR 4 becomes 4 - 4 = 0 damage)  
-**Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total)  
-**Prone Condition (at 4 successes):** Target must make Fortitude save or be knocked Prone by the force of the blow (1 success avoids).  
+**Success Scaling:** 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +4 damage (8 total), 4 = +8 damage (12 total), 5 = +8 damage (12 total) + applies Prone
+**Prone Condition (at 5 successes):** Target must make Fortitude save or be knocked Prone by the force of the blow (1 success avoids).
 
 ---
 
@@ -366,7 +371,7 @@
 ### Teleport
 **Primary Energy:** Space 7 (long-range teleportation)  
 **Supporting Energy:** None (touch, instantaneous, up to 8 willing creatures)  
-**Range:** Touch (up to 8 willing creatures)  
+**Range:** self, touch (up to 8 willing creatures)  
 **Duration:** Instantaneous  
 **Total Cost:** 7 Energy base (more for longer distances or more creatures)  
 **Action:** Complex weave (2 actions)  
@@ -396,7 +401,7 @@
 ### Tongues
 **Primary Energy:** Air 3 (granting understanding of all speech)  
 **Supporting Energy:** Time 3 (duration 1 hour)  
-**Range:** Touch  
+**Range:** self, touch  
 **Duration:** 1 hour  
 **Total Cost:** 6 Energy  
 **Action:** Complex weave (2 actions)  
@@ -416,6 +421,7 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Water/Negative Potential + Water/Negative Mastery / Space Potential + Space Mastery  
 **Effect:** Target takes 8 poison damage. Target makes Fortitude save to reduce damage.  
+**Applies Effects:** poisoned
 **Saving Throw:** Fortitude (to resist poison)  
 **Damage Type:** Poison (special - follows energy type used)  
 **DR Interaction:** Half DR if using Water/Negative energy (8 poison damage vs DR 4 becomes 8 - 2 = 6 damage)  
@@ -435,6 +441,7 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Target at close range makes Will save. Compare your weaving successes to their save successes. If you have more, target falls Prone with uncontrollable laughter, becoming Incapacitated and unable to stand. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect).  
+**Applies Effects:** prone
 **Saving Throw:** Will (to resist mental effect)  
 **Success Scaling:** 0 = no effect, 1 = 1 round, 2 = full effect, 3 = no save if damaged, 4 = 10 minutes  
 **Incapacitated Condition (at Net 2+):** Target can't take actions or reactions, is Prone, and can't stand. Repeats save at end of each turn.  
@@ -483,6 +490,7 @@
 **Action:** Complex weave (2 actions) to cast, then complex weave (2 actions) to discharge  
 **Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery  
 **Effect:** Your touch deals 12 negative damage. You heal HP equal to half damage dealt. Can hold the charge for up to 1 minute and attack multiple times if charge remains. This is an attack weave when discharging—no saving throw on the touch.  
+**Applies Effects:** weakened
 **Saving Throw:** None (attack weave when touching, weaving successes determine hit quality)  
 **Damage Type:** Negative (energy)  
 **DR Interaction:** Half DR (12 negative damage vs DR 4 becomes 12 - 2 = 10 damage)  
@@ -502,6 +510,7 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Fire Potential + Fire Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals 16 fire damage to creatures within 10 feet (choose side when casting). Passing through wall deals 24 fire damage. Provides total cover.  
+**Applies Effects:** ignited
 **Saving Throw:** Reflex (when within 10 feet or passing through)  
 **Damage Type:** Fire (energy)  
 **DR Interaction:** Half DR (16/24 fire damage vs DR 4 becomes 14/22 damage)  
@@ -575,7 +584,7 @@
 ### Warding Sphere
 **Primary Energy:** Space 7 (spherical magical barrier)  
 **Supporting Energy:** Time 3 (duration 10 minutes)  
-**Range:** Self  
+**Range:** self, touch 
 **Duration:** 10 minutes  
 **Total Cost:** 10 Energy  
 **Action:** Complex weave (2 actions)  
@@ -589,7 +598,7 @@
 ### Weave Reflection
 **Primary Energy:** Space 7 (redirecting magical energy)  
 **Supporting Energy:** Time 2 (duration 1 minute or until expended)  
-**Range:** Self  
+**Range:** Self, touch  
 **Duration:** 1 minute (or until 3 reflections)  
 **Total Cost:** 9 Energy  
 **Action:** Complex weave (2 actions)  
@@ -609,6 +618,7 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  
 **Effect:** Fill area with sticky webs anchored to surfaces. Creatures in area when created or entering area make Reflex save. Compare their successes to your weaving successes. If you have more, target becomes Restrained. Restrained creatures can use action + Athletics or Acrobatics check (2 successes needed) to escape. Webs are flammable; fire damage to 5ft area destroys webs in that section.  
+**Applies Effects:** restrained
 **Saving Throw:** Reflex (to avoid being Restrained)  
 **Success Scaling:** 0 = no effect, 1 = Partial web (10ft radius, 1 round), 2 = Full effect (20ft radius, 1 minute), 3 = Enhanced (30ft radius, 10 minutes), 4 = Maximum (40ft radius, 1 hour)  
 **Restrained Condition:** See conditions document. Target cannot move, has Misfortune on attacks, attackers have Fortune against them, Misfortune on Reflex saves.

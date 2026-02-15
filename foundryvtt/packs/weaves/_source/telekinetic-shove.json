@@ -1,5 +1,5 @@
 {
-  "_id": "ee748513734d4c70",
+  "_id": "cb02a88ba176472d",
   "name": "Telekinetic Shove",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Space 2 (force push/pull) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Push or pull one creature/object up to 10 feet. Target makes [[/save type=fortitude]] to resist (if creature). Can also be used to knock prone ([[/save type=reflex]]). Compare your weaving successes to their save successes. <strong>Saving Throw:</strong> Fortitude (to resist forced movement) or Reflex (to avoid being knocked prone) <strong>Success Scaling:</strong> 0 = no effect, 1 = 5 feet, 2 = 10 feet, 3 = 15 feet, 4 = 20 feet or knock prone</p>\n<p>---</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,22 @@
         "cost": 1
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Close, 30 ft.",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "fortitude",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!ee748513734d4c70"
+  "_key": "!items!cb02a88ba176472d"
 }

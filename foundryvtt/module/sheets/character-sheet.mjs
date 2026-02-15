@@ -24,6 +24,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       itemEdit: D8CharacterSheet.#onItemEdit,
       itemDelete: D8CharacterSheet.#onItemDelete,
       itemEquip: D8CharacterSheet.#onItemEquip,
+      itemRoll: D8CharacterSheet.#onItemRoll,
       openCompendium: D8CharacterSheet.#onOpenCompendium,
       conditionRemove: D8CharacterSheet.#onConditionRemove,
       itemChat: D8CharacterSheet.#onItemChat,
@@ -364,13 +365,13 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.magicalTraitDisplayName = traitNames[magicalTrait.type] || magicalTrait.type;
     
     // Enrich casting stat display
-    if (context.system.castingStat && context.system.castingStat.value && context.system.abilities) {
+    if (context.system.castingStat && context.system.castingStat.value && context.system.attributes) {
       const abilityKey = context.system.castingStat.value;
-      const ability = context.system.abilities[abilityKey];
-      if (ability) {
-        const modifier = ability.mod >= 0 ? `+${ability.mod}` : `${ability.mod}`;
-        context.system.castingStat.displayLabel = ability.label;
-        context.system.castingStat.displayValue = `${ability.value} (${modifier})`;
+      const attribute = context.system.attributes[abilityKey];
+      if (attribute) {
+        const value = attribute.value || 0;
+        context.system.castingStat.displayLabel = attribute.label || abilityKey;
+        context.system.castingStat.displayValue = value;
       }
     }
     
@@ -449,6 +450,63 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
   /** @override */
   async _onDropItem(event, data) {
+    // Handle WeaveEffect drops (dragged from chat cards)
+    if (data.type === 'WeaveEffect') {
+      const caster = game.actors.get(data.casterId);
+      const weave = caster?.items.get(data.weaveId);
+      
+      if (!caster || !weave) {
+        ui.notifications.error("Unable to apply effect - weave or caster not found");
+        return;
+      }
+      
+      // Apply the effect using the effect engine
+      try {
+        await game.legends.effectEngine.applyEffect({
+          actor: this.actor,
+          effectId: data.effectId,
+          origin: {
+            casterId: data.casterId,
+            weaveId: data.weaveId,
+            successes: data.casterSuccesses,
+            potential: caster.system.magicalPotential || 0
+          },
+          params: data.params || {},
+          netSuccesses: data.casterSuccesses // Use caster's successes as net when manually applied
+        });
+        
+        ui.notifications.info(`Applied ${data.effectId} to ${this.actor.name}`);
+      } catch (err) {
+        console.error(`Failed to apply effect ${data.effectId}:`, err);
+        ui.notifications.error(`Failed to apply effect: ${err.message}`);
+      }
+      return;
+    }
+    
+    // Handle InlineEffect drops (dragged from enriched text)
+    if (data.type === 'InlineEffect') {
+      try {
+        await game.legends.effectEngine.applyEffect({
+          actor: this.actor,
+          effectId: data.effectId,
+          origin: {
+            casterId: this.actor.id, // Self-origin for inline effects
+            weaveId: null,
+            successes: 2, // Default to 2 successes (1 minute duration)
+            potential: 0
+          },
+          params: data.params || {},
+          netSuccesses: 2 // Default duration
+        });
+        
+        ui.notifications.info(`Applied ${data.effectId} to ${this.actor.name}`);
+      } catch (err) {
+        console.error(`Failed to apply effect ${data.effectId}:`, err);
+        ui.notifications.error(`Failed to apply effect: ${err.message}`);
+      }
+      return;
+    }
+    
     // Resolve the dropped item
     const item = await Item.implementation.fromDropData(data);
     if ( item?.type === "condition" ) {
@@ -636,6 +694,19 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     if (item) {
       // Use the proper chat template system
       await game.legends.chat.createItemChatCard(item);
+    }
+  }
+
+  /**
+   * Handle rolling an item (e.g., casting a weave)
+   */
+  static async #onItemRoll(event, target) {
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
+    const item = this.actor.items.get(li.dataset.itemId);
+
+    if (item) {
+      return item.roll();
     }
   }
 

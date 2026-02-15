@@ -9,6 +9,7 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Target at medium range makes Will save. Compare your weaving successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes 3d8 psychic damage at start of each turn. Can repeat Will save each round to end effect (1 success ends effect).  
+**Applies Effects:** frightened
 **Saving Throw:** Will (to resist fear manifestation)  
 **Success Scaling:** 0 = no effect, 1 = Frightened only (no damage), 2 = full effect (Frightened + 3d8 damage), 3 = 4d8 damage, 4 = Fleeing instead of Frightened (5d8 damage)  
 **Frightened/Fleeing Conditions:** See conditions document for full mechanics. Target can repeat save at end of each turn.
@@ -16,7 +17,7 @@
 ### Null Sphere
 **Primary Energy:** Space 8 (negating magical energies in area)  
 **Supporting Energy:** Time 3 (duration 10 minutes)  
-**Range:** Self (10-foot radius)  
+**Range:** 10-foot radius, centered on self
 **Duration:** 10 minutes  
 **Total Cost:** 11 Energy  
 **Action:** Complex weave (2 actions)  
@@ -56,19 +57,20 @@
 ### Perfect Invisibility
 **Primary Energy:** Space 6 (bending light completely)  
 **Supporting Energy:** Time 2 (duration 1 minute)  
-**Range:** Touch  
+**Range:** self, touch  
 **Duration:** 1 minute  
 **Total Cost:** 8 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on attacks and Stealth checks, and observers have Misfortune on Perception checks to detect target. Unlike normal invisibility, this weave does NOT break when target attacks or casts weaves.  
+**Applies Effects:** hidden
 **Saving Throw:** None (beneficial buff, willing targets only)  
 **Success Scaling:** 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour
 
 ### Perfect Sight
 **Primary Energy:** Space 6 (perceiving true forms and hidden things)  
 **Supporting Energy:** Time 3 (duration 10 minutes)  
-**Range:** Touch  
+**Range:** self, touch  
 **Duration:** 10 minutes  
 **Total Cost:** 9 Energy  
 **Action:** Complex weave (2 actions)  
@@ -86,6 +88,7 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** You become invisible and gain the Hidden condition, while simultaneously creating an illusory double of yourself that appears where you were standing. You have Fortune on Stealth checks and observers have Misfortune on Perception checks to detect your true location. Can use action to move the double up to twice your speed and make it gesture, speak, and behave however you wish.  
+**Applies Effects:** hidden
 **Saving Throw:** Perception vs Space Mastery (to recognize double as illusory effect)  
 **Success Scaling:** 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours
 
@@ -140,7 +143,7 @@
 ### Protection from Energy
 **Primary Energy:** Space 5 (protective barrier against energy)  
 **Supporting Energy:** Time 3 (duration 10 minutes)  
-**Range:** Touch  
+**Range:** self, touch  
 **Duration:** 10 minutes  
 **Total Cost:** 8 Energy  
 **Action:** Complex weave (2 actions)  
@@ -160,11 +163,12 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery  
 **Effect:** A bolt of radiant energy strikes the target. Target takes 8 radiant damage. A nimbus of light surrounds the target for one round. The next person to attack the target before the duration ends has Fortune. The nimbus disappears afterward. This is an attack weave—no saving throw allowed.  
+**Applies Effects:** blinded
 **Saving Throw:** None (attack weave, weaving successes determine hit quality)  
 **Damage Type:** Positive (energy)  
 **DR Interaction:** Half DR (8 radiant damage vs DR 4 becomes 8 - 2 = 6 damage)  
-**Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)  
-**Blinded Condition (at 4 successes):** Target gains the Blinded condition. Can use 1 action to make Fortitude save (1 success ends).
+**Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total), 5 = +16 damage (24 total) + applies Blinded
+**Blinded Condition (at 5 successes):** Target gains the Blinded condition. Can use 1 action to make Fortitude save (1 success ends).
 
 ### Radiant Sphere
 **Primary Energy:** Fire 4 (creating bright magical light)  
@@ -192,12 +196,12 @@
 **DR Interaction:** Half DR (4 radiant damage vs DR 4 becomes 4 - 2 = 2 damage)  
 **Success Scaling:** 0 = miss, 1 = half damage (2, or 4 vs undead), 2 = full damage (4, or 8 vs undead), 3 = +4 damage (8 total, or 16 vs undead), 4 = +8 damage (12 total, or 24 vs undead)  
 **Special:** Double damage against undead creatures  
-**Revealed Condition (at 4 successes):** If target is invisible or hidden by magical darkness, they become visible until end of their next turn as they glow with radiant energy.  
+**Revealed Condition (at 5 successes):** If target is invisible or hidden by magical darkness, they become visible until end of their next turn as they glow with radiant energy.  
 
 ### Reactive Ward
 **Primary Energy:** Space 2 (force barrier)  
-**Supporting Energy:** None (self, instant reaction)  
-**Range:** Self  
+**Supporting Energy:** None (instant reaction)  
+**Range:** self, touch
 **Duration:** Until end of next turn  
 **Total Cost:** 2 Energy  
 **Action:** [Reaction]  
@@ -215,5 +219,6 @@
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  
 **Effect:** All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make Reflex save. Compare your weaving successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.  
+**Applies Effects:** revealed  
 **Saving Throw:** Reflex (to avoid being outlined)  
 **Success Scaling:** 0 = no effect, 1 = dim light only, 2 = full effect, 3 = 30-foot cube, 4 = 10 minutes duration  

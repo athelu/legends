@@ -1,5 +1,5 @@
 {
-  "_id": "d29cd74c646b410a",
+  "_id": "3f834d4e91e14449",
   "name": "Gentle Descent",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -19,33 +19,22 @@
         "cost": 5
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Close, 30 ft.",
+    "duration": "Up to 1 minute (until they land)",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!d29cd74c646b410a"
+  "_key": "!items!3f834d4e91e14449"
 }

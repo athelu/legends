@@ -103,6 +103,13 @@
       "path": "packs/conditions",
       "type": "Item",
       "system": "legends"
+    },
+    {
+      "name": "effects",
+      "label": "Legends - Effects",
+      "path": "packs/effects",
+      "type": "Item",
+      "system": "legends"
     }
   ],
   "languages": [
@@ -130,7 +137,8 @@
       "ancestry": {},
       "action": {},
       "ability": {},
-      "condition": {}
+      "condition": {},
+      "effect": {}
     }
   },
   "socket": false,
