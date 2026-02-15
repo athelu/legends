@@ -142,55 +142,67 @@
       </div>
       
       <ol class="items-list weapon-list">
-        <li class="items-header flexrow">
+        <li class="items-header">
+          <div class="item-image"></div>
           <div class="item-name">Name</div>
           <div class="item-attack">Attack</div>
           <div class="item-damage">Damage</div>
-          <div class="item-controls"></div>
+          <div class="item-controls">Actions</div>
         </li>
         
         {{#each weapons as |item id|}}
-        <li class="item flexrow weapon-item" data-item-id="{{item._id}}">
-          <div class="item-image">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+        <li class="item-collapsible" data-item-id="{{item._id}}">
+          
+          {{!-- Item Header (Always Visible, Clickable) --}}
+          <div class="item-header" data-action="expandItem">
+            <i class="item-caret fas fa-caret-right"></i>
+            <div class="item-image">
+              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            </div>
+            
+            <h4 class="item-name">{{item.name}}</h4>
+            
+            <div class="item-attack">
+              {{!-- Show attack buttons based on attack modes --}}
+              {{#each item.system.attackModes as |mode modeIndex|}}
+                {{#if (eq mode.type "melee")}}
+                  <button type="button" 
+                          class="weapon-attack-btn melee-attack" data-action="weaponAttack" 
+                          data-mode-index="{{modeIndex}}"
+                          title="Melee Attack">
+                    <i class="fas fa-hand-fist"></i>
+                  </button>
+                {{/if}}
+                {{#if (or (eq mode.type "ranged") (eq mode.type "thrown"))}}
+                  <button type="button" 
+                          class="weapon-attack-btn ranged-attack" data-action="weaponAttack" 
+                          data-mode-index="{{modeIndex}}"
+                          title="{{#if (eq mode.type 'thrown')}}Throw{{else}}Ranged Attack{{/if}}">
+                    <i class="fas fa-bullseye"></i>
+                  </button>
+                {{/if}}
+              {{/each}}
+            </div>
+            
+            <div class="item-damage">
+              {{item.system.damage.base}} {{item.system.damage.type}}
+            </div>
+            
+            <div class="item-controls">
+              <a class="item-control {{#if item.system.equipped}}equipped{{/if}}" data-action="itemEquip"
+                title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
+                <i class="{{#if item.system.equipped}}fas{{else}}far{{/if}} fa-circle"></i>
+              </a>
+              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
           </div>
           
-          <h4 class="item-name">{{item.name}}</h4>
-          
-          <div class="item-attack">
-            {{!-- Show attack buttons based on attack modes --}}
-            {{#each item.system.attackModes as |mode modeIndex|}}
-              {{#if (eq mode.type "melee")}}
-                <button type="button" 
-                        class="weapon-attack-btn melee-attack" data-action="weaponAttack" 
-                        data-mode-index="{{modeIndex}}"
-                        title="Melee Attack">
-                  <i class="fas fa-hand-fist"></i>
-                </button>
-              {{/if}}
-              {{#if (or (eq mode.type "ranged") (eq mode.type "thrown"))}}
-                <button type="button" 
-                        class="weapon-attack-btn ranged-attack" data-action="weaponAttack" 
-                        data-mode-index="{{modeIndex}}"
-                        title="{{#if (eq mode.type 'thrown')}}Throw{{else}}Ranged Attack{{/if}}">
-                  <i class="fas fa-bullseye"></i>
-                </button>
-              {{/if}}
-            {{/each}}
+          {{!-- Collapsible Content (Dynamic Loading) --}}
+          <div class="item-summary">
+            {{!-- Content will be generated dynamically by JavaScript --}}
           </div>
           
-          <div class="item-damage">
-            {{item.system.damage.base}} {{item.system.damage.type}}
-          </div>
-          
-          <div class="item-controls">
-            <a class="item-control {{#if item.system.equipped}}equipped{{/if}}" data-action="itemEquip"
-              title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
-              <i class="{{#if item.system.equipped}}fas{{else}}far{{/if}} fa-circle"></i>
-            </a>
-            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
-          </div>
         </li>
         {{/each}}
       </ol>
@@ -211,18 +223,28 @@
         <h4>Combat Actions</h4>
         <ol class="items-list action-list">
           {{#each combatActions as |item id|}}
-          <li class="item flexrow" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          <li class="item-collapsible" data-item-id="{{item._id}}">
+            
+            {{!-- Item Header (Always Visible, Clickable) --}}
+            <div class="item-header" data-action="expandItem">
+              <i class="item-caret fas fa-caret-right"></i>
+              <div class="item-image">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+              </div>
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-detail action-cost">
+                {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
+              </div>
+              <div class="item-controls">
+                <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+              </div>
             </div>
-            <h4 class="item-name">{{item.name}}</h4>
-            <div class="item-detail action-cost">
-              {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
-            </div>
-            <div class="item-controls">
-              <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            
+            {{!-- Collapsible Content (Dynamic Loading) --}}
+            <div class="item-summary">
+              {{!-- Content dynamically loaded --}}
             </div>
           </li>
           {{/each}}
@@ -236,18 +258,28 @@
         <h4>Movement Actions</h4>
         <ol class="items-list action-list">
           {{#each movementActions as |item id|}}
-          <li class="item flexrow" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          <li class="item-collapsible" data-item-id="{{item._id}}">
+            
+            {{!-- Item Header (Always Visible, Clickable) --}}
+            <div class="item-header" data-action="expandItem">
+              <i class="item-caret fas fa-caret-right"></i>
+              <div class="item-image">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+              </div>
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-detail action-cost">
+                {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
+              </div>
+              <div class="item-controls">
+                <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+              </div>
             </div>
-            <h4 class="item-name">{{item.name}}</h4>
-            <div class="item-detail action-cost">
-              {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
-            </div>
-            <div class="item-controls">
-              <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            
+            {{!-- Collapsible Content (Dynamic Loading) --}}
+            <div class="item-summary">
+              {{!-- Content dynamically loaded --}}
             </div>
           </li>
           {{/each}}
@@ -261,18 +293,28 @@
         <h4>Activate Actions</h4>
         <ol class="items-list action-list">
           {{#each activateActions as |item id|}}
-          <li class="item flexrow" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          <li class="item-collapsible" data-item-id="{{item._id}}">
+            
+            {{!-- Item Header (Always Visible, Clickable) --}}
+            <div class="item-header" data-action="expandItem">
+              <i class="item-caret fas fa-caret-right"></i>
+              <div class="item-image">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+              </div>
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-detail action-cost">
+                {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
+              </div>
+              <div class="item-controls">
+                <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+              </div>
             </div>
-            <h4 class="item-name">{{item.name}}</h4>
-            <div class="item-detail action-cost">
-              {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
-            </div>
-            <div class="item-controls">
-              <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            
+            {{!-- Collapsible Content (Dynamic Loading) --}}
+            <div class="item-summary">
+              {{!-- Content dynamically loaded --}}
             </div>
           </li>
           {{/each}}
@@ -286,18 +328,28 @@
         <h4>Interact Actions</h4>
         <ol class="items-list action-list">
           {{#each interactActions as |item id|}}
-          <li class="item flexrow" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          <li class="item-collapsible" data-item-id="{{item._id}}">
+            
+            {{!-- Item Header (Always Visible, Clickable) --}}
+            <div class="item-header" data-action="expandItem">
+              <i class="item-caret fas fa-caret-right"></i>
+              <div class="item-image">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+              </div>
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-detail action-cost">
+                {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
+              </div>
+              <div class="item-controls">
+                <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+              </div>
             </div>
-            <h4 class="item-name">{{item.name}}</h4>
-            <div class="item-detail action-cost">
-              {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
-            </div>
-            <div class="item-controls">
-              <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            
+            {{!-- Collapsible Content (Dynamic Loading) --}}
+            <div class="item-summary">
+              {{!-- Content dynamically loaded --}}
             </div>
           </li>
           {{/each}}
@@ -311,18 +363,28 @@
         <h4>Free Actions</h4>
         <ol class="items-list action-list">
           {{#each freeActions as |item id|}}
-          <li class="item flexrow" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          <li class="item-collapsible" data-item-id="{{item._id}}">
+            
+            {{!-- Item Header (Always Visible, Clickable) --}}
+            <div class="item-header" data-action="expandItem">
+              <i class="item-caret fas fa-caret-right"></i>
+              <div class="item-image">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+              </div>
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-detail action-cost">
+                {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
+              </div>
+              <div class="item-controls">
+                <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+              </div>
             </div>
-            <h4 class="item-name">{{item.name}}</h4>
-            <div class="item-detail action-cost">
-              {{#if item.system.actionCost}}[{{item.system.actionCost}}]{{/if}}
-            </div>
-            <div class="item-controls">
-              <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            
+            {{!-- Collapsible Content (Dynamic Loading) --}}
+            <div class="item-summary">
+              {{!-- Content dynamically loaded --}}
             </div>
           </li>
           {{/each}}
@@ -336,18 +398,28 @@
         <h4>Reactions</h4>
         <ol class="items-list action-list">
           {{#each reactions as |item id|}}
-          <li class="item flexrow" data-item-id="{{item._id}}">
-            <div class="item-image">
-              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          <li class="item-collapsible" data-item-id="{{item._id}}">
+            
+            {{!-- Item Header (Always Visible, Clickable) --}}
+            <div class="item-header" data-action="expandItem">
+              <i class="item-caret fas fa-caret-right"></i>
+              <div class="item-image">
+                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+              </div>
+              <h4 class="item-name">{{item.name}}</h4>
+              <div class="item-detail action-trigger">
+                {{#if item.system.trigger}}<small>{{item.system.trigger}}</small>{{/if}}
+              </div>
+              <div class="item-controls">
+                <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+                <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+              </div>
             </div>
-            <h4 class="item-name">{{item.name}}</h4>
-            <div class="item-detail action-trigger">
-              {{#if item.system.trigger}}<small>{{item.system.trigger}}</small>{{/if}}
-            </div>
-            <div class="item-controls">
-              <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            
+            {{!-- Collapsible Content (Dynamic Loading) --}}
+            <div class="item-summary">
+              {{!-- Content dynamically loaded --}}
             </div>
           </li>
           {{/each}}
@@ -453,9 +525,8 @@
         </button>
       </div>
       
-      {{!-- Weave Energies --}}
+      {{!-- Weave Energies Grid --}}
       <div class="weave-energies">
-        <h4>Weaving Proficiencies</h4>
         <div class="energy-grid">
           {{#each system.energies as |energy key|}}
           <div class="energy-item" data-energy="{{key}}">
@@ -468,7 +539,7 @@
 
       {{!-- Weaves List --}}
       <ol class="items-list weave-list">
-        <li class="items-header flexrow">
+        <li class="items-header">
           <div class="item-image">Icon</div>
           <div class="item-name">Name</div>
           <div class="energy-display">Primary</div>
@@ -477,100 +548,69 @@
           <div class="item-controls">Actions</div>
         </li>
         {{#each weaves as |item id|}}
-        <li class="item flexrow collapsible" data-item-id="{{item._id}}">
-          <div class="item-image">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
-          </div>
-          <h4 class="item-name expandable" data-action="expandItem">
-            <i class="fas fa-caret-right expand-caret"></i>
-            {{item.name}}
-          </h4>
-          <div class="energy-display">
-            {{#if item.system.energyCost.primary.type}}
-              <img src="systems/legends/ui/energy-{{item.system.energyCost.primary.type}}.png" 
-                   width="16" height="16" title="{{capitalize item.system.energyCost.primary.type}}"/>
-              {{item.system.energyCost.primary.cost}}
-            {{else}}—{{/if}}
-          </div>
-          <div class="energy-display">
-            {{#if item.system.energyCost.supporting.type}}
-              <img src="systems/legends/ui/energy-{{item.system.energyCost.supporting.type}}.png" 
-                   width="16" height="16" title="{{capitalize item.system.energyCost.supporting.type}}"/>
-              {{item.system.energyCost.supporting.cost}}
-            {{else}}—{{/if}}
-          </div>
-          <div class="item-detail">
-            {{#if item.system.totalEnergyCost}}
-              {{item.system.totalEnergyCost}}
-            {{else}}
-              {{add item.system.energyCost.primary.cost item.system.energyCost.supporting.cost}}
-            {{/if}}
-          </div>
-          <div class="item-controls">
-            <a class="item-control" data-action="itemRoll" title="Cast Weave"><i class="fas fa-dice-d8"></i></a>
-            <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
-          </div>
+        <li class="item-collapsible" data-item-id="{{item._id}}">
           
-          {{!-- Expanded Details --}}
-          <div class="item-details" style="display: none;">
-            <div class="weave-expanded">
-              {{#if item.system.energyCost.primary.type}}
-              <div class="detail-row">
-                <strong>Primary Energy:</strong> 
-                {{capitalize item.system.energyCost.primary.type}} {{item.system.energyCost.primary.cost}}
-                {{#if item.system.energyCost.primary.description}}({{item.system.energyCost.primary.description}}){{/if}}
-              </div>
-              {{/if}}
-              
-              {{#if item.system.energyCost.supporting.type}}
-              <div class="detail-row">
-                <strong>Supporting Energy:</strong> 
-                {{capitalize item.system.energyCost.supporting.type}} {{item.system.energyCost.supporting.cost}}
-                {{#if item.system.energyCost.supporting.description}}({{item.system.energyCost.supporting.description}}){{/if}}
-              </div>
-              {{/if}}
-              
-              {{#if item.system.range}}
-              <div class="detail-row"><strong>Range:</strong> {{item.system.range}}</div>
-              {{/if}}
-              
-              {{#if item.system.duration}}
-              <div class="detail-row"><strong>Duration:</strong> {{item.system.duration}}</div>
-              {{/if}}
-              
-              <div class="detail-row">
-                <strong>Action Cost:</strong>
+          {{!-- Item Header (Always Visible, Clickable) --}}
+          <div class="item-header" data-action="expandItem">
+            <i class="item-caret fas fa-caret-right"></i>
+            <div class="item-image">
+              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            </div>
+            
+            {{!-- Weave Info Container --}}
+            <div class="weave-info">
+              <span class="item-name-clickable">{{item.name}}</span>
+              <div class="weave-meta">
                 {{#if item.system.weaveType}}
-                  {{#if (eq item.system.weaveType "simple")}}Simple weave (1 action){{/if}}
-                  {{#if (eq item.system.weaveType "complex")}}Complex weave (2 actions){{/if}}
-                  {{#if (eq item.system.weaveType "ritual")}}Ritual (10 minutes){{/if}}
-                {{else}}
-                  {{#if item.system.actionCost}}{{item.system.actionCost}} action{{#if (gt item.system.actionCost 1)}}s{{/if}}{{else}}1 action{{/if}}
+                  <span class="weave-type">{{item.system.weaveType}}</span>
+                {{/if}}
+                {{#if item.system.actionCost}}
+                  <span class="weave-cost">[{{item.system.actionCost}} actions]</span>
                 {{/if}}
               </div>
-              
-              {{#if item.system.description.value}}
-              <div class="detail-row description">
-                <strong>Description:</strong>
-                <div class="description-text">{{{item.system.description.value}}}</div>
-              </div>
-              {{/if}}
-              
-              {{#if item.system.effect}}
-              <div class="detail-row"><strong>Effect:</strong> {{item.system.effect}}</div>
-              {{/if}}
-              
-              {{#if item.system.savingThrow}}
-              <div class="detail-row"><strong>Saving Throw:</strong> {{item.system.savingThrow}}</div>
-              {{/if}}
-              
-              {{#if item.system.successScaling}}
-              <div class="detail-row"><strong>Success Scaling:</strong> {{item.system.successScaling}}</div>
+            </div>
+            
+            {{!-- Primary Energy --}}
+            <div class="energy-display">
+              {{#if item.system.energyCost.primary.type}}
+                <img src="systems/legends/ui/energy-{{item.system.energyCost.primary.type}}.png" 
+                     width="16" height="16" title="{{capitalize item.system.energyCost.primary.type}}"/>
+                {{item.system.energyCost.primary.cost}}
+              {{else}}—{{/if}}
+            </div>
+            
+            {{!-- Supporting Energy --}}
+            <div class="energy-display">
+              {{#if item.system.energyCost.supporting.type}}
+                <img src="systems/legends/ui/energy-{{item.system.energyCost.supporting.type}}.png" 
+                     width="16" height="16" title="{{capitalize item.system.energyCost.supporting.type}}"/>
+                {{item.system.energyCost.supporting.cost}}
+              {{else}}—{{/if}}
+            </div>
+            
+            {{!-- Total Cost --}}
+            <div class="item-detail weave-total-cost">
+              {{#if item.system.totalEnergyCost}}
+                {{item.system.totalEnergyCost}}
+              {{else}}
+                {{add item.system.energyCost.primary.cost item.system.energyCost.supporting.cost}}
               {{/if}}
             </div>
+            
+            {{!-- Item Controls --}}
+            <div class="item-controls">
+              <a class="item-control" data-action="itemRoll" title="Cast Weave"><i class="fas fa-dice-d8"></i></a>
+              <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
           </div>
+          
+          {{!-- Collapsible Content (Dynamic Loading) --}}
+          <div class="item-summary">
+            {{!-- Content will be generated dynamically by JavaScript --}}
+          </div>
+          
         </li>
         {{/each}}
       </ol>
@@ -590,15 +630,25 @@
           </div>
           <ol class="items-list feat-list">
             {{#each feats as |item id|}}
-            <li class="item flexrow" data-item-id="{{item._id}}">
-              <div class="item-image">
-                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            <li class="item-collapsible" data-item-id="{{item._id}}">
+              
+              {{!-- Item Header (Always Visible, Clickable) --}}
+              <div class="item-header" data-action="expandItem">
+                <i class="item-caret fas fa-caret-right"></i>
+                <div class="item-image">
+                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                </div>
+                <h4 class="item-name">{{item.name}}</h4>
+                <div class="item-controls">
+                  <a class="item-control" data-action="itemView" title="View"><i class="fas fa-eye"></i></a>
+                  <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                  <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+                </div>
               </div>
-              <h4 class="item-name">{{item.name}}</h4>
-              <div class="item-controls">
-                <a class="item-control" data-action="itemView" title="View"><i class="fas fa-eye"></i></a>
-                <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-                <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+              
+              {{!-- Collapsible Content (Dynamic Loading) --}}
+              <div class="item-summary">
+                {{!-- Content dynamically loaded --}}
               </div>
             </li>
             {{/each}}
@@ -615,15 +665,25 @@
           </div>
           <ol class="items-list trait-list">
             {{#each traits as |item id|}}
-            <li class="item flexrow" data-item-id="{{item._id}}">
-              <div class="item-image">
-                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            <li class="item-collapsible" data-item-id="{{item._id}}">
+              
+              {{!-- Item Header (Always Visible, Clickable) --}}
+              <div class="item-header" data-action="expandItem">
+                <i class="item-caret fas fa-caret-right"></i>
+                <div class="item-image">
+                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                </div>
+                <h4 class="item-name">{{item.name}}</h4>
+                <div class="item-controls">
+                  <a class="item-control" data-action="itemView" title="View"><i class="fas fa-eye"></i></a>
+                  <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                  <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+                </div>
               </div>
-              <h4 class="item-name">{{item.name}}</h4>
-              <div class="item-controls">
-                <a class="item-control" data-action="itemView" title="View"><i class="fas fa-eye"></i></a>
-                <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-                <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+              
+              {{!-- Collapsible Content (Dynamic Loading) --}}
+              <div class="item-summary">
+                {{!-- Content dynamically loaded --}}
               </div>
             </li>
             {{/each}}
@@ -640,15 +700,25 @@
           </div>
           <ol class="items-list flaw-list">
             {{#each flaws as |item id|}}
-            <li class="item flexrow" data-item-id="{{item._id}}">
-              <div class="item-image">
-                <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            <li class="item-collapsible" data-item-id="{{item._id}}">
+              
+              {{!-- Item Header (Always Visible, Clickable) --}}
+              <div class="item-header" data-action="expandItem">
+                <i class="item-caret fas fa-caret-right"></i>
+                <div class="item-image">
+                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                </div>
+                <h4 class="item-name">{{item.name}}</h4>
+                <div class="item-controls">
+                  <a class="item-control" data-action="itemView" title="View"><i class="fas fa-eye"></i></a>
+                  <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                  <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+                </div>
               </div>
-              <h4 class="item-name">{{item.name}}</h4>
-              <div class="item-controls">
-                <a class="item-control" data-action="itemView" title="View"><i class="fas fa-eye"></i></a>
-                <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-                <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+              
+              {{!-- Collapsible Content (Dynamic Loading) --}}
+              <div class="item-summary">
+                {{!-- Content dynamically loaded --}}
               </div>
             </li>
             {{/each}}
@@ -701,33 +771,51 @@
         </button>
       </div>
       <ol class="items-list armor-list">
-        <li class="items-header flexrow">
+        <li class="items-header">
+          <div class="item-image"></div>
           <div class="item-name">Name</div>
-          <div class="item-detail">DR</div>
-          <div class="item-detail">Penalty</div>
-          <div class="item-controls"></div>
+          <div class="item-dr">DR</div>
+          <div class="item-penalty">Penalty</div>
+          <div class="item-controls">Actions</div>
         </li>
+        
         {{#each armor as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+        <li class="item-collapsible" data-item-id="{{item._id}}">
+          
+          {{!-- Item Header (Always Visible, Clickable) --}}
+          <div class="item-header" data-action="expandItem">
+            <i class="item-caret fas fa-caret-right"></i>
+            <div class="item-image">
+              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            </div>
+            
+            <h4 class="item-name">{{item.name}}</h4>
+            
+            <div class="item-dr">
+              {{#if item.system.dr.slashing}}
+                S:{{item.system.dr.slashing}} P:{{item.system.dr.piercing}} B:{{item.system.dr.bludgeoning}}
+              {{else}}
+                {{item.system.dr.value}}
+              {{/if}}
+            </div>
+            
+            <div class="item-penalty">{{item.system.stealthPenalty}}</div>
+            
+            <div class="item-controls">
+              <a class="item-control {{#if item.system.equipped}}equipped{{/if}}" data-action="itemEquip" 
+                title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
+                <i class="fas fa-shield-alt"></i>
+              </a>
+              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
           </div>
-          <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-detail">
-            {{#if item.system.dr.slashing}}
-              S:{{item.system.dr.slashing}} P:{{item.system.dr.piercing}} B:{{item.system.dr.bludgeoning}}
-            {{else}}
-              {{item.system.dr.value}}
-            {{/if}}
+          
+          {{!-- Collapsible Content (Dynamic Loading) --}}
+          <div class="item-summary">
+            {{!-- Content will be generated dynamically by JavaScript --}}
           </div>
-          <div class="item-detail">{{item.system.stealthPenalty}}</div>
-          <div class="item-controls">
-            <a class="item-control {{#if item.system.equipped}}equipped{{/if}}" data-action="itemEquip" title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
-              <i class="fas fa-shield-alt"></i>
-            </a>
-            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
-          </div>
+          
         </li>
         {{/each}}
       </ol>
@@ -740,25 +828,47 @@
         </button>
       </div>
       <ol class="items-list equipment-list">
-        <li class="items-header flexrow">
+        <li class="items-header">
+          <div class="item-image"></div>
           <div class="item-name">Name</div>
-          <div class="item-detail">Qty</div>
-          <div class="item-controls"></div>
+          <div class="item-quantity">Qty</div>
+          <div class="item-controls">Actions</div>
         </li>
+        
         {{#each equipment as |item id|}}
-        <li class="item flexrow" data-item-id="{{item._id}}">
-          <div class="item-image">
-            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+        <li class="item-collapsible" data-item-id="{{item._id}}">
+          
+          {{!-- Item Header (Always Visible, Clickable) --}}
+          <div class="item-header" data-action="expandItem">
+            <i class="item-caret fas fa-caret-right"></i>
+            <div class="item-image">
+              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            </div>
+            
+            <h4 class="item-name">{{item.name}}</h4>
+            
+            <div class="item-quantity">
+              <input type="number" 
+                     name="items.{{item._id}}.system.quantity" 
+                     value="{{item.system.quantity}}" 
+                     data-dtype="Number" 
+                     min="0"
+                     style="width: 60px !important; max-width: 60px !important; padding: 3px 6px !important; text-align: center !important; border: 1px solid #cbd5e0 !important; border-radius: 3px !important; background: white !important; font-weight: bold !important; color: #2d3748 !important; font-size: 13px !important; box-shadow: none !important; height: auto !important;"
+                     onclick="event.stopPropagation()"/>
+            </div>
+            
+            <div class="item-controls">
+              <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
           </div>
-          <h4 class="item-name">{{item.name}}</h4>
-          <div class="item-detail">
-            <input type="number" name="items.{{item._id}}.system.quantity" value="{{item.system.quantity}}" data-dtype="Number" min="0"/>
+          
+          {{!-- Collapsible Content (Dynamic Loading) --}}
+          <div class="item-summary">
+            {{!-- Content will be generated dynamically by JavaScript --}}
           </div>
-          <div class="item-controls">
-            <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
-            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
-            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
-          </div>
+          
         </li>
         {{/each}}
       </ol>
