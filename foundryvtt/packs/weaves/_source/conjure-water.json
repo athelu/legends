@@ -1,11 +1,11 @@
 {
-  "_id": "c3063b87e9354e2a",
+  "_id": "27c2407d0ca646b1",
   "name": "Conjure Water",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Water 2 (conjuring clean water) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create up to 10 gallons of clean water in an open container. Or create rain in 30ft cube that extinguishes open flames. <strong>Saving Throw:</strong> None (conjuration weave) <strong>Success Scaling:</strong> 0 = fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons, 4 = 40 gallons</p>"
+      "value": "<p><strong>Primary Energy:</strong> Water 2 (conjuring clean water) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create up to 10 gallons of clean water in an open container. Or create rain in 30ft cube that extinguishes open flames. <strong>Saving Throw:</strong> None (conjuration weave) <strong>Success Scaling:</strong> 0 = fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons, 4 = 40 gallons, 5 = 80 gallons</p>"
     },
     "weaveType": "complex",
     "actionCost": 1,
@@ -19,33 +19,22 @@
         "cost": 1
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Close, 30 ft.",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!c3063b87e9354e2a"
+  "_key": "!items!27c2407d0ca646b1"
 }

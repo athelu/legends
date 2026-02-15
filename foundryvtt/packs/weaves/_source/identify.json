@@ -1,11 +1,11 @@
 {
-  "_id": "e6c2251d883d4cbd",
+  "_id": "a4f7dbd802074de9",
   "name": "Identify",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 3 (revealing magical properties) <strong>Supporting Energy:</strong> None (touch, instantaneous) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Learn the properties of one magic item or active weave, including how to use it and any requirements. Also reveals if item is cursed (but not the curse's nature). <strong>Saving Throw:</strong> None (information gathering) <strong>Success Scaling:</strong> 0 = fails, 1 = basic function only, 2 = full properties, 3 = learn curse details, 4 = learn item's history</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 3 (revealing magical properties) <strong>Supporting Energy:</strong> None (touch, instantaneous) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Learn the properties of one magic item or active weave, including how to use it and any requirements. Also reveals if item is cursed (but not the curse's nature). <strong>Saving Throw:</strong> None (information gathering) <strong>Success Scaling:</strong> 0 = fails, 1 = basic function only, 2 = full properties, 3 = learn curse details, 4 = learn item's history, 5 = learn all magical interactions</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -19,33 +19,22 @@
         "cost": 0
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Touch",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!e6c2251d883d4cbd"
+  "_key": "!items!a4f7dbd802074de9"
 }

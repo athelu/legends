@@ -1,14 +1,14 @@
 {
-  "_id": "86af2d7d85984cca",
+  "_id": "f1d9ba1934a348f6",
   "name": "Levitate",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 3 (lifting target into air) <strong>Supporting Energy:</strong> Space 4 (close range + 10 minutes) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target at close range rises vertically up to 20 feet (your choice). Can change altitude by 20 feet each round. Target can't move horizontally except by pushing off objects. Unwilling targets get [[/save type=fortitude]] to resist. <strong>Saving Throw:</strong> Fortitude (if unwilling, to resist being lifted) <strong>Success Scaling:</strong> 0 = no effect (if unwilling), 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = can move horizontally (8 hours)</p>"
+      "value": "<p><strong>Primary Energy:</strong> Air 3 (lifting target into air) <strong>Supporting Energy:</strong> Space 4 (close range + 10 minutes) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target at close range rises vertically up to 20 feet (your choice). Can change altitude by 20 feet each round. Target can't move horizontally except by pushing off objects. Unwilling targets get [[/save type=fortitude]] to resist. <strong>Saving Throw:</strong> Fortitude (if unwilling, to resist being lifted) <strong>Success Scaling:</strong> 0 = no effect (if unwilling), 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = can move horizontally (8 hours), 5 = can lift/carry objects (24 hours)</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "air",
@@ -19,33 +19,22 @@
         "cost": 4
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Close, 30 ft.",
+    "duration": "10 minutes",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "fortitude",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!86af2d7d85984cca"
+  "_key": "!items!f1d9ba1934a348f6"
 }

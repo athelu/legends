@@ -1,5 +1,5 @@
 {
-  "_id": "09c6010f4a384b60",
+  "_id": "89d83ee26a674a6d",
   "name": "Mend Flesh, Mass",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Positive 4 (healing energy) <strong>Supporting Energy:</strong> Space 3 (close range + 6 targets) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Up to 6 creatures you choose within range heal 16 HP each. <strong>Saving Throw:</strong> None (healing weave, no resistance) <strong>Success Scaling:</strong> 0 = no healing, 1 = 8 HP each, 2 = 16 HP each, 3 = 24 HP each, 4 = 32 HP each</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "positive",
@@ -19,33 +19,22 @@
         "cost": 3
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Close, 30 ft.",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!09c6010f4a384b60"
+  "_key": "!items!89d83ee26a674a6d"
 }

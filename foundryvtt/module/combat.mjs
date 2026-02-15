@@ -789,6 +789,41 @@ export function initializeCombatSystem() {
       });
     });
 
+    // Handle weave save button clicks
+    html.querySelectorAll('.save-button').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const weaveData = {
+          messageId: btn.dataset.weaveMessageId,
+          casterId: btn.dataset.casterId,
+          weaveId: btn.dataset.weaveId,
+          casterSuccesses: parseInt(btn.dataset.casterSuccesses),
+          saveType: btn.dataset.saveType
+        };
+        
+        if (game.legends?.handleSaveClick) {
+          await game.legends.handleSaveClick(weaveData.messageId, weaveData);
+        }
+      });
+    });
+
+    // Handle apply effect button clicks (for weaves without saves)
+    html.querySelectorAll('.apply-effect-button').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const weaveData = {
+          messageId: btn.dataset.weaveMessageId,
+          casterId: btn.dataset.casterId,
+          weaveId: btn.dataset.weaveId,
+          casterSuccesses: parseInt(btn.dataset.casterSuccesses)
+        };
+        
+        if (game.legends?.handleApplyEffectClick) {
+          await game.legends.handleApplyEffectClick(weaveData.messageId, weaveData);
+        }
+      });
+    });
+
     // Handle apply damage button clicks
     html.querySelectorAll('.apply-damage-btn').forEach(btn => {
       btn.addEventListener('click', async (event) => {
@@ -810,6 +845,43 @@ export function initializeCombatSystem() {
         const damageType = button.dataset.damageType;
 
         await applyDamage(targetId, damage, damageType);
+      });
+    });
+    
+    // Handle apply weave damage button clicks
+    html.querySelectorAll('.apply-weave-damage-btn').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const button = event.currentTarget;
+        const damage = parseInt(button.dataset.damage);
+        const damageType = button.dataset.damageType;
+
+        if (game.legends?.applyWeaveDamage) {
+          await game.legends.applyWeaveDamage(damage, damageType);
+        }
+      });
+    });
+    
+    // Handle dragstart for draggable effects
+    html.querySelectorAll('.draggable-effect').forEach(effectEl => {
+      effectEl.addEventListener('dragstart', (event) => {
+        const effectId = effectEl.dataset.effectId;
+        const casterId = effectEl.dataset.casterId;
+        const weaveId = effectEl.dataset.weaveId;
+        const casterSuccesses = parseInt(effectEl.dataset.casterSuccesses);
+        const params = JSON.parse(effectEl.dataset.params || '{}');
+        
+        // Set drag data with effect information
+        const dragData = {
+          type: 'WeaveEffect',
+          effectId: effectId,
+          casterId: casterId,
+          weaveId: weaveId,
+          casterSuccesses: casterSuccesses,
+          params: params
+        };
+        
+        event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
       });
     });
   });

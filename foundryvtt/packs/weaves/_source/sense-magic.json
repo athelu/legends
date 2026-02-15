@@ -1,11 +1,11 @@
 {
-  "_id": "87871cacdf794b70",
+  "_id": "8f18228de94f4792",
   "name": "Sense Magic",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 2 (sensing magical auras) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Self (30 feet sensing range) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Sense presence of magic within 30ft. Can use action to see a faint aura around any visible creature or object that bears magic, and learn its energy type(s). <strong>Saving Throw:</strong> None (detection weave) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 60ft range (1 hour)</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 2 (sensing magical auras) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Self (30 feet sensing range) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Sense presence of magic within 30ft. Can use action to see a faint aura around any visible creature or object that bears magic, and learn its energy type(s). <strong>Saving Throw:</strong> None (detection weave) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 60ft range (1 hour), 5 = 120ft range (8 hours)</p>\n<p>---</p>"
     },
     "weaveType": "complex",
     "actionCost": 1,
@@ -19,33 +19,22 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Self (30 feet sensing range)",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!87871cacdf794b70"
+  "_key": "!items!8f18228de94f4792"
 }

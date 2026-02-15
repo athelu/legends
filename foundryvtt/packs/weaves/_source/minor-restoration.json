@@ -1,14 +1,14 @@
 {
-  "_id": "42a92223adf64932",
+  "_id": "4a7dd9e9d57d48d7",
   "name": "Minor Restoration",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 4 (cleansing lesser afflictions) <strong>Supporting Energy:</strong> None (touch range, instantaneous) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned. <strong>Saving Throw:</strong> None (beneficial restoration) <strong>Success Scaling:</strong> 0 = fails, 1 = temporary relief (10 minutes), 2 = full effect, 3 = removes 2 conditions, 4 = affects creature at close range (30ft) instead of touch</p>"
+      "value": "<p><strong>Primary Energy:</strong> Positive 4 (cleansing lesser afflictions) <strong>Supporting Energy:</strong> None (touch range, instantaneous) <strong>Range:</strong> self, touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned. <strong>Saving Throw:</strong> None (beneficial restoration) <strong>Success Scaling:</strong> 0 = fails, 1 = temporary relief (10 minutes), 2 = full effect, 3 = removes 2 conditions, 4 = affects creature at close range (30ft) instead of touch</p>"
     },
     "weaveType": "simple",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "positive",
@@ -19,33 +19,22 @@
         "cost": 0
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "self, touch",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!42a92223adf64932"
+  "_key": "!items!4a7dd9e9d57d48d7"
 }

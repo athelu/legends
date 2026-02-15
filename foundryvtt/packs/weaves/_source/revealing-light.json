@@ -1,14 +1,14 @@
 {
-  "_id": "8d2d30e18cff478d",
+  "_id": "8973bd664e004594",
   "name": "Revealing Light",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 2 (revealing light outlining creatures) <strong>Supporting Energy:</strong> Space 4 (medium range + 20ft cube + 1 minute) <strong>Range:</strong> Medium, 60 ft. (20-foot cube) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make [[/save type=reflex]]. Compare your weaving successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die. <strong>Saving Throw:</strong> Reflex (to avoid being outlined) <strong>Success Scaling:</strong> 0 = no effect, 1 = dim light only, 2 = full effect, 3 = 30-foot cube, 4 = 10 minutes duration</p>"
+      "value": "<p><strong>Primary Energy:</strong> Positive 2 (revealing light outlining creatures) <strong>Supporting Energy:</strong> Space 4 (medium range + 20ft cube + 1 minute) <strong>Range:</strong> Medium, 60 ft. (20-foot cube) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make [[/save type=reflex]]. Compare your weaving successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die. <strong>Applies Effects:</strong> revealed <strong>Saving Throw:</strong> Reflex (to avoid being outlined) <strong>Success Scaling:</strong> 0 = no effect, 1 = dim light only, 2 = full effect, 3 = 30-foot cube, 4 = 10 minutes duration</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "positive",
@@ -19,33 +19,27 @@
         "cost": 4
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (20-foot cube)",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "reflex",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "revealed",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!8d2d30e18cff478d"
+  "_key": "!items!8973bd664e004594"
 }

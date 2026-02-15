@@ -1,5 +1,5 @@
 {
-  "_id": "1668c6afbc464a8a",
+  "_id": "ecd7127d190c4c1f",
   "name": "Project Image",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Space 8 (illusory duplicate + medium range) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (can move up to 120 feet away) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create an illusory duplicate of yourself that you can see and hear through (can move up to 120 feet away). Can cast weaves from duplicate's location. Duplicate can move and speak. Physical interaction reveals it as illusory effect. <strong>Saving Throw:</strong> Perception vs Space Mastery (to recognize as illusory effect) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = long range (240 feet, 8 hours)</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,22 @@
         "cost": 3
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (can move up to 120 feet away)",
+    "duration": "10 minutes",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!1668c6afbc464a8a"
+  "_key": "!items!ecd7127d190c4c1f"
 }

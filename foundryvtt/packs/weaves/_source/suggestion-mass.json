@@ -1,5 +1,5 @@
 {
-  "_id": "dc2a758c6dfa4d92",
+  "_id": "94d34ebc589949e0",
   "name": "Suggestion, Mass",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Negative 6 (planting compulsion in multiple minds) <strong>Supporting Energy:</strong> Space 3 (medium range + up to 12 targets) / Time 4 (duration 24 hours) <strong>Range:</strong> Medium, 60 ft. (up to 12 creatures) <strong>Duration:</strong> 24 hours (or until completed) <strong>Total Cost:</strong> 13 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Up to 12 creatures you can see at medium range make Will saves. Compare your weaving successes to each target's save successes. Those you beat follow your suggested course of activity (1-2 sentences) that sounds reasonable. Targets pursue activity for 24 hours or until completing it. Obviously harmful suggestions end weave for that target. Creatures immune to charm are immune. <strong>Saving Throw:</strong> Will (to resist mental compulsion) <strong>Success Scaling:</strong> 0 = no effect (per target), 1 = 1 hour, 2 = 24 hours, 3 = 10 days, 4 = 30 days (extremely powerful compulsion)</p>\n<p>---</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "negative",
@@ -19,33 +19,22 @@
         "cost": 3
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (up to 12 creatures)",
+    "duration": "24 hours (or until completed)",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "will",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!dc2a758c6dfa4d92"
+  "_key": "!items!94d34ebc589949e0"
 }

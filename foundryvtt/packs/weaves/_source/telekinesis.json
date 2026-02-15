@@ -1,5 +1,5 @@
 {
-  "_id": "12e1c1993cf44a02",
+  "_id": "4ab38d30410f43f9",
   "name": "Telekinesis",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Space 6 (moving objects with force + medium range) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions), then action each round to maintain control <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Move object up to 500 lbs up to 30 feet per round at medium range. Can use to restrain creature (opposed check: your Space Mastery vs their Athletics). Restrained creature can retry each round (1 success escapes). <strong>Saving Throw:</strong> Athletics vs Space Mastery (if restraining creature) <strong>Success Scaling:</strong> 0 = fails, 1 = 100 lbs (1 minute), 2 = 500 lbs (full effect), 3 = 1000 lbs (1 hour), 4 = 2000 lbs and can fine manipulate (8 hours)</p>\n<p>---</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,22 @@
         "cost": 3
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft.",
+    "duration": "10 minutes",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!12e1c1993cf44a02"
+  "_key": "!items!4ab38d30410f43f9"
 }

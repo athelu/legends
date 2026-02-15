@@ -1,14 +1,14 @@
 {
-  "_id": "85eb84dfd35340e4",
+  "_id": "d3d29b9c39f14016",
   "name": "Barkward",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Earth 4 (hardening skin like tree bark) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> touch or self <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target's DR increases by 2 (doesn't stack with armor). Touch range by default. <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour</p>"
+      "value": "<p><strong>Primary Energy:</strong> Earth 4 (hardening skin like tree bark) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> touch, self <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target's DR increases by 2 (doesn't stack with armor). Touch range by default. <strong>Applies Effects:</strong> dr-bonus (value=2) <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour, 5 = 8 hours</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "earth",
@@ -19,33 +19,29 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "touch, self",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "dr-bonus",
+        "params": {
+          "value": "2"
+        }
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!85eb84dfd35340e4"
+  "_key": "!items!d3d29b9c39f14016"
 }

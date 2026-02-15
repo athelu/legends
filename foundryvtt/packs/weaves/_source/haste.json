@@ -1,14 +1,14 @@
 {
-  "_id": "bc77637f74364f65",
+  "_id": "5ce9b52a8e8144f9",
   "name": "Haste",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Time 5 (accelerating personal time, major buff) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Touch <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Time Potential + Time Mastery <strong>Effect:</strong> Target at touch gains +1 action per turn (can be used for Move, Attack, or Activate only), subtract 1 from both dice on Reflex saves, and subtract 1 from both dice on Agility checks. When weave ends, target gains 1 level of Exhaustion. <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = no exhaustion (1 hour)</p>"
+      "value": "<p><strong>Primary Energy:</strong> Time 5 (accelerating personal time, major buff) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Touch <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Time Potential + Time Mastery <strong>Effect:</strong> Target at touch gains +1 action per turn (can be used for Move, Attack, or Activate only), subtract 1 from both dice on Reflex saves, and subtract 1 from both dice on Agility checks. When weave ends, target gains 1 level of Exhaustion. <strong>Applies Effects:</strong> haste <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness. <strong>Saving Throw:</strong> None (healing weave, no resistance) <strong>Success Scaling:</strong> 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8), 5 = 20 HP (8+3d8)</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "time",
@@ -19,33 +19,27 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Touch",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "haste",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!bc77637f74364f65"
+  "_key": "!items!5ce9b52a8e8144f9"
 }

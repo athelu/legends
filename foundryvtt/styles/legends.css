@@ -3013,6 +3013,263 @@
 }
 
 /* ========================================
+   WEAVE CARDS (Chat)
+   ======================================== */
+
+.legends-weave-card {
+  padding: 10px;
+  border: 1px solid #6a5acd;
+  border-radius: 5px;
+  background: #f0e6ff;
+}
+
+.legends-weave-card h3 {
+  margin: 0 0 10px 0;
+  color: #4b0082;
+}
+
+.legends-weave-card .weave-successes,
+.legends-weave-card .weave-cost,
+.legends-weave-card .weave-target {
+  margin: 5px 0;
+  font-size: 13px;
+}
+
+.legends-weave-card .save-section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #9370db;
+}
+
+.legends-weave-card .save-button {
+  width: 100%;
+  padding: 8px;
+  background: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.legends-weave-card .save-button:hover {
+  background: #483d8b;
+}
+
+.legends-weave-card .apply-section {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #9370db;
+}
+
+.legends-weave-card .apply-effect-button {
+  width: 100%;
+  padding: 8px;
+  background: #8b008b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.legends-weave-card .apply-effect-button:hover {
+  background: #660066;
+}
+
+.legends-weave-card .no-target {
+  margin-top: 10px;
+  padding: 8px;
+  background: #e6e6fa;
+  border-radius: 4px;
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+/* Draggable Effects */
+.legends-weave-card .weave-effects-list {
+  margin-top: 10px;
+  padding: 10px;
+  background: rgba(106, 90, 205, 0.1);
+  border: 1px dashed #6a5acd;
+  border-radius: 4px;
+}
+
+.legends-weave-card .weave-effects-list h4 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+  color: #4b0082;
+  font-weight: 600;
+}
+
+.legends-weave-card .weave-effects-list .effects-help {
+  margin: 0 0 10px 0;
+  font-size: 12px;
+  font-style: italic;
+  color: #666;
+}
+
+.legends-weave-card .draggable-effect {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  background: white;
+  border: 2px solid #6a5acd;
+  border-radius: 4px;
+  cursor: grab;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.legends-weave-card .draggable-effect:last-child {
+  margin-bottom: 0;
+}
+
+.legends-weave-card .draggable-effect:hover {
+  background: #f8f5ff;
+  border-color: #8b008b;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.legends-weave-card .draggable-effect:active {
+  cursor: grabbing;
+  transform: translateY(0);
+}
+
+.legends-weave-card .draggable-effect i {
+  color: #6a5acd;
+  font-size: 16px;
+}
+
+.legends-weave-card .draggable-effect span {
+  flex: 1;
+  font-weight: 500;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.legends-weave-card .draggable-effect .drag-hint {
+  font-size: 11px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Inline Effects (from text enrichment) */
+.draggable-effect.inline-effect {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  margin: 0 4px;
+  background: white;
+  border: 1px solid #6a5acd;
+  border-radius: 4px;
+  cursor: grab;
+  transition: all 0.2s ease;
+  user-select: none;
+  vertical-align: middle;
+  font-size: 0.9em;
+}
+
+.draggable-effect.inline-effect:hover {
+  background: #f8f5ff;
+  border-color: #8b008b;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+.draggable-effect.inline-effect:active {
+  cursor: grabbing;
+  transform: translateY(0);
+}
+
+.draggable-effect.inline-effect i {
+  color: #6a5acd;
+  font-size: 14px;
+}
+
+.draggable-effect.inline-effect span {
+  font-weight: 500;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.draggable-effect.inline-effect .drag-hint {
+  font-size: 10px;
+  color: #999;
+  font-style: italic;
+  white-space: nowrap;
+}
+
+/* Weave Result Cards */
+.legends-weave-result {
+  padding: 10px;
+  border: 2px solid #6a5acd;
+  border-radius: 5px;
+  background: #f0e6ff;
+}
+
+.legends-weave-result h3 {
+  margin: 0 0 10px 0;
+  color: #4b0082;
+}
+
+.legends-weave-result .comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 10px;
+  background: white;
+  border-radius: 4px;
+}
+
+.legends-weave-result .net-successes {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4b0082;
+  padding: 8px;
+  background: #e6e6fa;
+  border-radius: 4px;
+}
+
+.legends-weave-result .damage-result {
+  margin: 10px 0;
+  padding: 10px;
+  background: #e6e6fa;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.legends-weave-result .damage-buttons {
+  margin-top: 10px;
+}
+
+.legends-weave-result .apply-weave-damage-btn {
+  width: 100%;
+  padding: 10px;
+  background: #4b0082;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.legends-weave-result .apply-weave-damage-btn:hover {
+  background: #330066;
+}
+
+/* ========================================
    UTILITY CLASSES
    ======================================== */
 
@@ -3453,6 +3710,13 @@ span.legends-damage-tag i {
 .energy-header h4 {
   margin: 0;
   flex: 1;
+}
+
+.magic-stats-inline {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .casting-stat-inline {

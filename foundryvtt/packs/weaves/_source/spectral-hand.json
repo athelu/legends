@@ -1,5 +1,5 @@
 {
-  "_id": "3c9c682200d24b40",
+  "_id": "53188ae7a7ec415f",
   "name": "Spectral Hand",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -19,33 +19,22 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Close, 30 ft.",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!3c9c682200d24b40"
+  "_key": "!items!53188ae7a7ec415f"
 }

@@ -1,14 +1,14 @@
 {
-  "_id": "8a8842153a3a41bb",
+  "_id": "c3c467ddb3c24a36",
   "name": "Mist Form",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 4 (transforming into mist) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at touch and equipment become a misty cloud. Fly speed 10 feet, DR 8 against nonmagical damage, can pass through small openings. Cannot attack, cast weaves, or manipulate objects. <strong>Saving Throw:</strong> None (beneficial transformation, willing targets only) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 20 feet fly speed (8 hours)</p>"
+      "value": "<p><strong>Primary Energy:</strong> Air 4 (transforming into mist) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> self, touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at touch and equipment become a misty cloud. Fly speed 10 feet, DR 8 against nonmagical damage, can pass through small openings. Cannot attack, cast weaves, or manipulate objects. <strong>Saving Throw:</strong> None (beneficial transformation, willing targets only) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 20 feet fly speed (8 hours)</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "air",
@@ -19,33 +19,22 @@
         "cost": 3
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "self, touch",
+    "duration": "10 minutes",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!8a8842153a3a41bb"
+  "_key": "!items!c3c467ddb3c24a36"
 }

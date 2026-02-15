@@ -1,14 +1,14 @@
 {
-  "_id": "f54bfaa7e51a4b57",
+  "_id": "e2d2fde9d82343a9",
   "name": "Banishment",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 6 (forcibly ejecting to another plane) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target at medium range (60ft) makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends. <strong>Saving Throw:</strong> Will (to resist planar banishment) <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 6 (forcibly ejecting to another plane) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target at medium range (60ft) makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends. <strong>Saving Throw:</strong> Will (to resist planar banishment) <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour, 5 = 8 hours</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,22 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft.",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "will",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!f54bfaa7e51a4b57"
+  "_key": "!items!e2d2fde9d82343a9"
 }

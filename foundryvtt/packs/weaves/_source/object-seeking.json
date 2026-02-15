@@ -1,5 +1,5 @@
 {
-  "_id": "c7bb1dacba9f490f",
+  "_id": "d14958a6207c4f35",
   "name": "Object Seeking",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -8,7 +8,7 @@
       "value": "<p><strong>Primary Energy:</strong> Space 4 (sensing specific object's location) <strong>Supporting Energy:</strong> Time 2 (duration 10 minutes) <strong>Range:</strong> Self (1,000 feet sensing range) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Sense the direction to a specific object you describe (must have seen it before) within 1,000 feet. If object is moving, you learn its direction of movement. Weave can't locate object if any thickness of lead blocks the path. <strong>Saving Throw:</strong> None (scrying) <strong>Success Scaling:</strong> 0 = fails, 1 = 100 feet range, 2 = full effect (1,000 feet), 3 = 1 mile range, 4 = can locate general type of object (e.g., \"stairs\" or \"freshwater\") instead of specific item</p>\n<h2>P</h2>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,22 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Self (1,000 feet sensing range)",
+    "duration": "10 minutes",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!c7bb1dacba9f490f"
+  "_key": "!items!d14958a6207c4f35"
 }

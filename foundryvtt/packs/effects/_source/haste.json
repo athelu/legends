@@ -1,0 +1,73 @@
+{
+  "_id": "haste000000000001",
+  "name": "Haste",
+  "type": "effect",
+  "img": "icons/svg/lightning.svg",
+  "system": {
+    "label": "Haste",
+    "category": "buff",
+    "effectType": "attribute-mod",
+    "description": {
+      "value": "<p>You gain +1 action per turn (can be used for Move, Attack, or Activate only). You subtract 1 from both dice on Reflex saves and Agility checks. When this effect ends, you gain 1 level of Exhaustion.</p>"
+    },
+    "tokenIcon": "icons/svg/lightning.svg",
+    "badge": {
+      "type": "none",
+      "value": 0,
+      "max": 0
+    },
+    "activeEffects": [
+      {
+        "key": "system.actions.max",
+        "mode": "add",
+        "value": "1",
+        "notes": "+1 action per turn"
+      },
+      {
+        "key": "diceMod.reflex",
+        "mode": "add",
+        "value": "-1",
+        "notes": "Subtract 1 from Reflex saves"
+      },
+      {
+        "key": "diceMod.agility",
+        "mode": "add",
+        "value": "-1",
+        "notes": "Subtract 1 from Agility checks"
+      }
+    ],
+    "stacking": "replace",
+    "overlayPriority": 14,
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": {
+      "trigger": "effectEnd",
+      "save": null,
+      "removeOnSuccess": false,
+      "assistance": null,
+      "onExpire": "applyCondition:exhausted-1"
+    },
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0
+    },
+    "grantedBy": "Haste",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 4 ? 60 : ${netSuccesses} >= 3 ? 10 : ${netSuccesses} >= 2 ? 1 : 0"
+    }
+  },
+  "flags": {},
+  "_key": "!items!haste000000000001"
+}

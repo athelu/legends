@@ -1,0 +1,61 @@
+{
+  "_id": "invisibility000001",
+  "name": "Invisibility",
+  "type": "effect",
+  "img": "icons/svg/invisible.svg",
+  "system": {
+    "label": "Invisibility",
+    "category": "buff",
+    "effectType": "dice-mod",
+    "description": {
+      "value": "<p>You are invisible and gain the Hidden condition. You have Fortune on Stealth checks, and observers have Misfortune on Perception checks to detect you. Breaks if you use a Combat action or cast a weave.</p>"
+    },
+    "tokenIcon": "icons/svg/invisible.svg",
+    "badge": {
+      "type": "none",
+      "value": 0,
+      "max": 0
+    },
+    "activeEffects": [
+      {
+        "key": "diceMod.stealth",
+        "mode": "fortune",
+        "value": "1",
+        "notes": "Fortune on Stealth checks"
+      },
+      {
+        "key": "visibility.invisible",
+        "mode": "override",
+        "value": "true",
+        "notes": "Character is invisible"
+      }
+    ],
+    "stacking": "replace",
+    "overlayPriority": 18,
+    "duration": {
+      "type": "minutes",
+      "value": 10,
+      "base": 10,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "combat-action",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0
+    },
+    "grantedBy": "Invisibility",
+    "conditions": ["hidden"],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 4 ? 480 : ${netSuccesses} >= 3 ? 60 : ${netSuccesses} >= 2 ? 10 : 1"
+    }
+  },
+  "flags": {},
+  "_key": "!items!invisibility000001"
+}

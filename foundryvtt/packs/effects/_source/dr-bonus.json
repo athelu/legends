@@ -1,0 +1,55 @@
+{
+  "_id": "drbonus0000000001",
+  "name": "DR Bonus",
+  "type": "effect",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "label": "DR Bonus",
+    "category": "buff",
+    "effectType": "attribute-mod",
+    "description": {
+      "value": "<p>Increases Damage Reduction. Does not stack with worn armor.</p>"
+    },
+    "tokenIcon": "icons/svg/shield.svg",
+    "badge": {
+      "type": "value",
+      "value": 2,
+      "max": 0
+    },
+    "activeEffects": [
+  {
+        "key": "system.dr.bonus",
+        "mode": "add",
+        "value": "${value}",
+        "notes": "DR bonus from magical effect"
+      }
+    ],
+    "stacking": "replace",
+    "overlayPriority": 15,
+    "duration": {
+      "type": "rounds",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0
+    },
+    "grantedBy": "",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "${value}",
+      "durationFormula": "${netSuccesses} >= 4 ? 3600 : ${netSuccesses} >= 3 ? 600 : ${netSuccesses} >= 2 ? 60 : 1"
+    }
+  },
+  "flags": {},
+  "_key": "!items!drbonus0000000001"
+}

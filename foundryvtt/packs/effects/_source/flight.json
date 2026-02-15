@@ -1,0 +1,55 @@
+{
+  "_id": "flight00000000001",
+  "name": "Flight",
+  "type": "effect",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "label": "Flight",
+    "category": "buff",
+    "effectType": "attribute-mod",
+    "description": {
+      "value": "<p>You gain a flying speed equal to your normal movement speed. If this effect ends while you are airborne, you fall.</p>"
+    },
+    "tokenIcon": "icons/svg/wing.svg",
+    "badge": {
+      "type": "none",
+      "value": 0,
+      "max": 0
+    },
+    "activeEffects": [
+      {
+        "key": "system.movement.fly",
+        "mode": "override",
+        "value": "30",
+        "notes": "Grants flying speed"
+      }
+    ],
+    "stacking": "replace",
+    "overlayPriority": 12,
+    "duration": {
+      "type": "minutes",
+      "value": 10,
+      "base": 10,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "sustained",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0
+    },
+    "grantedBy": "Fly",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 4 ? 480 : ${netSuccesses} >= 3 ? 60 : ${netSuccesses} >= 2 ? 10 : 1"
+    }
+  },
+  "flags": {},
+  "_key": "!items!flight00000000001"
+}

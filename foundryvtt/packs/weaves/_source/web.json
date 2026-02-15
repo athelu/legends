@@ -1,14 +1,14 @@
 {
-  "_id": "4ae5d139322f4d3a",
+  "_id": "4c3b3583c2784230",
   "name": "Web",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Earth 4 (sticky webbing control effect) <strong>Supporting Energy:</strong> Space 6 (medium range + 20ft radius + 1 minute) <strong>Range:</strong> Medium, 60 ft. (20-foot radius) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Fill area with sticky webs anchored to surfaces. Creatures in area when created or entering area make [[/save type=reflex]]. Compare their successes to your weaving successes. If you have more, target becomes Restrained. Restrained creatures can use action + Athletics or [[/check skill=acrobatics]] (2 successes needed) to escape. Webs are flammable; fire damage to 5ft area destroys webs in that section. <strong>Saving Throw:</strong> Reflex (to avoid being Restrained) <strong>Success Scaling:</strong> 0 = no effect, 1 = Partial web (10ft radius, 1 round), 2 = Full effect (20ft radius, 1 minute), 3 = Enhanced (30ft radius, 10 minutes), 4 = Maximum (40ft radius, 1 hour) <strong>Restrained Condition:</strong> See conditions document. Target cannot move, has Misfortune on attacks, attackers have Fortune against them, Misfortune on Reflex saves.</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Earth 4 (sticky webbing control effect) <strong>Supporting Energy:</strong> Space 6 (medium range + 20ft radius + 1 minute) <strong>Range:</strong> Medium, 60 ft. (20-foot radius) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Fill area with sticky webs anchored to surfaces. Creatures in area when created or entering area make [[/save type=reflex]]. Compare their successes to your weaving successes. If you have more, target becomes Restrained. Restrained creatures can use action + Athletics or [[/check skill=acrobatics]] (2 successes needed) to escape. Webs are flammable; fire damage to 5ft area destroys webs in that section. <strong>Applies Effects:</strong> restrained <strong>Saving Throw:</strong> Reflex (to avoid being Restrained) <strong>Success Scaling:</strong> 0 = no effect, 1 = Partial web (10ft radius, 1 round), 2 = Full effect (20ft radius, 1 minute), 3 = Enhanced (30ft radius, 10 minutes), 4 = Maximum (40ft radius, 1 hour) <strong>Restrained Condition:</strong> See conditions document. Target cannot move, has Misfortune on attacks, attackers have Fortune against them, Misfortune on Reflex saves.</p>\n<p>---</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "earth",
@@ -19,33 +19,27 @@
         "cost": 6
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft. (20-foot radius)",
+    "duration": "1 minute",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "reflex",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "restrained",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!4ae5d139322f4d3a"
+  "_key": "!items!4c3b3583c2784230"
 }

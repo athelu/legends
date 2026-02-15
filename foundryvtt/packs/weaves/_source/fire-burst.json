@@ -1,11 +1,11 @@
 {
-  "_id": "f1aea839b72c40a7",
+  "_id": "299cd8b3c3fb4149",
   "name": "Fire Burst",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 2 (burst of flame from palm, damage) <strong>Supporting Energy:</strong> None (touch to 5ft range) <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery (2d8 only) <strong>Effect:</strong> Channel flames through your palm to burn a target within 5 feet. Target takes [[/damage 4 type=fire]] damage. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=fire]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +[[/damage 4]] damage (8 total), 4 = +[[/damage 8]] damage (12 total) <strong>Tactical Note:</strong> Does NOT provoke opportunity attacks. Ideal for melee situations where Fire Bolt would provoke.</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 2 (burst of flame from palm, damage) <strong>Supporting Energy:</strong> None (touch to 5ft range) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery (2d8 only) <strong>Effect:</strong> Channel flames through your palm to burn a target within 5 feet. Target takes [[/damage 4 type=fire]] damage. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=fire]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +[[/damage 4]] damage (8 total), 4 = +[[/damage 8]] damage (12 total) <strong>Tactical Note:</strong> Does NOT provoke opportunity attacks. Ideal for melee situations where Fire Bolt would provoke.</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -19,33 +19,43 @@
         "cost": 0
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Touch",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
-    "effectType": "",
+    "savingThrow": "none",
+    "effect": "",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
-      "drInteraction": "",
-      "scaling": ""
+      "base": 4,
+      "type": "fire",
+      "drInteraction": "half",
+      "scaling": {
+        "0": {
+          "damage": 0,
+          "description": "miss"
+        },
+        "1": {
+          "damage": 2,
+          "description": "half damage"
+        },
+        "2": {
+          "damage": 4,
+          "description": "full damage"
+        },
+        "3": {
+          "damage": 8,
+          "description": "enhanced"
+        },
+        "4": {
+          "damage": 12,
+          "description": "enhanced"
+        }
+      }
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!f1aea839b72c40a7"
+  "_key": "!items!299cd8b3c3fb4149"
 }

@@ -1,11 +1,11 @@
 {
-  "_id": "4cf38cd0d3f14100",
+  "_id": "0c03e5ed778a4111",
   "name": "Cutting Words",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 2 (psychic assault through cruel words) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Simple Weave (1 action) - Does NOT provoke opportunity attacks <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Speak cutting words at one creature you can see within medium range. Target takes [[/damage 4 type=psychic]] damage and makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn. <strong>Saving Throw:</strong> Will (to resist psychic damage and demoralization) <strong>Damage Type:</strong> Psychic (mental) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=psychic]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (2), 2 = full damage (4) + penalty on attack, 3 = +[[/damage 4]] damage (8 total) + penalty on attack, 4 = +[[/damage 8]] damage (12 total) + penalty applies to all rolls until end of their next turn</p>\n<h2>D</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Negative 2 (psychic assault through cruel words) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Simple Weave (1 action) - Does NOT provoke opportunity attacks <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Speak cutting words at one creature you can see within medium range. Target takes [[/damage 4 type=psychic]] damage and makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn. <strong>Saving Throw:</strong> Will (to resist psychic damage and demoralization) <strong>Damage Type:</strong> Psychic (mental) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=psychic]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (2), 2 = full damage (4) + penalty on attack, 3 = +[[/damage 4]] damage (8 total) + penalty on attack, 4 = +[[/damage 8]] damage (12 total) + penalty applies to all rolls until end of their next turn, 5 = +[[/damage 8]] damage (12 total) + penalty lasts 1 minute</p>\n<h2>D</h2>"
     },
     "weaveType": "complex",
     "actionCost": 1,
@@ -19,33 +19,47 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft.",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
-    "effectType": "",
+    "savingThrow": "will",
+    "effect": "",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
-      "drInteraction": "",
-      "scaling": ""
+      "base": 4,
+      "type": "psychic",
+      "drInteraction": "half",
+      "scaling": {
+        "0": {
+          "damage": 0,
+          "description": "no damage"
+        },
+        "1": {
+          "damage": 2,
+          "description": "half damage"
+        },
+        "2": {
+          "damage": 4,
+          "description": "full damage"
+        },
+        "3": {
+          "damage": 8,
+          "description": "enhanced"
+        },
+        "4": {
+          "damage": 12,
+          "description": "enhanced"
+        },
+        "5": {
+          "damage": 12,
+          "description": "enhanced"
+        }
+      }
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!4cf38cd0d3f14100"
+  "_key": "!items!0c03e5ed778a4111"
 }

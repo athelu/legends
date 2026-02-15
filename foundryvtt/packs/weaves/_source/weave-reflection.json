@@ -1,14 +1,14 @@
 {
-  "_id": "2c0d1fd5dfd74ea5",
+  "_id": "deb612d0c4644e5d",
   "name": "Weave Reflection",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 7 (redirecting magical energy) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute or until expended) <strong>Range:</strong> Self <strong>Duration:</strong> 1 minute (or until 3 reflections) <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Next 3 weaves targeting only you are reflected back at the weaver. Weaves targeting area aren't reflected. After 3 reflections or 1 minute, effect ends. <strong>Saving Throw:</strong> None (protective buff, self-only) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 reflection, 2 = 3 reflections, 3 = 5 reflections (10 minutes), 4 = 8 reflections (1 hour)</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 7 (redirecting magical energy) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute or until expended) <strong>Range:</strong> Self, touch <strong>Duration:</strong> 1 minute (or until 3 reflections) <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Next 3 weaves targeting only you are reflected back at the weaver. Weaves targeting area aren't reflected. After 3 reflections or 1 minute, effect ends. <strong>Saving Throw:</strong> None (protective buff, self-only) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 reflection, 2 = 3 reflections, 3 = 5 reflections (10 minutes), 4 = 8 reflections (1 hour)</p>\n<p>---</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,22 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Self, touch",
+    "duration": "1 minute (or until 3 reflections)",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!2c0d1fd5dfd74ea5"
+  "_key": "!items!deb612d0c4644e5d"
 }

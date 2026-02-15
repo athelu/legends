@@ -1,11 +1,11 @@
 {
-  "_id": "2ddf1d5cf8344c71",
+  "_id": "f885c13375c249ff",
   "name": "Light",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 2 (creating illumination, minor effect) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 5 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Object you touch sheds bright light in 20ft radius and dim light for another 20 feet. Can be cast on a hostile creature ([[/save type=reflex]] to avoid). <strong>Saving Throw:</strong> Reflex (if targeting hostile creature to avoid) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or daylight brightness</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 2 (creating illumination, minor effect) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> self, touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 5 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Object you touch sheds bright light in 20ft radius and dim light for another 20 feet. Can be cast on a hostile creature ([[/save type=reflex]] to avoid). <strong>Saving Throw:</strong> Reflex (if targeting hostile creature to avoid) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or daylight brightness</p>"
     },
     "weaveType": "complex",
     "actionCost": 1,
@@ -19,33 +19,22 @@
         "cost": 3
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "self, touch",
+    "duration": "10 minutes",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "reflex",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!2ddf1d5cf8344c71"
+  "_key": "!items!f885c13375c249ff"
 }

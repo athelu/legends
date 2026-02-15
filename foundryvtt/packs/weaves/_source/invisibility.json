@@ -1,14 +1,14 @@
 {
-  "_id": "f147b0af22d34049",
+  "_id": "f21298080b844094",
   "name": "Invisibility",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 4 (bending light around target) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes or until broken) <strong>Range:</strong> Touch <strong>Duration:</strong> 10 minutes (or until broken) <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on Stealth checks to remain undetected, and observers have Misfortune on Perception checks to detect target. Breaks if target uses a [Combat] action or casts a weave. <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = affects 2 creatures (8 hours)</p>\n<h2>L</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Space 4 (bending light around target) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes or until broken) <strong>Range:</strong> Touch <strong>Duration:</strong> 10 minutes (or until broken) <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on Stealth checks to remain undetected, and observers have Misfortune on Perception checks to detect target. Breaks if target uses a [Combat] action or casts a weave. <strong>Applies Effects:</strong> hidden <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = affects 2 creatures (8 hours), 5 = affects 4 creatures (24 hours)</p>\n<h2>L</h2>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",
@@ -19,33 +19,27 @@
         "cost": 3
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Touch",
+    "duration": "10 minutes (or until broken)",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
+    "savingThrow": "none",
+    "effect": "",
     "effectType": "",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": ""
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [
+      {
+        "effectId": "hidden",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!f147b0af22d34049"
+  "_key": "!items!f21298080b844094"
 }

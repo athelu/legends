@@ -1,14 +1,14 @@
 {
-  "_id": "2e65b44d5ced4789",
+  "_id": "8e5c174ea317481c",
   "name": "Disintegrate",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 8 (reducing matter to dust, extreme damage) <strong>Supporting Energy:</strong> Space 2 (medium range 60ft) <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery + Space Potential + Space Mastery (4d8) <strong>Effect:</strong> Thin green ray. Target takes [[/damage 40 type=negative]] damage. Target makes [[/save type=fortitude]] to reduce. If reduced to 0 HP by this weave, target is disintegrated (turned to dust). Only resurrection magic can restore them. <strong>Saving Throw:</strong> Fortitude (to reduce damage) <strong>Damage Type:</strong> Negative (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 40 type=negative]] damage vs DR 4 becomes 40 - 2 = [[/damage 38]] damage) <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 0 = no damage , 1 = 1/[[/damage 2]] damage (20), 2 = full damage (40), 3 = +[[/damage 8]] damage (48 total), 4 = +[[/damage 16]] damage (56 total, instant disintegration if reduced to 0)</p>"
+      "value": "<p><strong>Primary Energy:</strong> Negative 8 (reducing matter to dust, extreme damage) <strong>Supporting Energy:</strong> Space 2 (medium range 60ft) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery + Space Potential + Space Mastery (4d8) <strong>Effect:</strong> Thin green ray. Target takes [[/damage 40 type=negative]] damage. Target makes [[/save type=fortitude]] to reduce. If reduced to 0 HP by this weave, target is disintegrated (turned to dust). Only resurrection magic can restore them. <strong>Saving Throw:</strong> Fortitude (to reduce damage) <strong>Damage Type:</strong> Negative (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 40 type=negative]] damage vs DR 4 becomes 40 - 2 = [[/damage 38]] damage) <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 0 = no damage , 1 = 1/[[/damage 2]] damage (20), 2 = full damage (40), 3 = +[[/damage 8]] damage (48 total), 4 = +[[/damage 16]] damage (56 total, instant disintegration if reduced to 0)</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "negative",
@@ -19,33 +19,22 @@
         "cost": 2
       }
     },
-    "school": "",
-    "range": {
-      "value": "",
-      "distance": 0
-    },
+    "range": "Medium, 60 ft.",
+    "duration": "Instantaneous",
     "target": "",
-    "areaSize": "",
-    "duration": "",
-    "durationDetail": "",
-    "saveType": "none",
-    "saveEffect": "",
-    "effectType": "",
+    "savingThrow": "fortitude",
+    "effect": "",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
-      "drInteraction": "",
-      "scaling": ""
+      "base": 40,
+      "type": "negative",
+      "drInteraction": "half",
+      "scaling": {}
     },
-    "healing": {
-      "base": 0,
-      "scaling": ""
-    },
-    "conditions": "",
-    "successEffects": "",
-    "specialProperties": "",
-    "heightening": ""
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
   },
   "effects": [],
-  "_key": "!items!2e65b44d5ced4789"
+  "_key": "!items!8e5c174ea317481c"
 }
