@@ -1,0 +1,21 @@
+{
+  "_id": "7fb3fa3f21b74414",
+  "name": "Mythic Characteristic (-10)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>Extraordinary ability like legendary heroes.</p>\n<ul>\n<li>One attribute: +2 (cannot exceed 8)</li>\n<li><strong>May only be taken once</strong></li>\n<li><strong>Requires GM approval</strong></li>\n</ul>\n<p>---</p>"
+    },
+    "pointCost": -10,
+    "traitType": "special",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": true,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!7fb3fa3f21b74414"
+}

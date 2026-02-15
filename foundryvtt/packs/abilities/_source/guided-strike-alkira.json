@@ -1,0 +1,20 @@
+{
+  "_id": "af04f3a8ebd548e0",
+  "name": "Guided Strike (Alkira)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action or [Reaction] Trigger (if Reaction): An ally within 60 feet makes an attack roll Range: 60 feet (must see target) Effect: Choose an ally within range who is about to make or has just rolled an attack. They gain Fortune on that attack roll. You speak a prayer to Alkira, invoking the god of war to guide your ally's strike true. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!af04f3a8ebd548e0"
+}

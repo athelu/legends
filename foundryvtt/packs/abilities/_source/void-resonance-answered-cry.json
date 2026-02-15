@@ -1,0 +1,20 @@
+{
+  "_id": "829d1ec76b4f4b77",
+  "name": "Void Resonance (Answered Cry)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Whenever you weave using Air or Space as primary energy, you can target one additional creature within range (make separate weaving rolls for each). The void spreads your intent beyond normal limits. This is a passive ability that enhances your casting.</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!829d1ec76b4f4b77"
+}

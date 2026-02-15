@@ -1,0 +1,20 @@
+{
+  "_id": "a5a6aff5daca4cea",
+  "name": "Shard's Terror (Stolen Shard)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action Range: 30 feet Frequency: Once per short rest Effect: Target within 30 feet makes [[/save type=will]] (your Charisma + Fire Mastery vs their Wisdom + Luck). If you win by 1+ successes, target is Frightened for 1 minute (they can repeat save each turn). The stolen power within you manifests as pure terror.</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!a5a6aff5daca4cea"
+}

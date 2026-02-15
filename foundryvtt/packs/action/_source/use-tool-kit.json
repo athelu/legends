@@ -1,0 +1,22 @@
+{
+  "_id": "46a3e0eaf9384612",
+  "name": "Use Tool/Kit",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> Variable (typically 1-10)</li>\n<li><strong>Effect:</strong> Use thieves' tools, healer's kit, artisan's tools, etc.</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Most tool use requires proficiency or appropriate skills</li>\n<li>Time requirements vary by task complexity</li>\n<li>May require skill checks (Devices for locks, Medicine for healer's kit, etc.)</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "1",
+    "trigger": "",
+    "effect": "Use thieves' tools, healer's kit, artisan's tools, etc.\n- **Notes:**\n  - Most tool use requires proficiency or appropriate skills\n  - Time requirements vary by task complexity\n  - May require skill checks (Devices for locks, Medicine for healer's kit, etc.)",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!46a3e0eaf9384612"
+}

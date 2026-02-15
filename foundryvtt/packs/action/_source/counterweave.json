@@ -1,0 +1,22 @@
+{
+  "_id": "4bca9dde6c0d429c",
+  "name": "Counterweave",
+  "type": "action",
+  "img": "icons/skills/melee/shield-block-gray-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Requirements:</strong> Ability to weave, Space energy available</li>\n<li><strong>Trigger:</strong> You see a creature weaving within medium range (60ft)</li>\n<li><strong>Effect:</strong> Attempt to counter the weave (see CounterWeave in Weaves)</li>\n<li><strong>Cost:</strong> Energy equal to the weave being countered</li>\n<li><strong>Notes:</strong> Requires successful [[/check skill=arcane]] to identify the weave first</li>\n</ul>"
+    },
+    "actionType": "reaction",
+    "actionCost": "Energy equal to the weave being countered",
+    "trigger": "You see a creature weaving within medium range (60ft)",
+    "effect": "Attempt to counter the weave (see CounterWeave in Weaves)\n- **Cost:** Energy equal to the weave being countered\n- **Notes:** Requires successful Arcane check to identify the weave first",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!4bca9dde6c0d429c"
+}

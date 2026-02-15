@@ -1,0 +1,22 @@
+{
+  "_id": "02a84ea249394ae5",
+  "name": "Release Grapple",
+  "type": "action",
+  "img": "icons/skills/movement/arrow-right-blue.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> Free</li>\n<li><strong>Effect:</strong> Stop grappling a creature you're currently grappling</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>The target is no longer Grappled by you</li>\n<li>You are no longer grappling them</li>\n<li>Doesn't require a check</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "free",
+    "actionCost": "Free",
+    "trigger": "",
+    "effect": "Stop grappling a creature you're currently grappling\n- **Notes:**\n  - The target is no longer Grappled by you\n  - You are no longer grappling them\n  - Doesn't require a check",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!02a84ea249394ae5"
+}

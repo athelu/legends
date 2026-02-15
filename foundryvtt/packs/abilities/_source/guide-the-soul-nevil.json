@@ -1,0 +1,20 @@
+{
+  "_id": "f5e82c26080543b1",
+  "name": "Guide the Soul (Nevil)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action Range: Touch Effect: Touch a dying creature (at 0 HP or negative HP). They automatically stabilize at 0 HP. Additionally, for 1 minute, they subtract 1 from both dice on all stabilization attempts and cannot die from reaching negative HP equal to their Constitution (death threshold suspended). You ease their passage, giving them a chance to cling to life. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!f5e82c26080543b1"
+}

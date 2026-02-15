@@ -1,0 +1,20 @@
+{
+  "_id": "5231cebe95194905",
+  "name": "Ritual Casting",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>You can cast any weave as a 10-minute ritual for half Energy cost (minimum 1). Cannot be used in combat. Your intellectual understanding of magic allows you to carefully construct weaves outside of combat pressure.</p>\n<h3>Divine Gift Abilities - Channel Divinity</h3>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!5231cebe95194905"
+}

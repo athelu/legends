@@ -1,0 +1,20 @@
+{
+  "_id": "50d84bdd94ce4ba7",
+  "name": "Kismet's Touch (Enschede)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: [Reaction] Trigger: Any roll is made (yours or another creature's) that you can see Range: 60 feet Effect: After seeing the result, you can declare it an automatic success (both dice count as successes) or automatic failure (both dice count as failures), regardless of the actual roll. Fate itself bends to your will for one crucial moment. This is Enschede's most powerful gift. Usage: Uses 1 Channel Divinity (can only be used once per long rest in addition to normal Channel Divinity limit)</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!50d84bdd94ce4ba7"
+}

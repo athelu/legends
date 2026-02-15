@@ -1,0 +1,20 @@
+{
+  "_id": "81d95bc87b8a4069",
+  "name": "Hammer of Justice (Athore)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: [Reaction] Trigger: You see a creature attack an innocent, helpless, or defenseless target Range: 60 feet Effect: Deal Positive damage equal to your Tier × 8 to the attacker. No save - Athore's hammer falls instantly on those who prey upon the weak. Damage Type: Positive (energy), Half DR Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!81d95bc87b8a4069"
+}

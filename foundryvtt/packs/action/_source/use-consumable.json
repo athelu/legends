@@ -1,0 +1,22 @@
+{
+  "_id": "ed8617c8cbdd44d2",
+  "name": "Use Consumable",
+  "type": "action",
+  "img": "icons/skills/trades/construction-gloves-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Use a consumable item (oil, poison, alchemical item, etc.)</li>\n<li><strong>Examples:</strong>\n<ul>\n<li>Applying oil to a weapon</li>\n<li>Throwing alchemist's fire</li>\n<li>Using a bandage to stabilize a dying creature</li>\n<li>Setting a bear trap</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Some consumables may have different action costs (see item description)</li>\n<li>Applying poison to a weapon requires 1 [Activate] action</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "activate",
+    "actionCost": "1",
+    "trigger": "",
+    "effect": "Use a consumable item (oil, poison, alchemical item, etc.)\n- **Examples:**\n  - Applying oil to a weapon\n  - Throwing alchemist's fire\n  - Using a bandage to stabilize a dying creature\n  - Setting a bear trap\n- **Notes:**\n  - Some consumables may have different action costs (see item description)\n  - Applying poison to a weapon requires 1 [Activate] action",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!ed8617c8cbdd44d2"
+}

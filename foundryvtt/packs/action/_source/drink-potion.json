@@ -1,0 +1,22 @@
+{
+  "_id": "7ea8b44308b6475c",
+  "name": "Drink Potion",
+  "type": "action",
+  "img": "icons/skills/trades/construction-gloves-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Consume a potion and gain its effects</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Administering a potion to another creature requires 1 [Activate] action</li>\n<li>The unconscious/willing creature must be adjacent</li>\n<li>Drinking while threatened provokes Opportunity Attacks (unless you use Disengage first)</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "activate",
+    "actionCost": "1",
+    "trigger": "",
+    "effect": "Consume a potion and gain its effects\n- **Notes:**\n  - Administering a potion to another creature requires 1 [Activate] action\n  - The unconscious/willing creature must be adjacent\n  - Drinking while threatened provokes Opportunity Attacks (unless you use Disengage first)",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!7ea8b44308b6475c"
+}

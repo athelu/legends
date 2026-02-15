@@ -1,0 +1,22 @@
+{
+  "_id": "96c372e23c924514",
+  "name": "Extinguish Flames",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Put out flames on yourself or an adjacent creature</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Ends the Burning condition (if small fire)</li>\n<li>Larger magical fires may require multiple actions or skill checks</li>\n<li>Uses your action but could save significant HP</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "1",
+    "trigger": "",
+    "effect": "Put out flames on yourself or an adjacent creature\n- **Notes:**\n  - Ends the Burning condition (if small fire)\n  - Larger magical fires may require multiple actions or skill checks\n  - Uses your action but could save significant HP",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!96c372e23c924514"
+}

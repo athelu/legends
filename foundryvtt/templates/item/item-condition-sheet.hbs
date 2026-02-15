@@ -1,0 +1,77 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Condition Name"/></h1>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
+  <section class="sheet-body">
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
+      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+
+      <!-- Category -->
+      <div class="form-group">
+        <label>Category</label>
+        <select name="system.category">
+          <option value="general" {{#if (eq system.category "general")}}selected{{/if}}>General</option>
+          <option value="physical" {{#if (eq system.category "physical")}}selected{{/if}}>Physical</option>
+          <option value="mental" {{#if (eq system.category "mental")}}selected{{/if}}>Mental</option>
+          <option value="fear" {{#if (eq system.category "fear")}}selected{{/if}}>Fear</option>
+          <option value="sensory" {{#if (eq system.category "sensory")}}selected{{/if}}>Sensory</option>
+          <option value="visibility" {{#if (eq system.category "visibility")}}selected{{/if}}>Visibility</option>
+          <option value="movement" {{#if (eq system.category "movement")}}selected{{/if}}>Movement</option>
+          <option value="incapacitation" {{#if (eq system.category "incapacitation")}}selected{{/if}}>Incapacitation</option>
+          <option value="combat" {{#if (eq system.category "combat")}}selected{{/if}}>Combat</option>
+          <option value="magic" {{#if (eq system.category "magic")}}selected{{/if}}>Magic</option>
+          <option value="damage-over-time" {{#if (eq system.category "damage-over-time")}}selected{{/if}}>Damage Over Time</option>
+          <option value="defense" {{#if (eq system.category "defense")}}selected{{/if}}>Defense</option>
+        </select>
+      </div>
+
+      <!-- Severity -->
+      <div class="form-group">
+        <label>Severity</label>
+        <select name="system.severity">
+          <option value="minor" {{#if (eq system.severity "minor")}}selected{{/if}}>Minor</option>
+          <option value="moderate" {{#if (eq system.severity "moderate")}}selected{{/if}}>Moderate</option>
+          <option value="severe" {{#if (eq system.severity "severe")}}selected{{/if}}>Severe</option>
+        </select>
+      </div>
+
+      <!-- Stacking -->
+      <div class="form-group">
+        <label>Stacking Behavior</label>
+        <select name="system.stacking">
+          <option value="replace" {{#if (eq system.stacking "replace")}}selected{{/if}}>Replace</option>
+          <option value="stack" {{#if (eq system.stacking "stack")}}selected{{/if}}>Stack</option>
+          <option value="duration-merge" {{#if (eq system.stacking "duration-merge")}}selected{{/if}}>Duration Merge</option>
+          <option value="highest" {{#if (eq system.stacking "highest")}}selected{{/if}}>Highest</option>
+        </select>
+      </div>
+
+      <!-- Token Icon -->
+      <div class="form-group">
+        <label>Token Icon</label>
+        <input type="text" name="system.tokenIcon" value="{{system.tokenIcon}}" placeholder="icons/svg/hazard.svg"/>
+      </div>
+
+      <!-- Overlay Priority -->
+      <div class="form-group">
+        <label>Overlay Priority</label>
+        <input type="number" name="system.overlayPriority" value="{{system.overlayPriority}}" data-dtype="Number" min="0" />
+      </div>
+
+    </div>
+  </section>
+</form>

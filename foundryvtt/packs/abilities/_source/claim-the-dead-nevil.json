@@ -1,0 +1,20 @@
+{
+  "_id": "a4f6acb2d24743c2",
+  "name": "Claim the Dead (Nevil)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Interact] action Range: Touch Effect: Touch a corpse. It is preserved from decay indefinitely and cannot become undead through any means. This is a funerary rite, not necromancy - you are consecrating the body and claiming the soul for Nevil's realm. The corpse is protected until you release it or it is desecrated. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!a4f6acb2d24743c2"
+}

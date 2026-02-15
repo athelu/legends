@@ -1,0 +1,41 @@
+<div>
+    <section class="tab {{#if (eq activeTab "core")}} active{{/if}}" data-group="primary" data-tab="core">
+        <div data-application-part="form"></div>
+    </section>
+
+    {{!-- PF2e Settings --}}
+    <section class="tab standard-form{{#if (eq activeTab "pf2e")}} active{{/if}}"
+        data-tab="pf2e" data-group="primary">
+        <div class="form-group">
+            <label for="{{user.uuid}}-showEffectPanel">{{localize "PF2E.SETTINGS.User.EffectPanel.Name"}}</label>
+            <div class="form-fields">
+                <input id="{{user.uuid}}-showEffectPanel" type="checkbox" name="flags.pf2e.settings.showEffectPanel" {{checked user.flags.pf2e.settings.showEffectPanel}} />
+            </div>
+            <p class="hint">{{localize "PF2E.SETTINGS.User.EffectPanel.Hint"}}</p>
+        </div>
+
+        <div class="form-group">
+            <label for="{{user.uuid}}-showCheckDialogs">{{localize "PF2E.SettingsQuickChecksLabel"}}</label>
+            <div class="form-fields">
+                <input id="{{user.uuid}}-showCheckDialogs" type="checkbox" name="flags.pf2e.settings.showCheckDialogs" {{checked user.flags.pf2e.settings.showCheckDialogs}} />
+            </div>
+            <p class="hint">{{localize "PF2E.SettingsQuickChecksNotes"}}</p>
+        </div>
+
+        <div class="form-group">
+            <label for="{{user.uuid}}-showDamageDialogs">{{localize "PF2E.SettingsQuickDamageLabel"}}</label>
+            <div class="form-fields">
+                <input id="{{user.uuid}}-showDamageDialogs" type="checkbox" name="flags.pf2e.settings.showDamageDialogs" {{checked user.flags.pf2e.settings.showDamageDialogs}} />
+            </div>
+            <p class="hint">{{localize "PF2E.SettingsQuickDamageNotes"}}</p>
+        </div>
+
+        <div class="form-group monochrome-darkvision">
+            <label for="{{user.uuid}}-monochromeDarkvision">{{localize "PF2E.SETTINGS.User.MonochromeDarkvision.Name"}}</label>
+            <div class="form-fields">
+                <input id="{{user.uuid}}-monochromeDarkvision" type="checkbox" name="flags.pf2e.settings.monochromeDarkvision" {{checked user.flags.pf2e.settings.monochromeDarkvision}} />
+            </div>
+            <p class="hint">{{localize "PF2E.SETTINGS.User.MonochromeDarkvision.Hint"}}</p>
+        </div>
+    </section>
+</div>

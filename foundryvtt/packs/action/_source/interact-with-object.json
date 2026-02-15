@@ -1,0 +1,22 @@
+{
+  "_id": "34fa60ac044c4c32",
+  "name": "Interact with Object",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> 1 (or Free with Move action, GM discretion)</li>\n<li><strong>Effect:</strong> Manipulate an object or environmental feature</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Simple, straightforward interactions</li>\n<li>More complex manipulations may require full [Interact] action</li>\n<li>GM determines if action can be done as [Free] during movement</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "Free",
+    "trigger": "",
+    "effect": "Manipulate an object or environmental feature\n- **Notes:**\n  - Simple, straightforward interactions\n  - More complex manipulations may require full [Interact] action\n  - GM determines if action can be done as [Free] during movement",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!34fa60ac044c4c32"
+}

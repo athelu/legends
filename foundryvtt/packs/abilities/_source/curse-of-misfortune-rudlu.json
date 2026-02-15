@@ -1,0 +1,20 @@
+{
+  "_id": "3d6533a7c75c48f4",
+  "name": "Curse of Misfortune (Rudlu)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action Range: 60 feet (must see target) Effect: Curse one enemy. Make opposed check: your Wisdom + Space Mastery vs their Wisdom + Luck ([[/save type=will]]). If you win (more successes), they have Misfortune on their next roll. Rudlu's capricious nature turns against them. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!3d6533a7c75c48f4"
+}

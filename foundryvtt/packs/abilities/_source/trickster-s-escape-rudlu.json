@@ -1,0 +1,20 @@
+{
+  "_id": "de1f81f0a7784f58",
+  "name": "Trickster's Escape (Rudlu)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: [Reaction] Trigger: An attack would hit you (after opposed roll but before damage) Range: Self (can teleport up to 30 feet) Effect: Teleport up to 30 feet to an unoccupied space you can see. The attack automatically misses as you vanish in a shimmer of violet light and reappear elsewhere. You cannot teleport through solid barriers. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!de1f81f0a7784f58"
+}
