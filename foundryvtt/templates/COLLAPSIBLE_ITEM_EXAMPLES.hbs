@@ -1,0 +1,264 @@
+{{!-- LEGENDS COLLAPSIBLE ITEM TEMPLATES --}}
+{{!-- Use these patterns across all your item lists for consistent collapsible functionality --}}
+
+{{!-- ============================================
+     WEAPONS LIST EXAMPLE
+     ============================================ --}}
+<div class="weapons-section">
+  <h3>Weapons</h3>
+  <ol class="items-list weapon-list">
+    {{#each weapons as |item id|}}
+      <li class="item-collapsible flexrow" data-item-id="{{item._id}}">
+        
+        {{!-- Item Header (Always Visible) --}}
+        <div class="item-header" data-action="expandItem">
+          <i class="item-caret fas fa-caret-right"></i>
+          <div class="item-image">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          </div>
+          <span class="item-name-clickable">{{item.name}}</span>
+          
+          {{!-- Quick stats (visible when collapsed) --}}
+          <div class="item-quick-stats">
+            <span class="item-attack">+{{item.system.attack.bonus}}</span>
+            <span class="item-damage">{{item.system.damage.base}} {{item.system.damage.type}}</span>
+          </div>
+          
+          {{!-- Item controls --}}
+          <div class="item-controls">
+            <a class="item-control {{#if item.system.equipped}}equipped{{/if}}" 
+               data-action="itemEquip" title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
+              <i class="{{#if item.system.equipped}}fas{{else}}far{{/if}} fa-circle"></i>
+            </a>
+            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+          </div>
+        </div>
+        
+        {{!-- Collapsible Content (Item Summary) --}}
+        <div class="item-summary">
+          {{!-- Content will be loaded dynamically by JavaScript --}}
+        </div>
+        
+      </li>
+    {{/each}}
+  </ol>
+</div>
+
+{{!-- ============================================
+     ARMOR LIST EXAMPLE  
+     ============================================ --}}
+<div class="armor-section">
+  <h3>Armor</h3>
+  <ol class="items-list armor-list">
+    {{#each armor as |item id|}}
+      <li class="item-collapsible flexrow" data-item-id="{{item._id}}">
+        
+        <div class="item-header" data-action="expandItem">
+          <i class="item-caret fas fa-caret-right"></i>
+          <div class="item-image">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          </div>
+          <span class="item-name-clickable">{{item.name}}</span>
+          
+          {{!-- Armor-specific quick stats --}}
+          <div class="item-quick-stats">
+            <span class="item-dr">DR: {{item.system.dr.slashing}}/{{item.system.dr.piercing}}/{{item.system.dr.bludgeoning}}</span>
+          </div>
+          
+          <div class="item-controls">
+            <a class="item-control {{#if item.system.equipped}}equipped{{/if}}" 
+               data-action="itemEquip" title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
+              <i class="{{#if item.system.equipped}}fas{{else}}far{{/if}} fa-shield-alt"></i>
+            </a>
+            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+          </div>
+        </div>
+        
+        <div class="item-summary">
+          {{!-- Content will be loaded dynamically --}}
+        </div>
+        
+      </li>
+    {{/each}}
+  </ol>
+</div>
+
+{{!-- ============================================
+     FEATS LIST EXAMPLE
+     ============================================ --}}
+<div class="feats-section">
+  <h3>Feats</h3>
+  <ol class="items-list feat-list">
+    {{#each feats as |item id|}}
+      <li class="item-collapsible" data-item-id="{{item._id}}">
+        
+        <div class="item-header" data-action="expandItem">
+          <i class="item-caret fas fa-caret-right"></i>
+          <div class="item-image">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          </div>
+          <div class="feat-info">
+            <span class="item-name-clickable">{{item.name}}</span>
+            {{#if item.system.usageType}}
+              <span class="feat-usage">[{{item.system.usageType}}]</span>
+            {{/if}}
+          </div>
+          
+          <div class="item-controls">
+            <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+          </div>
+        </div>
+        
+        <div class="item-summary">
+          {{!-- Content will be loaded dynamically --}}
+        </div>
+        
+      </li>
+    {{/each}}
+  </ol>
+</div>
+
+{{!-- ============================================
+     WEAVES LIST EXAMPLE
+     ============================================ --}}
+<div class="weaves-section">
+  <h3>Weaves</h3>
+  <ol class="items-list weave-list">
+    {{#each weaves as |item id|}}
+      <li class="item-collapsible" data-item-id="{{item._id}}">
+        
+        <div class="item-header" data-action="expandItem">
+          <i class="item-caret fas fa-caret-right"></i>
+          <div class="item-image">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          </div>
+          <div class="weave-info">
+            <span class="item-name-clickable">{{item.name}}</span>
+            <div class="weave-meta">
+              {{#if item.system.weaveType}}
+                <span class="weave-type">{{item.system.weaveType}}</span>
+              {{/if}}
+              {{#if item.system.actionCost}}
+                <span class="weave-cost">[{{item.system.actionCost}} actions]</span>
+              {{/if}}
+            </div>
+          </div>
+          
+          <div class="item-controls">
+            <a class="item-control" data-action="itemChat" title="Cast Weave"><i class="fas fa-magic"></i></a>
+            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+          </div>
+        </div>
+        
+        <div class="item-summary">
+          {{!-- Content will be loaded dynamically --}}
+        </div>
+        
+      </li>
+    {{/each}}
+  </ol>
+</div>
+
+{{!-- ============================================
+     ACTIONS LIST EXAMPLE (Simplified for Actions tab)
+     ============================================ --}}
+<div class="action-section">
+  <h4>Combat Actions</h4>
+  <ol class="items-list action-list">
+    {{#each combatActions as |item id|}}
+      <li class="item-collapsible" data-item-id="{{item._id}}">
+        
+        <div class="item-header" data-action="expandItem">
+          <i class="item-caret fas fa-caret-right"></i>
+          <div class="item-image">
+            <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+          </div>
+          <span class="item-name-clickable">{{item.name}}</span>
+          
+          {{#if item.system.actionCost}}
+            <span class="action-cost">[{{item.system.actionCost}}]</span>
+          {{/if}}
+          
+          <div class="item-controls">
+            <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
+            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+          </div>
+        </div>
+        
+        <div class="item-summary">
+          {{!-- Content will be loaded dynamically --}}
+        </div>
+        
+      </li>
+    {{/each}}
+  </ol>
+</div>
+
+{{!-- ============================================
+     TRAITS/FLAWS LIST EXAMPLE
+     ============================================ --}}
+<div class="traits-section">
+  <h3>Traits</h3>
+  <ol class="items-list trait-list">
+    {{#each traits as |item id|}}
+      <li class="item-collapsible" data-item-id="{{item._id}}">
+        
+        <div class="item-header" data-action="expandItem">
+          <i class="item-caret fas fa-caret-right"></i>
+          <div class="item-image">
+            <img src="{{item.img}}" title="{{item.name}}" width="20" height="20"/>
+          </div>
+          <div class="trait-info">
+            <span class="item-name-clickable">{{item.name}}</span>
+            {{#if item.system.category}}
+              <span class="trait-category">({{item.system.category}})</span>
+            {{/if}}
+          </div>
+          
+          <div class="item-controls">
+            <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+            <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+          </div>
+        </div>
+        
+        <div class="item-summary">
+          {{!-- Content will be loaded dynamically --}}
+        </div>
+        
+      </li>
+    {{/each}}
+  </ol>
+</div>
+
+{{!-- ============================================
+     KEY IMPLEMENTATION NOTES:
+     
+     1. REQUIRED STRUCTURE:
+        - .item-collapsible container with data-item-id
+        - .item-header with data-action="expandItem"
+        - .item-caret with fas fa-caret-right
+        - .item-name-clickable for the clickable name
+        - .item-summary for collapsible content
+        
+     2. FLEXIBLE LAYOUT:
+        - You can customize .item-header content for each item type
+        - Quick stats, metadata, and controls can be arranged as needed
+        - The JavaScript will handle all the expand/collapse logic
+        
+     3. DYNAMIC CONTENT:
+        - .item-summary starts empty
+        - Content is generated by JavaScript when first expanded
+        - Different item types get different summary layouts automatically
+        
+     4. STYLING:
+        - All styling is handled by the CSS in legends.css
+        - Consistent look across all item types
+        - Smooth animations and hover effects
+        
+     ============================================ --}}

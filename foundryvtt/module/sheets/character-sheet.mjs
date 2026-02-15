@@ -467,8 +467,13 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Handle weapon attack button clicks
    */
   static async #onWeaponAttack(event, target) {
-    const li = target.closest('.weapon-item');
-    const itemId = li.dataset.itemId;
+    event.stopPropagation(); // Prevent triggering expandItem
+    const li = target.closest('.item-collapsible');
+    const itemId = li?.dataset.itemId;
+    if (!itemId) {
+      console.error('Item container not found');
+      return;
+    }
     const modeIndex = parseInt(target.dataset.modeIndex);
 
     const weapon = this.actor.items.get(itemId);
@@ -539,7 +544,8 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Handle editing an item
    */
   static #onItemEdit(event, target) {
-    const li = target.closest(".item");
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
     const item = this.actor.items.get(li.dataset.itemId);
     item.sheet.render(true);
   }
@@ -548,7 +554,8 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Handle deleting an item
    */
   static async #onItemDelete(event, target) {
-    const li = target.closest(".item");
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
     const item = this.actor.items.get(li.dataset.itemId);
     if (item) return item.delete();
   }
@@ -557,7 +564,8 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Handle equipping/unequipping an item
    */
   static async #onItemEquip(event, target) {
-    const li = target.closest(".item");
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
     const item = this.actor.items.get(li.dataset.itemId);
     if (item) {
       return item.update({ 'system.equipped': !item.system.equipped });
@@ -621,7 +629,8 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Handle posting item to chat
    */
   static async #onItemChat(event, target) {
-    const li = target.closest(".item");
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
     const item = this.actor.items.get(li.dataset.itemId);
 
     if (item) {
@@ -634,7 +643,8 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Handle viewing item details
    */
   static #onItemView(event, target) {
-    const li = target.closest(".item");
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
     const item = this.actor.items.get(li.dataset.itemId);
     if (item) {
       item.sheet.render(true, { editable: false });
@@ -703,26 +713,353 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     }
   }
   /**
-   * Handle expanding/collapsible item details
+   * Handle expanding/collapsing item details
+   * Universal system for all item types (weapons, armor, feats, etc.)
    */
   static async #onExpandItem(event, target) {
     event.preventDefault();
-    const li = target.closest(".item");
-    const details = li.querySelector('.item-details');
-    const caret = li.querySelector('.expand-caret');
     
-    if (details && caret) {
-      if (details.style.display === 'none' || !details.style.display) {
-        details.style.display = 'block';
+    // Find the collapsible item container
+    const itemContainer = target.closest(".item-collapsible");
+    if (!itemContainer) {
+      console.warn("No .item-collapsible container found for expand action");
+      return;
+    }
+    
+    const summary = itemContainer.querySelector('.item-summary');
+    const caret = itemContainer.querySelector('.item-caret');
+    
+    if (!summary) {
+      console.warn("No .item-summary element found in collapsible item");
+      return;
+    }
+    
+    const isExpanded = itemContainer.classList.contains('expanded');
+    
+    if (!isExpanded) {
+      // EXPANDING: Load content if needed, then expand
+      await D8CharacterSheet._loadItemSummaryContent.call(this, itemContainer, summary);
+      
+      // Add expanded class to trigger CSS animations
+      itemContainer.classList.add('expanded');
+      
+      // Update caret
+      if (caret) {
         caret.classList.remove('fa-caret-right');
         caret.classList.add('fa-caret-down');
-        li.classList.add('expanded');
-      } else {
-        details.style.display = 'none';
+      }
+    } else {
+      // COLLAPSING: Remove expanded class
+      itemContainer.classList.remove('expanded');
+      
+      // Update caret
+      if (caret) {
         caret.classList.remove('fa-caret-down');
         caret.classList.add('fa-caret-right');
-        li.classList.remove('expanded');
       }
     }
+  }
+
+  /**
+   * Load content into item summary (similar to PF2E's lazy loading approach)
+   */
+  static async _loadItemSummaryContent(itemContainer, summary) {
+    // Check if content is already loaded
+    const existingContent = summary.querySelector('.item-summary-content');
+    if (existingContent && existingContent.children.length > 0) {
+      return; // Content already loaded
+    }
+    
+    // Get item data
+    const itemId = itemContainer.dataset.itemId;
+    if (!itemId) {
+      console.warn("No item ID found on collapsible item");
+      return;
+    }
+    
+    const item = this.actor.items.get(itemId);
+    if (!item) {
+      console.warn(`Item with ID ${itemId} not found`);
+      return;
+    }
+    
+    // Show loading state
+    summary.classList.add('loading');
+    
+    try {
+      // Create or update summary content
+      let contentDiv = existingContent || document.createElement('div');
+      contentDiv.className = 'item-summary-content';
+      
+      // Generate content based on item type
+      const content = await D8CharacterSheet._generateItemSummaryHTML(item);
+      contentDiv.innerHTML = content;
+      
+      if (!existingContent) {
+        summary.appendChild(contentDiv);
+      }
+      
+    } catch (error) {
+      console.error("Error loading item summary content:", error);
+      summary.innerHTML = '<div class=\"item-summary-content\"><p>Error loading item details</p></div>';
+    } finally {
+      summary.classList.remove('loading');
+    }
+  }
+
+  /**
+   * Generate HTML content for item summary based on item type
+   */
+  static async _generateItemSummaryHTML(item) {
+    const system = item.system;
+    let html = '';
+    
+    // Item description
+    if (system.description?.value) {
+      html += `<div class=\"description\">${system.description.value}</div>`;
+    }
+    
+    // Type-specific details
+    switch (item.type) {
+      case 'weapon':
+        html += D8CharacterSheet._generateWeaponSummary(system);
+        break;
+      case 'armor':
+        html += D8CharacterSheet._generateArmorSummary(system);
+        break;
+      case 'weave':
+        html += D8CharacterSheet._generateWeaveSummary(system);
+        break;
+      case 'feat':
+        html += D8CharacterSheet._generateFeatSummary(system);
+        break;
+      case 'trait':
+      case 'flaw':
+        html += D8CharacterSheet._generateTraitSummary(system);
+        break;
+      case 'action':
+        html += D8CharacterSheet._generateActionSummary(system);
+        break;
+      default:
+        html += D8CharacterSheet._generateGenericSummary(system);
+    }
+    
+    return html;
+  }
+
+  /**
+   * Generate weapon-specific summary content
+   */
+  static _generateWeaponSummary(system) {
+    let html = '';
+    
+    if (system.damage?.base || system.attack?.bonus) {
+      html += '<div class=\"details-section\">';
+      if (system.attack?.bonus) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Attack Bonus:</span><span class=\"detail-value\">+${system.attack.bonus}</span></div>`;
+      }
+      if (system.damage?.base) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Damage:</span><span class=\"detail-value\">${system.damage.base} ${system.damage.type || ''}</span></div>`;
+      }
+      if (system.range) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Range:</span><span class=\"detail-value\">${system.range}</span></div>`;
+      }
+      if (system.weight) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Weight:</span><span class=\"detail-value\">${system.weight} lbs</span></div>`;
+      }
+      html += '</div>';
+    }
+    
+    if (system.traits?.length) {
+      html += D8CharacterSheet._generateTraitTags(system.traits);
+    }
+    
+    return html;
+  }
+
+  /**
+   * Generate armor-specific summary content
+   */
+  static _generateArmorSummary(system) {
+    let html = '';
+    
+    if (system.dr || system.weight || system.cost) {
+      html += '<div class=\"details-section\">';
+      if (system.dr) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">DR:</span><span class=\"detail-value\">S:${system.dr.slashing || 0} P:${system.dr.piercing || 0} B:${system.dr.bludgeoning || 0}</span></div>`;
+      }
+      if (system.weight) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Weight:</span><span class=\"detail-value\">${system.weight} lbs</span></div>`;
+      }
+      if (system.cost) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Cost:</span><span class=\"detail-value\">${system.cost} gp</span></div>`;
+      }
+      html += '</div>';
+    }
+    
+    if (system.properties?.length) {
+      html += D8CharacterSheet._generateTraitTags(system.properties);
+    }
+    
+    return html;
+  }
+
+  /**
+   * Generate weave-specific summary content
+   */
+  static _generateWeaveSummary(system) {
+    let html = '';
+    
+    html += '<div class="details-section">';
+    if (system.weaveType) {
+      html += `<div class="detail-row"><span class="detail-label">Type:</span><span class="detail-value">${system.weaveType}</span></div>`;
+    }
+    if (system.actionCost) {
+      html += `<div class="detail-row"><span class="detail-label">Actions:</span><span class="detail-value">${system.actionCost}</span></div>`;
+    }
+    if (system.range) {
+      html += `<div class="detail-row"><span class="detail-label">Range:</span><span class="detail-value">${system.range}</span></div>`;
+    }
+    if (system.duration) {
+      html += `<div class="detail-row"><span class="detail-label">Duration:</span><span class="detail-value">${system.duration}</span></div>`;
+    }
+    html += '</div>';
+    
+    // Energy costs
+    if (system.energyCost || system.energyCosts) {
+      const costs = system.energyCost || system.energyCosts;
+      if (costs.primary || costs.supporting) {
+        html += '<h4>Energy Costs</h4><div class="details-section">';
+        if (costs.primary && (costs.primary.type || costs.primary.cost)) {
+          html += `<div class="detail-row"><span class="detail-label">Primary:</span><span class="detail-value">${costs.primary.type || 'Unknown'} ${costs.primary.cost || 0}</span></div>`;
+        }
+        if (costs.supporting && (costs.supporting.type || costs.supporting.cost)) {
+          html += `<div class="detail-row"><span class="detail-label">Supporting:</span><span class="detail-value">${costs.supporting.type || 'Unknown'} ${costs.supporting.cost || 0}</span></div>`;
+        }
+        html += '</div>';
+      }
+    }
+    
+    // Additional weave properties
+    if (system.effect) {
+      html += `<div class="detail-row"><span class="detail-label">Effect:</span><span class="detail-value">${system.effect}</span></div>`;
+    }
+    if (system.savingThrow) {
+      html += `<div class="detail-row"><span class="detail-label">Saving Throw:</span><span class="detail-value">${system.savingThrow}</span></div>`;
+    }
+    if (system.successScaling) {
+      html += `<div class="detail-row"><span class="detail-label">Success Scaling:</span><span class="detail-value">${system.successScaling}</span></div>`;
+    }
+    
+    return html;
+  }
+
+  /**
+   * Generate feat-specific summary content
+   */
+  static _generateFeatSummary(system) {
+    let html = '';
+    
+    if (system.prerequisites) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Prerequisites:</span><span class=\"detail-value\">${system.prerequisites}</span></div>`;
+    }
+    
+    if (system.usageType) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Usage:</span><span class=\"detail-value\">${system.usageType}</span></div>`;
+    }
+    
+    if (system.keywords?.length) {
+      html += D8CharacterSheet._generateTraitTags(system.keywords);
+    }
+    
+    return html;
+  }
+
+  /**
+   * Generate trait/flaw summary content
+   */
+  static _generateTraitSummary(system) {
+    let html = '';
+    
+    if (system.category) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Category:</span><span class=\"detail-value\">${system.category}</span></div>`;
+    }
+    
+    if (system.tier) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Tier:</span><span class=\"detail-value\">${system.tier}</span></div>`;
+    }
+    
+    return html;
+  }
+
+  /**
+   * Generate action summary content
+   */
+  static _generateActionSummary(system) {
+    let html = '';
+    
+    html += '<div class=\"details-section\">';
+    if (system.actionType) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Type:</span><span class=\"detail-value\">${system.actionType}</span></div>`;
+    }
+    if (system.actionCost) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Cost:</span><span class=\"detail-value\">${system.actionCost}</span></div>`;
+    }
+    html += '</div>';
+    
+    if (system.keywords?.length) {
+      html += D8CharacterSheet._generateTraitTags(system.keywords);
+    }
+    
+    return html;
+  }
+
+  /**
+   * Generate generic item summary content
+   */
+  static _generateGenericSummary(system) {
+    let html = '';
+    
+    if (system.weight || system.cost) {
+      html += '<div class=\"details-section\">';
+      if (system.weight) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Weight:</span><span class=\"detail-value\">${system.weight} lbs</span></div>`;
+      }
+      if (system.cost) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Cost:</span><span class=\"detail-value\">${system.cost} gp</span></div>`;
+      }
+      html += '</div>';
+    }
+    
+    return html;
+  }
+
+  /**
+   * Generate trait tags HTML
+   */
+  static _generateTraitTags(traits) {
+    if (!traits) return '';
+    
+    // Convert to array if needed
+    let traitArray = [];
+    if (Array.isArray(traits)) {
+      traitArray = traits;
+    } else if (typeof traits === 'string') {
+      // If it's a comma-separated string, split it
+      traitArray = traits.split(',').map(t => t.trim()).filter(t => t);
+    } else if (typeof traits === 'object') {
+      // If it's an object, try to get values
+      traitArray = Object.values(traits).filter(t => t);
+    }
+    
+    if (traitArray.length === 0) return '';
+    
+    let html = '<div class=\"item-tags\">';
+    traitArray.forEach(trait => {
+      html += `<span class=\"item-tag\">${trait}</span>`;
+    });
+    html += '</div>';
+    
+    return html;
   }
 }
