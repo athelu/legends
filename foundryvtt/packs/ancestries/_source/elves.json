@@ -1,0 +1,27 @@
+{
+  "_id": "ac7fd0e61aab4c6e",
+  "name": "Elves",
+  "type": "ancestry",
+  "img": "icons/svg/person.svg",
+  "system": {
+    "description": {
+      "value": "<p>In the Third Age, the Goddess Hirnaloyta brought elves into the world of Athelu. Crafted in her image, she imbued in them a love for the world and all its creatures. Elves explored and settled Estaea, building remarkable cities and works of art that blended harmoniously with the nature of the world. The reign of elves was brought short however by the dwarven wars.</p>"
+    },
+    "size": "medium",
+    "speed": 30,
+    "bonuses": {
+      "attributes": {}
+    },
+    "traits": "",
+    "languages": "",
+    "specialAbilities": "",
+    "senses": "",
+    "lifespan": 300,
+    "culture": "",
+    "physicalDescription": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!ac7fd0e61aab4c6e"
+}

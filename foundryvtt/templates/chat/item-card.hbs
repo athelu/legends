@@ -1,0 +1,90 @@
+<div class="legends-item-card weave-card">
+  <header class="card-header">
+    <img src="{{item.img}}" alt="{{item.name}}" class="item-image">
+    <h3>{{item.name}}</h3>
+  </header>
+  
+  <div class="card-content">
+    {{#if (eq item.type "weave")}}
+      <div class="weave-details">
+        {{#if system.energyCost.primary.type}}
+        <div class="energy-line">
+          <strong>Primary Energy:</strong> {{capitalize system.energyCost.primary.type}} {{system.energyCost.primary.cost}}
+          {{#if system.energyCost.primary.description}}({{system.energyCost.primary.description}}){{/if}}
+        </div>
+        {{/if}}
+        
+        {{#if system.energyCost.supporting.type}}
+        <div class="energy-line">
+          <strong>Supporting Energy:</strong> {{capitalize system.energyCost.supporting.type}} {{system.energyCost.supporting.cost}}
+          {{#if system.energyCost.supporting.description}}({{system.energyCost.supporting.description}}){{/if}}
+        </div>
+        {{/if}}
+        
+        {{#if system.range}}
+        <div class="weave-property">
+          <strong>Range:</strong> {{system.range}}
+        </div>
+        {{/if}}
+        
+        {{#if system.duration}}
+        <div class="weave-property">
+          <strong>Duration:</strong> {{system.duration}}
+        </div>
+        {{/if}}
+        
+        <div class="weave-property">
+          <strong>Total Cost:</strong> 
+          {{#if system.totalEnergyCost}}{{system.totalEnergyCost}}{{else}}{{add system.energyCost.primary.cost system.energyCost.supporting.cost}}{{/if}} Energy
+        </div>
+        
+        <div class="weave-property">
+          <strong>Action Cost:</strong> 
+          {{#if system.weaveType}}
+            {{#if (eq system.weaveType "simple")}}Simple weave (1 action){{/if}}
+            {{#if (eq system.weaveType "complex")}}Complex weave (2 actions){{/if}}
+            {{#if (eq system.weaveType "ritual")}}Ritual (10 minutes){{/if}}
+          {{else}}
+            {{#if system.actionCost}}{{system.actionCost}} action{{#if (gt system.actionCost 1)}}s{{/if}}{{else}}1 action{{/if}}
+          {{/if}}
+        </div>
+        
+        {{#if system.weavingRoll}}
+        <div class="weave-property">
+          <strong>Weaving Roll:</strong> {{system.weavingRoll}}
+        </div>
+        {{/if}}
+        
+        {{#if system.savingThrow}}
+        <div class="weave-property">
+          <strong>Saving Throw:</strong> {{system.savingThrow}}
+        </div>
+        {{/if}}
+      </div>
+    {{/if}}
+    
+    {{#if system.effect}}
+    <div class="weave-property">
+      <strong>Effect:</strong> {{system.effect}}
+    </div>
+    {{/if}}
+    
+    {{#if system.successScaling}}
+    <div class="weave-property">
+      <strong>Success Scaling:</strong> {{system.successScaling}}
+    </div>
+    {{/if}}
+    
+    {{#if system.trigger}}
+    <div class="weave-property">
+      <strong>Trigger:</strong> {{system.trigger}}
+    </div>
+    {{/if}}
+    
+    {{#if system.frequency}}
+    <div class="weave-property">
+      <strong>Frequency:</strong> {{system.frequency}}
+    </div>
+    {{/if}}
+  </div>
+</div>

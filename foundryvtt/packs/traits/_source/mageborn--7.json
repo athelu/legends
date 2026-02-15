@@ -1,0 +1,21 @@
+{
+  "_id": "a55220a2cdf94ccc",
+  "name": "Mageborn (-7)",
+  "type": "trait",
+  "img": "icons/skills/arcane/wand-sparks-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Image:</strong> `icons/skills/arcane/wand-sparks-purple.webp` <strong>Requirements:</strong> Intelligence ≥ 3</p>\n<p>You were born with an innate connection to the planes flowing through your pneuma. Your eyes glow with constant violet light, marking you as a mage from birth. Through careful study and understanding of magical theory, you have learned to channel the eight energies through precise intellectual control.</p>\n<p><strong>Visual Effects:</strong> Your weaves manifest with orbiting glyphs, bright flashes of violet light, and cascading magical symbols. Motes of energy trail from your gestures, and your magic leaves shimmering afterimages in the air. Your eyes never stop glowing—the violet light is constant, marking you as mageborn to all who see you.</p>\n<p><strong>Mechanical Benefits:</strong></p>\n<ul>\n<li>Roll <strong>8d8</strong>, assign to eight Magical Potentials</li>\n<li>Choose <strong>Elemental Affinity</strong> (Earth/Air/Fire/Water): That Potential = highest roll + 2 (max 8)</li>\n<li>Choose <strong>Secondary Focus</strong> (any other energy): That Potential = any other roll + 1</li>\n<li>Use <strong>Intelligence</strong> as Casting Stat</li>\n<li>Gain <strong>8 Magical Mastery skills</strong> corresponding to the 8 energies (start at rank 0, untrained)</li>\n<li>Can weave arcane magic using all 8 energies</li>\n<li><strong>Energy Pool:</strong> Sum of 8 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)</li>\n<li><strong>Gain Ritual Casting ability:</strong> Can cast any weave as a 10-minute ritual for half Energy cost (minimum 1). Cannot be used in combat.</li>\n</ul>"
+    },
+    "pointCost": -7,
+    "traitType": "magical",
+    "isMagical": true,
+    "magicalType": "mageborn",
+    "requirements": "Intelligence ≥ 3",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!a55220a2cdf94ccc"
+}

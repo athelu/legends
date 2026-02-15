@@ -1,0 +1,20 @@
+{
+  "_id": "97c5c57ddfe64c81",
+  "name": "Speak with Nature (Hirnaloyta)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Interact] action Range: Self Effect: For 10 minutes, you can communicate with plants and beasts. They understand your words and can respond (though beasts have limited intelligence and plants have even less). Plants can convey information about recent events in their vicinity. Beasts can describe what they've seen or sensed. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!97c5c57ddfe64c81"
+}

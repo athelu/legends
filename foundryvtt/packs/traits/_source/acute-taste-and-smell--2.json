@@ -1,0 +1,21 @@
+{
+  "_id": "96983f99c72b491a",
+  "name": "Acute Taste and Smell (-2)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>Beyond normal capabilities.</p>\n<ul>\n<li>Can detect poison with [[/check skill=perception]]</li>\n<li>Perception using these senses: Subtract 1 from die results</li>\n<li>Can track by scent</li>\n</ul>"
+    },
+    "pointCost": -2,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!96983f99c72b491a"
+}

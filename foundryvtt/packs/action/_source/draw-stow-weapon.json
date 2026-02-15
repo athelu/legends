@@ -1,0 +1,22 @@
+{
+  "_id": "27779975782d4f95",
+  "name": "Draw/Stow Weapon",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> Free with Move action, or 1 if standing still</li>\n<li><strong>Effect:</strong> Draw a weapon or stow it in its sheath/holster</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Can draw/stow ONE weapon per turn as part of movement</li>\n<li>Drawing two weapons requires Quick Draw feat or two separate actions</li>\n<li>Doesn't provoke Opportunity Attacks</li>\n<li>Cannot draw/stow weapons while Grappled (hands not free)</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "Free",
+    "trigger": "",
+    "effect": "Draw a weapon or stow it in its sheath/holster\n- **Notes:**\n  - Can draw/stow ONE weapon per turn as part of movement\n  - Drawing two weapons requires Quick Draw feat or two separate actions\n  - Doesn't provoke Opportunity Attacks\n  - Cannot draw/stow weapons while Grappled (hands not free)",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!27779975782d4f95"
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "13fa99e66f7946c0",
+  "name": "Speak/Signal",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> Free</li>\n<li><strong>Effect:</strong> Communicate briefly with allies or enemies</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Complex communication requires full action</li>\n<li>Can be done once per turn as [Free] action</li>\n<li>Silenced creatures cannot speak</li>\n</ul></li>\n</ul>\n<h2>Free Actions</h2>\n<p>Free actions require no significant time or effort and can be performed alongside other actions.</p>\n<h4>Free Action Limits</h4>\n<ul>\n<li><strong>Limit:</strong> You can take a reasonable number of [Free] actions per turn (typically 1-3), subject to GM discretion</li>\n<li><strong>Abuse Prevention:</strong> GM may rule that excessive free actions (like dropping 20 items) require actual action costs</li>\n<li><strong>Timing:</strong> Free actions can typically be taken at any point during your turn</li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "Free",
+    "trigger": "",
+    "effect": "Communicate briefly with allies or enemies\n- **Notes:**\n  - Complex communication requires full action\n  - Can be done once per turn as [Free] action\n  - Silenced creatures cannot speak\n\n## Free Actions\n\nFree actions require no significant time or effort and can be performed alongside other actions.\n\n#### Free Action Limits\n- **Limit:** You can take a reasonable number of [Free] actions per turn (typically 1-3), subject to GM discretion\n- **Abuse Prevention:** GM may rule that excessive free actions (like dropping 20 items) require actual action costs\n- **Timing:** Free actions can typically be taken at any point during your turn",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!13fa99e66f7946c0"
+}

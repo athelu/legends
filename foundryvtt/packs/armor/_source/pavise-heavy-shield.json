@@ -1,0 +1,42 @@
+{
+  "_id": "1de4b2358b8a40af",
+  "name": "Pavise (Heavy Shield)",
+  "type": "shield",
+  "img": "icons/equipment/shield/pavise-wood-steel.webp",
+  "system": {
+    "description": {
+      "value": "<p>Provides full cover against ranged attacks from one direction (choose direction when planting)</p>\n<ul>\n<li>Use 1 [Move] action to retrieve it from planted</li>\n</ul>\n<h2>Armor Types</h2>\n<p>Primarily a siege/defensive weapon, awkward in mobile combat</p>"
+    },
+    "shieldType": "",
+    "handUsage": "Requires both hands to move/position, but can be planted",
+    "meleeDefense": "",
+    "requirements": "Strength 4 minimum",
+    "specialAbilities": "",
+    "plantedMode": false,
+    "reactions": [
+      {
+        "name": "Shield Block",
+        "_id": "a320d75f5a1e49ec"
+      },
+      {
+        "name": "Ranged Defense",
+        "_id": "4fa98e2643ce4360"
+      }
+    ],
+    "weight": 0,
+    "cost": 40.0,
+    "quantity": 1,
+    "notes": "",
+    "keywords": [
+      "Move"
+    ],
+    "linkedAbilities": [
+      {
+        "name": "Shield Defense",
+        "_id": "9e88d21a01c14b0d"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!1de4b2358b8a40af"
+}

@@ -1,0 +1,22 @@
+{
+  "_id": "ad90f412bcc64eb4",
+  "name": "Opportunity Attack",
+  "type": "action",
+  "img": "icons/skills/melee/shield-block-gray-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Trigger:</strong> A hostile creature you can see moves out of your melee reach</li>\n<li><strong>Effect:</strong> Make one melee attack against the triggering creature</li>\n<li><strong>Resolution:</strong> Roll your Melee Combat skill normally. This attack uses your reaction for the round.</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Movement within your reach doesn't trigger this reaction</li>\n<li>Teleportation and forced movement don't trigger this reaction</li>\n<li>The Disengage action prevents opportunity attacks</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "reaction",
+    "actionCost": "",
+    "trigger": "A hostile creature you can see moves out of your melee reach",
+    "effect": "Make one melee attack against the triggering creature\n- **Resolution:** Roll your Melee Combat skill normally. This attack uses your reaction for the round.\n- **Notes:** \n  - Movement within your reach doesn't trigger this reaction\n  - Teleportation and forced movement don't trigger this reaction\n  - The Disengage action prevents opportunity attacks",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!ad90f412bcc64eb4"
+}

@@ -1,0 +1,20 @@
+{
+  "_id": "db73fdb662174a6c",
+  "name": "Words of Power",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Combat] action Range: 30 feet (must see allies) Frequency: Once per short rest Effect: Speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. The true names you speak resonate with power, guiding your allies toward success. Ancient glyphs and symbols briefly shimmer in the air as the word echoes with unnatural resonance.</p>\n<h3>Infuser Abilities</h3>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!db73fdb662174a6c"
+}

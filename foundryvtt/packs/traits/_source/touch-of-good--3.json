@@ -1,0 +1,21 @@
+{
+  "_id": "4d5136bb58284495",
+  "name": "Touch of Good (-3)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>From surprisingly good family stock.</p>\n<ul>\n<li>Persuasion: Subtract 1 from die results</li>\n<li>NPCs start with favorable impression</li>\n</ul>\n<p>---</p>"
+    },
+    "pointCost": -3,
+    "traitType": "social",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!4d5136bb58284495"
+}

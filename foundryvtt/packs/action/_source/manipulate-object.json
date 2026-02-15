@@ -1,0 +1,22 @@
+{
+  "_id": "0925c92794074af0",
+  "name": "Manipulate Object",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Perform a more complex object manipulation</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>More involved than simple interactions</li>\n<li>May require skill check for complex tasks</li>\n<li>GM determines if task requires multiple actions</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "1",
+    "trigger": "",
+    "effect": "Perform a more complex object manipulation\n- **Notes:**\n  - More involved than simple interactions\n  - May require skill check for complex tasks\n  - GM determines if task requires multiple actions",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!0925c92794074af0"
+}

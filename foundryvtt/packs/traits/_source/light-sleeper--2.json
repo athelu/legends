@@ -1,0 +1,21 @@
+{
+  "_id": "00eef0f5d96f4b85",
+  "name": "Light Sleeper (-2)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>Subtle noises awaken easily.</p>\n<ul>\n<li>Not surprised while sleeping</li>\n<li>No penalty when awakened</li>\n</ul>"
+    },
+    "pointCost": -2,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!00eef0f5d96f4b85"
+}

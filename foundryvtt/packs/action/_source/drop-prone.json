@@ -1,0 +1,22 @@
+{
+  "_id": "d04093dba5014c70",
+  "name": "Drop Prone",
+  "type": "action",
+  "img": "icons/skills/movement/arrow-right-blue.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> Free</li>\n<li><strong>Effect:</strong> Fall prone in your current space</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Doesn't provoke Opportunity Attacks</li>\n<li>Useful for gaining cover against ranged attacks (enemies have Misfortune)</li>\n<li>Remember: Enemies have Fortune on melee attacks against you while prone</li>\n</ul></li>\n</ul>\n<h2>Reactions</h2>\n<p>Reactions are special responses triggered by specific circumstances that occur outside your turn.</p>\n<h3>Basic Reaction Mechanics:</h3>\n<ul>\n<li><strong>Frequency:</strong> You can take ONE reaction per round (between your turns)</li>\n<li><strong>Timing:</strong> Reactions occur immediately when their trigger happens</li>\n<li><strong>Availability:</strong> You can use your reaction even before your first turn in combat (unless Surprised)</li>\n<li><strong>Surprised Exception:</strong> If you are Surprised, you cannot take reactions during the surprise round</li>\n<li><strong>Action Cost:</strong> Reactions don't count against your 3 actions per turn</li>\n<li><strong>Choice:</strong> If you have access to multiple reactions, you must choose which one to use when triggered</li>\n<li><strong>Additional Reactions:</strong> Some feats, equipment, and weaves grant additional reaction options beyond those listed here</li>\n</ul>\n<h3>Reaction Priority and Timing</h3>\n<p>When multiple creatures have reactions that could trigger simultaneously:</p>\n<ol>\n<li>The reacting creature closest to the triggering creature goes first</li>\n<li>If equidistant, highest Initiative Bonus acts first</li>\n<li>If still tied, reactions resolve simultaneously</li>\n</ol>\n<h3>Important Clarifications</h3>\n<p><strong>You cannot:</strong></p>\n<ul>\n<li>Take more than one reaction per round</li>\n<li>Use a reaction on your own turn (except for specific triggered abilities)</li>\n<li>Ready a reaction \"just in case\" - reactions only trigger from specific circumstances</li>\n</ul>\n<p><strong>You can:</strong></p>\n<ul>\n<li>Use your reaction before your first turn in initiative order (unless Surprised)</li>\n<li>Choose not to use your reaction when triggered</li>\n<li>Use different reactions on different rounds (if you have access to multiple reaction types)</li>\n</ul>\n<h3>Reactions</h3>"
+    },
+    "actionType": "free",
+    "actionCost": "Free",
+    "trigger": "",
+    "effect": "Fall prone in your current space\n- **Notes:**\n  - Doesn't provoke Opportunity Attacks\n  - Useful for gaining cover against ranged attacks (enemies have Misfortune)\n  - Remember: Enemies have Fortune on melee attacks against you while prone\n\n## Reactions\nReactions are special responses triggered by specific circumstances that occur outside your turn.\n\n### Basic Reaction Mechanics:\n- **Frequency:** You can take ONE reaction per round (between your turns)\n- **Timing:** Reactions occur immediately when their trigger happens\n- **Availability:** You can use your reaction even before your first turn in combat (unless Surprised)\n- **Surprised Exception:** If you are Surprised, you cannot take reactions during the surprise round\n- **Action Cost:** Reactions don't count against your 3 actions per turn\n- **Choice:** If you have access to multiple reactions, you must choose which one to use when triggered\n- **Additional Reactions:** Some feats, equipment, and weaves grant additional reaction options beyond those listed here\n\n### Reaction Priority and Timing\n\nWhen multiple creatures have reactions that could trigger simultaneously:\n1. The reacting creature closest to the triggering creature goes first\n2. If equidistant, highest Initiative Bonus acts first\n3. If still tied, reactions resolve simultaneously\n\n### Important Clarifications",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!d04093dba5014c70"
+}

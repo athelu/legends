@@ -1,0 +1,20 @@
+{
+  "_id": "9059bebe17db4005",
+  "name": "Knowledge of the Ages (Shu-Jahan)",
+  "type": "ability",
+  "img": "icons/svg/magic.svg",
+  "system": {
+    "description": {
+      "value": "<p>Action Cost: 1 [Interact] action Range: Self Effect: Choose any one skill. For 10 minutes, you count as having rank 5 proficiency in that skill (use rank 5 for all checks, even if your actual rank is higher or lower). The wisdom of ages flows through you, granting you temporary mastery. If you already have rank 5+, you instead subtract 1 from both dice when using that skill for the duration. Usage: Uses 1 Channel Divinity</p>"
+    },
+    "abilityType": "passive",
+    "source": "",
+    "keywords": "",
+    "trigger": "",
+    "frequency": "",
+    "effect": "",
+    "isActive": false
+  },
+  "effects": [],
+  "_key": "!items!9059bebe17db4005"
+}

@@ -1,0 +1,21 @@
+{
+  "_id": "4a2c9d1cdc604055",
+  "name": "Invoker (-5)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Requirements:</strong> Charisma ≥ 3</p>\n<p>You have discovered the connection between spoken words and magic. You are a diabolist. Awakened to magical power through research or accident rather than born with it. Through study and practice, you learned that certain sounds and syllables are the true names of forces and concepts and have inherent power when spoken by one who understands them. Your eyes glow with violet light only when you complete a weave, the power manifesting as the final syllable leaves your lips.</p>\n<p><strong>Visual Effects:</strong> When you speak true names, the syllables manifest as visible violet light in the air. Ancient glyphs and runic symbols materialize around you as each word of power is pronounced. Your eyes flash with violet radiance when the weave completes, then return to normal. The words themselves seem to echo with unnatural resonance, leaving shimmering afterimages of sound made visible.</p>\n<p><strong>The True Names:</strong> These words of power are rarely from any spoken language known to scholars. They may be fragments of primordial speech, echoes from the outer planes, or sounds that existed before language itself. Each invoker's pronunciation is unique. What matters is understanding the concept behind the sound, not perfect replication.</p>\n<p><strong>Mechanical Benefits:</strong></p>\n<ul>\n<li>Roll <strong>5d8</strong>, assign to five Magical Potentials:</li>\n<li><strong>Air Potential</strong> = highest roll + 2 (max 8) [always primary - sound, voice, resonance]</li>\n<li><strong>Positive Potential</strong> = second-highest roll + 1 [true names of healing and life]</li>\n<li><strong>Space Potential</strong> = any remaining roll [names of distance and perception]</li>\n<li><strong>Time Potential</strong> = any remaining roll [names of duration and causality]</li>\n<li><strong>Choose one Elemental or Conceptual energy</strong> (Earth, Fire, Water, or Negative): assign final roll</li>\n<li>Use <strong>Charisma</strong> as Casting Stat</li>\n<li>Gain <strong>5 Magical Mastery skills</strong> corresponding to your 5 energies (start at rank 0, untrained)</li>\n<li>Can weave invoker magic using only these 5 energies</li>\n<li><strong>Energy Pool:</strong> Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)</li>\n<li><strong>Gain Words of Power ability:</strong> Once per short rest, spend 1 [Combat] action to speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll.</li>\n</ul>\n<p><strong>Invoker Requirement:</strong> You must have line of sight to targets of your weaves. If you cannot see your target, you cannot speak their true name or bind them with your magic. This replaces typical targeting requirements for spells.</p>\n<p><strong>Elemental True Name Themes:</strong></p>\n<ul>\n<li><strong>Fire</strong>: Names of combustion, heat, passion, destruction</li>\n<li><strong>Water</strong>: Names of flow, cold, adaptation, persistence</li>\n<li><strong>Earth</strong>: Names of stone, stability, growth, endurance</li>\n<li><strong>Negative</strong>: Names of entropy, shadow, endings, void</li>\n</ul>"
+    },
+    "pointCost": -5,
+    "traitType": "magical",
+    "isMagical": true,
+    "magicalType": "invoker",
+    "requirements": "Charisma ≥ 3",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!4a2c9d1cdc604055"
+}

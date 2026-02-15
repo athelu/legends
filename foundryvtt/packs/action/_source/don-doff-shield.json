@@ -1,0 +1,22 @@
+{
+  "_id": "23d5fe677a8b4889",
+  "name": "Don/Doff Shield",
+  "type": "action",
+  "img": "icons/skills/trades/construction-gloves-yellow.webp",
+  "system": {
+    "description": {
+      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Equip or remove a shield</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Drawing/stowing a shield requires focused effort (not quick like a weapon)</li>\n<li>Cannot be done as part of a [Move] action</li>\n<li>Shield must be readily accessible (on your back, at your side, etc.)</li>\n</ul></li>\n</ul>"
+    },
+    "actionType": "activate",
+    "actionCost": "1",
+    "trigger": "",
+    "effect": "Equip or remove a shield\n- **Notes:**\n  - Drawing/stowing a shield requires focused effort (not quick like a weapon)\n  - Cannot be done as part of a [Move] action\n  - Shield must be readily accessible (on your back, at your side, etc.)",
+    "keywords": "",
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!23d5fe677a8b4889"
+}

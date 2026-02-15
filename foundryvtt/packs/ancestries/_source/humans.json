@@ -1,0 +1,27 @@
+{
+  "_id": "3cd25999f4aa450c",
+  "name": "Humans",
+  "type": "ancestry",
+  "img": "icons/svg/person.svg",
+  "system": {
+    "description": {
+      "value": "<p>Humans are creative, imaginative and inventive. There are distinct differences in the various human ethnicities, but they tend to be only differences of physical appearance and do not change the general makeup of humans.</p>"
+    },
+    "size": "medium",
+    "speed": 30,
+    "bonuses": {
+      "attributes": {}
+    },
+    "traits": "",
+    "languages": "",
+    "specialAbilities": "",
+    "senses": "",
+    "lifespan": 70,
+    "culture": "",
+    "physicalDescription": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!3cd25999f4aa450c"
+}

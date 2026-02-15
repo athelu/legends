@@ -1,0 +1,21 @@
+{
+  "_id": "ebf22d01ce374404",
+  "name": "Sorcerous Origin (-7)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Requirements:</strong> Wisdom ≥ 3</p>\n<p>You are an Arcanisty, your eyes glow with constant violet light from birth, marking your inherent connection to the planes. Unlike Mageborn who study magic intellectually or clerics who channel divine power, your magic flows from perfect self-knowledge and unshakeable inner certainty. Your pneuma is so clear, so completely understood, that reality itself recognizes and responds to your true nature. You don't need to understand <em>how</em> magic works—you <em>know</em> what you are, and that truth manifests as power.</p>\n<p><strong>The Source of Power:</strong> Where Mageborn study external principles and clerics channel external deities, sorcerers have achieved something rarer: <strong>perfect internal understanding</strong>. You've looked within and seen yourself completely—not your surface thoughts or emotions, but your fundamental nature across space, time, and probability. This enlightenment isn't intellectual (that's wizardry) or spiritual devotion (that's divine casting)—it's absolute self-perception. Reality cannot deny a truth perceived so clearly.</p>\n<p><strong>Visual Effects:</strong> Your weaves flow naturally, almost effortlessly, as if reality is simply acknowledging what already is. Violet light constantly emanates from your eyes—not flickering like other mageborn, but steady, like a candle that never wavers. When you cast, magic moves through you like water finding its level, inevitable and serene. Your Force of Will manifestation determines how this manifests aesthetically.</p>\n<p><strong>Mechanical Benefits:</strong></p>\n<ul>\n<li>Roll <strong>8d8</strong>, assign to eight Magical Potentials</li>\n<li><strong>Choose Force of Will Manifestation:</strong> Determines which energy aligns with your deepest truth and grants unique benefits</li>\n</ul>"
+    },
+    "pointCost": -7,
+    "traitType": "magical",
+    "isMagical": true,
+    "magicalType": "sorcerous-origin",
+    "requirements": "Wisdom ≥ 3",
+    "benefits": "",
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!ebf22d01ce374404"
+}
