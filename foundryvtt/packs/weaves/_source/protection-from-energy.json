@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 5 (protective barrier against energy) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> self, touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at touch gains Resistance (+1 DR) against one chosen damage type (fire, cold, acid, lightning, thunder). <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = Greater Resistance (+2 DR, 8 hours)</p>\n<h2>R</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Space 5 (protective barrier against energy) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> self, touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at touch gains Resistance (+4 DR) against one chosen damage type (fire, cold, acid, lightning, thunder). <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 1 hour (+8 DR), 5 = 4 hours (+8 DR)</p>\n<h2>R</h2>"
     },
     "weaveType": "complex",
     "actionCost": 2,

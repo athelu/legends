@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Water 5 (hailstorm, physical ice chunks) <strong>Supporting Energy:</strong> Space 4 (medium range + 20ft radius) <strong>Range:</strong> Medium, 60 ft. (20-foot radius) <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Hard ice and hail rain down in a 20-foot radius cylinder. All creatures in the area take 28 bludgeoning and cold damage (physical ice chunks). Each target takes the full listed damage and makes their own save. The ground becomes difficult terrain (costs double movement) until the ice melts. <strong>Saving Throw:</strong> Reflex (to find cover from falling ice) <strong>Damage Type:</strong> Physical (ice chunks) - Mixed bludgeoning and cold <strong>DR Interaction:</strong> FULL DR applies ([[/damage 28]] damage vs DR 4 becomes 28 - 4 = [[/damage 24]] damage) <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +[[/damage 8]] damage (36 total), 4 = +[[/damage 16]] damage (44 total), 5 = +[[/damage 24]] damage (52 total) + applies Prone <strong>Prone Condition (at Net 4):</strong> Target is knocked Prone by the force of falling ice in addition to taking damage.</p>"
+      "value": "<p><strong>Primary Energy:</strong> Water 5 (hailstorm, physical ice chunks) <strong>Supporting Energy:</strong> Space 4 (medium range + 20ft radius) <strong>Range:</strong> Medium, 60 ft. (20-foot radius) <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Hard ice and hail rain down in a 20-foot radius cylinder. All creatures in the area take 28 bludgeoning and cold damage (physical ice chunks). Each target takes the full listed damage and makes their own save. The ground becomes difficult terrain (costs double movement) until the ice melts. <strong>Applies Effects:</strong> prone <strong>Saving Throw:</strong> Reflex <strong>Damage Type:</strong> Physical (ice chunks) - Mixed bludgeoning and cold <strong>DR Interaction:</strong> FULL DR applies <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +[[/damage 8]] damage (36 total), 4 = +[[/damage 16]] damage (44 total), 5 = +[[/damage 24]] damage (52 total) + applies effects</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -33,7 +33,12 @@
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [
+      {
+        "effectId": "prone",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!21072281ae954cfd"

@@ -345,7 +345,7 @@ When creating new feats, follow these guidelines:
 #### Empty Body
 **Tier:** 6
 **Prerequisites:** Wis 6, Mystic Defense feat, Tier 6
-**Benefit:** Once per long rest, can spend 10 minutes meditating to become invisible for 1 minute. While invisible, you also have resistance (+4 DR) to all damage except psychic
+**Benefit:** Once per long rest, can spend 10 minutes meditating to become invisible for 1 minute. While invisible, you also have resistance (+6 DR) to all damage except psychic
 **Usage:** Once per long rest
 **Keyword:** [Ascetic]
 

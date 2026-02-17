@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 2 (force barrier) <strong>Supporting Energy:</strong> None (instant reaction) <strong>Range:</strong> self, touch <strong>Duration:</strong> Until end of next turn <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> [Reaction] <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> When hit by an attack or targeted by Unerring Bolt, gain Fortune on your defense roll (or automatically block Unerring Bolt). Applies to the triggering attack and any others until end of your next turn. <strong>Saving Throw:</strong> None (defensive reaction) <strong>Success Scaling:</strong> 0 = fails, 1 = triggering attack only, 2 = until end of next turn, 3 = +2 DR instead of Fortune, 4 = +4 DR (1 minute)</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 2 (force barrier) <strong>Supporting Energy:</strong> None (instant reaction) <strong>Range:</strong> self, touch <strong>Duration:</strong> Until end of next turn <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> [Reaction] <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> When hit by an attack or targeted by Unerring Bolt, gain Fortune on your defense roll (or automatically block Unerring Bolt). Applies to the triggering attack and any others until end of your next turn. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = triggering attack only, 2 = full effect, 3 = full effect (+4 DR)</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,

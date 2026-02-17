@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 4 (creating bright magical light) <strong>Supporting Energy:</strong> Space 4 (medium range + 60ft radius) / Time 3 (duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (60-foot radius sphere) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Bright light fills a 60ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy. <strong>Saving Throw:</strong> None (creates light) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 4 (creating bright magical light) <strong>Supporting Energy:</strong> Space 7 (medium range + 60ft radius + duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (60-foot radius sphere) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Bright light fills a 60ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 4 hours, 5 = 12 hours</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 4
+        "cost": 7
       }
     },
     "range": "Medium, 60 ft. (60-foot radius sphere)",

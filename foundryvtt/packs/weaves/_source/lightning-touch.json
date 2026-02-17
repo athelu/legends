@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 2 (lightning through touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Air Potential + Air Mastery <strong>Effect:</strong> Touch a target and release a jolt of electricity. Target takes [[/damage 4 type=lightning]] damage. If target is wearing metal armor, you have Fortune on your weaving roll. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Lightning (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=lightning]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +[[/damage 4]] damage (8 total), 4 = +[[/damage 8]] damage (12 total) <strong>Special:</strong> Fortune on weaving roll if target wears metal armor (better conductor) <strong>Dazed Condition (at 5 successes):</strong> Target has Misfortune on their next attack roll as electricity disrupts their nervous system.</p>\n<h2>M</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Air 2 (lightning through touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Air Potential + Air Mastery <strong>Effect:</strong> Touch a target and release a jolt of electricity. Target takes [[/damage 4 type=lightning]] damage. <strong>Saving Throw:</strong> None <strong>Damage Type:</strong> Lightning (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +[[/damage 4]] damage (8 total)</p>\n<h2>M</h2>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -44,10 +44,6 @@
         },
         "3": {
           "damage": 8,
-          "description": "enhanced"
-        },
-        "4": {
-          "damage": 12,
           "description": "enhanced"
         }
       }

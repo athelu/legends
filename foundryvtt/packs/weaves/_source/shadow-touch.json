@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 2 (necrotic energy through touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery <strong>Effect:</strong> Touch a target and drain their life force with necrotic energy. Target takes [[/damage 4 type=necrotic]] damage. You regain HP equal to half the damage dealt (rounded down). This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Necrotic (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=necrotic]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss (no healing), 1 = half damage (2, heal 1 HP), 2 = full damage (4, heal 2 HP), 3 = +[[/damage 4]] damage (8 total, heal 4 HP), 4 = +[[/damage 8]] damage (12 total, heal 6 HP), 5 = +[[/damage 8]] damage (12 total, heal 6 HP) + applies Weakened <strong>Weakened Condition (at 5 successes):</strong> Target has Misfortune on Strength-based checks until end of their next turn.</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Negative 2 (necrotic energy through touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery <strong>Effect:</strong> Touch a target and drain their life force with necrotic energy. Target takes [[/damage 4 type=necrotic]] damage. You regain HP equal to half the damage dealt (rounded down). This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None <strong>Damage Type:</strong> Necrotic (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = miss (no healing), 1 = half damage (2, heal 1 HP), 2 = full damage (4, heal 2 HP), 3 = +[[/damage 4]] damage (8 total, heal 4 HP)</p>\n<p>---</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -43,14 +43,6 @@
           "description": "full damage"
         },
         "3": {
-          "damage": 0,
-          "description": "enhanced"
-        },
-        "4": {
-          "damage": 0,
-          "description": "enhanced"
-        },
-        "5": {
           "damage": 0,
           "description": "enhanced"
         }

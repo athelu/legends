@@ -5,10 +5,10 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 3 (force platform) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Self <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends. <strong>Saving Throw:</strong> None (utility weave) <strong>Success Scaling:</strong> 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours and 1000 lbs capacity</p>\n<h2>E</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Space 3 (force platform) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Self <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery <strong>Effect:</strong> Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 4 hours and 500 lbs, 4 = 4 hours and 1000 lbs, 4 = 12 hours and 2000 lbs</p>\n<h2>E</h2>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "space",

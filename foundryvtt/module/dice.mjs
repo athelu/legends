@@ -688,13 +688,24 @@ export async function rollWeaveCheck(options = {}) {
   const primaryResults = primaryRoll.dice[0].results.map(r => r.result);
   
   let primarySuccesses = 0;
-  for (let die of primaryResults) {
-    const modified = die + primaryOverspend;
-    if (die === 1) {
-      primarySuccesses++;
-    } else if (die !== 8 && modified < primaryPotential) {
-      primarySuccesses++;
-    }
+  // First die checked against Potential, second die checked against Mastery
+  const primaryDie1 = primaryResults[0];
+  const primaryDie2 = primaryResults[1];
+  
+  // Check first die (Potential)
+  const primaryModified1 = primaryDie1 + primaryOverspend;
+  if (primaryDie1 === 1) {
+    primarySuccesses++;
+  } else if (primaryDie1 !== 8 && primaryModified1 < primaryPotential) {
+    primarySuccesses++;
+  }
+  
+  // Check second die (Mastery)
+  const primaryModified2 = primaryDie2 + primaryOverspend;
+  if (primaryDie2 === 1) {
+    primarySuccesses++;
+  } else if (primaryDie2 !== 8 && primaryModified2 < primaryMastery) {
+    primarySuccesses++;
   }
   
   let supportingSuccesses = 0;
@@ -706,13 +717,24 @@ export async function rollWeaveCheck(options = {}) {
     await supportingRoll.evaluate();
     supportingResults = supportingRoll.dice[0].results.map(r => r.result);
     
-    for (let die of supportingResults) {
-      const modified = die + supportingOverspend;
-      if (die === 1) {
-        supportingSuccesses++;
-      } else if (die !== 8 && modified < supportingPotential) {
-        supportingSuccesses++;
-      }
+    // First die checked against Potential, second die checked against Mastery
+    const supportingDie1 = supportingResults[0];
+    const supportingDie2 = supportingResults[1];
+    
+    // Check first die (Potential)
+    const supportingModified1 = supportingDie1 + supportingOverspend;
+    if (supportingDie1 === 1) {
+      supportingSuccesses++;
+    } else if (supportingDie1 !== 8 && supportingModified1 < supportingPotential) {
+      supportingSuccesses++;
+    }
+    
+    // Check second die (Mastery)
+    const supportingModified2 = supportingDie2 + supportingOverspend;
+    if (supportingDie2 === 1) {
+      supportingSuccesses++;
+    } else if (supportingDie2 !== 8 && supportingModified2 < supportingMastery) {
+      supportingSuccesses++;
     }
   }
   
@@ -921,17 +943,51 @@ export async function rollWeaveCheck(options = {}) {
   const supportingOverspendText = data.supportingOverspend > 0 ? 
     `<span class="overspend">Overspending: +${data.supportingOverspend} to dice</span>` : '';
   
+  // Primary energy dice breakdown
+  const primaryDice1 = data.primaryResults[0];
+  const primaryDice2 = data.primaryResults[1];
+  const primaryModified1 = primaryDice1 + data.primaryOverspend;
+  const primaryModified2 = primaryDice2 + data.primaryOverspend;
+  
+  // Determine success for each primary die
+  const primary1Success = primaryDice1 === 1 || (primaryDice1 !== 8 && primaryModified1 < data.primaryPotential);
+  const primary2Success = primaryDice2 === 1 || (primaryDice2 !== 8 && primaryModified2 < data.primaryMastery);
+  
   const supportingSection = data.supportingEnergy ? `
     <div class="energy-section supporting">
-      <h4>Supporting: ${data.supportingEnergy.charAt(0).toUpperCase() + data.supportingEnergy.slice(1)}</h4>
+      <h4>Supporting: ${data.supportingEnergy.charAt(0).toUpperCase() + data.supportingEnergy.slice(1)} (${data.supportingCost} Energy)</h4>
       <div class="dice-results">
-        <div class="die-result">
-          <span class="die-label">Potential (${data.supportingPotential})</span>
-          <span class="die-value">${data.supportingResults[0]}</span>
+        <div class="die-result" style="margin-bottom: 8px;">
+          <div style="margin-bottom: 4px;">
+            <strong>Potential Check: ${data.supportingPotential}</strong>
+          </div>
+          <div class="${data.supportingResults[0] === 1 ? 'natural-one' : data.supportingResults[0] === 8 ? 'natural-eight' : ''}">
+            Die Roll: ${data.supportingResults[0]}, Modifier: ${data.supportingOverspend >= 0 ? '+' : ''}${data.supportingOverspend}, Total: ${data.supportingResults[0] + data.supportingOverspend}
+            ${(() => {
+              const die = data.supportingResults[0];
+              const total = die + data.supportingOverspend;
+              const success = die === 1 || (die !== 8 && total < data.supportingPotential);
+              if (die === 1) return ' <span class="success-indicator">✓ (Natural 1 - Success!)</span>';
+              if (die === 8) return ' <span class="failure-indicator">✗ (Natural 8 - Failure!)</span>';
+              return success ? ' <span class="success-indicator">✓ Success</span>' : ' <span class="failure-indicator">✗ Failure</span>';
+            })()}
+          </div>
         </div>
         <div class="die-result">
-          <span class="die-label">Mastery (${data.supportingMastery})</span>
-          <span class="die-value">${data.supportingResults[1]}</span>
+          <div style="margin-bottom: 4px;">
+            <strong>Mastery Check: ${data.supportingMastery}</strong>
+          </div>
+          <div class="${data.supportingResults[1] === 1 ? 'natural-one' : data.supportingResults[1] === 8 ? 'natural-eight' : ''}">
+            Die Roll: ${data.supportingResults[1]}, Modifier: ${data.supportingOverspend >= 0 ? '+' : ''}${data.supportingOverspend}, Total: ${data.supportingResults[1] + data.supportingOverspend}
+            ${(() => {
+              const die = data.supportingResults[1];
+              const total = die + data.supportingOverspend;
+              const success = die === 1 || (die !== 8 && total < data.supportingMastery);
+              if (die === 1) return ' <span class="success-indicator">✓ (Natural 1 - Success!)</span>';
+              if (die === 8) return ' <span class="failure-indicator">✗ (Natural 8 - Failure!)</span>';
+              return success ? ' <span class="success-indicator">✓ Success</span>' : ' <span class="failure-indicator">✗ Failure</span>';
+            })()}
+          </div>
         </div>
       </div>
       ${supportingOverspendText}
@@ -953,13 +1009,31 @@ export async function rollWeaveCheck(options = {}) {
         <div class="energy-section primary">
           <h4>Primary: ${data.primaryEnergy.charAt(0).toUpperCase() + data.primaryEnergy.slice(1)} (${data.primaryCost} Energy)</h4>
           <div class="dice-results">
-            <div class="die-result">
-              <span class="die-label">Potential (${data.primaryPotential})</span>
-              <span class="die-value">${data.primaryResults[0]}</span>
+            <div class="die-result" style="margin-bottom: 8px;">
+              <div style="margin-bottom: 4px;">
+                <strong>Potential Check: ${data.primaryPotential}</strong>
+              </div>
+              <div class="${primaryDice1 === 1 ? 'natural-one' : primaryDice1 === 8 ? 'natural-eight' : ''}">
+                Die Roll: ${primaryDice1}, Modifier: ${data.primaryOverspend >= 0 ? '+' : ''}${data.primaryOverspend}, Total: ${primaryModified1}
+                ${(() => {
+                  if (primaryDice1 === 1) return ' <span class="success-indicator">✓ (Natural 1 - Success!)</span>';
+                  if (primaryDice1 === 8) return ' <span class="failure-indicator">✗ (Natural 8 - Failure!)</span>';
+                  return primary1Success ? ' <span class="success-indicator">✓ Success</span>' : ' <span class="failure-indicator">✗ Failure</span>';
+                })()}
+              </div>
             </div>
             <div class="die-result">
-              <span class="die-label">Mastery (${data.primaryMastery})</span>
-              <span class="die-value">${data.primaryResults[1]}</span>
+              <div style="margin-bottom: 4px;">
+                <strong>Mastery Check: ${data.primaryMastery}</strong>
+              </div>
+              <div class="${primaryDice2 === 1 ? 'natural-one' : primaryDice2 === 8 ? 'natural-eight' : ''}">
+                Die Roll: ${primaryDice2}, Modifier: ${data.primaryOverspend >= 0 ? '+' : ''}${data.primaryOverspend}, Total: ${primaryModified2}
+                ${(() => {
+                  if (primaryDice2 === 1) return ' <span class="success-indicator">✓ (Natural 1 - Success!)</span>';
+                  if (primaryDice2 === 8) return ' <span class="failure-indicator">✗ (Natural 8 - Failure!)</span>';
+                  return primary2Success ? ' <span class="success-indicator">✓ Success</span>' : ' <span class="failure-indicator">✗ Failure</span>';
+                })()}
+              </div>
             </div>
           </div>
           ${primaryOverspendText}

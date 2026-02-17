@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 3 (cone of flames, damage) <strong>Supporting Energy:</strong> Space 1 (self, 15ft cone affecting 2 targets) <strong>Range:</strong> 15ft cone <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery + Space Potential + Space Mastery (4d8) <strong>Effect:</strong> A cone of flames shoots from your hands. All creatures in a 15-foot cone take [[/damage 16 type=fire]] damage. Each target takes the full listed damage and makes their own save. <strong>Applies Effects:</strong> ignited <strong>Saving Throw:</strong> Reflex (to reduce damage) <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 16 type=fire]] damage vs DR 4 becomes 16 - 2 = [[/damage 14]] damage) <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 0 = no damage, 1 = half damage (8), 2 = full damage (16), 3 = +[[/damage 8]] damage (24 total), 4 = +[[/damage 16]] damage (32 total), 5 = +[[/damage 24]] damage (40 total) <strong>Ignited Condition (at Net 4):</strong> Target takes [[/damage 1d8 type=fire]] damage at the start of each of their turns. Target can use 1 action to make a [[/save type=reflex]] (1 success ends condition) or an ally can use 1 action to extinguish the flames.</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 3 (cone of flames, damage) <strong>Supporting Energy:</strong> Space 1 (self, 15ft cone affecting 2 targets) <strong>Range:</strong> 15ft cone <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery + Space Potential + Space Mastery <strong>Effect:</strong> A cone of flames shoots from your hands. All creatures in a 15-foot cone take [[/damage 16 type=fire]] damage. Each target takes the full listed damage and makes their own save. <strong>Applies Effects:</strong> ignited <strong>Saving Throw:</strong> Reflex <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (8), 2 = full damage (16), 3 = +[[/damage 8]] damage (24 total), 4 = +[[/damage 16]] damage (32 total), 5 = +[[/damage 24]] damage (40 total) + Applies effects</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,7 +29,33 @@
       "base": 16,
       "type": "fire",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "damage": 0,
+          "description": "no damage"
+        },
+        "1": {
+          "damage": 8,
+          "description": "half damage"
+        },
+        "2": {
+          "damage": 16,
+          "description": "full damage"
+        },
+        "3": {
+          "damage": 24,
+          "description": "enhanced"
+        },
+        "4": {
+          "damage": 32,
+          "description": "enhanced"
+        },
+        "5": {
+          "damage": 40,
+          "description": "enhanced + applies effects",
+          "appliesEffects": true
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",

@@ -5,10 +5,10 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Earth 3 (reshaping worked stone) <strong>Supporting Energy:</strong> None (touch, instantaneous/permanent) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous (permanent) <strong>Total Cost:</strong> 3 Energy per 5ft cube <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery <strong>Effect:</strong> Reshape stone into any form (doors, pillars, crude weapon). Can create hinges and latches. Cannot make complex mechanisms. Changes are permanent. <strong>Saving Throw:</strong> None (object manipulation) <strong>Success Scaling:</strong> 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube, 4 = 20ft cube or create detailed carvings, 5 = 40ft cube + permanent changes</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Earth 3 (reshaping worked stone) <strong>Supporting Energy:</strong> None (touch, instantaneous/permanent) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous (permanent) <strong>Total Cost:</strong> 3 Energy per 5ft cube <strong>Action:</strong> simple weave (1 action) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery <strong>Effect:</strong> Reshape stone into any form (doors, pillars, crude weapon). Can create hinges and latches. Cannot make complex mechanisms. Changes are permanent. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 2ft cube, 2 = 5ft cube, 3 = 10ft cube</p>\n<p>---</p>"
     },
     "weaveType": "simple",
-    "actionCost": 2,
+    "actionCost": 1,
     "energyCost": {
       "primary": {
         "type": "earth",

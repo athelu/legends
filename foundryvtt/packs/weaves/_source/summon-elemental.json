@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Matching elemental energy (Earth/Air/Fire/Water) 6 <strong>Supporting Energy:</strong> Space 1 (close range) / Time 3 (duration 10 minutes) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Primary Potential + Primary Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Summon an elemental matching your Primary Energy at close range. Elemental has HP = (Your Potential × 6), deals [[/damage 10]] damage, uses your Mastery for attacks, and has special abilities based on type. You can command it as [Free] action. If concentration breaks, elemental acts independently. <strong>Saving Throw:</strong> None (summoning weave) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or 2 elementals</p>\n<p>---</p>\n<h2>T</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Matching elemental energy (Earth/Air/Fire/Water) 6 <strong>Supporting Energy:</strong> Space 5 (close range, duration 10 minutes) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Primary Potential + Primary Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Summon an elemental matching your Primary Energy at close range. Elemental has HP = (Your Potential × 6), deals [[/damage 10]] damage, uses your Mastery for attacks, and has special abilities based on type. You can command it as [Free] action. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 4 hours, 5 = 12 hours</p>\n<p>---</p>\n<h2>T</h2>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 1
+        "cost": 5
       }
     },
     "range": "Close, 30 ft.",
@@ -24,12 +24,37 @@
     "target": "",
     "savingThrow": "none",
     "effect": "",
-    "effectType": "",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
+      "base": 10,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "damage": 0,
+          "description": "fails"
+        },
+        "1": {
+          "damage": 0,
+          "description": "1 minute"
+        },
+        "2": {
+          "damage": 0,
+          "description": "full effect"
+        },
+        "3": {
+          "damage": 0,
+          "description": "1 hour"
+        },
+        "4": {
+          "damage": 0,
+          "description": "4 hours"
+        },
+        "5": {
+          "damage": 0,
+          "description": "12 hours"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 2 (burst of flame from palm, damage) <strong>Supporting Energy:</strong> None (touch to 5ft range) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery (2d8 only) <strong>Effect:</strong> Channel flames through your palm to burn a target within 5 feet. Target takes [[/damage 4 type=fire]] damage. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=fire]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +[[/damage 4]] damage (8 total), 4 = +[[/damage 8]] damage (12 total) <strong>Tactical Note:</strong> Does NOT provoke opportunity attacks. Ideal for melee situations where Fire Bolt would provoke.</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 2 (burst of flame from palm, damage) <strong>Supporting Energy:</strong> None (touch to 5ft range) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery <strong>Effect:</strong> Channel flames through your palm to burn a target within 5 feet. Target takes [[/damage 4 type=fire]] damage. This is an attack weave—no saving throw allowed. <strong>Applies Effects:</strong> ignited <strong>Saving Throw:</strong> None <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2), 2 = full damage (4), 3 = +[[/damage 4]] damage (8 total)</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -45,16 +45,17 @@
         "3": {
           "damage": 8,
           "description": "enhanced"
-        },
-        "4": {
-          "damage": 12,
-          "description": "enhanced"
         }
       }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [
+      {
+        "effectId": "ignited",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!299cd8b3c3fb4149"

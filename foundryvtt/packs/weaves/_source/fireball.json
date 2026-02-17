@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 5 (exploding ball of flame, damage) <strong>Supporting Energy:</strong> Space 4 (medium range 60ft + area 20ft radius) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery + Space Potential + Space Mastery (4d8) <strong>Effect:</strong> A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. All creatures in a 20-foot radius sphere take [[/damage 28 type=fire]] damage. Each target takes the full listed damage and makes their own save. <strong>Applies Effects:</strong> ignited <strong>Saving Throw:</strong> Reflex (to reduce damage) <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 28 type=fire]] damage vs DR 4 becomes 28 - 2 = [[/damage 26]] damage) <strong>Area Effect Note:</strong> With Space 4, this affects all creatures in a 20ft radius (approximately 4-6 targets in typical combat). Each target is resolved individually—some may take full damage while others dodge for reduced or no damage. <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +[[/damage 8]] damage (36 total), 4 = +[[/damage 16]] damage (44 total), 5 = +[[/damage 24]] damage (52 total) + applies Stunned <strong>Ignited Condition (at Net 4):</strong> Target takes [[/damage 1d8 type=fire]] damage at start of each turn. Can use 1 action to make [[/save type=reflex]] (1 success ends) or ally can use 1 action to extinguish.</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 5 (exploding ball of flame, damage) <strong>Supporting Energy:</strong> Space 4 (medium range 60ft + area 20ft radius) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery + Space Potential + Space Mastery <strong>Effect:</strong> A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. All creatures in a 20-foot radius sphere take [[/damage 28 type=fire]] damage. Each target takes the full listed damage and makes their own save. <strong>Applies Effects:</strong> ignited <strong>Saving Throw:</strong> Reflex <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +[[/damage 8]] damage (36 total), 4 = +[[/damage 16]] damage (44 total), 5 = +[[/damage 24]] damage (52 total) + applies effects</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,7 +29,33 @@
       "base": 28,
       "type": "fire",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "damage": 0,
+          "description": "no damage"
+        },
+        "1": {
+          "damage": 14,
+          "description": "half damage"
+        },
+        "2": {
+          "damage": 28,
+          "description": "full damage"
+        },
+        "3": {
+          "damage": 36,
+          "description": "enhanced"
+        },
+        "4": {
+          "damage": 44,
+          "description": "enhanced"
+        },
+        "5": {
+          "damage": 52,
+          "description": "enhanced + applies effects",
+          "appliesEffects": true
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",

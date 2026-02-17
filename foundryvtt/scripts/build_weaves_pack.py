@@ -118,7 +118,7 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
     """
     Parse Success Scaling text into structured scaling table.
     
-    Input example: "0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total)"
+    Input example: "0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total), 5 = +16 damage (24 total) + applies effects"
     
     Also looks for condition thresholds like "**Sickened Condition (at 5 successes):**"
     
@@ -128,7 +128,7 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
         "2": { "damage": 8, "description": "full damage" },
         "3": { "damage": 16, "description": "enhanced" },
         "4": { "damage": 24, "description": "critical" },
-        "5": { "damage": 24, "effect": "sickened", "description": "applies sickened" }
+        "5": { "damage": 24, "appliesEffects": true, "description": "critical + applies effects" }
     }
     """
     if not scaling_text:
@@ -145,11 +145,18 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
         if not entry:
             continue
         
-        # Match: "0 = miss" or "1 = half damage (4)" or "3 = +8 damage (16 total)"
+        # Match: "0 = miss" or "1 = half damage (4)" or "3 = +8 damage (16 total)" or "5 = ... + applies effects"
         match = re.match(r'^(\d+)\s*[=:]\s*(.+)', entry)
         if match:
             success_level = match.group(1)
             rest = match.group(2).strip()
+            
+            # Check if this entry has "+ applies effects" or "+ Applies effects" or "+ Applies effect"
+            applies_effects_in_entry = False
+            if re.search(r'\+\s*[Aa]pplies\s+[Ee]ffects?', rest):
+                applies_effects_in_entry = True
+                # Remove the "+ applies effects" part from the description
+                rest = re.sub(r'\s*\+\s*[Aa]pplies\s+[Ee]ffects?', '', rest).strip()
             
             # Extract damage amount from parentheses like "(4)" or "(16 total)"
             damage_match = re.search(r'\((\d+)(?:\s+total)?\)', rest)
@@ -160,25 +167,35 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
                 damage = 0
             
             # Determine description
-            description = rest
+            desc = rest
             # Clean up description
             if damage_match:
-                description = re.sub(r'\s*\(\d+(?:\s+total)?\)', '', description).strip()
+                desc = re.sub(r'\s*\(\d+(?:\s+total)?\)', '', desc).strip()
             
             # Simplify common descriptions
-            if 'miss' in description.lower():
-                description = 'miss'
-            elif 'half' in description.lower():
-                description = 'half damage'
-            elif 'full' in description.lower():
-                description = 'full damage'
-            elif '+' in description or 'enhanced' in description.lower():
-                description = 'enhanced'
+            if 'miss' in desc.lower():
+                desc = 'miss'
+            elif 'half' in desc.lower() and 'damage' in desc.lower():
+                desc = 'half damage'
+            elif 'full' in desc.lower() and 'damage' in desc.lower():
+                desc = 'full damage'
+            elif '+' in desc and 'damage' in desc.lower():
+                desc = 'enhanced'
             
-            scaling_table[success_level] = {
+            # Add "+ applies effects" back to description if it was present
+            if applies_effects_in_entry:
+                desc = desc + ' + applies effects'
+            
+            scaling_entry = {
                 'damage': damage,
-                'description': description
+                'description': desc
             }
+            
+            # Add appliesEffects flag if "+ applies effects" was in the entry
+            if applies_effects_in_entry:
+                scaling_entry['appliesEffects'] = True
+            
+            scaling_table[success_level] = scaling_entry
     
     # Parse condition thresholds from description
     # Pattern: "**ConditionName Condition (at N successes):**"
@@ -323,6 +340,7 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 item['img'] = img_match.group(1).strip()
             
             # Parse damage information from Effect field
+            # Try to match "X <type> damage" first
             effect_match = re.search(r'\*\*Effect:\*\*[^*]*?(\d+)\s+(\w+)\s+damage', description, re.IGNORECASE)
             if effect_match:
                 damage_amount = int(effect_match.group(1))
@@ -330,6 +348,13 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 item['system']['damage']['base'] = damage_amount
                 item['system']['damage']['type'] = damage_type
                 item['system']['effectType'] = 'damage'
+            else:
+                # Try to match "deals X damage" or "takes X damage" without type
+                effect_match_simple = re.search(r'\*\*Effect:\*\*[^*]*?(?:deals|takes)\s+(\d+)\s+damage', description, re.IGNORECASE)
+                if effect_match_simple:
+                    damage_amount = int(effect_match_simple.group(1))
+                    item['system']['damage']['base'] = damage_amount
+                    item['system']['effectType'] = 'damage'
             
             # Parse Range field
             range_match = re.search(r'\*\*Range:\*\*\s*([^\n]+)', description)
@@ -367,7 +392,7 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                     item['system']['damage']['drInteraction'] = 'half'
                 elif 'full dr' in dr_text or 'full' in dr_text:
                     item['system']['damage']['drInteraction'] = 'full'
-                elif 'ignores dr' in dr_text or 'ignore' in dr_text:
+                elif 'none' in dr_text or 'ignores dr' in dr_text or 'ignore' in dr_text:
                     item['system']['damage']['drInteraction'] = 'ignore'
             
             # Parse Applies Effects field from markdown first (needed for scaling parser)
@@ -379,7 +404,8 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 item['system']['appliesEffects'] = applies_effects_list
             
             # Parse Success Scaling field into structured data
-            scaling_match = re.search(r'\*\*Success Scaling:\*\*\s*([^\n]+(?:\n(?!\*\*)[^\n]+)*)', description)
+            # Handle variations like "Success Scaling:" or "Success Scaling (Net successes...):"
+            scaling_match = re.search(r'\*\*Success Scaling[^:]*:\*\*\s*([^\n]+(?:\n(?!\*\*)[^\n]+)*)', description)
             if scaling_match:
                 scaling_text = scaling_match.group(1).strip()
                 if item['system']['damage']['base'] > 0:

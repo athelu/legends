@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 3 (healing energy) <strong>Supporting Energy:</strong> None (touch, instantaneous) <strong>Range:</strong> self, touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness. <strong>Saving Throw:</strong> None (healing weave, no resistance) <strong>Success Scaling:</strong> 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP (8+1d8), 4 = 16 HP (8+2d8)</p>"
+      "value": "<p><strong>Primary Energy:</strong> Positive 3 (healing energy) <strong>Supporting Energy:</strong> None (touch, instantaneous) <strong>Range:</strong> self, touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,

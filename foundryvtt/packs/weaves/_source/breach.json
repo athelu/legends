@@ -5,18 +5,18 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 3 (forcing locks and barriers open) <strong>Supporting Energy:</strong> None (close range 30ft, instantaneous) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery (2d8 only) <strong>Effect:</strong> One locked door, window, gate, chest, or similar object becomes unlocked. Removes Arcane Lock. Creates a loud bang audible up to 300 feet away. <strong>Saving Throw:</strong> None (object targeted) <strong>Success Scaling:</strong> 1 = makes loud noise but doesn't open, 2 = opens, 3 = silent, 4 = opens and disarms any traps, 5 = affects all locks/barriers within 30 feet</p>\n<h2>C</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Space 2 (forcing locks and barriers open) <strong>Supporting Energy:</strong> space 1 (close range 30ft, instantaneous) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> One locked door, window, gate, chest, or similar object becomes unlocked. Removes Arcane Lock. Creates a loud bang audible up to 300 feet away. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 1 = makes loud noise but doesn't open, 2 = opens, 3 = silent</p>\n<h2>C</h2>"
     },
-    "weaveType": "simple",
+    "weaveType": "complex",
     "actionCost": 1,
     "energyCost": {
       "primary": {
         "type": "space",
-        "cost": 3
+        "cost": 2
       },
       "supporting": {
-        "type": "",
-        "cost": 0
+        "type": "space",
+        "cost": 1
       }
     },
     "range": "Close, 30 ft.",

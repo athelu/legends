@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 3 (granting understanding of all speech) <strong>Supporting Energy:</strong> Time 3 (duration 1 hour) <strong>Range:</strong> self, touch <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Touch a creature. For the duration, target can understand and speak any language. Doesn't help with written languages. <strong>Saving Throw:</strong> None (beneficial enhancement) <strong>Success Scaling:</strong> 0 = fails, 1 = 10 minutes (understand only), 2 = full effect, 3 = 8 hours, 4 = can read/write all languages too</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Air 3 (granting understanding of all speech) <strong>Supporting Energy:</strong> Time 3 (duration 1 hour) <strong>Range:</strong> self, touch <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Touch a creature. For the duration, target can understand and speak any language. Doesn't help with written languages. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 10 minutes, 2 = full effect, 3 = 4 hours, 4 = 12 hours, 5 = 1 day</p>\n<p>---</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,

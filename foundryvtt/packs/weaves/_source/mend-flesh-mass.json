@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 4 (healing energy) <strong>Supporting Energy:</strong> Space 3 (close range + 6 targets) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Up to 6 creatures you choose within range heal 16 HP each. <strong>Saving Throw:</strong> None (healing weave, no resistance) <strong>Success Scaling:</strong> 0 = no healing, 1 = 8 HP each, 2 = 16 HP each, 3 = 24 HP each, 4 = 32 HP each</p>"
+      "value": "<p><strong>Primary Energy:</strong> Positive 4 (healing energy) <strong>Supporting Energy:</strong> Space 3 (close range + 6 targets) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Up to 6 creatures you choose within range heal 16 HP each. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = no healing, 1 = 8 HP each, 2 = 16 HP each, 3 = 24 HP each, 4 = 32 HP each, 5 = 40 HP each</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,

@@ -32,8 +32,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       itemView: D8CharacterSheet.#onItemView,
       setupMagicalTraits: D8CharacterSheet.#onSetupMagicalTraits,
     },
-    dragDrop: [{ dragSelector: ".item-list .item", dropSelector: null }],
-    form: { submitOnChange: true }
+    dragDrop: [{ dragSelector: ".item-list .item", dropSelector: null }]
   };
 
   static PARTS = {
@@ -49,12 +48,55 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     options.window.title = this.document.name || "Character";
   }
 
-  /** @override - Handle form submission properly for ActorSheetV2 */
-  async _processSubmitData(event, form, submitData) {
-    // Expand the flattened submission data
-    const expanded = foundry.utils.expandObject(submitData);
-    // Update the actor document with the expanded data
-    await this.document.update(expanded);
+  /** @override - Attach listeners to form inputs */
+  _attachPartListeners(partId, htmlElement, options) {
+    super._attachPartListeners(partId, htmlElement, options);
+    
+    // Add change listeners to all numeric inputs
+    const numericInputs = htmlElement.querySelectorAll('input[type="number"]');
+    numericInputs.forEach(input => {
+      input.addEventListener('change', this._onNumericInputChange.bind(this));
+      input.addEventListener('blur', this._onNumericInputChange.bind(this));
+    });
+  }
+
+  /** Handle numeric input changes and immediately update the actor */
+  async _onNumericInputChange(event) {
+    const input = event.target;
+    const fieldName = input.name;
+    const value = input.value;
+    
+    if (!fieldName || value === '') return;
+    
+    // Convert to number if it's a numeric field
+    const numValue = input.type === 'number' ? Number(value) : value;
+    
+    // Create update object
+    const updateData = {};
+    updateData[fieldName] = numValue;
+    
+    try {
+      // Update the actor immediately
+      const expanded = foundry.utils.expandObject(updateData);
+      
+      if (Object.keys(expanded).length === 0) {
+        console.warn('Update data expansion failed for field:', fieldName);
+        return;
+      }
+      
+      await this.document.update(expanded);
+      
+    } catch (error) {
+      console.error(`Failed to update ${fieldName}:`, error);
+      // Revert the field value on error
+      const currentValue = this._getNestedValue(this.document.system, fieldName.replace('system.', ''));
+      input.value = currentValue || 0;
+    }
+  }
+
+  /** Helper to get nested values from object */
+  _getNestedValue(obj, path) {
+    return path.split('.').reduce((current, key) => current?.[key], obj);
   }
 
   /** @override */

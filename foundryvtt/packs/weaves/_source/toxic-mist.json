@@ -5,13 +5,13 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Water 2 (toxic mist) or Negative 2 (negative poison) <strong>Supporting Energy:</strong> Space 1 (touch or 10 feet) <strong>Range:</strong> Touch or 10 feet <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water/Negative Potential + Water/Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target takes [[/damage 8 type=poison]] damage. Target makes [[/save type=fortitude]] to reduce damage. <strong>Applies Effects:</strong> poisoned <strong>Saving Throw:</strong> Fortitude (to resist poison) <strong>Damage Type:</strong> Poison (special - follows energy type used) <strong>DR Interaction:</strong> Half DR if using Water/Negative energy ([[/damage 8 type=poison]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong> 0 = no damage, 1 = half (4), 2 = full (8), 3 = +8 and Poisoned (16 total), 4 = +16 and Poisoned (24 total) <strong>Poisoned Condition (at Net 3+):</strong> Target has Misfortune on all rolls until the end of their next turn. At Net 4, duration extends to 1 minute (can save at end of each turn, 1 success ends).</p>\n<p>---</p>\n<h2>U</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Negative 2 (negative poison) <strong>Supporting Energy:</strong> Space 1 (touch or 10 feet) <strong>Range:</strong> Touch or 10 feet <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target takes [[/damage 8 type=poison]] damage. Target makes [[/save type=fortitude]] to reduce damage. <strong>Applies Effects:</strong> poisoned <strong>Saving Throw:</strong> Fortitude <strong>Damage Type:</strong> Poison <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = no damage, 1 = half (4), 2 = full (8), 3 = +8 and Poisoned (16 total), 4 = +16 (24 total), 5 = +16 (24 total) + Applies Effects</p>\n<p>---</p>\n<h2>U</h2>"
     },
     "weaveType": "complex",
     "actionCost": 2,
     "energyCost": {
       "primary": {
-        "type": "water",
+        "type": "negative",
         "cost": 2
       },
       "supporting": {
@@ -36,19 +36,24 @@
         },
         "1": {
           "damage": 4,
-          "description": "half damage"
+          "description": "half"
         },
         "2": {
           "damage": 8,
-          "description": "full damage"
+          "description": "full"
         },
         "3": {
           "damage": 16,
-          "description": "enhanced"
+          "description": "+8 and Poisoned"
         },
         "4": {
           "damage": 24,
-          "description": "enhanced"
+          "description": "+16"
+        },
+        "5": {
+          "damage": 24,
+          "description": "+16 + applies effects",
+          "appliesEffects": true
         }
       }
     },
