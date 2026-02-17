@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Earth 4 (hardening skin like tree bark) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> touch, self <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target's DR increases by 2 (doesn't stack with armor). Touch range by default. <strong>Applies Effects:</strong> dr-bonus (value=2) <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour, 5 = 8 hours</p>"
+      "value": "<p><strong>Primary Energy:</strong> Earth 4 (hardening skin like tree bark) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> touch, self <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target's DR increases by 4 (doesn't stack with armor). Touch range by default. <strong>Applies Effects:</strong> dr-bonus (value=4) <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -37,7 +37,7 @@
       {
         "effectId": "dr-bonus",
         "params": {
-          "value": "2"
+          "value": "4"
         }
       }
     ]

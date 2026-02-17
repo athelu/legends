@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 2 (force push/pull) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Push or pull one creature/object up to 10 feet. Target makes [[/save type=fortitude]] to resist (if creature). Can also be used to knock prone ([[/save type=reflex]]). Compare your weaving successes to their save successes. <strong>Saving Throw:</strong> Fortitude (to resist forced movement) or Reflex (to avoid being knocked prone) <strong>Success Scaling:</strong> 0 = no effect, 1 = 5 feet, 2 = 10 feet, 3 = 15 feet, 4 = 20 feet or knock prone</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 2 (force push/pull) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Push or pull one creature/object up to 10 feet. Target makes [[/save type=fortitude]] to resist (if creature). Compare your weaving successes to their save successes. <strong>Applies Effects:</strong> Prone <strong>Saving Throw:</strong> Fortitude <strong>Success Scaling:</strong> 0 = no effect, 1 = 5 feet, 2 = 10 feet, 3 = 15 feet, 4 = 20 feet, 5 = 20 feet + Applies effect</p>\n<p>---</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -33,7 +33,12 @@
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [
+      {
+        "effectId": "Prone",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!cb02a88ba176472d"

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 4 (disrupting magical energy) <strong>Supporting Energy:</strong> None (medium range 60ft, reaction) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy base (must match or exceed target weave cost) <strong>Action:</strong> Reaction (when you see a weave being cast) <strong>Weaving Roll:</strong> Space Potential + Space Mastery (2d8 only) <strong>Effect:</strong> Attempt to interrupt a weave being cast. Must spend Energy equal to or greater than the weave you're countering. Compare your weaving successes to their weaving successes. If you have more, their weave fails. <strong>Saving Throw:</strong> Opposed weaving check (Your Space weaving vs Their weaving) <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 1+ = Counter successful (weave fails)</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 4 (disrupting magical energy) <strong>Supporting Energy:</strong> None (medium range 60ft, reaction) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy base (must match or exceed target weave cost) <strong>Action:</strong> Reaction (when you see a weave being cast) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Attempt to interrupt a weave being cast. Make an [[/check skill=arcane]] to determine the weave being cast. Must spend Energy equal to or greater than the weave you're countering. Compare your weaving successes to their weaving successes. If you have more, their weave fails. <strong>Applies Effects:</strong> dazed <strong>Saving Throw:</strong> Opposed weaving check <strong>Success Scaling:</strong> 0 = fails, 1 = reduce counter spell by 1 success, 2 = Counter successful, 3 = Counter successful, regain 4 energy</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -33,7 +33,12 @@
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [
+      {
+        "effectId": "dazed",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!0e77a87e46b2434f"

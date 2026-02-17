@@ -1,0 +1,40 @@
+{
+  "_id": "5a26cf1a92264cec",
+  "name": "Healing burst",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Primary Energy:</strong> Positive 3 (Healing) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP, 4 = 16 HP, 5 = 20 HP</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "positive",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 1
+      }
+    },
+    "range": "Close, 30 ft.",
+    "duration": "Instantaneous",
+    "target": "",
+    "savingThrow": "none",
+    "effect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": {}
+    },
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": []
+  },
+  "effects": [],
+  "_key": "!items!5a26cf1a92264cec"
+}

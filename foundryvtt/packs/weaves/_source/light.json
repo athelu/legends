@@ -5,10 +5,10 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 2 (creating illumination, minor effect) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> self, touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 5 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Object you touch sheds bright light in 20ft radius and dim light for another 20 feet. Can be cast on a hostile creature ([[/save type=reflex]] to avoid). <strong>Saving Throw:</strong> Reflex (if targeting hostile creature to avoid) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 8 hours or daylight brightness</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 2 (creating illumination, minor effect) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> self, touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 5 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Object you touch sheds bright light in 20ft radius and dim light for another 20 feet. Can be cast on a hostile creature ([[/save type=reflex]] to avoid). <strong>Saving Throw:</strong> Reflex <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 4 hours, 5 = 12 hours</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "fire",

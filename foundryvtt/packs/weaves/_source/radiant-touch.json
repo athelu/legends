@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 2 (radiant energy through touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Touch a target and channel searing radiant energy. Target takes [[/damage 4 type=radiant]] damage. Deals double damage to undead creatures. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Radiant (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=radiant]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2, or 4 vs undead), 2 = full damage (4, or 8 vs undead), 3 = +[[/damage 4]] damage (8 total, or 16 vs undead), 4 = +[[/damage 8]] damage (12 total, or 24 vs undead) <strong>Special:</strong> Double damage against undead creatures <strong>Revealed Condition (at 5 successes):</strong> If target is invisible or hidden by magical darkness, they become visible until end of their next turn as they glow with radiant energy.</p>"
+      "value": "<p><strong>Primary Energy:</strong> Positive 2 (radiant energy through touch, damage) <strong>Supporting Energy:</strong> None (touch range only) <strong>Range:</strong> Touch <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery <strong>Effect:</strong> Touch a target and channel searing radiant energy. Target takes [[/damage 4 type=radiant]] damage. Deals double damage to undead creatures. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None <strong>Damage Type:</strong> Radiant (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (2, or 4 vs undead), 2 = full damage (4, or 8 vs undead), 3 = +[[/damage 4]] damage (8 total, or 16 vs undead)</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -43,10 +43,6 @@
           "description": "full damage"
         },
         "3": {
-          "damage": 0,
-          "description": "enhanced"
-        },
-        "4": {
           "damage": 0,
           "description": "enhanced"
         }

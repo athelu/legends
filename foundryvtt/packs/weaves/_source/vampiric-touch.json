@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 4 (draining life force) <strong>Supporting Energy:</strong> Time 2 (duration of charge, 1 minute) <strong>Range:</strong> Touch <strong>Duration:</strong> 1 minute (charge duration) <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) to cast, then complex weave (2 actions) to discharge <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Your touch deals [[/damage 12 type=negative]] damage. You heal HP equal to half damage dealt. Can hold the charge for up to 1 minute and attack multiple times if charge remains. This is an attack weave when discharging—no saving throw on the touch. <strong>Applies Effects:</strong> weakened <strong>Saving Throw:</strong> None (attack weave when touching, weaving successes determine hit quality) <strong>Damage Type:</strong> Negative (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 12 type=negative]] damage vs DR 4 becomes 12 - 2 = [[/damage 10]] damage) <strong>Success Scaling:</strong> 0 = no charge created, 1 = [[/damage 8]] damage (heal 4), 2 = [[/damage 12]] damage (heal 6), 3 = [[/damage 16]] damage (heal 8), 4 = [[/damage 24]] damage (heal 12, 10 minutes) <strong>Weakened Condition (at 3+ successes):</strong> Target has Misfortune on Strength checks and saves until end of their next turn.</p>\n<p>---</p>\n<h2>W</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Negative 4 (draining life force) <strong>Supporting Energy:</strong> Time 2 (duration of charge, 1 minute) <strong>Range:</strong> Touch <strong>Duration:</strong> 1 minute (charge duration) <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) to cast, then complex weave (2 actions) to discharge <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Your touch deals [[/damage 12 type=negative]] damage. You heal HP equal to half damage dealt. Can hold the charge for up to 1 minute and attack multiple times if charge remains. This is an attack weave when discharging—no saving throw on the touch. <strong>Applies Effects:</strong> weakened <strong>Saving Throw:</strong> None <strong>Damage Type:</strong> Negative (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = fails, 1 = [[/damage 6]] damage (heal 3), 2 = [[/damage 12]] damage (heal 6), 3 = [[/damage 16]] damage (heal 8), 4 = [[/damage 24]] damage (heal 12), 5 = [[/damage 24]] damage (heal 12) + Applies Effects</p>\n<p>---</p>\n<h2>W</h2>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -32,11 +32,11 @@
       "scaling": {
         "0": {
           "damage": 0,
-          "description": "no charge created"
+          "description": "fails"
         },
         "1": {
           "damage": 0,
-          "description": "8 damage (heal 4)"
+          "description": "6 damage (heal 3)"
         },
         "2": {
           "damage": 0,
@@ -48,7 +48,12 @@
         },
         "4": {
           "damage": 0,
-          "description": "24 damage (heal 12"
+          "description": "24 damage (heal 12)"
+        },
+        "5": {
+          "damage": 0,
+          "description": "24 damage (heal 12) + applies effects",
+          "appliesEffects": true
         }
       }
     },

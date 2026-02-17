@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 3 (creating zone of absolute quiet) <strong>Supporting Energy:</strong> Space 3 (close range + 20ft radius) / Time 2 (duration 10 minutes) <strong>Range:</strong> Close, 30 ft. (20-foot radius sphere) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create 20-foot radius sphere of silence centered on a point at close range. No sound can be created within or pass through the sphere. Creatures inside are Deafened. Verbal components of weaves can't be performed inside (blocks invokers and most casters). Can cast on object; sphere moves with object. <strong>Saving Throw:</strong> None (creates environmental effect) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 30-foot radius, 5 = 1 hour + 60-foot radius</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Air 3 (creating zone of absolute quiet) <strong>Supporting Energy:</strong> Space 5 (close range + 20ft radius + duration 10 minutes) <strong>Range:</strong> Close, 30 ft. (20-foot radius sphere) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create 20-foot radius sphere of silence centered on a point at close range. No sound can be created within or pass through the sphere. Creatures inside are Deafened. Verbal components of weaves can't be performed inside (blocks invokers and most casters). Can cast on object; sphere moves with object. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 30-foot radius, 4 = 1 hour (30-foot radius), 5 = 1 hour (40-foot radius  )</p>\n<p>---</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 3
+        "cost": 5
       }
     },
     "range": "Close, 30 ft. (20-foot radius sphere)",

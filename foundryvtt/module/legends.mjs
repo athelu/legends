@@ -816,6 +816,7 @@ async function createWeaveCastCard(options) {
   const savingThrow = weave.system.savingThrow;
   const hasSave = savingThrow && savingThrow.toLowerCase() !== 'none';
   const hasEffects = weave.system.appliesEffects?.length > 0;
+  const isDamage = weave.system.effectType === 'damage' && weave.system.damage?.base > 0;
   
   let actionButton = '';
   if (hasSave) {
@@ -832,8 +833,22 @@ async function createWeaveCastCard(options) {
         </button>
       </div>
     `;
+  } else if (isDamage) {
+    // No save but deals damage - show apply damage button
+    actionButton = `
+      <div class="apply-section">
+        <p><em>No save allowed. Affected targets: Select your token and click below to apply damage</em></p>
+        <button class="apply-damage-button" 
+                data-weave-message-id="{{MESSAGE_ID}}"
+                data-caster-id="${actor.id}"
+                data-weave-id="${weave.id}"
+                data-caster-successes="${rollResult.successes}">
+          <i class="fas fa-heart-broken"></i> Apply Damage
+        </button>
+      </div>
+    `;
   } else if (!hasEffects) {
-    // No save and no effects - show generic apply button
+    // No save, no damage, and no effects - show generic apply button
     actionButton = `
       <div class="apply-section">
         <p><em>No save allowed. Affected targets: Select your token and click below to apply effect</em></p>
@@ -847,7 +862,7 @@ async function createWeaveCastCard(options) {
       </div>
     `;
   }
-  // If no save but has effects, no button needed - just drag the effects
+  // If no save, no damage, but has effects, no button needed - just drag the effects
   
   // Build effect info
   const effectInfo = weave.system.effectType === 'damage' && weave.system.damage?.base > 0
@@ -1008,6 +1023,77 @@ export async function handleApplyEffectClick(messageId, weaveData) {
     weaveData.casterSuccesses,
     defender.id
   );
+}
+
+/**
+ * Handle apply damage button click for damage weaves without saves
+ * @param {string} messageId - The weave message ID
+ * @param {Object} weaveData - Weave data from the message flags
+ */
+export async function handleApplyDamageClick(messageId, weaveData) {
+  // Get the currently selected token
+  const controlled = canvas.tokens.controlled;
+  if (controlled.length === 0) {
+    ui.notifications.warn("Please select your token first!");
+    return;
+  }
+  
+  const defender = controlled[0].actor;
+  if (!defender) {
+    ui.notifications.error("Selected token has no actor!");
+    return;
+  }
+  
+  // Get the original message to access flags
+  const message = game.messages.get(messageId);
+  if (!message) {
+    ui.notifications.error("Original weave message not found!");
+    return;
+  }
+  
+  const messageWeaveData = message.flags?.['legends.weaveData'];
+  if (!messageWeaveData) {
+    ui.notifications.error("Weave data not found in message!");
+    return;
+  }
+  
+  const casterSuccesses = weaveData.casterSuccesses;
+  const damage = messageWeaveData.damage;
+  
+  // Calculate damage based on successes and scaling
+  let damageAmount = 0;
+  if (damage && damage.scaling) {
+    const scalingEntry = damage.scaling[casterSuccesses.toString()];
+    if (scalingEntry) {
+      damageAmount = scalingEntry.damage;
+    } else if (casterSuccesses >= 2) {
+      // Default to base damage for 2+ successes if no specific scaling
+      damageAmount = damage.base;
+    }
+  } else if (casterSuccesses >= 2) {
+    // Fallback to base damage for 2+ successes
+    damageAmount = damage.base || 0;
+  }
+  
+  if (damageAmount > 0) {
+    await applyWeaveDamage(damageAmount, damage.type);
+    
+    // Create result message
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: defender }),
+      content: `
+        <div class="legends-weave-result">
+          <h3><i class="fas fa-magic"></i> Damage Applied</h3>
+          <div class="effect-result">
+            <strong>Weaving Successes:</strong> ${casterSuccesses}<br/>
+            <strong>Damage:</strong> ${damageAmount} ${damage.type}
+          </div>
+        </div>
+      `
+    });
+  } else {
+    ui.notifications.info(`No damage applied - insufficient successes (${casterSuccesses})`);
+  }
 }
 
 /**

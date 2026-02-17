@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 4 (radiant energy, damage) <strong>Supporting Energy:</strong> Space 2 (medium range) / Time 1 (duration 1 round) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 round (nimbus effect) <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> A bolt of radiant energy strikes the target. Target takes [[/damage 8 type=radiant]] damage. A nimbus of light surrounds the target for one round. The next person to attack the target before the duration ends has Fortune. The nimbus disappears afterward. This is an attack weave—no saving throw allowed. <strong>Applies Effects:</strong> blinded <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Positive (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 8 type=radiant]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total), 5 = +[[/damage 16]] damage (24 total) + applies Blinded <strong>Blinded Condition (at 5 successes):</strong> Target gains the Blinded condition. Can use 1 action to make [[/save type=fortitude]] (1 success ends).</p>"
+      "value": "<p><strong>Primary Energy:</strong> Positive 4 (radiant energy, damage) <strong>Supporting Energy:</strong> Space 3 (medium range + 1 round duration) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 round (nimbus effect) <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> A bolt of radiant energy strikes the target. Target takes [[/damage 8 type=radiant]] damage. A nimbus of light surrounds the target for one round. The next person to attack the target before the duration ends has Fortune. The nimbus disappears afterward. This is an attack weave—no saving throw allowed. <strong>Applies Effects:</strong> blinded <strong>Saving Throw:</strong> None <strong>Damage Type:</strong> Positive (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total), 5 = +[[/damage 16]] damage (24 total) + applies effects</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 2
+        "cost": 3
       }
     },
     "range": "Medium, 60 ft.",
@@ -52,7 +52,8 @@
         },
         "5": {
           "damage": 24,
-          "description": "enhanced"
+          "description": "enhanced + applies effects",
+          "appliesEffects": true
         }
       }
     },

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 3 (force bolts that always hit) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 5 Energy for 3 bolts <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Create 3 glowing darts of force that automatically hit (no roll needed). Each dart deals [[/damage 4]] damage. Can target same creature or divide among multiple. <strong>Saving Throw:</strong> None (force effect, automatic hit) <strong>Damage Type:</strong> Force (bypasses all DR) <strong>DR Interaction:</strong> Force damage ignores DR completely <strong>Scaling:</strong> +1 Energy for +1 dart (max 8 darts at 10 Energy) <strong>Success Scaling:</strong> 0 = 1 dart only, 1 = 2 darts, 2 = 3 darts, 3 = 4 darts, 4 = 5 darts</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 3 (force bolts that always hit) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 5 Energy for 3 bolts <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Create 3 glowing darts of force that automatically hit (no roll needed). Each dart deals [[/damage 4]] damage. Can target same creature or divide among multiple. <strong>Saving Throw:</strong> None <strong>Damage Type:</strong> Force <strong>DR Interaction:</strong> Ignore <strong>Scaling:</strong> +1 Energy for +1 dart <strong>Success Scaling:</strong> 0 = fails, 1 = 1 dart ([[/damage 4]] damage), 2 = 3 darts ([[/damage 4]] damage each), 3 = 4 darts ([[/damage 4]] damage each)</p>\n<p>---</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -24,12 +24,29 @@
     "target": "",
     "savingThrow": "none",
     "effect": "",
-    "effectType": "",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
+      "base": 4,
+      "type": "force",
       "drInteraction": "ignore",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "damage": 0,
+          "description": "fails"
+        },
+        "1": {
+          "damage": 0,
+          "description": "1 dart (4 damage)"
+        },
+        "2": {
+          "damage": 0,
+          "description": "3 darts (4 damage each)"
+        },
+        "3": {
+          "damage": 0,
+          "description": "4 darts (4 damage each)"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",

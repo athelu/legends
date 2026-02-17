@@ -5,10 +5,10 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 2 (psychic assault through cruel words) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Simple Weave (1 action) - Does NOT provoke opportunity attacks <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Speak cutting words at one creature you can see within medium range. Target takes [[/damage 4 type=psychic]] damage and makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn. <strong>Saving Throw:</strong> Will (to resist psychic damage and demoralization) <strong>Damage Type:</strong> Psychic (mental) <strong>DR Interaction:</strong> Half DR ([[/damage 4 type=psychic]] damage vs DR 4 becomes 4 - 2 = [[/damage 2]] damage) <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (2), 2 = full damage (4) + penalty on attack, 3 = +[[/damage 4]] damage (8 total) + penalty on attack, 4 = +[[/damage 8]] damage (12 total) + penalty applies to all rolls until end of their next turn, 5 = +[[/damage 8]] damage (12 total) + penalty lasts 1 minute</p>\n<h2>D</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Negative 2 (psychic assault through cruel words) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Complex Weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Speak cutting words at one creature you can see within medium range. Target takes [[/damage 4 type=psychic]] damage and makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn. <strong>Saving Throw:</strong> Will <strong>Damage Type:</strong> Psychic (mental) <strong>DR Interaction:</strong> Ignore <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (2), 2 = full damage (4) + penalty on attack, 3 = +[[/damage 4]] damage (8 total) + penalty on attack, 4 = +[[/damage 8]] damage (12 total) + penalty applies to all rolls until end of their next turn, 5 = +[[/damage 8]] damage (12 total) + penalty lasts 1 minute</p>\n<h2>D</h2>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "negative",
@@ -28,7 +28,7 @@
     "damage": {
       "base": 4,
       "type": "psychic",
-      "drInteraction": "half",
+      "drInteraction": "ignore",
       "scaling": {
         "0": {
           "damage": 0,

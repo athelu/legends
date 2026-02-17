@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 8 (pure death energy combined with soul binding) <strong>Supporting Energy:</strong> Space 2 (medium range 60ft) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery + Space Potential + Space Mastery (4d8) <strong>Effect:</strong> Target takes [[/damage 40 type=negative]] damage. Target makes [[/save type=fortitude]] to reduce. If reduced to 0 HP by this weave, target dies and rises as a zombie under your control after 1 minute. <strong>Saving Throw:</strong> Fortitude (to resist death energy) <strong>Damage Type:</strong> Negative (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 40 type=negative]] damage vs DR 4 becomes 40 - 2 = [[/damage 38]] damage) <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 0 = no damage, 1 = 1/[[/damage 2]] damage (20), 2 = full damage (40), 3 = +[[/damage 8]] damage (48 total), 4 = +[[/damage 16]] damage (56 total, instant death if reduced to -Constitution), 5 = +[[/damage 24]] damage (64 total) + instant death regardless of HP <strong>Necromantic Warning:</strong> The soul-binding component of this weave (raising the slain as undead) represents lost First Men knowledge. Cannot be learned at character creation, requires GM permission. The damage portion is standard Negative energy, but the automatic raising effect manipulates pneuma.</p>"
+      "value": "<p><strong>Primary Energy:</strong> Negative 8 (pure death energy combined with soul binding) <strong>Supporting Energy:</strong> Space 2 (medium range 60ft) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery + Space Potential + Space Mastery <strong>Effect:</strong> Target takes [[/damage 40 type=negative]] damage. Target makes [[/save type=fortitude]] to reduce. If reduced to 0 HP by this weave, target dies and rises as a zombie under your control after 1 minute. <strong>Saving Throw:</strong> Fortitude <strong>Damage Type:</strong> Negative (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling (Net successes = Your successes - Their successes):</strong> 0 = no damage, 1 = 1/[[/damage 2]] damage (20), 2 = full damage (40), 3 = +[[/damage 8]] damage (48 total), 4 = +[[/damage 16]] damage (56 total, instant death if reduced to -Constitution), 5 = +[[/damage 24]] damage (64 total) + instant death regardless of HP</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,7 +29,32 @@
       "base": 40,
       "type": "negative",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "damage": 0,
+          "description": "no damage"
+        },
+        "1": {
+          "damage": 20,
+          "description": "1/2 damage"
+        },
+        "2": {
+          "damage": 40,
+          "description": "full damage"
+        },
+        "3": {
+          "damage": 48,
+          "description": "enhanced"
+        },
+        "4": {
+          "damage": 0,
+          "description": "enhanced"
+        },
+        "5": {
+          "damage": 64,
+          "description": "enhanced"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",

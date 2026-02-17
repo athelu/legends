@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 2 (radiant fire, damage) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target takes [[/damage 8 type=radiant]] damage. This is an attack weave—no saving throw allowed. <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Positive (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 8 type=positive]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total) <strong>Revealed Condition (at 5 successes):</strong> Target receives the Revealed condition. The target loses and cannot gain the Hidden and concealed conditions. The Revealed condition expires at the end of the target's next turn.</p>\n<h2>I</h2>"
+      "value": "<p><strong>Primary Energy:</strong> Positive 2 (radiant fire, damage) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target takes [[/damage 8 type=radiant]] damage. This is an attack weave—no saving throw allowed. <strong>Applies Effects:</strong> revealed <strong>Saving Throw:</strong> None <strong>Damage Type:</strong> Positive (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 8 type=positive]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total), 5 = +[[/damage 16]] damage (24 total)  + Applies effects</p>\n<h2>I</h2>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -49,12 +49,22 @@
         "4": {
           "damage": 24,
           "description": "enhanced"
+        },
+        "5": {
+          "damage": 24,
+          "description": "enhanced + applies effects",
+          "appliesEffects": true
         }
       }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [
+      {
+        "effectId": "revealed",
+        "params": {}
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!ab1a6deb48d34521"

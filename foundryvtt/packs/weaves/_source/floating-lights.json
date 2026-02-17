@@ -5,10 +5,10 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 2 (creating floating lights, minor effect) <strong>Supporting Energy:</strong> Space 4 (medium range + 1 minute) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create up to 4 torch-sized lights at medium range that hover and shed dim light in 10ft radius. Can move lights up to 60 feet as [Free] action. <strong>Saving Throw:</strong> None (utility weave) <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 2 (creating floating lights, minor effect) <strong>Supporting Energy:</strong> Space 4 (medium range + 1 minute) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create up to 4 torch-sized lights at medium range that hover and shed dim light in 10ft radius. Can move lights up to 60 feet as [Free] action. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "fire",

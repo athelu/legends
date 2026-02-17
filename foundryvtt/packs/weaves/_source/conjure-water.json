@@ -5,10 +5,10 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Water 2 (conjuring clean water) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create up to 10 gallons of clean water in an open container. Or create rain in 30ft cube that extinguishes open flames. <strong>Saving Throw:</strong> None (conjuration weave) <strong>Success Scaling:</strong> 0 = fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons, 4 = 40 gallons, 5 = 80 gallons</p>"
+      "value": "<p><strong>Primary Energy:</strong> Water 2 (conjuring clean water) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create up to 10 gallons of clean water in an open container. Or create rain in 30ft cube that extinguishes open flames. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons, 4 = 40 gallons, 5 = 80 gallons</p>"
     },
     "weaveType": "complex",
-    "actionCost": 1,
+    "actionCost": 2,
     "energyCost": {
       "primary": {
         "type": "water",

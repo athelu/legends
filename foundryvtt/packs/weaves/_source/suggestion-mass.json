@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 6 (planting compulsion in multiple minds) <strong>Supporting Energy:</strong> Space 3 (medium range + up to 12 targets) / Time 4 (duration 24 hours) <strong>Range:</strong> Medium, 60 ft. (up to 12 creatures) <strong>Duration:</strong> 24 hours (or until completed) <strong>Total Cost:</strong> 13 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Up to 12 creatures you can see at medium range make Will saves. Compare your weaving successes to each target's save successes. Those you beat follow your suggested course of activity (1-2 sentences) that sounds reasonable. Targets pursue activity for 24 hours or until completing it. Obviously harmful suggestions end weave for that target. Creatures immune to charm are immune. <strong>Saving Throw:</strong> Will (to resist mental compulsion) <strong>Success Scaling:</strong> 0 = no effect (per target), 1 = 1 hour, 2 = 24 hours, 3 = 10 days, 4 = 30 days (extremely powerful compulsion)</p>\n<p>---</p>"
+      "value": "<p><strong>Primary Energy:</strong> Negative 6 (planting compulsion in multiple minds) <strong>Supporting Energy:</strong> Space 8 (medium range/ 4 targets + Duration 4 hours) <strong>Range:</strong> Medium, 60 ft. (up to 4 creatures) <strong>Duration:</strong> 4 hours (or until completed) <strong>Total Cost:</strong> 14 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Up to 12 creatures you can see at medium range make Will saves. Compare your weaving successes to each target's save successes. Those you beat follow your suggested course of activity (1-2 sentences) that sounds reasonable. Targets pursue activity for 4 hours or until completing it. Obviously harmful suggestions end weave for that target. Creatures immune to charm are immune. <strong>Saving Throw:</strong> Will <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 hour, 2 = full effect (4 hours), 3 = 12 hours, 4 = requires 2 successes to recover (12 hours), 5 = requires 2 successes to recover (1 day)</p>\n<p>---</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -16,11 +16,11 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 3
+        "cost": 8
       }
     },
-    "range": "Medium, 60 ft. (up to 12 creatures)",
-    "duration": "24 hours (or until completed)",
+    "range": "Medium, 60 ft. (up to 4 creatures)",
+    "duration": "4 hours (or until completed)",
     "target": "",
     "savingThrow": "will",
     "effect": "",

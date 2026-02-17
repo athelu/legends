@@ -767,11 +767,11 @@ Physical armor and natural defenses interact differently with magical damage bas
 | Cold | Half DR | Frost Ray, Freezing Blast |
 | Lightning | Half DR | Lightning Bolt, Lightning Touch |
 | Acid | Half DR | Acid Blast, Acid Arrow |
-| Thunder | Half DR | Thunder Burst, Shatter |
+| Thunder | Ignore | Thunder Burst, Shatter |
 | Negative | Half DR | Chill Touch, Blight, Vampiric Touch |
 | Positive | Half DR | Holy Fire, Radiant Bolt |
-| Force | Half DR | Unerring Bolt  |
-| Psychic | Half DR | Mind Blast, Psychic Scream |
+| Force | ignore | Unerring Bolt  |
+| Psychic | ignore | Mind Blast, Psychic Scream |
 | Physical Ice | Full DR | HailStorm (ice chunks) |
 | Physical Stone | Full DR | Meteor Swarm, Conjured weapons |
 | Physical Debris | Full DR | Earthquake, Avalanche |
@@ -796,7 +796,7 @@ Some creatures have specific elemental resistances or immunities listed in their
 #### Special Cases
 
 **Force Damage (Unerring Bolt, etc.):**
-- Applies half DR
+- Ignores DR
 - Almost never resisted (very rare to have Force Resistance)
 - Considered pure magical energy
 
@@ -804,35 +804,13 @@ Some creatures have specific elemental resistances or immunities listed in their
 - DR does not reduce healing
 - Negative Energy Resistance does not reduce healing
 
-**Spell Damage Types in Descriptions:**
-Each spell description now includes:
-- **Damage Type:** [Energy type or Physical]
-- **DR Interaction:** [Half DR / Full DR / Ignores DR]
-
 ### Condition Application in Weaves
 
 Many weaves can inflict conditions on targets when achieving high success thresholds. The conditions applied depend on the primary energy type used in the weave and the power level of the spell.
 
 #### Success Threshold Framework
 
-**Attack Weaves (No Saving Throw):**
-- 0 successes: Miss
-- 1 success: Partial effect (typically half damage)
-- 2 successes: Full effect
-- 3 successes: Enhanced effect + minor condition
-- 4 successes: Maximum effect + major condition
-- 5+ successes: Overwhelming effect + severe or multiple conditions
-
-**Save Weaves (With Saving Throw):**
-- Net 0 or less: Resisted/minimal effect
-- Net 1: Reduced effect (typically half damage)
-- Net 2: Full effect
-- Net 3: Enhanced effect + minor condition
-- Net 4: Maximum effect + major condition
-- Net 5+: Overwhelming effect + severe or multiple conditions
-
-**Note:** Net successes = Caster's total successes - Target's save successes
-
+- 5+ successes: Maximum damage + Applies conditions
 #### Condition Selection by Energy Type
 
 Conditions should thematically match the primary energy used in the weave. Reference the conditions document for full condition rules.

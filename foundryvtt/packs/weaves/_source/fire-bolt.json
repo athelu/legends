@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 2 (bolt of flame, damage) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery <strong>Effect:</strong> You hurl a mote of fire at a creature or object within range. Target takes [[/damage 8 type=fire]] damage. This is an attack weave—no saving throw allowed. <strong>Applies Effects:</strong> ignited <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 8 type=fire]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total), 5 = +[[/damage 16]] damage (24 total) + applies Ignited <strong>Ignited Condition (at 5 successes):</strong> Target takes [[/damage 1d8 type=fire]] damage at start of each turn. Can use 1 action to make [[/save type=reflex]] (1 success ends) or ally can use 1 action to extinguish.</p>"
+      "value": "<p><strong>Primary Energy:</strong> Fire 2 (bolt of flame, damage) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery <strong>Effect:</strong> You hurl a mote of fire at a creature or object within range. Target takes [[/damage 8 type=fire]] damage. This is an attack weave—no saving throw allowed. <strong>Applies Effects:</strong> ignited <strong>Saving Throw:</strong> None <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total), 5 = +[[/damage 16]] damage (24 total) + applies effects</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -52,7 +52,8 @@
         },
         "5": {
           "damage": 24,
-          "description": "enhanced"
+          "description": "enhanced + applies effects",
+          "appliesEffects": true
         }
       }
     },

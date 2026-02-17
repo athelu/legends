@@ -824,6 +824,23 @@ export function initializeCombatSystem() {
       });
     });
 
+    // Handle apply damage button clicks (for damage weaves without saves)
+    html.querySelectorAll('.apply-damage-button').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.preventDefault();
+        const weaveData = {
+          messageId: btn.dataset.weaveMessageId,
+          casterId: btn.dataset.casterId,
+          weaveId: btn.dataset.weaveId,
+          casterSuccesses: parseInt(btn.dataset.casterSuccesses)
+        };
+        
+        if (game.legends?.handleApplyDamageClick) {
+          await game.legends.handleApplyDamageClick(weaveData.messageId, weaveData);
+        }
+      });
+    });
+
     // Handle apply damage button clicks
     html.querySelectorAll('.apply-damage-btn').forEach(btn => {
       btn.addEventListener('click', async (event) => {

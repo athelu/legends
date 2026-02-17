@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 3 (force armor) <strong>Supporting Energy:</strong> Time 4 (duration 1 hour) <strong>Range:</strong> self, touch <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery (4d8) <strong>Effect:</strong> Target at touch gains DR 3 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities. <strong>Applies Effects:</strong> dr-bonus (value=3) <strong>Saving Throw:</strong> None (beneficial buff, willing targets only) <strong>Success Scaling:</strong> 1 = 10 minutes, 2 = 1 hour, 3 = 8 hours, 4 = DR 4 (24 hours)</p>"
+      "value": "<p><strong>Primary Energy:</strong> Space 3 (force armor) <strong>Supporting Energy:</strong> Time 4 (duration 1 hour) <strong>Range:</strong> self, touch <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery <strong>Effect:</strong> Target at touch gains DR 5 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities. <strong>Applies Effects:</strong> dr-bonus (value=5) <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours, 4 = DR 6 (4 hours), 5 = DR 7 (12 Hours)</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -37,7 +37,7 @@
       {
         "effectId": "dr-bonus",
         "params": {
-          "value": "3"
+          "value": "5"
         }
       }
     ]
