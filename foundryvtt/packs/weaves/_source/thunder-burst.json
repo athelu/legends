@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 3 (wave of thunderous force) <strong>Supporting Energy:</strong> Space 1 (15-foot cube area) <strong>Range:</strong> Self (15-foot cube) <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 4 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> All creatures in 15-foot cube originating from you take [[/damage 12 type=thunder]] damage and make Fortitude saves. Compare your weaving successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed. <strong>Applies Effects:</strong> Prone <strong>Saving Throw:</strong> Fortitude <strong>Damage Type:</strong> Thunder (sonic energy) <strong>DR Interaction:</strong> Ignore <strong>Success Scaling:</strong> 0 = fails, 1 = 1/[[/damage 2]] damage 6, 2 = full damage (12), pushed 10 feet, 3 = +[[/damage 8]] damage (20 total), pushed 10 feet, 4 = +[[/damage 8]] damage (20 total), pushed 15 feet, 5 = +[[/damage 8]] damage (20 total), pushed 15 feet + Applies Effects</p>\n<p>---</p>"
+      "value": "<p>All creatures in 15-foot cube originating from you take [[/damage 12 type=thunder]] damage and make Fortitude saves. Compare your weaving successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -24,35 +24,41 @@
     "target": "",
     "savingThrow": "fortitude",
     "effect": "",
-    "effectType": "damage",
+    "effectType": "",
     "damage": {
-      "base": 12,
-      "type": "thunder",
+      "base": 0,
+      "type": "",
       "drInteraction": "ignore",
       "scaling": {
         "0": {
-          "damage": 0,
-          "description": "fails"
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
         },
         "1": {
-          "damage": 0,
-          "description": "1/2 damage 6"
+          "appliesEffects": true,
+          "description": "1/2 damage 6",
+          "duration": "1/2 damage 6"
         },
         "2": {
-          "damage": 12,
-          "description": "full damage"
+          "appliesEffects": true,
+          "description": "full damage (12)",
+          "duration": "full damage (12)"
         },
         "3": {
-          "damage": 20,
-          "description": "enhanced"
+          "appliesEffects": true,
+          "description": "+8 damage (20 total)",
+          "duration": "+8 damage (20 total)"
         },
         "4": {
-          "damage": 20,
-          "description": "enhanced"
+          "appliesEffects": true,
+          "description": "+8 damage (20 total)",
+          "duration": "+8 damage (20 total)"
         },
         "5": {
-          "damage": 20,
-          "description": "enhanced"
+          "appliesEffects": true,
+          "description": "+8 damage (20 total)",
+          "duration": "+8 damage (20 total)"
         }
       }
     },
@@ -63,6 +69,11 @@
         "effectId": "Prone",
         "params": {}
       }
+    ],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "control"
     ]
   },
   "effects": [],

@@ -793,16 +793,20 @@ export function initializeCombatSystem() {
     html.querySelectorAll('.save-button').forEach(btn => {
       btn.addEventListener('click', async (event) => {
         event.preventDefault();
-        const weaveData = {
-          messageId: btn.dataset.weaveMessageId,
+        const messageId = btn.dataset.weaveMessageId;
+        
+        // Get the full weave data from the message flags
+        const message = game.messages.get(messageId);
+        const weaveData = message?.flags?.legends?.weaveData || {
           casterId: btn.dataset.casterId,
           weaveId: btn.dataset.weaveId,
           casterSuccesses: parseInt(btn.dataset.casterSuccesses),
-          saveType: btn.dataset.saveType
+          savingThrow: btn.dataset.saveType, // Use savingThrow to match the flag structure
+          targets: []
         };
         
         if (game.legends?.handleSaveClick) {
-          await game.legends.handleSaveClick(weaveData.messageId, weaveData);
+          await game.legends.handleSaveClick(messageId, weaveData);
         }
       });
     });
@@ -811,15 +815,19 @@ export function initializeCombatSystem() {
     html.querySelectorAll('.apply-effect-button').forEach(btn => {
       btn.addEventListener('click', async (event) => {
         event.preventDefault();
-        const weaveData = {
-          messageId: btn.dataset.weaveMessageId,
+        const messageId = btn.dataset.weaveMessageId;
+        
+        // Get the full weave data from the message flags
+        const message = game.messages.get(messageId);
+        const weaveData = message?.flags?.legends?.weaveData || {
           casterId: btn.dataset.casterId,
           weaveId: btn.dataset.weaveId,
-          casterSuccesses: parseInt(btn.dataset.casterSuccesses)
+          casterSuccesses: parseInt(btn.dataset.casterSuccesses),
+          targets: []
         };
         
         if (game.legends?.handleApplyEffectClick) {
-          await game.legends.handleApplyEffectClick(weaveData.messageId, weaveData);
+          await game.legends.handleApplyEffectClick(messageId, weaveData);
         }
       });
     });
@@ -828,15 +836,19 @@ export function initializeCombatSystem() {
     html.querySelectorAll('.apply-damage-button').forEach(btn => {
       btn.addEventListener('click', async (event) => {
         event.preventDefault();
-        const weaveData = {
-          messageId: btn.dataset.weaveMessageId,
+        const messageId = btn.dataset.weaveMessageId;
+        
+        // Get the full weave data from the message flags
+        const message = game.messages.get(messageId);
+        const weaveData = message?.flags?.legends?.weaveData || {
           casterId: btn.dataset.casterId,
           weaveId: btn.dataset.weaveId,
-          casterSuccesses: parseInt(btn.dataset.casterSuccesses)
+          casterSuccesses: parseInt(btn.dataset.casterSuccesses),
+          targets: []
         };
         
         if (game.legends?.handleApplyDamageClick) {
-          await game.legends.handleApplyDamageClick(weaveData.messageId, weaveData);
+          await game.legends.handleApplyDamageClick(messageId, weaveData);
         }
       });
     });

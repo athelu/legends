@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 7 (shifting to ethereal plane) <strong>Supporting Energy:</strong> Time 4 (duration 1 hour) <strong>Range:</strong> Self, touch <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery <strong>Effect:</strong> You step into the border of the Ethereal Plane. You can see and hear the material plane (dim and muted). Can move through objects and creatures. Cannot affect or be affected by anything on material plane. Can end early as [Free] action. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 1 = 1 minute, 2 = full effect, 3 = 4 hours, 4 = 12 hours, 5 = 1 day</p>"
+      "value": "<p>You step into the border of the Ethereal Plane. You can see and hear the material plane (dim and muted). Can move through objects and creatures. Cannot affect or be affected by anything on material plane. Can end early as [Free] action.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,43 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "12 hours",
+          "duration": "12 hours"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "1 day",
+          "duration": "1 day"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "divination",
+      "ritual",
+      "touch"
+    ]
   },
   "effects": [],
   "_key": "!items!e40207a9bb6c41f7"

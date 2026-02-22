@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 5 (short-range teleportation) <strong>Supporting Energy:</strong> None (self + 1 willing creature, 500ft) <strong>Range:</strong> Self (500 feet teleportation) <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 5 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Instantly teleport yourself and one willing creature to a spot you can see or describe (direction and distance) within 500 feet. Arriving in occupied space causes [[/damage 1d8]] damage and teleports to nearest open space. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 100 feet, 2 = 500 feet, 3 = 1000 feet, 4 = 1 mile, 5 = 10 miles</p>\n<p>---</p>"
+      "value": "<p>Instantly teleport yourself and one willing creature to a spot you can see or describe (direction and distance) within 500 feet. Arriving in occupied space causes [[/damage 1d8]] damage and teleports to nearest open space.</p>"
     },
     "weaveType": "simple",
     "actionCost": 2,
@@ -29,11 +29,49 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "100 feet",
+          "duration": "100 feet"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "500 feet",
+          "duration": "500 feet"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1000 feet",
+          "duration": "1000 feet"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "1 mile",
+          "duration": "1 mile"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "10 miles",
+          "duration": "10 miles"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "divination",
+      "ranged",
+      "self",
+      "teleportation"
+    ]
   },
   "effects": [],
   "_key": "!items!0a2b7ffc76694eb1"

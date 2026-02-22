@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 4 (creating area of enforced honesty) <strong>Supporting Energy:</strong> Space 5 (close range + 15ft radius, duration 10 minutes) <strong>Range:</strong> Close, 30 ft. (15-foot radius sphere) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 9 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create 15-foot radius sphere at close range. All creatures in area make Will saves. Compare your weaving successes to each target's save successes. Those you beat can't speak deliberate lies while in the zone. They can be evasive, remain silent, or speak misleading truths. You know which creatures failed their saves. Creatures immune to charm are immune. <strong>Saving Throw:</strong> Will <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 20-foot radius (1 hour), 5 = 30-foot radius (1 hour)</p>"
+      "value": "<p>Create 15-foot radius sphere at close range. All creatures in area make Will saves. Compare your weaving successes to each target's save successes. Those you beat can't speak deliberate lies while in the zone. They can be evasive, remain silent, or speak misleading truths. You know which creatures failed their saves. Creatures immune to charm are immune.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,48 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "no effect",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "20-foot radius (1 hour)",
+          "duration": "20-foot radius (1 hour)"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "30-foot radius (1 hour)",
+          "duration": "30-foot radius (1 hour)"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "ranged",
+      "zone"
+    ]
   },
   "effects": [],
   "_key": "!items!0f4e94e459d24c75"

@@ -1,0 +1,861 @@
+{
+  "$schema": "./scaling-schema.json",
+  "examples": {
+    "damage_scaling": {
+      "name": "Acid Blast (Damage Weave)",
+      "description": "Standard damage scaling with conditional effect application",
+      "scaling": {
+        "0": {
+          "description": "miss",
+          "appliesEffects": false,
+          "damage": 0
+        },
+        "1": {
+          "description": "half damage",
+          "appliesEffects": false,
+          "damage": 4
+        },
+        "2": {
+          "description": "full damage",
+          "appliesEffects": false,
+          "damage": 8
+        },
+        "3": {
+          "description": "enhanced",
+          "appliesEffects": false,
+          "damage": 16
+        },
+        "4": {
+          "description": "critical",
+          "appliesEffects": false,
+          "damage": 24
+        },
+        "5": {
+          "description": "critical + applies effects",
+          "appliesEffects": true,
+          "damage": 24,
+          "specialMechanics": ["applies sickened condition"]
+        }
+      }
+    },
+    "duration_scaling": {
+      "name": "Sleep (Effect Weave)",
+      "description": "Duration-based scaling for effect application",
+      "scaling": {
+        "0": {
+          "description": "no effect",
+          "appliesEffects": false,
+          "duration": null
+        },
+        "1": {
+          "description": "1 round",
+          "appliesEffects": true,
+          "duration": {
+            "value": 1,
+            "unit": "round"
+          }
+        },
+        "2": {
+          "description": "full effect",
+          "appliesEffects": true,
+          "duration": {
+            "value": 1,
+            "unit": "minute"
+          }
+        },
+        "3": {
+          "description": "10 minutes",
+          "appliesEffects": true,
+          "duration": {
+            "value": 10,
+            "unit": "minute"
+          }
+        },
+        "4": {
+          "description": "1 hour",
+          "appliesEffects": true,
+          "duration": {
+            "value": 1,
+            "unit": "hour"
+          }
+        },
+        "5": {
+          "description": "4 hours",
+          "appliesEffects": true,
+          "duration": {
+            "value": 4,
+            "unit": "hour"
+          }
+        }
+      }
+    },
+    "range_scaling": {
+      "name": "Spatial Step (Teleportation)",
+      "description": "Range scaling for teleportation distance",
+      "scaling": {
+        "0": {
+          "description": "fails",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "100 feet",
+          "appliesEffects": true,
+          "range": {
+            "value": 100,
+            "unit": "feet"
+          }
+        },
+        "2": {
+          "description": "500 feet",
+          "appliesEffects": true,
+          "range": {
+            "value": 500,
+            "unit": "feet"
+          }
+        },
+        "3": {
+          "description": "1000 feet",
+          "appliesEffects": true,
+          "range": {
+            "value": 1000,
+            "unit": "feet"
+          }
+        },
+        "4": {
+          "description": "1 mile",
+          "appliesEffects": true,
+          "range": {
+            "value": 1,
+            "unit": "mile"
+          }
+        },
+        "5": {
+          "description": "10 miles",
+          "appliesEffects": true,
+          "range": {
+            "value": 10,
+            "unit": "miles"
+          }
+        }
+      }
+    },
+    "area_scaling": {
+      "name": "Shape Stone (Area Transformation)",
+      "description": "Volume/area scaling for terrain manipulation",
+      "scaling": {
+        "0": {
+          "description": "fails",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "2ft cube",
+          "appliesEffects": true,
+          "area": {
+            "shape": "cube",
+            "size": 2
+          }
+        },
+        "2": {
+          "description": "5ft cube",
+          "appliesEffects": true,
+          "area": {
+            "shape": "cube",
+            "size": 5
+          }
+        },
+        "3": {
+          "description": "10ft cube",
+          "appliesEffects": true,
+          "area": {
+            "shape": "cube",
+            "size": 10
+          }
+        },
+        "4": {
+          "description": "permanent changes",
+          "appliesEffects": true,
+          "area": {
+            "shape": "cube",
+            "size": 10
+          },
+          "duration": "permanent",
+          "specialMechanics": ["changes are permanent"]
+        },
+        "5": {
+          "description": "20ft cube + permanent",
+          "appliesEffects": true,
+          "area": {
+            "shape": "cube",
+            "size": 20
+          },
+          "duration": "permanent",
+          "specialMechanics": ["changes are permanent"]
+        }
+      }
+    },
+    "healing_scaling": {
+      "name": "Healing Burst",
+      "description": "Healing amount scaling",
+      "scaling": {
+        "0": {
+          "description": "no healing",
+          "healing": 0
+        },
+        "1": {
+          "description": "4 HP",
+          "healing": 4
+        },
+        "2": {
+          "description": "8 HP",
+          "healing": 8
+        },
+        "3": {
+          "description": "12 HP",
+          "healing": 12
+        },
+        "4": {
+          "description": "16 HP",
+          "healing": 16
+        },
+        "5": {
+          "description": "20 HP",
+          "healing": 20
+        }
+      }
+    },
+    "quantity_scaling": {
+      "name": "Unerring Bolt (Multiple Projectiles)",
+      "description": "Quantity scaling for number of projectiles",
+      "scaling": {
+        "0": {
+          "description": "fails",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "1 dart (4 damage)",
+          "appliesEffects": true,
+          "quantity": {
+            "amount": 1,
+            "unit": "darts"
+          },
+          "damage": 4
+        },
+        "2": {
+          "description": "3 darts (4 damage each)",
+          "appliesEffects": true,
+          "quantity": {
+            "amount": 3,
+            "unit": "darts"
+          },
+          "damage": 12,
+          "notes": "3 × 4 damage = 12 total"
+        },
+        "3": {
+          "description": "4 darts (4 damage each)",
+          "appliesEffects": true,
+          "quantity": {
+            "amount": 4,
+            "unit": "darts"
+          },
+          "damage": 16,
+          "notes": "4 × 4 damage = 16 total"
+        }
+      }
+    },
+    "capacity_scaling": {
+      "name": "Telekinesis (Weight Capacity)",
+      "description": "Weight capacity scaling for telekinetic lifting",
+      "scaling": {
+        "0": {
+          "description": "fails",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "100 lbs (1 minute)",
+          "appliesEffects": true,
+          "capacity": {
+            "weight": 100,
+            "unit": "lbs"
+          },
+          "duration": {
+            "value": 1,
+            "unit": "minute"
+          }
+        },
+        "2": {
+          "description": "500 lbs (full effect)",
+          "appliesEffects": true,
+          "capacity": {
+            "weight": 500,
+            "unit": "lbs"
+          },
+          "duration": {
+            "value": 10,
+            "unit": "minute"
+          }
+        },
+        "3": {
+          "description": "1000 lbs (1 hour)",
+          "appliesEffects": true,
+          "capacity": {
+            "weight": 1000,
+            "unit": "lbs"
+          },
+          "duration": {
+            "value": 1,
+            "unit": "hour"
+          }
+        },
+        "4": {
+          "description": "2000 lbs (4 hours)",
+          "appliesEffects": true,
+          "capacity": {
+            "weight": 2000,
+            "unit": "lbs"
+          },
+          "duration": {
+            "value": 4,
+            "unit": "hour"
+          }
+        },
+        "5": {
+          "description": "2000 lbs (12 hours)",
+          "appliesEffects": true,
+          "capacity": {
+            "weight": 2000,
+            "unit": "lbs"
+          },
+          "duration": {
+            "value": 12,
+            "unit": "hour"
+          }
+        }
+      }
+    },
+    "hybrid_damage_healing": {
+      "name": "Vampiric Touch",
+      "description": "Combined damage and healing scaling",
+      "scaling": {
+        "0": {
+          "description": "miss",
+          "appliesEffects": false,
+          "damage": 0,
+          "healing": 0
+        },
+        "1": {
+          "description": "half (4 damage, heal 2)",
+          "appliesEffects": false,
+          "damage": 4,
+          "healing": 2
+        },
+        "2": {
+          "description": "full (8 damage, heal 4)",
+          "appliesEffects": false,
+          "damage": 8,
+          "healing": 4
+        },
+        "3": {
+          "description": "+8 damage (16 total, heal 8)",
+          "appliesEffects": false,
+          "damage": 16,
+          "healing": 8
+        },
+        "4": {
+          "description": "+16 damage (24 total, heal 12)",
+          "appliesEffects": false,
+          "damage": 24,
+          "healing": 12
+        },
+        "5": {
+          "description": "+16 damage (24 total, heal 12) + applies effects",
+          "appliesEffects": true,
+          "damage": 24,
+          "healing": 12
+        }
+      }
+    },
+    "hybrid_damage_push": {
+      "name": "Thunder Burst",
+      "description": "Combined damage and push distance scaling",
+      "scaling": {
+        "0": {
+          "description": "fails",
+          "appliesEffects": false,
+          "damage": 0
+        },
+        "1": {
+          "description": "1/2 damage 6",
+          "appliesEffects": false,
+          "damage": 6
+        },
+        "2": {
+          "description": "full damage (12), pushed 10 feet",
+          "appliesEffects": false,
+          "damage": 12,
+          "pushDistance": {
+            "distance": 10,
+            "unit": "feet"
+          }
+        },
+        "3": {
+          "description": "+8 damage (20 total), pushed 10 feet",
+          "appliesEffects": false,
+          "damage": 20,
+          "pushDistance": {
+            "distance": 10,
+            "unit": "feet"
+          }
+        },
+        "4": {
+          "description": "+8 damage (20 total), pushed 15 feet",
+          "appliesEffects": false,
+          "damage": 20,
+          "pushDistance": {
+            "distance": 15,
+            "unit": "feet"
+          }
+        },
+        "5": {
+          "description": "+8 damage (20 total), pushed 15 feet + Applies Effects",
+          "appliesEffects": true,
+          "damage": 20,
+          "pushDistance": {
+            "distance": 15,
+            "unit": "feet"
+          }
+        }
+      }
+    },
+    "conditional_effect_progression": {
+      "name": "Fear",
+      "description": "Escalating effect conditions with optional damage",
+      "scaling": {
+        "0": {
+          "description": "no effect",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "Frightened only (no damage)",
+          "appliesEffects": true,
+          "effectType": "frightened",
+          "damage": 0
+        },
+        "2": {
+          "description": "full effect (Frightened + 3d8 damage)",
+          "appliesEffects": true,
+          "effectType": "frightened",
+          "damage": 24,
+          "notes": "Assuming average of 3d8 = 13.5, using approximation"
+        },
+        "3": {
+          "description": "Frightened + 4d8 damage",
+          "appliesEffects": true,
+          "effectType": "frightened",
+          "damage": 32,
+          "notes": "Assuming average of 4d8 = 18, using approximation"
+        },
+        "4": {
+          "description": "Fleeing + 4d8 damage",
+          "appliesEffects": true,
+          "effectType": "fleeing",
+          "damage": 32
+        },
+        "5": {
+          "description": "cowering + 4d8 damage",
+          "appliesEffects": true,
+          "effectType": "cowering",
+          "damage": 32
+        }
+      }
+    },
+    "target_count_scaling": {
+      "name": "Heroism (Multi-Target)",
+      "description": "Scaling number of simultaneous targets",
+      "scaling": {
+        "0": {
+          "description": "fails",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "1 round",
+          "appliesEffects": true,
+          "targetCount": 1,
+          "duration": {
+            "value": 1,
+            "unit": "round"
+          }
+        },
+        "2": {
+          "description": "full effect",
+          "appliesEffects": true,
+          "targetCount": 1,
+          "duration": {
+            "value": 1,
+            "unit": "minute"
+          }
+        },
+        "3": {
+          "description": "10 minutes",
+          "appliesEffects": true,
+          "targetCount": 1,
+          "duration": {
+            "value": 10,
+            "unit": "minute"
+          }
+        },
+        "4": {
+          "description": "affects 2 targets at once",
+          "appliesEffects": true,
+          "targetCount": 2,
+          "duration": {
+            "value": 10,
+            "unit": "minute"
+          }
+        },
+        "5": {
+          "description": "affects 4 targets (1 hour)",
+          "appliesEffects": true,
+          "targetCount": 4,
+          "duration": {
+            "value": 1,
+            "unit": "hour"
+          }
+        }
+      }
+    },
+    "special_mechanics": {
+      "name": "Suggestion (Duration + Recovery Mechanics)",
+      "description": "Duration with special recovery requirements",
+      "scaling": {
+        "0": {
+          "description": "no effect",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "1 hour",
+          "appliesEffects": true,
+          "duration": {
+            "value": 1,
+            "unit": "hour"
+          }
+        },
+        "2": {
+          "description": "full effect (4 hours)",
+          "appliesEffects": true,
+          "duration": {
+            "value": 4,
+            "unit": "hour"
+          }
+        },
+        "3": {
+          "description": "12 hours",
+          "appliesEffects": true,
+          "duration": {
+            "value": 12,
+            "unit": "hour"
+          }
+        },
+        "4": {
+          "description": "requires 2 successes to recover (12 hours)",
+          "appliesEffects": true,
+          "duration": {
+            "value": 12,
+            "unit": "hour"
+          },
+          "specialMechanics": ["requires 2 successes to shake off"]
+        },
+        "5": {
+          "description": "requires 2 successes to recover (1 day)",
+          "appliesEffects": true,
+          "duration": {
+            "value": 1,
+            "unit": "day"
+          },
+          "specialMechanics": ["requires 2 successes to shake off"]
+        }
+      }
+    },
+    "multi_attribute_scaling": {
+      "name": "Wall of Force (HP + DR + Duration)",
+      "description": "Multiple attributes scaling together",
+      "scaling": {
+        "0": {
+          "description": "fails",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "1 round (6 HP)",
+          "appliesEffects": true,
+          "hp": 6,
+          "duration": {
+            "value": 1,
+            "unit": "round"
+          }
+        },
+        "2": {
+          "description": "full effect (12 HP)",
+          "appliesEffects": true,
+          "hp": 12,
+          "duration": {
+            "value": 1,
+            "unit": "minute"
+          }
+        },
+        "3": {
+          "description": "10 minutes (24 HP)",
+          "appliesEffects": true,
+          "hp": 24,
+          "duration": {
+            "value": 10,
+            "unit": "minute"
+          }
+        },
+        "4": {
+          "description": "1 hour (36 HP DR 8)",
+          "appliesEffects": true,
+          "hp": 36,
+          "drModifier": 8,
+          "duration": {
+            "value": 1,
+            "unit": "hour"
+          }
+        },
+        "5": {
+          "description": "1 hour (36 HP, DR 8) + Applies effects on contact",
+          "appliesEffects": true,
+          "hp": 36,
+          "drModifier": 8,
+          "duration": {
+            "value": 1,
+            "unit": "hour"
+          },
+          "specialMechanics": ["applies effects on contact"]
+        }
+      }
+    },
+    "quality_complexity_scaling": {
+      "name": "Identify (Information Quality)",
+      "description": "Scaling quality/detail of information revealed",
+      "scaling": {
+        "0": {
+          "description": "fails",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "basic function only",
+          "appliesEffects": true,
+          "specialMechanics": ["reveals basic function"]
+        },
+        "2": {
+          "description": "full properties",
+          "appliesEffects": true,
+          "specialMechanics": ["reveals all properties"]
+        },
+        "3": {
+          "description": "learn curse details",
+          "appliesEffects": true,
+          "specialMechanics": ["reveals all properties", "reveals curses"]
+        }
+      }
+    },
+    "area_with_duration": {
+      "name": "Earthquake (Area + Duration + Structure Damage)",
+      "description": "Combined area, duration, and special effects",
+      "scaling": {
+        "0": {
+          "description": "no effect",
+          "appliesEffects": false
+        },
+        "1": {
+          "description": "1 round (25ft radius)",
+          "appliesEffects": true,
+          "area": {
+            "shape": "radius",
+            "size": 25
+          },
+          "duration": {
+            "value": 1,
+            "unit": "round"
+          }
+        },
+        "2": {
+          "description": "full effect (50ft radius, 1 minute)",
+          "appliesEffects": true,
+          "area": {
+            "shape": "radius",
+            "size": 50
+          },
+          "duration": {
+            "value": 1,
+            "unit": "minute"
+          }
+        },
+        "3": {
+          "description": "100ft radius",
+          "appliesEffects": true,
+          "area": {
+            "shape": "radius",
+            "size": 100
+          },
+          "duration": {
+            "value": 1,
+            "unit": "minute"
+          }
+        },
+        "4": {
+          "description": "major structural damage, fissures open (200ft radius)",
+          "appliesEffects": true,
+          "area": {
+            "shape": "radius",
+            "size": 200
+          },
+          "duration": {
+            "value": 1,
+            "unit": "minute"
+          },
+          "specialMechanics": ["major structural damage", "fissures open"]
+        },
+        "5": {
+          "description": "major structural damage, fissures open (200ft radius), applies effects",
+          "appliesEffects": true,
+          "area": {
+            "shape": "radius",
+            "size": 200
+          },
+          "duration": {
+            "value": 1,
+            "unit": "minute"
+          },
+          "specialMechanics": ["major structural damage", "fissures open"]
+        }
+      }
+    },
+    "comprehensive_multi_attribute": {
+      "name": "Hypothetical Complex Weave",
+      "description": "Example showing maximum property combination at a single success level",
+      "scaling": {
+        "0": {
+          "description": "complete miss",
+          "appliesEffects": false,
+          "damage": 0
+        },
+        "1": {
+          "description": "minimal effect",
+          "appliesEffects": true,
+          "damage": 8,
+          "range": {
+            "value": 30,
+            "unit": "feet"
+          }
+        },
+        "2": {
+          "description": "standard effect",
+          "appliesEffects": true,
+          "damage": 16,
+          "range": {
+            "value": 60,
+            "unit": "feet"
+          },
+          "area": {
+            "shape": "radius",
+            "size": 10
+          },
+          "duration": {
+            "value": 1,
+            "unit": "minute"
+          }
+        },
+        "3": {
+          "description": "enhanced effect",
+          "appliesEffects": true,
+          "damage": 24,
+          "healing": 12,
+          "range": {
+            "value": 120,
+            "unit": "feet"
+          },
+          "area": {
+            "shape": "radius",
+            "size": 20
+          },
+          "duration": {
+            "value": 10,
+            "unit": "minute"
+          },
+          "targetCount": 3
+        },
+        "4": {
+          "description": "powerful effect with everything",
+          "appliesEffects": true,
+          "damage": 32,
+          "healing": 16,
+          "range": {
+            "value": 240,
+            "unit": "feet"
+          },
+          "area": {
+            "shape": "radius",
+            "size": 30
+          },
+          "duration": {
+            "value": 1,
+            "unit": "hour"
+          },
+          "targetCount": 5,
+          "pushDistance": {
+            "distance": 15,
+            "unit": "feet"
+          },
+          "quantity": {
+            "amount": 4,
+            "unit": "projectiles"
+          },
+          "effectType": "stunned",
+          "drModifier": 10,
+          "specialMechanics": ["ignores cover", "bypasses resistance"],
+          "notes": "This level demonstrates that ANY combination of properties is valid"
+        },
+        "5": {
+          "description": "maximum power - all attributes at peak",
+          "appliesEffects": true,
+          "damage": 48,
+          "healing": 24,
+          "range": {
+            "value": 1,
+            "unit": "mile"
+          },
+          "area": {
+            "shape": "radius",
+            "size": 50
+          },
+          "duration": {
+            "value": 4,
+            "unit": "hour"
+          },
+          "targetCount": 10,
+          "pushDistance": {
+            "distance": 30,
+            "unit": "feet"
+          },
+          "quantity": {
+            "amount": 8,
+            "unit": "projectiles"
+          },
+          "capacity": {
+            "weight": 5000,
+            "unit": "lbs"
+          },
+          "effectType": "paralyzed",
+          "hp": 100,
+          "drModifier": 15,
+          "specialMechanics": [
+            "ignores all defenses",
+            "bypasses immunity",
+            "permanent until dispelled"
+          ],
+          "notes": "Demonstrates absolute maximum - you can include every single property type in one success level"
+        }
+      }
+    }
+  }
+}

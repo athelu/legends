@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 2 (overwhelming with uncontrollable mirth) <strong>Supporting Energy:</strong> Space 3 (close range, duration up to 1 minute) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 1 minute (until save succeeds) <strong>Total Cost:</strong> 5 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target at close range makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target falls Prone with uncontrollable laughter. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect).  Creatures with Intelligence 1 aren't affected. <strong>Applies Effects:</strong> incapacitated <strong>Saving Throw:</strong> Will <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = no fortune on saves (10 minutes), 5 = no fortune on saves (10 minutes) + Applies effects</p>\n<p>---</p>"
+      "value": "<p>Target at close range makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target falls Prone with uncontrollable laughter. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect).  Creatures with Intelligence 1 aren't affected.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,7 +29,38 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "no effect",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "no fortune on saves (10 minutes)",
+          "duration": "no fortune on saves (10 minutes)"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "no fortune on saves (10 minutes) + Applies effects",
+          "duration": "no fortune on saves (10 minutes) + Applies effects"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
@@ -38,6 +69,11 @@
         "effectId": "incapacitated",
         "params": {}
       }
+    ],
+    "deliveryMethod": "save",
+    "tags": [
+      "buff",
+      "ranged"
     ]
   },
   "effects": [],

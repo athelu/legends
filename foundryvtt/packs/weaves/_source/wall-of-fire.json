@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Fire 5 (curtain of flames) <strong>Supporting Energy:</strong> Space 7 (medium range + wall area, duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (60 feet long, 20 feet high OR ring 20 feet diameter) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 12 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Fire Potential + Fire Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals [[/damage 16 type=fire]] damage to creatures within 10 feet (choose side when casting). Passing through wall deals +8 (24) fire damage. Provides total cover. <strong>Applies Effects:</strong> ignited <strong>Saving Throw:</strong> Reflex <strong>Damage Type:</strong> Fire (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = no damage, 1 = half (8), 2 = full (16), 3 = +8 (24), 4 = +16 (32), 4 = +16 (32) + Applies effects</p>\n<p>---</p>"
+      "value": "<p>Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals [[/damage 16 type=fire]] damage to creatures within 10 feet (choose side when casting). Passing through wall deals +8 (24) fire damage. Provides total cover.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -24,32 +24,36 @@
     "target": "",
     "savingThrow": "reflex",
     "effect": "",
-    "effectType": "damage",
+    "effectType": "",
     "damage": {
-      "base": 16,
-      "type": "fire",
+      "base": 0,
+      "type": "",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "damage": 0,
-          "description": "no damage"
+          "appliesEffects": true,
+          "description": "no damage",
+          "duration": "no damage"
         },
         "1": {
-          "damage": 8,
-          "description": "half"
+          "appliesEffects": true,
+          "description": "half (8)",
+          "duration": "half (8)"
         },
         "2": {
-          "damage": 16,
-          "description": "full"
+          "appliesEffects": true,
+          "description": "full (16)",
+          "duration": "full (16)"
         },
         "3": {
-          "damage": 24,
-          "description": "+8"
+          "appliesEffects": true,
+          "description": "+8 (24)",
+          "duration": "+8 (24)"
         },
         "4": {
-          "damage": 32,
-          "description": "+16 + applies effects",
-          "appliesEffects": true
+          "appliesEffects": true,
+          "description": "+16 (32) + Applies effects",
+          "duration": "+16 (32) + Applies effects"
         }
       }
     },
@@ -60,6 +64,12 @@
         "effectId": "ignited",
         "params": {}
       }
+    ],
+    "deliveryMethod": "save",
+    "tags": [
+      "ranged",
+      "ritual",
+      "wall"
     ]
   },
   "effects": [],

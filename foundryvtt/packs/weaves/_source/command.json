@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 2 (imposing your will through compulsion) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Speak a one-word command to a creature you can see within close range. Target makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target follows the command on their next turn. Commands: Approach, Drop, Flee, Grovel (prone), Halt (no actions). Cannot command self-harm. Creatures immune to charm are immune. <strong>Saving Throw:</strong> Will <strong>Success Scaling:</strong> 0-1 = resists, 2 = follows command for 1 round, 3 = follows for 2 rounds, 4 = follow for 3 rounds, 5 = command lasts 1 minute</p>"
+      "value": "<p>Speak a one-word command to a creature you can see within close range. Target makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target follows the command on their next turn. Commands: Approach, Drop, Flee, Grovel (prone), Halt (no actions). Cannot command self-harm. Creatures immune to charm are immune.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,39 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "2": {
+          "appliesEffects": true,
+          "description": "follows command for 1 round",
+          "duration": "follows command for 1 round"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "follows for 2 rounds",
+          "duration": "follows for 2 rounds"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "follow for 3 rounds",
+          "duration": "follow for 3 rounds"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "command lasts 1 minute",
+          "duration": "command lasts 1 minute"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "defensive",
+      "divination",
+      "ranged",
+      "self"
+    ]
   },
   "effects": [],
   "_key": "!items!bba6ee93bbfd403a"

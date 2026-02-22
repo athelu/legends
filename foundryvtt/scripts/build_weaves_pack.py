@@ -14,8 +14,47 @@ This script will parse all of them and preserve manually-added fields
 
 import json
 import re
+import sys
 from pathlib import Path
 from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key, md_to_html, apply_enrichers
+
+# Add source/weaves directory to path for detectors
+script_dir = Path(__file__).parent
+weave_tools_path = script_dir.parent / 'source' / 'weaves'
+sys.path.insert(0, str(weave_tools_path))
+
+# Import detectors
+try:
+    import delivery_method_detector
+    import tag_detector
+    detect_delivery_method = delivery_method_detector.detect_delivery_method
+    detect_all_tags = tag_detector.detect_all_tags
+    DETECTORS_AVAILABLE = True
+    print(f"[OK] Loaded detectors from {weave_tools_path}")
+except ImportError as e:
+    print(f"Warning: Could not import detectors: {e}")
+    print(f"  Tried path: {weave_tools_path}")
+    print("Weaves will be created without auto-classification.")
+    DETECTORS_AVAILABLE = False
+
+# Import schema validation (optional)
+try:
+    import jsonschema
+    SCHEMA_VALIDATION_AVAILABLE = True
+    # Load schema
+    schema_path = script_dir.parent / 'source' / 'weaves' / 'weave-schema.json'
+    if schema_path.exists():
+        with open(schema_path, 'r', encoding='utf-8') as f:
+            WEAVE_SCHEMA = json.load(f)
+        print(f"[OK] Loaded schema from {schema_path}")
+    else:
+        WEAVE_SCHEMA = None
+        print(f"Warning: Schema file not found at {schema_path}")
+except ImportError:
+    print("Warning: jsonschema not installed. Schema validation disabled.")
+    print("Install with: pip install jsonschema")
+    SCHEMA_VALIDATION_AVAILABLE = False
+    WEAVE_SCHEMA = None
 
 
 def _safe_filename(name: str) -> str:
@@ -233,6 +272,60 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
     return scaling_table
 
 
+def _parse_effect_scaling(scaling_text, applies_effects):
+    """
+    Parse Success Scaling text for effect weaves (no damage).
+    
+    Input example: "0 = no effect, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours"
+    
+    Output: {
+        "0": { "appliesEffects": false, "description": "no effect", "duration": null },
+        "1": { "appliesEffects": true, "description": "1 round", "duration": "1 round" },
+        "2": { "appliesEffects": true, "description": "full effect", "duration": "full" },
+        "3": { "appliesEffects": true, "description": "10 minutes", "duration": "10 minutes" },
+        "4": { "appliesEffects": true, "description": "1 hour", "duration": "1 hour" },
+        "5": { "appliesEffects": true, "description": "4 hours", "duration": "4 hours" }
+    }
+    """
+    if not scaling_text:
+        return {}
+    
+    scaling_table = {}
+    
+    # Parse scaling line: "0 = no effect, 1 = 1 round, 2 = full effect, ..."
+    entries = scaling_text.split(',')
+    
+    for entry in entries:
+        entry = entry.strip()
+        if not entry:
+            continue
+        
+        # Match: "0 = no effect" or "1 = 1 round" or "3 = 10 minutes"
+        match = re.match(r'^(\d+)\s*[=:]\s*(.+)', entry)
+        if match:
+            success_level = match.group(1)
+            description = match.group(2).strip()
+            
+            # Determine if effects apply at this level
+            applies = 'no effect' not in description.lower()
+            
+            # Extract duration if present
+            duration = None
+            if applies:
+                # Common duration patterns: "1 round", "full effect", "10 minutes", "1 hour", etc.
+                duration = description
+            
+            scaling_entry = {
+                'appliesEffects': applies,
+                'description': description,
+                'duration': duration
+            }
+            
+            scaling_table[success_level] = scaling_entry
+    
+    return scaling_table
+
+
 def parse_weaves_md(ttrpg_dir, source_dir=None):
     """
     Parse all weaves.md files and extract weave items.
@@ -302,11 +395,26 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 'effects': []
             }
 
-            # Extract description
-            description = '\n'.join(lines[1:]).strip()
-            item['system']['description'] = {'value': apply_enrichers(md_to_html(description))}
+            # Extract full text for parsing
+            full_text = '\n'.join(lines[1:]).strip()
+            
+            # Extract only the Description/Effect field for description.value
+            # Look for "**Description:**" or "**Effect:**" field
+            description_match = re.search(
+                r'\*\*(?:Description|Effect):\*\*\s*([^\*]+?)(?=\s*\*\*[A-Z]|\s*$)',
+                full_text,
+                re.DOTALL
+            )
+            
+            if description_match:
+                description_text = description_match.group(1).strip()
+                item['system']['description'] = {'value': apply_enrichers(md_to_html(description_text))}
+            else:
+                # Fallback: use full text if we can't find Description/Effect field
+                item['system']['description'] = {'value': apply_enrichers(md_to_html(full_text))}
 
-            # Try to parse energy costs from description
+            # Try to parse energy costs from full text
+            description = full_text  # Keep using 'description' variable name for backward compat
             primary_match = re.search(r'\*\*Primary Energy:\*\*\s*(\w+)\s+(\d+)', description)
             if primary_match:
                 item['system']['energyCost']['primary']['type'] = primary_match.group(1).lower()
@@ -340,13 +448,16 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 item['img'] = img_match.group(1).strip()
             
             # Parse damage information from Effect field
-            # Try to match "X <type> damage" first
-            effect_match = re.search(r'\*\*Effect:\*\*[^*]*?(\d+)\s+(\w+)\s+damage', description, re.IGNORECASE)
+            # Try to match "X <type> damage" or "X <type> and <type> damage"
+            # Examples: "28 bludgeoning damage" or "28 bludgeoning and cold damage"
+            effect_match = re.search(r'\*\*Effect:\*\*[^*]*?(\d+)\s+((?:\w+(?:\s+and\s+)?)+)\s*damage', description, re.IGNORECASE)
             if effect_match:
                 damage_amount = int(effect_match.group(1))
-                damage_type = effect_match.group(2).lower()
+                damage_types_str = effect_match.group(2).strip()
+                # Extract first damage type from compound types (e.g., "bludgeoning and cold" -> "bludgeoning")
+                first_type = damage_types_str.split()[0].lower()
                 item['system']['damage']['base'] = damage_amount
-                item['system']['damage']['type'] = damage_type
+                item['system']['damage']['type'] = first_type
                 item['system']['effectType'] = 'damage'
             else:
                 # Try to match "deals X damage" or "takes X damage" without type
@@ -380,9 +491,15 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                     item['system']['savingThrow'] = 'will'
             
             # Parse Damage Type field (for more explicit damage type extraction)
-            damage_type_match = re.search(r'\*\*Damage Type:\*\*\s*(\w+)', description)
+            # Only use if it's an actual damage type, not descriptive words like "Physical" or "Energy"
+            valid_damage_types = ['slashing', 'piercing', 'bludgeoning', 'fire', 'cold', 'acid', 
+                                  'lightning', 'force', 'necrotic', 'radiant', 'psychic', 'poison', 'thunder']
+            damage_type_match = re.search(r'\*\*Damage Type:\*\*[^*]*?(slashing|piercing|bludgeoning|fire|cold|acid|lightning|force|necrotic|radiant|psychic|poison|thunder)', 
+                                         description, re.IGNORECASE)
             if damage_type_match and item['system']['damage']['base'] > 0:
-                item['system']['damage']['type'] = damage_type_match.group(1).lower()
+                extracted_type = damage_type_match.group(1).lower()
+                if extracted_type in valid_damage_types:
+                    item['system']['damage']['type'] = extracted_type
             
             # Parse DR Interaction field
             dr_match = re.search(r'\*\*DR Interaction:\*\*\s*([^\n]+)', description)
@@ -409,10 +526,17 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
             if scaling_match:
                 scaling_text = scaling_match.group(1).strip()
                 if item['system']['damage']['base'] > 0:
+                    # Damage weave: parse damage scaling
                     item['system']['damage']['scaling'] = _parse_damage_scaling(
                         scaling_text,
                         description,
                         item['system']['damage']['base'],
+                        applies_effects_list
+                    )
+                else:
+                    # Effect weave: parse effect/duration scaling
+                    item['system']['damage']['scaling'] = _parse_effect_scaling(
+                        scaling_text,
                         applies_effects_list
                     )
             
@@ -426,6 +550,22 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                         item['system']['appliesEffects'] = existing['system']['appliesEffects']
                     # Keep the same _id to maintain references
                     item['_id'] = existing.get('_id', item['_id'])
+            
+            # Auto-detect and apply classification
+            if DETECTORS_AVAILABLE:
+                # Detect delivery method
+                delivery_method = detect_delivery_method(item)
+                item['system']['deliveryMethod'] = delivery_method
+                
+                # Detect tags
+                tags = detect_all_tags(item)
+                item['system']['tags'] = tags
+                
+                # Clean up **[Tag]** markers from name
+                original_name = item['name']
+                cleaned_name = re.sub(r'\s*\*\*\[([^\]]+)\]\*\*', '', original_name)
+                if cleaned_name != original_name:
+                    item['name'] = cleaned_name.strip()
             
             items.append(item)
     
@@ -448,6 +588,44 @@ def main():
         effects_count = sum(1 for item in items if item['system'].get('appliesEffects'))
         if effects_count > 0:
             print(f"  {effects_count} weave(s) with appliesEffects configured")
+        
+        # Validate against schema (if available)
+        if SCHEMA_VALIDATION_AVAILABLE and WEAVE_SCHEMA:
+            print("\nValidating weaves against schema...")
+            validation_errors = []
+            for item in items:
+                try:
+                    jsonschema.validate(instance=item, schema=WEAVE_SCHEMA)
+                except jsonschema.ValidationError as e:
+                    validation_errors.append((item['name'], str(e.message)))
+            
+            if validation_errors:
+                print(f"  Warning: {len(validation_errors)} validation error(s):")
+                for name, error in validation_errors[:5]:  # Show first 5
+                    print(f"    - {name}: {error}")
+                if len(validation_errors) > 5:
+                    print(f"    ... and {len(validation_errors) - 5} more")
+            else:
+                print(f"  [OK] All {len(items)} weaves validated successfully")
+        
+        # Classification summary
+        if DETECTORS_AVAILABLE:
+            print("\nClassification summary:")
+            delivery_counts = {}
+            for item in items:
+                method = item['system'].get('deliveryMethod', 'unknown')
+                delivery_counts[method] = delivery_counts.get(method, 0) + 1
+            
+            for method, count in sorted(delivery_counts.items()):
+                print(f"  {method}: {count}")
+            
+            # Tag statistics
+            all_tags = set()
+            for item in items:
+                all_tags.update(item['system'].get('tags', []))
+            print(f"\nUnique tags found: {len(all_tags)}")
+            if all_tags:
+                print(f"  {', '.join(sorted(all_tags))}")
         
         # Save to _source/
         source_dir.mkdir(parents=True, exist_ok=True)

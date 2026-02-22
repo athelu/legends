@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 3 (force platform) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Self <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery <strong>Effect:</strong> Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 4 hours and 500 lbs, 4 = 4 hours and 1000 lbs, 4 = 12 hours and 2000 lbs</p>\n<h2>E</h2>"
+      "value": "<p>Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,36 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "12 hours and 2000 lbs",
+          "duration": "12 hours and 2000 lbs"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "self"
+    ]
   },
   "effects": [],
   "_key": "!items!60a314035de84d9b"

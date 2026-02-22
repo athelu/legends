@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 2 (slowing fall with updraft) <strong>Supporting Energy:</strong> Space 5 (close range + 5 creatures + up to 1 minute) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Up to 1 minute (until they land) <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> [Reaction] when you or creature within close range falls <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Up to 5 falling creatures within close range descend 60 feet per round and take no falling damage. Weave lasts until they land (up to 1 minute). <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 1 creature, 2 = 5 creatures, 3 = 10 creatures, 4 = 10 creatures - regain 3 energy, 5 = 10 creatures - regain 7 energy</p>"
+      "value": "<p>Up to 5 falling creatures within close range descend 60 feet per round and take no falling damage. Weave lasts until they land (up to 1 minute).</p>"
     },
     "weaveType": "complex",
     "actionCost": 1,
@@ -29,11 +29,46 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 creature",
+          "duration": "1 creature"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "5 creatures",
+          "duration": "5 creatures"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 creatures",
+          "duration": "10 creatures"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "10 creatures - regain 3 energy",
+          "duration": "10 creatures - regain 3 energy"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "10 creatures - regain 7 energy",
+          "duration": "10 creatures - regain 7 energy"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "ranged"
+    ]
   },
   "effects": [],
   "_key": "!items!3f834d4e91e14449"

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 4 (negating magical effects) <strong>Supporting Energy:</strong> Space 2 (medium range) <strong>Range:</strong> Medium, 60 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> End one magical effect on a creature, object, or area. Compare your weaving successes to the original caster's successes. If you equal or beat them, effect ends. Can target multiple effects (weakest first). <strong>Saving Throw:</strong> Opposed weaving check (Your Space weaving vs Original caster's weaving) <strong>Success Scaling:</strong> Must equal or exceed original weaving successes to dispel</p>\n<p>---</p>\n<h2>V</h2>"
+      "value": "<p>End one magical effect on a creature, object, or area. Compare your weaving successes to the original caster's successes. If you equal or beat them, effect ends. Can target multiple effects (weakest first).</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -33,7 +33,12 @@
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "ranged"
+    ]
   },
   "effects": [],
   "_key": "!items!7cfa2a26e1f34d5d"

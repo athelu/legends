@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Water 2 (acidic vapor damage) <strong>Supporting Energy:</strong> Space 1 (close range 30ft) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target takes [[/damage 8 type=acid]] damage. This is an attack weave—no saving throw allowed. <strong>Applies Effects:</strong> sickened <strong>Saving Throw:</strong> None (attack weave, weaving successes determine hit quality) <strong>Damage Type:</strong> Acid (energy) <strong>DR Interaction:</strong> Half DR ([[/damage 8 type=acid]] damage vs DR 4 becomes 8 - 2 = [[/damage 6]] damage) <strong>Success Scaling:</strong> 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +[[/damage 8]] damage (16 total), 4 = +[[/damage 16]] damage (24 total), 5 = +[[/damage 16]] damage (24 total) + applies effects <strong>Scaling Option:</strong> Can add Space 1 to affect 2 targets (total 4 Energy)</p>\n<h2>B</h2>"
+      "value": "<p>Target takes [[/damage 8 type=acid]] damage. This is an attack weave—no saving throw allowed.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -24,36 +24,41 @@
     "target": "",
     "savingThrow": "none",
     "effect": "",
-    "effectType": "damage",
+    "effectType": "",
     "damage": {
-      "base": 8,
-      "type": "acid",
+      "base": 0,
+      "type": "",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "damage": 0,
-          "description": "miss"
+          "appliesEffects": true,
+          "description": "miss",
+          "duration": "miss"
         },
         "1": {
-          "damage": 4,
-          "description": "half damage"
+          "appliesEffects": true,
+          "description": "half damage (4)",
+          "duration": "half damage (4)"
         },
         "2": {
-          "damage": 8,
-          "description": "full damage"
+          "appliesEffects": true,
+          "description": "full damage (8)",
+          "duration": "full damage (8)"
         },
         "3": {
-          "damage": 16,
-          "description": "enhanced"
+          "appliesEffects": true,
+          "description": "+8 damage (16 total)",
+          "duration": "+8 damage (16 total)"
         },
         "4": {
-          "damage": 24,
-          "description": "enhanced"
+          "appliesEffects": true,
+          "description": "+16 damage (24 total)",
+          "duration": "+16 damage (24 total)"
         },
         "5": {
-          "damage": 24,
-          "description": "enhanced + applies effects",
-          "appliesEffects": true
+          "appliesEffects": true,
+          "description": "+16 damage (24 total) + applies effects",
+          "duration": "+16 damage (24 total) + applies effects"
         }
       }
     },
@@ -64,6 +69,10 @@
         "effectId": "sickened",
         "params": {}
       }
+    ],
+    "deliveryMethod": "save",
+    "tags": [
+      "ranged"
     ]
   },
   "effects": [],

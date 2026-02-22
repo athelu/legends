@@ -1,0 +1,78 @@
+{
+  "_id": "a618df567d4f48de",
+  "name": "Death's Touch",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Target takes [[/damage 40 type=negative]] damage. Target makes [[/save type=fortitude]] to reduce. If reduced to 0 HP by this weave, target dies and rises as a zombie under your control after 1 minute.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "negative",
+        "cost": 8
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 2
+      }
+    },
+    "range": "Medium, 60 ft.",
+    "duration": "Instantaneous",
+    "target": "",
+    "savingThrow": "fortitude",
+    "effect": "",
+    "effectType": "",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "half",
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "no damage",
+          "duration": "no damage"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1/2 damage (20)",
+          "duration": "1/2 damage (20)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (40)",
+          "duration": "full damage (40)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "+8 damage (48 total)",
+          "duration": "+8 damage (48 total)"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "+16 damage (56 total",
+          "duration": "+16 damage (56 total"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "+24 damage (64 total) + instant death regardless of HP",
+          "duration": "+24 damage (64 total) + instant death regardless of HP"
+        }
+      }
+    },
+    "successScaling": "",
+    "weavingRoll": "",
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "debuff",
+      "necromantic",
+      "ranged",
+      "ritual"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!a618df567d4f48de"
+}

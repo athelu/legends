@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 4 (altering size + close range) <strong>Supporting Energy:</strong> Time 2 (duration 1 minute) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 6 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Target at close range grows or shrinks one size category. Enlarge: add [[/damage 1 type=to]] damage dice, Misfortune on Stealth. Reduce: subtract [[/damage 1 type=from]] damage dice, Fortune on Stealth. Unwilling targets get [[/save type=fortitude]]. <strong>Saving Throw:</strong> Fortitude <strong>Success Scaling:</strong> 0 = no effect (if unwilling), 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours</p>\n<p>---</p>"
+      "value": "<p>Target at close range grows or shrinks one size category. Enlarge: add [[/damage 1 type=to]] damage dice, Misfortune on Stealth. Reduce: subtract [[/damage 1 type=from]] damage dice, Fortune on Stealth. Unwilling targets get [[/save type=fortitude]].</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -24,41 +24,53 @@
     "target": "",
     "savingThrow": "fortitude",
     "effect": "",
-    "effectType": "damage",
+    "effectType": "",
     "damage": {
-      "base": 1,
-      "type": "to",
+      "base": 0,
+      "type": "",
       "drInteraction": "",
       "scaling": {
         "0": {
-          "damage": 0,
-          "description": "no effect (if unwilling)"
+          "appliesEffects": false,
+          "description": "no effect (if unwilling)",
+          "duration": null
         },
         "1": {
-          "damage": 0,
-          "description": "1 round"
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
         },
         "2": {
-          "damage": 0,
-          "description": "full effect"
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
         },
         "3": {
-          "damage": 0,
-          "description": "10 minutes"
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
         },
         "4": {
-          "damage": 0,
-          "description": "1 hour"
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
         },
         "5": {
-          "damage": 0,
-          "description": "4 hours"
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
         }
       }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "buff",
+      "debuff",
+      "ranged"
+    ]
   },
   "effects": [],
   "_key": "!items!faa68d1f97a24cb5"

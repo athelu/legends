@@ -325,6 +325,7 @@
       "savingThrow": "",
       "effect": "",
       "effectType": "damage",
+      "deliveryMethod": "save",
       "weaveType": "simple",
       "damage": {
         "base": 0,
@@ -335,7 +336,8 @@
       "successScaling": "",
       "weavingRoll": "",
       "actionCost": 1,
-      "appliesEffects": []
+      "appliesEffects": [],
+      "tags": []
     },
     "feat": {
       "templates": ["common"],

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Water 5 (barrier of solid ice) <strong>Supporting Energy:</strong> Space 6 (medium range + wall area, duration 1 minute) <strong>Range:</strong> Medium, 60 ft. (60 feet long, 20 feet high OR hemisphere 10 feet diameter) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create wall of ice at medium range up to 60 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter). Each 10ft section has HP = 12 + Water Potential, DR 6 vs nonmagical damage. Creatures within area when created make [[/save type=reflex]] or take [[/damage 8 type=cold]] damage. Wall melts naturally over time. <strong>Applies Effects:</strong> Frosted <strong>Saving Throw:</strong> Reflex <strong>Damage Type:</strong> Cold (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round (6 HP), 2 = full effect (12 HP), 3 = 10 minutes (24 HP), 4 = 1 hour (36 HP DR 8), 5 = 1 hour (36 HP, DR 8) + Applies effects on contact</p>\n<p>---</p>"
+      "value": "<p>Create wall of ice at medium range up to 60 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter). Each 10ft section has HP = 12 + Water Potential, DR 6 vs nonmagical damage. Creatures within area when created make [[/save type=reflex]] or take [[/damage 8 type=cold]] damage. Wall melts naturally over time.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -24,35 +24,41 @@
     "target": "",
     "savingThrow": "reflex",
     "effect": "",
-    "effectType": "damage",
+    "effectType": "",
     "damage": {
-      "base": 8,
-      "type": "cold",
+      "base": 0,
+      "type": "",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "damage": 0,
-          "description": "fails"
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
         },
         "1": {
-          "damage": 0,
-          "description": "1 round (6 HP)"
+          "appliesEffects": true,
+          "description": "1 round (6 HP)",
+          "duration": "1 round (6 HP)"
         },
         "2": {
-          "damage": 0,
-          "description": "full effect (12 HP)"
+          "appliesEffects": true,
+          "description": "full effect (12 HP)",
+          "duration": "full effect (12 HP)"
         },
         "3": {
-          "damage": 0,
-          "description": "10 minutes (24 HP)"
+          "appliesEffects": true,
+          "description": "10 minutes (24 HP)",
+          "duration": "10 minutes (24 HP)"
         },
         "4": {
-          "damage": 0,
-          "description": "1 hour (36 HP DR 8)"
+          "appliesEffects": true,
+          "description": "1 hour (36 HP DR 8)",
+          "duration": "1 hour (36 HP DR 8)"
         },
         "5": {
-          "damage": 0,
-          "description": "1 hour (36 HP"
+          "appliesEffects": true,
+          "description": "1 hour (36 HP",
+          "duration": "1 hour (36 HP"
         }
       }
     },
@@ -63,6 +69,14 @@
         "effectId": "Frosted",
         "params": {}
       }
+    ],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "defensive",
+      "ranged",
+      "ritual",
+      "wall"
     ]
   },
   "effects": [],

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Water 2 (conjuring clean water) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Water Potential + Water Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Create up to 10 gallons of clean water in an open container. Or create rain in 30ft cube that extinguishes open flames. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons, 4 = 40 gallons, 5 = 80 gallons</p>"
+      "value": "<p>Create up to 10 gallons of clean water in an open container. Or create rain in 30ft cube that extinguishes open flames.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,47 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "5 gallons",
+          "duration": "5 gallons"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 gallons",
+          "duration": "10 gallons"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "20 gallons",
+          "duration": "20 gallons"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "40 gallons",
+          "duration": "40 gallons"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "80 gallons",
+          "duration": "80 gallons"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "ranged"
+    ]
   },
   "effects": [],
   "_key": "!items!27c2407d0ca646b1"

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 3 (Healing) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = no healing, 1 = 4 HP, 2 = 8 HP, 3 = 12 HP, 4 = 16 HP, 5 = 20 HP</p>"
+      "value": "<p>Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,47 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "no healing",
+          "duration": "no healing"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "4 HP",
+          "duration": "4 HP"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "8 HP",
+          "duration": "8 HP"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "12 HP",
+          "duration": "12 HP"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "16 HP",
+          "duration": "16 HP"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "20 HP",
+          "duration": "20 HP"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "healing",
+      "ranged"
+    ]
   },
   "effects": [],
   "_key": "!items!5a26cf1a92264cec"
