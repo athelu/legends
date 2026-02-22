@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 3 (creating magical darkness) <strong>Supporting Energy:</strong> Space 7 (medium range + 15ft radius + duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (15-foot radius sphere) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Magical darkness fills a 15ft radius sphere at medium range. Blocks normal and magical light (unless from higher energy weave). Creatures inside are Blinded to creatures outside. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 30ft radius , 4 = 1 hour (30ft radius), 5 = 1 hour (40ft radius)</p>\n<p>---</p>"
+      "value": "<p>Magical darkness fills a 15ft radius sphere at medium range. Blocks normal and magical light (unless from higher energy weave). Creatures inside are Blinded to creatures outside.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,48 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "30ft radius",
+          "duration": "30ft radius"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "1 hour (30ft radius)",
+          "duration": "1 hour (30ft radius)"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "1 hour (40ft radius)",
+          "duration": "1 hour (40ft radius)"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "ranged",
+      "ritual"
+    ]
   },
   "effects": [],
   "_key": "!items!58b234b63cc14869"

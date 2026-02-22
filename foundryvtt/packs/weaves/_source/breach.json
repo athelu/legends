@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 2 (forcing locks and barriers open) <strong>Supporting Energy:</strong> space 1 (close range 30ft, instantaneous) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Simple weave (1 action) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> One locked door, window, gate, chest, or similar object becomes unlocked. Removes Arcane Lock. Creates a loud bang audible up to 300 feet away. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 1 = makes loud noise but doesn't open, 2 = opens, 3 = silent</p>\n<h2>C</h2>"
+      "value": "<p>One locked door, window, gate, chest, or similar object becomes unlocked. Removes Arcane Lock. Creates a loud bang audible up to 300 feet away.</p>"
     },
     "weaveType": "complex",
     "actionCost": 1,
@@ -29,11 +29,31 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "1": {
+          "appliesEffects": true,
+          "description": "makes loud noise but doesn't open",
+          "duration": "makes loud noise but doesn't open"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "opens",
+          "duration": "opens"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "silent",
+          "duration": "silent"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "ranged"
+    ]
   },
   "effects": [],
   "_key": "!items!1db508d4ab6d40e5"

@@ -33,7 +33,13 @@
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "buff",
+      "debuff"
+    ]
   },
   "effects": [],
   "_key": "!items!64c8fd34057e4436"

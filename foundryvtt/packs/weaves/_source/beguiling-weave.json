@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 2 (creating friendly feelings, minor mental effect) <strong>Supporting Energy:</strong> Space 5 (close range + 1 hour) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Humanoid target makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target regards you as a friendly acquaintance. Lasts 1 hour or until you or allies harm target. Target knows it was charmed when weave ends. <strong>Applies Effects:</strong> charmed <strong>Saving Throw:</strong> Will <strong>Success Scaling:</strong> 0 = no effect, 1 = 1 round, 2 = full effect (1 hour), 3 = 4 hours, 4 = 12 hours, 5 = 1 day</p>"
+      "value": "<p>Humanoid target makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target regards you as a friendly acquaintance. Lasts 1 hour or until you or allies harm target. Target knows it was charmed when weave ends.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,7 +29,38 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "no effect",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect (1 hour)",
+          "duration": "full effect (1 hour)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "12 hours",
+          "duration": "12 hours"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "1 day",
+          "duration": "1 day"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
@@ -38,6 +69,11 @@
         "effectId": "charmed",
         "params": {}
       }
+    ],
+    "deliveryMethod": "save",
+    "tags": [
+      "control",
+      "ranged"
     ]
   },
   "effects": [],

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 2 (force barrier) <strong>Supporting Energy:</strong> None (instant reaction) <strong>Range:</strong> self, touch <strong>Duration:</strong> Until end of next turn <strong>Total Cost:</strong> 2 Energy <strong>Action:</strong> [Reaction] <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> When hit by an attack or targeted by Unerring Bolt, gain Fortune on your defense roll (or automatically block Unerring Bolt). Applies to the triggering attack and any others until end of your next turn. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = triggering attack only, 2 = full effect, 3 = full effect (+4 DR)</p>"
+      "value": "<p>When hit by an attack or targeted by Unerring Bolt, gain Fortune on your defense roll (or automatically block Unerring Bolt). Applies to the triggering attack and any others until end of your next turn.</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -29,11 +29,37 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "triggering attack only",
+          "duration": "triggering attack only"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "full effect (+4 DR)",
+          "duration": "full effect (+4 DR)"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "buff",
+      "touch"
+    ]
   },
   "effects": [],
   "_key": "!items!a060bfceeedd4bf8"

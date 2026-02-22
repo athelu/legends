@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 3 (force armor) <strong>Supporting Energy:</strong> Time 4 (duration 1 hour) <strong>Range:</strong> self, touch <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery + Time Potential + Time Mastery <strong>Effect:</strong> Target at touch gains DR 5 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities. <strong>Applies Effects:</strong> dr-bonus (value=5) <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours, 4 = DR 6 (4 hours), 5 = DR 7 (12 Hours)</p>"
+      "value": "<p>Target at touch gains DR 5 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,7 +29,33 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "1": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "DR 6 (4 hours)",
+          "duration": "DR 6 (4 hours)"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "DR 7 (12 Hours)",
+          "duration": "DR 7 (12 Hours)"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
@@ -40,6 +66,12 @@
           "value": "5"
         }
       }
+    ],
+    "deliveryMethod": "save",
+    "tags": [
+      "buff",
+      "defensive",
+      "touch"
     ]
   },
   "effects": [],

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Positive 3 (divine blessing) <strong>Supporting Energy:</strong> Space 5 (close range + 3 targets + 1 minute) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Positive Potential + Positive Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Up to 3 targets subtract 1 from one die (their choice) on each roll they make. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = 1 round, 2 = full effect, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours</p>"
+      "value": "<p>Up to 3 targets subtract 1 from one die (their choice) on each roll they make.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,46 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "ranged"
+    ]
   },
   "effects": [],
   "_key": "!items!33d0c1c8b01849b4"

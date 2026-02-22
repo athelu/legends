@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 2 (transmitting sound across distance) <strong>Supporting Energy:</strong> Space 1 (close range) <strong>Range:</strong> Close, 30 ft. <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 3 Energy <strong>Action:</strong> Complex Weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Point at a creature within close range and whisper a message. Target (and only target) hears the message and can whisper a reply that only you hear. Weave transmits through most barriers but is blocked by 1 foot of stone, 1 inch of common metal, thin sheet of lead, or 3 feet of wood. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong> 0 = fails, 1 = one-way message only, 2 = full effect, 3 = medium range (60ft), 4 = long range (120ft), 4 = long range (120ft) ignores barriers</p>\n<p>---</p>\n<h2>Z</h2>"
+      "value": "<p>Point at a creature within close range and whisper a message. Target (and only target) hears the message and can whisper a reply that only you hear. Weave transmits through most barriers but is blocked by 1 foot of stone, 1 inch of common metal, thin sheet of lead, or 3 feet of wood.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,41 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "one-way message only",
+          "duration": "one-way message only"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "medium range (60ft)",
+          "duration": "medium range (60ft)"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "long range (120ft) ignores barriers",
+          "duration": "long range (120ft) ignores barriers"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "ranged"
+    ]
   },
   "effects": [],
   "_key": "!items!01b8a31c351b4c53"

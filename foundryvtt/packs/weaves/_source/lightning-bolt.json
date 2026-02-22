@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 5 (electricity in a line, damage) <strong>Supporting Energy:</strong> Space 2 ( 60ft line 5ft wide) <strong>Range:</strong> 60-foot line, 5 feet wide <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery / Space Potential + Space Mastery <strong>Effect:</strong> A stroke of lightning forming a line 60 feet long and 5 feet wide blasts out from you. All creatures in the line take [[/damage 28 type=lightning]] damage. Each target takes the full listed damage and makes their own save. <strong>Applies Effects:</strong> stunned <strong>Saving Throw:</strong> Reflex <strong>Damage Type:</strong> Lightning (energy) <strong>DR Interaction:</strong> Half DR <strong>Success Scaling:</strong> 0 = no damage, 1 = half damage (14), 2 = full damage (28), 3 = +[[/damage 8]] damage (36 total), 4 = +[[/damage 16]] damage (44 total), 5 = +[[/damage 16]] damage (44 total) + applies effects</p>"
+      "value": "<p>A stroke of lightning forming a line 60 feet long and 5 feet wide blasts out from you. All creatures in the line take [[/damage 28 type=lightning]] damage. Each target takes the full listed damage and makes their own save.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -24,36 +24,41 @@
     "target": "",
     "savingThrow": "reflex",
     "effect": "",
-    "effectType": "damage",
+    "effectType": "",
     "damage": {
-      "base": 28,
-      "type": "lightning",
+      "base": 0,
+      "type": "",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "damage": 0,
-          "description": "no damage"
+          "appliesEffects": true,
+          "description": "no damage",
+          "duration": "no damage"
         },
         "1": {
-          "damage": 14,
-          "description": "half damage"
+          "appliesEffects": true,
+          "description": "half damage (14)",
+          "duration": "half damage (14)"
         },
         "2": {
-          "damage": 28,
-          "description": "full damage"
+          "appliesEffects": true,
+          "description": "full damage (28)",
+          "duration": "full damage (28)"
         },
         "3": {
-          "damage": 36,
-          "description": "enhanced"
+          "appliesEffects": true,
+          "description": "+8 damage (36 total)",
+          "duration": "+8 damage (36 total)"
         },
         "4": {
-          "damage": 44,
-          "description": "enhanced"
+          "appliesEffects": true,
+          "description": "+16 damage (44 total)",
+          "duration": "+16 damage (44 total)"
         },
         "5": {
-          "damage": 44,
-          "description": "enhanced + applies effects",
-          "appliesEffects": true
+          "appliesEffects": true,
+          "description": "+16 damage (44 total) + applies effects",
+          "duration": "+16 damage (44 total) + applies effects"
         }
       }
     },
@@ -64,6 +69,12 @@
         "effectId": "stunned",
         "params": {}
       }
+    ],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "control",
+      "ranged"
     ]
   },
   "effects": [],

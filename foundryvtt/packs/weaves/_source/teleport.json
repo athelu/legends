@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 7 (long-range teleportation) <strong>Supporting Energy:</strong> None (touch, instantaneous, up to 8 willing creatures) <strong>Range:</strong> self, touch (up to 8 willing creatures) <strong>Duration:</strong> Instantaneous <strong>Total Cost:</strong> 7 Energy base (more for longer distances or more creatures) <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery <strong>Effect:</strong> Instantly transport to destination on same plane. Number of success required depends on familiarity. <strong>Saving Throw:</strong> None <strong>Success Scaling:</strong>  0 = fails, 1 = mishap, 2 = Very familiar, 3 = visited a few times</p>\n<p>---</p>"
+      "value": "<p>Instantly transport to destination on same plane. Number of success required depends on familiarity.</p>"
     },
     "weaveType": "simple",
     "actionCost": 2,
@@ -29,11 +29,36 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "mishap",
+          "duration": "mishap"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Very familiar",
+          "duration": "Very familiar"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "visited a few times",
+          "duration": "visited a few times"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "touch"
+    ]
   },
   "effects": [],
   "_key": "!items!163a763701894068"

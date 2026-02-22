@@ -83,12 +83,29 @@ export async function applyEffect(options) {
   } else if (effectInstance.system.duration?.scaling === 'netSuccesses') {
     // Apply standard netSuccesses scaling pattern
     effectInstance.system.duration.value = calculateDurationFromNetSuccesses(netSuccesses, effectInstance.system.duration.type);
+  } else if (!effectInstance.system.duration && netSuccesses > 0) {
+    // If no duration field exists (e.g., conditions), add one based on netSuccesses
+    effectInstance.system.duration = {
+      type: 'rounds',
+      value: calculateDurationFromNetSuccesses(netSuccesses, 'rounds'),
+      base: calculateDurationFromNetSuccesses(netSuccesses, 'rounds'),
+      scaling: 'netSuccesses',
+      expireOn: 'turnEnd',
+      sustaining: false
+    };
   }
   
   // Update badge for counter type
   if (effectInstance.system.badge?.type === 'counter') {
     effectInstance.system.badge.value = effectInstance.system.duration.value;
     effectInstance.system.badge.max = effectInstance.system.duration.value;
+  } else if (effectInstance.system.duration && !effectInstance.system.badge) {
+    // Add a counter badge for conditions with duration
+    effectInstance.system.badge = {
+      type: 'counter',
+      value: effectInstance.system.duration.value,
+      max: effectInstance.system.duration.value
+    };
   }
   
   // Set granted by
@@ -115,26 +132,62 @@ export async function applyEffect(options) {
  * @returns {Promise<Object|null>} Effect data
  */
 async function loadEffectTemplate(effectId) {
-  // Try to find in effects compendium
-  const pack = game.packs.get('legends.effects');
-  if (!pack) {
-    console.error('Legends | loadEffectTemplate: effects compendium not found');
-    return null;
-  }
+  // Normalize the search term for flexible matching
+  const normalizeString = (str) => {
+    return str.toLowerCase().replace(/[^a-z0-9]/g, '');
+  };
+  const normalizedSearch = normalizeString(effectId);
   
-  // Try by ID first
-  let effect = await pack.getDocument(effectId);
-  
-  // Try by name if not found
-  if (!effect) {
-    const index = await pack.getIndex();
-    const entry = index.find(e => e.name === effectId);
-    if (entry) {
-      effect = await pack.getDocument(entry._id);
+  // Try to find in effects compendium first
+  let pack = game.packs.get('legends.effects');
+  if (pack) {
+    // Try by ID first
+    let effect = await pack.getDocument(effectId);
+    
+    // Try by name if not found
+    if (!effect) {
+      const index = await pack.getIndex();
+      const entry = index.find(e => {
+        return e.name === effectId || 
+               e.name.toLowerCase() === effectId.toLowerCase() ||
+               normalizeString(e.name) === normalizedSearch;
+      });
+      if (entry) {
+        effect = await pack.getDocument(entry._id);
+      }
+    }
+    
+    if (effect) {
+      return effect.toObject();
     }
   }
   
-  return effect ? effect.toObject() : null;
+  // Fallback: try conditions compendium
+  pack = game.packs.get('legends.conditions');
+  if (pack) {
+    // Try by ID first
+    let effect = await pack.getDocument(effectId);
+    
+    // Try by name if not found
+    if (!effect) {
+      const index = await pack.getIndex();
+      const entry = index.find(e => {
+        return e.name === effectId || 
+               e.name.toLowerCase() === effectId.toLowerCase() ||
+               normalizeString(e.name) === normalizedSearch;
+      });
+      if (entry) {
+        effect = await pack.getDocument(entry._id);
+      }
+    }
+    
+    if (effect) {
+      return effect.toObject();
+    }
+  }
+  
+  console.error(`Legends | loadEffectTemplate: effect/condition "${effectId}" not found in compendiums`);
+  return null;
 }
 
 /**

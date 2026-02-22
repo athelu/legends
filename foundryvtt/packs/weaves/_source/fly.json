@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Air 5 (levitation and propulsion, flight) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Self, touch <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 8 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Air Potential + Air Mastery + Time Potential + Time Mastery <strong>Effect:</strong> Target at touch gains flying speed equal to their normal movement speed. If weave ends while airborne, target falls. <strong>Saving Throw:</strong> Non <strong>Success Scaling:</strong> 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 4 hours, 5 = 12 hours</p>"
+      "value": "<p>Target at touch gains flying speed equal to their normal movement speed. If weave ends while airborne, target falls.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,42 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "12 hours",
+          "duration": "12 hours"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "buff",
+      "touch"
+    ]
   },
   "effects": [],
   "_key": "!items!92fa94a166ca488c"

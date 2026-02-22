@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Space 8 (illusory duplicate + medium range) <strong>Supporting Energy:</strong> Time 3 (duration 10 minutes) <strong>Range:</strong> Medium, 60 ft. (can move up to 120 feet away) <strong>Duration:</strong> 10 minutes <strong>Total Cost:</strong> 11 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Space Potential + Space Mastery / Time Potential + Time Mastery <strong>Effect:</strong> Create an illusory duplicate of yourself that you can see and hear through (can move up to 120 feet away). Can cast weaves from duplicate's location. Duplicate can move and speak. Physical interaction reveals it as illusory effect. <strong>Saving Throw:</strong> Perception vs Space Mastery <strong>Success Scaling:</strong> 0 = fails, 1 = 1 minute, 2 = full effect, 3 = 1 hour, 4 = 1 hour (long, 240 feet), 5 = 4 hours (long, 240 feet)</p>"
+      "value": "<p>Create an illusory duplicate of yourself that you can see and hear through (can move up to 120 feet away). Can cast weaves from duplicate's location. Duplicate can move and speak. Physical interaction reveals it as illusory effect.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,11 +29,50 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": true,
+          "description": "fails",
+          "duration": "fails"
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "1 hour (long",
+          "duration": "1 hour (long"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "4 hours (long",
+          "duration": "4 hours (long"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
-    "appliesEffects": []
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "divination",
+      "illusion",
+      "ranged",
+      "ritual",
+      "self"
+    ]
   },
   "effects": [],
   "_key": "!items!ecd7127d190c4c1f"

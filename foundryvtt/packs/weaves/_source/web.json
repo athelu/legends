@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Earth 4 (sticky webbing control effect) <strong>Supporting Energy:</strong> Space 6 (medium range + 20ft radius + 1 minute) <strong>Range:</strong> Medium, 60 ft. (20-foot radius) <strong>Duration:</strong> 1 minute <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Earth Potential + Earth Mastery / Space Potential + Space Mastery <strong>Effect:</strong> Fill area with sticky webs anchored to surfaces. Creatures in area when created or entering area make [[/save type=reflex]]. Compare their successes to your weaving successes. If you have more, target becomes Restrained. Restrained creatures can use action + Athletics or [[/check skill=acrobatics]] (2 successes needed) to escape. Webs are flammable; fire damage to 5ft area destroys webs in that section. <strong>Applies Effects:</strong> restrained <strong>Saving Throw:</strong> Reflex <strong>Success Scaling:</strong> 0 = no effect, 1 = Partial web (10ft radius, 1 round), 2 = Full effect (20ft radius, 1 minute), 3 =  (30ft radius, 10 minutes), 4 = (40ft radius, 1 hour), 5 = (50ft radius, 4 hours)</p>\n<p>---</p>"
+      "value": "<p>Fill area with sticky webs anchored to surfaces. Creatures in area when created or entering area make [[/save type=reflex]]. Compare their successes to your weaving successes. If you have more, target becomes Restrained. Restrained creatures can use action + Athletics or [[/check skill=acrobatics]] (2 successes needed) to escape. Webs are flammable; fire damage to 5ft area destroys webs in that section.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,7 +29,38 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "no effect",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Partial web (10ft radius",
+          "duration": "Partial web (10ft radius"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full effect (20ft radius",
+          "duration": "Full effect (20ft radius"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "(30ft radius",
+          "duration": "(30ft radius"
+        },
+        "4": {
+          "appliesEffects": true,
+          "description": "(40ft radius",
+          "duration": "(40ft radius"
+        },
+        "5": {
+          "appliesEffects": true,
+          "description": "(50ft radius",
+          "duration": "(50ft radius"
+        }
+      }
     },
     "successScaling": "",
     "weavingRoll": "",
@@ -38,6 +69,13 @@
         "effectId": "restrained",
         "params": {}
       }
+    ],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "control",
+      "ranged",
+      "ritual"
     ]
   },
   "effects": [],
