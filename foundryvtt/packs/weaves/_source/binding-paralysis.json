@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": false,
-          "description": "no effect",
-          "duration": null
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "Paralyzed 1 round",
-          "duration": "Paralyzed 1 round"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "Paralyzed (full effect",
-          "duration": "Paralyzed (full effect"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "target has Misfortune on saves",
-          "duration": "target has Misfortune on saves"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "10 minutes",
-          "duration": "10 minutes"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "1 hour duration",
-          "duration": "1 hour duration"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {
         "effectId": "paralyzed",

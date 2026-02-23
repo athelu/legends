@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 round (6 HP)",
-          "duration": "1 round (6 HP)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect (12 HP)",
-          "duration": "full effect (12 HP)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "10 minutes (24 HP)",
-          "duration": "10 minutes (24 HP)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "1 hour (36 HP DR 8)",
-          "duration": "1 hour (36 HP DR 8)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "1 hour (36 HP",
-          "duration": "1 hour (36 HP"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round (6 HP)\n- 2 = full effect (12 HP)\n- 3 = 10 minutes (24 HP) + frosted",
+    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {
         "effectId": "Frosted",

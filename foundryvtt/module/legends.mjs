@@ -757,7 +757,9 @@ export async function rollInitiative(actor, skillKey = 'perception') {
 }
 
 /**
- * Roll a weave (spell) with targeting support
+ * Roll a weave (spell) with two-roll system
+ * Roll 1: Weaving (channeling quality) - provides bonuses
+ * Roll 2: Targeting (effect delivery) - determines success
  * @param {Actor} actor - The actor casting the weave
  * @param {Item} weave - The weave item being cast
  */
@@ -779,8 +781,8 @@ export async function rollWeave(actor, weave) {
     supportingMastery = actor.system.mastery[supportingEnergy].value;
   }
   
-  // Perform the weaving check
-  const rollResult = await dice.rollWeaveCheck({
+  // ROLL 1: Weaving Check (channeling quality)
+  const weavingResult = await dice.rollWeaveCheck({
     actor,
     weave,
     primaryPotential,
@@ -792,17 +794,60 @@ export async function rollWeave(actor, weave) {
   // Wait for dice roll message to post first
   await new Promise(resolve => setTimeout(resolve, 100));
   
+  // Check if weaving failed
+  if (weavingResult.successes === 0) {
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `
+        <div class="legends-weave-card failure">
+          <h3><i class="fas fa-magic"></i> ${weave.name}</h3>
+          <div class="weave-failure">
+            <strong>Weave Failed!</strong> The energies slip from your grasp.
+          </div>
+        </div>
+      `
+    });
+    return { weavingResult, targetingResult: null, weaveFailed: true };
+  }
+  
+  // Determine casting stat
+  const castingStat = actor.system.castingStat;
+  const castingStatValue = actor.system.attributes[castingStat]?.value || 0;
+  const castingStatLabel = castingStat.charAt(0).toUpperCase() + castingStat.slice(1);
+  
+  // ROLL 2: Targeting Check (effect delivery)
+  // Only for hostile effects (weaves with saves or damage)
+  const hasSave = weave.system.savingThrow && weave.system.savingThrow.toLowerCase() !== 'none';
+  const isDamage = weave.system.effectType === 'damage';
+  const needsTargeting = hasSave || isDamage || targets.length > 0;
+  
+  let targetingResult = null;
+  if (needsTargeting) {
+    targetingResult = await dice.rollTargetingCheck({
+      actor,
+      weave,
+      castingStat: castingStatValue,
+      primaryMastery,
+      weavingBonus: weavingResult.targetingBonus,
+      bonusApplication: 'stacked' // For now, apply all bonus to first die
+    });
+    
+    // Wait for targeting roll message to post
+    await new Promise(resolve => setTimeout(resolve, 100));
+  }
+  
   // Create targeting chat card if we have targets
   if (targets.length > 0) {
     await createWeaveCastCard({
       actor,
       weave,
       targets,
-      rollResult
+      weavingResult,
+      targetingResult
     });
   }
   
-  return rollResult;
+  return { weavingResult, targetingResult };
 }
 
 /**
@@ -810,7 +855,7 @@ export async function rollWeave(actor, weave) {
  * @param {Object} options - Cast data
  */
 async function createWeaveCastCard(options) {
-  const { actor, weave, targets, rollResult } = options;
+  const { actor, weave, targets, weavingResult, targetingResult } = options;
   const speaker = ChatMessage.getSpeaker({ actor });
   
   // Build target list (for display)
@@ -836,6 +881,9 @@ async function createWeaveCastCard(options) {
   });
   const batchHint = allGMOwned ? ' (GM: will process all targets at once)' : '';
   
+  // Use targeting successes (not weaving successes) for effects
+  const effectiveSuccesses = targetingResult ? targetingResult.successes : weavingResult.successes;
+  
   let actionButton = '';
   if (hasSave) {
     actionButton = `
@@ -845,7 +893,7 @@ async function createWeaveCastCard(options) {
                 data-weave-message-id="{{MESSAGE_ID}}"
                 data-caster-id="${actor.id}"
                 data-weave-id="${weave.id}"
-                data-caster-successes="${rollResult.successes}"
+                data-caster-successes="${effectiveSuccesses}"
                 data-save-type="${savingThrow.toLowerCase()}">
           <i class="fas fa-shield-alt"></i> Make ${savingThrow} Save
         </button>
@@ -860,7 +908,7 @@ async function createWeaveCastCard(options) {
                 data-weave-message-id="{{MESSAGE_ID}}"
                 data-caster-id="${actor.id}"
                 data-weave-id="${weave.id}"
-                data-caster-successes="${rollResult.successes}">
+                data-caster-successes="${effectiveSuccesses}">
           <i class="fas fa-heart-broken"></i> Apply Damage
         </button>
       </div>
@@ -874,7 +922,7 @@ async function createWeaveCastCard(options) {
                 data-weave-message-id="{{MESSAGE_ID}}"
                 data-caster-id="${actor.id}"
                 data-weave-id="${weave.id}"
-                data-caster-successes="${rollResult.successes}">
+                data-caster-successes="${effectiveSuccesses}">
           <i class="fas fa-bolt"></i> Apply Effect
         </button>
       </div>
@@ -882,25 +930,30 @@ async function createWeaveCastCard(options) {
   }
   // If no save, no damage, but has effects, no button needed - just drag the effects
   
-  // Calculate actual damage based on successes
+  // Calculate actual damage based on targeting successes
   let calculatedDamage = 0;
   if (weave.system.effectType === 'damage' && weave.system.damage?.base > 0) {
-    const successes = rollResult.successes;
+    const successes = effectiveSuccesses;
+    // New system: Net 0 = resist, Net 1 = half, Net 2 = full, Net 3 = +8
     if (weave.system.damage.scaling && weave.system.damage.scaling[successes.toString()]) {
       calculatedDamage = weave.system.damage.scaling[successes.toString()].damage;
-    } else if (successes >= 2) {
-      calculatedDamage = weave.system.damage.base;
+    } else {
+      // Default scaling for attack weaves (no save)
+      if (successes === 0) calculatedDamage = 0;
+      else if (successes === 1) calculatedDamage = Math.floor(weave.system.damage.base / 2);
+      else if (successes === 2) calculatedDamage = weave.system.damage.base;
+      else if (successes >= 3) calculatedDamage = weave.system.damage.base + 8;
     }
   }
   
   // Build effect info - show calculated damage, not base
   const effectInfo = weave.system.effectType === 'damage' && weave.system.damage?.base > 0
     ? `<div class="weave-damage"><strong>Base Damage:</strong> ${weave.system.damage.base} ${weave.system.damage.type || 'untyped'}</div>
-       <div class="weave-damage-calculated"><strong>Damage (${rollResult.successes} success${rollResult.successes !== 1 ? 'es' : ''}):</strong> ${calculatedDamage} ${weave.system.damage.type || 'untyped'}</div>`
+       <div class="weave-damage-calculated"><strong>Damage (${effectiveSuccesses} targeting success${effectiveSuccesses !== 1 ? 'es' : ''}):</strong> ${calculatedDamage} ${weave.system.damage.type || 'untyped'}</div>`
     : '';
   
-  const successInfo = weave.system.successScaling
-    ? `<div class="success-scaling"><strong>Success Scaling:</strong> ${weave.system.successScaling}</div>`
+  const successInfo = weave.system.targetingSuccessScaling
+    ? `<div class="success-scaling"><strong>Targeting Success Scaling:</strong> ${weave.system.targetingSuccessScaling}</div>`
     : '';
   
   // Build draggable effects section - only show if success threshold is met
@@ -909,7 +962,7 @@ async function createWeaveCastCard(options) {
   if (weave.system.appliesEffects?.length > 0 && !hasSave) {
     // Check if effects should be shown based on success threshold
     let showEffects = false;
-    const successes = rollResult.successes;
+    const successes = effectiveSuccesses;
     
     // Check if this success level enables effects
     if (weave.system.damage?.scaling && weave.system.damage.scaling[successes.toString()]) {
@@ -928,7 +981,7 @@ async function createWeaveCastCard(options) {
                data-effect-id="${effectId}"
                data-caster-id="${actor.id}"
                data-weave-id="${weave.id}"
-               data-caster-successes="${rollResult.successes}"
+               data-caster-successes="${effectiveSuccesses}"
                data-params='${JSON.stringify(effectRef.params || {})}'>
             <i class="fas fa-magic"></i>
             <span>${effectId}</span>
@@ -951,7 +1004,10 @@ async function createWeaveCastCard(options) {
     <div class="legends-weave-card">
       <h3><i class="fas fa-magic"></i> ${weave.name}</h3>
       <div class="weave-info">
-        <div class="weave-successes"><strong>Weaving Successes:</strong> ${rollResult.successes}</div>
+        <div class="weave-successes">
+          <strong>Weaving Successes:</strong> ${weavingResult.successes} (bonus: ${weavingResult.targetingBonus || 0})<br/>
+          ${targetingResult ? `<strong>Targeting Successes:</strong> ${targetingResult.successes}` : ''}
+        </div>
         ${effectInfo}
         <div class="weave-effect"><strong>Effect:</strong> ${weave.system.effect || 'See weave description'}</div>
         ${successInfo}
@@ -972,12 +1028,14 @@ async function createWeaveCastCard(options) {
       'legends.weaveData': {
         casterId: actor.id,
         weaveId: weave.id,
-        casterSuccesses: rollResult.successes,
+        casterSuccesses: effectiveSuccesses, // Use targeting successes
+        weavingSuccesses: weavingResult.successes,
+        targetingSuccesses: targetingResult?.successes || 0,
         targets: targets.map(t => t.actor.id),
         savingThrow: weave.system.savingThrow,
         damage: weave.system.damage,
         effectType: weave.system.effectType,
-        successScaling: weave.system.successScaling
+        targetingSuccessScaling: weave.system.targetingSuccessScaling
       }
     }
   });
@@ -1173,19 +1231,26 @@ export async function handleApplyDamageClick(messageId, weaveData) {
   const casterSuccesses = weaveData.casterSuccesses;
   const damage = messageWeaveData.damage;
   
-  // Calculate damage based on successes and scaling
+  // Calculate damage based on targeting successes (for attack weaves with no save)
+  // Net 0 = miss, Net 1 = half, Net 2 = full, Net 3 = +8
   let damageAmount = 0;
   if (damage && damage.scaling) {
     const scalingEntry = damage.scaling[casterSuccesses.toString()];
     if (scalingEntry) {
       damageAmount = scalingEntry.damage;
-    } else if (casterSuccesses >= 2) {
-      // Default to base damage for 2+ successes if no specific scaling
-      damageAmount = damage.base;
+    } else {
+      // Fallback to new system defaults
+      if (casterSuccesses === 0) damageAmount = 0;
+      else if (casterSuccesses === 1) damageAmount = Math.floor(damage.base / 2);
+      else if (casterSuccesses === 2) damageAmount = damage.base;
+      else if (casterSuccesses >= 3) damageAmount = damage.base + 8;
     }
-  } else if (casterSuccesses >= 2) {
-    // Fallback to base damage for 2+ successes
-    damageAmount = damage.base || 0;
+  } else {
+    // Use new system defaults
+    if (casterSuccesses === 0) damageAmount = 0;
+    else if (casterSuccesses === 1) damageAmount = Math.floor(damage.base / 2);
+    else if (casterSuccesses === 2) damageAmount = damage.base;
+    else if (casterSuccesses >= 3) damageAmount = damage.base + 8;
   }
   
   if (damageAmount > 0) {
@@ -1240,20 +1305,19 @@ async function calculateBatchWeaveEffect(weaveData, weaveMessageId, results, cas
     
     // Determine effect based on type and net successes
     if (weaveData.effectType === 'damage' && weaveData.damage?.base > 0) {
+      // New system: Net 0 = resist, Net 1 = half, Net 2 = full, Net 3 = +8
       if (margin === 0) {
         effectDescription = 'Resisted!';
+        damageAmount = 0;
       } else if (margin === 1) {
         damageAmount = Math.floor(weaveData.damage.base / 2);
         effectDescription = `${damageAmount} ${weaveData.damage.type} (reduced)`;
       } else if (margin === 2) {
         damageAmount = weaveData.damage.base;
         effectDescription = `${damageAmount} ${weaveData.damage.type}`;
-      } else if (margin === 3) {
-        damageAmount = weaveData.damage.base * 2;
+      } else if (margin >= 3) {
+        damageAmount = weaveData.damage.base + 8;
         effectDescription = `${damageAmount} ${weaveData.damage.type} (enhanced!)`;
-      } else {
-        damageAmount = weaveData.damage.base * 3;
-        effectDescription = `${damageAmount} ${weaveData.damage.type} (critical!)`;
       }
     } else {
       if (margin === 0) {
@@ -1388,8 +1452,10 @@ async function calculateWeaveEffect(weaveData, weaveMessageId, saveSuccesses, ca
   
   // Determine effect based on type and net successes
   if (weaveData.effectType === 'damage' && weaveData.damage?.base > 0) {
+    // New system: Net 0 = resist, Net 1 = half, Net 2 = full, Net 3 = +8
     if (margin === 0) {
       effectDescription = `${defender.name} resisted the weave! No effect.`;
+      damageAmount = 0;
     } else if (margin === 1) {
       // Reduced damage (half)
       damageAmount = Math.floor(weaveData.damage.base / 2);
@@ -1398,14 +1464,10 @@ async function calculateWeaveEffect(weaveData, weaveMessageId, saveSuccesses, ca
       // Full damage
       damageAmount = weaveData.damage.base;
       effectDescription = `${defender.name}: ${damageAmount} ${weaveData.damage.type} damage`;
-    } else if (margin === 3) {
-      // Double damage (base + base)
-      damageAmount = weaveData.damage.base * 2;
+    } else if (margin >= 3) {
+      // Enhanced damage (+8)
+      damageAmount = weaveData.damage.base + 8;
       effectDescription = `${defender.name}: ${damageAmount} ${weaveData.damage.type} damage (enhanced!)`;
-    } else {
-      // Margin 4+: Triple damage (base + base*2)
-      damageAmount = weaveData.damage.base * 3;
-      effectDescription = `${defender.name}: ${damageAmount} ${weaveData.damage.type} damage (critical!)`;
     }
   } else {
     // Non-damage effect

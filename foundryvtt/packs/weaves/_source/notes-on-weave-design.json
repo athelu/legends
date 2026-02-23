@@ -31,8 +31,9 @@
       "drInteraction": "",
       "scaling": {}
     },
-    "successScaling": "",
+    "targetingSuccessScaling": "",
     "weavingRoll": "",
+    "targetingRoll": "",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

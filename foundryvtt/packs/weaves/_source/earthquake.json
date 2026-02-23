@@ -29,48 +29,14 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": false,
-          "description": "no effect",
-          "duration": null
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 round (25ft radius)",
-          "duration": "1 round (25ft radius)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect (50ft radius",
-          "duration": "full effect (50ft radius"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "100ft radius",
-          "duration": "100ft radius"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "major structural damage",
-          "duration": "major structural damage"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "major structural damage",
-          "duration": "major structural damage"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Prone (1 round, 25ft radius)\n- 2 = Prone (1 minute, 50ft radius)\n- 3 = Prone (1 minute, 100ft radius)",
+    "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [
       {
         "effectId": "prone",
-        "params": {}
-      },
-      {
-        "effectId": "restrained",
         "params": {}
       }
     ],

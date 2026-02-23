@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Speak cutting words at one creature you can see within medium range. Target takes [[/damage 4 type=psychic]] damage and makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn.</p>"
+      "value": "<p>Speak cutting words at one creature you can see within medium range. Target takes [[/damage 4 type=psychic]] damage and makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "no damage",
-          "duration": "no damage"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half damage (2)",
-          "duration": "half damage (2)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (4) + penalty on attack",
-          "duration": "full damage (4) + penalty on attack"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+4 damage (8 total) + penalty on attack",
-          "duration": "+4 damage (8 total) + penalty on attack"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+8 damage (12 total) + penalty applies to all rolls until end of their next turn",
-          "duration": "+8 damage (12 total) + penalty applies to all rolls until end of their next turn"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "+8 damage (12 total) + penalty lasts 1 minute",
-          "duration": "+8 damage (12 total) + penalty lasts 1 minute"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (2)\n- 2 = Full damage (4) + penalty on attack\n- 3 = Enhanced damage (8) + penalty on attack",
+    "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
     "deliveryMethod": "attack",
     "tags": [

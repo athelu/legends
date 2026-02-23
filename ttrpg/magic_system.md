@@ -224,10 +224,24 @@ Each trait specifies how many dice to roll, which energies you have access to, a
 - Optional: Supporting Energy (modifies range/area/duration)
 - Spend points from your Energy Pool
 
-#### Step 3: Make Weaving Roll
+#### Step 3: Make Weaving Roll (Channeling Quality)
+**Purpose:** This roll determines how well you channel and shape the magical energies, not the final effect strength.
+
+**Simple Weaves (1 action):**
 - Roll Primary Potential + Primary Mastery (2d8)
-- If using supporting energy: Also roll Secondary Potential + Secondary Mastery (2d8)
+
+**Complex Weaves (2 actions):**
+- Roll Primary Potential + Primary Mastery (2d8)
+- Also roll Supporting Potential + Supporting Mastery (2d8)
 - Total possible: Up to 4 successes (5 with a critical roll)
+
+**Weaving Success Results:**
+- **0 successes:** Weave fails, lose half Energy Points spent (rounded up)
+- **1 success:** No bonus to targeting
+- **2 successes:** No bonus to targeting (baseline)
+- **3 successes:** Reduce one targeting die result by 1
+- **4 successes:** Reduce targeting die results by 2 (split or stacked as caster chooses)
+- **5 successes (critical):** Reduce targeting die results by 3 (split or stacked as caster chooses)
 
 #### Step 4: Apply Overspending Penalties
 - If Energy Points spent exceed your Mastery in that energy:
@@ -235,28 +249,28 @@ Each trait specifies how many dice to roll, which energies you have access to, a
   - Applies to BOTH Potential and Mastery dice for that energy
 - Cannot spend more than your Potential (absolute ceiling)
 
-#### Weaving Success Results
-##### 0 successes:
-- Weave fails
-- Lose half Energy Points spent (rounded up)
+#### Step 5: Make Targeting Roll (Effect Strength)
+**Purpose:** This roll determines how effectively you deliver the weave to your target(s).
 
-##### 1 success:
-- Weave works at reduced effectiveness
-- Damage weaves: Reduce by 1 die or half damage
-- Utility weaves: Reduced duration/range
+**All Weaves Require Targeting (except willing targets for beneficial effects):**
+- Roll Casting Stat + Primary Energy Mastery (2d8)
+- Apply any bonuses from weaving roll BEFORE counting successes
+- Each die that rolls under its value = 1 success
+- Maximum 2 successes per targeting roll (3 with critical)
 
-##### 2 successes:
-- Weave works as designed at full power
+**Targeting Success Scaling:**
+Compare your targeting successes against target's save successes (if applicable):
+- **Net 0 or less:** Target resists/no effect
+- **Net 1:** Reduced effect (half damage, weakened condition)
+- **Net 2:** Full effect as designed
+- **Net 3:** Enhanced effect (bonus damage, stronger condition)
 
-##### 3 successes:
-- Enhanced effect
-- Damage: +1d8 bonus damage
-- Utility: Extended duration or bonus effect
-
-##### 4 successes:
-- Maximum power/critical success
-- Damage: Maximum on one die or spectacular effect
-- Utility: Double duration or overwhelming power
+**Attack Weaves (No Save Allowed):**
+For attack weaves (single-target direct damage), compare targeting successes directly:
+- **0 successes:** Miss/no effect
+- **1 success:** Reduced effect (half damage)
+- **2 successes:** Full effect
+- **3 successes:** Enhanced effect
 
 
 ### Weaving While Threatened
@@ -298,14 +312,19 @@ Choose the appropriate table based on what you're trying to accomplish.
 | 7-8         | 40 damage     | 5th-6th+ level | Chain Lightning avg 45 |
 |             |               |                |                        |
 
-##### Modified by weaving successes:
-- 0 successes: Half damage (rounded down)
-- 1 success: 3/4 damage (rounded down)
-- 2 successes: Full damage
-- 3 successes: +8 damage
-- 4 successes: +16 damage
+##### Modified by targeting successes (vs saves):
+- Net 0 or less: No effect or minimal effect (see spell description)
+- Net 1: Half damage (rounded down)
+- Net 2: Full damage
+- Net 3: +8 damage
 
-**Design Note:** Damage values calibrated to D&D spell averages. Our system provides more reliable damage (no dice variance) balanced by opposed roll mechanics and success-based scaling.
+##### Modified by targeting successes (attack weaves, no save):
+- 0 successes: Miss, no damage
+- 1 success: Half damage (rounded down)
+- 2 successes: Full damage  
+- 3 successes: +8 damage
+
+**Design Note:** Damage values calibrated to D&D spell averages. Our system provides more reliable damage (no dice variance) balanced by opposed roll mechanics. The two-roll system prevents skilled mages from overwhelming saves while still rewarding mastery.
 
 2. **Primary Energy:** Healing
    **Energy Type:** Positive
@@ -584,60 +603,55 @@ Simple Weaves represent raw magical energy channeled directly through the caster
 
 ### Magic in Combat
 
-#### Attack Weaves (like Fire Bolt, Lightning)
-- Weaving successes determine hit quality automatically
-- No separate attack roll needed
-- Apply damage based on successes
+#### The Two-Roll System
 
-#### Save Weaves (like Fireball, Charm)
-- Weaver generates X successes from weaving roll
-- Target makes appropriate save (Fortitude/Reflex/Will)
-- Net Successes = Weaver Successes - Target Successes
-- Apply effect based on net successes:
-  - 0 or less: Target resists completely
-  - 1: Reduced effect (half damage, weakened)
-  - 2: Full effect
-  - 3: Enhanced effect
-  - 4: Overwhelming/maximum effect
+All offensive and targeted weaves use a two-roll system:
 
-##### Saving Throws
-- Fortitude : Resists fire, cold, poison, physical effects
-- Reflex : Resists area effects, explosions
-- Will : Resists mind control, fear, charm, illusory effects
+**Roll 1: Weaving Roll** (Channeling Quality)
+- Determines how well you shape and channel the magical energies
+- Primary Potential + Primary Mastery (+ Supporting if complex)
+- Success results provide bonuses to your targeting roll
+- 0 successes = weave fails
+- 3+ successes = reduce targeting die results (see Step 3 above)
 
-#### Attack Weaves vs Save Weaves
+**Roll 2: Targeting Roll** (Effect Delivery)
+- Determines how effectively the weave strikes/affects the target
+- Casting Stat + Primary Energy Mastery (2d8)
+- Apply weaving bonuses before counting successes
+- Compare targeting successes vs target's save (if applicable)
 
-Weaves fall into two categories based on how they interact with targets:
+**Exception:** Beneficial effects on willing targets skip the targeting roll and automatically succeed.
 
-##### Attack Weaves (No Saving Throw)
+#### Attack Weaves (No Saving Throw)
 **Characteristics:**
 - Single-target direct effects
 - Touch-range direct damage
-- Weaving successes alone determine effectiveness
-- No opposed roll by target
+- Targeting successes alone determine effectiveness (no opposed roll by target)
 
 **Weave Types:**
 - Single-target ranged damage (Fire Bolt, Frost Ray, Lightning Touch)
 - Touch-range damage spells
 - Single-target healing (Mend Flesh, Healing Burst)
-- Single-target buffs that benefit the target
+- Single-target buffs that benefit the target (no targeting roll needed if willing)
 
 **Success Determination:**
-- 0 successes: Miss/fail
-- 1 success: Reduced effect (typically half damage or half duration)
-- 2 successes: Full effect as listed
-- 3 successes: Enhanced effect (+8 damage or extended duration)
-- 4 successes: Maximum effect (+16 damage or double duration)
+After making weaving roll and applying bonuses:
+- 0 targeting successes: Miss/fail
+- 1 targeting success: Reduced effect (typically half damage or half duration)
+- 2 targeting successes: Full effect as listed
+- 3 targeting successes: Enhanced effect (+8 damage or extended duration)
 
 **Example - Fire Bolt:**
-Caster rolls Fire Potential + Fire Mastery + Air Potential + Air Mastery (4d8)
-- 0 successes: Miss, no damage
-- 1 success: 4 damage (half of 8)
-- 2 successes: 8 damage (full)
-- 3 successes: 16 damage (8 + 8 bonus)
-- 4 successes: 24 damage (8 + 16 bonus)
+Step 1: Weaving Roll - Fire Potential + Fire Mastery + Air Potential + Air Mastery (Complex weave, 4d8)
+- Result: 3 successes → Reduce one targeting die by 1
 
-##### Save Weaves (Saving Throw Allowed)
+Step 2: Targeting Roll - Intelligence + Fire Mastery (2d8)
+- Roll: 5 and 6
+- Apply bonus: 5-1=4 and 6 (one die reduced by 1)
+- Intelligence 5, Fire Mastery 4: Both succeed!
+- 2 targeting successes = Full damage (8)
+
+#### Save Weaves (Saving Throw Allowed)
 **Characteristics:**
 - Area effect damage
 - Control/debuff effects
@@ -652,24 +666,42 @@ Caster rolls Fire Potential + Fire Mastery + Air Potential + Air Mastery (4d8)
 - Transformation (Beastial Transformation, Petrification)
 
 **Success Determination - Opposed Roll:**
-1. **Caster rolls weaving:** Count successes normally from weaving roll
-2. **Each target rolls save:** Count successes from appropriate save (Reflex/Fortitude/Will)
-3. **Calculate Net Successes:** Net = Caster Successes - Target Successes
-4. **Apply effect based on net successes:**
+1. **Caster makes weaving roll:** Count successes, apply bonuses to targeting roll
+2. **Caster makes targeting roll:** Casting Stat + Primary Energy Mastery (2d8), apply weaving bonuses
+3. **Each target rolls save:** Count successes from appropriate save (Reflex/Fortitude/Will)
+4. **Calculate Net Successes:** Net = Caster Targeting Successes - Target Save Successes
+5. **Apply effect based on net successes:**
    - Net 0 or less: Target resists/reduces effect significantly
    - Net 1: Reduced effect (typically half damage)
    - Net 2: Full effect as listed
    - Net 3: Enhanced effect
-   - Net 4: Maximum effect
 
 **Important:** Even when net successes are 0 or negative, some spells still deal partial damage. Check individual spell descriptions for "minimum effect" rules.
 
 **Example - Fireball:**
-Caster rolls 3 successes on weaving (Fire + Space)
-- Target A rolls 1 success on Reflex save: Net 2, takes full 28 damage
-- Target B rolls 2 successes on Reflex save: Net 1, takes half (14 damage)
-- Target C rolls 3 successes on Reflex save: Net 0, takes no damage
-- Target D rolls 4 successes on Reflex save: Net -1, takes no damage
+Step 1: Caster Weaving Roll - Fire 5 + Space 3 (complex weave)
+- Fire Potential + Fire Mastery + Space Potential + Space Mastery = 4d8
+- Result: 4 successes → Reduce targeting dice by 2 (caster chooses how to split)
+
+Step 2: Caster Targeting Roll - Intelligence + Fire Mastery (2d8)
+- Roll: 6 and 7
+- Apply bonus: 6-2=4 and 7-0=7 (caster reduces first die by 2)
+- Intelligence 5, Fire Mastery 5: First die succeeds!
+- **1 targeting success**
+
+Step 3: Targets Make Saves
+- Target A rolls 0 successes on Reflex save: Net 1, takes half (14 damage)
+- Target B rolls 1 success on Reflex save: Net 0, takes no damage
+- Target C rolls 2 successes on Reflex save: Net -1, takes no damage
+
+#### Saving Throws
+All three saving throw types roll Attribute + Current Luck and count successes:
+- **Fortitude Save:** Constitution + Current Luck
+- **Reflex Save:** Agility + Current Luck
+- **Willpower Save:** Wisdom + Current Luck
+
+Roll 2d8 (one for the attribute, one for Current Luck), count successes.
+These successes are compared against the caster's targeting roll successes.
 
 #### Which Save Type Applies?
 
@@ -810,161 +842,164 @@ Many weaves can inflict conditions on targets when achieving high success thresh
 
 #### Success Threshold Framework
 
-- 5+ successes: Maximum damage + Applies conditions
+Conditions are applied based on **net successes** (targeting successes - save successes):
+- **Net 1:** Minor conditions possible (weaker effects)
+- **Net 2:** Moderate conditions (standard effects)
+- **Net 3:** Major conditions or maximum damage + condition application
 #### Condition Selection by Energy Type
 
 Conditions should thematically match the primary energy used in the weave. Reference the conditions document for full condition rules.
 
 ##### Fire Energy Conditions
-**Minor (3 successes / Net 3):**
+**Minor (Net 1):**
 - Singed
 - Smoldering
 - Dazzled
 
-**Major (4 successes / Net 4):**
+**Moderate (Net 2):**
 - Ignited
 - Frightened (fire panic)
 - Blinded (intense flash)
 
-**Severe (5+ successes / Net 5+):**
+**Major (Net 3):**
 - Burning
 - Cowering (fire terror)
 - Multiple conditions (Ignited + Frightened)
 
 ##### Cold/Water Energy Conditions
-**Minor (3 successes / Net 3):**
+**Minor (Net 1):**
 - Chilled
 - Numbed
 - Difficult terrain (ice)
 
-**Major (4 successes / Net 4):**
+**Moderate (Net 2):**
 - Slowed (major - 2 actions only)
 - Frosted
 - Prone (slipped on ice)
 
-**Severe (5+ successes / Net 5+):**
+**Major (Net 3):**
 - Frozen (Restrained + ongoing damage)
 - Paralyzed (extreme cold)
 - Multiple conditions (Prone + Frosted)
 
 ##### Lightning/Air Energy Conditions
-**Minor (3 successes / Net 3):**
+**Minor (Net 1):**
 - Dazed
 - Deafened
 - Pushed (forced movement)
 
-**Major (4 successes / Net 4):**
+**Moderate (Net 2):**
 - Stunned
 - Prone (knocked down)
 - Disoriented
 
-**Severe (5+ successes / Net 5+):**
+**Major (Net 3):**
 - Paralyzed (electrical shock)
 - Unconscious (extreme shock)
 - Multiple conditions (Stunned + Prone)
 
 ##### Earth Energy Conditions
-**Minor (3 successes / Net 3):**
+**Minor (Net 1):**
 - Difficult terrain
 - Off-balance (penalty to next action)
 - Prone (minor)
 
-**Major (4 successes / Net 4):**
+**Moderate (Net 2):**
 - Prone (knocked down)
 - Grappled
 - Slowed (movement impaired)
 
-**Severe (5+ successes / Net 5+):**
+**Major (Net 3):**
 - Restrained (bound by earth/stone)
 - Buried (Restrained + Blinded + suffocating)
 - Prone + Restrained
 
 ##### Positive Energy Conditions
-**Minor (3 successes / Net 3):**
+**Minor (Net 1):**
 - Dazzled (bright light)
 - Revealed (invisibility ends)
 - Weakened (offensive use)
 
-**Major (4 successes / Net 4):**
+**Moderate (Net 2):**
 - Blinded (intense light)
 - Frightened (undead only)
 - Turned (undead flee)
 
-**Severe (5+ successes / Net 5+):**
+**Major (Net 3):**
 - Destroyed (undead at low HP)
 - Banished (extraplanar creatures)
 - Multiple conditions
 
 ##### Negative Energy Conditions
-**Minor (3 successes / Net 3):**
+**Minor (Net 1):**
 - Weakened
 - Sickened
 - Chilled (death chill)
 
-**Major (4 successes / Net 4):**
+**Moderate (Net 2):**
 - Poisoned
 - Exhausted (Level 1)
 - Frightened (fear of death)
 
-**Severe (5+ successes / Net 5+):**
+**Major (Net 3):**
 - Dying (if below threshold HP)
 - Paralyzed (body wracked with pain)
 - Exhausted (Level 2+)
 
 ##### Space Energy Conditions
-**Minor (3 successes / Net 3):**
+**Minor (Net 1):**
 - Disoriented
 - Pushed (forced movement)
 - Off-balance
 
-**Major (4 successes / Net 4):**
+**Moderate (Net 2):**
 - Teleported (moved to different location)
 - Prone
 - Restrained (force bonds)
 
-**Severe (5+ successes / Net 5+):**
+**Major (Net 3):**
 - Banished (sent to another plane)
 - Stunned (reality distortion)
 - Grappled + Teleported
 
 ##### Time Energy Conditions
-**Minor (3 successes / Net 3):**
+**Minor (Net 1):**
 - Slowed (minor - speed/initiative penalty)
 - Disoriented (lost sense of timing)
 
-**Major (4 successes / Net 4):**
+**Moderate (Net 2):**
 - Slowed (major - 2 actions only)
 - Stunned (frozen in time)
 - Aged (Exhaustion gained)
 
-**Severe (5+ successes / Net 5+):**
+**Major (Net 3):**
 - Paralyzed (time frozen)
 - Slowed (1 action only)
 - Temporal displacement
 
 #### Power Level Restrictions
 
-The severity of conditions that can be applied depends on the weave's Energy cost:
+The severity of conditions that can be applied depends on the weave's Energy cost and net successes achieved:
 
 **Simple Weave Level (1-2 Energy):**
-- Maximum at 3 successes: Minor condition only
-- Maximum at 4 successes: Major condition (single effect, not most severe)
-- No severe conditions available
+- Net 1: Minor condition only
+- Net 2: Moderate condition (single effect, not most severe)
+- Net 3: Moderate condition with extended duration
 
 **Low Level (3-4 Energy):**
-- 3 successes: Minor or moderate condition
-- 4 successes: Major condition
-- 5+ successes: Major + minor, or severe for 1 round only
+- Net 1: Minor or moderate condition
+- Net 2: Moderate condition
+- Net 3: Major condition or moderate + minor
 
 **Medium Level (5-6 Energy):**
-- 3 successes: Major condition
-- 4 successes: Severe condition or major + minor
-- 5+ successes: Severe + additional effects
+- Net 1: Moderate condition
+- Net 2: Major condition or moderate + minor
+- Net 3: Major condition + additional effects
 
 **High Level (7-8 Energy):**
-- 3 successes: Severe condition possible
-- 4 successes: Severe condition + significant effect
-- 5+ successes: Multiple conditions or long-duration severe effects
+- Net 1: Major condition possible
+- Net 2: Major condition + significant effect
+- Net 3: Major condition + long duration or multiple major conditions
 
 #### Condition Duration Guidelines
 
@@ -979,31 +1014,30 @@ Most magical conditions allow the target to attempt a save at the end of each of
 #### Examples in Practice
 
 **Fire Bolt (Fire 2, Simple Weave):**
-- 3 successes: 16 damage + Singed (minor - subtract 1 from next die)
-- 4 successes: 24 damage + Ignited (major - 1d8 per turn, action to extinguish)
-- 5+ successes: 32 damage + Ignited + Dazzled (multiple conditions)
+- Net 1 (targeting 1, target 0): 4 damage (half) + Singed (minor - subtract 1 from next die)
+- Net 2 (targeting 2, target 0): 8 damage + Smoldering (moderate - 1 fire damage per turn)
+- Net 3 (targeting 3, target 0): 16 damage + Ignited (major - 1d8 per turn, action to extinguish)
 
 **Fireball (Fire 5, Medium Level AOE):**
-- Net 3: 36 damage + Frightened (major - add 1 to dice while visible)
-- Net 4: 44 damage + Ignited (major ongoing damage)
-- Net 5+: 52 damage + Burning (severe - 2d8 per turn, hard to extinguish)
+- Net 1 (targeting 2, target 1): 14 damage (half) + Singed (minor)
+- Net 2 (targeting 2, target 0): 28 damage + Frightened (moderate - add 1 to dice while visible)
+- Net 3 (targeting 3, target 0): 36 damage + Ignited (major ongoing damage)
 
 **Binding Paralysis (Space 4, Low Level Control):**
-- Net 2: Paralyzed for 1 minute (save each turn)
-- Net 3: Paralyzed + Misfortune on saves (harder to break)
-- Net 4: Paralyzed + affects 2 targets
-- Net 5+: Paralyzed for 1 hour + affects 2 targets
+- Net 1 (targeting 1, target 0): Slowed for 1 minute (save each turn)
+- Net 2 (targeting 2, target 0): Paralyzed for 1 minute (save each turn)
+- Net 3 (targeting 3, target 0): Paralyzed + Misfortune on saves (harder to break)
 
 **Lightning Bolt (Air 5, Medium Level AOE):**
-- Net 3: 36 damage + Dazed (minor - penalties next action)
-- Net 4: 44 damage + Stunned (major - no actions for 1 round)
-- Net 5+: 52 damage + Stunned + Prone (multiple conditions)
+- Net 1 (targeting 2, target 1): 14 damage (half) + Dazed (minor - penalties next action)
+- Net 2 (targeting 2, target 0): 28 damage + Stunned (moderate - no actions for 1 round)
+- Net 3 (targeting 3, target 0): 36 damage + Stunned + Prone (multiple conditions)
 
 #### GM Guidelines for Condition Application
 
 1. **Check Energy Type:** Conditions must thematically match the primary energy
 2. **Check Power Level:** Don't exceed the condition caps for that power level
-3. **Check Success Threshold:** Minor at 3, major at 4, severe at 5+
+3. **Check Net Successes:** Minor at Net 1, moderate at Net 2, major at Net 3
 4. **Check Spell Description:** Individual spells may specify different conditions
 5. **Be Consistent:** Similar spells should apply similar conditions
 

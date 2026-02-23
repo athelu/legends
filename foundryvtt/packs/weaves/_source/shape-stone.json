@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "2ft cube",
-          "duration": "2ft cube"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "5ft cube",
-          "duration": "5ft cube"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "10ft cube",
-          "duration": "10ft cube"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 2ft cube\n- 2 = 5ft cube\n- 3 = 10ft cube",
+    "weavingRoll": "Earth Potential + Earth Mastery",
+    "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

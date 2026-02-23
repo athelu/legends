@@ -19,7 +19,7 @@
         "cost": 2
       }
     },
-    "range": "touch, self",
+    "range": "Touch, self",
     "duration": "1 minute",
     "target": "",
     "savingThrow": "none",
@@ -29,36 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "1": {
-          "appliesEffects": true,
-          "description": "1 round",
-          "duration": "1 round"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect",
-          "duration": "full effect"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "10 minutes",
-          "duration": "10 minutes"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "1 hour",
-          "duration": "1 hour"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "4 hours",
-          "duration": "4 hours"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "weavingRoll": "Earth Potential + Earth Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [
       {
         "effectId": "dr-bonus",

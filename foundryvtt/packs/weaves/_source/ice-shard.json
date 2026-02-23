@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "miss",
-          "duration": "miss"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half damage (4)",
-          "duration": "half damage (4)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (8)",
-          "duration": "full damage (8)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+8 damage (16 total)",
-          "duration": "+8 damage (16 total)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+16 damage (24 total)",
-          "duration": "+16 damage (24 total)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "+16 damage (24 total) + applies effects",
-          "duration": "+16 damage (24 total) + applies effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (4)\n- 2 = full damage (8)\n- 3 = enhanced damage (16) + slowed",
+    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {
         "effectId": "slowed",

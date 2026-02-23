@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target at medium range (60ft) makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends.</p>"
+      "value": "<p>Target at medium range makes [[/save type=will]]. Calculate net successes (targeting - save). If you have more net successes, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,36 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "1": {
-          "appliesEffects": true,
-          "description": "1 round",
-          "duration": "1 round"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect",
-          "duration": "full effect"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "10 minutes",
-          "duration": "10 minutes"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "1 hour",
-          "duration": "1 hour"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "4 hours",
-          "duration": "4 hours"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

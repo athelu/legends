@@ -333,8 +333,9 @@
         "drInteraction": "",
         "scaling": {}
       },
-      "successScaling": "",
+      "targetingSuccessScaling": "",
       "weavingRoll": "",
+      "targetingRoll": "",
       "actionCost": 1,
       "appliesEffects": [],
       "tags": []

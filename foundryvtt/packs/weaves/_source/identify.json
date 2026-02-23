@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "basic function only",
-          "duration": "basic function only"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full properties",
-          "duration": "full properties"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "learn curse details",
-          "duration": "learn curse details"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = basic function only\n- 2 = full properties\n- 3 = learn curse details",
+    "weavingRoll": "Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

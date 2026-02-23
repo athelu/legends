@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "triggering attack only",
-          "duration": "triggering attack only"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect",
-          "duration": "full effect"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "full effect (+4 DR)",
-          "duration": "full effect (+4 DR)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = triggering attack only\n- 2 = 1 turn\n- 3 = 1 turn (+4 DR)",
+    "weavingRoll": "Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

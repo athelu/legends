@@ -19,7 +19,7 @@
         "cost": 0
       }
     },
-    "range": "touch",
+    "range": "Touch",
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "miss",
-          "duration": "miss"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half damage (2)",
-          "duration": "half damage (2)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (4)",
-          "duration": "full damage (4)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+4 damage (8 total)",
-          "duration": "+4 damage (8 total)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (2)\n- 2 = Full damage (4)\n- 3 = Enhanced damage (8)",
+    "weavingRoll": "Water Potential + Water Mastery",
+    "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {
         "effectId": "slowed",

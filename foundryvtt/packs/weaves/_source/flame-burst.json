@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "no damage",
-          "duration": "no damage"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half damage (8)",
-          "duration": "half damage (8)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (16)",
-          "duration": "full damage (16)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+8 damage (24 total)",
-          "duration": "+8 damage (24 total)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+16 damage (32 total)",
-          "duration": "+16 damage (32 total)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "+24 damage (40 total) + Applies effects",
-          "duration": "+24 damage (40 total) + Applies effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (8)\n- 2 = Full damage (16)\n- 3 = Enhanced damage (24) + ignited",
+    "weavingRoll": "Fire Potential + Fire Mastery + Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
       {
         "effectId": "ignited",

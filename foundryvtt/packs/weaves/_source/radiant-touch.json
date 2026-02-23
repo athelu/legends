@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "miss",
-          "duration": "miss"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half damage (2",
-          "duration": "half damage (2"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (4",
-          "duration": "full damage (4"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+4 damage (8 total",
-          "duration": "+4 damage (8 total"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = miss\n- 1 = half damage (2)\n- 2 = full damage (4)\n- 3 = enhanced damage (8)",
+    "weavingRoll": "Positive Potential + Positive Mastery",
+    "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

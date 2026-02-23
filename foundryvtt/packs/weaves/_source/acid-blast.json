@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target takes [[/damage 8 type=acid]] damage. This is an attack weave—no saving throw allowed.</p>"
+      "value": "<p>Single-target ranged attack. Target takes [[/damage 8 type=acid]] damage.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,48 +29,18 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "miss",
-          "duration": "miss"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half damage (4)",
-          "duration": "half damage (4)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (8)",
-          "duration": "full damage (8)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+8 damage (16 total)",
-          "duration": "+8 damage (16 total)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+16 damage (24 total)",
-          "duration": "+16 damage (24 total)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "+16 damage (24 total) + applies effects",
-          "duration": "+16 damage (24 total) + applies effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Miss\n- 1 = Half damage (4)\n- 2 = Full damage (8)  \n- 3 = Enhanced damage (16) + applies Sickened",
+    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {
         "effectId": "sickened",
         "params": {}
       }
     ],
-    "deliveryMethod": "save",
+    "deliveryMethod": "attack",
     "tags": [
       "ranged"
     ]

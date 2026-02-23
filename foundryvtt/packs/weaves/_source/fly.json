@@ -29,36 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "1": {
-          "appliesEffects": true,
-          "description": "1 minute",
-          "duration": "1 minute"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect",
-          "duration": "full effect"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "1 hour",
-          "duration": "1 hour"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "4 hours",
-          "duration": "4 hours"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "12 hours",
-          "duration": "12 hours"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "weavingRoll": "Air Potential + Air Mastery + Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

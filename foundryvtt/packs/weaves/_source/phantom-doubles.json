@@ -29,36 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 duplicate (1 round)",
-          "duration": "1 duplicate (1 round)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "3 duplicates (full effect)",
-          "duration": "3 duplicates (full effect)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "4 duplicates (10 minutes)",
-          "duration": "4 duplicates (10 minutes)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "6 duplicates (10 minutes)",
-          "duration": "6 duplicates (10 minutes)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 duplicate (1 round)\n- 2 = 3 duplicates (1 minute)\n- 3 = 4 duplicates (10 minutes)",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

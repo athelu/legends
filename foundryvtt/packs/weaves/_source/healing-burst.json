@@ -1,6 +1,6 @@
 {
   "_id": "5a26cf1a92264cec",
-  "name": "Healing burst",
+  "name": "Healing Burst",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "no healing",
-          "duration": "no healing"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "4 HP",
-          "duration": "4 HP"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "8 HP",
-          "duration": "8 HP"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "12 HP",
-          "duration": "12 HP"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "16 HP",
-          "duration": "16 HP"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "20 HP",
-          "duration": "20 HP"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = half strength (4)\n- 2 = full strength (8)\n- 3 = enhanced strength (12)",
+    "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

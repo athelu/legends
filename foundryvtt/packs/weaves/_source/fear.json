@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>All creatures in cone make Will saves. Compare your weaving successes to each target's save successes. Based on net successes: 1 = Frightened, 2 = Fleeing, 3+ = Cowering. Creatures can make saves at end of turn to downgrade/end (1 success downgrades or ends).</p>"
+      "value": "<p>All creatures in cone make Will saves. Compare your targeting successes to each target's save successes. Based on net successes: 1 = Frightened, 2 = Fleeing, 3+ = Cowering. Creatures can make saves at end of turn to downgrade/end (1 success downgrades or ends).</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": false,
-          "description": "no effect",
-          "duration": null
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "Frightened (1 round)",
-          "duration": "Frightened (1 round)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "Frightened (1 minute)",
-          "duration": "Frightened (1 minute)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "fleeing",
-          "duration": "fleeing"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "cowering",
-          "duration": "cowering"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "paralyzed",
-          "duration": "paralyzed"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Frightened (1 round)\n- 2 = Frightened (1 minute)\n- 3 = Fleeing (1 minute)",
+    "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [
       {
         "effectId": "frightened",
@@ -71,10 +41,6 @@
       },
       {
         "effectId": "fleeing",
-        "params": {}
-      },
-      {
-        "effectId": "cowering",
         "params": {}
       }
     ],

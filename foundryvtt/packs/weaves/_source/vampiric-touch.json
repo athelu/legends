@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "6 damage (heal 3)",
-          "duration": "6 damage (heal 3)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "12 damage (heal 6)",
-          "duration": "12 damage (heal 6)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "16 damage (heal 8)",
-          "duration": "16 damage (heal 8)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "24 damage (heal 12)",
-          "duration": "24 damage (heal 12)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "24 damage (heal 12) + Applies Effects",
-          "duration": "24 damage (heal 12) + Applies Effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 6 damage (heal 3)\n- 2 = 12 damage (heal 6)\n- 3 = 16 damage (heal 8)",
+    "weavingRoll": "Negative Potential + Negative Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [
       {
         "effectId": "weakened",

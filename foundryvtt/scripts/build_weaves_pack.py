@@ -157,7 +157,10 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
     """
     Parse Success Scaling text into structured scaling table.
     
-    Input example: "0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = +8 damage (16 total), 4 = +16 damage (24 total), 5 = +16 damage (24 total) + applies effects"
+    Supports both old and new formats:
+    - Old: "0 = miss, 1 = half damage (4), 2 = full damage (8), ..."
+    - New (attack): "0 successes: miss, 1 success: half damage (4), ..."
+    - New (save): "Net 0 or less: resist, Net 1: half damage (14), ..."
     
     Also looks for condition thresholds like "**Sickened Condition (at 5 successes):**"
     
@@ -165,9 +168,7 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
         "0": { "damage": 0, "description": "miss" },
         "1": { "damage": 4, "description": "half damage" },
         "2": { "damage": 8, "description": "full damage" },
-        "3": { "damage": 16, "description": "enhanced" },
-        "4": { "damage": 24, "description": "critical" },
-        "5": { "damage": 24, "appliesEffects": true, "description": "critical + applies effects" }
+        "3": { "damage": 16, "description": "enhanced", "appliesEffects": true }
     }
     """
     if not scaling_text:
@@ -175,17 +176,26 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
     
     scaling_table = {}
     
-    # Parse main scaling line: "0 = miss, 1 = half damage (4), 2 = full damage (8), ..."
-    # Split by comma, then parse each entry
-    entries = scaling_text.split(',')
+    # Parse main scaling line
+    # Split by comma or newline (some entries span multiple lines)
+    entries = re.split(r'[,\n]\s*', scaling_text)
     
     for entry in entries:
         entry = entry.strip()
         if not entry:
             continue
         
-        # Match: "0 = miss" or "1 = half damage (4)" or "3 = +8 damage (16 total)" or "5 = ... + applies effects"
-        match = re.match(r'^(\d+)\s*[=:]\s*(.+)', entry)
+        # Match various formats:
+        # - "0 = miss" (old format)
+        # - "0 successes: miss" (old format with label)
+        # - "Net 0 or less: resist" (new save format)
+        # - "Net 1: half damage (14)" (new save format)
+        # - "1 success: half damage (4)" (new attack format)
+        match = re.match(
+            r'^(?:Net\s+)?(\d+)(?:\s+(?:or\s+less|successes?|success))?[=:]\s*(.+)', 
+            entry, 
+            re.IGNORECASE
+        )
         if match:
             success_level = match.group(1)
             rest = match.group(2).strip()
@@ -197,7 +207,7 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
                 # Remove the "+ applies effects" part from the description
                 rest = re.sub(r'\s*\+\s*[Aa]pplies\s+[Ee]ffects?', '', rest).strip()
             
-            # Extract damage amount from parentheses like "(4)" or "(16 total)"
+            # Extract damage amount from parentheses like "(4)" or "(16 total)" or "(14)"
             damage_match = re.search(r'\((\d+)(?:\s+total)?\)', rest)
             damage = 0
             if damage_match:
@@ -387,8 +397,9 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                     'effectType': '',
                     'weaveType': '',
                     'damage': {'base': 0, 'type': '', 'drInteraction': '', 'scaling': {}},
-                    'successScaling': '',
+                    'targetingSuccessScaling': '',  # Unified field for all weaves
                     'weavingRoll': '',
+                    'targetingRoll': '',
                     'actionCost': 1,
                     'appliesEffects': []
                 },
@@ -512,6 +523,16 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 elif 'none' in dr_text or 'ignores dr' in dr_text or 'ignore' in dr_text:
                     item['system']['damage']['drInteraction'] = 'ignore'
             
+            # Parse Weaving Roll field
+            weaving_roll_match = re.search(r'\*\*Weaving Roll:\*\*\s*([^\n]+)', description)
+            if weaving_roll_match:
+                item['system']['weavingRoll'] = weaving_roll_match.group(1).strip()
+            
+            # Parse Targeting Roll field (NEW - two-roll system)
+            targeting_roll_match = re.search(r'\*\*Targeting Roll:\*\*\s*([^\n]+)', description)
+            if targeting_roll_match:
+                item['system']['targetingRoll'] = targeting_roll_match.group(1).strip()
+            
             # Parse Applies Effects field from markdown first (needed for scaling parser)
             applies_match = re.search(r'\*\*Applies Effects:\*\*\s*([^\n]+)', description)
             applies_effects_list = []
@@ -521,10 +542,16 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 item['system']['appliesEffects'] = applies_effects_list
             
             # Parse Success Scaling field into structured data
-            # Handle variations like "Success Scaling:" or "Success Scaling (Net successes...):"
-            scaling_match = re.search(r'\*\*Success Scaling[^:]*:\*\*\s*([^\n]+(?:\n(?!\*\*)[^\n]+)*)', description)
+            # NEW: All weaves use "Targeting Success Scaling:" in the two-roll system
+            # Also support old "Success Scaling:" for backward compatibility
+            scaling_match = re.search(
+                r'\*\*(?:Targeting Success Scaling|Success Scaling)[^:]*:\*\*\s*([^\n]+(?:\n(?!\*\*)[^\n]+)*)', 
+                description
+            )
             if scaling_match:
                 scaling_text = scaling_match.group(1).strip()
+                item['system']['targetingSuccessScaling'] = scaling_text  # Unified field for all weaves
+                
                 if item['system']['damage']['base'] > 0:
                     # Damage weave: parse damage scaling
                     item['system']['damage']['scaling'] = _parse_damage_scaling(

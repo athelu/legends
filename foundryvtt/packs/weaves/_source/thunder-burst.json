@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1/2 damage 6",
-          "duration": "1/2 damage 6"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (12)",
-          "duration": "full damage (12)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+8 damage (20 total)",
-          "duration": "+8 damage (20 total)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+8 damage (20 total)",
-          "duration": "+8 damage (20 total)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "+8 damage (20 total)",
-          "duration": "+8 damage (20 total)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1/2 damage (6)\n- 2 = full damage (12), pushed 10 feet\n- 3 = +8 damage (20 total), pushed 10 feet + prone\n---",
+    "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
       {
         "effectId": "Prone",

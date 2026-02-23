@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "mishap",
-          "duration": "mishap"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "Very familiar",
-          "duration": "Very familiar"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "visited a few times",
-          "duration": "visited a few times"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = mishap\n- 2 = Very familiar\n- 3 = visited a few times",
+    "weavingRoll": "Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

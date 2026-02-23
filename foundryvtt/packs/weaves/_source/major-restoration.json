@@ -19,7 +19,7 @@
         "cost": 0
       }
     },
-    "range": "self, touch",
+    "range": "Self, touch",
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "temporary relief (1 hour)",
-          "duration": "temporary relief (1 hour)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect",
-          "duration": "full effect"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "removes 2 effects",
-          "duration": "removes 2 effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = suppress effect (1 hour)\n- 2 = remove 1 effect\n- 3 = removes 2 effects",
+    "weavingRoll": "Positive Potential + Positive Mastery",
+    "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

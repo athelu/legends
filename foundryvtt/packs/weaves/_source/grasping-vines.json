@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Plants in area animate and grasp at creatures. Creatures in area when cast or entering make [[/save type=reflex]]. Compare your weaving successes to their save successes. If you have more, target becomes Restrained. Can use action + [[/check skill=athletics]] (2 successes needed) to break free, or repeat save at end of turn (1 success ends effect).</p>"
+      "value": "<p>Plants in area animate and grasp at creatures. Creatures in area when cast or entering make [[/save type=reflex]]. Compare your targeting successes to their save successes. If you have more, target becomes Restrained ([[/save type=reflex]]). Repeat save at end of affected player turn (1 success ends effect).</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": false,
-          "description": "no effect",
-          "duration": null
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 round (10ft square)",
-          "duration": "1 round (10ft square)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect (20ft square",
-          "duration": "full effect (20ft square"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "30ft square (10 minutes)",
-          "duration": "30ft square (10 minutes)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "40ft square (1 hour)",
-          "duration": "40ft square (1 hour)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "60ft square (1 hour)",
-          "duration": "60ft square (1 hour)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round (10ft square)\n- 2 = 1 minute (20ft square)\n- 3 = 10 minutes (30ft square)",
+    "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [
       {
         "effectId": "restrained",

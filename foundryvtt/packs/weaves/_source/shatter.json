@@ -29,36 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1/2 damage (8)",
-          "duration": "1/2 damage (8)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (16)",
-          "duration": "full damage (16)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+8 damage (24 total)",
-          "duration": "+8 damage (24 total)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+16 damage (32 total) + Applies effects",
-          "duration": "+16 damage (32 total) + Applies effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1/2 damage (8)\n- 2 = full damage (16)\n- 3 = +8 damage (24 total) + deafened",
+    "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
       {
         "effectId": "deafened",

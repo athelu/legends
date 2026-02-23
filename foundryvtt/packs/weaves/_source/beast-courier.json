@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "12 hours duration",
-          "duration": "12 hours duration"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "24 hours",
-          "duration": "24 hours"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "48 hours",
-          "duration": "48 hours"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "7 days",
-          "duration": "7 days"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "30 days",
-          "duration": "30 days"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 12 hours\n- 2 = 24 hours\n- 3 = 48 hours",
+    "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [
