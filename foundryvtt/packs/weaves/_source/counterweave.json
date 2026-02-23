@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Attempt to interrupt a weave being cast. Make an [[/check skill=arcane]] to determine the weave being cast. Must spend Energy equal to or greater than the weave you're countering. Compare your weaving successes to their weaving successes. If you have more, their weave fails.</p>"
+      "value": "<p>Attempt to interrupt a weave being cast. Make an [[/check skill=arcane]] to determine the weave being cast. Must spend Energy equal to or greater than the weave you're countering. Compare your Targeting successes to their weaving successes. If you have more, their weave fails.</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "reduce counter spell by 1 success",
-          "duration": "reduce counter spell by 1 success"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "Counter successful",
-          "duration": "Counter successful"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "Counter successful",
-          "duration": "Counter successful"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Reduce target spell by 1 success\n- 2 = Counter successful\n- 3 = Counter successful (regain 4 energy)",
+    "weavingRoll": "Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {
         "effectId": "dazed",

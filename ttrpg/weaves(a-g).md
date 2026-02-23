@@ -41,16 +41,17 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 3 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery
-**Description:** Target takes 8 acid damage. This is an attack weave—no saving throw allowed.
+**Targeting Roll:** Casting Stat + Water Mastery
+**Description:** Single-target ranged attack. Target takes 8 acid damage.
 **Applies Effects:** sickened
 **Saving Throw:** None
 **Damage Type:** Acid
-**DR Interaction:** Half DR (8 acid damage vs DR 4 becomes 8 - 2 = 6 damage)
-**Success Scaling:** 0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16), 4 = maximum amage (24), 5 = maximum damage (24) + applies effects
-**Scaling Option:** Can add Space 1 to affect 2 targets (total 4 Energy)
-
-
-## B
+**DR Interaction:** Half DR
+**Targeting Success Scaling:**
+- 0 = Miss
+- 1 = Half damage (4)
+- 2 = Full damage (8)  
+- 3 = Enhanced damage (16) + applies Sickened
 
 ### Banishment
 **Primary Energy:** Space 6 (forcibly ejecting to another plane)
@@ -60,22 +61,32 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
-**Description:** Target at medium range (60ft) makes Will save. Compare your weaving successes to their save successes. If you have more, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends.
+**Targeting Roll:** Casting Stat + Space Mastery
+**Description:** Target at medium range makes Will save. Calculate net successes (targeting - save). If you have more net successes, extraplanar creatures are sent to their home plane. Native creatures are sent to a harmless demiplane. Target reappears when weave ends.
 **Saving Throw:** Will
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours 
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 minute
+- 3 = 10 minutes 
 
 ### Barkward
 **Primary Energy:** Earth 4 (hardening skin like tree bark)
 **Supporting Energy:** Time 2 (duration 1 minute)
-**Range:** touch, self  
+**Range:** Touch, self  
 **Duration:** 1 minute
 **Total Cost:** 6 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Earth Potential + Earth Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Earth Mastery
 **Description:** Target's DR increases by 4 (doesn't stack with armor). Touch range by default.
 **Applies Effects:** dr-bonus (value=4)
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 minute
+- 3 = 10 minutes
 
 ### Beast Courier
 **Primary Energy:** Positive 3 (animating natural creature with purpose)  
@@ -85,22 +96,31 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 9 Energy  
 **Action:** Complex weave (2 actions), requires 1 minute to cast  
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  
+**Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Target one Tiny beast you can see within close range. The beast travels to a location you specify (must be familiar to you) and delivers a message of up to 25 words to a creature you describe. The beast travels at 50 miles per day (fly) or 25 miles per day (ground).  
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 12 hours, 2 = 24 hours, 3 = 48 hours, 4 = 7 days, 5 = 30 days
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 12 hours
+- 2 = 24 hours
+- 3 = 48 hours
 
 ### Beastial Transformation
 **Primary Energy:** Space 7 (transforming into another creature, major transformation, 30 ft. range)
 **Supporting Energy:** Time 3 (duration up to 10 minutes)
-**Range:** touch or self  
+**Range:** Touch or self  
 **Duration:** 10 minutes
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
-**Description:** Transform Touched creature into a beast. Target gains beast's HP (temporary), physical stats, and abilities. Keeps mental stats and personality. Unwilling targets get Fortitude save. Compare your weaving successes to their save successes. Reverts when reaching 0 HP or weave ends (returns to previous HP total).
+**Targeting Roll:** Casting Stat + Space Mastery
+**Description:** Transform touched creature into a beast. Target gains beast's HP (temporary), physical stats, and abilities. Keeps mental stats and personality. Unwilling targets get Fortitude save. Compare your Targeting successes to their save successes. Reverts when reaching 0 HP or weave ends (returns to previous HP total).
 **Saving Throw:** Fortitude
-**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour, 4 = 4 hours, 5 = 12 hours
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 minute
+- 2 = 10 minutes
+- 3 = 1 hour
 
 ### Beguiling Weave
 **Primary Energy:** Positive 2 (creating friendly feelings, minor mental effect)  
@@ -109,11 +129,16 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Duration:** 1 hour  
 **Total Cost:** 7 Energy  
 **Action:** Complex weave (2 actions)  
-**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  
+**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
+**Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Humanoid target makes Will save. Compare your weaving successes to their save successes. If you have more, target regards you as a friendly acquaintance. Lasts 1 hour or until you or allies harm target. Target knows it was charmed when weave ends.  
 **Applies Effects:** charmed
 **Saving Throw:** Will
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 hour, 3 = 4 hours, 4 = 12 hours, 5 = 1 day
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 hour
+- 3 = 4 hours
 
 ### Bind the Fallen **[Necromantic]**
 **Primary Energy:** Negative 6 (binding soul fragments to corpses)
@@ -123,11 +148,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** **[FORBIDDEN KNOWLEDGE]** Bind soul fragments or echoes to 1 corpse, animating it as a skeleton or zombie under your control. Undead has HP equal to your Negative Potential × 4, deals 6 damage, uses your Negative Mastery for attacks. Can command as [Free] action.
 **Saving Throw:** None
-**Scaling:** +2 Energy per additional undead (max = Negative Mastery)
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 hour, 3 = 4 hours, 4 = 12 hours, 5 = 1 day
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 hour
+- 3 = 4 hours
 
 ### Binding Paralysis
 **Primary Energy:** Space 7 (paralysis + close range)  
@@ -136,26 +164,33 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Duration:** 1 minute  
 **Total Cost:** 9 Energy  
 **Action:** Complex weave (2 actions)  
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Humanoid target at close range makes Will save. Compare your weaving successes to their save successes. If you have more, target is Paralyzed. Target can repeat save at end of each turn to break free (1 success ends effect).  
 **Applies Effects:** paralyzed
 **Saving Throw:** Will
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes, 4 = 10 minutes (target has Misfortune on saves), 5 = 1 hour (target has Misfortune on saves)
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 minute
+- 3 = 10 minutes
 
 ### Breach
 **Primary Energy:** Space 2 (forcing locks and barriers open)
-**Supporting Energy:** space 1 (close range 30ft, instantaneous)
+**Supporting Energy:** Space 1 (close range 30ft, instantaneous)
 **Range:** Close, 30 ft.  
 **Duration:** Instantaneous
 **Total Cost:** 3 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
 **Description:** One locked door, window, gate, chest, or similar object becomes unlocked. Removes Arcane Lock. Creates a loud bang audible up to 300 feet away.
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = fails, 2 = opens, 3 = opens (silent)
-
-
-## C
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Fails
+- 2 = Opens
+- 3 = Opens (silent)
 
 ### Calm Emotions
 **Primary Energy:** Positive 4 (soothing emotional turmoil)  
@@ -165,9 +200,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 10 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  
+**Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** All creatures in a 20-foot radius sphere at medium range must make Will saves. Compare your weaving successes to each target's save successes. Those you beat can choose to be affected (suppressing Charmed or Frightened) or you can suppress hostility (they become indifferent if not directly threatened). Creatures immune to charm are immune to this weave.  
 **Saving Throw:** Will
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours  
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 minute
+- 3 = 10 minutes
 
 ### Chain Lightning
 **Primary Energy:** Air 7 (arcing electricity, high damage)
@@ -177,13 +217,17 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Air Potential + Air Mastery + Space Potential + Space Mastery
-**Description:** Lightning arcs to 4 targets within range (first target, then 3 others within 30ft of previous). Each target takes 40 lightning damage and makes their own save.
+**Targeting Roll:** Casting Stat + Air Mastery
+**Description:** Lightning arcs to 4 targets within range (first target, then 3 others within 30ft of previous). Each target makes their own Reflex save. Calculate net successes for each target.
 **Applies Effects:** stunned
 **Saving Throw:** Reflex
 **Damage Type:** Lightning (energy)
-**DR Interaction:** Half DR (40 lightning damage vs DR 4 becomes 40 - 2 = 38 damage)
-**Success Scaling:** 0 = fails, 1 = half damage (20), 2 = full damage (40), 3 = +8 damage (48 total), 4 = +16 damage (56 total),  5 = +16 damage (56 total) + Applies effects
-
+**DR Interaction:** Half DR
+**Targeting Success Scaling:**
+- 0 = miss
+- 1 = Half damage (20)
+- 2 = Full damage (40)
+- 3 = Enhanced damage (48) + applies Stunned
 
 ### Command
 **Primary Energy:** Negative 2 (imposing your will through compulsion)  
@@ -193,23 +237,31 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 3 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery  
+**Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Speak a one-word command to a creature you can see within close range. Target makes Will save. Compare your weaving successes to their save successes. If you have more, target follows the command on their next turn. Commands: Approach, Drop, Flee, Grovel (prone), Halt (no actions). Cannot command self-harm. Creatures immune to charm are immune.  
 **Saving Throw:** Will
-**Success Scaling:** 0 = fails, 1 = fails, 2 = 1 round, 3 = 2 rounds, 4 = 3 rounds, 5 = 1 minute  
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Fails
+- 2 = 1 round
+- 3 = 2 rounds
 
 ### Commune with Dead **[Necromantic]**
 **Primary Energy:** Negative 4 (forcing communion with departed soul)
 **Supporting Energy:** Time 2 (duration of questioning, 1 minute)
-**Range:** touch
+**Range:** Touch
 **Duration:** 1 minute
 **Total Cost:** 6 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery + Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** **[FORBIDDEN KNOWLEDGE]** Force brief communion with the departed soul of a corpse (dead no more than 10 days) at touch. Can ask up to 3 questions. Corpse can only answer what it knew in life. Answers are usually brief, cryptic, or repetitive. Same corpse can't be questioned this way again for 10 days.
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 2 questions, 2 = 3 questions, 3 = 4 questions, 4 = 5 questions, 5 = 6 questions
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 2 questions
+- 2 = 3 questions
+- 3 = 4 questions
 
 ### Complex Illusion
 **Primary Energy:** Space 6 (complex illusion + medium range + 20ft cube area)  
@@ -219,9 +271,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 9 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery  
+**Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Create an illusion of an object, creature, or phenomenon within a 20-foot cube at medium range. The illusion includes sight, sound, smell, and temperature effects. Physical interaction reveals it as an illusion.  
 **Saving Throw:** Perception vs Space Mastery
-**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour, 4 = 4 hours, 5 = 12 hours
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 minute
+- 2 = 10 minutes
+- 3 = 1 hour
 
 ### Comprehend Languages
 **Primary Energy:** Air 2 (understanding spoken communication)  
@@ -231,10 +288,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 6 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Air Potential + Air Mastery / Time Potential + Time Mastery  
+**Targeting Roll:** Casting Stat + Air Mastery
 **Description:** For the duration, you understand the literal meaning of any spoken language you hear. You also understand written languages you see, but must touch the surface on which words are written. Reading takes about 1 minute per page.  
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours, 4 = 12 hours, 5 = 1 day
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 10 minutes
+- 2 = 1 hour
+- 3 = 4 hours
 
 ### Confusion
 **Primary Energy:** Negative 6 (mental chaos and discord)  
@@ -244,9 +305,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 11 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery  
-**Description:** All creatures in 10-foot radius sphere at medium range make Will saves. Compare your weaving successes to each target's save successes. Those you beat are confused. At the start of each confused creature's turn, roll 1d8: 1-2 = do nothing, 3-4 = no action and move random direction, 5-6 = attack nearest creature, 7-8 = act normally. Can repeat save at end of each turn (1 success ends effect). Creatures immune to charm are immune to this weave.
+**Targeting Roll:** Casting Stat + Negative Mastery
+**Description:** All creatures in 10-foot radius sphere at medium range make Will saves. Compare your Targeting successes to each target's save successes. Those you beat are confused. At the start of each confused creature's turn, roll 1d8: 1-2 = do nothing, 3-4 = no action and move random direction, 5-6 = attack nearest creature, 7-8 = act normally. Can repeat save at end of each turn (1 success ends effect). Creatures immune to charm are immune to this weave.
 **Saving Throw:** Will
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 1 minute (20-foot radius), 4 = 10 minutes (20-foot radius), 5 = 1 hour (30-foot radius) 
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 minute
+- 3 = 1 minute (20-foot radius)
 
 ### Conjure Water
 **Primary Energy:** Water 2 (conjuring clean water)  
@@ -256,9 +322,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 3 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery  
+**Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Create up to 10 gallons of clean water in an open container. Or create rain in 30ft cube that extinguishes open flames.  
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons, 4 = 40 gallons, 5 = 80 gallons
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 5 gallons
+- 2 = 10 gallons
+- 3 = 20 gallons
 
 ### CounterWeave
 **Primary Energy:** Space 4 (disrupting magical energy)
@@ -268,10 +339,15 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 4 Energy base (must match or exceed target weave cost)
 **Action:** Reaction (when you see a weave being cast)
 **Weaving Roll:** Space Potential + Space Mastery
-**Description:** Attempt to interrupt a weave being cast. Make an arcana check to determine the weave being cast. Must spend Energy equal to or greater than the weave you're countering. Compare your weaving successes to their weaving successes. If you have more, their weave fails.
+**Targeting Roll:** Casting Stat + Space Mastery
+**Description:** Attempt to interrupt a weave being cast. Make an arcana check to determine the weave being cast. Must spend Energy equal to or greater than the weave you're countering. Compare your Targeting successes to their weaving successes. If you have more, their weave fails.
 **Applies Effects:** dazed
 **Saving Throw:** Opposed weaving check
-**Success Scaling:** 0 = fails, 1 = reduce target spell by 1 success, 2 = Counter successful, 3 = Counter successful (regain 4 energy)
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Reduce target spell by 1 success
+- 2 = Counter successful
+- 3 = Counter successful (regain 4 energy)
 
 ### Cutting Words
 **Primary Energy:** Negative 2 (psychic assault through cruel words)  
@@ -279,15 +355,18 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Range:** Medium, 60 ft.  
 **Duration:** Instantaneous  
 **Total Cost:** 4 Energy  
-**Action:** Complex Weave (2 actions)
+**Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery  
-**Description:** Speak cutting words at one creature you can see within medium range. Target takes 4 psychic damage and makes Will save. Compare your weaving successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn.  
+**Targeting Roll:** Casting Stat + Negative Mastery
+**Description:** Speak cutting words at one creature you can see within medium range. Target takes 4 psychic damage and makes Will save. Compare your targeting successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn.  
 **Saving Throw:** Will
 **Damage Type:** Psychic (mental)  
 **DR Interaction:** Ignore
-**Success Scaling:** 0 = fails, 1 = half damage (2), 2 = full damage (4) + penalty on attack, 3 = enhanced damage (8) + penalty on attack, 4 = maximum damaage (12) + penalty applies to all rolls until end of their next turn, 5 = maximum damage (12) + penalty lasts 1 minute  
-
-## D
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Half damage (2)
+- 2 = Full damage (4) + penalty on attack
+- 3 = Enhanced damage (8) + penalty on attack
 
 ### Death's Touch **[Necromantic]**
 **Primary Energy:** Negative 8 (pure death energy combined with soul binding)
@@ -297,12 +376,16 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery + Space Potential + Space Mastery
+**Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Target takes 40 negative damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target dies and rises as a zombie under your control after 1 minute.
 **Saving Throw:** Fortitude
 **Damage Type:** Negative (energy)
 **DR Interaction:** Half DR
-**Success Scaling:** 0 = fails, 1 =  half damage (20), 2 = full damage (40), 3 = enhanced damage (48), 4 = maximum damage (56), 5 = maximum damage (56) + instant death regardless of HP
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Half damage (20)
+- 2 = Full damage (40)
+- 3 = Enhanced damage (48)
 
 ### Dimensional Refuge
 **Primary Energy:** Space 4 (creating extradimensional space)
@@ -312,9 +395,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Touch a surface to create an extradimensional space holding up to 8 Medium creatures. The surface may be closed like a door. From outside door and the space are invisible. Space holds up to 12 hours of air.
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour, 4 = 4 hours , 5 = 12 hours
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 minute
+- 2 = 10 minutes
+- 3 = 1 hour
 
 ### Disintegrate
 **Primary Energy:** Negative 8 (reducing matter to dust, extreme damage)
@@ -324,11 +412,16 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery + Space Potential + Space Mastery
-**Description:** Thin green ray. Target takes 40 negative damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target is disintegrated (turned to dust). Only resurrection magic can restore them.
+**Targeting Roll:** Casting Stat + Negative Mastery
+**Description:** Target takes 40 negative damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target is disintegrated (turned to dust). Only resurrection magic can restore them.
 **Saving Throw:** Fortitude
 **Damage Type:** Negative (energy)
 **DR Interaction:** Half DR
-**Success Scaling (Net successes = Your successes - Their successes):** 0 = fails , 1 = half damage (20), 2 = full damage (40), 3 = enhanced damage (48), 4 = maximum damage (56), 5 = maximum damage (56) and if killed cannot be resurrected
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Half damage (20)
+- 2 = Full damage (40)
+- 3 = Enhanced damage (48)
 
 ### Disk of Force
 **Primary Energy:** Space 3 (force platform)
@@ -338,11 +431,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 6 Energy
 **Action:** Complex weave (1 action)
 **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends.
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour, 4 = 4 hours, 5 = 4 hours (1000 lbs)
-
-## E
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 minute
+- 2 = 10 minutes
+- 3 = 1 hour
 
 ### Earthquake
 **Primary Energy:** Earth 8 (major terrain disruption)  
@@ -352,10 +448,15 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 15 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  
+**Targeting Roll:** Casting Stat + Earth Mastery
 **Description:** Ground shakes violently in area. All creatures make Reflex save. Compare your weaving successes to their save successes. If you have more, creatures fall Prone. Structures may collapse (GM discretion). Area becomes difficult terrain.  
-**Applies Effects:** prone; restrained
+**Applies Effects:** prone
 **Saving Throw:** Reflex
-**Success Scaling:** 0 = fails, 1 = prone (1 round, 25ft radius), 2 = prone (1 minute, 50ft radius), 3 = prone (1 minute, 100ft radius), 4 = prone (1 minute, 200ft radius), 5 = restrained (1 minute, 200ft radius)
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Prone (1 round, 25ft radius)
+- 2 = Prone (1 minute, 50ft radius)
+- 3 = Prone (1 minute, 100ft radius)
 
 ### Ethereal Shift
 **Primary Energy:** Space 7 (shifting to ethereal plane)
@@ -365,9 +466,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
 **Description:** You step into the border of the Ethereal Plane. You can see and hear the material plane (dim and muted). Can move through objects and creatures. Cannot affect or be affected by anything on material plane. Can end early as [Free] action.
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = 1 hour, 3 = 4 hours, 4 = 12 hours, 5 = 1 day
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 minute
+- 2 = 1 hour
+- 3 = 4 hours
 
 ### Extraplanar Binding
 **Primary Energy:** Space 6 (binding extraplanar creature, major binding)
@@ -376,13 +482,15 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Duration:** 1 hour
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions), takes 1 hour to cast
+**Targeting Roll:** Casting Stat + Space Mastery
 **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery
-**Description:** Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes Will save. Compare your weaving successes to their save successes. If you have more, creature must serve you for duration or until completing one task. Must negotiate payment/service.
+**Description:** Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes Will save. Compare your targeting successes to their save successes. If you have more, creature must serve you for duration or until completing one task. Must negotiate payment/service.
 **Saving Throw:** Will
-**Success Scaling** 0 = fails, 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours, 4 = 12 hours, 5 = 1 day
-
-
-## F
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 10 minutes
+- 2 = 1 hour
+- 3 = 4 hours
 
 ### Fear
 **Primary Energy:** Negative 5 (projecting terror, mental effect)  
@@ -392,11 +500,15 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 9 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery  
-**Description:** All creatures in cone make Will saves. Compare your weaving successes to each target's save successes. Based on net successes: 1 = Frightened, 2 = Fleeing, 3+ = Cowering. Creatures can make saves at end of turn to downgrade/end (1 success downgrades or ends).  
-**Applies Effects:** frightened; fleeing; cowering
+**Targeting Roll:** Casting Stat + Negative Mastery
+**Description:** All creatures in cone make Will saves. Compare your targeting successes to each target's save successes. Based on net successes: 1 = Frightened, 2 = Fleeing, 3+ = Cowering. Creatures can make saves at end of turn to downgrade/end (1 success downgrades or ends).  
+**Applies Effects:** frightened; fleeing
 **Saving Throw:** Will
-**Success Scaling:** 0 = fails, 1 = Frightened (1 round), 2 = Frightened (1 minute), 3 = fleeing (1 minute), 4 = cowering (1 minute), 5 = paralyzed (1 minute)
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Frightened (1 round)
+- 2 = Frightened (1 minute)
+- 3 = Fleeing (1 minute)
 
 ### Fire Bolt
 **Primary Energy:** Fire 2 (bolt of flame, damage)  
@@ -406,13 +518,17 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 3 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Fire Potential + Fire Mastery / Space Potential + Space Mastery  
+**Targeting Roll:** Casting Stat + Fire Mastery
 **Description:** You hurl a mote of fire at a creature or object within range. Target takes 8 fire damage. This is an attack weave—no saving throw allowed.  
 **Applies Effects:** ignited
 **Saving Throw:** None
 **Damage Type:** Fire (energy)  
 **DR Interaction:** Half DR
-**Success Scaling:** 0 = miss, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16), 4 = maximum damage (24), 5 = maximum damage (24) + ignited
-
+**Targeting Success Scaling:**
+- 0 = Miss
+- 1 = Half damage (4)
+- 2 = Full damage (8)
+- 3 = Enhanced damage (16) + ignited
 
 ### Fireball
 **Primary Energy:** Fire 5 (exploding ball of flame, damage)
@@ -422,13 +538,17 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Fire Potential + Fire Mastery + Space Potential + Space Mastery
+**Targeting Roll:** Casting Stat + Fire Mastery
 **Description:** A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. All creatures in a 20-foot radius sphere take 28 fire damage. Each target takes the full listed damage and makes their own save.
 **Applies Effects:** ignited
 **Saving Throw:** Reflex
 **Damage Type:** Fire (energy)
 **DR Interaction:** Half DR
-**Success Scaling:** 0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36), 4 = maximum damage (44), 5 = maximum damage (44) + ignited
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Half damage (14)
+- 2 = Full damage (28)
+- 3 = Enhanced damage (36) + ignited
 
 ### Fire Burst
 **Primary Energy:** Fire 2 (burst of flame from palm, damage)
@@ -438,12 +558,17 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 2 Energy
 **Action:** Simple weave (1 action)
 **Weaving Roll:** Fire Potential + Fire Mastery
+**Targeting Roll:** Casting Stat + Fire Mastery
 **Description:** Channel flames through your palm to burn a target within 5 feet. Target takes 4 fire damage. This is an attack weave—no saving throw allowed.
 **Applies Effects:** ignited
 **Saving Throw:** None
 **Damage Type:** Fire (energy)
 **DR Interaction:** Half DR
-**Success Scaling:** 0 = fails, 1 = half damage (2), 2 = full damage (4), 3 = enhanced damage (8)
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Half damage (2)
+- 2 = Full damage (4)
+- 3 = Enhanced damage (8)
 
 ### Flame Burst
 **Primary Energy:** Fire 3 (cone of flames, damage)
@@ -453,12 +578,17 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 4 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Fire Potential + Fire Mastery + Space Potential + Space Mastery
+**Targeting Roll:** Casting Stat + Fire Mastery
 **Description:** A cone of flames shoots from your hands. All creatures in a 15-foot cone take 16 fire damage. Each target takes the full listed damage and makes their own save.
 **Applies Effects:** ignited
 **Saving Throw:** Reflex
 **Damage Type:** Fire (energy)
 **DR Interaction:** Half DR
-**Success Scaling:** 0 = fails, 1 = half damage (8), 2 = full damage (16), 3 = enhanced damage (24), 4 = maximum damage (32), 5 = maximum damage (32) + ignited
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Half damage (8)
+- 2 = Full damage (16)
+- 3 = Enhanced damage (24) + ignited
 
 ### Floating Lights
 **Primary Energy:** Fire 2 (creating floating lights, minor effect)  
@@ -468,10 +598,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 6 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Fire Potential + Fire Mastery / Space Potential + Space Mastery  
+**Targeting Roll:** Casting Stat + Fire Mastery
 **Description:** Create up to 4 torch-sized lights at medium range that hover and shed dim light in 10ft radius. Can move lights up to 60 feet as [Free] action.  
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 minute
+- 3 = 10 minutes
 
 ### Fly
 **Primary Energy:** Air 5 (levitation and propulsion, flight)
@@ -481,22 +615,32 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Air Potential + Air Mastery + Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Target at touch gains flying speed equal to their normal movement speed. If weave ends while airborne, target falls.
-**Saving Throw:** Non
-**Success Scaling:** 0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour, 4 = 4 hours, 5 = 12 hours
+**Saving Throw:** None
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 minute
+- 2 = 10 minutes
+- 3 = 1 hour
 
 ### Force Armor
 **Primary Energy:** Space 3 (force armor)
 **Supporting Energy:** Time 4 (duration 1 hour)
-**Range:** self, touch
+**Range:** Self, touch
 **Duration:** 1 hour
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Target at touch gains DR 5 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities.
 **Applies Effects:** dr-bonus (value=5)
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours, 4 = 4 hours (DR 6), 5 = 12 hours (DR 7)
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 10 minutes
+- 2 = 1 hour
+- 3 = 4 hours
 
 ### Fortune's Favor
 **Primary Energy:** Positive 3 (divine blessing)  
@@ -506,41 +650,53 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 8 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery  
+**Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Up to 3 targets subtract 1 from one die (their choice) on each roll they make.  
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minutes, 3 = 10 minutes, 4 = 1 hour, 5 = 4 hours
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 minute
+- 3 = 10 minutes
 
 ### Freezing Blast
 **Primary Energy:** Water 6 (freezing blast, high damage)
-**Supporting Energy:** Space 3 ( 60ft cone)
+**Supporting Energy:** Space 3 (60ft cone)
 **Range:** 60ft cone
 **Duration:** Instantaneous
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Water Potential + Water Mastery + Space Potential + Space Mastery
+**Targeting Roll:** Casting Stat + Water Mastery
 **Description:** A blast of cold air erupts from your hands. All creatures in a 60-foot cone take 40 cold damage. Each target takes the full listed damage and makes their own save.
 **Applies Effects:** slowed
 **Saving Throw:** Reflex
 **Damage Type:** Cold (energy)
 **DR Interaction:** Half DR
-**Success Scaling:** 0 = fails, 1 = half damage (20), 2 = full damage (40), 3 = enhanced damage (48), 4 = maximum damage (56), 5 = maximum damage (56) + Slowed
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Half damage (20)
+- 2 = Full damage (40)
+- 3 = Enhanced damage (48)  + Slowed
 
 ### Frost Touch
 **Primary Energy:** Water 2 (freezing touch, damage)
 **Supporting Energy:** None (touch range only)
-**Range:** touch
+**Range:** Touch
 **Duration:** Instantaneous
 **Total Cost:** 2 Energy
 **Action:** Simple weave (1 action)
 **Weaving Roll:** Water Potential + Water Mastery
+**Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Touch a target and channel freezing energy into them. Target takes 4 cold damage. This is an attack weave—no saving throw allowed.
 **Saving Throw:** None
 **Damage Type:** Cold (energy)
 **DR Interaction:** Half DR
-**Success Scaling:** 0 = fails, 1 = half damage (2), 2 = full damage (4), 3 = enhanced damage (8)
-
-## G
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = Half damage (2)
+- 2 = Full damage (4)
+- 3 = Enhanced damage (8)
 
 ### Gentle Descent
 **Primary Energy:** Air 2 (slowing fall with updraft)  
@@ -550,9 +706,14 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 7 Energy  
 **Action:** [Reaction] when you or creature within close range falls  
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery  
+**Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Up to 5 falling creatures within close range descend 60 feet per round and take no falling damage. Weave lasts until they land (up to 1 minute).  
 **Saving Throw:** None
-**Success Scaling:** 0 = fails, 1 = 1 creature, 2 = 5 creatures, 3 = 10 creatures, 4 = 10 creatures (regain 3 energy), 5 = 10 creatures (regain 7 energy)
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 creature
+- 2 = 5 creatures
+- 3 = 10 creatures
 
 
 ### Grasping Vines
@@ -563,11 +724,15 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 9 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery  
-**Description:** Plants in area animate and grasp at creatures. Creatures in area when cast or entering make Reflex save. Compare your weaving successes to their save successes. If you have more, target becomes Restrained (reflex save). Tepeat save at end of affected player turn (1 success ends effect).  
+**Targeting Roll:** Casting Stat + Earth Mastery
+**Description:** Plants in area animate and grasp at creatures. Creatures in area when cast or entering make Reflex save. Compare your targeting successes to their save successes. If you have more, target becomes Restrained (reflex save). Repeat save at end of affected player turn (1 success ends effect).  
 **Applies Effects:** restrained
 **Saving Throw:** Reflex
-**Success Scaling:** 0 = fails, 1 = 1 round (10ft square), 2 = 1 minute (20ft square), 3 = 10 minutes (30ft square), 4 = 1 hour (40ft square), 5 = 1 hour (60ft square)
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round (10ft square)
+- 2 = 1 minute (20ft square)
+- 3 = 10 minutes (30ft square)
 
 ### Grease
 **Primary Energy:** Water 2 (slippery oil/grease, effect)  
@@ -577,8 +742,11 @@ These weaves are guidelines. Work with your GM to create unique effects by combi
 **Total Cost:** 6 Energy  
 **Action:** Complex weave (2 actions)  
 **Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery  
-**Description:** Area becomes slippery difficult terrain. Creatures entering or starting turn in area make Reflex save or fall Prone. Those running must save or fall. Compare your weaving successes to their save successes.  
+**Targeting Roll:** Casting Stat + Water Mastery
+**Description:** Area becomes slippery difficult terrain. Creatures entering or starting turn in area make Reflex save or fall Prone. Those running must save or fall. Compare your targeting successes to their save successes.  
 **Saving Throw:** Reflex
-**Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes (20ft square), 4 = 1 hour (30ft square), 5 = 1 hour (40ft square)
-
-
+**Targeting Success Scaling:**
+- 0 = Fails
+- 1 = 1 round
+- 2 = 1 minute
+- 3 = 10 minutes (20ft square)

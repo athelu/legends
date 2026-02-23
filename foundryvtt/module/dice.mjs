@@ -800,9 +800,123 @@ export async function rollWeaveCheck(options = {}) {
     successes: totalSuccesses,
     criticalSuccess,
     primarySuccesses,
-    supportingSuccesses
+    supportingSuccesses,
+    // Return bonuses for targeting roll
+    targetingBonus: totalSuccesses >= 5 ? 3 : (totalSuccesses >= 4 ? 2 : (totalSuccesses >= 3 ? 1 : 0))
   };
 }
+
+/**
+ * Roll a targeting check (weave delivery)
+ * @param {Object} options - Targeting roll options
+ * @returns {Object} Roll result with targeting successes
+ */
+export async function rollTargetingCheck(options = {}) {
+  const {
+    actor,
+    weave,
+    castingStat,
+    primaryMastery,
+    weavingBonus = 0, // Bonus from weaving roll (0-3)
+    bonusApplication = 'stacked' // 'stacked' or 'split'
+  } = options;
+  
+  // Roll 2d8 for targeting (Casting Stat + Primary Energy Mastery)
+  const targetingRoll = new Roll('2d8');
+  await targetingRoll.evaluate();
+  const targetingResults = targetingRoll.dice[0].results.map(r => r.result);
+  
+  let targetingSuccesses = 0;
+  const targetingDie1 = targetingResults[0];
+  const targetingDie2 = targetingResults[1];
+  
+  // Apply weaving bonuses to dice results
+  let modifiedDie1 = targetingDie1;
+  let modifiedDie2 = targetingDie2;
+  
+  if (weavingBonus > 0) {
+    if (bonusApplication === 'stacked') {
+      // Apply all bonus to first die
+      modifiedDie1 = Math.max(1, targetingDie1 - weavingBonus);
+    } else {
+      // Split bonus between dice (user chooses, default to balanced)
+      // For now, apply to die that benefits most
+      const die1Benefit = (targetingDie1 > castingStat && targetingDie1 !== 8) ? 1 : 0;
+      const die2Benefit = (targetingDie2 > primaryMastery && targetingDie2 !== 8) ? 1 : 0;
+      
+      if (die1Benefit > die2Benefit) {
+        modifiedDie1 = Math.max(1, targetingDie1 - weavingBonus);
+      } else if (die2Benefit > die1Benefit) {
+        modifiedDie2 = Math.max(1, targetingDie2 - weavingBonus);
+      } else {
+        // Equal benefit or no benefit, split evenly
+        const bonus1 = Math.floor(weavingBonus / 2);
+        const bonus2 = weavingBonus - bonus1;
+        modifiedDie1 = Math.max(1, targetingDie1 - bonus1);
+        modifiedDie2 = Math.max(1, targetingDie2 - bonus2);
+      }
+    }
+  }
+  
+  // Check first die (Casting Stat)
+  if (targetingDie1 === 1) {
+    targetingSuccesses++;
+  } else if (targetingDie1 !== 8 && modifiedDie1 < castingStat) {
+    targetingSuccesses++;
+  }
+  
+  // Check second die (Primary Mastery)
+  if (targetingDie2 === 1) {
+    targetingSuccesses++;
+  } else if (targetingDie2 !== 8 && modifiedDie2 < primaryMastery) {
+    targetingSuccesses++;
+  }
+  
+  // Check for critical
+  const criticalSuccess = (targetingDie1 === 1 && targetingDie2 === 1);
+  
+  if (criticalSuccess) {
+    // Add +1 bonus success for critical
+    targetingSuccesses = Math.min(3, targetingSuccesses + 1);
+    
+    // Restore luck
+    if (actor.system.luck) {
+      await actor.update({ 'system.luck.current': actor.system.luck.max });
+      ui.notifications.info(`${actor.name} rolled a critical success on targeting! All Luck restored!`);
+    }
+  }
+  
+  // Create chat message for targeting roll
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: await renderTargetingResult({
+      weaveName: weave.name,
+      castingStat,
+      castingStatValue: castingStat,
+      castingStatLabel: 'Casting Stat', // Will be replaced with actual label
+      primaryMastery,
+      primaryMasteryLabel: weave.system.energyCost.primary.type,
+      targetingResults,
+      modifiedDie1,
+      modifiedDie2,
+      weavingBonus,
+      targetingSuccesses,
+      criticalSuccess
+    })
+  });
+  
+  return {
+    successes: targetingSuccesses,
+    criticalSuccess,
+    targetingResults,
+    modifiedDie1,
+    modifiedDie2,
+    weavingBonus,
+    castingStat,
+    primaryMastery
+  };
+}
+
 // Render a skill check result
  async function renderRollResult(data) {
   // Extract values from data object
@@ -1047,6 +1161,85 @@ export async function rollWeaveCheck(options = {}) {
     </div>
   `;
 }
+
+// Render a targeting roll result
+async function renderTargetingResult(data) {
+  const { 
+    weaveName, 
+    castingStat,
+    castingStatValue,
+    castingStatLabel,
+    primaryMastery,
+    primaryMasteryLabel,
+    targetingResults, 
+    modifiedDie1,
+    modifiedDie2,
+    weavingBonus, 
+    targetingSuccesses, 
+    criticalSuccess 
+  } = data;
+  
+  // Determine success for each die
+  const die1 = targetingResults[0];
+  const die2 = targetingResults[1];
+  const die1Success = die1 === 1 || (die1 !== 8 && modifiedDie1 < castingStatValue);
+  const die2Success = die2 === 1 || (die2 !== 8 && modifiedDie2 < primaryMastery);
+  
+  const bonusText = weavingBonus > 0 ? 
+    `<div class="weaving-bonus">Weaving Bonus: -${weavingBonus} applied to dice</div>` : '';
+  
+  // Luck restore notification
+  let luckRestoreText = '';
+  if (criticalSuccess) {
+    luckRestoreText = '<div class="luck-restore"><i class="fas fa-star"></i> All Luck Restored!</div>';
+  }
+  
+  return `
+    <div class="d8-roll weave-targeting ${criticalSuccess ? 'critical-success' : ''}">
+      <div class="roll-summary" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 8px; background: rgba(0,0,0,0.1); border-radius: 4px; margin-bottom: 8px;">
+        <div>
+          <strong>Targeting: ${weaveName}</strong> - 
+          <strong style="font-size: 1.1em;">Successes: ${targetingSuccesses}</strong>
+          ${criticalSuccess ? '<span class="crit-text" style="margin-left: 8px;">CRITICAL!</span>' : ''}
+        </div>
+        <i class="fas fa-chevron-down toggle-details" style="transition: transform 0.2s;"></i>
+      </div>
+      <div class="roll-details" style="display: none;">
+        ${bonusText}
+        <div class="dice-results">
+          <div class="die-result" style="margin-bottom: 8px;">
+            <div style="margin-bottom: 4px;">
+              <strong>${castingStatLabel} Check: ${castingStatValue}</strong>
+            </div>
+            <div class="${die1 === 1 ? 'natural-one' : die1 === 8 ? 'natural-eight' : ''}">
+              Die Roll: ${die1}${weavingBonus > 0 ? `, Modified: ${modifiedDie1}` : ''}
+              ${(() => {
+                if (die1 === 1) return ' <span class="success-indicator">✓ (Natural 1 - Success!)</span>';
+                if (die1 === 8) return ' <span class="failure-indicator">✗ (Natural 8 - Failure!)</span>';
+                return die1Success ? ' <span class="success-indicator">✓ Success</span>' : ' <span class="failure-indicator">✗ Failure</span>';
+              })()}
+            </div>
+          </div>
+          <div class="die-result">
+            <div style="margin-bottom: 4px;">
+              <strong>${primaryMasteryLabel} Mastery Check: ${primaryMastery}</strong>
+            </div>
+            <div class="${die2 === 1 ? 'natural-one' : die2 === 8 ? 'natural-eight' : ''}">
+              Die Roll: ${die2}${weavingBonus > 0 ? `, Modified: ${modifiedDie2}` : ''}
+              ${(() => {
+                if (die2 === 1) return ' <span class="success-indicator">✓ (Natural 1 - Success!)</span>';
+                if (die2 === 8) return ' <span class="failure-indicator">✗ (Natural 8 - Failure!)</span>';
+                return die2Success ? ' <span class="success-indicator">✓ Success</span>' : ' <span class="failure-indicator">✗ Failure</span>';
+              })()}
+            </div>
+          </div>
+        </div>
+        ${luckRestoreText}
+      </div>
+    </div>
+  `;
+}
+
 /**
  * Handle spending luck on a roll
  * @param {string} messageId - Chat message ID

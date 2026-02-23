@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, creature must serve you for duration or until completing one task. Must negotiate payment/service.</p>"
+      "value": "<p>Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, creature must serve you for duration or until completing one task. Must negotiate payment/service.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,36 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "1": {
-          "appliesEffects": true,
-          "description": "10 minutes service",
-          "duration": "10 minutes service"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "1 hour",
-          "duration": "1 hour"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "4 hours",
-          "duration": "4 hours"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "12 hours",
-          "duration": "12 hours"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "1 day",
-          "duration": "1 day"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 10 minutes\n- 2 = 1 hour\n- 3 = 4 hours",
+    "weavingRoll": "Space Potential + Space Mastery + Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

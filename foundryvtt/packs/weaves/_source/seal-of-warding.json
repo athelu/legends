@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "10 minutes",
-          "duration": "10 minutes"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "until dispelled",
-          "duration": "until dispelled"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "add 1 additional penalty (+5 total)",
-          "duration": "add 1 additional penalty (+5 total)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "add 2 additional penalty (+6 total)",
-          "duration": "add 2 additional penalty (+6 total)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "cannot be bypassed.",
-          "duration": "cannot be bypassed."
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 10 minutes\n- 2 = until dispelled\n- 3 = add 1 additional penalty (+5 total)",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

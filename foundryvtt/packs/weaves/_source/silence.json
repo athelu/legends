@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 minute",
-          "duration": "1 minute"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect",
-          "duration": "full effect"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "30-foot radius",
-          "duration": "30-foot radius"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "1 hour (30-foot radius)",
-          "duration": "1 hour (30-foot radius)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "1 hour (40-foot radius  )",
-          "duration": "1 hour (40-foot radius  )"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 10 minutes (30-foot radius)",
+    "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "5 gallons",
-          "duration": "5 gallons"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "10 gallons",
-          "duration": "10 gallons"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "20 gallons",
-          "duration": "20 gallons"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "40 gallons",
-          "duration": "40 gallons"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "80 gallons",
-          "duration": "80 gallons"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 5 gallons\n- 2 = 10 gallons\n- 3 = 20 gallons",
+    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

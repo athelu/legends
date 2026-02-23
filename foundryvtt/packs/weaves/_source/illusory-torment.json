@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create an illusory effect at medium range in one creature's mind. Target makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target perceives illusory effect as real and rationalizes illogical elements. If illusory effect could damage target, it takes [[/damage 1d8 type=psychic]] damage per round. Target can use action + Perception vs your Space Mastery to recognize illusory effect.</p>"
+      "value": "<p>Create an illusory effect at medium range in one creature's mind. Target makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target perceives illusory effect as real and rationalizes illogical elements. If illusory effect could damage target, it takes [[/damage 8 type=psychic]] damage per round. Target can use action + Perception vs your Space Mastery to recognize illusory effect.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {
-        "0": {
-          "appliesEffects": false,
-          "description": "no effect",
-          "duration": null
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 round",
-          "duration": "1 round"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect (2d8 damage)",
-          "duration": "full effect (2d8 damage)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "2d8 damage (add 1 to their Perception dice)",
-          "duration": "2d8 damage (add 1 to their Perception dice)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "3d8 damage",
-          "duration": "3d8 damage"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "3d8 damage + applies effects",
-          "duration": "3d8 damage + applies effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round (8)\n- 2 = 1 minute (8)\n- 3 = 1 minute (8) + disoriented",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {
         "effectId": "disoriented",

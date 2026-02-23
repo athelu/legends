@@ -240,21 +240,23 @@ With array 4,3,3,3,3,2,2,1 and skills at 2-3:
 -   34% at least one success
 -   3% both successes
 
-### Weaving Expected Successes
+### Weaving Expected Successes (Channeling Quality Roll)
 
-Using two energies, within trained ability (no overspending):
+**Note:** These averages apply to the weaving roll (which determines channeling quality and bonuses to targeting). The final effect strength is determined by a separate targeting roll.
+
+Using two energies in a complex weave, within trained ability (no overspending):
 
 #### Competent Weaver (Potential 4, Mastery 3):
--   Average: 1.75 successes (typically 2)
+-   Average: 1.75 successes (typically 2) → No targeting bonus
 
 #### Skilled Weaver (Potential 5, Mastery 4):
--   Average: 2.25 successes (typically 2-3)
+-   Average: 2.25 successes (typically 2-3) → 0-1 targeting die reduced by 1
 
 #### Expert Weaver (Potential 6, Mastery 5):
--   Average: 2.75 successes (typically 3)
+-   Average: 2.75 successes (typically 3) → Reduce 1 targeting die by 1
 
 #### Master Weaver (Potential 8, Mastery 7):
--   Average: 3.75 successes (typically 4)
+-   Average: 3.75 successes (typically 4) → Reduce targeting dice by 2
 
 ## The Dying Mechanic
 

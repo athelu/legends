@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "no damage",
-          "duration": "no damage"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half damage (14)",
-          "duration": "half damage (14)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (28)",
-          "duration": "full damage (28)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+8 damage (36 total)",
-          "duration": "+8 damage (36 total)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+16 damage (44 total)",
-          "duration": "+16 damage (44 total)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "+16 damage (44 total) + applies effects",
-          "duration": "+16 damage (44 total) + applies effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (14)\n- 2 = full damage (28)\n- 3 = enhanced damage (36) + stunned",
+    "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
       {
         "effectId": "stunned",

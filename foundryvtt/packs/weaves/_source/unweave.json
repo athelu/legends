@@ -31,8 +31,9 @@
       "drInteraction": "",
       "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- Must equal or exceed original weaving successes to dispel",
+    "weavingRoll": "Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

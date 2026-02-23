@@ -19,7 +19,7 @@
         "cost": 3
       }
     },
-    "range": "self, touch",
+    "range": "Self, touch",
     "duration": "10 minutes",
     "target": "",
     "savingThrow": "reflex",
@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 minute",
-          "duration": "1 minute"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect",
-          "duration": "full effect"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "1 hour",
-          "duration": "1 hour"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "4 hours",
-          "duration": "4 hours"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "12 hours",
-          "duration": "12 hours"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "weavingRoll": "Fire Potential + Fire Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

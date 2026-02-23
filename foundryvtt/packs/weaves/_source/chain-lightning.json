@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Lightning arcs to 4 targets within range (first target, then 3 others within 30ft of previous). Each target takes [[/damage 40 type=lightning]] damage and makes their own save.</p>"
+      "value": "<p>Lightning arcs to 4 targets within range (first target, then 3 others within 30ft of previous). Each target makes their own [[/save type=reflex]]. Calculate net successes for each target.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "no damage",
-          "duration": "no damage"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half damage (20)",
-          "duration": "half damage (20)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full damage (40)",
-          "duration": "full damage (40)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+8 damage (48 total)",
-          "duration": "+8 damage (48 total)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+16 damage (56 total)",
-          "duration": "+16 damage (56 total)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "+16 damage (56 total) + Applies effects",
-          "duration": "+16 damage (56 total) + Applies effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "",
+    "weavingRoll": "Air Potential + Air Mastery + Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
       {
         "effectId": "stunned",

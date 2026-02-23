@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": false,
-          "description": "no effect",
-          "duration": null
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "dim light only",
-          "duration": "dim light only"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect",
-          "duration": "full effect"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "30-foot cube",
-          "duration": "30-foot cube"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "10 minutes (30-ft cube)",
-          "duration": "10 minutes (30-ft cube)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "1 hour (30-ft cube)",
-          "duration": "1 hour (30-ft cube)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 10-ft cube\n- 2 = 20-ft cube\n- 3 = 30-ft cube + revealed",
+    "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [
       {
         "effectId": "revealed",

@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "miss",
-          "duration": "miss"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half (4 damage",
-          "duration": "half (4 damage"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full (8 damage",
-          "duration": "full (8 damage"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+8 damage (16 total",
-          "duration": "+8 damage (16 total"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+16 damage (24 total",
-          "duration": "+16 damage (24 total"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "+16 damage (24 total",
-          "duration": "+16 damage (24 total"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (4) heal (2)\n- 2 = full damage (8) heal (4)\n- 3 = enhanced damage (16) heal (8) + weakened",
+    "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [
       {
         "effectId": "weakened",

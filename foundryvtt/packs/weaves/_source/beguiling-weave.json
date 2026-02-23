@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": false,
-          "description": "no effect",
-          "duration": null
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 round",
-          "duration": "1 round"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full effect (1 hour)",
-          "duration": "full effect (1 hour)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "4 hours",
-          "duration": "4 hours"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "12 hours",
-          "duration": "12 hours"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "1 day",
-          "duration": "1 day"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 hour\n- 3 = 4 hours",
+    "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [
       {
         "effectId": "charmed",

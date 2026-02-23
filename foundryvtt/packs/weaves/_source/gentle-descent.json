@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 creature",
-          "duration": "1 creature"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "5 creatures",
-          "duration": "5 creatures"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "10 creatures",
-          "duration": "10 creatures"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "10 creatures - regain 3 energy",
-          "duration": "10 creatures - regain 3 energy"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "10 creatures - regain 7 energy",
-          "duration": "10 creatures - regain 7 energy"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 creature\n- 2 = 5 creatures\n- 3 = 10 creatures",
+    "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

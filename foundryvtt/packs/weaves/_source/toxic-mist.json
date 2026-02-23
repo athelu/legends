@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "no damage",
-          "duration": "no damage"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "half (4)",
-          "duration": "half (4)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "full (8)",
-          "duration": "full (8)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "+8 and Poisoned (16 total)",
-          "duration": "+8 and Poisoned (16 total)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "+16 (24 total)",
-          "duration": "+16 (24 total)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "+16 (24 total) + Applies Effects",
-          "duration": "+16 (24 total) + Applies Effects"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = no damage\n- 1 = half (4)\n- 2 = full (8)\n- 3 = +8 and Poisoned (16 total) + Poisoned",
+    "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [
       {
         "effectId": "poisoned",

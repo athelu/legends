@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": false,
-          "description": "no effect",
-          "duration": null
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "5 feet",
-          "duration": "5 feet"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "10 feet",
-          "duration": "10 feet"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "15 feet",
-          "duration": "15 feet"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "20 feet",
-          "duration": "20 feet"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "20 feet + Applies effect",
-          "duration": "20 feet + Applies effect"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = no effect\n- 1 = 5 feet\n- 2 = 10 feet\n- 3 = 15 feet + prone",
+    "weavingRoll": "Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {
         "effectId": "Prone",

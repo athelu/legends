@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "2": {
-          "appliesEffects": true,
-          "description": "follows command for 1 round",
-          "duration": "follows command for 1 round"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "follows for 2 rounds",
-          "duration": "follows for 2 rounds"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "follow for 3 rounds",
-          "duration": "follow for 3 rounds"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "command lasts 1 minute",
-          "duration": "command lasts 1 minute"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Fails\n- 2 = 1 round\n- 3 = 2 rounds",
+    "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

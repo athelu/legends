@@ -29,31 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 dart (4 damage)",
-          "duration": "1 dart (4 damage)"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "3 darts (4 damage each)",
-          "duration": "3 darts (4 damage each)"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "4 darts (4 damage each)",
-          "duration": "4 darts (4 damage each)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 dart (4 damage)\n- 2 = 3 darts (4 damage each)\n- 3 = 4 darts (4 damage each)",
+    "weavingRoll": "Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

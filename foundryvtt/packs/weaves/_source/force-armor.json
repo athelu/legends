@@ -19,7 +19,7 @@
         "cost": 4
       }
     },
-    "range": "self, touch",
+    "range": "Self, touch",
     "duration": "1 hour",
     "target": "",
     "savingThrow": "none",
@@ -29,36 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "1": {
-          "appliesEffects": true,
-          "description": "10 minutes",
-          "duration": "10 minutes"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "1 hour",
-          "duration": "1 hour"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "4 hours",
-          "duration": "4 hours"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "DR 6 (4 hours)",
-          "duration": "DR 6 (4 hours)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "DR 7 (12 Hours)",
-          "duration": "DR 7 (12 Hours)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 10 minutes\n- 2 = 1 hour\n- 3 = 4 hours",
+    "weavingRoll": "Space Potential + Space Mastery + Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {
         "effectId": "dr-bonus",

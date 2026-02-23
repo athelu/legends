@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "no healing",
-          "duration": "no healing"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "8 HP each",
-          "duration": "8 HP each"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "16 HP each",
-          "duration": "16 HP each"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "24 HP each",
-          "duration": "24 HP each"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "32 HP each",
-          "duration": "32 HP each"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "40 HP each",
-          "duration": "40 HP each"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = heal (8)\n- 2 = heal (16)\n- 3 = heal (24)",
+    "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

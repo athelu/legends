@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 reflection",
-          "duration": "1 reflection"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "3 reflections",
-          "duration": "3 reflections"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "4 reflections (10 minutes)",
-          "duration": "4 reflections (10 minutes)"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "5 reflections (1 hour)",
-          "duration": "5 reflections (1 hour)"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "6 reflections (4 hours)",
-          "duration": "6 reflections (4 hours)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 reflection\n- 2 = 3 reflections\n- 3 = 4 reflections (10 minutes)",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [

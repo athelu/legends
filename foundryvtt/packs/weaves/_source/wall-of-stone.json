@@ -29,41 +29,11 @@
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {
-        "0": {
-          "appliesEffects": true,
-          "description": "fails",
-          "duration": "fails"
-        },
-        "1": {
-          "appliesEffects": true,
-          "description": "1 minute",
-          "duration": "1 minute"
-        },
-        "2": {
-          "appliesEffects": true,
-          "description": "permanent",
-          "duration": "permanent"
-        },
-        "3": {
-          "appliesEffects": true,
-          "description": "double HP",
-          "duration": "double HP"
-        },
-        "4": {
-          "appliesEffects": true,
-          "description": "triple HP",
-          "duration": "triple HP"
-        },
-        "5": {
-          "appliesEffects": true,
-          "description": "triple HP (DR 10)",
-          "duration": "triple HP (DR 10)"
-        }
-      }
+      "scaling": {}
     },
-    "successScaling": "",
-    "weavingRoll": "",
+    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = permanent\n- 3 = double HP",
+    "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [
