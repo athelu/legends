@@ -1,5 +1,5 @@
 {
-  "_id": "1ef498c597fa4a7f",
+  "_id": "de8c492cbac14c96",
   "name": "Splint Mail",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -27,5 +27,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!1ef498c597fa4a7f"
+  "_key": "!items!de8c492cbac14c96"
 }

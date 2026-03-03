@@ -325,7 +325,7 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
     }
     
     // Show roll dialog instead of rolling immediately
-    return dice.showRollDialog({
+    return dice.showSkillCheckDialog({
       actor,
       attrValue: attr.value,
       skillValue: (typeof skillValue === 'object' ? skillValue.value ?? skillValue : skillValue),
@@ -811,43 +811,42 @@ export async function rollWeave(actor, weave) {
   }
   
   // Determine casting stat
-  const castingStat = actor.system.castingStat;
+  const castingStat = actor.system.castingStat?.value || 'intelligence';
   const castingStatValue = actor.system.attributes[castingStat]?.value || 0;
   const castingStatLabel = castingStat.charAt(0).toUpperCase() + castingStat.slice(1);
   
   // ROLL 2: Targeting Check (effect delivery)
-  // Only for hostile effects (weaves with saves or damage)
+  // Only for hostile effects (weaves with saves, damage, or attack rolls)
   const hasSave = weave.system.savingThrow && weave.system.savingThrow.toLowerCase() !== 'none';
   const isDamage = weave.system.effectType === 'damage';
-  const needsTargeting = hasSave || isDamage || targets.length > 0;
+  const isAttack = weave.system.deliveryMethod === 'attack';
+  const needsTargeting = hasSave || isDamage || isAttack || targets.length > 0;
   
-  let targetingResult = null;
+  // Don't auto-roll targeting - let player spend luck on weaving first
+  // Store weave data for manual targeting roll
   if (needsTargeting) {
-    targetingResult = await dice.rollTargetingCheck({
-      actor,
-      weave,
-      castingStat: castingStatValue,
-      primaryMastery,
-      weavingBonus: weavingResult.targetingBonus,
-      bonusApplication: 'stacked' // For now, apply all bonus to first die
-    });
-    
-    // Wait for targeting roll message to post
-    await new Promise(resolve => setTimeout(resolve, 100));
+    // Store targeting info in the last message for later use
+    const messages = game.messages.contents;
+    const lastMessage = messages[messages.length - 1];
+    if (lastMessage) {
+      await lastMessage.update({
+        flags: {
+          'legends.weavingComplete': true,
+          'legends.weaveData': {
+            actorId: actor.id,
+            weaveId: weave.id,
+            castingStat: castingStatValue,
+            castingStatLabel,
+            primaryMastery,
+            weavingBonus: weavingResult.targetingBonus,
+            targets: targets.map(t => t.id)
+          }
+        }
+      });
+    }
   }
   
-  // Create targeting chat card if we have targets
-  if (targets.length > 0) {
-    await createWeaveCastCard({
-      actor,
-      weave,
-      targets,
-      weavingResult,
-      targetingResult
-    });
-  }
-  
-  return { weavingResult, targetingResult };
+  return { weavingResult, targetingResult: null, needsTargeting };
 }
 
 /**
@@ -966,10 +965,38 @@ async function createWeaveCastCard(options) {
     
     // Check if this success level enables effects
     if (weave.system.damage?.scaling && weave.system.damage.scaling[successes.toString()]) {
+      // Use structured scaling data if available
       showEffects = weave.system.damage.scaling[successes.toString()].appliesEffects === true;
+    } else if (weave.system.targetingSuccessScaling) {
+      // Parse the text-based scaling to determine effect threshold
+      // Look for patterns like "3 = ... + applies [effect]" or "3 = ... + [effect]"
+      const scalingText = weave.system.targetingSuccessScaling.toLowerCase();
+      const lines = scalingText.split('\n').map(l => l.trim());
+      
+      // Find the minimum success level that mentions applying effects
+      let effectThreshold = 0; // Default: always apply if not specified
+      for (const line of lines) {
+        // Match patterns like "- 3 = ... + applies" or "- 3 = ... + ignited"
+        const match = line.match(/^-?\s*(\d+)\s*=.*\+\s*(applies|ignited|sickened|slowed|frightened|stunned|paralyzed|petrified|blinded|deafened|charmed|exhausted)/i);
+        if (match) {
+          const level = parseInt(match[1]);
+          if (effectThreshold === 0 || level < effectThreshold) {
+            effectThreshold = level;
+          }
+        }
+      }
+      
+      // Show effects if we meet or exceed the threshold
+      // If no threshold found in text and it's not a damage weave, show effects at all success levels
+      if (effectThreshold > 0) {
+        showEffects = successes >= effectThreshold;
+      } else {
+        // No damage weave or effect always applies
+        showEffects = weave.system.effectType !== 'damage' || successes > 0;
+      }
     } else {
-      // If no scaling or not damage weave, show effects
-      showEffects = weave.system.effectType !== 'damage';
+      // If no scaling info at all, show effects for non-damage weaves
+      showEffects = weave.system.effectType !== 'damage' || successes > 0;
     }
     
     if (showEffects) {

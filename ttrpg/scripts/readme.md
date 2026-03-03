@@ -175,7 +175,9 @@ Encounter            Result     Rounds   PC HP           Dmg Dealt
 - Margin = Attacker successes - Defender successes
 
 Damage:
-- Margin 0: Tie, defender wins, no damage
+- Margin 0: Tiebreaker - compare modified dice totals (after luck). Lower roll wins.
+  If attacker wins: Base weapon damage. If defender wins or perfect tie: No damage.
+  (Note: Simulated combat doesn't include luck spending, so uses original rolls)
 - Margin 1: Base weapon damage
 - Margin 2+: Base weapon damage + Strength modifier
 

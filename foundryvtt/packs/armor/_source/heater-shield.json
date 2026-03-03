@@ -1,13 +1,13 @@
 {
-  "_id": "e5f74dee73824e69",
-  "name": "Heater Shield (Medium Shield)",
+  "_id": "b1b022f119ec4304",
+  "name": "Heater Shield",
   "type": "shield",
   "img": "icons/equipment/shield/heater-marked-red.webp",
   "system": {
     "description": {
       "value": "<p>Can be slung on back when not in use (takes 1 [Minor] action to ready)</p>"
     },
-    "shieldType": "",
+    "shieldType": "medium",
     "handUsage": "Occupies off-hand completely",
     "meleeDefense": "",
     "requirements": "",
@@ -16,11 +16,11 @@
     "reactions": [
       {
         "name": "Shield Block",
-        "_id": "a320d75f5a1e49ec"
+        "_id": "083c3db43dd24c95"
       },
       {
         "name": "Ranged Defense",
-        "_id": "4fa98e2643ce4360"
+        "_id": "bf8fb3f40d0343f0"
       }
     ],
     "weight": 0,
@@ -38,5 +38,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!e5f74dee73824e69"
+  "_key": "!items!b1b022f119ec4304"
 }

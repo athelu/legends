@@ -1,5 +1,5 @@
 {
-  "_id": "b05ec357681a497b",
+  "_id": "de5c05e51df64db5",
   "name": "Plate, Full",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -27,5 +27,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!b05ec357681a497b"
+  "_key": "!items!de5c05e51df64db5"
 }

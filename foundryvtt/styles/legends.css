@@ -337,6 +337,13 @@
   flex-shrink: 0;
 }
 
+.legends.sheet.actor.npc .profile-img {
+  border: 2px solid var(--d8-gold);
+  border-radius: 4px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
 .legends .header-info {
   display: flex;
   flex-direction: column;
@@ -360,6 +367,19 @@
 
 /* Ensure main form takes full height */
 .legends.sheet.actor.character form.flexcol {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Item sheets need the same flex layout for scrolling to work */
+.legends.sheet.item .window-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.legends.sheet.item form.flexcol {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -988,6 +1008,66 @@
   font-size: 10px;
 }
 
+/* ========================================
+   Energy Icon Styling & Color Coding
+   ======================================== */
+.energy-icon {
+  vertical-align: middle;
+  transition: filter 0.2s ease;
+}
+
+/* Fire - Red/Orange */
+.energy-fire {
+  filter: brightness(0.9) saturate(3) hue-rotate(-5deg) contrast(1.3);
+  /* Creates a vibrant red-orange fire color */
+}
+
+/* Water - Blue */
+.energy-water {
+  filter: brightness(0.8) saturate(3) hue-rotate(200deg) contrast(1.2);
+  /* Creates a deep ocean blue */
+}
+
+/* Earth - Brown/Green */
+.energy-earth {
+  filter: brightness(0.65) saturate(1.8) hue-rotate(95deg) contrast(1.1);
+  /* Creates an earthy brown-green tone */
+}
+
+/* Air - Cyan/Light Blue */
+.energy-air {
+  filter: brightness(1.1) saturate(2.5) hue-rotate(175deg) contrast(0.95);
+  /* Creates a light sky blue/cyan */
+}
+
+/* Space - Purple/Violet */
+.energy-space {
+  filter: brightness(0.75) saturate(3) hue-rotate(260deg) contrast(1.3);
+  /* Creates a mystical deep purple */
+}
+
+/* Time - Gold/Yellow */
+.energy-time {
+  filter: brightness(1.1) saturate(3) hue-rotate(38deg) contrast(1.15);
+  /* Creates a golden yellow */
+}
+
+/* Positive - Light/Radiant */
+.energy-positive {
+  filter: brightness(1.8) saturate(0.2) contrast(0.7);
+  /* Creates a light, radiant appearance */
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  padding: 1px;
+}
+
+/* Negative - Dark/Shadow */
+.energy-negative {
+  filter: brightness(0.35) saturate(0.4) contrast(1.4);
+  /* Keeps it dark and shadowy, slightly lighter than pure black */
+}
+
 .legends .item-image {
   flex: 0 0 24px;
   margin-right: 8px;
@@ -1243,6 +1323,9 @@
 /* Generic Item Sheet Header */
 .legends.sheet.item .sheet-header {
   flex: 0 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   padding: 10px;
   border-bottom: 2px solid #7a7971;
   background: linear-gradient(to bottom, var(--d8-primary), var(--d8-accent));
@@ -2552,10 +2635,11 @@
    FEAT/TRAIT/FLAW LISTS (Collapsible)
    ======================================== */
 
-/* Common styles for all three feature lists */
+/* Common styles for all feature lists */
 .legends .feat-list,
 .legends .trait-list,
-.legends .flaw-list {
+.legends .flaw-list,
+.legends .ability-list {
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -2567,7 +2651,8 @@
 /* Item collapsible container */
 .legends .feat-list .item-collapsible,
 .legends .trait-list .item-collapsible,
-.legends .flaw-list .item-collapsible {
+.legends .flaw-list .item-collapsible,
+.legends .ability-list .item-collapsible {
   border: 1px solid var(--d8-border);
   border-radius: 3px;
   background: rgba(255, 255, 255, 0.9);
@@ -2577,7 +2662,8 @@
 /* Item header - always visible, clickable */
 .legends .feat-list > .item-collapsible > .item-header,
 .legends .trait-list > .item-collapsible > .item-header,
-.legends .flaw-list > .item-collapsible > .item-header {
+.legends .flaw-list > .item-collapsible > .item-header,
+.legends .ability-list > .item-collapsible > .item-header {
   display: flex;
   align-items: center;
   padding: 8px;
@@ -2588,14 +2674,16 @@
 
 .legends .feat-list > .item-collapsible > .item-header:hover,
 .legends .trait-list > .item-collapsible > .item-header:hover,
-.legends .flaw-list > .item-collapsible > .item-header:hover {
+.legends .flaw-list > .item-collapsible > .item-header:hover,
+.legends .ability-list > .item-collapsible > .item-header:hover {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
 /* Item image */
 .legends .feat-list .item-header > .item-image,
 .legends .trait-list .item-header > .item-image,
-.legends .flaw-list .item-header > .item-image {
+.legends .flaw-list .item-header > .item-image,
+.legends .ability-list .item-header > .item-image {
   flex: 0 0 24px;
   display: flex;
   align-items: center;
@@ -2604,7 +2692,8 @@
 
 .legends .feat-list .item-header > .item-image img,
 .legends .trait-list .item-header > .item-image img,
-.legends .flaw-list .item-header > .item-image img {
+.legends .flaw-list .item-header > .item-image img,
+.legends .ability-list .item-header > .item-image img {
   width: 24px;
   height: 24px;
   border: none;
@@ -2613,7 +2702,8 @@
 /* Item name */
 .legends .feat-list .item-header > .item-name,
 .legends .trait-list .item-header > .item-name,
-.legends .flaw-list .item-header > .item-name {
+.legends .flaw-list .item-header > .item-name,
+.legends .ability-list .item-header > .item-name {
   flex: 1;
   font-size: 14px;
   font-weight: 500;
@@ -2624,7 +2714,8 @@
 /* Item controls */
 .legends .feat-list .item-header > .item-controls,
 .legends .trait-list .item-header > .item-controls,
-.legends .flaw-list .item-header > .item-controls {
+.legends .flaw-list .item-header > .item-controls,
+.legends .ability-list .item-header > .item-controls {
   flex: 0 0 auto;
   display: flex;
   gap: 8px;
@@ -2635,7 +2726,8 @@
 /* Control buttons */
 .legends .feat-list .item-control,
 .legends .trait-list .item-control,
-.legends .flaw-list .item-control {
+.legends .flaw-list .item-control,
+.legends .ability-list .item-control {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -2649,35 +2741,40 @@
 
 .legends .feat-list .item-control:hover,
 .legends .trait-list .item-control:hover,
-.legends .flaw-list .item-control:hover {
+.legends .flaw-list .item-control:hover,
+.legends .ability-list .item-control:hover {
   opacity: 1;
 }
 
 /* View button */
 .legends .feat-list [data-action="itemView"] i,
 .legends .trait-list [data-action="itemView"] i,
-.legends .flaw-list [data-action="itemView"] i {
+.legends .flaw-list [data-action="itemView"] i,
+.legends .ability-list [data-action="itemView"] i {
   color: #8b5cf6;
 }
 
 /* Edit button */
 .legends .feat-list [data-action="itemEdit"] i,
 .legends .trait-list [data-action="itemEdit"] i,
-.legends .flaw-list [data-action="itemEdit"] i {
+.legends .flaw-list [data-action="itemEdit"] i,
+.legends .ability-list [data-action="itemEdit"] i {
   color: #3b82f6;
 }
 
 /* Delete button */
 .legends .feat-list [data-action="itemDelete"] i,
 .legends .trait-list [data-action="itemDelete"] i,
-.legends .flaw-list [data-action="itemDelete"] i {
+.legends .flaw-list [data-action="itemDelete"] i,
+.legends .ability-list [data-action="itemDelete"] i {
   color: #ef4444;
 }
 
 /* Item summary content */
 .legends .feat-list .item-summary,
 .legends .trait-list .item-summary,
-.legends .flaw-list .item-summary {
+.legends .flaw-list .item-summary,
+.legends .ability-list .item-summary {
   padding: 12px 12px 12px 42px;
   border-top: 1px solid var(--d8-border);
   background-color: rgba(0, 0, 0, 0.02);
@@ -2686,14 +2783,16 @@
 
 .legends .feat-list .item-collapsible.expanded .item-summary,
 .legends .trait-list .item-collapsible.expanded .item-summary,
-.legends .flaw-list .item-collapsible.expanded .item-summary {
+.legends .flaw-list .item-collapsible.expanded .item-summary,
+.legends .ability-list .item-collapsible.expanded .item-summary {
   display: block;
 }
 
 /* Summary detail rows */
 .legends .feat-list .item-summary .detail-row,
 .legends .trait-list .item-summary .detail-row,
-.legends .flaw-list .item-summary .detail-row {
+.legends .flaw-list .item-summary .detail-row,
+.legends .ability-list .item-summary .detail-row {
   display: flex;
   padding: 0.25rem 0;
   gap: 0.5rem;
@@ -2702,7 +2801,8 @@
 
 .legends .feat-list .item-summary .detail-label,
 .legends .trait-list .item-summary .detail-label,
-.legends .flaw-list .item-summary .detail-label {
+.legends .flaw-list .item-summary .detail-label,
+.legends .ability-list .item-summary .detail-label {
   font-weight: 600 !important;
   color: var(--d8-primary) !important;
   width: auto !important;
@@ -2713,7 +2813,8 @@
 
 .legends .feat-list .item-summary .detail-value,
 .legends .trait-list .item-summary .detail-value,
-.legends .flaw-list .item-summary .detail-value {
+.legends .flaw-list .item-summary .detail-value,
+.legends .ability-list .item-summary .detail-value {
   color: var(--d8-text) !important;
   flex: 0 0 auto !important;
   width: auto !important;

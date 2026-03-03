@@ -159,14 +159,17 @@ Sometimes you're not rolling for a set number of successes and instead you're co
 
 In combat, melee attacks use opposed rolls: both the attacker and defender roll Agility + Melee Combat and count successes. Whoever gets more successes wins.
 
-If you tie (both get the same number of successes), the defender wins or whoever rolled the lower total number wins.
+If you tie (both get the same number of successes), apply the tiebreaker: compare the modified dice totals (after any luck spending). Whoever rolled **lower** total wins. If still tied, the defender wins.
+
+**Important:** Only player characters can spend luck, which means you can tactically spend luck not just to gain successes, but to reduce your dice total and win tiebreakers!
 
 The **success margin** (difference between successes) matters in combat:
-- Margin of 0: Defender wins, no damage
+- Margin of 0 with tiebreaker win (attacker): Base weapon damage
+- Margin of 0 with tiebreaker win (defender) or perfect tie: No damage
 - Margin of 1: Attacker hits for base weapon damage
 - Margin of 2+: Attacker hits for base weapon damage plus Strength modifier
 
-This creates interesting tactical decisions. Do you use Luck points to turn a 1-success win into a 2-success win for extra damage? Or save that Luck for defense later?
+This creates interesting tactical decisions. Do you use Luck points to turn a 1-success win into a 2-success win for extra damage? Or save that Luck for defense later? Or spend it strategically to win a crucial tiebreaker?
 
 ## When Combat Begins
 

@@ -1,5 +1,5 @@
 {
-  "_id": "f28fee8eb438408c",
+  "_id": "af2271086e254561",
   "name": "Scale Mail",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -27,5 +27,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!f28fee8eb438408c"
+  "_key": "!items!af2271086e254561"
 }

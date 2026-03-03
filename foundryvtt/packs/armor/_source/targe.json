@@ -1,13 +1,13 @@
 {
-  "_id": "4b779a13d0b34f1c",
-  "name": "Targe (Round Shield - Medium Shield)",
+  "_id": "74dff68584b84cd8",
+  "name": "Targe",
   "type": "shield",
   "img": "icons/equipment/shield/round-wood-reinforced.webp",
   "system": {
     "description": {
       "value": "<p>Can be slung on back when not in use (takes 1 [Minor] action to ready).</p>"
     },
-    "shieldType": "",
+    "shieldType": "medium",
     "handUsage": "Occupies off-hand completely.",
     "meleeDefense": "",
     "requirements": "",
@@ -16,11 +16,11 @@
     "reactions": [
       {
         "name": "Shield Block",
-        "_id": "a320d75f5a1e49ec"
+        "_id": "083c3db43dd24c95"
       },
       {
         "name": "Ranged Defense",
-        "_id": "4fa98e2643ce4360"
+        "_id": "bf8fb3f40d0343f0"
       }
     ],
     "weight": 0,
@@ -38,5 +38,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!4b779a13d0b34f1c"
+  "_key": "!items!74dff68584b84cd8"
 }

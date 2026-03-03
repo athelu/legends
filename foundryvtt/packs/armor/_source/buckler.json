@@ -1,13 +1,13 @@
 {
-  "_id": "edc64fe3ef784082",
-  "name": "Buckler (Light Shield)",
+  "_id": "583e72e823c84c2d",
+  "name": "Buckler",
   "type": "shield",
   "img": "icons/equipment/shield/buckler-metal-blue.webp",
   "system": {
     "description": {
       "value": "<p>Can make off-hand attacks with the buckler itself (treat as light weapon, [[/damage 4]] damage bludgeoning) using the two-weapon combat action.</p>"
     },
-    "shieldType": "",
+    "shieldType": "light",
     "handUsage": "Occupies off-hand but allows punch/pommel strikes",
     "meleeDefense": "",
     "requirements": "",
@@ -16,7 +16,7 @@
     "reactions": [
       {
         "name": "Shield Block",
-        "_id": "a320d75f5a1e49ec"
+        "_id": "083c3db43dd24c95"
       }
     ],
     "weight": 0,
@@ -31,5 +31,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!edc64fe3ef784082"
+  "_key": "!items!583e72e823c84c2d"
 }

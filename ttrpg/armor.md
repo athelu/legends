@@ -10,32 +10,36 @@
 ## Shields
 ---
 
-### Buckler (Light Shield)
+### Buckler
 - **Image:** `icons/equipment/shield/buckler-metal-blue.webp`
+- **Shield Type:** light
 - **Hand Usage:** Occupies off-hand but allows punch/pommel strikes
 - **Granted Reactions:** Shield Block
 - **Granted Ability:** Active Parry
 - **Special:** Can make off-hand attacks with the buckler itself (treat as light weapon, 4 damage bludgeoning) using the two-weapon combat action.
 - **Cost:** 10 gp
 
-### Targe (Round Shield - Medium Shield)
+### Targe
 - **Image:** `icons/equipment/shield/round-wood-reinforced.webp`
+- **Shield Type:** Medium
 - **Hand Usage:** Occupies off-hand completely.
 - **Granted Ability:** Shield Defense
 - **Granted Reactions:** Shield Block, Ranged Defense
 - **Special:** Can be slung on back when not in use (takes 1 [Minor] action to ready).
 - **Cost:** 10 gp
 
-### Heater Shield (Medium Shield)
+### Heater Shield
 - **Image:** `icons/equipment/shield/heater-marked-red.webp`
+- **Shield Type:** Medium
 - **Hand Usage:** Occupies off-hand completely
 - **Granted Ability:** Shield Defense
 - **Granted Reactions:** Shield Block, Ranged Defense
 - **Special:** Can be slung on back when not in use (takes 1 [Minor] action to ready)
 - **Cost:** 15 gp
 
-### Kite Shield (Heavy Shield)
+### Kite Shield
 - **Image:** `icons/equipment/shield/kite-steel-blue.webp`
+- **Shield Type:** Heavy
 - **Hand Usage:** Occupies off-hand completely
 - **Granted Ability:** Fortune on defensive melee combat rolls
 - **Granted Reactions:** Shield Block, Ranged Defense
@@ -43,8 +47,9 @@
 - **Special:** Provides Partial Cover when crouching
 - **Cost:** 20 gp
 
-### Tower Shield (Heavy Shield)
+### Tower Shield
 - **Image:** `icons/equipment/shield/tower-wood-blue.webp`
+- **Shield Type:** Heavy
 - **Hand Usage:** Occupies off-hand completely
 - **Granted Ability:** Shield Defense
 - **Granted Reactions:** Shield Block, Ranged Defense
@@ -52,8 +57,9 @@
 - **Special:** Provides Full Cover when crouching
 - **Cost:** 25 gp
 
-### Pavise (Heavy Shield)
+### Pavise
 - **Image:** `icons/equipment/shield/pavise-wood-steel.webp`
+- **Shield Type:** Heavy
 - **Hand Usage:** Requires both hands to move/position, but can be planted
 - **Granted Ability:** Shield Defense
 - **Granted Reactions:** Shield Block, Ranged Defense

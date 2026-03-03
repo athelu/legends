@@ -573,8 +573,9 @@
             {{!-- Primary Energy --}}
             <div class="energy-display">
               {{#if item.system.energyCost.primary.type}}
-                <img src="systems/legends/ui/energy-{{item.system.energyCost.primary.type}}.png" 
-                     width="16" height="16" title="{{capitalize item.system.energyCost.primary.type}}"/>
+                <img src="systems/legends/images/icons/magic/{{item.system.energyCost.primary.type}}.svg" 
+                     class="energy-icon energy-{{item.system.energyCost.primary.type}}"
+                     width="26" height="26" title="{{capitalize item.system.energyCost.primary.type}}"/>
                 {{item.system.energyCost.primary.cost}}
               {{else}}—{{/if}}
             </div>
@@ -582,8 +583,9 @@
             {{!-- Supporting Energy --}}
             <div class="energy-display">
               {{#if item.system.energyCost.supporting.type}}
-                <img src="systems/legends/ui/energy-{{item.system.energyCost.supporting.type}}.png" 
-                     width="16" height="16" title="{{capitalize item.system.energyCost.supporting.type}}"/>
+                <img src="systems/legends/images/icons/magic/{{item.system.energyCost.supporting.type}}.svg" 
+                     class="energy-icon energy-{{item.system.energyCost.supporting.type}}"
+                     width="26" height="26" title="{{capitalize item.system.energyCost.supporting.type}}"/>
                 {{item.system.energyCost.supporting.cost}}
               {{else}}—{{/if}}
             </div>
@@ -724,6 +726,41 @@
             {{/each}}
           </ol>
         </div>
+
+        {{!-- Abilities --}}
+        <div class="feature-section">
+          <div class="inventory-header">
+            <h3>Abilities</h3>
+            <button type="button" data-action="openCompendium" data-type="ability" title="Add from Compendium">
+              <i class="fas fa-atlas"></i> Add Ability
+            </button>
+          </div>
+          <ol class="items-list ability-list">
+            {{#each abilities as |item id|}}
+            <li class="item-collapsible" data-item-id="{{item._id}}">
+              
+              {{!-- Item Header (Always Visible, Clickable) --}}
+              <div class="item-header" data-action="expandItem">
+                <i class="item-caret fas fa-caret-right"></i>
+                <div class="item-image">
+                  <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+                </div>
+                <h4 class="item-name">{{item.name}}</h4>
+                <div class="item-controls">
+                  <a class="item-control" data-action="itemView" title="View"><i class="fas fa-eye"></i></a>
+                  <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+                  <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+                </div>
+              </div>
+              
+              {{!-- Collapsible Content (Dynamic Loading) --}}
+              <div class="item-summary">
+                {{!-- Content dynamically loaded --}}
+              </div>
+            </li>
+            {{/each}}
+          </ol>
+        </div>
       </div>
     </div>
 
@@ -800,6 +837,57 @@
             </div>
             
             <div class="item-penalty">{{item.system.stealthPenalty}}</div>
+            
+            <div class="item-controls">
+              <a class="item-control {{#if item.system.equipped}}equipped{{/if}}" data-action="itemEquip" 
+                title="{{#if item.system.equipped}}Equipped{{else}}Not Equipped{{/if}}">
+                <i class="fas fa-shield-alt"></i>
+              </a>
+              <a class="item-control" data-action="itemEdit" title="Edit"><i class="fas fa-edit"></i></a>
+              <a class="item-control" data-action="itemDelete" title="Delete"><i class="fas fa-trash"></i></a>
+            </div>
+          </div>
+          
+          {{!-- Collapsible Content (Dynamic Loading) --}}
+          <div class="item-summary">
+            {{!-- Content will be generated dynamically by JavaScript --}}
+          </div>
+          
+        </li>
+        {{/each}}
+      </ol>
+
+      {{!-- Shields Section --}}
+      <div class="inventory-header">
+        <h3>Shields</h3>
+        <button type="button" data-action="openCompendium" data-type="shield" title="Add from Compendium">
+          <i class="fas fa-atlas"></i> Add Shield
+        </button>
+      </div>
+      <ol class="items-list shields-list">
+        <li class="items-header">
+          <div class="item-image"></div>
+          <div class="item-name">Name</div>
+          <div class="item-type">Type</div>
+          <div class="item-defense">Defense</div>
+          <div class="item-controls">Actions</div>
+        </li>
+        
+        {{#each shields as |item id|}}
+        <li class="item-collapsible" data-item-id="{{item._id}}">
+          
+          {{!-- Item Header (Always Visible, Clickable) --}}
+          <div class="item-header" data-action="expandItem">
+            <i class="item-caret fas fa-caret-right"></i>
+            <div class="item-image">
+              <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
+            </div>
+            
+            <h4 class="item-name">{{item.name}}</h4>
+            
+            <div class="item-type">{{item.system.shieldType}}</div>
+            
+            <div class="item-defense">{{item.system.meleeDefense}}</div>
             
             <div class="item-controls">
               <a class="item-control {{#if item.system.equipped}}equipped{{/if}}" data-action="itemEquip" 

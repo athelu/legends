@@ -189,7 +189,19 @@ def melee_attack(attacker: Creature, defender: Creature, modifier: int = 0, log:
         base_damage = 6  # Quarterstaff default
     
     if margin == 0:
-        log.append(f"    Tie - defender wins, no damage")
+        # Tiebreaker: compare raw dice totals
+        attack_total = attack_rolls[0] + attack_rolls[1]
+        defense_total = defense_rolls[0] + defense_rolls[1]
+        if attack_total < defense_total:
+            # Attacker wins tiebreaker (lower roll)
+            damage = base_damage
+            log.append(f"    Tie - attacker wins tiebreaker ({attack_total} < {defense_total}): {damage} damage")
+        elif defense_total < attack_total:
+            # Defender wins tiebreaker (lower roll)
+            log.append(f"    Tie - defender wins tiebreaker ({defense_total} < {attack_total}), no damage")
+        else:
+            # Perfect tie
+            log.append(f"    Perfect tie ({attack_total} = {defense_total}) - defender wins, no damage")
     elif margin == 1:
         damage = base_damage
         log.append(f"    Margin 1: {damage} damage")

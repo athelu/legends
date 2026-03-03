@@ -336,7 +336,8 @@ async function showConditionSaveDialog(actor, condition, saveType = 'fortitude')
       skillLabel = 'Fortitude Save';
   }
   
-  const attrValue = actor.system.attributes[attrKey]?.value ?? 2;
+  // Use effective attribute value (includes bonuses from feats/abilities)
+  const attrValue = actor.system.attributesEffective?.[attrKey] ?? actor.system.attributes[attrKey]?.value ?? 2;
   const luckValue = actor.system.luck?.current ?? actor.system.attributes.luck?.value ?? 2;
 
   // Get and enrich the condition description
@@ -525,7 +526,8 @@ async function rollConditionSaveWithFortune(actor, condition, saveType, options 
       attrLabel = 'Constitution';
   }
   
-  const attrValue = actor.system.attributes[attrKey]?.value ?? 2;
+  // Use effective attribute value (includes bonuses from feats/abilities)
+  const attrValue = actor.system.attributesEffective?.[attrKey] ?? actor.system.attributes[attrKey]?.value ?? 2;
   const luckValue = actor.system.luck?.current ?? actor.system.attributes.luck?.value ?? 2;
   
   // Roll 3d8 for each die
@@ -675,7 +677,8 @@ async function rollConditionSave(actor, condition, saveType = 'fortitude', optio
       attrLabel = 'Constitution';
   }
   
-  const attrValue = actor.system.attributes[attrKey]?.value ?? 2;
+  // Use effective attribute value (includes bonuses from feats/abilities)
+  const attrValue = actor.system.attributesEffective?.[attrKey] ?? actor.system.attributes[attrKey]?.value ?? 2;
   const luckValue = actor.system.luck?.current ?? actor.system.attributes.luck?.value ?? 2;
   
   // Roll 2d8 (attribute die + luck die)

@@ -26,6 +26,70 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     sheet: { template: "systems/legends/templates/item/item-feat-sheet.hbs" }
   };
 
+  /** @override - Attach listeners */
+  _attachPartListeners(partId, htmlElement, options) {
+    super._attachPartListeners(partId, htmlElement, options);
+    
+    // Add click listener for profile image to open file picker
+    const profileImg = htmlElement.querySelector('.profile-img[data-edit="img"]');
+    if (profileImg) {
+      profileImg.addEventListener('click', this._onEditImage.bind(this));
+      // Add context menu for right-click options
+      this._contextMenu(profileImg);
+    }
+  }
+
+  /** Set up context menu for profile image */
+  _contextMenu(img) {
+    new foundry.applications.ux.ContextMenu.implementation(this.element, img, [
+      {
+        name: "View Image",
+        icon: '<i class="fas fa-eye"></i>',
+        callback: () => {
+          const ip = new ImagePopout(this.document.img, {
+            title: this.document.name,
+            uuid: this.document.uuid
+          });
+          ip.render(true);
+        }
+      },
+      {
+        name: "Share Image",
+        icon: '<i class="fas fa-eye"></i>',
+        condition: game.user.isGM,
+        callback: () => {
+          const ip = new ImagePopout(this.document.img, {
+            title: this.document.name,
+            uuid: this.document.uuid,
+            shareable: true
+          });
+          ip.render(true);
+          ip.shareImage();
+        }
+      }
+    ], {
+      jQuery: false
+    });
+  }
+
+  /** Handle clicking on the profile image to change it */
+  async _onEditImage(event) {
+    event.preventDefault();
+    const attr = event.currentTarget.dataset.edit;
+    const current = foundry.utils.getProperty(this.document, attr);
+    
+    const fp = new FilePicker({
+      type: "image",
+      current: current,
+      callback: path => {
+        this.document.update({ [attr]: path });
+      },
+      top: this.position.top + 40,
+      left: this.position.left + 10
+    });
+    return fp.browse();
+  }
+
   /** @override */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
@@ -193,6 +257,30 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
 
   /** @override */
   _processSubmitData(event, formData) {
+    // Handle checkbox arrays (like weapon properties)
+    // Multiple checkboxes with the same name don't automatically create arrays
+    const form = this.element.querySelector('form');
+    if (form) {
+      // Collect all checked property checkboxes
+      const propertyCheckboxes = form.querySelectorAll('input[name="system.properties"]:checked');
+      if (propertyCheckboxes.length > 0) {
+        // Remove any existing system.properties from formData
+        delete formData['system.properties'];
+        // Add each checked value as an array element
+        const properties = [];
+        propertyCheckboxes.forEach(cb => {
+          if (cb.value) properties.push(cb.value);
+        });
+        // Add to formData using array notation
+        properties.forEach((prop, idx) => {
+          formData[`system.properties.${idx}`] = prop;
+        });
+      } else {
+        // If no checkboxes are checked, explicitly set empty array
+        formData['system.properties'] = [];
+      }
+    }
+
     // Foundry converts array field names like "system.effects.0.type" into
     // nested objects with numeric keys, which corrupts actual arrays.
     // Reconstruct any such arrays before passing to the update.
@@ -216,6 +304,16 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
         modesArr.push(modesObj[key]);
       }
       expanded.system.attackModes = modesArr;
+    }
+
+    // Fix system.properties (convert to proper array)
+    if (expanded.system?.properties && !Array.isArray(expanded.system.properties)) {
+      const propsObj = expanded.system.properties;
+      const propsArr = [];
+      for (const key of Object.keys(propsObj).sort((a, b) => Number(a) - Number(b))) {
+        propsArr.push(propsObj[key]);
+      }
+      expanded.system.properties = propsArr;
     }
 
     // Flatten back and return

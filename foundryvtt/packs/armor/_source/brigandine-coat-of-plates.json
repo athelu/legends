@@ -1,5 +1,5 @@
 {
-  "_id": "4c1e109f189c458a",
+  "_id": "85929ade0bb24b59",
   "name": "Brigandine/Coat of Plates",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -27,5 +27,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!4c1e109f189c458a"
+  "_key": "!items!85929ade0bb24b59"
 }

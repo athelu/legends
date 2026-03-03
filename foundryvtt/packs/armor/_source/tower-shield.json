@@ -1,13 +1,13 @@
 {
-  "_id": "55ea9f685e334fad",
-  "name": "Tower Shield (Heavy Shield)",
+  "_id": "b262e443977e44a9",
+  "name": "Tower Shield",
   "type": "shield",
   "img": "icons/equipment/shield/tower-wood-blue.webp",
   "system": {
     "description": {
       "value": "<p>Provides Full Cover when crouching</p>"
     },
-    "shieldType": "",
+    "shieldType": "heavy",
     "handUsage": "Occupies off-hand completely",
     "meleeDefense": "",
     "requirements": "Strength 4 minimum",
@@ -16,11 +16,11 @@
     "reactions": [
       {
         "name": "Shield Block",
-        "_id": "a320d75f5a1e49ec"
+        "_id": "083c3db43dd24c95"
       },
       {
         "name": "Ranged Defense",
-        "_id": "4fa98e2643ce4360"
+        "_id": "bf8fb3f40d0343f0"
       }
     ],
     "weight": 0,
@@ -35,5 +35,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!55ea9f685e334fad"
+  "_key": "!items!b262e443977e44a9"
 }
