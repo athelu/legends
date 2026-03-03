@@ -48,7 +48,10 @@ Highest Initiative acts first.
 Weapon Damage (Margin of Success)
 
 #### Melee Combat (Opposed Rolls):
--   Margin 0 (Tie): Defender wins, no damage
+-   Margin 0 (Tie in successes): Apply tiebreaker - compare modified dice totals (after luck spending). Whoever rolled **lower** total wins. If still tied, defender wins.
+    -   Tiebreaker winner (attacker): Base weapon damage
+    -   Tiebreaker winner (defender): No damage
+    -   **Tactical note:** Player characters can spend luck to reduce their dice total and win tiebreakers
 -   Margin 1: Base weapon damage
 -   Margin 2: Base weapon damage + Strength modifier
 

@@ -102,7 +102,7 @@ function enrichCheck(config, label) {
   a.dataset.action = "check";
   a.dataset.skill = skill;
   a.innerHTML = `<i class="fas fa-dice-d8"></i> ${displayName}`;
-  return a;
+  return a.outerHTML;
 }
 
 function enrichSave(config, label) {
@@ -116,7 +116,7 @@ function enrichSave(config, label) {
   a.dataset.action = "save";
   a.dataset.save = saveType;
   a.innerHTML = `<i class="fas fa-shield-alt"></i> ${displayName}`;
-  return a;
+  return a.outerHTML;
 }
 
 function enrichDamage(config, label) {
@@ -127,7 +127,7 @@ function enrichDamage(config, label) {
   const span = document.createElement("span");
   span.classList.add("legends-damage-tag");
   span.innerHTML = `<i class="fas fa-burst"></i> ${displayName}`;
-  return span;
+  return span.outerHTML;
 }
 
 function enrichEffect(config, label) {
@@ -151,7 +151,7 @@ function enrichEffect(config, label) {
   div.dataset.params = JSON.stringify(params);
   div.innerHTML = `<i class="fas fa-magic"></i> <span>${displayName}</span> <em class="drag-hint">(drag to actor)</em>`;
   
-  return div;
+  return div.outerHTML;
 }
 
 /* -------------------------------------------- */

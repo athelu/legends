@@ -87,7 +87,7 @@ export async function grantLinkedItemsFromShield(actor, shield) {
 
     if (found && found.doc) {
       // Create a copy on the actor and tag it as granted by this shield
-      const copy = duplicate(found.doc.toObject());
+      const copy = foundry.utils.duplicate(found.doc.toObject());
       copy.flags = copy.flags || {};
       copy.flags.legends = copy.flags.legends || {};
       copy.flags.legends.grantedBy = { shieldId: shield.id, shieldName: shield.name, sourcePack: found.pack.collection, sourceId: found.doc.id };

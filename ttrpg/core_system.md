@@ -63,7 +63,8 @@
 ### Opposed Rolls
 -   Both participants roll their relevant attribute + skill
 -   More successes wins
--   Tie goes to the defender (or lowest total rolled)
+-   Tie (0 margin): Compare modified dice totals (after luck spending). Whoever rolled **lower** total wins. If still tied, defender wins.
+    -   **Player advantage:** Only player characters can spend luck, giving them an edge in tiebreakers
 
 ## The Luck System
 ### Luck Pool

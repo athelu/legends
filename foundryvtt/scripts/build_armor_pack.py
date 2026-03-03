@@ -116,8 +116,15 @@ def parse_armor_md(md_file):
         if not item_name:
             continue
         
-        # Detect if this is a shield
-        is_shield = 'shield' in item_name.lower()
+        # Parse the section to get metadata first
+        section_text = '\n'.join(lines[1:])
+        
+        # Collect bold metadata (e.g. '- **Cost:** 10 gp', '- **Shield Type:** light')
+        meta_pairs = re.findall(r'-\s*\*\*([^*]+)\*\*[:\s]+([^\n]+)', section_text)
+        meta = {k.strip().rstrip(':').lower(): v.strip() for k, v in meta_pairs}
+        
+        # Detect if this is a shield by the presence of "Shield Type:" metadata
+        is_shield = 'shield type' in meta
         
         if is_shield:
             # Create shield item
@@ -170,19 +177,12 @@ def parse_armor_md(md_file):
                 'effects': []
             }
         
-        # Parse the section
-        section_text = '\n'.join(lines[1:])
-        
         # Extract image path (support inline code and plain text, with or without bold markers)
         img_match = re.search(r'\*?\*?Image\*?\*?[:\s]+`?([^`\n|]+)`?', section_text)
         if img_match:
             img_val = img_match.group(1).strip().strip('`')
             if img_val and not img_val.startswith('**'):
                 item['img'] = img_val
-
-        # Collect bold metadata (e.g. '- **Cost:** 10 gp', '- **DR:** Slashing 2, Piercing 1, Bludgeoning 3')
-        meta_pairs = re.findall(r'-\s*\*\*([^*]+)\*\*[:\s]+([^\n]+)', section_text)
-        meta = {k.strip().rstrip(':').lower(): v.strip() for k, v in meta_pairs}
 
         # Use image from metadata if not already set
         if 'image' in meta:
@@ -265,8 +265,10 @@ def parse_armor_md(md_file):
         
         if is_shield:
             # Extract shield-specific data from parsed metadata
-            if 'type' in meta:
-                item['system']['shieldType'] = meta['type']
+            # Shield Type comes from the metadata and should be light, medium, or heavy
+            if 'shield type' in meta:
+                shield_type_raw = meta['shield type'].lower().strip()
+                item['system']['shieldType'] = shield_type_raw
             # Requirements
             if 'requirements' in meta:
                 item['system']['requirements'] = meta['requirements']

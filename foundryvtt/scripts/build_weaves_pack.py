@@ -25,8 +25,8 @@ sys.path.insert(0, str(weave_tools_path))
 
 # Import detectors
 try:
-    import delivery_method_detector
-    import tag_detector
+    import delivery_method_detector  # type: ignore
+    import tag_detector  # type: ignore
     detect_delivery_method = delivery_method_detector.detect_delivery_method
     detect_all_tags = tag_detector.detect_all_tags
     DETECTORS_AVAILABLE = True
@@ -39,7 +39,7 @@ except ImportError as e:
 
 # Import schema validation (optional)
 try:
-    import jsonschema
+    import jsonschema  # type: ignore
     SCHEMA_VALIDATION_AVAILABLE = True
     # Load schema
     schema_path = script_dir.parent / 'source' / 'weaves' / 'weave-schema.json'

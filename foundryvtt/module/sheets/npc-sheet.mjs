@@ -44,6 +44,70 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     options.window.title = this.document.name || "NPC";
   }
 
+  /** @override - Attach listeners to form inputs */
+  _attachPartListeners(partId, htmlElement, options) {
+    super._attachPartListeners(partId, htmlElement, options);
+    
+    // Add click listener for profile image to open file picker
+    const profileImg = htmlElement.querySelector('.profile-img[data-edit="img"]');
+    if (profileImg) {
+      profileImg.addEventListener('click', this._onEditImage.bind(this));
+      // Add context menu for right-click options
+      this._contextMenu(profileImg);
+    }
+  }
+
+  /** Set up context menu for profile image */
+  _contextMenu(img) {
+    new foundry.applications.ux.ContextMenu.implementation(this.element, img, [
+      {
+        name: "View Image",
+        icon: '<i class="fas fa-eye"></i>',
+        callback: () => {
+          const ip = new ImagePopout(this.document.img, {
+            title: this.document.name,
+            uuid: this.document.uuid
+          });
+          ip.render(true);
+        }
+      },
+      {
+        name: "Share Image",
+        icon: '<i class="fas fa-eye"></i>',
+        condition: game.user.isGM,
+        callback: () => {
+          const ip = new ImagePopout(this.document.img, {
+            title: this.document.name,
+            uuid: this.document.uuid,
+            shareable: true
+          });
+          ip.render(true);
+          ip.shareImage();
+        }
+      }
+    ], {
+      jQuery: false
+    });
+  }
+
+  /** Handle clicking on the profile image to change it */
+  async _onEditImage(event) {
+    event.preventDefault();
+    const attr = event.currentTarget.dataset.edit;
+    const current = foundry.utils.getProperty(this.document, attr);
+    
+    const fp = new FilePicker({
+      type: "image",
+      current: current,
+      callback: path => {
+        this.document.update({ [attr]: path });
+      },
+      top: this.position.top + 40,
+      left: this.position.left + 10
+    });
+    return fp.browse();
+  }
+
   /** @override - Handle form submission properly for ActorSheetV2 */
   async _processSubmitData(event, form, submitData) {
     // Expand the flattened submission data

@@ -1,5 +1,5 @@
 {
-  "_id": "a308ff9dfede42fa",
+  "_id": "36fc8c5503c8488b",
   "name": "Gambeson",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -26,5 +26,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!a308ff9dfede42fa"
+  "_key": "!items!36fc8c5503c8488b"
 }

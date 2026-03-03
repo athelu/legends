@@ -9,14 +9,24 @@
       <div class="weave-details">
         {{#if system.energyCost.primary.type}}
         <div class="energy-line">
-          <strong>Primary Energy:</strong> {{capitalize system.energyCost.primary.type}} {{system.energyCost.primary.cost}}
+          <strong>Primary Energy:</strong> 
+          <img src="systems/legends/images/icons/magic/{{system.energyCost.primary.type}}.svg" 
+               class="energy-icon energy-{{system.energyCost.primary.type}}"
+               width="20" height="20" style="vertical-align: middle;" 
+               title="{{capitalize system.energyCost.primary.type}}"/>
+          {{capitalize system.energyCost.primary.type}} {{system.energyCost.primary.cost}}
           {{#if system.energyCost.primary.description}}({{system.energyCost.primary.description}}){{/if}}
         </div>
         {{/if}}
         
         {{#if system.energyCost.supporting.type}}
         <div class="energy-line">
-          <strong>Supporting Energy:</strong> {{capitalize system.energyCost.supporting.type}} {{system.energyCost.supporting.cost}}
+          <strong>Supporting Energy:</strong> 
+          <img src="systems/legends/images/icons/magic/{{system.energyCost.supporting.type}}.svg" 
+               class="energy-icon energy-{{system.energyCost.supporting.type}}"
+               width="20" height="20" style="vertical-align: middle;" 
+               title="{{capitalize system.energyCost.supporting.type}}"/>
+          {{capitalize system.energyCost.supporting.type}} {{system.energyCost.supporting.cost}}
           {{#if system.energyCost.supporting.description}}({{system.energyCost.supporting.description}}){{/if}}
         </div>
         {{/if}}

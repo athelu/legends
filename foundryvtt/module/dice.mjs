@@ -5,7 +5,7 @@
  */
 
 /**
- * Show roll configuration dialog
+ * Show roll configuration dialog (for attacks with MAP)
  * @param {Object} options - Roll options (actor, attrValue, skillValue, etc.)
  * @returns {Promise<void>}
  */
@@ -20,6 +20,7 @@ export async function showRollDialog(options) {
           display: flex;
           flex-wrap: wrap;
           gap: 5px;
+          justify-content: center;
         }
         .dialog-buttons button {
           flex: 0 0 calc(33.333% - 4px);
@@ -113,6 +114,118 @@ export async function showRollDialog(options) {
           const rawValue = modifierInput?.value || "";
           const baseModifier = parseInt(rawValue) || 0;
           const modifier = baseModifier + 4; // Apply MAP penalty
+          const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
+          const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
+          const result = await rollD8Check({
+            ...options,
+            modifier,
+            applyToAttr,
+            applyToSkill,
+            fortune: 0,
+            misfortune: 0
+          });
+          if (onRollComplete) await onRollComplete(result);
+          return result;
+        }
+      },
+      {
+        action: "fortune",
+        label: "Fortune",
+        callback: async (event, button, dialog) => {
+          const modifier = parseInt(dialog.element.querySelector('[name="modifier"]').value) || 0;
+          const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
+          const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
+          return showDiceAssignmentDialog({
+            ...options,
+            modifier,
+            applyToAttr,
+            applyToSkill,
+            isFortune: true,
+            onRollComplete
+          });
+        }
+      },
+      {
+        action: "misfortune",
+        label: "Misfortune",
+        callback: async (event, button, dialog) => {
+          const modifier = parseInt(dialog.element.querySelector('[name="modifier"]').value) || 0;
+          const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
+          const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
+          return showDiceAssignmentDialog({
+            ...options,
+            modifier,
+            applyToAttr,
+            applyToSkill,
+            isFortune: false,
+            onRollComplete
+          });
+        }
+      }
+    ]
+  });
+}
+
+/**
+ * Show roll configuration dialog for skill checks (without MAP)
+ * @param {Object} options - Roll options (actor, attrValue, skillValue, etc.)
+ * @returns {Promise<void>}
+ */
+export async function showSkillCheckDialog(options) {
+  const { actor, attrValue, skillValue, attrLabel, skillLabel, onRollComplete, defaultModifier = 0, defaultApplyToAttr = true, defaultApplyToSkill = true } = options;
+
+  return foundry.applications.api.DialogV2.wait({
+    window: { title: `Roll: ${skillLabel}` },
+    content: `
+      <style>
+        .dialog-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+          justify-content: center;
+        }
+        .dialog-buttons button {
+          flex: 0 0 calc(50% - 3px);
+        }
+      </style>
+      <form class="legends-roll-dialog">
+        <div class="form-group">
+          <label><strong>${attrLabel} ${attrValue} + ${skillLabel} ${skillValue}</strong></label>
+        </div>
+        <div class="form-group">
+          <label>Modifier:</label>
+          <input type="text" name="modifier" value="${defaultModifier}" style="width: 60px; text-align: center;" placeholder="0"/>
+        </div>
+        <div class="form-group" style="margin-left: 20px;">
+          <label>
+            <input type="checkbox" name="applyToAttr" ${defaultApplyToAttr ? 'checked' : ''}/>
+            Apply to ${attrLabel} die
+          </label>
+        </div>
+        <div class="form-group" style="margin-left: 20px;">
+          <label>
+            <input type="checkbox" name="applyToSkill" ${defaultApplyToSkill ? 'checked' : ''}/>
+            Apply to ${skillLabel} die
+          </label>
+        </div>
+        <hr style="margin: 15px 0;"/>
+        <div class="form-group">
+          <p style="font-size: 12px; color: #666; margin: 0;">
+            <strong>Fortune:</strong> Roll 3d8, choose best 2<br/>
+            <strong>Misfortune:</strong> Roll 3d8, choose worst 2
+          </p>
+        </div>
+      </form>
+    `,
+    buttons: [
+      {
+        action: "roll",
+        label: "Roll",
+        default: true,
+        callback: async (event, button, dialog) => {
+          const modifierInput = dialog.element.querySelector('[name="modifier"]');
+          const rawValue = modifierInput?.value || "";
+          const modifier = parseInt(rawValue) || 0;
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
           const result = await rollD8Check({
@@ -390,7 +503,10 @@ if (criticalSuccess) {
     discarded: discarded,
     isSave: isSave,
     luckSpent: 0,
-    allResults: allResults
+    allResults: allResults,
+    successes: successes,
+    criticalSuccess: criticalSuccess,
+    criticalFailure: criticalFailure
   };
 
   const fakeRoll = Roll.fromData({
@@ -574,7 +690,10 @@ export async function rollD8Check(options = {}) {
     discarded: (netFortune > 0 || netMisfortune > 0) ? results[2] : null,
     isSave: isSave,
     luckSpent: 0,
-    allResults: results
+    allResults: results,
+    successes: successes,
+    criticalSuccess: criticalSuccess,
+    criticalFailure: criticalFailure
   };
 
   // Create chat message with serializable data
@@ -772,7 +891,7 @@ export async function rollWeaveCheck(options = {}) {
   if (supportingRoll) allRolls.push(supportingRoll);
   
   // Create chat message
-  await ChatMessage.create({
+  const chatMessage = await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
     content: await renderWeaveResult({
       weaveName: weave.name,
@@ -791,9 +910,37 @@ export async function rollWeaveCheck(options = {}) {
       totalSuccesses,
       criticalSuccess,
       primaryOverspend,
-      supportingOverspend
-    }),  // ADD COMMA HERE
-    rolls: allRolls  // Now allRolls is defined
+      supportingOverspend,
+      actorId: actor.id,
+      needsTargeting: true
+    }),
+    rolls: allRolls,
+    flags: {
+      'legends.weaveRollData': {
+        actorId: actor.id,
+        weaveId: weave.id,
+        weaveName: weave.name,
+        primaryEnergy: weave.system.energyCost.primary.type,
+        supportingEnergy: weave.system.energyCost.supporting.type,
+        primaryPotential,
+        primaryMastery,
+        supportingPotential,
+        supportingMastery,
+        primaryCost,
+        supportingCost,
+        primaryResults,
+        supportingResults,
+        primarySuccesses,
+        supportingSuccesses,
+        totalSuccesses,
+        criticalSuccess,
+        primaryOverspend,
+        supportingOverspend,
+        currentPrimaryDie1: primaryResults[0],
+        currentPrimaryDie2: primaryResults[1],
+        luckSpent: 0
+      }
+    }
   });
   
   return {
@@ -816,10 +963,14 @@ export async function rollTargetingCheck(options = {}) {
     actor,
     weave,
     castingStat,
+    castingStatLabel,
     primaryMastery,
     weavingBonus = 0, // Bonus from weaving roll (0-3)
     bonusApplication = 'stacked' // 'stacked' or 'split'
   } = options;
+  
+  // castingStatValue is an alias for castingStat (numeric value)
+  const castingStatValue = castingStat;
   
   // Roll 2d8 for targeting (Casting Stat + Primary Energy Mastery)
   const targetingRoll = new Roll('2d8');
@@ -892,8 +1043,8 @@ export async function rollTargetingCheck(options = {}) {
     content: await renderTargetingResult({
       weaveName: weave.name,
       castingStat,
-      castingStatValue: castingStat,
-      castingStatLabel: 'Casting Stat', // Will be replaced with actual label
+      castingStatValue,
+      castingStatLabel: castingStatLabel || 'Casting Stat',
       primaryMastery,
       primaryMasteryLabel: weave.system.energyCost.primary.type,
       targetingResults,
@@ -901,8 +1052,28 @@ export async function rollTargetingCheck(options = {}) {
       modifiedDie2,
       weavingBonus,
       targetingSuccesses,
-      criticalSuccess
-    })
+      criticalSuccess,
+      actorId: actor.id
+    }),
+    flags: {
+      'legends.targetingRollData': {
+        actorId: actor.id,
+        weaveId: weave.id,
+        weaveName: weave.name,
+        castingStat,
+        castingStatValue,
+        castingStatLabel: castingStatLabel || 'Casting Stat',
+        primaryMastery,
+        primaryMasteryLabel: weave.system.energyCost.primary.type,
+        targetingResults,
+        currentTargetingDie1: targetingResults[0],
+        currentTargetingDie2: targetingResults[1],
+        weavingBonus,
+        targetingSuccesses,
+        criticalSuccess,
+        luckSpent: 0
+      }
+    }
   });
   
   return {
@@ -1052,20 +1223,31 @@ export async function rollTargetingCheck(options = {}) {
 
 // Render a weave result
  async function renderWeaveResult(data) {
+  const actor = data.actor || (data.actorId ? game.actors.get(data.actorId) : null);
+  const currentLuck = actor ? (actor.system.luck?.current ?? actor.system.attributes.luck.value) : 0;
+  const isPlayerCharacter = actor && actor.type === "character" && actor.hasPlayerOwner;
+  
   const primaryOverspendText = data.primaryOverspend > 0 ? 
     `<span class="overspend">Overspending: +${data.primaryOverspend} to dice</span>` : '';
   const supportingOverspendText = data.supportingOverspend > 0 ? 
     `<span class="overspend">Overspending: +${data.supportingOverspend} to dice</span>` : '';
   
   // Primary energy dice breakdown
-  const primaryDice1 = data.primaryResults[0];
-  const primaryDice2 = data.primaryResults[1];
+  const primaryDice1 = data.currentPrimaryDie1 ?? data.primaryResults[0];
+  const primaryDice2 = data.currentPrimaryDie2 ?? data.primaryResults[1];
+  const originalPrimaryDice1 = data.primaryResults[0];
+  const originalPrimaryDice2 = data.primaryResults[1];
   const primaryModified1 = primaryDice1 + data.primaryOverspend;
   const primaryModified2 = primaryDice2 + data.primaryOverspend;
   
   // Determine success for each primary die
   const primary1Success = primaryDice1 === 1 || (primaryDice1 !== 8 && primaryModified1 < data.primaryPotential);
   const primary2Success = primaryDice2 === 1 || (primaryDice2 !== 8 && primaryModified2 < data.primaryMastery);
+  
+  // Check luck spending availability for primary dice
+  const luckSpent = data.luckSpent || 0;
+  const canSpendOnPrimary1 = isPlayerCharacter && currentLuck > luckSpent && primaryDice1 > 1 && originalPrimaryDice1 !== 1 && originalPrimaryDice1 !== 8;
+  const canSpendOnPrimary2 = isPlayerCharacter && currentLuck > luckSpent && primaryDice2 > 1 && originalPrimaryDice2 !== 1 && originalPrimaryDice2 !== 8;
   
   const supportingSection = data.supportingEnergy ? `
     <div class="energy-section supporting">
@@ -1119,6 +1301,13 @@ export async function rollTargetingCheck(options = {}) {
         </div>
         <i class="fas fa-chevron-down toggle-details" style="transition: transform 0.2s;"></i>
       </div>
+      ${data.needsTargeting !== false ? `
+        <div class="targeting-button-container" style="margin-bottom: 8px; text-align: center;">
+          <button class="roll-targeting-btn" data-message-id="{{messageId}}" style="padding: 8px 16px; font-size: 14px; font-weight: bold; background: #4CAF50; color: white; border: none; border-radius: 4px; cursor: pointer;">
+            <i class="fas fa-magic"></i> Roll Targeting
+          </button>
+        </div>
+      ` : ''}
       <div class="roll-details" style="display: none;">
         <div class="energy-section primary">
           <h4>Primary: ${data.primaryEnergy.charAt(0).toUpperCase() + data.primaryEnergy.slice(1)} (${data.primaryCost} Energy)</h4>
@@ -1157,6 +1346,22 @@ export async function rollTargetingCheck(options = {}) {
         <div class="energy-cost">
           <strong>Energy Cost:</strong> ${data.primaryCost + data.supportingCost}
         </div>
+        ${luckSpent > 0 ? `<div class="luck-spent"><i class="fas fa-coins"></i> Luck Spent: ${luckSpent}</div>` : ''}
+        ${(canSpendOnPrimary1 || canSpendOnPrimary2) ? `
+          <div class="luck-spending">
+            <div class="luck-header">
+              <strong>Spend Luck?</strong> (Current: ${currentLuck})
+            </div>
+            <div class="luck-buttons">
+              ${canSpendOnPrimary1 ? `<button class="spend-luck-weave-btn" data-target="primary1" data-message-id="{{messageId}}">
+                <i class="fas fa-arrow-down"></i> Reduce Potential die (${primaryDice1} → ${primaryDice1 - 1})
+              </button>` : ''}
+              ${canSpendOnPrimary2 ? `<button class="spend-luck-weave-btn" data-target="primary2" data-message-id="{{messageId}}">
+                <i class="fas fa-arrow-down"></i> Reduce Mastery die (${primaryDice2} → ${primaryDice2 - 1})
+              </button>` : ''}
+            </div>
+          </div>
+        ` : ''}
       </div>
     </div>
   `;
@@ -1164,6 +1369,10 @@ export async function rollTargetingCheck(options = {}) {
 
 // Render a targeting roll result
 async function renderTargetingResult(data) {
+  const actor = data.actor || (data.actorId ? game.actors.get(data.actorId) : null);
+  const currentLuck = actor ? (actor.system.luck?.current ?? actor.system.attributes.luck.value) : 0;
+  const isPlayerCharacter = actor && actor.type === "character" && actor.hasPlayerOwner;
+  
   const { 
     weaveName, 
     castingStat,
@@ -1172,18 +1381,32 @@ async function renderTargetingResult(data) {
     primaryMastery,
     primaryMasteryLabel,
     targetingResults, 
-    modifiedDie1,
-    modifiedDie2,
     weavingBonus, 
     targetingSuccesses, 
     criticalSuccess 
   } = data;
   
+  // Get current dice (may be modified by luck)
+  const die1 = data.currentTargetingDie1 ?? targetingResults[0];
+  const die2 = data.currentTargetingDie2 ?? targetingResults[1];
+  const originalDie1 = targetingResults[0];
+  const originalDie2 = targetingResults[1];
+  
+  // Calculate modified dice with weaving bonus
+  let modifiedDie1 = die1;
+  let modifiedDie2 = die2;
+  if (weavingBonus > 0) {
+    modifiedDie1 = Math.max(1, die1 - weavingBonus);
+  }
+  
   // Determine success for each die
-  const die1 = targetingResults[0];
-  const die2 = targetingResults[1];
   const die1Success = die1 === 1 || (die1 !== 8 && modifiedDie1 < castingStatValue);
   const die2Success = die2 === 1 || (die2 !== 8 && modifiedDie2 < primaryMastery);
+  
+  // Check luck spending availability
+  const luckSpent = data.luckSpent || 0;
+  const canSpendOnDie1 = isPlayerCharacter && currentLuck > luckSpent && die1 > 1 && originalDie1 !== 1 && originalDie1 !== 8;
+  const canSpendOnDie2 = isPlayerCharacter && currentLuck > luckSpent && die2 > 1 && originalDie2 !== 1 && originalDie2 !== 8;
   
   const bonusText = weavingBonus > 0 ? 
     `<div class="weaving-bonus">Weaving Bonus: -${weavingBonus} applied to dice</div>` : '';
@@ -1199,7 +1422,7 @@ async function renderTargetingResult(data) {
       <div class="roll-summary" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center; padding: 8px; background: rgba(0,0,0,0.1); border-radius: 4px; margin-bottom: 8px;">
         <div>
           <strong>Targeting: ${weaveName}</strong> - 
-          <strong style="font-size: 1.1em;">Successes: ${targetingSuccesses}</strong>
+          <strong style="font-size: 1.1em;">Successes: ${data.recalculatedSuccesses ?? targetingSuccesses}</strong>
           ${criticalSuccess ? '<span class="crit-text" style="margin-left: 8px;">CRITICAL!</span>' : ''}
         </div>
         <i class="fas fa-chevron-down toggle-details" style="transition: transform 0.2s;"></i>
@@ -1235,6 +1458,22 @@ async function renderTargetingResult(data) {
           </div>
         </div>
         ${luckRestoreText}
+        ${luckSpent > 0 ? `<div class="luck-spent"><i class="fas fa-coins"></i> Luck Spent: ${luckSpent}</div>` : ''}
+        ${(canSpendOnDie1 || canSpendOnDie2) ? `
+          <div class="luck-spending">
+            <div class="luck-header">
+              <strong>Spend Luck?</strong> (Current: ${currentLuck})
+            </div>
+            <div class="luck-buttons">
+              ${canSpendOnDie1 ? `<button class="spend-luck-targeting-btn" data-target="die1" data-message-id="{{messageId}}">
+                <i class="fas fa-arrow-down"></i> Reduce ${castingStatLabel} die (${die1} → ${die1 - 1})
+              </button>` : ''}
+              ${canSpendOnDie2 ? `<button class="spend-luck-targeting-btn" data-target="die2" data-message-id="{{messageId}}">
+                <i class="fas fa-arrow-down"></i> Reduce Mastery die (${die2} → ${die2 - 1})
+              </button>` : ''}
+            </div>
+          </div>
+        ` : ''}
       </div>
     </div>
   `;
@@ -1284,6 +1523,12 @@ export async function spendLuckOnRoll(messageId, target) {
   
   rollData.luckSpent += 1;
   
+  // Recalculate successes after modifying dice
+  const updatedResult = calculateSuccesses(rollData);
+  rollData.successes = updatedResult.successes;
+  rollData.criticalSuccess = updatedResult.criticalSuccess;
+  rollData.criticalFailure = updatedResult.criticalFailure;
+  
   // Update actor's luck
   await actor.update({ 'system.luck.current': currentLuck - 1 });
   
@@ -1300,6 +1545,195 @@ export async function spendLuckOnRoll(messageId, target) {
 }
 
 /**
+ * Handle spending luck on a weave roll
+ * @param {string} messageId - Chat message ID
+ * @param {string} target - Which die to reduce ('primary1' or 'primary2')
+ */
+export async function spendLuckOnWeave(messageId, target) {
+  const message = game.messages.get(messageId);
+  if (!message) return;
+  
+  const weaveData = message.flags.legends?.weaveRollData;
+  if (!weaveData) return;
+  
+  const actor = game.actors.get(weaveData.actorId);
+  if (!actor) return;
+  
+  if (actor.type !== "character" || !actor.hasPlayerOwner) {
+    ui.notifications.warn("NPCs cannot spend Luck!");
+    return;
+  }
+
+  const currentLuck = actor.system.luck?.current ?? actor.system.attributes.luck.value;
+  if (currentLuck < 1) {
+    ui.notifications.warn("Not enough Luck!");
+    return;
+  }
+  
+  // Determine which die to reduce
+  if (target === 'primary1') {
+    if (weaveData.currentPrimaryDie1 <= 1 || weaveData.primaryResults[0] === 1 || weaveData.primaryResults[0] === 8) {
+      ui.notifications.warn("Cannot reduce this die further!");
+      return;
+    }
+    weaveData.currentPrimaryDie1 -= 1;
+  } else if (target === 'primary2') {
+    if (weaveData.currentPrimaryDie2 <= 1 || weaveData.primaryResults[1] === 1 || weaveData.primaryResults[1] === 8) {
+      ui.notifications.warn("Cannot reduce this die further!");
+      return;
+    }
+    weaveData.currentPrimaryDie2 -= 1;
+  }
+  
+  weaveData.luckSpent = (weaveData.luckSpent || 0) + 1;
+  
+  // Recalculate successes with new dice values
+  const primaryModified1 = weaveData.currentPrimaryDie1 + weaveData.primaryOverspend;
+  const primaryModified2 = weaveData.currentPrimaryDie2 + weaveData.primaryOverspend;
+  
+  let newPrimarySuccesses = 0;
+  if (weaveData.currentPrimaryDie1 === 1 || (weaveData.currentPrimaryDie1 !== 8 && primaryModified1 < weaveData.primaryPotential)) {
+    newPrimarySuccesses++;
+  }
+  if (weaveData.currentPrimaryDie2 === 1 || (weaveData.currentPrimaryDie2 !== 8 && primaryModified2 < weaveData.primaryMastery)) {
+    newPrimarySuccesses++;
+  }
+  
+  weaveData.primarySuccesses = newPrimarySuccesses;
+  weaveData.totalSuccesses = newPrimarySuccesses + (weaveData.supportingSuccesses || 0);
+  
+  // Update actor's luck
+  await actor.update({ 'system.luck.current': currentLuck - 1 });
+  
+  // Re-render the message
+  const newContent = await renderWeaveResult({
+    ...weaveData,
+    actor,
+    needsTargeting: true
+  });
+  await message.update({
+    content: newContent.replace('{{messageId}}', messageId),
+    flags: {
+      'legends.weaveRollData': weaveData
+    }
+  });
+  
+  ui.notifications.info(`Spent 1 Luck. ${currentLuck - 1} remaining.`);
+}
+
+/**
+ * Handle spending luck on a targeting roll
+ * @param {string} messageId - Chat message ID
+ * @param {string} target - Which die to reduce ('die1' or 'die2')
+ */
+export async function spendLuckOnTargeting(messageId, target) {
+  const message = game.messages.get(messageId);
+  if (!message) return;
+  
+  const targetingData = message.flags.legends?.targetingRollData;
+  if (!targetingData) return;
+  
+  const actor = game.actors.get(targetingData.actorId);
+  if (!actor) return;
+  
+  if (actor.type !== "character" || !actor.hasPlayerOwner) {
+    ui.notifications.warn("NPCs cannot spend Luck!");
+    return;
+  }
+
+  const currentLuck = actor.system.luck?.current ?? actor.system.attributes.luck.value;
+  if (currentLuck < 1) {
+    ui.notifications.warn("Not enough Luck!");
+    return;
+  }
+  
+  // Determine which die to reduce
+  if (target === 'die1') {
+    if (targetingData.currentTargetingDie1 <= 1 || targetingData.targetingResults[0] === 1 || targetingData.targetingResults[0] === 8) {
+      ui.notifications.warn("Cannot reduce this die further!");
+      return;
+    }
+    targetingData.currentTargetingDie1 -= 1;
+  } else if (target === 'die2') {
+    if (targetingData.currentTargetingDie2 <= 1 || targetingData.targetingResults[1] === 1 || targetingData.targetingResults[1] === 8) {
+      ui.notifications.warn("Cannot reduce this die further!");
+      return;
+    }
+    targetingData.currentTargetingDie2 -= 1;
+  }
+  
+  targetingData.luckSpent = (targetingData.luckSpent || 0) + 1;
+  
+  // Recalculate successes with new dice values
+  const die1 = targetingData.currentTargetingDie1;
+  const die2 = targetingData.currentTargetingDie2;
+  const modifiedDie1 = Math.max(1, die1 - (targetingData.weavingBonus || 0));
+  const modifiedDie2 = die2;
+  
+  let newSuccesses = 0;
+  if (die1 === 1 || (die1 !== 8 && modifiedDie1 < targetingData.castingStatValue)) {
+    newSuccesses++;
+  }
+  if (die2 === 1 || (die2 !== 8 && modifiedDie2 < targetingData.primaryMastery)) {
+    newSuccesses++;
+  }
+  
+  targetingData.recalculatedSuccesses = newSuccesses;
+  
+  // Update actor's luck
+  await actor.update({ 'system.luck.current': currentLuck - 1 });
+  
+  // Re-render the message
+  const newContent = await renderTargetingResult({
+    ...targetingData,
+    actor
+  });
+  await message.update({
+    content: newContent.replace('{{messageId}}', messageId),
+    flags: {
+      'legends.targetingRollData': targetingData
+    }
+  });
+  
+  ui.notifications.info(`Spent 1 Luck. ${currentLuck - 1} remaining.`);
+}
+
+/**
+ * Handle rolling targeting check from weave message
+ * @param {string} messageId - Chat message ID
+ */
+export async function rollTargetingFromWeave(messageId) {
+  const message = game.messages.get(messageId);
+  if (!message) return;
+  
+  const weaveData = message.flags.legends?.weaveRollData;
+  if (!weaveData) return;
+  
+  const actor = game.actors.get(weaveData.actorId);
+  const weave = actor?.items.get(weaveData.weaveId);
+  if (!actor || !weave) return;
+  
+  // Get casting stat info
+  const castingStat = actor.system.castingStat?.value || 'intelligence';
+  const castingStatValue = actor.system.attributes[castingStat]?.value || 0;
+  const castingStatLabel = castingStat.charAt(0).toUpperCase() + castingStat.slice(1);
+  
+  // Calculate targeting bonus from weaving successes
+  const targetingBonus = weaveData.totalSuccesses >= 5 ? 3 : (weaveData.totalSuccesses >= 4 ? 2 : (weaveData.totalSuccesses >= 3 ? 1 : 0));
+  
+  // Roll targeting check
+  await rollTargetingCheck({
+    actor,
+    weave,
+    castingStat: castingStatValue,
+    castingStatLabel,
+    primaryMastery: weaveData.primaryMastery,
+    weavingBonus: targetingBonus,
+    bonusApplication: 'stacked'
+  });
+}
+
+/**
  * Initialize luck spending button handlers
  */
 export function initializeLuckHandlers() {
@@ -1310,6 +1744,35 @@ export function initializeLuckHandlers() {
         event.preventDefault();
         const target = btn.dataset.target;
         await spendLuckOnRoll(message.id, target);
+      });
+    });
+    
+    // Weave luck spending buttons
+    html.querySelectorAll('.spend-luck-weave-btn').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.stopPropagation();
+        const target = btn.dataset.target;
+        await spendLuckOnWeave(message.id, target);
+      });
+    });
+    
+    // Targeting luck spending buttons
+    html.querySelectorAll('.spend-luck-targeting-btn').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.stopPropagation();
+        const target = btn.dataset.target;
+        await spendLuckOnTargeting(message.id, target);
+      });
+    });
+    
+    // Roll targeting buttons
+    html.querySelectorAll('.roll-targeting-btn').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.stopPropagation();
+        // Disable button after click
+        btn.disabled = true;
+        btn.textContent = 'Rolling...';
+        await rollTargetingFromWeave(message.id);
       });
     });
     

@@ -4,7 +4,7 @@
  * Foundry VTT V13 - Uses renderChatMessageHTML hook (native DOM, not jQuery)
  */
 
-import { rollD8Check, showRollDialog } from './dice.mjs';
+import { rollD8Check, showRollDialog, showSkillCheckDialog } from './dice.mjs';
 import * as featEffects from './feat-effects.mjs';
 
 /**
@@ -111,10 +111,10 @@ async function showAttackOptionsDialog(actor, weapon, attackMode) {
     `;
   }
   
-  // Finesse: Strength vs Agility
+  // Finesse: Strength vs Agility (use effective values with bonuses)
   if (hasFinesse) {
-    const str = actor.system.attributes.strength.value;
-    const agi = actor.system.attributes.agility.value;
+    const str = actor.system.attributesEffective?.strength ?? actor.system.attributes.strength.value;
+    const agi = actor.system.attributesEffective?.agility ?? actor.system.attributes.agility.value;
     
     content += `
       <div class="form-group" style="margin-bottom: 15px;">
@@ -474,13 +474,19 @@ async function _continueDefenseFlow(defenseType, defender, attackData, messageId
  * @param {string} attackMessageId - The attack message ID
  */
 async function rollMeleeDefense(defender, attackData, attackMessageId) {
-  const agility = defender.system.attributes.agility;
-  const meleeCombat = defender.system.skills.meleeCombat;
+  // Get effective attribute value (with bonuses from feats/abilities)
+  const agility = defender.system.attributesEffective?.agility 
+    ? { value: defender.system.attributesEffective.agility, label: defender.system.attributes.agility?.label || 'Agility' }
+    : defender.system.attributes.agility;
   
-  await showRollDialog({
+  // Get effective skill value (with bonuses from feats/abilities)
+  const skill = defender.system.skillsEffective?.meleeCombat ?? defender.system.skills.meleeCombat ?? 0;
+  const skillValue = typeof skill === 'object' ? (skill.value ?? skill) : skill;
+  
+  await showSkillCheckDialog({
     actor: defender,
     attrValue: agility.value,
-    skillValue: meleeCombat.value,
+    skillValue: skillValue,
     attrLabel: agility.label,
     skillLabel: 'Melee Defense',
     isSave: false,
@@ -492,7 +498,7 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
       await calculateDamage(
         attackData,
         attackMessageId,
-        rollResult.successes,
+        rollResult.message,
         attackData.attackSuccesses,
         attackData._shieldEffect
       );
@@ -522,10 +528,13 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
         action: "cover",
         label: "I'm in Cover (Reflex Save)",
         callback: async () => {
-          const agility = defender.system.attributes.agility;
+          // Get effective attribute value (with bonuses from feats/abilities)
+          const agility = defender.system.attributesEffective?.agility 
+            ? { value: defender.system.attributesEffective.agility, label: defender.system.attributes.agility?.label || 'Agility' }
+            : defender.system.attributes.agility;
           const currentLuck = defender.system.luck?.current ?? defender.system.attributes.luck.value;
 
-          await showRollDialog({
+          await showSkillCheckDialog({
             actor: defender,
             attrValue: agility.value,
             skillValue: currentLuck,
@@ -538,7 +547,7 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
               await calculateDamage(
                 attackData,
                 attackMessageId,
-                rollResult.successes,
+                rollResult.message,
                 attackData.attackSuccesses,
                 attackData._shieldEffect
               );
@@ -554,7 +563,7 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
           await calculateDamage(
             attackData,
             attackMessageId,
-            0,
+            null,
             attackData.attackSuccesses,
             attackData._shieldEffect
           );
@@ -568,11 +577,31 @@ async function handleRangedDefense(defender, attackData, attackMessageId) {
  * Calculate damage and create comparison result card
  * @param {Object} attackData - Attack data
  * @param {string} attackMessageId - The attack message ID
- * @param {number} defenseSuccesses - Defender's successes
+ * @param {ChatMessage|null} defenseRollMessage - Defender's roll message (null for auto-hit)
  * @param {number} attackSuccesses - Attacker's successes
  */
-async function calculateDamage(attackData, attackMessageId, defenseSuccesses, attackSuccesses, shieldEffect=null) {
-  const margin = attackSuccesses - defenseSuccesses;
+async function calculateDamage(attackData, attackMessageId, defenseRollMessage, attackSuccesses, shieldEffect=null) {
+  // Retrieve updated attack successes from the roll message if luck was spent
+  let actualAttackSuccesses = attackSuccesses;
+  let attackRollData = null;
+  if (attackData.attackRollMessageId) {
+    const rollMessage = game.messages.get(attackData.attackRollMessageId);
+    if (rollMessage?.flags?.legends?.rollData) {
+      attackRollData = rollMessage.flags.legends.rollData;
+      // Use the current successes from the roll data (which includes luck spending)
+      actualAttackSuccesses = attackRollData.successes;
+    }
+  }
+  
+  // Get defense successes and roll data
+  let defenseSuccesses = 0;
+  let defenseRollData = null;
+  if (defenseRollMessage?.flags?.legends?.rollData) {
+    defenseRollData = defenseRollMessage.flags.legends.rollData;
+    defenseSuccesses = defenseRollData.successes;
+  }
+  
+  const margin = actualAttackSuccesses - defenseSuccesses;
   
   const attacker = game.actors.get(attackData.actorId);
   const defender = game.actors.get(attackData.targetId);
@@ -585,17 +614,45 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
   
   let damageAmount = 0;
   let damageDescription = '';
+  let tiebreakerNote = '';
   
-  if (margin <= 0) {
-    // Defender wins or ties
+  if (margin < 0) {
+    // Defender wins
     damageDescription = 'Defender wins! No damage.';
+  } else if (margin === 0) {
+    // Exactly tied - apply tiebreaker rule
+    // Compare modified dice totals (after luck spending - lower total wins)
+    if (attackRollData && defenseRollData) {
+      const attackTotal = attackRollData.currentAttrDie + attackRollData.currentSkillDie;
+      const defenseTotal = defenseRollData.currentAttrDie + defenseRollData.currentSkillDie;
+      
+      if (attackTotal < defenseTotal) {
+        // Attacker wins tiebreaker (rolled lower)
+        damageDescription = 'Tied successes, but attacker rolled lower total and wins!';
+        tiebreakerNote = ` (Attacker: ${attackTotal}, Defender: ${defenseTotal})`;
+        // Treat as margin 1 for damage
+        damageAmount = attackData.baseDamage;
+        damageDescription = `${damageAmount} ${attackData.damageType} damage (tied, attacker wins on lower roll)`;
+      } else if (defenseTotal < attackTotal) {
+        // Defender wins tiebreaker (rolled lower)
+        damageDescription = 'Tied successes, but defender rolled lower total and wins!';
+        tiebreakerNote = ` (Attacker: ${attackTotal}, Defender: ${defenseTotal})`;
+      } else {
+        // Perfect tie - defender wins
+        damageDescription = 'Perfect tie! Defender wins. No damage.';
+        tiebreakerNote = ` (Both rolled ${attackTotal})`;
+      }
+    } else {
+      // Can't apply tiebreaker (no roll data), default to defender wins
+      damageDescription = 'Tie - Defender wins! No damage.';
+    }
   } else if (margin === 1) {
     // Base damage only
     damageAmount = attackData.baseDamage;
     damageDescription = `${damageAmount} ${attackData.damageType} damage (base)`;
   } else {
-    // Base damage + attribute modifier
-    const attrValue = attacker.system.attributes[attackData.damageAttr].value;
+    // Base damage + attribute modifier (use effective value with bonuses)
+    const attrValue = attacker.system.attributesEffective?.[attackData.damageAttr] ?? attacker.system.attributes[attackData.damageAttr].value;
     damageAmount = attackData.baseDamage + attrValue;
     damageDescription = `${damageAmount} ${attackData.damageType} damage (base ${attackData.baseDamage} + ${attrValue} ${attackData.damageAttr})`;
   }
@@ -617,14 +674,14 @@ async function calculateDamage(attackData, attackMessageId, defenseSuccesses, at
       <div class="comparison">
         <div class="attacker-result">
           <strong>Attacker:</strong> ${attacker.name}<br/>
-          <strong>Successes:</strong> ${attackSuccesses}
+          <strong>Successes:</strong> ${actualAttackSuccesses}
         </div>
         <div class="defender-result">
           <strong>Defender:</strong> ${defender.name}<br/>
           <strong>Successes:</strong> ${defenseSuccesses}
         </div>
         <div class="margin">
-          <strong>Margin:</strong> ${margin}
+          <strong>Margin:</strong> ${margin}${tiebreakerNote}
         </div>
       </div>
       <div class="damage-result">

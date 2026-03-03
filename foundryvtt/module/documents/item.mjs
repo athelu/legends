@@ -144,7 +144,7 @@ export class D8Item extends Item {
     
     // Initialize shield type
     if (!systemData.shieldType) {
-      systemData.shieldType = 'buckler';
+      systemData.shieldType = 'light';
     }
     
     // Ensure reactions array exists

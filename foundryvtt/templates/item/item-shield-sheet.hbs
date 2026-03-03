@@ -57,12 +57,9 @@
       <div class="form-group">
         <label>Shield Type</label>
         <select name="system.shieldType" class="shield-type-select">
-          <option value="buckler" {{#if (eq system.shieldType "buckler")}}selected{{/if}}>Buckler (Light Shield)</option>
-          <option value="targe" {{#if (eq system.shieldType "targe")}}selected{{/if}}>Targe (Round Shield)</option>
-          <option value="heater" {{#if (eq system.shieldType "heater")}}selected{{/if}}>Heater Shield</option>
-          <option value="kite" {{#if (eq system.shieldType "kite")}}selected{{/if}}>Kite Shield</option>
-          <option value="tower" {{#if (eq system.shieldType "tower")}}selected{{/if}}>Tower Shield</option>
-          <option value="pavise" {{#if (eq system.shieldType "pavise")}}selected{{/if}}>Pavise (Planted Shield)</option>
+          <option value="light" {{#if (eq system.shieldType "light")}}selected{{/if}}>Light Shield</option>
+          <option value="medium" {{#if (eq system.shieldType "medium")}}selected{{/if}}>Medium Shield</option>
+          <option value="heavy" {{#if (eq system.shieldType "heavy")}}selected{{/if}}>Heavy Shield</option>
         </select>
       </div>
 

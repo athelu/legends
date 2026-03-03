@@ -1,5 +1,5 @@
 {
-  "_id": "cae1a395f2aa4e72",
+  "_id": "753fc7b7fdf0405b",
   "name": "Armor Properties",
   "type": "armor",
   "img": "icons/equipment/chest/plate-armor-gray.webp",
@@ -23,5 +23,5 @@
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!cae1a395f2aa4e72"
+  "_key": "!items!753fc7b7fdf0405b"
 }

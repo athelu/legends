@@ -1,5 +1,5 @@
 {
-  "_id": "1d36fd0bccbc4cf2",
+  "_id": "5ee83c4abdd14ac1",
   "name": "Chain Mail",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -27,5 +27,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!1d36fd0bccbc4cf2"
+  "_key": "!items!5ee83c4abdd14ac1"
 }
