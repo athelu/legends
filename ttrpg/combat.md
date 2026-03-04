@@ -1,446 +1,233 @@
 # Combat
+Invariably situations in roleplaying games will come down to combat. Provided here are the detailed rules allowing you to run combat in the Legends games system
+Melee Attack
+A melee attack in Legends is any offensive action that would deal damage or apply an effect to a target using a melee or natural weapon.
+Most melee attack rolls result in an opposed check against the targets combat skill. A melee combat check would look like the following:
+*Agility + Melee combat*
+A d8 is assigned to the Agility attribute and rolled, and a d8 is assigned to the melee combat skill and rolled. Each die that rolls BELOW the value/rank is counted as a success.
+A defender would then make their own melee combat roll following the same formula, where each success they achieve is counted.
+The attacker reduces their success totals for every success that the defender achieved. The result of this is called the Margin of success.
 
-## Initiative System
+If the Margin of success is 1 or higher, then they successfully deal damage to the target.
 
-### Initiative Bonus (Fixed Value)
+If the Margin of success is exactly 0, then you apply the tiebreaker rules. You determine a tiebreaker by  comparing the modified dice totals (after luck spending). Whoever rolled lower total wins, granting them 1 success.
 
-Initiative Bonus = Agility + Modifiers
+If there is still a tie after totaling the dice rolls then the defender wins.
 
-#### Modifiers:
--   Alert feat: +2
--   Quickened Reflexes feat: +2
--   Acute Hearing trait: +1
--   Deafened condition: -2
--   Other permanent/temporary modifiers
+## Melee Damage
+Attacks in Legends do a base amount of damage that can be increased based upon the Margin of successes achieved in the skill roll.
+- **Margin 1:** Base weapon damage. The target suffers damage equal to the damage listed for the weapon
+- **Margin 2:** Base weapon damage + Strength. The target suffers damage equal to the damage listed for the weapon plus the attackers Strength score.
+- **Margin 3:** Base weapon damage + Strength + Condition The target suffers damage equal to the damage listed for the weapon plus the attackers Strength score and the attacker may apply an applicable condition. (prone, disarmed, bleed etc).
 
-### Initiative Roll
-Initiative = Initiative Bonus + Current Luck + Desired Skill + 1d8
+## Ranged Attack
+A ranged  attack in Legends is any offensive action that would deal damage or apply an effect to a target using a ranged or thrown weapon.
+Ranged attacks, unlike melee attacks, are normally unopposed. Situations such a cover or concealment or wielding a shield may provide some defense against ranged attacks.  A ranged combat check would look like the following:
+*Dexterity + Ranged combat*
+A d8 is assigned to the Dexterity attribute and rolled, and a d8 is assigned to the Ranged combat skill and rolled. Each die that rolls BELOW the value/rank is counted as a success.
+If the defender benefits from a shield, cover, or concealment they would be allowed to make a reflex saving throw.
+The attacker reduces their success totals for every success that the defender achieved. The result of this is called the Margin of success.
+Unlike melee combat, the number of successes required to hit a target with a ranged attack depends upon the range. The Margin of success is compared to the range requirements.
 
-#### Where:
--   Initiative Bonus: Your fixed Agi + mods
--   Current Luck: Your Luck pool at combat start (dynamic, depletes during session)
--   Desired Skill: The skill you use to react
--   1d8: Random element
+### Short range
+Short range is defined as the distance in the first range increment for the weapon. 
+- **Margin 1:** Base weapon damage. The target suffers damage equal to the damage listed for the weapon
+- **Margin 2:** Base weapon damage + Dexterity. The target suffers damage equal to the damage listed for the weapon plus the attackers Dexterity score.
+- **Margin 3:** Base weapon damage + Dexterity + Condition The target suffers damage equal to the damage listed for the weapon plus the attackers Dexterity score and the attacker may apply an applicable condition. (prone, disarmed, bleed etc)
 
-### Initiative Skill Options
-Default: Perception (most common, general awareness)
+### Medium range
+Medium range is defined as the distance above the first range increment but below the third range increment.
+- **Margin 1:** Attack misses
+- **Margin 2:** Base weapon damage + Dexterity. The target suffers damage equal to the damage listed for the weapon plus the attackers Dexterity score.
+- **Margin 3:** Base weapon damage + Dexterity + Condition The target suffers damage equal to the damage listed for the weapon plus the attackers Dexterity score and the attacker may apply an applicable condition. (prone, disarmed, bleed etc)
 
-Combat Skills: Melee Combat, Ranged Combat
-Movement Skills: Athletics, Acrobatics, Stealth
-Mental/Social: Investigate, Intimidate
-Magical: Arcane, Religion
+### Long range
+Long range is defined as the distance above the second range increment up to the value of  the third range increment. If no third increment is listed then long range attacks are not possible with the chosen weapon. Long range Attacks are more difficult and the ranged attack roll is modified as follows:
+**Add 1 to both attack die results**
+- **Margin 1:** Attack misses
+- **Margin 2:** Base weapon damage + Dexterity. The target suffers damage equal to the damage listed for the weapon plus the attackers Dexterity score.
+- **Margin 3:** Base weapon damage + Dexterity + Condition The target suffers damage equal to the damage listed for the weapon plus the attackers Dexterity score and the attacker may apply an applicable condition. (prone, disarmed, bleed etc)
 
-#### Requirements:
--   Must have at least rank 1 in skill to use it for initiative
--   Must make narrative sense for the situation (GM approval)
--   Declare before rolling
-
-### Turn Order
-Highest Initiative acts first.
-
-#### Ties (in order):
-1.  Higher Initiative Bonus
-2.  Higher skill value used
-3.  Higher maximum Luck attribute
-4.  Simultaneous actions (or GM decides)
-
-### Hit Points & Damage
-Weapon Damage (Margin of Success)
-
-#### Melee Combat (Opposed Rolls):
--   Margin 0 (Tie in successes): Apply tiebreaker - compare modified dice totals (after luck spending). Whoever rolled **lower** total wins. If still tied, defender wins.
-    -   Tiebreaker winner (attacker): Base weapon damage
-    -   Tiebreaker winner (defender): No damage
-    -   **Tactical note:** Player characters can spend luck to reduce their dice total and win tiebreakers
--   Margin 1: Base weapon damage
--   Margin 2: Base weapon damage + Strength modifier
-
-#### Ranged Combat (Unopposed):
--   Short range: 1 success needed
-    -   1 success: Base damage
-    -   2 successes: Base + Dexterity modifier
--   Medium range: 2 successes needed
-    -   2 successes: Base + Dexterity modifier
--   Long range: 2 successes needed
-    -   Add 1 to both attack die results
-    -   2 successes: Base + Dexterity modifier
-
-### Weapon Base Damage
--   Light weapons: 4 damage (dagger, club, sap)
--   Standard weapons: 6 damage (shortsword, mace, spear)
--   Heavy one-handed: 8 damage (longsword, battleaxe, warhammer)
--   Two-handed: 10 damage (greatsword, greataxe, maul)
-
-### Critical Hits (Double 1s)
--   Grants +1 additional success (3 total successes in opposed rolls)
--   Margin 3+: Deal maximum damage (base + attribute, no roll needed)
--   Restore all Luck (as per existing rule)
--   Choose one additional effect:
-    -   Apply condition (Prone, Disarm, Bleeding)
-    -   Bypass half DR
-    -   Extra combat maneuver
+## Critical Hits
+Critical hits are rare, occurring when both of the dice rolled for a check are natural 1s. Several things happen when a critical is rolled:
+- Grants +1 additional success
+- Restore all Luck for the roller
 
 ## Non-Lethal Damage
-
-### Non-Lethal Attacks
 Non-lethal damage represents attacks intended to subdue rather than kill. When a creature is reduced to 0 HP by non-lethal damage, they fall unconscious but are stable (not dying).
-
-**Naturally Non-Lethal Attacks:**
+Certain type of attacks automatically generate non-lethal damage:
 - Unarmed strikes (punches, kicks, grapples)
 - Sap
 - Any weapon or attack specifically described as non-lethal
 
-**Declaring Non-Lethal Intent:**
-Before making any melee weapon attack, you may declare the attack as non-lethal:
-- If the attack hits and reduces the target to 0 HP or below, the target falls unconscious but is stable
-- You cannot declare ranged attacks, area effects, or ongoing damage (fire, acid, etc.) as non-lethal
+Before making any melee weapon attack, you may declare the attack as non-lethal. You cannot declare ranged attacks, area effects,energy damage or ongoing damage (fire, acid, etc.) as non-lethal.
+If reduced to 0 HP by non-lethal while also having suffered lethal damage, the creature will become unconscious and dying.
 
-**Recovering from Non-Lethal Damage:**
-- A creature at 0 HP from non-lethal damage is unconscious but stable
-- They regain consciousness after 1d8 minutes
-- They can be awakened early with 1 minute of tending and a Medicine check
-- Healing restores them normally and wakes them immediately
-
-**Mixing Lethal and Non-Lethal:**
-- If reduced to 0 HP by non-lethal while also having lethal damage, creature is unconscious and dying normally
+### Recovering from Non-Lethal Damage
+A creature at 0 HP from non-lethal damage is unconscious but stable and will automatically regain consciousness after 1d8 minutes. They can be awakened early with 1 minute of tending and a Medicine check. Magical healing restores them normally and wakes them immediately
 
 ## Temporary Hit Points
+Temporary HP is a buffer that absorbs damage before your actual HP. Temporary HP is lost before actual HP when taking damage. You can only have one source of temporary HP at a time (new temp HP replaces old, they don't stack). Temporary HP granted from the same source doesn't stack with itself. Temporary HP can't be healed, only regained through the source that granted it. Temporary HP disappears after a long rest. Temporary HP doesn't count as healing for any effects or triggers.
 
-Temporary HP is a buffer that absorbs damage before your actual HP.
+## Damage Types
+In a fantasy world there are plenty of ways that you can get hurt. Below are the different types of damage that can be applied.
+### Physical Damage
+- Slashing - Cuts, bleeds (swords, axes)
+- Piercing - Penetration, precision (spears, arrows, daggers)
+- Bludgeoning - Impact, crushing (maces, hammers, clubs)
 
-**Rules:**
-- Temporary HP is lost before actual HP when you take damage
-- You can only have one source of temporary HP at a time (new temp HP replaces old, they don't stack)
-- Temporary HP from the same source doesn't stack with itself
-- Temporary HP can't be healed - only regained through the source that granted it
-- Temporary HP disappears after a long rest
-- Temporary HP doesn't count as healing (doesn't trigger healing-related effects)
+### Energy Damage
+- Fire (flames, heat, burning)
+- Cold (frost, ice energy, freezing)
+- Lightning (electricity, shock)
+- Acid (corrosive energy)
+- Thunder (sonic energy, sound waves)
+- Negative (life-draining, necrotic energy)
+- Positive (radiant, divine energy)
+- Force (pure magical energy)
 
-**Example:** You have 25 HP and gain 8 temporary HP. An enemy deals 12 damage. You lose all 8 temporary HP and 4 actual HP (now at 21/25 HP, 0 temp HP).
+## Damage Resistance (DR)
+Damage resistance reduces the amount of damage that a character takes from attacks. Damage resistance will normally specify the type (bludgeoning, slashing, fire etc). If a type is NOT listed then the Damage Resistance is considered to be universal and applies equally to all sources.
+Armor provides DR. When a character wearing armor takes damage from an energy source and does not state a specific DR for that energy type, then the highest available DR is used.
 
+## Combat Maneuvers
+Combat maneuvers are special types of attacks or actions that may be declared before rolling and modify an attack. The combat maneuver is applied in lieu of any damage the attack would normally apply, unless stated differently in the maneuver.
+Combat maneuvers may be attempted by any character trained in Melee combat that meets the requirements..
 
-### Fortune & Misfortune in Combat
-Certain conditions and circumstances grant Fortune or Misfortune on
-attack rolls:
+### Called Shot
+You attempt to strike a weak spot or specific area of the target. Add 1 to both attack die results
+- **Margin 1:** if Margin 1 would normally apply damage, then apply base damage.
+- **Margin 2:** Apply damage as normal for the the Margin of success, but choose from the following bonuses:
+    - Half DR
+    - Apply specific condition (GM Discretion)
+- **Requirements:** Agility or Dexterity 4
 
-#### Fortune on attacks (roll 3d8, take best 2):
--   Attacking a Blinded opponent
--   Attacking a Cowering opponent
--   Other beneficial tactical positions
+### Disarm
+You use your attack to strike the weapon or hand of the target in a way to make them drop their equipped weapon. Make a normal combat check.
+- **Margin 1:** if Margin 1 would normally apply damage, then apply base damage.
+- **Margin 2:** Apply damage as normal for the the Margin of success, and the target drops equipped weapon of attackers choice.
 
-#### Misfortune on attacks (roll 3d8, take worst 2):
--   You are Blinded
--   Attacking while Prone
--   Other detrimental circumstances
+### Trip
+You use your attack to strike the target in a way to make them lose their balance and fall. Make a normal combat check.
+- **Margin 1:** if Margin 1 would normally apply damage, then apply base damage.
+- **Margin 2:** Apply damage as normal for the the Margin of success, and the target gains the prone condition
 
-### Physical Damage Types
-1.  Slashing - Cuts, bleeds (swords, axes)
-2.  Piercing - Penetration, precision (spears, arrows, daggers)
-3.  Bludgeoning - Impact, crushing (maces, hammers, clubs)
+### Two-Weapon Fighting
+When wielding two weapons, you may make two attacks with a single [Combat] action. The Off-hand weapon must have the Light property. The attack uses a Shared Attribute Roll (roll attribute once, applies to both attacks). Roll skill die separately for each weapon.
+- **First Two-Weapon Action:** First attack: Add 1 to both die results, Second attack: Add 2 to both die results
+- **Second Two-Weapon Action:** First attack: Add 2 to both die results, Second attack: Add 3 to both die results
+- **Second Two-Weapon Action:** First attack: Add 3 to both die results, Second attack: Add 4 to both die results
 
-### Resistance Tiers
--   Weakness: DR halved (rounded down)
--   Normal: Full DR applies
--   Resistance: +1 DR against that damage type
--   Greater Resistance: +2 DR against that damage type
--   Legendary Resistance: +4 DR against that damage type
--   Immunity: No damage from that source
--   Vulnerability: +50% damage (rounded up) from that type
+## Initiative System
+Initiative is the method use to determine the order of activation of all of the actors involved in combat. This is one of the few systems in Legends where a Higher result is desirable. 
+Each character has an initiative bonus that is calculated by the following:
+*Initiative Bonus = Agility + Modifiers*
 
-### Combat Maneuvers
-Combat maneuvers are declared before rolling and modify the attack:
+A number of traits, feats and weaves can provide an initiative modifier, some examples of such:
+- Alert feat: +2
+- Quickened Reflexes feat: +2
+- Acute Hearing trait: +1
+- Deafened condition: -2
 
-#### Called Shot
--   Add 1 to both attack die results
--   On hit: Bypass half DR OR apply specific condition (GM Discretion)
+### Initiative Roll
+Each actor in a combat will need to make an initiative roll to determine when they will act in the combat round.  You determine your initiative for the combat using the following:
+- Initiative Bonus + Current Luck + Desired Skill + 1d8
+- Initiative Bonus: Your fixed Agi + mods
+- Current Luck: Your Luck pool at combat start 
+- Desired Skill: The skill you use to react
+- 1d8: Random element
 
-#### Power Attack (feat required)
--   Add 1 to both attack die results
--   On hit: +1d8 bonus damage
+### Initiative Skill Options
+Unless some other skill is declared, the actor will use Perception as the skill for initiative. This represents the characters general situational awareness. Most other skills could be used to determine initiative. This would require the player to justify as to how the use of the skill in this particular situation could be applied. The GM will determine if the the skill in question and the characters explanation warrant its use. There are however some requirements that must be met before a skill may be used for initiative.
+	1	Character must have at least 1 rank in the skill
+	2	Must make narrative sense for the situation (GM approval)
+	3	Declare before rolling
 
-#### Disarm/Trip Attempt
--   Normal attack roll
--   Margin 1: No damage, but apply condition (Disarmed/Prone)
--   Margin 2: Base damage AND apply condition
+### Turn Order
+Once all of the actors have determined their initiative the combatants are ranked from highest to lowest  with the highest Initiative acting first.
+If there are ties in the initiative order, the following characteristics will be used for tie breakers:
+Tie Breakers (in order):
+	1	Higher Initiative Bonus
+	2	Higher skill rank used
+	3	Higher maximum Luck attribute
+	4	Simultaneous actions (or GM decides)
 
-#### Two-Weapon Fighting
-##### Without Feat
--   When wielding two weapons, you may make two attacks with a single [Combat] action (1 action total)
--   Off-hand weapon must have the Light property
--   Use a Shared Attribute Roll (roll attribute once, applies to both attacks)
--   Roll skill die separately for each weapon
--   First Two-Weapon Action: First attack: Add 1 to both die results, Second attack: Add 2 to both die results
--   Second Two-Weapon Action: First attack: Add 2 to both die results, Second attack: Add 3 to both die results
--   Additional [Combat] actions continue penalty progression (3rd attack adds 3, 4th adds 4, etc.)
+## Cover
+Cover provides physical protection from attacks through defensive positioning and is one of the only ways to gain protection from ranged attacks. Cover only applies against attacks coming from the direction of the obstacle. Flanking or attacking from different angles may negate cover. Cover is broken into 3 classes for determining how you are benefited.
 
-##### With Two-Weapon Fighting Feat
--   Off-hand weapon must have the Light property
--   First attack in an [Combat] action: Normal (no penalty)
--   Second attack: Add 1 to both die results (instead of 2)
--   Subsequent [Combat] actions follow normal penalty progression from there
--   Still use Shared Attribute Roll
+### Partial Cover
+This is cover where the target is obscured (¼ to ½ body covered), such as from a low wall, furniture, creature, or tree trunk.
+**Benefit:** Melee Defense +1 DR. Ranged Defense:  Make Reflex save to duck behind cover from a ranged or AOE attack. Reduce the attackers success margin by your rolled successes.
 
-##### Example without feat:
--   Action 1: Attack with both weapons (add 1 to first, add 2 to second)
--   Action 2: Attack with both weapons (add 2 to first, add 3 to second)
+### Half Cover
+You are positioned to where most of your body is blocked  (½ to ¾ body covered), such as behind a portcullis, arrow slit, or Crouching behind a barricade.
+**Benefit:** Melee Defense +2 DR. Ranged Defense Make Reflex save to duck behind cover from a ranged or AOE attack. Subtract 1 from both Reflex save die results. Reduce the attackers success margin by your rolled successes. 
 
-##### Example with feat:
--   Action 1: Attack with both weapons (normal on first, add 1 to second)
--   Action 2: Attack with both weapons (add 1 to first, add 2 to second)
--   Action 2: Attack with both weapons (add 2 to first, add 3 to second)
+### Full Cover
+You are hidden completely behind a solid obstacle such as a barricade, wall, closed door etc..
+**Benefit:** Cannot be directly targeted by attacks or most weaves
 
-### Cover
+### Fighting from Cover
+You can attack while benefiting from cover. Leaning out to attack doesn't reduce your cover benefits (unless the attacker uses a held action). Attacking doesn't prevent you from using cover's defensive benefits on the same round.
 
-Cover provides physical protection from attacks through defensive positioning.
+### Multiple Cover Sources
+Use the highest degree of cover available. Cover bonuses don't stack (being behind two partial cover sources = partial cover, not half).
 
-#### Degrees of Cover
-
-##### No Cover
--   Target is completely exposed
--   No defensive bonuses
-
-##### Partial Cover (¼ to ½ body covered)
--   Low wall, furniture, creature, tree trunk
--   **Against Melee Attacks:** +1 DR (fewer vulnerable areas to strike)
--   **Against Ranged Attacks:** Make Reflex save to duck behind cover
-    -   1+ successes: Attack misses
-    -   0 successes: Attack hits normally
--   Examples: Standing behind a 3-foot wall, leaning around a corner, ally partially blocking line of sight
-
-##### Half Cover (½ to ¾ body covered)
--   Portcullis, arrow slit, thick tree trunk
--   **Against Melee Attacks:** +2 DR (significantly fewer vulnerable areas)
--   **Against Ranged Attacks:** Make Reflex save to duck behind cover
-    -   Subtract 1 from both Reflex save die results
-    -   1+ successes: Attack misses
-    -   0 successes: Attack hits normally
--   Examples: Firing through arrow slit, crouching behind a barrel, most of body behind wall
-
-##### Three-Quarters Cover (¾ or more body covered)
--   Murder hole, small window, only small part visible
--   **Against Melee Attacks:** +3 DR (minimal exposed areas to strike)
--   **Against Ranged Attacks:** Make Reflex save to duck behind cover
-    -   Subtract 1 from both Reflex save die results
-    -   1+ successes: Attack misses
-    -   0 successes: Attack hits normally
--   Examples: Peeking around a corner, firing through a narrow window
-
-##### Full Cover (completely covered)
--   Completely behind solid obstacle
--   **Benefit:** Cannot be directly targeted by attacks or most weaves
--   Examples: Fully behind a wall, around a corner, inside a closed room
--   **Note:** Some weaves or abilities can affect targets through full cover (GM discretion)
-
-#### Cover Rules
-
-**Direction Matters:**
--   Cover only applies against attacks coming from the direction of the obstacle
--   Flanking or attacking from different angles may negate cover
-
-**Cover and Concealment:**
--   Cover and concealment can stack
--   Example: Behind a low wall in fog = Partial Cover (Reflex save vs ranged) + Concealed (attacker adds +1 to attack)
-
-**Damaging Cover:**
--   Cover objects can be destroyed
--   GM assigns HP and DR to cover objects
--   Destroying cover removes its benefit
-
-**Cover vs. Area Effects:**
--   Area effects (fireballs, lightning, etc.) typically allow Reflex saves
--   Subtract 1 from one Reflex save die on Reflex saves against area effects
--   Full cover may provide total protection from area effects (GM discretion)
--   Example: Fireball explodes - you're behind half cover = Fortune on your Reflex save
-
-**Fighting from Cover:**
--   You can attack while benefiting from cover
--   Leaning out to attack doesn't reduce your cover benefit
--   Attacking doesn't prevent you from using cover's defensive benefits on the same round
-
-**Multiple Cover Sources:**
--   Use the highest degree of cover available
--   Cover bonuses don't stack (being behind two partial cover sources = partial cover, not half)
-
-#### Prone and Cover
-
--   Being Prone provides equivalent of Partial Cover against ranged attacks
--   Can combine with physical cover for better protection:
-    -   Prone + Partial Cover = Half Cover
-    -   Prone + Half Cover = Three-Quarters Cover
--   Against Melee Attacks: Being Prone does NOT provide DR
-
-#### Cover Tactics
-
-**Best Practices:**
--   Seek cover before enemy ranged combatants act
--   Half cover or better gives you bonuses on Reflex saves
--   Full cover completely protects but you can't attack either
--   Move between cover positions using Disengage to avoid Opportunity Attacks
--   Prone + Cover stacks for excellent ranged defense (but vulnerable to melee)
-
-**Cover Example:**
-Archer shoots at you behind a barrel (Half Cover):
-1. Archer rolls Dexterity + Ranged Combat, gets 2 successes (hit at medium range)
-2. You immediately roll Reflex save (Agility + Luck) with half cover bonus
-3. If you get 1+ successes, you duck behind the barrel - arrow misses
-4. If you get 0 successes, arrow hits you for damage (minus any DR from armor)
-
-## Line of Sight & Targeting
-
-### What is Line of Sight?
-
-**Line of Sight (LoS) Definition:**
-You have line of sight to a target if you can draw an unblocked straight line from any point in your space to any point in the target's space.
-
-**Why LoS Matters:**
-- Required to target with most attacks and weaves
-- Determines if you can see a creature (vs Hidden)
-- Affects cover and concealment
-- Required for many abilities and reactions
-
----
-
-### What Blocks Line of Sight
-
-**Complete LoS Blockage (Cannot Target):**
-- **Solid obstacles:** Walls, closed doors, large boulders, thick tree trunks
-- **Full cover:** Completely behind solid barrier
-- **Total darkness + no darkvision:** Pitch black conditions (creature is Hidden)
-- **Magical darkness:** Unless you have darkvision or magical sight
-- **Opaque barriers:** Solid doors, thick curtains, stone walls
-
-**Special Cases:**
-- **Invisible creatures:** You don't have LoS unless you can detect them (they are Hidden)
-- **Around corners:** No LoS to creatures on other side of wall
-- **Inside containers:** No LoS to creatures inside closed chests, boxes, etc.
-
----
-
-### What Does NOT Block Line of Sight
-
-**You DO have LoS through/despite:**
-- **Fog, smoke, mist, rain:** Provides Concealment, doesn't block LoS
-- **Dim light or shadows:** Provides Concealment, doesn't block LoS
-- **Partial or lesser cover:** Can see target, they have cover benefits
-- **Other creatures:** Generally provide cover, don't completely block LoS (see below)
-- **Transparent barriers:** Glass, ice, magical force walls (though may block attacks)
-- **Difficult terrain:** Undergrowth, rubble, etc. (may provide Concealment)
-- **Water:** Can see through clear water (may affect attacks differently)
-
-**Important Distinction:**
-- **Blocked LoS** = Cannot target at all
-- **Concealment** = Can target but with penalties (harder to see clearly)
-- **Cover** = Can target but target has defensive benefits (physical protection)
-
----
+### Prone and Cover
+Being Prone even without cover provides Partial Cover against ranged attacks. Going prone can be combined with physical cover for better protection:
+Prone + Partial Cover = Half Cover (ranged benefit only)
+Prone + Half Cover = full Cover (ranged benefit only)
+Going prone with our without cover does not provide any benefits from melee attacks
 
 ### Creatures as Obstacles
+Intervening creatures can provide cover when an attack (ranged, melee or weave) would pass through or near a square they occupy before reaching your target. The degree of cover depends upon the size of the intervening creature.
+- If the intervening creature is the same size as your target then the target gains Partial cover.
+- If the intervening creature is one size category larger than your target, then the target gains Half Cover
+- If the intervening creature is two+ size categories larger than your target, then the target gains Full cover.
 
-When an attack (ranged or melee) would pass through or near a square occupied by another creature before reaching your target:
+## Line of Sight & Targeting
+You have line of sight to a target if you can draw an unblocked straight line from any point in your space to any point in the target's space.
+Line of sight is required to target with most attacks and weaves. Line of site also determines the effects of cover and concealment. 
+A creature that you cannot see cannot become a target. The following are examples that block line of sight:
+- Solid obstacles: Walls, closed doors, large boulders.
+- Full cover: A creature benefiting from full cover cannot normally be targeted
+- Total darkness: No light source (or enhanced vision) in a Dark environment.
+- Invisible:  You don't have LoS unless you can detect them (they are Hidden).
+- Inside containers: No LoS to creatures inside closed chests, boxes, etc.
 
-#### Intervening Creature Provides Cover
+Some conditions may not block line of sight completely, and instead provide some other benefit to the target:
+- Fog, smoke, mist, heavy rain: Provides Concealment.
+- Dim light or shadows: Provides Concealment
+- Partial cover: Can see target, they have cover benefits.
+- Other creatures: Generally provide partial cover, don't completely block LoS (see below)
+- Transparent barriers: Glass, ice, magical force walls (though may block attacks).
+- Difficult terrain: Undergrowth, rubble, etc. (may provide Concealment)
+- Water: Can see through clear water (may affect attacks differently)
 
-**Size-Based Cover Determination:**
+## Area Effect Weaves
+Area effects weaves do not require line of sight to a specific target and instead are placed within an area. Fireball, Lightning Bolt, and other AOE weaves affect all creatures in area, including allies.Intervening creatures do not provide cover against area effects.
 
-**If intervening creature is same size or larger than your target:**
-- Provides **Partial Cover** to target
+## Targeting Hidden Creatures
+If a creature has the hidden condition then you do not have line of sight to them. You cannot make attack rolls against them. You cannot target them with single-target weaves.You can target their general area with AOE effects (if you know/guess where they might be).
+To gain line of sight to a creature with the Hidden condition you must do one of the following:
+- Succeed on Perception check to detect them. 
+- Use abilities that detect hidden creatures (Blindsight, Tremorsense).
+- Wait for them to reveal themselves (attack, make noise, leave tracks)
 
-**If intervening creature is one size category larger than you:**
-- Provides **Half Cover** to target
+## Invisibility
+Invisibility grants the hidden condition as defined above with extra considerations. If you successfully detect an invisible creature using the methods listed for hidden creatures, the invisible creature reduces the hidden condition to concealed only for the character that detected them.
 
-**If intervening creature is two+ size categories larger than you:**
-- Provides **Three-Quarters Cover** to target
+## Special Senses and Line of Sight
+Some creatures may possess senses superior to the characters. The bestiary entry will detail what additional senses they have.
 
-**Important Notes:**
-- The intervening creature is **NOT** at risk of being hit (you aim carefully around them)
-- This assumes you're deliberately targeting a creature beyond an ally
-- You don't want to hit your ally, so you're trying to shoot/strike around them
+### Darkvision
+Darkvision enables a creature to see in the absence of light. Darkvision grants normal vision in darkness and dim light (although reduced to black and white). A creature with Darkvision can draw line of sight through darkness that would otherwise block vision. Darkvision will normally also specify a range, but if none is specified it is assumed to be 60 ft.
 
+### Blindsight
+Blindsight allows a creature to sense creatures within specified range without relying upon light or any form of sight. Blindsight allows you to draw line of sight to any creatures within Blindsight range, ignoring the hidden condition. Blindsight does not work around corners or through solid barriers. Any target detected using only Blindsight gains the concealed condition to the detecting creature.
 
-#### Area Effect Weaves
+### Tremorsense
+Creatures with Tremorsense are able to detect creatures in that come into contact with the ground within specified range. A creature with Termorsense has line of sight to creatures on the ground within Tremorsense range, ignoring the hidden condition. Any target detected using only Tremorsense gains the concealed condition to the detecting creature.
 
-**Area effects are different:**
-- Fireball, Lightning Bolt, and other AOE weaves affect **all creatures in area**
-- Intervening creatures do **NOT** provide cover against area effects
-
-
----
-
-### Targeting Hidden Creatures
-
-**If a creature is Hidden:**
-- You **do not have LoS** to them (you don't know where they are)
-- You **cannot** make attack rolls against them
-- You **cannot** target them with single-target weaves
-- You **can** target their general area with AOE effects (if you know/guess where they might be)
-
-**To gain LoS to Hidden creature:**
-1. Succeed on Perception check to detect them → they become visible
-2. Use abilities that detect hidden creatures (Blindsight, Tremorsense, Perfect Sight) rendering them concealed
-3. Wait for them to reveal themselves (attack, make noise, leave tracks)
-
---
-
-### Invisible Creatures
-
-**Invisibility grants Hidden condition:**
-- You don't have LoS to invisible creatures by vision alone
-- They cannot be directly targeted
-- You must detect them by other means (sound, smell, touch, environmental clues)
-
-**If you detect invisible creature:**
-- They become Concealed (you know their location but can't see them clearly)
-- You have LoS to their square
-- You can attack with penalties from Concealment
-
-**Perfect Sight or similar abilities:**
-- Grants LoS to invisible creatures
-- You can see and target them normally
-
----
-
-### Special Senses and LoS
-
-#### Darkvision
-- Grants normal vision in darkness and dim light
-- You have LoS through darkness that would otherwise block vision
-- Range specified (typically 60 feet)
-
-#### Blindsight
-- You can sense creatures within specified range without sight
-- You have LoS to creatures within Blindsight range, even if invisible or in total darkness
-- Does not work around corners or through solid barriers
-- Typically requires hearing (can be defeated by Silence)
-
-#### Tremorsense
-- You can detect creatures in contact with the ground within specified range
-- You have LoS to creatures on the ground within Tremorsense range
-- Works even if creature is invisible or in darkness
-- Does not detect flying or burrowing creatures
-
-#### Truesight / Perfect Sight
-- You can see invisible creatures
-- You can see through magical darkness
-- You can see through illusory effects
-- You have LoS to creatures that would otherwise be Hidden by magic
-- Range specified (typically 60-120 feet)
-
----
-
-### Targeting Rules Summary
-
-**To target a creature with an attack or single-target weave:**
-1. You must have line of sight to the target
-2. Target must be within range of attack/weave
-3. Target cannot have Full Cover from you
-4. Target cannot be Hidden from you
-
-**If any requirement fails:**
-- You cannot target that creature
-- You must choose a different target or different action
-
-**Alternative Actions if Cannot Target:**
-- Use AOE effects to target their general area
-- Use Search action to try to find Hidden creatures
-- Move to position where you have LoS
-- Ready action to attack when target becomes visible
+### Perfect Sight
+With Perfect sight you ignore the hidden condition of targets, and can see through magical darkness and illusory effects within the range of your Perfect sight.
