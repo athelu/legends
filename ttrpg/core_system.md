@@ -1,292 +1,176 @@
 # Core System
 
-### Core Mechanic: Roll Under
+The Legends RPG system is a success counting system. Characters make rolls and count the number of successes made to determine the outcome of situation during the game. 
+A d8 roll under mechanic is used to determine results. The only dice required for Legends are d8. All checks will be determined with the rolling of 2d8.
 
-#### Basic Skill Test
+## Skill Test
 
-1.  Roll d8 for the governing attribute
-2.  Roll d8 for the skill
-3.  Each die that rolls **under** its value = 1 success
-4.  **Rolling a natural 1 always counts as a success** regardless of attribute/skill value
-5.  **Rolling an 8 always fails** (counts as 0 successes)
-6.  Maximum 2 successes per basic test
+A skill test is used when the character wishes to perform some action in the game using a skill, regardless if they posses any ranks in the skill. To perform a skill test:
+1. Roll d8 for the governing attribute
+2. Roll d8 for the skill
+3. Each die that rolls under its value = 1 success
 
-#### Success Thresholds
--   Easy Task: 1 success required
--   Hard Task: 2 successes required
+Rolling a natural 1 always counts as a success regardless of attribute/skill rank.
+Rolling an 8 always fails.
 
-### Advanced Rolling Mechanics
+**When making a skill test:**
+- Easy Task: 1 success required
+- Hard Task: 2 successes required
 
-**Shared Attribute Roll:** When making multiple checks with the same attribute as part of a single action or simultaneous activity, roll the attribute die once. Each check uses this same attribute result but rolls its own skill die separately.
+If the GM determined that a particular skill test was hard and required 2 success but the player only generated 1 success, the GM may allow the test to succeed with complications. If so, the following is performed:
+1. Roll d8
+2. If result is < your Current Luck: No complication.
+3. If result is > your Current Luck: GM introduces a complication, cost, or consequence to the test.
 
-**Single Die Modifiers:** Some effects specify they modify only the "attribute die" or "skill die" rather than both. Unless a rule specifically states it affects only one die, all modifiers apply to both dice in a check.
+## Opposed Skill Test
 
-**Examples:**
--   "Add 1 to both die results" - affects both attribute and skill dice
--   "Add 1 to the attribute die only" - only affects attribute die
--   "Reroll the skill die" - only affects skill die
+Some rolls in Legends, primarily combat, will require the use of opposed skill tests. An opposed skill test works the same as a basic skill test, but instead of needing to achieve 1 or 2 successes your rolled successes are reduced by your opponents successes.
+Let’s use combat for this example. Lex wants to use his katana to attack a foe. He performs a skill test using his Melee Combat skill. He would make the following test:
 
-### Fortune (bonus):
--   Roll 3d8 total (instead of the normal 2d8)
--   Take the best (lowest) 2 results
--   Assign one result to the attribute, one to the skill
--   Count successes normally
--   Represents favorable circumstances, superior positioning, or cosmic luck
+***Agility (6) + Melee Combat (5)***
 
-### Misfortune (penalty):
--   Roll 3d8 total (instead of the normal 2d8)
--   Take the worst (highest) 2 results
--   Assign one result to the attribute, one to the skill
--   Count successes normally
--   Represents unfavorable circumstances, poor positioning, or cosmic ill luck
+The numbers represent the ability score and ranks that Lex possesses. Lex rolls 2d8, and before rolling he assigns one die as his agility die and the other as his melee combat die. He rolls the dice and receives:
 
-#### Example with Fortune:
--   Stealth check: Agility 4, Stealth 3
--   Roll 3d8: results are 2, 5, 7
--   Take best 2: 2 and 5
--   Assign: 2 to Agility (<4? Success!), 5 to Stealth (<3? Failure)
--   Total: 1 success
+***Agility (4) + Melee Combat (4)***
 
-**Multiple sources:** Fortune and Misfortune cancel each other out on a 1-to-1 basis. If you have 2 sources of Fortune and 1 source of Misfortune, you have 1 Fortune remaining.
+Both of his dice rolled BELOW the values of his attribute and his skill ranks meaning he achieved 2 successes. 
+His opponent would then be allowed to defend against the attack using their Melee Combat with the following values:
 
-### Critical Success: Rolling double 1s
--   Both dice automatically succeed (counts as 2 successes)
--   Grants +1 additional success (total 3 successes in opposed rolls)
--   Restore all Luck points to maximum
--   **In combat:** 3+ success margin = maximum damage + Luck restore + apply condition
+***Agility (5) + Melee Combat (4)***
 
-### Critical Failure: Rolling double 8s
--   Both dice automatically fail (0 successes)
--   Action fails catastrophically
--   GM determines consequences
+The opponent assigns their dice and makes a roll resulting in:
 
-### Opposed Rolls
--   Both participants roll their relevant attribute + skill
--   More successes wins
--   Tie (0 margin): Compare modified dice totals (after luck spending). Whoever rolled **lower** total wins. If still tied, defender wins.
-    -   **Player advantage:** Only player characters can spend luck, giving them an edge in tiebreakers
+***Agility (4) + Melee Combat (5)***
 
-## The Luck System
-### Luck Pool
--   Each session begins with Luck points equal to your Luck attribute
--   Current Luck depletes as you spend it throughout the session
--   Resets to full after a long rest/new session
+Comparing the die results to the attribute and skill ranks of the opponent results in only 1 success. 
 
-### Spending Luck (Active Use)
--   Cost: 1 Luck point reduces any single die result by 1
--   Can spend multiple points on one roll
+This 1 success would remove one of Lex’s successes, leaving him with a margin of success of 1. See the combat section for more details.
 
-### Luck for Complications (Reactive)
-When you achieve partial success (1 success when 2 needed):
-1.  Roll d8
-2.  If result is < your Current Luck: No complication
-3.  If result is > your Current Luck: GM introduces a complication, cost, or consequence
+## Advanced Test Mechanics
 
-### Luck in Saving Throws
-All three saving throw types roll Attribute + Current Luck and count successes:
--   Fortitude Save: Constitution + Current Luck
--   Reflex Save: Agility + Current Luck
--   Willpower Save: Wisdom + Current Luck
+The basic skill test can be adjusted to accommodate bonuses or penalties applied due to abilities or changing situations. The standard methods and ways that skill tests can be modified at outlined here. 
 
-Roll 2d8 (one for the attribute, one for Current Luck), count successes.
+### Shared Attribute Roll
+
+When making multiple checks with the same attribute as part of a single action or simultaneous activity, roll the attribute die once. Each check uses this same attribute result but rolls its own skill die separately. Examples of this modification would be when using two-weapon fighting.
+
+### Single Die Modifiers
+
+The vast majority of bonuses and penalties modify both die results in a skill test. However, some effects specify they modify only the "attribute die" or "skill die" rather than both. Unless a rule specifically states it affects only one die, all modifiers apply to both dice in a check.
+**Examples**
+- “Add 1 to both die results"  affects both attribute and skill dice
+- "Add 1 to the attribute die only" - only affects attribute die
+- "Reroll the skill die" - only affects skill die
+
+### Fortune
+
+Fortune is the largest bonus that is typically applied to a skill test. Fortune represents favorable circumstances, superior positioning, or cosmic luck. When you may a skill test with fortune you: 
+- Roll 3d8  (instead of the normal 2d8)
+- Take the best (lowest) 2 results
+- Assign one result to the attribute, one to the skill AFTER making the role.
+- Count successes normally
+
+### Misfortune
+
+Misfortune is the largest penalty that is typically applied to a skill test. Misfortune represents unfavorable circumstances, poor positioning, or cosmic ill luck. When you may a skill test with misfortune you:
+- Roll 3d8 total (instead of the normal 2d8)
+- Take the worst (highest) 2 results
+- Assign one result to the attribute, one to the skill AFTER the roll
+- Count successes normally
+
+Multiple sources providing fortune and misfortune cancel each other out on a 1-to-1 basis. If you have 2 sources of Fortune and 1 source of Misfortune, you have 1 Fortune remaining.
+
+### Critical Success
+
+A critical success occurs when both of the dice rolled in a skill test result in natural 1s. Dice that are modified to be a 1 do not count. A critical success results in the following:
+- Both dice generate success regardless of target number.
+- Grants +1 additional success (total 3 successes)
+- Restore the characters Luck points to maximum
+
+### Critical Failure
+
+A critical failure occurs when both of the dice rolled in a skill test result in natural 8s. Dice that are modified to be a 8 do not count. A critical failure results in the following: 
+- Both dice automatically fail (0 successes)
+- Action fails catastrophically
+- GM determines consequences
+
+## Luck System
+
+Each character in Legends has a Luck Attribute. Player characters however also get a Luck Pool. This is represented on the character sheet as Current Luck.
+Each session, a character begins with a Luck Pool equal to their Luck attribute. Luck points may be spent throughout a session, and each point spent reduces the Luck Pool (Current Luck). 
+
+### Spending Luck
+
+During the course of a session a character may choose to spend their luck in two ways
+
+### Reduce die roll
+
+Spend 1 Luck point reduces any single die result by 1. Can spend multiple points on one roll.
+
+### Prevent complication
+
+When you achieve partial success, where 1 success was generated when 2 are needed for a Hard skill test a complication can occur. You may choose to spend 1 luck to avoid the complication.
+
+### Restoring Luck
+
+Luck is a finite resource and there are a few ways that it may be recovered.
+
+#### Long Rest
+A characters Current Luck resets to full after a long rest.
+
+#### Short Rest
+A character restores 1 Luck point for completing a short rest. This cannot exceed the characters luck attribute value.
+
+#### Story Awards
+The GM may restore luck points for heroic actions and epic roleplay moments, clever solutions, Lucky breaks, fortuitous discoveries, major story milestones or defeating significant enemies. The choice to restore luck points and the amount restored is up to the GM.
+
+#### Critical Success
+Rolling double 1s restores a character Current Luck points to maximum their maximum
+
+## Saving Throws
+A saving throw is another type of test made using just the characters attributes. All three saving throw types roll Attribute + Current Luck and count successes:
+- Fortitude Save: Constitution + Current Luck
+- Reflex Save: Agility + Current Luck
+- Willpower Save: Wisdom + Current Luck
 These successes are compared against the threat's successes.
+As you spend Luck throughout the session, your Current Luck decreases, making it harder to generate successes on your Luck die!
 
-**Important:** As you spend Luck throughout the session, your Current Luck decreases, making it harder to generate successes on your Luck die!
+## Resting
+Legends utilizes a short rest and long rest system for resource recovery. 
+### Short Rest
+A short break in adventuring, a minimum of 10 minutes, spent to catch your breath and patch up wounds. A short rest has the following standard benefits:
+- Regain HP equal to Constitution attribute
+- Regain 1 Luck point
 
-#### Example:
--   Early session with Current Luck 3: Roll Constitution d8 and Luck d8
-    (need <3 on Luck die)
--   Late session with Current Luck 0: Roll Constitution d8 and Luck d8 (need 1 on Luck die as 1 = success)
--   Your Constitution can still generate successes, but Luck only on a 1
-
-### Restoring Luck During Sessions
-
-#### Short Rest (10 minutes):
--   Regain 1 Luck point
--   Cannot exceed maximum
-
-#### GM Story Awards (1-2 Luck):
--   Heroic actions and epic roleplay
--   Clever solutions
--   Lucky breaks and fortuitous discoveries
--   Major story milestones
--   Defeating significant enemies
-
-#### Critical Success Bonus:
--   Rolling double 1s restores ALL Luck points to maximum
-
-#### Consumable Items (Optional):
--   Lucky charms and talismans can restore 1-3 Luck
--   Found as treasure or purchased from merchants
-
-## Hit Point Recovery
-
-### Short Rest (10 minutes)
--   Regain HP equal to Constitution attribute
--   Regain 1 Luck point
--   No limit on frequency (can be taken as often as needed)
-
-### Long Rest (8 hours of sleep)
--   Regain HP equal to Constitution × 4
--   Restore all Luck points to maximum
--   Restore all Energy points to maximum
--   Remove certain conditions (GM discretion)
-
-#### Example: A character with Constitution 4 (32 max HP):
--   Short rest: Regains 4 HP
--   Long rest: Regains 16 HP (half max HP)
--   Full recovery requires 2 long rests without magical healing
+### Long Rest
+A long rest can only be taken in a safe place and requires a minimum of 8 hours. This is typically a sleeping period.  A long rest has the following standard benefits:
+- Regain HP equal to Constitution × 4
+- Restore all Luck points to maximum
+- Restore all Energy points to maximum
+- Remove certain conditions (GM discretion)
 
 ## Action Economy
-
-### Actions Per Turn
-
-Each character gets 3 actions per turn
-
-#### Actions can be spent on:
--   Standard Actions (combat, weave, use item, skill check, etc.)
--   Move Actions (move up to your speed)
--   Minor Actions (draw weapon, open door, speak, etc.)
+Each character gets 3 actions per turn to use as they see fit. Actions can be spent on a number of activities, such as:
+- Standard Actions (combat, weave, use item, skill check, etc.)
+- Move Actions (move up to your speed)
+- Minor Actions (draw weapon, open door, speak, etc.)
 
 ### Action Keywords
--   [Combat] - Offensive/tactical combat abilities
--   [Activate] - Using items or devices
--   [Interact] - Non-combat interactions and skills
--   [Move] - Movement and positioning
--   [Minor] - Quick, simple actions
--   [Free] - No action cost
--   [Reaction] - Triggered responses (don't use turn actions)
+Each action in Legends will have a keyword denoting the type of action it is. The action keywords are presented below:
+- [Combat] - Offensive/tactical combat abilities
+- [Activate] - Using items or devices
+- [Interact] - Non-combat interactions and skills
+- [Move] - Movement and positioning
+- [Minor] - Quick, simple actions
+- [Free] - No action cost
+- [Reaction] - Triggered response outside of your turn that does not consume an action
 
-#### Minor Action Rule
--   One [Minor] action can be combined with a [Move] action for free
--   Examples: Draw weapon while moving, open door while moving
+### Minor Action Rule
+One [Minor] action can be combined with a [Move] action for free. Examples would be drawing a weapon while moving, or opening a door while moving.
 
 ### Multiple Action Penalty
-
-Only actions with [Combat] keywords trigger the penalty:
--   First [Combat] action: Normal
--   Second [Combat] action: Add 1 to both die results
--   Third [Combat] action: Add 2 to both die results
-
+Combat actions have a penalty that is triggered if more than one is taken during a characters turn.Only actions with [Combat] keywords trigger the penalty:
+- First [Combat] action: Normal
+- Second [Combat] action: Add 1 to both die results
+- Third [Combat] action: Add 2 to both die results
 All other keyword types can be used multiple times without penalty.
-
-## Experience and Advancement
-
-### Experience Points (XP)
--   **24 XP per session** (awarded equally to all players)
--   XP can be spent on attributes, skills, Potentials (if magical), or feats
-
-### Advancement Costs
--   **Skills:** 4 for rank 1, else 8 × current rank
--   **Attributes:** 16 × current rank
--   **Potentials:** 16 × current rank (magical characters only)
--   **Feats:** 40 XP each
-
-### Character Tiers
-
-| Tier | XP Range | Sessions (24/session) | D&D Equivalent |
-|------|----------|----------------------|----------------|
-| 1 | 0–120 | ~5 | Levels 1–2 |
-| 2 | 120–360 | ~10 | Levels 3–5 |
-| 3 | 360–600 | ~10 | Levels 6–8 |
-| 4 | 600–840 | ~10 | Levels 9–11 |
-| 5 | 840–1080 | ~10 | Levels 12–14 |
-| 6 | 1080–1320 | ~10 | Levels 15–17 |
-| 7 | 1320–1560 | ~10 | Levels 18–19 |
-| 8 | 1560+ | ~10+ | Level 20 |
-
-
-##### Progression Rate: At 24 XP per session:
--   Tier 1→2: ~5 sessions
--   Tier 2→3: ~10 sessions
--   Tier 3→4: ~10 sessions
--   Tier 4→5: ~10 sessions
--   Tier 5→6: ~10 sessions
--   Tier 6→7: ~10 sessions
--   Tier 7→8: ~10 sessions
-
-##### Notes on Feat Limits:
--   The 2 starting feats are FREE and do NOT count against tier limits
--   Tier limits apply only to feats purchased with XP
--   This allows characters to grow from 4 feats (Tier 1) to 18 feats (Tier 8)
--   Characters can still mix and match feat types freely (martial + magical, etc.)
-
-
-## Success Probability Reference
-
-| Value | Single Die | At Least 1 Success | Both Succeed (2 successes) |
-|-------:|:----------:|:------------------:|:--------------------------:|
-| 1/1    | 12.5%      | 23%                | 1.6%                       |
-| 2/2    | 25%        | 44%                | 6.25%                      |
-| 3/3    | 37.5%      | 61%                | 14%                        |
-| 4/4    | 50%        | 75%                | 25%                        |
-| 5/5    | 62.5%      | 86%                | 39%                        |
-| 6/6    | 75%        | 94%                | 56%                        |
-| 7/7    | 87.5%      | 98%                | 77%                        |
-| 8/8    | 87.5%      | 98%                | 77%                        |
-
-### Typical Starting Character Success Rates
-
-With array 4,3,3,3,3,2,2,1 and skills at 2-3:
-
-#### Best skills (Attribute 4/Skill 3):
--   61% at least one success
--   14% both successes
-
-#### Good skills (Attribute 3/Skill 2):
--   53% at least one success
--   9% both successes
-
-#### Weak areas (Attribute 2/Skill 1):
--   34% at least one success
--   3% both successes
-
-### Weaving Expected Successes (Channeling Quality Roll)
-
-**Note:** These averages apply to the weaving roll (which determines channeling quality and bonuses to targeting). The final effect strength is determined by a separate targeting roll.
-
-Using two energies in a complex weave, within trained ability (no overspending):
-
-#### Competent Weaver (Potential 4, Mastery 3):
--   Average: 1.75 successes (typically 2) → No targeting bonus
-
-#### Skilled Weaver (Potential 5, Mastery 4):
--   Average: 2.25 successes (typically 2-3) → 0-1 targeting die reduced by 1
-
-#### Expert Weaver (Potential 6, Mastery 5):
--   Average: 2.75 successes (typically 3) → Reduce 1 targeting die by 1
-
-#### Master Weaver (Potential 8, Mastery 7):
--   Average: 3.75 successes (typically 4) → Reduce targeting dice by 2
-
-## The Dying Mechanic
-
-### Reaching 0 HP
--   Any attack that reduces you to 0 HP or below stops at 0 HP (excess damage ignored)
--   Immediately gain Dying, Unconscious, Blinded, and Prone conditions
-
-### Stabilization Attempts
-On your turn while Dying:
-
-#### At 0 HP: Make Fortitude save (Constitution + Current Luck)
--   1+ successes: Stabilize at 0 HP (Dying ends, remain Unconscious, Blinded and Prone)
--   0 successes: Drop to -1 HP
-
-### Death Threshold
-If negative HP equals your Constitution score, you die
--   **Example:** Constitution 4 character dies at -4 HP
-
-#### Ally Assistance
-An ally can use an [Interact] action to stabilize you with a Medicine
-check:
--   2 successes: You stabilize at 0 HP
--   1 success: You gain -1 to both dice on your next stabilization save
-
-Magical healing immediately restores you to consciousness and removes
-Dying, Unconscious, and Blinded conditions.
-
-### Recovering from Stabilization
-Once stabilized, you remain Unconscious, Blinded and Prone.
-At the end of your next turn, make a Will save (Wisdom + Luck):
--   1+ successes: Regain consciousness with 1 HP. Remove Unconscious and Blinded conditions. Receive Grievously Wounded condition
--   0 successes: Remain Unconscious, Blinded and Prone. Repeat save each turn

@@ -51,10 +51,6 @@ The Positive Plane is a realm of pure life energy and vitality, a place where po
 It is a plane of pure darkness, coldness, and lifelessness, composed entirely of negative energy. This energy is the opposite of the positive energy that animates living creatures, and it drains life force from any living beings that enter the plane.
 The Negative Energy Plane is inhospitable to most forms of life, but some creatures have adapted to its harsh environment. Travel to the Negative Energy Plane can be dangerous, as prolonged exposure to its negative energy can drain the life force of living beings and even kill them. Within the setting of Legends of Athelu, the negative Plane contains the lower planes as well (Acheron, The Nine Hells, Ghenna, Hades, Carceri, The Abyss and Pandemonium).
 
-## Out of Sync Planes 
-
-The Planes of Limbo and Mechanus are additional overlapping planes with the prime material, but are out of phase with the other planes, which prevents travel to or from them, and therefore they are not part of the known cosmology of Athelu. 
-These planes are where Athore banished the dwarves and the end of the war. Unable to destroy his creations, he instead trapped them here, cut off from the rest of the universe. 
 
 # Ley Lines
 
