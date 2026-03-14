@@ -33,7 +33,7 @@ You spent your early days in a religious monastery or cloister. You may have tra
 Crumbling ruins called to you louder than the comforts of civilization. You've spent years piecing together fragments of lost empires, and you know that the greatest treasures aren't gold, they're answers. Adventuring might have started as just another dig, but you've discovered that sometimes the most interesting artifacts are still being used by their current owners.
 **Skills:** History 3, Investigate 2, +32 XP
 **Equipment:** journal, map case, traveler's clothes, work boots
-**Feature** - Historical Insight: When examining ruins or artifacts, the GM will provide one useful historical fact or context clue.
+**Feature** - Historical Insight: When examining ruins or artifacts, the character will know one useful historical fact or context clue.
 
 #### Artisan
 As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith's apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships. Your guild connections remain strong which is useful when you need work, materials, or a favor.
@@ -46,12 +46,6 @@ Your art is your greatest passion, whatever form it takes. You may adventure for
 **Skills:** Perform 3, Perception 2, +32 XP
 **Equipment:** Artist's tools, fine clothes, shoes
 **Feature** - Artistic Reputation: Your work is recognized in certain circles. Can earn money through commissions and gain access to wealthy patrons.
-
-#### Athlete
-Years of competition taught you that glory is fleeting but discipline is forever. You might have retired at your peak, or perhaps an injury ended your career prematurely, but the training never really stops, it just finds new applications. At least adventuring pays better than most tournaments.
-**Skills:** Athletics 2, Acrobatics 2, Perform 1, Intimidate 1, +40 XP
-**Equipment:** Traveler's clothes, backpack, shoes
-**Feature** - Competitor's Spirit: You're known in sporting circles. Can find competitions, training facilities, and fellow athletes who respect your dedication.
 
 #### Bandit
 You took what you needed from those who had more than enough, or at least that's what you told yourself. As a member of a gang or working alone, the outlaw life taught you skills that polite society condemns but secretly envies. You might be seeking redemption, or you might just be looking for richer targets. Perhaps it's a bit of both.
@@ -69,7 +63,7 @@ You have three specialties: cutting hair, treating minor wounds, and listening t
 You poured drinks and kept the peace in an establishment where ale flowed as freely as stories. Every regular had a tale, every stranger brought news from afar, and you were right in the middle of it all. You know how to read people and make them comfortable and those are useful skills anywhere.
 **Skills:** Empathy 2, Persuasion 2, Society 2, Perception 2, +24 XP
 **Equipment:** Apron, common clothes, shoes
-**Feature** - Tavern Talk: You know how to listen and learn. Gain Fortune on skill tests when gathering information in drinking establishments.
+**Feature** - Tavern Talk: You know how to listen and learn and have a chance to pick up useful information in drinking establishments.
 
 #### Barrister
 Piles of legal manuals, stern teachers, and experience in the courtroom have instructed you in legal matters. You're capable of mounting a prosecution or defense in court, and you tend to keep abreast of local laws. You never know when you might need to talk your way out of trouble on short notice. Or talk your friends out of it, for that matter.
@@ -129,7 +123,7 @@ As an unscrupulous independent or as a member of an underworld organization, you
 Whether hauling cargo for merchants or transporting passengers, you developed a reputation for getting through when others turned back. The work was steady but monotonous, and eventually, you decided that if you were going to risk your life on dangerous roads anyway, you might as well do it for more interesting reasons.
 **Skills:** Wilderness 2, Athletics 2, Society 1, Perception 1, +40 XP
 **Equipment:** Whip, traveler's clothes, bedroll, work gloves, work boots
-**Feature** - Beast Handler: You have expertise with draft animals and vehicles, gaining Fortune when working with them.
+**Feature** - Beast Handler: You have expertise with draft animals and vehicles.
 
 #### Entertainer
 You might have been an actor, a dancer, a musician, a street magician, or any other sort of performer. Adventuring offers new audiences and new material and every narrow escape is another dramatic moment for future performances.
@@ -147,7 +141,7 @@ With a strong back and an understanding of seasonal cycles, you tilled the land 
 The water was your livelihood and your teacher. You might have left because the catches grew thin, or perhaps you realized the biggest fish weren't in the water at all. Either way, patience is a virtue you've mastered, and the sea's lessons apply to more than just fishing.
 **Skills:** Wilderness 2, Athletics 2, Perception 1, Craft 1, +40 XP
 **Equipment:** Net, common clothes, shoes
-**Feature** - Water Sense: You understand water, tides, and aquatic life, gaining Fortune on related skill checks.
+**Feature** - Water Sense: You understand water, tides, and aquatic life.
 
 #### Gambler
 The thrill of the win drew you into games of chance, though you know that in the long run, the house always wins, that is unless you cheat, and you definitely know how to do that. Adventuring could be a way out of debt or buy-in to the next big game. At least when you gamble with your life, the odds are more honest.
@@ -165,7 +159,7 @@ You served in the guard, standing watch while others slept. You know the boredom
 As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. Adventuring gives you access to rare specimens you could never afford before.
 **Skills:** Medicine 3, Wilderness 2, +32 XP
 **Equipment:** Herbalism kit, mortar and pestle, common clothes, shoes
-**Feature** - Plant Lore: You can identify useful plants and create basic remedies. Medicine checks to treat poison have Fortune.
+**Feature** - Plant Lore: You can identify useful plants and create basic remedies.
 
 #### Hermit
 You lived a life of solitude. Adventuring might represent your first foray out among other people in some time. This might be a welcome reprieve from solitude or an unwanted change, but in either case, you're likely still rough around the edges.
@@ -177,13 +171,13 @@ You lived a life of solitude. Adventuring might represent your first foray out a
 You stalked and took down animals and other creatures of the wild. The skills transfer remarkably well regardless if you're tracking a deer or a bandit, the principles are the same. You just have to hope the prey doesn't shoot back.
 **Skills:** Wilderness 2, Ranged Combat 2, Stealth 1, Perception 1, +40 XP
 **Equipment:** Bow or crossbow, arrows/bolts, high boots, work clothes, work gloves
-**Feature** - Tracker: You can track creatures through wilderness and gain Fortune on Wilderness checks to follow trails or identify animal signs.
+**Feature** - Tracker: You can track creatures through wilderness and identify animal signs.
 
 #### Investigator
 You made your living uncovering truths that others wanted hidden. You developed a reputation for finding answers. Your skills at noticing details and following leads are invaluable, even if your companions find your constant questions irritating.
 **Skills:** Investigate 3, Perception 2, +32 XP
 **Equipment:** Magnifying glass, journal, ink, quill, fine clothes, shoes
-**Feature** - Keen Mind: When examining a crime scene or mystery, the GM will provide one crucial clue or detail others might miss.
+**Feature** - Keen Mind: When examining a crime scene or mystery, you may uncover one crucial clue or detail others might miss.
 
 #### Laborer
 You've spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else's command. At least now when you're risking your life there's treasure involved instead of just a silver a day and aching muscles.
@@ -207,7 +201,7 @@ Bringing in lawbreakers or fighting in petty wars lined your pockets. Maybe you 
 You earned a living wrenching precious minerals from the lightless depths of the earth. Adventuring might have seemed lucrative or glamorous compared to this backbreaking labor and if you have to head back underground, this time you plan to do so armed with a real weapon instead of a miner's pick. At least now the things trying to kill you might be guarding treasure instead of just being cave-ins.
 **Skills:** Might 2, Athletics 2, Perception 1, Craft 1, +40 XP
 **Equipment:** Lantern, work clothes, hemp rope, work boots
-**Feature** - Underground Sense: You can navigate underground spaces and identify minerals and stone quality. Gain Fortune on checks related to underground environments.
+**Feature** - Underground Sense: You can navigate underground spaces and identify minerals and stone quality.
 
 #### Noble
 To the common folk, the life of a noble seems one of idyllic luxury, but growing up as a noble or member of the aspiring gentry, you know the reality: a noble's lot is obligation and intrigue. Whether you seek to escape your duties by adventuring or to better your station, you have traded silks and pageantry for an adventurer's life. The question is whether your family sees this as honorable service or scandalous rebellion.
@@ -304,9 +298,3 @@ You were raised in a noble or wealthy household, educated and cared for but neve
 **Skills:** Society 2, History 2, Empathy 1, Perception 1, +40 XP
 **Equipment:** Fine clothes, general topic book, quill, ink, vellum parchment x2, shoes
 **Feature** - Noble Education: You were raised in a noble household and understand etiquette and high society, though you lack the full privileges and recognition that true nobles command.
-
-#### Weaver
-Thread became cloth under your practiced hands, patterns emerging from careful planning and patient work. You understand materials and construction in ways that prove surprisingly useful when you need to improvise or understand how something was made.
-**Skills:** Craft 2, Perception 2, Society 1, Devices 1, +40 XP
-**Equipment:** Common clothes, shoes, scissors, sewing kit
-**Feature** - Textile Expertise: You understand fabrics and their properties. Can identify quality, origin, and uses of textiles, and create useful cloth items with proper materials.

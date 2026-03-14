@@ -49,7 +49,7 @@ Cold is a stacking condition and making a successful saving throw will reduce th
 - 2 success: Remove all cold conditions
 
 ### Frozen (Level 4 Cold)
-**Effect:** Body encased in ice or frozen solid. Restrained condition active Take 1d8 cold damage at the beginning of your turn.
+**Effect:** Body encased in ice or frozen solid. Restrained condition active Take 4 cold damage at the beginning of your turn.
 **Recovery:**  Use 1 [Action] to make Might check.
 - 1 success: subtract 1 from both dice on next attempt
 - 2 success: Remove Frozen and Restrained condition.
@@ -156,14 +156,14 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 **Ally assistance:** Ally within 5 feet can use 1 [Action]: Automatic extinguish
 
 ### Ignited (Level 3 Fire)
-**Effect:** Character is on fire. Take 1d8 fire damage at the beginning of each of your turns.
+**Effect:** Character is on fire. Take 4 fire damage at the beginning of each of your turns.
 **Recovery:** Use 1 [Action] to drop and roll: Make Reflex save
 - 1 success: Reduce condition to Smoldering
 - 2 success: Remove all fire conditions
 **Ally assistance:** Ally within 5 feet can use 1 [Action]: Automatic extinguish
 
 ### Burning (Level 4 Fire)
-**Effect:** Character is engulfed in intense flames. Take 2d8 fire damage at the beginning of each of your turns. All actions: Add 1 to die results.
+**Effect:** Character is engulfed in intense flames. Take 8 fire damage at the beginning of each of your turns. All actions: Add 1 to die results.
 **Recovery:** Use 1 [Action] to drop and roll: Make Reflex save
 - 1 success: Reduce condition to Ignited
 - 2 successes: Remove all fire conditions
@@ -199,11 +199,11 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 **Recovery:** Fortitude save at end of 1 hour (1 success). Medicine check (2 successes) can end Poisoned early.
 
 ### Poisoned (Strong)
-**Effect:** All attribute dice: Add 2 to die results.  HP regeneration from short/long rests reduced by half.Target takes 1d8 damage each hour until the condition is removed.
+**Effect:** All attribute dice: Add 2 to die results.  HP regeneration from short/long rests reduced by half.Target takes 4 damage each hour until the condition is removed.
 **Recovery:** Fortitude save at end of 4 hours (1 success). Medicine check (2 successes) can end Poisoned early.
 
 ### Poisoned (Deadly)
-**Effect:** All attribute dice: Add 2 to die results.  Long and short rests provide no benefit..Target takes 2d8 damage each hour until the condition is removed.
+**Effect:** All attribute dice: Add 2 to die results.  Long and short rests provide no benefit..Target takes 8 damage each hour until the condition is removed.
 **Recovery:** Fortitude save at end of 4 hours (1 success). Antidote can remove condition early.
 
 ### Prone

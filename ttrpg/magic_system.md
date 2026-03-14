@@ -1016,7 +1016,7 @@ Most magical conditions allow the target to attempt a save at the end of each of
 **Fire Bolt (Fire 2, Simple Weave):**
 - Net 1 (targeting 1, target 0): 4 damage (half) + Singed (minor - subtract 1 from next die)
 - Net 2 (targeting 2, target 0): 8 damage + Smoldering (moderate - 1 fire damage per turn)
-- Net 3 (targeting 3, target 0): 16 damage + Ignited (major - 1d8 per turn, action to extinguish)
+- Net 3 (targeting 3, target 0): 16 damage + Ignited (major - 4 per turn, action to extinguish)
 
 **Fireball (Fire 5, Medium Level AOE):**
 - Net 1 (targeting 2, target 1): 14 damage (half) + Singed (minor)
@@ -1050,8 +1050,7 @@ For complete condition descriptions, mechanics, and recovery rules, see the **Co
 #### Core Ability
 Automatic for all Divine Gift characters.
 - Action: Channel Divinity [Combat] (2 actions)
-- Uses: Once per short rest, or spend 1 Luck point for additional use
-- Cost: Minimum 4 Energy Points, can spend more (up to Positive or Negative Potential)
+- Uses: Equal to character tier per long rest, or spend 1 Luck point for additional use
 - Range: 30-foot radius centered on you
 - No Roll Required: Channeling automatically succeeds for Heal/Harm intents
 
@@ -1069,36 +1068,36 @@ Automatic for all Divine Gift characters.
 
 #### The Six Channel Types
 
-##### 1. Channel Positive - HEAL Intent (Good Paths Only)
-- ALL living creatures within range heal 1d8 HP per 4 Energy spent
+##### 1. Channel Positive - HEAL Intent
+- ALL living creatures within range heal 1d8 HP per 2 Tiers (minimum 1d8)
 - Affects: Living creatures (anything that can be healed)
 - Does NOT affect: Undead
 - Indiscriminate: Heals friends AND enemies
 
-##### 2. Channel Positive - HARM Intent (Good Paths Only)
-- ALL undead within range take 1d8 positive damage per 4 Energy spent
+##### 2. Channel Positive - HARM Intent 
+- ALL undead within range take 1d8 positive damage per 2 Tiers (minimum 1d8)
 - Affects: Undead only
 - Does NOT affect: Living creatures
 - No save (raw divine power)
 - Indiscriminate: Damages ALL undead
 
-##### 3. Channel Positive - TURN Intent (Good Paths Only)
+##### 3. Channel Positive - TURN Intent 
 - All undead within range must resist
-- Channeler rolls: Wisdom + Positive Mastery (2d8, count successes)
-- Each undead rolls: Will save (Wisdom + Luck, count successes)
+- Channeler rolls: Wisdom + Positive Mastery
+- Each undead rolls: Will save
 - Compare successes:
   - Undead gets fewer: Flees for 1 minute, cannot approach within 30 feet
   - Undead equals or exceeds: Resists, no effect
 - Indiscriminate: Turns ALL undead
 
-##### 4. Channel Negative - HEAL Intent (Evil Paths Only)
-- ALL undead within range heal 1d8 HP per 4 Energy spent
+##### 4. Channel Negative - HEAL Intent (Dragon Cult or Twisted Path only)
+- ALL undead within range heal 1d8 HP per 2 Tiers (minimum 1d8)
 - Affects: Undead only
 - Does NOT affect: Living creatures
 - Indiscriminate: Heals ALL undead
 
-##### 5. Channel Negative - HARM Intent (Evil Paths Only)
-- ALL living creatures within range take 1d8 negative damage per 4 Energy spent
+##### 5. Channel Negative - HARM Intent (Dragon Cult or Twisted Path only)
+- ALL living creatures within range take 1d8 negative damage per 2 Tiers (minimum 1d8)
 - Affects: Living creatures only (including the channeler!)
 - Does NOT affect: Undead
 - Reflex save (Agility + Luck): Count successes, reduce damage by 1d8 per success (minimum 0)
@@ -1106,16 +1105,14 @@ Automatic for all Divine Gift characters.
 
 ##### 6. Channel Negative - COMMAND Intent (Evil Paths Only)
 - Target one undead within range (not area effect)
-- Channeler rolls: Wisdom + Negative Mastery (2d8, count successes)
-- Target rolls: Will save (Wisdom + Luck, count successes)
+- Channeler rolls: Wisdom + Negative Mastery
+- Target rolls: Will save
 - Compare successes:
   - You get more: Undead obeys commands for 1 minute
   - Tie or target wins: Resists, no effect
 
 #### Key Principle
-##### Intent Overrides Energy Type:
+##### Intent Determines Effect:
 - Heal intent: Only heals (never harms)
 - Harm intent: Only harms (never heals)
 - Special intents: Turn/Command require opposed rolls
-
-**Alignment Restriction:** Your Divine Path determines which channel options are available. Good paths (Cleric, Druid) use Positive energy to heal allies and destroy undead. Evil paths (Death Cleric, Blight Druid) use Negative energy to heal undead, harm living creatures, and command the dead.
