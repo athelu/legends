@@ -29,6 +29,24 @@ This might sound overwhelming if you're new to GMing, but remember: you don't ne
 
 Your primary goal isn't to "beat" the players or tell them your story. It's to create interesting situations, present meaningful choices, and facilitate everyone having a good time. Some GMs run published adventures; others create everything from scratch; most do a mix of both. All approaches work.
 
+### What you will Need
+To run Legends of Athelu, you will need the following items:
+
+- This rulebook (or access to the rules)
+- Character sheets for each player
+- Eight-sided dice (d8s) — several per person, ideally 4–6 each
+- Paper and pencils for notes
+- A way to track initiative during encounters
+
+Optional but helpful:
+
+- A battle map and miniatures to visualize combat
+- Reference sheets for commonly used rules
+- Digital tools for character tracking
+- Dice rolling apps if you prefer digital dice
+
+The most important tool is imagination and willingness to collaborate. 
+
 ### Running Sessions
 A typical Legends session lasts 2-4 hours. Groups usually meet weekly or biweekly, though the schedule is whatever works for your group.
 A single session might contain a complete short story: the characters accept a job, investigate a mystery, confront the villain, and collect their reward. More commonly, sessions are chapters in a longer campaign that unfolds over months or years of play.

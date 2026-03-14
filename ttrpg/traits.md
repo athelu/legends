@@ -44,7 +44,7 @@ Select which of the Eight you primarily serve, or choose to serve the Pantheon e
 - Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0)
 - Can weave divine magic using all 8 energies
 - **Energy Pool:** Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
-- **Channel Divinity:** 2 uses per long rest. Gain access to all Channel Divinity options for your chosen patron.
+- **Channel Divinity:** Uses equal to your tier per long rest. Gain access to all Channel Divinity options for your chosen patron as well as the base 6 channel divinity types.
 
 ---
 
@@ -272,7 +272,7 @@ The generalist can use any of the following Channel Divinity options, choosing w
 ### From Shu-Jahan:
 **Philosopher's Insight** - See through illusory effects, detect lies, Fortune on Perception/Investigate for 10 minutes
 
-**Usage:** You still have only 2 Channel Divinity uses per long rest, but you can choose which deity to invoke each time. This versatility is the generalist's strength.
+**Usage:** You have Channel Divinity uses equal to your tier per long rest, but you can choose which deity to invoke each time. This versatility is the generalist's strength.
 
 ---
 
@@ -341,7 +341,7 @@ You have discovered the connection between spoken words and magic. You are a dia
 -   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 0, untrained)
 -   Can weave invoker magic using only these 5 energies
 -   **Energy Pool:** Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
--   **Gain Words of Power ability:** Once per short rest, spend 1 [Combat] action to speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll.
+-   **Gain Words of Power ability:** A number of times per short rest equal to your current Tier, spend 1 [Combat] action to speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. Additionally, your next weave cast before the end of your next turn benefits from the resonance — subtract 1 from one targeting die result of your choice on that weave.
 
 **Invoker Requirement:** You must have line of sight to targets of your weaves. If you cannot see your target, you cannot speak their true name or bind them with your magic. This replaces typical targeting requirements for spells.
 
@@ -465,19 +465,19 @@ Your eyes glow with violet light only when you complete a weave, the power flowi
 #### The Survivor's Bargain
 **Energies:** Space (Primary), Negative (Secondary), Fire, Earth, Time
 **Story:** *You should have died. You didn't. Something intervened.*
-**Pact Conduit - Scavenged Power:** When you reduce a hostile creature to 0 HP, immediately regain Energy equal to your tier (minimum 2). Your patron feeds on endings.
+**Pact Conduit - Scavenged Power:** Whenever you weave using Space energy as primary, you immediately regain Energy equal to half the Energy spent on that weave (rounded down, minimum 1). 
 **Pact Gift:** When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier
 
 #### The Desperate Deal
 **Energies:** Positive (Primary), Space (Secondary), Air, Time, Water
 **Story:** *You promised something to someone in your darkest hour. Power came immediately.*
-**Pact Conduit - Borrowed Vitality:** Whenever you weave using Positive energy as primary or supporting, the target (or you, if healing self) gains +4 temporary HP that lasts until your next short rest. Life borrowed is life shared.
+**Pact Conduit - Borrowed Vitality:** Whenever you weave using Positive energy as primary, the target (or you, if healing self) gains +4 temporary HP that lasts until your next short rest.
 **Pact Gift:** Once per short rest, as [Combat] action, heal yourself or touched ally for HP equal to Charisma × tier
 
 #### The Answered Cry
 **Energies:** Air (Primary), Negative (Secondary), Space, Time, Water
 **Story:** *You screamed into the void. The void answered.*
-**Pact Conduit - Void Resonance:** Whenever you weave using Air or Space as primary energy, you can target one additional creature within range (make separate weaving rolls for each). The void spreads your intent.
+**Pact Conduit - Void Resonance:** Whenever you weave using Air energy as primary, you may target one additional creature within range (make separate weaving rolls for each). 
 **Pact Gift:** You can communicate telepathically with any creature you can see within 30 feet
 
 #### The Stolen Shard

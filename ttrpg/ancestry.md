@@ -3,19 +3,19 @@
 Humans are creative, imaginative and inventive. There are distinct differences in the various human ethnicities, but they tend to be only differences of physical appearance and do not change the general makeup of humans.
 
 ### Ethnicities
-Humans can hail from any of the nations or regions on the continent of Estaea. The land of Origin of a human will influence their Native Language and what eye, hair, and skin tone are common. Each of the regions also have unique naming styles.
+Humans can hail from any of the nations or regions on the continent of Estaea. The land of Origin of a human will influence their Native Language and what eye, hair, and skin tone are common. Each of the regions also have unique naming styles, but a fantasy name works as well.
 
 ### Bellicosian
-Bellicosians tend to be slightly taller on average, and of fair/pale complexion. Building and clothing styles are Asiatic in inspiration. Bellicosian names follow traditional Germanic and Slavic styles, but fantasy derived names are acceptable as well.
+Bellicosians tend to be slightly taller on average, and of fair/pale complexion. Building and clothing styles are Asiatic in inspiration. Bellicosian names follow traditional Germanic and Slavic styles.
 
 ### Coudassian
-Coudassians vary in complexion, with the southerners having a honey or coffee complexion and the northerners being more pale. Coudassian names follow Spanish, Portuguese and Italian styles, but fantasy derived names are also acceptable.
+Coudassians vary in complexion, with the southerners having a honey or coffee complexion and the northerners being more pale. Coudassian names follow Spanish, Portuguese and Italian styles.
 
 ### Echartesh
-In Appearance the Echartesh have swarthy skin, and long, dark hair. Eyes tend to be light brown, but blue, green, yellow/amber are also seen. Echartesh names follow Jewish and Arabic styles, but fantasy derived names work as well.
+In Appearance the Echartesh have swarthy skin, and long, dark hair. Eyes tend to be light brown, but blue, green, yellow/amber are also seen. Echartesh names follow Jewish and Arabic styles.
 
 ### Mersagian
-Mersagian populace vary in appearance with the Northerners being quite pale and with all shades of hair and eye color. The Central and southern Meresaw populace tends to be olive skinned with darker hair and eyes. Mersagian names follow traditional English and American styles, but fantasy derived names are acceptable. It is quite possible to have a name from any of the other regions as the kingdom of Meresaw is very cosmopolitan.
+Mersagian populace vary in appearance with the Northerners being quite pale and with all shades of hair and eye color. The Central and southern Meresaw populace tends to be olive skinned with darker hair and eyes. Mersagian names follow traditional English and American styles. It is quite possible to have a name from any of the other regions as the kingdom of Meresaw is very cosmopolitan.
 
 ### Odani
 The Odani people are made up of the Reshi and Tandu tribes. They populate the southern coast of what is considered the Mersaw Kingdom. Their skin is dark, deep shades of black and brown, but eye color tends to be light such as blue, green, amber, or grey.
@@ -26,10 +26,10 @@ The Urjack are a solitary people who inhabit the Lackabier peaks mountain range 
 ### Human Characteristics
 | Characteristics | Male | Female |
 |---|---|---|
-| Height | 5'-7" | 5'-7' |
-| Height (Average) | 5'9" | 5'4" |
+| Height | 5'-7' | 5'-7' |
+| Height (Average) | 5'9" | 5'6" |
 | Weight | 90-300 lbs | 90-300 lbs |
-| Weight (Average) | 175 lbs | 120 lbs |
+| Weight (Average) | 175 lbs | 130 lbs |
 
 | Characteristics | |
 |---|---|
@@ -148,9 +148,9 @@ Elves are tall, thin, fair skinned humanoids with pointed ears. They have a deli
 | Characteristics | Male     | Female   |
 |----------------|----------|----------|
 | Height         | 6’-7’    | 6’-7’    |
-| Average        | 6’6”     | 6’2”     |
+| Average        | 6’6”     | 6’3”     |
 | Weight         | 120-200  | 120-200  |
-| Average        | 175      | 150      |
+| Average        | 175      | 155      |
 
 | Characteristics |     |
 |----------------|-----------|
@@ -192,7 +192,7 @@ Roll 1d8 to determine eye color:
 | 5  | Amber | Golden honey to burnished copper |
 | 6  | Violet | Lavender to deep purple |
 | 7  | Orange | Pale orange to deep sunset |
-| 8  | Tinted (Roll Again) | Roll again, result has slight unusual tint or heterochromia |
+| 8  | Unusual | Heterochromia or very rare shade (roll twice)|
 
 **Tinted Examples (if you roll 8):**
 - Blue with green flecks
@@ -229,9 +229,4 @@ Simply decide at what stage of life you envision the character and set your age 
 
 ### Haiden Elves
 
-Haiden Elves are the stragglers and refugees left behind after the Dwarven War. The march of the Dwarves destroyed almost all Elven kind and their civilization.
-The few that were spared fled to safety.  in many cases finding the new cities of Men. Here they were welcomed if a bit warily. Eventually these survivors integrated into this new society, blending parts of their past with this new human culture.
-Elves that live within the human nations are typically accepted as regular citizens and have integrated so naturally that there is little Elven culture to distinguish. These elves can benefit from the same Ethnicity options as their human brothers. 
-Not being of the same species, mixed marriages can produce no children, so are rare. Elven natural grace and appreciation of beauty finds them many positions in the fine arts. Artist, Poet, Musician and Performer are common occupations for Haiden elves. Many more are accomplished Sorcerers, alchemists, or scholars, with their enviable lifespan allowing them to come to true mastery of these mysteries.
-There are a group of elves that have reclaimed the land of their forefathers; rebuilding cities and creating their own nation once again. The kingdom of men, particularly the Kingdom of Meresaw helped these elves rebuild, forging an alliance between the two nations that stands today. 
-These elves have more cultural differences from their more human integrated counterparts. Typically, around family structure, traditions, and religious practices. 
+Haiden Elves are the survivors and refugees left behind after the Dwarven War. The march of the Dwarves destroyed almost all Elven kind and their civilization. The few that were spared fled to safety. in many cases finding the new cities of Men. Here they were welcomed if a bit warily. Eventually these survivors integrated into this new society, blending parts of their past with this new human culture. Elves that live within the human nations are typically accepted as regular citizens and have integrated so naturally that there is little Elven culture to distinguish. These elves can benefit from the same Ethnicity options as their human brothers. Not being of the same species, mixed marriages can produce no children, so are rare. Elven natural grace and appreciation of beauty finds them many positions in the fine arts. Artist, Poet, Musician and Performer are common occupations for Haiden elves. Many more are accomplished Sorcerers, alchemists, or scholars, with their enviable lifespan allowing them to come to true mastery of these mysteries. There are a group of elves that have reclaimed the land of their forefathers; rebuilding cities and creating their own nation once again. The kingdom of men, particularly the Kingdom of Meresaw helped these elves rebuild, forging an alliance between the two nations that stands today. These elves have more cultural differences from their more human integrated counterparts, typically around family structure, traditions, and religious practices
