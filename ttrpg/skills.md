@@ -44,19 +44,15 @@ The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents
 
 ### Craft (Dexterity)
 **Description:** Creating and repairing items using artisan's tools. Covers various trades including smithing, carpentry, alchemy, leatherworking, and other crafts.
-
 **Simple Task (1 success):** Craft a common item given time and materials, repair a damaged piece of equipment, identify quality craftsmanship, sharpen a blade.
-
 **Hard Task (2 successes):** Craft a masterwork item, repair severely damaged equipment in the field, identify a specific craftsman's work, create a complex mechanism or alchemical item.
 
 ---
 
 ### Deception (Charisma)
-**Description:** Lying convincingly, creating believable cover stories, and misleading others. Used to hide the truth or present false information as fact.
-
-**Simple Task (1 success):** Tell a simple lie convincingly, maintain a basic disguise under casual observation, bluff about your intentions in a non-critical situation.
-
-**Hard Task (2 successes):** Maintain a complex lie under questioning, impersonate a specific person to those familiar with them, create an elaborate cover story that withstands scrutiny.
+**Description:** Lying convincingly, creating believable cover stories, and misleading others. Used to present false information as truth. Whether to protect yourself, manipulate others, or manufacture relationships between third parties. Deception can shift attitude up or down the scale, but carries the risk of discovery. See Social Interactions in the Core System for full rules.
+**Simple Task (1 success):** Tell a convincing lie to a disinterested party, maintain a basic disguise under casual observation, bluff about your intentions when the stakes are low.
+**Hard Task (2 successes):** Maintain a complex lie under direct questioning, impersonate a specific person to those familiar with them, plant a rumor that shifts how one NPC regards another.
 
 ---
 
@@ -88,11 +84,9 @@ The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents
 ---
 
 ### Intimidate (Charisma)
-**Description:** Using threats, violence, or force of personality to coerce others. Used to frighten, bully, or force compliance through fear.
-
-**Simple Task (1 success):** Frighten a common person into cooperation, establish dominance in a social situation, threaten violence convincingly.
-
-**Hard Task (2 successes):** Intimidate a trained warrior or authority figure, force information from a resistant target, cow a hostile crowd into backing down.
+**Description:** Using threat, violence, or force of personality to coerce compliance. Intimidate does not improve relationships instaed it extracts what you need at the cost of goodwill. Can impose the Frightened condition or force immediate compliance, always moving the target's attitude one step toward Hostile. See Social Interactions in the Core System for full rules.
+**Simple Task (1 success):** Coerce a common person into immediate compliance, establish dominance in a social situation, make someone back down from a confrontation.
+**Hard Task (2 successes):** Frighten or coerce a trained warrior, authority figure, or someone with strong reason to resist; cow a hostile crowd into standing down
 
 ---
 
@@ -164,11 +158,9 @@ The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents
 ---
 
 ### Persuasion (Charisma)
-**Description:** Convincing others through reason, charm, and social grace. Used for honest negotiation and diplomatic appeals.
-
-**Simple Task (1 success):** Convince someone of something they're inclined to believe, negotiate a fair deal, make a good first impression.
-
-**Hard Task (2 successes):** Convince someone to change their mind on an important matter, negotiate a deal heavily in your favor, sway a hostile audience to your position.
+**Description:** Convincing others through honest appeal, reason, charm, and social grace. Persuasion works with the truth to move a target's attitude up the scale, whether toward yourself or to build goodwill between third parties. Typically an opposed skill test when the target has any investment in resisting. See Social Interactions in the Core System for full rules.
+**Simple Task (1 success):** Shift a cooperative or indifferent NPC's attitude one step in your favor, negotiate a fair deal, make a strong first impression.
+**Hard Task (2 successes):** Shift attitude two steps, convince someone to change their position on a matter they care about, sway a skeptical audience, broker goodwill between two parties with reason to distrust each other.
 
 ---
 

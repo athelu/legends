@@ -174,3 +174,46 @@ Combat actions have a penalty that is triggered if more than one is taken during
 - Second [Combat] action: Add 1 to both die results
 - Third [Combat] action: Add 2 to both die results
 All other keyword types can be used multiple times without penalty.
+
+## Social Interactions
+When characters attempt to influence the attitudes and behavior of NPCs, the outcome depends on both the approach taken and the existing relationship between the parties. Social skills — Persuasion, Deception, and Intimidate — each operate differently, but all interact with the same underlying Attitude Scale.
+### The Attitude Scale
+Every NPC has an attitude toward every other significant party — whether that is toward the player characters, toward each other, or toward third parties entirely. This attitude determines how difficult social interaction is and what is even possible.
+AttitudeDescriptionDevotedDeeply loyal. Will act against their own interests on your behalf.FriendlyGenuinely well-disposed. Willing to help within reason without persuasion.CooperativeWilling to engage and assist if asked appropriately.IndifferentNo particular feeling either way. Default for most strangers.UncooperativeSkeptical or resistant. Will not help without significant convincing.HostileActively opposed. Will obstruct, mislead, or threaten.HatredDeeply and personally opposed. Will not engage under normal circumstances.
+The GM sets starting attitudes based on context — a known criminal walking into a guard barracks doesn't begin at Indifferent. Reputation, history, race, faction, and circumstance all influence where an NPC starts on the scale.
+Attitude is persistent. A merchant charmed during last week's visit remembers it. An NPC whose trust was betrayed does not forget.
+### Social Skill Tests
+Social interactions use either simple skill tests or opposed skill tests depending on how invested the NPC is in the outcome.
+- **Simple Skill Test:** Used when the NPC has no particular stake in resisting. A bystander, a disinterested merchant, someone with no reason to push back.
+- **Opposed Skill Test:** Used when the NPC is actively invested in the outcome. A suspicious noble, someone being interrogated, a rival with something to lose.
+
+#### Current attitude modifies the test:
+AttitudeSimple TaskOpposed TaskDevotedAutomatic — no roll requiredFortune on your rollFriendlyAutomatic — no roll requiredSubtract 1 from both their diceCooperativeEasy task (1 success)Straight opposed rollIndifferentHard task (2 successes)Add 1 to both your diceUncooperativeHard task + add 1 to both your diceMisfortune on your diceHostileCannot attempt normallyCannot attempt normallyHatredCannot attempt normallyCannot attempt normally
+Hostile and Hatred attitudes cannot be overcome through social skill alone. Circumstances must change first — a demonstration of good faith, intervention by a trusted third party, or a significant event that reframes the relationship.
+
+### Shifting Attitude
+Persuasion and Deception can move an NPC's attitude up or down the scale. The subject of that attitude shift need not be yourself — you can work to improve or damage the relationship between two other parties entirely.
+Declare before rolling:
+
+Who the subject is (who the attitude is about)
+Who the target is (the NPC whose attitude you are shifting)
+Your intent (moving attitude up or down, and toward what end)
+
+Results of a social skill test aimed at shifting attitude:
+
+1 net success: Shift attitude one step in the intended direction
+2 net successes: Shift attitude two steps in the intended direction
+
+Attitude shifts from a single interaction rarely exceed two steps. Moving someone from Hostile to Cooperative in one conversation strains credibility — the GM may rule that certain shifts require time, repeated interaction, or meaningful events rather than a single roll.
+### Intimidate
+Intimidate works differently from Persuasion and Deception. It does not move attitude upward — it extracts compliance through fear, always at a cost to the relationship.
+Intimidate has two uses:
+Frighten — Force immediate compliance by imposing the Frightened condition. Make an opposed roll (your Charisma + Intimidate vs their Wisdom + Luck). If you win, the target is Frightened for the duration of the encounter or until the source of fear is resolved. Regardless of outcome, the target's attitude toward you drops one step — the threat was made, and that has consequences.
+Coerce — Extract specific compliance without triggering the Frightened condition. The target does what you demand right now. Their attitude drops one step. This is the tool you reach for when you need something done immediately and do not care about the relationship afterward.
+There are limits to what fear can buy. A Hostile or Hatred NPC may comply with an immediate demand under Intimidation but will act against you at the first safe opportunity. The GM determines what any given NPC will never do regardless of how badly they are frightened.
+### Deception and Discovery
+Deception carries risk that Persuasion does not. Lies can move attitude faster and more dramatically — false flattery, manufactured grievances, planted rumors — but the foundation is fragile. If a deception is uncovered:
+
+The target's attitude toward you drops to Hostile immediately, regardless of current standing
+Any attitude shifts manufactured toward third parties may reverse at GM discretion
+Future Persuasion attempts against that NPC add 1 to both your dice permanently — trust, once broken, is not easily rebuilt
