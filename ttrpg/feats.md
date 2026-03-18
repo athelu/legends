@@ -149,6 +149,14 @@ When creating new feats, follow these guidelines:
 **Keyword:** [Shadow]
 **Benefit:** You can sense the location of any hidden or invisible creature within 10 feet, reducing their condition to concealed
 
+#### Bloodied Fury
+**Tier:** 4
+**Prerequisites:** Relentless Fury feat, Con 6, Tier 4
+**Usage:** Passive, requires Primal Fury active
+**Keyword:** [Combat], [Savage]
+**Description:** The fury doesn't weaken when the blood flows. If anything, it gets cleaner. 
+**Benefit:** While in Primal Fury and below half your maximum HP, subtract 1 from both attack dice. Additionally, your +2 damage bonus from Primal Fury increases to +4 while in this state.
+
 #### Brutal Critical
 **Tier:** 3
 **Prerequisites:** Str 5, Melee 5, Primal Fury feat
@@ -180,9 +188,16 @@ When creating new feats, follow these guidelines:
 **Keyword:** [Combat]
 **Description:** A moment of observation tells you everything you need to know. Knowledge, as they say, is half the battle. The other half is hitting them where it hurts.
 **Benefit:** As 1 [Combat] action, make a Wisdom + Perception check opposed by target's Wisdom + Deception.
-- ***1 success:*** learn its current HP range (Healthy 75%+/Bloodied 25-75%/Critical <25%), highest attribute, and any damage resistances or immunities.
-- ***2 successes:*** your next attack against it this combat subtracts 1 from one die (your choice)
+- ***Margin 1:*** learn its current HP range (Healthy 75%+/Bloodied 25-75%/Critical <25%), highest attribute, and any damage resistances or immunities.
+- ***Margin 2:*** your next attack against it this combat subtracts 1 from one die (your choice)
 
+#### Combat Reading
+**Tier:** 2
+**Prerequisites:** Agi 4, Melee 4, Wis 4, Precision Training feat
+**Usage:** Passive
+**Keyword:** [Combat], [Discipline]
+**Description:** You have spent years winning exactly these moments. Your opponent is still deciding. You already know.
+**Benefit:** When a melee attack results in a margin of 0 (tied successes), you win the tiebreaker automatically without comparing dice totals (if both you and the target have Combat Reading, standard tiebreaker rules apply instead). Additionally when you are the defender in a tiebreaker, you may choose to deliberately lose it allowing the attack to land at Margin 1 in order to immediately make a counterattack against that attacker as a [Reaction]. This counterattack does not trigger the Multiple Action Penalty.
 
 #### Combined Elements Strike
 **Tier:** 3
@@ -230,6 +245,16 @@ When creating new feats, follow these guidelines:
 **Description:** Magic follows patterns, and you know them intimately. When you see someone beginning to weave, you recognize the structure they're building and know exactly where to pull the thread to make it all unravel.
 **Benefit:** When you see a creature within 60 feet casting a weave, you can use your reaction to attempt to counter it. Make opposed Arcana check. If you win by 1+ net success, the weave fails. Costs Energy equal to half the weave's cost (minimum 2)
 
+#### Covering Fire
+**Tier: **1
+**Prerequisites:** Dex 3, Ranged 3, Precise Shot feat
+**Usage:** 2 [Combat] actions, lasts until start of your next turn
+**Keyword:** [Combat], [Ranged], [Marksman]
+**Description:** You don't always need to hit someone to control them. A well-placed shot that clips the wall beside their head sends a clear message.
+**Benefit:** Spend 2 [Combat] actions to establish a Covered Zone; a 30-foot cone or a specific 20-foot square within your range that you can see. Creatures that are already in the Covered Zone when you establish it are not affected until they attempt to move. Until the start of your next turn, any creature that moves within or through the Covered Zone must make a Will save (opposed by your Dexterity + Ranged Combat):
+- **Margin 0:** The creature must stop moving immediately and cannot willingly enter open ground within the Covered Zone until the start of their next turn
+- **Margin 1:** The creature may move normally but their movement speed is halved while within the zone
+
 #### Critical Insight
 **Tier:** 3
 **Prerequisites:** Sorcerous Origin trait, Wis 5
@@ -241,7 +266,6 @@ When creating new feats, follow these guidelines:
   2. Regain Energy equal to your Wisdom
   3. Grant all allies within 30 feet temporary HP equal to your tier × 2
 
-
 #### Danger Sense
 **Tier:** 1
 **Prerequisites:** Wis 3
@@ -249,6 +273,30 @@ When creating new feats, follow these guidelines:
 **Keyword:** [Combat], [Savage]
 **Description:** Reflexes only work if you see the danger coming. Your instincts are sharper than most. You can't always avoid trouble entirely, but you're rarely caught completely flat-footed.
 **Benefit:** Subtract 1 from both dice on Reflex saves against effects you can see
+
+#### Deadeye
+**Tier:** 5
+**Prerequisites:** Dex 7, Ranged 7, Suppressing Presence feat, Sharpshooter feat,
+**Usage:** Passive benefits always active; Deadeye Shot once per long rest
+**Keyword:** [Combat], [Ranged], [Marksman]
+**Description:** There is a stillness some archers find that has nothing to do with standing still. Warriors who have fought alongside you describe the experience of watching you work as unsettling.
+**Benefit:** Your mastery of ranged combat grants permanent benefits:
+- Keen Eye now triggers on matching pairs where only one die is a success
+- Threatening Sightline no longer adds 1 to both dice 
+- When you apply the third Bleeding stack to a target, they immediately gain the Pinned condition (no [Move] actions) until the Bleeding is fully removed
+- **Deadeye Shot:** Once per long rest, declare before rolling. This attack automatically achieves Margin 3 regardless of the dice result, and the target cannot benefit from cover of any kind. If Keen Eye triggers naturally on this shot, the target is also Immobilized (Restrained) until the end of their next turn.
+
+#### Decisive Strike
+**Tier:** 3
+**Prerequisites:** Melee 5, Precision Training feat, Exploit the Margin feat
+**Usage:** Triggers when Precision Training activates
+**Keyword:** [Combat], [Discipline]
+**Description:** The perfect strike is not just more damage. Sometimes you need to create openings for the next strike.
+**Benefit:** When Precision Training triggers, in addition to the +1 success you may immediately choose one of the following effects at no additional cost.Only one effect may be chosen per Precision Training trigger.:
+- **Stagger:** Target is Dazed until end of their next turn
+- **Breach:** Target's DR is reduced by 4 until end of your next turn (minimum 0)
+- **Expose:** Target has Misfortune on their next attack roll
+- **Momentum:** You may immediately move up to 10 feet without provoking opportunity attacks
 
 #### Deep Study
 **Tier:** 2
@@ -341,7 +389,6 @@ When creating new feats, follow these guidelines:
   - **Stone Resilience:** You have natural DR 2 that stacks with armor. Your HP calculation uses Con × 9 instead of Con × 8
   - **Tremorsense:** You can sense vibrations through solid surfaces, detecting movement within 30 feet even if you cannot see
 
-
 #### Eldritch Resilience
 **Tier:** 1
 **Prerequisites:** Eldritch Pact trait, Cha 3, Con 3
@@ -387,7 +434,6 @@ When creating new feats, follow these guidelines:
     - **1 success:** 8 elemental damage
     - **0 successes:** 4 elemental damage (lose opposed check)
 
-
 #### Elemental Enlightenment
 **Tier:** 2
 **Prerequisites:**  Casting Attribute 4, chosen elemental Mastery 5
@@ -411,12 +457,12 @@ When creating new feats, follow these guidelines:
   - **Air:** Your movement doesn't provoke opportunity attacks
   - **Earth:** Gain +4 DR but movement speed reduced by 10 feet
 
-
 #### Elemental Rapid Strikes
 **Tier:** 3
 **Prerequisites:** Rapid Strikes feat, Pneuma Strike (any element)
 **Usage:** When using Rapid Strikes, costs 4 Energy total
 **Keyword:** [Combat], [Ascetic], [Magic]
+**Description:** You've stopped treating your strikes and your spellwork as two separate things. Now the element flows through every blow in the flurry, each impact carrying the same charge
 **Benefit:** You can channel elemental energy through your Rapid Strikes flurry. When using Rapid Strikes (3 attacks in one action):
   - Choose to spend 4 Energy total (instead of 2 per strike)
   - Make ONE weaving check for your chosen element
@@ -424,24 +470,24 @@ When creating new feats, follow these guidelines:
     - **1 success:** Each hit deals +4 elemental damage
     - **2 successes:** Each hit deals +8 elemental damage
 
-
 #### Enlightened Casting
 **Tier:** 5
 **Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5
 **Usage:** Once per long rest
 **Keyword:** [Magic], [Sorcerer]
+**Description:** Every variable aligns, every current runs true, and the weave emerges exactly as you intended without effort or cost.
 **Benefit:** Once per long rest, you can cast one weave at maximum possible effect without rolling:
   - Automatically achieve 4 successes (critical effect)
   - No Energy cost
   - No action cost (can cast as [Free] action)
   - Must be a weave you've cast before
 
-
 #### Evasion
 **Tier:** 3
 **Prerequisites:** Agi 5
 **Usage:** Passive
 **Keyword:** [Defense], [Shadow]
+**Description:** When you read it right, you're already somewhere else. When you don't, at least you're only half-wrong.
 **Benefit:** When subjected to an effect allowing Reflex save: if you win (1+ successes) take no damage; if you lose (0 successes) take half damage
 
 #### Evasive Fighter
@@ -457,8 +503,21 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Any skill rank 5
 **Usage:** Passive
 **Keyword:** [Skill]
+**Description:** There's a difference between someone who is good at something and someone who has made it a part of themselves. What takes others careful effort, you do the way you breathe.
 **Benefit:** For chosen skill, subtract 1 from both dice when making checks
 **Note:** Can be taken multiple times for different skills
+
+#### Exploit the Margin
+**Tier:** 2
+**Prerequisites:** Melee 5, Precision Training feat
+**Usage:** Once per turn, declare before rolling
+**Keyword:** [Combat], [Discipline]
+**Description:** Every attack is a question. You have learned to choose which question you are asking before you throw the first blow.
+**Benefit:** Before making a melee attack, declare one of the following techniques. The technique replaces the standard margin result for that attack. Standard margin damage applies unless the technique specifies otherwise. On Margin 3, you may still apply a condition in addition to the technique effect:
+- **Unbalancing Strike:** On Margin 1+, target makes a Reflex save (opposed by your attack roll). On failure, target is Disoriented until end of their next turn. On Margin 2+, target is also pushed 5 feet in a direction of your choice.
+- **Pinning Blow:** On Margin 1+, target's movement speed is reduced by 10 feet until end of their next turn. On Margin 2+, target cannot take [Move] actions until end of their next turn.
+- **Measured Strike:** On Margin 1, deal base damage + Strength (as if Margin 2). On Margin 2+, deal base damage + Strength × 2. This technique is purely about extracting maximum damage from controlled execution.
+- **Open the Guard:** On Margin 1+, the next attack against this target before the start of your next turn subtracts 1 from both attack dice. On Margin 2+, the next two attacks benefit from this.
 
 #### Exploit Vulnerability
 **Tier:** 2
@@ -489,14 +548,24 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Con 4
 **Usage:** Passive
 **Keyword:** [Heal], [General]
+**Description:** Your body treats injuries like inconveniences rather than emergencies. Given even a moment's rest, it gets to work. A full night of sleep borders on miraculous.
 **Benefit:** Short rest: gain +Con HP; long rest: gain double HP
+
+#### Fearsome Reputation
+**Tier:** 2
+**Prerequisites:** Cha or Str 4, Primal Fury feat, Intimidate 4
+**Usage:** Passive
+**Keyword:** [Savage], [Social]
+**Description:** You don't need to raise your voice. The way you move, the scars you carry, the look in your eyes all adds up to a single message that most people are wise enough to read.
+**Benefit:** Subtract 1 from both dice on Intimidate checks. Creatures you have successfully Intimidated do not recover from the Frightened condition while you remain visible to them. When you enter Primal Fury in view of creatures who are already Frightened of you, they must make a Will save (Hard task) or become Cowering until the start of your next turn.
 
 #### Feral Instinct
 **Tier:** 2
 **Prerequisites:** Wis 4, Primal Fury feat
 **Usage:** Passive
 **Keyword:** [Combat], [Savage]
-**Benefit:** +2 to initiative. You cannot be surprised while conscious. When Primal Fury ends, you don't gain Exhaustion if you win a Fortitude save (1 success)
+**Description:** While the battle-rage burns, some deeper part of your mind stays cold and alert, reading the room before your conscious thoughts catch up. Fear and charm find no purchase in a mind already consumed by fury.
+**Benefit:** +2 to initiative. You cannot be surprised while conscious. While in Primal Fury, you are immune to the Frightened and Charmed conditions
 
 #### Fire Savant
 **Tier:** 3
@@ -509,12 +578,12 @@ When creating new feats, follow these guidelines:
   - **Flame Resistance:** You are immune to fire damage from non-magical sources. You have Resistance (+2 DR) against magical fire damage
   - **Flame Walker:** You can walk across lava or flames as if solid ground (take no damage). Fire-based difficult terrain doesn't slow you
 
-
 #### Flawless Execution
 **Tier:** 4
 **Prerequisites:** Casting Attribute 6, any Energy Mastery 6, Tier 4
 **Usage:** Once per long rest
 **Keyword:** [Magic]
+**Description:** You pour everything you have into a single weave without flinching at the cost.
 **Benefit:** Once per long rest, you can cast one weave and completely ignore ALL overspending penalties. Spend as much Energy as you want (up to your Potential) with no penalties
 
 #### Flowing Guard
@@ -530,6 +599,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Rapid Strikes feat
 **Usage:** Costs 2 Luck when using Rapid Strikes
 **Keyword:** [Combat], [Ascetic], [Unarmed]
+**Description:** Burning a little luck to squeeze one more blow into the blur. Your opponents stop counting after the second hit anyway.
 **Benefit:** When you use Rapid Strikes, you can spend 2 Luck to make a fourth attack as part of the same action (add 3 to the skill die for this attack). All four attacks still count as one [Combat] action
 
 #### Forager
@@ -537,6 +607,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Survival 3
 **Usage:** Once per day
 **Keyword:** [Wilderness], [Skill]
+**Description:** Food, water, medicine; it's all out there if you know where the wilderness keeps its secrets.
 **Benefit:** Find food and water for 6 people per day with Survival check (Simple task). 2 successes = find medicinal herbs worth 1d8 × 5 gp
 
 #### Formation Fighting
@@ -544,6 +615,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Str 3, Shield Master feat
 **Usage:** Passive + reaction
 **Keyword:** [Combat], [Defense], [Reaction]
+**Description:** A wall of shields held by people who trust each other is harder to break than stone. 
 **Benefit:** When you and at least two allies adjacent to you are all wielding shields, all of you gain +2 DR. When an adjacent ally is attacked, you can use a [Reaction] to grant them +2 to both dice on their defense roll
 
 #### Fortune's Favorite
@@ -551,6 +623,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Luck 5
 **Usage:** Once per session
 **Keyword:** [Skill]. [General]
+**Description:** Luck runs in cycles. You've learned to feel when the wheel is about to turn and give it a nudge in the direction you prefer
 **Benefit:** Once per session, after seeing any roll result (yours or an enemy's), force a reroll and choose which result to use
 
 #### Formulaic Precision
@@ -578,13 +651,15 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Str 5, Athletics 4
 **Usage:** Passive
 **Keyword:** [Combat], [Grapple]
-**Benefit:** Subtract 1 from both dice when making Athletics checks to grapple. When you successfully grapple a creature, you can immediately deal 4 damage [Bludgeoning]. Creatures you grapple add 1 to both dice when attempting to escape
+**Description:** Getting hold of someone is only the first problem. Keeping them, punishing them for struggling is where the real skill lies.
+**Benefit:** Subtract 1 from both dice when making Athletics checks to grapple. When you successfully grapple a creature, you can immediately deal 4 [Bludgeoning] damage. Creatures you grapple add 1 to both dice when attempting to escape
 
 #### Guardian's Protection
 **Tier:** 1
 **Prerequisites:** Str 3, Melee 3, must be using a shield
 **Usage:** Passive (uses reactions)
 **Keyword:** [Combat], [Reaction]
+**Description:** You've made yourself into a wall between the enemy and the people beside you.
 **Benefit:** When an ally within 5 feet is hit by an attack, you can use your [Reaction] to grant them +2 DR against that attack. Additionally, when a creature within 5 feet attacks an ally, you can use your [Reaction] to make a melee weapon attack against that creature
 
 #### Guided Weaving
@@ -592,6 +667,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Sorcerous Origin trait, Wis 4
 **Usage:** Wisdom times per long rest
 **Keyword:** [Magic], [Sorcerer], [Reaction]
+**Description:** You don't always need to cast the spell yourself to shape its outcome.
 **Benefit:** When an ally within 60 feet casts a weave, you can use your [Reaction] to impose Misfortune on one enemy's saving throw against that weave (they roll 3d8, take worst 2). Alternatively, you can grant the casting ally Fortune on their weaving roll
 
 #### Harmonic Mastery
@@ -599,6 +675,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5
 **Usage:** Passive enhancement to Harmonic Weaving
 **Keyword:** [Magic], [Sorcerer]
+**Description:** You spent years learning to harmonize with the flows of magic. Now you have reached the end of that road.
 **Benefit:** Your mastery of Harmonic Weaving is complete. Choose one:
   - **Option A - Abundant Harmony:** Your Harmonic Weaving uses increase to (Wisdom × 2) + Tier per long rest
   - **Option B - Perfect Harmony:** When you use Harmonic Weaving, you can reroll ALL dice in your weaving roll (every energy's Potential + Mastery), not just one die. Uses your normal Harmonic Weaving limit
@@ -646,6 +723,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Agi 5
 **Usage:** Once per round (reaction)
 **Keyword:** [Combat], [Defense], [Shadow]
+**Description:** You don't think about it. The attack comes, something in you moves, and you're half out of the way before the pain registers.
 **Benefit:** When an attacker you can see hits you with an attack, you can use your reaction to halve the attack's damage against you
 
 #### Intimidating Presence
@@ -653,13 +731,23 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Cha 4
 **Usage:** Unlimited
 **Keyword:** [Combat], [Savage]
+**Description:** You don't need to raise your voice. The right look, the right silence, the right moment and the creature across from you suddenly remembers it has somewhere else to be.
 **Benefit:** As 1 [Combat] action, choose one creature within 30 feet that can see or hear you. Target makes Will save (opposed by your Charisma + Intimidation). If you win, target is Frightened until end of your next turn
+
+#### Iron Endurance
+**Tier:** 3
+**Prerequisites:** Con 5, Primal Fury feat
+**Usage:** Passive, short rest trigger
+**Keyword:** [Savage]
+**Description:** You have pushed through conditions that would hospitalize anyone else, and your body has adapted accordingly.
+**Benefit:** During a short rest, remove 1 level of Exhaustion gained from Primal Fury. Additionally, the penalties from Fatigued (Exhaustion level 1) do not apply to you.
 
 #### Iron Will
 **Tier:** 5
 **Prerequisites:** Wis 5, Tier 5
 **Usage:** Passive
 **Keyword:** [Save], [Ascetic]
+**Description:** Whatever they throw at your mind, you have already survived worse.
 **Benefit:** Subtract 1 from both dice on Willpower saving throws
 
 #### Jack of All Trades
@@ -667,7 +755,18 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Int 4, five skills at 3+
 **Usage:** Passive
 **Keyword:** [Skill]
+**Description:** A shallow familiarity with a skill is still familiarity. You've gathered enough of them that almost nothing is completely foreign, and raw ignorance rarely stops you.
 **Benefit:** Rank 1 skills count as rank 2
+
+### Keen Eye
+**Tier:** 2
+**Prerequisites:** Dex 4, Ranged 4, Precise Shot feat
+**Usage:** Passive, natural rolls only
+**Keyword:** [Combat], [Ranged], [Marksman]
+**Description:** The shot that feels perfect before it leaves the string. You have learned to recognize when it is happening and let it.
+**Benefit:** When you make a ranged attack and both dice show the same value and both are successes, gain +1 additional success. This is not a critical hit and does not restore Luck. The following conditions become available on Keen Eye triggered attacks based on margin:
+- **Margin 2:** Target is Slowed (minor) until end of their next turn
+- **Margin 3:** Target is Slowed (major) until end of their next turn, or target gains 1 Bleeding stack
 
 #### Layered Weave
 **Tier:** 3
@@ -682,6 +781,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Int 3, Language 3
 **Usage:** Passive
 **Keyword:** [Skill]
+**Description:** Not every tongue comes naturally, but you have never met one you couldn't eventually master.
 **Benefit:** For languages known gain +2; learn new languages faster
 
 #### Living Infusion
@@ -700,6 +800,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Dex 5, Ranged 5
 **Usage:** Passive
 **Keyword:** [Combat], [Ranged]
+**Description:** At this range, with this bow, you shoot where you aim.
 **Benefit:** When using ranged weapons: +2 damage, attacking at long range doesn't add to your dice, and you ignore half cover and three-quarters cover
 
 #### Master Artificer
@@ -719,6 +820,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Dex 5, Craft 5
 **Usage:** Passive
 **Keyword:** [Skill]
+**Description:** You make things that last, things that work, things that exceed what the materials had any right to become.
 **Benefit:** Work twice as fast on crafting projects and produce enhanced quality items
 
 #### Medical Expert
@@ -726,6 +828,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Wis 4, Medicine 4
 **Usage:** Passive
 **Keyword:** [Skill]
+**Description:** Medicine is part knowledge, part observation, and part willingness to act decisively when someone's life is on the line.
 **Benefit:** Subtract 1 from both dice on Medicine checks and heal 4 additional HP
 
 #### Momentum Strike
@@ -733,6 +836,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Str or Agi 4, Melee 4
 **Usage:** Once per turn
 **Keyword:** [Combat]
+**Description:** You've trained yourself to carry the motion forward. The same swing, the same energy, redirected before your boots finish the step.
 **Benefit:** When you reduce a creature to 0 HP with a melee attack, you can immediately make one additional melee attack against another creature within 5 feet. Use the same Attribute roll, roll Melee Combat skill separately. If the original attack suffered a Mulitiple Attack Penalty, the same penalty is applied to this strik. This can trigger once per turn.
 
 #### Mounted Combatant
@@ -740,6 +844,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Riding 4
 **Usage:** Passive
 **Keyword:** [Combat], [Mounted]
+**Description:** Horse and rider become something neither could be alone.
 **Benefit:** Attacks against your mount add 1 to both dice. If mount is hit, you can redirect attack to yourself instead. While mounted, melee attacks against creatures smaller than your mount subtract 1 from both dice
 
 #### Mystic Defense
@@ -756,6 +861,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Survival 4
 **Usage:** Passive
 **Keyword:** [Wilderness]
+**Description:** You know the wilderness, its moods, its rhythms, its shortcuts and its warnings. In the right terrain, you move like you belong there.
 **Benefit:** Choose terrain type (forest, mountains, swamp, etc.). In chosen terrain: difficult terrain doesn't slow travel, Fortune on initiative rolls, Wilderness checks subtract 1 from both dice, enemy ambushes add 1 to both stealth dice
 **Note:** Can take multiple times for different terrains
 
@@ -820,6 +926,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Casting Attribute 6, Tier 4
 **Usage:** Once per long rest, requires 10-minute meditation, lasts 1 hour
 **Keyword:** [Magic]
+**Description:** If you take the time to go still and listen with something deeper, the world stops hiding from you.
 **Benefit:** Once per long rest, enter deep meditation for 10 minutes. For the next hour, you:
   - See through illusory effects automatically
   - Perceive invisible creatures and objects within 60 feet
@@ -832,6 +939,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Casting Attribute 5
 **Usage:** Once per turn (reaction)
 **Keyword:** [Magic], [Reaction]
+**Description:** The right word at the right moment changes everything.
 **Benefit:** Once per turn, you can use a [Reaction] to grant one creature within 60 feet Fortune on their next roll (any type—attack, save, skill check, or weaving). You must declare this before they roll
 
 #### Persistent Harmony
@@ -839,6 +947,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Sorcerous Origin trait, Wis 5, Tier 4
 **Usage:** Once per long rest, 1 minute duration
 **Keyword:** [Magic], [Sorcerer]
+**Description:** For one minute, you stop stealing and simply live inside the current. Every weave finds its harmony naturally.
 **Benefit:** Once per long rest, you can enter a state of "Perfect Harmony" for 1 minute. During this time, every weave you cast automatically benefits from Harmonic Weaving (reroll one die per weave) without expending uses. You still have your normal Harmonic uses after this ends
 
 #### Pneuma Burst
@@ -846,6 +955,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Pneuma Strike (any element), Elemental Burst, any elemental Mastery 6, Tier 4
 **Usage:** Enhancement to Elemental Burst
 **Keyword:** [Combat], [Ascetic], [Magic]
+**Description:** Your mastery or the elements results in a blast with twice the weight, and the survivors have a condition to remember you by.
 **Benefit:** Your Elemental Burst ability improves:
   - **Increased Area:** 30-foot cone (instead of 15-foot)
   - **Increased Damage:** 
@@ -854,12 +964,12 @@ When creating new feats, follow these guidelines:
     - 0 successes: 8 elemental damage (instead of 4)
   - **Lingering Effect:** Creatures that fail their save also gain appropriate condition
 
-
 #### Pneuma Sensitivity
 **Tier:** 3
 **Prerequisites:** Arcana 5, Religion 3, any magical tradition trait
 **Usage:** Passive
 **Keyword:** [Magic], [Skill]
+**Description:** Ley lines, undead, daemons, the lingering pneuma of the recently dead: you feel them the way others feel weather changing.
 **Benefit:** Sense ley lines and nexuses within 1 mile (Arcana check). 1 success = general direction and type; 2 successes = exact location and strongest energy types. Within 100 feet of daemons or undead, subtract 1 from Perception die to sense presence. Determine if corpse possessed pneuma with Medicine or Religion check
 
 #### Pneuma Strike (Elemental)
@@ -872,7 +982,6 @@ When creating new feats, follow these guidelines:
   - Make weaving check for chosen element (Potential + Mastery). Can take multiple times for different elements
   - **1 success:** Deal +4 elemental damage
   - **2+ successes:** Deal +8 elemental damage
-
 
 #### Power Attack
 **Tier:** 1
@@ -887,6 +996,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Dex 3, Ranged 3
 **Usage:** Passive
 **Keyword:** [Combat], [Ranged]
+**Description:** You've learned to find the gap between the bodies, between the planks, and send the shot through anyway.
 **Benefit:** Ignore penalties for shooting into melee or partial cover
 
 #### Precision Duelist
@@ -894,7 +1004,16 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Agi 4, Melee 4
 **Usage:** Passive
 **Keyword:** [Combat]
+**Description:** Freedom of movement, economy of motion, and the knowledge that you don't need to hide behind anything to win.
 **Benefit:** When wielding a melee weapon in one hand with your other hand free (no shield, no second weapon), you gain +2 to damage and subtract 1 from your Agility die result when making attacks (minimum 1)
+
+#### Precision Training
+**Tier:** 1
+**Prerequisites:** Agi 4, Melee 4
+**Usage:** Passive, natural rolls only
+**Keyword:** [Combat], [Discipline]
+**Description:** Years of drilling the same strikes, the same footwork, the same timing have produced something that transcends conscious thought.
+**Benefit:** When you make a melee attack and both dice show the same value and both are successes, gain +1 additional success. This is not a critical hit and does not restore Luck or grant the additional critical benefits
 
 #### Prepared Infusion
 **Tier:** 1
@@ -904,13 +1023,27 @@ When creating new feats, follow these guidelines:
 **Description:** Combat is a poor time to do careful work. You have learned to prepare infusions in advance during the quiet moments between conflicts, so that when violence arrives you already have tools ready to hand.
 **Benefit:** During a short rest, you may prepare up to two objects with dormant infusions using your normal Imbue Item charges. A prepared infusion holds its effect indefinitely until triggered or until you take a long rest. When you or an ally touches a prepared object and activates it as a [Minor] action, the infusion triggers immediately with no action cost from you. Prepared infusions use the same effect options as Imbue Item.
 
+#### Pressure Fighter
+**Tier:** 3
+**Prerequisites:** Agi 5, Melee 5, Exploit the Margin feat
+**Usage:** Passive, triggers once per target per encounter
+**Keyword:** [Combat], [Discipline]
+**Description:** The first exchange tells you everything. The fight is already over. They just don't know it yet.
+**Benefit:** The first time you make a melee attack against a creature, or a creature makes a melee attack against you, you gain a Combat Read on that creature for the remainder of the encounter. While you have a Combat Read on a creature:
+- Subtract 1 from your skill die when attacking them
+- You automatically win tiebreakers against them (if both you and the target have Combat Reading, standard tiebreaker rules apply instead)
+
 #### Primal Fury
 **Tier:** 1
 **Prerequisites:** Str or Con 4, Melee 3
-**Usage:** Once per long rest, lasts 1 minute
+**Usage:** Unlimited, lasts 1 minute
 **Keyword:** [Combat], [Savage]
-**Description:** Rage sharpens rather than clouds your mind. You have developed a focused, directed fury that makes you hit harder, move faster, and shrug off wounds that would stop others.
-**Benefit:** As 1 [Combat] action, enter Primal Fury for 1 minute: gain temporary HP equal to your Constitution score, +2 damage on melee attacks, +2 DR against physical damage, subtract 1 from both dice on Fortitude saves. Cannot cast weaves while in Primal Fury (all pneuma used to fuel rage). Ends early if you fall Unconscious. Once it ends, you gain one level of Exhaustion. Can only use once per long rest
+**Description:** Rage sharpens rather than clouds your mind. You have developed a focused, directed fury that makes you hit harder and shrug off wounds that would stop others. Your body pays the price but given a night's rest, it always recovers.
+**Benefit:** As 1 [Combat] action, enter Primal Fury for 1 minute: gain temporary HP equal to your Constitution score, +2 damage on melee attacks, +2 DR against physical damage, subtract 1 from both dice on Fortitude saves. Cannot cast weaves while in Primal Fury. Ends early if you fall Unconscious. A long rest removes all Exhaustion levels gained from Primal Fury
+**Exiting Fury:** When Primal Fury ends, make a Fortitude save:
+- **0 successes:** Gain 1 Exhaustion level
+- **1 success:** No Exhaustion gained
+- **2 successes:** No Exhaustion gained; remove 1 existing Exhaustion level
 
 ### Primal Multiattack
 **Tier:** 3
@@ -924,6 +1057,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Int 4
 **Usage:** Passive
 **Keyword:** [Skill]
+**Description:** You've figured out how learning works and stopped wasting the effort that others spend relearning their mistakes.
 **Benefit:** All skill improvements cost 2 less XP
 
 #### Rally Cry
@@ -931,6 +1065,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Cha 4
 **Usage:** Once per short rest
 **Keyword:** [Morale]
+**Description:** The right speech, delivered with conviction in the right moment, reminds people why they're still fighting.
 **Benefit:** During a short rest, you can give a rousing speech to inspire your companions. Choose up to 6 allies who can hear and understand you. Each gains temporary HP equal to your Tier + your Charisma score. These temporary HP last until their next long rest
 
 #### Rapid Strikes
@@ -938,32 +1073,32 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Agi 4, Wis 3, Melee 4, Unarmed Mastery feat
 **Usage:** Once per turn
 **Keyword:** [Combat], [Ascetic], [Unarmed]
-**Benefit:** Once per turn when you make an unarmed attack or monk weapon attack, you may make three strikes as a single [Combat] action:
+**Description:** Three strikes, one breath, one motion. You've drilled this until it stopped being three things and became one thing with three results.
+**Benefit:** Once per turn when you make an unarmed attack or monk weapon attack, you may make three strikes as a single [Combat] action. All three attacks count as one [Combat] action for multiple action penalty purposes:
   - **Use Shared Attribute Roll:** Roll your Agility die once, use that result for all three attacks
   - **Roll Melee Combat skill die separately** for each attack
   - **Apply penalties to skill die only:**
-    - First attack: Normal
-    - Second attack: Add 1 to skill die
-    - Third attack: Add 2 to skill die
-  - All three attacks count as one [Combat] action for multiple action penalty purposes
-
+    - **First attack:** Normal
+    - **Second attack:** Add 1 to skill die
+    - **Third attack:** Add 2 to skill die
 
 #### Reality's Favorite
 **Tier:** 5
 **Prerequisites:** Sorcerous Origin trait, Wis 7, Tier 5
 **Usage:** Passive, always on
 **Keyword:** [Magic], [Sorcerer]
+**Description:** The lucky rolls come a little more often, the catastrophic failures find a way to recover, and luck tends to  bend in your favor.
 **Benefit:** Your perfect self-knowledge has impressed reality itself. You gain permanent benefits:
   - When you roll any saving throw, subract 1 from your highest die
   - When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses
   - When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave
-
 
 #### Reckless Attack
 **Tier:** 1
 **Prerequisites:** Str 4, Melee 3
 **Usage:** Unlimited
 **Keyword:** [Combat], [Savage]
+**Description:** You've made a calculated decision to hit harder and worry about consequences later.
 **Benefit:** When you make a melee weapon attack, you can choose to subtract 1 from both attack dice. If you do, attacks against you also subtract 1 from both dice until start of your next turn
 
 #### Reliable Talent
@@ -971,6 +1106,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Tier 5
 **Usage:** Passive
 **Keyword:** [Skill], [Shadow]
+**Description:** The gap between what you can do and what you actually do has closed to almost nothing.
 **Benefit:** Choose two (non-combat or mastery) skills in which you have rank 5+. When you roll those skills and get a result higher than your skill rank, treat it as equal to your skill rank instead
 
 #### Relentless Fury
@@ -978,6 +1114,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Con 5, Primal Fury feat
 **Usage:** While in Primal Fury
 **Keyword:** [Combat], [Savage]
+**Description:** The fury has its own opinion about when you're allowed to fall. More than once, it has overruled your body. Each time gets a little harder to pull off, but you're still here.
 **Benefit:** While in Primal Fury, if you drop to 0 HP you can make a Fortitude save (Hard task = 2 successes). On success, drop to 1 HP instead. Each time you use this after the first, add 1 to both dice. Resets after long rest
 
 #### Resilient
@@ -985,6 +1122,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Con 4
 **Usage:** Passive
 **Keyword:** [Save], [General]
+**Description:** What would leave another person struggling to recover, you shake off, or at least cut short.
 **Benefit:** Fortitude saves: subtract 1 from die results; success on ongoing effect ends it
 
 #### Ritual Efficiency
@@ -992,6 +1130,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Arcana 4, any magical tradition trait with ritual casting
 **Usage:** Passive
 **Keyword:** [Magic]
+**Description:** You've streamlined the process without cutting corners, halving the time and finding ways around missing pieces.
 **Benefit:** Cast rituals in half the normal time (5 minutes instead of 10). Component costs reduced by 25%. When missing a component, can make Arcana check (Hard task) to substitute similar materials. Can teach rituals to other casters (they learn in half time if you teach them)
 
 #### Ritual Mastery
@@ -1013,11 +1152,20 @@ When creating new feats, follow these guidelines:
 **Description:** Your devotion to your patron has sharpened your attunement to their divine domain. When you work within their sphere of influence, your weaves carry the deity's authority behind them.
 **Benefit:**  When casting weaves using your patron's Primary energy, subtract 1 from one targeting die result of your choice. Creatures who fail a save against one of your patron's-energy weaves have Misfortune on their next save against your weaves until the end of the encounter. Generalist Divine Gift casters choose one of their three bonus energies as their Sacred Domain energy when taking this feat.
 
+#### Savage Momentum
+**Tier:** 3
+**Prerequisites:** Reckless Attack feat, Primal Fury feat, Str 5
+**Usage:** Passive
+**Keyword:** [Combat], [Savage]
+**Description:** You learned a long time ago that the fighter who commits fully wins. The one who hedges loses.
+**Benefit:** When you use Reckless Attack while in Primal Fury and an enemy attacks you before the start of your next turn, you may make one immediate melee attack against that attacker as a [Reaction]. This attack uses the Reckless Attack modifier (subtract 1 from both dice) and does not count toward your Multiple Action Penalty.
+
 #### Savage Resilience
 **Tier:** 2
 **Prerequisites:** Con 4
 **Usage:** Passive
 **Keyword:** [Combat], [Savage]
+**Description:** Years of conditioning have turned skin and muscle into something that earns its own respect.
 **Benefit:** While wearing no armor and not using a shield, your thick skin and conditioning grant DR equal to half your Constitution (rounded down)
 
 #### Secured Identity
@@ -1033,6 +1181,7 @@ When creating new feats, follow these guidelines:
 **Prerequisites:** Arcana 3, any magical tradition trait
 **Usage:** Passive
 **Keyword:** [Magic], [Skill]
+**Description:** You've learned to open that sense at will, reading the magical landscape around you without ceremony or cost.
 **Benefit:** Sense magical auras as [Minor] action without Energy cost. Make Arcana check: 1 success = detect presence and general intensity within 30 feet; 2 successes = identify energy types and general purpose (harmful/helpful, permanent/temporary)
 
 #### Sharpshooter
@@ -1125,6 +1274,18 @@ When creating new feats, follow these guidelines:
 **Description:** Through perfect understanding of shadows, sound, and sightlines, you can make yourself effectively invisible without magic.
 **Benefit:** Subtract 1 from both Stealth dice when attempting to hide
 
+#### Suppressing Presence
+**Tier:** 4
+**Prerequisites:** Dex 6, Ranged 6, Threatening Sightline feat, Covering Fire feat, Tier 4
+**Usage:** Passive enhancement to existing abilities
+**Keyword:** [Combat], [Ranged], [Marksman]
+**Description:** At this point your reputation on a battlefield does some of the work for you. You don't need to suppress an entire enemy force. You just need them to believe you could.
+**Benefit:** Your ranged abilities gain the following enhancements:
+- Covering Fire can be maintained by spending 1 [Combat] action.
+- Threatening Sightline may now trigger twice per round instead of once
+- When a creature fails their Will save against Covering Fire, they also gain the Frightened condition until the start of their next turn.
+- Bleeding stacks applied through ranged attacks can only be removed from an ally's Medicine check or magical healing.
+
 #### Sustained Prayer
 **Tier:** 2
 **Prerequisites:** Divine Gift trait, Wis 4, Religion 4, Sacred Domain feat
@@ -1140,6 +1301,26 @@ When creating new feats, follow these guidelines:
 **Keyword:** [Combat], [Move] [Shadow]
 **Description:** You can perform defensive maneuvers with minimal effort, allowing you to slip away from threats or seek cover in a fraction of the time it takes others.
 **Benefit:** You can Disengage or Hide using only 1 [Minor] action instead of a full action
+
+#### Threatening Sightline
+**Tier:** 3
+**Prerequisites:** Dex 5, Ranged 5, Keen Eye feat, Master Archer feat
+**Usage:** Once per round, [Reaction]
+**Keyword:** [Combat], [Ranged], [Marksman]
+**Description:** The moment they step out from behind that wall is the moment you've been waiting for. 
+**Benefit:** Once per round, you may use a [Reaction] to make a ranged attack when one of the following occurs within your range and line of sight:
+- A creature moves from Full Cover, Half Cover, or Hidden into a lesser state
+- A creature stands up from Prone
+- A creature that was Concealed or Hidden reveals themselves by taking any action
+This attack adds 1 to both dice. If you also have Keen Eye and it triggers on this attack ignore the dice penalty. 
+
+#### Tough
+**Tier:** 1
+**Prerequisites:** Con 3
+**Usage:** Passive
+**Keyword:** [General]
+**Description:** Some people are just harder to kill. You are more resilient, allowying you to take punishment that would drop others.
+**Benefit:** Gain HP equal to Con × current Tier
 
 #### Tracker
 **Tier:** 1
@@ -1173,6 +1354,26 @@ When creating new feats, follow these guidelines:
 **Description:** Your body is a weapon. Fists, elbows, knees, and feet all honed into effective tools for violence, you are never unarmed.
 **Benefit:** Your unarmed strikes deal 6 damage (same as standard weapons). Additionally, all weapons with the **Monk** property count as monk weapons for your abilities
 
+#### Unbroken
+**Tier:** 4
+**Prerequisites:** Iron Endurance feat, Con 6, Tier 4
+**Usage:** Passive
+**Keyword:** [Savage]
+**Description:** You have survived things that should have broken you, and each time you came out the other side harder than before.
+**Benefit:** You have Fortune on all Fortitude saves against environmental conditions, poisons, and disease. Exhaustion from non-Primal Fury sources (forced march, extreme conditions, sleep deprivation) requires you to fail two consecutive saves before gaining a level. When making stabilization saves while Dying, subtract 1 from both dice.
+
+#### Unyielding Advance
+**Tier:** 4
+**Prerequisites:** Str or Agi 6, Melee 6, Pressure Fighter feat, Tier 4
+**Usage:** Passive
+**Keyword:** [Combat], [Discipline]
+**Description:** Lesser fighters control a space. You control the entire engagement.
+**Benefit:** You gain the following permanent combat presence abilities:
+- Opportunity attacks against you add 2 to both attack dice (Does not stack with Evasive Fighter)
+- When you hit a target with a melee attack, you may move up to 5 feet as a [Free] action without provoking opportunity attacks
+- When a creature attempts to disengage from melee with you, make an immediate attack against them as a [Reaction] before they move. This does not consume your normal reaction if you have already used it this round.
+- Creatures that start their turn adjacent to you must succeed on a Will save (opposed by your Strength + Intimidate or Melee Combat ) or cannot willingly move away from you that turn
+
 #### Urban Tracker
 **Tier:** 2
 **Prerequisites:** Investigation 4, Society 3
@@ -1188,6 +1389,21 @@ When creating new feats, follow these guidelines:
 **Keyword:** [Magic], [Divine], [Reaction]
 **Description:** You have learned to let your patron's power flow through you more completely. In moments of true need, the deity acts not merely through your channeling but directly 
 **Benefit:** Once per long rest, when an ally within 30 feet would be reduced to 0 HP, you may use a [Reaction] to call upon your patron. Choose any one of your patron's Channel Divinity options — it triggers immediately. This use does not consume one of your Channel Divinity uses.
+
+#### Victor's Discipline
+**Tier:** 5
+**Prerequisites:** Str or Agi 7, Melee 7, Decisive Strike feat, Unyielding Advance feat
+**Usage:** Combat Clarity once per long rest; passive benefits always active
+**Keyword:** [Combat], [Discipline]
+**Description:** There is a kind of warrior that doesn't need rage or divine favor or the cosmos intervening on their behalf. They have simply trained longer, thought harder, and survived more than everyone else in the room.
+**Benefit:** Your mastery of combat grants permanent benefits:
+- The Multiple Action Penalty for [Combat] actions is reduced by 1 (second action: no penalty; third action: add 1 instead of 2)
+- Precision Training now triggers on matching pairs where only one die needs to be a success (if Pressure Fighter's 6th action bonus hasn't already provided this, it is now always active)
+**Combat Clarity:** Once per long rest, declare Combat Clarity at the start of your turn. For 1 minute:
+- Every attack automatically wins tiebreakers
+- Precision Training triggers on every attack where at least one die is a natural 1 (in addition to normal triggers)
+- You may use Exploit the Margin on every attack without the once-per-turn restriction
+- Allies within 30 feet who can see you subtract 1 from both dice on their next attack each round.
 
 #### Voice of the Pantheon
 **Tier:** 5
@@ -1256,11 +1472,12 @@ When creating new feats, follow these guidelines:
   - **Frost Resistance:** You are immune to cold damage from non-magical sources. You have Resistance (+2 DR) against magical cold damage
   - **Aquatic Adaptation:** You can breathe underwater. Gain swimming speed equal to your normal movement speed. Water-based Wilderness checks gain Fortune
 
-
-#### Tough
-**Tier:** 1
-**Prerequisites:** Con 3
-**Usage:** Passive
-**Keyword:** [General]
-**Description:** Some people are just harder to kill. You are more resilient, allowying you to take punishment that would drop others.
-**Benefit:** Gain HP equal to Con × current Tier
+#### Wrath Incarnate
+**Tier:** 5
+**Prerequisites:** Bloodied Fury feat, Fearsome Reputation feat, Con 7, Str or Agi 7, Tier 5
+**Usage:** Exhaustion immunity is passive while in fury; battlefield presence once per long rest
+**Keyword:** [Combat], [Savage]
+**Description:** You are not someone who gets angry. You are what anger looks like when it has been trained, tested, and refined across years of surviving things that had no right to leave survivors.
+**Benefit:** While in Primal Fury, Exhaustion levels do not reduce your actions, movement, or apply their dice penalties. You still accumulate Exhaustion and it still applies outside of fury, but inside the rage you are beyond its reach. Once per long rest when you enter Primal Fury, every hostile creature within 30 feet that can see or hear you must make a Will save (opposed by your Strength or Constitution + Intimidate). Creatures that succeed are immune to this effect for the remainder of the encounter:
+- **Margin 1:** Frightened until the start of your next turn
+- **Margin 2:** Cowering until the start of your next turn, then Frightened for 1 minute
