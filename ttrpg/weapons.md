@@ -1,3 +1,9 @@
+Every weapon in Legends is defined by a handful of properties that determine how it handles, what damage type it deals, and what tactical options it opens up. The damage value listed is static; not a die roll, reflecting the system's design philosophy that combat outcomes should hinge on skill and positioning rather than variance.
+Weapon properties like [Versatile], [Finesse], and [Reach] describe the tactical identity of each weapon: how it can be held, which attribute governs its damage bonus, and how it interacts with feats and fighting styles.
+Damage types (Slashing, Piercing, and Bludgeoning) matter because certain armor, creatures, and conditions respond differently to each.
+Range is listed in three increments for ranged weapons, with increasing penalties at greater distances.
+Before choosing a weapon, consider not just raw damage but how its properties interact with your attributes, your feats, and the situations you expect to face.
+
 ## Weapon Properties
 
 
