@@ -1,17 +1,3 @@
-# D8 TTRPG - Part 8: Equipment
-## Currency
-
-It is necessary to establish some type of currency for the game system to allow for the purchasing of equipment during the character creation process at least. We will leverages the standard coin types:
-- Copper Piece (cp)
-- Silver Piece (sp)
-- Gold Piece (gp)
-
-**Exchange Rates:**
-- 10 cp = 1 sp
-- 10 sp = 1 gp
-
-For a value proposition, lets assume $1 = 5 cp.
-
 ## Equipment Price List
 
 | Item | Price |
@@ -111,6 +97,13 @@ For a value proposition, lets assume $1 = 5 cp.
 | Uniform/Livery | 15 gp |
 | Wineskin | 4 gp |
 
+Not every problem in Legends is solved with a sword. This section covers the tools, supplies, and sundry goods that adventurers carry, purchase, and occasionally regret leaving behind.
+Equipment is organized alphabetically, with each entry listing cost, weight, and a description of its practical use.
+Currency uses a straightforward copper-silver-gold system:
+- 10 copper to a silver
+- 10 silver to a gold
+A copper piece is roughly equivalent to twenty cents in modern purchasing power.
+When outfitting a character at creation or resupplying between adventures, prioritize the items that match your character's role and expected challenges; a healer without a medicine kit and a scout without rope are both making avoidable mistakes. The GM may rule that certain tasks are impossible or significantly harder without the appropriate tool on hand.
 
 <!-- PACK:equipment -->
 ## Equipment Descriptions

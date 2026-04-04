@@ -1,4 +1,9 @@
 # Armor & Shields
+In Legends, armor does not make you harder to hit, it makes you harder to hurt. The system uses Damage Reduction (DR) rather than Armor Class, meaning a well-placed blow lands regardless of what you're wearing, but the steel between you and the blade absorbs a portion of what would otherwise be a serious wound.
+Each armor type lists separate DR values for Slashing, Piercing, and Bludgeoning damage, reflecting how different materials and constructions resist different kinds of force. 
+Shields work differently from armor. Rather than providing passive DR, they grant reactions and abilities you actively use during combat, intercepting attacks and deflecting missiles.
+When selecting armor, weigh protection against the penalties heavier suits impose on swimming, stealth, and endurance in prolonged combat. No armor covers every situation equally, and a fighter who never leaves the dungeon has different needs than a scout who must cross a river.
+
 
 ### Armor Properties
 - **[Noisy]** - Armor with this keyword imparts a +1 penalty to the stealth skill die.
