@@ -85,8 +85,9 @@ Success (1+): Your ally subtracts 1 from both dice on their next action.
 ### Feint [Combat]
 **Cost:** 1
 **Effect:** Make opposed Deception check (Charisma + Deception vs target's Empathy + Wisdom)
-**Margin 1:** You subtract 1 from both dice on your next [combat] action.
-**Margin 2:** You gain fortune on your next [combat] action.
+- **Margin 0:** no effect.
+- **Margin 1:** This action does not count towards the multiple action penalty. You subtract 1 from both dice on your next [combat] action.
+- **Margin 2:** This action does not count towards the multiple action penalty. You gain fortune on your next [combat] action.
 
 ### Total Defense [Combat]
 **Cost:** 3

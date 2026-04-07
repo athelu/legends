@@ -219,7 +219,7 @@ _prepareCharacterData(actorData) {
   }
   
   /**
-   * Take a short rest (10 minutes)
+   * Take a short rest (1 hour)
    */
   async shortRest() {
     const updates = {};
@@ -242,7 +242,7 @@ _prepareCharacterData(actorData) {
       content: `
         <div class="d8-rest">
           <h3>Short Rest</h3>
-          <p>${this.name} takes a short rest (10 minutes)</p>
+          <p>${this.name} takes a short rest (1 hour)</p>
           <ul>
             <li>Regained ${con} HP</li>
             <li>Regained 1 Luck</li>

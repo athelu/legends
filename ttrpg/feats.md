@@ -381,13 +381,6 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Description:** Through discipline and daily prayer, you have learned to reach deeper into your connection with your patron.
 **Benefit:** You may spend 1 Luck to use any Channel Divinity option that normally costs 2 [Combat] actions as 1 [Combat] action instead.
 
-#### Diamond Soul
-**Prerequisites:** Wis 5
-**Usage:** Passive proficiency + reaction costs Luck
-**Keyword:** [Save], [Ascetic]
-**Description:** Your training has refined your spirit to crystalline perfection. Where others rely on toughness or resistance, your fundamental resilience makes even reality's harshest effects slide off you like water from stone.
-**Benefit:** Gain proficiency in all saving throws. When you fail a saving throw, you can spend 1 Luck to reroll and must take the new result
-
 #### Dirty Fighter
 **Prerequisites:** Agi 3, Melee or Ranged 3
 **Usage:** Passive
@@ -505,17 +498,6 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Keyword:** [Combat], [Duelist]
 **Description:**  A flick of the wrist, a shift of the eyes — the setup costs you nothing now.
 **Benefit:** Once per turn you may use Feint as a [Minor] action instead of a [Combat] action. All normal Feint rules apply including the MAP exemption on success
-
-#### Enlightened Casting
-**Prerequisites:** Sorcerous Origin trait, Wis 7
-**Usage:** Once per long rest
-**Keyword:** [Magic], [Sorcerer]
-**Description:** Every variable aligns, every current runs true, and the weave emerges exactly as you intended without effort or cost.
-**Benefit:** Once per long rest, you can cast one weave at maximum possible effect without rolling:
-  - Automatically achieve 4 successes (critical effect)
-  - No Energy cost
-  - No action cost (can cast as [Free] action)
-  - Must be a weave you've cast before
 
 #### Evasion
 **Prerequisites:** Agi 5
@@ -1348,16 +1330,6 @@ This ability does not reveal magically concealed information and cannot compel a
 **Description:** You can perform defensive maneuvers with minimal effort, allowing you to slip away from threats or seek cover in a fraction of the time it takes others.
 **Benefit:** You can Disengage or Hide using only 1 [Minor] action instead of a full action
 
-#### The Unspoken Name
-**Prerequisites:** Invoker trait, Cha 7, Air Mastery 6, Unraveling Word feat, Echoing Invocation feat
-**Usage:** Once per long rest
-**Keyword:** [Magic], [Invoker]
-**Description:** Every named thing can be unnamed. To speak it is to reach into the fundamental nature of a creature and rewrite what it is permitted to do.
-**Benefit:** Once per long rest, as 2 [Combat] actions, speak the Unspoken Name at one creature within 60 feet you can see. Make an opposed Charisma + Air Mastery check vs their Wisdom + Luck (Will save).
-- **Margin 1:** Full revelation — you learn the creature's current HP, all special abilities and trait abilities, any ongoing magical effects, and whether they can be permanently affected by true name magic. This knowledge persists for the remainder of the encounter.
-- **Margin 2:** As Margin 1, and the creature gains the Fleeing condition for 1 minute (Will save at end of each turn, 1 success downgrades to Frightened, 2 successes ends entirely). The creature also loses access to one special ability or weave of your choice for the duration.
-- **Margin 3:** As Margin 2, all creatures of the same creature type within 30 feet of the target must immediately make Will saves (same opposed check result) or gain the Frightened condition for 1 minute.
-
 #### Threatening Sightline
 **Prerequisites:** Dex 5, Ranged 5
 **Usage:** Once per round, [Reaction]
@@ -1514,6 +1486,10 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
 
 # Legendary Feats
 
+Legendary Feats are the capstone abilities for following certain specializations. These feats often manifest as several new permanent abilities or changes to existing abilities. These represent the full mastery of a specialty. 
+Legendary feats count toward the standard feat limits. The only difference is their cost:
+**Legendary Feat Cost:** 80 xp
+
 #### Air Savant
 **Prerequisites:** Air Mastery 6, Air Potential 6, any magical tradition trait
 **Usage:** Passive
@@ -1545,6 +1521,13 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
 - When you apply the third Bleeding stack to a target, they immediately gain the Pinned condition (no [Move] actions) until the Bleeding is fully removed
 - **Deadeye Shot:** Once per long rest, declare before rolling. This attack automatically achieves Margin 3 regardless of the dice result, and the target cannot benefit from cover of any kind. If Keen Eye triggers naturally on this shot, the target is also Immobilized (Restrained) until the end of their next turn.
 
+#### Diamond Soul
+**Prerequisites:** Wis 5
+**Usage:** Passive proficiency + reaction costs Luck
+**Keyword:** [Save], [Ascetic]
+**Description:** Your training has refined your spirit to crystalline perfection. Where others rely on toughness or resistance, your fundamental resilience makes even reality's harshest effects slide off you like water from stone.
+**Benefit:** Gain proficiency in all saving throws. When you fail a saving throw, you can spend 1 Luck to reroll and must take the new result
+
 #### Earth Savant
 **Prerequisites:** Earth Mastery 6, Earth Potential 6, any magical tradition trait
 **Usage:** Passive
@@ -1554,6 +1537,17 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
   - **Crushing Weaves:** When you cast a weave using Earth as primary energy and deal bludgeoning/piercing damage, targets that fail their save gain **Prone** and **Restrained** conditions until they use an action to break free
   - **Stone Resilience:** You have natural DR 2 that stacks with armor. Your HP calculation uses Con × 9 instead of Con × 8
   - **Tremorsense:** You can sense vibrations through solid surfaces, detecting movement within 30 feet even if you cannot see
+
+#### Enlightened Casting
+**Prerequisites:** Sorcerous Origin trait, Wis 7
+**Usage:** Once per long rest
+**Keyword:** [Magic], [Sorcerer]
+**Description:** Every variable aligns, every current runs true, and the weave emerges exactly as you intended without effort or cost.
+**Benefit:** Once per long rest, you can cast one weave at maximum possible effect without rolling:
+  - Automatically achieve 4 successes (critical effect)
+  - No Energy cost
+  - No action cost (can cast as [Free] action)
+  - Must be a weave you've cast before
 
 #### Fire Savant
 **Prerequisites:** Fire Mastery 6, Fire Potential 6, any magical tradition trait
@@ -1616,6 +1610,16 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
   - When you roll any saving throw, subract 1 from your highest die
   - When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses
   - When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave
+
+#### The Unspoken Name
+**Prerequisites:** Invoker trait, Cha 7, Air Mastery 6, Unraveling Word feat, Echoing Invocation feat
+**Usage:** Once per long rest
+**Keyword:** [Magic], [Invoker]
+**Description:** Every named thing can be unnamed. To speak it is to reach into the fundamental nature of a creature and rewrite what it is permitted to do.
+**Benefit:** Once per long rest, as 2 [Combat] actions, speak the Unspoken Name at one creature within 60 feet you can see. Make an opposed Charisma + Air Mastery check vs their Wisdom + Luck (Will save).
+- **Margin 1:** Full revelation — you learn the creature's current HP, all special abilities and trait abilities, any ongoing magical effects, and whether they can be permanently affected by true name magic. This knowledge persists for the remainder of the encounter.
+- **Margin 2:** As Margin 1, and the creature gains the Fleeing condition for 1 minute (Will save at end of each turn, 1 success downgrades to Frightened, 2 successes ends entirely). The creature also loses access to one special ability or weave of your choice for the duration.
+- **Margin 3:** As Margin 2, all creatures of the same creature type within 30 feet of the target must immediately make Will saves (same opposed check result) or gain the Frightened condition for 1 minute.
 
 #### Unbreakable
 **Prerequisites:** Str 7, Con 7, Melee 7, Iron Fortress feat, Retribution feat

@@ -499,6 +499,61 @@ Your eyes glow with violet light only when you complete a weave, the power flowi
 -   **Answered Cry:** Silent. Watchful. Grants power but gives no guidance. Feels like being observed constantly. You don't know if it's good/evil/neutral or what it wants from you. Your magic feels like a gift from an absent benefactor.
 -   **Stolen Shard:** Might not even be sentient—could be residual power from dead entity, trapped daemon, or lost fragment of god. You don't know if the original owner wants it back or if taking it cursed you. Your magic feels unstable, like wielding something too powerful for mortal hands.
 
+### Alchemical Tradition (-5)
+**Requirements:** Intelligence ≥ 3
+
+You have no innate connection to the planes. Your eyes do not glow, your pneuma carries no magical resonance, and in a room full of mages you are indistinguishable from anyone else. What you have is a precise understanding of how magical energy concentrates within natural objects, and how those energies can be extracted, combined, and directed toward purposeful effect. Where a Mageborn reaches into the planes through their pneuma, you reach into the physical world and find what was already there.
+Your magic requires forethought, preparation, and access to the right materials. It is slower and more deliberate than any other tradition. In exchange, your preparations persist indefinitely, can be used by anyone, and accumulate across the days between crises in ways that no other tradition's power can.
+
+Alchemical preparations produce the same violet light as any magical effect when activated. The Alchemist themselves shows no glowing eyes, and no motes of energy trailing from their hands. The magic is in the bottles, not the person holding them. An Alchemist's workspace tells its own story: stained surfaces, unusual smells, carefully labeled containers, and the faint violet residue of completed work.
+
+**Benefits:**
+- Gain the ability to create alchemical preparations using physical components containing concentrated magical energy.
+- Gain **Craft: Alchemist** as a skill (starts at rank 0, untrained. Must be trained to rank 1 before use.). See Crafting section for details.
+- Use Intelligence as your effective Casting Stat for preparation identification and activation resolution.
+- May reference the full weave list to determine energy requirements for any desired preparation.
+- **Thrown Delivery:** May substitute up to Space 2 worth of component cost by designating a preparation as a thrown item. The physical arc of the throw provides the spatial delivery that Space energy would otherwise create. Thrown preparations use Dexterity + Ranged Combat to hit a target or location (range 30/60 ft as a thrown weapon). Space 3 and above cannot be substituted by throwing. Area effects, barriers, and other Space-primary effects still require Space components.
+
+#### Daily Preparations
+After each long rest, the Alchemist spends 1 hour in routine morning preparation1 mixing basic materials they always keep on hand into a fresh set of simple preparations for the day ahead.
+- **Quantity:** Intelligence score + Craft: Alchemist rank.
+- **Energy cost limit:** Total energy cost per preparation must be 4 or less.
+- **Energy types:** Common only (Fire, Air, Earth, Water).
+- **Time:** 1 hour, only after completing a Long Rest.
+- No Craft check required.
+- No component cost.
+- Unused daily preparations expire at the next long rest.
+
+#### Short Rest Preparations
+- During any 1-hour short rest, the Alchemist may spend part of their rest time producing a small set of field preparations from their portable kit.
+- **Quantity:** Craft: Alchemist rank.
+- **Energy cost limit:** Total energy cost per preparation must be 4 or less.
+- **Energy types:** Common only (Fire, Air, Earth, Water).
+- **Time:** Included within the short rest.
+- No Craft check required.
+- No component cost.
+- Unused short rest preparations expire at the next long rest.
+
+#### Field Improvisation
+When the Alchemist needs a specific preparation that they did not make during daily or short rest production, they may improvise one in the field using 10 minutes of focused work.
+- **Quantity:** Always 1.
+- **Energy cost limit:** Total energy cost must be 4 or less.
+- **Energy types:** Common only (Fire, Air, Earth, Water).
+- Add 1 to both dice on the Craft: Alchemist check.
+- Unused field improvised preparations expire at the next long rest
+
+#### Crafted Preparations (Downtime)
+The Alchemist's most powerful productions require dedicated downtime, physical components, and a proper workspace. Crafted preparations are the only way to access Uncommon or Rare energy types, produce complex multi-energy effects, and build a stockpile that persists indefinitely across sessions.
+- **Yield:** Craft: Alchemist rank.
+- **Energy cost:** Up to Craft rank × 2.
+- **Energy types:** All types, subject to component availability.
+- **Time:** Determined by total energy cost.
+- Craft check required.
+- Components cost gold or must be harvested.
+- Crafted preparations never expire.
+- **Critical Failure on Mixing:** If the Craft: Alchemist check during any crafted preparation session results in a critical failure (double 8s), the preparation activates immediately upon completion. Offensive preparations release in the workspace. The Alchemist and any nearby creatures may be affected. The preparation is consumed. 
+
+
 ## MAGICAL ENHANCEMENT TRAITS
 
 ### Gifted Mage (-2)
