@@ -836,7 +836,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static async #onShortRest(event, target) {
     const confirmed = await foundry.applications.api.DialogV2.confirm({
       window: { title: "Short Rest" },
-      content: `<p>Take a short rest (10 minutes)?</p>
+      content: `<p>Take a short rest (1 hour)?</p>
                 <p>You will regain <strong>${this.actor.system.attributes.constitution.value} HP</strong> and <strong>1 Luck</strong>.</p>`
     });
 
