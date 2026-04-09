@@ -1,5 +1,5 @@
 {
-  "_id": "8e5c174ea317481c",
+  "_id": "1b342d8b629c81f8",
   "name": "Disintegrate",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,15 +23,36 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "fortitude",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target takes 40 negative damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target is disintegrated (turned to dust). Only resurrection magic can restore them.",
+    "effectType": "healing",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (20)",
+          "duration": "Half damage (20)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (40)",
+          "duration": "Full damage (40)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (48)",
+          "duration": "Enhanced damage (48)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (20)\n- 2 = Full damage (40)\n- 3 = Enhanced damage (48)",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48)",
     "weavingRoll": "Negative Potential + Negative Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
@@ -43,5 +64,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!8e5c174ea317481c"
+  "_key": "!items!1b342d8b629c81f8"
 }

@@ -1,21 +1,74 @@
 {
-  "_id": "a812c7557c1b42a6",
+  "_id": "8810a9661d788508",
   "name": "Merchant",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>In a dusty shop or market stall you bartered wares for coin and trade goods. The skills you picked up still apply in the adventuring life, where a good deal on a suit of armor could prevent your death. You understand that everything has a price and knowing how to negotiate can be as important as knowing how to fight. <strong>Skills:</strong> Persuasion 2, Society 2, Empathy 2, Investigate 2, +24 XP <strong>Equipment:</strong> Fine clothes, journal, quill, ink, shoes <strong>Feature</strong> - Trade Network: You have contacts in merchant guilds and can find buyers or sellers for most goods.</p>"
+      "value": "<p>In a dusty shop or market stall you bartered wares for coin and trade goods. The skills you picked up still apply in the adventuring life, where a good deal on a suit of armor could prevent your death. You understand that everything has a price and knowing how to negotiate can be as important as knowing how to fight.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 24,
+    "skillBonuses": "Persuasion 2, Society 2, Empathy 2, Investigate 2, +24 XP",
+    "startingEquipment": "Fine clothes\njournal\nquill\nink\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Trade Network: You have contacts in merchant guilds and can find buyers or sellers for most goods.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "persuasion": 2,
+      "society": 2,
+      "empathy": 2,
+      "investigate": 2
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "Fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Journal",
+        "quantity": 1,
+        "originalText": "journal",
+        "sourceId": "1b02ead55fc70f66"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Quill",
+        "quantity": 1,
+        "originalText": "quill",
+        "sourceId": "4e18e27b51e765ec"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Ink, 1 oz",
+        "quantity": 1,
+        "originalText": "ink",
+        "sourceId": "0a04bf0388f541a3"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!a812c7557c1b42a6"
+  "_key": "!items!8810a9661d788508"
 }

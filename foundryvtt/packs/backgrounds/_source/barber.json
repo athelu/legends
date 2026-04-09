@@ -1,21 +1,83 @@
 {
-  "_id": "4d5400cd6b364fc8",
+  "_id": "b6c137c41872841b",
   "name": "Barber",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You have three specialties: cutting hair, treating minor wounds, and listening to gossip. People talk freely in your chair, and you've heard everything from marital troubles to murder plots. A good barber knows which secrets to keep, which to share, and when a customer really just needs someone to listen. Your steady hands and sharp razors serve you well in any situation. <strong>Skills:</strong> Medicine 2, Society 2, Persuasion 1, Devices 1, +40 XP <strong>Equipment:</strong> Razor, scissors, comb, soap, common clothes, shoes <strong>Feature</strong> - Gossip Network: People talk freely during grooming. You hear rumors and local news before most others.</p>"
+      "value": "<p>You have three specialties: cutting hair, treating minor wounds, and listening to gossip. People talk freely in your chair, and you've heard everything from marital troubles to murder plots. A good barber knows which secrets to keep, which to share, and when a customer really just needs someone to listen. Your steady hands and sharp razors serve you well in any situation.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Medicine 2, Society 2, Persuasion 1, Devices 1, +40 XP",
+    "startingEquipment": "Razor\nscissors\ncomb\nsoap\ncommon clothes\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Gossip Network: People talk freely during grooming. You hear rumors and local news before most others.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "medicine": 2,
+      "society": 2,
+      "persuasion": 1,
+      "devices": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Razor",
+        "quantity": 1,
+        "originalText": "Razor",
+        "sourceId": "cc78dfbb3ae869f8"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Scissors",
+        "quantity": 1,
+        "originalText": "scissors",
+        "sourceId": "ba77c569d9516bbe"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Comb",
+        "quantity": 1,
+        "originalText": "comb",
+        "sourceId": "80227ffa27288bc7"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Soap",
+        "quantity": 1,
+        "originalText": "soap",
+        "sourceId": "78220b95d7a48ace"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!4d5400cd6b364fc8"
+  "_key": "!items!b6c137c41872841b"
 }

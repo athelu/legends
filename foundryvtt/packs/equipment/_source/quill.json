@@ -1,5 +1,5 @@
 {
-  "_id": "5f207888d1654742",
+  "_id": "4e18e27b51e765ec",
   "name": "Quill",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -12,9 +12,23 @@
     "cost": 1.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!5f207888d1654742"
+  "_key": "!items!4e18e27b51e765ec"
 }

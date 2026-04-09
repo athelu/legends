@@ -1,5 +1,5 @@
 {
-  "_id": "9a9cdbcc475740a6",
+  "_id": "2a559b2da4deccd5",
   "name": "Uniform/Livery",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>Distinctive clothing identifying the wearer as a member of a specific organization, military unit, or household.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 3.0,
     "cost": 15.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!9a9cdbcc475740a6"
+  "_key": "!items!2a559b2da4deccd5"
 }

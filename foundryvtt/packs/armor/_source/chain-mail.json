@@ -1,5 +1,5 @@
 {
-  "_id": "5ee83c4abdd14ac1",
+  "_id": "e4a87928323f3fa7",
   "name": "Chain Mail",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -13,6 +13,10 @@
       "piercing": 5,
       "bludgeoning": 4
     },
+    "properties": [
+      "MediumArmor",
+      "Noisy"
+    ],
     "stealthPenalty": "noisy",
     "swimPenalty": "",
     "donTime": "",
@@ -20,12 +24,8 @@
     "weight": 0,
     "cost": 200.0,
     "quantity": 1,
-    "notes": "",
-    "keywords": [
-      "MediumArmor",
-      "Noisy"
-    ]
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!5ee83c4abdd14ac1"
+  "_key": "!items!e4a87928323f3fa7"
 }

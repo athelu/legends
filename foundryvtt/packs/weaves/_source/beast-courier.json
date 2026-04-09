@@ -1,5 +1,5 @@
 {
-  "_id": "30400fa542424ffb",
+  "_id": "a1909db02ca6814f",
   "name": "Beast Courier",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "Close, 30 ft.",
     "duration": "Up to 24 hours",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target one Tiny beast you can see within close range. The beast travels to a location you specify (must be familiar to you) and delivers a message of up to 25 words to a creature you describe. The beast travels at 50 miles per day (fly) or 25 miles per day (ground).",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "12 hours",
+          "duration": "12 hours"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "24 hours",
+          "duration": "24 hours"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "48 hours",
+          "duration": "48 hours"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 12 hours\n- 2 = 24 hours\n- 3 = 48 hours",
+    "targetingSuccessScaling": "0 = Fails, 1 = 12 hours, 2 = 24 hours, 3 = 48 hours",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "divination",
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!30400fa542424ffb"
+  "_key": "!items!a1909db02ca6814f"
 }

@@ -1,0 +1,38 @@
+{
+  "_id": "8ba8f33b424000ac",
+  "name": "Prepared Infusion",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Combat is a poor time to do careful work. You have learned to prepare infusions in advance during the quiet moments between conflicts, so that when violence arrives you already have tools ready to hand.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 3
+      },
+      "skills": "craft:3",
+      "feats": [
+        "Infuser"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>During a short rest, you may prepare up to two objects with dormant infusions using your normal Imbue Item charges. A prepared infusion holds its effect indefinitely until triggered or until you take a long rest. When you or an ally touches a prepared object and activates it as a [Minor] action, the infusion triggers immediately with no action cost from you. Prepared infusions use the same effect options as Imbue Item.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Prepare up to 2 objects during short rest using Imbue Item charges; activated by touch as [Minor] action"
+    },
+    "keywords": "[Magic], [Infuser]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!8ba8f33b424000ac"
+}

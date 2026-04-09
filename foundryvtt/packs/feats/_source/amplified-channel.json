@@ -1,0 +1,39 @@
+{
+  "_id": "68ee84cf7a1c5fc0",
+  "name": "Amplified Channel",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have found a way to pour more of yourself into each act of channeling, letting the deity's power flow through you at greater intensity than the standard invocation allows.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 5
+      },
+      "skills": "religion:5",
+      "feats": [
+        "Divine Gift",
+        "Devoted Channeler"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When using a Channel Divinity option, you may spend 4 Energy alongside the use to enhance the effect:</p>\n<ul>\n<li>Damage options deal additional damage equal to your Wisdom × your Tier</li>\n<li>Healing options restore additional HP equal to your Wisdom × your Tier</li>\n<li>Control options (stun, zone, sanctuary, etc.) extend their duration by 1 minute</li>\n<li>Fortune/Misfortune options apply to the next two rolls instead of one</li>\n</ul>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Optional 4 Energy cost when using Channel Divinity"
+    },
+    "keywords": "[Magic], [Divine]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!68ee84cf7a1c5fc0"
+}

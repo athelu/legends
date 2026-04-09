@@ -1,21 +1,72 @@
 {
-  "_id": "6f3fefb587024262",
+  "_id": "5b3102da48d591e5",
   "name": "Barrister",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Piles of legal manuals, stern teachers, and experience in the courtroom have instructed you in legal matters. You're capable of mounting a prosecution or defense in court, and you tend to keep abreast of local laws. You never know when you might need to talk your way out of trouble on short notice. Or talk your friends out of it, for that matter. <strong>Skills:</strong> Society 3, Persuasion 2, +32 XP <strong>Equipment:</strong> Fine clothes, quill, ink, vellum parchment x5, shoes <strong>Feature</strong> - Legal Knowledge: You understand laws and courts. Can navigate legal systems and provide counsel (though not always successfully).</p>"
+      "value": "<p>Piles of legal manuals, stern teachers, and experience in the courtroom have instructed you in legal matters. You're capable of mounting a prosecution or defense in court, and you tend to keep abreast of local laws. You never know when you might need to talk your way out of trouble on short notice. Or talk your friends out of it, for that matter.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 32,
+    "skillBonuses": "Society 3, Persuasion 2, +32 XP",
+    "startingEquipment": "Fine clothes\nquill\nink\nvellum parchment x5\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Legal Knowledge: You understand laws and courts. Can navigate legal systems and provide counsel (though not always successfully).",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "society": 3,
+      "persuasion": 2
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "Fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Quill",
+        "quantity": 1,
+        "originalText": "quill",
+        "sourceId": "4e18e27b51e765ec"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Ink, 1 oz",
+        "quantity": 1,
+        "originalText": "ink",
+        "sourceId": "0a04bf0388f541a3"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Parchment, Vellum",
+        "quantity": 5,
+        "originalText": "vellum parchment x5",
+        "sourceId": "7cffa64115b3d728"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!6f3fefb587024262"
+  "_key": "!items!5b3102da48d591e5"
 }

@@ -1,21 +1,82 @@
 {
-  "_id": "3c867c878c4a44fa",
+  "_id": "0739f2fd95de6e64",
   "name": "Acolyte",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You spent your early days in a religious monastery or cloister. You may have traveled out into the world to spread the message of your faith or because you cast away the teachings of your religion, but deep down you'll always carry within you the lessons you learned. Whether those lessons bring you comfort or haunt you probably depends on the day. <strong>Skills:</strong> Religion 3, Empathy 1, History 1, +36 XP <strong>Equipment:</strong> Iron Holy symbol, prayer book, Robe, incense stick x 10, common clothes, shoes <strong>Feature</strong> - Shelter of the Faithful: You can receive free healing and care at temples of your faith.</p>"
+      "value": "<p>You spent your early days in a religious monastery or cloister. You may have traveled out into the world to spread the message of your faith or because you cast away the teachings of your religion, but deep down you'll always carry within you the lessons you learned. Whether those lessons bring you comfort or haunt you probably depends on the day.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 36,
+    "skillBonuses": "Religion 3, Empathy 1, History 1, +36 XP",
+    "startingEquipment": "Iron Holy symbol\nprayer book\nRobe\nincense stick x 10\ncommon clothes\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Shelter of the Faithful: You can receive free healing and care at temples of your faith.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "religion": 3,
+      "empathy": 1,
+      "history": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Holy Symbol, Iron",
+        "quantity": 1,
+        "originalText": "Iron Holy symbol",
+        "sourceId": "2eec0f456bfe6cea"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Book, Prayer",
+        "quantity": 1,
+        "originalText": "prayer book",
+        "sourceId": "ff403d1a85a90f10"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Robe",
+        "quantity": 1,
+        "originalText": "Robe",
+        "sourceId": "cead7ceedf80bfbc"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Incense, Stick",
+        "quantity": 10,
+        "originalText": "incense stick x 10",
+        "sourceId": "370acdbed3c28b59"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!3c867c878c4a44fa"
+  "_key": "!items!0739f2fd95de6e64"
 }

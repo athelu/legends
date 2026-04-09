@@ -1,5 +1,5 @@
 {
-  "_id": "425dcacfc52a4261",
+  "_id": "a3841d4a61263f18",
   "name": "Blindsense",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Sight is useful, but it's also limiting. You've learned to perceive the world through sound, air pressure, and vibration. Darkness is no longer an obstacle; it's just a different kind of light.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "perception:7",
       "feats": [],
-      "tier": 6,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>You can sense the location of any hidden or invisible creature within 10 feet, reducing their condition to concealed</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Shadow]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!425dcacfc52a4261"
+  "_key": "!items!a3841d4a61263f18"
 }

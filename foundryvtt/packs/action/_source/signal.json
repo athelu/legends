@@ -1,0 +1,23 @@
+{
+  "_id": "7aeb854ab0b8171d",
+  "name": "Signal",
+  "type": "action",
+  "img": "icons/skills/movement/arrow-right-blue.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Cost:</strong> Free <strong>Effect:</strong> Shout an Alarm, point out a subject, or other very quick communication. Can only be done once per turn as a [Free] Action. Longer communication requires an [Interact] action.</p>\n<h2>Reactions</h2>\n<p>Reactions are special responses triggered by specific circumstances that occur outside your turn. <strong>Basic Reaction Mechanics:</strong> You can take ONE reaction per round. Reactions occur immediately when their trigger happens. Reactions happen during another actor’s turn. You can use your reaction even before your first turn in combat (unless Surprised). Reactions don't count against your 3 actions per turn. If you have access to multiple reactions, you must choose which one to use when the trigger occurs. Some feats, equipment, and weaves grant additional reaction options beyond hose listed here When multiple creatures have reactions that could trigger simultaneously. The reacting creature closest to the triggering creature goes first, If equidistant, highest Initiative Bonus acts first.</p>"
+    },
+    "actionType": "free",
+    "actionCost": "Free",
+    "requirements": "",
+    "trigger": "",
+    "effect": "Shout an Alarm, point out a subject, or other very quick communication. Can only be done once per turn as a [Free] Action. Longer communication requires an [Interact] action.\n\n## Reactions\nReactions are special responses triggered by specific circumstances that occur outside your turn.\nBasic Reaction Mechanics:\nYou can take ONE reaction per round. Reactions occur immediately when their trigger happens. Reactions happen during another actor’s turn. You can use your reaction even before your first turn in combat (unless Surprised). Reactions don't count against your 3 actions per turn.\nIf you have access to multiple reactions, you must choose which one to use when the trigger occurs. Some feats, equipment, and weaves grant additional reaction options beyond hose listed here When multiple creatures have reactions that could trigger simultaneously. The reacting creature closest to the triggering creature goes first, If equidistant, highest Initiative Bonus acts first.",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!7aeb854ab0b8171d"
+}

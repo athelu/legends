@@ -1,0 +1,38 @@
+{
+  "_id": "01859c58ec1523c0",
+  "name": "Arcane Theory",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Where others feel their way through a weave instinctively, you perceive the underlying structure of every effect you produce, and every effect aimed at you.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 3
+      },
+      "skills": "arcane:3",
+      "feats": [
+        "Mageborn"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you are targeted by a weave, you automatically identify the energy types being used and the general effect category (damage, control, transformation, etc.) before the effect resolves. Subtract 1 from one targeting die result of your choice when making Arcana checks to identify magical effects or objects.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Magic], [Mageborn]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!01859c58ec1523c0"
+}

@@ -1,29 +1,36 @@
 {
-  "_id": "f2c8257b836d4838",
+  "_id": "fe7633e45b6dce36",
   "name": "Linguist",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Not every tongue comes naturally, but you have never met one you couldn't eventually master.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "intelligence": 3
       },
       "skills": "language:3",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>For languages known gain +2; learn new languages faster</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!f2c8257b836d4838"
+  "_key": "!items!fe7633e45b6dce36"
 }

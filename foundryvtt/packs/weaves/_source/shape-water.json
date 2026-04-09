@@ -1,5 +1,5 @@
 {
-  "_id": "5bb4473fee274264",
+  "_id": "66d6d6f688300c6f",
   "name": "Shape Water",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Close, 30 ft.",
     "duration": "Instantaneous (or 1 hour for changes)",
-    "target": "",
+    "target": "area",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "Choose one: (1) Move up to 5ft cube of water up to 5 feet, (2) Shape water into simple forms that last 1 hour, (3) Change color/opacity for 1 hour, (4) Freeze water (unfrozen creatures can escape with Reflex save).",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "2ft cube",
+          "duration": "2ft cube"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "5ft cube",
+          "duration": "5ft cube"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10ft cube",
+          "duration": "10ft cube"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 2ft cube\n- 2 = 5ft cube\n- 3 = 10ft cube",
+    "targetingSuccessScaling": "0 = fails, 1 = 2ft cube, 2= 5ft cube, 3 = 10ft cube",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [],
@@ -42,5 +63,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!5bb4473fee274264"
+  "_key": "!items!66d6d6f688300c6f"
 }

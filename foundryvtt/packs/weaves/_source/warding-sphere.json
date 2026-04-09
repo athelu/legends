@@ -1,5 +1,5 @@
 {
-  "_id": "5fdb7e8187cb4025",
+  "_id": "88941ff6a6b31262",
   "name": "Warding Sphere",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -19,30 +19,52 @@
         "cost": 3
       }
     },
-    "range": "self, touch",
+    "range": "Self, touch",
     "duration": "10 minutes",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Creates a 10ft radius sphere around you. Weaves using 4 or fewer Energy cannot affect anything inside the globe (neither in nor out). You can move, sphere moves with you.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = full effect\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 1 hour",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
       "ritual",
       "touch",
+      "utility",
       "zone"
     ]
   },
   "effects": [],
-  "_key": "!items!5fdb7e8187cb4025"
+  "_key": "!items!88941ff6a6b31262"
 }

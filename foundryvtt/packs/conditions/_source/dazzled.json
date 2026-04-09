@@ -1,20 +1,35 @@
 {
-  "_id": "189cc5236bab4803",
+  "_id": "140e175da13759e1",
   "name": "Dazzled",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Target’s vision is impaired by bright light, spots, or over-stimulation. Vision-based Perception checks: Add 1 to both die results. Attack rolls: Add 1 to both die results. **</p>"
+    },
     "label": "Dazzled",
     "category": "sensory",
-    "description": {
-      "value": "<ul>\n<li>Vision impaired by bright light, spots, disorientation, or overstimulation</li>\n<li>Vision-based Perception checks: Add 1 to die results</li>\n<li>Attack rolls: Add 1 to die results</li>\n</ul>"
-    },
-    "tokenIcon": "",
-    "activeEffects": [],
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
+    "activeEffects": [
+      {
+        "key": "diceMod.attack.all",
+        "mode": "add",
+        "value": 1,
+        "notes": "Add 1 to attack dice"
+      }
+    ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": null
   },
   "flags": {},
-  "_key": "!items!189cc5236bab4803"
+  "_key": "!items!140e175da13759e1"
 }

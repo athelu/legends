@@ -1,21 +1,28 @@
 {
-  "_id": "fe09c3a25bdf481d",
+  "_id": "c276609e19e29fa2",
   "name": "Highly Skilled (-5)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>Excellent education in focus area.</p>\n<ul>\n<li>Choose one skill to start at rank 4 at creation</li>\n<li>That skill's governing attribute: +1</li>\n</ul>"
+      "value": "<p>Excellent education in focus area.</p>"
     },
     "pointCost": -5,
     "traitType": "physical",
     "isMagical": false,
     "magicalType": "",
     "requirements": "",
-    "benefits": "",
+    "benefits": "<ul>\n<li>Choose one skill to start at rank 4 at creation</li>\n<li>That skill's governing attribute: +1</li>\n</ul>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
     "requiresGMApproval": false,
     "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!fe09c3a25bdf481d"
+  "_key": "!items!c276609e19e29fa2"
 }

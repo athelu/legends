@@ -1,5 +1,5 @@
 {
-  "_id": "2c1a4c4275914ee4",
+  "_id": "590c337c24482465",
   "name": "Aversion (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
@@ -8,14 +8,15 @@
       "value": "<p>Particular dislike for one thing. Will remove it from your presence.</p>"
     },
     "pointValue": 1,
-    "flawType": "",
-    "severity": "moderate",
+    "flawType": "mental",
+    "severity": "minor",
     "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!2c1a4c4275914ee4"
+  "_key": "!items!590c337c24482465"
 }

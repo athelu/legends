@@ -1,5 +1,5 @@
 {
-  "_id": "998f273708894688",
+  "_id": "07b2b6d97f4b86cc",
   "name": "Fire Bolt",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,15 +23,36 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "You hurl a mote of fire at a creature or object within range. Target takes 8 fire damage. This is an attack weave—no saving throw allowed.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Miss",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (4)",
+          "duration": "Half damage (4)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (8)",
+          "duration": "Full damage (8)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (16) + ignited",
+          "duration": "Enhanced damage (16) + ignited"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Miss\n- 1 = Half damage (4)\n- 2 = Full damage (8)\n- 3 = Enhanced damage (16) + ignited",
+    "targetingSuccessScaling": "0 = Miss, 1 = Half damage (4), 2 = Full damage (8), 3 = Enhanced damage (16) + ignited",
     "weavingRoll": "Fire Potential + Fire Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
@@ -46,5 +67,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!998f273708894688"
+  "_key": "!items!07b2b6d97f4b86cc"
 }

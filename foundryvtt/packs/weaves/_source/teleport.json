@@ -1,13 +1,13 @@
 {
-  "_id": "163a763701894068",
+  "_id": "936e2250b82e019a",
   "name": "Teleport",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Instantly transport to destination on same plane. Number of success required depends on familiarity.</p>"
+      "value": "<p>Instantly transport to destination on same plane. Number of success required depends on familiarity</p>"
     },
-    "weaveType": "simple",
+    "weaveType": "complex",
     "actionCost": 2,
     "energyCost": {
       "primary": {
@@ -16,30 +16,53 @@
       },
       "supporting": {
         "type": "",
-        "cost": 0
+        "cost": 8
       }
     },
-    "range": "self, touch (up to 8 willing creatures)",
+    "range": "Self, touch (up to 8 willing creatures)",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Instantly transport to destination on same plane. Number of success required depends on familiarity",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "mishap",
+          "duration": "mishap"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Very familiar",
+          "duration": "Very familiar"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "visited a few times",
+          "duration": "visited a few times"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = mishap\n- 2 = Very familiar\n- 3 = visited a few times",
+    "targetingSuccessScaling": "0 = fails, 1 = mishap, 2= Very familiar, 3 = visited a few times",
     "weavingRoll": "Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "touch"
+      "ritual",
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!163a763701894068"
+  "_key": "!items!936e2250b82e019a"
 }

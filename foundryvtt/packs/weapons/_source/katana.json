@@ -1,5 +1,5 @@
 {
-  "_id": "b6e24114a68b491a",
+  "_id": "7159d3984eb9ac16",
   "name": "Katana",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 8,
       "type": "slashing",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": "piercing"
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
+        "skill": "melee",
         "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 8,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -43,8 +43,10 @@
     "properties": [
       "versatile"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!b6e24114a68b491a"
+  "_key": "!items!7159d3984eb9ac16"
 }

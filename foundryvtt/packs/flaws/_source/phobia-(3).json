@@ -1,5 +1,5 @@
 {
-  "_id": "43ff710fccba4cb9",
+  "_id": "a7869e7ac5677581",
   "name": "Phobia (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
@@ -8,14 +8,15 @@
       "value": "<p>Deathly afraid of something. Make [[/save type=will]] (1 success required) or flee/cower when confronted.</p>"
     },
     "pointValue": 3,
-    "flawType": "",
+    "flawType": "mental",
     "severity": "moderate",
     "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!43ff710fccba4cb9"
+  "_key": "!items!a7869e7ac5677581"
 }

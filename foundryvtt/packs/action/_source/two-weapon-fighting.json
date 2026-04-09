@@ -1,22 +1,23 @@
 {
-  "_id": "a67d6545f2284ff9",
+  "_id": "8126d5158217a03d",
   "name": "Two-Weapon Fighting",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Requirements:</strong> Wielding two weapons, off-hand weapon must have Light property</li>\n<li><strong>Without Feat:</strong>\n<ul>\n<li>Use Shared Attribute Roll (roll attribute once for both attacks)</li>\n<li>First attack: Add 1 to both die results</li>\n<li>Second attack: Add 2 to both die results</li>\n</ul></li>\n<li><strong>With Two-Weapon Fighting Feat:</strong>\n<ul>\n<li>First attack: Normal (no penalty)</li>\n<li>Second attack: Add 1 to both die results</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Both attacks made as part of single [Combat] action</li>\n<li>Subject to Multiple Action Penalty if you make additional combat actions</li>\n<li>See (Combat) for detailed examples</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Requirements:</strong> Wielding two weapons, off-hand weapon must have Light property <strong>Effect:</strong> When wielding two weapons, you may make two attacks with a single [Combat] action. The Off-hand weapon must have the Light property. The attack uses a Shared Attribute Roll (roll attribute once, applies to both attacks). Roll skill die separately for each weapon.</p>\n<ul>\n<li>First Two-Weapon Action: First attack: Add 1 to both die results, Second attack: Add 2 to both die results</li>\n<li>Second Two-Weapon Action: First attack: Add 2 to both die results, Second attack: Add 3 to both die results</li>\n<li>Second Two-Weapon Action: First attack: Add 3 to both die results, Second attack: Add 4 to both die results</li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
+    "requirements": "Wielding two weapons, off-hand weapon must have Light property",
     "trigger": "",
-    "effect": "",
-    "keywords": "",
+    "effect": "When wielding two weapons, you may make two attacks with a single [Combat] action. The Off-hand weapon must have the Light property. The attack uses a Shared Attribute Roll (roll attribute once, applies to both attacks). Roll skill die separately for each weapon.\n- First Two-Weapon Action: First attack: Add 1 to both die results, Second attack: Add 2 to both die results\n- Second Two-Weapon Action: First attack: Add 2 to both die results, Second attack: Add 3 to both die results\n- Second Two-Weapon Action: First attack: Add 3 to both die results, Second attack: Add 4 to both die results",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!a67d6545f2284ff9"
+  "_key": "!items!8126d5158217a03d"
 }

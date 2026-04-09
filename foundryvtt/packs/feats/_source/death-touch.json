@@ -1,0 +1,39 @@
+{
+  "_id": "be5685fa8169145f",
+  "name": "Death Touch",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Every feint is a death sentence; they just do not know it yet.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 6,
+        "charisma": 6
+      },
+      "skills": "meleeCombat:6",
+      "feats": [
+        "Bleeding Edge"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your Exposed Strike damage increases to Charisma × 2.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Duelist]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!be5685fa8169145f"
+}

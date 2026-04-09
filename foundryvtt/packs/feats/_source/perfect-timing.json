@@ -1,29 +1,34 @@
 {
-  "_id": "563ba1eccfcc4e88",
+  "_id": "aa02b8c183e0ee1e",
   "name": "Perfect Timing",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>The right word at the right moment changes everything.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "wisdom": 5
-      },
+      "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 3,
-      "other": "Sorcerous Origin trait"
+      "tier": 0,
+      "other": "Casting Attribute 5"
     },
     "benefits": "<p>Once per turn, you can use a [Reaction] to grant one creature within 60 feet Fortune on their next roll (any type—attack, save, skill check, or weaving). You must declare this before they roll</p>",
-    "usageType": "once",
-    "keywords": "[Magic], [Sorcerer], [Reaction]",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per turn (reaction)"
+    },
+    "keywords": "[Magic], [Reaction]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!563ba1eccfcc4e88"
+  "_key": "!items!aa02b8c183e0ee1e"
 }

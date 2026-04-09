@@ -1,0 +1,38 @@
+{
+  "_id": "87bb2a9455c24aa0",
+  "name": "Formulaic Precision",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have memorized the precise mathematical relationship between energy expenditure and effect. When you have time to prepare, the formula plays out in your mind with perfect clarity.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 5
+      },
+      "skills": "arcane:5",
+      "feats": [
+        "Mageborn"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When using Ritual Casting, you never suffer overspending penalties regardless of how far your Energy expenditure exceeds your Mastery. The preparation time compensates for raw Mastery gaps with theoretical knowledge.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Applies whenever you use Ritual Casting"
+    },
+    "keywords": "[Magic], [Mageborn]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!87bb2a9455c24aa0"
+}

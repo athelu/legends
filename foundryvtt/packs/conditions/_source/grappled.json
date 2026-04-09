@@ -1,20 +1,54 @@
 {
-  "_id": "4e92820bd9b1472c",
+  "_id": "a51cab7376b2389f",
   "name": "Grappled",
   "type": "condition",
   "img": "icons/svg/net.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Movement speed reduced to 0. Cannot take [Move] actions. Attacks and skill checks: Add 1 to both die results. <strong>Recovery:</strong> Use 1 action to make an opposed Athletics, Might or [[/check skill=acrobatics]].</p>\n<ul>\n<li>Margin 1+: Remove grappled condition.</li>\n</ul>"
+    },
     "label": "Grappled",
     "category": "movement",
-    "description": {
-      "value": "<h4>Effect:</h4>\n<ul>\n<li>Movement speed reduced to 0</li>\n<li>Cannot take [Move] actions</li>\n<li>Attacks and skill checks: Add 1 to die results</li>\n<li>Can still attack and act normally otherwise</li>\n<li>Attacks against you: No modifier</li>\n</ul>\n<h4>Initiating Grapple:</h4>\n<ul>\n<li>Use 1 [Combat] action</li>\n<li>Make opposed Athletics (Str + Athletics) check vs target's choice of Athletics or Acrobatics</li>\n<li>If you win: Target becomes Grappled</li>\n<li>Both you and target are grappling (you cannot move either, but can release as [Free] action)</li>\n</ul>\n<h4>Escaping Grapple:</h4>\n<ul>\n<li>Use 1 action to make opposed Athletics or [[/check skill=acrobatics]]</li>\n<li>If you equal or exceed grappler's successes: Escape and can move normally</li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/net.svg",
-    "activeEffects": [],
+    "activeEffects": [
+      {
+        "key": "diceMod.attack.all",
+        "mode": "add",
+        "value": 1,
+        "notes": "Add 1 to attack dice"
+      }
+    ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "check",
+      "removeOnSuccess": false,
+      "check": {
+        "skill": "athletics",
+        "attribute": "",
+        "skills": [
+          "athletics",
+          "might",
+          "acrobatics"
+        ],
+        "attributes": [],
+        "opposed": true,
+        "label": "Athletics, Might or Acrobatics"
+      },
+      "downgrades": {
+        "margin_1_plus": null
+      }
+    }
   },
   "flags": {},
-  "_key": "!items!4e92820bd9b1472c"
+  "_key": "!items!a51cab7376b2389f"
 }

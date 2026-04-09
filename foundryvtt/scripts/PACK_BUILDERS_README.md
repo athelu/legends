@@ -21,6 +21,7 @@ python build_all_packs.py
 ```bash
 python build_armor_pack.py
 python build_weapons_pack.py
+python build_equipment_pack.py
 python build_traits_pack.py
 python build_action_pack.py
 python build_ability_pack.py
@@ -77,10 +78,41 @@ These scripts parse markdown documentation and extract items automatically.
 - Creates: Weapon items
   - Generates: `foundryvtt/packs/weapons/` (LevelDB files)
 
+#### `build_equipment_pack.py`
+- Parses: `ttrpg/equipment.md`
+- Creates: Equipment items
+- Generates: `foundryvtt/packs/equipment/` (LevelDB files)
+- Extracts dedicated equipment metadata where present:
+  - `system.equipmentType`
+  - `system.capacity`
+  - `system.brightLight` / `system.dimLight` / `system.duration`
+  - `system.uses` / `system.consumable`
+  - `system.associatedSkill`
+- Uses deterministic IDs so rebuilds do not churn `_id` and `_key`
+
 #### `build_traits_pack.py`
-- Parses: `ttrpg/traits.md`, `ttrpg/flaws.md`, `ttrpg/feats.md`
-- Creates: Trait, Flaw, and Feat items
-- Generates: Three separate LevelDB pack directories
+- Parses: `ttrpg/traits.md`
+- Creates: Trait items
+- Generates: `foundryvtt/packs/traits/` (LevelDB files)
+- Extracts dedicated trait metadata fields where present:
+  - `system.requirements`
+  - `system.benefits`
+  - `system.visualEffects`
+  - `system.notes`
+  - magical trait metadata such as `castingStat` and resource-grant flags
+
+#### `build_flaws_pack.py`
+- Parses: `ttrpg/flaws.md`
+- Creates: Flaw items
+- Generates: `foundryvtt/packs/flaws/` (LevelDB files)
+- Extracts dedicated flaw metadata fields where present:
+  - `system.pointValue`
+  - `system.flawType`
+  - `system.severity`
+  - `system.mechanicalEffects`
+  - `system.roleplayingImpact`
+  - `system.requiresGMApproval`
+  - `system.notes`
 
 #### `build_action_pack.py`
 - Parses: `ttrpg/actions.md`
@@ -276,7 +308,9 @@ To use custom images, edit the image path in:
 | `build_all_packs.py` | Runs all builders | All packs (LevelDB) | Master build script |
 | `build_armor_pack.py` | `armor.md` | `armor/` (LevelDB) | Parse armor + shields |
 | `build_weapons_pack.py` | `weapons.md` | `weapons/` (LevelDB) | Parse weapons |
-| `build_traits_pack.py` | `traits.md`, `flaws.md`, `feats.md` | 3 packs (LevelDB) | Parse traits/flaws/feats |
+| `build_traits_pack.py` | `traits.md` | `traits/` (LevelDB) | Parse traits |
+| `build_flaws_pack.py` | `flaws.md` | `flaws/` (LevelDB) | Parse flaws |
+| `build_feats_pack.py` | `feats.md` | `feats/` (LevelDB) | Parse feats |
 | `build_action_pack.py` | `actions.md` | `action/` (LevelDB) | Parse actions |
 | `build_ability_pack.py` | JSON files | `abilities/` (LevelDB) | Build abilities |
 | `build_packs_simple.py` | JSON files | LevelDB pack files | Generic builder |

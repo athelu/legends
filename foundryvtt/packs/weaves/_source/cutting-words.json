@@ -1,11 +1,11 @@
 {
-  "_id": "0c03e5ed778a4111",
+  "_id": "7f46eb7960831b1b",
   "name": "Cutting Words",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Speak cutting words at one creature you can see within medium range. Target takes [[/damage 4 type=psychic]] damage and makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target adds 1 to their next attack roll before end of their next turn.</p>"
+      "value": "<p>Speak cutting words at one creature you can see within medium range. Target takes [[/damage 4 type=psychic]] damage and makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target adds 1 to both their dice on their next attack roll before end of their next turn.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft.",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Speak cutting words at one creature you can see within medium range. Target takes 4 psychic damage and makes Will save. Compare your targeting successes to their save successes. If you have more, target adds 1 to both their dice on their next attack roll before end of their next turn.",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (2)",
+          "duration": "Half damage (2)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (4) + attack penalty",
+          "duration": "Full damage (4) + attack penalty"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (8) + attack penalty",
+          "duration": "Enhanced damage (8) + attack penalty"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (2)\n- 2 = Full damage (4) + penalty on attack\n- 3 = Enhanced damage (8) + penalty on attack",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (2), 2 = Full damage (4) + attack penalty, 3 = Enhanced damage (8) + attack penalty",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
@@ -42,5 +63,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!0c03e5ed778a4111"
+  "_key": "!items!7f46eb7960831b1b"
 }

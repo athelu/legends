@@ -1,5 +1,5 @@
 {
-  "_id": "122a59acfa2f4478",
+  "_id": "41a819124d31f16c",
   "name": "Supreme Stealth",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Through perfect understanding of shadows, sound, and sightlines, you can make yourself effectively invisible without magic.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "stealth:5",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Subtract 1 from both Stealth dice when attempting to hide</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Skill], [Shadow]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!122a59acfa2f4478"
+  "_key": "!items!41a819124d31f16c"
 }

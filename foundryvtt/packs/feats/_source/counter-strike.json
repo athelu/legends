@@ -1,5 +1,5 @@
 {
-  "_id": "81db28ac92d94084",
+  "_id": "06f8fe8b91c0f8d2",
   "name": "Counter Strike",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>They thought missing was safe. They were wrong. You've learned to exploit that instant, turning their mistake into your opportunity.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 5
       },
       "skills": "meleeCombat:5",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>When a creature misses you with a melee attack, as a [Reaction] you may make one melee weapon attack against that creature</p>",
-    "usageType": "once",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per round (reaction)"
+    },
     "keywords": "[Combat], [Maneuver], [Reaction]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!81db28ac92d94084"
+  "_key": "!items!06f8fe8b91c0f8d2"
 }

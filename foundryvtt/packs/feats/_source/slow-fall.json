@@ -1,5 +1,5 @@
 {
-  "_id": "41ce1feb21bf44c9",
+  "_id": "800064836b9cd996",
   "name": "Slow Fall",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Through training or instinct, you've learned to control your descent that sheer drops are no longer a challenge,  always landing in ways that distribute impact.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Reduce falling damage by an amount equal to 5 × your Tier</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Ascetic], [Reaction]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!41ce1feb21bf44c9"
+  "_key": "!items!800064836b9cd996"
 }

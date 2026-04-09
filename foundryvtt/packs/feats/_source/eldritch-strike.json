@@ -1,5 +1,5 @@
 {
-  "_id": "6e2f98176f414ad0",
+  "_id": "ce11d03a69d5ed81",
   "name": "Eldritch Strike",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>When your blade finds its mark, it leaves more than just a wound, it leaves an opening. The combination is elegant, efficient, and terrifying.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [
         "Weapon Weaver"
       ],
-      "tier": 2,
+      "tier": 0,
       "other": "any combat skill 4"
     },
     "benefits": "<p>When you hit a creature with a weapon attack, the next weave you cast against that creature before end of your next turn has the target subtract 1 from both saving throw dice</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive trigger"
+    },
     "keywords": "[Combat], [Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!6e2f98176f414ad0"
+  "_key": "!items!ce11d03a69d5ed81"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "27c2407d0ca646b1",
+  "_id": "24102f45ce7e5231",
   "name": "Conjure Water",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,24 +23,46 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create up to 10 gallons of clean water in an open container. Or create rain in 30ft cube that extinguishes open flames.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "5 gallons",
+          "duration": "5 gallons"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 gallons",
+          "duration": "10 gallons"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "20 gallons",
+          "duration": "20 gallons"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 5 gallons\n- 2 = 10 gallons\n- 3 = 20 gallons",
+    "targetingSuccessScaling": "0 = Fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!27c2407d0ca646b1"
+  "_key": "!items!24102f45ce7e5231"
 }

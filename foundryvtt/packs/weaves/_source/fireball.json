@@ -1,5 +1,5 @@
 {
-  "_id": "aba0af23c11f4986",
+  "_id": "700262beaa311ccf",
   "name": "Fireball",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft.",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. All creatures in a 20-foot radius sphere take 28 fire damage. Each target takes the full listed damage and makes their own save.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (14)",
+          "duration": "Half damage (14)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (28)",
+          "duration": "Full damage (28)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (36) + ignited",
+          "duration": "Enhanced damage (36) + ignited"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (14)\n- 2 = Full damage (28)\n- 3 = Enhanced damage (36) + ignited",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (14), 2 = Full damage (28), 3 = Enhanced damage (36) + ignited",
     "weavingRoll": "Fire Potential + Fire Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
@@ -47,5 +68,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!aba0af23c11f4986"
+  "_key": "!items!700262beaa311ccf"
 }

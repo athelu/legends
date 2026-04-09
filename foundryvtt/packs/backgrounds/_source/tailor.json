@@ -1,21 +1,56 @@
 {
-  "_id": "08b711c15993408f",
+  "_id": "49a38d7cf36b80f9",
   "name": "Tailor",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Fabric, thread, and needle were your tools, and with them you created everything from simple work clothes to elaborate gowns. You learned that clothes speak volumes about the wearers status, wealth, taste, even personality. This eye for detail serves you well in any situation. <strong>Skills:</strong> Craft 2, Society 2, Perception 1, Persuasion 1, +40 XP <strong>Equipment:</strong> Sewing kit, fine clothes, shoes <strong>Feature</strong> - Fashion Sense: You understand clothing and status. Can identify someone's social position by their attire, create convincing disguises, and know current fashion trends.</p>"
+      "value": "<p>Fabric, thread, and needle were your tools, and with them you created everything from simple work clothes to elaborate gowns. You learned that clothes speak volumes about the wearers status, wealth, taste, even personality. This eye for detail serves you well in any situation.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Craft 2, Society 2, Perception 1, Persuasion 1, +40 XP",
+    "startingEquipment": "Sewing kit\nfine clothes\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Fashion Sense: You understand clothing and status. Can identify someone's social position by their attire, create convincing disguises, and know current fashion trends.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "craft": 2,
+      "society": 2,
+      "perception": 1,
+      "persuasion": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Sewing Kit",
+        "quantity": 1,
+        "originalText": "Sewing kit",
+        "sourceId": "1824007414418c16"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!08b711c15993408f"
+  "_key": "!items!49a38d7cf36b80f9"
 }

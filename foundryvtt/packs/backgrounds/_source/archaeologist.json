@@ -1,21 +1,63 @@
 {
-  "_id": "bd4288b3020f4024",
+  "_id": "f5e055d44cb4e880",
   "name": "Archaeologist",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Crumbling ruins called to you louder than the comforts of civilization. You've spent years piecing together fragments of lost empires, and you know that the greatest treasures aren't gold, they're answers. Adventuring might have started as just another dig, but you've discovered that sometimes the most interesting artifacts are still being used by their current owners. <strong>Skills:</strong> History 3, Investigate 2, +32 XP <strong>Equipment:</strong> journal, map case, traveler's clothes, work boots <strong>Feature</strong> - Historical Insight: When examining ruins or artifacts, the GM will provide one useful historical fact or context clue.</p>"
+      "value": "<p>Crumbling ruins called to you louder than the comforts of civilization. You've spent years piecing together fragments of lost empires, and you know that the greatest treasures aren't gold, they're answers. Adventuring might have started as just another dig, but you've discovered that sometimes the most interesting artifacts are still being used by their current owners.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 32,
+    "skillBonuses": "History 3, Investigate 2, +32 XP",
+    "startingEquipment": "journal\nmap case\ntraveler's clothes\nwork boots",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Historical Insight: When examining ruins or artifacts, the character will know one useful historical fact or context clue.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "history": 3,
+      "investigate": 2
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Journal",
+        "quantity": 1,
+        "originalText": "journal",
+        "sourceId": "1b02ead55fc70f66"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Map Case",
+        "quantity": 1,
+        "originalText": "map case",
+        "sourceId": "c9a749f06795873a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Traveler's",
+        "quantity": 1,
+        "originalText": "traveler's clothes",
+        "sourceId": "0e79b3267533a030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Work",
+        "quantity": 1,
+        "originalText": "work boots",
+        "sourceId": "6a6394e3ffbccf86"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!bd4288b3020f4024"
+  "_key": "!items!f5e055d44cb4e880"
 }

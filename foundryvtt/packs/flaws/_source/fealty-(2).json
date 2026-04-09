@@ -1,5 +1,5 @@
 {
-  "_id": "b00ba4355e8c4118",
+  "_id": "f7971ce620489b65",
   "name": "Fealty (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
@@ -8,14 +8,15 @@
       "value": "<p>Sworn allegiance to political faction. Must honor it.</p>"
     },
     "pointValue": 2,
-    "flawType": "",
-    "severity": "moderate",
+    "flawType": "social",
+    "severity": "minor",
     "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!b00ba4355e8c4118"
+  "_key": "!items!f7971ce620489b65"
 }

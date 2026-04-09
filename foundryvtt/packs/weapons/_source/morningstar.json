@@ -1,5 +1,5 @@
 {
-  "_id": "52ffa9d3ec284278",
+  "_id": "2e4c1678eb7494ca",
   "name": "Morningstar",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 8,
       "type": "bludgeoning",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": "piercing"
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
+        "skill": "melee",
         "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 8,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -44,8 +44,10 @@
       "standard",
       "multi-type"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!52ffa9d3ec284278"
+  "_key": "!items!2e4c1678eb7494ca"
 }

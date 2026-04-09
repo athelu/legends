@@ -1,29 +1,36 @@
 {
-  "_id": "c510a830cd744f77",
+  "_id": "bc19e89334863b2a",
   "name": "Fast Healer",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Your body treats injuries like inconveniences rather than emergencies. Given even a moment's rest, it gets to work. A full night of sleep borders on miraculous.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "constitution": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Short rest: gain +Con HP; long rest: gain double HP</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Heal], [General]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!c510a830cd744f77"
+  "_key": "!items!bc19e89334863b2a"
 }

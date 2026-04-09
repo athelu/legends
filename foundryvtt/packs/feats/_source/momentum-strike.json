@@ -1,14 +1,15 @@
 {
-  "_id": "f13220d9465b4ee7",
+  "_id": "b73eb5d519473ab3",
   "name": "Momentum Strike",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>You've trained yourself to carry the motion forward. The same swing, the same energy, redirected before your boots finish the step.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 4,
@@ -16,15 +17,21 @@
       },
       "skills": "meleeCombat:4",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
-    "benefits": "<p>When you reduce a creature to 0 HP with a melee attack, you can immediately make one additional melee attack against another creature within 5 feet. Use the same Attribute roll, roll Melee Combat skill separately. This can trigger once per turn</p>",
-    "usageType": "once",
+    "benefits": "<p>When you reduce a creature to 0 HP with a melee attack, you can immediately make one additional melee attack against another creature within 5 feet. Use the same Attribute roll, roll Melee Combat skill separately. If the original attack suffered a Mulitiple Attack Penalty, the same penalty is applied to this strik. This can trigger once per turn.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per turn"
+    },
     "keywords": "[Combat]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!f13220d9465b4ee7"
+  "_key": "!items!b73eb5d519473ab3"
 }

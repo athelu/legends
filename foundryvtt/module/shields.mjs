@@ -34,6 +34,31 @@ export function getShieldReactionsForActor(actor) {
   return reactions;
 }
 
+function normalizeLinkedEntries(shield) {
+  const linkedAbilities = Array.isArray(shield.system?.linkedAbilities) ? shield.system.linkedAbilities : [];
+  const reactions = Array.isArray(shield.system?.reactions) ? shield.system.reactions : [];
+  return linkedAbilities.concat(reactions).filter(entry => entry?.name);
+}
+
+async function resolveLinkedCompendiumDocument(entry) {
+  for (const pack of game.packs.values()) {
+    try {
+      const idx = await pack.getIndex();
+      const indexed = idx.find(i => (entry._id && (i.id === entry._id || i._id === entry._id)) || i.name === entry.name);
+      if (!indexed) continue;
+
+      const doc = await pack.getDocument(indexed.id || indexed._id || indexed._doc);
+      if (doc) {
+        return { pack, doc };
+      }
+    } catch (err) {
+      continue;
+    }
+  }
+
+  return null;
+}
+
 /**
  * Apply a shield reaction. Supports reactions of type 'melee' or 'ranged'
  * which reduce incoming damage for a single hit.
@@ -62,37 +87,30 @@ export async function applyShieldReaction(defender, reactionEntry, context={}) {
  */
 export async function grantLinkedItemsFromShield(actor, shield) {
   if (!actor || !shield) return;
-  const linked = (shield.system?.linkedAbilities || []).concat(shield.system?.reactions || []);
+  const linked = normalizeLinkedEntries(shield);
   if (!linked.length) return;
 
   for (const entry of linked) {
-    const name = entry.name;
-    // Try to find the item in any compendium by name or id
-    let found = null;
-    for (const pack of game.packs.values()) {
-      try {
-        const idx = await pack.getIndex();
-        const e = idx.find(i => (entry._id && (i.id === entry._id || i._id === entry._id)) || i.name === name);
-        if (e) {
-          try {
-            const doc = await pack.getDocument(e.id || e._id || e._doc);
-            if (doc) {
-              found = { pack, doc };
-              break;
-            }
-          } catch (err) {}
-        }
-      } catch (err) {}
-    }
+    const found = await resolveLinkedCompendiumDocument(entry);
+    if (!found?.doc) continue;
 
-    if (found && found.doc) {
-      // Create a copy on the actor and tag it as granted by this shield
-      const copy = foundry.utils.duplicate(found.doc.toObject());
-      copy.flags = copy.flags || {};
-      copy.flags.legends = copy.flags.legends || {};
-      copy.flags.legends.grantedBy = { shieldId: shield.id, shieldName: shield.name, sourcePack: found.pack.collection, sourceId: found.doc.id };
-      await actor.createEmbeddedDocuments('Item', [copy]);
-    }
+    const existing = actor.items.find(i =>
+      i?.flags?.legends?.grantedBy?.shieldId === shield.id &&
+      i?.flags?.legends?.grantedBy?.sourceId === found.doc.id
+    );
+    if (existing) continue;
+
+    const copy = foundry.utils.duplicate(found.doc.toObject());
+    copy.flags = copy.flags || {};
+    copy.flags.legends = copy.flags.legends || {};
+    copy.flags.legends.grantedBy = {
+      shieldId: shield.id,
+      shieldName: shield.name,
+      sourcePack: found.pack.collection,
+      sourceId: found.doc.id,
+      sourceName: found.doc.name
+    };
+    await actor.createEmbeddedDocuments('Item', [copy]);
   }
 }
 
@@ -109,6 +127,37 @@ export async function revokeLinkedItemsFromShield(actor, shield) {
   await actor.deleteEmbeddedDocuments('Item', ids);
 }
 
+export async function syncShieldLinkedItemsForActor(actor) {
+  if (!actor?.items) return;
+
+  const equippedShields = findEquippedShields(actor);
+  const desiredKeys = new Set();
+
+  for (const shield of equippedShields) {
+    for (const entry of normalizeLinkedEntries(shield)) {
+      if (!entry?.name) continue;
+      desiredKeys.add(`${shield.id}:${entry._id || entry.name}`);
+    }
+  }
+
+  const staleIds = actor.items
+    .filter(item => item?.flags?.legends?.grantedBy?.shieldId)
+    .filter(item => {
+      const grantedBy = item.flags.legends.grantedBy;
+      const key = `${grantedBy.shieldId}:${grantedBy.sourceId || grantedBy.sourceName}`;
+      return !desiredKeys.has(key);
+    })
+    .map(item => item.id);
+
+  if (staleIds.length) {
+    await actor.deleteEmbeddedDocuments('Item', staleIds);
+  }
+
+  for (const shield of equippedShields) {
+    await grantLinkedItemsFromShield(actor, shield);
+  }
+}
+
 /**
  * Simple initializer to expose an API on game.legends.shields
  */
@@ -117,6 +166,9 @@ export function initializeShieldHelpers() {
   game.legends.shields = {
     findEquippedShields,
     getShieldReactionsForActor,
-    applyShieldReaction
+    applyShieldReaction,
+    grantLinkedItemsFromShield,
+    revokeLinkedItemsFromShield,
+    syncShieldLinkedItemsForActor
   };
 }

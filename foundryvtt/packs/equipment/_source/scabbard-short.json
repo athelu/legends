@@ -1,5 +1,5 @@
 {
-  "_id": "88d3235f4fba4c01",
+  "_id": "e7c4ecb896730d60",
   "name": "Scabbard, Short",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -12,9 +12,23 @@
     "cost": 25.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!88d3235f4fba4c01"
+  "_key": "!items!e7c4ecb896730d60"
 }

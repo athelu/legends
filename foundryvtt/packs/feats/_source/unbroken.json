@@ -1,0 +1,36 @@
+{
+  "_id": "7a42a6e997c9e8d8",
+  "name": "Unbroken",
+  "type": "feat",
+  "img": "icons/skills/melee/strike-axe-blood-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have survived things that should have broken you, and each time you came out the other side harder than before.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "constitution": 6
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>You have Fortune on all Fortitude saves against environmental conditions, poisons, and disease. Exhaustion from non-Primal Fury sources (forced march, extreme conditions, sleep deprivation) requires you to fail two consecutive saves before gaining a level. When making stabilization saves while Dying, subtract 1 from both dice.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Savage]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!7a42a6e997c9e8d8"
+}

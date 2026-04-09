@@ -1,5 +1,5 @@
 {
-  "_id": "60c164aed231414c",
+  "_id": "27e42c6a114da51c",
   "name": "Minor Illusion",
   "type": "weave",
   "img": "is static unless you use action to move it. Physical interaction reveals illusory effect.",
@@ -23,26 +23,48 @@
     "duration": "1 minute",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create a sound or image at close range no larger than a 5ft cube. Sound can be any noise. Image is static unless you use action to move it. Physical interaction reveals illusory effect.",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
       "divination",
       "illusion",
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!60c164aed231414c"
+  "_key": "!items!27e42c6a114da51c"
 }

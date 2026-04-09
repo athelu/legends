@@ -1,5 +1,5 @@
 {
-  "_id": "af2271086e254561",
+  "_id": "8a4300ae44a6d4e6",
   "name": "Scale Mail",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -13,6 +13,10 @@
       "piercing": 5,
       "bludgeoning": 4
     },
+    "properties": [
+      "MediumArmor",
+      "Noisy"
+    ],
     "stealthPenalty": "noisy",
     "swimPenalty": "",
     "donTime": "",
@@ -20,12 +24,8 @@
     "weight": 0,
     "cost": 250.0,
     "quantity": 1,
-    "notes": "",
-    "keywords": [
-      "MediumArmor",
-      "Noisy"
-    ]
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!af2271086e254561"
+  "_key": "!items!8a4300ae44a6d4e6"
 }

@@ -1,22 +1,23 @@
 {
-  "_id": "083c3db43dd24c95",
+  "_id": "d0c1c276ea9f57eb",
   "name": "Shield Block",
   "type": "action",
   "img": "icons/skills/melee/shield-block-gray-yellow.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Trigger:</strong> You are hit by an attack while wielding a shield</li>\n<li><strong>Effect:</strong> Once per round, Gain +6 DR against this attack only</li>\n</ul>\n<h3>Universal Reactions</h3>\n<p>All characters have access to these reactions:</p>"
+      "value": "<p><strong>Trigger:</strong> You are hit by an attack while wielding a shield <strong>Effect:</strong> Once per round, Gain +6 DR against this attack only</p>"
     },
     "actionType": "reaction",
     "actionCost": "",
+    "requirements": "",
     "trigger": "You are hit by an attack while wielding a shield",
-    "effect": "Once per round, Gain +6 DR against this attack only\n\n\n\n### Universal Reactions\nAll characters have access to these reactions:",
-    "keywords": "",
+    "effect": "Once per round, Gain +6 DR against this attack only",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!083c3db43dd24c95"
+  "_key": "!items!d0c1c276ea9f57eb"
 }

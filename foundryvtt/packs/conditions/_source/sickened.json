@@ -1,29 +1,52 @@
 {
-  "_id": "53a17d70da0d4b20",
+  "_id": "38768e1e389c652e",
   "name": "Sickened",
   "type": "condition",
   "img": "icons/svg/acid.svg",
   "system": {
-    "label": "Sickened",
-    "category": "physical",
     "description": {
-      "value": "<ul>\n<li>Constitution and bodily functions impaired</li>\n<li>Fortitude saves: Add 1 to die results</li>\n<li>Cannot benefit from food or drink</li>\n<li>Duration: Typically 10 minutes to 1 hour unless specified otherwise</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends after specified duration</li>\n<li>[[/check skill=medicine]] (1 success) can end early</li>\n<li>Magical healing removes condition</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Constitution and bodily functions impaired. Fortitude saves: Add 1 to die results. Cannot benefit from food or drink <strong>Recovery:</strong> Typically 10 minutes to 1 hour unless specified otherwise. [[/check skill=medicine]] (1 success) can end early</p>"
     },
+    "label": "Sickened",
+    "category": "magic",
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/acid.svg",
-    "activeEffects": [],
+    "activeEffects": [
+      {
+        "key": "diceMod.save.fortitude",
+        "mode": "add",
+        "value": 1,
+        "notes": "Add 1 to fortitude saves"
+      }
+    ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
+    "damageTick": null,
     "recovery": {
-      "trigger": "endOfTurn",
+      "trigger": "onEvent",
+      "method": "check",
       "removeOnSuccess": true,
-      "save": {
-        "type": "fortitude"
+      "check": {
+        "skill": "medicine",
+        "attribute": "",
+        "skills": [
+          "medicine"
+        ],
+        "attributes": [],
+        "opposed": false,
+        "label": "Medicine"
       },
-      "promptPlayer": true,
-      "chatMessage": "Make a [[/save type=fortitude]] to recover from Sickened"
+      "downgrades": {
+        "1_success": null
+      }
     }
   },
   "flags": {},
-  "_key": "!items!53a17d70da0d4b20"
+  "_key": "!items!38768e1e389c652e"
 }

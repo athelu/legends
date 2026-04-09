@@ -1,5 +1,5 @@
 {
-  "_id": "2e37e6267b9445f4",
+  "_id": "ff35c6d0b255dc77",
   "name": "Spell Penetration",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Through perfect understanding of magical theory and ruthless application of will, your spells bypass defenses that would stop lesser practitioners.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "wisdom": 5
       },
       "skills": "",
       "feats": [],
-      "tier": 4,
+      "tier": 0,
       "other": "Any magical tradition trait, any Energy Mastery 6"
     },
-    "benefits": "<p>When an enemy makes a saving throw against your weave, add 1 to their better die result (apply after they roll, before comparing successes)</p>",
+    "benefits": "<p>When an enemy makes a saving throw against your weave, add 1 to their better die result (apply after they roll, before comparing successes).</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Magic], [Save]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!2e37e6267b9445f4"
+  "_key": "!items!ff35c6d0b255dc77"
 }

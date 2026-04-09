@@ -1,14 +1,17 @@
 {
-  "_id": "656e9527da534adb",
+  "_id": "81c7f261598a05f6",
   "name": "Partial Cover",
   "type": "condition",
   "img": "icons/svg/shield.svg",
   "system": {
+    "description": {
+      "value": "<p>Low wall, furniture, creature, tree trunk (1/4 to 1/2 body covered). Against Melee: +1 DR. Against Ranged: Make [[/save type=reflex]]{[[/save type=reflex]]} to duck behind cover (1+ successes = miss).</p>"
+    },
     "label": "Partial Cover",
     "category": "defense",
-    "description": {
-      "value": "<p>Low wall, furniture, creature, tree trunk (¼ to ½ body covered). Against Melee: +1 DR. Against Ranged: Make [[/save type=reflex]]{Reflex save} to duck behind cover (1+ successes = miss).</p>"
-    },
+    "keywords": [
+      "Tactical"
+    ],
     "tokenIcon": "icons/svg/shield.svg",
     "activeEffects": [
       {
@@ -18,10 +21,15 @@
         "notes": "+1 DR vs melee attacks"
       }
     ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "highest",
+    "stacks": 1,
     "severity": "minor",
-    "overlayPriority": 15
+    "overlayPriority": 15,
+    "damageTick": null,
+    "recovery": null
   },
   "flags": {},
-  "_key": "!items!656e9527da534adb"
+  "_key": "!items!81c7f261598a05f6"
 }

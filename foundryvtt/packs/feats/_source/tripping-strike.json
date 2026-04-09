@@ -1,5 +1,5 @@
 {
-  "_id": "b0932311ec0c4c76",
+  "_id": "43674d433b0aa77d",
   "name": "Tripping Strike",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>With a sweep of the legs here, a strike to the knee there, you mastered the art of attacks that don't just wound but also knock opponents off their feet.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "strength": 4
       },
       "skills": "meleeCombat:5",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>When you hit with a melee weapon attack, force target to make a [[/save type=reflex]] (opposed by your attack). If you win by 1+ successes, target falls Prone</p>",
-    "usageType": "once",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per turn"
+    },
     "keywords": "[Combat], [Maneuver]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!b0932311ec0c4c76"
+  "_key": "!items!43674d433b0aa77d"
 }

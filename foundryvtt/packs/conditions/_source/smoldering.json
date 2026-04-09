@@ -1,33 +1,40 @@
 {
-  "_id": "1c003c4fd91f46f5",
+  "_id": "342e395a708bae76",
   "name": "Smoldering",
   "type": "condition",
   "img": "icons/svg/fire.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Take [[/damage 2 type=fire]] damage at the beginning of your next turn only. <strong>Recovery:</strong> Automatically ends after taking the [[/damage 2]] damage <strong>Ally assistance:</strong> Ally within 5 feet can use 1 [Action]: Automatic extinguish</p>"
+    },
     "label": "Smoldering",
     "category": "magic",
-    "description": {
-      "value": "<ul>\n<li>Character has embers or minor burns continuing</li>\n<li>Take [[/damage 2 type=fire]] damage at the start of your next turn only</li>\n<li>Duration: One turn only (not ongoing)</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends after taking the [[/damage 2]] damage</li>\n<li>Ally within 5 feet can use 1 [Action]: Automatic extinguish</li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/fire.svg",
     "activeEffects": [],
-    "stacking": "replace",
+    "appliesConditions": [],
+    "progressionChain": [
+      "Singed",
+      "Smoldering",
+      "Ignited",
+      "Burning"
+    ],
+    "stacking": "duration-merge",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
-    "damageTick": {
-      "frequency": "startOfTurn",
-      "formula": "2",
-      "showInChat": true,
-      "chatMessage": "Take [[/damage 2 type=fire]] damage from Smoldering"
-    },
+    "damageTick": null,
     "recovery": {
-      "trigger": "endOfTurn",
-      "removeOnSuccess": true,
+      "trigger": "onEvent",
+      "method": "automatic",
+      "removeOnSuccess": false,
       "assistance": {
         "range": 5
       }
     }
   },
   "flags": {},
-  "_key": "!items!1c003c4fd91f46f5"
+  "_key": "!items!342e395a708bae76"
 }

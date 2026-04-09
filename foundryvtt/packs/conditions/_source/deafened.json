@@ -1,14 +1,17 @@
 {
-  "_id": "5f2b1cd546f141e9",
+  "_id": "275e08433e700fd4",
   "name": "Deafened",
   "type": "condition",
   "img": "icons/svg/deaf.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> The target loses the ability to hear. Sound-based Perception checks automatically fail. Initiative: -2. Cannot benefit from verbal communication or warnings <strong>Recovery:</strong> The source of the condition will describe the recovery conditions.</p>"
+    },
     "label": "Deafened",
     "category": "sensory",
-    "description": {
-      "value": "<ul>\n<li>Cannot hear</li>\n<li>Sound-based Perception checks automatically fail</li>\n<li>Initiative: -2</li>\n<li>Cannot benefit from verbal communication or warnings</li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/deaf.svg",
     "activeEffects": [
       {
@@ -18,10 +21,19 @@
         "notes": "-2 to initiative"
       }
     ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
   },
   "flags": {},
-  "_key": "!items!5f2b1cd546f141e9"
+  "_key": "!items!275e08433e700fd4"
 }

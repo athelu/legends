@@ -1,11 +1,11 @@
 {
-  "_id": "2205952054824dac",
+  "_id": "e296cc6558e89184",
   "name": "Bind the Fallen",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Primary Energy:</strong> Negative 6 (binding soul fragments to corpses) <strong>Supporting Energy:</strong> Time 4 (duration 1 hour of control) <strong>Range:</strong> Touch <strong>Duration:</strong> 1 hour <strong>Total Cost:</strong> 10 Energy <strong>Action:</strong> Complex weave (2 actions) <strong>Weaving Roll:</strong> Negative Potential + Negative Mastery / Time Potential + Time Mastery <strong>Targeting Roll:</strong> Casting Stat + Negative Mastery <strong>Description:</strong> <strong>[FORBIDDEN KNOWLEDGE]</strong> Bind soul fragments or echoes to 1 corpse, animating it as a skeleton or zombie under your control. Undead has HP equal to your Negative Potential × 4, deals [[/damage 6]] damage, uses your Negative Mastery for attacks. Can command as [Free] action. <strong>Saving Throw:</strong> None <strong>Targeting Success Scaling:</strong></p>\n<ul>\n<li>0 = Fails</li>\n<li>1 = 1 round</li>\n<li>2 = 1 hour</li>\n<li>3 = 4 hours</li>\n</ul>"
+      "value": "<p>[FORBIDDEN KNOWLEDGE] Bind soul fragments or echoes to 1 corpse, animating it as a skeleton or zombie under your control. Undead has HP equal to your Negative Potential × 4, deals [[/damage 6]] damage, uses your Negative Mastery for attacks. Can command as [Free] action.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,28 +21,50 @@
     },
     "range": "Touch",
     "duration": "1 hour",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "[FORBIDDEN KNOWLEDGE] Bind soul fragments or echoes to 1 corpse, animating it as a skeleton or zombie under your control. Undead has HP equal to your Negative Potential × 4, deals 6 damage, uses your Negative Mastery for attacks. Can command as [Free] action.",
+    "effectType": "summon",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 hour\n- 3 = 4 hours",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 hour, 3 = 4 hours",
     "weavingRoll": "Negative Potential + Negative Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "forbidden",
       "necromantic",
       "ritual",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!2205952054824dac"
+  "_key": "!items!e296cc6558e89184"
 }

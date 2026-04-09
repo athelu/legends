@@ -1,21 +1,74 @@
 {
-  "_id": "e2e33bf559b04fb5",
+  "_id": "e99329c10dcb392e",
   "name": "Nomad",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Traveling far and wide, you picked up basic tactics for surviving on the road and in unknown lands, getting by with few supplies and even fewer comforts. As an adventurer, you travel still, often into even more dangerous places. The difference is that now you have companions and you're not sure yet whether that makes things easier or more complicated. <strong>Skills:</strong> Wilderness 2, Athletics 2, Perception 1, Society 1, +40 XP <strong>Equipment:</strong> Tent, traveler's clothes, hemp rope, waterskin, work boots <strong>Feature</strong> - Wanderer's Knowledge: You know routes and shortcuts across wilderness and can find nomadic communities for trade or information.</p>"
+      "value": "<p>Traveling far and wide, you picked up basic tactics for surviving on the road and in unknown lands, getting by with few supplies and even fewer comforts. As an adventurer, you travel still, often into even more dangerous places. The difference is that now you have companions and you're not sure yet whether that makes things easier or more complicated.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Wilderness 2, Athletics 2, Perception 1, Society 1, +40 XP",
+    "startingEquipment": "Tent\ntraveler's clothes\nhemp rope\nwaterskin\nwork boots",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Wanderer's Knowledge: You know routes and shortcuts across wilderness and can find nomadic communities for trade or information.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "wilderness": 2,
+      "athletics": 2,
+      "perception": 1,
+      "society": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Tent",
+        "quantity": 1,
+        "originalText": "Tent",
+        "sourceId": "4f8c01e17fcb950e"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Traveler's",
+        "quantity": 1,
+        "originalText": "traveler's clothes",
+        "sourceId": "0e79b3267533a030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Rope, Jute/Hemp",
+        "quantity": 1,
+        "originalText": "hemp rope",
+        "sourceId": "80bb5d0cbb1888e5"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Waterskin",
+        "quantity": 1,
+        "originalText": "waterskin",
+        "sourceId": "c4a16e4b3f3ac1af"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Work",
+        "quantity": 1,
+        "originalText": "work boots",
+        "sourceId": "6a6394e3ffbccf86"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!e2e33bf559b04fb5"
+  "_key": "!items!e99329c10dcb392e"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "9b7d10f992fc4466",
+  "_id": "4033198bba11cf36",
   "name": "Malleable Form",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "Self",
     "duration": "1 minute",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Alter your appearance, gain aquatic adaptation, or grow natural weapons (4 damage). Appearance changes are cosmetic only (height 1 foot, weight 50 lbs, features change). Natural weapons count as light weapons.",
+    "effectType": "buff",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "buff",
-      "self"
+      "self",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!9b7d10f992fc4466"
+  "_key": "!items!4033198bba11cf36"
 }

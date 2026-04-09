@@ -1,21 +1,28 @@
 {
-  "_id": "90096e692cd34191",
+  "_id": "c1aba9d9632534aa",
   "name": "Luckiness (-2)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>Fortune favors you.</p>\n<ul>\n<li>Start each session with 2 bonus Luck points beyond attribute</li>\n</ul>\n<p>---</p>"
+      "value": "<p>Fortune favors you.</p>"
     },
     "pointCost": -2,
     "traitType": "luck",
     "isMagical": false,
     "magicalType": "",
     "requirements": "",
-    "benefits": "",
+    "benefits": "<ul>\n<li>Start each session with 2 bonus Luck points beyond attribute</li>\n</ul>\n<h2>SPECIAL TRAITS (GM Approval Required)</h2>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
     "requiresGMApproval": false,
     "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!90096e692cd34191"
+  "_key": "!items!c1aba9d9632534aa"
 }

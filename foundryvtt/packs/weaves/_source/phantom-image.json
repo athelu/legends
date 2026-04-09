@@ -1,5 +1,5 @@
 {
-  "_id": "b0cd365e43b94043",
+  "_id": "00b04281ab60c10e",
   "name": "Phantom Image",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,28 +21,50 @@
     },
     "range": "Medium, 60 ft. (15-ft cube)",
     "duration": "1 minute",
-    "target": "",
+    "target": "area",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create a visual illusory effect of object, creature, or phenomenon at medium range in 15ft cube. Can move illusory effect with action. No sound, smell, or other sensory elements. Physical interaction reveals illusory effect.",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
       "divination",
       "illusion",
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!b0cd365e43b94043"
+  "_key": "!items!00b04281ab60c10e"
 }

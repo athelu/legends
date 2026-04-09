@@ -1,0 +1,36 @@
+{
+  "_id": "75655b4973457cdb",
+  "name": "Flanking Mastery",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>When an ally occupies the opponents  attention, you find the angle they cannot cover.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [],
+      "tier": 0,
+      "other": "Exploit Weakness"
+    },
+    "benefits": "<p>When you make a melee attack against a target that has an ally within 5 feet of them, subtract 1 from both of your attack dice.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Shadow]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!75655b4973457cdb"
+}

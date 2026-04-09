@@ -1,29 +1,36 @@
 {
-  "_id": "9d2e5cf732174fdc",
+  "_id": "89c0ef2aadf44460",
   "name": "Resilient",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>What would leave another person struggling to recover, you shake off, or at least cut short.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "constitution": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Fortitude saves: subtract 1 from die results; success on ongoing effect ends it</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Save], [General]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!9d2e5cf732174fdc"
+  "_key": "!items!89c0ef2aadf44460"
 }

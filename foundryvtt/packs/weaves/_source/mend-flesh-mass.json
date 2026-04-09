@@ -1,5 +1,5 @@
 {
-  "_id": "89d83ee26a674a6d",
+  "_id": "51b4923e29980580",
   "name": "Mend Flesh, Mass",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "Close, 30 ft.",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "multiple",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Up to 6 creatures you choose within range heal 16 HP each.",
+    "effectType": "healing",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "heal (8)",
+          "duration": "heal (8)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "heal (16)",
+          "duration": "heal (16)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "heal (24)",
+          "duration": "heal (24)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = heal (8)\n- 2 = heal (16)\n- 3 = heal (24)",
+    "targetingSuccessScaling": "0 = fails, 1 = heal (8), 2 = heal (16), 3 = heal (24)",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "healing",
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!89d83ee26a674a6d"
+  "_key": "!items!51b4923e29980580"
 }

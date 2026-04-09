@@ -1,0 +1,39 @@
+{
+  "_id": "b43396249f5f2125",
+  "name": "Sustained Prayer",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Where other casters must spend supporting energy to extend their effects, your patron sustains what they have blessed. A weave offered as a prayer lingers far longer than its energy alone would suggest.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 4
+      },
+      "skills": "religion:4",
+      "feats": [
+        "Divine Gift",
+        "Sacred Domain"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you cast a weave using your patron's Primary energy that has a duration, extend the duration by one step on the duration table at no additional Energy cost. This cannot extend a duration beyond 1 hour.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive; applies to patron primary energy weaves with duration only"
+    },
+    "keywords": "[Magic], [Divine]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!b43396249f5f2125"
+}

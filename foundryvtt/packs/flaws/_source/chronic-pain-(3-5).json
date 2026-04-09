@@ -1,21 +1,22 @@
 {
-  "_id": "a0e2d5525539439f",
+  "_id": "4a8e3de23c6fa097",
   "name": "Chronic Pain (3-5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>You suffer from persistent pain that flares during stress.</p>\n<ul>\n<li><strong>Mild (3):</strong> At start of combat or during extended physical activity, make [[/save type=will]] (1 success required). On failure, add 1 to all die results for 1d8 rounds.</li>\n<li><strong>Severe (5):</strong> As Mild, but [[/save type=will]] is at Misfortune (1 success required). On failure, add 2 to all die results for 2d8 rounds.</li>\n</ul>"
+      "value": "<p>You suffer from persistent pain that flares during stress.</p>"
     },
     "pointValue": 3,
-    "flawType": "",
+    "flawType": "physical",
     "severity": "moderate",
-    "mechanicalEffects": "",
+    "mechanicalEffects": "<ul>\n<li><strong>Mild (3):</strong> At start of combat or during extended physical activity, make [[/save type=will]] (1 success required). On failure, add 1 to all die results for 1d8 rounds.</li>\n<li><strong>Severe (5):</strong> As Mild, but [[/save type=will]] is at Misfortune (1 success required). On failure, add 2 to all die results for 2d8 rounds.</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!a0e2d5525539439f"
+  "_key": "!items!4a8e3de23c6fa097"
 }

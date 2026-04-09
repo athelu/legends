@@ -1,22 +1,23 @@
 {
-  "_id": "63141f94cce14bfb",
+  "_id": "1dfa76b5016579fa",
   "name": "Channel Divinity",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 2</li>\n<li><strong>Requirements:</strong> Divine Gift Trait</li>\n<li><strong>Range:</strong> 30-foot radius centered on you</li>\n<li><strong>Effect:</strong> Automatically succeeds for Heal/Harm intents (see Part 7 for full details)</li>\n<li><strong>Types:</strong> Heal, Harm, Turn (undead), Command (undead)</li>\n<li><strong>Energy Cost:</strong> Minimum 4 Energy, can spend more</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Counts as ONE combat action for Multiple Action Penalty purposes</li>\n<li>Indiscriminate area effect (affects friends and foes)</li>\n<li>See (Magic System) for Channel Divinity details</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 2 <strong>Requirements:</strong> Divine Gift Trait <strong>Range:</strong> 30-foot radius centered on you <strong>Effect:</strong> Automatically succeeds for Heal/Harm intents (see Magic section for full details). Counts as ONE combat action for Multiple Action Penalty purposes</p>"
     },
     "actionType": "combat",
     "actionCost": "2",
+    "requirements": "Divine Gift Trait",
     "trigger": "",
-    "effect": "Automatically succeeds for Heal/Harm intents (see Part 7 for full details)\n- **Types:** Heal, Harm, Turn (undead), Command (undead)\n- **Energy Cost:** Minimum 4 Energy, can spend more\n- **Notes:**\n  - Counts as ONE combat action for Multiple Action Penalty purposes\n  - Indiscriminate area effect (affects friends and foes)\n  - See (Magic System) for Channel Divinity details",
-    "keywords": "",
+    "effect": "Automatically succeeds for Heal/Harm intents (see Magic section for full details). Counts as ONE combat action for Multiple Action Penalty purposes",
+    "keywords": [],
     "range": "30-foot radius centered on you",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!63141f94cce14bfb"
+  "_key": "!items!1dfa76b5016579fa"
 }

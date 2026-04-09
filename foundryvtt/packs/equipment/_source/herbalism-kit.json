@@ -1,5 +1,5 @@
 {
-  "_id": "efab57841b4040dc",
+  "_id": "adcc370f8439d6c9",
   "name": "Herbalism Kit",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A collection of pouches, vials, and tools for identifying, harvesting, and preparing medicinal herbs and natural remedies.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "tools",
     "weight": 3.0,
     "cost": 30.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "Medicine",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!efab57841b4040dc"
+  "_key": "!items!adcc370f8439d6c9"
 }

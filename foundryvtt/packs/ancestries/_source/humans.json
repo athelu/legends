@@ -1,5 +1,5 @@
 {
-  "_id": "3cd25999f4aa450c",
+  "_id": "fec246d499a9ae4f",
   "name": "Humans",
   "type": "ancestry",
   "img": "icons/svg/person.svg",
@@ -10,18 +10,37 @@
     "size": "medium",
     "speed": 30,
     "bonuses": {
-      "attributes": {}
+      "attributes": {
+        "strength": 0,
+        "constitution": 0,
+        "agility": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "charisma": 0,
+        "luck": 0
+      }
     },
     "traits": "",
     "languages": "",
     "specialAbilities": "",
     "senses": "",
     "lifespan": 70,
-    "culture": "",
-    "physicalDescription": "",
+    "culture": "Ethnicities\nHumans can hail from any of the nations or regions on the continent of Estaea. The land of Origin of a human will influence their Native Language and what eye, hair, and skin tone are common. Each of the regions also have unique naming styles, but a fantasy name works as well.\n\nBellicosian\nBellicosians tend to be slightly taller on average, and of fair/pale complexion. Building and clothing styles are Asiatic in inspiration. Bellicosian names follow traditional Germanic and Slavic styles.\n\nCoudassian\nCoudassians vary in complexion, with the southerners having a honey or coffee complexion and the northerners being more pale. Coudassian names follow Spanish, Portuguese and Italian styles.\n\nEchartesh\nIn Appearance the Echartesh have swarthy skin, and long, dark hair. Eyes tend to be light brown, but blue, green, yellow/amber are also seen. Echartesh names follow Jewish and Arabic styles.\n\nMersagian\nMersagian populace vary in appearance with the Northerners being quite pale and with all shades of hair and eye color. The Central and southern Meresaw populace tends to be olive skinned with darker hair and eyes. Mersagian names follow traditional English and American styles. It is quite possible to have a name from any of the other regions as the kingdom of Meresaw is very cosmopolitan.\n\nOdani\nThe Odani people are made up of the Reshi and Tandu tribes. They populate the southern coast of what is considered the Mersaw Kingdom. Their skin is dark, deep shades of black and brown, but eye color tends to be light such as blue, green, amber, or grey.\n\nUrjack\nThe Urjack are a solitary people who inhabit the Lackabier peaks mountain range in eastern Estaea. They are taller and broader than most humans from the other realms. Light eye color is common, as well as blonde hair, but browns and reds occur as well.",
+    "physicalDescription": "Humans are creative, imaginative and inventive. There are distinct differences in the various human ethnicities, but they tend to be only differences of physical appearance and do not change the general makeup of humans.\n\nHumans can hail from any of the nations or regions on the continent of Estaea. The land of Origin of a human will influence their Native Language and what eye, hair, and skin tone are common. Each of the regions also have unique naming styles, but a fantasy name works as well.\n\nBellicosians tend to be slightly taller on average, and of fair/pale complexion. Building and clothing styles are Asiatic in inspiration. Bellicosian names follow traditional Germanic and Slavic styles.\n\nCoudassians vary in complexion, with the southerners having a honey or coffee complexion and the northerners being more pale. Coudassian names follow Spanish, Portuguese and Italian styles.\n\nIn Appearance the Echartesh have swarthy skin, and long, dark hair. Eyes tend to be light brown, but blue, green, yellow/amber are also seen. Echartesh names follow Jewish and Arabic styles.\n\nMersagian populace vary in appearance with the Northerners being quite pale and with all shades of hair and eye color. The Central and southern Meresaw populace tends to be olive skinned with darker hair and eyes. Mersagian names follow traditional English and American styles. It is quite possible to have a name from any of the other regions as the kingdom of Meresaw is very cosmopolitan.\n\nThe Odani people are made up of the Reshi and Tandu tribes. They populate the southern coast of what is considered the Mersaw Kingdom. Their skin is dark, deep shades of black and brown, but eye color tends to be light such as blue, green, amber, or grey.\n\nThe Urjack are a solitary people who inhabit the Lackabier peaks mountain range in eastern Estaea. They are taller and broader than most humans from the other realms. Light eye color is common, as well as blonde hair, but browns and reds occur as well.\n\nHeight: 5'-7' / 5'-7'\nHeight (Average): 5'9\" / 5'6\"\nWeight: 90-300 lbs / 90-300 lbs\nWeight (Average): 175 lbs / 130 lbs\n\nEyes: Blue, Brown, Green, Gray, Amber\nHair: Black, Brown, Red, Blonde\nLifespan: 70 years",
     "requiresGMApproval": false,
-    "notes": ""
+    "notes": "",
+    "abilityModifiers": {
+      "strength": 0,
+      "constitution": 0,
+      "agility": 0,
+      "dexterity": 0,
+      "intelligence": 0,
+      "wisdom": 0,
+      "charisma": 0,
+      "luck": 0
+    }
   },
   "effects": [],
-  "_key": "!items!3cd25999f4aa450c"
+  "_key": "!items!fec246d499a9ae4f"
 }

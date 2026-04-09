@@ -1,21 +1,28 @@
 {
-  "_id": "6e60a58042284892",
+  "_id": "92e149ca56189cb2",
   "name": "Double-Jointed (-3)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>Hyper-extend joints.</p>\n<ul>\n<li>Acrobatics starts at rank 3 at creation</li>\n<li>Reflex saves: Subtract 1 from die results</li>\n</ul>"
+      "value": "<p>Hyper-extend joints.</p>"
     },
     "pointCost": -3,
     "traitType": "physical",
     "isMagical": false,
     "magicalType": "",
     "requirements": "",
-    "benefits": "",
+    "benefits": "<ul>\n<li>Acrobatics starts at rank 3 at creation</li>\n<li>Reflex saves: Subtract 1 from die results</li>\n</ul>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
     "requiresGMApproval": false,
     "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!6e60a58042284892"
+  "_key": "!items!92e149ca56189cb2"
 }

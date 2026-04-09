@@ -1,5 +1,5 @@
 {
-  "_id": "fbd22a26bca646c6",
+  "_id": "bf677853cd7b69fd",
   "name": "Lantern",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>An enclosed oil lamp with glass or horn panels that protects the flame from wind. Provides bright light in a 15-foot radius and dim light for an additional 15 feet. Burns for 6 hours on one pint of oil.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "light-source",
     "weight": 2.0,
     "cost": 8.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 15,
+    "dimLight": 15,
+    "duration": "6 hours on one pint of oil",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!fbd22a26bca646c6"
+  "_key": "!items!bf677853cd7b69fd"
 }

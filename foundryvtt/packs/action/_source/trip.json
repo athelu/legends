@@ -1,0 +1,29 @@
+{
+  "_id": "b490b749e0acfac0",
+  "name": "Trip",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> You use your attack to strike the target in a way to make them lose their balance and fall. Declare before rolling. Target must be no more than one size larger than you. Make a normal combat check. <strong>Margin 1:</strong> if Margin 1 would normally apply damage, then apply base damage. <strong>Margin 2:</strong> Apply damage as normal for the the Margin of success, and the target gains the prone condition</p>"
+    },
+    "actionType": "combat",
+    "actionCost": "1",
+    "requirements": "",
+    "trigger": "",
+    "effect": "You use your attack to strike the target in a way to make them lose their balance and fall. Declare before rolling. Target must be no more than one size larger than you. Make a normal combat check.",
+    "appliesEffects": [
+      {
+        "effectId": "Prone",
+        "params": {}
+      }
+    ],
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": "Margin 1: if Margin 1 would normally apply damage, then apply base damage.\nMargin 2: Apply damage as normal for the the Margin of success, and the target gains the prone condition"
+  },
+  "effects": [],
+  "_key": "!items!b490b749e0acfac0"
+}

@@ -1,27 +1,34 @@
 {
-  "_id": "04157e64b5994a12",
+  "_id": "603bea262707e137",
   "name": "Reliable Talent",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>The gap between what you can do and what you actually do has closed to almost nothing.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 5,
-      "other": ""
+      "tier": 0,
+      "other": "Two non-combat skills rank 5+"
     },
     "benefits": "<p>Choose two (non-combat or mastery) skills in which you have rank 5+. When you roll those skills and get a result higher than your skill rank, treat it as equal to your skill rank instead</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Skill], [Shadow]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!04157e64b5994a12"
+  "_key": "!items!603bea262707e137"
 }

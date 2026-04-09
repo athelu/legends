@@ -1,5 +1,5 @@
 {
-  "_id": "9667702822d642bb",
+  "_id": "dadbb19f356bb257",
   "name": "Skirmisher",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>You've perfected the art of hitting and moving, never giving opponents the chance to retaliate. By the time they realize they should attack you, you're already out of range and moving on to your next target.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 5
       },
       "skills": "",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>When you make a melee attack against a creature, that creature cannot make opportunity attacks against you for the rest of your turn</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat], [Defense], [Move]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!9667702822d642bb"
+  "_key": "!items!dadbb19f356bb257"
 }

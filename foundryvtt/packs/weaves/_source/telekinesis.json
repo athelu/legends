@@ -1,5 +1,5 @@
 {
-  "_id": "4ab38d30410f43f9",
+  "_id": "4c59d01ff10df1c6",
   "name": "Telekinesis",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,23 +23,45 @@
     "duration": "10 minutes",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Move object up to 500 lbs up to 30 feet per round at medium range. Can use to restrain creature (opposed check: your Space Mastery vs their Athletics). Restrained creature can retry each round (1 success escapes).",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "100 lbs (1 minute)",
+          "duration": "100 lbs (1 minute)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "500 lbs (10 minutes)",
+          "duration": "500 lbs (10 minutes)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1000 lbs (1 hour)",
+          "duration": "1000 lbs (1 hour)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 100 lbs (1 minute)\n- 2 = 500 lbs (full effect)\n- 3 = 1000 lbs (1 hour)",
+    "targetingSuccessScaling": "0 = fails, 1 = 100 lbs (1 minute), 2= 500 lbs (10 minutes), 3 = 1000 lbs (1 hour)",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!4ab38d30410f43f9"
+  "_key": "!items!4c59d01ff10df1c6"
 }

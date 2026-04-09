@@ -1,27 +1,34 @@
 {
-  "_id": "2b32886c8cd74a89",
+  "_id": "e3d5c70ae1fc9d96",
   "name": "Pneuma Sensitivity",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Ley lines, undead, daemons, the lingering pneuma of the recently dead: you feel them the way others feel weather changing.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "arcane:5",
+      "skills": "arcane:5, religion:3",
       "feats": [],
-      "tier": 3,
-      "other": "Religion 3, any magical tradition trait"
+      "tier": 0,
+      "other": "any magical tradition trait"
     },
-    "benefits": "<p>Sense ley lines and nexuses within 1 mile ([[/check skill=arcane]]). 1 success = general direction and type; 2 successes = exact location and strongest energy types. Within 100 feet of daemons or undead, subtract 1 from Perception die to sense presence. Determine if corpse possessed pneuma with Medicine or Religion check</p>",
+    "benefits": "<p>Sense ley lines and nexuses within 1 mile ([[/check skill=arcane]]). 1 success = general direction and type; 2 successes = exact location and strongest energy types. Within 100 feet of daemons or undead, subtract 1 from Perception die to sense presence. Determine if corpse possessed pneuma with Medicine or [[/check skill=religion]]</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Magic], [Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!2b32886c8cd74a89"
+  "_key": "!items!e3d5c70ae1fc9d96"
 }

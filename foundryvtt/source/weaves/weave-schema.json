@@ -88,7 +88,7 @@
         "effectType": {
           "type": "string",
           "description": "Category of effect",
-          "enum": ["", "damage", "healing", "utility", "control", "buff", "debuff"],
+          "enum": ["", "damage", "healing", "utility", "control", "buff", "debuff", "summon", "transformation", "protection", "divination"],
           "default": "damage"
         },
         "deliveryMethod": {
@@ -117,9 +117,19 @@
           "description": "Human-readable success scaling description (deprecated in favor of structured damage.scaling)",
           "default": ""
         },
+        "targetingSuccessScaling": {
+          "type": "string",
+          "description": "Human-readable targeting success scaling description used by the two-roll weave workflow",
+          "default": ""
+        },
         "weavingRoll": {
           "type": "string",
           "description": "Which attributes to roll for weaving",
+          "default": ""
+        },
+        "targetingRoll": {
+          "type": "string",
+          "description": "Which attributes/stat to roll for targeting or delivery",
           "default": ""
         },
         "appliesEffects": {
@@ -190,6 +200,7 @@
               "type": "string",
               "description": "Primary energy type",
               "enum": [
+                "variable-elemental",
                 "fire",
                 "water",
                 "air",
@@ -219,6 +230,7 @@
               "description": "Supporting energy type (empty string if none)",
               "enum": [
                 "",
+                "variable-elemental",
                 "fire",
                 "water",
                 "air",
@@ -264,6 +276,11 @@
             "force",
             "negative",
             "positive",
+            "necrotic",
+            "radiant",
+            "psychic",
+            "poison",
+            "thunder",
             "bludgeoning",
             "piercing",
             "slashing"
@@ -272,7 +289,7 @@
         "drInteraction": {
           "type": "string",
           "description": "How damage interacts with damage reduction",
-          "enum": ["", "full", "half", "none"]
+          "enum": ["", "full", "half", "none", "ignore"]
         },
         "scaling": {
           "$ref": "#/$defs/successScaling"
@@ -338,6 +355,10 @@
             },
             "duration": {
               "oneOf": [
+                {
+                  "type": "null",
+                  "description": "No duration applies at this success level"
+                },
                 {
                   "type": "string",
                   "description": "Duration as text (e.g., 'full effect', 'until dispelled')"

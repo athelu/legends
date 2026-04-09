@@ -1,5 +1,5 @@
 {
-  "_id": "567933e547964613",
+  "_id": "73c541e906256296",
   "name": "Hand Axe",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 4,
       "type": "slashing",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
+        "skill": "melee",
         "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 4,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -37,14 +37,14 @@
         }
       },
       {
-        "name": "Ranged",
-        "type": "ranged",
-        "skill": "rangedCombat",
-        "damageAttr": "agility",
+        "name": "Thrown",
+        "type": "thrown",
+        "skill": "ranged",
+        "damageAttr": "dexterity",
         "defenseType": "ranged",
         "damage": {
           "base": 4,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 30,
@@ -60,8 +60,10 @@
       "light",
       "thrown"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!567933e547964613"
+  "_key": "!items!73c541e906256296"
 }

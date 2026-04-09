@@ -1,14 +1,17 @@
 {
-  "_id": "afa517a8292a4308",
+  "_id": "87e24a8a19ccdb02",
   "name": "Half Cover",
   "type": "condition",
   "img": "icons/svg/shield.svg",
   "system": {
+    "description": {
+      "value": "<p>Portcullis, arrow slit, thick tree trunk (1/2 to 3/4 body covered). Against Melee: +2 DR. Against Ranged: Make [[/save type=reflex]]{[[/save type=reflex]]} (subtract 1 from both dice) to duck behind cover (1+ successes = miss).</p>"
+    },
     "label": "Half Cover",
     "category": "defense",
-    "description": {
-      "value": "<p>Portcullis, arrow slit, thick tree trunk (½ to ¾ body covered). Against Melee: +2 DR. Against Ranged: Make [[/save type=reflex]]{Reflex save} (subtract 1 from both dice) to duck behind cover (1+ successes = miss).</p>"
-    },
+    "keywords": [
+      "Tactical"
+    ],
     "tokenIcon": "icons/svg/shield.svg",
     "activeEffects": [
       {
@@ -24,10 +27,15 @@
         "notes": "-1 to Reflex save to dodge ranged attacks"
       }
     ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "highest",
+    "stacks": 1,
     "severity": "minor",
-    "overlayPriority": 15
+    "overlayPriority": 15,
+    "damageTick": null,
+    "recovery": null
   },
   "flags": {},
-  "_key": "!items!afa517a8292a4308"
+  "_key": "!items!87e24a8a19ccdb02"
 }

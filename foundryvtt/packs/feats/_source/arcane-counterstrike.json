@@ -1,0 +1,39 @@
+{
+  "_id": "2043bf73ee0149f5",
+  "name": "Arcane Counterstrike",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Understanding a magical structure completely enough to disrupt it is one thing. Turning that disrupted energy back on the caster is the mark of a true arcane scholar.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 5
+      },
+      "skills": "arcane:6",
+      "feats": [
+        "Mageborn",
+        "Analytical Mind"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you successfully use Analytical Mind to impose Misfortune on a caster's rolls and their weave still fails (0 successes on their weaving roll), you may spend 4 Energy as a [Free] action to redirect the collapsed magical structure. Deal damage to the original caster equal to the Energy they spent on the failed weave, using the same energy type. No save.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Triggers on enemy weave failure after Analytical Mind; costs 4 Energy"
+    },
+    "keywords": "[Magic], [Mageborn]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!2043bf73ee0149f5"
+}

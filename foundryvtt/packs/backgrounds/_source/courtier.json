@@ -1,21 +1,65 @@
 {
-  "_id": "b800a31ddfcf4ad0",
+  "_id": "eb3d52bcd79c20ad",
   "name": "Courtier",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>To the common folk, court life seems like an endless parade of balls and banquets. You know better. Every smile hides an agenda, every compliment is calculated, and one misstep can mean social death, or sometimes the regular kind. You learned to navigate these treacherous waters with grace, though whether you're fleeing court intrigue or pursuing it in a new arena is anyone's guess. <strong>Skills:</strong> Persuasion 2, Society 2, Empathy 2, Perform 2, +24 XP <strong>Equipment:</strong> Fine clothes, signet ring, perfume, shoes <strong>Feature</strong> - Court Connections: You know how to navigate noble society. Can gain audience with important figures and understand court politics.</p>"
+      "value": "<p>To the common folk, court life seems like an endless parade of balls and banquets. You know better. Every smile hides an agenda, every compliment is calculated, and one misstep can mean social death, or sometimes the regular kind. You learned to navigate these treacherous waters with grace, though whether you're fleeing court intrigue or pursuing it in a new arena is anyone's guess.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 24,
+    "skillBonuses": "Persuasion 2, Society 2, Empathy 2, Perform 2, +24 XP",
+    "startingEquipment": "Fine clothes\nsignet ring\nperfume\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Court Connections: You know how to navigate noble society. Can gain audience with important figures and understand court politics.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "persuasion": 2,
+      "society": 2,
+      "empathy": 2,
+      "perform": 2
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "Fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Signet Ring",
+        "quantity": 1,
+        "originalText": "signet ring",
+        "sourceId": "358eb3495a42f563"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Perfume",
+        "quantity": 1,
+        "originalText": "perfume",
+        "sourceId": "3417d5af495fa089"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!b800a31ddfcf4ad0"
+  "_key": "!items!eb3d52bcd79c20ad"
 }

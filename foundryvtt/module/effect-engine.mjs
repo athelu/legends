@@ -3,6 +3,28 @@
  * Handles application of effect items to actors with parameterized values
  */
 
+import { processRecoveryPrompt, promptForSave } from './condition-engine.mjs';
+
+function buildRecoverySourceFromOrigin(origin = {}) {
+  const actorId = origin.actorId || origin.actor?.id || origin.actor || origin.casterId || '';
+  const tokenId = origin.tokenId || origin.token?.id || origin.token || '';
+  const sourceActor = actorId ? game.actors?.get(actorId) : null;
+  const successesValue = origin.successes;
+  const parsedSuccesses = Number.parseInt(successesValue, 10);
+  const successes = Number.isFinite(parsedSuccesses) ? parsedSuccesses : null;
+
+  if (!actorId && !tokenId && successes === null) {
+    return null;
+  }
+
+  return {
+    actorId,
+    tokenId,
+    label: sourceActor?.name || origin.label || origin.weaveName || origin.type || '',
+    successes,
+  };
+}
+
 /**
  * Apply an effect to a target actor
  * @param {Object} options - Effect application options
@@ -42,7 +64,7 @@ export async function applyEffect(options) {
   effectInstance.system.origin = {
     type: origin.type || 'weave',
     id: origin.id || '',
-    actor: origin.actor || '',
+    actor: origin.actor || origin.actorId || origin.casterId || '',
     successes: origin.successes || 0
   };
   
@@ -111,6 +133,14 @@ export async function applyEffect(options) {
   // Set granted by
   if (origin.weaveName) {
     effectInstance.system.grantedBy = origin.weaveName;
+  }
+
+  if (effectInstance.type === 'condition') {
+    return game.legends.applyCondition(target, effectInstance.name, {
+      duration: effectInstance.system.duration,
+      source: origin.weaveName || origin.label || origin.type || 'effect',
+      recoverySource: buildRecoverySourceFromOrigin(origin),
+    });
   }
   
   // Create the effect on the target actor
@@ -435,17 +465,18 @@ async function reverseActiveEffects(actor, effectItem) {
  */
 export async function updateEffectDurations(actor, trigger = 'turnEnd') {
   const effects = actor.items.filter(i => i.type === 'effect');
+  const recoveryTrigger = trigger === 'turnStart' ? 'startOfTurn' : trigger === 'turnEnd' ? 'endOfTurn' : trigger;
   
   for (const effect of effects) {
     const duration = effect.system.duration;
+    const recovery = effect.system.recovery || {};
+    let expired = false;
     
     // Check if effect should decrement on this trigger
-    if (duration.expireOn !== trigger && duration.expireOn !== 'sustained') {
-      continue;
-    }
-    
+    const shouldDecrement = duration.expireOn === trigger || duration.expireOn === 'sustained';
+
     // Decrement duration
-    if (duration.type === 'rounds' && duration.value > 0) {
+    if (shouldDecrement && duration.type === 'rounds' && duration.value > 0) {
       const newDuration = duration.value - 1;
       
       // Update badge if counter
@@ -458,13 +489,38 @@ export async function updateEffectDurations(actor, trigger = 'turnEnd') {
       
       // Remove if expired
       if (newDuration <= 0) {
-        await removeEffect(actor, effect.id);
+        expired = true;
       }
     }
     
     // Process damage tick if appropriate
     if (effect.system.damageTick && effect.system.damageTick.frequency === trigger) {
       await processDamageTick(actor, effect);
+    }
+
+    if (recovery.trigger === recoveryTrigger) {
+      await processRecoveryPrompt(actor, effect);
+    }
+
+    const hasExpireCheck = Boolean(
+      recovery.save?.type
+      || recovery.check?.skill
+      || recovery.check?.attribute
+      || (Array.isArray(recovery.check?.skills) && recovery.check.skills.length > 0)
+      || (Array.isArray(recovery.check?.attributes) && recovery.check.attributes.length > 0)
+      || recovery.assistance?.check?.skill
+      || recovery.assistance?.check?.attribute
+      || (Array.isArray(recovery.assistance?.check?.skills) && recovery.assistance.check.skills.length > 0)
+      || (Array.isArray(recovery.assistance?.check?.attributes) && recovery.assistance.check.attributes.length > 0)
+    );
+
+    if (expired && recovery.trigger === 'onExpire' && hasExpireCheck) {
+      await processRecoveryPrompt(actor, effect);
+      continue;
+    }
+
+    if (expired) {
+      await removeEffect(actor, effect.id);
     }
   }
 }
@@ -509,8 +565,7 @@ async function processDamageTick(actor, effect) {
   
   // Allow save if specified
   if (damageTick.save && damageTick.save.effectOnSuccess === 'end') {
-    // Would prompt for save - for now just log
-    console.log(`Legends | processDamageTick: ${actor.name} can make ${damageTick.save.type} save to end ${effect.name}`);
+    await promptForSave(actor, effect, damageTick.save, 'damage');
   }
 }
 

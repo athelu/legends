@@ -1,21 +1,28 @@
 {
-  "_id": "1706d30356db415c",
+  "_id": "71ae1a2865d3428b",
   "name": "Longevity (-5)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>Longer lifespan.</p>\n<ul>\n<li>Double race's maximum age</li>\n</ul>"
+      "value": "<p>Longer lifespan.</p>"
     },
     "pointCost": -5,
     "traitType": "special",
     "isMagical": false,
     "magicalType": "",
     "requirements": "",
-    "benefits": "",
+    "benefits": "<ul>\n<li>Double race's maximum age</li>\n</ul>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
     "requiresGMApproval": false,
     "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!1706d30356db415c"
+  "_key": "!items!71ae1a2865d3428b"
 }

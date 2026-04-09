@@ -1,5 +1,5 @@
 {
-  "_id": "026d62bbe80548be",
+  "_id": "c84986df3317acb7",
   "name": "Coordinated Strike",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Represents fighting in coordination with allies, flowing from one opponent to the next</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": "any combat skill 4"
     },
     "benefits": "<p>Once per turn when you make a weapon attack, you can make another attack with the same weapon against a different creature within 5 feet of the original target. Use Shared Attribute Roll: roll your Attribute die once, use that result for both attacks. Roll Combat skill die separately for each attack</p>",
-    "usageType": "once",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per turn"
+    },
     "keywords": "[Combat]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!026d62bbe80548be"
+  "_key": "!items!c84986df3317acb7"
 }

@@ -1,11 +1,11 @@
 {
-  "_id": "4c3b3583c2784230",
+  "_id": "fcecf46c00f68518",
   "name": "Web",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Fill area with sticky webs anchored to surfaces. Creatures in area when created or entering area make [[/save type=reflex]]. Compare their successes to your weaving successes. If you have more, target becomes Restrained. Restrained creatures can use action + Athletics or [[/check skill=acrobatics]] (2 successes needed) to escape. Webs are flammable; fire damage to 5ft area destroys webs in that section.</p>"
+      "value": "<p>Fill area with sticky webs anchored to surfaces. Creatures in area when created or entering area make [[/save type=reflex]]. Compare their successes to your targeting successes. If you have more, target becomes Restrained. Restrained creatures can use action + Athletics or [[/check skill=acrobatics]] (2 successes needed) to escape. Webs are flammable; fire damage to 5ft area destroys webs in that section.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,22 +21,43 @@
     },
     "range": "Medium, 60 ft. (20-foot radius)",
     "duration": "1 minute",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "Fill area with sticky webs anchored to surfaces. Creatures in area when created or entering area make Reflex save. Compare their successes to your targeting successes. If you have more, target becomes Restrained. Restrained creatures can use action + Athletics or Acrobatics check (2 successes needed) to escape. Webs are flammable; fire damage to 5ft area destroys webs in that section.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "10ft radius (1 round)",
+          "duration": "10ft radius (1 round)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "20ft radius (1 minute)",
+          "duration": "20ft radius (1 minute)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "30ft radius (10 minutes)",
+          "duration": "30ft radius (10 minutes)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no effect\n- 1 = Partial web (10ft radius, 1 round)\n- 2 = Full effect (20ft radius, 1 minute)\n- 3 = 30ft radius (10 minutes)",
+    "targetingSuccessScaling": "0 = fails, 1 = 10ft radius (1 round), 2= 20ft radius (1 minute), 3 = 30ft radius (10 minutes)",
     "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [
       {
-        "effectId": "restrained",
+        "effectId": "Restrained",
         "params": {}
       }
     ],
@@ -49,5 +70,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!4c3b3583c2784230"
+  "_key": "!items!fcecf46c00f68518"
 }

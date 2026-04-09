@@ -1,29 +1,36 @@
 {
-  "_id": "cb1774abf5334372",
+  "_id": "8314912ead69237f",
   "name": "Precision Duelist",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Freedom of movement, economy of motion, and the knowledge that you don't need to hide behind anything to win.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 4
       },
       "skills": "meleeCombat:4",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>When wielding a melee weapon in one hand with your other hand free (no shield, no second weapon), you gain +[[/damage 2 type=to]] damage and subtract 1 from your Agility die result when making attacks (minimum 1)</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!cb1774abf5334372"
+  "_key": "!items!8314912ead69237f"
 }

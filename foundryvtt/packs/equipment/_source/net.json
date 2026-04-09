@@ -1,5 +1,5 @@
 {
-  "_id": "2bf1cf7f471845f9",
+  "_id": "c578e5ec3644e571",
   "name": "Net",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -12,9 +12,23 @@
     "cost": 15.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!2bf1cf7f471845f9"
+  "_key": "!items!c578e5ec3644e571"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "b25e96b6a3f14329",
+  "_id": "a182f5f854f0eec8",
   "name": "Tongues",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -19,27 +19,49 @@
         "cost": 3
       }
     },
-    "range": "self, touch",
+    "range": "Self, touch",
     "duration": "1 hour",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Touch a creature. For the duration, target can understand and speak any language. Doesn't help with written languages.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 10 minutes\n- 2 = full effect\n- 3 = 4 hours",
+    "targetingSuccessScaling": "0 = fails, 1 = 10 minutes, 2= 1 hour, 3 = 4 hours",
     "weavingRoll": "Air Potential + Air Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!b25e96b6a3f14329"
+  "_key": "!items!a182f5f854f0eec8"
 }

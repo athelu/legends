@@ -1,5 +1,5 @@
 {
-  "_id": "b7d8e84e884e4c7c",
+  "_id": "87c27e1982a2b789",
   "name": "Wall of Ice",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft. (60 feet long, 20 feet high OR hemisphere 10 feet diameter)",
     "duration": "1 minute",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create wall of ice at medium range up to 60 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter). Each 10ft section has HP = 12 + Water Potential, DR 6 vs nonmagical damage. Creatures within area when created make Reflex save or take 8 cold damage. Wall melts naturally over time.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round (6 HP)",
+          "duration": "1 round (6 HP)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect (12 HP)",
+          "duration": "full effect (12 HP)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes (24 HP) + frosted",
+          "duration": "10 minutes (24 HP) + frosted"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round (6 HP)\n- 2 = full effect (12 HP)\n- 3 = 10 minutes (24 HP) + frosted",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round (6 HP), 2= full effect (12 HP), 3 = 10 minutes (24 HP) + frosted",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
@@ -50,5 +71,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!b7d8e84e884e4c7c"
+  "_key": "!items!87c27e1982a2b789"
 }

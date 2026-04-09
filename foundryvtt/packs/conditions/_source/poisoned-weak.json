@@ -1,0 +1,47 @@
+{
+  "_id": "35585115a5e700cc",
+  "name": "Poisoned (Weak)",
+  "type": "condition",
+  "img": "icons/svg/poison.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All attribute dice: Add 1 to die results. HP regeneration from short/long rests reduced by half. <strong>Recovery:</strong> [[/save type=fortitude]] at end of 1 hour (1 success). [[/check skill=medicine]] (2 successes) can end Poisoned early.</p>"
+    },
+    "label": "Poisoned (Weak)",
+    "category": "damage-over-time",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/poison.svg",
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "save",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "fortitude"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Poisoned (Weak)",
+      "check": {
+        "skill": "medicine",
+        "attribute": "",
+        "skills": [
+          "medicine"
+        ],
+        "attributes": [],
+        "opposed": false,
+        "label": "Medicine"
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!35585115a5e700cc"
+}

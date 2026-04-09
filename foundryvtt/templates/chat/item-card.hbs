@@ -96,5 +96,27 @@
       <strong>Frequency:</strong> {{system.frequency}}
     </div>
     {{/if}}
+
+    {{#if itemAppliesEffects.length}}
+    <div class="weave-effects-list">
+      <h4>Effects</h4>
+       <p class="effects-help"><em>Drag effects onto character tokens or sheets to apply or remove</em></p>
+      {{#each itemAppliesEffects}}
+      <div class="draggable-effect"
+           draggable="true"
+           data-source-type="{{sourceType}}"
+           data-effect-id="{{effectId}}"
+         data-operation="{{operation}}"
+           data-actor-id="{{actorId}}"
+           data-item-id="{{itemId}}"
+           data-item-name="{{itemName}}"
+           data-params='{{paramsJson}}'>
+        <i class="fas fa-magic"></i>
+        <span>{{label}}</span>
+        <em class="drag-hint">(drag to actor)</em>
+      </div>
+      {{/each}}
+    </div>
+    {{/if}}
   </div>
 </div>

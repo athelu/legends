@@ -1,20 +1,45 @@
 {
-  "_id": "752b0768e30346e3",
+  "_id": "7ad0ea5e0873fd5f",
   "name": "Clumsy",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "label": "Clumsy",
-    "category": "physical",
     "description": {
-      "value": "<ul>\n<li>Physical coordination impaired</li>\n<li>Dexterity and Agility based skill checks: Add 1 to die results</li>\n<li>Reflex saves: Add 1 to die results</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Physical coordination is impaired. Dexterity and Agility based skill checks: Add 1 to ability die results. Reflex saves: Add 1 to die results. <strong>Recovery:</strong> The source of the condition will describe the recovery conditions.</p>"
     },
-    "tokenIcon": "",
-    "activeEffects": [],
+    "label": "Clumsy",
+    "category": "general",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
+    "activeEffects": [
+      {
+        "key": "diceMod.attribute.agility",
+        "mode": "add",
+        "value": 1,
+        "notes": "Add 1 to agility attribute die results"
+      },
+      {
+        "key": "diceMod.save.reflex",
+        "mode": "add",
+        "value": 1,
+        "notes": "Add 1 to reflex saves"
+      }
+    ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
   },
   "flags": {},
-  "_key": "!items!752b0768e30346e3"
+  "_key": "!items!7ad0ea5e0873fd5f"
 }

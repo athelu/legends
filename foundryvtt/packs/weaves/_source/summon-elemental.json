@@ -1,5 +1,5 @@
 {
-  "_id": "b02e825e21074309",
+  "_id": "538a738cbcd90a0b",
   "name": "Summon Elemental",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -11,8 +11,8 @@
     "actionCost": 2,
     "energyCost": {
       "primary": {
-        "type": "",
-        "cost": 0
+        "type": "variable-elemental",
+        "cost": 6
       },
       "supporting": {
         "type": "space",
@@ -23,24 +23,47 @@
     "duration": "10 minutes",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Summon an elemental matching your Primary Energy at close range. Elemental has HP = (Your Potential × 6), deals 10 damage, uses your Mastery for attacks, and has special abilities based on type. You can command it as [Free] action.",
+    "effectType": "summon",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = full effect\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= full effect, 3 = 1 hour",
     "weavingRoll": "Primary Potential + Primary Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Primary Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "ranged",
-      "summoning"
+      "ritual",
+      "summoning",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!b02e825e21074309"
+  "_key": "!items!538a738cbcd90a0b"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "6bcdef9405bd4e44",
+  "_id": "026190d8334d5378",
   "name": "Musical Instrument, Basic",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A simple musical instrument such as a flute, drum, or lyre of basic construction and sound quality.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "tools",
     "weight": 2.0,
     "cost": 30.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "Perform",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!6bcdef9405bd4e44"
+  "_key": "!items!026190d8334d5378"
 }

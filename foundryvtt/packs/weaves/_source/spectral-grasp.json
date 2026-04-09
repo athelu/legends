@@ -1,5 +1,5 @@
 {
-  "_id": "32630a18e3d8455e",
+  "_id": "a124e8a11b102813",
   "name": "Spectral Grasp",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,28 +23,50 @@
     "duration": "1 minute",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create a Large hand of force at medium range. Can use action to command it: Grapple (opposed Athletics using your Space Mastery), Shove (move target 10 feet), or Interpose (grant target subtract 1 from both defense dice). Hand has HP = Space Potential × 4.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round\n- 2 = full effect\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {
-        "effectId": "grappled",
+        "effectId": "Grappled",
         "params": {}
       }
     ],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!32630a18e3d8455e"
+  "_key": "!items!a124e8a11b102813"
 }

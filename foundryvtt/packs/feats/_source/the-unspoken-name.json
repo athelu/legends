@@ -1,0 +1,40 @@
+{
+  "_id": "6040ea09c6a71cb1",
+  "name": "The Unspoken Name",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Every named thing can be unnamed. To speak it is to reach into the fundamental nature of a creature and rewrite what it is permitted to do.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 7
+      },
+      "skills": "",
+      "feats": [
+        "Invoker",
+        "Unraveling Word",
+        "Echoing Invocation"
+      ],
+      "tier": 0,
+      "other": "Air Mastery 6"
+    },
+    "benefits": "<p>Once per long rest, as 2 [Combat] actions, speak the Unspoken Name at one creature within 60 feet you can see. Make an opposed Charisma + Air Mastery check vs their Wisdom + Luck ([[/save type=will]]).</p>\n<ul>\n<li><strong>Margin 1:</strong> Full revelation — you learn the creature's current HP, all special abilities and trait abilities, any ongoing magical effects, and whether they can be permanently affected by true name magic. This knowledge persists for the remainder of the encounter.</li>\n<li><strong>Margin 2:</strong> As Margin 1, and the creature gains the Fleeing condition for 1 minute ([[/save type=will]] at end of each turn, 1 success downgrades to Frightened, 2 successes ends entirely). The creature also loses access to one special ability or weave of your choice for the duration.</li>\n<li><strong>Margin 3:</strong> As Margin 2, all creatures of the same creature type within 30 feet of the target must immediately make Will saves (same opposed check result) or gain the Frightened condition for 1 minute.</li>\n</ul>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per long rest"
+    },
+    "keywords": "[Magic], [Invoker]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!6040ea09c6a71cb1"
+}

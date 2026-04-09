@@ -1,21 +1,33 @@
 {
-  "_id": "cd53925fb1fd421a",
+  "_id": "f87caeec08ecaad8",
   "name": "Cowering",
   "type": "condition",
   "img": "icons/svg/terror.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Cannot take [Combat] actions. Cannot take [Move] actions. Attacks against you have Fortune. <strong>Recovery:</strong> At the end of each turn, make [[/save type=will]].</p>\n<ul>\n<li>1 success: Downgrade to Fleeing</li>\n<li>2 successes: Downgrade to Frightened</li>\n</ul>\n<p><strong>Ally Assistance:</strong> An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]].</p>\n<ul>\n<li>1 success: Downgrade to Fleeing</li>\n<li>2 successes: Downgrade to Frightened</li>\n</ul>"
+    },
     "label": "Cowering",
     "category": "fear",
-    "description": {
-      "value": "<ul>\n<li>Cannot take [Combat] actions</li>\n<li>Cannot take [Move] actions</li>\n<li>Attacks against you have Fortune</li>\n<li><strong>Recovery:</strong> At the end of each turn, make [[/save type=will]]:\n<ul>\n<li>2 successes: Downgrade to Frightened</li>\n<li>1 success: Downgrade to Fleeing</li>\n<li>0 successes: Remains Cowering</li>\n</ul></li>\n<li><strong>Ally Assistance:</strong> An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]]:\n<ul>\n<li>2 successes: Downgrade to Frightened</li>\n<li>1 success: Downgrade to Fleeing</li>\n</ul></li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/terror.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [
+      "Frightened",
+      "Fleeing",
+      "Cowering"
+    ],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
+    "damageTick": null,
     "recovery": {
       "trigger": "endOfTurn",
+      "method": "save",
       "removeOnSuccess": true,
       "save": {
         "type": "will"
@@ -23,15 +35,29 @@
       "promptPlayer": true,
       "chatMessage": "Make a [[/save type=will]] to recover from Cowering",
       "assistance": {
-        "range": 5
+        "range": 5,
+        "downgrades": {
+          "1_success": "Fleeing",
+          "2_success": "Frightened"
+        },
+        "check": {
+          "skill": "persuasion",
+          "attribute": "",
+          "skills": [
+            "persuasion",
+            "intimidate"
+          ],
+          "attributes": [],
+          "opposed": false,
+          "label": "Persuasion or Intimidate"
+        }
       },
       "downgrades": {
-        "2_success": "Frightened",
         "1_success": "Fleeing",
-        "0_success": "Cowering"
+        "2_success": "Frightened"
       }
     }
   },
   "flags": {},
-  "_key": "!items!cd53925fb1fd421a"
+  "_key": "!items!f87caeec08ecaad8"
 }

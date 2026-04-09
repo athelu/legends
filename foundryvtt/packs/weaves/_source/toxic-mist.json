@@ -1,5 +1,5 @@
 {
-  "_id": "ca3ef32b306f451b",
+  "_id": "dd7576d8b10e21e5",
   "name": "Toxic Mist",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,22 +21,43 @@
     },
     "range": "Touch or 10 feet",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "fortitude",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target takes 8 poison damage. Target makes Fortitude save to reduce damage.",
+    "effectType": "debuff",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (4)",
+          "duration": "half damage (4)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (8)",
+          "duration": "full damage (8)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (16) + Poisoned (Weak)",
+          "duration": "enhanced damage (16) + Poisoned (Weak)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no damage\n- 1 = half (4)\n- 2 = full (8)\n- 3 = +8 and Poisoned (16 total) + Poisoned",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2= full damage (8), 3 = enhanced damage (16) + Poisoned (Weak)",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [
       {
-        "effectId": "poisoned",
+        "effectId": "Poisoned (Weak)",
         "params": {}
       }
     ],
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!ca3ef32b306f451b"
+  "_key": "!items!dd7576d8b10e21e5"
 }

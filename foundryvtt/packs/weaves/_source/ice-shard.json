@@ -1,5 +1,5 @@
 {
-  "_id": "05488d9784ca4004",
+  "_id": "6771c014738d18af",
   "name": "Ice Shard",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,15 +23,36 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target takes 8 cold damage. This is an attack weave—no saving throw allowed.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (4)",
+          "duration": "half damage (4)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (8)",
+          "duration": "full damage (8)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (16) + slowed",
+          "duration": "enhanced damage (16) + slowed"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (4)\n- 2 = full damage (8)\n- 3 = enhanced damage (16) + slowed",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + slowed",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
@@ -46,5 +67,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!05488d9784ca4004"
+  "_key": "!items!6771c014738d18af"
 }

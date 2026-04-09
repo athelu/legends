@@ -1,27 +1,34 @@
 {
-  "_id": "54850f21beb24d13",
+  "_id": "30bcde9ea94d0aed",
   "name": "Mounted Combatant",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Horse and rider become something neither could be alone.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": "Riding 4"
     },
     "benefits": "<p>Attacks against your mount add 1 to both dice. If mount is hit, you can redirect attack to yourself instead. While mounted, melee attacks against creatures smaller than your mount subtract 1 from both dice</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat], [Mounted]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!54850f21beb24d13"
+  "_key": "!items!30bcde9ea94d0aed"
 }

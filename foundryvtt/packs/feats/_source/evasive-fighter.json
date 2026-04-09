@@ -1,5 +1,5 @@
 {
-  "_id": "d333482de2db417b",
+  "_id": "d322f1358fa562e9",
   "name": "Evasive Fighter",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>You've mastered moving through threats without exposing yourself</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 5
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Opportunity attacks against you add 1 to both attack dice</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat], [Defense]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!d333482de2db417b"
+  "_key": "!items!d322f1358fa562e9"
 }

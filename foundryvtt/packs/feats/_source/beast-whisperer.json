@@ -1,5 +1,5 @@
 {
-  "_id": "9be4240e246c4953",
+  "_id": "89ec61909b1f7bd8",
   "name": "Beast Whisperer",
   "type": "feat",
   "img": "icons/environment/wilderness/tree-oak.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Animals don't speak your language, but you've learned to speak theirs. Most creatures just want to be left alone, and you know how to communicate that you're not a threat.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "wisdom": 4
       },
-      "skills": "animalHandling:4",
+      "skills": "wilderness:4",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Can communicate simple concepts to beasts. Beasts that aren't hostile have their attitude improved by one step. Can attempt to calm hostile beast (opposed [[/save type=will]], your Wis + Animal Handling vs beast's Wis + Luck)</p>",
-    "usageType": "passive",
+    "benefits": "<p>Can communicate simple concepts to beasts. Beasts that aren't hostile have their attitude improved by one step. Can attempt to calm hostile beast (opposed [[/save type=will]], your Wis + Wilderness vs beast's Wis + Luck)</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive communication, action to calm"
+    },
     "keywords": "[Wilderness]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!9be4240e246c4953"
+  "_key": "!items!89ec61909b1f7bd8"
 }

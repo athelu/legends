@@ -4,6 +4,8 @@
  * Uses: static DEFAULT_OPTIONS, static PARTS, _prepareContext(), data-action event delegation
  * Dynamic template selection via _configureRenderOptions() based on item type
  */
+import { parseBackgroundItemGrants, parseBackgroundSkillBonuses } from '../backgrounds.mjs';
+
 const { ItemSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -15,6 +17,8 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     actions: {
       addEffect: D8ItemSheet.#onAddEffect,
       removeEffect: D8ItemSheet.#onRemoveEffect,
+      addWeaveEffect: D8ItemSheet.#onAddWeaveEffect,
+      removeWeaveEffect: D8ItemSheet.#onRemoveWeaveEffect,
       addAttackMode: D8ItemSheet.#onAddAttackMode,
       removeAttackMode: D8ItemSheet.#onRemoveAttackMode,
     },
@@ -125,10 +129,50 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       }
     );
 
-    // Enrich benefits text (feats) -- supports inline roll enrichers
+    // Enrich benefit-style text fields -- supports inline roll enrichers
     if (context.system.benefits) {
       context.enrichedBenefits = await TextEditor.enrichHTML(
         context.system.benefits,
+        {
+          secrets: this.document.isOwner,
+          async: true
+        }
+      );
+    }
+
+    if (context.system.visualEffects) {
+      context.enrichedVisualEffects = await TextEditor.enrichHTML(
+        context.system.visualEffects,
+        {
+          secrets: this.document.isOwner,
+          async: true
+        }
+      );
+    }
+
+    if (context.system.notes) {
+      context.enrichedNotes = await TextEditor.enrichHTML(
+        context.system.notes,
+        {
+          secrets: this.document.isOwner,
+          async: true
+        }
+      );
+    }
+
+    if (context.system.mechanicalEffects) {
+      context.enrichedMechanicalEffects = await TextEditor.enrichHTML(
+        context.system.mechanicalEffects,
+        {
+          secrets: this.document.isOwner,
+          async: true
+        }
+      );
+    }
+
+    if (context.system.roleplayingImpact) {
+      context.enrichedRoleplayingImpact = await TextEditor.enrichHTML(
+        context.system.roleplayingImpact,
         {
           secrets: this.document.isOwner,
           async: true
@@ -193,7 +237,8 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       context.effectTypes = {
         damage: "Damage",
         healing: "Healing",
-        buff: "Buff/Debuff",
+        buff: "Buff",
+        debuff: "Debuff",
         control: "Control",
         summon: "Summon",
         transformation: "Transformation",
@@ -201,6 +246,36 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
         protection: "Protection",
         divination: "Divination"
       };
+
+      context.weaveAppliesEffects = (context.system.appliesEffects || []).map((effectRef, index) => ({
+        index,
+        effectId: effectRef.effectId || '',
+        paramsText: Object.entries(effectRef.params || {})
+          .map(([key, value]) => `${key}=${value}`)
+          .join(', ')
+      }));
+    }
+
+    if (this.document.type === 'action') {
+      context.actionAppliesEffects = (context.system.appliesEffects || []).map((effectRef, index) => ({
+        index,
+        effectId: effectRef.effectId || '',
+        operation: effectRef.operation === 'remove' ? 'remove' : 'apply',
+        paramsText: Object.entries(effectRef.params || {})
+          .map(([key, value]) => `${key}=${value}`)
+          .join(', ')
+      }));
+    }
+
+    if (this.document.type === 'ability') {
+      context.abilityAppliesEffects = (context.system.appliesEffects || []).map((effectRef, index) => ({
+        index,
+        effectId: effectRef.effectId || '',
+        operation: effectRef.operation === 'remove' ? 'remove' : 'apply',
+        paramsText: Object.entries(effectRef.params || {})
+          .map(([key, value]) => `${key}=${value}`)
+          .join(', ')
+      }));
     }
 
     return context;
@@ -316,6 +391,298 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       expanded.system.properties = propsArr;
     }
 
+    if (this.document.type === 'weapon') {
+      if (typeof expanded.system?.reload !== 'string') expanded.system.reload = '';
+      if (typeof expanded.system?.requirements !== 'string') expanded.system.requirements = '';
+
+      const firstRangedMode = Array.isArray(expanded.system?.attackModes)
+        ? expanded.system.attackModes.find(mode => ['ranged', 'thrown'].includes(mode?.type))
+        : null;
+
+      expanded.system.range = firstRangedMode?.range
+        ? foundry.utils.deepClone(firstRangedMode.range)
+        : { normal: 0, medium: 0, long: 0 };
+    }
+
+    if (this.document.type === 'weave') {
+      if (expanded.system?.appliesEffects && !Array.isArray(expanded.system.appliesEffects)) {
+        const appliesEffectsObj = expanded.system.appliesEffects;
+        const appliesEffectsArr = [];
+        for (const key of Object.keys(appliesEffectsObj).sort((a, b) => Number(a) - Number(b))) {
+          appliesEffectsArr.push(appliesEffectsObj[key]);
+        }
+        expanded.system.appliesEffects = appliesEffectsArr;
+      }
+
+      for (const field of ['range', 'duration', 'target', 'savingThrow', 'effectType', 'effect', 'deliveryMethod', 'weavingRoll', 'targetingRoll', 'targetingSuccessScaling']) {
+        if (typeof expanded.system?.[field] !== 'string') expanded.system[field] = '';
+        else expanded.system[field] = expanded.system[field].trim();
+      }
+
+      if (Array.isArray(expanded.system?.tags)) {
+        expanded.system.tags = expanded.system.tags.map(tag => String(tag || '').trim()).filter(Boolean);
+      } else {
+        expanded.system.tags = String(expanded.system?.tags || '')
+          .split(',')
+          .map(tag => tag.trim())
+          .filter(Boolean);
+      }
+
+      const validEffectTypes = ['damage', 'healing', 'buff', 'debuff', 'control', 'summon', 'transformation', 'utility', 'protection', 'divination'];
+      if (!validEffectTypes.includes(expanded.system.effectType)) {
+        expanded.system.effectType = expanded.system.damage?.base > 0 ? 'damage' : 'utility';
+      }
+
+      const validDeliveryMethods = ['attack', 'save', 'automatic'];
+      if (!validDeliveryMethods.includes(expanded.system.deliveryMethod)) {
+        expanded.system.deliveryMethod = 'automatic';
+      }
+
+      const validSaveTypes = ['', 'none', 'fortitude', 'reflex', 'will'];
+      if (!validSaveTypes.includes(expanded.system.savingThrow)) {
+        expanded.system.savingThrow = 'none';
+      }
+
+      if (!Array.isArray(expanded.system?.appliesEffects)) {
+        expanded.system.appliesEffects = [];
+      }
+
+      expanded.system.appliesEffects = expanded.system.appliesEffects
+        .map(effectRef => {
+          const effectId = String(effectRef?.effectId || '').trim();
+          const operation = effectRef?.operation === 'remove' ? 'remove' : 'apply';
+          const rawParams = String(effectRef?.paramsText || '').trim();
+          const params = {};
+
+          if (rawParams) {
+            for (const entry of rawParams.split(',')) {
+              const [key, ...rest] = entry.split('=');
+              const paramKey = String(key || '').trim();
+              const paramValue = rest.join('=').trim();
+              if (paramKey) params[paramKey] = paramValue;
+            }
+          }
+
+          return effectId ? { effectId, operation, params } : null;
+        })
+        .filter(Boolean);
+
+      if (!Number.isFinite(expanded.system?.actionCost)) {
+        expanded.system.actionCost = 1;
+      }
+    }
+
+    if (this.document.type === 'background') {
+      for (const field of ['skillBonuses', 'startingEquipment', 'suggestedFeats', 'features', 'sampleNames', 'traits', 'notes']) {
+        if (typeof expanded.system?.[field] !== 'string') expanded.system[field] = '';
+      }
+
+      const parsedSkills = parseBackgroundSkillBonuses(expanded.system.skillBonuses || '');
+      expanded.system.grantedSkills = parsedSkills.skills;
+      expanded.system.itemGrants = parseBackgroundItemGrants(expanded.system.startingEquipment || '');
+
+      if (!Number.isFinite(expanded.system.startingXP) || (expanded.system.startingXP <= 0 && parsedSkills.startingXP > 0)) {
+        expanded.system.startingXP = parsedSkills.startingXP;
+      }
+    }
+
+    if (this.document.type === 'ancestry') {
+      if (!expanded.system?.bonuses || typeof expanded.system.bonuses !== 'object' || Array.isArray(expanded.system.bonuses)) {
+        expanded.system.bonuses = { attributes: {} };
+      }
+
+      if (!expanded.system.bonuses.attributes || typeof expanded.system.bonuses.attributes !== 'object' || Array.isArray(expanded.system.bonuses.attributes)) {
+        expanded.system.bonuses.attributes = {};
+      }
+
+      for (const attr of ['strength', 'constitution', 'agility', 'dexterity', 'intelligence', 'wisdom', 'charisma', 'luck']) {
+        const value = expanded.system.bonuses.attributes[attr];
+        expanded.system.bonuses.attributes[attr] = Number.isFinite(value) ? value : 0;
+      }
+
+      for (const field of ['traits', 'languages', 'specialAbilities', 'senses', 'culture', 'physicalDescription', 'notes']) {
+        if (typeof expanded.system?.[field] !== 'string') expanded.system[field] = '';
+      }
+
+      if (!Number.isFinite(expanded.system.speed)) expanded.system.speed = 30;
+      if (!Number.isFinite(expanded.system.lifespan)) expanded.system.lifespan = 0;
+      expanded.system.requiresGMApproval = Boolean(expanded.system.requiresGMApproval);
+      expanded.system.abilityModifiers = foundry.utils.deepClone(expanded.system.bonuses.attributes);
+    }
+
+    if (this.document.type === 'action') {
+      if (expanded.system?.appliesEffects && !Array.isArray(expanded.system.appliesEffects)) {
+        const appliesEffectsObj = expanded.system.appliesEffects;
+        const appliesEffectsArr = [];
+        for (const key of Object.keys(appliesEffectsObj).sort((a, b) => Number(a) - Number(b))) {
+          appliesEffectsArr.push(appliesEffectsObj[key]);
+        }
+        expanded.system.appliesEffects = appliesEffectsArr;
+      }
+
+      if (!Array.isArray(expanded.system?.appliesEffects)) {
+        expanded.system.appliesEffects = [];
+      }
+
+      expanded.system.appliesEffects = expanded.system.appliesEffects
+        .map(effectRef => {
+          const effectId = String(effectRef?.effectId || '').trim();
+          const operation = effectRef?.operation === 'remove' ? 'remove' : 'apply';
+          const rawParams = String(effectRef?.paramsText || '').trim();
+          const params = {};
+
+          if (rawParams) {
+            for (const entry of rawParams.split(',')) {
+              const [key, ...rest] = entry.split('=');
+              const paramKey = String(key || '').trim();
+              const paramValue = rest.join('=').trim();
+              if (paramKey) params[paramKey] = paramValue;
+            }
+          }
+
+          return effectId ? { effectId, operation, params } : null;
+        })
+        .filter(Boolean);
+
+      const validActionTypes = ['combat', 'move', 'interact', 'activate', 'free', 'reaction'];
+
+      if (!validActionTypes.includes(expanded.system?.actionType)) {
+        expanded.system.actionType = 'combat';
+      }
+
+      for (const field of ['actionCost', 'requirements', 'trigger', 'effect', 'range', 'target', 'frequency', 'special']) {
+        if (typeof expanded.system?.[field] !== 'string') expanded.system[field] = '';
+        else expanded.system[field] = expanded.system[field].trim();
+      }
+
+      if (Array.isArray(expanded.system?.keywords)) {
+        expanded.system.keywords = expanded.system.keywords.map(keyword => String(keyword || '').trim()).filter(Boolean);
+      } else {
+        expanded.system.keywords = String(expanded.system?.keywords || '')
+          .split(',')
+          .map(keyword => keyword.trim())
+          .filter(Boolean);
+      }
+    }
+
+    if (this.document.type === 'ability') {
+      if (expanded.system?.appliesEffects && !Array.isArray(expanded.system.appliesEffects)) {
+        const appliesEffectsObj = expanded.system.appliesEffects;
+        const appliesEffectsArr = [];
+        for (const key of Object.keys(appliesEffectsObj).sort((a, b) => Number(a) - Number(b))) {
+          appliesEffectsArr.push(appliesEffectsObj[key]);
+        }
+        expanded.system.appliesEffects = appliesEffectsArr;
+      }
+
+      if (!Array.isArray(expanded.system?.appliesEffects)) {
+        expanded.system.appliesEffects = [];
+      }
+
+      expanded.system.appliesEffects = expanded.system.appliesEffects
+        .map(effectRef => {
+          const effectId = String(effectRef?.effectId || '').trim();
+          const rawParams = String(effectRef?.paramsText || '').trim();
+          const params = {};
+
+          if (rawParams) {
+            for (const entry of rawParams.split(',')) {
+              const [key, ...rest] = entry.split('=');
+              const paramKey = String(key || '').trim();
+              const paramValue = rest.join('=').trim();
+              if (paramKey) params[paramKey] = paramValue;
+            }
+          }
+
+          return effectId ? { effectId, params } : null;
+        })
+        .filter(Boolean);
+
+      const validAbilityTypes = ['passive', 'triggered', 'active', 'reaction'];
+
+      if (!validAbilityTypes.includes(expanded.system?.abilityType)) {
+        expanded.system.abilityType = 'passive';
+      }
+
+      for (const field of ['trigger', 'effect', 'frequency', 'source']) {
+        if (typeof expanded.system?.[field] !== 'string') expanded.system[field] = '';
+        else expanded.system[field] = expanded.system[field].trim();
+      }
+
+      if (Array.isArray(expanded.system?.keywords)) {
+        expanded.system.keywords = expanded.system.keywords.map(keyword => String(keyword || '').trim()).filter(Boolean);
+      } else {
+        expanded.system.keywords = String(expanded.system?.keywords || '')
+          .split(',')
+          .map(keyword => keyword.trim())
+          .filter(Boolean);
+      }
+
+      expanded.system.isActive = Boolean(expanded.system?.isActive);
+    }
+
+    if (this.document.type === 'condition') {
+      const validStackingModes = ['replace', 'stack', 'duration-merge', 'highest'];
+      const validSeverities = ['minor', 'moderate', 'severe'];
+
+      if (typeof expanded.system?.label !== 'string' || !expanded.system.label.trim()) {
+        expanded.system.label = String(expanded.name || this.document.name || '').trim();
+      } else {
+        expanded.system.label = expanded.system.label.trim();
+      }
+
+      for (const field of ['category', 'tokenIcon']) {
+        if (typeof expanded.system?.[field] !== 'string') expanded.system[field] = '';
+        else expanded.system[field] = expanded.system[field].trim();
+      }
+
+      if (Array.isArray(expanded.system?.keywords)) {
+        expanded.system.keywords = expanded.system.keywords.map(keyword => String(keyword || '').trim()).filter(Boolean);
+      } else {
+        expanded.system.keywords = String(expanded.system?.keywords || '')
+          .split(',')
+          .map(keyword => keyword.trim())
+          .filter(Boolean);
+      }
+
+      if (Array.isArray(expanded.system?.appliesConditions)) {
+        expanded.system.appliesConditions = expanded.system.appliesConditions.map(name => String(name || '').trim()).filter(Boolean);
+      } else {
+        expanded.system.appliesConditions = String(expanded.system?.appliesConditions || '')
+          .split(',')
+          .map(name => name.trim())
+          .filter(Boolean);
+      }
+
+      if (Array.isArray(expanded.system?.progressionChain)) {
+        expanded.system.progressionChain = expanded.system.progressionChain.map(name => String(name || '').trim()).filter(Boolean);
+      } else {
+        expanded.system.progressionChain = String(expanded.system?.progressionChain || '')
+          .split(',')
+          .map(name => name.trim())
+          .filter(Boolean);
+      }
+
+      if (!validStackingModes.includes(expanded.system?.stacking)) {
+        expanded.system.stacking = 'replace';
+      }
+
+      if (!validSeverities.includes(expanded.system?.severity)) {
+        expanded.system.severity = 'moderate';
+      }
+
+      if (!Number.isFinite(expanded.system?.stacks) || expanded.system.stacks < 1) {
+        expanded.system.stacks = 1;
+      } else {
+        expanded.system.stacks = Math.floor(expanded.system.stacks);
+      }
+
+      if (!Number.isFinite(expanded.system?.overlayPriority)) {
+        const priorityMap = { minor: 10, moderate: 20, severe: 30 };
+        expanded.system.overlayPriority = priorityMap[expanded.system.severity] ?? 20;
+      }
+    }
+
     // Flatten back and return
     return foundry.utils.flattenObject(expanded);
   }
@@ -353,6 +720,21 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     await this.document.update({ 'system.effects': effects });
   }
 
+  static async #onAddWeaveEffect(event, target) {
+    const effects = foundry.utils.duplicate(this.document.system.appliesEffects || []);
+    effects.push({ effectId: '', params: {} });
+    await this.document.update({ 'system.appliesEffects': effects });
+  }
+
+  static async #onRemoveWeaveEffect(event, target) {
+    const idx = Number(target.dataset.index);
+    if (isNaN(idx)) return;
+    const effects = foundry.utils.duplicate(this.document.system.appliesEffects || []);
+    if (idx < 0 || idx >= effects.length) return;
+    effects.splice(idx, 1);
+    await this.document.update({ 'system.appliesEffects': effects });
+  }
+
   /**
    * Handle adding a new attack mode
    */
@@ -368,7 +750,12 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       range: { normal: 0, medium: 0, long: 0 }
     });
 
-    await this.document.update({ 'system.attackModes': modes });
+    const firstRangedMode = modes.find(mode => ['ranged', 'thrown'].includes(mode?.type));
+
+    await this.document.update({
+      'system.attackModes': modes,
+      'system.range': firstRangedMode?.range || { normal: 0, medium: 0, long: 0 }
+    });
   }
 
   /**
@@ -380,7 +767,12 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
 
     modes.splice(index, 1);
 
-    await this.document.update({ 'system.attackModes': modes });
+    const firstRangedMode = modes.find(mode => ['ranged', 'thrown'].includes(mode?.type));
+
+    await this.document.update({
+      'system.attackModes': modes,
+      'system.range': firstRangedMode?.range || { normal: 0, medium: 0, long: 0 }
+    });
   }
 
   /**

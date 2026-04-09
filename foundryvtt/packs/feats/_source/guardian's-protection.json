@@ -1,29 +1,36 @@
 {
-  "_id": "ce06e082e2c64537",
+  "_id": "af069825b3466a0f",
   "name": "Guardian's Protection",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>You've made yourself into a wall between the enemy and the people beside you.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "strength": 3
       },
       "skills": "meleeCombat:3",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": "must be using a shield"
     },
     "benefits": "<p>When an ally within 5 feet is hit by an attack, you can use your [Reaction] to grant them +2 DR against that attack. Additionally, when a creature within 5 feet attacks an ally, you can use your [Reaction] to make a melee weapon attack against that creature</p>",
-    "usageType": "passive",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive (uses reactions)"
+    },
     "keywords": "[Combat], [Reaction]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!ce06e082e2c64537"
+  "_key": "!items!af069825b3466a0f"
 }

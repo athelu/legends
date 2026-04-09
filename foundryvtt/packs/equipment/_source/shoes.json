@@ -1,5 +1,5 @@
 {
-  "_id": "10aaf8b7cb684081",
+  "_id": "7fa6c1e8322f9dd6",
   "name": "Shoes",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>Basic leather footwear suitable for everyday wear, less protective than boots but more comfortable for indoor use.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 1.0,
     "cost": 10.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!10aaf8b7cb684081"
+  "_key": "!items!7fa6c1e8322f9dd6"
 }

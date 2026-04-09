@@ -1,0 +1,39 @@
+{
+  "_id": "f5cc9177ab53e6d2",
+  "name": "Vessel of Faith",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have learned to let your patron's power flow through you more completely. In moments of true need, the deity acts not merely through your channeling but directly</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 4
+      },
+      "skills": "religion:4",
+      "feats": [
+        "Divine Gift",
+        "Devoted Channeler"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per long rest, when an ally within 30 feet would be reduced to 0 HP, you may use a [Reaction] to call upon your patron. Choose any one of your patron's Channel Divinity options — it triggers immediately. This use does not consume one of your Channel Divinity uses.</p>",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per long rest, Reaction"
+    },
+    "keywords": "[Magic], [Divine], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!f5cc9177ab53e6d2"
+}

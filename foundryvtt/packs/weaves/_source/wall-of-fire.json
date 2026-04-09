@@ -1,11 +1,11 @@
 {
-  "_id": "1c63171785d0465f",
+  "_id": "4d886b603ac7a027",
   "name": "Wall of Fire",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals [[/damage 16 type=fire]] damage to creatures within 10 feet (choose side when casting). Passing through wall deals +8 (24) fire damage. Provides total cover.</p>"
+      "value": "<p>Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals [[/damage 16 type=fire]] damage to creatures within 10 feet (choose side when casting). Passing through wall deals [[/damage 24 type=fire]] damage. Provides total cover.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,22 +21,43 @@
     },
     "range": "Medium, 60 ft. (60 feet long, 20 feet high OR ring 20 feet diameter)",
     "duration": "10 minutes",
-    "target": "",
+    "target": "area",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals 16 fire damage to creatures within 10 feet (choose side when casting). Passing through wall deals 24 fire damage. Provides total cover.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (8)",
+          "duration": "half damage (8)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (16)",
+          "duration": "full damage (16)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (24) + ignited",
+          "duration": "enhanced damage (24) + ignited"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no damage\n- 1 = half (8)\n- 2 = full (16)\n- 3 = +8 (24) + ignited",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (8), 2= full damage (16), 3 = enhanced damage (24) + ignited",
     "weavingRoll": "Fire Potential + Fire Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
       {
-        "effectId": "ignited",
+        "effectId": "Ignited",
         "params": {}
       }
     ],
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!1c63171785d0465f"
+  "_key": "!items!4d886b603ac7a027"
 }

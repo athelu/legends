@@ -1,21 +1,22 @@
 {
-  "_id": "4541d969439742b3",
+  "_id": "30381d94afb5e8bf",
   "name": "Overweight (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>You carry extra weight that affects your mobility.</p>\n<ul>\n<li>Choose one when taking this flaw:\n<ul>\n<li><strong>Athletics Penalty:</strong> Add 1 to Athletics die results</li>\n<li><strong>Acrobatics Penalty:</strong> Add 1 to Acrobatics die results</li>\n</ul></li>\n</ul>"
+      "value": "<p>You carry extra weight that affects your mobility.</p>"
     },
     "pointValue": 1,
-    "flawType": "",
-    "severity": "moderate",
-    "mechanicalEffects": "",
+    "flawType": "physical",
+    "severity": "minor",
+    "mechanicalEffects": "<ul>\n<li>Choose one when taking this flaw:\n<ul>\n<li><strong>Athletics Penalty:</strong> Add 1 to Athletics die results</li>\n<li><strong>Acrobatics Penalty:</strong> Add 1 to Acrobatics die results</li>\n</ul></li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!4541d969439742b3"
+  "_key": "!items!30381d94afb5e8bf"
 }

@@ -1,21 +1,74 @@
 {
-  "_id": "0dbc81bd7067468a",
+  "_id": "d0aa3fc4f8262879",
   "name": "Driver",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Whether hauling cargo for merchants or transporting passengers, you developed a reputation for getting through when others turned back. The work was steady but monotonous, and eventually, you decided that if you were going to risk your life on dangerous roads anyway, you might as well do it for more interesting reasons. <strong>Skills:</strong> Wilderness 2, Athletics 2, Society 1, Perception 1, +40 XP <strong>Equipment:</strong> Whip, traveler's clothes, bedroll, work gloves, work boots <strong>Feature</strong> - Beast Handler: You have expertise with draft animals and vehicles, gaining Fortune when working with them.</p>"
+      "value": "<p>Whether hauling cargo for merchants or transporting passengers, you developed a reputation for getting through when others turned back. The work was steady but monotonous, and eventually, you decided that if you were going to risk your life on dangerous roads anyway, you might as well do it for more interesting reasons.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Wilderness 2, Athletics 2, Society 1, Perception 1, +40 XP",
+    "startingEquipment": "Whip\ntraveler's clothes\nbedroll\nwork gloves\nwork boots",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Beast Handler: You have expertise with draft animals and vehicles.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "wilderness": 2,
+      "athletics": 2,
+      "society": 1,
+      "perception": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "weapon",
+        "pack": "legends.weapons",
+        "sourceName": "Whip",
+        "quantity": 1,
+        "originalText": "Whip",
+        "sourceId": "5997b3205698f4cc"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Traveler's",
+        "quantity": 1,
+        "originalText": "traveler's clothes",
+        "sourceId": "0e79b3267533a030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Bedroll",
+        "quantity": 1,
+        "originalText": "bedroll",
+        "sourceId": "7f53e37546634877"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Gloves, Work",
+        "quantity": 1,
+        "originalText": "work gloves",
+        "sourceId": "56d09fece9f4243e"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Work",
+        "quantity": 1,
+        "originalText": "work boots",
+        "sourceId": "6a6394e3ffbccf86"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!0dbc81bd7067468a"
+  "_key": "!items!d0aa3fc4f8262879"
 }

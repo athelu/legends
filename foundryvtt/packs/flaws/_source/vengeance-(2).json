@@ -1,21 +1,22 @@
 {
-  "_id": "4273ee1e397440f6",
+  "_id": "24b4eaa74e1c35a4",
   "name": "Vengeance (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Someone wronged you terribly. Life devoted to revenge.</p>\n<p>---</p>\n<h2>FLAWS REQUIRING GM APPROVAL</h2>\n<p>Some flaws require GM approval due to their extreme nature, potential to disrupt the campaign, or need for mature roleplaying.</p>"
+      "value": "<p>Someone wronged you terribly. Life devoted to revenge.</p>"
     },
     "pointValue": 2,
-    "flawType": "",
-    "severity": "moderate",
+    "flawType": "social",
+    "severity": "minor",
     "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!4273ee1e397440f6"
+  "_key": "!items!24b4eaa74e1c35a4"
 }

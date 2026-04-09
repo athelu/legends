@@ -6,11 +6,18 @@ Build feats compendium pack from parsed feats.md documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, ensure_key, md_to_html, apply_enrichers
+from pack_utils import build_pack_from_source, generate_stable_id, ensure_key, md_to_html, apply_enrichers
 
 
 # Default feat icon (Foundry built-in webp for proper compendium thumbnails)
 DEFAULT_FEAT_ICON = 'icons/sundries/books/book-star-purple.webp'
+
+FIELD_RE = re.compile(r'^\*\*([^*]+?):\*\*\s*(.*)$')
+
+FEAT_CLASSIFICATION_XP = {
+    'standard': 40,
+    'legendary': 80,
+}
 
 # Keyword -> icon mapping for feat categories
 KEYWORD_ICONS = {
@@ -38,6 +45,94 @@ def _choose_icon(keywords):
     return DEFAULT_FEAT_ICON
 
 
+def _generate_feat_id(name):
+    """Generate a stable ID for a feat from its canonical name."""
+    normalized_name = re.sub(r'\s+', ' ', name).strip().lower()
+    return generate_stable_id(f'feat:{normalized_name}')
+
+
+def _split_sections(content):
+    """Split markdown content into feat sections while tracking classification headings."""
+    matches = list(re.finditer(r'^(#{1,6})\s+(.+)$', content, flags=re.MULTILINE))
+    sections = []
+    current_classification = 'standard'
+
+    for index, match in enumerate(matches):
+        heading_text = match.group(2).strip()
+        heading_key = re.sub(r'\s+', ' ', heading_text).strip().lower()
+
+        if heading_key == 'legendary feats':
+            current_classification = 'legendary'
+            continue
+
+        if heading_key == 'standard feats':
+            current_classification = 'standard'
+            continue
+
+        if len(match.group(1)) not in (3, 4):
+            continue
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(content)
+        sections.append((heading_text, content[start:end].strip(), current_classification))
+
+    return sections
+
+
+def _parse_fields(section_body):
+    """Parse standardized **Field:** blocks with multiline continuation support."""
+    fields = {}
+    current_field = None
+    current_lines = []
+    body_lines = []
+
+    for line in section_body.splitlines():
+        field_match = FIELD_RE.match(line.strip())
+        if field_match:
+            if current_field is not None:
+                fields[current_field] = '\n'.join(current_lines).strip()
+            current_field = field_match.group(1).strip().lower()
+            current_lines = [field_match.group(2).rstrip()]
+            continue
+
+        if current_field is not None:
+            current_lines.append(line.rstrip())
+        else:
+            body_lines.append(line.rstrip())
+
+    if current_field is not None:
+        fields[current_field] = '\n'.join(current_lines).strip()
+
+    return fields, '\n'.join(body_lines).strip()
+
+
+def _parse_usage_type(usage_text):
+    """Map rich usage text to the simple feat sheet usage type enum."""
+    usage_lower = usage_text.lower().strip()
+    if not usage_lower:
+        return 'passive'
+    if 'reaction' in usage_lower:
+        return 'reaction'
+    if 'free' in usage_lower:
+        return 'free'
+    if usage_lower in {'passive', 'passive trigger', 'passive enhancement', 'passive, always on'}:
+        return 'passive'
+    if usage_lower.startswith('active') or usage_lower.startswith('action'):
+        return 'active'
+    if any(token in usage_lower for token in ['once per', 'per turn', 'per round', 'costs', 'trigger', 'triggers', 'special', 'requires', 'while', '[combat] action']):
+        return 'special'
+    return 'active'
+
+
+def _extract_keywords(keyword_text):
+    """Normalize bracketed keyword lists while preserving existing storage format."""
+    if not keyword_text:
+        return ''
+    bracketed = [f'[{match.strip()}]' for match in re.findall(r'\[([^\]]+)\]', keyword_text)]
+    if bracketed:
+        return ', '.join(bracketed)
+    return ', '.join(part.strip() for part in keyword_text.split(',') if part.strip())
+
+
 # Attribute abbreviation -> system key mapping
 ATTR_ABBREV = {
     'str': 'strength', 'strength': 'strength',
@@ -55,8 +150,8 @@ SKILL_MAP = {
     'athletics': 'athletics', 'might': 'might',
     'acrobatics': 'acrobatics', 'stealth': 'stealth',
     'thievery': 'thievery', 'devices': 'devices',
-    'perception': 'perception', 'survival': 'survival',
-    'medicine': 'medicine', 'insight': 'insight',
+    'perception': 'perception', 'wilderness': 'wilderness',
+    'medicine': 'medicine', 'empathy': 'empathy', 'religion': 'religion',
     'arcana': 'arcane', 'arcane': 'arcane',
     'history': 'history', 'society': 'society',
     'investigation': 'investigate', 'investigate': 'investigate',
@@ -64,7 +159,6 @@ SKILL_MAP = {
     'intimidate': 'intimidate', 'intimidation': 'intimidate',
     'perform': 'perform', 'language': 'language',
     'craft': 'craft', 'writing': 'writing',
-    'animal handling': 'animalHandling', 'animalhandling': 'animalHandling',
     'melee': 'meleeCombat', 'melee combat': 'meleeCombat', 'meleecombat': 'meleeCombat',
     'ranged': 'rangedCombat', 'ranged combat': 'rangedCombat', 'rangedcombat': 'rangedCombat',
 }
@@ -100,6 +194,30 @@ def _parse_prerequisites(prereq_text, prereqs):
             prereqs['tier'] = int(tier_m.group(1))
             continue
 
+        # Check for generic skill requirement: "Any skill rank 5"
+        any_skill_m = re.match(r'^[Aa]ny\s+skill\s+rank\s+(\d+)$', part_stripped)
+        if any_skill_m:
+            remaining.append(part_stripped)
+            continue
+
+        # Check for chosen/generic combat or mastery skills that cannot be mapped to one field
+        generic_skill_m = re.match(r'^(any|chosen)\s+(.+?)\s+(\d+)$', part_stripped, re.IGNORECASE)
+        if generic_skill_m:
+            remaining.append(part_stripped)
+            continue
+
+        # Check for potential/mastery requirements that are not actor skill keys
+        energy_req_m = re.match(r'^(\w+)\s+(mastery|potential)\s+(\d+)$', part_stripped, re.IGNORECASE)
+        if energy_req_m:
+            remaining.append(part_stripped)
+            continue
+
+        # Check for casting attribute requirements
+        casting_attr_m = re.match(r'^[Cc]asting\s+[Aa]ttribute\s+(\d+)$', part_stripped)
+        if casting_attr_m:
+            remaining.append(part_stripped)
+            continue
+
         # Check for attribute requirement: "Str 4", "Agi 5", "Str or Agi 4"
         # Pattern: optional "AttrAbbr or " prefix, then AttrAbbr + number
         attr_m = re.match(
@@ -126,7 +244,7 @@ def _parse_prerequisites(prereq_text, prereqs):
                     _append_skill(prereqs, SKILL_MAP[name1], value)
                 continue
 
-        # Check for two-word skill: "Melee Combat 4", "Ranged Combat 4", "Animal Handling 3"
+        # Check for two-word skill: "Melee Combat 4", "Ranged Combat 4", "Wilderness 3"
         skill2_m = re.match(r'^(\w+\s+\w+)\s+(\d+)$', part_stripped, re.IGNORECASE)
         if skill2_m:
             skill_name = skill2_m.group(1).lower()
@@ -139,6 +257,17 @@ def _parse_prerequisites(prereq_text, prereqs):
         feat_m = re.match(r'^(.+?)\s+[Ff]eat$', part_stripped)
         if feat_m:
             prereqs['feats'].append(feat_m.group(1).strip())
+            continue
+
+        # Check for trait prerequisite: specific named traits become item prerequisites,
+        # but generic phrases like "any magical tradition trait" stay as free text.
+        trait_m = re.match(r'^(.+?)\s+[Tt]rait$', part_stripped)
+        if trait_m:
+            trait_name = trait_m.group(1).strip()
+            if trait_name.lower().startswith(('any ', 'chosen ')):
+                remaining.append(part_stripped)
+            else:
+                prereqs['feats'].append(trait_name)
             continue
 
         # Anything else goes to other
@@ -163,28 +292,36 @@ def parse_feats_md(md_file):
         content = content[m.end():]
     
     items = []
-    
-    # Prefer level-4 headings (####) for individual feats; fall back to level-3 if none found
-    sections = re.split(r'^####\s+', content, flags=re.MULTILINE)[1:]
-    if not sections:
-        sections = re.split(r'^###\s+', content, flags=re.MULTILINE)[1:]
-    
-    for section in sections:
-        lines = section.split('\n')
-        item_name = lines[0].strip()
+    sections = _split_sections(content)
+
+    for item_name, section_body, classification in sections:
         
         if not item_name:
             continue
+
+        fields, free_body = _parse_fields(section_body)
+
+        canonical_fields = {key.rstrip(':').strip().lower(): value for key, value in fields.items()}
+        raw_description = section_body.strip()
+        tier_text = canonical_fields.get('tier', '')
+        prereq_text = canonical_fields.get('prerequisites', '') or canonical_fields.get('requirements', '')
+        usage_text = canonical_fields.get('usage', '')
+        keyword_text = canonical_fields.get('keyword', '') or canonical_fields.get('keywords', '')
+        benefit_text = canonical_fields.get('benefit', '') or canonical_fields.get('benefits', '')
+        note_text = canonical_fields.get('note', '') or canonical_fields.get('notes', '')
+        image_text = canonical_fields.get('image', '')
+        description_text = canonical_fields.get('description', '') or free_body
         
         item = {
-            '_id': generate_id(),
+            '_id': _generate_feat_id(item_name),
             'name': item_name,
             'type': 'feat',
             'img': DEFAULT_FEAT_ICON,
             'system': {
                 'description': {'value': ''},
                 'flavorText': '',
-                'xpCost': 0,
+                'xpCost': FEAT_CLASSIFICATION_XP.get(classification, 40),
+                'classification': classification,
                 'prerequisites': {
                     'attributes': {},
                     'skills': '',
@@ -194,6 +331,12 @@ def parse_feats_md(md_file):
                 },
                 'benefits': '',
                 'usageType': 'passive',
+                'usage': {
+                    'mode': 'passive',
+                    'uses': None,
+                    'recharge': None,
+                    'text': ''
+                },
                 'keywords': '',
                 'notes': '',
                 'effects': []
@@ -201,55 +344,46 @@ def parse_feats_md(md_file):
             'effects': []
         }
 
-        # Extract raw description text (used for parsing metadata fields)
-        raw_description = '\n'.join(lines[1:]).strip()
-
         # Parse tier from description — tier is a prerequisite
-        tier_match = re.search(r'\*\*Tier:\*\*\s*(\d+)', raw_description)
+        tier_match = re.search(r'(\d+)', tier_text)
         if tier_match:
             item['system']['prerequisites']['tier'] = int(tier_match.group(1))
 
-        # Parse usage type from description
-        usage_match = re.search(r'\*\*Usage:\*\*\s*(\w+)', raw_description, re.IGNORECASE)
-        if usage_match:
-            item['system']['usageType'] = usage_match.group(1).lower()
+        # Parse usage details from standardized usage field
+        item['system']['usageType'] = _parse_usage_type(usage_text)
+        item['system']['usage'] = {
+            'mode': item['system']['usageType'],
+            'uses': None,
+            'recharge': None,
+            'text': usage_text.strip()
+        }
 
         # Parse keywords from description
-        kw_match = re.search(r'\*\*Keywords?:\*\*\s*([^\n]+)', raw_description)
-        if kw_match:
-            item['system']['keywords'] = kw_match.group(1).strip()
+        item['system']['keywords'] = _extract_keywords(keyword_text)
 
         # Parse prerequisites from description
-        prereq_match = re.search(r'\*\*Prerequisites?:\*\*\s*([^\n]+)', raw_description)
-        if prereq_match:
-            prereq_text = prereq_match.group(1).strip()
+        if prereq_text:
             _parse_prerequisites(prereq_text, item['system']['prerequisites'])
 
         # Parse benefit from description
-        benefit_match = re.search(r'\*\*Benefits?:\*\*\s*([^\n]+(?:\n(?!\*\*)[^\n]*)*)', raw_description)
-        if benefit_match:
-            item['system']['benefits'] = apply_enrichers(md_to_html(benefit_match.group(1).strip()))
+        if benefit_text:
+            item['system']['benefits'] = apply_enrichers(md_to_html(benefit_text.strip()))
+
+        if note_text:
+            item['system']['notes'] = note_text.strip()
 
         # Choose icon based on keywords (can be overridden by explicit Image: field)
         item['img'] = _choose_icon(item['system']['keywords'])
 
         # Extract explicit image path if specified (overrides keyword-based icon)
-        # Supports: **Image:** `icons/path.webp` or plain Image: icons/path.webp
-        img_match = re.search(r'\*?\*?Image:?\*?\*?\s*`?([^`\n|]+)`?', raw_description)
-        if img_match:
-            item['img'] = img_match.group(1).strip()
+        if image_text:
+            img_match = re.search(r'`?([^`\n|]+)`?', image_text)
+            if img_match:
+                item['img'] = img_match.group(1).strip()
 
         # Extract the actual description text: use **Description:** value if present,
         # otherwise strip all metadata lines and use what remains
-        desc_match = re.search(r'\*\*Description:\*\*\s*(.+?)(?=\n\*\*|\Z)', raw_description, re.DOTALL)
-        if desc_match:
-            clean_desc = desc_match.group(1).strip()
-        else:
-            # Strip all known metadata lines
-            clean_desc = re.sub(
-                r'^-?\s*\*\*(?:Tier|Prerequisites?|Benefits?|Usage|Keywords?|Description|Image):?\*\*[^\n]*\n?',
-                '', raw_description, flags=re.MULTILINE | re.IGNORECASE
-            ).strip()
+        clean_desc = description_text.strip()
 
         # Convert to Foundry-compatible HTML
         item['system']['description']['value'] = apply_enrichers(md_to_html(clean_desc))

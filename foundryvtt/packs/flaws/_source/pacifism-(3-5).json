@@ -1,21 +1,22 @@
 {
-  "_id": "82e28675d76645b8",
+  "_id": "58a76bdb998153e3",
   "name": "Pacifism (3-5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>You are opposed to violence.</p>\n<ul>\n<li><strong>Restrained Violence (3):</strong> Will not attack non-combatants, surrendered foes, or clearly innocent people. Make [[/save type=will]] (1 success required) to harm anyone who hasn't directly threatened you.</li>\n<li><strong>Absolute Non-Violence (5):</strong> Will never deal lethal damage. All your attacks must be non-lethal, and you cannot deliver killing blows even to defeated enemies.</li>\n</ul>"
+      "value": "<p>You are opposed to violence.</p>"
     },
     "pointValue": 3,
-    "flawType": "",
+    "flawType": "mental",
     "severity": "moderate",
-    "mechanicalEffects": "",
+    "mechanicalEffects": "<ul>\n<li><strong>Restrained Violence (3):</strong> Will not attack non-combatants, surrendered foes, or clearly innocent people. Make [[/save type=will]] (1 success required) to harm anyone who hasn't directly threatened you.</li>\n<li><strong>Absolute Non-Violence (5):</strong> Will never deal lethal damage. All your attacks must be non-lethal, and you cannot deliver killing blows even to defeated enemies.</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!82e28675d76645b8"
+  "_key": "!items!58a76bdb998153e3"
 }

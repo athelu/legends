@@ -1,0 +1,38 @@
+{
+  "_id": "8a5284afbc33ff56",
+  "name": "Resonant Words",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The syllables you speak don't fade when the sound does.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 3
+      },
+      "skills": "",
+      "feats": [
+        "Invoker"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you use Words of Power, the effect extends to the next two rolls your allies make instead of just one. Additionally, you may include yourself as one of the targets of Words of Power. Energy spent on Words of Power is refunded after each short rest.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive enhancement to Words of Power"
+    },
+    "keywords": "[Magic], [Invoker]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!8a5284afbc33ff56"
+}

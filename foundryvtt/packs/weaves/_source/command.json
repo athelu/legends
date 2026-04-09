@@ -1,11 +1,11 @@
 {
-  "_id": "bba6ee93bbfd403a",
+  "_id": "05aca347ada00641",
   "name": "Command",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Speak a one-word command to a creature you can see within close range. Target makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target follows the command on their next turn. Commands: Approach, Drop, Flee, Grovel (prone), Halt (no actions). Cannot command self-harm. Creatures immune to charm are immune.</p>"
+      "value": "<p>Speak a one-word command to a creature you can see within close range. Target makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target follows the command on their next turn. Commands: Approach, Drop, Flee, Grovel (prone), Halt (no actions). Cannot command self-harm. Creatures immune to charm are immune.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -23,15 +23,36 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Speak a one-word command to a creature you can see within close range. Target makes Will save. Compare your targeting successes to their save successes. If you have more, target follows the command on their next turn. Commands: Approach, Drop, Flee, Grovel (prone), Halt (no actions). Cannot command self-harm. Creatures immune to charm are immune.",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "2 rounds",
+          "duration": "2 rounds"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Fails\n- 2 = 1 round\n- 3 = 2 rounds",
+    "targetingSuccessScaling": "0 = Fails, 1 = Fails, 2 = 1 round, 3 = 2 rounds",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
@@ -44,5 +65,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!bba6ee93bbfd403a"
+  "_key": "!items!05aca347ada00641"
 }

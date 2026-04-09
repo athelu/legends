@@ -1,0 +1,39 @@
+{
+  "_id": "ec6cc5247b0c28c6",
+  "name": "Immovable",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>They have tried pushing you, shoving you, blasting you back with force and fury byt you are still standing exactly where you were.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 5,
+        "constitution": 5
+      },
+      "skills": "",
+      "feats": [
+        "Stalwart"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>You cannot be moved against your will by any non-magical forced movement. Shoves, bull rushes, and knockback effects automatically fail against you. Additionally you have Fortune on Fortitude saves against effects that would move or reposition you.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Shield]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!ec6cc5247b0c28c6"
+}

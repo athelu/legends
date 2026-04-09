@@ -1,5 +1,5 @@
 {
-  "_id": "f1d9ba1934a348f6",
+  "_id": "30f74ede52ff7d79",
   "name": "Levitate",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Close, 30 ft.",
     "duration": "10 minutes",
-    "target": "",
+    "target": "single",
     "savingThrow": "fortitude",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target at close range rises vertically up to 20 feet (your choice). Can change altitude by 20 feet each round. Target can't move horizontally except by pushing off objects. Unwilling targets get Fortitude save to resist.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour",
     "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
@@ -41,5 +62,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!f1d9ba1934a348f6"
+  "_key": "!items!30f74ede52ff7d79"
 }

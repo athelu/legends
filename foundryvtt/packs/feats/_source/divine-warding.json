@@ -1,0 +1,39 @@
+{
+  "_id": "9a8ceaf7fe3b6991",
+  "name": "Divine Warding",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your patron wraps a mantle of protection around you. Those who strike at a conduit of the divine invite consequences they didn't anticipate.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 5
+      },
+      "skills": "religion:5",
+      "feats": [
+        "Divine Gift",
+        "Vessel of Faith"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per round when you are hit by an attack or fail a saving throw, you may spend 1 Luck to invoke your patron's protection. Roll 1d8 — if the result is under your Wisdom score, the attack deals half damage or you succeed on the saving throw instead. Additionally, creatures that hit you with melee attacks while you have at least 1 Channel Divinity use remaining take Positive or Negative damage (matching your patron's primary energy type) equal to your Wisdom score. This is not a choice and triggers automatically.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "1 Luck cost for defensive roll (once per round); passive retaliation damage always active"
+    },
+    "keywords": "[Magic], [Divine], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!9a8ceaf7fe3b6991"
+}

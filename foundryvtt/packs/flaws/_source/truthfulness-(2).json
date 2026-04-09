@@ -1,21 +1,22 @@
 {
-  "_id": "0858bc83e14e4656",
+  "_id": "4d213d0630543538",
   "name": "Truthfulness (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>You hate lying and must make [[/save type=will]] (1 success required) to deceive, even by omission.</p>\n<ul>\n<li>Automatically fail Deception checks to lie directly</li>\n<li>Can mislead by telling literal truth</li>\n</ul>"
+      "value": "<p>You hate lying and must make [[/save type=will]] (1 success required) to deceive, even by omission.</p>"
     },
     "pointValue": 2,
-    "flawType": "",
-    "severity": "moderate",
-    "mechanicalEffects": "",
+    "flawType": "mental",
+    "severity": "minor",
+    "mechanicalEffects": "<ul>\n<li>Automatically fail Deception checks to lie directly</li>\n<li>Can mislead by telling literal truth</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!0858bc83e14e4656"
+  "_key": "!items!4d213d0630543538"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "d5e71bf8fd6047e7",
+  "_id": "43f70f8a96edea28",
   "name": "Grease",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Close, 30 ft. (10-foot square)",
     "duration": "1 minute",
-    "target": "",
+    "target": "area",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "Area becomes slippery difficult terrain. Creatures entering or starting turn in area make Reflex save or fall Prone. Those running must save or fall. Compare your targeting successes to their save successes.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes (20ft square)",
+          "duration": "10 minutes (20ft square)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes (20ft square)",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes (20ft square)",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [],
@@ -42,5 +63,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!d5e71bf8fd6047e7"
+  "_key": "!items!43f70f8a96edea28"
 }

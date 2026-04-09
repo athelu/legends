@@ -1,22 +1,23 @@
 {
-  "_id": "e4709818862247a4",
+  "_id": "a5ccfd0c318bcb37",
   "name": "Read Scroll",
   "type": "action",
   "img": "icons/skills/trades/construction-gloves-yellow.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 2</li>\n<li><strong>Requirements:</strong> Ability to read, appropriate magical knowledge</li>\n<li><strong>Effect:</strong> Cast the spell contained in the scroll</li>\n<li><strong>Check:</strong> [[/check skill=arcane]] required if spell level exceeds your weaving capability</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>The scroll is consumed after use</li>\n<li>Provokes Opportunity Attacks (like Complex Weave)</li>\n<li>Failure may destroy the scroll</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 2 <strong>Requirements:</strong> Ability to read, appropriate magical knowledge <strong>Effect:</strong> Cast the spell containedin the scroll. [[/check skill=arcane]] required. The scroll is consumed after use. Provokes Opportunity Attacks.</p>"
     },
     "actionType": "activate",
     "actionCost": "2",
+    "requirements": "Ability to read, appropriate magical knowledge",
     "trigger": "",
-    "effect": "Cast the spell contained in the scroll\n- **Check:** Arcane check required if spell level exceeds your weaving capability\n- **Notes:**\n  - The scroll is consumed after use\n  - Provokes Opportunity Attacks (like Complex Weave)\n  - Failure may destroy the scroll",
-    "keywords": "",
+    "effect": "Cast the spell containedin the scroll. Arcane check required. The scroll is consumed after use. Provokes Opportunity Attacks.",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!e4709818862247a4"
+  "_key": "!items!a5ccfd0c318bcb37"
 }

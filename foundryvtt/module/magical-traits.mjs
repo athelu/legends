@@ -42,7 +42,7 @@ export function getExistingPrimaryMagicalTrait(actor) {
   
   const primaryTraits = [
     'mageborn', 'divine gift', 'sorcerous origin', 
-    'invoker', 'infuser', 'eldritch pact'
+    'invoker', 'infuser', 'eldritch pact', 'alchemical tradition'
   ];
   
   for (const item of actor.items) {
@@ -76,7 +76,7 @@ export function validateMagicalTraitApplication(actor, traitType) {
   
   // Primary magical traits cannot stack
   const primaryTraits = ['mageborn', 'divine-gift', 'sorcerous-origin', 
-                         'invoker', 'infuser', 'eldritch-pact'];
+                         'invoker', 'infuser', 'eldritch-pact', 'alchemical-tradition'];
   
   if (primaryTraits.includes(traitType.toLowerCase())) {
     if (existingTrait) {
@@ -104,7 +104,8 @@ export function detectPrimaryMagicalTrait(actor) {
     { pattern: 'invoker', type: 'invoker' },
     { pattern: 'infuser', type: 'infuser' },
     { pattern: 'sorcerous origin', type: 'sorcerous-origin' },
-    { pattern: 'eldritch pact', type: 'eldritch-pact' }
+    { pattern: 'eldritch pact', type: 'eldritch-pact' },
+    { pattern: 'alchemical tradition', type: 'alchemical-tradition' }
   ];
   
   for (const item of actor.items) {
@@ -219,6 +220,9 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
           break;
       }
       break;
+
+    case 'alchemical-tradition':
+      break;
   }
   
   // Fetch and create abilities
@@ -262,7 +266,8 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
     'invoker': 'Invoker',
     'infuser': 'Infuser',
     'sorcerous-origin': 'Sorcerous Origin',
-    'eldritch-pact': 'Eldritch Pact'
+    'eldritch-pact': 'Eldritch Pact',
+    'alchemical-tradition': 'Alchemical Tradition'
   };
   
   const modeDescriptions = {
@@ -272,7 +277,24 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
   };
   
   const traitName = traitNames[primaryTrait.type] || primaryTrait.type;
-  const modeDesc = modeDescriptions[mode] || 'Standard rolling';
+  const modeDesc = primaryTrait.type === 'alchemical-tradition'
+    ? 'No potential generation required'
+    : (modeDescriptions[mode] || 'Standard rolling');
+  const workflowSteps = primaryTrait.type === 'alchemical-tradition'
+    ? `
+      <ol>
+        <li>Set Intelligence as your effective casting stat</li>
+        <li>Mark Alchemical Tradition as configured on the actor</li>
+        <li>Use Craft: Alchemist and the downtime rules to create preparations</li>
+      </ol>
+    `
+    : `
+      <ol>
+        <li>Generating your Magical Potentials</li>
+        <li>Making trait-specific choices</li>
+        <li>Assigning potentials to energy types</li>
+      </ol>
+    `;
   
   return Dialog.confirm({
     title: "Setup Magical Traits",
@@ -282,11 +304,7 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
       <p><strong>Generation Mode:</strong> ${modeDesc}</p>
       <hr>
       <p>You will be guided through:</p>
-      <ol>
-        <li>Generating your Magical Potentials</li>
-        <li>Making trait-specific choices</li>
-        <li>Assigning potentials to energy types</li>
-      </ol>
+      ${workflowSteps}
       <p><em>This cannot be easily undone. Make sure you have all desired modifier traits 
       (Gifted Mage, Balanced Channeler) added first.</em></p>
       <p>Ready to begin?</p>
@@ -357,6 +375,9 @@ export async function setupMagicalTraits(actor) {
         break;
       case 'eldritch-pact':
         success = await applyEldritchPactWorkflow(actor, primaryTrait.item, mode);
+        break;
+      case 'alchemical-tradition':
+        success = await applyAlchemicalTraditionWorkflow(actor, primaryTrait.item, mode);
         break;
       default:
         ui.notifications.error(`Unknown magical trait type: ${primaryTrait.type}`);
@@ -1117,6 +1138,8 @@ export async function applyDivineGiftWorkflow(actor, traitItem, mode) {
     ui.notifications.warn("Divine Gift application cancelled");
     return false;
   }
+
+  const tier = actor.system.tier?.value || 1;
   
   // Step 5: Build updates object
   const updates = {
@@ -1131,8 +1154,8 @@ export async function applyDivineGiftWorkflow(actor, traitItem, mode) {
       isSetup: true
     },
     'system.channelDivinity': {
-      current: 2,
-      max: 2
+      current: tier,
+      max: tier
     }
   };
   
@@ -1208,6 +1231,37 @@ export async function applyInvokerWorkflow(actor, traitItem, mode) {
   await actor.update(updates);
   
   ui.notifications.info("Invoker trait applied successfully!");
+  return true;
+}
+
+/**
+ * Alchemical Tradition workflow - called from setupMagicalTraits()
+ */
+export async function applyAlchemicalTraditionWorkflow(actor, traitItem, mode) {
+  ui.notifications.info("Setting up Alchemical Tradition...");
+
+  const updates = {
+    'system.potentials': createPotentialsObject({}),
+    'system.mastery': initializeMastery([]),
+    'system.energy.current': 0,
+    'system.energy.max': 0,
+    'system.castingStat.value': 'intelligence',
+    'system.magicalTrait': {
+      type: 'alchemical-tradition',
+      subtype: 'alchemical',
+      availableEnergies: [],
+      isSetup: true
+    },
+    'system.channelDivinity': {
+      current: 0,
+      max: 0
+    }
+  };
+
+  await grantMagicalTraitAbilities(actor, 'alchemical-tradition', updates);
+  await actor.update(updates);
+
+  ui.notifications.info("Alchemical Tradition applied successfully!");
   return true;
 }
 
@@ -1497,7 +1551,7 @@ export async function handleMagicalTraitRemoval(actor, traitItem) {
   // Check if this is a primary magical trait
   const isPrimaryTrait = [
     'mageborn', 'divine gift', 'invoker', 'infuser', 
-    'sorcerous origin', 'eldritch pact'
+    'sorcerous origin', 'eldritch pact', 'alchemical tradition'
   ].some(pattern => traitName.includes(pattern));
   
   if (!isPrimaryTrait) {
@@ -1520,7 +1574,8 @@ export async function handleMagicalTraitRemoval(actor, traitItem) {
     
     // Check if this ability was granted by a magical trait
     if (source.includes('mageborn') || source.includes('divine gift') || 
-        source.includes('invoker') || source.includes('infuser') ||
+      source.includes('invoker') || source.includes('infuser') ||
+      source.includes('alchemical tradition') ||
         source.includes('sorcerous origin') || source.includes('eldritch pact')) {
       abilitiesToRemove.push(item.id);
       continue;

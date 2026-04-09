@@ -52,7 +52,20 @@
           <span class="value">{{system.range.normal}}/{{system.range.medium}}/{{system.range.long}}</span>
         </div>
         {{/if}}
+
+        {{#if system.reload}}
+        <div class="summary-stat">
+          <label>Reload</label>
+          <span class="value">{{system.reload}}</span>
+        </div>
+        {{/if}}
       </div>
+
+      {{#if system.requirements}}
+      <div class="weapon-tags">
+        <span class="tag property-tag">REQ: {{system.requirements}}</span>
+      </div>
+      {{/if}}
     </div>
   </header>
 
@@ -100,7 +113,8 @@
           <li><strong>Margin 2:</strong> Base weapon damage + Ability value</li>
           <li><strong>Margin 3+ (Critical):</strong> Base weapon damage + Ability value + Condition</li>
         </ul>
-        <p><small>Ability value depends on the weapon skill used (Ranged use Dexterity, melee use Strength, Thrown use Strength).</small></p>
+        <p><small>Attack rolls use Agility for melee and Dexterity for ranged or thrown attacks.</small></p>
+        <p><small>Damage bonuses default to Strength for melee and Dexterity for ranged or thrown attacks. Finesse lets melee attacks choose Strength or Agility for damage.</small></p>
         <p><small><strong>PC Advantage:</strong> Player characters can spend luck to reduce dice totals and win tiebreakers.</small></p>
       </div>
 
@@ -233,7 +247,7 @@
             <input type="checkbox" name="system.properties" value="finesse" {{#if (contains system.properties "finesse")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Finesse</span>
-              <span class="property-desc">Use Agility instead of Strength for attack rolls.</span>
+              <span class="property-desc">Melee damage can use Strength or Agility at attack time.</span>
             </div>
           </label>
           
@@ -291,9 +305,26 @@
             <input type="checkbox" name="system.properties" value="multi-type" {{#if (contains system.properties "multi-type")}}checked{{/if}} />
             <div class="property-info">
               <span class="property-name">Multi-Type</span>
-              <span class="property-desc">Deals multiple damage types simultaneously.</span>
+              <span class="property-desc">Choose between the listed damage types when attacking.</span>
             </div>
           </label>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h3>Use Requirements</h3>
+      </div>
+
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Requirements</label>
+          <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="Strength 3" />
+          <small>Eligibility or minimum stats needed to use the weapon effectively.</small>
+        </div>
+        <div class="form-group">
+          <label>Reload</label>
+          <input type="text" name="system.reload" value="{{system.reload}}" placeholder="1 action" />
+          <small>Only used for weapons that require reload time.</small>
         </div>
       </div>
 

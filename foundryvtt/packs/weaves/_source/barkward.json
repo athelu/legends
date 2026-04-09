@@ -1,5 +1,5 @@
 {
-  "_id": "d3d29b9c39f14016",
+  "_id": "963dd753ebb95ea0",
   "name": "Barkward",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Touch, self",
     "duration": "1 minute",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target's DR increases by 4 (doesn't stack with armor). Touch range by default.",
+    "effectType": "protection",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Earth Potential + Earth Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [
@@ -42,13 +63,14 @@
         }
       }
     ],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "buff",
       "defensive",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!d3d29b9c39f14016"
+  "_key": "!items!963dd753ebb95ea0"
 }

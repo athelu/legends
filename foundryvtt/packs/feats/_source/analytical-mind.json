@@ -1,0 +1,38 @@
+{
+  "_id": "32b2fc871281a1c8",
+  "name": "Analytical Mind",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your intellectual grasp of magical structures lets you find the flaws in enemy weaves before they can fully form.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 4
+      },
+      "skills": "arcane:4",
+      "feats": [
+        "Mageborn"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per round, when a creature within 60 feet begins casting a Complex Weave (2-action cast), you may use a [Reaction] to study the forming weave. Make an [[/check skill=arcane]] (Int + Arcana, opposed by caster's Int or Wis + Arcana):</p>\n<ul>\n<li><strong>1 success:</strong> Impose Misfortune on their weaving roll</li>\n<li><strong>2 successes:</strong> Impose Misfortune on both their weaving roll and their targeting roll</li>\n</ul>",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per round, Reaction"
+    },
+    "keywords": "[Magic], [Mageborn], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!32b2fc871281a1c8"
+}

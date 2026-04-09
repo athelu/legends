@@ -1,5 +1,5 @@
 {
-  "_id": "63e02e7476d34ed9",
+  "_id": "c6357ce8c53ebd78",
   "name": "Flail",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 6,
       "type": "bludgeoning",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
+        "skill": "melee",
         "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 6,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -43,8 +43,10 @@
     "properties": [
       "standard"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!63e02e7476d34ed9"
+  "_key": "!items!c6357ce8c53ebd78"
 }

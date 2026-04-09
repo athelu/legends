@@ -1,21 +1,81 @@
 {
-  "_id": "3d6de6a793c34c05",
+  "_id": "2ce87788d6986f02",
   "name": "Smith",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Fire, hammer, and patience were your tools and your teachers. You shaped metal into tools, weapons, and art, learning that true craftsmanship cannot be rushed. It could be that you tired of making swords for others to wield, or the business was no longer supporting you. You understand the value of good equipment, and you know how to keep it maintained in the field. Your companions will thank you for that. <strong>Skills:</strong> Craft 3, Might 2, +32 XP <strong>Equipment:</strong> Smith's tools, hammer, apron, work gloves, work clothes, work boots <strong>Feature</strong> - Master Craftsman: You can repair weapons and armor in the field, assess metal quality and craftsmanship, and create or modify metal items with proper materials and time.</p>"
+      "value": "<p>Fire, hammer, and patience were your tools and your teachers. You shaped metal into tools, weapons, and art, learning that true craftsmanship cannot be rushed. It could be that you tired of making swords for others to wield, or the business was no longer supporting you. You understand the value of good equipment, and you know how to keep it maintained in the field. Your companions will thank you for that.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 32,
+    "skillBonuses": "Craft 3, Might 2, +32 XP",
+    "startingEquipment": "Smith's tools\nhammer\napron\nwork gloves\nwork clothes\nwork boots",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Master Craftsman: You can repair weapons and armor in the field, assess metal quality and craftsmanship, and create or modify metal items with proper materials and time.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "craft": 3,
+      "might": 2
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Smith's Tools",
+        "quantity": 1,
+        "originalText": "Smith's tools",
+        "sourceId": "7eefc5223374d691"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Hammer",
+        "quantity": 1,
+        "originalText": "hammer",
+        "sourceId": "e241009feb240ec6"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Apron",
+        "quantity": 1,
+        "originalText": "apron",
+        "sourceId": "23d6fdda72713321"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Gloves, Work",
+        "quantity": 1,
+        "originalText": "work gloves",
+        "sourceId": "56d09fece9f4243e"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Work",
+        "quantity": 1,
+        "originalText": "work clothes",
+        "sourceId": "e9a99873e17f718a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Work",
+        "quantity": 1,
+        "originalText": "work boots",
+        "sourceId": "6a6394e3ffbccf86"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!3d6de6a793c34c05"
+  "_key": "!items!2ce87788d6986f02"
 }

@@ -1,21 +1,63 @@
 {
-  "_id": "078b63c9bd0f457f",
+  "_id": "88987f510cab104d",
   "name": "Charlatan",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You traveled from place to place, peddling false fortunes in one town, pretending to be a long-lost heir in the next. Becoming an adventurer might be your next big scam or an attempt to put your talents to use for a greater cause. You realize that after pretending to be a hero for so long, you've become the mask. Or maybe you're just running from that last con that went sideways. <strong>Skills:</strong> Deception 2, Persuasion 2, Perform 2, Thievery 2, +24 XP <strong>Equipment:</strong> Fine clothes, disguise kit, playing cards, shoes <strong>Feature</strong> - False Identity: You have created a second identity with documentation and can switch between identities convincingly.</p>"
+      "value": "<p>You traveled from place to place, peddling false fortunes in one town, pretending to be a long-lost heir in the next. Becoming an adventurer might be your next big scam or an attempt to put your talents to use for a greater cause. You realize that after pretending to be a hero for so long, you've become the mask. Or maybe you're just running from that last con that went sideways.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 24,
+    "skillBonuses": "Deception 2, Persuasion 2, Perform 2, Thievery 2, +24 XP",
+    "startingEquipment": "Fine clothes\ndisguise kit\nplaying cards\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "False Identity: You have created a second identity with documentation and can switch between identities convincingly.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "deception": 2,
+      "persuasion": 2,
+      "perform": 2,
+      "thievery": 2
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "Fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Disguise Kit",
+        "quantity": 1,
+        "originalText": "disguise kit",
+        "sourceId": "58b900cc51a61f63"
+      },
+      {
+        "mode": "placeholder",
+        "itemType": "equipment",
+        "sourceName": "playing cards",
+        "quantity": 1,
+        "originalText": "playing cards"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!078b63c9bd0f457f"
+  "_key": "!items!88987f510cab104d"
 }

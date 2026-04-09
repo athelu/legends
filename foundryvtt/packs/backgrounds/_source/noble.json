@@ -1,21 +1,55 @@
 {
-  "_id": "d3ee802eef594163",
+  "_id": "254edc9ccbb27e73",
   "name": "Noble",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>To the common folk, the life of a noble seems one of idyllic luxury, but growing up as a noble or member of the aspiring gentry, you know the reality: a noble's lot is obligation and intrigue. Whether you seek to escape your duties by adventuring or to better your station, you have traded silks and pageantry for an adventurer's life. The question is whether your family sees this as honorable service or scandalous rebellion. <strong>Skills:</strong> Society 3, Persuasion 1, History 1, +36 XP <strong>Equipment:</strong> Fine clothes, signet ring, shoes <strong>Feature</strong> - Position of Privilege: You are of noble birth. Common folk defer to you, and you can secure audiences with authorities, though this may also make you a target.</p>"
+      "value": "<p>To the common folk, the life of a noble seems one of idyllic luxury, but growing up as a noble or member of the aspiring gentry, you know the reality: a noble's lot is obligation and intrigue. Whether you seek to escape your duties by adventuring or to better your station, you have traded silks and pageantry for an adventurer's life. The question is whether your family sees this as honorable service or scandalous rebellion.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 36,
+    "skillBonuses": "Society 3, Persuasion 1, History 1, +36 XP",
+    "startingEquipment": "Fine clothes\nsignet ring\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Position of Privilege: You are of noble birth. Common folk defer to you, and you can secure audiences with authorities, though this may also make you a target.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "society": 3,
+      "persuasion": 1,
+      "history": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "Fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Signet Ring",
+        "quantity": 1,
+        "originalText": "signet ring",
+        "sourceId": "358eb3495a42f563"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!d3ee802eef594163"
+  "_key": "!items!254edc9ccbb27e73"
 }

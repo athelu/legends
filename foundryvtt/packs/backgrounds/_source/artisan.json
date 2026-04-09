@@ -1,21 +1,65 @@
 {
-  "_id": "eb5d1be0af8c4c58",
+  "_id": "6682836e9fc36384",
   "name": "Artisan",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith's apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships. Your guild connections remain strong which is useful when you need work, materials, or a favor. <strong>Skills:</strong> Craft 2, Society 2, Persuasion 1, Devices 1, +40 XP <strong>Equipment:</strong> Artisan's tools (choose type), common clothes, belt pouch, shoes <strong>Feature</strong> - Guild Membership: You have connections with artisan guilds. Can find work, get fair prices on materials, and access guild resources in cities.</p>"
+      "value": "<p>As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith's apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships. Your guild connections remain strong which is useful when you need work, materials, or a favor.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Craft 2, Society 2, Persuasion 1, Devices 1, +40 XP",
+    "startingEquipment": "Artisan's tools (choose type)\ncommon clothes\nbelt pouch\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Guild Membership: You have connections with artisan guilds. Can find work, get fair prices on materials, and access guild resources in cities.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "craft": 2,
+      "society": 2,
+      "persuasion": 1,
+      "devices": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Artisan's Tools",
+        "quantity": 1,
+        "originalText": "Artisan's tools (choose type)",
+        "sourceId": "af2e21fa90147ac9"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Pouch, Belt",
+        "quantity": 1,
+        "originalText": "belt pouch",
+        "sourceId": "33e46555fb3535f6"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!eb5d1be0af8c4c58"
+  "_key": "!items!6682836e9fc36384"
 }

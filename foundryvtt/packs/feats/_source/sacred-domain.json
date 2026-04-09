@@ -1,0 +1,38 @@
+{
+  "_id": "42672556db48c04d",
+  "name": "Sacred Domain",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your devotion to your patron has sharpened your attunement to their divine domain. When you work within their sphere of influence, your weaves carry the deity's authority behind them.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 3
+      },
+      "skills": "",
+      "feats": [
+        "Divine Gift"
+      ],
+      "tier": 0,
+      "other": "chosen patron's primary energy Mastery 3"
+    },
+    "benefits": "<p>When casting weaves using your patron's Primary energy, subtract 1 from one targeting die result of your choice. Creatures who fail a save against one of your patron's-energy weaves have Misfortune on their next save against your weaves until the end of the encounter. Generalist Divine Gift casters choose one of their three bonus energies as their Sacred Domain energy when taking this feat.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Magic], [Divine]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!42672556db48c04d"
+}

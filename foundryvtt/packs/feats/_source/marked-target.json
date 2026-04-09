@@ -1,0 +1,36 @@
+{
+  "_id": "7b48bf57e822d9a0",
+  "name": "Marked Target",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Distance is not an obstacle when you know exactly where to aim.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 5
+      },
+      "skills": "rangedCombat:5",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you make a ranged attack against a target that has any [Hindered] condition applied to them, you meet the Exploit Weakness trigger condition without requiring an ally within 5 feet of the target.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Shadow]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!7b48bf57e822d9a0"
+}

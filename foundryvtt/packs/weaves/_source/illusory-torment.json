@@ -1,11 +1,11 @@
 {
-  "_id": "e4b9d7f5313a4cb9",
+  "_id": "00010443f3a633ff",
   "name": "Illusory Torment",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create an illusory effect at medium range in one creature's mind. Target makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target perceives illusory effect as real and rationalizes illogical elements. If illusory effect could damage target, it takes [[/damage 8 type=psychic]] damage per round. Target can use action + Perception vs your Space Mastery to recognize illusory effect.</p>"
+      "value": "<p>Create an illusory effect at medium range in one creature's mind. Target makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target perceives illusory effect as real and rationalizes illogical elements. If illusory effect could damage target, it takes [[/damage 8 type=psychic]] damage per round. Target can use action + Perception vs your Space Mastery to recognize illusory effect.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft. (10-foot cube)",
     "duration": "1 minute",
-    "target": "",
+    "target": "area",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create an illusory effect at medium range in one creature's mind. Target makes Will save. Compare your targeting successes to their save successes. If you have more, target perceives illusory effect as real and rationalizes illogical elements. If illusory effect could damage target, it takes 8 psychic damage per round. Target can use action + Perception vs your Space Mastery to recognize illusory effect.",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round (8)",
+          "duration": "1 round (8)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute (8)",
+          "duration": "1 minute (8)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 minute (8) + disoriented",
+          "duration": "1 minute (8) + disoriented"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round (8)\n- 2 = 1 minute (8)\n- 3 = 1 minute (8) + disoriented",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round (8), 2 = 1 minute (8), 3 = 1 minute (8) + disoriented",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
@@ -49,5 +70,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!e4b9d7f5313a4cb9"
+  "_key": "!items!00010443f3a633ff"
 }

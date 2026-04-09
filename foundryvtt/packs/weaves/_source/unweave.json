@@ -1,11 +1,11 @@
 {
-  "_id": "7cfa2a26e1f34d5d",
+  "_id": "47e29e2eeee6d5a2",
   "name": "Unweave",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>End one magical effect on a creature, object, or area. Compare your weaving successes to the original caster's successes. If you equal or beat them, effect ends. Can target multiple effects (weakest first).</p>"
+      "value": "<p>End one magical effect on a creature, object, or area. Compare your targeting successes to the original caster's successes. If you equal or beat them, effect ends. Can target multiple effects (weakest first).</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,26 +21,27 @@
     },
     "range": "Medium, 60 ft.",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "area",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "End one magical effect on a creature, object, or area. Compare your targeting successes to the original caster's successes. If you equal or beat them, effect ends. Can target multiple effects (weakest first).",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
       "scaling": {}
     },
-    "targetingSuccessScaling": "- Must equal or exceed original weaving successes to dispel",
+    "targetingSuccessScaling": "Must equal or exceed original weaving successes to dispel",
     "weavingRoll": "Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!7cfa2a26e1f34d5d"
+  "_key": "!items!47e29e2eeee6d5a2"
 }

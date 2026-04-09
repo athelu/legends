@@ -6,7 +6,19 @@
   "system": {
     "description": {
       "value": "Once per round as a [Free] action (no reaction cost), Attacker must reroll one of their success dice."
-    }
+    },
+    "abilityType": "reaction",
+    "trigger": "When an attacker hits you with a melee attack",
+    "effect": "The attacker rerolls one of their success dice.",
+    "frequency": "Once per round",
+    "source": "Buckler Shield",
+    "appliesEffects": [],
+    "keywords": [
+      "Shield",
+      "Defense",
+      "Reaction"
+    ],
+    "isActive": false
   },
   "effects": []
 }

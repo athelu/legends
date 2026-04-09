@@ -1,0 +1,38 @@
+{
+  "_id": "5d93d9ffb756219a",
+  "name": "Infusion Specialization",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have developed a personal catalogue of infusion formulae of specific combinations of energy and material that you have refined through repetition into reliable, potent effects. Where improvised infusions scatter energy broadly, your formulae focus it to precise purpose.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 4
+      },
+      "skills": "craft:4",
+      "feats": [
+        "Infuser"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Choose two Infusion Formulae from the list below, usable as alternatives when using Imbue Item or Prepared Infusion. Each formula replaces the standard weapon or armor effect for that infusion.Can be taken again at Tier 4 to choose two additional formulae.:</p>\n<ul>\n<li><strong>Kinetic Store:</strong> Weapon; the next single attack ignores DR entirely and deals +[[/damage 12]] damage instead of the standard per-hit bonus. Expends after one trigger.</li>\n<li><strong>Ablative Ward:</strong> Armor; grants +6 DR but the infusion ends after absorbing [[/damage 16 type=total]] damage</li>\n<li><strong>Phase Step:</strong> Boots or footwear; bearer may teleport up to 15 feet as a [Minor] action once before expiring</li>\n<li><strong>Force Lens:</strong> Any held object; bearer subtracts 1 from one targeting die result of their choice on their next weave before expiring</li>\n<li><strong>Null Ward:</strong> Any item; bearer gains resistance to one energy type (chosen at infusion time). Reduce incoming damage of that type by 4 until end of their next short rest or until they take [[/damage 20]] damage of that type.</li>\n</ul>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive expansion of Imbue Item options"
+    },
+    "keywords": "[Magic], [Infuser]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!5d93d9ffb756219a"
+}

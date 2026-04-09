@@ -1,0 +1,39 @@
+{
+  "_id": "d65bdcd77a24dfe9",
+  "name": "Grand Ritual",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You posses the ability to construct weaves of such complexity and duration that they reshape the world in ways that persist long after you are gone.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 7
+      },
+      "skills": "arcane:7",
+      "feats": [
+        "Mageborn",
+        "Layered Weave"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per long rest, you may perform a Grand Ritual (1 hour of uninterrupted preparation). This ritual produces effects impossible through normal casting:</p>\n<ul>\n<li>Energy cost is reduced to one quarter (rounded up, minimum 1)</li>\n<li>You may affect up to your Intelligence score in targets</li>\n<li>You ignore all overspending penalties</li>\n<li>The ritual weave automatically counts as having achieved 3 successes on the weaving roll (no roll required)</li>\n</ul>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per long rest; requires 1 hour of uninterrupted preparation"
+    },
+    "keywords": "[Magic], [Mageborn]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!d65bdcd77a24dfe9"
+}

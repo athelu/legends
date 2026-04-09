@@ -1,5 +1,5 @@
 {
-  "_id": "4de8c98d4bf84ed2",
+  "_id": "9228aa93cc22513a",
   "name": "Cloak",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A long outer garment with sleeves or armholes that provides warmth and protection from the elements.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 3.0,
     "cost": 8.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!4de8c98d4bf84ed2"
+  "_key": "!items!9228aa93cc22513a"
 }

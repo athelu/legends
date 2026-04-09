@@ -1,5 +1,5 @@
 {
-  "_id": "20795f5215014c7f",
+  "_id": "218224085ebd56ae",
   "name": "Battle Harmony",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,31 @@
       "value": "<p>You've learned to perceive the ebb and flow of fortune in combat. When reality denies someone completely, you feel the rebound</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "wisdom": 4
       },
       "skills": "",
-      "feats": [],
-      "tier": 2,
-      "other": "Sorcerous Origin trait"
+      "feats": [
+        "Sorcerous Origin"
+      ],
+      "tier": 0,
+      "other": ""
     },
     "benefits": "<p>Your Harmonic Weaving becomes more responsive to combat flow. After you or an ally within 60 feet rolls a critical failure (double 8s) on any roll, you immediately regain one use of Harmonic Weaving. This can trigger multiple times per combat</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive trigger"
+    },
     "keywords": "[Magic], [Sorcerer], [Combat]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!20795f5215014c7f"
+  "_key": "!items!218224085ebd56ae"
 }

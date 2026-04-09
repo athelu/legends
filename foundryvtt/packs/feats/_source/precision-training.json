@@ -1,0 +1,36 @@
+{
+  "_id": "41666ef25373f84c",
+  "name": "Precision Training",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Years of drilling the same strikes, the same footwork, the same timing have produced something that transcends conscious thought.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you make a melee attack and both dice show the same value and both are successes, gain +1 additional success. This is not a critical hit and does not restore Luck or grant the additional critical benefits</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive, natural rolls only"
+    },
+    "keywords": "[Combat], [Discipline]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!41666ef25373f84c"
+}

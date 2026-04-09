@@ -1,22 +1,29 @@
 {
-  "_id": "ef8822da51314bcd",
+  "_id": "9d244235b1a7d46a",
   "name": "Hide",
   "type": "action",
   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> [[/check skill=stealth]] (Agility + stealth) with the aid of partial cover or greater.</li>\n<li><strong>Check:</strong> Opposed by enemy's Perception (Wisdom + Perception)</li>\n<li><strong>Success:</strong> You use cover to successfully become hidden</li>\n<li><strong>Failure:</strong> You do not gain the Hidden condition from the enemy, but may have concealed from cover.</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Per Enemy test, may be hidden from some (but you do not know which)</li>\n<li><strong>Partial Cover:</strong> Low wall, furniture, creature, tree trunk, etc</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Make a [[/check skill=stealth]] with the aid of partial cover or greater. [[/check skill=stealth]] is opposed by enemy's Perception.</p>\n<ul>\n<li><strong>Margin 1 +:</strong> You can the Hidden condition</li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Stealth check (Agility + stealth) with the aid of partial cover or greater.\n- **Check:** Opposed by enemy's Perception (Wisdom + Perception)\n- **Success:** You use cover to successfully become hidden\n- **Failure:** You do not gain the Hidden condition from the enemy, but may have concealed from cover.\n- **Notes:**\n  - Per Enemy test, may be hidden from some (but you do not know which)\n  - **Partial Cover:** Low wall, furniture, creature, tree trunk, etc",
-    "keywords": "",
+    "effect": "Make a Stealth check with the aid of partial cover or greater. Stealth Check is opposed by enemy's Perception.",
+    "appliesEffects": [
+      {
+        "effectId": "Hidden",
+        "params": {}
+      }
+    ],
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
-    "special": ""
+    "special": "Margin 1 +: You can the Hidden condition"
   },
   "effects": [],
-  "_key": "!items!ef8822da51314bcd"
+  "_key": "!items!9d244235b1a7d46a"
 }

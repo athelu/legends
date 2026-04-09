@@ -1,5 +1,5 @@
 {
-  "_id": "09115c351e12412b",
+  "_id": "ae0a5049568f4838",
   "name": "Freezing Blast",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "60ft cone",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "cone",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "A blast of cold air erupts from your hands. All creatures in a 60-foot cone take 40 cold damage. Each target takes the full listed damage and makes their own save.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (20)",
+          "duration": "Half damage (20)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (40)",
+          "duration": "Full damage (40)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (48) + Slowed",
+          "duration": "Enhanced damage (48) + Slowed"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (20)\n- 2 = Full damage (40)\n- 3 = Enhanced damage (48)  + Slowed",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + Slowed",
     "weavingRoll": "Water Potential + Water Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
@@ -47,5 +68,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!09115c351e12412b"
+  "_key": "!items!ae0a5049568f4838"
 }

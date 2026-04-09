@@ -1,21 +1,65 @@
 {
-  "_id": "7a1184f264e54254",
+  "_id": "e77e7542b9801f0a",
   "name": "Miner",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You earned a living wrenching precious minerals from the lightless depths of the earth. Adventuring might have seemed lucrative or glamorous compared to this backbreaking labor and if you have to head back underground, this time you plan to do so armed with a real weapon instead of a miner's pick. At least now the things trying to kill you might be guarding treasure instead of just being cave-ins. <strong>Skills:</strong> Might 2, Athletics 2, Perception 1, Craft 1, +40 XP <strong>Equipment:</strong> Lantern, work clothes, hemp rope, work boots <strong>Feature</strong> - Underground Sense: You can navigate underground spaces and identify minerals and stone quality. Gain Fortune on checks related to underground environments.</p>"
+      "value": "<p>You earned a living wrenching precious minerals from the lightless depths of the earth. Adventuring might have seemed lucrative or glamorous compared to this backbreaking labor and if you have to head back underground, this time you plan to do so armed with a real weapon instead of a miner's pick. At least now the things trying to kill you might be guarding treasure instead of just being cave-ins.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Might 2, Athletics 2, Perception 1, Craft 1, +40 XP",
+    "startingEquipment": "Lantern\nwork clothes\nhemp rope\nwork boots",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Underground Sense: You can navigate underground spaces and identify minerals and stone quality.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "might": 2,
+      "athletics": 2,
+      "perception": 1,
+      "craft": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Lantern",
+        "quantity": 1,
+        "originalText": "Lantern",
+        "sourceId": "bf677853cd7b69fd"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Work",
+        "quantity": 1,
+        "originalText": "work clothes",
+        "sourceId": "e9a99873e17f718a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Rope, Jute/Hemp",
+        "quantity": 1,
+        "originalText": "hemp rope",
+        "sourceId": "80bb5d0cbb1888e5"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Work",
+        "quantity": 1,
+        "originalText": "work boots",
+        "sourceId": "6a6394e3ffbccf86"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!7a1184f264e54254"
+  "_key": "!items!e77e7542b9801f0a"
 }

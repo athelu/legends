@@ -1,5 +1,5 @@
 {
-  "_id": "53188ae7a7ec415f",
+  "_id": "d2e11dfa8e0640c1",
   "name": "Spectral Hand",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,23 +23,45 @@
     "duration": "1 minute",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round\n- 2 = full effect\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!53188ae7a7ec415f"
+  "_key": "!items!d2e11dfa8e0640c1"
 }

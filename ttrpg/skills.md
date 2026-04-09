@@ -43,9 +43,13 @@ The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents
 ---
 
 ### Craft (Dexterity)
-**Description:** Creating and repairing items using artisan's tools. Covers various trades including smithing, carpentry, alchemy, leatherworking, and other crafts.
-**Simple Task (1 success):** Craft a common item given time and materials, repair a damaged piece of equipment, identify quality craftsmanship, sharpen a blade.
-**Hard Task (2 successes):** Craft a masterwork item, repair severely damaged equipment in the field, identify a specific craftsman's work, create a complex mechanism or alchemical item.
+**Description:** Craft is a family of keyworded skills rather than a single broad discipline. Each craft is learned, tracked, and advanced separately. **Craft: Blacksmith**, **Craft: Tailor**, **Craft: Bowyer**, and **Craft: Alchemist** are all different skills even though they share the same governing attribute. Use the full Crafting rules in the Core System to determine tools, time, workshop needs, and results.
+
+**Simple Task (1 success):** Complete routine work in your specific craft with proper tools and materials, identify competent workmanship in your area, perform basic repairs, or produce a simple item during the required downtime.
+
+**Hard Task (2 successes):** Complete a demanding commission in your specific craft, identify a subtle flaw or signature technique, repair heavily damaged gear in poor conditions, or produce a complex item that requires high-quality materials, long work periods, or workshop access.
+
+**Example Keyword Skill:** **Craft: Alchemist** covers brewing preparations, extracting magical components, mixing reagents safely, and producing alchemical items under the downtime and harvesting rules.
 
 ---
 

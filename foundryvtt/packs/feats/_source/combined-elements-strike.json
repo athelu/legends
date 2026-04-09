@@ -1,5 +1,5 @@
 {
-  "_id": "05b897b11e344709",
+  "_id": "1ecd3bea8b8aec5a",
   "name": "Combined Elements Strike",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Most spellcasters struggle to weave even two energies in careful ritual. You've learned to blend them in the chaos of combat</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": "Pneuma Strike (two different elements)"
     },
-    "benefits": "<p>When using Pneuma Strike, you can spend 4 Energy (instead of 2) to channel two elements simultaneously:</p>\n<ul>\n<li>Make weaving checks for BOTH elements</li>\n<li>Count total successes across both checks\n<ul>\n<li><strong>3-4 total successes:</strong> Deal +[[/damage 3d8]] damage, choose damage type or split</li>\n<li><strong>1-2 total successes:</strong> Deal +[[/damage 2d8]] damage, choose damage type or split</li>\n<li><strong>0 successes:</strong> Deal +1d8, choose type</li>\n</ul></li>\n</ul>",
-    "usageType": "replaces",
+    "benefits": "<p>When using Pneuma Strike, you can spend 4 Energy (instead of 2) to channel two elements simultaneously:</p>\n<ul>\n<li>Make weaving checks for BOTH elements</li>\n<li>Count total successes across both checks\n<ul>\n<li><strong>3-4 total successes:</strong> Deal [[/damage 12]] damage, choose damage type or split</li>\n<li><strong>1-2 total successes:</strong> Deal [[/damage 8]] damage, choose damage type or split</li>\n<li><strong>0 successes:</strong> Deal 4, choose type</li>\n</ul></li>\n</ul>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Replaces normal Pneuma Strike usage, costs 4 Energy"
+    },
     "keywords": "[Combat], [Ascetic], [Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!05b897b11e344709"
+  "_key": "!items!1ecd3bea8b8aec5a"
 }

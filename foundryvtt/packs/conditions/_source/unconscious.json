@@ -1,0 +1,35 @@
+{
+  "_id": "551dc32c62e8afe4",
+  "name": "Unconscious",
+  "type": "condition",
+  "img": "icons/svg/unconscious.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Cannot take actions or reactions. Cannot move. Blinded condition active. Prone condition active. Automatically fail Fortitude and Reflex saves. Attacks against you have Fortune. <strong>Recovery:</strong> The source of the condition will describe the recovery conditions.</p>"
+    },
+    "label": "Unconscious",
+    "category": "incapacitation",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/unconscious.svg",
+    "activeEffects": [],
+    "appliesConditions": [
+      "Blinded",
+      "Prone"
+    ],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "severe",
+    "overlayPriority": 30,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
+  },
+  "flags": {},
+  "_key": "!items!551dc32c62e8afe4"
+}

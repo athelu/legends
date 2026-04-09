@@ -1,5 +1,5 @@
 {
-  "_id": "1f2335babab6487c",
+  "_id": "c22889d0c0b0ecea",
   "name": "Mystic Defense",
   "type": "feat",
   "img": "icons/equipment/shield/shield-cross-bronze.webp",
@@ -8,22 +8,29 @@
       "value": "<p>You've learned to defend yourself through awareness and supernatural positioning. It requires constant vigilance, but the freedom of movement makes it worthwhile.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "wisdom": 3
       },
       "skills": "",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>While wearing no armor and not using a shield, your disciplined mind and body harmony grant DR equal to your Wisdom score</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Defense], [Ascetic]",
-    "notes": "",
+    "notes": "Can be combined with Savage Resilience if you meet both prerequisites; use the better DR",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!1f2335babab6487c"
+  "_key": "!items!c22889d0c0b0ecea"
 }

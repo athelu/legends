@@ -180,7 +180,17 @@ When characters attempt to influence the attitudes and behavior of NPCs, the out
 
 ### The Attitude Scale
 Every NPC has an attitude toward every other significant party — whether that is toward the player characters, toward each other, or toward third parties entirely. This attitude determines how difficult social interaction is and what is even possible.
-AttitudeDescriptionDevotedDeeply loyal. Will act against their own interests on your behalf.FriendlyGenuinely well-disposed. Willing to help within reason without persuasion.CooperativeWilling to engage and assist if asked appropriately.IndifferentNo particular feeling either way. Default for most strangers.UncooperativeSkeptical or resistant. Will not help without significant convincing.HostileActively opposed. Will obstruct, mislead, or threaten.HatredDeeply and personally opposed. Will not engage under normal circumstances.
+
+
+| Attitude |         Description          |
+|----------|------------------------------|
+| Devoted | Deeply loyal. Will act against their own interests on your behalf. |
+| Friendly | Genuinely well-disposed. Willing to help within reason without persuasion. |
+| Cooperative | Willing to engage and assist if asked appropriately. |
+| Indifferent | No particular feeling either way. Default for most strangers. |
+| Uncooperative | Skeptical or resistant. Will not help without significant convincing. |
+| Hostile | Actively opposed. Will obstruct, mislead, or threaten. |
+| Hatred | Deeply and personally opposed. Will not engage under normal circumstances. |
 
 The GM sets starting attitudes based on context — a known criminal walking into a guard barracks doesn't begin at Indifferent. Reputation, history, race, faction, and circumstance all influence where an NPC starts on the scale.
 Attitude is persistent. A merchant charmed during last week's visit remembers it. An NPC whose trust was betrayed does not forget.
@@ -325,7 +335,7 @@ Characters may create items during downtime using an appropriate Craft: Keyword 
 
 #### Craft: Keyword Skills
 
-The Craft skill is not a single skill. Each area of craft represents distinct knowledge, training, and tools. **Craft: Blacksmith** and **Craft: Alchemy** are separate skills, each with their own rank, checkbox, and advancement track. All Craft: Keyword skills are governed by Dexterity.
+The Craft skill is not a single skill. Each area of craft represents distinct knowledge, training, and tools. **Craft: Blacksmith** and **Craft: Alchemist** are separate skills, each with their own rank, checkbox, and advancement track. All Craft: Keyword skills are governed by Dexterity.
 
 ##### Crafting Keywords
 | Keyword       | Product     | Tools              | Cost |

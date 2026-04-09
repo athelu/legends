@@ -1,5 +1,5 @@
 {
-  "_id": "0955731f3d9440ca",
+  "_id": "7506e869f4bcbaca",
   "name": "Unarmed Mastery",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Your body is a weapon. Fists, elbows, knees, and feet all honed into effective tools for violence, you are never unarmed.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 3
       },
       "skills": "meleeCombat:3",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Your unarmed strikes deal [[/damage 6]] damage (same as standard weapons). Additionally, all weapons with the <strong>Monk</strong> property count as monk weapons for your abilities</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat], [Ascetic], [Unarmed]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!0955731f3d9440ca"
+  "_key": "!items!7506e869f4bcbaca"
 }

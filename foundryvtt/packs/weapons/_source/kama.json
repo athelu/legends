@@ -1,5 +1,5 @@
 {
-  "_id": "49e59f77def54e3c",
+  "_id": "1e41362917891b4d",
   "name": "Kama",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 4,
       "type": "slashing",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
-        "damageAttr": "agility",
+        "skill": "melee",
+        "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 4,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -44,8 +44,10 @@
       "light",
       "finesse"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!49e59f77def54e3c"
+  "_key": "!items!1e41362917891b4d"
 }

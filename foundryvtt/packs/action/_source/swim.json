@@ -1,22 +1,23 @@
 {
-  "_id": "37954ceff1c14203",
+  "_id": "6302aa3a6a9203c7",
   "name": "Swim",
   "type": "action",
   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> Costs 2 feet of movement for every 1 foot swum</li>\n<li><strong>Effect:</strong> Move through water</li>\n<li><strong>Check:</strong> [[/check skill=athletics]] required for rough water, strong currents, or swimming while armored</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Holding breath: Can hold breath for (Constitution) minutes</li>\n<li>After that: Must make [[/save type=fortitude]] each round or begin drowning</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Move through water/ Costs 2 feet of movement for every 1 foot swum. [[/check skill=athletics]] required for rough water, strong currents, or swimming while armored.</p>"
     },
     "actionType": "move",
-    "actionCost": "2",
+    "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Move through water\n- **Check:** Athletics check required for rough water, strong currents, or swimming while armored\n- **Notes:**\n  - Holding breath: Can hold breath for (Constitution) minutes\n  - After that: Must make Fortitude save each round or begin drowning",
-    "keywords": "",
+    "effect": "Move through water/ Costs 2 feet of movement for every 1 foot swum. Athletics check required for rough water, strong currents, or swimming while armored.",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!37954ceff1c14203"
+  "_key": "!items!6302aa3a6a9203c7"
 }

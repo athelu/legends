@@ -1,5 +1,5 @@
 {
-  "_id": "9b0486d632d24f31",
+  "_id": "22d130df28a30fde",
   "name": "Frost Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Touch",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Touch a target and channel freezing energy into them. Target takes 4 cold damage. This is an attack weave—no saving throw allowed.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (2)",
+          "duration": "Half damage (2)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (4)",
+          "duration": "Full damage (4)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (8)",
+          "duration": "Enhanced damage (8)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (2)\n- 2 = Full damage (4)\n- 3 = Enhanced damage (8)",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (2), 2 = Full damage (4), 3 = Enhanced damage (8)",
     "weavingRoll": "Water Potential + Water Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
@@ -46,5 +67,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!9b0486d632d24f31"
+  "_key": "!items!22d130df28a30fde"
 }

@@ -1,11 +1,11 @@
 {
-  "_id": "0f2e8b9d0b154bb1",
+  "_id": "4b6b6c87d81dba60",
   "name": "Leather Armor/Cuir Bouilli (Hardened Leather)",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Boiled and hardened leather plates, shaped and rigid</p>"
     },
     "armorType": "light",
     "dr": {
@@ -13,6 +13,9 @@
       "piercing": 2,
       "bludgeoning": 4
     },
+    "properties": [
+      "LightArmor"
+    ],
     "stealthPenalty": "none",
     "swimPenalty": "",
     "donTime": "",
@@ -20,11 +23,8 @@
     "weight": 0,
     "cost": 200.0,
     "quantity": 1,
-    "notes": "",
-    "keywords": [
-      "LightArmor"
-    ]
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!0f2e8b9d0b154bb1"
+  "_key": "!items!4b6b6c87d81dba60"
 }

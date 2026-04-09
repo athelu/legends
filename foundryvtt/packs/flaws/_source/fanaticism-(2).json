@@ -1,5 +1,5 @@
 {
-  "_id": "6aa99da52ac44436",
+  "_id": "4275d427a32a8448",
   "name": "Fanaticism (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
@@ -8,14 +8,15 @@
       "value": "<p>Zealot about one belief. Take offense when insulted.</p>"
     },
     "pointValue": 2,
-    "flawType": "",
-    "severity": "moderate",
+    "flawType": "mental",
+    "severity": "minor",
     "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!6aa99da52ac44436"
+  "_key": "!items!4275d427a32a8448"
 }

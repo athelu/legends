@@ -63,14 +63,14 @@
         "arcane": 0,
         "society": 0,
         "perception": 0,
-        "survival": 0,
+        "empathy": 0,
         "persuasion": 0,
         "deception": 0,
         "intimidate": 0,
         "perform": 0,
-        "insight": 0,
         "medicine": 0,
-        "animalHandling": 0
+        "wilderness": 0,
+        "religion": 0
       },
       "hp": {
         "value": 16,
@@ -262,7 +262,14 @@
         "alternateType": "",
         "multiType": ""
       },
+      "range": {
+        "normal": 0,
+        "medium": 0,
+        "long": 0
+      },
       "properties": [],
+      "reload": "",
+      "requirements": "",
       "notes": "",
        "attackModes": [
         {
@@ -287,6 +294,7 @@
         "piercing": 0,
         "bludgeoning": 0
       },
+      "properties": [],
       "stealthPenalty": "none",
       "swimPenalty": "",
       "donTime": "",
@@ -295,17 +303,35 @@
     },
     "shield": {
       "templates": ["common", "physical"],
-      "shieldType": "buckler",
+      "shieldType": "light",
       "handUsage": "",
       "meleeDefense": "",
       "reactions": [],
+      "linkedAbilities": [],
       "requirements": "",
       "specialAbilities": "",
       "plantedMode": false,
       "notes": ""
     },
     "equipment": {
-      "templates": ["common", "physical"]
+      "templates": ["common", "physical"],
+      "equipmentType": "adventuring-gear",
+      "capacity": "",
+      "brightLight": 0,
+      "dimLight": 0,
+      "duration": "",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "consumable": false,
+      "associatedSkill": "",
+      "toolBonus": 0,
+      "rarity": "",
+      "requiresAttunement": false,
+      "magicalProperties": "",
+      "properties": "",
+      "notes": ""
     },
     "weave": {
       "templates": ["common"],
@@ -343,6 +369,7 @@
     "feat": {
       "templates": ["common"],
       "tier": 1,
+      "classification": "standard",
       "prerequisites": "",
       "benefits": "",
       "usage": "",
@@ -355,38 +382,87 @@
       "traitType": "physical",
       "isMagical": false,
       "magicalType": "",
-      "prerequisites": "",
+      "requirements": "",
       "benefits": "",
-      "usage": "",
-      "keywords": [],
+      "notes": "",
+      "visualEffects": "",
+      "castingStat": "",
+      "elementalAffinity": "",
+      "grantsEnergyPool": false,
+      "grantsMasterySkills": false,
+      "grantsRitualCasting": false,
       "requiresGMApproval": false,
       "requiresExistingTrait": ""
     },
     "flaw": {
       "templates": ["common"],
-      "xpGain": 5,
+      "pointValue": 0,
+      "flawType": "mental",
       "severity": "minor",
-      "mechanicalEffect": ""
+      "mechanicalEffects": "",
+      "roleplayingImpact": "",
+      "canBeOvercome": false,
+      "overcomeMethod": "",
+      "requiresGMApproval": false,
+      "notes": ""
     },
     "background": {
       "templates": ["common"],
       "startingXP": 0,
-      "skillBonuses": {},
-      "startingEquipment": []
+      "skillBonuses": "",
+      "startingEquipment": "",
+      "suggestedFeats": "",
+      "features": "",
+      "sampleNames": "",
+      "traits": "",
+      "notes": "",
+      "grantedSkills": {},
+      "itemGrants": []
     },
     "ancestry": {
       "templates": ["common"],
       "size": "medium",
       "speed": 30,
-      "traits": [],
-      "abilityModifiers": {}
+      "bonuses": {
+        "attributes": {
+          "strength": 0,
+          "constitution": 0,
+          "agility": 0,
+          "dexterity": 0,
+          "intelligence": 0,
+          "wisdom": 0,
+          "charisma": 0,
+          "luck": 0
+        }
+      },
+      "abilityModifiers": {
+        "strength": 0,
+        "constitution": 0,
+        "agility": 0,
+        "dexterity": 0,
+        "intelligence": 0,
+        "wisdom": 0,
+        "charisma": 0,
+        "luck": 0
+      },
+      "traits": "",
+      "languages": "",
+      "specialAbilities": "",
+      "senses": "",
+      "lifespan": 0,
+      "culture": "",
+      "physicalDescription": "",
+      "requiresGMApproval": false,
+      "notes": ""
     },
     "action": {
       "templates": ["common"],
       "actionType": "combat",
       "actionCost": "1",
+      "requirements": "",
       "trigger": "",
       "effect": "",
+      "appliesEffects": [],
       "keywords": [],
       "range": "",
       "target": "",
@@ -400,6 +476,7 @@
       "effect": "",
       "frequency": "",
       "source": "",
+      "appliesEffects": [],
       "keywords": [],
       "isActive": false
     },
@@ -407,13 +484,34 @@
       "templates": ["common"],
       "label": "",
       "category": "",
+      "keywords": [],
       "tokenIcon": "",
       "activeEffects": [],
+      "appliesConditions": [],
+      "progressionChain": [],
       "stacking": "replace",
+      "stacks": 1,
       "severity": "moderate",
       "overlayPriority": 20,
       "damageTick": null,
-      "recovery": null
+      "recovery": {
+        "trigger": "onEvent",
+        "method": "none",
+        "removeOnSuccess": false,
+        "promptPlayer": false,
+        "chatMessage": "",
+        "save": null,
+        "check": {
+          "skill": "",
+          "attribute": "",
+          "skills": [],
+          "attributes": [],
+          "opposed": false,
+          "label": ""
+        },
+        "downgrades": {},
+        "assistance": null
+      }
     },
     "effect": {
       "templates": ["common"],
@@ -439,7 +537,25 @@
         "sustaining": false
       },
       "damageTick": null,
-      "recovery": null,
+      "recovery": {
+        "trigger": "onEvent",
+        "method": "none",
+        "removeOnSuccess": false,
+        "promptPlayer": false,
+        "chatMessage": "",
+        "save": null,
+        "check": {
+          "skill": "",
+          "attribute": "",
+          "skills": [],
+          "attributes": [],
+          "opposed": false,
+          "label": ""
+        },
+        "downgrades": {},
+        "assistance": null,
+        "onExpire": ""
+      },
       "origin": {
         "type": "",
         "id": "",

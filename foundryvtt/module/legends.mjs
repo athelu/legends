@@ -25,8 +25,224 @@ import * as featEffects from "./feat-effects.mjs";
 import * as traitEffects from "./trait-effects.mjs";
 import * as effectEngine from "./effect-engine.mjs";
 import * as magicalTraits from "./magical-traits.mjs";
+import * as backgrounds from "./backgrounds.mjs";
 import { initializeConditionEngine, initializeChatHandlers, handleRecoveryResult } from "./condition-engine.mjs";
 import { registerEnrichers } from "./enrichers.mjs";
+
+const ELEMENTAL_ENERGIES = ["earth", "air", "fire", "water"];
+
+function resolveWeaveEnergyType(actor, energyType) {
+  if (energyType !== "variable-elemental") {
+    return energyType;
+  }
+
+  const magicalTrait = actor.system.magicalTrait ?? {};
+  const preferredCandidates = [
+    magicalTrait.elementalAffinity,
+    magicalTrait.chosenElement,
+    ...(magicalTrait.availableEnergies ?? []).filter((candidate) => ELEMENTAL_ENERGIES.includes(candidate))
+  ].filter(Boolean);
+
+  for (const candidate of preferredCandidates) {
+    if (actor.system.potentials?.[candidate] && actor.system.mastery?.[candidate]) {
+      return candidate;
+    }
+  }
+
+  return ELEMENTAL_ENERGIES.reduce((best, candidate) => {
+    const candidateMastery = actor.system.mastery?.[candidate]?.value ?? -1;
+    const bestMastery = actor.system.mastery?.[best]?.value ?? -1;
+    return candidateMastery > bestMastery ? candidate : best;
+  }, "earth");
+}
+
+function isDraggedEffectData(data) {
+  return data?.type === "WeaveEffect" || data?.type === "InlineEffect" || data?.type === "ItemEffect";
+}
+
+function normalizeEffectName(name) {
+  return String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+async function removeConditionBySource(actor, conditionName, sourceActorId) {
+  const matchingConditions = actor.items.filter((item) =>
+    item.type === 'condition'
+    && item.name === conditionName
+    && (sourceActorId ? item.flags?.legends?.recoverySource?.actorId === sourceActorId : true)
+  );
+
+  if (matchingConditions.length === 0) {
+    return false;
+  }
+
+  await actor.deleteEmbeddedDocuments('Item', matchingConditions.map((item) => item.id));
+
+  const statusId = conditionName.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+  const effectIds = actor.effects
+    .filter((effect) => effect.statuses.has(statusId) && effect.flags?.legends?.isConditionMarker)
+    .map((effect) => effect.id);
+
+  if (effectIds.length > 0) {
+    await actor.deleteEmbeddedDocuments('ActiveEffect', effectIds);
+  }
+
+  return true;
+}
+
+async function removeLinkedGrapple(sourceActor, targetActor) {
+  const removedTargetGrapple = await removeConditionBySource(targetActor, 'Grappled', sourceActor.id);
+  const removedTargetRestraint = await removeConditionBySource(targetActor, 'Restrained', sourceActor.id);
+  const removedSelfGrapple = await removeConditionBySource(sourceActor, 'Grappled', targetActor.id);
+  const removedSelfRestraint = await removeConditionBySource(sourceActor, 'Restrained', targetActor.id);
+
+  return removedTargetGrapple || removedTargetRestraint || removedSelfGrapple || removedSelfRestraint;
+}
+
+async function removeReleaseGrappleConditions(targetActor, data) {
+  const sourceActor = data?.actorId ? game.actors.get(data.actorId) : null;
+  const linkedActorIds = new Set();
+
+  if (sourceActor && sourceActor.id !== targetActor.id) {
+    linkedActorIds.add(sourceActor.id);
+  }
+
+  for (const item of targetActor.items) {
+    if (item.type !== 'condition') continue;
+    if (item.name !== 'Grappled' && item.name !== 'Restrained') continue;
+
+    const linkedActorId = item.flags?.legends?.recoverySource?.actorId;
+    if (linkedActorId && linkedActorId !== targetActor.id) {
+      linkedActorIds.add(linkedActorId);
+    }
+  }
+
+  let removed = false;
+
+  if (linkedActorIds.size === 0) {
+    removed = await removeDraggedEffect(targetActor, 'Grappled');
+    return removed;
+  }
+
+  for (const linkedActorId of linkedActorIds) {
+    const linkedActor = game.actors.get(linkedActorId);
+    if (!linkedActor) continue;
+
+    if (linkedActor.id === targetActor.id) continue;
+    removed = await removeLinkedGrapple(linkedActor, targetActor) || removed;
+    removed = await removeLinkedGrapple(targetActor, linkedActor) || removed;
+  }
+
+  if (!removed) {
+    throw new Error(`No grappled or restrained conditions linked to ${targetActor.name} were found.`);
+  }
+
+  return true;
+}
+
+async function removeDraggedEffect(targetActor, effectId) {
+  const normalizedTarget = normalizeEffectName(effectId);
+  let removed = false;
+
+  const matchingConditions = targetActor.items.filter((item) =>
+    item.type === 'condition' && normalizeEffectName(item.name) === normalizedTarget
+  );
+
+  for (const condition of matchingConditions) {
+    await removeCondition(targetActor, condition.name);
+    removed = true;
+  }
+
+  const matchingEffects = targetActor.items.filter((item) =>
+    item.type === 'effect' && normalizeEffectName(item.name) === normalizedTarget
+  );
+
+  for (const effect of matchingEffects) {
+    await effectEngine.removeEffect(targetActor, effect.id);
+    removed = true;
+  }
+
+  if (!removed) {
+    throw new Error(`${targetActor.name} does not have ${effectId}`);
+  }
+
+  return true;
+}
+
+async function applyDraggedEffect(targetActor, data) {
+  if (!targetActor) {
+    throw new Error("No target actor provided");
+  }
+
+  if (data?.type === "WeaveEffect") {
+    const caster = game.actors.get(data.casterId);
+    const weave = caster?.items.get(data.weaveId);
+
+    if (!caster || !weave) {
+      throw new Error("Unable to apply effect - weave or caster not found");
+    }
+
+    return effectEngine.applyEffect({
+      target: targetActor,
+      effect: data.effectId,
+      origin: {
+        casterId: data.casterId,
+        actorId: data.casterId,
+        weaveId: data.weaveId,
+        weaveName: weave.name,
+        successes: data.casterSuccesses,
+        potential: caster.system.magicalPotential || 0
+      },
+      params: data.params || {},
+      netSuccesses: data.casterSuccesses
+    });
+  }
+
+  if (data?.type === "InlineEffect") {
+    return effectEngine.applyEffect({
+      target: targetActor,
+      effect: data.effectId,
+      origin: {
+        casterId: targetActor.id,
+        actorId: targetActor.id,
+        weaveId: null,
+        weaveName: null,
+        successes: 2,
+        potential: 0,
+        type: "inline-effect",
+        label: "inline effect"
+      },
+      params: data.params || {},
+      netSuccesses: 2
+    });
+  }
+
+  if (data?.type === "ItemEffect") {
+    if (data.operation === 'remove') {
+      if (data.params?.linkedGrapple === true && normalizeEffectName(data.effectId) === 'grappled') {
+        return removeReleaseGrappleConditions(targetActor, data);
+      }
+
+      return removeDraggedEffect(targetActor, data.effectId);
+    }
+
+    return effectEngine.applyEffect({
+      target: targetActor,
+      effect: data.effectId,
+      origin: {
+        actorId: data.actorId || '',
+        id: data.itemId || '',
+        type: 'item',
+        label: data.itemName || 'item effect',
+        successes: 0
+      },
+      params: data.params || {},
+      netSuccesses: 0
+    });
+  }
+
+  return null;
+}
+import { getSkillValue, normalizeSkillKey, SKILL_ATTRIBUTE_KEYS } from "./skill-utils.mjs";
 
 /* -------------------------------------------- */
 /*  Init Hook                                   */
@@ -52,6 +268,8 @@ Hooks.once('init', async function() {
     handleApplyEffectClick,
     handleApplyDamageClick,
     applyWeaveDamage,
+    applyDraggedEffect,
+    isDraggedEffectData,
 
     // Condition management
     applyCondition,
@@ -63,6 +281,7 @@ Hooks.once('init', async function() {
     dice,
     chat,
     combat,
+    backgrounds,
     featEffects,
     traitEffects,
     magicalTraits,
@@ -121,6 +340,9 @@ Hooks.once('init', async function() {
   // Initialize trait effect handlers
   traitEffects.initializeTraitHandlers();
 
+  // Initialize background grant handlers
+  backgrounds.initializeBackgroundHandlers();
+
   // Initialize condition engine
   initializeConditionEngine();
   initializeChatHandlers();
@@ -130,6 +352,30 @@ Hooks.once('init', async function() {
 
   // Register custom TextEditor enrichers (inline rolls)
   registerEnrichers();
+});
+
+Hooks.on("dropCanvasData", async function(canvas, data) {
+  if (!isDraggedEffectData(data)) {
+    return;
+  }
+
+  const targetToken = [...(canvas.tokens?.placeables || [])]
+    .reverse()
+    .find(token => token.actor && token.bounds?.contains(data.x, data.y));
+
+  if (!targetToken?.actor) {
+    ui.notifications.warn("Drop the effect onto a token to apply it");
+    return false;
+  }
+
+  try {
+    await applyDraggedEffect(targetToken.actor, data);
+  } catch (err) {
+    console.error("Legends | Failed to apply dragged effect to token", err);
+    ui.notifications.error(`Failed to apply effect: ${err.message}`);
+  }
+
+  return false;
 });
 
 /* -------------------------------------------- */
@@ -145,10 +391,8 @@ Hooks.once('ready', async function() {
   // On ready, ensure any equipped shields have granted items applied
   try {
     for (const actor of game.actors.values()) {
-      const shieldsEquipped = shields.findEquippedShields(actor);
-      for (const s of shieldsEquipped) {
-        await shields.grantLinkedItemsFromShield(actor, s);
-      }
+      await backgrounds.syncBackgroundsForActor(actor);
+      await shields.syncShieldLinkedItemsForActor(actor);
     }
   } catch (err) {
     console.warn('Legends | Error applying shield-linked items on ready', err);
@@ -186,6 +430,19 @@ Hooks.on('preCreateActiveEffect', async (activeEffect, data, options, userId) =>
   return false; // Prevent default creation
 });
 
+Hooks.on('preCreateItem', async (item) => {
+  if (!item || item.type !== 'ancestry') return;
+
+  const actor = item.parent;
+  if (!actor || actor.type !== 'character') return;
+
+  const existing = actor.items.find(existingItem => existingItem.type === 'ancestry');
+  if (existing) {
+    ui.notifications.warn(`${actor.name} already has an ancestry. Remove the existing ancestry before adding another.`);
+    return false;
+  }
+});
+
 // Handle condition removal via token HUD
 Hooks.on('preDeleteActiveEffect', async (activeEffect, options, userId) => {
   // Only handle our condition marker effects
@@ -214,14 +471,23 @@ Hooks.on('updateItem', async (item, diff, options, userId) => {
   try {
     if (!item || item.type !== 'shield') return;
     const actor = item.actor;
-    const equipped = diff?.system?.equipped;
-    if (equipped === true) {
-      await shields.grantLinkedItemsFromShield(actor, item);
-    } else if (equipped === false) {
-      await shields.revokeLinkedItemsFromShield(actor, item);
-    }
+    if (!actor) return;
+    await shields.syncShieldLinkedItemsForActor(actor);
   } catch (err) {
     console.warn('Legends | Error handling shield equip change', err);
+  }
+});
+
+Hooks.on('deleteItem', async (item, options, userId) => {
+  try {
+    if (!item || item.type !== 'shield') return;
+
+    const actor = item.actor;
+    if (!actor) return;
+
+    await shields.syncShieldLinkedItemsForActor(actor);
+  } catch (err) {
+    console.warn('Legends | Error handling shield removal', err);
   }
 });
 
@@ -261,15 +527,17 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
  * @param {Object} options - Additional rolling options
  */
   export async function rollSkillCheck(actor, skillKey, options = {}) {
+    const { onRollComplete = null } = options;
+    const normalizedSkillKey = normalizeSkillKey(skillKey) || skillKey;
     // Get skill value (prefer effective value computed from feats)
-      const skillValue = actor.system.skillsEffective?.[skillKey] ?? actor.system.skills[skillKey] ?? 0;
+      const skillValue = getSkillValue(actor.system.skillsEffective || {}, normalizedSkillKey) || getSkillValue(actor.system.skills || {}, normalizedSkillKey);
       // Prefill any dice modifiers from feats
       let defaultModifier = 0;
       let defaultApplyToAttr = true;
       let defaultApplyToSkill = true;
       try {
         const featMods = featEffects.computeFeatModifiers(actor);
-        const s = featMods.skillDiceModifiers?.[skillKey];
+        const s = featMods.skillDiceModifiers?.[normalizedSkillKey] || featMods.skillDiceModifiers?.[skillKey];
         if (s) {
           defaultModifier = s.value || 0;
           defaultApplyToAttr = !!s.applyToAttr;
@@ -280,35 +548,8 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
       }
     
     // Map skill keys to their governing attributes
-    const skillToAttribute = {
-      athletics: 'strength',
-      might: 'strength',
-      devices: 'dexterity',
-      thievery: 'dexterity',
-      writing: 'dexterity',
-      rangedCombat: 'dexterity',
-      craft: 'dexterity',
-      acrobatics: 'agility',
-      meleeCombat: 'agility',
-      stealth: 'agility',
-      investigate: 'intelligence',
-      language: 'intelligence',
-      history: 'intelligence',
-      arcane: 'intelligence',
-      society: 'intelligence',
-      perception: 'wisdom',
-      survival: 'wisdom',
-      persuasion: 'charisma',
-      deception: 'charisma',
-      intimidate: 'charisma',
-      perform: 'charisma',
-      insight: 'wisdom',
-      medicine: 'wisdom',
-      animalHandling: 'wisdom'
-    };
-    
     // Get the attribute key for this skill
-    const attrKey = skillToAttribute[skillKey];
+    const attrKey = SKILL_ATTRIBUTE_KEYS[normalizedSkillKey];
     
     if (!attrKey) {
       console.error(`Unknown skill: ${skillKey}`);
@@ -330,10 +571,11 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
       attrValue: attr.value,
       skillValue: (typeof skillValue === 'object' ? skillValue.value ?? skillValue : skillValue),
       attrLabel: attr.label,
-      skillLabel: game.i18n.localize(`D8.Skills.${skillKey}`),
+      skillLabel: game.i18n.localize(`D8.Skills.${normalizedSkillKey}`),
       defaultModifier: defaultModifier,
       defaultApplyToAttr: defaultApplyToAttr,
-      defaultApplyToSkill: defaultApplyToSkill
+      defaultApplyToSkill: defaultApplyToSkill,
+      onRollComplete,
     });
   }
 
@@ -767,8 +1009,8 @@ export async function rollWeave(actor, weave) {
   // Get selected targets
   const targets = Array.from(game.user.targets);
   
-  const primaryEnergy = weave.system.energyCost.primary.type;
-  const supportingEnergy = weave.system.energyCost.supporting.type;
+  const primaryEnergy = resolveWeaveEnergyType(actor, weave.system.energyCost.primary.type);
+  const supportingEnergy = resolveWeaveEnergyType(actor, weave.system.energyCost.supporting.type);
   
   const primaryPotential = actor.system.potentials[primaryEnergy].value;
   const primaryMastery = actor.system.mastery[primaryEnergy].value;
@@ -785,6 +1027,8 @@ export async function rollWeave(actor, weave) {
   const weavingResult = await dice.rollWeaveCheck({
     actor,
     weave,
+    primaryEnergyType: primaryEnergy,
+    supportingEnergyType: supportingEnergy,
     primaryPotential,
     primaryMastery,
     supportingPotential,
@@ -837,6 +1081,7 @@ export async function rollWeave(actor, weave) {
             weaveId: weave.id,
             castingStat: castingStatValue,
             castingStatLabel,
+            primaryEnergyType: primaryEnergy,
             primaryMastery,
             weavingBonus: weavingResult.targetingBonus,
             targets: targets.map(t => t.id)
@@ -1739,6 +1984,31 @@ export async function applyWeaveDamage(damage, damageType, drInteraction = 'half
  * @param {Object} options - Additional options (duration, source, etc.)
  * @returns {Promise<Item>} The created condition item on the actor
  */
+function normalizeRecoverySourceData(options = {}) {
+  const source = options.recoverySource;
+  const fallbackActor = options.sourceActor;
+  const fallbackToken = options.sourceToken;
+  const fallbackSuccesses = options.sourceSuccesses;
+
+  const actorId = source?.actorId || source?.actor?.id || fallbackActor?.id || '';
+  const tokenId = source?.tokenId || source?.token?.id || fallbackToken?.id || '';
+  const label = source?.label || source?.actor?.name || fallbackActor?.name || '';
+  const successesValue = source?.successes ?? fallbackSuccesses;
+  const parsedSuccesses = Number.parseInt(successesValue, 10);
+  const successes = Number.isFinite(parsedSuccesses) ? parsedSuccesses : null;
+
+  if (!actorId && !tokenId && !label && successes === null) {
+    return null;
+  }
+
+  return {
+    actorId,
+    tokenId,
+    label,
+    successes,
+  };
+}
+
 async function applyCondition(actor, conditionName, options = {}) {
   try {
     // Get the conditions compendium
@@ -1810,6 +2080,7 @@ async function applyCondition(actor, conditionName, options = {}) {
     const conditionData = condition.toObject();
 
     // Apply any custom options (e.g., duration, source)
+    const recoverySource = normalizeRecoverySourceData(options);
     if (options.duration) {
       conditionData.system.duration = options.duration;
     }
@@ -1817,6 +2088,11 @@ async function applyCondition(actor, conditionName, options = {}) {
       conditionData.flags = conditionData.flags || {};
       conditionData.flags.legends = conditionData.flags.legends || {};
       conditionData.flags.legends.source = options.source;
+    }
+    if (recoverySource) {
+      conditionData.flags = conditionData.flags || {};
+      conditionData.flags.legends = conditionData.flags.legends || {};
+      conditionData.flags.legends.recoverySource = recoverySource;
     }
 
     const [createdCondition] = await actor.createEmbeddedDocuments('Item', [conditionData]);
@@ -1862,7 +2138,8 @@ async function applyCondition(actor, conditionName, options = {}) {
     if (condition.system.appliesConditions && condition.system.appliesConditions.length > 0) {
       for (const appliedConditionName of condition.system.appliesConditions) {
         await applyCondition(actor, appliedConditionName, {
-          source: condition.name
+          source: condition.name,
+          recoverySource,
         });
       }
     }

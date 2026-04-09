@@ -1,28 +1,32 @@
 {
-  "_id": "d70913c4627e42ad",
+  "_id": "430290ee5b7ceccd",
   "name": "Grievously Wounded",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "label": "Grievously Wounded",
-    "category": "physical",
     "description": {
-      "value": "<ul>\n<li>Applied when you regain consciousness at 0 HP or below</li>\n<li>Clumsy condition active</li>\n<li>Dazzled condition active</li>\n<li>Can only take one action per turn (move OR standard action, not both)</li>\n<li>Cannot take reactions</li>\n<li><strong>Recovery:</strong> Condition ends when healed above 1 HP</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Applied when you regain consciousness at 0 HP or below. Can only take one action per turn. Cannot take reactions. Gain the Clumsy and Dazzled Conditions. <strong>Recovery:</strong> Condition ends when healed above 1 HP</p>"
     },
-    "tokenIcon": "",
+    "label": "Grievously Wounded",
+    "category": "incapacitation",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
+    "damageTick": null,
     "recovery": {
-      "trigger": "endOfTurn",
-      "removeOnSuccess": true
-    },
-    "appliesConditions": [
-      "Clumsy",
-      "Dazzled"
-    ]
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
   },
   "flags": {},
-  "_key": "!items!d70913c4627e42ad"
+  "_key": "!items!430290ee5b7ceccd"
 }

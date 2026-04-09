@@ -1,5 +1,5 @@
 {
-  "_id": "ec13ad58351044b9",
+  "_id": "1b02ead55fc70f66",
   "name": "Journal",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -12,9 +12,23 @@
     "cost": 10.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!ec13ad58351044b9"
+  "_key": "!items!1b02ead55fc70f66"
 }

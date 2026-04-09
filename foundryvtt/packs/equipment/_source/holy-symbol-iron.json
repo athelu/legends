@@ -1,5 +1,5 @@
 {
-  "_id": "cc6732901bb14b4c",
+  "_id": "2eec0f456bfe6cea",
   "name": "Holy Symbol, Iron",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -12,9 +12,23 @@
     "cost": 0.5,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!cc6732901bb14b4c"
+  "_key": "!items!2eec0f456bfe6cea"
 }

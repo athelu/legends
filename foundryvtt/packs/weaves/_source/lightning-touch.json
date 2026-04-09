@@ -1,5 +1,5 @@
 {
-  "_id": "818a9c3769c4416d",
+  "_id": "9bd593b2f35ed6cb",
   "name": "Lightning Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,25 +21,47 @@
     },
     "range": "Touch",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Touch a target and release a jolt of electricity. Target takes 4 lightning damage.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (2)",
+          "duration": "half damage (2)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (4)",
+          "duration": "full damage (4)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (8)",
+          "duration": "enhanced damage (8)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (2)\n- 2 = full damage (4)\n- 3 = enhanced damage (8)",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (2), 2 = full damage (4), 3 = enhanced damage (8)",
     "weavingRoll": "Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!818a9c3769c4416d"
+  "_key": "!items!9bd593b2f35ed6cb"
 }

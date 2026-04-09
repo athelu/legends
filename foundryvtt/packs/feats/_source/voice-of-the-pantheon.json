@@ -1,0 +1,40 @@
+{
+  "_id": "0ededf70e2ba8b7b",
+  "name": "Voice of the Pantheon",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You are no longer merely a worshipper granted access to divine power. You are a living expression of your patron's will in the world. The connection that once required prayer to open now simply never closes.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 7
+      },
+      "skills": "religion:7",
+      "feats": [
+        "Divine Gift",
+        "Amplified Channel",
+        "Patron's Favor"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your Channel Divinity uses now regenerate on a short rest instead of a long rest. Additionally, once per long rest you may invoke your patron's full presence for 1 minute: during this time, every weave you cast using your patron's Primary energy automatically triggers the most contextually appropriate Channel Divinity effect at no additional Channel Divinity cost (GM adjudicates). Your eyes glow continuously for the duration rather than only at spell completion.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Short rest Channel Divinity renewal is passive and permanent; full presence once per long rest for 1 minute"
+    },
+    "keywords": "[Magic], [Divine]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!0ededf70e2ba8b7b"
+}

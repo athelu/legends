@@ -1,5 +1,5 @@
 {
-  "_id": "b6728059e562478b",
+  "_id": "6f31bca3d4ea28f9",
   "name": "Flame Burst",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "15ft cone",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "cone",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "A cone of flames shoots from your hands. All creatures in a 15-foot cone take 16 fire damage. Each target takes the full listed damage and makes their own save.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (8)",
+          "duration": "Half damage (8)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (16)",
+          "duration": "Full damage (16)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (24) + ignited",
+          "duration": "Enhanced damage (24) + ignited"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (8)\n- 2 = Full damage (16)\n- 3 = Enhanced damage (24) + ignited",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (8), 2 = Full damage (16), 3 = Enhanced damage (24) + ignited",
     "weavingRoll": "Fire Potential + Fire Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
@@ -47,5 +68,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!b6728059e562478b"
+  "_key": "!items!6f31bca3d4ea28f9"
 }

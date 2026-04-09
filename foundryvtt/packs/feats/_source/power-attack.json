@@ -1,5 +1,5 @@
 {
-  "_id": "fb4ffa077db24213",
+  "_id": "599377fa78644d89",
   "name": "Power Attack",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Precision is nice. Power is better. When you swing your weapon, you fully commit, putting your entire body behind the blow with enough force to crack armor and break bones.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "strength": 3
       },
       "skills": "meleeCombat:3",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Declare before rolling: add 1 to both die results and deal +[[/damage 1d8]] damage on hit</p>",
-    "usageType": "unlimited",
+    "benefits": "<p>Declare before rolling: add 1 to both die results and deal +[[/damage 4]] damage on hit</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Unlimited"
+    },
     "keywords": "[Combat]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!fb4ffa077db24213"
+  "_key": "!items!599377fa78644d89"
 }

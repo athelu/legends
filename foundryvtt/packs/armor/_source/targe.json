@@ -1,5 +1,5 @@
 {
-  "_id": "74dff68584b84cd8",
+  "_id": "ed604375279aec3f",
   "name": "Targe",
   "type": "shield",
   "img": "icons/equipment/shield/round-wood-reinforced.webp",
@@ -9,9 +9,9 @@
     },
     "shieldType": "medium",
     "handUsage": "Occupies off-hand completely.",
-    "meleeDefense": "",
+    "meleeDefense": "Shield Defense",
     "requirements": "",
-    "specialAbilities": "",
+    "specialAbilities": "Can be slung on back when not in use (takes 1 [Minor] action to ready).",
     "plantedMode": false,
     "reactions": [
       {
@@ -23,20 +23,17 @@
         "_id": "bf8fb3f40d0343f0"
       }
     ],
-    "weight": 0,
-    "cost": 10.0,
-    "quantity": 1,
-    "notes": "",
-    "keywords": [
-      "Minor"
-    ],
     "linkedAbilities": [
       {
         "name": "Shield Defense",
         "_id": "9e88d21a01c14b0d"
       }
-    ]
+    ],
+    "weight": 0,
+    "cost": 10.0,
+    "quantity": 1,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!74dff68584b84cd8"
+  "_key": "!items!ed604375279aec3f"
 }

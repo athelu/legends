@@ -1,0 +1,38 @@
+{
+  "_id": "ccd37b307ec90593",
+  "name": "Object Conduit",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>An infused object carries your magical signature. If you can reach the object, you can reach anything the object touches.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 5
+      },
+      "skills": "craft:5",
+      "feats": [
+        "Infuser"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you have an active infused object in play you may cast weaves targeting that object's location or bearer without being adjacent to them. Range is determined normally from your position to the target. Additionally, you may detonate an active infusion as a [Reaction] when the bearer is hit by an attack, The infusion ends immediately but deals damage equal to your Intelligence × 2 to the attacker using your chosen elemental energy type. No save.</p>",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive range extension via active infused objects; detonation is a [Reaction] that consumes the infusion"
+    },
+    "keywords": "[Magic], [Infuser], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!ccd37b307ec90593"
+}

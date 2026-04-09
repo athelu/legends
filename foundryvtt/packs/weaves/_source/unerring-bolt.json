@@ -1,11 +1,11 @@
 {
-  "_id": "d75ffcc19cbc49fe",
+  "_id": "2ef71e7b8e965811",
   "name": "Unerring Bolt",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create 3 glowing darts of force that automatically hit (no roll needed). Each dart deals [[/damage 4]] damage. Can target same creature or divide among multiple.</p>"
+      "value": "<p>Create 3 glowing darts of force. Each dart deals [[/damage 4]] damage. Can target same creature or divide among multiple.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -23,23 +23,45 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create 3 glowing darts of force. Each dart deals 4 damage. Can target same creature or divide among multiple.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 dart (4)",
+          "duration": "1 dart (4)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "3 darts (4 x3)",
+          "duration": "3 darts (4 x3)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 darts (4 x4)",
+          "duration": "4 darts (4 x4)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 dart (4 damage)\n- 2 = 3 darts (4 damage each)\n- 3 = 4 darts (4 damage each)",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 dart (4), 2= 3 darts (4 x3), 3 = 4 darts (4 x4)",
     "weavingRoll": "Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!d75ffcc19cbc49fe"
+  "_key": "!items!2ef71e7b8e965811"
 }

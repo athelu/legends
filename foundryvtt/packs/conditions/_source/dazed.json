@@ -1,31 +1,32 @@
 {
-  "_id": "86cb5a8cccbd439d",
+  "_id": "285cd969adf73937",
   "name": "Dazed",
   "type": "condition",
-  "img": "icons/svg/hazard.svg",
+  "img": "icons/svg/stoned.svg",
   "system": {
-    "label": "Dazed",
-    "category": "physical",
     "description": {
-      "value": "<ul>\n<li>Mental processing slowed, disoriented or stunned briefly</li>\n<li>Next action taken: Add 1 to both dice</li>\n<li>Initiative: -1 for the round</li>\n<li>Cannot take reactions until after your next turn</li>\n<li>Duration: Until end of your next turn (typically)</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends after your next turn completes</li>\n<li>No save typically required</li>\n</ul>\n<p><strong>Note:</strong> Dazed is less severe than Stunned (which prevents all actions)</p>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Mental processing slowed Next action taken: Add 1 to both dice. Moved to the bottom of the initiative order. Cannot take reactions until after your next turn. <strong>Recovery:</strong> Automatically ends after your next turn completes</p>"
     },
-    "tokenIcon": "",
-    "activeEffects": [
-      {
-        "key": "initiative.flat",
-        "mode": "add",
-        "value": -1,
-        "notes": "-1 to initiative"
-      }
+    "label": "Dazed",
+    "category": "mental",
+    "keywords": [
+      "Hindered"
     ],
+    "tokenIcon": "icons/svg/stoned.svg",
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "minor",
     "overlayPriority": 10,
+    "damageTick": null,
     "recovery": {
-      "trigger": "endOfTurn",
-      "removeOnSuccess": true
+      "trigger": "onEvent",
+      "method": "automatic",
+      "removeOnSuccess": false
     }
   },
   "flags": {},
-  "_key": "!items!86cb5a8cccbd439d"
+  "_key": "!items!285cd969adf73937"
 }

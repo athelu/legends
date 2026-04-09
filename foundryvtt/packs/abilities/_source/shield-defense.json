@@ -6,7 +6,18 @@
   "system": {
     "description": {
       "value": "Grants Fortune on defensive melee combat rolls."
-    }
+    },
+    "abilityType": "passive",
+    "trigger": "",
+    "effect": "You gain Fortune on defensive melee combat rolls while using the shield.",
+    "frequency": "Passive",
+    "source": "Shield",
+    "appliesEffects": [],
+    "keywords": [
+      "Shield",
+      "Defense"
+    ],
+    "isActive": false
   },
   "effects": []
 }

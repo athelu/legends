@@ -1,0 +1,39 @@
+{
+  "_id": "1e94dadbc1c18d8b",
+  "name": "Suppressing Presence",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>At this point your reputation on a battlefield does some of the work for you. You don't need to suppress an entire enemy force. You just need them to believe you could.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 6
+      },
+      "skills": "rangedCombat:6",
+      "feats": [
+        "Threatening Sightline",
+        "Covering Fire"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your ranged abilities gain the following enhancements:</p>\n<ul>\n<li>Covering Fire can be maintained by spending 1 [Combat] action.</li>\n<li>Threatening Sightline may now trigger twice per round instead of once</li>\n<li>When a creature fails their [[/save type=will]] against Covering Fire, they also gain the Frightened condition until the start of their next turn.</li>\n<li>Bleeding stacks applied through ranged attacks can only be removed from an ally's [[/check skill=medicine]] or magical healing.</li>\n</ul>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive enhancement to existing abilities"
+    },
+    "keywords": "[Combat], [Ranged], [Marksman]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!1e94dadbc1c18d8b"
+}

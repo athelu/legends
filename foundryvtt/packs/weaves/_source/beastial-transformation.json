@@ -1,5 +1,5 @@
 {
-  "_id": "ea1f892afb2a4b66",
+  "_id": "2f4121932b9f444f",
   "name": "Beastial Transformation",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Touch or self",
     "duration": "10 minutes",
-    "target": "",
+    "target": "single",
     "savingThrow": "fortitude",
-    "effect": "",
-    "effectType": "",
+    "effect": "Transform touched creature into a beast. Target gains beast's HP (temporary), physical stats, and abilities. Keeps mental stats and personality. Unwilling targets get Fortitude save. Compare your Targeting successes to their save successes. Reverts when reaching 0 HP or weave ends (returns to previous HP total).",
+    "effectType": "transformation",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
@@ -43,5 +64,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!ea1f892afb2a4b66"
+  "_key": "!items!2f4121932b9f444f"
 }

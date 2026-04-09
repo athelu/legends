@@ -1,0 +1,39 @@
+{
+  "_id": "4102fa6d17cba331",
+  "name": "Patron's Whisper",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The entity you called to has grown more comfortable reaching back. You have learned to use those moments.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 5
+      },
+      "skills": "",
+      "feats": [
+        "Eldritch Pact",
+        "Pact Attunement"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per long rest, you may spend 10 minutes in silent stillness and ask your patron for guidance. The GM provides a single piece of information the patron knows that is relevant to your current situation ex. where an enemy is, the nature of a magical effect, the weakness of a creature. Additionally, when you use your Pact Gift ability, you may choose to spend 2 Luck instead of the normal action cost to use it as a [Reaction] instead.</p>",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Patron guidance once per long rest (10 minutes); Pact Gift as Reaction costs 2 Luck"
+    },
+    "keywords": "[Magic], [Pact]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!4102fa6d17cba331"
+}

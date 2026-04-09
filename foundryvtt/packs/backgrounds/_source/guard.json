@@ -1,21 +1,89 @@
 {
-  "_id": "62a73d652588479d",
+  "_id": "ea20c3c1e0f8931c",
   "name": "Guard",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You served in the guard, standing watch while others slept. You know the boredom of endless patrols punctuated by moments of sudden terror. Whether you left because of corruption in the ranks, disagreements with your commander, or simple wanderlust, you still think like a guard. Old habits die hard, and honestly, they've kept you alive more than once. <strong>Skills:</strong> Melee Combat 2, Perception 2, Intimidate 1, Society 1, +40 XP <strong>Equipment:</strong> Spear or club, uniform, manacles, work gloves, work boots <strong>Feature</strong> - Watchful Eye: You're trained to spot trouble and know typical guard procedures in most settlements.</p>"
+      "value": "<p>You served in the guard, standing watch while others slept. You know the boredom of endless patrols punctuated by moments of sudden terror. Whether you left because of corruption in the ranks, disagreements with your commander, or simple wanderlust, you still think like a guard. Old habits die hard, and honestly, they've kept you alive more than once.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Melee Combat 2, Perception 2, Intimidate 1, Society 1, +40 XP",
+    "startingEquipment": "Spear or club\nuniform\nmanacles\nwork gloves\nwork boots",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Watchful Eye: You're trained to spot trouble and know typical guard procedures in most settlements.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "meleeCombat": 2,
+      "perception": 2,
+      "intimidate": 1,
+      "society": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "choice",
+        "itemType": "weapon",
+        "options": [
+          {
+            "mode": "reference",
+            "itemType": "weapon",
+            "pack": "legends.weapons",
+            "sourceName": "Spear",
+            "quantity": 1,
+            "sourceId": "ba384489c661e282"
+          },
+          {
+            "mode": "reference",
+            "itemType": "weapon",
+            "pack": "legends.weapons",
+            "sourceName": "Club",
+            "quantity": 1,
+            "sourceId": "97f6f006fe408098"
+          }
+        ],
+        "quantity": 1,
+        "originalText": "Spear or club"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Uniform/Livery",
+        "quantity": 1,
+        "originalText": "uniform",
+        "sourceId": "2a559b2da4deccd5"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Manacles",
+        "quantity": 1,
+        "originalText": "manacles",
+        "sourceId": "dc54332725e7d0fb"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Gloves, Work",
+        "quantity": 1,
+        "originalText": "work gloves",
+        "sourceId": "56d09fece9f4243e"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Work",
+        "quantity": 1,
+        "originalText": "work boots",
+        "sourceId": "6a6394e3ffbccf86"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!62a73d652588479d"
+  "_key": "!items!ea20c3c1e0f8931c"
 }

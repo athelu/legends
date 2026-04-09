@@ -1,21 +1,65 @@
 {
-  "_id": "97ac0990190a4440",
+  "_id": "3f295e37a2c2e56b",
   "name": "Sailor",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You heard the call of the sea from a young age. Maybe you signed onto a merchant's vessel, joined the navy, or even fell in with a crew of pirates and scalawags. Life at sea taught you to work as part of a crew and stay steady when solid ground is just a memory. You might be on land now, but the ocean never really lets go of those who've sailed her waters. <strong>Skills:</strong> Athletics 2, Acrobatics 2, Perception 1, Wilderness 1, +40 XP <strong>Equipment:</strong> Lime bast rope, common clothes, belt knife, shoes <strong>Feature</strong> - Ship Passage: You can secure free or reduced passage on ships and are welcomed in port taverns. Sailors recognize and trust one of their own.</p>"
+      "value": "<p>You heard the call of the sea from a young age. Maybe you signed onto a merchant's vessel, joined the navy, or even fell in with a crew of pirates and scalawags. Life at sea taught you to work as part of a crew and stay steady when solid ground is just a memory. You might be on land now, but the ocean never really lets go of those who've sailed her waters.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Athletics 2, Acrobatics 2, Perception 1, Wilderness 1, +40 XP",
+    "startingEquipment": "Lime bast rope\ncommon clothes\nbelt knife\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Ship Passage: You can secure free or reduced passage on ships and are welcomed in port taverns. Sailors recognize and trust one of their own.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "athletics": 2,
+      "acrobatics": 2,
+      "perception": 1,
+      "wilderness": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Rope, Lime Bast",
+        "quantity": 1,
+        "originalText": "Lime bast rope",
+        "sourceId": "04de8f947a85e5b5"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Knife, Belt",
+        "quantity": 1,
+        "originalText": "belt knife",
+        "sourceId": "df91ff3da99f76f0"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!97ac0990190a4440"
+  "_key": "!items!3f295e37a2c2e56b"
 }

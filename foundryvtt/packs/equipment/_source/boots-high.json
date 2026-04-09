@@ -1,5 +1,5 @@
 {
-  "_id": "8b3bd44043d74a37",
+  "_id": "76b92e417dab140f",
   "name": "Boots, High",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>Sturdy leather boots that extend above the ankle, providing good support and protection for the feet and lower legs.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 3.0,
     "cost": 40.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!8b3bd44043d74a37"
+  "_key": "!items!76b92e417dab140f"
 }

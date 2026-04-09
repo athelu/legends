@@ -12,7 +12,9 @@ This creates the LevelDB format files required by Foundry V13.
 This script runs all individual pack builders in sequence:
 - build_armor_pack.py (parses armor.md, creates armor + shield items)
 - build_weapons_pack.py (parses weapons.md)
- - build_traits_pack.py (parses traits.md, flaws.md, feats.md)
+ - build_traits_pack.py (parses traits.md)
+ - build_flaws_pack.py (parses flaws.md)
+ - build_feats_pack.py (parses feats.md)
 - build_action_pack.py (parses actions.md)
 - build_ability_pack.py (builds from JSON sources)
 

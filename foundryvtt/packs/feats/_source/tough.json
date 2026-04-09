@@ -1,5 +1,5 @@
 {
-  "_id": "f1f89a6ab4fe4d80",
+  "_id": "81618ea80c829b8d",
   "name": "Tough",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Some people are just harder to kill. You are more resilient, allowying you to take punishment that would drop others.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "constitution": 3
       },
       "skills": "",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Gain HP equal to Con × current Tier</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[General]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!f1f89a6ab4fe4d80"
+  "_key": "!items!81618ea80c829b8d"
 }

@@ -1,15 +1,18 @@
 {
-  "_id": "3d0ddcd83aa044cd",
+  "_id": "346c356cdee82c4f",
   "name": "Disoriented",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "label": "Disoriented",
-    "category": "sensory",
     "description": {
-      "value": "<ul>\n<li>Spatial awareness or balance impaired</li>\n<li>Perception checks: Add 1 to die results</li>\n<li>Initiative: -1</li>\n<li>Cannot determine exact positions of creatures/objects (GM may require check)</li>\n<li>Duration: Typically 1 round unless specified otherwise</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends after specified duration</li>\n<li>Some effects allow [[/check skill=perception]] to end early</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Spatial awareness or balance impaired. Perception checks: Add 1 to both die results. Initiative: -1. Opponents receive the concealed condition to your attacks. <strong>Recovery:</strong> Typically 1 round unless specified otherwise.</p>"
     },
-    "tokenIcon": "",
+    "label": "Disoriented",
+    "category": "mental",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
     "activeEffects": [
       {
         "key": "initiative.flat",
@@ -18,14 +21,19 @@
         "notes": "-1 to initiative"
       }
     ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
+    "damageTick": null,
     "recovery": {
-      "trigger": "endOfTurn",
-      "removeOnSuccess": true
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
     }
   },
   "flags": {},
-  "_key": "!items!3d0ddcd83aa044cd"
+  "_key": "!items!346c356cdee82c4f"
 }

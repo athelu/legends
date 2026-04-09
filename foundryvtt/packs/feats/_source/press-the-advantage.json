@@ -1,0 +1,36 @@
+{
+  "_id": "c7daf0b4c6a3cadb",
+  "name": "Press the Advantage",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You keep your opponent reacting rather than thinking, never letting them find their footing.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 5
+      },
+      "skills": "meleeCombat:5",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you land a hit that triggers Exposed Strike damage, you may immediately make a Feint attempt against the same target as a [Free] action. This feint follows all normal rules including the MAP exemption on success.</p>",
+    "usageType": "free",
+    "usage": {
+      "mode": "free",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per turn, Free action"
+    },
+    "keywords": "[Combat], [Duelist]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!c7daf0b4c6a3cadb"
+}

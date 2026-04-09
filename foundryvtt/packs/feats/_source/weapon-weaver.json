@@ -1,5 +1,5 @@
 {
-  "_id": "7d895c517298479d",
+  "_id": "c1616d032302e397",
   "name": "Weapon Weaver",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,20 +8,27 @@
       "value": "<p>You may combine a weapon attack and a Simple Weave into a single action. It does not bypass the need to make weaving checks.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "meleeCombat:3",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": "any magical tradition trait"
     },
     "benefits": "<p>When you take a [Combat] action with a melee weapon, can cast one Simple Weave (2 Energy cost or less) as part of the same action. You still make the normal weaving check for the weave (Potential + Mastery for each energy used). Both the attack and the weave use the same [Combat] action</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat], [Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!7d895c517298479d"
+  "_key": "!items!c1616d032302e397"
 }

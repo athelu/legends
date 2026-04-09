@@ -1,0 +1,54 @@
+{
+  "_id": "b77a75e54308eca9",
+  "name": "Bound",
+  "type": "condition",
+  "img": "icons/svg/net.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Tied up or bound in chains or shackles. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune.Automatically fail Reflex saves. <strong>Recovery:</strong> Use 1 action to make a Acrobatics, Might or [[/check skill=devices]]</p>\n<ul>\n<li>2 successes: Remove Bound condition</li>\n</ul>"
+    },
+    "label": "Bound",
+    "category": "movement",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/net.svg",
+    "activeEffects": [
+      {
+        "key": "diceMod.attack.all",
+        "mode": "add",
+        "value": 2,
+        "notes": "Add 2 to attack dice"
+      }
+    ],
+    "appliesConditions": [],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "check",
+      "removeOnSuccess": true,
+      "check": {
+        "skill": "acrobatics",
+        "attribute": "",
+        "skills": [
+          "acrobatics",
+          "might",
+          "devices"
+        ],
+        "attributes": [],
+        "opposed": false,
+        "label": "Acrobatics, Might or devices"
+      },
+      "downgrades": {
+        "2_success": null
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!b77a75e54308eca9"
+}

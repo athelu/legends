@@ -1,5 +1,5 @@
 {
-  "_id": "33d0c1c8b01849b4",
+  "_id": "2ec11b08604e9a24",
   "name": "Fortune's Favor",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,25 +21,47 @@
     },
     "range": "Close, 30 ft.",
     "duration": "1 minute",
-    "target": "",
+    "target": "multiple",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Up to 3 targets subtract 1 from one die (their choice) on each roll they make.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!33d0c1c8b01849b4"
+  "_key": "!items!2ec11b08604e9a24"
 }

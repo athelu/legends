@@ -1,0 +1,40 @@
+{
+  "_id": "bc88ae24712d1a80",
+  "name": "Chorus of Names",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You speak the true names of your companions aloud, not the deep names that bind, but the names that affirm.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 6
+      },
+      "skills": "",
+      "feats": [
+        "Invoker",
+        "Resonant Words",
+        "Echoing Invocation"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>As 2 [Combat] actions, speak the names of up to your Charisma score in willing allies within 60 feet who can hear you. Named allies gain the following benefits for the remainder of the encounter:</p>\n<ul>\n<li><strong>Will saves:</strong> Subtract 1 from both dice</li>\n<li>When a named ally would gain the Frightened condition, they may immediately make a [[/save type=will]] (1 success negates the condition entirely)</li>\n<li>Once per round, when a named ally makes a [[/save type=will]], you may use a [Free] action to grant them Fortune on that save. This requires you to be able to see the ally and can only be used once per round total, not once per ally.</li>\n</ul>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per encounter, 2 [Combat] actions"
+    },
+    "keywords": "[Magic], [Invoker]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!bc88ae24712d1a80"
+}

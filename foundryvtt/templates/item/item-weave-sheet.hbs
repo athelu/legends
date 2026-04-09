@@ -13,38 +13,31 @@
   </nav>
 
   <section class="sheet-body">
-    <!-- Description Tab -->
     <div class="tab description" data-group="primary" data-tab="description">
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
     </div>
 
-    <!-- Details Tab -->
     <div class="tab details" data-group="primary" data-tab="details">
-      
-      <!-- Weave Type -->
       <div class="form-group">
         <label>Weave Type</label>
         <select name="system.weaveType">
-          <option value="simple" {{#if (eq system.weaveType "simple")}}selected{{/if}}>Simple (1 action)</option>
-          <option value="complex" {{#if (eq system.weaveType "complex")}}selected{{/if}}>Complex (2 actions)</option>
-          <option value="ritual" {{#if (eq system.weaveType "ritual")}}selected{{/if}}>Ritual (10 minutes)</option>
+          <option value="simple" {{#if (eq system.weaveType "simple")}}selected{{/if}}>Simple</option>
+          <option value="complex" {{#if (eq system.weaveType "complex")}}selected{{/if}}>Complex</option>
+          <option value="intricate" {{#if (eq system.weaveType "intricate")}}selected{{/if}}>Intricate</option>
         </select>
       </div>
 
       <div class="form-group">
         <label>Action Cost</label>
         <input type="number" name="system.actionCost" value="{{system.actionCost}}" data-dtype="Number" min="0" />
-        <small>Number of actions required to cast</small>
       </div>
 
-      <!-- Energy Costs -->
       <h3>Energy Costs</h3>
-      
-      <h4>Primary Energy</h4>
       <div class="form-group-row">
         <div class="form-group">
-          <label>Type</label>
+          <label>Primary Type</label>
           <select name="system.energyCost.primary.type">
+            <option value="variable-elemental" {{#if (eq system.energyCost.primary.type "variable-elemental")}}selected{{/if}}>Variable Elemental</option>
             <option value="earth" {{#if (eq system.energyCost.primary.type "earth")}}selected{{/if}}>Earth</option>
             <option value="air" {{#if (eq system.energyCost.primary.type "air")}}selected{{/if}}>Air</option>
             <option value="fire" {{#if (eq system.energyCost.primary.type "fire")}}selected{{/if}}>Fire</option>
@@ -56,15 +49,14 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Cost</label>
+          <label>Primary Cost</label>
           <input type="number" name="system.energyCost.primary.cost" value="{{system.energyCost.primary.cost}}" data-dtype="Number" min="0" />
         </div>
       </div>
-      
-      <h4>Supporting Energy (Optional)</h4>
+
       <div class="form-group-row">
         <div class="form-group">
-          <label>Type</label>
+          <label>Supporting Type</label>
           <select name="system.energyCost.supporting.type">
             <option value="" {{#unless system.energyCost.supporting.type}}selected{{/unless}}>None</option>
             <option value="earth" {{#if (eq system.energyCost.supporting.type "earth")}}selected{{/if}}>Earth</option>
@@ -78,54 +70,24 @@
           </select>
         </div>
         <div class="form-group">
-          <label>Cost</label>
+          <label>Supporting Cost</label>
           <input type="number" name="system.energyCost.supporting.cost" value="{{system.energyCost.supporting.cost}}" data-dtype="Number" min="0" />
         </div>
       </div>
 
-      <!-- School/Category -->
-      <div class="form-group">
-        <label>School</label>
-        <select name="system.school">
-          <option value="evocation" {{#if (eq system.school "evocation")}}selected{{/if}}>Evocation</option>
-          <option value="conjuration" {{#if (eq system.school "conjuration")}}selected{{/if}}>Conjuration</option>
-          <option value="transmutation" {{#if (eq system.school "transmutation")}}selected{{/if}}>Transmutation</option>
-          <option value="abjuration" {{#if (eq system.school "abjuration")}}selected{{/if}}>Abjuration</option>
-          <option value="divination" {{#if (eq system.school "divination")}}selected{{/if}}>Divination</option>
-          <option value="enchantment" {{#if (eq system.school "enchantment")}}selected{{/if}}>Enchantment</option>
-          <option value="illusion" {{#if (eq system.school "illusion")}}selected{{/if}}>Illusion</option>
-          <option value="necromancy" {{#if (eq system.school "necromancy")}}selected{{/if}}>Necromancy</option>
-        </select>
-      </div>
-
-      <!-- Targeting -->
       <h3>Targeting</h3>
       <div class="form-group">
         <label>Range</label>
-        <select name="system.range.value">
-          <option value="self" {{#if (eq system.range.value "self")}}selected{{/if}}>Self</option>
-          <option value="touch" {{#if (eq system.range.value "touch")}}selected{{/if}}>Touch</option>
-          <option value="close" {{#if (eq system.range.value "close")}}selected{{/if}}>Close (25 ft)</option>
-          <option value="medium" {{#if (eq system.range.value "medium")}}selected{{/if}}>Medium (100 ft)</option>
-          <option value="long" {{#if (eq system.range.value "long")}}selected{{/if}}>Long (400 ft)</option>
-          <option value="sight" {{#if (eq system.range.value "sight")}}selected{{/if}}>Line of Sight</option>
-          <option value="custom" {{#if (eq system.range.value "custom")}}selected{{/if}}>Custom</option>
-        </select>
+        <input type="text" name="system.range" value="{{system.range}}" placeholder="e.g., Touch, Close 30 ft., Self" />
       </div>
 
-      {{#if (eq system.range.value "custom")}}
       <div class="form-group">
-        <label>Custom Range (ft)</label>
-        <input type="number" name="system.range.distance" value="{{system.range.distance}}" data-dtype="Number" min="0" />
-      </div>
-      {{/if}}
-
-      <div class="form-group">
-        <label>Target</label>
+        <label>Target Category</label>
         <select name="system.target">
-          <option value="single" {{#if (eq system.target "single")}}selected{{/if}}>Single Target</option>
-          <option value="multiple" {{#if (eq system.target "multiple")}}selected{{/if}}>Multiple Targets</option>
-          <option value="area" {{#if (eq system.target "area")}}selected{{/if}}>Area Effect</option>
+          <option value="" {{#unless system.target}}selected{{/unless}}>Unspecified</option>
+          <option value="single" {{#if (eq system.target "single")}}selected{{/if}}>Single</option>
+          <option value="multiple" {{#if (eq system.target "multiple")}}selected{{/if}}>Multiple</option>
+          <option value="area" {{#if (eq system.target "area")}}selected{{/if}}>Area</option>
           <option value="cone" {{#if (eq system.target "cone")}}selected{{/if}}>Cone</option>
           <option value="line" {{#if (eq system.target "line")}}selected{{/if}}>Line</option>
           <option value="sphere" {{#if (eq system.target "sphere")}}selected{{/if}}>Sphere/Burst</option>
@@ -133,60 +95,54 @@
       </div>
 
       <div class="form-group">
-        <label>Area Size (if applicable)</label>
-        <input type="text" name="system.areaSize" value="{{system.areaSize}}" placeholder="e.g., 20 ft radius, 60 ft cone" />
-      </div>
-
-      <!-- Duration -->
-      <div class="form-group">
         <label>Duration</label>
-        <select name="system.duration">
-          <option value="instantaneous" {{#if (eq system.duration "instantaneous")}}selected{{/if}}>Instantaneous</option>
-          <option value="concentration" {{#if (eq system.duration "concentration")}}selected{{/if}}>Concentration</option>
-          <option value="rounds" {{#if (eq system.duration "rounds")}}selected{{/if}}>Rounds</option>
-          <option value="minutes" {{#if (eq system.duration "minutes")}}selected{{/if}}>Minutes</option>
-          <option value="hours" {{#if (eq system.duration "hours")}}selected{{/if}}>Hours</option>
-          <option value="days" {{#if (eq system.duration "days")}}selected{{/if}}>Days</option>
-          <option value="permanent" {{#if (eq system.duration "permanent")}}selected{{/if}}>Permanent</option>
-          <option value="custom" {{#if (eq system.duration "custom")}}selected{{/if}}>Custom</option>
+        <input type="text" name="system.duration" value="{{system.duration}}" placeholder="e.g., Instantaneous, 1 minute, 1 hour" />
+      </div>
+
+      <div class="form-group">
+        <label>Saving Throw</label>
+        <select name="system.savingThrow">
+          <option value="none" {{#if (eq system.savingThrow "none")}}selected{{/if}}>None</option>
+          <option value="fortitude" {{#if (eq system.savingThrow "fortitude")}}selected{{/if}}>Fortitude</option>
+          <option value="reflex" {{#if (eq system.savingThrow "reflex")}}selected{{/if}}>Reflex</option>
+          <option value="will" {{#if (eq system.savingThrow "will")}}selected{{/if}}>Will</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Duration Detail</label>
-        <input type="text" name="system.durationDetail" value="{{system.durationDetail}}" placeholder="e.g., 1 minute, until dispelled" />
-      </div>
-
-      <!-- Saving Throw -->
-      <div class="form-group">
-        <label>Save Type</label>
-        <select name="system.saveType">
-          <option value="none" {{#if (eq system.saveType "none")}}selected{{/if}}>None</option>
-          <option value="fortitude" {{#if (eq system.saveType "fortitude")}}selected{{/if}}>Fortitude</option>
-          <option value="reflex" {{#if (eq system.saveType "reflex")}}selected{{/if}}>Reflex</option>
-          <option value="will" {{#if (eq system.saveType "will")}}selected{{/if}}>Will</option>
+        <label>Delivery Method</label>
+        <select name="system.deliveryMethod">
+          <option value="attack" {{#if (eq system.deliveryMethod "attack")}}selected{{/if}}>Attack</option>
+          <option value="save" {{#if (eq system.deliveryMethod "save")}}selected{{/if}}>Save</option>
+          <option value="automatic" {{#if (eq system.deliveryMethod "automatic")}}selected{{/if}}>Automatic</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Save Effect</label>
-        <input type="text" name="system.saveEffect" value="{{system.saveEffect}}" placeholder="e.g., Half damage, Negates" />
+        <label>Weaving Roll</label>
+        <input type="text" name="system.weavingRoll" value="{{system.weavingRoll}}" placeholder="e.g., Fire Potential + Fire Mastery" />
       </div>
 
+      <div class="form-group">
+        <label>Targeting Roll</label>
+        <input type="text" name="system.targetingRoll" value="{{system.targetingRoll}}" placeholder="e.g., Casting Stat + Fire Mastery" />
+      </div>
+
+      <div class="form-group">
+        <label>Tags</label>
+        <input type="text" name="system.tags" value="{{system.tags}}" placeholder="Comma-separated tags" />
+      </div>
     </div>
 
-    <!-- Effects Tab -->
     <div class="tab effects" data-group="primary" data-tab="effects">
-      
-      <!-- Effect Type -->
       <div class="form-group">
-        <label>Primary Effect</label>
+        <label>Primary Effect Type</label>
         <select name="system.effectType">
           <option value="damage" {{#if (eq system.effectType "damage")}}selected{{/if}}>Damage</option>
           <option value="healing" {{#if (eq system.effectType "healing")}}selected{{/if}}>Healing</option>
-          <option value="buff" {{#if (eq system.effectType "buff")}}selected{{/if}}>Buff/Enhancement</option>
-          <option value="debuff" {{#if (eq system.effectType "debuff")}}selected{{/if}}>Debuff/Penalty</option>
-          <option value="control" {{#if (eq system.effectType "control")}}selected{{/if}}>Control/Condition</option>
+          <option value="buff" {{#if (eq system.effectType "buff")}}selected{{/if}}>Buff</option>
+          <option value="debuff" {{#if (eq system.effectType "debuff")}}selected{{/if}}>Debuff</option>
+          <option value="control" {{#if (eq system.effectType "control")}}selected{{/if}}>Control</option>
           <option value="summon" {{#if (eq system.effectType "summon")}}selected{{/if}}>Summon</option>
           <option value="transformation" {{#if (eq system.effectType "transformation")}}selected{{/if}}>Transformation</option>
           <option value="utility" {{#if (eq system.effectType "utility")}}selected{{/if}}>Utility</option>
@@ -195,7 +151,11 @@
         </select>
       </div>
 
-      <!-- Damage (if applicable) -->
+      <div class="form-group">
+        <label>Effect</label>
+        <textarea name="system.effect" rows="5" placeholder="Mechanical effect summary">{{system.effect}}</textarea>
+      </div>
+
       {{#if (eq system.effectType "damage")}}
       <h3>Damage</h3>
       <div class="form-group-row">
@@ -206,16 +166,22 @@
         <div class="form-group">
           <label>Damage Type</label>
           <select name="system.damage.type">
+            <option value="" {{#unless system.damage.type}}selected{{/unless}}>Unspecified</option>
             <option value="fire" {{#if (eq system.damage.type "fire")}}selected{{/if}}>Fire</option>
             <option value="cold" {{#if (eq system.damage.type "cold")}}selected{{/if}}>Cold</option>
             <option value="lightning" {{#if (eq system.damage.type "lightning")}}selected{{/if}}>Lightning</option>
             <option value="acid" {{#if (eq system.damage.type "acid")}}selected{{/if}}>Acid</option>
-            <option value="thunder" {{#if (eq system.damage.type "thunder")}}selected{{/if}}>Thunder</option>
+            <option value="force" {{#if (eq system.damage.type "force")}}selected{{/if}}>Force</option>
             <option value="positive" {{#if (eq system.damage.type "positive")}}selected{{/if}}>Positive</option>
             <option value="negative" {{#if (eq system.damage.type "negative")}}selected{{/if}}>Negative</option>
-            <option value="force" {{#if (eq system.damage.type "force")}}selected{{/if}}>Force</option>
+            <option value="necrotic" {{#if (eq system.damage.type "necrotic")}}selected{{/if}}>Necrotic</option>
+            <option value="radiant" {{#if (eq system.damage.type "radiant")}}selected{{/if}}>Radiant</option>
             <option value="psychic" {{#if (eq system.damage.type "psychic")}}selected{{/if}}>Psychic</option>
-            <option value="physical" {{#if (eq system.damage.type "physical")}}selected{{/if}}>Physical (magical)</option>
+            <option value="poison" {{#if (eq system.damage.type "poison")}}selected{{/if}}>Poison</option>
+            <option value="thunder" {{#if (eq system.damage.type "thunder")}}selected{{/if}}>Thunder</option>
+            <option value="bludgeoning" {{#if (eq system.damage.type "bludgeoning")}}selected{{/if}}>Bludgeoning</option>
+            <option value="piercing" {{#if (eq system.damage.type "piercing")}}selected{{/if}}>Piercing</option>
+            <option value="slashing" {{#if (eq system.damage.type "slashing")}}selected{{/if}}>Slashing</option>
           </select>
         </div>
       </div>
@@ -223,60 +189,42 @@
       <div class="form-group">
         <label>DR Interaction</label>
         <select name="system.damage.drInteraction">
-          <option value="half" {{#if (eq system.damage.drInteraction "half")}}selected{{/if}}>Half DR (energy damage)</option>
-          <option value="full" {{#if (eq system.damage.drInteraction "full")}}selected{{/if}}>Full DR (physical damage)</option>
-          <option value="ignore" {{#if (eq system.damage.drInteraction "ignore")}}selected{{/if}}>Ignores DR</option>
+          <option value="" {{#unless system.damage.drInteraction}}selected{{/unless}}>Default</option>
+          <option value="half" {{#if (eq system.damage.drInteraction "half")}}selected{{/if}}>Half DR</option>
+          <option value="full" {{#if (eq system.damage.drInteraction "full")}}selected{{/if}}>Full DR</option>
+          <option value="ignore" {{#if (eq system.damage.drInteraction "ignore")}}selected{{/if}}>Ignore DR</option>
         </select>
       </div>
-
-      <div class="form-group">
-        <label>Success Scaling</label>
-        <textarea name="system.damage.scaling" rows="3" placeholder="e.g., +4 damage per success beyond minimum">{{system.damage.scaling}}</textarea>
-      </div>
       {{/if}}
 
-      <!-- Healing (if applicable) -->
-      {{#if (eq system.effectType "healing")}}
-      <h3>Healing</h3>
       <div class="form-group">
-        <label>Base Healing</label>
-        <input type="number" name="system.healing.base" value="{{system.healing.base}}" data-dtype="Number" min="0" />
+        <label>Targeting Success Scaling</label>
+        <textarea name="system.targetingSuccessScaling" rows="5" placeholder="e.g., 0 = fail, 1 = half, 2 = full, 3 = enhanced">{{system.targetingSuccessScaling}}</textarea>
       </div>
+
+      <h3>Applied Effects</h3>
       <div class="form-group">
-        <label>Success Scaling</label>
-        <textarea name="system.healing.scaling" rows="2" placeholder="e.g., +4 HP per success">{{system.healing.scaling}}</textarea>
+        <button type="button" data-action="addWeaveEffect">Add Applied Effect</button>
       </div>
+      {{#if weaveAppliesEffects.length}}
+        {{#each weaveAppliesEffects}}
+        <div class="form-group-row">
+          <div class="form-group">
+            <label>Effect ID</label>
+            <input type="text" name="system.appliesEffects.{{index}}.effectId" value="{{effectId}}" placeholder="e.g., frightened" />
+          </div>
+          <div class="form-group">
+            <label>Params</label>
+            <input type="text" name="system.appliesEffects.{{index}}.paramsText" value="{{paramsText}}" placeholder="key=value, other=2" />
+          </div>
+          <div class="form-group" style="align-self: end;">
+            <button type="button" data-action="removeWeaveEffect" data-index="{{index}}">Remove</button>
+          </div>
+        </div>
+        {{/each}}
+      {{else}}
+      <p><em>No applied effects configured.</em></p>
       {{/if}}
-
-      <!-- Conditions Applied -->
-      <h3>Conditions/Status Effects</h3>
-      <div class="form-group">
-        <label>Conditions Applied</label>
-        <textarea name="system.conditions" rows="3" placeholder="List any conditions this weave applies (e.g., Blinded, Stunned, Frightened)">{{system.conditions}}</textarea>
-      </div>
-
-      <!-- Success Thresholds -->
-      <h3>Success Thresholds</h3>
-      <div class="form-group">
-        <label>Success Effects</label>
-        <textarea name="system.successEffects" rows="4" placeholder="Describe effects at different success counts:
-1 success: [effect]
-2 successes: [effect]
-3+ successes: [effect]">{{system.successEffects}}</textarea>
-      </div>
-
-      <!-- Special Properties -->
-      <div class="form-group">
-        <label>Special Properties</label>
-        <textarea name="system.specialProperties" rows="4" placeholder="Any special rules, limitations, or interactions">{{system.specialProperties}}</textarea>
-      </div>
-
-      <!-- Heightening -->
-      <div class="form-group">
-        <label>Heightening Options</label>
-        <textarea name="system.heightening" rows="3" placeholder="Describe how this weave scales with additional energy">{{system.heightening}}</textarea>
-      </div>
-
     </div>
   </section>
 </form>

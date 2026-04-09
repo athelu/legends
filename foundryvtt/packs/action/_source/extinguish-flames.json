@@ -1,22 +1,45 @@
 {
-  "_id": "96c372e23c924514",
+  "_id": "5acfdd707f7a00de",
   "name": "Extinguish Flames",
   "type": "action",
   "img": "icons/skills/social/wave-halt-stop.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Put out flames on yourself or an adjacent creature</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Ends the Burning condition (if small fire)</li>\n<li>Larger magical fires may require multiple actions or skill checks</li>\n<li>Uses your action but could save significant HP</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Put out flames on yourself or an adjacent creature.</p>"
     },
     "actionType": "interact",
     "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Put out flames on yourself or an adjacent creature\n- **Notes:**\n  - Ends the Burning condition (if small fire)\n  - Larger magical fires may require multiple actions or skill checks\n  - Uses your action but could save significant HP",
-    "keywords": "",
+    "effect": "Put out flames on yourself or an adjacent creature.",
+    "appliesEffects": [
+      {
+        "effectId": "Burning",
+        "operation": "remove",
+        "params": {}
+      },
+      {
+        "effectId": "Ignited",
+        "operation": "remove",
+        "params": {}
+      },
+      {
+        "effectId": "Smoldering",
+        "operation": "remove",
+        "params": {}
+      },
+      {
+        "effectId": "Singed",
+        "operation": "remove",
+        "params": {}
+      }
+    ],
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!96c372e23c924514"
+  "_key": "!items!5acfdd707f7a00de"
 }

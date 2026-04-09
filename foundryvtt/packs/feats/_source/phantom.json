@@ -1,0 +1,39 @@
+{
+  "_id": "6efd5138393dc297",
+  "name": "Phantom",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>They cannot corner you, cannot hold you, cannot make you stand still long enough to be hit cleanly.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "agility": 7
+      },
+      "skills": "",
+      "feats": [
+        "Dirty Fighter",
+        "Shadow Step"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>You gain the following permanent abilities:</p>\n<ul>\n<li><strong>Elusive:</strong> Opportunity attacks against you add 1 to both attack dice.</li>\n<li><strong>Reaction Step:</strong> When a hostile creature moves into your melee reach, you may use a [Reaction] to move up to half your movement speed without provoking opportunity attacks.</li>\n<li><strong>Frictionless:</strong> Shadow Step no longer counts against your once per turn limit. You may use it after every melee attack you make</li>\n</ul>",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive + Reaction"
+    },
+    "keywords": "[Combat], [Shadow], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!6efd5138393dc297"
+}

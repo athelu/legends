@@ -1,0 +1,47 @@
+{
+  "_id": "073d0b28a3394774",
+  "name": "Slowed (Major)",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Movement speed reduced by 10 feet, Can only take 2 action per turn. Initiative -1. Haste weave can counteract. <strong>Recovery:</strong> Unless otherwise specified, [[/save type=will]] at end of turn.</p>\n<ul>\n<li>1 success: Reduce condition to  Slowed (minor)</li>\n<li>1 success: Remove Slowed condition</li>\n</ul>"
+    },
+    "label": "Slowed (Major)",
+    "category": "movement",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
+    "activeEffects": [
+      {
+        "key": "initiative.flat",
+        "mode": "add",
+        "value": -1,
+        "notes": "-1 to initiative"
+      }
+    ],
+    "appliesConditions": [],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "endOfTurn",
+      "method": "save",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "will"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=will]] to recover from Slowed (Major)",
+      "downgrades": {
+        "1_success": "Slowed (minor)"
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!073d0b28a3394774"
+}

@@ -1,0 +1,48 @@
+{
+  "_id": "dcb4fad7d6c81bcd",
+  "name": "Asleep",
+  "type": "condition",
+  "img": "icons/svg/unconscious.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Cannot take actions or reactions. Cannot move. Blinded condition active. Prone condition active. Automatically fail Fortitude and Reflex saves. Attacks against you have Fortune <strong>Recovery:</strong> Loud noises or physical contact: Make [[/check skill=perception]] (1 success to wake)</p>"
+    },
+    "label": "Asleep",
+    "category": "incapacitation",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/unconscious.svg",
+    "activeEffects": [],
+    "appliesConditions": [
+      "Blinded",
+      "Prone"
+    ],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "check",
+      "removeOnSuccess": true,
+      "check": {
+        "skill": "perception",
+        "attribute": "",
+        "skills": [
+          "perception"
+        ],
+        "attributes": [],
+        "opposed": false,
+        "label": "Perception"
+      },
+      "downgrades": {
+        "1_success": null
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!dcb4fad7d6c81bcd"
+}

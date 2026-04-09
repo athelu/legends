@@ -1,0 +1,38 @@
+{
+  "_id": "849c06caff78a90e",
+  "name": "Blade Mastery",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>The moment one blade deflects a strike the other is already in position to catch the next one.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 5
+      },
+      "skills": "",
+      "feats": [
+        "Cross Parry"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Cross Parry may now trigger twice per round instead of once. Each use is still a separate [Reaction] and reduces damage by your Strength score.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive enhancement to Cross Parry"
+    },
+    "keywords": "[Combat], [Dual], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!849c06caff78a90e"
+}

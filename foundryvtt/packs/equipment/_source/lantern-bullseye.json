@@ -1,5 +1,5 @@
 {
-  "_id": "9679f3b17a334530",
+  "_id": "2dcf57fab07b2f41",
   "name": "Lantern, Bullseye",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A directional lantern that projects bright light in a 60-foot cone and dim light for an additional 60 feet. Burns for 6 hours on one pint of oil.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "light-source",
     "weight": 3.0,
     "cost": 15.0,
     "quantity": 1,
     "equipped": false,
-    "properties": "",
+    "capacity": "",
+    "brightLight": 60,
+    "dimLight": 60,
+    "duration": "6 hours on one pint of oil",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "Projects light in a cone rather than a radius.",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!9679f3b17a334530"
+  "_key": "!items!2dcf57fab07b2f41"
 }

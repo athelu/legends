@@ -1,0 +1,39 @@
+{
+  "_id": "e281f488faa2e4e1",
+  "name": "Iron Fortress",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You are not just hard to move. You are hard to damage, hard to affect, hard to do anything meaningful to.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 6,
+        "constitution": 6
+      },
+      "skills": "",
+      "feats": [
+        "Immovable"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your DR increases by an additional 2 (stacking with Stalwart for a total of +4 DR from feats). Magical forced movement and repositioning effects require the caster to win an opposed check against your Strength + Melee Combat to affect you.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Shield]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!e281f488faa2e4e1"
+}

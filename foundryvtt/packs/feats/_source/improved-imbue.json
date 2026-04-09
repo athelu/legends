@@ -1,0 +1,38 @@
+{
+  "_id": "de7749f835055103",
+  "name": "Improved Imbue",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your understanding of how magical energy settles into material objects has grown precise enough to pack more into each infusion without destabilizing it. The object holds more, and holds it longer.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 3
+      },
+      "skills": "craft:3",
+      "feats": [
+        "Infuser"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your Imbue Item ability improves: weapon infusions deal +[[/damage 8 type=elemental]] damage per hit instead of +4, and armor infusions grant +4 DR instead of +3. Durations are unchange</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive enhancement to Imbue Item"
+    },
+    "keywords": "[Magic], [Infuser]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!de7749f835055103"
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "42ae0b1fb2ca4bc9",
+  "_id": "3cc2a148c7a57f95",
   "name": "Two-Weapon Fighting",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,7 +8,8 @@
       "value": "<p>Extensive training with a blade in each hand allows you to maintain a relentless offense that overwhelms defenses. The second strike might not be as clean as the first, but it's still effective.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 4,
@@ -16,15 +17,21 @@
       },
       "skills": "",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>When making dual-weapon attacks in a single [Combat] action, first attack is normal, second attack adds 1 to skill die only (instead of adding to both dice). Both attacks use Shared Attribute Roll</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat], [Dual]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!42ae0b1fb2ca4bc9"
+  "_key": "!items!3cc2a148c7a57f95"
 }

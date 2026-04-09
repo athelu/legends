@@ -1,28 +1,33 @@
 {
-  "_id": "afc841d0ddf941e4",
+  "_id": "3588d562e6aab555",
   "name": "Fleeing",
   "type": "condition",
   "img": "icons/svg/terror.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Must use movement to get away from the fear source by the safest1 route available. Cannot willingly move closer to the fear source. Can engage other threats that aren't the source of fear. Add 1 to all die results. <strong>Recovery:</strong> At the end of each turn, make [[/save type=will]].</p>\n<ul>\n<li>1 success: Downgrade to Frightened</li>\n<li>2 successes: Condition ends completely</li>\n</ul>\n<p><strong>Ally Assistance:</strong> An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]]</p>\n<ul>\n<li>1 success: Target may reroll next recovery save</li>\n<li>2 successes: Downgrade to Frightened</li>\n</ul>"
+    },
     "label": "Fleeing",
     "category": "fear",
-    "description": {
-      "value": "<ul>\n<li>Must use movement to get away from the fear source by the safest route available</li>\n<li>All rolls: Add 1 to die results</li>\n<li>Cannot willingly move closer to the fear source</li>\n<li>Can defend if cornered or attacked, but cannot make attacks against the fear source</li>\n<li>Can engage other threats that aren't the source of fear (though still add 1 to die results)</li>\n<li><strong>Recovery:</strong> At the end of each turn, make [[/save type=will]]:\n<ul>\n<li>2 successes: Condition ends completely</li>\n<li>1 success: Downgrade to Frightened</li>\n<li>0 successes: Remains Fleeing</li>\n</ul></li>\n<li><strong>Ally Assistance:</strong> An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]]:\n<ul>\n<li>2 successes: Downgrade to Frightened</li>\n<li>1 success: Target may reroll next recovery save</li>\n</ul></li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/terror.svg",
-    "activeEffects": [
-      {
-        "key": "diceMod.allRolls",
-        "mode": "add",
-        "value": 1,
-        "notes": "Add 1 to all die results"
-      }
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [
+      "Frightened",
+      "Fleeing",
+      "Cowering"
     ],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
+    "damageTick": null,
     "recovery": {
       "trigger": "endOfTurn",
+      "method": "save",
       "removeOnSuccess": true,
       "save": {
         "type": "will"
@@ -30,15 +35,28 @@
       "promptPlayer": true,
       "chatMessage": "Make a [[/save type=will]] to recover from Fleeing",
       "assistance": {
-        "range": 5
+        "range": 5,
+        "downgrades": {
+          "2_success": "Frightened"
+        },
+        "check": {
+          "skill": "persuasion",
+          "attribute": "",
+          "skills": [
+            "persuasion",
+            "intimidate"
+          ],
+          "attributes": [],
+          "opposed": false,
+          "label": "Persuasion or Intimidate"
+        }
       },
       "downgrades": {
-        "1_success": "Frightened",
         "2_success": null,
-        "0_success": "Fleeing"
+        "1_success": "Frightened"
       }
     }
   },
   "flags": {},
-  "_key": "!items!afc841d0ddf941e4"
+  "_key": "!items!3588d562e6aab555"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "bf38ffdd851f4ccf",
+  "_id": "577f441593e86520",
   "name": "Ward Analysis",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Intrinsic understanding of weaves and wards allows you to perceive their structure, finding the patterns and logic behind their construction, locating their triggers and weaknesses</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "arcane:4",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": "Space Mastery 2 or Time Mastery 2"
     },
     "benefits": "<p>Can analyze magical wards and barriers. Make [[/check skill=arcane]] (opposed by ward creator's Arcana): 1 net success = identify ward type and triggering conditions; 2+ net successes = find safe bypass or temporary weakness. Attempting to dispel a ward costs 2 Energy and requires winning the opposed check</p>",
     "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Active"
+    },
     "keywords": "[Magic], [Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!bf38ffdd851f4ccf"
+  "_key": "!items!577f441593e86520"
 }

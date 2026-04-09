@@ -1,5 +1,5 @@
 {
-  "_id": "852a9d7cfbb3400e",
+  "_id": "004edb23b41a2df2",
   "name": "Shortsword",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 6,
       "type": "slashing",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": "piercing"
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
-        "damageAttr": "agility",
+        "skill": "melee",
+        "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 6,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -45,8 +45,10 @@
       "multi-type",
       "finesse"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!852a9d7cfbb3400e"
+  "_key": "!items!004edb23b41a2df2"
 }

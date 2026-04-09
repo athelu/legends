@@ -1,21 +1,22 @@
 {
-  "_id": "6d88d2899c2f4030",
+  "_id": "fd83bb3eea305e22",
   "name": "Cursed (10)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Affairs never go your way.</p>\n<ul>\n<li>Luck starts at 1, can never exceed 1</li>\n<li>Gain 2 Curse Points (work opposite: increase rolls)</li>\n<li>Must use Curse before Luck</li>\n<li>After using Luck, regain 2 Curse Points</li>\n<li>Items carry curse for 1 week after leaving possession</li>\n</ul>"
+      "value": "<p>Affairs never go your way.</p>"
     },
     "pointValue": 10,
-    "flawType": "",
-    "severity": "moderate",
-    "mechanicalEffects": "",
+    "flawType": "supernatural",
+    "severity": "major",
+    "mechanicalEffects": "<ul>\n<li>Luck starts at 1, can never exceed 1</li>\n<li>Gain 2 Curse Points (work opposite: increase rolls)</li>\n<li>Must use Curse before Luck</li>\n<li>After using Luck, regain 2 Curse Points</li>\n<li>Items carry curse for 1 week after leaving possession</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!6d88d2899c2f4030"
+  "_key": "!items!fd83bb3eea305e22"
 }

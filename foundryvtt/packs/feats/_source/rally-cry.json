@@ -1,29 +1,36 @@
 {
-  "_id": "5c04c3e4e8b34643",
+  "_id": "b1c751bf30958131",
   "name": "Rally Cry",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>The right speech, delivered with conviction in the right moment, reminds people why they're still fighting.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "charisma": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>During a short rest, you can give a rousing speech to inspire your companions. Choose up to 6 allies who can hear and understand you. Each gains temporary HP equal to your Tier + your Charisma score. These temporary HP last until their next long rest</p>",
-    "usageType": "once",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per short rest"
+    },
     "keywords": "[Morale]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!5c04c3e4e8b34643"
+  "_key": "!items!b1c751bf30958131"
 }

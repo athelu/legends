@@ -4,6 +4,20 @@
 
 The magical traits system provides a guided, step-by-step workflow for applying magical traits to characters. The system automatically detects modifier traits (Gifted Mage, Balanced Channeler) and adjusts the potential generation accordingly.
 
+## Compendium Metadata
+
+Magical trait items should store their rules in dedicated metadata fields rather than one large description blob.
+
+- `system.description.value`: narrative overview, lore, and non-mechanical explanatory text
+- `system.requirements`: concise eligibility text such as `Intelligence ≥ 3`
+- `system.benefits`: mechanical rules, option blocks, subheadings, and actionable gameplay effects
+- `system.visualEffects`: how the trait's magic looks or manifests
+- `system.notes`: GM guidance or special handling that does not fit the main rules text
+- `system.castingStat`: primary casting attribute when the trait grants one
+- `system.grantsEnergyPool`, `system.grantsMasterySkills`, `system.grantsRitualCasting`: booleans for core magical-trait capabilities
+
+For the parser in `foundryvtt/scripts/build_traits_pack.py`, the markdown source in `ttrpg/traits.md` is treated as canonical. Builder metadata lines such as `**Image:**` and `**Requirements:**` are extracted into fields and omitted from the stored description body.
+
 ## Workflow Architecture
 
 ### Detection Phase
@@ -67,7 +81,7 @@ The magical traits system provides a guided, step-by-step workflow for applying 
 6. **Assign Remaining Rolls** to other energies
 7. Set Wisdom as Casting Stat
 8. Initialize 8 Mastery skills
-9. Add 2 Channel Divinity uses per long rest
+9. Add Channel Divinity uses equal to current Tier per long rest
 10. Grant Channel Divinity abilities for chosen patron
 
 **Key Choices**:
@@ -89,7 +103,7 @@ The magical traits system provides a guided, step-by-step workflow for applying 
 7. **Assign 3 Rolls** to Space, Time, and chosen element
 8. Set Charisma as Casting Stat
 9. Initialize 5 Mastery skills
-10. Add Words of Power ability (1/short rest)
+10. Add Words of Power ability (Tier uses per short rest)
 
 **Key Choices**:
 - Air and Positive are fixed (invoker signature energies)
@@ -116,6 +130,20 @@ The magical traits system provides a guided, step-by-step workflow for applying 
 - Earth and Space are fixed (infusion foundation)
 - 5th energy choice defines your imbuing style
 - Positive and Time for enhancement and duration
+
+### Alchemical Tradition (-5)
+**Requirements**: Intelligence ≥ 3
+
+**Workflow Steps**:
+1. No potential generation required
+2. Set Intelligence as effective Casting Stat
+3. Mark Alchemical Tradition as configured on the actor
+4. Use Craft: Alchemist and downtime rules for preparation creation
+
+**Key Notes**:
+- Alchemical Tradition does not use a personal Energy pool
+- Preparations are created from components, tools, and downtime
+- The weave list remains the reference for energy requirements
 
 ### Sorcerous Origin (-7)
 **Requirements**: Wisdom ≥ 3

@@ -1,5 +1,5 @@
 {
-  "_id": "108ba1e9ad204b9a",
+  "_id": "1066f3f17d8239ce",
   "name": "War Weaver",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Expanding your Weapon Weaver technique to work with more complex spells, seamlessly blending steel and sorcery in combinations that shouldn't be possible.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "meleeCombat:5",
       "feats": [
         "Weapon Weaver"
       ],
-      "tier": 3,
+      "tier": 0,
       "other": "any Energy Mastery 5"
     },
     "benefits": "<p>Your Weapon Weaver ability can now combine with weaves costing up to 4 Energy (instead of just 2 Energy or less)</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive enhancement"
+    },
     "keywords": "[Combat], [Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!108ba1e9ad204b9a"
+  "_key": "!items!1066f3f17d8239ce"
 }

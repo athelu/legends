@@ -1,5 +1,5 @@
 {
-  "_id": "151198e57eaf4fa3",
+  "_id": "40b7e073758ee105",
   "name": "Cape",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A sleeveless outer garment that drapes over the shoulders and back, providing some protection from weather.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 2.0,
     "cost": 7.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!151198e57eaf4fa3"
+  "_key": "!items!40b7e073758ee105"
 }

@@ -13,6 +13,8 @@
 
 ### Divine Gift Abilities - Channel Divinity
 
+Divine Gift characters have Channel Divinity uses equal to their current tier per long rest.
+
 #### Guided Strike (Alkira)
 - **Action Cost:** 1 [Combat] action or [Reaction]
 - **Trigger (if Reaction):** An ally within 60 feet makes an attack roll
@@ -170,8 +172,8 @@
 #### Words of Power
 - **Action Cost:** 1 [Combat] action
 - **Range:** 30 feet (must see allies)
-- **Frequency:** Once per short rest
-- **Effect:** Speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. The true names you speak resonate with power, guiding your allies toward success. Ancient glyphs and symbols briefly shimmer in the air as the word echoes with unnatural resonance.
+- **Frequency:** Tier times per short rest
+- **Effect:** Speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. Additionally, your next weave cast before the end of your next turn subtracts 1 from one targeting die result of your choice. The true names you speak resonate with power, guiding your allies toward success. Ancient glyphs and symbols briefly shimmer in the air as the word echoes with unnatural resonance.
 
 ### Infuser Abilities
 

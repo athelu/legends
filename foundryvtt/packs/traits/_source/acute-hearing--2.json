@@ -1,21 +1,28 @@
 {
-  "_id": "af0edf115cb547ea",
+  "_id": "8265bdf367d3b09f",
   "name": "Acute Hearing (-2)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>Ranges of sound increased.</p>\n<ul>\n<li>Initiative: +1</li>\n<li>Sound-based Perception: Subtract 1 from die results</li>\n</ul>"
+      "value": "<p>Ranges of sound increased.</p>"
     },
     "pointCost": -2,
     "traitType": "physical",
     "isMagical": false,
     "magicalType": "",
     "requirements": "",
-    "benefits": "",
+    "benefits": "<ul>\n<li>Initiative: +1</li>\n<li>Sound-based Perception: Subtract 1 from die results</li>\n</ul>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
     "requiresGMApproval": false,
     "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!af0edf115cb547ea"
+  "_key": "!items!8265bdf367d3b09f"
 }

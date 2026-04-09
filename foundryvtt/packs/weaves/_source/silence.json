@@ -1,5 +1,5 @@
 {
-  "_id": "79fc4b83d6be47c3",
+  "_id": "dfa48c5c568a70e9",
   "name": "Silence",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "Close, 30 ft. (20-foot radius sphere)",
     "duration": "10 minutes",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create 20-foot radius sphere of silence centered on a point at close range. No sound can be created within or pass through the sphere. Creatures inside are Deafened. Verbal components of weaves can't be performed inside (blocks invokers and most casters). Can cast on object; sphere moves with object.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes (30-foot radius)",
+          "duration": "10 minutes (30-foot radius)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 10 minutes (30-foot radius)",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 10 minutes (30-foot radius)",
     "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!79fc4b83d6be47c3"
+  "_key": "!items!dfa48c5c568a70e9"
 }

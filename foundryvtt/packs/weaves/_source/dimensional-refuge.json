@@ -1,5 +1,5 @@
 {
-  "_id": "20f81b686dc740df",
+  "_id": "274b81905060b8ed",
   "name": "Dimensional Refuge",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,25 +21,47 @@
     },
     "range": "Touch",
     "duration": "10 minutes",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Touch a surface to create an extradimensional space holding up to 8 Medium creatures. The surface may be closed like a door. From outside door and the space are invisible. Space holds up to 12 hours of air.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour",
     "weavingRoll": "Space Potential + Space Mastery + Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!20f81b686dc740df"
+  "_key": "!items!274b81905060b8ed"
 }

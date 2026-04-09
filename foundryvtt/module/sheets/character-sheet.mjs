@@ -3,6 +3,8 @@
  * Foundry VTT V13 - Application V2 (HandlebarsApplicationMixin + ActorSheetV2)
  * Uses: static DEFAULT_OPTIONS, static PARTS, _prepareContext(), data-action event delegation
  */
+import { SKILL_ATTRIBUTE_SHORT, SKILL_LABELS } from '../skill-utils.mjs';
+
 const { ActorSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
@@ -121,7 +123,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
   /** Handle numeric input changes and immediately update the actor */
   async _onNumericInputChange(event) {
-    const input = event.target;
+      for (let [key, label] of Object.entries(SKILL_LABELS)) {
     const fieldName = input.name;
     const value = input.value;
     
@@ -140,7 +142,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       
       if (Object.keys(expanded).length === 0) {
         console.warn('Update data expansion failed for field:', fieldName);
-        return;
+          attr: SKILL_ATTRIBUTE_SHORT[key],
       }
       
       await this.document.update(expanded);
@@ -163,7 +165,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const context = await super._prepareContext(options);
     const actorData = this.actor.toObject(false);
 
-    context.system = actorData.system;
+    context.system = foundry.utils.deepClone(this.actor.system);
     context.flags = actorData.flags;
     context.actor = actorData;
     context.owner = this.actor.isOwner;
@@ -175,60 +177,10 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const featMods = game.legends?.featEffects?.computeFeatModifiers?.(this.actor) || {};
     this._prepareAttributes(context, featMods);
     this._prepareSkills(context, featMods);
-
-    // Add tier information
-    context.tier = this._getTierInfo(context.system.tier?.xp || 0);
-
-    // Add magical trait helpers
     this._prepareMagicalTraitHelpers(context);
-
-    // Update header fields from background/ancestry items
-    const backgroundItem = this.actor.items.find(i => i.type === 'background');
-    const ancestryItem = this.actor.items.find(i => i.type === 'ancestry');
-
-    if (backgroundItem) {
-      context.system.biography.background = backgroundItem.name;
-    }
-    if (ancestryItem) {
-      context.system.biography.ancestry = ancestryItem.name;
-    }
-
-    // Enrich biography HTML
-    const TextEditor = foundry.applications.ux.TextEditor.implementation;
-    context.enrichedBiography = await TextEditor.enrichHTML(
-      context.system.biography.value,
-      {
-        secrets: this.actor.isOwner,
-        async: true
-      }
-    );
-
+    context.primaryAncestry = context.ancestries[0] || null;
+    context.tier = this._getTierInfo(context.system.tier?.xp ?? 0);
     return context;
-  }
-
-  /**
-   * Prepare attributes with base/bonus/total breakdowns
-   */
-  _prepareAttributes(context, featMods = {}) {
-    const attrs = context.system.attributes || {};
-    const eff = context.system.attributesEffective || {};
-    const list = [];
-    const attrBonuses = featMods.attributes || {};
-    for (const [key, attr] of Object.entries(attrs)) {
-      const base = attr?.value ?? 0;
-      const total = eff?.[key] ?? base;
-      const bonus = total - base;
-      // Build breakdown string
-      let breakdown = '';
-      if (bonus !== 0) {
-        breakdown = `Base: ${base}`;
-        if (attrBonuses[key]) breakdown += `\n+${attrBonuses[key]} from feats/abilities`;
-        // Add more sources here if needed
-        breakdown += `\n= ${total}`;
-      }
-      list.push({ key, label: attr.label || key, base, bonus, total, breakdown });
-    }
-    context.attributeList = list;
   }
 
   /**
@@ -347,67 +299,47 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   }
 
   /**
+   * Prepare attributes with ancestry and feat breakdowns.
+   */
+  _prepareAttributes(context, featMods = {}) {
+    const attributes = context.system.attributes || {};
+    const attributeList = [];
+    const featBonuses = featMods.attributes || {};
+    const ancestryBonuses = context.system.ancestryEffects?.attributes || {};
+
+    for (const [key, attribute] of Object.entries(attributes)) {
+      const base = attribute?.value ?? 0;
+      const ancestryBonus = ancestryBonuses[key] || 0;
+      const featBonus = featBonuses[key] || 0;
+      const effective = context.system.attributesEffective?.[key] ?? (base + ancestryBonus + featBonus);
+      const bonus = effective - base;
+
+      const breakdownLines = [`Base: ${base}`];
+      if (ancestryBonus) breakdownLines.push(`+${ancestryBonus} from ancestry`);
+      if (featBonus) breakdownLines.push(`+${featBonus} from feats/abilities`);
+      if (bonus) breakdownLines.push(`= ${effective}`);
+
+      attributeList.push({
+        key,
+        label: attribute?.label || key,
+        base,
+        bonus,
+        total: effective,
+        breakdown: bonus ? breakdownLines.join('\n') : ''
+      });
+    }
+
+    context.attributeList = attributeList;
+  }
+
+  /**
    * Prepare skills with labels
    */
   _prepareSkills(context, featMods = {}) {
     const skills = context.system.skills;
-    const skillLabels = {
-      athletics: "Athletics",
-      might: "Might",
-      devices: "Devices",
-      thievery: "Thievery",
-      writing: "Writing",
-      rangedCombat: "Ranged Combat",
-      craft: "Craft",
-      acrobatics: "Acrobatics",
-      meleeCombat: "Melee Combat",
-      stealth: "Stealth",
-      investigate: "Investigate",
-      language: "Language",
-      history: "History",
-      arcane: "Arcane",
-      society: "Society",
-      perception: "Perception",
-      survival: "Survival",
-      persuasion: "Persuasion",
-      deception: "Deception",
-      intimidate: "Intimidate",
-      perform: "Perform",
-      insight: "Insight",
-      medicine: "Medicine",
-      animalHandling: "Animal Handling"
-    };
-
-    const skillAttributes = {
-      athletics: "str",
-      might: "str",
-      devices: "dex",
-      thievery: "dex",
-      writing: "dex",
-      rangedCombat: "dex",
-      craft: "dex",
-      acrobatics: "agi",
-      meleeCombat: "agi",
-      stealth: "agi",
-      investigate: "int",
-      language: "int",
-      history: "int",
-      arcane: "int",
-      society: "int",
-      perception: "wis",
-      survival: "wis",
-      persuasion: "cha",
-      deception: "cha",
-      intimidate: "cha",
-      perform: "cha",
-      insight: "wis",
-      medicine: "wis",
-      animalHandling: "wis"
-    };
-
     const skillList = [];
     const skillBonuses = featMods.skills || {};
-    for (let [key, label] of Object.entries(skillLabels)) {
+    for (const [key, label] of Object.entries(SKILL_LABELS)) {
       const baseRaw = skills?.[key];
       const base = (typeof baseRaw === 'object') ? (baseRaw.value ?? 0) : (baseRaw ?? 0);
       const effective = context.system.skillsEffective?.[key] ?? base;
@@ -426,7 +358,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         base: base,
         bonus: bonus,
         total: effective,
-        attr: skillAttributes[key],
+        attr: SKILL_ATTRIBUTE_SHORT[key],
         breakdown
       });
     }
@@ -465,10 +397,12 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       'invoker': 'Invoker',
       'infuser': 'Infuser',
       'sorcerous-origin': 'Sorcerous Origin',
-      'eldritch-pact': 'Eldritch Pact'
+      'eldritch-pact': 'Eldritch Pact',
+      'alchemical-tradition': 'Alchemical Tradition'
     };
     
     context.magicalTraitDisplayName = traitNames[magicalTrait.type] || magicalTrait.type;
+    context.isAlchemicalTradition = magicalTrait.type === 'alchemical-tradition';
     
     // Enrich casting stat display
     if (context.system.castingStat && context.system.castingStat.value && context.system.attributes) {
@@ -556,58 +490,11 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
   /** @override */
   async _onDropItem(event, data) {
-    // Handle WeaveEffect drops (dragged from chat cards)
-    if (data.type === 'WeaveEffect') {
-      const caster = game.actors.get(data.casterId);
-      const weave = caster?.items.get(data.weaveId);
-      
-      if (!caster || !weave) {
-        ui.notifications.error("Unable to apply effect - weave or caster not found");
-        return;
-      }
-      
-      // Apply the effect using the effect engine
+    if (game.legends.isDraggedEffectData(data)) {
       try {
-        await game.legends.effectEngine.applyEffect({
-          actor: this.actor,
-          effectId: data.effectId,
-          origin: {
-            casterId: data.casterId,
-            weaveId: data.weaveId,
-            successes: data.casterSuccesses,
-            potential: caster.system.magicalPotential || 0
-          },
-          params: data.params || {},
-          netSuccesses: data.casterSuccesses // Use caster's successes as net when manually applied
-        });
-        
-        ui.notifications.info(`Applied ${data.effectId} to ${this.actor.name}`);
+        await game.legends.applyDraggedEffect(this.actor, data);
       } catch (err) {
-        console.error(`Failed to apply effect ${data.effectId}:`, err);
-        ui.notifications.error(`Failed to apply effect: ${err.message}`);
-      }
-      return;
-    }
-    
-    // Handle InlineEffect drops (dragged from enriched text)
-    if (data.type === 'InlineEffect') {
-      try {
-        await game.legends.effectEngine.applyEffect({
-          actor: this.actor,
-          effectId: data.effectId,
-          origin: {
-            casterId: this.actor.id, // Self-origin for inline effects
-            weaveId: null,
-            successes: 2, // Default to 2 successes (1 minute duration)
-            potential: 0
-          },
-          params: data.params || {},
-          netSuccesses: 2 // Default duration
-        });
-        
-        ui.notifications.info(`Applied ${data.effectId} to ${this.actor.name}`);
-      } catch (err) {
-        console.error(`Failed to apply effect ${data.effectId}:`, err);
+        console.error("Failed to apply dragged effect:", err);
         ui.notifications.error(`Failed to apply effect: ${err.message}`);
       }
       return;
@@ -1000,6 +887,9 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     
     // Type-specific details
     switch (item.type) {
+      case 'ancestry':
+        html += D8CharacterSheet._generateAncestrySummary(system);
+        break;
       case 'weapon':
         html += D8CharacterSheet._generateWeaponSummary(system);
         break;
@@ -1022,10 +912,72 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       case 'action':
         html += D8CharacterSheet._generateActionSummary(system);
         break;
+      case 'condition':
+        html += D8CharacterSheet._generateConditionSummary(system);
+        break;
       default:
         html += D8CharacterSheet._generateGenericSummary(system);
     }
     
+    return html;
+  }
+
+  static _generateAncestrySummary(system) {
+    let html = '<div class="details-section">';
+
+    if (system.size) {
+      html += `<div class="detail-row"><span class="detail-label">Size:</span><span class="detail-value">${system.size}</span></div>`;
+    }
+    if (Number.isFinite(system.speed)) {
+      html += `<div class="detail-row"><span class="detail-label">Speed:</span><span class="detail-value">${system.speed} ft</span></div>`;
+    }
+    if (Number.isFinite(system.lifespan) && system.lifespan > 0) {
+    if (system.requirements) {
+      html += `<div class="detail-row"><span class="detail-label">Requirements:</span><span class="detail-value">${system.requirements}</span></div>`;
+    }
+    if (system.trigger) {
+      html += `<div class="detail-row"><span class="detail-label">Trigger:</span><span class="detail-value">${system.trigger}</span></div>`;
+    }
+    if (system.range) {
+      html += `<div class="detail-row"><span class="detail-label">Range:</span><span class="detail-value">${system.range}</span></div>`;
+    }
+    if (system.target) {
+      html += `<div class="detail-row"><span class="detail-label">Target:</span><span class="detail-value">${system.target}</span></div>`;
+    }
+    if (system.frequency) {
+      html += `<div class="detail-row"><span class="detail-label">Frequency:</span><span class="detail-value">${system.frequency}</span></div>`;
+    }
+      html += `<div class="detail-row"><span class="detail-label">Lifespan:</span><span class="detail-value">${system.lifespan} years</span></div>`;
+    }
+    if (system.traits) {
+      html += `<div class="detail-row"><span class="detail-label">Traits:</span><span class="detail-value">${system.traits}</span></div>`;
+    }
+
+    if (system.effect) {
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Effect:</span><span class="detail-value">${system.effect.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+
+    if (system.special) {
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Special:</span><span class="detail-value">${system.special.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+    if (system.languages) {
+      html += `<div class="detail-row"><span class="detail-label">Languages:</span><span class="detail-value">${system.languages.replace(/\n/g, '<br>')}</span></div>`;
+    }
+    if (system.senses) {
+      html += `<div class="detail-row"><span class="detail-label">Senses:</span><span class="detail-value">${system.senses.replace(/\n/g, '<br>')}</span></div>`;
+    }
+    html += '</div>';
+
+    if (system.specialAbilities) {
+      html += `<h4>Special Abilities</h4><div class="details-section"><div class="detail-row"><span class="detail-value">${system.specialAbilities.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+    if (system.culture) {
+      html += `<h4>Culture</h4><div class="details-section"><div class="detail-row"><span class="detail-value">${system.culture.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+    if (system.physicalDescription) {
+      html += `<h4>Physical Description</h4><div class="details-section"><div class="detail-row"><span class="detail-value">${system.physicalDescription.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+
     return html;
   }
 
@@ -1091,31 +1043,40 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    */
   static _generateShieldSummary(system) {
     let html = '';
-    
+    const linkedAbilities = Array.isArray(system.linkedAbilities) ? system.linkedAbilities : [];
+
     html += '<div class=\"details-section\">';
-    
+
     if (system.shieldType) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Type:</span><span class=\"detail-value\">${system.shieldType}</span></div>`;
     }
-    
+
     if (system.handUsage) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Hand Usage:</span><span class=\"detail-value\">${system.handUsage}</span></div>`;
     }
-    
+
     if (system.meleeDefense) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Melee Defense:</span><span class=\"detail-value\">${system.meleeDefense}</span></div>`;
     }
-    
+
+    if (system.requirements) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Requirements:</span><span class=\"detail-value\">${system.requirements}</span></div>`;
+    }
+
+    if (system.plantedMode) {
+      html += '<div class=\"detail-row\"><span class=\"detail-label\">Planted:</span><span class=\"detail-value\">Yes</span></div>';
+    }
+
     if (system.weight) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Weight:</span><span class=\"detail-value\">${system.weight} lbs</span></div>`;
     }
-    
+
     if (system.cost) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Cost:</span><span class=\"detail-value\">${system.cost} gp</span></div>`;
     }
-    
+
     html += '</div>';
-    
+
     if (system.reactions?.length) {
       html += '<h4>Reactions</h4><div class=\"details-section\">';
       system.reactions.forEach(reaction => {
@@ -1123,11 +1084,19 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       });
       html += '</div>';
     }
-    
+
+    if (linkedAbilities.length) {
+      html += '<h4>Granted Abilities</h4><div class=\"details-section\">';
+      linkedAbilities.forEach(ability => {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">${ability.name || 'Ability'}:</span><span class=\"detail-value\">Granted while equipped</span></div>`;
+      });
+      html += '</div>';
+    }
+
     if (system.specialAbilities) {
       html += `<div class=\"details-section\"><div class=\"detail-row\"><span class=\"detail-label\">Special Abilities:</span><span class=\"detail-value\">${system.specialAbilities}</span></div></div>`;
     }
-    
+
     return html;
   }
 
@@ -1158,12 +1127,14 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       if (costs.primary || costs.supporting) {
         html += '<h4>Energy Costs</h4><div class="details-section">';
         if (costs.primary && (costs.primary.type || costs.primary.cost)) {
-          const primaryIcon = costs.primary.type ? `<img src="systems/legends/images/icons/magic/${costs.primary.type}.svg" width="16" height="16" style="vertical-align: middle; margin-right: 4px;" title="${costs.primary.type}" />` : '';
-          html += `<div class="detail-row"><span class="detail-label">Primary:</span><span class="detail-value">${primaryIcon}${costs.primary.type || 'Unknown'} ${costs.primary.cost || 0}</span></div>`;
+          const primaryTypeLabel = costs.primary.type === 'variable-elemental' ? 'Variable Elemental' : (costs.primary.type || 'Unknown');
+          const primaryIcon = costs.primary.type && costs.primary.type !== 'variable-elemental' ? `<img src="systems/legends/images/icons/magic/${costs.primary.type}.svg" width="16" height="16" style="vertical-align: middle; margin-right: 4px;" title="${costs.primary.type}" />` : '';
+          html += `<div class="detail-row"><span class="detail-label">Primary:</span><span class="detail-value">${primaryIcon}${primaryTypeLabel} ${costs.primary.cost || 0}</span></div>`;
         }
         if (costs.supporting && (costs.supporting.type || costs.supporting.cost)) {
-          const supportIcon = costs.supporting.type ? `<img src="systems/legends/images/icons/magic/${costs.supporting.type}.svg" width="16" height="16" style="vertical-align: middle; margin-right: 4px;" title="${costs.supporting.type}" />` : '';
-          html += `<div class="detail-row"><span class="detail-label">Supporting:</span><span class="detail-value">${supportIcon}${costs.supporting.type || 'Unknown'} ${costs.supporting.cost || 0}</span></div>`;
+          const supportingTypeLabel = costs.supporting.type === 'variable-elemental' ? 'Variable Elemental' : (costs.supporting.type || 'Unknown');
+          const supportIcon = costs.supporting.type && costs.supporting.type !== 'variable-elemental' ? `<img src="systems/legends/images/icons/magic/${costs.supporting.type}.svg" width="16" height="16" style="vertical-align: middle; margin-right: 4px;" title="${costs.supporting.type}" />` : '';
+          html += `<div class="detail-row"><span class="detail-label">Supporting:</span><span class="detail-value">${supportIcon}${supportingTypeLabel} ${costs.supporting.cost || 0}</span></div>`;
         }
         html += '</div>';
       }
@@ -1188,6 +1159,15 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    */
   static _generateFeatSummary(system) {
     let html = '';
+
+    if (system.classification) {
+      const classificationLabel = system.classification === 'legendary' ? 'Legendary' : 'Standard';
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Classification:</span><span class=\"detail-value\">${classificationLabel}</span></div>`;
+    }
+
+    if (Number.isFinite(system.xpCost) && system.xpCost > 0) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">XP Cost:</span><span class=\"detail-value\">${system.xpCost}</span></div>`;
+    }
     
     if (system.prerequisites) {
       const prereqText = D8CharacterSheet._formatPrerequisites(system.prerequisites);
@@ -1234,32 +1214,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     };
     
     // Skill names map
-    const skillNames = {
-      athletics: 'Athletics',
-      might: 'Might',
-      devices: 'Devices',
-      thievery: 'Thievery',
-      writing: 'Writing',
-      rangedCombat: 'Ranged Combat',
-      craft: 'Craft',
-      acrobatics: 'Acrobatics',
-      meleeCombat: 'Melee Combat',
-      stealth: 'Stealth',
-      investigate: 'Investigation',
-      language: 'Language',
-      history: 'History',
-      arcane: 'Arcana',
-      society: 'Society',
-      perception: 'Perception',
-      survival: 'Survival',
-      persuasion: 'Persuasion',
-      deception: 'Deception',
-      intimidate: 'Intimidation',
-      perform: 'Performance',
-      insight: 'Insight',
-      medicine: 'Medicine',
-      animalHandling: 'Animal Handling'
-    };
+    const skillNames = SKILL_LABELS;
     
     // Format attributes
     if (prereqs.attributes && typeof prereqs.attributes === 'object') {
@@ -1338,6 +1293,40 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       html += D8CharacterSheet._generateTraitTags(system.keywords);
     }
     
+    return html;
+  }
+
+  /**
+   * Generate condition summary content
+   */
+  static _generateConditionSummary(system) {
+    let html = '<div class="details-section">';
+
+    if (system.category) {
+      html += `<div class="detail-row"><span class="detail-label">Category:</span><span class="detail-value">${system.category}</span></div>`;
+    }
+    if (system.severity) {
+      html += `<div class="detail-row"><span class="detail-label">Severity:</span><span class="detail-value">${system.severity}</span></div>`;
+    }
+    if (system.stacking) {
+      html += `<div class="detail-row"><span class="detail-label">Stacking:</span><span class="detail-value">${system.stacking}</span></div>`;
+    }
+    if ((system.stacks || 0) > 1) {
+      html += `<div class="detail-row"><span class="detail-label">Stacks:</span><span class="detail-value">${system.stacks}</span></div>`;
+    }
+    if (system.damageTick?.formula && system.damageTick?.frequency) {
+      html += `<div class="detail-row"><span class="detail-label">Damage Tick:</span><span class="detail-value">${system.damageTick.formula} (${system.damageTick.frequency})</span></div>`;
+    }
+    if (system.appliesConditions?.length) {
+      html += `<div class="detail-row"><span class="detail-label">Applies:</span><span class="detail-value">${system.appliesConditions.join(', ')}</span></div>`;
+    }
+
+    html += '</div>';
+
+    if (system.keywords?.length) {
+      html += D8CharacterSheet._generateTraitTags(system.keywords);
+    }
+
     return html;
   }
 

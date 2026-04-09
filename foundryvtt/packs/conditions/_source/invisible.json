@@ -1,0 +1,47 @@
+{
+  "_id": "0c96a31ec07bf87a",
+  "name": "Invisible",
+  "type": "condition",
+  "img": "icons/svg/invisible.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Tactical] <strong>Effect:</strong> Magically induced state of Invisibility. Grants Hidden condition. <strong>Recovery:</strong> Opposed by Observers [[/check skill=perception]] reducing effect to Concealed.</p>"
+    },
+    "label": "Invisible",
+    "category": "visibility",
+    "keywords": [
+      "Tactical"
+    ],
+    "tokenIcon": "icons/svg/invisible.svg",
+    "activeEffects": [],
+    "appliesConditions": [
+      "Hidden"
+    ],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "check",
+      "removeOnSuccess": false,
+      "check": {
+        "skill": "perception",
+        "attribute": "",
+        "skills": [
+          "perception"
+        ],
+        "attributes": [],
+        "opposed": true,
+        "label": "perception"
+      },
+      "downgrades": {
+        "margin_1_plus": "Concealed"
+      }
+    }
+  },
+  "flags": {},
+  "_key": "!items!0c96a31ec07bf87a"
+}

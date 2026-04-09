@@ -1,0 +1,37 @@
+{
+  "_id": "757476e1289408bb",
+  "name": "Poisoned (Deadly)",
+  "type": "condition",
+  "img": "icons/svg/poison.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All attribute dice: Add 2 to die results.  Long and short rests provide no benefit..Target takes [[/damage 8]] damage each hour until the condition is removed. <strong>Recovery:</strong> [[/save type=fortitude]] at end of 4 hours (1 success). Antidote can remove condition early.</p>"
+    },
+    "label": "Poisoned (Deadly)",
+    "category": "incapacitation",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/poison.svg",
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "severe",
+    "overlayPriority": 30,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "save",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "fortitude"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Poisoned (Deadly)"
+    }
+  },
+  "flags": {},
+  "_key": "!items!757476e1289408bb"
+}

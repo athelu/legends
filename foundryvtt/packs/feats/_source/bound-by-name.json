@@ -1,0 +1,39 @@
+{
+  "_id": "c02f603a16c45234",
+  "name": "Bound by Name",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>When you speak something's true name as part of a binding weave, the magic carries an authority that transcends ordinary compulsion.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "",
+      "feats": [
+        "Invoker",
+        "True Name Seeker"
+      ],
+      "tier": 0,
+      "other": "Air Mastery 3"
+    },
+    "benefits": "<p>When you cast a control or compulsion weave against a creature you have used True Name Seeker on, that creature adds 1 to both saving throw dice. Additionally, if the creature fails its save, the condition duration increases by one step on the duration table. This benefit applies once per creature per encounter.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive, enhances control weaves"
+    },
+    "keywords": "[Magic], [Invoker], [Control]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!c02f603a16c45234"
+}

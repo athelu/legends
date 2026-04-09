@@ -1,21 +1,81 @@
 {
-  "_id": "651981aa75c046a7",
+  "_id": "bac283babbdc89c9",
   "name": "Investigator",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You made your living uncovering truths that others wanted hidden. You developed a reputation for finding answers. Your skills at noticing details and following leads are invaluable, even if your companions find your constant questions irritating. <strong>Skills:</strong> Investigate 3, Perception 2, +32 XP <strong>Equipment:</strong> Magnifying glass, journal, ink, quill, fine clothes, shoes <strong>Feature</strong> - Keen Mind: When examining a crime scene or mystery, the GM will provide one crucial clue or detail others might miss.</p>"
+      "value": "<p>You made your living uncovering truths that others wanted hidden. You developed a reputation for finding answers. Your skills at noticing details and following leads are invaluable, even if your companions find your constant questions irritating.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 32,
+    "skillBonuses": "Investigate 3, Perception 2, +32 XP",
+    "startingEquipment": "Magnifying glass\njournal\nink\nquill\nfine clothes\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Keen Mind: When examining a crime scene or mystery, you may uncover one crucial clue or detail others might miss.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "investigate": 3,
+      "perception": 2
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Magnifying Glass",
+        "quantity": 1,
+        "originalText": "Magnifying glass",
+        "sourceId": "0c1ef171ce564a54"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Journal",
+        "quantity": 1,
+        "originalText": "journal",
+        "sourceId": "1b02ead55fc70f66"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Ink, 1 oz",
+        "quantity": 1,
+        "originalText": "ink",
+        "sourceId": "0a04bf0388f541a3"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Quill",
+        "quantity": 1,
+        "originalText": "quill",
+        "sourceId": "4e18e27b51e765ec"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!651981aa75c046a7"
+  "_key": "!items!bac283babbdc89c9"
 }

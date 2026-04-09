@@ -1,0 +1,38 @@
+{
+  "_id": "bbbeb684f2a88883",
+  "name": "Aggressive Block",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Stopping their attack is only the first half.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [
+        "Shield Master"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you completely negate an attack using Shield Master's once-per-combat negation, you may immediately drive your shield into the attacker as a [Free] action. Make an attack using Strength + Melee Combat. On hit, deal [[/damage 4 type=bludgeoning]] damage regardless of shield size and the target is pushed 5 feet directly away from you.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Triggers on Shield Master negation"
+    },
+    "keywords": "[Combat], [Shield]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!bbbeb684f2a88883"
+}

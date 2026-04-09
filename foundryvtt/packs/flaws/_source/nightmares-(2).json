@@ -1,21 +1,22 @@
 {
-  "_id": "39072a6a7388494c",
+  "_id": "fb272ad5c9a1e8f6",
   "name": "Nightmares (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Horrible nightmares prevent restful sleep.</p>\n<ul>\n<li>Long rest only restores half Luck (rounded down)</li>\n</ul>"
+      "value": "<p>Horrible nightmares prevent restful sleep.</p>"
     },
     "pointValue": 2,
-    "flawType": "",
-    "severity": "moderate",
-    "mechanicalEffects": "",
+    "flawType": "mental",
+    "severity": "minor",
+    "mechanicalEffects": "<ul>\n<li>Long rest only restores half Luck (rounded down)</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!39072a6a7388494c"
+  "_key": "!items!fb272ad5c9a1e8f6"
 }

@@ -1,21 +1,22 @@
 {
-  "_id": "bfbeebe2743f44ba",
+  "_id": "b31a4dc5b335b423",
   "name": "Deafness (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Totally deaf.</p>\n<ul>\n<li>Permanently Deafened (see Deafened condition)</li>\n</ul>"
+      "value": "<p>Totally deaf.</p>"
     },
     "pointValue": 3,
-    "flawType": "",
+    "flawType": "physical",
     "severity": "moderate",
-    "mechanicalEffects": "",
+    "mechanicalEffects": "<ul>\n<li>Permanently Deafened (see Deafened condition)</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!bfbeebe2743f44ba"
+  "_key": "!items!b31a4dc5b335b423"
 }
