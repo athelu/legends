@@ -1,31 +1,37 @@
 {
-  "_id": "d7bcc89114a64cbd",
+  "_id": "b9abad523a0488a0",
   "name": "Chilled",
   "type": "condition",
   "img": "icons/svg/frozen.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Cold has numbed extremities and slowed reactions slightly. Agility based skill checks: Subtract 1 from one die on your next action. <strong>Recovery:</strong> Automatically ends after character’s next action.</p>"
+    },
     "label": "Chilled",
     "category": "magic",
-    "description": {
-      "value": "<ul>\n<li>Cold has numbed extremities and slowed reactions slightly</li>\n<li>Agility based skill checks: Subtract 1 from one die on your next action</li>\n<li>Initiative: -1 for this round only</li>\n<li>Duration: Until end of your next turn</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends after specified duration</li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/frozen.svg",
-    "activeEffects": [
-      {
-        "key": "initiative.flat",
-        "mode": "add",
-        "value": -1,
-        "notes": "-1 to initiative"
-      }
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [
+      "Chilled",
+      "Numbed",
+      "Frosted",
+      "Frozen"
     ],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "minor",
     "overlayPriority": 10,
+    "damageTick": null,
     "recovery": {
-      "trigger": "endOfTurn",
-      "removeOnSuccess": true
+      "trigger": "onEvent",
+      "method": "automatic",
+      "removeOnSuccess": false
     }
   },
   "flags": {},
-  "_key": "!items!d7bcc89114a64cbd"
+  "_key": "!items!b9abad523a0488a0"
 }

@@ -1,21 +1,56 @@
 {
-  "_id": "77a041bf65f442af",
+  "_id": "8e3a496c75fa8f59",
   "name": "Courier",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Time was always your enemy. You raced against weather, bandits, and deadlines, carrying messages and packages that others deemed too valuable to trust to slower methods. The pay was decent, the life was exciting, and you saw more of the world than most people dream of. Adventuring is just a logical extension and now at least you can fight back when someone tries to rob you. <strong>Skills:</strong> Athletics 2, Society 2, Perception 1, Wilderness 1, +40 XP <strong>Equipment:</strong> Traveler's clothes, map case, riding boots <strong>Feature</strong> - Swift Delivery: You know the fastest routes between settlements and can navigate unfamiliar cities quickly.</p>"
+      "value": "<p>Time was always your enemy. You raced against weather, bandits, and deadlines, carrying messages and packages that others deemed too valuable to trust to slower methods. The pay was decent, the life was exciting, and you saw more of the world than most people dream of. Adventuring is just a logical extension and now at least you can fight back when someone tries to rob you.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Athletics 2, Society 2, Perception 1, Wilderness 1, +40 XP",
+    "startingEquipment": "Traveler's clothes\nmap case\nriding boots",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Swift Delivery: You know the fastest routes between settlements and can navigate unfamiliar cities quickly.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "athletics": 2,
+      "society": 2,
+      "perception": 1,
+      "wilderness": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Traveler's",
+        "quantity": 1,
+        "originalText": "Traveler's clothes",
+        "sourceId": "0e79b3267533a030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Map Case",
+        "quantity": 1,
+        "originalText": "map case",
+        "sourceId": "c9a749f06795873a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Riding",
+        "quantity": 1,
+        "originalText": "riding boots",
+        "sourceId": "57a56e7ad7873677"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!77a041bf65f442af"
+  "_key": "!items!8e3a496c75fa8f59"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "04b57bdd3d1f4d8e",
+  "_id": "6b6df38e8d6fde31",
   "name": "Seal of Warding",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,25 +21,47 @@
     },
     "range": "Touch",
     "duration": "1 hour (or permanent until dispelled)",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Magically seal one door, window, gate, chest, or similar closure. Add 4 to die results for anyone attempting to open it. You and designated creatures can open freely.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "until dispelled",
+          "duration": "until dispelled"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "add 1 additional penalty (+5 total)",
+          "duration": "add 1 additional penalty (+5 total)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 10 minutes\n- 2 = until dispelled\n- 3 = add 1 additional penalty (+5 total)",
+    "targetingSuccessScaling": "0 = fails, 1 = 10 minutes, 2= until dispelled, 3 = add 1 additional penalty (+5 total)",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!04b57bdd3d1f4d8e"
+  "_key": "!items!6b6df38e8d6fde31"
 }

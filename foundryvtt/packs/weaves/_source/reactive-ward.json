@@ -1,5 +1,5 @@
 {
-  "_id": "a060bfceeedd4bf8",
+  "_id": "87528ea149df4809",
   "name": "Reactive Ward",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "self, touch",
     "duration": "Until end of next turn",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "When hit by an attack or targeted by Unerring Bolt, gain Fortune on your defense roll (or automatically block Unerring Bolt). Applies to the triggering attack and any others until end of your next turn.",
+    "effectType": "buff",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "triggering attack only",
+          "duration": "triggering attack only"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 turn",
+          "duration": "1 turn"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 turn (+4 DR)",
+          "duration": "1 turn (+4 DR)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = triggering attack only\n- 2 = 1 turn\n- 3 = 1 turn (+4 DR)",
+    "targetingSuccessScaling": "0 = fails, 1 = triggering attack only, 2= 1 turn, 3 = 1 turn (+4 DR)",
     "weavingRoll": "Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "buff",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!a060bfceeedd4bf8"
+  "_key": "!items!87528ea149df4809"
 }

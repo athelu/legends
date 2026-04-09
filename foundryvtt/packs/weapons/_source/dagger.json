@@ -1,5 +1,5 @@
 {
-  "_id": "a2038aef2ed44d48",
+  "_id": "c9b8ba110e2e1e6e",
   "name": "Dagger",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 4,
       "type": "piercing",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": "slashing"
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
-        "damageAttr": "agility",
+        "skill": "melee",
+        "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 4,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -37,14 +37,14 @@
         }
       },
       {
-        "name": "Ranged",
-        "type": "ranged",
-        "skill": "rangedCombat",
-        "damageAttr": "agility",
+        "name": "Thrown",
+        "type": "thrown",
+        "skill": "ranged",
+        "damageAttr": "dexterity",
         "defenseType": "ranged",
         "damage": {
           "base": 4,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 30,
@@ -62,8 +62,10 @@
       "thrown",
       "finesse"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!a2038aef2ed44d48"
+  "_key": "!items!c9b8ba110e2e1e6e"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "4510cd517f6c468f",
+  "_id": "658bd37721d19580",
   "name": "Extraplanar Binding",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,15 +23,36 @@
     "duration": "1 hour",
     "target": "",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes Will save. Compare your targeting successes to their save successes. If you have more, creature must serve you for duration or until completing one task. Must negotiate payment/service.",
+    "effectType": "summon",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 10 minutes\n- 2 = 1 hour\n- 3 = 4 hours",
+    "targetingSuccessScaling": "0 = Fails, 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours",
     "weavingRoll": "Space Potential + Space Mastery + Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
@@ -42,5 +63,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!4510cd517f6c468f"
+  "_key": "!items!658bd37721d19580"
 }

@@ -1,27 +1,39 @@
 {
-  "_id": "333e845692284b68",
+  "_id": "32317884223f36c0",
   "name": "Ignited",
   "type": "condition",
   "img": "icons/svg/fire.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Character is on fire. Take [[/damage 4 type=fire]] damage at the beginning of each of your turns. <strong>Recovery:</strong> Use 1 [Action] to drop and roll: Make [[/save type=reflex]]</p>\n<ul>\n<li>1 success: Reduce condition to Smoldering</li>\n<li>2 success: Remove all fire conditions</li>\n</ul>\n<p><strong>Ally assistance:</strong> Ally within 5 feet can use 1 [Action]: Automatic extinguish</p>"
+    },
     "label": "Ignited",
     "category": "magic",
-    "description": {
-      "value": "<ul>\n<li>Character is on fire</li>\n<li>Take [[/damage 1d8 type=fire]] damage at the start of each of your turns</li>\n<li>Duration: Until extinguished</li>\n</ul>\n<p><strong>Extinguishing Fire (Choose one):</strong></p>\n<ul>\n<li>Use 1 [Action] to drop and roll: Make [[/save type=reflex]]\n<ul>\n<li>1 success: Ignited ends</li>\n<li>0 successes: Remains Ignited</li>\n</ul></li>\n<li>Ally within 5 feet can use 1 [Action]: Automatic extinguish</li>\n<li>Jump in water or smother flames: Automatic extinguish</li>\n<li>Take cold damage of any amount: Automatic extinguish</li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/fire.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [
+      "Singed",
+      "Smoldering",
+      "Ignited",
+      "Burning"
+    ],
     "stacking": "duration-merge",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
     "damageTick": {
       "frequency": "startOfTurn",
-      "formula": "1d8",
+      "formula": "4",
       "showInChat": true,
-      "chatMessage": "Take [[/damage 1d8 type=fire]] damage from Ignited"
+      "chatMessage": "Take [[/damage 4 type=fire]] damage from Ignited"
     },
     "recovery": {
-      "trigger": "endOfTurn",
+      "trigger": "onEvent",
+      "method": "save",
       "removeOnSuccess": true,
       "save": {
         "type": "reflex"
@@ -32,12 +44,11 @@
         "range": 5
       },
       "downgrades": {
-        "1_success": null,
         "2_success": null,
-        "0_success": "Ignited"
+        "1_success": "Smoldering"
       }
     }
   },
   "flags": {},
-  "_key": "!items!333e845692284b68"
+  "_key": "!items!32317884223f36c0"
 }

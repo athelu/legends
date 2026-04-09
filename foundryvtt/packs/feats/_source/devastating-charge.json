@@ -1,5 +1,5 @@
 {
-  "_id": "140f28fcc21f40c4",
+  "_id": "43d21c8663236170",
   "name": "Devastating Charge",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Momentum is a weapon all its own. When you build up speed and slam into an opponent, the impact is tremendous.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "strength": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>If you move at least 20 feet straight toward a target before making a melee attack on your turn, you can choose one: either subtract 1 from both attack dice, or make a shove attempt as part of the same action (both use same action)</p>",
-    "usageType": "unlimited",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Unlimited"
+    },
     "keywords": "[Combat], [Move]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!140f28fcc21f40c4"
+  "_key": "!items!43d21c8663236170"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "7f47bb4a1eee4cfd",
+  "_id": "1b28619b1947bab1",
   "name": "Vampiric Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,22 +21,43 @@
     },
     "range": "Touch",
     "duration": "1 minute (charge duration)",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Your touch deals 12 negative damage. You heal HP equal to half damage dealt. Can hold the charge for up to 1 minute and attack multiple times if charge remains. This is an attack weave when discharging—no saving throw on the touch.",
+    "effectType": "healing",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "6 damage (heal 3)",
+          "duration": "6 damage (heal 3)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "12 damage (heal 6)",
+          "duration": "12 damage (heal 6)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "16 damage (heal 8)",
+          "duration": "16 damage (heal 8)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 6 damage (heal 3)\n- 2 = 12 damage (heal 6)\n- 3 = 16 damage (heal 8)",
+    "targetingSuccessScaling": "0 = fails, 1 = 6 damage (heal 3), 2= 12 damage (heal 6), 3 = 16 damage (heal 8)",
     "weavingRoll": "Negative Potential + Negative Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [
       {
-        "effectId": "weakened",
+        "effectId": "Weakened",
         "params": {}
       }
     ],
@@ -47,5 +68,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!7f47bb4a1eee4cfd"
+  "_key": "!items!1b28619b1947bab1"
 }

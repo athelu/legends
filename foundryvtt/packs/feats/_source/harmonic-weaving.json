@@ -1,5 +1,5 @@
 {
-  "_id": "e9a002667f044661",
+  "_id": "11df7afbd212e32a",
   "name": "Harmonic Weaving",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
@@ -8,20 +8,29 @@
       "value": "<p>Your enlightened state grants moments of perfect clarity where you perceive the optimal weave before it happens</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "",
-      "feats": [],
-      "tier": 1,
-      "other": "Sorcerous Origin trait"
+      "feats": [
+        "Sorcerous Origin"
+      ],
+      "tier": 0,
+      "other": ""
     },
     "benefits": "<p>This is the core ability of Sorcerous Origin, automatically gained with the trait. When you cast a weave, you can reroll one die (either a Potential die or Mastery die) and take the better result. Can use this Wisdom times per long rest</p>",
-    "usageType": "wisdom",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Wisdom times per long rest"
+    },
     "keywords": "[Magic], [Sorcerer]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!e9a002667f044661"
+  "_key": "!items!11df7afbd212e32a"
 }

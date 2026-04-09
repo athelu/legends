@@ -1,0 +1,38 @@
+{
+  "_id": "3fe88ac8bfe00108",
+  "name": "Bleeding Flurry",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Two blades leave two wounds.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 5
+      },
+      "skills": "meleeCombat:5",
+      "feats": [
+        "Dual Strike"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When Dual Strike triggers, the target also gains 1 Bleeding stack in addition to the bonus damage.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive, triggers when Dual Strike activates"
+    },
+    "keywords": "[Combat], [Dual]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!3fe88ac8bfe00108"
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "59aeac0623364732",
+  "_id": "13de2709f83441e8",
   "name": "Secured Identity",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Your organization protects its operatives</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": "Organizational Training"
     },
     "benefits": "<p>Your organization provides identity protection and operational security. Gain <strong>Fortune</strong> on saves against prophecy weaves and truth detection. Can request your organization erase records of your activity in specific locations (takes 1 week, GM approval required). Once per mission, can call for extraction from dangerous situation</p>",
-    "usageType": "passive",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive + special requests"
+    },
     "keywords": "[Faction], [Save]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!59aeac0623364732"
+  "_key": "!items!13de2709f83441e8"
 }

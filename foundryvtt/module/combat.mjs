@@ -46,12 +46,13 @@ export async function rollWeaponAttack(actor, weapon) {
  */
 async function showAttackOptionsDialog(actor, weapon, attackMode) {
   const properties = weapon.system.properties || [];
+  const isMeleeMode = attackMode?.skill === 'melee' || attackMode?.type === 'melee';
   
   // Determine what options to show
   const hasVersatile = properties.includes('versatile');
   const hasMultiType = properties.includes('multi-type');
   const hasAlternateStrike = properties.includes('alternate-strike');
-  const hasFinesse = properties.includes('finesse');
+  const hasFinesse = properties.includes('finesse') && isMeleeMode;
   
   // If no special options, return default config
   if (!hasVersatile && !hasMultiType && !hasAlternateStrike && !hasFinesse) {
@@ -111,7 +112,7 @@ async function showAttackOptionsDialog(actor, weapon, attackMode) {
     `;
   }
   
-  // Finesse: Strength vs Agility (use effective values with bonuses)
+  // Finesse only affects melee damage choice.
   if (hasFinesse) {
     const str = actor.system.attributesEffective?.strength ?? actor.system.attributes.strength.value;
     const agi = actor.system.attributesEffective?.agility ?? actor.system.attributes.agility.value;
@@ -223,7 +224,7 @@ async function showAttackModeDialog(weapon, attackModes) {
             ${attackModes.map((mode, idx) => `
               <option value="${idx}">
                 ${mode.name}
-                (${mode.skill === 'melee' ? 'Melee Combat' : 'Ranged Combat'}
+                (${mode.type === 'thrown' ? 'Thrown' : (mode.skill === 'melee' ? 'Melee Combat' : 'Ranged Combat')}
                 ${mode.range.normal > 0 ? `, Range: ${mode.range.normal}/${mode.range.medium}/${mode.range.long}` : ''})
               </option>
             `).join('')}
@@ -460,7 +461,7 @@ export async function handleDefenseClick(messageId, attackData) {
 async function _continueDefenseFlow(defenseType, defender, attackData, messageId) {
   if (defenseType === 'melee') {
     await rollMeleeDefense(defender, attackData, messageId);
-  } else if (defenseType === 'ranged-reflex') {
+  } else if (defenseType === 'ranged-reflex' || defenseType === 'ranged') {
     await handleRangedDefense(defender, attackData, messageId);
   } else if (defenseType === 'none') {
     await calculateDamage(attackData, messageId, 0, attackData.attackSuccesses, attackData._shieldEffect);
@@ -952,20 +953,43 @@ export function initializeCombatSystem() {
     html.querySelectorAll('.draggable-effect').forEach(effectEl => {
       effectEl.addEventListener('dragstart', (event) => {
         const effectId = effectEl.dataset.effectId;
+        const operation = effectEl.dataset.operation || 'apply';
+        const sourceType = effectEl.dataset.sourceType;
         const casterId = effectEl.dataset.casterId;
         const weaveId = effectEl.dataset.weaveId;
-        const casterSuccesses = parseInt(effectEl.dataset.casterSuccesses);
+        const casterSuccesses = parseInt(effectEl.dataset.casterSuccesses || '0');
+        const actorId = effectEl.dataset.actorId;
+        const itemId = effectEl.dataset.itemId;
+        const itemName = effectEl.dataset.itemName;
         const params = JSON.parse(effectEl.dataset.params || '{}');
-        
-        // Set drag data with effect information
-        const dragData = {
-          type: 'WeaveEffect',
-          effectId: effectId,
-          casterId: casterId,
-          weaveId: weaveId,
-          casterSuccesses: casterSuccesses,
-          params: params
-        };
+
+        let dragData;
+        if (effectEl.classList.contains('inline-effect')) {
+          dragData = {
+            type: 'InlineEffect',
+            effectId,
+            params
+          };
+        } else if (sourceType === 'item') {
+          dragData = {
+            type: 'ItemEffect',
+            effectId,
+            operation,
+            actorId: actorId || '',
+            itemId: itemId || '',
+            itemName: itemName || '',
+            params
+          };
+        } else {
+          dragData = {
+            type: 'WeaveEffect',
+            effectId,
+            casterId,
+            weaveId,
+            casterSuccesses,
+            params
+          };
+        }
         
         event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
       });

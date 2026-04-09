@@ -1,5 +1,5 @@
 {
-  "_id": "b7e46d59ff6c4938",
+  "_id": "0a04bf0388f541a3",
   "name": "Ink, 1 oz",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -12,9 +12,23 @@
     "cost": 0.7,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!b7e46d59ff6c4938"
+  "_key": "!items!0a04bf0388f541a3"
 }

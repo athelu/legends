@@ -1,5 +1,5 @@
 {
-  "_id": "21072281ae954cfd",
+  "_id": "70103522267a21f0",
   "name": "HailStorm",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft. (20-foot radius)",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "Hard ice and hail rain down in a 20-foot radius cylinder. All creatures in the area take 28 bludgeoning and cold damage (physical ice chunks). Each target takes the full listed damage and makes their own save. The ground becomes difficult terrain (costs double movement) until the ice melts.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "full",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (14)",
+          "duration": "half damage (14)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (28)",
+          "duration": "full damage (28)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (36) + prone",
+          "duration": "enhanced damage (36) + prone"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (14)\n- 2 = full damage (28)\n- 3 = enhanced damage (36) + prone",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36) + prone",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!21072281ae954cfd"
+  "_key": "!items!70103522267a21f0"
 }

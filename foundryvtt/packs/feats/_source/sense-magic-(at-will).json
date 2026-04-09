@@ -1,27 +1,34 @@
 {
-  "_id": "1b03e4e6a15e4010",
+  "_id": "1c289d0955c18f96",
   "name": "Sense Magic (At-Will)",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>You've learned to open that sense at will, reading the magical landscape around you without ceremony or cost.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "arcane:3",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": "any magical tradition trait"
     },
     "benefits": "<p>Sense magical auras as [Minor] action without Energy cost. Make [[/check skill=arcane]]: 1 success = detect presence and general intensity within 30 feet; 2 successes = identify energy types and general purpose (harmful/helpful, permanent/temporary)</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Magic], [Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!1b03e4e6a15e4010"
+  "_key": "!items!1c289d0955c18f96"
 }

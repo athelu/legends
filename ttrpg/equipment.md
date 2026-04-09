@@ -4,6 +4,7 @@
 |------|-------|
 | Abacus | 15 gp |
 | Apron | 5 gp |
+| Arrows/Bolts | 1 gp |
 | Artisan's tools (specify type) | 50 gp |
 | Artist's tools (paints, etc.) | 40 gp |
 | Backpack | 15 gp |
@@ -66,6 +67,7 @@
 | Parchment, papyrus | 5 cp |
 | Parchment, vellum | 5 sp |
 | Pen, fountain | 7 gp |
+| Perfume | 20 gp |
 | Piton | 2 sp |
 | Playing cards | 5 sp |
 | Pouch, belt | 5 gp |
@@ -95,6 +97,7 @@
 | Torch | 1 sp |
 | Tunic | 5 gp |
 | Uniform/Livery | 15 gp |
+| Waterskin | 2 gp |
 | Wineskin | 4 gp |
 
 Not every problem in Legends is solved with a sword. This section covers the tools, supplies, and sundry goods that adventurers carry, purchase, and occasionally regret leaving behind.
@@ -115,6 +118,10 @@ A wooden calculating device with beads on rods, useful for merchants and anyone 
 ### Apron
 **Cost:** 5 gp | **Weight:** 1 lb
 A practical garment worn over clothing to protect from dirt, stains, and minor hazards during work or craft activities.
+
+### Arrows/Bolts
+**Cost:** 1 gp | **Weight:** 1 lb
+A bundle of 20 standard arrows or 20 standard bolts for bows and crossbows. Stored in a quiver, case, or satchel until needed.
 
 ### Artisan's Tools
 **Cost:** 50 gp | **Weight:** 5 lbs
@@ -364,6 +371,10 @@ A single sheet of high-quality vellum writing material made from treated animal 
 **Cost:** 7 gp | **Weight:** 0.1 lbs
 A metal pen with an internal ink reservoir, allowing for extended writing without frequent dipping.
 
+### Perfume
+**Cost:** 20 gp | **Weight:** 0.1 lbs
+A small glass vial of scented oil or perfume used to mask unpleasant odors, signal wealth or refinement, or leave a memorable impression in social settings.
+
 ### Piton
 **Cost:** 2 sp | **Weight:** 0.5 lbs
 An iron spike hammered into rock or wood to support climbing ropes or secure items.
@@ -479,6 +490,10 @@ A simple pullover garment worn as a primary layer, typically extending to mid-th
 ### Uniform/Livery
 **Cost:** 15 gp | **Weight:** 3 lbs
 Distinctive clothing identifying the wearer as a member of a specific organization, military unit, or household.
+
+### Waterskin
+**Cost:** 2 gp | **Weight:** 1 lb (empty), 5 lbs (full)
+A treated leather container for carrying drinking water on the road. Holds enough water for a day of ordinary travel without easy resupply.
 
 ### Wineskin
 **Cost:** 4 gp | **Weight:** 1 lb (empty), 5 lbs (full)

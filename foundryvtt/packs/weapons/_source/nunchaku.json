@@ -1,5 +1,5 @@
 {
-  "_id": "c35a8648d3fe4660",
+  "_id": "6c1fa05f8a0742c8",
   "name": "Nunchaku",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 6,
       "type": "bludgeoning",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
-        "damageAttr": "agility",
+        "skill": "melee",
+        "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 6,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -44,8 +44,10 @@
       "light",
       "finesse"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!c35a8648d3fe4660"
+  "_key": "!items!6c1fa05f8a0742c8"
 }

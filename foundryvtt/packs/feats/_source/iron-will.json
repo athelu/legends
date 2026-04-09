@@ -1,29 +1,36 @@
 {
-  "_id": "65df399d93404595",
+  "_id": "885885219a2e5ae6",
   "name": "Iron Will",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Whatever they throw at your mind, you have already survived worse.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "wisdom": 5
       },
       "skills": "",
       "feats": [],
-      "tier": 5,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Subtract 1 from both dice on Willpower saving throws</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Save], [Ascetic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!65df399d93404595"
+  "_key": "!items!885885219a2e5ae6"
 }

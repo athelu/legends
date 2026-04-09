@@ -1,5 +1,5 @@
 {
-  "_id": "c91ff1c1caea4229",
+  "_id": "e322bdc4381f7852",
   "name": "Charming",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Some people just have a way with words. You're one of them. It doesn't always work, but when it matters most, it usually does.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "charisma": 4
       },
       "skills": "persuasion:4",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Once per session reroll failed social check; double 1s count as ally success</p>",
-    "usageType": "once",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per session"
+    },
     "keywords": "[Skill], [General]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!c91ff1c1caea4229"
+  "_key": "!items!e322bdc4381f7852"
 }

@@ -1,25 +1,34 @@
 {
-  "_id": "cf657001bbcb4a48",
+  "_id": "45e0856014d6c06e",
   "name": "Dying",
   "type": "condition",
   "img": "icons/svg/unconscious.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Effect:</strong> You are at 0 HP or below. Cannot take actions, reactions, or move. Unconscious condition active. Blinded condition active. Prone condition active <strong>Recovery:</strong> See Dying Mechanic section</p>"
+    },
     "label": "Dying",
     "category": "incapacitation",
-    "description": {
-      "value": "<ul>\n<li>At 0 HP or below</li>\n<li>Cannot take actions, reactions, or move</li>\n<li>Unconscious condition active</li>\n<li>Blinded condition active</li>\n<li>Prone condition active</li>\n<li>See Dying Mechanic section in Core Rules for full details</li>\n</ul>"
-    },
+    "keywords": [],
     "tokenIcon": "icons/svg/unconscious.svg",
     "activeEffects": [],
-    "stacking": "replace",
-    "severity": "severe",
-    "overlayPriority": 30,
     "appliesConditions": [
       "Unconscious",
       "Blinded",
       "Prone"
-    ]
+    ],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "severe",
+    "overlayPriority": 30,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
   },
   "flags": {},
-  "_key": "!items!cf657001bbcb4a48"
+  "_key": "!items!45e0856014d6c06e"
 }

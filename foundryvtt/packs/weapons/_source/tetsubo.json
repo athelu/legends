@@ -1,5 +1,5 @@
 {
-  "_id": "0bf73c410bc640b3",
+  "_id": "9752d880a2a9cc54",
   "name": "Tetsubo",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 10,
       "type": "bludgeoning",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
+        "skill": "melee",
         "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 10,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -43,8 +43,10 @@
     "properties": [
       "two-handed"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!0bf73c410bc640b3"
+  "_key": "!items!9752d880a2a9cc54"
 }

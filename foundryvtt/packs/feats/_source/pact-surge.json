@@ -1,0 +1,38 @@
+{
+  "_id": "8bdf239bd5e2ece2",
+  "name": "Pact Surge",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have learned to reach into the pact and demand more than it would willingly give.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "",
+      "feats": [
+        "Eldritch Pact"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per short rest, you may declare a Pact Surge before making a weaving roll. You may spend Energy up to double your Potential in that energy for this one weave (ignoring the Potential ceiling entirely). For every point spent beyond your normal Potential ceiling, add 1 to both dice on the weaving roll.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per short rest; declared before weaving roll"
+    },
+    "keywords": "[Magic], [Pact]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!8bdf239bd5e2ece2"
+}

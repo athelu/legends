@@ -1,5 +1,5 @@
 {
-  "_id": "b9cfbb7a4738407e",
+  "_id": "e31f1093a0c9a398",
   "name": "Radiant Bolt",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,15 +23,36 @@
     "duration": "1 round (nimbus effect)",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "A bolt of radiant energy strikes the target. Target takes 8 radiant damage. A nimbus of light surrounds the target for one round. The next person to attack the target before the duration ends has Fortune. The nimbus disappears afterward. This is an attack weave—no saving throw allowed.",
+    "effectType": "protection",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (4)",
+          "duration": "half damage (4)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (8)",
+          "duration": "full damage (8)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (16) + blinded",
+          "duration": "enhanced damage (16) + blinded"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (4)\n- 2 = full damage (8)\n- 3 = enhanced damage (16) + blinded",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2= full damage (8), 3 = enhanced damage (16) + blinded",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!b9cfbb7a4738407e"
+  "_key": "!items!e31f1093a0c9a398"
 }

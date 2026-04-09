@@ -1,29 +1,36 @@
 {
-  "_id": "cc743d8fcd454a99",
+  "_id": "4abad72c231b4371",
   "name": "Intimidating Presence",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>You don't need to raise your voice. The right look, the right silence, the right moment and the creature across from you suddenly remembers it has somewhere else to be.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "charisma": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>As 1 [Combat] action, choose one creature within 30 feet that can see or hear you. Target makes [[/save type=will]] (opposed by your Charisma + Intimidation). If you win, target is Frightened until end of your next turn</p>",
-    "usageType": "unlimited",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Unlimited"
+    },
     "keywords": "[Combat], [Savage]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!cc743d8fcd454a99"
+  "_key": "!items!4abad72c231b4371"
 }

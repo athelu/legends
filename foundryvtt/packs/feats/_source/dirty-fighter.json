@@ -1,0 +1,36 @@
+{
+  "_id": "6cd96aff1828594c",
+  "name": "Dirty Fighter",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have learned that a fair fight is a fight you chose poorly.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 3
+      },
+      "skills": "rangedCombat:3, meleeCombat:3",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you make an attack against a target that has any [Hindered] condition applied to them, you meet the Exploit Weakness trigger condition, regardless of positioning or dice modifiers.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Shadow]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!6cd96aff1828594c"
+}

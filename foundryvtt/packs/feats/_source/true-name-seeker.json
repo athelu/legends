@@ -1,0 +1,38 @@
+{
+  "_id": "be5c59f650ebc912",
+  "name": "True Name Seeker",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Every creature has a true name woven into its nature. You have learned to listen for the echo of it.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 3
+      },
+      "skills": "arcane:3",
+      "feats": [
+        "Invoker"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>As a [Minor] action, study one creature you can see within 60 feet. Make a Charisma + [[/check skill=arcane]] (Hard task, 2 successes). On success, you learn the creature's dominant energy type, any immunities or resistances, and whether it is susceptible to compulsion effects. Until the end of the encounter, your weaves targeting that creature subtract 1 from one targeting die of your choice. You may use this once per short rest.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per short rest"
+    },
+    "keywords": "[Magic], [Invoker], [Skill]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!be5c59f650ebc912"
+}

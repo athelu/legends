@@ -1,5 +1,5 @@
 {
-  "_id": "6600156b14274e96",
+  "_id": "c3f52c61a80b1a80",
   "name": "Force Armor",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Self, touch",
     "duration": "1 hour",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target at touch gains DR 5 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities.",
+    "effectType": "protection",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 10 minutes\n- 2 = 1 hour\n- 3 = 4 hours",
+    "targetingSuccessScaling": "0 = Fails, 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours",
     "weavingRoll": "Space Potential + Space Mastery + Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
@@ -42,13 +63,14 @@
         }
       }
     ],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "buff",
       "defensive",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!6600156b14274e96"
+  "_key": "!items!c3f52c61a80b1a80"
 }

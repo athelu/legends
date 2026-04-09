@@ -1,5 +1,5 @@
 {
-  "_id": "01b8a31c351b4c53",
+  "_id": "96a846ba9b9726e4",
   "name": "Whispered Message",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,23 +23,45 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Point at a creature within close range and whisper a message. Target (and only target) hears the message and can whisper a reply that only you hear. Weave transmits through most barriers but is blocked by 1 foot of stone, 1 inch of common metal, thin sheet of lead, or 3 feet of wood.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "one-way message only",
+          "duration": "one-way message only"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "close range (30 ft)",
+          "duration": "close range (30 ft)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "medium range (60ft)",
+          "duration": "medium range (60ft)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = one-way message only\n- 2 = full effect\n- 3 = medium range (60ft)\n---",
+    "targetingSuccessScaling": "0 = fails, 1 = one-way message only, 2= close range (30 ft), 3 = medium range (60ft)",
     "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!01b8a31c351b4c53"
+  "_key": "!items!96a846ba9b9726e4"
 }

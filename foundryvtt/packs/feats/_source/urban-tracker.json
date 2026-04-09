@@ -1,5 +1,5 @@
 {
-  "_id": "79e4cd5c0d4a4e90",
+  "_id": "46a0f4bb24e65872",
   "name": "Urban Tracker",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Being able to track prey through the urban wilderness, inside crowds and alleys instead of forests and fields. The patterns and principles are much the same.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "investigate:4, society:3",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>In urban environments, can track people through crowds using Investigation. Learn useful information about neighborhoods (safe houses, gang territories, guard patrols) with [[/check skill=society]]. When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!79e4cd5c0d4a4e90"
+  "_key": "!items!46a0f4bb24e65872"
 }

@@ -1,22 +1,23 @@
 {
-  "_id": "09f289d45a2148ea",
+  "_id": "7acab4ee265020e5",
   "name": "Stalk",
   "type": "action",
   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> Costs 2 feet of movement for every 1 foot moved.</li>\n<li><strong>Effect:</strong> While Hidden, you change location. Make a [[/check skill=stealth]] (Agility + stealth).</li>\n<li><strong>Check:</strong> Opposed by enemy's Perception (Wisdom + Perception)</li>\n<li><strong>Success:</strong> You use cover to successfully change location while remaining hidden.</li>\n<li><strong>Failure:</strong> You lose the Hidden condition, but may have concealed from cover.</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Per Enemy test, may be hidden from some (but you do not know which)</li>\n</ul></li>\n</ul>\n<h2>Activate Actions</h2>\n<p>Activate actions involve using items, equipment, or abilities that require deliberate triggering or operation. These actions represent more complex interactions than simple manipulation.</p>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> While Hidden, you change location. Make a [[/check skill=stealth]] opposed by enemy's Perception.</p>\n<ul>\n<li><strong>Margin 0:</strong> You lose the Hidden condition, but may have concealed from cover.</li>\n<li><strong>Margin 1+:</strong> You use cover to successfully change location while remaining hidden.</li>\n</ul>\n<h2>Activate Actions</h2>\n<p>Activate actions involve using items, equipment, or abilities that require deliberate triggering or operation. These actions represent more complex interactions than simple manipulation.</p>"
     },
     "actionType": "move",
-    "actionCost": "2",
+    "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "While Hidden, you change location. Make a Stealth check (Agility + stealth).\n- **Check:** Opposed by enemy's Perception (Wisdom + Perception)\n- **Success:** You use cover to successfully change location while remaining hidden.\n- **Failure:** You lose the Hidden condition, but may have concealed from cover.\n- **Notes:**\n  - Per Enemy test, may be hidden from some (but you do not know which)\n\n\n## Activate Actions\n\nActivate actions involve using items, equipment, or abilities that require deliberate triggering or operation. These actions represent more complex interactions than simple manipulation.",
-    "keywords": "",
+    "effect": "While Hidden, you change location. Make a Stealth check opposed by enemy's Perception.",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
-    "special": ""
+    "special": "Margin 0: You lose the Hidden condition, but may have concealed from cover.\nMargin 1+: You use cover to successfully change location while remaining hidden.\n\n## Activate Actions\nActivate actions involve using items, equipment, or abilities that require deliberate triggering or operation. These actions represent more complex interactions than simple manipulation."
   },
   "effects": [],
-  "_key": "!items!09f289d45a2148ea"
+  "_key": "!items!7acab4ee265020e5"
 }

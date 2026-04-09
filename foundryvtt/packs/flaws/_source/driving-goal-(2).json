@@ -1,5 +1,5 @@
 {
-  "_id": "0cc2f1bb63a24e87",
+  "_id": "867025d8a439b95a",
   "name": "Driving Goal (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
@@ -8,14 +8,15 @@
       "value": "<p>Always-just-out-of-reach goal you constantly pursue.</p>"
     },
     "pointValue": 2,
-    "flawType": "",
-    "severity": "moderate",
+    "flawType": "social",
+    "severity": "minor",
     "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!0cc2f1bb63a24e87"
+  "_key": "!items!867025d8a439b95a"
 }

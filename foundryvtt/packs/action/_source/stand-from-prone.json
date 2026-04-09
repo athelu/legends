@@ -1,22 +1,30 @@
 {
-  "_id": "70c891c62d6249f4",
+  "_id": "b1cb6bf42540abdf",
   "name": "Stand from Prone",
   "type": "action",
   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Stand up from the Prone condition</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>If your speed is 0, you cannot stand up</li>\n<li>Standing up doesn't provoke Opportunity Attacks</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Remove the Prone condition. If your speed is 0, you cannot stand up. Standing up does not provoke Opportunity Attacks.</p>"
     },
     "actionType": "move",
     "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Stand up from the Prone condition\n- **Notes:**\n  - If your speed is 0, you cannot stand up\n  - Standing up doesn't provoke Opportunity Attacks",
-    "keywords": "",
+    "effect": "Remove the Prone condition. If your speed is 0, you cannot stand up. Standing up does not provoke Opportunity Attacks.",
+    "appliesEffects": [
+      {
+        "effectId": "Prone",
+        "operation": "remove",
+        "params": {}
+      }
+    ],
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!70c891c62d6249f4"
+  "_key": "!items!b1cb6bf42540abdf"
 }

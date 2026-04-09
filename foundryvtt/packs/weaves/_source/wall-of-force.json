@@ -1,11 +1,11 @@
 {
-  "_id": "20980a98adad40a9",
+  "_id": "84a16414e1a7caab",
   "name": "Wall of Force",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create invisible wall of force at medium range up to 80 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter, or sphere 10 feet diameter). Totally blocks physical and magical effects. Can't be dispelled but Disintegrate destroys it. Nothing can pass through.</p>"
+      "value": "<p>Create invisible wall of force at medium range up to 80 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter, or sphere 10 feet diameter). Totally blocks physical and magical effects. Can be dispelled and Disintegrate destroys it. Nothing can pass through.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,28 +21,50 @@
     },
     "range": "Medium, 60 ft. (80 feet long OR hemisphere/sphere 10 feet diameter)",
     "duration": "10 minutes",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create invisible wall of force at medium range up to 80 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter, or sphere 10 feet diameter). Totally blocks physical and magical effects. Can be dispelled and Disintegrate destroys it. Nothing can pass through.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = full effect\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 1 hour",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
       "ranged",
       "ritual",
+      "utility",
       "wall"
     ]
   },
   "effects": [],
-  "_key": "!items!20980a98adad40a9"
+  "_key": "!items!84a16414e1a7caab"
 }

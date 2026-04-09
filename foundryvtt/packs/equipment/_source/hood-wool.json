@@ -1,5 +1,5 @@
 {
-  "_id": "381e5e84e1154f12",
+  "_id": "c1fca4ff58120d72",
   "name": "Hood, Wool",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A warm woolen hood that can be worn separately or attached to a cloak for additional head protection.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 0.5,
     "cost": 5.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!381e5e84e1154f12"
+  "_key": "!items!c1fca4ff58120d72"
 }

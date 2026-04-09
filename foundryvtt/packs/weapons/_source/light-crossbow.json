@@ -1,5 +1,5 @@
 {
-  "_id": "39ebe7f2f18947b2",
+  "_id": "81ad095be854e853",
   "name": "Light Crossbow",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 6,
       "type": "piercing",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -21,30 +21,14 @@
     },
     "attackModes": [
       {
-        "name": "Melee",
-        "type": "melee",
-        "skill": "meleeCombat",
-        "damageAttr": "strength",
-        "defenseType": "melee",
-        "damage": {
-          "base": 6,
-          "alternate": null
-        },
-        "range": {
-          "normal": 0,
-          "medium": 0,
-          "long": 0
-        }
-      },
-      {
         "name": "Ranged",
         "type": "ranged",
-        "skill": "rangedCombat",
-        "damageAttr": "agility",
+        "skill": "ranged",
+        "damageAttr": "dexterity",
         "defenseType": "ranged",
         "damage": {
           "base": 6,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 60,
@@ -60,9 +44,10 @@
       "two-handed",
       "ranged"
     ],
-    "notes": "",
-    "reload": "1 action"
+    "reload": "1 action",
+    "requirements": "",
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!39ebe7f2f18947b2"
+  "_key": "!items!81ad095be854e853"
 }

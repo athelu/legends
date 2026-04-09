@@ -1,11 +1,11 @@
 {
-  "_id": "38331227122348ba",
+  "_id": "e486c7b8601dec09",
   "name": "Sleep",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Creatures in area make Will saves. Starting with lowest HP targets, compare your weaving successes to their save successes. Those you beat fall Unconscious for 1 minute. Awakens if damaged or shaken (action). Doesn't affect constructs or undead.</p>"
+      "value": "<p>Creatures in area make Will saves. Starting with lowest HP targets, compare your targeting successes to their save successes. Those you beat fall Unconscious for 1 minute. Awakens if damaged or shaken (action). Doesn't affect constructs or undead.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,22 +21,43 @@
     },
     "range": "Medium, 60 ft. (10-foot radius)",
     "duration": "1 minute (or until awakened)",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Creatures in area make Will saves. Starting with lowest HP targets, compare your targeting successes to their save successes. Those you beat fall Unconscious for 1 minute. Awakens if damaged or shaken (action). Doesn't affect constructs or undead.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "no effect",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no effect\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = no effect, 1 = 1 round, 2= 1 minute, 3 = 10 minutes",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [
       {
-        "effectId": "asleep-unconscious",
+        "effectId": "Unconscious",
         "params": {}
       }
     ],
@@ -49,5 +70,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!38331227122348ba"
+  "_key": "!items!e486c7b8601dec09"
 }

@@ -1,29 +1,38 @@
 {
-  "_id": "9f6f2ca40e5b4b0d",
+  "_id": "8ad88411bd810b1a",
   "name": "Persistent Harmony",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>For one minute, you stop stealing and simply live inside the current. Every weave finds its harmony naturally.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "wisdom": 5
       },
       "skills": "",
-      "feats": [],
-      "tier": 4,
-      "other": "Sorcerous Origin trait"
+      "feats": [
+        "Sorcerous Origin"
+      ],
+      "tier": 0,
+      "other": ""
     },
     "benefits": "<p>Once per long rest, you can enter a state of \"Perfect Harmony\" for 1 minute. During this time, every weave you cast automatically benefits from Harmonic Weaving (reroll one die per weave) without expending uses. You still have your normal Harmonic uses after this ends</p>",
-    "usageType": "once",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per long rest, 1 minute duration"
+    },
     "keywords": "[Magic], [Sorcerer]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!9f6f2ca40e5b4b0d"
+  "_key": "!items!8ad88411bd810b1a"
 }

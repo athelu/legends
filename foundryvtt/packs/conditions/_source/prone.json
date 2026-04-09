@@ -1,20 +1,33 @@
 {
-  "_id": "442f34f9f0d34835",
+  "_id": "ac17603244e89d1e",
   "name": "Prone",
   "type": "condition",
   "img": "icons/svg/falling.svg",
   "system": {
-    "label": "Prone",
-    "category": "physical",
     "description": {
-      "value": "<ul>\n<li>Lying on the ground</li>\n<li>Melee attacks against subtract 1 from both attack dice</li>\n<li>Ranged attacks against you have Misfortune</li>\n<li>Your melee attacks have Misfortune</li>\n<li>Your ranged attacks have Misfortune (unless weapon can be used prone)</li>\n<li>Standing up from prone costs 1 [Move] action</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered], [Tactical] <strong>Effect:</strong> You are lying on the ground. Melee attacks against you subtract 1 from both attack dice. Ranged attacks against you have Misfortune. Your melee attacks have Misfortune. <strong>Recovery:</strong> Standing up from prone costs 1 [Move] action</p>"
     },
+    "label": "Prone",
+    "category": "movement",
+    "keywords": [
+      "Hindered",
+      "Tactical"
+    ],
     "tokenIcon": "icons/svg/falling.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
   },
   "flags": {},
-  "_key": "!items!442f34f9f0d34835"
+  "_key": "!items!ac17603244e89d1e"
 }

@@ -1,21 +1,22 @@
 {
-  "_id": "c10f150328a24bcb",
+  "_id": "58a0e003de64e337",
   "name": "Enemy (1-5)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Someone/group has animosity toward you.</p>\n<ul>\n<li>Minor (1): Occasional trouble</li>\n<li>Powerful (3): Significant threat</li>\n<li>Group/Extremely Powerful (5): Organized, constant danger</li>\n</ul>"
+      "value": "<p>Someone/group has animosity toward you.</p>"
     },
     "pointValue": 1,
-    "flawType": "",
+    "flawType": "social",
     "severity": "moderate",
-    "mechanicalEffects": "",
+    "mechanicalEffects": "<ul>\n<li>Minor (1): Occasional trouble</li>\n<li>Powerful (3): Significant threat</li>\n<li>Group/Extremely Powerful (5): Organized, constant danger</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!c10f150328a24bcb"
+  "_key": "!items!58a0e003de64e337"
 }

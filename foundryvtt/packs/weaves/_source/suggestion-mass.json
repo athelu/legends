@@ -1,11 +1,11 @@
 {
-  "_id": "94d34ebc589949e0",
+  "_id": "4cab36384aaa1ee5",
   "name": "Suggestion, Mass",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Up to 12 creatures you can see at medium range make Will saves. Compare your weaving successes to each target's save successes. Those you beat follow your suggested course of activity (1-2 sentences) that sounds reasonable. Targets pursue activity for 4 hours or until completing it. Obviously harmful suggestions end weave for that target. Creatures immune to charm are immune.</p>"
+      "value": "<p>Up to 12 creatures you can see at medium range make Will saves. Compare your targeting successes to each target's save successes. Those you beat follow your suggested course of activity (1-2 sentences) that sounds reasonable. Targets pursue activity for 4 hours or until completing it. Obviously harmful suggestions end weave for that target. Creatures immune to charm are immune.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft. (up to 4 creatures)",
     "duration": "4 hours (or until completed)",
-    "target": "",
+    "target": "multiple",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Up to 12 creatures you can see at medium range make Will saves. Compare your targeting successes to each target's save successes. Those you beat follow your suggested course of activity (1-2 sentences) that sounds reasonable. Targets pursue activity for 4 hours or until completing it. Obviously harmful suggestions end weave for that target. Creatures immune to charm are immune.",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "12 hours",
+          "duration": "12 hours"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no effect\n- 1 = 1 hour\n- 2 = full effect (4 hours)\n- 3 = 12 hours",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 hour, 2= 4 hours, 3 = 12 hours",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
@@ -43,5 +64,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!94d34ebc589949e0"
+  "_key": "!items!4cab36384aaa1ee5"
 }

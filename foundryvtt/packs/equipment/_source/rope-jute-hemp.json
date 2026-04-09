@@ -1,5 +1,5 @@
 {
-  "_id": "b5c3fc49cec24afd",
+  "_id": "80bb5d0cbb1888e5",
   "name": "Rope, Jute/Hemp",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -12,9 +12,23 @@
     "cost": 3.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!b5c3fc49cec24afd"
+  "_key": "!items!80bb5d0cbb1888e5"
 }

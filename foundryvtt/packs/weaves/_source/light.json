@@ -1,5 +1,5 @@
 {
-  "_id": "f885c13375c249ff",
+  "_id": "ebd516bfb8252f2f",
   "name": "Light",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Self, touch",
     "duration": "10 minutes",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "Object you touch sheds bright light in 20ft radius and dim light for another 20 feet. Can be cast on a hostile creature (Reflex save to avoid).",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour",
     "weavingRoll": "Fire Potential + Fire Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [],
@@ -42,5 +63,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!f885c13375c249ff"
+  "_key": "!items!ebd516bfb8252f2f"
 }

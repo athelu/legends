@@ -1,27 +1,34 @@
 {
-  "_id": "8e4201fc23e74746",
+  "_id": "3bc579c5f2216203",
   "name": "Natural Explorer",
   "type": "feat",
   "img": "icons/environment/wilderness/tree-oak.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Note:</strong> Can take multiple times for different terrains</p>"
+      "value": "<p>You know the wilderness, its moods, its rhythms, its shortcuts and its warnings. In the right terrain, you move like you belong there.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "survival:4",
+      "skills": "",
       "feats": [],
-      "tier": 2,
-      "other": ""
+      "tier": 0,
+      "other": "Survival 4"
     },
     "benefits": "<p>Choose terrain type (forest, mountains, swamp, etc.). In chosen terrain: difficult terrain doesn't slow travel, Fortune on initiative rolls, Wilderness checks subtract 1 from both dice, enemy ambushes add 1 to both stealth dice</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Wilderness]",
-    "notes": "",
+    "notes": "Can take multiple times for different terrains",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!8e4201fc23e74746"
+  "_key": "!items!3bc579c5f2216203"
 }

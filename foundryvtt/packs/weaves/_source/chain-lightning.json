@@ -1,5 +1,5 @@
 {
-  "_id": "9e67ce64b08d498b",
+  "_id": "a238a5ee5261d95d",
   "name": "Chain Lightning",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft.",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "multiple",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "Lightning arcs to 4 targets within range (first target, then 3 others within 30ft of previous). Each target makes their own Reflex save. Calculate net successes for each target.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "miss",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (20)",
+          "duration": "Half damage (20)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (40)",
+          "duration": "Full damage (40)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (48) + applies Stunned",
+          "duration": "Enhanced damage (48) + applies Stunned"
+        }
+      }
     },
-    "targetingSuccessScaling": "",
+    "targetingSuccessScaling": "0 = miss, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + applies Stunned",
     "weavingRoll": "Air Potential + Air Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!9e67ce64b08d498b"
+  "_key": "!items!a238a5ee5261d95d"
 }

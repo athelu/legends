@@ -1,0 +1,38 @@
+{
+  "_id": "017ca4e0d0624250",
+  "name": "Devoted Channeler",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Through discipline and daily prayer, you have learned to reach deeper into your connection with your patron.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 3
+      },
+      "skills": "religion:3",
+      "feats": [
+        "Divine Gift"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>You may spend 1 Luck to use any Channel Divinity option that normally costs 2 [Combat] actions as 1 [Combat] action instead.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "1 Luck cost per use"
+    },
+    "keywords": "[Magic], [Divine]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!017ca4e0d0624250"
+}

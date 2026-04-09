@@ -1,11 +1,11 @@
 {
-  "_id": "e3107f3f89484e42",
+  "_id": "cac233573f2ac5df",
   "name": "Protection from Energy",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target at touch gains Resistance (+4 DR) against one chosen damage type (fire, cold, acid, lightning, thunder).</p>"
+      "value": "<p>Target at touch gains Resistance (+4) against one chosen damage type (fire, cold, acid, lightning, thunder).</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,27 +21,48 @@
     },
     "range": "self, touch",
     "duration": "10 minutes",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target at touch gains Resistance (+4) against one chosen damage type (fire, cold, acid, lightning, thunder).",
+    "effectType": "protection",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 1 hour",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "buff",
-      "defensive",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!e3107f3f89484e42"
+  "_key": "!items!cac233573f2ac5df"
 }

@@ -1,28 +1,33 @@
 {
-  "_id": "174316360b0546ac",
+  "_id": "0ea9cfc2c36a80fe",
   "name": "Frightened",
   "type": "condition",
   "img": "icons/svg/terror.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Can act normally but suffers the penaltyAdd 1 to die results while the source of fear is perceived. <strong>Recovery:</strong> At the end of each turn, make [[/save type=will]].</p>\n<ul>\n<li>1+ success: Condition ends</li>\n</ul>\n<p><strong>Ally Assistance:</strong> An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]]:</p>\n<ul>\n<li>1+ successes: Condition ends</li>\n</ul>"
+    },
     "label": "Frightened",
     "category": "fear",
-    "description": {
-      "value": "<ul>\n<li>All rolls: Add 1 to die results while the source of fear is perceived</li>\n<li>Can act normally but suffers the penalty</li>\n<li>Can choose to flee or stand and fight</li>\n<li><strong>Recovery:</strong> At the end of each turn, make [[/save type=will]]:\n<ul>\n<li>1 success: Condition ends</li>\n<li>0 successes: Remains Frightened</li>\n</ul></li>\n<li>Ally Assistance: An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]]:\n<ul>\n<li>1+ successes: Condition ends</li>\n</ul></li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/terror.svg",
-    "activeEffects": [
-      {
-        "key": "diceMod.allRolls",
-        "mode": "add",
-        "value": 1,
-        "notes": "Add 1 to all die results"
-      }
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [
+      "Frightened",
+      "Fleeing",
+      "Cowering"
     ],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
+    "damageTick": null,
     "recovery": {
       "trigger": "endOfTurn",
+      "method": "save",
       "removeOnSuccess": true,
       "save": {
         "type": "will"
@@ -30,15 +35,29 @@
       "promptPlayer": true,
       "chatMessage": "Make a [[/save type=will]] to recover from Frightened",
       "assistance": {
-        "range": 5
+        "range": 5,
+        "downgrades": {
+          "1_success": null,
+          "2_success": null
+        },
+        "check": {
+          "skill": "persuasion",
+          "attribute": "",
+          "skills": [
+            "persuasion",
+            "intimidate"
+          ],
+          "attributes": [],
+          "opposed": false,
+          "label": "Persuasion or Intimidate"
+        }
       },
       "downgrades": {
         "1_success": null,
-        "2_success": null,
-        "0_success": "Frightened"
+        "2_success": null
       }
     }
   },
   "flags": {},
-  "_key": "!items!174316360b0546ac"
+  "_key": "!items!0ea9cfc2c36a80fe"
 }

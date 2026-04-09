@@ -1,5 +1,5 @@
 {
-  "_id": "17aeab3c87924cd7",
+  "_id": "bbbf0e26ad1aa239",
   "name": "Greataxe",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 10,
       "type": "slashing",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
+        "skill": "melee",
         "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 10,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -43,8 +43,10 @@
     "properties": [
       "two-handed"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!17aeab3c87924cd7"
+  "_key": "!items!bbbf0e26ad1aa239"
 }

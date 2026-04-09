@@ -1,0 +1,38 @@
+{
+  "_id": "7f50154b1bf846d7",
+  "name": "Bodyguard",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You did not pick up a shield to protect yourself. You put yourself between them and everything that wants to hurt them.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [
+        "Shield Master"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per round when an adjacent ally is hit by any attack, you may use a [Reaction] to have that attack target you instead. The attack resolves against your defenses and DR as normal.</p>",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per round, Reaction"
+    },
+    "keywords": "[Combat], [Shield], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!7f50154b1bf846d7"
+}

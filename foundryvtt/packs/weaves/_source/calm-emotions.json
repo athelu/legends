@@ -1,11 +1,11 @@
 {
-  "_id": "3c6b9b0603ee44de",
+  "_id": "d0bd76c5592adfda",
   "name": "Calm Emotions",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>All creatures in a 20-foot radius sphere at medium range must make Will saves. Compare your weaving successes to each target's save successes. Those you beat can choose to be affected (suppressing Charmed or Frightened) or you can suppress hostility (they become indifferent if not directly threatened). Creatures immune to charm are immune to this weave.</p>"
+      "value": "<p>All creatures in a 20-foot radius sphere at medium range must make Will saves. Compare your targeting successes to each target's save successes. Those you beat can choose to be affected (suppressing Charmed or Frightened) or you can suppress hostility (they become indifferent if not directly threatened). Creatures immune to charm are immune to this weave.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft. (20-foot radius sphere)",
     "duration": "1 minute",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "All creatures in a 20-foot radius sphere at medium range must make Will saves. Compare your targeting successes to each target's save successes. Those you beat can choose to be affected (suppressing Charmed or Frightened) or you can suppress hostility (they become indifferent if not directly threatened). Creatures immune to charm are immune to this weave.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
@@ -43,5 +64,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!3c6b9b0603ee44de"
+  "_key": "!items!d0bd76c5592adfda"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "44a8f981543c40dc",
+  "_id": "61e58acdba9bef15",
   "name": "Passwall",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,24 +23,46 @@
     "duration": "1 minute",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create a passage at close range up to 5 feet wide, 8 feet tall, and 20 feet deep through wood, plaster, or stone. When weave ends, creatures still in passage are ejected safely.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "10 ft (1 round)",
+          "duration": "10 ft (1 round)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "20 ft (1 minute)",
+          "duration": "20 ft (1 minute)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "30 ft (10 minutes)",
+          "duration": "30 ft (10 minutes)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 10 ft (1 round)\n- 2 = 20 ft (1 minute)\n- 3 = 30 ft (10 minutes)",
+    "targetingSuccessScaling": "0 = fails, 1 = 10 ft (1 round), 2= 20 ft (1 minute), 3 = 30 ft (10 minutes)",
     "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "ranged",
+      "utility",
       "wall"
     ]
   },
   "effects": [],
-  "_key": "!items!44a8f981543c40dc"
+  "_key": "!items!61e58acdba9bef15"
 }

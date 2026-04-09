@@ -1,0 +1,38 @@
+{
+  "_id": "948b11d7dbe29f2b",
+  "name": "Name of Healing",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have learned the syllables that resonate with vitality itself; words that call a body back toward its own wholeness.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "",
+      "feats": [
+        "Invoker"
+      ],
+      "tier": 0,
+      "other": "Positive Mastery 3"
+    },
+    "benefits": "<p>When you cast a healing weave using Positive as the primary energy, add your Charisma score to the total HP restored. Additionally, healing weaves you cast can target creatures at Close range (30 feet) without requiring Space as a supporting energy.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Magic], [Invoker], [Heal]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!948b11d7dbe29f2b"
+}

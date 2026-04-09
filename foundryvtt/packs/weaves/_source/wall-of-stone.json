@@ -1,5 +1,5 @@
 {
-  "_id": "0f44abf055cd4328",
+  "_id": "4471e3a42767be33",
   "name": "Wall of Stone",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,27 +21,49 @@
     },
     "range": "Medium, 60 ft. (60 feet long, 20 feet high)",
     "duration": "Permanent",
-    "target": "",
+    "target": "area",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 8. Can shape into crenellations, bridges, etc.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "permanent",
+          "duration": "permanent"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "double HP",
+          "duration": "double HP"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = permanent\n- 3 = double HP",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= permanent, 3 = double HP",
     "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "defensive",
       "ranged",
+      "utility",
       "wall"
     ]
   },
   "effects": [],
-  "_key": "!items!0f44abf055cd4328"
+  "_key": "!items!4471e3a42767be33"
 }

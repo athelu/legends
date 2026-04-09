@@ -1,5 +1,5 @@
 {
-  "_id": "7b97e0fd12614aed",
+  "_id": "ba384489c661e282",
   "name": "Spear",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
+        "skill": "melee",
         "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 6,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -37,14 +37,14 @@
         }
       },
       {
-        "name": "Ranged",
-        "type": "ranged",
-        "skill": "rangedCombat",
-        "damageAttr": "agility",
+        "name": "Thrown",
+        "type": "thrown",
+        "skill": "ranged",
+        "damageAttr": "dexterity",
         "defenseType": "ranged",
         "damage": {
           "base": 6,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 30,
@@ -62,8 +62,10 @@
       "thrown",
       "reach"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!7b97e0fd12614aed"
+  "_key": "!items!ba384489c661e282"
 }

@@ -1,0 +1,39 @@
+{
+  "_id": "52d0967248639eda",
+  "name": "Fearsome Reputation",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>You don't need to raise your voice. The way you move, the scars you carry, the look in your eyes all adds up to a single message that most people are wise enough to read.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 4,
+        "charisma": 4
+      },
+      "skills": "intimidate:4",
+      "feats": [
+        "Primal Fury"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Subtract 1 from both dice on Intimidate checks. Creatures you have successfully Intimidated do not recover from the Frightened condition while you remain visible to them. When you enter Primal Fury in view of creatures who are already Frightened of you, they must make a [[/save type=will]] (Hard task) or become Cowering until the start of your next turn.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Savage], [Social]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!52d0967248639eda"
+}

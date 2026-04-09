@@ -1,24 +1,39 @@
 {
-  "_id": "5e6d7eba782e4329",
+  "_id": "9b94f739f382daa6",
   "name": "Weakened",
   "type": "condition",
   "img": "icons/svg/downgrade.svg",
   "system": {
-    "label": "Weakened",
-    "category": "physical",
     "description": {
-      "value": "<ul>\n<li>Physical strength impaired</li>\n<li>Strength based skill checks: Add 1 to die results</li>\n<li>Melee damage: Reduce by 2 (minimum 1)</li>\n<li>Carrying capacity: Halved</li>\n<li>Duration: Typically 1 minute to 1 hour unless specified otherwise</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends after specified duration</li>\n<li>Magical healing can remove (if from magical source)</li>\n<li>Rest removes non-magical weakness</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Physical strength impaired. Strength based skill checks: Add 1 to ability die results. Melee damage: Reduce by 2 (minimum 1). Carrying capacity: Halved <strong>Recovery:</strong> Typically 1 minute to 1 hour unless specified otherwise</p>"
     },
+    "label": "Weakened",
+    "category": "magic",
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/downgrade.svg",
-    "activeEffects": [],
+    "activeEffects": [
+      {
+        "key": "diceMod.attribute.strength",
+        "mode": "add",
+        "value": 1,
+        "notes": "Add 1 to strength attribute die results"
+      }
+    ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
+    "damageTick": null,
     "recovery": {
-      "trigger": "endOfTurn",
-      "removeOnSuccess": true
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
     }
   },
   "flags": {},
-  "_key": "!items!5e6d7eba782e4329"
+  "_key": "!items!9b94f739f382daa6"
 }

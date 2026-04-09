@@ -1,14 +1,17 @@
 {
-  "_id": "271811646de3440f",
+  "_id": "687055068f05c692",
   "name": "Blinded",
   "type": "condition",
   "img": "icons/svg/blind.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> The target loses their sight. Vision-based Perception checks automatically fail. Initiative -4. Attacks against you have Fortune. Your opponents have the hidden condition against your attacks. <strong>Recovery:</strong> The source of the condition will describe the recovery conditions.</p>"
+    },
     "label": "Blinded",
     "category": "sensory",
-    "description": {
-      "value": "<ul>\n<li>Cannot see</li>\n<li>Vision-based Perception checks automatically fail</li>\n<li>Initiative: -4</li>\n<li>Attacks against you have Fortune</li>\n<li>Your attacks have Misfortune</li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/blind.svg",
     "activeEffects": [
       {
@@ -18,10 +21,19 @@
         "notes": "-4 to initiative"
       }
     ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
   },
   "flags": {},
-  "_key": "!items!271811646de3440f"
+  "_key": "!items!687055068f05c692"
 }

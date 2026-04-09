@@ -1,0 +1,36 @@
+{
+  "_id": "6e8d3f7c3dba7c00",
+  "name": "Hollow Form",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have trained your body and spirit to the point where the boundary between yourself and the world around you has become negotiable. There is nothing for weapons to strike, nothing for fire to catch — you have made yourself as insubstantial as breath.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 6
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per long rest, can spend 10 minutes meditating to become invisible for 1 minute. While invisible, you also have resistance (+6 DR) to all damage except psychic.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per long rest"
+    },
+    "keywords": "[Ascetic]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!6e8d3f7c3dba7c00"
+}

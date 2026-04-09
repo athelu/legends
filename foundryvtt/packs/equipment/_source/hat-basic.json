@@ -1,5 +1,5 @@
 {
-  "_id": "4f741d4b241d4629",
+  "_id": "f9180d11071e1194",
   "name": "Hat, Basic",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A simple cloth or straw hat providing basic protection from sun and rain.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 0.5,
     "cost": 2.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!4f741d4b241d4629"
+  "_key": "!items!f9180d11071e1194"
 }

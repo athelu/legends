@@ -1,5 +1,5 @@
 {
-  "_id": "0a2b7ffc76694eb1",
+  "_id": "d254333c8e71cfde",
   "name": "Spatial Step",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -7,7 +7,7 @@
     "description": {
       "value": "<p>Instantly teleport yourself and one willing creature to a spot you can see or describe (direction and distance) within 500 feet. Arriving in occupied space causes [[/damage 1d8]] damage and teleports to nearest open space.</p>"
     },
-    "weaveType": "simple",
+    "weaveType": "complex",
     "actionCost": 2,
     "energyCost": {
       "primary": {
@@ -16,33 +16,55 @@
       },
       "supporting": {
         "type": "",
-        "cost": 0
+        "cost": 1
       }
     },
     "range": "Self (500 feet teleportation)",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Instantly teleport yourself and one willing creature to a spot you can see or describe (direction and distance) within 500 feet. Arriving in occupied space causes 1d8 damage and teleports to nearest open space.",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "100 feet",
+          "duration": "100 feet"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "500 feet",
+          "duration": "500 feet"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1000 feet",
+          "duration": "1000 feet"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 100 feet\n- 2 = 500 feet\n- 3 = 1000 feet",
+    "targetingSuccessScaling": "0 = fails, 1 = 100 feet, 2= 500 feet, 3 = 1000 feet",
     "weavingRoll": "Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "divination",
       "ranged",
       "self",
-      "teleportation"
+      "teleportation",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!0a2b7ffc76694eb1"
+  "_key": "!items!d254333c8e71cfde"
 }

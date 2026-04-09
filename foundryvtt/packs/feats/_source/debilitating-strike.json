@@ -1,0 +1,36 @@
+{
+  "_id": "89e0c5fcc36a170c",
+  "name": "Debilitating Strike",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Every successful hit leaves them a little slower, a little less certain.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 5
+      },
+      "skills": "rangedCombat:5, meleeCombat:5",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you deal damage through Exploit Weakness, the target adds 1 to both of their attack dice until the end of their next turn. This effect stacks up to a maximum of 2 times simultaneously. Each subsequent Exploit Weakness hit refreshes the duration.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Shadow]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!89e0c5fcc36a170c"
+}

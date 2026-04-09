@@ -1,11 +1,11 @@
 {
-  "_id": "8973bd664e004594",
+  "_id": "0d3ff7ffb2c83938",
   "name": "Revealing Light",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make [[/save type=reflex]]. Compare your weaving successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.</p>"
+      "value": "<p>All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make [[/save type=reflex]]. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft. (20-foot cube)",
     "duration": "1 minute",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make Reflex save. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "10-ft cube",
+          "duration": "10-ft cube"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "20-ft cube",
+          "duration": "20-ft cube"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "30-ft cube + revealed",
+          "duration": "30-ft cube + revealed"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 10-ft cube\n- 2 = 20-ft cube\n- 3 = 30-ft cube + revealed",
+    "targetingSuccessScaling": "0 = fails, 1 = 10-ft cube, 2= 20-ft cube, 3 = 30-ft cube + revealed",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!8973bd664e004594"
+  "_key": "!items!0d3ff7ffb2c83938"
 }

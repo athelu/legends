@@ -1,0 +1,39 @@
+{
+  "_id": "3309de7850f70a6d",
+  "name": "Cross Parry",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have learned to cross both weapons at the moment of impact, catching incoming strikes and bleeding off their force before they reach you. Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction] to reduce the incoming damage by your Strength score. This ability does not apply if your off-hand weapon is a Shield.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 4,
+        "agility": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [
+        "Two-Weapon Fighting"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per round, Reaction"
+    },
+    "keywords": "[Combat], [Dual], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!3309de7850f70a6d"
+}

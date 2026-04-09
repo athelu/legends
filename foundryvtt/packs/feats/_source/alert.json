@@ -1,5 +1,5 @@
 {
-  "_id": "3db0faab9c5141b9",
+  "_id": "8d088d1827dd4656",
   "name": "Alert",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Danger rarely announces itself politely. You've learned to read the subtle signs. By the time others realize there's a threat, you're already moving.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "wisdom": 3
       },
       "skills": "perception:3",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Initiative: +2, cannot be surprised</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Initiative], [General]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!3db0faab9c5141b9"
+  "_key": "!items!8d088d1827dd4656"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "affae4c0f0894f0d",
+  "_id": "6a6394e3ffbccf86",
   "name": "Boots, Work",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>Heavy-duty leather boots with reinforced soles and toes, designed to withstand the rigors of manual labor.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 4.0,
     "cost": 45.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!affae4c0f0894f0d"
+  "_key": "!items!6a6394e3ffbccf86"
 }

@@ -1,14 +1,15 @@
 {
-  "_id": "8353834184fc46e7",
+  "_id": "c403d6f38ca18d5f",
   "name": "Relentless Fury",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>The fury has its own opinion about when you're allowed to fall. More than once, it has overruled your body. Each time gets a little harder to pull off, but you're still here.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "constitution": 5
@@ -17,15 +18,21 @@
       "feats": [
         "Primal Fury"
       ],
-      "tier": 3,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>While in Primal Fury, if you drop to 0 HP you can make a [[/save type=fortitude]] (Hard task = 2 successes). On success, drop to 1 HP instead. Each time you use this after the first, add 1 to both dice. Resets after long rest</p>",
-    "usageType": "while",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "While in Primal Fury"
+    },
     "keywords": "[Combat], [Savage]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!8353834184fc46e7"
+  "_key": "!items!c403d6f38ca18d5f"
 }

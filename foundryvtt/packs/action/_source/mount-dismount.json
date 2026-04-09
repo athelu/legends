@@ -1,22 +1,23 @@
 {
-  "_id": "4a9196bc7e0b417c",
+  "_id": "95128f5d0b8f1818",
   "name": "Mount/Dismount",
   "type": "action",
   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Mount or dismount a creature/vehicle</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>The mount must be within 5 feet and willing</li>\n<li>Mounting/dismounting doesn't provoke Opportunity Attacks</li>\n<li>While mounted, you use the mount's speed instead of your own</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Mount or dismount a creature/vehicle. The mount must be within 5 feet and willing. Mounting/dismounting doesn't provoke Opportunity Attacks.</p>"
     },
     "actionType": "move",
     "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Mount or dismount a creature/vehicle\n- **Notes:**\n  - The mount must be within 5 feet and willing\n  - Mounting/dismounting doesn't provoke Opportunity Attacks\n  - While mounted, you use the mount's speed instead of your own",
-    "keywords": "",
+    "effect": "Mount or dismount a creature/vehicle. The mount must be within 5 feet and willing. Mounting/dismounting doesn't provoke Opportunity Attacks.",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!4a9196bc7e0b417c"
+  "_key": "!items!95128f5d0b8f1818"
 }

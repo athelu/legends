@@ -1,29 +1,36 @@
 {
-  "_id": "5773adc35aa64aaa",
+  "_id": "febd5bc21624fe9d",
   "name": "Quick Learner",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>You've figured out how learning works and stopped wasting the effort that others spend relearning their mistakes.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "intelligence": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>All skill improvements cost 2 less XP</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!5773adc35aa64aaa"
+  "_key": "!items!febd5bc21624fe9d"
 }

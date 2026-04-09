@@ -1,5 +1,5 @@
 {
-  "_id": "399bb8e14bc842fb",
+  "_id": "3cae009f45818182",
   "name": "Shadow Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Touch",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Touch a target and drain their life force with necrotic energy. Target takes 4 necrotic damage. You regain HP equal to half the damage dealt (rounded down). This is an attack weave—no saving throw allowed.",
+    "effectType": "healing",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (2)",
+          "duration": "half damage (2)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (4)",
+          "duration": "full damage (4)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (8)",
+          "duration": "enhanced damage (8)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (2), heal (1)\n- 2 = full damage (4), heal (2)\n- 3 = enhanced damage (8), heal (4)",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (2), heal (1), 2= full damage (4), heal (2), 3 = enhanced damage (8), heal (4)",
     "weavingRoll": "Negative Potential + Negative Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
@@ -43,5 +64,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!399bb8e14bc842fb"
+  "_key": "!items!3cae009f45818182"
 }

@@ -1,21 +1,28 @@
 {
-  "_id": "38a640e650454b8c",
+  "_id": "d6cc3c07353d3537",
   "name": "Intuition (-3)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>Overdeveloped sixth sense.</p>\n<ul>\n<li>Perception and Investigate: Subtract 1 from die results</li>\n<li>GM may give \"hunches\"</li>\n</ul>"
+      "value": "<p>Overdeveloped sixth sense.</p>"
     },
     "pointCost": -3,
     "traitType": "physical",
     "isMagical": false,
     "magicalType": "",
     "requirements": "",
-    "benefits": "",
+    "benefits": "<ul>\n<li>Perception and Investigate: Subtract 1 from die results</li>\n<li>GM may give \"hunches\"</li>\n</ul>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
     "requiresGMApproval": false,
     "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!38a640e650454b8c"
+  "_key": "!items!d6cc3c07353d3537"
 }

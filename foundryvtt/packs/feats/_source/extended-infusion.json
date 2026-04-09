@@ -1,0 +1,38 @@
+{
+  "_id": "11574c5d89d53e16",
+  "name": "Extended Infusion",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Through obsessive study of how magical energy degrades within matter, you have found ways to slow the inevitable decay.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 4
+      },
+      "skills": "craft:4",
+      "feats": [
+        "Infuser"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your Imbue Item duration increases from 1 minute to 10 minutes. Your Prepared Infusions now persist until the end of your next long rest rather than expiring at long rest. Additionally you may now prepare up to four dormant infusions instead of two.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive enhancement to all infusion durations"
+    },
+    "keywords": "[Magic]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!11574c5d89d53e16"
+}

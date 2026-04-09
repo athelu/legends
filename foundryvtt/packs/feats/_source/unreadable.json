@@ -1,0 +1,38 @@
+{
+  "_id": "68646b317f1956fb",
+  "name": "Unreadable",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>They have been trying to get your measure since the first exchange, and still do not know what is coming.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 5
+      },
+      "skills": "deception:5",
+      "feats": [
+        "Cunning Feint"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Targets add 1 to both dice when making Empathy or Wisdom checks to resist your Feint attempts. Additionally, if a target fails to resist your feint, they cannot attempt to resist your next feint against them this combat — they automatically fail the opposed check.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Duelist]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!68646b317f1956fb"
+}

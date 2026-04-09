@@ -1,5 +1,5 @@
 {
-  "_id": "7d1a9080a3a34fc5",
+  "_id": "5a087991501c8d74",
   "name": "Torch",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A wooden stick wrapped in oil-soaked cloth that burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "light-source",
     "weight": 1.0,
     "cost": 0.1,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 20,
+    "dimLight": 20,
+    "duration": "1 hour",
+    "uses": {
+      "value": 1,
+      "max": 1
+    },
+    "consumable": true,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!7d1a9080a3a34fc5"
+  "_key": "!items!5a087991501c8d74"
 }

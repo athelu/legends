@@ -1,21 +1,63 @@
 {
-  "_id": "345266b87e984a7a",
+  "_id": "256bfb0481ac95d7",
   "name": "Herbalist",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. Adventuring gives you access to rare specimens you could never afford before. <strong>Skills:</strong> Medicine 3, Wilderness 2, +32 XP <strong>Equipment:</strong> Herbalism kit, mortar and pestle, common clothes, shoes <strong>Feature</strong> - Plant Lore: You can identify useful plants and create basic remedies. Medicine checks to treat poison have Fortune.</p>"
+      "value": "<p>As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. Adventuring gives you access to rare specimens you could never afford before.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 32,
+    "skillBonuses": "Medicine 3, Wilderness 2, +32 XP",
+    "startingEquipment": "Herbalism kit\nmortar and pestle\ncommon clothes\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Plant Lore: You can identify useful plants and create basic remedies.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "medicine": 3,
+      "wilderness": 2
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Herbalism Kit",
+        "quantity": 1,
+        "originalText": "Herbalism kit",
+        "sourceId": "adcc370f8439d6c9"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Mortar and Pestle",
+        "quantity": 1,
+        "originalText": "mortar and pestle",
+        "sourceId": "151b6327836b4df2"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!345266b87e984a7a"
+  "_key": "!items!256bfb0481ac95d7"
 }

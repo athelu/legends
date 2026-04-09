@@ -1,5 +1,5 @@
 {
-  "_id": "0b04bef64e854150",
+  "_id": "211559e6c1d1cb37",
   "name": "Purse, Belt",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A drawstring pouch specifically designed for carrying coins and small valuables. Holds up to 3 lbs.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "container",
     "weight": 0.3,
     "cost": 4.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "3 lbs",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!0b04bef64e854150"
+  "_key": "!items!211559e6c1d1cb37"
 }

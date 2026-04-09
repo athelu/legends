@@ -1,20 +1,55 @@
 {
-  "_id": "d3b05f2db4994ceb",
+  "_id": "1d81a19fa952b73e",
   "name": "Restrained",
   "type": "condition",
   "img": "icons/svg/net.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Placed in a hold or lock by an opponent. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune.Automatically fail Reflex saves. <strong>Recovery:</strong> Use 1 action to make an opposed Athletics, Might or [[/check skill=acrobatics]]</p>\n<ul>\n<li>Margin 1: Reduce condition to Grappled.</li>\n<li>Margin 2: Remove Restrained condition.</li>\n</ul>"
+    },
     "label": "Restrained",
     "category": "movement",
-    "description": {
-      "value": "<h4>Effect:</h4>\n<ul>\n<li>Movement speed reduced to 0</li>\n<li>Cannot take [Move] actions</li>\n<li>All attacks and skill checks: Add 2 to die results</li>\n<li>Attacks against you have Fortune</li>\n<li>Automatically fail Reflex saves</li>\n</ul>\n<h4>Common Sources:</h4>\n<ul>\n<li>Nets, chains, magical bindings</li>\n<li>Special monster abilities (web, constrict)</li>\n<li>Space weaves (force cage)</li>\n</ul>\n<h4>Escaping Restrained:</h4>\n<ul>\n<li>Depends on source</li>\n<li>Physical bonds: Athletics or [[/check skill=devices]] (typically 2 successes)</li>\n<li>Magical bonds: Usually requires dispelling or breaking concentration</li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/net.svg",
-    "activeEffects": [],
+    "activeEffects": [
+      {
+        "key": "diceMod.attack.all",
+        "mode": "add",
+        "value": 2,
+        "notes": "Add 2 to attack dice"
+      }
+    ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "check",
+      "removeOnSuccess": false,
+      "check": {
+        "skill": "athletics",
+        "attribute": "",
+        "skills": [
+          "athletics",
+          "might",
+          "acrobatics"
+        ],
+        "attributes": [],
+        "opposed": true,
+        "label": "Athletics, Might or Acrobatics"
+      },
+      "downgrades": {
+        "margin_2": null,
+        "margin_1": "Grappled"
+      }
+    }
   },
   "flags": {},
-  "_key": "!items!d3b05f2db4994ceb"
+  "_key": "!items!1d81a19fa952b73e"
 }

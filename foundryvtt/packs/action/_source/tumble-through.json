@@ -1,22 +1,23 @@
 {
-  "_id": "b6075cce0bd24ba4",
+  "_id": "e5d9f3b3d1eeb0a4",
   "name": "Tumble Through",
   "type": "action",
   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> [[/check skill=acrobatics]] (Agility + Acrobatics) to move through an enemy's space</li>\n<li><strong>Check:</strong> Opposed by enemy's [[/save type=reflex]] (Agility + Luck)</li>\n<li><strong>Success:</strong> You move through their space without provoking Opportunity Attacks</li>\n<li><strong>Failure:</strong> Movement ends, you provoke Opportunity Attack</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Enemy must be no more than one size larger than you</li>\n<li>Useful for flanking or escaping surrounded positions</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Move through an Enemy space. Make an [[/check skill=acrobatics]] Opposed by enemy's [[/save type=reflex]].</p>\n<ul>\n<li><strong>Margin 0:</strong> Movement ends, you provoke Opportunity Attack</li>\n<li><strong>Margin 1:</strong> You move through their space without provoking Opportunity Attacks</li>\n<li><strong>Margin 2:</strong> You move through their space without provoking Opportunity Attacks. Subtract 1 from both dice on your next [combat] action this turn.</li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Acrobatics check (Agility + Acrobatics) to move through an enemy's space\n- **Check:** Opposed by enemy's Reflex save (Agility + Luck)\n- **Success:** You move through their space without provoking Opportunity Attacks\n- **Failure:** Movement ends, you provoke Opportunity Attack\n- **Notes:**\n  - Enemy must be no more than one size larger than you\n  - Useful for flanking or escaping surrounded positions",
-    "keywords": "",
+    "effect": "Move through an Enemy space. Make an Acrobatics check Opposed by enemy's Reflex save.",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
-    "special": ""
+    "special": "Margin 0: Movement ends, you provoke Opportunity Attack\nMargin 1: You move through their space without provoking Opportunity Attacks\nMargin 2: You move through their space without provoking Opportunity Attacks. Subtract 1 from both dice on your next [combat] action this turn."
   },
   "effects": [],
-  "_key": "!items!b6075cce0bd24ba4"
+  "_key": "!items!e5d9f3b3d1eeb0a4"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "378d7903b6fa4299",
+  "_id": "5240cc0d35e9d04a",
   "name": "Code of Honor (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
@@ -8,14 +8,15 @@
       "value": "<p>Rigid ethics code (8-10 tenets) you cannot break. GM approval required.</p>"
     },
     "pointValue": 3,
-    "flawType": "",
+    "flawType": "social",
     "severity": "moderate",
     "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
-    "requiresGMApproval": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": true,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!378d7903b6fa4299"
+  "_key": "!items!5240cc0d35e9d04a"
 }

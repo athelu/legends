@@ -1,21 +1,54 @@
 {
-  "_id": "5cc96eec73ba4f2d",
+  "_id": "07a68785e8f41ee3",
   "name": "Artist",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Your art is your greatest passion, whatever form it takes. You may adventure for inspiration, or maybe you're just trying to survive until the world recognizes your genius. You have discovered that wealthy patrons are more interested in artists who have exciting stories to tell and nothing makes for a better story than a brush with death. <strong>Skills:</strong> Perform 3, Perception 2, +32 XP <strong>Equipment:</strong> Artist's tools, fine clothes, shoes <strong>Feature</strong> - Artistic Reputation: Your work is recognized in certain circles. Can earn money through commissions and gain access to wealthy patrons.</p>"
+      "value": "<p>Your art is your greatest passion, whatever form it takes. You may adventure for inspiration, or maybe you're just trying to survive until the world recognizes your genius. You have discovered that wealthy patrons are more interested in artists who have exciting stories to tell and nothing makes for a better story than a brush with death.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 32,
+    "skillBonuses": "Perform 3, Perception 2, +32 XP",
+    "startingEquipment": "Artist's tools\nfine clothes\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Artistic Reputation: Your work is recognized in certain circles. Can earn money through commissions and gain access to wealthy patrons.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "perform": 3,
+      "perception": 2
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Artist's Tools",
+        "quantity": 1,
+        "originalText": "Artist's tools",
+        "sourceId": "73a833dea3c6555f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!5cc96eec73ba4f2d"
+  "_key": "!items!07a68785e8f41ee3"
 }

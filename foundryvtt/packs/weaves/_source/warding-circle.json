@@ -1,11 +1,11 @@
 {
-  "_id": "3f9719ffa2b547a3",
+  "_id": "0f6409a023f92528",
   "name": "Warding Circle",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Touch creates 10ft radius cylinder. Choose creature type (celestial, elemental, fey, fiend, undead). Creatures of that type can't enter the cylinder, can't charm/frighten/possess those inside, and have Misfortune on attacks against them. Creatures of that type on the nside can't exit or affect those outside.</p>"
+      "value": "<p>Touch creates 10ft radius cylinder. Choose creature type (celestial, elemental, fey, fiend, undead). Creatures of that type can't enter the cylinder, can't charm/frighten/possess those inside, and have Misfortune on attacks against them. Creatures of that type on the inside can't exit or affect those outside.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,30 +21,52 @@
     },
     "range": "Touch",
     "duration": "10 minutes",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Touch creates 10ft radius cylinder. Choose creature type (celestial, elemental, fey, fiend, undead). Creatures of that type can't enter the cylinder, can't charm/frighten/possess those inside, and have Misfortune on attacks against them. Creatures of that type on the inside can't exit or affect those outside.",
+    "effectType": "summon",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = full effect\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 1 hour",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
       "buff",
       "debuff",
       "necromantic",
       "touch",
+      "utility",
       "zone"
     ]
   },
   "effects": [],
-  "_key": "!items!3f9719ffa2b547a3"
+  "_key": "!items!0f6409a023f92528"
 }

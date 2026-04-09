@@ -1,21 +1,54 @@
 {
-  "_id": "ef024ec20b2e4f3c",
+  "_id": "0f2876bcea0f6e67",
   "name": "Squire",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You served a knight or noble warrior, learning combat, chivalry, and the responsibilities that come with wielding power. The training was rigorous, the ideals were lofty, and the reality often fell short of both. Now you seek your own path or are just waiting for that moment of recognition. You carry those lessons with you, for better or worse. <strong>Skills:</strong> Melee Combat 2, Athletics 2, Society 1, Empathy 1, +40 XP <strong>Equipment:</strong> Weapon of choice, fine clothes, riding boots <strong>Feature</strong> - Knight's Training: You were trained in chivalry and combat. Recognized by noble warriors and can invoke codes of honor, though results vary by region and culture.</p>"
+      "value": "<p>You served a knight or noble warrior, learning combat, chivalry, and the responsibilities that come with wielding power. The training was rigorous, the ideals were lofty, and the reality often fell short of both. Now you seek your own path or are just waiting for that moment of recognition. You carry those lessons with you, for better or worse.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Melee Combat 2, Athletics 2, Society 1, Empathy 1, +40 XP",
+    "startingEquipment": "Weapon of choice\nfine clothes\nriding boots",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Knight's Training: You were trained in chivalry and combat. Recognized by noble warriors and can invoke codes of honor, though results vary by region and culture.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "meleeCombat": 2,
+      "athletics": 2,
+      "society": 1,
+      "empathy": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "weapon-choice",
+        "itemType": "weapon",
+        "pack": "legends.weapons",
+        "quantity": 1,
+        "originalText": "Weapon of choice"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Riding",
+        "quantity": 1,
+        "originalText": "riding boots",
+        "sourceId": "57a56e7ad7873677"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!ef024ec20b2e4f3c"
+  "_key": "!items!0f2876bcea0f6e67"
 }

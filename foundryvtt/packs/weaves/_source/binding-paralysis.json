@@ -1,11 +1,11 @@
 {
-  "_id": "c0ae149cefc241c7",
+  "_id": "ac47f1bdf2088af1",
   "name": "Binding Paralysis",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Humanoid target at close range makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target is Paralyzed. Target can repeat save at end of each turn to break free (1 success ends effect).</p>"
+      "value": "<p>Humanoid target at close range makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target is Paralyzed. Target can repeat save at end of each turn to break free (1 success ends effect).</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Close, 30 ft.",
     "duration": "1 minute",
-    "target": "",
+    "target": "single",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Humanoid target at close range makes Will save. Compare your targeting successes to their save successes. If you have more, target is Paralyzed. Target can repeat save at end of each turn to break free (1 success ends effect).",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
@@ -47,5 +68,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!c0ae149cefc241c7"
+  "_key": "!items!ac47f1bdf2088af1"
 }

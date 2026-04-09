@@ -1,5 +1,5 @@
 {
-  "_id": "cff475c953584940",
+  "_id": "6030cac0eb8528d7",
   "name": "Grasping Vines",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft. (20-foot square)",
     "duration": "1 minute",
-    "target": "",
+    "target": "area",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "Plants in area animate and grasp at creatures. Creatures in area when cast or entering make Reflex save. Compare your targeting successes to their save successes. If you have more, target becomes Restrained (reflex save). Repeat save at end of affected player turn (1 success ends effect).",
+    "effectType": "summon",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round (10ft square)",
+          "duration": "1 round (10ft square)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute (20ft square)",
+          "duration": "1 minute (20ft square)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes (30ft square)",
+          "duration": "10 minutes (30ft square)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 round (10ft square)\n- 2 = 1 minute (20ft square)\n- 3 = 10 minutes (30ft square)",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 round (10ft square), 2 = 1 minute (20ft square), 3 = 10 minutes (30ft square)",
     "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!cff475c953584940"
+  "_key": "!items!6030cac0eb8528d7"
 }

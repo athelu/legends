@@ -16,7 +16,7 @@ import json
 import re
 import sys
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, validate_items, write_db_file, ensure_key, md_to_html, apply_enrichers
+from pack_utils import build_pack_from_source, generate_stable_id, ensure_key, md_to_html, apply_enrichers
 
 # Add source/weaves directory to path for detectors
 script_dir = Path(__file__).parent
@@ -57,18 +57,34 @@ except ImportError:
     WEAVE_SCHEMA = None
 
 
-def _safe_filename(name: str) -> str:
-    """Return a filesystem-safe filename for item names (cross-platform).
+def _canonical_weave_name(name: str) -> str:
+    """Strip markdown and trailing tag decoration from a weave heading."""
+    cleaned = re.sub(r'\s*\*\*\[([^\]]+)\]\*\*', '', name)
+    cleaned = re.sub(r'\s*\[([^\]]+)\]\s*$', '', cleaned)
+    cleaned = re.sub(r'\s+', ' ', cleaned)
+    return cleaned.strip()
 
-    Replace characters that are invalid on Windows (and awkward elsewhere)
-    with hyphens and collapse repeated hyphens.
-    """
-    # Replace any character that is not alphanumeric, period, underscore, space or hyphen
-    s = re.sub(r"[^A-Za-z0-9 ._\-]", "-", name)
-    s = s.strip().lower()
-    s = re.sub(r"[\s]+", "-", s)
-    s = re.sub(r"-+", "-", s)
-    return s
+
+def _safe_filename(name: str) -> str:
+    """Return a deterministic canonical filename slug for a weave."""
+    canonical_name = _canonical_weave_name(name)
+    slug = re.sub(r'[^a-z0-9]+', '-', canonical_name.strip().lower())
+    return slug.strip('-')
+
+
+def _legacy_filename(name: str) -> str:
+    """Return the legacy weave filename slug used before canonical cleanup."""
+    legacy = re.sub(r"[^A-Za-z0-9 ._\-]", "-", name)
+    legacy = legacy.strip().lower()
+    legacy = re.sub(r"[\s]+", "-", legacy)
+    legacy = re.sub(r"-+", "-", legacy)
+    return legacy.strip('-')
+
+
+def _generate_weave_id(name: str) -> str:
+    """Generate a stable Foundry document ID from the canonical weave name."""
+    canonical_name = _canonical_weave_name(name).lower()
+    return generate_stable_id(f'weave:{canonical_name}')
 
 
 def _load_existing_weave(source_dir, weave_name):
@@ -76,10 +92,15 @@ def _load_existing_weave(source_dir, weave_name):
     Load existing weave JSON to preserve manually-added fields like appliesEffects.
     Returns None if the file doesn't exist.
     """
-    filename = _safe_filename(weave_name) + '.json'
-    json_file = source_dir / filename
-    
-    if json_file.exists():
+    candidate_filenames = [f"{_safe_filename(weave_name)}.json"]
+    legacy_filename = f"{_legacy_filename(weave_name)}.json"
+    if legacy_filename not in candidate_filenames:
+        candidate_filenames.append(legacy_filename)
+
+    for filename in candidate_filenames:
+        json_file = source_dir / filename
+        if not json_file.exists():
+            continue
         try:
             with open(json_file, 'r', encoding='utf-8') as f:
                 return json.load(f)
@@ -87,6 +108,7 @@ def _load_existing_weave(source_dir, weave_name):
             print(f"  Warning: Could not load existing {filename}: {e}")
     
     return None
+
 
 
 def _preserve_manual_fields(new_item, existing_item):
@@ -272,13 +294,13 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
                 if str(i) in scaling_table and 'damage' in scaling_table[str(i)]:
                     prev_damage = scaling_table[str(i)]['damage']
                     break
-            
+
             scaling_table[success_level] = {
                 'damage': prev_damage,
                 'effect': condition_name,
                 'description': f"applies {condition_name}"
             }
-    
+
     return scaling_table
 
 
@@ -316,8 +338,10 @@ def _parse_effect_scaling(scaling_text, applies_effects):
             success_level = match.group(1)
             description = match.group(2).strip()
             
+            normalized_description = description.lower()
+
             # Determine if effects apply at this level
-            applies = 'no effect' not in description.lower()
+            applies = not any(term in normalized_description for term in ['no effect', 'fail', 'fails', 'miss', 'misses', 'resist'])
             
             # Extract duration if present
             duration = None
@@ -334,6 +358,140 @@ def _parse_effect_scaling(scaling_text, applies_effects):
             scaling_table[success_level] = scaling_entry
     
     return scaling_table
+
+
+def _extract_markdown_field(text, labels):
+    """Extract the first matching markdown field value for one of the labels."""
+    if not text:
+        return ''
+
+    label_pattern = '|'.join(re.escape(label) for label in labels)
+    match = re.search(
+        rf'\*\*(?:{label_pattern}):\*\*\s*(.+?)(?=\n\*\*[A-Z]|\Z)',
+        text,
+        re.DOTALL
+    )
+    if not match:
+        return ''
+
+    return match.group(1).strip()
+
+
+def _strip_markdown_text(text):
+    """Convert a short markdown fragment into plain text for structured fields."""
+    if not text:
+        return ''
+
+    stripped = re.sub(r'\[\[/[^\]]+\]\]', '', text)
+    stripped = re.sub(r'[`*_#>]+', '', stripped)
+    stripped = re.sub(r'\s+', ' ', stripped)
+    return stripped.strip()
+
+
+def _parse_energy_spec(text):
+    """Parse an energy field into a normalized energy type and numeric cost."""
+    plain_text = _strip_markdown_text(text)
+    if not plain_text:
+        return '', 0
+
+    match = re.match(r'(.+?)\s+(\d+)(?:\b|$)', plain_text)
+    if not match:
+        return '', 0
+
+    raw_type = match.group(1).strip().lower()
+    cost = int(match.group(2))
+    normalized_type = re.sub(r'\s+', ' ', raw_type)
+
+    energy_aliases = {
+        'earth': 'earth',
+        'air': 'air',
+        'fire': 'fire',
+        'water': 'water',
+        'positive': 'positive',
+        'negative': 'negative',
+        'space': 'space',
+        'time': 'time',
+        'force': 'force',
+        'entropy': 'entropy',
+        'matching elemental energy (earth/air/fire/water)': 'variable-elemental',
+        'matching elemental energy': 'variable-elemental',
+        'your primary energy': 'variable-elemental'
+    }
+
+    return energy_aliases.get(normalized_type, ''), cost
+
+
+def _derive_target_category(range_text, effect_text):
+    """Map prose/range hints to the categorical target values expected by the item sheet."""
+    normalized_range = range_text.lower()
+    haystack = f"{range_text} {effect_text}".lower()
+
+    if 'cone' in haystack:
+        return 'cone'
+    if re.search(r'\bline\b', haystack):
+        return 'line'
+    if any(keyword in haystack for keyword in ['radius', 'sphere', 'burst']) and any(marker in haystack for marker in ['creature', 'target', 'enemy', 'humanoid', 'within', 'all ']):
+        return 'sphere'
+    if any(keyword in haystack for keyword in ['cube', 'hemisphere', 'area', 'zone', 'wall']) and any(marker in haystack for marker in ['creature', 'target', 'enemy', 'within', 'all ']):
+        return 'area'
+    if re.search(r'up to\s+\d+\s+(targets?|creatures?)', haystack) or any(keyword in haystack for keyword in ['all creatures', 'all creature', 'multiple targets', 'multiple creatures', 'each creature', 'each target']):
+        return 'multiple'
+    if any(keyword in haystack for keyword in ['single-target', 'single target', 'one creature', 'humanoid target', 'touched creature', 'target at ', 'target one ']):
+        return 'single'
+    if any(keyword in haystack for keyword in ['object you touch', 'one object', 'touched object']):
+        return 'single'
+    if 'self' in normalized_range:
+        return 'single'
+    if 'touch' in haystack:
+        return 'single'
+
+    return ''
+
+
+def _derive_effect_type(effect_text, applies_effects, damage_base):
+    """Infer a broad effect category that matches current weave runtime fields."""
+    if damage_base > 0:
+      return 'damage'
+
+    normalized_effect = effect_text.lower()
+    effect_ids = [entry.get('effectId', '').lower() for entry in applies_effects]
+
+    if any(word in normalized_effect for word in ['heal', 'healing', 'restore', 'regain']):
+        return 'healing'
+
+    summon_markers = ['summon', 'conjure', 'animate', 'animating', 'servant', 'elemental', 'zombie', 'skeleton', 'undead under your control']
+    if any(marker in normalized_effect for marker in summon_markers):
+        return 'summon'
+
+    transformation_markers = ['transform', 'transformation', 'polymorph', 'shapechange', 'changes into', 'turn into', 'size shift', 'malleable form']
+    if any(marker in normalized_effect for marker in transformation_markers):
+        return 'transformation'
+
+    divination_markers = ['identify', 'learn', 'reveal', 'detect', 'sense', 'scry', 'perceive', 'see ', 'see through', 'commune', 'communion']
+    if any(marker in normalized_effect for marker in divination_markers):
+        return 'divination'
+
+    protection_markers = ['protection', 'ward', 'shield', 'armor', 'damage reduction', 'dr increases', 'reflect', 'reflection', 'resistance']
+    if any(marker in normalized_effect for marker in protection_markers):
+        return 'protection'
+
+    control_effects = {
+        'frightened', 'fleeing', 'cowering', 'paralyzed', 'stunned', 'restrained', 'grappled',
+        'prone', 'slowed', 'dazed', 'charmed', 'hidden', 'invisible', 'concealed', 'revealed',
+        'blinded', 'deafened', 'asleep', 'sleep', 'confusion', 'sickened'
+    }
+    if any(effect_id in control_effects for effect_id in effect_ids):
+        return 'control'
+
+    buff_markers = ['bonus', 'fortune', 'blessing', 'haste', 'gain', 'gains', 'increase', 'enhance']
+    if any(marker in normalized_effect for marker in ['gain', 'gains', 'increase', 'protect', 'grant']) or any(marker in effect_id for effect_id in effect_ids for marker in buff_markers):
+        return 'buff'
+
+    debuff_markers = ['penalty', 'misfortune', 'reduce', 'weaken', 'slow']
+    if any(marker in normalized_effect for marker in debuff_markers):
+        return 'debuff'
+
+    return 'utility'
 
 
 def parse_weaves_md(ttrpg_dir, source_dir=None):
@@ -377,8 +535,8 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 continue
             
             item = {
-                '_id': generate_id(),
-                'name': weave_name,
+                '_id': _generate_weave_id(weave_name),
+                'name': _canonical_weave_name(weave_name),
                 'type': 'weave',
                 'img': 'icons/magic/abjuration/abjuration-purple.webp',
                 'system': {
@@ -408,6 +566,9 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
 
             # Extract full text for parsing
             full_text = '\n'.join(lines[1:]).strip()
+
+            effect_text = _extract_markdown_field(full_text, ['Effect', 'Description'])
+            item['system']['effect'] = _strip_markdown_text(effect_text)
             
             # Extract only the Description/Effect field for description.value
             # Look for "**Description:**" or "**Effect:**" field
@@ -426,16 +587,19 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
 
             # Try to parse energy costs from full text
             description = full_text  # Keep using 'description' variable name for backward compat
-            primary_match = re.search(r'\*\*Primary Energy:\*\*\s*(\w+)\s+(\d+)', description)
-            if primary_match:
-                item['system']['energyCost']['primary']['type'] = primary_match.group(1).lower()
-                item['system']['energyCost']['primary']['cost'] = int(primary_match.group(2))
-            supporting_match = re.search(r'\*\*Supporting Energy:\*\*\s*(\w+)\s+(\d+)', description)
-            if supporting_match:
-                item['system']['energyCost']['supporting']['type'] = supporting_match.group(1).lower()
-                item['system']['energyCost']['supporting']['cost'] = int(supporting_match.group(2))
+            primary_energy_text = _extract_markdown_field(description, ['Primary Energy'])
+            primary_type, primary_cost = _parse_energy_spec(primary_energy_text)
+            if primary_type or primary_cost:
+                item['system']['energyCost']['primary']['type'] = primary_type
+                item['system']['energyCost']['primary']['cost'] = primary_cost
+
+            supporting_energy_text = _extract_markdown_field(description, ['Supporting Energy'])
+            supporting_type, supporting_cost = _parse_energy_spec(supporting_energy_text)
+            if supporting_type or supporting_cost:
+                item['system']['energyCost']['supporting']['type'] = supporting_type
+                item['system']['energyCost']['supporting']['cost'] = supporting_cost
                 item['system']['weaveType'] = 'complex'
-            elif primary_match:
+            elif primary_type or primary_cost:
                 item['system']['weaveType'] = 'simple'
             
             # Parse Action field to determine actionCost
@@ -482,6 +646,8 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
             range_match = re.search(r'\*\*Range:\*\*\s*([^\n]+)', description)
             if range_match:
                 item['system']['range'] = range_match.group(1).strip()
+
+            item['system']['target'] = _derive_target_category(item['system']['range'], effect_text)
             
             # Parse Duration field
             duration_match = re.search(r'\*\*Duration:\*\*\s*([^\n]+)', description)
@@ -540,6 +706,12 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 effects_str = applies_match.group(1).strip()
                 applies_effects_list = _parse_applies_effects(effects_str)
                 item['system']['appliesEffects'] = applies_effects_list
+
+            item['system']['effectType'] = _derive_effect_type(
+                item['system']['effect'],
+                applies_effects_list,
+                item['system']['damage']['base']
+            )
             
             # Parse Success Scaling field into structured data
             # NEW: All weaves use "Targeting Success Scaling:" in the two-roll system
@@ -575,8 +747,6 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                     # Only preserve if not already parsed from markdown
                     if not applies_match and existing.get('system', {}).get('appliesEffects'):
                         item['system']['appliesEffects'] = existing['system']['appliesEffects']
-                    # Keep the same _id to maintain references
-                    item['_id'] = existing.get('_id', item['_id'])
             
             # Auto-detect and apply classification
             if DETECTORS_AVAILABLE:
@@ -587,12 +757,6 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                 # Detect tags
                 tags = detect_all_tags(item)
                 item['system']['tags'] = tags
-                
-                # Clean up **[Tag]** markers from name
-                original_name = item['name']
-                cleaned_name = re.sub(r'\s*\*\*\[([^\]]+)\]\*\*', '', original_name)
-                if cleaned_name != original_name:
-                    item['name'] = cleaned_name.strip()
             
             items.append(item)
     
@@ -656,6 +820,9 @@ def main():
         
         # Save to _source/
         source_dir.mkdir(parents=True, exist_ok=True)
+
+        for old_file in source_dir.glob('*.json'):
+            old_file.unlink()
         
         for item in items:
             filename = _safe_filename(item['name']) + '.json'

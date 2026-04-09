@@ -1,5 +1,5 @@
 {
-  "_id": "c53d8c6d965d415f",
+  "_id": "762464bbbed2ec13",
   "name": "Buckler",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 4,
       "type": "bludgeoning",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
-        "damageAttr": "agility",
+        "skill": "melee",
+        "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 4,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -45,8 +45,10 @@
       "standard",
       "finesse"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!c53d8c6d965d415f"
+  "_key": "!items!762464bbbed2ec13"
 }

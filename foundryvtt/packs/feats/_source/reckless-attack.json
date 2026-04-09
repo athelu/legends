@@ -1,29 +1,36 @@
 {
-  "_id": "a0cc58cb1fbd47d4",
+  "_id": "7a7d668f933509a1",
   "name": "Reckless Attack",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>You've made a calculated decision to hit harder and worry about consequences later.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "strength": 4
       },
       "skills": "meleeCombat:3",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>When you make a melee weapon attack, you can choose to subtract 1 from both attack dice. If you do, attacks against you also subtract 1 from both dice until start of your next turn</p>",
-    "usageType": "unlimited",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Unlimited"
+    },
     "keywords": "[Combat], [Savage]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!a0cc58cb1fbd47d4"
+  "_key": "!items!7a7d668f933509a1"
 }

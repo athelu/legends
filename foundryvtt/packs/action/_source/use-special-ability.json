@@ -1,22 +1,23 @@
 {
-  "_id": "b09d023ff87e4b4e",
+  "_id": "c72fbc79d7d6122a",
   "name": "Use Special Ability",
   "type": "action",
   "img": "icons/skills/trades/construction-gloves-yellow.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1 (or as specified by ability)</li>\n<li><strong>Effect:</strong> Use a class feature, feat, or special ability that doesn't fit other categories</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Specific action cost listed in ability description</li>\n<li>Some abilities may be [Free] or [Reaction] instead</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Use a class feature, feat, or special ability that doesn't fit other categories. If the ability specifies that it takes more than 1 action than use its stated action cost.</p>"
     },
     "actionType": "activate",
     "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Use a class feature, feat, or special ability that doesn't fit other categories\n- **Notes:**\n  - Specific action cost listed in ability description\n  - Some abilities may be [Free] or [Reaction] instead",
-    "keywords": "",
+    "effect": "Use a class feature, feat, or special ability that doesn't fit other categories. If the ability specifies that it takes more than 1 action than use its stated action cost.",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!b09d023ff87e4b4e"
+  "_key": "!items!c72fbc79d7d6122a"
 }

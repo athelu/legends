@@ -1,21 +1,83 @@
 {
-  "_id": "724a0c63c42e48a6",
+  "_id": "915de6b2cd4cd986",
   "name": "Bookkeeper",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Numbers don't lie, but the people who record them often do. You spent your days tracking accounts and managing ledgers, developing an eye for discrepancies that most people miss. Adventure is certainly more exciting than balance sheets, though sometimes the pay isn't as reliable. <strong>Skills:</strong> Society 2, Investigate 2, Writing 1, Perception 1, +40 XP <strong>Equipment:</strong> Journal, ink, quill, abacus, fine clothes, shoes <strong>Feature</strong> - Head for Numbers: You can quickly assess financial records and spot discrepancies or patterns in accounts.</p>"
+      "value": "<p>Numbers don't lie, but the people who record them often do. You spent your days tracking accounts and managing ledgers, developing an eye for discrepancies that most people miss. Adventure is certainly more exciting than balance sheets, though sometimes the pay isn't as reliable.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Society 2, Investigate 2, Writing 1, Perception 1, +40 XP",
+    "startingEquipment": "Journal\nink\nquill\nabacus\nfine clothes\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Head for Numbers: You can quickly assess financial records and spot discrepancies or patterns in accounts.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "society": 2,
+      "investigate": 2,
+      "writing": 1,
+      "perception": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Journal",
+        "quantity": 1,
+        "originalText": "Journal",
+        "sourceId": "1b02ead55fc70f66"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Ink, 1 oz",
+        "quantity": 1,
+        "originalText": "ink",
+        "sourceId": "0a04bf0388f541a3"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Quill",
+        "quantity": 1,
+        "originalText": "quill",
+        "sourceId": "4e18e27b51e765ec"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Abacus",
+        "quantity": 1,
+        "originalText": "abacus",
+        "sourceId": "1143a56fa4fb09d5"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!724a0c63c42e48a6"
+  "_key": "!items!915de6b2cd4cd986"
 }

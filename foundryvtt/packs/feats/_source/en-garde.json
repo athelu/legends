@@ -1,0 +1,36 @@
+{
+  "_id": "fb337fc6316af13b",
+  "name": "En Garde",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>A flick of the wrist, a shift of the eyes — the setup costs you nothing now.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "deception:4",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per turn you may use Feint as a [Minor] action instead of a [Combat] action. All normal Feint rules apply including the MAP exemption on success</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per turn"
+    },
+    "keywords": "[Combat], [Duelist]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!fb337fc6316af13b"
+}

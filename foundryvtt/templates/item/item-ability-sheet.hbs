@@ -84,6 +84,31 @@
         <small>Mechanical effect of this ability</small>
       </div>
 
+      <div class="form-group stacked">
+        <label>Applies Effects</label>
+        <small>Configured effects will appear as draggable chips on this ability's chat card.</small>
+        <div class="effect-list">
+          {{#if abilityAppliesEffects.length}}
+            {{#each abilityAppliesEffects}}
+              <div class="effect-entry">
+                <input type="text" name="system.appliesEffects.{{index}}.effectId" value="{{effectId}}" placeholder="e.g., frightened" />
+                <select name="system.appliesEffects.{{index}}.operation">
+                  <option value="apply" {{#if (eq operation "apply")}}selected{{/if}}>Apply</option>
+                  <option value="remove" {{#if (eq operation "remove")}}selected{{/if}}>Remove</option>
+                </select>
+                <input type="text" name="system.appliesEffects.{{index}}.paramsText" value="{{paramsText}}" placeholder="key=value, other=2" />
+                <button type="button" class="icon-button" data-action="removeWeaveEffect" data-index="{{index}}" title="Remove effect">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            {{/each}}
+          {{else}}
+            <p class="hint">No ability effects configured.</p>
+          {{/if}}
+        </div>
+        <button type="button" class="add-effect-button" data-action="addWeaveEffect">Add Effect</button>
+      </div>
+
       <div class="form-group">
         <label>Currently Active</label>
         <input type="checkbox" name="system.isActive" {{checked system.isActive}}/>

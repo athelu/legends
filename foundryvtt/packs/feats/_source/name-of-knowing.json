@@ -1,0 +1,38 @@
+{
+  "_id": "38f1d22ee6fd534c",
+  "name": "Name of Knowing",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>A thing named truly cannot easily hide its nature.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 3
+      },
+      "skills": "empathy:3",
+      "feats": [
+        "Invoker"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>As a [Minor] action, speak a word of naming at one creature you can see within 60 feet. Make an opposed Charisma + [[/check skill=empathy]] vs their Wisdom + Luck ([[/save type=will]]). If you win:</p>\n<ul>\n<li>You know immediately if the creature speaks a deliberate lie for the next 10 minutes</li>\n<li>You may ask one question that the creature must answer truthfully, though they may choose to remain silent rather than answer. They cannot speak a false answer to the question you ask.</li>\n<li>You see through any mundane disguise or false identity they are presenting</li>\n</ul>\n<p>This ability does not reveal magically concealed information and cannot compel answers about things the creature genuinely does not know. Outside combat this requires no action cost.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per short rest"
+    },
+    "keywords": "[Magic], [Invoker], [Social]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!38f1d22ee6fd534c"
+}

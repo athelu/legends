@@ -1,5 +1,5 @@
 {
-  "_id": "7741d626f83c46a1",
+  "_id": "230517f053177958",
   "name": "Supportive Harmony",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
@@ -8,22 +8,31 @@
       "value": "<p>Your enlightenment extends outward. When you perceive the optimal path for yourself, you can show others glimpses of their own best possibilities</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "wisdom": 5
       },
       "skills": "",
-      "feats": [],
-      "tier": 3,
-      "other": "Sorcerous Origin trait"
+      "feats": [
+        "Sorcerous Origin"
+      ],
+      "tier": 0,
+      "other": ""
     },
     "benefits": "<p>When you use Harmonic Weaving to reroll one of your own dice, you may simultaneously grant one ally within 60 feet Fortune on their next roll within the next minute (they roll 3d8, take best 2)</p>",
-    "usageType": "uses",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Uses your normal Harmonic Weaving"
+    },
     "keywords": "[Magic], [Sorcerer]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!7741d626f83c46a1"
+  "_key": "!items!230517f053177958"
 }

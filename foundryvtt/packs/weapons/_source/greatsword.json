@@ -1,5 +1,5 @@
 {
-  "_id": "bbbf121d9c41435c",
+  "_id": "01435cdddea9b227",
   "name": "Greatsword",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
+        "skill": "melee",
         "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 10,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -44,8 +44,10 @@
       "two-handed",
       "alternate-strike"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!bbbf121d9c41435c"
+  "_key": "!items!01435cdddea9b227"
 }

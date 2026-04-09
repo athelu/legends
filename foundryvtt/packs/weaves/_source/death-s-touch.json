@@ -1,5 +1,5 @@
 {
-  "_id": "66fc2d85d06043fb",
+  "_id": "1272904b78ce9162",
   "name": "Death's Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,15 +23,36 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "fortitude",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target takes 40 negative damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target dies and rises as a zombie under your control after 1 minute.",
+    "effectType": "summon",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (20)",
+          "duration": "Half damage (20)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (40)",
+          "duration": "Full damage (40)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (48)",
+          "duration": "Enhanced damage (48)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (20)\n- 2 = Full damage (40)\n- 3 = Enhanced damage (48)",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48)",
     "weavingRoll": "Negative Potential + Negative Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
@@ -44,5 +65,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!66fc2d85d06043fb"
+  "_key": "!items!1272904b78ce9162"
 }

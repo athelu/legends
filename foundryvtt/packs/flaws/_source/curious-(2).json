@@ -1,21 +1,22 @@
 {
-  "_id": "78f562b5811048cc",
+  "_id": "8c15d146c48d62db",
   "name": "Curious (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>You are naturally inquisitive and must investigate anything unusual.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) to avoid examining strange items, investigating sounds, or pursuing mysteries even when dangerous</li>\n</ul>"
+      "value": "<p>You are naturally inquisitive and must investigate anything unusual.</p>"
     },
     "pointValue": 2,
-    "flawType": "",
-    "severity": "moderate",
-    "mechanicalEffects": "",
+    "flawType": "mental",
+    "severity": "minor",
+    "mechanicalEffects": "<ul>\n<li>Make [[/save type=will]] (1 success required) to avoid examining strange items, investigating sounds, or pursuing mysteries even when dangerous</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!78f562b5811048cc"
+  "_key": "!items!8c15d146c48d62db"
 }

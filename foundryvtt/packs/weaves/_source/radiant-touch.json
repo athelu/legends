@@ -1,5 +1,5 @@
 {
-  "_id": "b4e5357dd80f4402",
+  "_id": "7e04ca35d5578770",
   "name": "Radiant Touch",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Touch",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Touch a target and channel searing radiant energy. Target takes 4 radiant damage. Deals double damage to undead creatures. This is an attack weave—no saving throw allowed.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half",
+          "duration": "half"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (4)",
+          "duration": "full damage (4)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (8)",
+          "duration": "enhanced damage (8)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = miss\n- 1 = half damage (2)\n- 2 = full damage (4)\n- 3 = enhanced damage (8)",
+    "targetingSuccessScaling": "0 = fails, 1 = half, damage (2), 2= full damage (4), 3 = enhanced damage (8)",
     "weavingRoll": "Positive Potential + Positive Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
@@ -42,5 +63,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!b4e5357dd80f4402"
+  "_key": "!items!7e04ca35d5578770"
 }

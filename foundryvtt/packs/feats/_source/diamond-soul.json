@@ -1,5 +1,5 @@
 {
-  "_id": "7aac9d16438f4d7b",
+  "_id": "f68376e55878e0d7",
   "name": "Diamond Soul",
   "type": "feat",
   "img": "icons/sundries/books/book-star-purple.webp",
@@ -8,24 +8,29 @@
       "value": "<p>Your training has refined your spirit to crystalline perfection. Where others rely on toughness or resistance, your fundamental resilience makes even reality's harshest effects slide off you like water from stone.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 80,
+    "classification": "legendary",
     "prerequisites": {
       "attributes": {
         "wisdom": 5
       },
       "skills": "",
-      "feats": [
-        "Mystic Defense"
-      ],
-      "tier": 4,
+      "feats": [],
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Gain proficiency in all saving throws. When you fail a saving throw, you can spend 1 Luck to reroll and must take the new result</p>",
-    "usageType": "passive",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive proficiency + reaction costs Luck"
+    },
     "keywords": "[Save], [Ascetic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!7aac9d16438f4d7b"
+  "_key": "!items!f68376e55878e0d7"
 }

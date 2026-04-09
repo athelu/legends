@@ -1,0 +1,36 @@
+{
+  "_id": "ac67e09bc081bfec",
+  "name": "Shadow Step",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>By the time they look for you, you are already somewhere else.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 5
+      },
+      "skills": "meleeCombat:4",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per turn, after making a melee attack, you may move up to half your movement speed without provoking opportunity attacks.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per turn"
+    },
+    "keywords": "[Combat], [Shadow], [Move]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!ac67e09bc081bfec"
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "4b7f9ff3a54c4563",
+  "_id": "2895a0007b4426f8",
   "name": "Shortbow",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 6,
       "type": "piercing",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -21,30 +21,14 @@
     },
     "attackModes": [
       {
-        "name": "Melee",
-        "type": "melee",
-        "skill": "meleeCombat",
-        "damageAttr": "strength",
-        "defenseType": "melee",
-        "damage": {
-          "base": 6,
-          "alternate": null
-        },
-        "range": {
-          "normal": 0,
-          "medium": 0,
-          "long": 0
-        }
-      },
-      {
         "name": "Ranged",
         "type": "ranged",
-        "skill": "rangedCombat",
-        "damageAttr": "agility",
+        "skill": "ranged",
+        "damageAttr": "dexterity",
         "defenseType": "ranged",
         "damage": {
           "base": 6,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 60,
@@ -60,8 +44,10 @@
       "two-handed",
       "ranged"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!4b7f9ff3a54c4563"
+  "_key": "!items!2895a0007b4426f8"
 }

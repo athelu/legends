@@ -1,0 +1,38 @@
+{
+  "_id": "9e1e635f74ba0ac2",
+  "name": "Fluid Strikes",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Both blades move as one continuous motion, the second flowing naturally from the first without loss of speed or precision.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 5
+      },
+      "skills": "meleeCombat:5",
+      "feats": [
+        "Two-Weapon Fighting"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When making a Two-Weapon Fighting action, the off-hand attack no longer adds 1 to the skill die. Both attacks are made at normal dice.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Dual]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!9e1e635f74ba0ac2"
+}

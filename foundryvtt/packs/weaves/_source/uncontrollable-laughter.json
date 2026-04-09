@@ -1,11 +1,11 @@
 {
-  "_id": "6f397acd7c2d4b2d",
+  "_id": "ff2349fe95cb3861",
   "name": "Uncontrollable Laughter",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target at close range makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target falls Prone with uncontrollable laughter. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect).  Creatures with Intelligence 1 aren't affected.</p>"
+      "value": "<p>Target at close range makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target falls Prone with uncontrollable laughter. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect). Creatures with Intelligence 1 aren't affected.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,22 +21,43 @@
     },
     "range": "Close, 30 ft.",
     "duration": "1 minute (until save succeeds)",
-    "target": "",
+    "target": "single",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target at close range makes Will save. Compare your targeting successes to their save successes. If you have more, target falls Prone with uncontrollable laughter. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect). Creatures with Intelligence 1 aren't affected.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes + incapacitated",
+          "duration": "10 minutes + incapacitated"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no effect\n- 1 = 1 round\n- 2 = full effect\n- 3 = 10 minutes + incapacitated",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes + incapacitated",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [
       {
-        "effectId": "incapacitated",
+        "effectId": "Incapacitated",
         "params": {}
       }
     ],
@@ -47,5 +68,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!6f397acd7c2d4b2d"
+  "_key": "!items!ff2349fe95cb3861"
 }

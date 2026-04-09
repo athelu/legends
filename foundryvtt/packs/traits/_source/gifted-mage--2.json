@@ -1,21 +1,28 @@
 {
-  "_id": "54f1397cf45b4aa6",
+  "_id": "05ddae2d53a8fea6",
   "name": "Gifted Mage (-2)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>Enhanced magical talent - add this trait BEFORE applying Mageborn or Divine Gift.</p>\n<ul>\n<li>Roll 9d8, drop lowest</li>\n<li>Trait bonuses still apply</li>\n</ul>"
+      "value": "<p>Enhanced magical talent - add this trait BEFORE applying Mageborn or Divine Gift.</p>"
     },
     "pointCost": -2,
     "traitType": "magical",
     "isMagical": true,
     "magicalType": "gifted-mage",
     "requirements": "",
-    "benefits": "",
+    "benefits": "<ul>\n<li>Roll 9d8, drop lowest</li>\n<li>Trait bonuses still apply</li>\n</ul>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
     "requiresGMApproval": false,
     "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!54f1397cf45b4aa6"
+  "_key": "!items!05ddae2d53a8fea6"
 }

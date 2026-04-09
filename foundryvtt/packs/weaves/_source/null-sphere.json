@@ -1,5 +1,5 @@
 {
-  "_id": "d801d15613e846a1",
+  "_id": "32dfc538f9d31a4c",
   "name": "Null Sphere",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "10-foot radius, centered on self",
     "duration": "10 minutes",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Creates a 10ft radius sphere around you that suppresses all magic. Weaves cannot be cast into or out of the field. Magical items cease functioning. Active weaves are suppressed while in the field.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 round\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2= 10 minutes, 3 = 1 hour",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
-      "ritual"
+      "ritual",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!d801d15613e846a1"
+  "_key": "!items!32dfc538f9d31a4c"
 }

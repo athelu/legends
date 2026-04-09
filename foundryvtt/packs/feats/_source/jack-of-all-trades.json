@@ -1,29 +1,36 @@
 {
-  "_id": "3c7465b3fea44590",
+  "_id": "fcb4cefa796859d6",
   "name": "Jack of All Trades",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>A shallow familiarity with a skill is still familiarity. You've gathered enough of them that almost nothing is completely foreign, and raw ignorance rarely stops you.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "intelligence": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": "five skills at 3+"
     },
     "benefits": "<p>Rank 1 skills count as rank 2</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!3c7465b3fea44590"
+  "_key": "!items!fcb4cefa796859d6"
 }

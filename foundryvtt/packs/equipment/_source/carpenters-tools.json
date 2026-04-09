@@ -1,5 +1,5 @@
 {
-  "_id": "bbc677dc28de4691",
+  "_id": "ea9e56fc8c2fdbb0",
   "name": "Carpenter's Tools",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A set of specialized woodworking tools including saws, chisels, planes, and measuring devices necessary for carpentry work.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "tools",
     "weight": 6.0,
     "cost": 40.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "Craft: Carpenter",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!bbc677dc28de4691"
+  "_key": "!items!ea9e56fc8c2fdbb0"
 }

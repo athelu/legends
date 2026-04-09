@@ -1,21 +1,29 @@
 {
-  "_id": "e4be8f90d0904678",
+  "_id": "40cbd56462321feb",
   "name": "Paralyzed",
   "type": "condition",
   "img": "icons/svg/paralysis.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Cannot take actions, reactions. Cannot move. Cannot speak. Automatically fail Fortitude and Reflex saves. Attacks against you have Fortune. May be aware of surroundings through senses. <strong>Recovery:</strong> At the end of each turn, make [[/save type=fortitude]].</p>\n<ul>\n<li>1 success: Subtract 1 from both die results on next recovery save</li>\n<li>2 successes: Remove Paralyzed condition</li>\n</ul>"
+    },
     "label": "Paralyzed",
     "category": "incapacitation",
-    "description": {
-      "value": "<ul>\n<li>Cannot take actions, reactions, or move</li>\n<li>Cannot speak</li>\n<li>Automatically fail Fortitude and Reflex saves</li>\n<li>Attacks against you have Fortune</li>\n<li>May be aware of surroundings through senses</li>\n<li><strong>Recovery:</strong> At the end of each turn, make [[/save type=fortitude]] (Constitution + Current Luck):\n<ul>\n<li>2 successes: Condition ends</li>\n<li>1 success: Subtract 1 from next recovery save die results</li>\n<li>0 successes: Remains Paralyzed</li>\n</ul></li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/paralysis.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "severe",
     "overlayPriority": 30,
+    "damageTick": null,
     "recovery": {
       "trigger": "endOfTurn",
+      "method": "save",
       "removeOnSuccess": true,
       "save": {
         "type": "fortitude"
@@ -23,12 +31,10 @@
       "promptPlayer": true,
       "chatMessage": "Make a [[/save type=fortitude]] to recover from Paralyzed",
       "downgrades": {
-        "2_success": null,
-        "1_success": "Paralyzed",
-        "0_success": "Paralyzed"
+        "2_success": null
       }
     }
   },
   "flags": {},
-  "_key": "!items!e4be8f90d0904678"
+  "_key": "!items!40cbd56462321feb"
 }

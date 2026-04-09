@@ -1,21 +1,105 @@
 {
-  "_id": "714fed9e61474a56",
+  "_id": "3a331742c643022d",
   "name": "Hunter",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You stalked and took down animals and other creatures of the wild. The skills transfer remarkably well regardless if you're tracking a deer or a bandit, the principles are the same. You just have to hope the prey doesn't shoot back. <strong>Skills:</strong> Wilderness 2, Ranged Combat 2, Stealth 1, Perception 1, +40 XP <strong>Equipment:</strong> Bow or crossbow, arrows/bolts, high boots, work clothes, work gloves <strong>Feature</strong> - Tracker: You can track creatures through wilderness and gain Fortune on Wilderness checks to follow trails or identify animal signs.</p>"
+      "value": "<p>You stalked and took down animals and other creatures of the wild. The skills transfer remarkably well regardless if you're tracking a deer or a bandit, the principles are the same. You just have to hope the prey doesn't shoot back.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Wilderness 2, Ranged Combat 2, Stealth 1, Perception 1, +40 XP",
+    "startingEquipment": "Bow or crossbow\narrows/bolts\nhigh boots\nwork clothes\nwork gloves",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Tracker: You can track creatures through wilderness and identify animal signs.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "wilderness": 2,
+      "rangedCombat": 2,
+      "stealth": 1,
+      "perception": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "choice",
+        "itemType": "weapon",
+        "options": [
+          {
+            "mode": "reference",
+            "itemType": "weapon",
+            "pack": "legends.weapons",
+            "sourceName": "Shortbow",
+            "quantity": 1,
+            "sourceId": "2895a0007b4426f8"
+          },
+          {
+            "mode": "reference",
+            "itemType": "weapon",
+            "pack": "legends.weapons",
+            "sourceName": "Longbow",
+            "quantity": 1,
+            "sourceId": "8dbe9d712488c94a"
+          },
+          {
+            "mode": "reference",
+            "itemType": "weapon",
+            "pack": "legends.weapons",
+            "sourceName": "Light Crossbow",
+            "quantity": 1,
+            "sourceId": "81ad095be854e853"
+          },
+          {
+            "mode": "reference",
+            "itemType": "weapon",
+            "pack": "legends.weapons",
+            "sourceName": "Heavy Crossbow",
+            "quantity": 1,
+            "sourceId": "ab295727aee60a82"
+          }
+        ],
+        "quantity": 1,
+        "originalText": "Bow or crossbow"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Arrows/Bolts",
+        "quantity": 1,
+        "originalText": "arrows/bolts",
+        "sourceId": "f49022f7fa7954f0"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, High",
+        "quantity": 1,
+        "originalText": "high boots",
+        "sourceId": "76b92e417dab140f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Work",
+        "quantity": 1,
+        "originalText": "work clothes",
+        "sourceId": "e9a99873e17f718a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Gloves, Work",
+        "quantity": 1,
+        "originalText": "work gloves",
+        "sourceId": "56d09fece9f4243e"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!714fed9e61474a56"
+  "_key": "!items!3a331742c643022d"
 }

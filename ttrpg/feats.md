@@ -121,11 +121,11 @@ When creating new feats, follow these guidelines:
 **Benefit:** When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn
 
 #### Beast Whisperer
-**Prerequisites:** Wis 4, Animal Handling 4
+**Prerequisites:** Wis 4, Wilderness 4
 **Usage:** Passive communication, action to calm
 **Keyword:** [Wilderness]
 **Description:** Animals don't speak your language, but you've learned to speak theirs. Most creatures just want to be left alone, and you know how to communicate that you're not a threat.
-**Benefit:** Can communicate simple concepts to beasts. Beasts that aren't hostile have their attitude improved by one step. Can attempt to calm hostile beast (opposed Will save, your Wis + Animal Handling vs beast's Wis + Luck)
+**Benefit:** Can communicate simple concepts to beasts. Beasts that aren't hostile have their attitude improved by one step. Can attempt to calm hostile beast (opposed Will save, your Wis + Wilderness vs beast's Wis + Luck)
 
 #### Blade Mastery
 **Prerequisites:** Str 5, Cross Parry feat
@@ -1046,7 +1046,7 @@ This ability does not reveal magically concealed information and cannot compel a
 - **1 success:** No Exhaustion gained
 - **2 successes:** No Exhaustion gained; remove 1 existing Exhaustion level
 
-### Primal Multiattack
+#### Primal Multiattack
 **Prerequisites:** Primal Fury feat, Melee 5
 **Usage:** While in Primal Fury, once per turn
 **Keyword:** [Combat], [Savage]

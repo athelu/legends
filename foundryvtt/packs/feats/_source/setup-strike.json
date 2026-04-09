@@ -1,0 +1,36 @@
+{
+  "_id": "bdc2efb616d58ab4",
+  "name": "Setup Strike",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>The first hit isn't meant to finish them. It's meant to make the second one inevitable.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 3
+      },
+      "skills": "rangedCombat:3, meleeCombat:3",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per turn when you hit with a weapon attack, you may apply either the Slowed (Minor) or Disoriented condition to the target until the end of their next turn.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per turn"
+    },
+    "keywords": "[Combat], [Shadow]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!bdc2efb616d58ab4"
+}

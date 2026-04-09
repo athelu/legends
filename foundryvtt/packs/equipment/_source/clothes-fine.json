@@ -1,5 +1,5 @@
 {
-  "_id": "44271464657542ce",
+  "_id": "55f402d8cc15c40f",
   "name": "Clothes, Fine",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>Well-made clothing from quality materials with decorative elements, suitable for social occasions or those of higher status.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 3.0,
     "cost": 30.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!44271464657542ce"
+  "_key": "!items!55f402d8cc15c40f"
 }

@@ -1,21 +1,83 @@
 {
-  "_id": "1b717e29c9ac4385",
+  "_id": "fbcc5c4b68774719",
   "name": "Ward",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You were raised in a noble or wealthy household, educated and cared for but never quite family. The experience gave you access to privilege while reminding you constantly that it could be taken away. You learned etiquette, history, and the subtle art of navigating high society from the margins. Now you're free to make your own way, though whether that freedom is liberating or terrifying probably depends on the day. <strong>Skills:</strong> Society 2, History 2, Empathy 1, Perception 1, +40 XP <strong>Equipment:</strong> Fine clothes, general topic book, quill, ink, vellum parchment x2, shoes <strong>Feature</strong> - Noble Education: You were raised in a noble household and understand etiquette and high society, though you lack the full privileges and recognition that true nobles command.</p>"
+      "value": "<p>You were raised in a noble or wealthy household, educated and cared for but never quite family. The experience gave you access to privilege while reminding you constantly that it could be taken away. You learned etiquette, history, and the subtle art of navigating high society from the margins. Now you're free to make your own way, though whether that freedom is liberating or terrifying probably depends on the day.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Society 2, History 2, Empathy 1, Perception 1, +40 XP",
+    "startingEquipment": "Fine clothes\ngeneral topic book\nquill\nink\nvellum parchment x2\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Noble Education: You were raised in a noble household and understand etiquette and high society, though you lack the full privileges and recognition that true nobles command.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "society": 2,
+      "history": 2,
+      "empathy": 1,
+      "perception": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "Fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Book, General Topic",
+        "quantity": 1,
+        "originalText": "general topic book",
+        "sourceId": "d8a688921c1a9efc"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Quill",
+        "quantity": 1,
+        "originalText": "quill",
+        "sourceId": "4e18e27b51e765ec"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Ink, 1 oz",
+        "quantity": 1,
+        "originalText": "ink",
+        "sourceId": "0a04bf0388f541a3"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Parchment, Vellum",
+        "quantity": 2,
+        "originalText": "vellum parchment x2",
+        "sourceId": "7cffa64115b3d728"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!1b717e29c9ac4385"
+  "_key": "!items!fbcc5c4b68774719"
 }

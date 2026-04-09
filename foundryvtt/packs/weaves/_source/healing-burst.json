@@ -1,5 +1,5 @@
 {
-  "_id": "5a26cf1a92264cec",
+  "_id": "8ccd9ee145cea97b",
   "name": "Healing Burst",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,24 +23,46 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness.",
+    "effectType": "healing",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half strength (4)",
+          "duration": "half strength (4)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full strength (8)",
+          "duration": "full strength (8)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced strength (12)",
+          "duration": "enhanced strength (12)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = half strength (4)\n- 2 = full strength (8)\n- 3 = enhanced strength (12)",
+    "targetingSuccessScaling": "0 = fails, 1 = half strength (4), 2 = full strength (8), 3 = enhanced strength (12)",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "healing",
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!5a26cf1a92264cec"
+  "_key": "!items!8ccd9ee145cea97b"
 }

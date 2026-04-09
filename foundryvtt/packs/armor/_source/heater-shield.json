@@ -1,5 +1,5 @@
 {
-  "_id": "b1b022f119ec4304",
+  "_id": "6e0bcf154ec9b8e9",
   "name": "Heater Shield",
   "type": "shield",
   "img": "icons/equipment/shield/heater-marked-red.webp",
@@ -9,9 +9,9 @@
     },
     "shieldType": "medium",
     "handUsage": "Occupies off-hand completely",
-    "meleeDefense": "",
+    "meleeDefense": "Shield Defense",
     "requirements": "",
-    "specialAbilities": "",
+    "specialAbilities": "Can be slung on back when not in use (takes 1 [Minor] action to ready)",
     "plantedMode": false,
     "reactions": [
       {
@@ -23,20 +23,17 @@
         "_id": "bf8fb3f40d0343f0"
       }
     ],
-    "weight": 0,
-    "cost": 15.0,
-    "quantity": 1,
-    "notes": "",
-    "keywords": [
-      "Minor"
-    ],
     "linkedAbilities": [
       {
         "name": "Shield Defense",
         "_id": "9e88d21a01c14b0d"
       }
-    ]
+    ],
+    "weight": 0,
+    "cost": 15.0,
+    "quantity": 1,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!b1b022f119ec4304"
+  "_key": "!items!6e0bcf154ec9b8e9"
 }

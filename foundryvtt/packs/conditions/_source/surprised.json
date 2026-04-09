@@ -1,20 +1,32 @@
 {
-  "_id": "20d094032e3d4157",
+  "_id": "86f9dd14fe7b19a7",
   "name": "Surprised",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
-    "label": "Surprised",
-    "category": "combat",
     "description": {
-      "value": "<ul>\n<li>Cannot act during the surprise round</li>\n<li>Defense: Add 2 to die results until your first turn</li>\n<li>After surprise round ends, act normally</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Cannot act during the surprise round. Add 2 to die results until your first turn. <strong>Recovery:</strong> After surprise round ends, act normally</p>"
     },
-    "tokenIcon": "",
+    "label": "Surprised",
+    "category": "magic",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
   },
   "flags": {},
-  "_key": "!items!20d094032e3d4157"
+  "_key": "!items!86f9dd14fe7b19a7"
 }

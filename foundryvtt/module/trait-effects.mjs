@@ -79,6 +79,7 @@ function getTraitType(traitItem) {
   if (name.includes('infuser')) return 'infuser';
   if (name.includes('sorcerous origin')) return 'sorcerous-origin';
   if (name.includes('eldritch pact')) return 'eldritch-pact';
+  if (name.includes('alchemical tradition')) return 'alchemical-tradition';
   if (name.includes('gifted mage')) return 'gifted-mage';
   if (name.includes('balanced channeler')) return 'balanced-channeler';
   
@@ -94,6 +95,7 @@ function getTraitType(traitItem) {
 export function isMagicalTrait(traitItem) {
   const type = getTraitType(traitItem);
   return ['mageborn', 'divine-gift', 'invoker', 'infuser', 'sorcerous-origin', 
+          'alchemical-tradition',
           'eldritch-pact', 'gifted-mage', 'balanced-channeler'].includes(type);
 }
 
@@ -116,7 +118,7 @@ export async function applyTraitEffects(actor, traitItem) {
   if (isMagicalTrait(traitItem)) {
     // Primary magical traits are passive - just mark the type
     const primaryTraits = ['mageborn', 'divine-gift', 'invoker', 'infuser', 
-                          'sorcerous-origin', 'eldritch-pact'];
+                'sorcerous-origin', 'eldritch-pact', 'alchemical-tradition'];
     if (primaryTraits.includes(traitType)) {
       await actor.update({
         'system.magicalTrait.type': traitType,
@@ -142,6 +144,7 @@ export async function applyTraitEffects(actor, traitItem) {
       case 'invoker':
       case 'infuser':
       case 'sorcerous-origin':
+      case 'alchemical-tradition':
       case 'eldritch-pact':
         return true;  // Already handled above
       

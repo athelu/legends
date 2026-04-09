@@ -1,24 +1,32 @@
 {
-  "_id": "7dc7891bf69b423e",
+  "_id": "ffd6a70bd4d8e60f",
   "name": "Concealed",
   "type": "condition",
-  "img": "icons/svg/fog.svg",
+  "img": "icons/svg/invisible.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Tactical] <strong>Effect:</strong> Your location is known, but you are difficult to see clearly. Attackers add 1 to both dice when attacking you. <strong>Recovery:</strong> Lasts as long as environmental condition persists.</p>"
+    },
     "label": "Concealed",
     "category": "visibility",
-    "description": {
-      "value": "<ul>\n<li>Your location is known, but you are difficult to see clearly</li>\n<li>Attackers can target you but with penalties</li>\n<li><strong>Attack Penalties:</strong> Attackers add 1 to both dice when attacking you</li>\n<li><strong>Perception Penalties:</strong> Others add 1 to both dice when using perception checks to see details about you</li>\n</ul>\n<p><strong>Common Sources:</strong></p>\n<ul>\n<li>Fog, mist, smoke</li>\n<li>Heavy rain or snow</li>\n<li>Dim light or shadows (not total darkness)</li>\n<li>Dense foliage or undergrowth</li>\n<li>Obscuring magical effects</li>\n<li>Environmental conditions (sandstorm, etc.)</li>\n</ul>\n<p><strong>Does NOT Prevent Targeting:</strong></p>\n<ul>\n<li>You can still be directly targeted by attacks and weaves</li>\n<li>Enemies know which square you occupy</li>\n<li>Different from Hidden (where location is unknown)</li>\n</ul>\n<p><strong>Stacking with Cover:</strong></p>\n<ul>\n<li>Concealment and Cover can stack</li>\n<li>Example: Behind low wall in fog = Partial Cover + Concealed</li>\n</ul>\n<p><strong>Duration:</strong></p>\n<ul>\n<li>Lasts as long as environmental condition persists</li>\n<li>Moving into clear conditions ends Concealment</li>\n<li>Bright light or magical effects (like Revealing Light) may end Concealment</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends when you move into clear, well-lit conditions</li>\n<li>Some weaves (like Radiant Sphere, Revealing Light) automatically end Concealment</li>\n<li>Revealed condition prevents gaining Concealment</li>\n</ul>\n<p>---</p>"
-    },
-    "tokenIcon": "icons/svg/fog.svg",
+    "keywords": [
+      "Tactical"
+    ],
+    "tokenIcon": "icons/svg/invisible.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
+    "damageTick": null,
     "recovery": {
-      "trigger": "endOfTurn",
-      "removeOnSuccess": true
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
     }
   },
   "flags": {},
-  "_key": "!items!7dc7891bf69b423e"
+  "_key": "!items!ffd6a70bd4d8e60f"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "9b84eabfdad8482e",
+  "_id": "4967514ecbf4bbb1",
   "name": "Fire Savant",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>You've embraced the passion, fire and destruciton becoming a living conduit for flame. When you command fire, it doesn't just burn, it consumes. Ordinary heat no longer bothers you.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 80,
+    "classification": "legendary",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": "Fire Mastery 6, Fire Potential 6, any magical tradition trait"
     },
     "benefits": "<p>Your mastery of Fire energy grants the following abilities:</p>\n<ul>\n<li><strong>Igniting Weaves:</strong> When you cast a weave using Fire as primary energy and deal fire damage, targets that fail their save gain the <strong>Ignited</strong> condition until they spend an action to extinguish</li>\n<li><strong>Flame Resistance:</strong> You are immune to fire damage from non-magical sources. You have Resistance (+2 DR) against magical fire damage</li>\n<li><strong>Flame Walker:</strong> You can walk across lava or flames as if solid ground (take no damage). Fire-based difficult terrain doesn't slow you</li>\n</ul>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!9b84eabfdad8482e"
+  "_key": "!items!4967514ecbf4bbb1"
 }

@@ -1,22 +1,23 @@
 {
-  "_id": "db53584ac60d4f19",
+  "_id": "1c11e09bb21e64c5",
   "name": "Drop Item",
   "type": "action",
   "img": "icons/skills/movement/arrow-right-blue.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> Free</li>\n<li><strong>Effect:</strong> Release an item from your hand</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Item falls in your space</li>\n<li>Doesn't provoke Opportunity Attacks</li>\n<li>Can drop multiple items per turn if necessary (GM discretion)</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> Free <strong>Effect:</strong> Release an item from your hand. Item falls in your space. Doesn't provoke Opportunity Attacks</p>"
     },
     "actionType": "free",
     "actionCost": "Free",
+    "requirements": "",
     "trigger": "",
-    "effect": "Release an item from your hand\n- **Notes:**\n  - Item falls in your space\n  - Doesn't provoke Opportunity Attacks\n  - Can drop multiple items per turn if necessary (GM discretion)",
-    "keywords": "",
+    "effect": "Release an item from your hand. Item falls in your space. Doesn't provoke Opportunity Attacks",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!db53584ac60d4f19"
+  "_key": "!items!1c11e09bb21e64c5"
 }

@@ -1,0 +1,38 @@
+{
+  "_id": "100c1159dc69bd9a",
+  "name": "Retribution",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Every blow that lands on your shield is a lesson.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 5
+      },
+      "skills": "meleeCombat:5",
+      "feats": [
+        "Aggressive Block"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per round when a creature hits you with a melee attack, they take bludgeoning damage equal to your Strength score as the shield absorbs and redirects the impact back into them. No action required — this triggers automatically on the hit.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per round"
+    },
+    "keywords": "[Combat], [Shield]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!100c1159dc69bd9a"
+}

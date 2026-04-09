@@ -1,21 +1,56 @@
 {
-  "_id": "3baa49dcdd224511",
+  "_id": "a3addd276d637a54",
   "name": "Cook",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You transformed ingredients into something that warmed both body and spirit. Whether you worked in a noble's kitchen with exotic spices or a roadside inn with whatever was available, you understand that a good meal creates community. Adventuring might pay better than kitchen work, but you still find yourself feeding your companions. <strong>Skills:</strong> Craft 2, Wilderness 2, Perception 1, Society 1, +40 XP <strong>Equipment:</strong> Apron, work clothes, shoes <strong>Feature</strong> - Comfort Food: Meals you prepare during rests grant one additional HP recovery (once per rest, applies to whole party).</p>"
+      "value": "<p>You transformed ingredients into something that warmed both body and spirit. Whether you worked in a noble's kitchen with exotic spices or a roadside inn with whatever was available, you understand that a good meal creates community. Adventuring might pay better than kitchen work, but you still find yourself feeding your companions.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Craft 2, Wilderness 2, Perception 1, Society 1, +40 XP",
+    "startingEquipment": "Apron\nwork clothes\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Comfort Food: Meals you prepare during rests grant one additional HP recovery (once per rest, applies to whole party).",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "craft": 2,
+      "wilderness": 2,
+      "perception": 1,
+      "society": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Apron",
+        "quantity": 1,
+        "originalText": "Apron",
+        "sourceId": "23d6fdda72713321"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Work",
+        "quantity": 1,
+        "originalText": "work clothes",
+        "sourceId": "e9a99873e17f718a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!3baa49dcdd224511"
+  "_key": "!items!a3addd276d637a54"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "4ab082b1b2b4431e",
+  "_id": "ad10dbff74ce56d3",
   "name": "Book, Blank",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -12,9 +12,23 @@
     "cost": 30.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!4ab082b1b2b4431e"
+  "_key": "!items!ad10dbff74ce56d3"
 }

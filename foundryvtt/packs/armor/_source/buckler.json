@@ -1,5 +1,5 @@
 {
-  "_id": "583e72e823c84c2d",
+  "_id": "6f618cd107bf6452",
   "name": "Buckler",
   "type": "shield",
   "img": "icons/equipment/shield/buckler-metal-blue.webp",
@@ -9,9 +9,9 @@
     },
     "shieldType": "light",
     "handUsage": "Occupies off-hand but allows punch/pommel strikes",
-    "meleeDefense": "",
+    "meleeDefense": "Active Parry",
     "requirements": "",
-    "specialAbilities": "",
+    "specialAbilities": "Can make off-hand attacks with the buckler itself (treat as light weapon, 4 damage bludgeoning) using the two-weapon combat action.",
     "plantedMode": false,
     "reactions": [
       {
@@ -19,17 +19,17 @@
         "_id": "083c3db43dd24c95"
       }
     ],
-    "weight": 0,
-    "cost": 10.0,
-    "quantity": 1,
-    "notes": "",
     "linkedAbilities": [
       {
         "name": "Active Parry",
         "_id": "35dc5e87866c454a"
       }
-    ]
+    ],
+    "weight": 0,
+    "cost": 10.0,
+    "quantity": 1,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!583e72e823c84c2d"
+  "_key": "!items!6f618cd107bf6452"
 }

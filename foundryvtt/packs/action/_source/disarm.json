@@ -1,0 +1,23 @@
+{
+  "_id": "ca6a263dbe7bc5fc",
+  "name": "Disarm",
+  "type": "action",
+  "img": "icons/skills/melee/blade-damage.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> You use your attack to strike the hand of the target in a way to make them drop a held item. Declare before making roll. Make a normal combat check. <strong>Margin 1:</strong> if Margin 1 would normally apply damage, then apply base damage. <strong>Margin 2:</strong> Apply damage as normal for the the Margin of success, and the target drops held item of attackers choice.</p>"
+    },
+    "actionType": "combat",
+    "actionCost": "1",
+    "requirements": "",
+    "trigger": "",
+    "effect": "You use your attack to strike the hand of the target in a way to make them drop a held item. Declare before making roll. Make a normal combat check.",
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": "Margin 1: if Margin 1 would normally apply damage, then apply base damage.\nMargin 2: Apply damage as normal for the the Margin of success, and the target drops held item of attackers choice."
+  },
+  "effects": [],
+  "_key": "!items!ca6a263dbe7bc5fc"
+}

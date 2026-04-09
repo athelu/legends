@@ -1,0 +1,36 @@
+{
+  "_id": "52b758380c9be351",
+  "name": "Ritual Mastery",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The extended ritual form of a weave becomes something fundamentally more powerful. The extra preparation time lets you layer the magical structure with a precision that combat casting cannot achieve.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {},
+      "skills": "arcane:3",
+      "feats": [
+        "Mageborn"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your Ritual Casting now also grants one of the following benefits when used, chosen at the time of casting:</p>\n<ul>\n<li>Extend the duration one step on the duration table at no additional Energy cost</li>\n<li>Extend the area or range one step at no additional Energy cost</li>\n<li>Add one additional target at no additional Energy cost</li>\n</ul>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Applies whenever you use Ritual Casting"
+    },
+    "keywords": "[Magic], [Mageborn]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!52b758380c9be351"
+}

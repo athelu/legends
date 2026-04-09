@@ -1,0 +1,38 @@
+{
+  "_id": "074f01bb972cef76",
+  "name": "Living Infusion",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Living creatures are the challenge you have been building toward. Infusing a person directly requires understanding both the material and the vital simultaneously.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 5
+      },
+      "skills": "craft:5",
+      "feats": [
+        "Infuser"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>You may now use Imbue Item on a willing creature you touch rather than only on objects. Living infusions grant one of the following effects for 1 minute:</p>\n<ul>\n<li><strong>Fortified Flesh:</strong> Target gains +4 DR and resistance to one energy type of your choice</li>\n<li><strong>Empowered Strike:</strong> Target's weapon and unarmed attacks deal +[[/damage 4 type=elemental]] damage of your chosen type on every hit for the duration</li>\n<li><strong>Accelerated Healing:</strong> At the start of each of the target's turns, they regain HP equal to your Intelligence score</li>\n</ul>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Uses one Imbue Item charge; touch required; willing creatures only"
+    },
+    "keywords": "[Magic], [Infuser]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!074f01bb972cef76"
+}

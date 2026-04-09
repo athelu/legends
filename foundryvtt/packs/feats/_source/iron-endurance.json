@@ -1,0 +1,36 @@
+{
+  "_id": "0d11e3b80b35d2ed",
+  "name": "Iron Endurance",
+  "type": "feat",
+  "img": "icons/skills/melee/strike-axe-blood-red.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have pushed through conditions that would hospitalize anyone else, and your body has adapted accordingly.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "constitution": 5
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>During a short rest, remove 1 level of Exhaustion gained from Primal Fury. Additionally, the penalties from Fatigued (Exhaustion level 1) do not apply to you.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive, short rest trigger"
+    },
+    "keywords": "[Savage]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!0d11e3b80b35d2ed"
+}

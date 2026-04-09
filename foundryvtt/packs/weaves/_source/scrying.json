@@ -1,5 +1,5 @@
 {
-  "_id": "09006d85f9c64160",
+  "_id": "71f249ed5b103760",
   "name": "Scrying",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,15 +23,36 @@
     "duration": "10 minutes",
     "target": "",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create invisible sensor near target creature you choose. Target makes Will save (apply Fortune/Misfortune based on familiarity). Compare your weaving successes to their save successes. If you have more, you can see and hear through sensor. Target has vague feeling of being watched.",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 1 hour",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
@@ -43,5 +64,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!09006d85f9c64160"
+  "_key": "!items!71f249ed5b103760"
 }

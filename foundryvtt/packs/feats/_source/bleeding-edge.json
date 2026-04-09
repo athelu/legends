@@ -1,0 +1,38 @@
+{
+  "_id": "8d5e155b5f4364f3",
+  "name": "Bleeding Edge",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You know exactly where to place the blade.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 5
+      },
+      "skills": "meleeCombat:5",
+      "feats": [
+        "Exposed Strike"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you deal damage through Exposed Strike, the target also gains 1 Bleeding stack in addition to any other effects.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Duelist]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!8d5e155b5f4364f3"
+}

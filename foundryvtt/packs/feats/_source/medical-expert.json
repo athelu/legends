@@ -1,29 +1,36 @@
 {
-  "_id": "e29d697194674a60",
+  "_id": "a141e7a562ce6da3",
   "name": "Medical Expert",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Medicine is part knowledge, part observation, and part willingness to act decisively when someone's life is on the line.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "wisdom": 4
       },
       "skills": "medicine:4",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Subtract 1 from both dice on Medicine checks and heal 1d8 additional HP</p>",
+    "benefits": "<p>Subtract 1 from both dice on Medicine checks and heal 4 additional HP</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!e29d697194674a60"
+  "_key": "!items!a141e7a562ce6da3"
 }

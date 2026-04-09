@@ -1,0 +1,38 @@
+{
+  "_id": "823aacabf8cf966a",
+  "name": "Layered Weave",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Through careful preparation, you can weave two separate effects into a single ritual.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 5
+      },
+      "skills": "arcane:5",
+      "feats": [
+        "Mageborn"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When using Ritual Casting, you may combine two weaves into a single ritual (ritual takes 20 minutes instead of 10). Both weaves use the half-Energy cost benefit. When the ritual completes, both effects trigger simultaneously. They may target the same creature or location, or different ones within range. You make separate weaving and targeting rolls for each weave.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Applies to Ritual Casting only; ritual takes 20 minutes"
+    },
+    "keywords": "[Magic], [Mageborn]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!823aacabf8cf966a"
+}

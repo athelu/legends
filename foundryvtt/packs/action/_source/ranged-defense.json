@@ -1,22 +1,23 @@
 {
-  "_id": "bf8fb3f40d0343f0",
+  "_id": "482ae0d0a2a7c59c",
   "name": "Ranged Defense",
   "type": "action",
   "img": "icons/skills/melee/shield-block-gray-yellow.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Trigger:</strong> You are targeted by a Ranged attack while wielding a shield.</li>\n<li><strong>Effect:</strong> Force Misfortune on one ranged attack per round.</li>\n</ul>"
+      "value": "<p><strong>Trigger:</strong> You are targeted by a Ranged attack while wielding a shield. <strong>Effect:</strong> Force Misfortune on one ranged attack per round.</p>"
     },
     "actionType": "reaction",
     "actionCost": "",
+    "requirements": "",
     "trigger": "You are targeted by a Ranged attack while wielding a shield.",
     "effect": "Force Misfortune on one ranged attack per round.",
-    "keywords": "",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!bf8fb3f40d0343f0"
+  "_key": "!items!482ae0d0a2a7c59c"
 }

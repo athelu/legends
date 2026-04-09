@@ -1,22 +1,23 @@
 {
-  "_id": "e86e8f04db214b90",
+  "_id": "6f9b97f027d4e181",
   "name": "Called Shot",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Add 1 to both attack die results, but on hit choose one:\n<ul>\n<li>Bypass half DR (rounded down)</li>\n<li>Apply specific condition (Bleeding, Dazzled, etc. - GM approval required)</li>\n<li>Deny shield Ranged Defense [Reaction]</li>\n</ul></li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Declare before rolling</li>\n<li>Subject to Multiple Action Penalty</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Requirements:</strong> Agility or Dexterity 4 <strong>Effect:</strong> You attempt to strike a weak spot or specific area of the target.  Declare before rolling. Add 1 to both attack die results <strong>Margin 1:</strong> if Margin 1 would normally apply damage, then apply base damage. <strong>Margin 2:</strong> Apply damage as normal for the the Margin of success, but choose from the following bonuses:</p>\n<ul>\n<li>Half DR</li>\n<li>Apply specific condition</li>\n<li>Deny shield Ranged Defense [Reaction]</li>\n</ul>"
     },
     "actionType": "combat",
     "actionCost": "1",
+    "requirements": "Agility or Dexterity 4",
     "trigger": "",
-    "effect": "Add 1 to both attack die results, but on hit choose one:\n  - Bypass half DR (rounded down)\n  - Apply specific condition (Bleeding, Dazzled, etc. - GM approval required)\n  - Deny shield Ranged Defense [Reaction]\n- **Notes:**\n  - Declare before rolling\n  - Subject to Multiple Action Penalty",
-    "keywords": "",
+    "effect": "You attempt to strike a weak spot or specific area of the target.  Declare before rolling. Add 1 to both attack die results",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
-    "special": ""
+    "special": "Margin 1: if Margin 1 would normally apply damage, then apply base damage.\nMargin 2: Apply damage as normal for the the Margin of success, but choose from the following bonuses:\n- Half DR\n- Apply specific condition\n- Deny shield Ranged Defense [Reaction]"
   },
   "effects": [],
-  "_key": "!items!e86e8f04db214b90"
+  "_key": "!items!6f9b97f027d4e181"
 }

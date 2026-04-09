@@ -1,11 +1,11 @@
 {
-  "_id": "c3c467ddb3c24a36",
+  "_id": "c0a929f6258a5895",
   "name": "Mist Form",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target at touch and equipment become a misty cloud. Fly speed 10 feet, DR 8 against nonmagical damage, can pass through small openings. Cannot attack, cast weaves, or manipulate objects.</p>"
+      "value": "<p>Target at touch and equipment become a misty cloud. Fly speed 10 feet, DR 8 against non-magical damage, can pass through small openings. Cannot attack, cast weaves, or manipulate objects.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,27 +21,49 @@
     },
     "range": "Self, touch",
     "duration": "10 minutes",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target at touch and equipment become a misty cloud. Fly speed 10 feet, DR 8 against non-magical damage, can pass through small openings. Cannot attack, cast weaves, or manipulate objects.",
+    "effectType": "buff",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour",
     "weavingRoll": "Air Potential + Air Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "buff",
       "defensive",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!c3c467ddb3c24a36"
+  "_key": "!items!c0a929f6258a5895"
 }

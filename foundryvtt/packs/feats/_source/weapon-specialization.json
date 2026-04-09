@@ -1,5 +1,5 @@
 {
-  "_id": "89590acf81f0492b",
+  "_id": "899a932788169083",
   "name": "Weapon Specialization",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
@@ -8,20 +8,27 @@
       "value": "<p>This weapon is like an extension of your body.In your hands, this weapon becomes significantly more dangerous than it would be for anyone else.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": "Chosen combat skill 5"
     },
     "benefits": "<p>Choose one weapon type (longswords, bows, spears, etc.). When attacking with that weapon type, subtract 1 from your combat skill die result before comparing (minimum 1). Can be taken multiple times for different weapon types</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!89590acf81f0492b"
+  "_key": "!items!899a932788169083"
 }

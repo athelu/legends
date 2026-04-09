@@ -1,0 +1,37 @@
+{
+  "_id": "f5ad25f8005dad2a",
+  "name": "Cunning Feint",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your feints do not just open their guard — they leave them rattled.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 4,
+        "charisma": 4
+      },
+      "skills": "deception:4",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you successfully feint a target, in addition to the normal margin effect you may apply either the Disoriented or Dazed [Hindered] condition to the target until the end of their next turn.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive enhancement to Feint"
+    },
+    "keywords": "[Combat], [Duelist]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!f5ad25f8005dad2a"
+}

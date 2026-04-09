@@ -1,0 +1,39 @@
+{
+  "_id": "d0890f44958b88c1",
+  "name": "Eldritch Resilience",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have survived things that should have ended you once already. Whatever grante dyou power still wants you alive</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 3,
+        "constitution": 3
+      },
+      "skills": "",
+      "feats": [
+        "Eldritch Pact"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>At the start of each short rest, you gain temporary HP equal to your Charisma score. These persist until your next short rest. Additionally, when you are reduced to 0 HP, you may use a [Reaction] to immediately expend your short rest Energy recovery — your Energy pool refills and you stabilize at 1 HP. You may use this once per long rest.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Temporary HP at each short rest (passive); emergency recovery once per long rest"
+    },
+    "keywords": "[Magic], [Pact], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!d0890f44958b88c1"
+}

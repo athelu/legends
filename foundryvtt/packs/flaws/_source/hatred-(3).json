@@ -1,5 +1,5 @@
 {
-  "_id": "0e8c38f248ef4270",
+  "_id": "1191009a56143595",
   "name": "Hatred (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
@@ -8,14 +8,15 @@
       "value": "<p>Overpowering contempt for someone/something. Hatred overrides other emotions.</p>"
     },
     "pointValue": 3,
-    "flawType": "",
+    "flawType": "mental",
     "severity": "moderate",
     "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!0e8c38f248ef4270"
+  "_key": "!items!1191009a56143595"
 }

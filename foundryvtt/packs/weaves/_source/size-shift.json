@@ -1,5 +1,5 @@
 {
-  "_id": "faa68d1f97a24cb5",
+  "_id": "a6bf3d83b6c2be9c",
   "name": "Size Shift",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Close, 30 ft.",
     "duration": "1 minute",
-    "target": "",
+    "target": "single",
     "savingThrow": "fortitude",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target at close range grows or shrinks one size category. Enlarge: add 1 to damage dice, Misfortune on Stealth. Reduce: subtract 1 from damage dice, Fortune on Stealth. Unwilling targets get Fortitude save.",
+    "effectType": "debuff",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no effect (if unwilling)\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
@@ -43,5 +64,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!faa68d1f97a24cb5"
+  "_key": "!items!a6bf3d83b6c2be9c"
 }

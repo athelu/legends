@@ -1,0 +1,38 @@
+{
+  "_id": "f3f521097c74446f",
+  "name": "Conduit Mastery",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have refined your ability to push the conduit to its limits without losing control entirely. The overspending that would leave another caster fumbling through wild energies you channel with something approaching precision.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 5
+      },
+      "skills": "",
+      "feats": [
+        "Eldritch Pact"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>You ignore the first two points of overspending penalty on your Primary pact energy (instead of the usual zero). For your Secondary pact energy, you ignore the first point of overspending penalty. On your remaining three pact energies, overspending penalties apply normally.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Magic], [Pact]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!f3f521097c74446f"
+}

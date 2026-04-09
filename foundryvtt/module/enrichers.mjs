@@ -31,14 +31,14 @@ const SKILL_LABELS = {
   arcane: "Arcana",
   society: "Society",
   perception: "Perception",
-  survival: "Survival",
+  empathy: "Empathy",
+  wilderness: "Wilderness",
+  religion: "Religion",
   persuasion: "Persuasion",
   deception: "Deception",
   intimidate: "Intimidation",
   perform: "Performance",
-  insight: "Insight",
-  medicine: "Medicine",
-  animalHandling: "Animal Handling"
+  medicine: "Medicine"
 };
 
 const SAVE_LABELS = {

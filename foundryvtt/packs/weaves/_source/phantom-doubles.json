@@ -1,5 +1,5 @@
 {
-  "_id": "fde952e1c33d4387",
+  "_id": "78cac3d7df34e256",
   "name": "Phantom Doubles",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "Self",
     "duration": "1 minute",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the \"hits duplicate\" range.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 duplicate (1 round)",
+          "duration": "1 duplicate (1 round)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "3 duplicates (1 minute)",
+          "duration": "3 duplicates (1 minute)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 duplicates (10 minutes)",
+          "duration": "4 duplicates (10 minutes)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 duplicate (1 round)\n- 2 = 3 duplicates (1 minute)\n- 3 = 4 duplicates (10 minutes)",
-    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 duplicate (1 round), 2= 3 duplicates (1 minute), 3 = 4 duplicates (10 minutes)",
+    "weavingRoll": "Space Potential + Space Mastery /Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "illusion",
-      "self"
+      "self",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!fde952e1c33d4387"
+  "_key": "!items!78cac3d7df34e256"
 }

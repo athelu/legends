@@ -1,5 +1,5 @@
 {
-  "_id": "aa4ff3cbf60b4d0b",
+  "_id": "42a3130e6cca38eb",
   "name": "Air Savant",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>The wind answers your call like an old friend. You've transcended mere manipulation of air and you've become part of the storm itself. Lightning courses through your veins, and gravity is more of a suggestion than a law.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 80,
+    "classification": "legendary",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": "Air Mastery 6, Air Potential 6, any magical tradition trait"
     },
     "benefits": "<p>Your mastery of Air energy grants the following abilities:</p>\n<ul>\n<li><strong>Shocking Weaves:</strong> When you cast a weave using Air as primary energy and deal lightning damage, targets that fail their save gain the <strong>Stunned</strong> condition until end of their next turn</li>\n<li><strong>Storm Resistance:</strong> You are immune to lightning damage from non-magical sources. You have Resistance (+2 DR) against magical lightning damage</li>\n<li><strong>Windwalker:</strong> You ignore movement penalties from difficult terrain. Can walk on water or other liquids as if solid ground. Falling damage reduced by half</li>\n</ul>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!aa4ff3cbf60b4d0b"
+  "_key": "!items!42a3130e6cca38eb"
 }

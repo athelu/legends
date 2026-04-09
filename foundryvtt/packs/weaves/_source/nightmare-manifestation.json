@@ -1,11 +1,11 @@
 {
-  "_id": "3ed18d92d75744d7",
+  "_id": "d194548359b18ea9",
   "name": "Nightmare Manifestation",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target at medium range makes [[/save type=will]]. Compare your weaving successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes [[/damage 12 type=psychic]] damage at start of each turn. Can repeat [[/save type=will]] each round to end effect (1 success ends effect).</p>"
+      "value": "<p>Target at medium range makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes [[/damage 12 type=psychic]] damage at start of each turn. Can repeat [[/save type=will]] each round to end effect (1 success ends effect).</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Medium, 60 ft.",
     "duration": "1 minute",
-    "target": "",
+    "target": "single",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes 12 psychic damage at start of each turn. Can repeat Will save each round to end effect (1 success ends effect).",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Frightened",
+          "duration": "Frightened"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Frightened (12)",
+          "duration": "Frightened (12)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Frightened (16)",
+          "duration": "Frightened (16)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = Frightened\n- 2 = Frightened (12)\n- 3 = Frightened (16)",
+    "targetingSuccessScaling": "0 = fails, 1 = Frightened, 2= Frightened (12), 3 = Frightened (16)",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
@@ -49,5 +70,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!3ed18d92d75744d7"
+  "_key": "!items!d194548359b18ea9"
 }

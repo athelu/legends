@@ -1,21 +1,65 @@
 {
-  "_id": "8c7aea4120d64582",
+  "_id": "12349d7fe6bab7f7",
   "name": "Entertainer",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You might have been an actor, a dancer, a musician, a street magician, or any other sort of performer. Adventuring offers new audiences and new material and every narrow escape is another dramatic moment for future performances. <strong>Skills:</strong> Perform 2, Persuasion 2, Acrobatics 1, Perception 1, +40 XP <strong>Equipment:</strong> Basic musical instrument, common clothes, disguise kit, shoes <strong>Feature</strong> - By Popular Demand: You can find performance venues and earn money entertaining in most settlements.</p>"
+      "value": "<p>You might have been an actor, a dancer, a musician, a street magician, or any other sort of performer. Adventuring offers new audiences and new material and every narrow escape is another dramatic moment for future performances.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Perform 2, Persuasion 2, Acrobatics 1, Perception 1, +40 XP",
+    "startingEquipment": "Basic musical instrument\ncommon clothes\ndisguise kit\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "By Popular Demand: You can find performance venues and earn money entertaining in most settlements.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "perform": 2,
+      "persuasion": 2,
+      "acrobatics": 1,
+      "perception": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Musical Instrument, Basic",
+        "quantity": 1,
+        "originalText": "Basic musical instrument",
+        "sourceId": "026190d8334d5378"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Disguise Kit",
+        "quantity": 1,
+        "originalText": "disguise kit",
+        "sourceId": "58b900cc51a61f63"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!8c7aea4120d64582"
+  "_key": "!items!12349d7fe6bab7f7"
 }

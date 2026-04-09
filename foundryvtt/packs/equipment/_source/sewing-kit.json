@@ -1,5 +1,5 @@
 {
-  "_id": "5afb8f8d90d64b9d",
+  "_id": "1824007414418c16",
   "name": "Sewing Kit",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A collection of needles, thread, scissors, and other materials needed for repairing or creating clothing.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "tools",
     "weight": 1.0,
     "cost": 15.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "Craft: Tailor",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!5afb8f8d90d64b9d"
+  "_key": "!items!1824007414418c16"
 }

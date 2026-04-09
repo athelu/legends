@@ -1,29 +1,36 @@
 {
-  "_id": "2468974d714f4082",
+  "_id": "7d4809a4bae0a4b2",
   "name": "Precise Shot",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>You've learned to find the gap between the bodies, between the planks, and send the shot through anyway.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "dexterity": 3
       },
       "skills": "rangedCombat:3",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Ignore penalties for shooting into melee or partial cover</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat], [Ranged]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!2468974d714f4082"
+  "_key": "!items!7d4809a4bae0a4b2"
 }

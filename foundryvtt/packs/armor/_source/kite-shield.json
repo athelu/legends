@@ -1,5 +1,5 @@
 {
-  "_id": "0868af23905a41a9",
+  "_id": "dc9839c3e03bfbf5",
   "name": "Kite Shield",
   "type": "shield",
   "img": "icons/equipment/shield/kite-steel-blue.webp",
@@ -9,9 +9,9 @@
     },
     "shieldType": "heavy",
     "handUsage": "Occupies off-hand completely",
-    "meleeDefense": "",
+    "meleeDefense": "Fortune on defensive melee combat rolls",
     "requirements": "Strength 3 minimum or suffer Misfortune on your own attacks",
-    "specialAbilities": "",
+    "specialAbilities": "Provides Partial Cover when crouching",
     "plantedMode": false,
     "reactions": [
       {
@@ -23,17 +23,17 @@
         "_id": "bf8fb3f40d0343f0"
       }
     ],
-    "weight": 0,
-    "cost": 20.0,
-    "quantity": 1,
-    "notes": "",
     "linkedAbilities": [
       {
         "name": "Fortune on defensive melee combat rolls",
         "_id": null
       }
-    ]
+    ],
+    "weight": 0,
+    "cost": 20.0,
+    "quantity": 1,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!0868af23905a41a9"
+  "_key": "!items!dc9839c3e03bfbf5"
 }

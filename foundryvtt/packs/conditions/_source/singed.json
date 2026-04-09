@@ -1,24 +1,37 @@
 {
-  "_id": "eced8d17c278435b",
+  "_id": "d23403be3e9f7c48",
   "name": "Singed",
   "type": "condition",
-  "img": "icons/svg/hazard.svg",
+  "img": "icons/svg/fire.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Hair or clothing lightly burned, minor distraction.Subtract 1 from one die on your next action. <strong>Recovery:</strong> Automatically ends after your next action</p>"
+    },
     "label": "Singed",
     "category": "magic",
-    "description": {
-      "value": "<ul>\n<li>Hair or clothing lightly burned, minor distraction</li>\n<li>Subtract 1 from one die on your next action only</li>\n<li>Duration: One action only</li>\n</ul>\n<p><strong>Recovery:</strong></p>\n<ul>\n<li>Automatically ends after your next action</li>\n</ul>"
-    },
-    "tokenIcon": "",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/fire.svg",
     "activeEffects": [],
-    "stacking": "replace",
+    "appliesConditions": [],
+    "progressionChain": [
+      "Singed",
+      "Smoldering",
+      "Ignited",
+      "Burning"
+    ],
+    "stacking": "duration-merge",
+    "stacks": 1,
     "severity": "minor",
     "overlayPriority": 10,
+    "damageTick": null,
     "recovery": {
-      "trigger": "endOfTurn",
-      "removeOnSuccess": true
+      "trigger": "onEvent",
+      "method": "automatic",
+      "removeOnSuccess": false
     }
   },
   "flags": {},
-  "_key": "!items!eced8d17c278435b"
+  "_key": "!items!d23403be3e9f7c48"
 }

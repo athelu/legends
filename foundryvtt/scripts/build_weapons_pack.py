@@ -6,7 +6,8 @@ Build weapons compendium pack from parsed weapons.md documentation.
 import json
 import re
 from pathlib import Path
-from pack_utils import build_pack_from_source, generate_id, ensure_key, md_to_html, apply_enrichers
+
+from pack_utils import build_pack_from_source, generate_stable_id, ensure_key, md_to_html, apply_enrichers
 
 
 def slugify(name: str) -> str:
@@ -14,7 +15,13 @@ def slugify(name: str) -> str:
     s = re.sub(r"[\\/]+", "-", s)
     s = re.sub(r"[^\w\s-]", "", s)
     s = re.sub(r"[\s]+", "-", s)
-    return s.strip("-")
+    s = re.sub(r"-+", "-", s)
+    return s.strip("-") or "item"
+
+
+def generate_weapon_item_id(name: str) -> str:
+    normalized_name = re.sub(r'\s+', ' ', name).strip().lower()
+    return generate_stable_id(f'weapon:{normalized_name}')
 
 
 def parse_weapons_md(md_file):
@@ -47,7 +54,7 @@ def parse_weapons_md(md_file):
             continue
         
         item = {
-            '_id': generate_id(),
+            '_id': generate_weapon_item_id(weapon_name),
             'name': weapon_name,
             'type': 'weapon',
             'img': 'icons/weapons/swords/sword-long-crossguard-brown.webp',
@@ -66,6 +73,8 @@ def parse_weapons_md(md_file):
                 'cost': 0,
                 'quantity': 1,
                 'properties': [],
+                'reload': '',
+                'requirements': '',
                 'notes': ''
             },
             'effects': []
@@ -157,7 +166,7 @@ def parse_weapons_md(md_file):
 
         base, alt = parse_damage(damage)
         item['system']['damage']['base'] = base or 0
-        item['system']['damage']['alternate'] = alt
+        item['system']['damage']['alternate'] = alt if alt is not None else 0
 
         # damage type parsing
         # Format: [Type1], [Type2], [AltType] (N)
@@ -194,24 +203,27 @@ def parse_weapons_md(md_file):
         if requirements:
             item['system']['requirements'] = requirements
 
-        # Build attackModes: melee by default
+        # Build attackModes following combat rules:
+        # - melee attacks use Agility + Melee Combat, but default melee damage bonus is Strength
+        # - ranged and thrown attacks use Dexterity + Ranged Combat and Dexterity for damage bonuses
+        properties_lower = {p.lower() for p in properties}
         attack_modes = []
-        # decide if finesse (use agility) else strength for melee
-        melee_attr = 'agility' if any(p.lower() == 'finesse' for p in properties) else 'strength'
-        # default melee mode
-        melee_mode = {
-            'name': 'Melee',
-            'type': 'melee',
-            'skill': 'meleeCombat',
-            'damageAttr': melee_attr,
-            'defenseType': 'melee',
-            'damage': { 'base': base, 'alternate': alt },
-            'range': { 'normal': 0, 'medium': 0, 'long': 0 }
-        }
-        attack_modes.append(melee_mode)
+        is_ranged_weapon = 'ranged' in properties_lower
+        is_thrown_weapon = 'thrown' in properties_lower
 
-        # If ranged or thrown, add a ranged mode
-        ranged_present = any(p.lower() in ('ranged','thrown') for p in properties) or bool(range_raw)
+        include_melee_mode = not is_ranged_weapon or is_thrown_weapon
+        if include_melee_mode:
+            attack_modes.append({
+                'name': 'Melee',
+                'type': 'melee',
+                'skill': 'melee',
+                'damageAttr': 'strength',
+                'defenseType': 'melee',
+                'damage': {'base': base or 0, 'alternate': alt if alt is not None else 0},
+                'range': {'normal': 0, 'medium': 0, 'long': 0}
+            })
+
+        ranged_present = is_ranged_weapon or is_thrown_weapon or bool(range_raw)
         if ranged_present:
             # parse range_raw like '80/160/320' or '30/60 when thrown' -> numbers
             def parse_range_vals(text):
@@ -226,16 +238,28 @@ def parse_weapons_md(md_file):
                 return {'normal': 0, 'medium': 0, 'long': 0}
 
             rng = parse_range_vals(range_raw)
+            ranged_mode_type = 'thrown' if is_thrown_weapon and not is_ranged_weapon else 'ranged'
             ranged_mode = {
-                'name': 'Ranged',
-                'type': 'ranged',
-                'skill': 'rangedCombat',
-                'damageAttr': 'agility',
+                'name': 'Thrown' if ranged_mode_type == 'thrown' else 'Ranged',
+                'type': ranged_mode_type,
+                'skill': 'ranged',
+                'damageAttr': 'dexterity',
                 'defenseType': 'ranged',
-                'damage': { 'base': base, 'alternate': alt },
+                'damage': {'base': base or 0, 'alternate': alt if alt is not None else 0},
                 'range': rng
             }
             attack_modes.append(ranged_mode)
+
+        if not attack_modes:
+            attack_modes.append({
+                'name': 'Melee',
+                'type': 'melee',
+                'skill': 'melee',
+                'damageAttr': 'strength',
+                'defenseType': 'melee',
+                'damage': {'base': base or 0, 'alternate': alt if alt is not None else 0},
+                'range': {'normal': 0, 'medium': 0, 'long': 0}
+            })
 
         item['system']['attackModes'] = attack_modes
 
@@ -263,6 +287,9 @@ def main():
         # Save to _source/
         source_dir = script_dir / "foundryvtt" / "packs" / "weapons" / "_source"
         source_dir.mkdir(parents=True, exist_ok=True)
+
+        for existing_file in source_dir.glob("*.json"):
+            existing_file.unlink()
         
         # write sanitized filenames
         source_dir.mkdir(parents=True, exist_ok=True)

@@ -1,11 +1,11 @@
 {
-  "_id": "aa9d373f03344ac3",
+  "_id": "10fbecb147997bd9",
   "name": "Slow",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Up to 4 targets make Will saves. Compare your weaving successes to each target's save successes. Those you beat have only 2 actions per turn (instead of 3), Misfortune on Agility checks and Reflex saves, and Misfortune on attacks. Targets can repeat save at end of each turn (1 success ends effect).</p>"
+      "value": "<p>Up to 4 targets make Will saves. Compare your targeting successes to each target's save successes. Those you beat have only 2 actions per turn (instead of 3), Misfortune on Agility checks and Reflex saves, and Misfortune on attacks. Targets can repeat save at end of each turn (1 success ends effect).</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,22 +21,43 @@
     },
     "range": "Medium, 60 ft. (up to 4 targets)",
     "duration": "1 minute (until save succeeds)",
-    "target": "",
+    "target": "multiple",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Up to 4 targets make Will saves. Compare your targeting successes to each target's save successes. Those you beat have only 2 actions per turn (instead of 3), Misfortune on Agility checks and Reflex saves, and Misfortune on attacks. Targets can repeat save at end of each turn (1 success ends effect).",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "no effect",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no effect\n- 1 = 1 round\n- 2 = 1 minute\n- 3 = 10 minutes",
+    "targetingSuccessScaling": "0 = no effect, 1 = 1 round, 2= 1 minute, 3 = 10 minutes",
     "weavingRoll": "Time Potential + Time Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Time Mastery",
     "appliesEffects": [
       {
-        "effectId": "slowed",
+        "effectId": "Slowed",
         "params": {}
       }
     ],
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!aa9d373f03344ac3"
+  "_key": "!items!10fbecb147997bd9"
 }

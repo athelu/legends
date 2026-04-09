@@ -1,21 +1,22 @@
 {
-  "_id": "9987df75a0674e11",
+  "_id": "ae6804d89fd50d50",
   "name": "Charitable (3)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>You can't stand to see others suffer.</p>\n<ul>\n<li>Make [[/save type=will]] (1 success required) to refuse reasonable requests for help, even from enemies</li>\n<li>Must give to beggars and help wounded, even at personal risk</li>\n<li>Put others' needs before your own safety</li>\n</ul>"
+      "value": "<p>You can't stand to see others suffer.</p>"
     },
     "pointValue": 3,
-    "flawType": "",
+    "flawType": "mental",
     "severity": "moderate",
-    "mechanicalEffects": "",
+    "mechanicalEffects": "<ul>\n<li>Make [[/save type=will]] (1 success required) to refuse reasonable requests for help, even from enemies</li>\n<li>Must give to beggars and help wounded, even at personal risk</li>\n<li>Put others' needs before your own safety</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!9987df75a0674e11"
+  "_key": "!items!ae6804d89fd50d50"
 }

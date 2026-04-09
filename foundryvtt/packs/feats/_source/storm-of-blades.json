@@ -1,0 +1,39 @@
+{
+  "_id": "04c4f3ea85812ad0",
+  "name": "Storm of Blades",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Where others see two weapons you see an unbroken chain of strikes.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 6,
+        "agility": 6
+      },
+      "skills": "meleeCombat:6",
+      "feats": [
+        "Fluid Strikes"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your Two-Weapon Fighting action now generates three attacks instead of two — main hand, off-hand, main hand. The third attack adds 1 to the skill die only. All three attacks use the same Shared Attribute Roll.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Dual]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!04c4f3ea85812ad0"
+}

@@ -4,6 +4,7 @@ Shared utilities for building Foundry VTT pack files.
 
 import json
 import re
+import hashlib
 import uuid
 from pathlib import Path
 
@@ -11,6 +12,16 @@ from pathlib import Path
 def generate_id():
     """Generate a random ID suitable for Foundry items."""
     return uuid.uuid4().hex[:16]
+
+
+def generate_stable_id(seed):
+    """Generate a deterministic 16-character hex ID from a stable seed string."""
+    if seed is None:
+        raise ValueError('seed is required for deterministic ID generation')
+    normalized_seed = str(seed).strip().lower()
+    if not normalized_seed:
+        raise ValueError('seed must not be empty for deterministic ID generation')
+    return hashlib.sha256(normalized_seed.encode('utf-8')).hexdigest()[:16]
 
 
 def ensure_key(item):
@@ -190,12 +201,12 @@ SKILL_KEYS = {
     'craft': 'craft', 'acrobatics': 'acrobatics', 'melee combat': 'meleeCombat',
     'stealth': 'stealth', 'investigation': 'investigate', 'language': 'language',
     'history': 'history', 'arcana': 'arcane', 'arcane': 'arcane',
-    'society': 'society', 'perception': 'perception', 'survival': 'survival',
+    'society': 'society', 'perception': 'perception', 'wilderness': 'wilderness',
+    'religion': 'religion', 'empathy': 'empathy',
     'persuasion': 'persuasion', 'deception': 'deception',
     'intimidation': 'intimidate', 'intimidate': 'intimidate',
     'performance': 'perform', 'perform': 'perform',
-    'insight': 'insight', 'medicine': 'medicine',
-    'animal handling': 'animalHandling',
+    'medicine': 'medicine',
 }
 
 SAVE_TYPES = {'fortitude', 'reflex', 'will'}

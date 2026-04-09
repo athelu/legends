@@ -1,5 +1,5 @@
 {
-  "_id": "1328b27ab1cf4ab6",
+  "_id": "3d722292b6701af1",
   "name": "Water Savant",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Embracing the patient and adaptable nature of water your weaves have become as fluid and unstoppable as the ocean itself.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 80,
+    "classification": "legendary",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": "Water Mastery 6, Water Potential 6, any magical tradition trait"
     },
     "benefits": "<p>Your mastery of Water energy grants the following abilities:</p>\n<ul>\n<li><strong>Freezing Weaves:</strong> When you cast a weave using Water as primary energy and deal cold damage, targets that fail their save have movement speed halved until end of their next turn</li>\n<li><strong>Frost Resistance:</strong> You are immune to cold damage from non-magical sources. You have Resistance (+2 DR) against magical cold damage</li>\n<li><strong>Aquatic Adaptation:</strong> You can breathe underwater. Gain swimming speed equal to your normal movement speed. Water-based Wilderness checks gain Fortune</li>\n</ul>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!1328b27ab1cf4ab6"
+  "_key": "!items!3d722292b6701af1"
 }

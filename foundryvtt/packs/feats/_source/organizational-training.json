@@ -1,5 +1,5 @@
 {
-  "_id": "b44442a8dc284bd8",
+  "_id": "82935327fccd9018",
   "name": "Organizational Training",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Your organization has trained you in specific tradecraft</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 1,
+      "tier": 0,
       "other": "Background (any), affiliated with an investigative organization"
     },
     "benefits": "<p>Choose two skills from this list: Deception, Investigation, Persuasion, Society, Stealth. Gain +1 rank in each chosen skill (or +2 ranks to distribute if already trained). Once per session, can requisition specialized equipment (value up to 50 gp × your Tier) from organization safehouse or contact</p>",
-    "usageType": "passive",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive + once per session requisition"
+    },
     "keywords": "[Faction], [Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!b44442a8dc284bd8"
+  "_key": "!items!82935327fccd9018"
 }

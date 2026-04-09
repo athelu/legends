@@ -1,11 +1,11 @@
 {
-  "_id": "0f4e94e459d24c75",
+  "_id": "b7da8f62bb16c555",
   "name": "Zone of Truth",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create 15-foot radius sphere at close range. All creatures in area make Will saves. Compare your weaving successes to each target's save successes. Those you beat can't speak deliberate lies while in the zone. They can be evasive, remain silent, or speak misleading truths. You know which creatures failed their saves. Creatures immune to charm are immune.</p>"
+      "value": "<p>Create 15-foot radius sphere at close range. All creatures in area make Will saves. Compare your targeting successes to each target's save successes. Those you beat can't speak deliberate lies while in the zone. They can be evasive, remain silent, or speak misleading truths. You know which creatures failed their saves. Creatures immune to charm are immune.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Close, 30 ft. (15-foot radius sphere)",
     "duration": "10 minutes",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "will",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create 15-foot radius sphere at close range. All creatures in area make Will saves. Compare your targeting successes to each target's save successes. Those you beat can't speak deliberate lies while in the zone. They can be evasive, remain silent, or speak misleading truths. You know which creatures failed their saves. Creatures immune to charm are immune.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full effect",
+          "duration": "full effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no effect\n- 1 = 1 minute\n- 2 = full effect\n- 3 = 1 hour",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= full effect, 3 = 1 hour",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
@@ -43,5 +64,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!0f4e94e459d24c75"
+  "_key": "!items!b7da8f62bb16c555"
 }

@@ -1,29 +1,34 @@
 {
-  "_id": "271891d4840741b6",
+  "_id": "6d6e14017eca2c30",
   "name": "Flawless Execution",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>You pour everything you have into a single weave without flinching at the cost.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "wisdom": 6
-      },
+      "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 4,
-      "other": "Sorcerous Origin trait, any Energy Mastery 6"
+      "tier": 0,
+      "other": "Casting Attribute 6, any Energy Mastery 6"
     },
     "benefits": "<p>Once per long rest, you can cast one weave and completely ignore ALL overspending penalties. Spend as much Energy as you want (up to your Potential) with no penalties</p>",
-    "usageType": "once",
-    "keywords": "[Magic], [Sorcerer]",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per long rest"
+    },
+    "keywords": "[Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!271891d4840741b6"
+  "_key": "!items!6d6e14017eca2c30"
 }

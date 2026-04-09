@@ -1,0 +1,39 @@
+{
+  "_id": "f7f9716511ae0ac2",
+  "name": "Voice of Restoration",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You speak the name of a creature's wholeness, not what they are now, but what they are meant to be.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 5
+      },
+      "skills": "",
+      "feats": [
+        "Invoker",
+        "Name of Healing"
+      ],
+      "tier": 0,
+      "other": "Positive Mastery 4"
+    },
+    "benefits": "<p>Once per short rest, as 2 [Combat] actions, speak a word of restoration to one creature within 60 feet you can see. That creature immediately:</p>\n<ul>\n<li>Heals HP equal to your Charisma × your Tier</li>\n<li>Removes one of the following conditions: Blinded, Deafened, Frightened, Paralyzed, Poisoned, or Stunned</li>\n<li>Gains temporary HP equal to your Charisma score that last until your next long rest</li>\n</ul>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per short rest"
+    },
+    "keywords": "[Magic], [Invoker], [Heal]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!f7f9716511ae0ac2"
+}

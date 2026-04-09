@@ -1,21 +1,83 @@
 {
-  "_id": "cd379179ceb24b68",
+  "_id": "afd6661f3c1d58ed",
   "name": "Teacher",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You dedicated yourself to sharing knowledge with others, whether in a formal school or as a private tutor. The work taught you patience, clarity, and the understanding that every student learns differently. Even when not teaching you still find yourself explaining things to your companions. <strong>Skills:</strong> Society 2, History 2, Persuasion 1, Empathy 1, +40 XP <strong>Equipment:</strong> General topic book, quill, ink, robe, papyrus parchment x5, shoes <strong>Feature</strong> - Educator: You can explain complex topics simply and effectively. When teaching skills to others, they learn faster (GM discretion on mechanical benefits).</p>"
+      "value": "<p>You dedicated yourself to sharing knowledge with others, whether in a formal school or as a private tutor. The work taught you patience, clarity, and the understanding that every student learns differently. Even when not teaching you still find yourself explaining things to your companions.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Society 2, History 2, Persuasion 1, Empathy 1, +40 XP",
+    "startingEquipment": "General topic book\nquill\nink\nrobe\npapyrus parchment x5\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Educator: You can explain complex topics simply and effectively. When teaching skills to others, they learn faster (GM discretion on mechanical benefits).",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "society": 2,
+      "history": 2,
+      "persuasion": 1,
+      "empathy": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Book, General Topic",
+        "quantity": 1,
+        "originalText": "General topic book",
+        "sourceId": "d8a688921c1a9efc"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Quill",
+        "quantity": 1,
+        "originalText": "quill",
+        "sourceId": "4e18e27b51e765ec"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Ink, 1 oz",
+        "quantity": 1,
+        "originalText": "ink",
+        "sourceId": "0a04bf0388f541a3"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Robe",
+        "quantity": 1,
+        "originalText": "robe",
+        "sourceId": "cead7ceedf80bfbc"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Parchment, Papyrus",
+        "quantity": 5,
+        "originalText": "papyrus parchment x5",
+        "sourceId": "ee0a2c8671ca865a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!cd379179ceb24b68"
+  "_key": "!items!afd6661f3c1d58ed"
 }

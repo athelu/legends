@@ -1,0 +1,38 @@
+{
+  "_id": "bd47772d9eaa5f97",
+  "name": "Hammering Blows",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>One blade distracts, the other drives through.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [
+        "Dual Strike"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When both attacks from a Two-Weapon Fighting action hit the same target, combine the total damage from both attacks and apply the target's DR once instead of twice.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive, triggers when both attacks hit same target"
+    },
+    "keywords": "[Combat], [Dual]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!bd47772d9eaa5f97"
+}

@@ -1,29 +1,36 @@
 {
-  "_id": "b02b60b883b44d7e",
+  "_id": "1bfee36535e95e61",
   "name": "Master Archer",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>At this range, with this bow, you shoot where you aim.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "dexterity": 5
       },
       "skills": "rangedCombat:5",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>When using ranged weapons: +[[/damage 2]] damage, attacking at long range doesn't add to your dice, and you ignore half cover and three-quarters cover</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat], [Ranged]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!b02b60b883b44d7e"
+  "_key": "!items!1bfee36535e95e61"
 }

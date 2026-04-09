@@ -1,29 +1,36 @@
 {
-  "_id": "80460b8c0d8a49ee",
+  "_id": "7cdf945003e425a0",
   "name": "Grappling Mastery",
   "type": "feat",
   "img": "icons/skills/melee/hand-grip-sword-orange.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Getting hold of someone is only the first problem. Keeping them, punishing them for struggling is where the real skill lies.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "strength": 5
       },
       "skills": "athletics:4",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Subtract 1 from both dice when making Athletics checks to grapple. When you successfully grapple a creature, you can immediately deal [[/damage 4]] damage [Bludgeoning]. Creatures you grapple add 1 to both dice when attempting to escape</p>",
+    "benefits": "<p>Subtract 1 from both dice when making Athletics checks to grapple. When you successfully grapple a creature, you can immediately deal 4 [Bludgeoning] damage. Creatures you grapple add 1 to both dice when attempting to escape</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Combat], [Grapple]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!80460b8c0d8a49ee"
+  "_key": "!items!7cdf945003e425a0"
 }

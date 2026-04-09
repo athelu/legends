@@ -1,5 +1,5 @@
 {
-  "_id": "0e77a87e46b2434f",
+  "_id": "ee87eb4f46fd4054",
   "name": "CounterWeave",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,15 +23,36 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Attempt to interrupt a weave being cast. Make an arcana check to determine the weave being cast. Must spend Energy equal to or greater than the weave you're countering. Compare your Targeting successes to their weaving successes. If you have more, their weave fails.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Reduce target spell by 1 success",
+          "duration": "Reduce target spell by 1 success"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Counter successful",
+          "duration": "Counter successful"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Counter successful + dazed",
+          "duration": "Counter successful + dazed"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Reduce target spell by 1 success\n- 2 = Counter successful\n- 3 = Counter successful (regain 4 energy)",
+    "targetingSuccessScaling": "0 = Fails, 1 = Reduce target spell by 1 success, 2 = Counter successful, 3 = Counter successful + dazed",
     "weavingRoll": "Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
@@ -40,11 +61,12 @@
         "params": {}
       }
     ],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!0e77a87e46b2434f"
+  "_key": "!items!ee87eb4f46fd4054"
 }

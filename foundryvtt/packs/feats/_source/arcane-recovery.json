@@ -1,5 +1,5 @@
 {
-  "_id": "3fccf84b48604695",
+  "_id": "2bfa3c9e60cfcca3",
   "name": "Arcane Recovery",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
@@ -8,22 +8,29 @@
       "value": "<p>Your understanding of magical theory goes beyond just weaving. You know how to coax energy back from the edges of dissipation, reclaiming what would otherwise fade into the cosmos.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "intelligence": 4
       },
       "skills": "",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": "any magical tradition trait"
     },
     "benefits": "<p>Once per day during short rest, recover Energy equal to your Intelligence × 2</p>",
-    "usageType": "once",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per day during short rest"
+    },
     "keywords": "[Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!3fccf84b48604695"
+  "_key": "!items!2bfa3c9e60cfcca3"
 }

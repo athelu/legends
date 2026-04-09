@@ -1,0 +1,39 @@
+{
+  "_id": "68d4c97c2a36d915",
+  "name": "Patron’s Favor",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your years of devotion have not gone unnoticed. Your patron watches over you with active interest , occasionally intervening in ways that defy what channeling alone should produce.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 6
+      },
+      "skills": "religion:6",
+      "feats": [
+        "Divine Gift",
+        "Sustained Prayer"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per long rest, when you make a weaving or targeting roll using your patron's Primary energy, you may declare you are calling for your patron's direct favor before rolling. The roll automatically achieves the maximum possible successes (4 on a complex weave, 2 on a simple weave targeting roll) without rolling.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per long rest; must be declared before rolling"
+    },
+    "keywords": "[Magic], [Divine]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!68d4c97c2a36d915"
+}

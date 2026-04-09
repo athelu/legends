@@ -1,0 +1,38 @@
+{
+  "_id": "a6512c4901630ef2",
+  "name": "Pact Attunement",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have learned, perhaps against your better judgment to open yourself more fullly to your power. The power flows more readily now. You try not to think about what that means.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 3
+      },
+      "skills": "",
+      "feats": [
+        "Eldritch Pact"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your Pact Conduit passive now triggers on both your Primary and Secondary pact energies, not just your Primary. Additionally, once per short rest when you cast a weave using your Primary energy, you may cast it without spending any Energy.</p>",
+    "usageType": "free",
+    "usage": {
+      "mode": "free",
+      "uses": null,
+      "recharge": null,
+      "text": "Pact Conduit expansion is passive; free cast once per short rest"
+    },
+    "keywords": "[Magic], [Pact]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!a6512c4901630ef2"
+}

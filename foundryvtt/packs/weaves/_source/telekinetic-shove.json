@@ -1,11 +1,11 @@
 {
-  "_id": "cb02a88ba176472d",
+  "_id": "81e4004d036cacb6",
   "name": "Telekinetic Shove",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Push or pull one creature/object up to 10 feet. Target makes [[/save type=fortitude]] to resist (if creature). Compare your weaving successes to their save successes.</p>"
+      "value": "<p>Push or pull one creature/object up to 10 feet. Target makes [[/save type=fortitude]] to resist (if creature). Compare your targeting successes to their save successes.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Close, 30 ft.",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "fortitude",
-    "effect": "",
-    "effectType": "",
+    "effect": "Push or pull one creature/object up to 10 feet. Target makes Fortitude save to resist (if creature). Compare your targeting successes to their save successes.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "5 feet",
+          "duration": "5 feet"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 feet",
+          "duration": "10 feet"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "15 feet + prone",
+          "duration": "15 feet + prone"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = no effect\n- 1 = 5 feet\n- 2 = 10 feet\n- 3 = 15 feet + prone",
+    "targetingSuccessScaling": "0 = fails, 1 = 5 feet, 2= 10 feet, 3 = 15 feet + prone",
     "weavingRoll": "Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
@@ -47,5 +68,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!cb02a88ba176472d"
+  "_key": "!items!81e4004d036cacb6"
 }

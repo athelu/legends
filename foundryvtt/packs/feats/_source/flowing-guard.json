@@ -1,0 +1,36 @@
+{
+  "_id": "1560741bc36c0181",
+  "name": "Flowing Guard",
+  "type": "feat",
+  "img": "icons/equipment/shield/shield-cross-bronze.webp",
+  "system": {
+    "description": {
+      "value": "<p>Movement is life, stillness is death. You've learned to read the rhythm of incoming attacks and flow around them rather than absorb them — turning the moment an enemy misses into the moment they regret it.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 3
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>As 1 [Combat] action, enter defensive meditation until start of your next turn: attacks against you add 1 to both attack dice. When an attack misses you while in Patient Defense, you can spend 1 Luck to make an immediate unarmed strike as a [Reacion]</p>",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Unlimited (entering stance), reaction costs Luck"
+    },
+    "keywords": "[Defense], [Ascetic], [Reacion]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!1560741bc36c0181"
+}

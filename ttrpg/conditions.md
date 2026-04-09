@@ -225,7 +225,7 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 **Effect:** Your location is unknown; enemies do not know which square you occupy. Enemies cannot directly target you with attacks or single-target weaves. While hidden you have Fortune on your first [combat] action. Making a [combat] action removes the hidden condition. 
 **Recovery:** Opposed by Observers perception check
 
-### Invisibile
+### Invisible
 **Keyword:** [Tactical]
 **Effect:** Magically induced state of Invisibility. Grants Hidden condition.
 **Recovery:** Opposed by Observers perception check reducing effect to Concealed.

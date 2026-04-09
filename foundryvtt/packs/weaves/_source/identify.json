@@ -1,11 +1,11 @@
 {
-  "_id": "a4f7dbd802074de9",
+  "_id": "1ae35b80ceca77cb",
   "name": "Identify",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Learn the properties of one magic item or active weave, including how to use it and any requirements. Also reveals if item is cursed (but not the curse's nature).</p>"
+      "value": "<p>Learn the properties of one magic item or active weave, including how to use it and any requirements. Can also reveals if item is cursed (but not the curse's nature).</p>"
     },
     "weaveType": "simple",
     "actionCost": 1,
@@ -21,26 +21,48 @@
     },
     "range": "Touch",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Learn the properties of one magic item or active weave, including how to use it and any requirements. Can also reveals if item is cursed (but not the curse's nature).",
+    "effectType": "divination",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "basic function only",
+          "duration": "basic function only"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full properties",
+          "duration": "full properties"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "learn curse details",
+          "duration": "learn curse details"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = basic function only\n- 2 = full properties\n- 3 = learn curse details",
+    "targetingSuccessScaling": "0 = fails, 1 = basic function only, 2 = full properties, 3 = learn curse details",
     "weavingRoll": "Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "divination",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!a4f7dbd802074de9"
+  "_key": "!items!1ae35b80ceca77cb"
 }

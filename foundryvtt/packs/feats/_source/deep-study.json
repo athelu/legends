@@ -1,0 +1,39 @@
+{
+  "_id": "3ca9cdfc5f585d0d",
+  "name": "Deep Study",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have learned to push Ritual Casting into territory that defies what combat magic can accomplish.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "intelligence": 4
+      },
+      "skills": "arcane:4",
+      "feats": [
+        "Mageborn",
+        "Ritual Mastery"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When using Ritual Casting, you may now select two benefits from the Ritual Mastery list instead of one. Additionally, you may extend duration up to two steps on the duration table instead of one.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Applies whenever you use Ritual Casting"
+    },
+    "keywords": "[Magic], [Mageborn]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!3ca9cdfc5f585d0d"
+}

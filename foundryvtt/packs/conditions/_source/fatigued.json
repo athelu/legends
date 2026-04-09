@@ -1,0 +1,38 @@
+{
+  "_id": "a2eda521d5290d80",
+  "name": "Fatigued",
+  "type": "condition",
+  "img": "icons/svg/sleep.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All skill checks: Add 1 to attribute die results.Cannot benefit from HP recovery for short rests. <strong>Recovery:</strong> Long rest removes 1 level of Exhaustion</p>"
+    },
+    "label": "Fatigued",
+    "category": "physical",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/sleep.svg",
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [
+      "Fatigued",
+      "Exhausted",
+      "Severely Exhausted",
+      "Near Collapse",
+      "Collapse"
+    ],
+    "stacking": "stack",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "automatic",
+      "removeOnSuccess": false
+    }
+  },
+  "flags": {},
+  "_key": "!items!a2eda521d5290d80"
+}

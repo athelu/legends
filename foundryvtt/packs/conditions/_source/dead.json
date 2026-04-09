@@ -1,20 +1,30 @@
 {
-  "_id": "ddc3ba9a36994085",
+  "_id": "0d6107bb247b8316",
   "name": "Dead",
   "type": "condition",
   "img": "icons/svg/skull.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Effect:</strong> Character is deceased. Cannot be affected by normal healing. <strong>Recovery:</strong> Requires resurrection magic or special circumstances</p>"
+    },
     "label": "Dead",
     "category": "incapacitation",
-    "description": {
-      "value": "<ul>\n<li>Character is deceased</li>\n<li>Cannot be affected by normal healing</li>\n<li>Requires resurrection magic or special circumstances</li>\n</ul>"
-    },
+    "keywords": [],
     "tokenIcon": "icons/svg/skull.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "severe",
-    "overlayPriority": 30
+    "overlayPriority": 30,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
   },
   "flags": {},
-  "_key": "!items!ddc3ba9a36994085"
+  "_key": "!items!0d6107bb247b8316"
 }

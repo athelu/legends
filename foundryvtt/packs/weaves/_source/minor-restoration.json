@@ -1,11 +1,11 @@
 {
-  "_id": "4a7dd9e9d57d48d7",
+  "_id": "362fec1b68da9541",
   "name": "Minor Restoration",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned.</p>"
+      "value": "<p>Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or one Poisoned condition.</p>"
     },
     "weaveType": "simple",
     "actionCost": 2,
@@ -21,25 +21,47 @@
     },
     "range": "Self, touch",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or one Poisoned condition.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "suppress condition (10 minutes)",
+          "duration": "suppress condition (10 minutes)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "remove 1 condition",
+          "duration": "remove 1 condition"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "remove 2 conditions",
+          "duration": "remove 2 conditions"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = suppress condition (10 minutes)\n- 2 = remove 1 condition\n- 3 = remove 2 conditions",
+    "targetingSuccessScaling": "0 = fails, 1 = suppress condition (10 minutes), 2 = remove 1 condition, 3 = remove 2 conditions",
     "weavingRoll": "Positive Potential + Positive Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!4a7dd9e9d57d48d7"
+  "_key": "!items!362fec1b68da9541"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "e85a0bd1fe37496c",
+  "_id": "ae145692d0f50f56",
   "name": "Greed (2)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
@@ -8,14 +8,15 @@
       "value": "<p>Covet money above all. Will go to any length to gain more.</p>"
     },
     "pointValue": 2,
-    "flawType": "",
-    "severity": "moderate",
+    "flawType": "mental",
+    "severity": "minor",
     "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!e85a0bd1fe37496c"
+  "_key": "!items!ae145692d0f50f56"
 }

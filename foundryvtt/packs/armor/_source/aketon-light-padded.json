@@ -1,5 +1,5 @@
 {
-  "_id": "8b5ab0530c1f4796",
+  "_id": "4f2b30ce32cb4ca7",
   "name": "Aketon/Light Padded",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -13,6 +13,9 @@
       "piercing": 1,
       "bludgeoning": 3
     },
+    "properties": [
+      "LightArmor"
+    ],
     "stealthPenalty": "none",
     "swimPenalty": "",
     "donTime": "",
@@ -20,11 +23,8 @@
     "weight": 0,
     "cost": 15.0,
     "quantity": 1,
-    "notes": "",
-    "keywords": [
-      "LightArmor"
-    ]
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!8b5ab0530c1f4796"
+  "_key": "!items!4f2b30ce32cb4ca7"
 }

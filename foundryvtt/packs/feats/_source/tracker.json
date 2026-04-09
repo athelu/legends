@@ -1,5 +1,5 @@
 {
-  "_id": "8a616ac637974da4",
+  "_id": "f6e9236ab5c67cb0",
   "name": "Tracker",
   "type": "feat",
   "img": "icons/environment/wilderness/tree-oak.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Every creature leaves a trail and you can read these signs like a book, following trails that others wouldn't even notice exist.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "survival:3, perception:3",
+      "skills": "perception:3",
       "feats": [],
-      "tier": 1,
-      "other": ""
+      "tier": 0,
+      "other": "Survival 3"
     },
     "benefits": "<p>Subtract 1 from both dice when tracking. Can track across difficult terrain at normal speed. Can determine number, size, and condition of tracked creatures</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Wilderness], [Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!8a616ac637974da4"
+  "_key": "!items!f6e9236ab5c67cb0"
 }

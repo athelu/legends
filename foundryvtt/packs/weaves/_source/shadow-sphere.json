@@ -1,5 +1,5 @@
 {
-  "_id": "58b234b63cc14869",
+  "_id": "2552ac29fac7d996",
   "name": "Shadow Sphere",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,27 +21,49 @@
     },
     "range": "Medium, 60 ft. (15-foot radius sphere)",
     "duration": "10 minutes",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Magical darkness fills a 15ft radius sphere at medium range. Blocks normal and magical light (unless from higher energy weave). Creatures inside are Blinded to creatures outside.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes (30-foot radius)",
+          "duration": "10 minutes (30-foot radius)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 minute\n- 2 = 10 minutes\n- 3 = 10 minutes (30-foot radius)",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 10 minutes (30-foot radius)",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
       "ranged",
-      "ritual"
+      "ritual",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!58b234b63cc14869"
+  "_key": "!items!2552ac29fac7d996"
 }

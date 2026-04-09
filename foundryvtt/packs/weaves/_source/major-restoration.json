@@ -1,5 +1,5 @@
 {
-  "_id": "7668c3b956844a50",
+  "_id": "f993c6d3624d129f",
   "name": "Major Restoration",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -7,7 +7,7 @@
     "description": {
       "value": "<p>Touch a creature and end one of the following: one curse (including attunement to cursed item), petrification, reduction of attribute scores, reduction of max HP. The weave removes only one effect per casting.</p>"
     },
-    "weaveType": "simple",
+    "weaveType": "complex",
     "actionCost": 2,
     "energyCost": {
       "primary": {
@@ -16,30 +16,52 @@
       },
       "supporting": {
         "type": "",
-        "cost": 0
+        "cost": 1
       }
     },
     "range": "Self, touch",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Touch a creature and end one of the following: one curse (including attunement to cursed item), petrification, reduction of attribute scores, reduction of max HP. The weave removes only one effect per casting.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "suppress effect (1 hour)",
+          "duration": "suppress effect (1 hour)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "remove 1 effect",
+          "duration": "remove 1 effect"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "removes 2 effects",
+          "duration": "removes 2 effects"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = suppress effect (1 hour)\n- 2 = remove 1 effect\n- 3 = removes 2 effects",
+    "targetingSuccessScaling": "0 = fails, 1 = suppress effect (1 hour), 2 = remove 1 effect, 3 = removes 2 effects",
     "weavingRoll": "Positive Potential + Positive Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!7668c3b956844a50"
+  "_key": "!items!f993c6d3624d129f"
 }

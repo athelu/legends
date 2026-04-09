@@ -1,5 +1,5 @@
 {
-  "_id": "d45aba30934a4962",
+  "_id": "5ec33543ba5b595e",
   "name": "Hose",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>Fitted leg coverings worn under other garments, typically made of wool or linen.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "clothing",
     "weight": 0.5,
     "cost": 2.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!d45aba30934a4962"
+  "_key": "!items!5ec33543ba5b595e"
 }

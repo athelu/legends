@@ -1,5 +1,5 @@
 {
-  "_id": "de79b25c7c094f4f",
+  "_id": "3d6a426014c261ff",
   "name": "Sling",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 4,
       "type": "bludgeoning",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": ""
     },
@@ -21,30 +21,14 @@
     },
     "attackModes": [
       {
-        "name": "Melee",
-        "type": "melee",
-        "skill": "meleeCombat",
-        "damageAttr": "strength",
-        "defenseType": "melee",
-        "damage": {
-          "base": 4,
-          "alternate": null
-        },
-        "range": {
-          "normal": 0,
-          "medium": 0,
-          "long": 0
-        }
-      },
-      {
         "name": "Ranged",
         "type": "ranged",
-        "skill": "rangedCombat",
-        "damageAttr": "agility",
+        "skill": "ranged",
+        "damageAttr": "dexterity",
         "defenseType": "ranged",
         "damage": {
           "base": 4,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 40,
@@ -59,8 +43,10 @@
     "properties": [
       "ranged"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!de79b25c7c094f4f"
+  "_key": "!items!3d6a426014c261ff"
 }

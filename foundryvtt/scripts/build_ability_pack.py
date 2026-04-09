@@ -26,7 +26,6 @@ import json
 from pathlib import Path
 from pack_utils import build_pack_from_source, generate_id, ensure_key, md_to_html, apply_enrichers
 import re
-import json
 
 
 def main():
@@ -79,11 +78,12 @@ def main():
                     'description': {'value': apply_enrichers(md_to_html(body))},
                     'abilityType': 'passive',
                     'source': '',
-                    'keywords': '',
+                    'keywords': [],
                     'trigger': '',
                     'frequency': '',
                     'effect': '',
-                    'isActive': False
+                    'isActive': False,
+                    'appliesEffects': []
                 },
                 'effects': []
             }

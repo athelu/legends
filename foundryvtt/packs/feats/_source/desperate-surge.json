@@ -1,0 +1,38 @@
+{
+  "_id": "13de88707fad8722",
+  "name": "Desperate Surge",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>When your back is against the wall and the odds are against you, the pact responds.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "",
+      "feats": [
+        "Eldritch Pact"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you are below half your maximum HP, your Pact Conduit passive triggers on all five of your pact energies, not just your primary and secondary. Additionally, while below half HP, you may spend 1 Luck to reroll one die on any weaving or targeting roll, taking the new result.</p>",
+    "usageType": "active",
+    "usage": {
+      "mode": "active",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive when below half HP; Luck cost for reroll"
+    },
+    "keywords": "[Magic], [Pact]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!13de88707fad8722"
+}

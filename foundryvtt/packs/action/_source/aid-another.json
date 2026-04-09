@@ -1,22 +1,23 @@
 {
-  "_id": "eae3e05f3c3c43d6",
+  "_id": "d314a113ea107ae3",
   "name": "Aid Another",
   "type": "action",
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Make a skill check to help an ally with their action</li>\n<li><strong>Success (1+):</strong> Your ally gains Fortune on their next roll for that task</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Must be able to meaningfully help (GM discretion)</li>\n<li>Can aid attacks, skill checks, or other actions</li>\n<li>Subject to Multiple Action Penalty</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Make a skill check to help an ally with their action. Must be able to meaningfully help (GM discretion). Can aid attacks, skill checks, or other actions. Success (1+): Your ally subtracts 1 from both dice on their next action.</p>"
     },
     "actionType": "combat",
     "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Make a skill check to help an ally with their action\n- **Success (1+):** Your ally gains Fortune on their next roll for that task\n- **Notes:**\n  - Must be able to meaningfully help (GM discretion)\n  - Can aid attacks, skill checks, or other actions\n  - Subject to Multiple Action Penalty",
-    "keywords": "",
+    "effect": "Make a skill check to help an ally with their action. Must be able to meaningfully help (GM discretion). Can aid attacks, skill checks, or other actions.",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
-    "special": ""
+    "special": "Success (1+): Your ally subtracts 1 from both dice on their next action."
   },
   "effects": [],
-  "_key": "!items!eae3e05f3c3c43d6"
+  "_key": "!items!d314a113ea107ae3"
 }

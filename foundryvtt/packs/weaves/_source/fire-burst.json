@@ -1,5 +1,5 @@
 {
-  "_id": "299cd8b3c3fb4149",
+  "_id": "13d0c60fad5e2333",
   "name": "Fire Burst",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Touch",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Channel flames through your palm to burn a target within 5 feet. Target takes 4 fire damage. This is an attack weave—no saving throw allowed.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (2)",
+          "duration": "Half damage (2)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (4)",
+          "duration": "Full damage (4)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (8) + ignited",
+          "duration": "Enhanced damage (8) + ignited"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = Half damage (2)\n- 2 = Full damage (4)\n- 3 = Enhanced damage (8)",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (2), 2 = Full damage (4), 3 = Enhanced damage (8) + ignited",
     "weavingRoll": "Fire Potential + Fire Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
@@ -46,5 +67,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!299cd8b3c3fb4149"
+  "_key": "!items!13d0c60fad5e2333"
 }

@@ -1,20 +1,45 @@
 {
-  "_id": "161c988aed064f1c",
+  "_id": "6e9c7759485ea708",
   "name": "Hidden",
   "type": "condition",
   "img": "icons/svg/invisible.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Tactical] <strong>Effect:</strong> Your location is unknown; enemies do not know which square you occupy. Enemies cannot directly target you with attacks or single-target weaves. While hidden you have Fortune on your first [combat] action. Making a [combat] action removes the hidden condition. <strong>Recovery:</strong> Opposed by Observers [[/check skill=perception]]</p>"
+    },
     "label": "Hidden",
     "category": "visibility",
-    "description": {
-      "value": "<ul>\n<li>Your location is unknown; enemies do not know which square you occupy</li>\n<li>Enemies cannot directly target you with attacks or single-target weaves</li>\n<li>You have significant tactical advantage</li>\n</ul>\n<p><strong>How to Gain Hidden:</strong></p>\n<ol>\n<li><strong>Successful [[/check skill=stealth]]:</strong></li>\n</ol>\n<ul>\n<li>Use Hide action (normally 1 [Combat] action, or 1 [Minor] with Swift Movement feat)</li>\n<li>Make [[/check skill=stealth]] opposed by observers' Perception</li>\n<li>Must have something to hide behind (cover, concealment, etc.)</li>\n<li>Success: You gain Hidden condition</li>\n<li>Failure: Observers know your location (you may be Concealed but not Hidden)</li>\n</ul>\n<ol>\n<li><strong>Invisibility:</strong></li>\n</ol>\n<ul>\n<li>Invisibility weaves grant Hidden condition</li>\n<li>Observers cannot see you without magical means</li>\n<li>Can still be detected by sound, smell, touch, or environmental clues</li>\n</ul>\n<ol>\n<li><strong>Full Cover from All Observers:</strong></li>\n</ol>\n<ul>\n<li>If no enemy has line of sight to you, and you pass a [[/check skill=stealth]] you are Hidden from them</li>\n<li>Example: Behind a wall, around a corner, inside a closed room</li>\n</ul>\n<ol>\n<li><strong>Magical Effects:</strong></li>\n</ol>\n<ul>\n<li>Some weaves or abilities grant Hidden condition</li>\n<li>Darkness that prevents vision</li>\n</ul>\n<p><strong>Cannot Be Directly Targeted:</strong></p>\n<ul>\n<li>Enemies cannot make attack rolls against you (don't know where you are)</li>\n<li>Single-target weaves requiring line of sight cannot target you</li>\n<li>Area effects can still affect you if your general area is targeted</li>\n</ul>\n<p><strong>Attacking While Hidden:</strong></p>\n<ul>\n<li>You have Fortune on your first attack roll while Hidden</li>\n<li>Making an attack typically reveals your position:\n<ul>\n<li><strong>Standard:</strong> Attack reveals you, you become visible</li>\n<li><strong>Exception:</strong> Woodcraft feat - ranged attacks from hiding in natural terrain don't automatically reveal position (enemies must succeed [[/check skill=perception]])</li>\n<li><strong>Exception:</strong> Perfect Invisibility - doesn't break when attacking</li>\n</ul></li>\n</ul>\n<p><strong>Detection:</strong> If an observer succeeds on [[/check skill=perception]] to detect you:</p>\n<ul>\n<li><strong>Hidden → Visible</strong></li>\n</ul>\n<p><strong>Ways to Detect Hidden Creatures:</strong></p>\n<ol>\n<li><strong>Active Search [Interact action]:</strong></li>\n</ol>\n<ul>\n<li>Make [[/check skill=perception]] opposed by Hidden creature's Stealth</li>\n<li>Success: Creature loses Hidden, becomes Visible</li>\n<li>Failure: Creature remains Hidden</li>\n</ul>\n<ol>\n<li><strong>Passive Perception:</strong></li>\n</ol>\n<ul>\n<li>GM compares observer's Passive Perception to Hidden creature's Stealth result</li>\n<li>If Passive Perception equals or beats Stealth, creature is detected</li>\n</ul>\n<ol>\n<li><strong>Non-Visual Detection:</strong></li>\n</ol>\n<ul>\n<li><strong>Sound:</strong> Footsteps, breathing, knocked objects, armor noise ([[/check skill=perception]])</li>\n<li><strong>Smell:</strong> Strong scents, perfume, unwashed ([[/check skill=perception]], often with Misfortune)</li>\n<li><strong>Touch:</strong> Bumping into invisible creature (automatic detection → Concealed)</li>\n<li><strong>Environmental:</strong> Footprints in snow, ripples in water, disturbed fog, moving grass (Investigation or [[/check skill=perception]])</li>\n<li><strong>Magical:</strong> Perfect Sight, tremorsense, blindsight, other special senses</li>\n</ul>\n<p><strong>Maintaining Hidden:</strong></p>\n<ul>\n<li>Requires continued stealth</li>\n<li>GM may call for new Stealth checks if you move (especially if moving quickly or across noisy terrain)</li>\n<li>Broken if enemies successfully detect you</li>\n<li>Automatically broken by Revealed condition</li>\n<li>Broken by most offensive actions (attacks, casting obvious weaves)</li>\n</ul>\n<p><strong>Special Senses:</strong></p>\n<ul>\n<li>Creatures with Blindsight can detect Hidden creatures within range reducing their benefit to concealed.</li>\n<li>Creatures with Tremorsense detect Hidden creatures on the ground reducing their benefit to concealed.</li>\n<li>Perfect Sight sees through invisibility and illusory effects</li>\n</ul>\n<p><strong>Area of Effect Targeting:</strong></p>\n<ul>\n<li>Enemies can target your general area with AOE weaves</li>\n<li>Example: \"I cast Fireball centered on that cluster of barrels where I heard noise\"</li>\n<li>You're still affected if you're in the area, even though they can't target you directly</li>\n</ul>\n<p><strong>Duration:</strong></p>\n<ul>\n<li>Until revealed, you attack, or conditions change</li>\n<li>Revealed condition immediately ends Hidden</li>\n</ul>\n<p><strong>Example Situations:</strong></p>\n<ul>\n<li>Successfully hiding behind a pillar during combat</li>\n<li>Invisible via Invisibility weave</li>\n<li>Around a corner with no line of sight to enemies</li>\n<li>In deep shadows after successful [[/check skill=stealth]]</li>\n</ul>\n<p>---</p>"
-    },
+    "keywords": [
+      "Tactical"
+    ],
     "tokenIcon": "icons/svg/invisible.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "replace",
+    "stacks": 1,
     "severity": "moderate",
-    "overlayPriority": 20
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "check",
+      "removeOnSuccess": false,
+      "check": {
+        "skill": "perception",
+        "attribute": "",
+        "skills": [
+          "perception"
+        ],
+        "attributes": [],
+        "opposed": true,
+        "label": "perception"
+      },
+      "downgrades": {
+        "margin_1_plus": null
+      }
+    }
   },
   "flags": {},
-  "_key": "!items!161c988aed064f1c"
+  "_key": "!items!6e9c7759485ea708"
 }

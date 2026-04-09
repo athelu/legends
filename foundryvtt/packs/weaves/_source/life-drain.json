@@ -1,11 +1,11 @@
 {
-  "_id": "22098d5b52814c91",
+  "_id": "bcde64da8daa3a6f",
   "name": "Life Drain",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target takes [[/damage 8 type=negative]] damage. You heal HP equal to half the damage dealt. This is an attack weave—no saving throw allowed.</p>"
+      "value": "<p>Target takes [[/damage 8 type=negative]] damage. You heal HP equal to half the damage dealt (after DR). This is an attack weave—no saving throw allowed.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -23,15 +23,36 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target takes 8 negative damage. You heal HP equal to half the damage dealt (after DR). This is an attack weave—no saving throw allowed.",
+    "effectType": "healing",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (4) heal (2)",
+          "duration": "half damage (4) heal (2)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (8) heal (4)",
+          "duration": "full damage (8) heal (4)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (16) heal (8) + weakened",
+          "duration": "enhanced damage (16) heal (8) + weakened"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (4) heal (2)\n- 2 = full damage (8) heal (4)\n- 3 = enhanced damage (16) heal (8) + weakened",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (4) heal (2), 2 = full damage (8) heal (4), 3 = enhanced damage (16) heal (8) + weakened",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
     "appliesEffects": [
@@ -42,10 +63,11 @@
     ],
     "deliveryMethod": "save",
     "tags": [
+      "defensive",
       "healing",
       "ranged"
     ]
   },
   "effects": [],
-  "_key": "!items!22098d5b52814c91"
+  "_key": "!items!bcde64da8daa3a6f"
 }

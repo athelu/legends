@@ -1,5 +1,5 @@
 {
-  "_id": "fada5782795647ed",
+  "_id": "555ec5156586b166",
   "name": "Mend Flesh",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "Self, touch",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness.",
+    "effectType": "healing",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "heal (4)",
+          "duration": "heal (4)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "heal (8)",
+          "duration": "heal (8)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "heal (12)",
+          "duration": "heal (12)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = heal (4)\n- 2 = heal (8)\n- 3 = heal (12)",
+    "targetingSuccessScaling": "0 = fails, 1 = heal (4), 2 = heal (8), 3 = heal (12)",
     "weavingRoll": "Positive Potential + Positive Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "healing",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!fada5782795647ed"
+  "_key": "!items!555ec5156586b166"
 }

@@ -1,5 +1,5 @@
 {
-  "_id": "e7b28e8ca0c54a6b",
+  "_id": "422822dfe30f1149",
   "name": "Climber",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Walls are just vertical floors to you. Falling is still dangerous, of course, but you've gotten good at catching yourself.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {},
       "skills": "athletics:4, acrobatics:2",
       "feats": [],
-      "tier": 2,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Climb at full movement speed (no reduction). Can attempt normally impossible climbs (smooth stone, ice, ceilings) with [[/check skill=athletics]] (Hard task). When falling during a climb, automatically get [[/check skill=acrobatics]] to catch yourself (1 success = catch and stop fall, 2 successes = catch and don't take damage)</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!e7b28e8ca0c54a6b"
+  "_key": "!items!422822dfe30f1149"
 }

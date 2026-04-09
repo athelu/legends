@@ -2,6 +2,7 @@
  * Extend the base Actor class for D8 TTRPG
  */
 import * as featEffects from "../feat-effects.mjs";
+import { normalizeSkillKey, syncSkillAliases } from "../skill-utils.mjs";
 
 export class D8Actor extends Actor {
   
@@ -12,6 +13,10 @@ export class D8Actor extends Actor {
   
   /** @override */
   prepareBaseData() {
+    if ((this.type === 'character' || this.type === 'npc') && this.system?.skills) {
+      syncSkillAliases(this.system.skills);
+    }
+
     // Calculate HP based on Constitution
     if (this.type === 'character' || this.type === 'npc') {
       const con = this.system.attributes.constitution.value;
@@ -60,6 +65,7 @@ export class D8Actor extends Actor {
  */
 _prepareCharacterData(actorData) {
   const systemData = actorData.system;
+  const ancestryEffects = this._collectAncestryEffects(actorData.items);
   // Aggregate DR per damage type from equipped armor
   let slashingTotal = 0;
   let piercingTotal = 0;
@@ -67,6 +73,7 @@ _prepareCharacterData(actorData) {
 
   // Store armor pieces for reference
   systemData.equippedArmor = [];
+  systemData.equippedShields = [];
 
   for (let item of actorData.items) {
     if (item.type === 'armor' && item.system.equipped) {
@@ -92,17 +99,18 @@ _prepareCharacterData(actorData) {
     
     // Shields are tracked separately, not included in armor DR aggregation
     if (item.type === 'shield' && item.system.equipped) {
-      if (!systemData.equippedShields) systemData.equippedShields = [];
       systemData.equippedShields.push({
         name: item.name,
         shieldType: item.system.shieldType,
-        reactions: item.system.reactions || []
+        reactions: item.system.reactions || [],
+        linkedAbilities: item.system.linkedAbilities || []
       });
     }
   }
 
   // Store aggregated DR totals and a simple summary value
   if (!systemData.dr) systemData.dr = {};
+  systemData.ancestryEffects = ancestryEffects;
   systemData.dr.slashing = slashingTotal;
   systemData.dr.piercing = piercingTotal;
   systemData.dr.bludgeoning = bludgeoningTotal;
@@ -117,14 +125,15 @@ _prepareCharacterData(actorData) {
     // Apply skill and attribute effective values from feats
     systemData.skillsEffective = {};
     for (const [k, v] of Object.entries(systemData.skills || {})) {
-      const mod = featMods.skills[k] || 0;
+      const canonicalKey = normalizeSkillKey(k) || k;
+      const mod = featMods.skills[canonicalKey] || featMods.skills[k] || 0;
       systemData.skillsEffective[k] = (typeof v === 'object' ? (v.value ?? 0) : v) + mod;
     }
 
     systemData.attributesEffective = {};
     for (const [attrKey, attrObj] of Object.entries(systemData.attributes || {})) {
       const base = attrObj?.value ?? 0;
-      const mod = featMods.attributes[attrKey] || 0;
+      const mod = (ancestryEffects.attributes[attrKey] || 0) + (featMods.attributes[attrKey] || 0);
       systemData.attributesEffective[attrKey] = base + mod;
     }
 
@@ -132,6 +141,77 @@ _prepareCharacterData(actorData) {
     systemData.featActions = featMods.actions || [];
     systemData.featReactions = featMods.reactions || [];
 }
+
+  _collectAncestryEffects(items) {
+    const emptyAttributes = {
+      strength: 0,
+      constitution: 0,
+      agility: 0,
+      dexterity: 0,
+      intelligence: 0,
+      wisdom: 0,
+      charisma: 0,
+      luck: 0
+    };
+
+    const ancestryItems = items.filter(item => item.type === 'ancestry');
+    const primary = ancestryItems[0] ?? null;
+
+    const effects = {
+      count: ancestryItems.length,
+      primaryName: primary?.name ?? '',
+      attributes: { ...emptyAttributes },
+      traits: '',
+      languages: '',
+      senses: '',
+      specialAbilities: '',
+      culture: primary?.system?.culture ?? '',
+      physicalDescription: primary?.system?.physicalDescription ?? '',
+      lifespan: Number.isFinite(primary?.system?.lifespan) ? primary.system.lifespan : 0,
+      requiresGMApproval: ancestryItems.some(item => item.system?.requiresGMApproval)
+    };
+
+    const traitNames = [];
+    const languages = [];
+    const senses = [];
+    const specialAbilities = [];
+
+    for (const ancestry of ancestryItems) {
+      const bonuses = ancestry.system?.bonuses?.attributes;
+      const legacy = ancestry.system?.abilityModifiers;
+
+      for (const attrKey of Object.keys(emptyAttributes)) {
+        const value = Number.isFinite(bonuses?.[attrKey])
+          ? bonuses[attrKey]
+          : (Number.isFinite(legacy?.[attrKey]) ? legacy[attrKey] : 0);
+        effects.attributes[attrKey] += value;
+      }
+
+      const traitText = typeof ancestry.system?.traits === 'string' ? ancestry.system.traits : '';
+      for (const part of traitText.split(',')) {
+        const cleaned = part.trim();
+        if (cleaned && !traitNames.includes(cleaned)) traitNames.push(cleaned);
+      }
+
+      for (const field of [
+        ['languages', languages],
+        ['senses', senses],
+        ['specialAbilities', specialAbilities]
+      ]) {
+        const [key, collection] = field;
+        const value = ancestry.system?.[key];
+        if (typeof value === 'string' && value.trim()) {
+          collection.push(value.trim());
+        }
+      }
+    }
+
+    effects.traits = traitNames.join(', ');
+    effects.languages = [...new Set(languages)].join('\n');
+    effects.senses = [...new Set(senses)].join('\n');
+    effects.specialAbilities = [...new Set(specialAbilities)].join('\n\n');
+    return effects;
+  }
   
   /**
    * Prepare NPC-specific data

@@ -1,5 +1,5 @@
 {
-  "_id": "c4de3b738a3641ac",
+  "_id": "c97082ba115097e3",
   "name": "Shape Earth",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,24 +23,46 @@
     "duration": "Instantaneous (or 1 hour for changes)",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Choose one: (1) Excavate or move up to 5ft cube of loose earth, (2) Shape earth/stone into basic forms, (3) Change color or texture of earth/stone in 5ft cube. Changes last 1 hour.",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "2ft cube",
+          "duration": "2ft cube"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "5ft cube",
+          "duration": "5ft cube"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10ft cube",
+          "duration": "10ft cube"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 2ft cube\n- 2 = 5ft cube\n- 3 = 10ft cube",
+    "targetingSuccessScaling": "0 = fails, 1 = 2ft cube, 2= 5ft cube, 3 = 10ft cube",
     "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!c4de3b738a3641ac"
+  "_key": "!items!c97082ba115097e3"
 }

@@ -4,6 +4,19 @@
  * Foundry VTT V13 - Uses renderChatMessageHTML hook (native DOM, not jQuery)
  */
 
+import { SKILL_LABELS } from './skill-utils.mjs';
+
+const ATTRIBUTE_LABELS = {
+  strength: 'Strength',
+  constitution: 'Constitution',
+  agility: 'Agility',
+  dexterity: 'Dexterity',
+  intelligence: 'Intelligence',
+  wisdom: 'Wisdom',
+  charisma: 'Charisma',
+  luck: 'Luck',
+};
+
 /**
  * Enrich a string containing [[/check ...]], [[/save ...]], [[/damage ...]] enricher syntax.
  * Falls back to returning the original string if TextEditor is unavailable.
@@ -127,7 +140,7 @@ async function processConditionsAtTiming(actor, timing) {
   if (timing === 'endOfTurn') {
     // End of turn: recovery prompts FIRST (chance to avoid damage), then damage
     for (const condition of recoveries) {
-      await processRecoverySave(actor, condition);
+      await processRecoveryPrompt(actor, condition);
     }
     // Apply damage ticks (no separate warning needed - summary above is sufficient)
     for (const condition of damageTicks) {
@@ -139,9 +152,115 @@ async function processConditionsAtTiming(actor, timing) {
       await processDamageTick(actor, condition);
     }
     for (const condition of recoveries) {
-      await processRecoverySave(actor, condition);
+      await processRecoveryPrompt(actor, condition);
     }
   }
+}
+
+function hasRecoveryCheck(checkData) {
+  if (!checkData || typeof checkData !== 'object') return false;
+  return (Array.isArray(checkData.skills) && checkData.skills.length > 0)
+    || (Array.isArray(checkData.attributes) && checkData.attributes.length > 0)
+    || Boolean(checkData.skill)
+    || Boolean(checkData.attribute);
+}
+
+function formatRecoveryCheckLabel(checkData) {
+  if (!checkData || typeof checkData !== 'object') return 'Recovery Check';
+  if (typeof checkData.label === 'string' && checkData.label.trim()) {
+    return checkData.label.trim();
+  }
+
+  const labels = [];
+  const skills = Array.isArray(checkData.skills) ? checkData.skills : (checkData.skill ? [checkData.skill] : []);
+  const attributes = Array.isArray(checkData.attributes) ? checkData.attributes : (checkData.attribute ? [checkData.attribute] : []);
+
+  for (const skill of skills) {
+    labels.push(SKILL_LABELS[skill] || skill);
+  }
+  for (const attribute of attributes) {
+    labels.push(ATTRIBUTE_LABELS[attribute] || attribute);
+  }
+
+  return labels.join(' or ') || 'Recovery Check';
+}
+
+function buildRecoveryPromptMessage(item, recovery) {
+  if (recovery.chatMessage) {
+    return recovery.chatMessage;
+  }
+
+  const primaryCheckLabel = hasRecoveryCheck(recovery.check) ? formatRecoveryCheckLabel(recovery.check) : '';
+
+  if (recovery.save?.type && primaryCheckLabel) {
+    return `Choose a [[/save type=${recovery.save.type}]] or ${primaryCheckLabel} check to recover from ${item.name}.`;
+  }
+  if (recovery.save?.type) {
+    return `Make a [[/save type=${recovery.save.type}]] to recover from ${item.name}.`;
+  }
+  if (primaryCheckLabel) {
+    return `Make a ${primaryCheckLabel} check to recover from ${item.name}.`;
+  }
+  return `Resolve recovery for ${item.name}.`;
+}
+
+function buildRecoveryButtons(actor, item, recovery) {
+  const buttons = [];
+
+  if (recovery.save?.type) {
+    buttons.push({
+      cssClass: 'recovery-roll',
+      label: `Roll ${recovery.save.type} Save`,
+      actionType: 'save',
+      target: 'primary',
+      meta: `data-save-type="${recovery.save.type}"`,
+    });
+  }
+
+  if (hasRecoveryCheck(recovery.check)) {
+    buttons.push({
+      cssClass: 'recovery-roll',
+      label: `Roll ${formatRecoveryCheckLabel(recovery.check)} Check`,
+      actionType: 'check',
+      target: 'primary',
+      meta: '',
+    });
+  }
+
+  if (recovery.assistance?.check && hasRecoveryCheck(recovery.assistance.check)) {
+    const rangeLabel = Number.isFinite(recovery.assistance.range)
+      ? ` (${recovery.assistance.range} ft)`
+      : '';
+    buttons.push({
+      cssClass: 'recovery-roll',
+      label: `Assistance: ${formatRecoveryCheckLabel(recovery.assistance.check)}${rangeLabel}`,
+      actionType: 'check',
+      target: 'assistance',
+      meta: '',
+    });
+  } else if (recovery.assistance?.range) {
+    buttons.push({
+      cssClass: 'recovery-assist',
+      label: `Request Assistance (${recovery.assistance.range} ft)`,
+      actionType: 'assist-info',
+      target: 'assistance',
+      meta: `data-range="${recovery.assistance.range}"`,
+    });
+  }
+
+  return buttons.map(button => `
+    <button
+      class="${button.cssClass}"
+      data-actor-id="${actor.id}"
+      data-item-id="${item.id}"
+      data-item-type="${item.type}"
+      data-action-type="${button.actionType}"
+      data-recovery-target="${button.target}"
+      ${button.meta}
+    >
+      ${button.label}
+    </button>
+  `).join('');
 }
 
 /**
@@ -299,6 +418,8 @@ async function notifyConditionDamageWarning(actor, condition) {
       legends: {
         conditionWarning: true,
         actorId: actor.id,
+        itemId: condition.id,
+        itemType: condition.type,
         conditionId: condition.id
       }
     }
@@ -312,6 +433,11 @@ async function notifyConditionDamageWarning(actor, condition) {
  * @param {string} saveType - Type of save: 'fortitude', 'reflex', 'will'
  */
 async function showConditionSaveDialog(actor, condition, saveType = 'fortitude') {
+  return showRecoverySaveDialog(actor, condition, saveType);
+}
+
+async function showRecoverySaveDialog(actor, item, saveType = 'fortitude', options = {}) {
+  const { onComplete = null, title = `${item.name} - Recovery` } = options;
   // Determine which attribute to use
   let attrKey, attrLabel, skillLabel;
   switch(saveType) {
@@ -341,12 +467,12 @@ async function showConditionSaveDialog(actor, condition, saveType = 'fortitude')
   const luckValue = actor.system.luck?.current ?? actor.system.attributes.luck?.value ?? 2;
 
   // Get and enrich the condition description
-  const descriptionHTML = condition.system.description?.value 
-    ? await enrichText(condition.system.description.value)
+  const descriptionHTML = item.system.description?.value 
+    ? await enrichText(item.system.description.value)
     : '';
 
   return foundry.applications.api.DialogV2.wait({
-    window: { title: `${condition.name} - Recovery` },
+    window: { title },
     content: `
       <style>
         .dialog-buttons {
@@ -451,12 +577,13 @@ async function showConditionSaveDialog(actor, condition, saveType = 'fortitude')
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
           
-          return await rollConditionSave(actor, condition, saveType, {
+          return await rollConditionSave(actor, item, saveType, {
             modifier,
             applyToAttr,
             applyToSkill,
             fortune: 0,
-            misfortune: 0
+            misfortune: 0,
+            onComplete,
           });
         }
       },
@@ -468,11 +595,12 @@ async function showConditionSaveDialog(actor, condition, saveType = 'fortitude')
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
           
-          return await rollConditionSaveWithFortune(actor, condition, saveType, {
+          return await rollConditionSaveWithFortune(actor, item, saveType, {
             modifier,
             applyToAttr,
             applyToSkill,
-            isFortune: true
+            isFortune: true,
+            onComplete,
           });
         }
       },
@@ -484,11 +612,12 @@ async function showConditionSaveDialog(actor, condition, saveType = 'fortitude')
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
           
-          return await rollConditionSaveWithFortune(actor, condition, saveType, {
+          return await rollConditionSaveWithFortune(actor, item, saveType, {
             modifier,
             applyToAttr,
             applyToSkill,
-            isFortune: false
+            isFortune: false,
+            onComplete,
           });
         }
       }
@@ -504,7 +633,7 @@ async function showConditionSaveDialog(actor, condition, saveType = 'fortitude')
  * @param {object} options - Roll options
  */
 async function rollConditionSaveWithFortune(actor, condition, saveType, options = {}) {
-  const { modifier = 0, applyToAttr = true, applyToSkill = true, isFortune = true } = options;
+  const { modifier = 0, applyToAttr = true, applyToSkill = true, isFortune = true, onComplete = null } = options;
   
   // Determine which attribute to use
   let attrKey, attrLabel;
@@ -638,7 +767,9 @@ async function rollConditionSaveWithFortune(actor, condition, saveType, options 
           });
           
           // Apply recovery result
-          await handleRecoveryResult(actor, condition, successes);
+          if (onComplete) await onComplete(successes);
+          else if (condition.type === 'condition') await handleRecoveryResult(actor, condition, successes);
+          else await handleEffectRecoveryResult(actor, condition, successes);
           
           return successes;
         }
@@ -655,7 +786,7 @@ async function rollConditionSaveWithFortune(actor, condition, saveType, options 
  * @param {object} options - Roll options
  */
 async function rollConditionSave(actor, condition, saveType = 'fortitude', options = {}) {
-  const { modifier = 0, applyToAttr = true, applyToSkill = true, fortune = 0, misfortune = 0 } = options;
+  const { modifier = 0, applyToAttr = true, applyToSkill = true, fortune = 0, misfortune = 0, onComplete = null } = options;
   
   // Determine which attribute to use
   let attrKey, attrLabel;
@@ -738,33 +869,45 @@ async function rollConditionSave(actor, condition, saveType = 'fortitude', optio
   });
   
   // Apply recovery result
-  await handleRecoveryResult(actor, condition, successes);
+  if (onComplete) await onComplete(successes);
+  else if (condition.type === 'condition') await handleRecoveryResult(actor, condition, successes);
+  else await handleEffectRecoveryResult(actor, condition, successes);
   
   return successes;
 }
 
 /**
- * Process recovery save for a condition
- * @param {Actor} actor - The actor making the save
- * @param {Item} condition - The condition being recovered from
+ * Process recovery prompt for a recoverable item
+ * @param {Actor} actor - The actor making the recovery
+ * @param {Item} item - The recoverable condition or effect
  */
-async function processRecoverySave(actor, condition) {
-  const recovery = condition.system.recovery;
+export async function processRecoveryPrompt(actor, item) {
+  const recovery = item.system.recovery;
 
-  if (!recovery.promptPlayer) return;
+  if (!recovery) return null;
 
-  const chatMessage = await enrichText(recovery.chatMessage || `Make a ${recovery.save?.type || 'saving throw'} to recover from ${condition.name}`);
+  const hasPrimarySave = Boolean(recovery.save?.type);
+  const hasPrimaryCheck = hasRecoveryCheck(recovery.check);
+  const hasAssistanceCheck = hasRecoveryCheck(recovery.assistance?.check);
+
+  if (!recovery.promptPlayer && !hasPrimarySave && !hasPrimaryCheck && !hasAssistanceCheck) {
+    return null;
+  }
+
+  const chatMessage = await enrichText(buildRecoveryPromptMessage(item, recovery));
+  const buttonsHtml = buildRecoveryButtons(actor, item, recovery);
+
+  if (!buttonsHtml) {
+    return null;
+  }
 
   // Create interactive chat card for recovery
   const messageContent = `
     <div class="d8-condition-recovery">
-      <h3>${condition.name} - Recovery</h3>
+      <h3>${item.name} - Recovery</h3>
       <p>${chatMessage}</p>
-      <div class="recovery-buttons" data-actor-id="${actor.id}" data-condition-id="${condition.id}">
-        <button class="recovery-roll" data-save-type="${recovery.save?.type || 'fortitude'}">
-          Roll Recovery
-        </button>
-        ${recovery.assistance ? `<button class="recovery-assist" data-range="${recovery.assistance.range}">Request Assistance (${recovery.assistance.range} ft)</button>` : ''}
+      <div class="recovery-buttons">
+        ${buttonsHtml}
       </div>
     </div>
   `;
@@ -776,8 +919,8 @@ async function processRecoverySave(actor, condition) {
       legends: {
         conditionRecovery: true,
         actorId: actor.id,
-        conditionId: condition.id,
-        saveType: recovery.save?.type,
+        itemId: item.id,
+        itemType: item.type,
         downgrades: recovery.downgrades
       }
     }
@@ -793,15 +936,15 @@ async function processRecoverySave(actor, condition) {
  * @param {object} saveData - Save configuration
  * @param {string} context - Context: 'damage' or 'recovery'
  */
-async function promptForSave(actor, condition, saveData, context) {
+export async function promptForSave(actor, item, saveData, context) {
   const saveType = saveData.type || 'fortitude';
   const effectOnSuccess = saveData.effectOnSuccess || 'none';
 
   const messageContent = `
     <div class="d8-condition-save">
-      <h3>${condition.name} - Save</h3>
+      <h3>${item.name} - Save</h3>
       <p>Make a <strong>${saveType}</strong> save!</p>
-      <button class="condition-save-roll" data-actor-id="${actor.id}" data-condition-id="${condition.id}" data-save-type="${saveType}" data-effect="${effectOnSuccess}">
+      <button class="condition-save-roll" data-actor-id="${actor.id}" data-item-id="${item.id}" data-item-type="${item.type}" data-save-type="${saveType}" data-effect="${effectOnSuccess}">
         Roll ${saveType} Save
       </button>
     </div>
@@ -814,7 +957,8 @@ async function promptForSave(actor, condition, saveData, context) {
       legends: {
         conditionSave: true,
         actorId: actor.id,
-        conditionId: condition.id,
+        itemId: item.id,
+        itemType: item.type,
         saveType: saveType,
         effectOnSuccess: effectOnSuccess
       }
@@ -822,12 +966,28 @@ async function promptForSave(actor, condition, saveData, context) {
   });
 }
 
-/**
- * Get all conditions in the same family as the given condition
- * @param {string} conditionName - The condition name
- * @returns {Array<string>} Array of condition names in the same family
- */
-function getConditionFamily(conditionName) {
+async function handleDamageSaveResult(actor, item, successes, effectOnSuccess) {
+  if (effectOnSuccess !== 'end' || successes <= 0) {
+    return;
+  }
+
+  if (item.type === 'condition') {
+    await game.legends.removeCondition(actor, item.name);
+  } else if (item.type === 'effect') {
+    await game.legends.effectEngine.removeEffect(actor, item.id);
+  }
+
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: `<p><strong>${actor.name}</strong> ends <strong>${item.name}</strong> with a successful save.</p>`
+  });
+}
+
+function getConditionFamily(conditionName, progressionChain = []) {
+  if (Array.isArray(progressionChain) && progressionChain.length > 0 && progressionChain.includes(conditionName)) {
+    return progressionChain;
+  }
+
   const families = {
     fire: ['Burning', 'Ignited', 'Smoldering', 'Singed'],
     cold: ['Frozen', 'Frosted', 'Numbed', 'Chilled'],
@@ -846,25 +1006,132 @@ function getConditionFamily(conditionName) {
   return [conditionName];
 }
 
+function getRecoverySource(item) {
+  return item?.flags?.legends?.recoverySource || null;
+}
+
+function getRecoveryOutcome(downgrades, successes, margin = null) {
+  if (!downgrades || Object.keys(downgrades).length === 0) {
+    return undefined;
+  }
+
+  if (Number.isFinite(margin) && margin > 0) {
+    for (let threshold = margin; threshold >= 1; threshold--) {
+      const exactKey = `margin_${threshold}`;
+      if (Object.prototype.hasOwnProperty.call(downgrades, exactKey)) {
+        return downgrades[exactKey];
+      }
+
+      const plusKey = `margin_${threshold}_plus`;
+      if (Object.prototype.hasOwnProperty.call(downgrades, plusKey)) {
+        return downgrades[plusKey];
+      }
+    }
+  }
+
+  return downgrades[`${successes}_success`];
+}
+
+async function promptOpposedSuccesses(actor, item) {
+  const recoverySource = getRecoverySource(item);
+  const sourceLabel = recoverySource?.label || 'Opposing source';
+
+  return foundry.applications.api.DialogV2.wait({
+    window: { title: `${item.name} - Opposed Recovery` },
+    content: `
+      <form class="legends-opposed-recovery">
+        <div class="form-group">
+          <label>${sourceLabel} successes:</label>
+          <input type="number" name="opposedSuccesses" min="0" max="3" step="1" value="0" style="width: 80px; text-align: center;"/>
+        </div>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'roll',
+        label: 'Confirm',
+        default: true,
+        callback: async (event, button, dialog) => {
+          const value = Number.parseInt(dialog.element.querySelector('[name="opposedSuccesses"]').value, 10);
+          return Number.isFinite(value) ? Math.max(0, value) : 0;
+        }
+      },
+      {
+        action: 'cancel',
+        label: 'Cancel',
+        callback: async () => null,
+      }
+    ]
+  });
+}
+
+async function getOpposedRecoveryMargin(actor, item, successes) {
+  const recoverySource = getRecoverySource(item);
+  let opposingSuccesses = Number.parseInt(recoverySource?.successes, 10);
+
+  if (!Number.isFinite(opposingSuccesses)) {
+    opposingSuccesses = await promptOpposedSuccesses(actor, item);
+    if (!Number.isFinite(opposingSuccesses)) {
+      return null;
+    }
+
+    if (item.type === 'condition') {
+      await item.update({
+        'flags.legends.recoverySource': {
+          actorId: recoverySource?.actorId || '',
+          tokenId: recoverySource?.tokenId || '',
+          label: recoverySource?.label || '',
+          successes: opposingSuccesses,
+        }
+      });
+    }
+  }
+
+  return successes - opposingSuccesses;
+}
+
 /**
  * Handle recovery save results
  * @param {Actor} actor - The actor who made the save
  * @param {Item} condition - The condition being recovered from
  * @param {number} successes - Number of successes rolled (0, 1, or 2)
  */
-export async function handleRecoveryResult(actor, condition, successes) {
+export async function handleRecoveryResult(actor, condition, successes, options = {}) {
   const recovery = condition.system.recovery;
-  const downgrades = recovery.downgrades;
+  const downgrades = options.downgrades ?? recovery.downgrades;
 
-  if (!downgrades) return;
+  if ((!downgrades || Object.keys(downgrades).length === 0) && !(recovery?.removeOnSuccess && successes > 0)) {
+    return;
+  }
 
   // Determine what happens based on success count
-  const outcomeKey = `${successes}_success`;
-  const outcome = downgrades[outcomeKey];
+  const outcome = getRecoveryOutcome(downgrades, successes, options.margin);
+
+  if (typeof outcome === 'string' && outcome.startsWith('reduceStacks:')) {
+    const reduction = Number.parseInt(outcome.split(':')[1], 10);
+    const currentStacks = Number.isFinite(condition.system.stacks) ? condition.system.stacks : 1;
+    const nextStacks = currentStacks - (Number.isFinite(reduction) ? reduction : 0);
+
+    if (nextStacks > 0) {
+      await condition.update({ 'system.stacks': nextStacks });
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>${actor.name}</strong> reduces <strong>${condition.name}</strong> to <strong>${nextStacks}</strong> stack${nextStacks === 1 ? '' : 's'}.</p>`
+      });
+      return;
+    }
+
+    await game.legends.removeCondition(actor, condition.name);
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>${actor.name}</strong> completely recovered from <strong>${condition.name}</strong>!</p>`
+    });
+    return;
+  }
 
   if (outcome === null || outcome === 'null') {
     // Condition ends completely - remove entire condition family
-    const family = getConditionFamily(condition.name);
+    const family = getConditionFamily(condition.name, condition.system.progressionChain);
     
     // Remove all conditions in this family
     for (const familyMember of family) {
@@ -882,19 +1149,388 @@ export async function handleRecoveryResult(actor, condition, successes) {
     // Downgrade to a different condition
     await game.legends.removeCondition(actor, condition.name);
     await game.legends.applyCondition(actor, outcome, {
-      source: 'downgrade'
+      source: 'downgrade',
+      recoverySource: getRecoverySource(condition),
     });
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor }),
       content: `<p><strong>${actor.name}</strong>'s <strong>${condition.name}</strong> downgraded to <strong>${outcome}</strong>!</p>`
     });
   } else {
+    if (recovery?.removeOnSuccess && successes > 0) {
+      await game.legends.removeCondition(actor, condition.name);
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>${actor.name}</strong> recovered from <strong>${condition.name}</strong>.</p>`
+      });
+      return;
+    }
+
     // Remains the same
     await ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor }),
       content: `<p><strong>${actor.name}</strong> remains <strong>${condition.name}</strong>.</p>`
     });
   }
+}
+
+async function applyEffectRecoveryOutcome(actor, effect, outcome) {
+  await game.legends.effectEngine.removeEffect(actor, effect.id);
+
+  if (typeof outcome !== 'string' || !outcome.trim()) {
+    return;
+  }
+
+  if (outcome.startsWith('applyCondition:')) {
+    const conditionName = outcome.split(':')[1];
+    if (conditionName) {
+      const origin = effect.system?.origin || {};
+      const parsedSuccesses = Number.parseInt(origin.successes, 10);
+      await game.legends.applyCondition(actor, conditionName, {
+        source: 'effect-recovery',
+        recoverySource: {
+          actorId: origin.actor || '',
+          label: game.actors.get(origin.actor)?.name || effect.name,
+          successes: Number.isFinite(parsedSuccesses) ? parsedSuccesses : null,
+        },
+      });
+    }
+    return;
+  }
+
+  if (outcome.startsWith('applyEffect:')) {
+    const effectName = outcome.split(':')[1];
+    if (effectName) {
+      await game.legends.effectEngine.applyEffect({ target: actor, effect: effectName, origin: { type: 'recovery' } });
+    }
+  }
+}
+
+export async function handleEffectRecoveryResult(actor, effect, successes, options = {}) {
+  const recovery = effect.system.recovery || {};
+  const downgrades = options.downgrades ?? recovery.downgrades;
+
+  if (downgrades && Object.keys(downgrades).length > 0) {
+    const outcome = getRecoveryOutcome(downgrades, successes, options.margin);
+
+    if (outcome === null || outcome === 'null') {
+      await game.legends.effectEngine.removeEffect(actor, effect.id);
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>${actor.name}</strong> completely recovered from <strong>${effect.name}</strong>.</p>`
+      });
+      return;
+    }
+
+    if (typeof outcome === 'string' && outcome.trim()) {
+      await applyEffectRecoveryOutcome(actor, effect, outcome.trim());
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>${actor.name}</strong>'s <strong>${effect.name}</strong> recovery resolves to <strong>${outcome}</strong>.</p>`
+      });
+      return;
+    }
+  }
+
+  if (recovery.removeOnSuccess && successes > 0) {
+    await game.legends.effectEngine.removeEffect(actor, effect.id);
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>${actor.name}</strong> recovers from <strong>${effect.name}</strong>.</p>`
+    });
+    return;
+  }
+
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: `<p><strong>${actor.name}</strong> remains affected by <strong>${effect.name}</strong>.</p>`
+  });
+}
+
+async function chooseRecoveryCheckOption(actor, item, recoveryTarget = 'primary') {
+  const recovery = item.system.recovery || {};
+  const checkData = recoveryTarget === 'assistance' ? recovery.assistance?.check : recovery.check;
+  const downgrades = recoveryTarget === 'assistance' ? recovery.assistance?.downgrades ?? recovery.downgrades : recovery.downgrades;
+
+  if (!hasRecoveryCheck(checkData)) {
+    ui.notifications.warn('No recovery check configured for this item.');
+    return null;
+  }
+
+  const skillOptions = Array.isArray(checkData.skills) ? checkData.skills : (checkData.skill ? [checkData.skill] : []);
+  const attributeOptions = Array.isArray(checkData.attributes) ? checkData.attributes : (checkData.attribute ? [checkData.attribute] : []);
+  const options = [
+    ...skillOptions.map(value => ({ type: 'skill', value, label: SKILL_LABELS[value] || value })),
+    ...attributeOptions.map(value => ({ type: 'attribute', value, label: ATTRIBUTE_LABELS[value] || value })),
+  ];
+
+  if (options.length === 0) {
+    ui.notifications.warn('No valid recovery check options found.');
+    return null;
+  }
+
+  const executeRecovery = async (selection) => {
+    const onComplete = async (result) => {
+      const successes = typeof result === 'number' ? result : result?.successes ?? 0;
+      const margin = checkData.opposed ? await getOpposedRecoveryMargin(actor, item, successes) : null;
+      if (checkData.opposed && margin === null) {
+        return;
+      }
+      if (item.type === 'condition') {
+        await handleRecoveryResult(actor, item, successes, { downgrades, margin });
+      } else {
+        await handleEffectRecoveryResult(actor, item, successes, { downgrades, margin });
+      }
+    };
+
+    if (selection.type === 'skill') {
+      return game.legends.rollSkillCheck(actor, selection.value, { onRollComplete: onComplete });
+    }
+
+    return showRecoveryAttributeDialog(actor, item, selection.value, { onComplete, title: `${item.name} - Recovery Check` });
+  };
+
+  if (options.length === 1) {
+    return executeRecovery(options[0]);
+  }
+
+  return foundry.applications.api.DialogV2.wait({
+    window: { title: `${item.name} - Choose Recovery Check` },
+    content: `
+      <form class="legends-recovery-choice">
+        <div class="form-group">
+          <label>Recovery method:</label>
+          <select name="recoveryOption">
+            ${options.map((option, index) => `<option value="${index}">${option.label}</option>`).join('')}
+          </select>
+        </div>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'roll',
+        label: 'Roll Check',
+        default: true,
+        callback: async (event, button, dialog) => {
+          const selectedIndex = Number.parseInt(dialog.element.querySelector('[name="recoveryOption"]').value, 10) || 0;
+          return executeRecovery(options[selectedIndex]);
+        }
+      }
+    ]
+  });
+}
+
+async function showRecoveryAttributeDialog(actor, item, attributeKey, options = {}) {
+  const { onComplete = null, title = `${item.name} - Recovery Check` } = options;
+  const attrLabel = ATTRIBUTE_LABELS[attributeKey] || attributeKey;
+  const attrValue = actor.system.attributesEffective?.[attributeKey] ?? actor.system.attributes?.[attributeKey]?.value ?? 2;
+  const luckValue = actor.system.luck?.current ?? actor.system.attributes?.luck?.value ?? 2;
+  const descriptionHTML = item.system.description?.value ? await enrichText(item.system.description.value) : '';
+
+  return foundry.applications.api.DialogV2.wait({
+    window: { title },
+    content: `
+      <form class="legends-save-dialog">
+        ${descriptionHTML ? `<div class="recovery-info-details" style="display:block; margin-bottom: 12px; max-height: 240px; overflow-y: auto;">${descriptionHTML}</div>` : ''}
+        <div class="form-group">
+          <label><strong>${attrLabel} ${attrValue} + Luck ${luckValue}</strong></label>
+        </div>
+        <div class="form-group">
+          <label>Modifier:</label>
+          <input type="text" name="modifier" value="0" style="width: 60px; text-align: center;" placeholder="0"/>
+        </div>
+        <div class="form-group" style="margin-left: 20px;">
+          <label><input type="checkbox" name="applyToAttr" checked/> Apply to ${attrLabel} die</label>
+        </div>
+        <div class="form-group" style="margin-left: 20px;">
+          <label><input type="checkbox" name="applyToSkill" checked/> Apply to Luck die</label>
+        </div>
+        <hr style="margin: 15px 0;"/>
+        <div class="form-group">
+          <p style="font-size: 12px; color: #666; margin: 0;">
+            <strong>Fortune:</strong> Roll 3d8, choose best 2<br/>
+            <strong>Misfortune:</strong> Roll 3d8, choose worst 2
+          </p>
+        </div>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'normal',
+        label: 'Roll Check',
+        default: true,
+        callback: async (event, button, dialog) => {
+          const modifier = parseInt(dialog.element.querySelector('[name="modifier"]').value) || 0;
+          const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
+          const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
+          return rollRecoveryAttributeCheck(actor, item, attributeKey, { modifier, applyToAttr, applyToSkill, onComplete });
+        }
+      },
+      {
+        action: 'fortune',
+        label: 'Fortune',
+        callback: async (event, button, dialog) => {
+          const modifier = parseInt(dialog.element.querySelector('[name="modifier"]').value) || 0;
+          const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
+          const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
+          return rollRecoveryAttributeCheckWithFortune(actor, item, attributeKey, { modifier, applyToAttr, applyToSkill, isFortune: true, onComplete });
+        }
+      },
+      {
+        action: 'misfortune',
+        label: 'Misfortune',
+        callback: async (event, button, dialog) => {
+          const modifier = parseInt(dialog.element.querySelector('[name="modifier"]').value) || 0;
+          const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
+          const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
+          return rollRecoveryAttributeCheckWithFortune(actor, item, attributeKey, { modifier, applyToAttr, applyToSkill, isFortune: false, onComplete });
+        }
+      }
+    ]
+  });
+}
+
+async function rollRecoveryAttributeCheck(actor, item, attributeKey, options = {}) {
+  const { modifier = 0, applyToAttr = true, applyToSkill = true, onComplete = null } = options;
+  const attrLabel = ATTRIBUTE_LABELS[attributeKey] || attributeKey;
+  const attrValue = actor.system.attributesEffective?.[attributeKey] ?? actor.system.attributes?.[attributeKey]?.value ?? 2;
+  const luckValue = actor.system.luck?.current ?? actor.system.attributes?.luck?.value ?? 2;
+  const attrRoll = new Roll('1d8');
+  const luckRoll = new Roll('1d8');
+
+  await attrRoll.evaluate();
+  await luckRoll.evaluate();
+
+  let attrDie = attrRoll.total;
+  let luckDie = luckRoll.total;
+  if (applyToAttr && modifier !== 0) attrDie += modifier;
+  if (applyToSkill && modifier !== 0) luckDie += modifier;
+
+  let successes = 0;
+  if (attrRoll.total <= attrValue) successes++;
+  if (luckRoll.total <= luckValue) successes++;
+
+  const resultText = successes >= 2 ? '2 Successes - Excellent!' : successes === 1 ? '1 Success' : '0 Successes - Failed';
+  const resultClass = successes >= 2 ? 'success' : successes === 1 ? 'partial' : 'failure';
+
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor }),
+    content: `
+      <div class="d8-condition-save-result">
+        <h3>${item.name} - ${attrLabel} Recovery Check</h3>
+        <div class="dice-roll">
+          <div class="dice-result">
+            <div class="dice-formula">${attrLabel} ${attrValue} + Luck ${luckValue}${modifier !== 0 ? ` (${modifier >= 0 ? '+' : ''}${modifier})` : ''}</div>
+            <div class="dice-details">
+              <span class="${attrDie <= attrValue ? 'success' : 'failure'}">${attrLabel}: ${attrDie} ${attrDie <= attrValue ? '✓' : '✗'}</span>
+              <span class="${luckDie <= luckValue ? 'success' : 'failure'}">Luck: ${luckDie} ${luckDie <= luckValue ? '✓' : '✗'}</span>
+            </div>
+            <h4 class="dice-total ${resultClass}">${resultText}</h4>
+          </div>
+        </div>
+      </div>
+    `,
+    rolls: [attrRoll, luckRoll]
+  });
+
+  if (onComplete) {
+    await onComplete({ successes });
+  }
+
+  return successes;
+}
+
+async function rollRecoveryAttributeCheckWithFortune(actor, item, attributeKey, options = {}) {
+  const { modifier = 0, applyToAttr = true, applyToSkill = true, isFortune = true, onComplete = null } = options;
+  const attrLabel = ATTRIBUTE_LABELS[attributeKey] || attributeKey;
+  const attrValue = actor.system.attributesEffective?.[attributeKey] ?? actor.system.attributes?.[attributeKey]?.value ?? 2;
+  const luckValue = actor.system.luck?.current ?? actor.system.attributes?.luck?.value ?? 2;
+
+  const attrRolls = [];
+  const luckRolls = [];
+  for (let index = 0; index < 3; index++) {
+    const attrRoll = new Roll('1d8');
+    const luckRoll = new Roll('1d8');
+    await attrRoll.evaluate();
+    await luckRoll.evaluate();
+    attrRolls.push(attrRoll);
+    luckRolls.push(luckRoll);
+  }
+
+  const sortedAttrIndices = attrRolls.map((roll, index) => ({ index, value: roll.total }))
+    .sort((left, right) => isFortune ? left.value - right.value : right.value - left.value);
+  const sortedLuckIndices = luckRolls.map((roll, index) => ({ index, value: roll.total }))
+    .sort((left, right) => isFortune ? left.value - right.value : right.value - left.value);
+
+  return foundry.applications.api.DialogV2.wait({
+    window: { title: `${isFortune ? 'Fortune' : 'Misfortune'} - Assign Dice` },
+    content: `
+      <form class="legends-dice-assignment">
+        <p>Choose which dice to assign to ${attrLabel} and Luck:</p>
+        <div style="display: flex; gap: 10px; margin: 10px 0;">
+          ${attrRolls.map(roll => `<div style="text-align: center; padding: 10px; border: 2px solid #666; border-radius: 4px; font-size: 18px; font-weight: bold;">${roll.total}</div>`).join('')}
+        </div>
+        <div class="form-group">
+          <label>${attrLabel} die:</label>
+          <select name="attrDie">${attrRolls.map((roll, index) => `<option value="${index}" ${index === sortedAttrIndices[0].index ? 'selected' : ''}>Die ${index + 1}: ${roll.total}</option>`).join('')}</select>
+        </div>
+        <div class="form-group">
+          <label>Luck die:</label>
+          <select name="luckDie">${luckRolls.map((roll, index) => `<option value="${index}" ${index === sortedLuckIndices[0].index ? 'selected' : ''}>Die ${index + 1}: ${roll.total}</option>`).join('')}</select>
+        </div>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'assign',
+        label: 'Assign Dice',
+        callback: async (event, button, dialog) => {
+          const attrDieIndex = parseInt(dialog.element.querySelector('[name="attrDie"]').value);
+          const luckDieIndex = parseInt(dialog.element.querySelector('[name="luckDie"]').value);
+          const selectedAttrRoll = attrRolls[attrDieIndex];
+          const selectedLuckRoll = luckRolls[luckDieIndex];
+
+          let attrDie = selectedAttrRoll.total;
+          let luckDie = selectedLuckRoll.total;
+          if (applyToAttr && modifier !== 0) attrDie += modifier;
+          if (applyToSkill && modifier !== 0) luckDie += modifier;
+
+          let successes = 0;
+          if (attrDie <= attrValue) successes++;
+          if (luckDie <= luckValue) successes++;
+
+          const resultText = successes >= 2 ? '2 Successes - Excellent!' : successes === 1 ? '1 Success' : '0 Successes - Failed';
+          const resultClass = successes >= 2 ? 'success' : successes === 1 ? 'partial' : 'failure';
+
+          await ChatMessage.create({
+            speaker: ChatMessage.getSpeaker({ actor }),
+            content: `
+              <div class="d8-condition-save-result">
+                <h3>${item.name} - ${attrLabel} Recovery Check (${isFortune ? 'Fortune' : 'Misfortune'})</h3>
+                <div class="dice-roll"><div class="dice-result">
+                  <div class="dice-formula">${attrLabel} ${attrValue} + Luck ${luckValue}${modifier !== 0 ? ` (${modifier >= 0 ? '+' : ''}${modifier})` : ''}</div>
+                  <div class="dice-details">
+                    <div>Rolled: ${attrRolls.map(roll => roll.total).join(', ')}</div>
+                    <div>Selected: ${attrLabel} ${selectedAttrRoll.total}, Luck ${selectedLuckRoll.total}</div>
+                    <span class="${attrDie <= attrValue ? 'success' : 'failure'}">${attrLabel}: ${attrDie} ${attrDie <= attrValue ? '✓' : '✗'}</span>
+                    <span class="${luckDie <= luckValue ? 'success' : 'failure'}">Luck: ${luckDie} ${luckDie <= luckValue ? '✓' : '✗'}</span>
+                  </div>
+                  <h4 class="dice-total ${resultClass}">${resultText}</h4>
+                </div></div>
+              </div>
+            `,
+            rolls: [selectedAttrRoll, selectedLuckRoll]
+          });
+
+          if (onComplete) {
+            await onComplete({ successes });
+          }
+
+          return successes;
+        }
+      }
+    ]
+  });
 }
 
 /* -------------------------------------------- */
@@ -1252,21 +1888,38 @@ export function initializeChatHandlers() {
     html.querySelectorAll('.recovery-roll').forEach(btn => {
       btn.addEventListener('click', async (event) => {
         const button = event.currentTarget;
-        const recoveryButtons = html.querySelector('.recovery-buttons');
-        const actorId = recoveryButtons?.dataset.actorId;
-        const conditionId = recoveryButtons?.dataset.conditionId;
+        const actorId = button.dataset.actorId;
+        const itemId = button.dataset.itemId;
+        const actionType = button.dataset.actionType;
+        const recoveryTarget = button.dataset.recoveryTarget || 'primary';
         const saveType = button.dataset.saveType;
 
         const actor = game.actors.get(actorId);
-        const condition = actor?.items.get(conditionId);
+        const item = actor?.items.get(itemId);
 
-        if (!actor || !condition) {
-          ui.notifications.warn('Actor or condition not found');
+        if (!actor || !item) {
+          ui.notifications.warn('Actor or recovery item not found');
           return;
         }
 
-        // Show dialog for save with modifiers and fortune/misfortune options
-        await showConditionSaveDialog(actor, condition, saveType);
+        if (actionType === 'save') {
+          const downgrades = recoveryTarget === 'assistance'
+            ? item.system.recovery?.assistance?.downgrades ?? item.system.recovery?.downgrades
+            : item.system.recovery?.downgrades;
+          const onComplete = async (successes) => {
+            if (item.type === 'condition') {
+              await handleRecoveryResult(actor, item, successes, { downgrades });
+            } else {
+              await handleEffectRecoveryResult(actor, item, successes, { downgrades });
+            }
+          };
+          await showRecoverySaveDialog(actor, item, saveType, { onComplete });
+          return;
+        }
+
+        if (actionType === 'check') {
+          await chooseRecoveryCheckOption(actor, item, recoveryTarget);
+        }
       });
     });
 
@@ -1282,18 +1935,22 @@ export function initializeChatHandlers() {
       btn.addEventListener('click', async (event) => {
         const button = event.currentTarget;
         const actorId = button.dataset.actorId;
-        const conditionId = button.dataset.conditionId;
+        const itemId = button.dataset.itemId;
         const saveType = button.dataset.saveType;
+        const effectOnSuccess = button.dataset.effect;
 
         const actor = game.actors.get(actorId);
-        const condition = actor?.items.get(conditionId);
+        const item = actor?.items.get(itemId);
         
-        if (!actor || !condition) {
-          ui.notifications.warn('Actor or condition not found');
+        if (!actor || !item) {
+          ui.notifications.warn('Actor or item not found');
           return;
         }
 
-        await showConditionSaveDialog(actor, condition, saveType);
+        await showRecoverySaveDialog(actor, item, saveType, {
+          title: `${item.name} - Save`,
+          onComplete: async (successes) => handleDamageSaveResult(actor, item, successes, effectOnSuccess),
+        });
       });
     });
   });
@@ -1307,6 +1964,9 @@ export const conditionEngine = {
   initializeConditionEngine,
   initializeChatHandlers,
   handleRecoveryResult,
+  handleEffectRecoveryResult,
+  processRecoveryPrompt,
+  promptForSave,
   renderTokenConditionOverlay,
   removeTokenConditionOverlay
 };

@@ -1,21 +1,22 @@
 {
-  "_id": "4b637f0a672b462c",
+  "_id": "7db7cd60c8e685b1",
   "name": "Poor Memory (1)",
   "type": "flaw",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Cannot remember faces, names, times, dates, places.</p>\n<ul>\n<li>Cannot benefit from Eidetic Memory</li>\n<li>History and Society: Add 2 to die results</li>\n</ul>"
+      "value": "<p>Cannot remember faces, names, times, dates, places.</p>"
     },
     "pointValue": 1,
-    "flawType": "",
-    "severity": "moderate",
-    "mechanicalEffects": "",
+    "flawType": "social",
+    "severity": "minor",
+    "mechanicalEffects": "<ul>\n<li>Cannot benefit from Eidetic Memory</li>\n<li>History and Society: Add 2 to die results</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
+    "overcomeMethod": "",
     "requiresGMApproval": false,
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!4b637f0a672b462c"
+  "_key": "!items!7db7cd60c8e685b1"
 }

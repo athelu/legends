@@ -1,5 +1,5 @@
 {
-  "_id": "3f834d4e91e14449",
+  "_id": "82f123c9bf7c70cb",
   "name": "Gentle Descent",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -23,23 +23,45 @@
     "duration": "Up to 1 minute (until they land)",
     "target": "",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Up to 5 falling creatures within close range descend 60 feet per round and take no falling damage. Weave lasts until they land (up to 1 minute).",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 creature",
+          "duration": "1 creature"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "5 creatures",
+          "duration": "5 creatures"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 creatures",
+          "duration": "10 creatures"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Fails\n- 1 = 1 creature\n- 2 = 5 creatures\n- 3 = 10 creatures",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 creature, 2 = 5 creatures, 3 = 10 creatures",
     "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
-      "ranged"
+      "ranged",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!3f834d4e91e14449"
+  "_key": "!items!82f123c9bf7c70cb"
 }

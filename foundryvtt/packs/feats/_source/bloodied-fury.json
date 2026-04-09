@@ -1,0 +1,38 @@
+{
+  "_id": "3b70618e5b3e82c7",
+  "name": "Bloodied Fury",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>The fury doesn't weaken when the blood flows. If anything, it gets cleaner.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "constitution": 6
+      },
+      "skills": "",
+      "feats": [
+        "Primal Fury"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>While in Primal Fury and below half your maximum HP, subtract 1 from both attack dice. Additionally, your +[[/damage 2]] damage bonus from Primal Fury increases to +4 while in this state.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive, requires Primal Fury active"
+    },
+    "keywords": "[Combat], [Savage]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!3b70618e5b3e82c7"
+}

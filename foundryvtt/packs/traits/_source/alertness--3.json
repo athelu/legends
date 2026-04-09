@@ -1,21 +1,28 @@
 {
-  "_id": "aef0d2ae9d6440bd",
+  "_id": "fe5c1ffc6a222dc0",
   "name": "Alertness (-3)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>Aware of surroundings.</p>\n<ul>\n<li>Initiative: +1</li>\n<li>All Perception: Subtract 1 from die results</li>\n</ul>"
+      "value": "<p>Aware of surroundings.</p>"
     },
     "pointCost": -3,
     "traitType": "physical",
     "isMagical": false,
     "magicalType": "",
     "requirements": "",
-    "benefits": "",
+    "benefits": "<ul>\n<li>Initiative: +1</li>\n<li>All Perception: Subtract 1 from die results</li>\n</ul>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
     "requiresGMApproval": false,
     "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!aef0d2ae9d6440bd"
+  "_key": "!items!fe5c1ffc6a222dc0"
 }

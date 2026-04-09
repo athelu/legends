@@ -1,17 +1,23 @@
 {
-  "_id": "cbfc57d0e0be4194",
+  "_id": "94e454bddd0c0490",
   "name": "Bleeding",
   "type": "condition",
   "img": "icons/svg/blood.svg",
   "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Take [[/damage 2]] damage per stack at the end of each of your turns. Multiple bleeding effects add together (2 stacks = [[/damage 4]] damage per turn, 3 stacks = [[/damage 6]] damage per turn). If at 0 HP or below, bleeding damage stops. Add your total bleeding stack count to both dice when making stabilization saves. <strong>Recovery:</strong> Magical healing removes all bleeding stacks. Target may Use 1 action to make a [[/check skill=medicine]] to reduce bleeding.</p>\n<ul>\n<li>2 successes: Remove 1 bleeding stack</li>\n</ul>\n<p><strong>Ally Assistance:</strong> An ally within 5 feet may Use 1 action to make a [[/check skill=medicine]].</p>\n<ul>\n<li>1 successes: Remove 1 bleeding stack</li>\n<li>2 successes: Remove all bleeding stacks</li>\n</ul>"
+    },
     "label": "Bleeding",
     "category": "damage-over-time",
-    "description": {
-      "value": "<h4>Effect:</h4>\n<ul>\n<li>Take [[/damage 2]] damage per stack at the end of each of your turns</li>\n<li>Stacks: Multiple bleeding effects add together (2 stacks = [[/damage 4]] damage per turn, 3 stacks = [[/damage 6]] damage per turn)</li>\n<li>Bleeding damage occurs at the end of your turn, even if you received healing (unless the bleeding condition itself was removed)</li>\n</ul>\n<h4>Bleeding While Dying:</h4>\n<ul>\n<li>If at 0 HP or below, bleeding damage stops (no damage taken while dying)</li>\n<li>However, add your total bleeding stack count to both dice when making stabilization saves.</li>\n</ul>\n<ul>\n<li><strong>Example:</strong> At -2 HP with 2 bleeding stacks, you add 2 (from bleeding stacks) = add 2 total to both your Constitution die and Luck die when attempting to stabilize</li>\n<li>This makes it much harder to stabilize.</li>\n</ul>\n<h4>Stopping Bleeding:</h4>\n<ul>\n<li>[[/check skill=medicine]] (1 action, 1 success): Stop 1 bleeding stack on adjacent ally</li>\n<li>Self-treatment (1 action, 2 successes): Stop 1 bleeding stack on yourself</li>\n<li>Magical healing: Automatically stops all bleeding stacks</li>\n<li>Pressure/Bandages: Can attempt [[/check skill=medicine]] even without training</li>\n<li>Short rest: Automatically stops 1 bleeding stack</li>\n</ul>\n<h4>Duration:</h4>\n<ul>\n<li>Continues until stopped by [[/check skill=medicine]], magic, or rest</li>\n<li>Each stack must be treated separately</li>\n</ul>\n<h4>Gaining Bleeding:</h4>\n<ul>\n<li>Critical hits with slashing weapons (optional rule)</li>\n<li>Special monster abilities (claws, teeth)</li>\n<li>Called shots to cause bleeding</li>\n<li>Certain environments (barbed wire, thorns)</li>\n</ul>\n<h5>Example:</h5>\n<ul>\n<li>Character takes a critical hit and gains 2 bleeding stacks</li>\n<li>On their turn, they can use an action to attempt self-treatment (2 successes needed)</li>\n<li>At the end of their turn, if bleeding wasn\\'t stopped, they take [[/damage 4]] damage</li>\n</ul>"
-    },
+    "keywords": [
+      "Hindered"
+    ],
     "tokenIcon": "icons/svg/blood.svg",
     "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "stack",
+    "stacks": 1,
     "severity": "moderate",
     "overlayPriority": 20,
     "damageTick": {
@@ -19,8 +25,43 @@
       "formula": "2",
       "showInChat": true,
       "chatMessage": "Take [[/damage 2]] damage per stack from Bleeding"
+    },
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "check",
+      "removeOnSuccess": false,
+      "check": {
+        "skill": "medicine",
+        "attribute": "",
+        "skills": [
+          "medicine"
+        ],
+        "attributes": [],
+        "opposed": false,
+        "label": "Medicine"
+      },
+      "assistance": {
+        "range": 5,
+        "downgrades": {
+          "1_success": "reduceStacks:1",
+          "2_success": null
+        },
+        "check": {
+          "skill": "medicine",
+          "attribute": "",
+          "skills": [
+            "medicine"
+          ],
+          "attributes": [],
+          "opposed": false,
+          "label": "Medicine"
+        }
+      },
+      "downgrades": {
+        "2_success": "reduceStacks:1"
+      }
     }
   },
   "flags": {},
-  "_key": "!items!cbfc57d0e0be4194"
+  "_key": "!items!94e454bddd0c0490"
 }

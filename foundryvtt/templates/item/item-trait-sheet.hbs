@@ -14,7 +14,33 @@
   <section class="sheet-body">
     <!-- Description Tab -->
     <div class="tab description" data-group="primary" data-tab="description">
-      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+      <div class="feat-description-section">
+        <h3>Description</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+        </div>
+      </div>
+
+      <div class="feat-benefits-section">
+        <h3>Visual Effects</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedVisualEffects target="system.visualEffects" button=true owner=owner editable=editable}}
+        </div>
+      </div>
+
+      <div class="feat-benefits-section">
+        <h3>Mechanical Benefits</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedBenefits target="system.benefits" button=true owner=owner editable=editable}}
+        </div>
+      </div>
+
+      <div class="feat-benefits-section">
+        <h3>Notes</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedNotes target="system.notes" button=true owner=owner editable=editable}}
+        </div>
+      </div>
     </div>
 
     <!-- Details Tab -->
@@ -98,33 +124,12 @@
       </div>
       {{/if}}
 
-      <!-- Visual Effects (for magical traits) -->
-      {{#if (eq system.traitType "magical")}}
-      <div class="form-group">
-        <label>Visual Effects</label>
-        <textarea name="system.visualEffects" rows="3" placeholder="Describe how this trait's magic appears">{{system.visualEffects}}</textarea>
-      </div>
-      {{/if}}
-
-      <!-- Benefits -->
-      <h3>Mechanical Benefits</h3>
-      <div class="form-group">
-        <label>Benefits</label>
-        <textarea name="system.benefits" rows="6" placeholder="Describe all mechanical benefits this trait provides">{{system.benefits}}</textarea>
-      </div>
-
       <!-- GM Approval -->
       <div class="form-group">
         <label class="checkbox">
           <input type="checkbox" name="system.requiresGMApproval" {{#if system.requiresGMApproval}}checked{{/if}} />
           Requires GM Approval
         </label>
-      </div>
-
-      <!-- Special Notes -->
-      <div class="form-group">
-        <label>Special Notes</label>
-        <textarea name="system.notes" rows="3" placeholder="Any additional rules or clarifications">{{system.notes}}</textarea>
       </div>
 
     </div>

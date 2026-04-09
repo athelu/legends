@@ -1,0 +1,39 @@
+{
+  "_id": "c9e3afafec5bb395",
+  "name": "Voice of the Void",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You are no longer simply a person who made a desperate bargain. The pact has become part of what you are and the boundary between your will and the patron's is no longer entirely clear.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 7
+      },
+      "skills": "",
+      "feats": [
+        "Eldritch Pact",
+        "Pact Ascendant"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your Pact Conduit passive now applies to every weave you cast, regardless of energy type. Once per long rest, you may fully invoke the patron's presence for 1 minute: during this time, your Pact Gift ability has no action cost (it triggers as part of any action), your Energy costs for all weaves are halved (rounded up), and creatures that fail saves against your weaves must also make a [[/save type=will]] (Hard task) or become Frightened of you for 1 minute. When this minute ends, you gain one level of Exhaustion</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Pact Conduit expansion is passive and permanent; patron presence once per long rest, 1 minute, followed by one level of Exhaustion"
+    },
+    "keywords": "[Magic], [Pact]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!c9e3afafec5bb395"
+}

@@ -1,0 +1,39 @@
+{
+  "_id": "77057bc2c525f923",
+  "name": "Shield Wall",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You absorb the blow, redirect the force, and make them regret the decision.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 4,
+        "constitution": 4
+      },
+      "skills": "",
+      "feats": [
+        "Stalwart"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When a creature hits you with a melee attack while you are wielding a shield, you may use a [Reaction] to reduce the incoming damage by your Constitution score.</p>",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per round, Reaction"
+    },
+    "keywords": "[Combat], [Shield], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!77057bc2c525f923"
+}

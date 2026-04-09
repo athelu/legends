@@ -1,5 +1,5 @@
 {
-  "_id": "36fc8c5503c8488b",
+  "_id": "4ebfd74ed76ab46b",
   "name": "Gambeson",
   "type": "armor",
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
@@ -13,6 +13,9 @@
       "piercing": 2,
       "bludgeoning": 5
     },
+    "properties": [
+      "MediumArmor"
+    ],
     "stealthPenalty": "none",
     "swimPenalty": "",
     "donTime": "",
@@ -20,11 +23,8 @@
     "weight": 0,
     "cost": 40.0,
     "quantity": 1,
-    "notes": "",
-    "keywords": [
-      "MediumArmor"
-    ]
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!36fc8c5503c8488b"
+  "_key": "!items!4ebfd74ed76ab46b"
 }

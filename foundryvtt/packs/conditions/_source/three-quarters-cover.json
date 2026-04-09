@@ -1,14 +1,17 @@
 {
-  "_id": "74d1449368b344fa",
+  "_id": "ffdd70069c619145",
   "name": "Three-Quarters Cover",
   "type": "condition",
   "img": "icons/svg/shield.svg",
   "system": {
+    "description": {
+      "value": "<p>Murder hole, small window, only small part visible (3/4+ body covered). Against Melee: +3 DR. Against Ranged: Make [[/save type=reflex]]{[[/save type=reflex]]} (subtract 1 from both dice) to duck behind cover (1+ successes = miss).</p>"
+    },
     "label": "Three-Quarters Cover",
     "category": "defense",
-    "description": {
-      "value": "<p>Murder hole, small window, only small part visible (¾+ body covered). Against Melee: +3 DR. Against Ranged: Make [[/save type=reflex]]{Reflex save} (subtract 1 from both dice) to duck behind cover (1+ successes = miss).</p>"
-    },
+    "keywords": [
+      "Tactical"
+    ],
     "tokenIcon": "icons/svg/shield.svg",
     "activeEffects": [
       {
@@ -24,10 +27,15 @@
         "notes": "-1 to Reflex save to dodge ranged attacks"
       }
     ],
+    "appliesConditions": [],
+    "progressionChain": [],
     "stacking": "highest",
+    "stacks": 1,
     "severity": "minor",
-    "overlayPriority": 15
+    "overlayPriority": 15,
+    "damageTick": null,
+    "recovery": null
   },
   "flags": {},
-  "_key": "!items!74d1449368b344fa"
+  "_key": "!items!ffdd70069c619145"
 }

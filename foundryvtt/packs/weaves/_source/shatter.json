@@ -1,5 +1,5 @@
 {
-  "_id": "1754f4cc56dc4741",
+  "_id": "7f6cd031f2d0ccdd",
   "name": "Shatter",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,22 +21,43 @@
     },
     "range": "Medium, 60 ft. (10-foot radius sphere)",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "sphere",
     "savingThrow": "fortitude",
-    "effect": "",
-    "effectType": "",
+    "effect": "Create sudden loud ringing in 10-foot radius sphere. All creatures in area take 16 thunder damage. Creatures make Fortitude saves to reduce damage. Nonmagical objects made of crystal, glass, or similar material take double damage and shatter if reduced to 0 HP.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1/2 damage (8)",
+          "duration": "1/2 damage (8)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (16)",
+          "duration": "full damage (16)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "+8 damage (24 total) + deafened",
+          "duration": "+8 damage (24 total) + deafened"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1/2 damage (8)\n- 2 = full damage (16)\n- 3 = +8 damage (24 total) + deafened",
+    "targetingSuccessScaling": "0 = fails, 1 = 1/2 damage (8), 2= full damage (16), 3 = +8 damage (24 total) + deafened",
     "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
       {
-        "effectId": "deafened",
+        "effectId": "Deafened",
         "params": {}
       }
     ],
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!1754f4cc56dc4741"
+  "_key": "!items!7f6cd031f2d0ccdd"
 }

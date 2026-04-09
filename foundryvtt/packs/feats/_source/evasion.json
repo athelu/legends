@@ -1,29 +1,36 @@
 {
-  "_id": "3d4704fd86824646",
+  "_id": "d405dc3db47ce7ac",
   "name": "Evasion",
   "type": "feat",
   "img": "icons/equipment/shield/shield-cross-bronze.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>When you read it right, you're already somewhere else. When you don't, at least you're only half-wrong.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "agility": 5
       },
       "skills": "",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>When subjected to an effect allowing [[/save type=reflex]]: if you win (1+ successes) take no damage; if you lose (0 successes) take half damage</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Defense], [Shadow]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!3d4704fd86824646"
+  "_key": "!items!d405dc3db47ce7ac"
 }

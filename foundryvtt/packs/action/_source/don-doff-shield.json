@@ -1,22 +1,23 @@
 {
-  "_id": "23d5fe677a8b4889",
+  "_id": "337e5ed086e91bca",
   "name": "Don/Doff Shield",
   "type": "action",
   "img": "icons/skills/trades/construction-gloves-yellow.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> 1</li>\n<li><strong>Effect:</strong> Equip or remove a shield</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Drawing/stowing a shield requires focused effort (not quick like a weapon)</li>\n<li>Cannot be done as part of a [Move] action</li>\n<li>Shield must be readily accessible (on your back, at your side, etc.)</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Equip or remove a shield. Drawing/stowing a shield requires focused effort and cannot be done as part of a [Move] action. The shield must be readily accessible (on your back, at your side, etc.)</p>\n<h2>Interact Actions</h2>\n<p>Interact actions involve manipulating objects, the environment, or simple physical tasks that don't require specialized skills. Many Interact actions can be combined with movement for efficiency.</p>"
     },
     "actionType": "activate",
     "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Equip or remove a shield\n- **Notes:**\n  - Drawing/stowing a shield requires focused effort (not quick like a weapon)\n  - Cannot be done as part of a [Move] action\n  - Shield must be readily accessible (on your back, at your side, etc.)",
-    "keywords": "",
+    "effect": "Equip or remove a shield. Drawing/stowing a shield requires focused effort and cannot be done as part of a [Move] action. The shield must be readily accessible (on your back, at your side, etc.)\n\n## Interact Actions\nInteract actions involve manipulating objects, the environment, or simple physical tasks that don't require specialized skills. Many Interact actions can be combined with movement for efficiency.",
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!23d5fe677a8b4889"
+  "_key": "!items!337e5ed086e91bca"
 }

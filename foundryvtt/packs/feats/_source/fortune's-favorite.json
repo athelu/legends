@@ -1,29 +1,36 @@
 {
-  "_id": "016ae26a838145df",
+  "_id": "711905b23e4eca89",
   "name": "Fortune's Favorite",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Luck runs in cycles. You've learned to feel when the wheel is about to turn and give it a nudge in the direction you prefer</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "luck": 5
       },
       "skills": "",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Once per session, after seeing any roll result (yours or an enemy's), force a reroll and choose which result to use</p>",
-    "usageType": "once",
-    "keywords": "[Skill]. [General]",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per session"
+    },
+    "keywords": "[Skill], [General]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!016ae26a838145df"
+  "_key": "!items!711905b23e4eca89"
 }

@@ -1,11 +1,11 @@
 {
-  "_id": "14491f8b38314310",
+  "_id": "15113da4b348ac3a",
   "name": "Thunder Burst",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>All creatures in 15-foot cube originating from you take [[/damage 12 type=thunder]] damage and make Fortitude saves. Compare your weaving successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.</p>"
+      "value": "<p>All creatures in 15-foot cube originating from you take [[/damage 12 type=thunder]] damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -21,17 +21,38 @@
     },
     "range": "Self (15-foot cube)",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "area",
     "savingThrow": "fortitude",
-    "effect": "",
-    "effectType": "",
+    "effect": "All creatures in 15-foot cube originating from you take 12 thunder damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "ignore",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1/2 damage (6)",
+          "duration": "1/2 damage (6)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (12)",
+          "duration": "full damage (12)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (20)",
+          "duration": "enhanced damage (20)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1/2 damage (6)\n- 2 = full damage (12), pushed 10 feet\n- 3 = +8 damage (20 total), pushed 10 feet + prone\n---",
+    "targetingSuccessScaling": "0 = fails, 1 = 1/2 damage (6), 2= full damage (12), pushed 10 feet, 3 = enhanced damage (20), pushed 10 feet + prone",
     "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
@@ -47,5 +68,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!14491f8b38314310"
+  "_key": "!items!15113da4b348ac3a"
 }

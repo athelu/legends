@@ -1,29 +1,36 @@
 {
-  "_id": "440408727f5a4981",
+  "_id": "1a7a0c23414c4649",
   "name": "Master Craftsman",
   "type": "feat",
   "img": "icons/sundries/books/book-open-purple.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>You make things that last, things that work, things that exceed what the materials had any right to become.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 40,
+    "classification": "standard",
     "prerequisites": {
       "attributes": {
         "dexterity": 5
       },
       "skills": "craft:5",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": ""
     },
     "benefits": "<p>Work twice as fast on crafting projects and produce enhanced quality items</p>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Skill]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!440408727f5a4981"
+  "_key": "!items!1a7a0c23414c4649"
 }

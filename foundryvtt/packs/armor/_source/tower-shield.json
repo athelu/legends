@@ -1,5 +1,5 @@
 {
-  "_id": "b262e443977e44a9",
+  "_id": "5c14a61922a8c2b5",
   "name": "Tower Shield",
   "type": "shield",
   "img": "icons/equipment/shield/tower-wood-blue.webp",
@@ -9,9 +9,9 @@
     },
     "shieldType": "heavy",
     "handUsage": "Occupies off-hand completely",
-    "meleeDefense": "",
+    "meleeDefense": "Shield Defense",
     "requirements": "Strength 4 minimum",
-    "specialAbilities": "",
+    "specialAbilities": "Provides Full Cover when crouching",
     "plantedMode": false,
     "reactions": [
       {
@@ -23,17 +23,17 @@
         "_id": "bf8fb3f40d0343f0"
       }
     ],
-    "weight": 0,
-    "cost": 25.0,
-    "quantity": 1,
-    "notes": "",
     "linkedAbilities": [
       {
         "name": "Shield Defense",
         "_id": "9e88d21a01c14b0d"
       }
-    ]
+    ],
+    "weight": 0,
+    "cost": 25.0,
+    "quantity": 1,
+    "notes": ""
   },
   "effects": [],
-  "_key": "!items!b262e443977e44a9"
+  "_key": "!items!5c14a61922a8c2b5"
 }

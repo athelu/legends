@@ -1,5 +1,5 @@
 {
-  "_id": "70b34425599e4f26",
+  "_id": "58b900cc51a61f63",
   "name": "Disguise Kit",
   "type": "equipment",
   "img": "icons/svg/item-bag.svg",
@@ -7,14 +7,28 @@
     "description": {
       "value": "<p>A collection of cosmetics, hair dye, false facial hair, and other materials used to alter one's appearance.</p>"
     },
-    "equipmentType": "adventuring-gear",
+    "equipmentType": "tools",
     "weight": 3.0,
     "cost": 35.0,
     "quantity": 1,
     "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "Deception",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
     "properties": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!70b34425599e4f26"
+  "_key": "!items!58b900cc51a61f63"
 }

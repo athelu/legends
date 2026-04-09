@@ -1,0 +1,39 @@
+{
+  "_id": "1f0e6dea7bc65645",
+  "name": "Savage Momentum",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You learned a long time ago that the fighter who commits fully wins. The one who hedges loses.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 5
+      },
+      "skills": "",
+      "feats": [
+        "Reckless Attack",
+        "Primal Fury"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you use Reckless Attack while in Primal Fury and an enemy attacks you before the start of your next turn, you may make one immediate melee attack against that attacker as a [Reaction]. This attack uses the Reckless Attack modifier (subtract 1 from both dice) and does not count toward your Multiple Action Penalty.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
+    "keywords": "[Combat], [Savage]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!1f0e6dea7bc65645"
+}

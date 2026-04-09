@@ -1,22 +1,29 @@
 {
-  "_id": "bb86a8df7c7042ba",
+  "_id": "18c7c339c429f9e5",
   "name": "Take Cover",
   "type": "action",
   "img": "icons/skills/social/wave-halt-stop.webp",
   "system": {
     "description": {
-      "value": "<ul>\n<li><strong>Cost:</strong> Free with Move action</li>\n<li><strong>Effect:</strong> Position yourself to gain cover benefits</li>\n<li><strong>Notes:</strong>\n<ul>\n<li>Must have cover available (wall, boulder, etc.)</li>\n<li>See Cover rules in Combat section</li>\n<li>Enemies may have Misfortune attacking you depending on cover quality</li>\n</ul></li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free ] action during a move.</p>"
     },
     "actionType": "interact",
-    "actionCost": "Free",
+    "actionCost": "1",
+    "requirements": "",
     "trigger": "",
-    "effect": "Position yourself to gain cover benefits\n- **Notes:**\n  - Must have cover available (wall, boulder, etc.)\n  - See Cover rules in Combat section\n  - Enemies may have Misfortune attacking you depending on cover quality",
-    "keywords": "",
+    "effect": "Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free ] action during a move.",
+    "appliesEffects": [
+      {
+        "effectId": "Covered",
+        "params": {}
+      }
+    ],
+    "keywords": [],
     "range": "",
     "target": "",
     "frequency": "",
     "special": ""
   },
   "effects": [],
-  "_key": "!items!bb86a8df7c7042ba"
+  "_key": "!items!18c7c339c429f9e5"
 }

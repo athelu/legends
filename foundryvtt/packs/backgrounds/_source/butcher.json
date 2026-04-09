@@ -1,21 +1,74 @@
 {
-  "_id": "ad8066f5366241a2",
+  "_id": "54e8a7b7d3ad03b1",
   "name": "Butcher",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>Your apprenticeship involved sharp knives, practical anatomy, and an understanding of how to get the best cuts. The work was bloody, demanding, and surprisingly educational. You know more about sinew and bone than most people ever will. <strong>Skills:</strong> Might 2, Medicine 2, Craft 1, Society 1, +40 XP <strong>Equipment:</strong> Cleaver, apron, meat hook, work clothes, work boots <strong>Feature</strong> - Anatomy Knowledge: You know the best cuts and methods for processing animals.</p>"
+      "value": "<p>Your apprenticeship involved sharp knives, practical anatomy, and an understanding of how to get the best cuts. The work was bloody, demanding, and surprisingly educational. You know more about sinew and bone than most people ever will.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 40,
+    "skillBonuses": "Might 2, Medicine 2, Craft 1, Society 1, +40 XP",
+    "startingEquipment": "Cleaver\napron\nmeat hook\nwork clothes\nwork boots",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Anatomy Knowledge: You know the best cuts and methods for processing animals.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "might": 2,
+      "medicine": 2,
+      "craft": 1,
+      "society": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Cleaver",
+        "quantity": 1,
+        "originalText": "Cleaver",
+        "sourceId": "6bb1a0cce696402a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Apron",
+        "quantity": 1,
+        "originalText": "apron",
+        "sourceId": "23d6fdda72713321"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Meat Hook",
+        "quantity": 1,
+        "originalText": "meat hook",
+        "sourceId": "2414522d2c585616"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Work",
+        "quantity": 1,
+        "originalText": "work clothes",
+        "sourceId": "e9a99873e17f718a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Work",
+        "quantity": 1,
+        "originalText": "work boots",
+        "sourceId": "6a6394e3ffbccf86"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!ad8066f5366241a2"
+  "_key": "!items!54e8a7b7d3ad03b1"
 }

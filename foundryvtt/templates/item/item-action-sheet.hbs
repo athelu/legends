@@ -61,6 +61,11 @@
       </div>
 
       <div class="form-group">
+        <label>Requirements</label>
+        <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="e.g., Target within melee reach, Divine Gift Trait"/>
+      </div>
+
+      <div class="form-group">
         <label>Keywords (comma-separated)</label>
         <input type="text" name="system.keywords" value="{{system.keywords}}" placeholder="e.g., Combat, Attack, Melee"/>
         <small>Enter keywords separated by commas</small>
@@ -90,6 +95,31 @@
         <label>Effect</label>
         <textarea name="system.effect" rows="4">{{system.effect}}</textarea>
         <small>Mechanical effect of this action</small>
+      </div>
+
+      <div class="form-group stacked">
+        <label>Applies Effects</label>
+        <small>Configured effects will appear as draggable chips on this action's chat card.</small>
+        <div class="effect-list">
+          {{#if actionAppliesEffects.length}}
+            {{#each actionAppliesEffects}}
+              <div class="effect-entry">
+                <input type="text" name="system.appliesEffects.{{index}}.effectId" value="{{effectId}}" placeholder="e.g., frightened" />
+                <select name="system.appliesEffects.{{index}}.operation">
+                  <option value="apply" {{#if (eq operation "apply")}}selected{{/if}}>Apply</option>
+                  <option value="remove" {{#if (eq operation "remove")}}selected{{/if}}>Remove</option>
+                </select>
+                <input type="text" name="system.appliesEffects.{{index}}.paramsText" value="{{paramsText}}" placeholder="key=value, other=2" />
+                <button type="button" class="icon-button" data-action="removeWeaveEffect" data-index="{{index}}" title="Remove effect">
+                  <i class="fas fa-trash"></i>
+                </button>
+              </div>
+            {{/each}}
+          {{else}}
+            <p class="hint">No action effects configured.</p>
+          {{/if}}
+        </div>
+        <button type="button" class="add-effect-button" data-action="addWeaveEffect">Add Effect</button>
       </div>
 
       <div class="form-group">

@@ -1,5 +1,5 @@
 {
-  "_id": "deb612d0c4644e5d",
+  "_id": "c067c1a3691e3ebf",
   "name": "Weave Reflection",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "Self, touch",
     "duration": "1 minute (or until 3 reflections)",
-    "target": "",
+    "target": "area",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Next 3 weaves targeting only you are reflected back at the weaver. Weaves targeting area aren't reflected. After 3 reflections or 1 minute, effect ends.",
+    "effectType": "protection",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 reflection",
+          "duration": "1 reflection"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "3 reflections",
+          "duration": "3 reflections"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 reflections (10 minutes)",
+          "duration": "4 reflections (10 minutes)"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 1 reflection\n- 2 = 3 reflections\n- 3 = 4 reflections (10 minutes)",
+    "targetingSuccessScaling": "0 = fails, 1 = 1 reflection, 2= 3 reflections, 3 = 4 reflections (10 minutes)",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "aoe",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!deb612d0c4644e5d"
+  "_key": "!items!c067c1a3691e3ebf"
 }

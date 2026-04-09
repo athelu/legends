@@ -1,21 +1,28 @@
 {
-  "_id": "cb6e29a560b94abc",
+  "_id": "7b31ca3bd7b72c61",
   "name": "Quickened Reflexes (-5)",
   "type": "trait",
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>Unparalleled quickness and awareness.</p>\n<ul>\n<li>Initiative: +2</li>\n<li>All Perception: Subtract 1 from die results</li>\n<li>Reflex saves: Subtract 1 from die results</li>\n</ul>"
+      "value": "<p>Unparalleled quickness and awareness.</p>"
     },
     "pointCost": -5,
     "traitType": "physical",
     "isMagical": false,
     "magicalType": "",
     "requirements": "",
-    "benefits": "",
+    "benefits": "<ul>\n<li>Initiative: +2</li>\n<li>All Perception: Subtract 1 from die results</li>\n<li>Reflex saves: Subtract 1 from die results</li>\n</ul>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
     "requiresGMApproval": false,
     "requiresExistingTrait": ""
   },
   "effects": [],
-  "_key": "!items!cb6e29a560b94abc"
+  "_key": "!items!7b31ca3bd7b72c61"
 }

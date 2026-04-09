@@ -1,0 +1,39 @@
+{
+  "_id": "f0f78f8b2ab9b19e",
+  "name": "Weapon Momentum",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>The second strike lands before they have recovered from the first.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 4,
+        "agility": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [
+        "Two-Weapon Fighting"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When both attacks from a Two-Weapon Fighting action hit the same target, you may apply either the Slowed (Minor) or Disoriented [Hindered] condition to the target until the end of their next turn.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive, triggers when both attacks hit same target"
+    },
+    "keywords": "[Combat], [Dual]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!f0f78f8b2ab9b19e"
+}

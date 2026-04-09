@@ -1,0 +1,38 @@
+{
+  "_id": "741f04200c96337f",
+  "name": "Collapse",
+  "type": "condition",
+  "img": "icons/svg/sleep.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Character becomes Unconscious. Cannot be awakened until Exhaustion reduced below level 5 <strong>Recovery:</strong> Long rest removes 1 level of Exhaustion</p>"
+    },
+    "label": "Collapse",
+    "category": "physical",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/sleep.svg",
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [
+      "Fatigued",
+      "Exhausted",
+      "Severely Exhausted",
+      "Near Collapse",
+      "Collapse"
+    ],
+    "stacking": "stack",
+    "stacks": 1,
+    "severity": "severe",
+    "overlayPriority": 30,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "automatic",
+      "removeOnSuccess": false
+    }
+  },
+  "flags": {},
+  "_key": "!items!741f04200c96337f"
+}

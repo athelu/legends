@@ -1,5 +1,5 @@
 {
-  "_id": "56bd973e389e4b84",
+  "_id": "3a3372d83c04fbad",
   "name": "Preserve Remains",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,26 +21,48 @@
     },
     "range": "Touch",
     "duration": "1 hour (or until dispelled)",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Corpse at touch is protected from decay and cannot become undead. Extends time limit for resurrection magic.",
+    "effectType": "buff",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 hour",
+          "duration": "1 hour"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "4 hours",
+          "duration": "4 hours"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = 10 minutes\n- 2 = 1 hour\n- 3 = 4 hours",
+    "targetingSuccessScaling": "0 = fails, 1 = 10 minutes, 2= 1 hour, 3 = 4 hours",
     "weavingRoll": "Positive Potential + Positive Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
-    "deliveryMethod": "save",
+    "deliveryMethod": "automatic",
     "tags": [
       "necromantic",
-      "touch"
+      "touch",
+      "utility"
     ]
   },
   "effects": [],
-  "_key": "!items!56bd973e389e4b84"
+  "_key": "!items!3a3372d83c04fbad"
 }

@@ -1,0 +1,39 @@
+{
+  "_id": "a52245b49738cdc3",
+  "name": "Pact Ascendant",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The pact has grown. What once was a desperate one-sided bargain has become a genuine channel of power in both directions. You are no longer just drawing from the connection. The connection is drawing from you.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 6
+      },
+      "skills": "",
+      "feats": [
+        "Eldritch Pact",
+        "Patron's Whisper"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per long rest, you may declare an Instant Recovery as a [Free] action, immediately recovering your full Energy pool as though you had taken a short rest. Reduce your max Energy by your Charisma score until long rest.</p>",
+    "usageType": "free",
+    "usage": {
+      "mode": "free",
+      "uses": null,
+      "recharge": null,
+      "text": "Instant Recovery once per long rest as [Free] action; max Energy reduced until long rest"
+    },
+    "keywords": "[Magic], [Pact]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!a52245b49738cdc3"
+}

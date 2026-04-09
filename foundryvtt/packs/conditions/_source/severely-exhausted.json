@@ -1,0 +1,45 @@
+{
+  "_id": "a7f8547324c92926",
+  "name": "Severely Exhausted",
+  "type": "condition",
+  "img": "icons/svg/sleep.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All rolls add 2 to both die results. Movement speed reduced by half. Can only take 2 actions per turn instead of 3. Receive no benefit from short rests. <strong>Recovery:</strong> Long rest removes 1 level of Exhaustion</p>"
+    },
+    "label": "Severely Exhausted",
+    "category": "physical",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/sleep.svg",
+    "activeEffects": [
+      {
+        "key": "diceMod.allRolls",
+        "mode": "add",
+        "value": 2,
+        "notes": "Add 2 to all die results"
+      }
+    ],
+    "appliesConditions": [],
+    "progressionChain": [
+      "Fatigued",
+      "Exhausted",
+      "Severely Exhausted",
+      "Near Collapse",
+      "Collapse"
+    ],
+    "stacking": "stack",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "automatic",
+      "removeOnSuccess": false
+    }
+  },
+  "flags": {},
+  "_key": "!items!a7f8547324c92926"
+}

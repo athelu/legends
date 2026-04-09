@@ -1,0 +1,36 @@
+{
+  "_id": "01c947b9b481fc34",
+  "name": "Opportunist",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You never waste the moment someone else creates. While they're reacting to your ally, you're already moving.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per round, when an ally hits a target within your melee reach, you may use a [Reaction] to make one melee attack against that target.</p>",
+    "usageType": "reaction",
+    "usage": {
+      "mode": "reaction",
+      "uses": null,
+      "recharge": null,
+      "text": "Once per round, Reaction"
+    },
+    "keywords": "[Combat], [Shadow], [Reaction]",
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!01c947b9b481fc34"
+}

@@ -1,5 +1,5 @@
 {
-  "_id": "aeafc92f9de24ff8",
+  "_id": "e7522f4a7fc25a85",
   "name": "Acid Blast",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "Close, 30 ft.",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "single",
     "savingThrow": "none",
-    "effect": "",
-    "effectType": "",
+    "effect": "Single-target ranged attack. Target takes 8 acid damage.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Miss",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (4)",
+          "duration": "Half damage (4)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (8)",
+          "duration": "Full damage (8)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (16) + applies Sickened",
+          "duration": "Enhanced damage (16) + applies Sickened"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = Miss\n- 1 = Half damage (4)\n- 2 = Full damage (8)  \n- 3 = Enhanced damage (16) + applies Sickened",
+    "targetingSuccessScaling": "0 = Miss, 1 = Half damage (4), 2 = Full damage (8), 3 = Enhanced damage (16) + applies Sickened",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
@@ -46,5 +67,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!aeafc92f9de24ff8"
+  "_key": "!items!e7522f4a7fc25a85"
 }

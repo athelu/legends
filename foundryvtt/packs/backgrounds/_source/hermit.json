@@ -1,21 +1,55 @@
 {
-  "_id": "1fb0eb75b4ba4859",
+  "_id": "7635406dccd56bb8",
   "name": "Hermit",
   "type": "background",
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You lived a life of solitude. Adventuring might represent your first foray out among other people in some time. This might be a welcome reprieve from solitude or an unwanted change, but in either case, you're likely still rough around the edges. <strong>Skills:</strong> Wilderness 3, Medicine 1, Religion 1, +36 XP <strong>Equipment:</strong> Robe, herbalism kit, shoes <strong>Feature</strong> - Solitary Discovery: During your isolation, you discovered something significant (work with GM). People seek your wisdom, though they may not understand it.</p>"
+      "value": "<p>You lived a life of solitude. Adventuring might represent your first foray out among other people in some time. This might be a welcome reprieve from solitude or an unwanted change, but in either case, you're likely still rough around the edges.</p>"
     },
-    "startingXP": 0,
-    "skillBonuses": "",
-    "startingEquipment": "",
+    "startingXP": 36,
+    "skillBonuses": "Wilderness 3, Medicine 1, Religion 1, +36 XP",
+    "startingEquipment": "Robe\nherbalism kit\nshoes",
     "suggestedFeats": "",
-    "features": "",
+    "features": "Solitary Discovery: During your isolation, you discovered something significant (work with GM). People seek your wisdom, though they may not understand it.",
     "sampleNames": "",
     "traits": "",
-    "notes": ""
+    "notes": "",
+    "grantedSkills": {
+      "wilderness": 3,
+      "medicine": 1,
+      "religion": 1
+    },
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Robe",
+        "quantity": 1,
+        "originalText": "Robe",
+        "sourceId": "cead7ceedf80bfbc"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Herbalism Kit",
+        "quantity": 1,
+        "originalText": "herbalism kit",
+        "sourceId": "adcc370f8439d6c9"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
   },
   "effects": [],
-  "_key": "!items!1fb0eb75b4ba4859"
+  "_key": "!items!7635406dccd56bb8"
 }

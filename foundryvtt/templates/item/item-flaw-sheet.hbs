@@ -14,7 +14,33 @@
   <section class="sheet-body">
     <!-- Description Tab -->
     <div class="tab description" data-group="primary" data-tab="description">
-      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+      <div class="feat-description-section">
+        <h3>Description</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+        </div>
+      </div>
+
+      <div class="feat-benefits-section">
+        <h3>Mechanical Effects</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedMechanicalEffects target="system.mechanicalEffects" button=true owner=owner editable=editable}}
+        </div>
+      </div>
+
+      <div class="feat-benefits-section">
+        <h3>Roleplaying Impact</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedRoleplayingImpact target="system.roleplayingImpact" button=true owner=owner editable=editable}}
+        </div>
+      </div>
+
+      <div class="feat-benefits-section">
+        <h3>Notes</h3>
+        <div class="feat-editor-wrap">
+          {{editor enrichedNotes target="system.notes" button=true owner=owner editable=editable}}
+        </div>
+      </div>
     </div>
 
     <!-- Details Tab -->
@@ -49,19 +75,6 @@
         </select>
       </div>
 
-      <!-- Mechanical Effects -->
-      <h3>Mechanical Effects</h3>
-      <div class="form-group">
-        <label>Game Effects</label>
-        <textarea name="system.mechanicalEffects" rows="5" placeholder="Describe the mechanical penalties or restrictions this flaw imposes">{{system.mechanicalEffects}}</textarea>
-      </div>
-
-      <!-- Roleplaying Impact -->
-      <div class="form-group">
-        <label>Roleplaying Impact</label>
-        <textarea name="system.roleplayingImpact" rows="4" placeholder="How does this flaw affect character roleplay and interactions?">{{system.roleplayingImpact}}</textarea>
-      </div>
-
       <!-- Can Be Overcome -->
       <div class="form-group">
         <label class="checkbox">
@@ -83,12 +96,6 @@
           <input type="checkbox" name="system.requiresGMApproval" {{#if system.requiresGMApproval}}checked{{/if}} />
           Requires GM Approval
         </label>
-      </div>
-
-      <!-- Special Notes -->
-      <div class="form-group">
-        <label>Special Notes</label>
-        <textarea name="system.notes" rows="3" placeholder="Any additional rules or clarifications">{{system.notes}}</textarea>
       </div>
 
     </div>

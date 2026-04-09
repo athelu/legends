@@ -1,5 +1,5 @@
 {
-  "_id": "1e8b64635f2442b0",
+  "_id": "e08c95471bf8e230",
   "name": "Lightning Bolt",
   "type": "weave",
   "img": "icons/magic/abjuration/abjuration-purple.webp",
@@ -21,17 +21,38 @@
     },
     "range": "60-foot line, 5 feet wide",
     "duration": "Instantaneous",
-    "target": "",
+    "target": "line",
     "savingThrow": "reflex",
-    "effect": "",
-    "effectType": "",
+    "effect": "A stroke of lightning forming a line 60 feet long and 5 feet wide blasts out from you. All creatures in the line take 28 lightning damage. Each target takes the full listed damage and makes their own save.",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
       "drInteraction": "half",
-      "scaling": {}
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (14)",
+          "duration": "half damage (14)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (28)",
+          "duration": "full damage (28)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (36) + stunned",
+          "duration": "enhanced damage (36) + stunned"
+        }
+      }
     },
-    "targetingSuccessScaling": "- 0 = fails\n- 1 = half damage (14)\n- 2 = full damage (28)\n- 3 = enhanced damage (36) + stunned",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36) + stunned",
     "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
@@ -48,5 +69,5 @@
     ]
   },
   "effects": [],
-  "_key": "!items!1e8b64635f2442b0"
+  "_key": "!items!e08c95471bf8e230"
 }

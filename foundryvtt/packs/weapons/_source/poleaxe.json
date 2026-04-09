@@ -1,5 +1,5 @@
 {
-  "_id": "e6ea4361d3874168",
+  "_id": "24525953e091fcb5",
   "name": "Poleaxe",
   "type": "weapon",
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
@@ -10,7 +10,7 @@
     "damage": {
       "base": 10,
       "type": "slashing",
-      "alternate": null,
+      "alternate": 0,
       "alternateType": "",
       "multiType": "piercing, bludgeoning"
     },
@@ -23,12 +23,12 @@
       {
         "name": "Melee",
         "type": "melee",
-        "skill": "meleeCombat",
+        "skill": "melee",
         "damageAttr": "strength",
         "defenseType": "melee",
         "damage": {
           "base": 10,
-          "alternate": null
+          "alternate": 0
         },
         "range": {
           "normal": 0,
@@ -45,8 +45,10 @@
       "multi-type",
       "reach"
     ],
+    "reload": "",
+    "requirements": "",
     "notes": ""
   },
   "effects": [],
-  "_key": "!items!e6ea4361d3874168"
+  "_key": "!items!24525953e091fcb5"
 }

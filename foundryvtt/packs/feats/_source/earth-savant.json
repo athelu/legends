@@ -1,5 +1,5 @@
 {
-  "_id": "ce0bc227634842fe",
+  "_id": "03bbeb8f4de36aeb",
   "name": "Earth Savant",
   "type": "feat",
   "img": "icons/magic/symbols/star-rising-purple.webp",
@@ -8,20 +8,27 @@
       "value": "<p>Your mastery of earth has made you immovable, unbreakable and as inevitable as a mountain.</p>"
     },
     "flavorText": "",
-    "xpCost": 0,
+    "xpCost": 80,
+    "classification": "legendary",
     "prerequisites": {
       "attributes": {},
       "skills": "",
       "feats": [],
-      "tier": 3,
+      "tier": 0,
       "other": "Earth Mastery 6, Earth Potential 6, any magical tradition trait"
     },
     "benefits": "<p>Your mastery of Earth energy grants the following abilities:</p>\n<ul>\n<li><strong>Crushing Weaves:</strong> When you cast a weave using Earth as primary energy and deal bludgeoning/piercing damage, targets that fail their save gain <strong>Prone</strong> and <strong>Restrained</strong> conditions until they use an action to break free</li>\n<li><strong>Stone Resilience:</strong> You have natural DR 2 that stacks with armor. Your HP calculation uses Con × 9 instead of Con × 8</li>\n<li><strong>Tremorsense:</strong> You can sense vibrations through solid surfaces, detecting movement within 30 feet even if you cannot see</li>\n</ul>",
     "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": null,
+      "recharge": null,
+      "text": "Passive"
+    },
     "keywords": "[Magic]",
     "notes": "",
     "effects": []
   },
   "effects": [],
-  "_key": "!items!ce0bc227634842fe"
+  "_key": "!items!03bbeb8f4de36aeb"
 }

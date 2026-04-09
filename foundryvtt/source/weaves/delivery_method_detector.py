@@ -56,11 +56,15 @@ def detect_delivery_method(item: dict) -> str:
     # Check if it's a utility/automatic weave
     utility_keywords = [
         'you create',
+        'create ',
         'you conjure',
+        'conjure ',
         'you gain',
         'target gain',
+        'target gains',
+        'transform',
+        'teleport',
         'automatically',
-        'duration:',
         'utility',
         'buff'
     ]
@@ -68,10 +72,11 @@ def detect_delivery_method(item: dict) -> str:
     # If has no damage and no save, likely automatic
     damage_base = item.get('system', {}).get('damage', {}).get('base', 0)
     
-    if damage_base == 0 and not saving_throw:
+    if damage_base == 0 and saving_throw in ['', 'none', 'n/a']:
         # Check if description suggests automatic effect
         if any(keyword in description for keyword in utility_keywords):
             return 'automatic'
+        return 'automatic'
     
     # Default to save (most common for combat weaves)
     return 'save'
