@@ -5,6 +5,7 @@
  * Dynamic template selection via _configureRenderOptions() based on item type
  */
 import { parseBackgroundItemGrants, parseBackgroundSkillBonuses } from '../backgrounds.mjs';
+import { SKILL_LABELS } from '../skill-utils.mjs';
 
 const { ItemSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -29,6 +30,10 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
   static PARTS = {
     sheet: { template: "systems/legends/templates/item/item-feat-sheet.hbs" }
   };
+
+  get title() {
+    return this.document.name || "Item";
+  }
 
   /** @override - Attach listeners */
   _attachPartListeners(partId, htmlElement, options) {
@@ -98,9 +103,22 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
     options.parts = ["sheet"];
+    options.window = options.window || {};
+    options.window.title = this.title;
     // Dynamically set the template based on item type
     this.constructor.PARTS.sheet.template =
       `systems/legends/templates/item/item-${this.document.type}-sheet.hbs`;
+  }
+
+  /** @override */
+  async _onFirstRender(context, options) {
+    await super._onFirstRender(context, options);
+
+    const rect = this.element?.getBoundingClientRect?.();
+    if (!rect) return;
+    if (rect.width < 480 || rect.height < 320) {
+      this.setPosition({ width: 520, height: 480 });
+    }
   }
 
   /** @override */
@@ -290,6 +308,40 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       context.featRechargeLabel = context.system.usage?.recharge?.period === 'shortRest'
         ? 'Short Rest'
         : (context.system.usage?.recharge?.period === 'longRest' ? 'Long Rest' : '');
+    }
+
+    if (this.document.type === 'background') {
+      const parsedSkills = parseBackgroundSkillBonuses(context.system.skillBonuses || '');
+      const grantedSkills = Object.keys(context.system.grantedSkills || {}).length
+        ? context.system.grantedSkills
+        : parsedSkills.skills;
+      const itemGrants = Array.isArray(context.system.itemGrants) && context.system.itemGrants.length
+        ? context.system.itemGrants
+        : parseBackgroundItemGrants(context.system.startingEquipment || '');
+      const startingXP = Number.isFinite(context.system.startingXP)
+        ? context.system.startingXP
+        : parsedSkills.startingXP;
+
+      context.backgroundSummary = {
+        startingXP,
+        grantedSkills: Object.entries(grantedSkills)
+          .map(([key, amount]) => ({
+            key,
+            label: SKILL_LABELS[key] || key,
+            amount: Number(amount || 0)
+          }))
+          .filter(entry => entry.amount !== 0),
+        itemGrants: itemGrants.map(grant => ({
+          label: grant.originalText || grant.sourceName || grant.name || 'Background Item'
+        })),
+        features: String(context.system.features || '').trim(),
+        hasBenefits: Boolean(
+          startingXP
+          || Object.keys(grantedSkills).length
+          || itemGrants.length
+          || String(context.system.features || '').trim()
+        )
+      };
     }
 
     return context;

@@ -2,7 +2,7 @@
   "id": "legends",
   "title": "Legends TTRPG System",
   "description": "A classless tabletop roleplaying game built entirely around the number eight, using d8 dice and a roll-under system with success counting.",
-  "version": "0.6.0",
+  "version": "0.6.3",
   "authors": [
     {
       "name": "Sean (athelu)",

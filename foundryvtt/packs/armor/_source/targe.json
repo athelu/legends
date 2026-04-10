@@ -5,7 +5,7 @@
   "img": "icons/equipment/shield/round-wood-reinforced.webp",
   "system": {
     "description": {
-      "value": "<p>Can be slung on back when not in use (takes 1 [Minor] action to ready).</p>"
+      "value": "<p>A round shield of moderate size, typically constructed from layered wood and leather with metal reinforcement at the rim and center. The targe is a versatile all-purpose shield that balances coverage with maneuverability, offering solid defense against both melee and ranged attacks without the encumbrance of heavier designs.</p>\n<p>Can be slung on back when not in use (takes 1 [Minor] action to ready).</p>"
     },
     "shieldType": "medium",
     "handUsage": "Occupies off-hand completely.",
@@ -16,11 +16,11 @@
     "reactions": [
       {
         "name": "Shield Block",
-        "_id": "083c3db43dd24c95"
+        "_id": "d0c1c276ea9f57eb"
       },
       {
         "name": "Ranged Defense",
-        "_id": "bf8fb3f40d0343f0"
+        "_id": "482ae0d0a2a7c59c"
       }
     ],
     "linkedAbilities": [

@@ -2,10 +2,10 @@
   "_id": "1c95d976609e25d6",
   "name": "Splint Mail",
   "type": "armor",
-  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+  "img": "icons/equipment/chest/breastplate-banded-steel-gold.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Vertical strips of metal riveted to a backing of leather and mail, covering the major surfaces of the torso and limbs with rigid bands that resist both cutting and crushing force. Splint mail sits between chain and full plate in the hierarchy of protection being significantly more resistant to damage than mail while remaining more affordable and faster to don than a full harness.</p>"
     },
     "armorType": "heavy",
     "dr": {

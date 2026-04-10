@@ -2,10 +2,10 @@
   "_id": "46000c5f4b39f108",
   "name": "Plate, Full",
   "type": "armor",
-  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+  "img": "icons/equipment/chest/breastplate-cuirass-steel-grey.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>The pinnacle of the armorer's craft, a complete articulated harness of shaped steel plates covering the entire body from head to foot. Each piece is formed to deflect rather than simply absorb incoming force, and the articulated construction allows a surprising degree of movement once properly fitted. A suit requires a skilled armorer and represents a substantial investment,the cost alone places it beyond the reach of most soldiers.</p>"
     },
     "armorType": "heavy",
     "dr": {

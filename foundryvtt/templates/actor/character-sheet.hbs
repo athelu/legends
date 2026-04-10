@@ -10,15 +10,29 @@
       </div>
       <div class="info-line">
         <label>Background:</label>
-        <input type="text" name="system.biography.background" value="{{system.biography.background}}" placeholder="Background"/>
+        <div class="header-choice-group">
+          {{#if primaryBackground}}
+          <span class="derived-field" title="From background item">{{primaryBackground.name}}</span>
+          {{else}}
+          <input type="text" name="system.biography.background" value="{{system.biography.background}}" placeholder="Background"/>
+          {{/if}}
+          {{#if canChangeOriginChoices}}
+          <button type="button" class="header-choice-button" data-action="changeHeaderChoice" data-item-type="background">{{#if primaryBackground}}Change{{else}}Choose{{/if}}</button>
+          {{/if}}
+        </div>
       </div>
       <div class="info-line">
         <label>Race:</label>
-        {{#if primaryAncestry}}
-        <span class="derived-field" title="From ancestry item">{{primaryAncestry.name}}</span>
-        {{else}}
-        <input type="text" name="system.biography.ancestry" value="{{system.biography.ancestry}}" placeholder="Ancestry"/>
-        {{/if}}
+        <div class="header-choice-group">
+          {{#if primaryAncestry}}
+          <span class="derived-field" title="From ancestry item">{{primaryAncestry.name}}</span>
+          {{else}}
+          <input type="text" name="system.biography.ancestry" value="{{system.biography.ancestry}}" placeholder="Ancestry"/>
+          {{/if}}
+          {{#if canChangeOriginChoices}}
+          <button type="button" class="header-choice-button" data-action="changeHeaderChoice" data-item-type="ancestry">{{#if primaryAncestry}}Change{{else}}Choose{{/if}}</button>
+          {{/if}}
+        </div>
       </div>
       <div class="info-line">
         <label>Tier:</label>

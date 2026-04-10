@@ -139,6 +139,40 @@ _prepareCharacterData(actorData) {
     }
   }
 
+  // Store aggregated DR totals and a simple summary value
+  if (!systemData.dr) systemData.dr = {};
+  systemData.ancestryEffects = ancestryEffects;
+  systemData.dr.slashing = slashingTotal;
+  systemData.dr.piercing = piercingTotal;
+  systemData.dr.bludgeoning = bludgeoningTotal;
+  // summary: best protection
+    // Incorporate feat-provided DR and other modifiers
+    const featMods = featEffects.computeFeatModifiers(this);
+    systemData.dr.slashing = slashingTotal + (featMods.dr.slashing || 0);
+    systemData.dr.piercing = piercingTotal + (featMods.dr.piercing || 0);
+    systemData.dr.bludgeoning = bludgeoningTotal + (featMods.dr.bludgeoning || 0);
+    systemData.dr.total = Math.max(systemData.dr.slashing, systemData.dr.piercing, systemData.dr.bludgeoning);
+
+    // Apply skill and attribute effective values from feats
+    systemData.skillsEffective = {};
+    for (const [k, v] of Object.entries(systemData.skills || {})) {
+      const canonicalKey = normalizeSkillKey(k) || k;
+      const mod = featMods.skills[canonicalKey] || featMods.skills[k] || 0;
+      systemData.skillsEffective[k] = (typeof v === 'object' ? (v.value ?? 0) : v) + mod;
+    }
+
+    systemData.attributesEffective = {};
+    for (const [attrKey, attrObj] of Object.entries(systemData.attributes || {})) {
+      const base = attrObj?.value ?? 0;
+      const mod = (ancestryEffects.attributes[attrKey] || 0) + (featMods.attributes[attrKey] || 0);
+      systemData.attributesEffective[attrKey] = base + mod;
+    }
+
+    // Attach computed actions/reactions for UI
+    systemData.featActions = featMods.actions || [];
+    systemData.featReactions = featMods.reactions || [];
+  }
+
   _getActiveConditionNames() {
     return new Set(
       this.items
@@ -173,40 +207,6 @@ _prepareCharacterData(actorData) {
       halvesHpRecovery: Boolean(hpHalvedBy),
     };
   }
-
-  // Store aggregated DR totals and a simple summary value
-  if (!systemData.dr) systemData.dr = {};
-  systemData.ancestryEffects = ancestryEffects;
-  systemData.dr.slashing = slashingTotal;
-  systemData.dr.piercing = piercingTotal;
-  systemData.dr.bludgeoning = bludgeoningTotal;
-  // summary: best protection
-    // Incorporate feat-provided DR and other modifiers
-    const featMods = featEffects.computeFeatModifiers(this);
-    systemData.dr.slashing = slashingTotal + (featMods.dr.slashing || 0);
-    systemData.dr.piercing = piercingTotal + (featMods.dr.piercing || 0);
-    systemData.dr.bludgeoning = bludgeoningTotal + (featMods.dr.bludgeoning || 0);
-    systemData.dr.total = Math.max(systemData.dr.slashing, systemData.dr.piercing, systemData.dr.bludgeoning);
-
-    // Apply skill and attribute effective values from feats
-    systemData.skillsEffective = {};
-    for (const [k, v] of Object.entries(systemData.skills || {})) {
-      const canonicalKey = normalizeSkillKey(k) || k;
-      const mod = featMods.skills[canonicalKey] || featMods.skills[k] || 0;
-      systemData.skillsEffective[k] = (typeof v === 'object' ? (v.value ?? 0) : v) + mod;
-    }
-
-    systemData.attributesEffective = {};
-    for (const [attrKey, attrObj] of Object.entries(systemData.attributes || {})) {
-      const base = attrObj?.value ?? 0;
-      const mod = (ancestryEffects.attributes[attrKey] || 0) + (featMods.attributes[attrKey] || 0);
-      systemData.attributesEffective[attrKey] = base + mod;
-    }
-
-    // Attach computed actions/reactions for UI
-    systemData.featActions = featMods.actions || [];
-    systemData.featReactions = featMods.reactions || [];
-}
 
   _collectAncestryEffects(items) {
     const emptyAttributes = {

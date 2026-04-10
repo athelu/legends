@@ -56,6 +56,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       expandItem: D8CharacterSheet.#onExpandItem,
       itemView: D8CharacterSheet.#onItemView,
       setupMagicalTraits: D8CharacterSheet.#onSetupMagicalTraits,
+      changeHeaderChoice: D8CharacterSheet.#onChangeHeaderChoice,
     },
     dragDrop: [{ dragSelector: ".item-list .item", dropSelector: null }]
   };
@@ -64,13 +65,45 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     sheet: { template: "systems/legends/templates/actor/character-sheet.hbs" }
   };
 
+  static TABS = {
+    primary: {
+      initial: "main",
+      tabs: [
+        { id: "main", label: "Main" },
+        { id: "weapons", label: "Weapons" },
+        { id: "actions", label: "Actions" },
+        { id: "magic", label: "Magic" },
+        { id: "features", label: "Features" },
+        { id: "effects", label: "Effects" },
+        { id: "equipment", label: "Equipment" },
+        { id: "biography", label: "Biography" }
+      ]
+    }
+  };
+
   tabGroups = { primary: "main" };
+
+  get title() {
+    return this.document.name || "Character";
+  }
 
   /** @override - Configure the window title to show just the actor name */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+    options.parts = ["sheet"];
     options.window = options.window || {};
-    options.window.title = this.document.name || "Character";
+    options.window.title = this.title;
+  }
+
+  /** @override */
+  async _onFirstRender(context, options) {
+    await super._onFirstRender(context, options);
+
+    const rect = this.element?.getBoundingClientRect?.();
+    if (!rect) return;
+    if (rect.width < 700 || rect.height < 500) {
+      this.setPosition({ width: 720, height: 800 });
+    }
   }
 
   /** @override - Attach listeners to form inputs */
@@ -171,10 +204,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       return;
     }
     
-    // Convert to number if it's a numeric field
     const numValue = input.type === 'number' ? Number(value) : value;
-    
-    // Create update object
     const updateData = {};
     updateData[fieldName] = numValue;
 
@@ -196,7 +226,6 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     }
     
     try {
-      // Update the actor immediately
       const expanded = foundry.utils.expandObject(updateData);
       
       if (Object.keys(expanded).length === 0) {
@@ -208,7 +237,6 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       
     } catch (error) {
       console.error(`Failed to update ${fieldName}:`, error);
-      // Revert the field value on error
       const currentValue = this._getNestedValue(this.document.system, fieldName.replace('system.', ''));
       input.value = currentValue || 0;
     }
@@ -242,6 +270,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     this._prepareAttributes(context, featMods);
     this._prepareSkills(context, featMods);
     this._prepareMagicalTraitHelpers(context);
+    context.primaryBackground = context.backgrounds[0] || null;
     context.primaryAncestry = context.ancestries[0] || null;
     context.tier = this._getTierInfo(context.system.tier?.xp ?? 0);
     context.progression = game.legends?.progression?.getActorProgressionState?.(this.actor) || {
@@ -257,6 +286,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.canAwardXp = Boolean(this.isEditable && game.legends?.progression?.canAwardXP?.(this.actor, game.user));
     context.canSpendXp = Boolean(this.isEditable && game.legends?.progression?.canSpendXP?.(this.actor, game.user));
     context.canManageProgression = Boolean(this.isEditable && game.legends?.progression?.canManageProgression?.(this.actor, game.user));
+    context.canChangeOriginChoices = Boolean(this.isEditable && context.progression?.isCreation);
     context.xpFieldHint = context.canEditXpFields
       ? 'XP fields can be edited directly in character creation or manual override mode.'
       : 'XP fields are locked outside character creation or manual override.';
@@ -416,7 +446,6 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         breakdown: bonus ? breakdownLines.join('\n') : ''
       });
     }
-
     context.attributeList = attributeList;
   }
 
@@ -573,14 +602,13 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       }
       return;
     }
-    
-    // Resolve the dropped item
+
     const item = await Item.implementation.fromDropData(data);
     if ( item?.type === "condition" ) {
-      // Use our condition system instead of creating a plain embedded item
       await game.legends.applyCondition(this.actor, item.name);
       return;
     }
+
     return super._onDropItem(event, data);
   }
 
@@ -644,30 +672,24 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     }
 
     if (!skill) {
-      console.error('No skill found for roll button', target);
-      ui.notifications.error('Could not determine which skill to roll');
+      ui.notifications.warn('Skill roll is missing its target skill.');
       return;
     }
 
     return game.legends.rollSkillCheck(this.actor, skill);
   }
 
-  /**
-   * Handle creating a new item
-   */
   static async #onItemCreate(event, target) {
     const type = target.dataset.type;
-    const data = {
-      name: `New ${type ? type.charAt(0).toUpperCase() + type.slice(1) : 'Item'}`,
-      type: type,
+    const name = `New ${type ? type.charAt(0).toUpperCase() + type.slice(1) : 'Item'}`;
+    const itemData = {
+      name,
+      type,
       system: {}
     };
-    return await Item.create(data, { parent: this.actor });
+    return await Item.create(itemData, { parent: this.actor });
   }
 
-  /**
-   * Handle editing an item
-   */
   static #onItemEdit(event, target) {
     event.stopPropagation();
     const li = target.closest(".item-collapsible");
@@ -718,7 +740,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     if (['trait', 'flaw'].includes(compendiumType)) {
       const progressionState = game.legends?.progression?.getActorProgressionState?.(this.actor);
       if (progressionState?.isCreation) {
-        return this.#showTraitFlawCreationWorkflow(compendiumType, packName);
+        return D8CharacterSheet.#showTraitFlawCreationWorkflow.call(this, compendiumType, packName);
       }
     }
 
@@ -752,7 +774,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     }
 
     const actor = this.actor;
-    const pointSummary = this.#getTraitFlawPointSummary(actor);
+    const pointSummary = D8CharacterSheet.#getTraitFlawPointSummary(actor);
     const ownedNames = new Set(
       actor.items
         .filter((item) => item.type === type)
@@ -901,6 +923,47 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     if (item) {
       item.sheet.render(true, { editable: false });
     }
+  }
+
+  static async #onChangeHeaderChoice(event, target) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const itemType = String(target.dataset.itemType || '').trim();
+    const packName = ITEM_COMPENDIUM_PACKS[itemType];
+    if (!itemType || !packName) {
+      ui.notifications.warn('That header choice is not configured for compendium selection.');
+      return;
+    }
+
+    const progressionState = game.legends?.progression?.getActorProgressionState?.(this.actor);
+    if (!progressionState?.isCreation) {
+      ui.notifications.warn('Background and ancestry can only be changed from the header during character creation.');
+      return;
+    }
+
+    const existingItem = this.actor.items.find((item) => item.type === itemType);
+    if (existingItem) {
+      const confirmed = await foundry.applications.api.DialogV2.confirm({
+        window: { title: `Change ${itemType === 'ancestry' ? 'Ancestry' : 'Background'}` },
+        content: `<p>Replace <strong>${existingItem.name}</strong>?</p><p>This removes the current ${itemType} and opens its compendium so you can pick a new one.</p>`
+      });
+
+      if (!confirmed) return;
+
+      await existingItem.delete();
+      if (itemType === 'ancestry') {
+        await this.actor.update({ 'system.biography.ancestry': '' });
+      }
+    }
+
+    const pack = game.packs.get(packName);
+    if (!pack) {
+      ui.notifications.warn(`Compendium pack "${packName}" not found. Check system.json configuration.`);
+      return;
+    }
+
+    pack.render(true);
   }
 
   /**
@@ -1321,11 +1384,36 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    */
   static _generateArmorSummary(system) {
     let html = '';
+    const armorTypeLabels = {
+      light: 'Light Armor',
+      medium: 'Medium Armor',
+      heavy: 'Heavy Armor'
+    };
+    const stealthPenaltyLabels = {
+      none: 'None',
+      noisy: 'Noisy (+1 to both dice on Stealth checks)',
+      loud: 'Loud (+2 to both dice on Stealth checks)'
+    };
     
-    if (system.dr || system.weight || system.cost) {
+    if (system.armorType || system.dr || system.stealthPenalty || system.swimPenalty || system.donTime || system.doffTime || system.weight || system.cost) {
       html += '<div class=\"details-section\">';
+      if (system.armorType) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Type:</span><span class=\"detail-value\">${armorTypeLabels[system.armorType] || system.armorType}</span></div>`;
+      }
       if (system.dr) {
         html += `<div class=\"detail-row\"><span class=\"detail-label\">DR:</span><span class=\"detail-value\">S:${system.dr.slashing || 0} P:${system.dr.piercing || 0} B:${system.dr.bludgeoning || 0}</span></div>`;
+      }
+      if (system.stealthPenalty) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Stealth:</span><span class=\"detail-value\">${stealthPenaltyLabels[system.stealthPenalty] || system.stealthPenalty}</span></div>`;
+      }
+      if (system.swimPenalty) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Swim:</span><span class=\"detail-value\">${system.swimPenalty}</span></div>`;
+      }
+      if (system.donTime) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Don Time:</span><span class=\"detail-value\">${system.donTime}</span></div>`;
+      }
+      if (system.doffTime) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Doff Time:</span><span class=\"detail-value\">${system.doffTime}</span></div>`;
       }
       if (system.weight) {
         html += `<div class=\"detail-row\"><span class=\"detail-label\">Weight:</span><span class=\"detail-value\">${system.weight} lbs</span></div>`;
@@ -1339,6 +1427,10 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     if (system.properties?.length) {
       html += D8CharacterSheet._generateTraitTags(system.properties);
     }
+
+    if (system.notes) {
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Notes:</span><span class="detail-value">${system.notes.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
     
     return html;
   }
@@ -1348,80 +1440,58 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    */
   static _generateShieldSummary(system) {
     let html = '<div class="details-section">';
-
-    html += '<div class=\"details-section\">';
+    const linkedAbilities = Array.isArray(system.linkedAbilities) ? system.linkedAbilities : [];
+    const reactions = Array.isArray(system.reactions) ? system.reactions : [];
 
     if (system.shieldType) {
-      html += `<div class=\"detail-row\"><span class=\"detail-label\">Type:</span><span class=\"detail-value\">${system.shieldType}</span></div>`;
+      html += `<div class="detail-row"><span class="detail-label">Type:</span><span class="detail-value">${system.shieldType}</span></div>`;
     }
-
+    if (system.handUsage) {
+      html += `<div class="detail-row"><span class="detail-label">Hand Usage:</span><span class="detail-value">${system.handUsage}</span></div>`;
+    }
+    if (system.meleeDefense) {
+      html += `<div class="detail-row"><span class="detail-label">Melee Defense:</span><span class="detail-value">${system.meleeDefense}</span></div>`;
+    }
     if (system.requirements) {
       html += `<div class="detail-row"><span class="detail-label">Requirements:</span><span class="detail-value">${system.requirements}</span></div>`;
     }
-    if (system.trigger) {
-      html += `<div class="detail-row"><span class="detail-label">Trigger:</span><span class="detail-value">${system.trigger}</span></div>`;
-    }
-    if (system.range) {
-      html += `<div class="detail-row"><span class="detail-label">Range:</span><span class="detail-value">${system.range}</span></div>`;
-    }
-    if (system.target) {
-      html += `<div class="detail-row"><span class="detail-label">Target:</span><span class="detail-value">${system.target}</span></div>`;
-    }
-    if (system.frequency) {
-      html += `<div class="detail-row"><span class="detail-label">Frequency:</span><span class="detail-value">${system.frequency}</span></div>`;
-    }
-    if (system.handUsage) {
-      html += `<div class=\"detail-row\"><span class=\"detail-label\">Hand Usage:</span><span class=\"detail-value\">${system.handUsage}</span></div>`;
-    }
-
-    if (system.meleeDefense) {
-
-    if (system.effect) {
-      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Effect:</span><span class="detail-value">${system.effect.replace(/\n/g, '<br>')}</span></div></div>`;
-    }
-
-    if (system.special) {
-      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Special:</span><span class="detail-value">${system.special.replace(/\n/g, '<br>')}</span></div></div>`;
-    }
-      html += `<div class=\"detail-row\"><span class=\"detail-label\">Melee Defense:</span><span class=\"detail-value\">${system.meleeDefense}</span></div>`;
-    }
-
-    if (system.requirements) {
-      html += `<div class=\"detail-row\"><span class=\"detail-label\">Requirements:</span><span class=\"detail-value\">${system.requirements}</span></div>`;
-    }
-
     if (system.plantedMode) {
-      html += '<div class=\"detail-row\"><span class=\"detail-label\">Planted:</span><span class=\"detail-value\">Yes</span></div>';
+      html += '<div class="detail-row"><span class="detail-label">Planted:</span><span class="detail-value">Yes</span></div>';
     }
-
     if (system.weight) {
-      html += `<div class=\"detail-row\"><span class=\"detail-label\">Weight:</span><span class=\"detail-value\">${system.weight} lbs</span></div>`;
+      html += `<div class="detail-row"><span class="detail-label">Weight:</span><span class="detail-value">${system.weight} lbs</span></div>`;
     }
-
     if (system.cost) {
-      html += `<div class=\"detail-row\"><span class=\"detail-label\">Cost:</span><span class=\"detail-value\">${system.cost} gp</span></div>`;
+      html += `<div class="detail-row"><span class="detail-label">Cost:</span><span class="detail-value">${system.cost} gp</span></div>`;
     }
-
     html += '</div>';
 
-    if (system.reactions?.length) {
-      html += '<h4>Reactions</h4><div class=\"details-section\">';
-      system.reactions.forEach(reaction => {
-        html += `<div class=\"detail-row\"><span class=\"detail-label\">${reaction.name || 'Reaction'}:</span><span class=\"detail-value\">${reaction.description || ''}</span></div>`;
+    if (reactions.length) {
+      html += '<h4>Reactions</h4><div class="details-section">';
+      reactions.forEach(reaction => {
+        const reactionName = reaction?.name || reaction?.type || 'Reaction';
+        const reactionDescription = reaction?.description || reaction?.effect || '';
+        html += `<div class="detail-row"><span class="detail-label">${reactionName}:</span><span class="detail-value">${reactionDescription}</span></div>`;
       });
       html += '</div>';
     }
 
     if (linkedAbilities.length) {
-      html += '<h4>Granted Abilities</h4><div class=\"details-section\">';
+      html += '<h4>Granted Abilities</h4><div class="details-section">';
       linkedAbilities.forEach(ability => {
-        html += `<div class=\"detail-row\"><span class=\"detail-label\">${ability.name || 'Ability'}:</span><span class=\"detail-value\">Granted while equipped</span></div>`;
+        const abilityName = ability?.name || ability?.sourceName || 'Ability';
+        const abilityDescription = ability?.description || ability?.effect || 'Granted while equipped';
+        html += `<div class="detail-row"><span class="detail-label">${abilityName}:</span><span class="detail-value">${abilityDescription}</span></div>`;
       });
       html += '</div>';
     }
 
     if (system.specialAbilities) {
-      html += `<div class=\"details-section\"><div class=\"detail-row\"><span class=\"detail-label\">Special Abilities:</span><span class=\"detail-value\">${system.specialAbilities}</span></div></div>`;
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Special Abilities:</span><span class="detail-value">${system.specialAbilities.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+
+    if (system.notes) {
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Notes:</span><span class="detail-value">${system.notes.replace(/\n/g, '<br>')}</span></div></div>`;
     }
 
     return html;
@@ -1493,22 +1563,10 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const rechargeLabel = usage?.recharge?.period === 'shortRest'
       ? 'Short Rest'
       : (usage?.recharge?.period === 'longRest' ? 'Long Rest' : '');
-
-    if (system.classification) {
-      const classificationLabel = system.classification === 'legendary' ? 'Legendary' : 'Standard';
-      html += `<div class=\"detail-row\"><span class=\"detail-label\">Classification:</span><span class=\"detail-value\">${classificationLabel}</span></div>`;
-    }
-
-    if (Number.isFinite(system.xpCost) && system.xpCost > 0) {
-      html += `<div class=\"detail-row\"><span class=\"detail-label\">XP Cost:</span><span class=\"detail-value\">${system.xpCost}</span></div>`;
-    }
-    
-    if (system.prerequisites) {
-      const prereqText = D8CharacterSheet._formatPrerequisites(system.prerequisites);
+    const prereqText = D8CharacterSheet._formatPrerequisites(system.prerequisites);
       if (prereqText) {
         html += `<div class=\"detail-row\"><span class=\"detail-label\">Prerequisites:</span><span class=\"detail-value\">${prereqText}</span></div>`;
       }
-    }
     
     if (usageMode) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Usage:</span><span class=\"detail-value\">${usageMode}</span></div>`;

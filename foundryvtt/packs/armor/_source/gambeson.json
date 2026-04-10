@@ -2,10 +2,10 @@
   "_id": "4ebfd74ed76ab46b",
   "name": "Gambeson",
   "type": "armor",
-  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+  "img": "icons/equipment/chest/breastplate-quilted-brown.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>A thicker, more heavily padded coat than the aketon, with additional quilted layers that provide meaningful protection in their own right. The gambeson excels at absorbing the crushing force of bludgeoning weapons. It remains popular with soldiers who cannot afford the expense of mail.</p>"
     },
     "armorType": "medium",
     "dr": {

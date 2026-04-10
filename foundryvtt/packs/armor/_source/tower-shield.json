@@ -5,7 +5,7 @@
   "img": "icons/equipment/shield/tower-wood-blue.webp",
   "system": {
     "description": {
-      "value": "<p>Provides Full Cover when crouching</p>"
+      "value": "<p>An enormous rectangular or slightly curved shield large enough to shelter the bearer's entire body. Tower shields are not fighting tools so much as mobile fortifications. In open combat they are awkward and exhausting, demanding significant strength just to keep upright.</p>\n<p>Provides Full Cover when crouching</p>"
     },
     "shieldType": "heavy",
     "handUsage": "Occupies off-hand completely",
@@ -16,11 +16,11 @@
     "reactions": [
       {
         "name": "Shield Block",
-        "_id": "083c3db43dd24c95"
+        "_id": "d0c1c276ea9f57eb"
       },
       {
         "name": "Ranged Defense",
-        "_id": "bf8fb3f40d0343f0"
+        "_id": "482ae0d0a2a7c59c"
       }
     ],
     "linkedAbilities": [

@@ -2,10 +2,10 @@
   "_id": "c2f9dfe6e89e50bb",
   "name": "Brigandine/Coat of Plates",
   "type": "armor",
-  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+  "img": "icons/equipment/chest/coat-collared-studded-red.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Small rectangular plates of steel riveted to the inside of a fabric or leather coat, with the rivet heads visible on the exterior as rows of metal studs. The brigandine distributes protection broadly and evenly across the torso, providing consistent resistance to all physical damage types without the pronounced weaknesses of some other construction methods.</p>"
     },
     "armorType": "medium",
     "dr": {

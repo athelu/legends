@@ -5,7 +5,7 @@
   "img": "icons/equipment/shield/pavise-wood-steel.webp",
   "system": {
     "description": {
-      "value": "<p>Primarily a siege/defensive weapon, awkward in mobile combat</p>\n<p>Planted Mode: Use 1 [Move] action to plant shield. While planted:</p>\n<ul>\n<li>Provides full cover against ranged attacks from one direction (choose direction when planting)</li>\n<li>Use 1 [Move] action to retrieve it from planted</li>\n</ul>\n<p>Carried Mode: Functions as Tower Shield but with Misfortune on your attacks</p>"
+      "value": "<p>A freestanding shield large enough to shelter an archer or crossbowman entirely, designed to be planted in the ground and used as a portable wall rather than carried into melee. In planted mode the pavise transforms a section of open ground into a fortified firing position, providing full cover against ranged attacks from a single direction.</p>\n<p>Primarily a siege/defensive weapon, awkward in mobile combat</p>\n<p>Planted Mode: Use 1 [Move] action to plant shield. While planted:</p>\n<ul>\n<li>Provides full cover against ranged attacks from one direction (choose direction when planting)</li>\n<li>Use 1 [Move] action to retrieve it from planted</li>\n</ul>\n<p>Carried Mode: Functions as Tower Shield but with Misfortune on your attacks</p>"
     },
     "shieldType": "heavy",
     "handUsage": "Requires both hands to move/position, but can be planted",
@@ -16,11 +16,11 @@
     "reactions": [
       {
         "name": "Shield Block",
-        "_id": "083c3db43dd24c95"
+        "_id": "d0c1c276ea9f57eb"
       },
       {
         "name": "Ranged Defense",
-        "_id": "bf8fb3f40d0343f0"
+        "_id": "482ae0d0a2a7c59c"
       }
     ],
     "linkedAbilities": [

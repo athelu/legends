@@ -5,7 +5,7 @@
   "img": "icons/equipment/shield/heater-marked-red.webp",
   "system": {
     "description": {
-      "value": "<p>Can be slung on back when not in use (takes 1 [Minor] action to ready)</p>"
+      "value": "<p>A triangular shield with a flat top and tapered point, designed to protect the body from shoulder to mid-thigh while allowing full freedom of movement in the sword arm. The heater's shape provides excellent coverage against angled blows,</p>\n<p>Can be slung on back when not in use (takes 1 [Minor] action to ready)</p>"
     },
     "shieldType": "medium",
     "handUsage": "Occupies off-hand completely",
@@ -16,11 +16,11 @@
     "reactions": [
       {
         "name": "Shield Block",
-        "_id": "083c3db43dd24c95"
+        "_id": "d0c1c276ea9f57eb"
       },
       {
         "name": "Ranged Defense",
-        "_id": "bf8fb3f40d0343f0"
+        "_id": "482ae0d0a2a7c59c"
       }
     ],
     "linkedAbilities": [

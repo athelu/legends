@@ -212,6 +212,20 @@ async function setBackgroundGrantState(actor, state) {
   await actor.setFlag(BACKGROUND_FLAG_SCOPE, BACKGROUND_FLAG_KEY, state);
 }
 
+function getPrimaryBackgroundName(actor) {
+  return actor?.items?.find(item => item.type === 'background')?.name || '';
+}
+
+async function syncActorBackgroundLabel(actor, explicitName = null) {
+  if (!actor || actor.type !== 'character') return;
+
+  const nextName = explicitName == null ? getPrimaryBackgroundName(actor) : String(explicitName || '');
+  const currentName = String(actor.system?.biography?.background || '');
+  if (currentName === nextName) return;
+
+  await actor.update({ 'system.biography.background': nextName });
+}
+
 async function resolveGrantDocument(grant) {
   const pack = game.packs.get(grant.pack);
   if (!pack) return null;
@@ -408,10 +422,13 @@ export async function applyBackgroundGrants(actor, background) {
   if (state[background.id]?.applied) {
     state[background.id] = await ensureBackgroundGrantedItems(actor, background, state[background.id], itemGrants);
     await setBackgroundGrantState(actor, state);
+    await syncActorBackgroundLabel(actor, background.name);
     return;
   }
 
-  const updates = {};
+  const updates = {
+    'system.biography.background': background.name
+  };
   for (const [skillKey, amount] of Object.entries(skillGrants)) {
     const current = Number(actor.system.skills?.[skillKey] ?? 0);
     updates[`system.skills.${skillKey}`] = Math.max(0, current + Number(amount || 0));
@@ -472,6 +489,7 @@ export async function revokeBackgroundGrants(actor, background) {
 
   delete state[background.id];
   await setBackgroundGrantState(actor, state);
+  await syncActorBackgroundLabel(actor);
 }
 
 export async function syncBackgroundsForActor(actor) {
@@ -493,6 +511,7 @@ export async function syncBackgroundsForActor(actor) {
   }
 
   await setBackgroundGrantState(actor, state);
+  await syncActorBackgroundLabel(actor);
 }
 
 export function initializeBackgroundHandlers() {

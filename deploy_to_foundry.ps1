@@ -24,48 +24,53 @@ if (!(Test-Path $SourceDir)) {
     exit 1
 }
 
-# Files and directories to deploy
-$deployItems = @(
-    # New module files
-    @{src="module/condition-engine.mjs"; dst="module/"},
-    @{src="module/feat-effects.mjs"; dst="module/"},
-
-    # Modified module files
-    @{src="module/legends.mjs"; dst="module/"},
-    @{src="module/combat.mjs"; dst="module/"},
-    @{src="module/dice.mjs"; dst="module/"},
-    @{src="module/shields.mjs"; dst="module/"},
-    @{src="module/documents/actor.mjs"; dst="module/documents/"},
-    @{src="module/documents/item.mjs"; dst="module/documents/"},
-    @{src="module/sheets/character-sheet.mjs"; dst="module/sheets/"},
-    @{src="module/sheets/item-sheet.mjs"; dst="module/sheets/"},
-    @{src="module/sheets/npc-sheet.mjs"; dst="module/sheets/"},
-
-    # Styles
-    @{src="styles/legends.css"; dst="styles/"},
-
-    # Templates
-    @{src="templates/item/item-feat-sheet.hbs"; dst="templates/item/"},
-
-    # System configuration
-    @{src="system.json"; dst=""}
+# Directories and files to deploy
+$deployDirectories = @(
+    "module",
+    "styles",
+    "templates",
+    "lang",
+    "images",
+    "ui"
 )
 
-Write-Host "Deploying core files..." -ForegroundColor Cyan
+$deployFiles = @(
+    "system.json",
+    "template.json",
+    "README.md",
+    "LICENSE.txt"
+)
 
-foreach ($item in $deployItems) {
-    $localPath = Join-Path $SourceDir $item.src
-    $remotePath = "${ServerUser}@${ServerHost}:${ServerPath}/$($item.dst)"
+Write-Host "Deploying runtime directories..." -ForegroundColor Cyan
 
+foreach ($dir in $deployDirectories) {
+    $localPath = Join-Path $SourceDir $dir
     if (Test-Path $localPath) {
-        Write-Host "  Copying $($item.src)..."
-        scp $localPath $remotePath
+        Write-Host "  Syncing $dir/..."
+        ssh "${ServerUser}@${ServerHost}" "mkdir -p ${ServerPath}/${dir}"
+        scp -r "$localPath/*" "${ServerUser}@${ServerHost}:${ServerPath}/${dir}/"
 
         if ($LASTEXITCODE -ne 0) {
-            Write-Host "  ERROR: Failed to copy $($item.src)" -ForegroundColor Red
+            Write-Host "  ERROR: Failed to sync $dir" -ForegroundColor Red
         }
     } else {
-        Write-Host "  WARNING: File not found - $($item.src)" -ForegroundColor Yellow
+        Write-Host "  WARNING: Directory not found - $dir" -ForegroundColor Yellow
+    }
+}
+
+Write-Host "Deploying root files..." -ForegroundColor Cyan
+
+foreach ($file in $deployFiles) {
+    $localPath = Join-Path $SourceDir $file
+    if (Test-Path $localPath) {
+        Write-Host "  Copying $file..."
+        scp $localPath "${ServerUser}@${ServerHost}:${ServerPath}/"
+
+        if ($LASTEXITCODE -ne 0) {
+            Write-Host "  ERROR: Failed to copy $file" -ForegroundColor Red
+        }
+    } else {
+        Write-Host "  WARNING: File not found - $file" -ForegroundColor Yellow
     }
 }
 
