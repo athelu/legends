@@ -2,10 +2,10 @@
   "_id": "4f2b30ce32cb4ca7",
   "name": "Aketon/Light Padded",
   "type": "armor",
-  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+  "img": "icons/equipment/chest/coat-collared-red-gold.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Layers of quilted linen or wool stitched tightly together, the aketon is the most accessible armor available to common soldiers and the starting point for most fighting careers. Cheap to produce, easy to wear for extended periods, and silent in movement, it offers modest protection against cuts and superior cushioning against blunt impacts. It is frequently worn beneath heavier armor to prevent chafing and absorb shock.</p>"
     },
     "armorType": "light",
     "dr": {

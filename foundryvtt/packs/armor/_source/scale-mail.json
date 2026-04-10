@@ -2,10 +2,10 @@
   "_id": "8a4300ae44a6d4e6",
   "name": "Scale Mail",
   "type": "armor",
-  "img": "icons/equipment/chest/breastplate-scale-grey.webp",
+  "img": "icons/equipment/chest/breastplate-metal-scaled-grey.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Overlapping metal scales sewn or laced to a backing of leather or cloth, each scale riveted at the top and free to flex at the bottom. The overlapping arrangement provides solid coverage against slashing and reasonable resistance to thrusts. Scale mail is heavier than chain and similarly noisy, but its construction makes it easier to repair in the field.</p>"
     },
     "armorType": "medium",
     "dr": {

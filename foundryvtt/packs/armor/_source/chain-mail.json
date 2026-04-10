@@ -5,7 +5,7 @@
   "img": "icons/equipment/chest/breastplate-scale-grey.webp",
   "system": {
     "description": {
-      "value": ""
+      "value": "<p>Thousands of interlocking metal rings riveted together into a flexible mesh that drapes over the body like a heavy garment. Chain mail is excellent against slashing attacks, which struggle to find purchase between the rings, but offers less resistance to the focused point of a thrust or the concentrated impact of a crushing blow.</p>"
     },
     "armorType": "medium",
     "dr": {

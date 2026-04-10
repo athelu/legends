@@ -1,0 +1,30 @@
+{
+  "_id": "117e564783802926",
+  "name": "Leather Armor, Hardened",
+  "type": "armor",
+  "img": "icons/equipment/chest/breastplate-layered-leather-brown-silver.webp",
+  "system": {
+    "description": {
+      "value": "<p>Hardened leather that has been boiled, shaped, and stiffened into rigid plates, offering significantly better protection than simple padded cloth while remaining light and silent. The cost reflects the skilled labor required to shape and harden the material properly.</p>"
+    },
+    "armorType": "light",
+    "dr": {
+      "slashing": 3,
+      "piercing": 2,
+      "bludgeoning": 4
+    },
+    "properties": [
+      "LightArmor"
+    ],
+    "stealthPenalty": "none",
+    "swimPenalty": "",
+    "donTime": "",
+    "doffTime": "",
+    "weight": 0,
+    "cost": 200.0,
+    "quantity": 1,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!117e564783802926"
+}

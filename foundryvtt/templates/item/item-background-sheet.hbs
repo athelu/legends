@@ -7,13 +7,56 @@
   </header>
 
   <nav class="sheet-tabs tabs" data-group="primary">
-    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="description">Overview</a>
     <a class="item" data-tab="details">Details</a>
   </nav>
 
   <section class="sheet-body">
     <!-- Description Tab -->
     <div class="tab description" data-group="primary" data-tab="description">
+      {{#if backgroundSummary.hasBenefits}}
+      <div class="background-overview">
+        <h3>Background Benefits</h3>
+
+        {{#if backgroundSummary.startingXP}}
+        <div class="form-group">
+          <label>Starting XP</label>
+          <div>+{{backgroundSummary.startingXP}} XP</div>
+        </div>
+        {{/if}}
+
+        {{#if backgroundSummary.grantedSkills.length}}
+        <div class="form-group">
+          <label>Granted Skill Ranks</label>
+          <div>
+            {{#each backgroundSummary.grantedSkills}}
+            <div>{{label}} {{amount}}</div>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if backgroundSummary.itemGrants.length}}
+        <div class="form-group">
+          <label>Starting Equipment</label>
+          <div>
+            {{#each backgroundSummary.itemGrants}}
+            <div>{{label}}</div>
+            {{/each}}
+          </div>
+        </div>
+        {{/if}}
+
+        {{#if backgroundSummary.features}}
+        <div class="form-group">
+          <label>Special Features</label>
+          <div>{{backgroundSummary.features}}</div>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      <h3>Description</h3>
       {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
     </div>
 

@@ -30,18 +30,37 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   /** @override */
   static TABS = {
     primary: {
-      main: { id: "main", group: "primary", label: "Main" },
-      combat: { id: "combat", group: "primary", label: "Combat" }
+      initial: "main",
+      tabs: [
+        { id: "main", label: "Main" },
+        { id: "combat", label: "Combat" }
+      ]
     }
   };
 
   tabGroups = { primary: "main" };
 
+  get title() {
+    return this.document.name || "NPC";
+  }
+
   /** @override - Configure the window title to show just the actor name */
   _configureRenderOptions(options) {
     super._configureRenderOptions(options);
+    options.parts = ["sheet"];
     options.window = options.window || {};
-    options.window.title = this.document.name || "NPC";
+    options.window.title = this.title;
+  }
+
+  /** @override */
+  async _onFirstRender(context, options) {
+    await super._onFirstRender(context, options);
+
+    const rect = this.element?.getBoundingClientRect?.();
+    if (!rect) return;
+    if (rect.width < 560 || rect.height < 420) {
+      this.setPosition({ width: 600, height: 700 });
+    }
   }
 
   /** @override - Attach listeners to form inputs */

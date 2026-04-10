@@ -64,7 +64,11 @@ def parse_bold_metadata(section_text: str) -> dict[str, str]:
     def flush_current():
         nonlocal current_key, current_lines
         if current_key:
-            meta[current_key] = '\n'.join(line.rstrip() for line in current_lines).strip()
+            value = '\n'.join(line.rstrip() for line in current_lines).strip()
+            if current_key in meta and meta[current_key] and value:
+                meta[current_key] = f"{meta[current_key]}\n\n{value}"
+            else:
+                meta[current_key] = value
         current_key = None
         current_lines = []
 
@@ -225,6 +229,8 @@ def parse_armor_md(md_file):
         reactions = split_metadata_list(meta.get('granted reactions') or meta.get('reactions'))
 
         description_parts = []
+        if meta.get('description'):
+            description_parts.append(meta['description'])
         narrative = strip_metadata_lines(section_text)
         if narrative:
             description_parts.append(narrative)

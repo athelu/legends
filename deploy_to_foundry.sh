@@ -12,40 +12,24 @@ echo "Target: $TARGET_DIR"
 echo ""
 
 # Create necessary directories if they don't exist
-mkdir -p "$TARGET_DIR/module"
-mkdir -p "$TARGET_DIR/module/sheets"
-mkdir -p "$TARGET_DIR/module/documents"
-mkdir -p "$TARGET_DIR/styles"
-mkdir -p "$TARGET_DIR/templates/item"
 mkdir -p "$TARGET_DIR/packs"
 
-# Copy NEW module files (critical!)
-echo "Copying new module files..."
-cp "$SOURCE_DIR/module/condition-engine.mjs" "$TARGET_DIR/module/"
-cp "$SOURCE_DIR/module/feat-effects.mjs" "$TARGET_DIR/module/"
+# Sync runtime directories so sheet template/style changes are deployed too
+for dir in module styles templates lang images ui; do
+  if [ -d "$SOURCE_DIR/$dir" ]; then
+    echo "Syncing $dir/..."
+    mkdir -p "$TARGET_DIR/$dir"
+    cp -r "$SOURCE_DIR/$dir/." "$TARGET_DIR/$dir/"
+  fi
+done
 
-# Copy modified module files
-echo "Copying modified module files..."
-cp "$SOURCE_DIR/module/legends.mjs" "$TARGET_DIR/module/"
-cp "$SOURCE_DIR/module/combat.mjs" "$TARGET_DIR/module/"
-cp "$SOURCE_DIR/module/dice.mjs" "$TARGET_DIR/module/"
-cp "$SOURCE_DIR/module/shields.mjs" "$TARGET_DIR/module/"
-cp "$SOURCE_DIR/module/documents/actor.mjs" "$TARGET_DIR/module/documents/"
-cp "$SOURCE_DIR/module/documents/item.mjs" "$TARGET_DIR/module/documents/"
-cp "$SOURCE_DIR/module/sheets/character-sheet.mjs" "$TARGET_DIR/module/sheets/"
-cp "$SOURCE_DIR/module/sheets/item-sheet.mjs" "$TARGET_DIR/module/sheets/"
-
-# Copy styles
-echo "Copying styles..."
-cp "$SOURCE_DIR/styles/legends.css" "$TARGET_DIR/styles/"
-
-# Copy templates
-echo "Copying templates..."
-cp "$SOURCE_DIR/templates/item/item-feat-sheet.hbs" "$TARGET_DIR/templates/item/"
-
-# Copy system configuration
-echo "Copying system.json..."
-cp "$SOURCE_DIR/system.json" "$TARGET_DIR/"
+# Copy root runtime files
+for file in system.json template.json README.md LICENSE.txt; do
+  if [ -f "$SOURCE_DIR/$file" ]; then
+    echo "Copying $file..."
+    cp "$SOURCE_DIR/$file" "$TARGET_DIR/"
+  fi
+done
 
 # Copy all pack .db files
 echo "Copying pack databases..."

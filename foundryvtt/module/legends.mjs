@@ -31,6 +31,9 @@ import * as training from "./training.mjs";
 import { initializeConditionEngine, initializeChatHandlers, handleRecoveryResult } from "./condition-engine.mjs";
 import { registerEnrichers } from "./enrichers.mjs";
 
+console.warn("Legends | legends.mjs evaluated", import.meta.url);
+globalThis.__legendsModuleLoaded = true;
+
 const ELEMENTAL_ENERGIES = ["earth", "air", "fire", "water"];
 
 function resolveWeaveEnergyType(actor, energyType) {
@@ -62,6 +65,59 @@ function getWeavePotentialValue(actor, weave) {
   const primaryEnergyType = weave?.system?.energyCost?.primary?.type;
   const resolvedEnergyType = resolveWeaveEnergyType(actor, primaryEnergyType);
   return actor?.system?.potentials?.[resolvedEnergyType]?.value ?? 0;
+}
+
+function getDefaultSheetClassMap() {
+  const actorTypes = ["character", "npc"];
+  const itemTypes = Object.keys(game.system?.documentTypes?.Item || {});
+  const actorSheets = Object.fromEntries([
+    ["character", "legends.D8CharacterSheet"],
+    ["npc", "legends.D8NPCSheet"]
+  ].filter(([type]) => actorTypes.includes(type)));
+  const itemSheets = Object.fromEntries(itemTypes.map((type) => [type, "legends.D8ItemSheet"]));
+
+  return {
+    Actor: actorSheets,
+    Item: itemSheets
+  };
+}
+
+async function ensureDefaultSheets() {
+  const SheetConfig = foundry.applications?.apps?.DocumentSheetConfig;
+  if (!SheetConfig?.updateDefaultSheets || !game.settings?.get || !game.settings?.set) {
+    return;
+  }
+
+  const current = foundry.utils.deepClone(game.settings.get("core", "sheetClasses") || {});
+  const desired = getDefaultSheetClassMap();
+  let changed = false;
+
+  for (const [documentName, typeMap] of Object.entries(desired)) {
+    current[documentName] = current[documentName] || {};
+    for (const [type, sheetId] of Object.entries(typeMap)) {
+      if (current[documentName][type] !== sheetId) {
+        current[documentName][type] = sheetId;
+        changed = true;
+      }
+    }
+  }
+
+  if (changed) {
+    await game.settings.set("core", "sheetClasses", current);
+  }
+
+  SheetConfig.updateDefaultSheets(current);
+}
+
+function logSheetDiagnostics(stage) {
+  const sheetClasses = game.settings?.get?.("core", "sheetClasses") || {};
+  console.warn(`Legends | Sheet diagnostics (${stage})`, {
+    actorDocumentClass: CONFIG.Actor?.documentClass?.name,
+    itemDocumentClass: CONFIG.Item?.documentClass?.name,
+    actorSheetClass: CONFIG.Actor?.sheetClass?.name,
+    itemSheetClass: CONFIG.Item?.sheetClass?.name,
+    sheetClasses
+  });
 }
 
 function isDraggedEffectData(data) {
@@ -269,6 +325,7 @@ import { getSkillValue, normalizeSkillKey, SKILL_ATTRIBUTE_KEYS } from "./skill-
 
 Hooks.once('init', async function() {
   console.log('Legends | Initializing Legends System');
+  ui.notifications?.info?.('Legends init loaded (sheet diagnostics enabled)');
 
   // Create the main game.legends namespace
   game.legends = {
@@ -323,24 +380,49 @@ Hooks.once('init', async function() {
   CONFIG.specialStatusEffects = {};
 
   // Register sheet application classes (AppV2)
-  foundry.documents.collections.Actors.unregisterSheet("core", foundry.applications.sheets.ActorSheetV2);
-  foundry.documents.collections.Actors.registerSheet("legends", D8CharacterSheet, {
-    types: ["character"],
-    makeDefault: true,
-    label: "D8.SheetLabels.Character"
-  });
+  const SheetConfig = foundry.applications?.apps?.DocumentSheetConfig;
+  const ActorDocumentClass = CONFIG.Actor.documentClass;
+  const ItemDocumentClass = CONFIG.Item.documentClass;
+  if (SheetConfig?.registerSheet) {
+    SheetConfig.unregisterSheet(ActorDocumentClass, "core", foundry.applications.sheets.ActorSheetV2, {
+      types: ["character", "npc"]
+    });
+    SheetConfig.registerSheet(ActorDocumentClass, "legends", D8CharacterSheet, {
+      types: ["character"],
+      makeDefault: true,
+      label: "D8.SheetLabels.Character"
+    });
+    SheetConfig.registerSheet(ActorDocumentClass, "legends", D8NPCSheet, {
+      types: ["npc"],
+      makeDefault: true,
+      label: "D8.SheetLabels.NPC"
+    });
 
-  foundry.documents.collections.Actors.registerSheet("legends", D8NPCSheet, {
-    types: ["npc"],
-    makeDefault: true,
-    label: "D8.SheetLabels.NPC"
-  });
+    SheetConfig.unregisterSheet(ItemDocumentClass, "core", foundry.applications.sheets.ItemSheetV2);
+    SheetConfig.registerSheet(ItemDocumentClass, "legends", D8ItemSheet, {
+      makeDefault: true,
+      label: "D8.SheetLabels.Item"
+    });
+  } else {
+    foundry.documents.collections.Actors.unregisterSheet("core", foundry.applications.sheets.ActorSheetV2);
+    foundry.documents.collections.Actors.registerSheet("legends", D8CharacterSheet, {
+      types: ["character"],
+      makeDefault: true,
+      label: "D8.SheetLabels.Character"
+    });
 
-  foundry.documents.collections.Items.unregisterSheet("core", foundry.applications.sheets.ItemSheetV2);
-  foundry.documents.collections.Items.registerSheet("legends", D8ItemSheet, {
-    makeDefault: true,
-    label: "D8.SheetLabels.Item"
-  });
+    foundry.documents.collections.Actors.registerSheet("legends", D8NPCSheet, {
+      types: ["npc"],
+      makeDefault: true,
+      label: "D8.SheetLabels.NPC"
+    });
+
+    foundry.documents.collections.Items.unregisterSheet("core", foundry.applications.sheets.ItemSheetV2);
+    foundry.documents.collections.Items.registerSheet("legends", D8ItemSheet, {
+      makeDefault: true,
+      label: "D8.SheetLabels.Item"
+    });
+  }
 
   // Preload Handlebars templates
   await foundry.applications.handlebars.loadTemplates([
@@ -374,6 +456,15 @@ Hooks.once('init', async function() {
 
   // Register custom TextEditor enrichers (inline rolls)
   registerEnrichers();
+
+  await ensureDefaultSheets();
+  logSheetDiagnostics('post-init');
+
+  game.legends = game.legends || {};
+  game.legends.debugSheetDiagnostics = () => {
+    logSheetDiagnostics('manual');
+    return game.settings?.get?.('core', 'sheetClasses');
+  };
 });
 
 Hooks.on("dropCanvasData", async function(canvas, data) {
@@ -406,6 +497,7 @@ Hooks.on("dropCanvasData", async function(canvas, data) {
 
 Hooks.once('ready', async function() {
   console.log('Legends | System Ready');
+  logSheetDiagnostics('ready');
 
   // Register conditions as status effects for token HUD (packs are fully loaded at ready)
   await registerConditionsAsStatusEffects();
@@ -2419,6 +2511,11 @@ function registerHandlebarsHelpers() {
   
   Handlebars.registerHelper('eq', function(a, b) {
     return a === b;
+  });
+
+  Handlebars.registerHelper('or', function(...args) {
+    args.pop();
+    return args.some(Boolean);
   });
   
   // Check if an array contains a value
