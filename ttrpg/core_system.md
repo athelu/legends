@@ -105,7 +105,7 @@ During the course of a session a character may choose to spend their luck in two
 
 ### Reduce die roll
 
-Spend 1 Luck point reduces any single die result by 1. Can spend multiple points on one roll.
+Spending 1 Luck point reduces any single die result by 1. You can spend multiple points on one roll.
 
 ### Prevent complication
 
@@ -169,7 +169,7 @@ Each action in Legends will have a keyword denoting the type of action it is. Th
 One [Minor] action can be combined with a [Move] action for free. Examples would be drawing a weapon while moving, or opening a door while moving.
 
 ### Multiple Action Penalty
-Combat actions have a penalty that is triggered if more than one is taken during a characters turn.Only actions with [Combat] keywords trigger the penalty:
+Combat actions have a penalty that is triggered if more than one is taken during a character's turn. Only actions with [Combat] keywords trigger the penalty:
 - First [Combat] action: Normal
 - Second [Combat] action: Add 1 to both die results
 - Third [Combat] action: Add 2 to both die results

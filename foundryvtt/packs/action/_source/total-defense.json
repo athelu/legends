@@ -5,13 +5,14 @@
   "img": "icons/skills/melee/blade-damage.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 3 <strong>Effect:</strong> Focus entirely on defense until your next turn. Cannot take any other actions this turn. All attacks made against you until the start of your next turn have Misfortune.</p>\n<h2>Move Actions</h2>\n<p>Movement actions allow you to reposition, navigate terrain, and control the battlefield.</p>\n<p><strong>Basic Movement Mechanics:</strong></p>\n<ul>\n<li>Speed: Your base movement speed is 30 feet per round (unless modified by ancestry, conditions, or abilities).</li>\n<li>Difficult terrain: It costs 2 feet of movement for every 1 foot traveled.</li>\n<li>Multiple Movements: You can take multiple [Move] actions in a turn, spending your actions as needed</li>\n<li>Splitting Movement: You can split your movement between other actions (move 15 feet, attack, move 15 feet more)</li>\n<li>Opportunity Attacks: Moving out of an enemy's reach provokes Opportunity Attacks (see Reactions). Forced movement (shoved, pushed by spells) and teleportation do not trigger an opportunity attack.</li>\n<li>Enemy Space: You cannot move through an enemy's space unless you Tumble Through or have special permission</li>\n<li>Ally Space: You may move through allies' spaces provided you do not interrupt or end your movement in their space.</li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 3 <strong>Effect:</strong> Focus entirely on defense until your next turn. Cannot take any other actions this turn. All attacks made against you until the start of your next turn have Misfortune.</p>"
     },
     "actionType": "combat",
     "actionCost": "3",
     "requirements": "",
     "trigger": "",
-    "effect": "Focus entirely on defense until your next turn. Cannot take any other actions this turn. All attacks made against you until the start of your next turn have Misfortune.\n\n## Move Actions\nMovement actions allow you to reposition, navigate terrain, and control the battlefield.\n\nBasic Movement Mechanics:\n- Speed: Your base movement speed is 30 feet per round (unless modified by ancestry, conditions, or abilities).\n- Difficult terrain: It costs 2 feet of movement for every 1 foot traveled.\n- Multiple Movements: You can take multiple [Move] actions in a turn, spending your actions as needed\n- Splitting Movement: You can split your movement between other actions (move 15 feet, attack, move 15 feet more)\n- Opportunity Attacks: Moving out of an enemy's reach provokes Opportunity Attacks (see Reactions). Forced movement (shoved, pushed by spells) and teleportation do not trigger an opportunity attack.\n- Enemy Space: You cannot move through an enemy's space unless you Tumble Through or have special permission\n- Ally Space: You may move through allies' spaces provided you do not interrupt or end your movement in their space.",
+    "effect": "Focus entirely on defense until your next turn. Cannot take any other actions this turn. All attacks made against you until the start of your next turn have Misfortune.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

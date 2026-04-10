@@ -25,11 +25,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "While in Primal Fury"
     },
-    "keywords": "[Combat], [Savage]",
+    "keywords": [
+      "[Combat]",
+      "[Savage]"
+    ],
     "notes": "",
     "effects": []
   },

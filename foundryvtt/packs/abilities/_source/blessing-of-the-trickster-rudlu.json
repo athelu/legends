@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Minor] action Range: 30 feet (must see target) Effect: Grant one creature Fortune on their next roll. Lady Luck smiles upon them. The violet light of fortune briefly flickers around them. Usage: Uses 1 Channel Divinity</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Minor] action</li>\n<li><strong>Range:</strong> 30 feet (must see target)</li>\n<li><strong>Effect:</strong> Grant one creature Fortune on their next roll. Lady Luck smiles upon them. The violet light of fortune briefly flickers around them.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "Grant one creature Fortune on their next roll. Lady Luck smiles upon them. The violet light of fortune briefly flickers around them.",
+    "isActive": false,
+    "actionCost": "1 [Minor] action",
+    "requirements": "",
+    "range": "30 feet (must see target)",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!f1c4af6e2b6e457c"

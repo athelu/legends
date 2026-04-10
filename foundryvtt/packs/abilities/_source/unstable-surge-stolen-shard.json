@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Whenever you weave using your Primary Energy (Fire), add +[[/damage 4]] damage OR extend duration by 1 round. Power stolen doesn't flow smoothly—it erupts with raw force. This is a passive ability.</p>"
+      "value": "<ul>\n<li><strong>Effect:</strong> Whenever you weave using your Primary Energy (Fire), add +[[/damage 4]] damage OR extend duration by 1 round. Power stolen doesn't flow smoothly—it erupts with raw force. This is a passive ability.</li>\n</ul>"
     },
     "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "source": "Eldritch Pact Abilities",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "Whenever you weave using your Primary Energy (Fire), add +4 damage OR extend duration by 1 round. Power stolen doesn't flow smoothly—it erupts with raw force. This is a passive ability.",
+    "isActive": false,
+    "actionCost": "",
+    "requirements": "",
+    "range": "",
+    "target": "",
+    "usage": "",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!b31b62fdeeb646f6"

@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Combat] action Range: Touch or Self Frequency: Once per short rest Effect: Heal yourself or touched ally for HP equal to Charisma × tier. Life borrowed is life shared. Your pact allows you to channel positive energy through desperation.</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> Touch or Self</li>\n<li><strong>Frequency:</strong> Once per short rest</li>\n<li><strong>Effect:</strong> Heal yourself or touched ally for HP equal to Charisma × tier. Life borrowed is life shared. Your pact allows you to channel positive energy through desperation.</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Eldritch Pact Abilities",
+    "keywords": [],
     "trigger": "",
-    "frequency": "",
-    "effect": "",
-    "isActive": false
+    "frequency": "Once per short rest",
+    "effect": "Heal yourself or touched ally for HP equal to Charisma × tier. Life borrowed is life shared. Your pact allows you to channel positive energy through desperation.",
+    "isActive": false,
+    "actionCost": "1 [Combat] action",
+    "requirements": "",
+    "range": "Touch or Self",
+    "target": "",
+    "usage": "",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!8e3d1f49a1764a50"

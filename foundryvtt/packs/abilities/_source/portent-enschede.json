@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: [Reaction] Trigger: Any creature you can see makes a roll Range: 60 feet (line of sight) Effect: Force the creature to reroll all dice for that check. You choose which result they must use (original or reroll). You glimpse the thread of fate and pull it in a different direction. Usage: Uses 1 Channel Divinity</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> [Reaction]</li>\n<li><strong>Trigger:</strong> Any creature you can see makes a roll</li>\n<li><strong>Range:</strong> 60 feet (line of sight)</li>\n<li><strong>Effect:</strong> Force the creature to reroll all dice for that check. You choose which result they must use (original or reroll). You glimpse the thread of fate and pull it in a different direction.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
-    "trigger": "",
+    "abilityType": "reaction",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
+    "trigger": "Any creature you can see makes a roll",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "Force the creature to reroll all dice for that check. You choose which result they must use (original or reroll). You glimpse the thread of fate and pull it in a different direction.",
+    "isActive": false,
+    "actionCost": "[Reaction]",
+    "requirements": "",
+    "range": "60 feet (line of sight)",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!665a61cc6e504274"

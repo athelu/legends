@@ -26,11 +26,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "1"
+      },
       "text": "Once per long rest; requires 1 hour of uninterrupted preparation"
     },
-    "keywords": "[Magic], [Mageborn]",
+    "keywords": [
+      "[Magic]",
+      "[Mageborn]"
+    ],
     "notes": "",
     "effects": []
   },

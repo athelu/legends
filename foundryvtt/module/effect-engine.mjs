@@ -5,6 +5,174 @@
 
 import { processRecoveryPrompt, promptForSave } from './condition-engine.mjs';
 
+const ROUND_CONVERSION = {
+  rounds: 1,
+  minutes: 10,
+  hours: 600,
+};
+
+function normalizeEffectTrigger(trigger) {
+  return trigger === 'turnStart' ? 'startOfTurn' : trigger === 'turnEnd' ? 'endOfTurn' : trigger;
+}
+
+function coerceEffectValue(value, currentValue) {
+  if (typeof value === 'boolean') {
+    return value;
+  }
+
+  if (typeof value === 'number') {
+    return value;
+  }
+
+  const stringValue = String(value ?? '').trim();
+  if (!stringValue) {
+    return stringValue;
+  }
+
+  if (stringValue === 'true') return true;
+  if (stringValue === 'false') return false;
+
+  const numericValue = Number(stringValue);
+  if (!Number.isNaN(numericValue) && stringValue !== '') {
+    return numericValue;
+  }
+
+  if (typeof currentValue === 'boolean') {
+    return stringValue.toLowerCase() === 'true';
+  }
+
+  return stringValue;
+}
+
+function convertDurationToRounds(duration = {}) {
+  if (!duration || typeof duration !== 'object') {
+    return null;
+  }
+
+  const value = Number(duration.value);
+  if (!Number.isFinite(value) || value <= 0) {
+    return null;
+  }
+
+  const factor = ROUND_CONVERSION[duration.type] ?? null;
+  if (!factor) {
+    return null;
+  }
+
+  return Math.max(1, Math.floor(value * factor));
+}
+
+function buildDurationState(duration = {}) {
+  if (!duration || typeof duration !== 'object') {
+    return null;
+  }
+
+  const remainingRounds = convertDurationToRounds(duration);
+  if (!Number.isFinite(remainingRounds)) {
+    return null;
+  }
+
+  return {
+    remainingRounds,
+    totalRounds: remainingRounds,
+  };
+}
+
+function getStoredDurationState(effect) {
+  const state = effect?.flags?.legends?.durationState;
+  if (!state || typeof state !== 'object') {
+    return null;
+  }
+
+  const remainingRounds = Number(state.remainingRounds);
+  const totalRounds = Number(state.totalRounds);
+  if (!Number.isFinite(remainingRounds) || !Number.isFinite(totalRounds)) {
+    return null;
+  }
+
+  return {
+    remainingRounds,
+    totalRounds,
+  };
+}
+
+async function ensureDurationState(effect) {
+  const existingState = getStoredDurationState(effect);
+  if (existingState) {
+    return existingState;
+  }
+
+  const state = buildDurationState(effect?.system?.duration);
+  if (!state) {
+    return null;
+  }
+
+  await effect.update({
+    'flags.legends.durationState': state,
+  });
+
+  return state;
+}
+
+function shouldAdvanceDuration(duration = {}, trigger) {
+  if (!duration || typeof duration !== 'object') {
+    return false;
+  }
+
+  const normalizedTrigger = normalizeEffectTrigger(trigger);
+  const normalizedExpireOn = normalizeEffectTrigger(duration.expireOn);
+
+  if (normalizedExpireOn === 'sustained') {
+    return normalizedTrigger === 'endOfTurn';
+  }
+
+  return normalizedExpireOn === normalizedTrigger;
+}
+
+async function executeExpireAction(actor, effect, action) {
+  const normalizedAction = String(action || '').trim();
+  if (!normalizedAction) {
+    return;
+  }
+
+  if (normalizedAction.startsWith('applyCondition:')) {
+    const conditionName = normalizedAction.split(':')[1]?.trim();
+    if (conditionName) {
+      await game.legends.applyCondition(actor, conditionName, {
+        source: effect.name,
+      });
+    }
+    return;
+  }
+
+  if (normalizedAction.startsWith('applyEffect:')) {
+    const effectName = normalizedAction.split(':')[1]?.trim();
+    if (effectName) {
+      await applyEffect({
+        target: actor,
+        effect: effectName,
+        origin: {
+          type: 'effect-expire',
+          label: effect.name,
+          actorId: effect.system?.origin?.actor || '',
+          successes: effect.system?.origin?.successes || 0,
+        },
+      });
+    }
+  }
+}
+
+function getActivityExpireModes(activityType) {
+  switch (activityType) {
+    case 'cast-weave':
+      return new Set(['cast-weave', 'combat-action']);
+    case 'combat-action':
+      return new Set(['combat-action']);
+    default:
+      return new Set([activityType]);
+  }
+}
+
 function buildRecoverySourceFromOrigin(origin = {}) {
   const actorId = origin.actorId || origin.actor?.id || origin.actor || origin.casterId || '';
   const tokenId = origin.tokenId || origin.token?.id || origin.token || '';
@@ -116,17 +284,25 @@ export async function applyEffect(options) {
       sustaining: false
     };
   }
+
+  effectInstance.flags = effectInstance.flags || {};
+  effectInstance.flags.legends = effectInstance.flags.legends || {};
+  const durationState = buildDurationState(effectInstance.system.duration);
+  if (durationState) {
+    effectInstance.flags.legends.durationState = durationState;
+  }
   
   // Update badge for counter type
-  if (effectInstance.system.badge?.type === 'counter') {
-    effectInstance.system.badge.value = effectInstance.system.duration.value;
-    effectInstance.system.badge.max = effectInstance.system.duration.value;
-  } else if (effectInstance.system.duration && !effectInstance.system.badge) {
+  const badgeValue = durationState?.remainingRounds ?? effectInstance.system.duration?.value;
+  if (effectInstance.system.badge?.type === 'counter' && Number.isFinite(badgeValue)) {
+    effectInstance.system.badge.value = badgeValue;
+    effectInstance.system.badge.max = durationState?.totalRounds ?? badgeValue;
+  } else if (effectInstance.system.duration && !effectInstance.system.badge && Number.isFinite(badgeValue)) {
     // Add a counter badge for conditions with duration
     effectInstance.system.badge = {
       type: 'counter',
-      value: effectInstance.system.duration.value,
-      max: effectInstance.system.duration.value
+      value: badgeValue,
+      max: durationState?.totalRounds ?? badgeValue
     };
   }
   
@@ -149,6 +325,7 @@ export async function applyEffect(options) {
   // Apply active effects to actor
   if (createdEffect) {
     await applyActiveEffects(target, createdEffect);
+    await applyLinkedConditions(target, createdEffect);
     
     ui.notifications.info(`${target.name} gains ${effectInstance.name}`);
   }
@@ -309,6 +486,7 @@ function calculateDurationFromNetSuccesses(netSuccesses, durationType) {
  */
 async function applyActiveEffects(actor, effectItem) {
   const activeEffects = effectItem.system.activeEffects || [];
+  const originalValues = {};
   
   for (const effectData of activeEffects) {
     const { key, mode, value } = effectData;
@@ -322,24 +500,28 @@ async function applyActiveEffects(actor, effectItem) {
     
     // Get current value
     const currentValue = foundry.utils.getProperty(actor, dataPath);
+    if (!Object.prototype.hasOwnProperty.call(originalValues, dataPath)) {
+      originalValues[dataPath] = currentValue;
+    }
     
     // Apply modification based on mode
     let newValue;
+    const parsedValue = coerceEffectValue(value, currentValue);
     switch (mode) {
       case 'add':
-        newValue = (currentValue || 0) + parseFloat(value);
+        newValue = Number(currentValue || 0) + Number(parsedValue || 0);
         break;
       case 'mult':
-        newValue = (currentValue || 0) * parseFloat(value);
+        newValue = Number(currentValue || 0) * Number(parsedValue || 0);
         break;
       case 'override':
-        newValue = value;
+        newValue = parsedValue;
         break;
       case 'upgrade':
-        newValue = Math.max(currentValue || 0, parseFloat(value));
+        newValue = Math.max(Number(currentValue || 0), Number(parsedValue || 0));
         break;
       case 'downgrade':
-        newValue = Math.min(currentValue || 0, parseFloat(value));
+        newValue = Math.min(Number(currentValue || 0), Number(parsedValue || 0));
         break;
       default:
         console.warn(`Legends | applyActiveEffects: Unknown mode ${mode}`);
@@ -348,6 +530,52 @@ async function applyActiveEffects(actor, effectItem) {
     
     // Update actor
     await actor.update({ [dataPath]: newValue });
+  }
+
+  if (Object.keys(originalValues).length > 0) {
+    await effectItem.update({
+      'flags.legends.appliedState.originalValues': originalValues,
+    });
+  }
+}
+
+async function applyLinkedConditions(actor, effectItem) {
+  const conditionNames = effectItem.system.conditions || [];
+  if (!Array.isArray(conditionNames) || conditionNames.length === 0) {
+    return;
+  }
+
+  const appliedConditions = [];
+  for (const conditionName of conditionNames) {
+    const createdCondition = await game.legends.applyCondition(actor, conditionName, {
+      source: effectItem.id,
+      recoverySource: buildRecoverySourceFromOrigin(effectItem.system?.origin || {}),
+    });
+
+    if (createdCondition) {
+      appliedConditions.push({ id: createdCondition.id, name: createdCondition.name });
+    }
+  }
+
+  if (appliedConditions.length > 0) {
+    await effectItem.update({
+      'flags.legends.appliedState.conditions': appliedConditions,
+    });
+  }
+}
+
+async function removeLinkedConditions(actor, effectItem) {
+  const appliedConditions = effectItem.flags?.legends?.appliedState?.conditions || [];
+  if (!Array.isArray(appliedConditions) || appliedConditions.length === 0) {
+    return;
+  }
+
+  const conditionIds = appliedConditions
+    .map((entry) => entry?.id)
+    .filter((id) => typeof id === 'string' && actor.items.get(id)?.type === 'condition');
+
+  if (conditionIds.length > 0) {
+    await actor.deleteEmbeddedDocuments('Item', conditionIds);
   }
 }
 
@@ -406,15 +634,11 @@ export async function removeEffect(actor, effectId) {
   
   // Reverse active effects before removing
   await reverseActiveEffects(actor, effect);
+  await removeLinkedConditions(actor, effect);
   
   // Handle recovery/cleanup (e.g., Haste applies exhaustion)
   if (effect.system.recovery?.onExpire) {
-    const action = effect.system.recovery.onExpire;
-    if (action.startsWith('applyCondition:')) {
-      const conditionName = action.split(':')[1];
-      // Apply condition (would need condition system integration)
-      console.log(`Legends | removeEffect: Would apply condition ${conditionName}`);
-    }
+    await executeExpireAction(actor, effect, effect.system.recovery.onExpire);
   }
   
   await effect.delete();
@@ -428,12 +652,18 @@ export async function removeEffect(actor, effectId) {
  */
 async function reverseActiveEffects(actor, effectItem) {
   const activeEffects = effectItem.system.activeEffects || [];
+  const originalValues = effectItem.flags?.legends?.appliedState?.originalValues || {};
   
   for (const effectData of activeEffects) {
     const { key, mode, value } = effectData;
     
     const dataPath = mapSemanticKey(key);
     if (!dataPath) continue;
+
+    if (Object.prototype.hasOwnProperty.call(originalValues, dataPath)) {
+      await actor.update({ [dataPath]: originalValues[dataPath] });
+      continue;
+    }
     
     const currentValue = foundry.utils.getProperty(actor, dataPath);
     
@@ -465,22 +695,22 @@ async function reverseActiveEffects(actor, effectItem) {
  */
 export async function updateEffectDurations(actor, trigger = 'turnEnd') {
   const effects = actor.items.filter(i => i.type === 'effect');
-  const recoveryTrigger = trigger === 'turnStart' ? 'startOfTurn' : trigger === 'turnEnd' ? 'endOfTurn' : trigger;
+  const recoveryTrigger = normalizeEffectTrigger(trigger);
+  const timingTrigger = normalizeEffectTrigger(trigger);
   
   for (const effect of effects) {
     const duration = effect.system.duration;
     const recovery = effect.system.recovery || {};
     let expired = false;
-    
-    // Check if effect should decrement on this trigger
-    const shouldDecrement = duration.expireOn === trigger || duration.expireOn === 'sustained';
+    const durationState = await ensureDurationState(effect);
+    const shouldDecrement = shouldAdvanceDuration(duration, trigger);
 
     // Decrement duration
-    if (shouldDecrement && duration.type === 'rounds' && duration.value > 0) {
-      const newDuration = duration.value - 1;
+    if (shouldDecrement && durationState && durationState.remainingRounds > 0) {
+      const newDuration = durationState.remainingRounds - 1;
       
       // Update badge if counter
-      const updates = { 'system.duration.value': newDuration };
+      const updates = { 'flags.legends.durationState.remainingRounds': newDuration };
       if (effect.system.badge?.type === 'counter') {
         updates['system.badge.value'] = newDuration;
       }
@@ -494,7 +724,7 @@ export async function updateEffectDurations(actor, trigger = 'turnEnd') {
     }
     
     // Process damage tick if appropriate
-    if (effect.system.damageTick && effect.system.damageTick.frequency === trigger) {
+    if (effect.system.damageTick && normalizeEffectTrigger(effect.system.damageTick.frequency) === timingTrigger) {
       await processDamageTick(actor, effect);
     }
 
@@ -576,20 +806,54 @@ export function initializeEffectEngine() {
   console.log('Legends | Initializing Effect Engine');
   
   // Hook into combat tracker for duration updates
-  Hooks.on('combatTurn', async (combat, updateData, updateOptions) => {
+  Hooks.on('combatTurn', async (combat, updateData, options) => {
+    const previousTurn = options?.direction === 1
+      ? (combat.turn === 0 ? combat.turns.length - 1 : combat.turn - 1)
+      : (combat.turn === combat.turns.length - 1 ? 0 : combat.turn + 1);
+    const previousCombatant = combat.turns[previousTurn];
+
+    if (previousCombatant?.actor) {
+      await updateEffectDurations(previousCombatant.actor, 'turnEnd');
+    }
+
     const combatant = combat.combatant;
     if (!combatant?.actor) return;
-    
+
     await updateEffectDurations(combatant.actor, 'turnStart');
   });
   
-  // Also handle end of turn (would need more sophisticated turn tracking)
   Hooks.on('combatRound', async (combat, updateData, updateOptions) => {
-    // Process all combatants' effects at end of round
     for (const combatant of combat.combatants) {
       if (combatant.actor) {
-        await updateEffectDurations(combatant.actor, 'turnEnd');
+        await updateEffectDurations(combatant.actor, 'eachRound');
       }
     }
   });
+
+  Hooks.on('updateActor', async (actor, diff) => {
+    const updatedTempHp = foundry.utils.getProperty(diff, 'system.hp.temp');
+    if (!Number.isFinite(updatedTempHp) || updatedTempHp > 0) {
+      return;
+    }
+
+    const depletedEffects = actor.items.filter(item => item.type === 'effect' && item.system?.duration?.expireOn === 'depleted');
+    for (const effect of depletedEffects) {
+      await removeEffect(actor, effect.id);
+    }
+  });
+}
+
+export async function handleActorActivity(actor, activityType) {
+  if (!actor || !activityType) {
+    return;
+  }
+
+  const expireModes = getActivityExpireModes(activityType);
+  const matchingEffects = actor.items.filter(item =>
+    item.type === 'effect' && expireModes.has(item.system?.duration?.expireOn)
+  );
+
+  for (const effect of matchingEffects) {
+    await removeEffect(actor, effect.id);
+  }
 }

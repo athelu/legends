@@ -25,11 +25,20 @@
     "usageType": "passive",
     "usage": {
       "mode": "passive",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Passive"
     },
-    "keywords": "[Combat], [Savage]",
+    "keywords": [
+      "[Combat]",
+      "[Savage]"
+    ],
     "notes": "",
     "effects": []
   },

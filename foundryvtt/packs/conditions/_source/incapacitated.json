@@ -1,0 +1,32 @@
+{
+  "_id": "b56b1426eb6791d8",
+  "name": "Incapacitated",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Cannot take actions or reactions. Movement speed reduced to 0. <strong>Recovery:</strong> The source of the condition will describe the recovery conditions.</p>"
+    },
+    "label": "Incapacitated",
+    "category": "magic",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
+  },
+  "flags": {},
+  "_key": "!items!b56b1426eb6791d8"
+}

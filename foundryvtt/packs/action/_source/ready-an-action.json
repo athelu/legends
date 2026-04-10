@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Choose a trigger and an action. When the trigger occurs before your next turn, you can use your [Reaction] to perform the readied action. If the trigger does not occur you lose the readied action. Readied weaves that aren't used still consume Energy.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

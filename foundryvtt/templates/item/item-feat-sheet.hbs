@@ -112,15 +112,54 @@
       </div>
 
       <!-- Usage -->
-      <div class="form-group">
-        <label>Usage Type</label>
-        <select name="system.usageType">
-          <option value="passive" {{#if (eq system.usageType "passive")}}selected{{/if}}>Passive</option>
-          <option value="active" {{#if (eq system.usageType "active")}}selected{{/if}}>Active</option>
-          <option value="reaction" {{#if (eq system.usageType "reaction")}}selected{{/if}}>Reaction</option>
-          <option value="free" {{#if (eq system.usageType "free")}}selected{{/if}}>Free Action</option>
-          <option value="special" {{#if (eq system.usageType "special")}}selected{{/if}}>Special</option>
-        </select>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Usage Type</label>
+          <select name="system.usage.mode">
+            <option value="passive" {{#if (eq system.usage.mode "passive")}}selected{{/if}}>Passive</option>
+            <option value="active" {{#if (eq system.usage.mode "active")}}selected{{/if}}>Active</option>
+            <option value="reaction" {{#if (eq system.usage.mode "reaction")}}selected{{/if}}>Reaction</option>
+            <option value="free" {{#if (eq system.usage.mode "free")}}selected{{/if}}>Free Action</option>
+            <option value="special" {{#if (eq system.usage.mode "special")}}selected{{/if}}>Special</option>
+            <option value="unlimited" {{#if (eq system.usage.mode "unlimited")}}selected{{/if}}>Unlimited</option>
+            <option value="once" {{#if (eq system.usage.mode "once")}}selected{{/if}}>Once</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Usage Text</label>
+          <input type="text" name="system.usage.text" value="{{system.usage.text}}" placeholder="Once per short rest" />
+        </div>
+      </div>
+
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Current Uses</label>
+          <input type="number" name="system.usage.uses.value" value="{{system.usage.uses.value}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Max Uses</label>
+          <input type="number" name="system.usage.uses.max" value="{{system.usage.uses.max}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Recharge Period</label>
+          <select name="system.usage.recharge.period">
+            <option value="" {{#if (eq system.usage.recharge.period "")}}selected{{/if}}>None</option>
+            <option value="shortRest" {{#if (eq system.usage.recharge.period "shortRest")}}selected{{/if}}>Short Rest</option>
+            <option value="longRest" {{#if (eq system.usage.recharge.period "longRest")}}selected{{/if}}>Long Rest</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Recharge Formula</label>
+          <input type="text" name="system.usage.recharge.formula" value="{{system.usage.recharge.formula}}" placeholder="1 or Wisdom + Tier" />
+        </div>
+      </div>
+
+      {{#if featRechargeLabel}}
+      <p class="hint">Derived recharge: {{featRechargeLabel}}</p>
+      {{/if}}
       </div>
 
       <!-- Keywords/Tags -->

@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "A complex manipulation of an object or environmental feature. GM determines if action can be done as [Free] during movement instead of an [interact] action.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

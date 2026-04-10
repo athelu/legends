@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Make a skill check to help an ally with their action. Must be able to meaningfully help (GM discretion). Can aid attacks, skill checks, or other actions.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

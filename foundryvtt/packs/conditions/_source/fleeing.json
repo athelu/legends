@@ -5,7 +5,7 @@
   "img": "icons/svg/terror.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Must use movement to get away from the fear source by the safest1 route available. Cannot willingly move closer to the fear source. Can engage other threats that aren't the source of fear. Add 1 to all die results. <strong>Recovery:</strong> At the end of each turn, make [[/save type=will]].</p>\n<ul>\n<li>1 success: Downgrade to Frightened</li>\n<li>2 successes: Condition ends completely</li>\n</ul>\n<p><strong>Ally Assistance:</strong> An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]]</p>\n<ul>\n<li>1 success: Target may reroll next recovery save</li>\n<li>2 successes: Downgrade to Frightened</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Must use movement to get away from the fear source by the safest route available. Cannot willingly move closer to the fear source. Can engage other threats that aren't the source of fear. Add 1 to all die results. <strong>Recovery:</strong> At the end of each turn, make [[/save type=will]].</p>\n<ul>\n<li>1 success: Downgrade to Frightened</li>\n<li>2 successes: Condition ends completely</li>\n</ul>\n<p><strong>Ally Assistance:</strong> An ally within 5 feet can use an [Interact] action with Persuasion or [[/check skill=intimidate]]</p>\n<ul>\n<li>1 success: Target may reroll next recovery save</li>\n<li>2 successes: Downgrade to Frightened</li>\n</ul>"
     },
     "label": "Fleeing",
     "category": "fear",

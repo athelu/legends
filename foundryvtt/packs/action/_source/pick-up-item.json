@@ -5,13 +5,14 @@
   "img": "icons/skills/social/wave-halt-stop.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Retrieve a dropper or loose/unattended item. Item must be within reach (typically 5 feet). Can be done as a [Free] action during a move.</p>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Retrieve a dropped or loose/unattended item. Item must be within reach (typically 5 feet). Can be done as a [Free] action during a move.</p>"
     },
     "actionType": "interact",
     "actionCost": "1",
     "requirements": "",
     "trigger": "",
-    "effect": "Retrieve a dropper or loose/unattended item. Item must be within reach (typically 5 feet). Can be done as a [Free] action during a move.",
+    "effect": "Retrieve a dropped or loose/unattended item. Item must be within reach (typically 5 feet). Can be done as a [Free] action during a move.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

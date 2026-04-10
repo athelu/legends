@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Running start (10+ feet): Jump up to 3 + (Strength ÷ 2, rounded down) feet. Standing jump: Jump up to half that distance. An Athletics check may be required for difficult jumps (GM discretion), Landing in difficult terrain may require Acrobatics check to avoid falling prone",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

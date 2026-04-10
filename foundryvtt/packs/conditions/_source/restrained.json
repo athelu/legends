@@ -5,7 +5,7 @@
   "img": "icons/svg/net.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Placed in a hold or lock by an opponent. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune.Automatically fail Reflex saves. <strong>Recovery:</strong> Use 1 action to make an opposed Athletics, Might or [[/check skill=acrobatics]]</p>\n<ul>\n<li>Margin 1: Reduce condition to Grappled.</li>\n<li>Margin 2: Remove Restrained condition.</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Placed in a hold or lock by an opponent. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune. Automatically fail Reflex saves. <strong>Recovery:</strong> Use 1 action to make an opposed Athletics, Might or [[/check skill=acrobatics]]</p>\n<ul>\n<li>Margin 1: Reduce condition to Grappled.</li>\n<li>Margin 2: Remove Restrained condition.</li>\n</ul>"
     },
     "label": "Restrained",
     "category": "movement",

@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "You attempt to move an opponent in combat. Declare before rolling. Target must be no more than one size larger than you. Make opposed Athletics check (Strength + Athletics vs target's Athletics, Acrobatics or Might).",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

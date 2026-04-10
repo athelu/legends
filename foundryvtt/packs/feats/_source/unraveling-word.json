@@ -26,11 +26,22 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "shortRest",
+        "formula": "1"
+      },
       "text": "Once per short rest"
     },
-    "keywords": "[Magic], [Invoker], [Control], [Reaction]",
+    "keywords": [
+      "[Magic]",
+      "[Invoker]",
+      "[Control]",
+      "[Reaction]"
+    ],
     "notes": "",
     "effects": []
   },

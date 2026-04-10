@@ -93,10 +93,10 @@
 
 ### Shatter
 **Primary Energy:** Air 4 (destructive sonic vibration)
-**Supporting Energy:** Space 3 (medium range + 10ft radius)
+**Supporting Energy:** Space 4 (medium range + 10ft radius)
 **Range:** Medium, 60 ft. (10-foot radius sphere)
 **Duration:** Instantaneous
-**Total Cost:** 7 Energy
+**Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
@@ -122,10 +122,10 @@
 
 ### Silence
 **Primary Energy:** Air 3 (creating zone of absolute quiet)
-**Supporting Energy:** Space 5 (close range + 20ft radius + duration 10 minutes)
+**Supporting Energy:** Space 8 (close range + 20ft radius + duration 10 minutes)
 **Range:** Close, 30 ft. (20-foot radius sphere)
 **Duration:** 10 minutes
-**Total Cost:** 8 Energy
+**Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
@@ -148,29 +148,29 @@
 
 ### Sleep
 **Primary Energy:** Positive 3 (inducing magical slumber)
-**Supporting Energy:** Space 3 (medium range + 10ft radius)
+**Supporting Energy:** Space 6 (medium range + 10ft radius + Duration)
 **Range:** Medium, 60 ft. (10-foot radius)
 **Duration:** 1 minute (or until awakened)
-**Total Cost:** 6 Energy
+**Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Creatures in area make Will saves. Starting with lowest HP targets, compare your targeting successes to their save successes. Those you beat fall Unconscious for 1 minute. Awakens if damaged or shaken (action). Doesn't affect constructs or undead.
-**Applies Effects:** Asleep-Unconscious
+**Applies Effects:** Asleep
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = no effect, 1 = 1 round, 2= 1 minute, 3 = 10 minutes
 
 ### Slow
 **Primary Energy:** Time 4 (decelerating personal time)
-**Supporting Energy:** Space 4 (medium range + 4 targets)
+**Supporting Energy:** Space 5 (medium range + 4 targets)
 **Range:** Medium, 60 ft. (up to 4 targets)
 **Duration:** 1 minute (until save succeeds)
-**Total Cost:** 8 Energy
+**Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Time Potential + Time Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Time Mastery
 **Description:** Up to 4 targets make Will saves. Compare your targeting successes to each target's save successes. Those you beat have only 2 actions per turn (instead of 3), Misfortune on Agility checks and Reflex saves, and Misfortune on attacks. Targets can repeat save at end of each turn (1 success ends effect).
-**Applies Effects:** Slowed
+**Applies Effects:** Slowed (Major)
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = no effect, 1 = 1 round, 2= 1 minute, 3 = 10 minutes
 
@@ -373,11 +373,11 @@
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Target takes 8 poison damage. Target makes Fortitude save to reduce damage.
-**Applies Effects:** Poisoned
+**Applies Effects:** Poisoned (Weak)
 **Saving Throw:** Fortitude
 **Damage Type:** Poison
 **DR Interaction:** Half DR
-**Targeting Success Scaling:** 0 = fails, 1 = half damage (4), 2= full damage (8), 3 = enhanced damage (16) + Poisoned
+**Targeting Success Scaling:** 0 = fails, 1 = half damage (4), 2= full damage (8), 3 = enhanced damage (16) + Poisoned (Weak)
 
 ### Uncontrollable Laughter
 **Primary Energy:** Negative 2 (overwhelming with uncontrollable mirth)
@@ -536,10 +536,10 @@
 
 ### Web
 **Primary Energy:** Earth 4 (sticky webbing control effect)
-**Supporting Energy:** Space 6 (medium range + 20ft radius + 1 minute)
+**Supporting Energy:** Space 8 (medium range + 20ft radius + 1 minute)
 **Range:** Medium, 60 ft. (20-foot radius)
 **Duration:** 1 minute
-**Total Cost:** 10 Energy
+**Total Cost:** 12 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
@@ -563,10 +563,10 @@
 
 ### Zone of Truth
 **Primary Energy:** Positive 4 (creating area of enforced honesty)
-**Supporting Energy:** Space 5 (close range + 15ft radius, duration 10 minutes)
+**Supporting Energy:** Space 7 (close range + 15ft radius, duration 10 minutes)
 **Range:** Close, 30 ft. (15-foot radius sphere)
 **Duration:** 10 minutes
-**Total Cost:** 9 Energy
+**Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery

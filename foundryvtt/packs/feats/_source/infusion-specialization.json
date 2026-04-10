@@ -21,15 +21,24 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Choose two Infusion Formulae from the list below, usable as alternatives when using Imbue Item or Prepared Infusion. Each formula replaces the standard weapon or armor effect for that infusion.Can be taken again at Tier 4 to choose two additional formulae.:</p>\n<ul>\n<li><strong>Kinetic Store:</strong> Weapon; the next single attack ignores DR entirely and deals +[[/damage 12]] damage instead of the standard per-hit bonus. Expends after one trigger.</li>\n<li><strong>Ablative Ward:</strong> Armor; grants +6 DR but the infusion ends after absorbing [[/damage 16 type=total]] damage</li>\n<li><strong>Phase Step:</strong> Boots or footwear; bearer may teleport up to 15 feet as a [Minor] action once before expiring</li>\n<li><strong>Force Lens:</strong> Any held object; bearer subtracts 1 from one targeting die result of their choice on their next weave before expiring</li>\n<li><strong>Null Ward:</strong> Any item; bearer gains resistance to one energy type (chosen at infusion time). Reduce incoming damage of that type by 4 until end of their next short rest or until they take [[/damage 20]] damage of that type.</li>\n</ul>",
+    "benefits": "<p>Choose two Infusion Formulae from the list below, usable as alternatives when using Imbue Item or Prepared Infusion. Each formula replaces the standard weapon or armor effect for that infusion. Can be taken again at Tier 4 to choose two additional formulae:</p>\n<ul>\n<li><strong>Kinetic Store:</strong> Weapon; the next single attack ignores DR entirely and deals +[[/damage 12]] damage instead of the standard per-hit bonus. Expends after one trigger.</li>\n<li><strong>Ablative Ward:</strong> Armor; grants +6 DR but the infusion ends after absorbing [[/damage 16 type=total]] damage</li>\n<li><strong>Phase Step:</strong> Boots or footwear; bearer may teleport up to 15 feet as a [Minor] action once before expiring</li>\n<li><strong>Force Lens:</strong> Any held object; bearer subtracts 1 from one targeting die result of their choice on their next weave before expiring</li>\n<li><strong>Null Ward:</strong> Any item; bearer gains resistance to one energy type (chosen at infusion time). Reduce incoming damage of that type by 4 until end of their next short rest or until they take [[/damage 20]] damage of that type.</li>\n</ul>",
     "usageType": "active",
     "usage": {
       "mode": "active",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Passive expansion of Imbue Item options"
     },
-    "keywords": "[Magic], [Infuser]",
+    "keywords": [
+      "[Magic]",
+      "[Infuser]"
+    ],
     "notes": "",
     "effects": []
   },

@@ -25,11 +25,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Passive, triggers when both attacks hit same target"
     },
-    "keywords": "[Combat], [Dual]",
+    "keywords": [
+      "[Combat]",
+      "[Dual]"
+    ],
     "notes": "",
     "effects": []
   },

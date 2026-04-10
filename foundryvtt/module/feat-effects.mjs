@@ -1,3 +1,5 @@
+import { normalizeSkillKey } from './skill-utils.mjs';
+
 /**
  * Feat validation and usage handlers for Legends
  */
@@ -21,26 +23,6 @@ export function initializeFeatHandlers() {
     }
   });
 
-  // After a feat is created, initialize any limited-use tracking on the actor
-  Hooks.on('createItem', async (item, options, userId) => {
-    try {
-      if (!item || item.type !== 'feat') return;
-      const actor = item.parent;
-      if (!actor || actor.type !== 'character') return;
-
-      // Normalize possible fields for usage
-      const usage = item.system?.usage || item.system?.usageType || {};
-      // If the feat declares a `uses` count, store remaining uses on the actor flags
-      const uses = item.system?.uses ?? item.system?.usage?.uses ?? null;
-      if (typeof uses === 'number' && uses > 0) {
-        const flag = actor.getFlag('legends', 'featUses') || {};
-        flag[item.id] = { remaining: uses, max: uses };
-        await actor.setFlag('legends', 'featUses', flag);
-      }
-    } catch (err) {
-      console.warn('Error initializing feat uses', err);
-    }
-  });
 }
 
 /**
@@ -109,9 +91,6 @@ export function validatePrereqs(actor, item) {
   return reasons;
 }
 
-// Expose normalizeSkillKey for other modules if needed
-export { normalizeSkillKey };
-
 function parseSkillString(str) {
   const out = {};
   if (!str || typeof str !== 'string') return out;
@@ -123,10 +102,6 @@ function parseSkillString(str) {
     }
   }
   return out;
-}
-
-function normalizeSkillKey(key) {
-  return key.replace(/\s+/g, '').replace(/[-_]/g, '').toLowerCase();
 }
 
 /**

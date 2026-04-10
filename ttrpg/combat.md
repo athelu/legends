@@ -97,7 +97,7 @@ Combat maneuvers may be attempted by any character trained in Melee combat that 
 ### Called Shot
 You attempt to strike a weak spot or specific area of the target. Add 1 to both attack die results
 - **Margin 1:** if Margin 1 would normally apply damage, then apply base damage.
-- **Margin 2:** Apply damage as normal for the the Margin of success, but choose from the following bonuses:
+- **Margin 2:** Apply damage as normal for the Margin of success, but choose from the following bonuses:
     - Half DR
     - Apply specific condition (GM Discretion)
 - **Requirements:** Agility or Dexterity 4
@@ -105,12 +105,12 @@ You attempt to strike a weak spot or specific area of the target. Add 1 to both 
 ### Disarm
 You use your attack to strike the weapon or hand of the target in a way to make them drop their equipped weapon. Make a normal combat check.
 - **Margin 1:** if Margin 1 would normally apply damage, then apply base damage.
-- **Margin 2:** Apply damage as normal for the the Margin of success, and the target drops equipped weapon of attackers choice.
+- **Margin 2:** Apply damage as normal for the Margin of success, and the target drops an equipped weapon of the attacker's choice.
 
 ### Trip
 You use your attack to strike the target in a way to make them lose their balance and fall. Make a normal combat check.
 - **Margin 1:** if Margin 1 would normally apply damage, then apply base damage.
-- **Margin 2:** Apply damage as normal for the the Margin of success, and the target gains the prone condition
+- **Margin 2:** Apply damage as normal for the Margin of success, and the target gains the prone condition
 
 ### Two-Weapon Fighting
 When wielding two weapons, you may make two attacks with a single [Combat] action. The Off-hand weapon must have the Light property. The attack uses a Shared Attribute Roll (roll attribute once, applies to both attacks). Roll skill die separately for each weapon.
@@ -138,7 +138,7 @@ Each actor in a combat will need to make an initiative roll to determine when th
 - 1d8: Random element
 
 ### Initiative Skill Options
-Unless some other skill is declared, the actor will use Perception as the skill for initiative. This represents the characters general situational awareness. Most other skills could be used to determine initiative. This would require the player to justify as to how the use of the skill in this particular situation could be applied. The GM will determine if the the skill in question and the characters explanation warrant its use. There are however some requirements that must be met before a skill may be used for initiative.
+Unless some other skill is declared, the actor will use Perception as the skill for initiative. This represents the character's general situational awareness. Most other skills could be used to determine initiative. This would require the player to justify how the use of the skill in this particular situation could be applied. The GM will determine if the skill in question and the character's explanation warrant its use. There are however some requirements that must be met before a skill may be used for initiative.
 	1	Character must have at least 1 rank in the skill
 	2	Must make narrative sense for the situation (GM approval)
 	3	Declare before rolling
@@ -205,10 +205,10 @@ Some conditions may not block line of sight completely, and instead provide some
 - Water: Can see through clear water (may affect attacks differently)
 
 ## Area Effect Weaves
-Area effects weaves do not require line of sight to a specific target and instead are placed within an area. Fireball, Lightning Bolt, and other AOE weaves affect all creatures in area, including allies.Intervening creatures do not provide cover against area effects.
+Area effects weaves do not require line of sight to a specific target and instead are placed within an area. Fireball, Lightning Bolt, and other AOE weaves affect all creatures in area, including allies. Intervening creatures do not provide cover against area effects.
 
 ## Targeting Hidden Creatures
-If a creature has the hidden condition then you do not have line of sight to them. You cannot make attack rolls against them. You cannot target them with single-target weaves.You can target their general area with AOE effects (if you know/guess where they might be).
+If a creature has the hidden condition then you do not have line of sight to them. You cannot make attack rolls against them. You cannot target them with single-target weaves. You can target their general area with AOE effects (if you know/guess where they might be).
 To gain line of sight to a creature with the Hidden condition you must do one of the following:
 - Succeed on Perception check to detect them. 
 - Use abilities that detect hidden creatures (Blindsight, Tremorsense).

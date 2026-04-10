@@ -24,11 +24,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Passive, triggers after successful feint"
     },
-    "keywords": "[Combat], [Duelist]",
+    "keywords": [
+      "[Combat]",
+      "[Duelist]"
+    ],
     "notes": "",
     "effects": []
   },

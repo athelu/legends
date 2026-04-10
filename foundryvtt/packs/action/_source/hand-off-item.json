@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Pass an item to an adjacent willing creature. Both creatures must have at least one free hand. Recipient must be within 5 feet. Both parties must be willing. Doesn't provoke Opportunity Attacks",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

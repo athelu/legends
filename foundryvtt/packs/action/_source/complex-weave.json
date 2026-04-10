@@ -12,6 +12,7 @@
     "requirements": "Ability to weave, sufficient Energy",
     "trigger": "",
     "effect": "Cast a multi-energy weave using Primary + Supporting Energy. Counts as ONE combat action for Multiple Action Penalty purposes (even though it costs 2 actions). See (Magic System) for full weaving rules",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

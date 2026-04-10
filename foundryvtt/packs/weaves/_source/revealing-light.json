@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make [[/save type=reflex]]. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.</p>"
+      "value": "<p>All objects and creatures in 10-foot radius at medium range are outlined in violet light. Targets make [[/save type=reflex]]. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -16,14 +16,14 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 4
+        "cost": 6
       }
     },
-    "range": "Medium, 60 ft. (20-foot cube)",
+    "range": "Medium, 60 ft. (10-foot radius)",
     "duration": "1 minute",
     "target": "sphere",
     "savingThrow": "reflex",
-    "effect": "All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make Reflex save. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.",
+    "effect": "All objects and creatures in 10-foot radius at medium range are outlined in violet light. Targets make Reflex save. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.",
     "effectType": "control",
     "damage": {
       "base": 0,
@@ -37,22 +37,22 @@
         },
         "1": {
           "appliesEffects": true,
-          "description": "10-ft cube",
-          "duration": "10-ft cube"
+          "description": "5-ft radius",
+          "duration": "5-ft radius"
         },
         "2": {
           "appliesEffects": true,
-          "description": "20-ft cube",
-          "duration": "20-ft cube"
+          "description": "10-ft radius",
+          "duration": "10-ft radius"
         },
         "3": {
           "appliesEffects": true,
-          "description": "30-ft cube + revealed",
-          "duration": "30-ft cube + revealed"
+          "description": "10-ft radius + revealed",
+          "duration": "10-ft radius + revealed"
         }
       }
     },
-    "targetingSuccessScaling": "0 = fails, 1 = 10-ft cube, 2= 20-ft cube, 3 = 30-ft cube + revealed",
+    "targetingSuccessScaling": "0 = fails, 1 = 5-ft radius, 2= 10-ft radius, 3 = 10-ft radius + revealed",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [

@@ -26,6 +26,8 @@ import * as traitEffects from "./trait-effects.mjs";
 import * as effectEngine from "./effect-engine.mjs";
 import * as magicalTraits from "./magical-traits.mjs";
 import * as backgrounds from "./backgrounds.mjs";
+import * as progression from "./progression.mjs";
+import * as training from "./training.mjs";
 import { initializeConditionEngine, initializeChatHandlers, handleRecoveryResult } from "./condition-engine.mjs";
 import { registerEnrichers } from "./enrichers.mjs";
 
@@ -56,12 +58,29 @@ function resolveWeaveEnergyType(actor, energyType) {
   }, "earth");
 }
 
+function getWeavePotentialValue(actor, weave) {
+  const primaryEnergyType = weave?.system?.energyCost?.primary?.type;
+  const resolvedEnergyType = resolveWeaveEnergyType(actor, primaryEnergyType);
+  return actor?.system?.potentials?.[resolvedEnergyType]?.value ?? 0;
+}
+
 function isDraggedEffectData(data) {
   return data?.type === "WeaveEffect" || data?.type === "InlineEffect" || data?.type === "ItemEffect";
 }
 
 function normalizeEffectName(name) {
   return String(name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+}
+
+function getFirstStatusId(activeEffect) {
+  const statuses = activeEffect?.statuses;
+  if (!statuses) return null;
+  if (typeof statuses.first === 'function') return statuses.first();
+  if (Array.isArray(statuses)) return statuses[0] ?? null;
+  if (typeof statuses[Symbol.iterator] === 'function') {
+    return Array.from(statuses)[0] ?? null;
+  }
+  return null;
 }
 
 async function removeConditionBySource(actor, conditionName, sourceActorId) {
@@ -190,7 +209,7 @@ async function applyDraggedEffect(targetActor, data) {
         weaveId: data.weaveId,
         weaveName: weave.name,
         successes: data.casterSuccesses,
-        potential: caster.system.magicalPotential || 0
+        potential: getWeavePotentialValue(caster, weave)
       },
       params: data.params || {},
       netSuccesses: data.casterSuccesses
@@ -270,6 +289,7 @@ Hooks.once('init', async function() {
     applyWeaveDamage,
     applyDraggedEffect,
     isDraggedEffectData,
+    rollItemMacro,
 
     // Condition management
     applyCondition,
@@ -282,6 +302,8 @@ Hooks.once('init', async function() {
     chat,
     combat,
     backgrounds,
+    progression,
+    training,
     featEffects,
     traitEffects,
     magicalTraits,
@@ -411,7 +433,7 @@ Hooks.on('preCreateActiveEffect', async (activeEffect, data, options, userId) =>
   }
 
   // Check if this is a condition from our system
-  const statusId = activeEffect.statuses?.first();
+  const statusId = getFirstStatusId(activeEffect);
   if (!statusId) return true;
 
   // Find the condition in our registered status effects
@@ -450,7 +472,7 @@ Hooks.on('preDeleteActiveEffect', async (activeEffect, options, userId) => {
     return true; // Allow deletion of non-condition effects
   }
 
-  const statusId = activeEffect.statuses?.first();
+  const statusId = getFirstStatusId(activeEffect);
   if (!statusId) return true;
 
   const statusEffect = CONFIG.statusEffects.find(e => e.id === statusId);
@@ -565,16 +587,36 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
       return;
     }
     
+    const resolvedSkillValue = typeof skillValue === 'object' ? skillValue.value ?? skillValue : skillValue;
+    const rollData = {
+      actor,
+      skillKey: normalizedSkillKey,
+      attrKey,
+      attrValue: attr.value,
+      skillValue: resolvedSkillValue,
+      isAttack: false,
+      isSave: false,
+      modifier: defaultModifier,
+      defaultApplyToAttr,
+      defaultApplyToSkill,
+      fortune: 0,
+      misfortune: 0,
+    };
+    Hooks.call('preRollSkillCheck', rollData);
+
     // Show roll dialog instead of rolling immediately
     return dice.showSkillCheckDialog({
       actor,
+      skillKey: normalizedSkillKey,
       attrValue: attr.value,
-      skillValue: (typeof skillValue === 'object' ? skillValue.value ?? skillValue : skillValue),
+      skillValue: resolvedSkillValue,
       attrLabel: attr.label,
       skillLabel: game.i18n.localize(`D8.Skills.${normalizedSkillKey}`),
-      defaultModifier: defaultModifier,
-      defaultApplyToAttr: defaultApplyToAttr,
-      defaultApplyToSkill: defaultApplyToSkill,
+      defaultModifier: rollData.modifier || 0,
+      defaultApplyToAttr: rollData.defaultApplyToAttr ?? defaultApplyToAttr,
+      defaultApplyToSkill: rollData.defaultApplyToSkill ?? defaultApplyToSkill,
+      defaultFortune: rollData.fortune || 0,
+      defaultMisfortune: rollData.misfortune || 0,
       onRollComplete,
     });
   }
@@ -637,7 +679,13 @@ export async function rollSavingThrow(actor, saveType, options = {}) {
     attrKey,
     attrValue: attr.value,
     luckValue: luckCurrent,
-    modifier: defaultModifier
+    modifier: defaultModifier,
+    defaultApplyToAttr: true,
+    defaultApplyToSkill: true,
+    fortune: 0,
+    misfortune: 0,
+    isSave: true,
+    isAttack: false,
   };
   Hooks.call('preRollSavingThrow', rollData);
   
@@ -653,7 +701,11 @@ export async function rollSavingThrow(actor, saveType, options = {}) {
     attrLabel,
     skillLabel,
     saveType: normalizedSaveType,
-    defaultModifier
+    defaultModifier,
+    defaultApplyToAttr: rollData.defaultApplyToAttr ?? true,
+    defaultApplyToSkill: rollData.defaultApplyToSkill ?? true,
+    defaultFortune: rollData.fortune || 0,
+    defaultMisfortune: rollData.misfortune || 0,
   });
 }
 
@@ -662,7 +714,20 @@ export async function rollSavingThrow(actor, saveType, options = {}) {
  * @param {object} options - Dialog options
  */
 async function showSavingThrowDialog(options) {
-  const { actor, attrKey, attrValue, luckValue, attrLabel, skillLabel, saveType, defaultModifier = 0 } = options;
+  const {
+    actor,
+    attrKey,
+    attrValue,
+    luckValue,
+    attrLabel,
+    skillLabel,
+    saveType,
+    defaultModifier = 0,
+    defaultApplyToAttr = true,
+    defaultApplyToSkill = true,
+    defaultFortune = 0,
+    defaultMisfortune = 0,
+  } = options;
 
   return foundry.applications.api.DialogV2.wait({
     window: { title: `${skillLabel}` },
@@ -687,13 +752,13 @@ async function showSavingThrowDialog(options) {
         </div>
         <div class="form-group" style="margin-left: 20px;">
           <label>
-            <input type="checkbox" name="applyToAttr" checked/>
+            <input type="checkbox" name="applyToAttr" ${defaultApplyToAttr ? 'checked' : ''}/>
             Apply to ${attrLabel} die
           </label>
         </div>
         <div class="form-group" style="margin-left: 20px;">
           <label>
-            <input type="checkbox" name="applyToSkill" checked/>
+            <input type="checkbox" name="applyToSkill" ${defaultApplyToSkill ? 'checked' : ''}/>
             Apply to Luck die
           </label>
         </div>
@@ -717,6 +782,24 @@ async function showSavingThrowDialog(options) {
           const modifier = parseInt(rawValue) || 0;
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
+
+          if (defaultFortune > defaultMisfortune) {
+            return await rollSavingThrowWithFortune(actor, saveType, attrKey, attrLabel, attrValue, luckValue, {
+              modifier,
+              applyToAttr,
+              applyToSkill,
+              isFortune: true
+            });
+          }
+
+          if (defaultMisfortune > defaultFortune) {
+            return await rollSavingThrowWithFortune(actor, saveType, attrKey, attrLabel, attrValue, luckValue, {
+              modifier,
+              applyToAttr,
+              applyToSkill,
+              isFortune: false
+            });
+          }
           
           return await rollSavingThrowDice(actor, saveType, attrKey, attrLabel, attrValue, luckValue, {
             modifier,
@@ -1014,6 +1097,8 @@ export async function rollWeave(actor, weave) {
   
   const primaryPotential = actor.system.potentials[primaryEnergy].value;
   const primaryMastery = actor.system.mastery[primaryEnergy].value;
+
+  await game.legends?.training?.markTrainingCheckbox?.(actor, 'mastery', primaryEnergy);
   
   let supportingPotential = 0;
   let supportingMastery = 0;
@@ -1021,6 +1106,9 @@ export async function rollWeave(actor, weave) {
   if (supportingEnergy) {
     supportingPotential = actor.system.potentials[supportingEnergy].value;
     supportingMastery = actor.system.mastery[supportingEnergy].value;
+    if (supportingEnergy !== primaryEnergy) {
+      await game.legends?.training?.markTrainingCheckbox?.(actor, 'mastery', supportingEnergy);
+    }
   }
   
   // ROLL 1: Weaving Check (channeling quality)
@@ -1628,7 +1716,7 @@ async function calculateBatchWeaveEffect(weaveData, weaveMessageId, results, cas
               weaveId: weave.id,
               weaveName: weave.name,
               successes: casterSuccesses,
-              potential: caster.system.magicalPotential || 0
+              potential: getWeavePotentialValue(caster, weave)
             },
             params: effectRef.params || {},
             netSuccesses: margin
@@ -1799,7 +1887,7 @@ async function calculateWeaveEffect(weaveData, weaveMessageId, saveSuccesses, ca
             weaveId: weave.id,
             weaveName: weave.name,
             successes: casterSuccesses,
-            potential: caster.system.magicalPotential || 0
+            potential: getWeavePotentialValue(caster, weave)
           },
           params: effectRef.params || {},
           netSuccesses: margin
@@ -2401,7 +2489,7 @@ async function createItemMacro(data, slot) {
   const item = await fromUuid(data.uuid);
   if (!item) return ui.notifications.warn("Could not find item");
   
-  const command = `game.legends.rollItemMacro("${item.name}");`;
+  const command = `game.legends.rollItemMacro(${JSON.stringify(item.name)});`;
   let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
   
   if (!macro) {
@@ -2415,4 +2503,20 @@ async function createItemMacro(data, slot) {
   }
   
   game.user.assignHotbarMacro(macro, slot);
+}
+
+async function rollItemMacro(itemName) {
+  const speaker = ChatMessage.getSpeaker();
+  const actor = game.actors.get(speaker.actor) || game.user.character;
+
+  if (!actor) {
+    return ui.notifications.warn('No actor available for this macro.');
+  }
+
+  const item = actor.items.find(candidate => candidate.name === itemName);
+  if (!item) {
+    return ui.notifications.warn(`${actor.name} does not have an item named ${itemName}.`);
+  }
+
+  return item.roll();
 }

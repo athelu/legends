@@ -39,7 +39,7 @@ All characters have access to these combat options:
 **Requirements:** Agility or Dexterity 4
 **Effect:** You attempt to strike a weak spot or specific area of the target.  Declare before rolling. Add 1 to both attack die results
 **Margin 1:** if Margin 1 would normally apply damage, then apply base damage.
-**Margin 2:** Apply damage as normal for the the Margin of success, but choose from the following bonuses:
+**Margin 2:** Apply damage as normal for the Margin of success, but choose from the following bonuses:
 - Half DR
 - Apply specific condition
 - Deny shield Ranged Defense [Reaction]
@@ -48,13 +48,13 @@ All characters have access to these combat options:
 **Cost:** 1
 **Effect:** You use your attack to strike the hand of the target in a way to make them drop a held item. Declare before making roll. Make a normal combat check.
 **Margin 1:** if Margin 1 would normally apply damage, then apply base damage.
-**Margin 2:** Apply damage as normal for the the Margin of success, and the target drops held item of attackers choice.
+**Margin 2:** Apply damage as normal for the Margin of success, and the target drops a held item of the attacker's choice.
 
 ### Trip [Combat]
 **Cost:** 1
 **Effect:** You use your attack to strike the target in a way to make them lose their balance and fall. Declare before rolling. Target must be no more than one size larger than you. Make a normal combat check.
 **Margin 1:** if Margin 1 would normally apply damage, then apply base damage.
-**Margin 2:** Apply damage as normal for the the Margin of success, and the target gains the prone condition
+**Margin 2:** Apply damage as normal for the Margin of success, and the target gains the prone condition
 
 ### Shove [Combat]
 **Cost:** 1
@@ -155,7 +155,7 @@ Movement actions allow you to reposition, navigate terrain, and control the batt
 ### Hide [Move]
 **Cost:** 1
 **Effect:** Make a Stealth check with the aid of partial cover or greater. Stealth Check is opposed by enemy's Perception.
-- **Margin 1 +:** You can the Hidden condition
+- **Margin 1 +:** You gain the Hidden condition
 
 ### Stalk [Move]
 **Cost:** 1
@@ -185,7 +185,7 @@ Activate actions involve using items, equipment, or abilities that require delib
 ### Read Scroll [Activate]
 **Cost:** 2
 **Requirements:** Ability to read, appropriate magical knowledge
-**Effect:** Cast the spell containedin the scroll. Arcane check required. The scroll is consumed after use. Provokes Opportunity Attacks.
+**Effect:** Cast the spell contained in the scroll. Arcane check required. The scroll is consumed after use. Provokes Opportunity Attacks.
 
 ### Don/Doff Shield [Activate]
 **Cost:** 1
@@ -204,7 +204,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
 
 ### Pick Up Item [Interact]
 **Cost:** 1
-**Effect:** Retrieve a dropper or loose/unattended item. Item must be within reach (typically 5 feet). Can be done as a [Free] action during a move.
+**Effect:** Retrieve a dropped or loose/unattended item. Item must be within reach (typically 5 feet). Can be done as a [Free] action during a move.
 
 ### Hand Off Item [Interact]
 **Cost:** Free
@@ -224,7 +224,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
 
 ### Take Cover [Interact]
 **Cost:** 1
-**Effect:** Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free ] action during a move.
+**Effect:** Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free] action during a move.
 
 ### Speak [Interact]
 **Cost:** 1
@@ -255,7 +255,7 @@ You can take a reasonable number of [Free] actions per turn (typically 1-3), sub
 Reactions are special responses triggered by specific circumstances that occur outside your turn.
 **Basic Reaction Mechanics:**
 You can take ONE reaction per round. Reactions occur immediately when their trigger happens. Reactions happen during another actor’s turn. You can use your reaction even before your first turn in combat (unless Surprised). Reactions don't count against your 3 actions per turn.
-If you have access to multiple reactions, you must choose which one to use when the trigger occurs. Some feats, equipment, and weaves grant additional reaction options beyond hose listed here When multiple creatures have reactions that could trigger simultaneously. The reacting creature closest to the triggering creature goes first, If equidistant, highest Initiative Bonus acts first.
+If you have access to multiple reactions, you must choose which one to use when the trigger occurs. Some feats, equipment, and weaves grant additional reaction options beyond those listed here. When multiple creatures have reactions that could trigger simultaneously, the reacting creature closest to the triggering creature goes first. If equidistant, the highest Initiative Bonus acts first.
 
 ### Ranged Defense [Reaction]
 **Trigger:** You are targeted by a Ranged attack while wielding a shield.
@@ -272,4 +272,4 @@ If you have access to multiple reactions, you must choose which one to use when 
 ### Counterweave [Combat]
 **Requirements:** Ability to weave, Space energy available
 **Trigger:** You see a creature weaving within medium range (60ft)
-**Effect:** Attempt to counter the weave (see CounterWeave in Weaves). Requires successful Arcane check to identify the weave first
+**Effect:** Attempt to counter the weave (see Counterweave in Weaves). Requires successful Arcane check to identify the weave first

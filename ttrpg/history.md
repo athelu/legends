@@ -8,9 +8,9 @@ The gods created Athelu and all the other worlds.  To do so required magic. Magi
 ### The Gifts
 
 All manner of flora and fauna was created, but Rudlu encouraged the Gods to make something more cunning, and so the seed for man was sown.  Shu-Jahan insisted that he must impart some wisdom to men, to allow them to grow and steward the world.
-Alkira created the laws of nature and those that men must follow. Hirnoloyta balanced man’s need to hunt with flora to gather. Ambis created woman as man's companion. The creation of man pleased and intrigued the gods, who at first interfered in how man interacted with the world.
+Alkira created the laws of nature and those that men must follow. Hirnaloyta balanced man’s need to hunt with flora to gather. Ambis created woman as man's companion. The creation of man pleased and intrigued the gods, who at first interfered in how man interacted with the world.
 
-Encshede convinced the others to let men find their own way. Nevil, silent throughout the process brooded, until he decided that man must be mortal, so that he would know humility and thank the gods for the time he had. 
+Enschede convinced the others to let men find their own way. Nevil, silent throughout the process, brooded until he decided that man must be mortal, so that he would know humility and thank the gods for the time he had. 
 Thus, was man and his world set into motion. The gods marveled at their wit and cunning in their creations, but as all omnipotent beings, they became bored with this endeavor. They soon saw fit to try creating other worlds. Rudlu took this opportunity to encourage men to explore and learn.
 
 ### The Rise of Man
@@ -64,5 +64,5 @@ The desolation was great. Such destruction and death had not been seen since the
 ### The Gods Return
 
 In the wake of the destruction, Athore and Hirnaloyta almost gave up hope for Athelu. But Rudlu, Alkira, and Shu-Jahan returned. They said they were called and to the gods’ shock they found the tribes of men, strong in their faith and helping to rebuild Estaea.
-Hirnoloyta and Athore were once again brought to men. Enschede and Nevil had no need to return in full; the gift of Enschede is felt by all and Nevil waits to reclaim all creations in the end. 
+Hirnaloyta and Athore were once again brought to men. Enschede and Nevil had no need to return in full; the gift of Enschede is felt by all and Nevil waits to reclaim all creations in the end. 
 Man has once again become the master of his domain. The land is subjugated to his will and he chafes at his bonds. The tribes of men, ever restless, now quarrel amongst themselves. 

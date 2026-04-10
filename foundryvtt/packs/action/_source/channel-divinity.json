@@ -12,6 +12,7 @@
     "requirements": "Divine Gift Trait",
     "trigger": "",
     "effect": "Automatically succeeds for Heal/Harm intents (see Magic section for full details). Counts as ONE combat action for Multiple Action Penalty purposes",
+    "appliesEffects": [],
     "keywords": [],
     "range": "30-foot radius centered on you",
     "target": "",

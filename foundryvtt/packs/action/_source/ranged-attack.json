@@ -12,6 +12,7 @@
     "requirements": "Ranged weapon, target within range",
     "trigger": "",
     "effect": "Make an attack roll (Dexterity + Ranged Combat). Making a ranged attack while threatened (enemy within 5 feet) add 1 to both attack dice. Shooting into Melee: Add 1 to both die results",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

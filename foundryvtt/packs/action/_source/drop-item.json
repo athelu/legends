@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Release an item from your hand. Item falls in your space. Doesn't provoke Opportunity Attacks",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

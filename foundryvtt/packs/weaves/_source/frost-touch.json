@@ -55,12 +55,7 @@
     "targetingSuccessScaling": "0 = Fails, 1 = Half damage (2), 2 = Full damage (4), 3 = Enhanced damage (8)",
     "weavingRoll": "Water Potential + Water Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
-    "appliesEffects": [
-      {
-        "effectId": "slowed",
-        "params": {}
-      }
-    ],
+    "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [
       "touch"

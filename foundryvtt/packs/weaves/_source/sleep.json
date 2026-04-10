@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 3
+        "cost": 6
       }
     },
     "range": "Medium, 60 ft. (10-foot radius)",
@@ -24,7 +24,7 @@
     "target": "sphere",
     "savingThrow": "will",
     "effect": "Creatures in area make Will saves. Starting with lowest HP targets, compare your targeting successes to their save successes. Those you beat fall Unconscious for 1 minute. Awakens if damaged or shaken (action). Doesn't affect constructs or undead.",
-    "effectType": "utility",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
@@ -57,7 +57,7 @@
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [
       {
-        "effectId": "Unconscious",
+        "effectId": "Asleep",
         "params": {}
       }
     ],

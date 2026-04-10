@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Combat] action Range: 30 feet Frequency: Once per short rest Effect: Target within 30 feet makes [[/save type=will]] (your Charisma + Fire Mastery vs their Wisdom + Luck). If you win by 1+ successes, target is Frightened for 1 minute (they can repeat save each turn). The stolen power within you manifests as pure terror.</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> 30 feet</li>\n<li><strong>Frequency:</strong> Once per short rest</li>\n<li><strong>Effect:</strong> Target within 30 feet makes [[/save type=will]] (your Charisma + Fire Mastery vs their Wisdom + Luck). If you win by 1+ successes, target is Frightened for 1 minute (they can repeat save each turn). The stolen power within you manifests as pure terror.</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Eldritch Pact Abilities",
+    "keywords": [],
     "trigger": "",
-    "frequency": "",
-    "effect": "",
-    "isActive": false
+    "frequency": "Once per short rest",
+    "effect": "Target within 30 feet makes Will save (your Charisma + Fire Mastery vs their Wisdom + Luck). If you win by 1+ successes, target is Frightened for 1 minute (they can repeat save each turn). The stolen power within you manifests as pure terror.",
+    "isActive": false,
+    "actionCost": "1 [Combat] action",
+    "requirements": "",
+    "range": "30 feet",
+    "target": "",
+    "usage": "",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!a5a6aff5daca4cea"

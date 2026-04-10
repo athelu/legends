@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "A hostile creature you can see moves out of your melee reach",
     "effect": "Make one melee attack against the triggering creature. Movement within your reach doesn't trigger this reaction. Teleportation and forced movement don't trigger this reaction. The Disengage action prevents opportunity attacks.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

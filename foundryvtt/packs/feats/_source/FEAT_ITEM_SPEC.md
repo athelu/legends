@@ -66,7 +66,7 @@ Field definitions
 Design notes / integration guidance
 - Validation: when a character attempts to add a feat, check `data.tier` and compare to the character's Tier, then validate all entries in `data.prerequisites`.
 - Benefit automation: populate `benefit.effects` where practical. Start with common effect types (defense.modify, save.modify, damage.add, resist.add, condition.apply, movement.modify, hp.modify). The system should map effect types to engine handlers.
-- Usage handling: feats with `mode: passive` require no tracking. For `limited` use feats, store current usage on the Actor (e.g. `actor.data.flags.legends.featUses[featId]`) and use `recharge` to reset.
+- Usage handling: feats with `mode: passive` require no tracking. For limited-use feats, store current/max uses on the feat item itself under `system.usage.uses`, store rest cadence under `system.usage.recharge`, and let actor rest flows reset that item state.
 - UI: in the item sheet, display `tier`, `prerequisites` and parse `benefit.effects` into readable lines; allow GMs to author both free-text and structured effects.
 - Compendium packing: feats belong in a `feats` pack; include both text and `effects` JSON so automated imports can seed actor data and effect handlers.
 

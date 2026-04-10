@@ -23,11 +23,22 @@
     "usageType": "active",
     "usage": {
       "mode": "active",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Additional cost when Stunning Strike succeeds"
     },
-    "keywords": "[Combat], [Ascetic], [Unarmed], [Magic]",
+    "keywords": [
+      "[Combat]",
+      "[Ascetic]",
+      "[Unarmed]",
+      "[Magic]"
+    ],
     "notes": "",
     "effects": []
   },

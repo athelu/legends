@@ -84,7 +84,7 @@ Weaves that create false sensory information or conceal the truth. Primarily use
 #### Protective Effects (Warding Magic)
 Weaves that create barriers, wards, or defensive magic. Primarily uses Space energy to create force barriers or Reactive Ward effects. These are referred to as protective weaves or wards.
 
-**Common Examples:** Reactive Ward, Force Armor, protection from energy, CounterWeave, Unweave
+**Common Examples:** Reactive Ward, Force Armor, protection from energy, Counterweave, Unweave
 
 #### Transformation Effects (Physical Alteration)
 Weaves that physically change or enhance creatures or objects. Uses elemental energies (Earth, Fire, Water, Air) to reshape matter, or Positive/Negative to enhance/wither living tissue.
@@ -480,16 +480,21 @@ Supporting Energy modifies the delivery and scope of your Primary effect.
    When your Primary Energy IS Space, add the area/range cost to the primary energy cost.
    use time for the duration cost.
 ##### Supporting Energy: Range (typically Air or Space)
-- 0 points: Touch
-- 1 point: Close (30 feet)
-- 2 points: Medium (60 feet)
-- 3+ points: Long (120 feet)
+| Energy | Range    |
+|--------|----------|
+| 0      | Touch |
+| 1      | Close (30 feet) |
+| 2      | Medium (60 feet) |
+| 3+     | Long (120 feet) |
 
 ##### Supporting Energy: Area Effect (typically Air or Space)
-- 0 points: Single target
-- 1 point: 2 targets or 10ft radius
-- 2 points: 4 targets or 20ft radius
-- 3+ points: 6 targets or 30ft radius
+| Energy | Diameter |  Cone  |   Line  |
+|--------|----------|--------|---------|
+|   1    | 10 ft    | 15 ft  | 30 ft   |
+|   2    | 20 ft    | 20 ft  | 60 ft   |
+|   3    | 30 ft    | 30 ft  | 120 ft  |
+|   4    | 40 ft    | 40 ft  |    -    |
+|   5    | 60 ft    | 60 ft  |    -    |
 
 **AOE Damage Application:**
 When a damage weave affects multiple targets through area effect:
@@ -502,15 +507,17 @@ When a damage weave affects multiple targets through area effect:
 - Second target: 16 fire damage (makes own save)
 
 ##### Supporting Energy: Duration (typically Time or element)
-- 0 points: Instantaneous
-- 1 point: 1 round (8 seconds)
-- 2 points: 1 minute
-- 3 points: 10 minutes
-- 4 points: 1 hour
-- 5 points: 4 hours
-- 6 points: 12 hours
-- 7 points: 1 day
-- 8 points: 1 week
+| Energy | Duration     |
+|--------|--------------|
+| 0      | Instantaneous |
+| 1      | 1 round (8 seconds) |
+| 2      | 1 minute |
+| 3      | 10 minutes |
+| 4      | 1 hour |
+| 5      | 4 hours |
+| 6      | 12 hours |
+| 7      | 1 day |
+| 8      | 1 week |
 
 ##### Supporting Energy: Simple Weaves
 Simple Weaves use only a single energy type (no supporting energy) and are limited in scope:

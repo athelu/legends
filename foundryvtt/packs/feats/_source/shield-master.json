@@ -23,11 +23,20 @@
     "usageType": "reaction",
     "usage": {
       "mode": "reaction",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Passive + once per combat reaction"
     },
-    "keywords": "[Combat], [Reaction]",
+    "keywords": [
+      "[Combat]",
+      "[Reaction]"
+    ],
     "notes": "",
     "effects": []
   },

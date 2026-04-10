@@ -23,11 +23,20 @@
     "usageType": "free",
     "usage": {
       "mode": "free",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Once per turn, Free action"
     },
-    "keywords": "[Combat], [Duelist]",
+    "keywords": [
+      "[Combat]",
+      "[Duelist]"
+    ],
     "notes": "",
     "effects": []
   },

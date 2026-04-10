@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "You are targeted by a Ranged attack while wielding a shield.",
     "effect": "Force Misfortune on one ranged attack per round.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

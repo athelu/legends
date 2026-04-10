@@ -26,11 +26,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "1"
+      },
       "text": "Once per long rest; must be declared before rolling"
     },
-    "keywords": "[Magic], [Divine]",
+    "keywords": [
+      "[Magic]",
+      "[Divine]"
+    ],
     "notes": "",
     "effects": []
   },

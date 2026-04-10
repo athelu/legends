@@ -180,7 +180,51 @@
       },
       "tier": {
         "xp": 0,
-        "value": 1
+        "value": 1,
+        "unspent": 0
+      },
+      "progression": {
+        "phase": "advancement",
+        "manualOverride": false,
+        "transactions": []
+      },
+      "training": {
+        "skills": {
+          "athletics": false,
+          "might": false,
+          "devices": false,
+          "thievery": false,
+          "writing": false,
+          "rangedCombat": false,
+          "craft": false,
+          "acrobatics": false,
+          "meleeCombat": false,
+          "stealth": false,
+          "investigate": false,
+          "language": false,
+          "history": false,
+          "arcane": false,
+          "society": false,
+          "perception": false,
+          "empathy": false,
+          "persuasion": false,
+          "deception": false,
+          "intimidate": false,
+          "perform": false,
+          "medicine": false,
+          "wilderness": false,
+          "religion": false
+        },
+        "mastery": {
+          "earth": false,
+          "air": false,
+          "fire": false,
+          "water": false,
+          "positive": false,
+          "negative": false,
+          "time": false,
+          "space": false
+        }
       }
     },
     "npc": {
@@ -370,9 +414,29 @@
       "templates": ["common"],
       "tier": 1,
       "classification": "standard",
-      "prerequisites": "",
+      "prerequisites": {
+        "attributes": {},
+        "skills": "",
+        "feats": [],
+        "tier": 0,
+        "other": ""
+      },
       "benefits": "",
-      "usage": "",
+      "usage": {
+        "mode": "passive",
+        "text": "",
+        "uses": {
+          "value": 0,
+          "max": 0
+        },
+        "recharge": {
+          "period": "",
+          "formula": ""
+        }
+      },
+      "usageType": "passive",
+      "xpCost": 40,
+      "notes": "",
       "keywords": []
     },
     "trait": {
@@ -472,10 +536,23 @@
     "ability": {
       "templates": ["common"],
       "abilityType": "passive",
+      "actionCost": "",
+      "requirements": "",
       "trigger": "",
+      "range": "",
+      "target": "",
       "effect": "",
       "frequency": "",
+      "usage": "",
       "source": "",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "appliesEffects": [],
       "keywords": [],
       "isActive": false

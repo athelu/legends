@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Combat] action Range: 30 feet (must see allies) Frequency: Tier times per short rest Effect: Speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. Additionally, your next weave cast before the end of your next turn subtracts 1 from one targeting die result of your choice. The true names you speak resonate with power, guiding your allies toward success. Ancient glyphs and symbols briefly shimmer in the air as the word echoes with unnatural resonance.</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> 30 feet (must see allies)</li>\n<li><strong>Frequency:</strong> Tier times per short rest</li>\n<li><strong>Effect:</strong> Speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. Additionally, your next weave cast before the end of your next turn subtracts 1 from one targeting die result of your choice. The true names you speak resonate with power, guiding your allies toward success. Ancient glyphs and symbols briefly shimmer in the air as the word echoes with unnatural resonance.</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Invoker Abilities",
+    "keywords": [],
     "trigger": "",
-    "frequency": "",
-    "effect": "",
-    "isActive": false
+    "frequency": "Tier times per short rest",
+    "effect": "Speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. Additionally, your next weave cast before the end of your next turn subtracts 1 from one targeting die result of your choice. The true names you speak resonate with power, guiding your allies toward success. Ancient glyphs and symbols briefly shimmer in the air as the word echoes with unnatural resonance.",
+    "isActive": false,
+    "actionCost": "1 [Combat] action",
+    "requirements": "",
+    "range": "30 feet (must see allies)",
+    "target": "",
+    "usage": "",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!db73fdb662174a6c"

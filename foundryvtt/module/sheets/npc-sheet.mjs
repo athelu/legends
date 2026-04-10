@@ -226,7 +226,7 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
   static async #onItemCreate(event, target) {
     const type = target.dataset.type;
-    const name = `New ${type.capitalize()}`;
+    const name = `New ${type ? type.charAt(0).toUpperCase() + type.slice(1) : 'Item'}`;
     const itemData = {
       name: name,
       type: type,

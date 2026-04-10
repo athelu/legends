@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 2 [Combat] actions Range: 60 feet Effect: Target one creature you can see. Make opposed check: your Wisdom + Positive Mastery vs their Wisdom + Luck ([[/save type=will]]). If you win by 1+ net successes, they are Stunned until end of their next turn as Athore's judgment weighs upon them. Usage: Uses 1 Channel Divinity</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 2 [Combat] actions</li>\n<li><strong>Range:</strong> 60 feet</li>\n<li><strong>Effect:</strong> Target one creature you can see. Make opposed check: your Wisdom + Positive Mastery vs their Wisdom + Luck ([[/save type=will]]). If you win by 1+ net successes, they are Stunned until end of their next turn as Athore's judgment weighs upon them.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "Target one creature you can see. Make opposed check: your Wisdom + Positive Mastery vs their Wisdom + Luck (Will save). If you win by 1+ net successes, they are Stunned until end of their next turn as Athore's judgment weighs upon them.",
+    "isActive": false,
+    "actionCost": "2 [Combat] actions",
+    "requirements": "",
+    "range": "60 feet",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!bd071be000194a0f"

@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Combat] action Range: 60 feet (must see target) Effect: Curse one enemy. Make opposed check: your Wisdom + Space Mastery vs their Wisdom + Luck ([[/save type=will]]). If you win (more successes), they have Misfortune on their next roll. Rudlu's capricious nature turns against them. Usage: Uses 1 Channel Divinity</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> 60 feet (must see target)</li>\n<li><strong>Effect:</strong> Curse one enemy. Make opposed check: your Wisdom + Space Mastery vs their Wisdom + Luck ([[/save type=will]]). If you win (more successes), they have Misfortune on their next roll. Rudlu's capricious nature turns against them.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "Curse one enemy. Make opposed check: your Wisdom + Space Mastery vs their Wisdom + Luck (Will save). If you win (more successes), they have Misfortune on their next roll. Rudlu's capricious nature turns against them.",
+    "isActive": false,
+    "actionCost": "1 [Combat] action",
+    "requirements": "",
+    "range": "60 feet (must see target)",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!3d6533a7c75c48f4"

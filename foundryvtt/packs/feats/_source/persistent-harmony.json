@@ -25,11 +25,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Once per long rest, 1 minute duration"
     },
-    "keywords": "[Magic], [Sorcerer]",
+    "keywords": [
+      "[Magic]",
+      "[Sorcerer]"
+    ],
     "notes": "",
     "effects": []
   },

@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Make a Perception or Investigate check to find something.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

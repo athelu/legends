@@ -276,6 +276,20 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
           .map(([key, value]) => `${key}=${value}`)
           .join(', ')
       }));
+
+      context.abilityRechargeLabel = context.system.recharge?.period === 'shortRest'
+        ? 'Short Rest'
+        : (context.system.recharge?.period === 'longRest' ? 'Long Rest' : '');
+    }
+
+    if (this.document.type === 'feat') {
+      if (Array.isArray(context.system?.prerequisites?.feats)) {
+        context.system.prerequisites.feats = context.system.prerequisites.feats.join(', ');
+      }
+
+      context.featRechargeLabel = context.system.usage?.recharge?.period === 'shortRest'
+        ? 'Short Rest'
+        : (context.system.usage?.recharge?.period === 'longRest' ? 'Long Rest' : '');
     }
 
     return context;
@@ -604,7 +618,7 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
         expanded.system.abilityType = 'passive';
       }
 
-      for (const field of ['trigger', 'effect', 'frequency', 'source']) {
+      for (const field of ['actionCost', 'requirements', 'trigger', 'range', 'target', 'effect', 'frequency', 'usage', 'source']) {
         if (typeof expanded.system?.[field] !== 'string') expanded.system[field] = '';
         else expanded.system[field] = expanded.system[field].trim();
       }
@@ -619,6 +633,61 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       }
 
       expanded.system.isActive = Boolean(expanded.system?.isActive);
+    }
+
+    if (this.document.type === 'feat') {
+      if (!expanded.system?.prerequisites || typeof expanded.system.prerequisites !== 'object' || Array.isArray(expanded.system.prerequisites)) {
+        expanded.system.prerequisites = { attributes: {}, skills: '', feats: [], tier: 0, other: '' };
+      }
+
+      if (!expanded.system.prerequisites.attributes || typeof expanded.system.prerequisites.attributes !== 'object' || Array.isArray(expanded.system.prerequisites.attributes)) {
+        expanded.system.prerequisites.attributes = {};
+      }
+
+      expanded.system.prerequisites.skills = String(expanded.system.prerequisites.skills || '').trim();
+      expanded.system.prerequisites.other = String(expanded.system.prerequisites.other || '').trim();
+      expanded.system.prerequisites.feats = String(expanded.system.prerequisites.feats || '')
+        .split(',')
+        .map(feat => feat.trim())
+        .filter(Boolean);
+
+      if (!expanded.system?.usage || typeof expanded.system.usage !== 'object' || Array.isArray(expanded.system.usage)) {
+        expanded.system.usage = {};
+      }
+
+      const validUsageModes = ['passive', 'active', 'reaction', 'free', 'special', 'unlimited', 'once'];
+      expanded.system.usage.mode = String(expanded.system.usage.mode || expanded.system.usageType || '').trim().toLowerCase();
+      if (!validUsageModes.includes(expanded.system.usage.mode)) {
+        expanded.system.usage.mode = 'passive';
+      }
+
+      expanded.system.usage.text = String(expanded.system.usage.text || '').trim();
+
+      if (!expanded.system.usage.uses || typeof expanded.system.usage.uses !== 'object' || Array.isArray(expanded.system.usage.uses)) {
+        expanded.system.usage.uses = { value: 0, max: 0 };
+      }
+
+      expanded.system.usage.uses.value = Number.isFinite(expanded.system.usage.uses.value) ? expanded.system.usage.uses.value : 0;
+      expanded.system.usage.uses.max = Number.isFinite(expanded.system.usage.uses.max) ? expanded.system.usage.uses.max : 0;
+
+      if (!expanded.system.usage.recharge || typeof expanded.system.usage.recharge !== 'object' || Array.isArray(expanded.system.usage.recharge)) {
+        expanded.system.usage.recharge = { period: '', formula: '' };
+      }
+
+      expanded.system.usage.recharge.period = String(expanded.system.usage.recharge.period || '').trim();
+      expanded.system.usage.recharge.formula = String(expanded.system.usage.recharge.formula || '').trim();
+      expanded.system.usageType = expanded.system.usage.mode;
+
+      if (Array.isArray(expanded.system?.keywords)) {
+        expanded.system.keywords = expanded.system.keywords.map(keyword => String(keyword || '').trim()).filter(Boolean);
+      } else {
+        expanded.system.keywords = String(expanded.system?.keywords || '')
+          .split(',')
+          .map(keyword => keyword.trim())
+          .filter(Boolean);
+      }
+
+      expanded.system.notes = String(expanded.system.notes || '').trim();
     }
 
     if (this.document.type === 'condition') {

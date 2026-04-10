@@ -434,6 +434,48 @@
   flex: none;
 }
 
+.legends .header-info .info-line .xp-input[readonly] {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.legends .header-info .progression-line {
+  flex-wrap: wrap;
+}
+
+.legends .header-info .progression-badge {
+  display: inline-flex;
+  align-items: center;
+  height: 20px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.legends .header-info .progression-badge.warning {
+  background: rgba(237, 137, 54, 0.3);
+  color: #fff5eb;
+}
+
+.legends .header-info .progression-button {
+  height: 22px;
+  padding: 0 8px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.legends .header-info .progression-button:hover {
+  background: rgba(255, 255, 255, 0.24);
+}
+
 /* ========================================
    SHEET TABS
    ======================================== */
@@ -567,6 +609,15 @@
   color: var(--d8-text);
 }
 
+.legends .training-checkbox {
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  accent-color: var(--d8-success);
+  cursor: pointer;
+  flex: 0 0 auto;
+}
+
 .legends .skill-row .skill-attr {
   font-size: 10px;
   color: var(--d8-secondary);
@@ -666,6 +717,11 @@
   border-radius: 3px;
   background: white;
   font-weight: bold;
+.legends input.readonly-field[readonly] {
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--d8-secondary);
+  cursor: not-allowed;
+}
   color: var(--d8-text);
 }
 
@@ -677,6 +733,23 @@
   font-weight: 500;
   cursor: help;
   border-radius: 2px;
+.legends .creation-points-summary {
+  margin: 0 0 8px;
+  padding: 6px 10px;
+  border: 1px solid var(--d8-border);
+  border-radius: 4px;
+  background: var(--d8-bg-light);
+  font-size: 12px;
+  color: var(--d8-text);
+}
+.legends .creation-points-summary.warning {
+  border-color: #c05621;
+  background: rgba(197, 86, 33, 0.08);
+}
+.legends .creation-lock-note {
+  margin-left: 8px;
+  color: var(--d8-secondary);
+}
   background: #e6f0fa;
   margin-left: 2px;
   margin-right: 2px;
@@ -4057,6 +4130,10 @@ span.legends-damage-tag i {
   align-items: center;
   gap: 6px;
   justify-content: center;
+}
+
+.energy-values .mastery-checkbox {
+  margin-right: 2px;
 }
 
 .energy-values .energy-input {

@@ -8,8 +8,8 @@ The weaves are split across multiple files:
 - weaves(n-r).md
 - weaves(s-z).md
 
-This script will parse all of them and preserve manually-added fields
-(such as appliesEffects) from existing JSON files.
+This script will parse all of them and rebuild weave source JSON from
+markdown.
 """
 
 import json
@@ -89,7 +89,7 @@ def _generate_weave_id(name: str) -> str:
 
 def _load_existing_weave(source_dir, weave_name):
     """
-    Load existing weave JSON to preserve manually-added fields like appliesEffects.
+    Load existing weave JSON to preserve stable identity fields.
     Returns None if the file doesn't exist.
     """
     candidate_filenames = [f"{_safe_filename(weave_name)}.json"]
@@ -108,25 +108,6 @@ def _load_existing_weave(source_dir, weave_name):
             print(f"  Warning: Could not load existing {filename}: {e}")
     
     return None
-
-
-
-def _preserve_manual_fields(new_item, existing_item):
-    """
-    Preserve manually-added fields from existing item that shouldn't be overwritten.
-    Currently preserves:
-    - system.appliesEffects (effect references)
-    """
-    if existing_item and 'system' in existing_item:
-        # Preserve appliesEffects if it exists and is not empty
-        if 'appliesEffects' in existing_item['system']:
-            applies_effects = existing_item['system']['appliesEffects']
-            if applies_effects:  # Only if non-empty
-                new_item['system']['appliesEffects'] = applies_effects
-                return True  # Indicate that we preserved something
-    
-    return False
-
 
 def _parse_applies_effects(effects_str):
     """
@@ -150,27 +131,27 @@ def _parse_applies_effects(effects_str):
         entry = entry.strip()
         if not entry:
             continue
-        
-        # Parse: "effect-name (param1=value1, param2=value2)"
-        match = re.match(r'^([a-z0-9\-]+)\s*(?:\(([^)]+)\))?$', entry, re.IGNORECASE)
+
+        effect_id = entry
+        params = {}
+
+        # Treat a trailing parenthetical as params only when it contains key=value pairs.
+        match = re.match(r'^(.*?)\s*\(([^)]+)\)\s*$', entry)
         if match:
-            effect_id = match.group(1).strip()
-            params_str = match.group(2)
-            
-            params = {}
-            if params_str:
-                # Parse parameters: "value=2, type=bonus"
-                param_parts = params_str.split(',')
-                for param_part in param_parts:
+            candidate_effect_id = match.group(1).strip()
+            params_str = match.group(2).strip()
+            if '=' in params_str:
+                effect_id = candidate_effect_id
+                for param_part in params_str.split(','):
                     param_part = param_part.strip()
                     if '=' in param_part:
                         key, value = param_part.split('=', 1)
                         params[key.strip()] = value.strip()
-            
-            applies_effects.append({
-                'effectId': effect_id,
-                'params': params
-            })
+
+        applies_effects.append({
+            'effectId': effect_id,
+            'params': params
+        })
     
     return applies_effects
 
@@ -503,7 +484,7 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
     Description and details...
     
     If source_dir is provided, will load existing JSON files to preserve
-    manually-added fields like appliesEffects.
+    stable identity fields such as Foundry document IDs.
     """
     items = []
     
@@ -739,14 +720,8 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                         applies_effects_list
                     )
             
-            # Preserve manually-added fields from existing JSON (if available)
-            # This is now mainly for backward compatibility
             if source_dir:
                 existing = _load_existing_weave(source_dir, weave_name)
-                if existing:
-                    # Only preserve if not already parsed from markdown
-                    if not applies_match and existing.get('system', {}).get('appliesEffects'):
-                        item['system']['appliesEffects'] = existing['system']['appliesEffects']
             
             # Auto-detect and apply classification
             if DETECTORS_AVAILABLE:
@@ -775,7 +750,7 @@ def main():
         items = parse_weaves_md(ttrpg_dir, source_dir)
         print(f"  Extracted {len(items)} weave items from documentation")
         
-        # Count how many have appliesEffects (from markdown or preserved)
+        # Count how many have appliesEffects configured in markdown
         effects_count = sum(1 for item in items if item['system'].get('appliesEffects'))
         if effects_count > 0:
             print(f"  {effects_count} weave(s) with appliesEffects configured")

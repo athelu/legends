@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Minor] action Range: Self Effect: For 10 minutes, you gain the following benefits: You automatically see through all illusory effects (no check needed). You know when creatures speak lies (though not what the truth is). You have Fortune on Perception and Investigate checks. Your eyes glow brighter than normal as enlightenment fills you. Usage: Uses 1 Channel Divinity</p>\n<h3>Invoker Abilities</h3>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Minor] action</li>\n<li><strong>Range:</strong> Self</li>\n<li><strong>Effect:</strong> For 10 minutes, you gain the following benefits: You automatically see through all illusory effects (no check needed). You know when creatures speak lies (though not what the truth is). You have Fortune on Perception and Investigate checks. Your eyes glow brighter than normal as enlightenment fills you.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "For 10 minutes, you gain the following benefits: You automatically see through all illusory effects (no check needed). You know when creatures speak lies (though not what the truth is). You have Fortune on Perception and Investigate checks. Your eyes glow brighter than normal as enlightenment fills you.",
+    "isActive": false,
+    "actionCost": "1 [Minor] action",
+    "requirements": "",
+    "range": "Self",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!9863d969bdcc4360"

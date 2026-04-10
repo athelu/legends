@@ -74,9 +74,44 @@
       </div>
 
       <div class="form-group">
+        <label>Action Cost</label>
+        <input type="text" name="system.actionCost" value="{{system.actionCost}}" placeholder="e.g., 1 [Combat] action, [Reaction], [Free]"/>
+      </div>
+
+      <div class="form-group">
+        <label>Requirements</label>
+        <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="e.g., Must see the target, Divine Gift trait"/>
+      </div>
+
+      <div class="form-group">
+        <label>Range</label>
+        <input type="text" name="system.range" value="{{system.range}}" placeholder="e.g., Self, Touch, 60 feet"/>
+      </div>
+
+      <div class="form-group">
+        <label>Target</label>
+        <input type="text" name="system.target" value="{{system.target}}" placeholder="e.g., One creature, allies in range"/>
+      </div>
+
+      <div class="form-group">
         <label>Frequency</label>
         <input type="text" name="system.frequency" value="{{system.frequency}}" placeholder="e.g., Once per round, At will, Passive"/>
       </div>
+
+      <div class="form-group">
+        <label>Usage</label>
+        <input type="text" name="system.usage" value="{{system.usage}}" placeholder="e.g., Uses 1 Channel Divinity"/>
+      </div>
+
+      {{#if (gt system.uses.max 0)}}
+      <div class="form-group">
+        <label>Tracked Uses</label>
+        <div>{{system.uses.value}} / {{system.uses.max}}</div>
+        {{#if abilityRechargeLabel}}
+        <small>Recharges on {{abilityRechargeLabel}}</small>
+        {{/if}}
+      </div>
+      {{/if}}
 
       <div class="form-group">
         <label>Effect</label>

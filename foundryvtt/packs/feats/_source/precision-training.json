@@ -23,11 +23,20 @@
     "usageType": "active",
     "usage": {
       "mode": "active",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Passive, natural rolls only"
     },
-    "keywords": "[Combat], [Discipline]",
+    "keywords": [
+      "[Combat]",
+      "[Discipline]"
+    ],
     "notes": "",
     "effects": []
   },

@@ -223,7 +223,7 @@ Once per round (the time between your turns), you can use a reaction, which is a
 The most common reaction is the Opportunity Attack: when an enemy moves out of your melee reach, you can use your reaction to make one melee attack against them.
 This creates tactical choices. Do enemies risk taking opportunity attacks to run away? Do they use the Disengage action to avoid attacks but sacrifice an offensive action?
 
-Other reactions include Shield Block (if you're wielding a shield) and CounterWeave (if you can counter enemy spells). Some feats grant additional reaction options.
+Other reactions include Shield Block (if you're wielding a shield) and Counterweave (if you can counter enemy spells). Some feats grant additional reaction options.
 
 ### Magic: Weaving the Eight Energies
 When the gods created Athelu, they wove magic into the fabric of reality itself. This magic flows through eight distinct energies: Earth, Air, Fire, Water, Positive, Negative, Time, and Space. Each energy embodies different aspects of existence, from the physical elements to the concepts of life, death, and reality manipulation.

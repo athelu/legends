@@ -2,12 +2,331 @@ import { showSkillCheckDialog } from "../dice.mjs";
 import * as featEffects from "../feat-effects.mjs";
 import { getSkillValue, normalizeSkillKey, SKILL_ATTRIBUTE_KEYS, SKILL_LABELS } from "../skill-utils.mjs";
 
+const ABILITY_RECHARGE_PERIODS = {
+  short: 'shortRest',
+  long: 'longRest',
+};
+
+const FEAT_USAGE_MODES = ['passive', 'active', 'reaction', 'free', 'special', 'unlimited', 'once'];
+
 function slugifyActionName(name) {
   return String(name || '')
     .trim()
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '');
+}
+
+function getNumericValue(value, fallback = 0) {
+  return Number.isFinite(value) ? Number(value) : fallback;
+}
+
+function normalizeAbilityFormulaTerm(term) {
+  return String(term || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\bcurrent\b/g, '')
+    .replace(/\bscore\b/g, '')
+    .replace(/\byour\b/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function resolveAbilityFormulaTerm(actor, rawTerm) {
+  const term = normalizeAbilityFormulaTerm(rawTerm);
+  if (!term) return 0;
+  if (/^\d+$/.test(term)) return Number.parseInt(term, 10);
+  if (term === 'tier') return getNumericValue(actor?.system?.tier?.value);
+
+  const attributeAliases = {
+    str: 'strength', strength: 'strength',
+    con: 'constitution', constitution: 'constitution',
+    agi: 'agility', agility: 'agility',
+    dex: 'dexterity', dexterity: 'dexterity',
+    int: 'intelligence', intelligence: 'intelligence',
+    wis: 'wisdom', wisdom: 'wisdom',
+    cha: 'charisma', charisma: 'charisma',
+    luck: 'luck',
+  };
+
+  const attributeKey = attributeAliases[term];
+  if (!attributeKey) return null;
+
+  return getNumericValue(
+    actor?.system?.attributesEffective?.[attributeKey]
+      ?? actor?.system?.attributes?.[attributeKey]?.value,
+    0
+  );
+}
+
+function parseRechargeText(text, { allowEmbedded = false } = {}) {
+  const rawText = String(text || '').trim();
+  if (!rawText) return null;
+
+  const candidates = [rawText];
+  if (allowEmbedded) {
+    for (const segment of rawText.split(/[.;]/)) {
+      const candidate = segment.trim();
+      if (candidate && !candidates.includes(candidate)) {
+        candidates.push(candidate);
+      }
+    }
+  }
+
+  for (const candidate of candidates) {
+    const onceMatch = candidate.match(/^(?:.+?\s+)?once per (short|long) rest$/i);
+    if (onceMatch) {
+      return {
+        period: ABILITY_RECHARGE_PERIODS[onceMatch[1].toLowerCase()] || '',
+        formula: '1',
+        sourceText: candidate,
+      };
+    }
+
+    const timesMatch = candidate.match(/^(.+?)\s+times per\s+(short|long)\s+rest$/i);
+    if (timesMatch) {
+      return {
+        period: ABILITY_RECHARGE_PERIODS[timesMatch[2].toLowerCase()] || '',
+        formula: timesMatch[1].trim(),
+        sourceText: candidate,
+      };
+    }
+
+    const embeddedOnceMatch = candidate.match(/\bonce per (short|long) rest\b/i);
+    if (embeddedOnceMatch) {
+      return {
+        period: ABILITY_RECHARGE_PERIODS[embeddedOnceMatch[1].toLowerCase()] || '',
+        formula: '1',
+        sourceText: candidate,
+      };
+    }
+
+    const embeddedTimesMatch = candidate.match(/\b(.+?)\s+times per\s+(short|long)\s+rest\b/i);
+    if (embeddedTimesMatch) {
+      return {
+        period: ABILITY_RECHARGE_PERIODS[embeddedTimesMatch[2].toLowerCase()] || '',
+        formula: embeddedTimesMatch[1].trim(),
+        sourceText: candidate,
+      };
+    }
+  }
+
+  return null;
+}
+
+export function parseAbilityRechargeText(text) {
+  return parseRechargeText(text);
+}
+
+export function evaluateAbilityRechargeFormula(actor, formula) {
+  const normalizedFormula = String(formula || '').trim();
+  if (!normalizedFormula) return 0;
+
+  const parts = normalizedFormula.split('+').map(part => part.trim()).filter(Boolean);
+  if (parts.length === 0) return 0;
+
+  let total = 0;
+  for (const part of parts) {
+    const value = resolveAbilityFormulaTerm(actor, part);
+    if (value == null) return 0;
+    total += value;
+  }
+
+  return Math.max(0, Math.floor(total));
+}
+
+export function getAbilityRechargeState(systemData = {}, actor = null) {
+  const explicitPeriod = typeof systemData?.recharge?.period === 'string' ? systemData.recharge.period.trim() : '';
+  const explicitFormula = typeof systemData?.recharge?.formula === 'string' ? systemData.recharge.formula.trim() : '';
+  const inferredRecharge = parseAbilityRechargeText(systemData?.frequency)
+    || parseAbilityRechargeText(systemData?.usage)
+    || null;
+
+  const period = inferredRecharge?.period || explicitPeriod;
+  const formula = inferredRecharge?.formula || explicitFormula;
+  const maxUses = period && formula ? evaluateAbilityRechargeFormula(actor, formula) : 0;
+
+  return {
+    period,
+    formula,
+    maxUses,
+    tracked: maxUses > 0 && Boolean(period),
+  };
+}
+
+function normalizeFeatUsageMode(mode) {
+  const normalizedMode = String(mode || '').trim().toLowerCase();
+  return FEAT_USAGE_MODES.includes(normalizedMode) ? normalizedMode : 'passive';
+}
+
+function getNormalizedFeatUsage(systemData = {}) {
+  const rawUsage = systemData?.usage;
+  const usage = rawUsage && typeof rawUsage === 'object' && !Array.isArray(rawUsage)
+    ? foundry.utils.deepClone(rawUsage)
+    : {};
+
+  usage.mode = normalizeFeatUsageMode(usage.mode || systemData?.usageType);
+  usage.text = typeof usage.text === 'string'
+    ? usage.text.trim()
+    : (typeof rawUsage === 'string' ? rawUsage.trim() : '');
+
+  const legacyUses = systemData?.uses;
+  if (!usage.uses || typeof usage.uses !== 'object' || Array.isArray(usage.uses)) {
+    if (typeof legacyUses === 'number') {
+      usage.uses = { value: legacyUses, max: legacyUses };
+    } else if (legacyUses && typeof legacyUses === 'object' && !Array.isArray(legacyUses)) {
+      usage.uses = {
+        value: getNumericValue(legacyUses.value, 0),
+        max: getNumericValue(legacyUses.max, 0),
+      };
+    } else {
+      usage.uses = { value: 0, max: 0 };
+    }
+  } else {
+    usage.uses.value = getNumericValue(usage.uses.value, 0);
+    usage.uses.max = getNumericValue(usage.uses.max, 0);
+  }
+
+  if (!usage.recharge || typeof usage.recharge !== 'object' || Array.isArray(usage.recharge)) {
+    const legacyRecharge = systemData?.recharge;
+    usage.recharge = legacyRecharge && typeof legacyRecharge === 'object' && !Array.isArray(legacyRecharge)
+      ? {
+          period: String(legacyRecharge.period || '').trim(),
+          formula: String(legacyRecharge.formula || '').trim(),
+        }
+      : { period: '', formula: '' };
+  } else {
+    usage.recharge.period = String(usage.recharge.period || '').trim();
+    usage.recharge.formula = String(usage.recharge.formula || '').trim();
+  }
+
+  return usage;
+}
+
+export function getFeatRechargeState(systemData = {}, actor = null) {
+  const usage = getNormalizedFeatUsage(systemData);
+  const inferredRecharge = parseRechargeText(usage.text, { allowEmbedded: true }) || null;
+  const period = inferredRecharge?.period || usage.recharge.period;
+  const formula = inferredRecharge?.formula || usage.recharge.formula;
+  const explicitMax = usage.uses.max;
+  const maxUses = period && formula
+    ? evaluateAbilityRechargeFormula(actor, formula)
+    : explicitMax;
+
+  return {
+    period,
+    formula,
+    maxUses,
+    tracked: maxUses > 0 && Boolean(period),
+    usage,
+  };
+}
+
+export function getFeatUseState(item) {
+  const systemData = item?.system || {};
+  const recharge = getFeatRechargeState(systemData, item?.actor || null);
+  const storedValue = getNumericValue(recharge.usage?.uses?.value, 0);
+  const storedMax = getNumericValue(recharge.usage?.uses?.max, 0);
+  const maxUses = recharge.maxUses > 0 ? recharge.maxUses : storedMax;
+
+  if (maxUses <= 0) {
+    return {
+      ...recharge,
+      currentUses: 0,
+      maxUses: 0,
+      tracked: false,
+    };
+  }
+
+  const currentUses = storedMax > 0
+    ? Math.min(Math.max(0, storedValue), maxUses)
+    : maxUses;
+
+  return {
+    ...recharge,
+    currentUses,
+    maxUses,
+    tracked: Boolean(recharge.period),
+  };
+}
+
+export function buildFeatRechargeUpdate(item, restType) {
+  const state = getFeatUseState(item);
+  if (!state.tracked || state.maxUses <= 0) return null;
+
+  const shouldRestore = restType === 'longRest'
+    ? ['shortRest', 'longRest'].includes(state.period)
+    : state.period === 'shortRest';
+  if (!shouldRestore) return null;
+
+  if (state.currentUses === state.maxUses
+    && getNumericValue(item?.system?.usage?.uses?.max, 0) === state.maxUses
+    && String(item?.system?.usage?.recharge?.period || '') === state.period
+    && String(item?.system?.usage?.recharge?.formula || '') === state.formula) {
+    return null;
+  }
+
+  return {
+    _id: item.id,
+    'system.usage.uses.value': state.maxUses,
+    'system.usage.uses.max': state.maxUses,
+    'system.usage.recharge.period': state.period,
+    'system.usage.recharge.formula': state.formula,
+    'system.usageType': state.usage.mode,
+  };
+}
+
+export function getAbilityUseState(item) {
+  const systemData = item?.system || {};
+  const recharge = getAbilityRechargeState(systemData, item?.actor || null);
+  const storedValue = getNumericValue(systemData?.uses?.value, 0);
+  const storedMax = getNumericValue(systemData?.uses?.max, 0);
+  const maxUses = recharge.maxUses > 0 ? recharge.maxUses : storedMax;
+
+  if (maxUses <= 0) {
+    return {
+      ...recharge,
+      currentUses: 0,
+      maxUses: 0,
+      tracked: false,
+    };
+  }
+
+  const currentUses = storedMax > 0
+    ? Math.min(Math.max(0, storedValue), maxUses)
+    : maxUses;
+
+  return {
+    ...recharge,
+    currentUses,
+    maxUses,
+    tracked: Boolean(recharge.period),
+  };
+}
+
+export function buildAbilityRechargeUpdate(item, restType) {
+  const state = getAbilityUseState(item);
+  if (!state.tracked || state.maxUses <= 0) return null;
+
+  const shouldRestore = restType === 'longRest'
+    ? ['shortRest', 'longRest'].includes(state.period)
+    : state.period === 'shortRest';
+  if (!shouldRestore) return null;
+
+  if (state.currentUses === state.maxUses
+    && getNumericValue(item?.system?.uses?.max, 0) === state.maxUses
+    && String(item?.system?.recharge?.period || '') === state.period
+    && String(item?.system?.recharge?.formula || '') === state.formula) {
+    return null;
+  }
+
+  return {
+    _id: item.id,
+    'system.uses.value': state.maxUses,
+    'system.uses.max': state.maxUses,
+    'system.recharge.period': state.period,
+    'system.recharge.formula': state.formula,
+  };
 }
 
 /**
@@ -346,6 +665,14 @@ export class D8Item extends Item {
       systemData.appliesEffects = [];
     }
 
+    if (!systemData.uses || typeof systemData.uses !== 'object' || Array.isArray(systemData.uses)) {
+      systemData.uses = { value: 0, max: 0 };
+    }
+
+    if (!systemData.recharge || typeof systemData.recharge !== 'object' || Array.isArray(systemData.recharge)) {
+      systemData.recharge = { period: '', formula: '' };
+    }
+
     systemData.appliesEffects = systemData.appliesEffects
       .map((effectRef) => {
         const effectId = String(effectRef?.effectId || '').trim();
@@ -362,9 +689,25 @@ export class D8Item extends Item {
       })
       .filter(Boolean);
 
-    for (const field of ['trigger', 'effect', 'frequency', 'source']) {
+    for (const field of ['actionCost', 'requirements', 'trigger', 'range', 'target', 'effect', 'frequency', 'usage', 'source']) {
       if (typeof systemData[field] !== 'string') systemData[field] = '';
       else systemData[field] = systemData[field].trim();
+    }
+
+    for (const field of ['period', 'formula']) {
+      if (typeof systemData.recharge[field] !== 'string') systemData.recharge[field] = '';
+      else systemData.recharge[field] = systemData.recharge[field].trim();
+    }
+
+    if (!Number.isFinite(systemData.uses.value)) systemData.uses.value = 0;
+    if (!Number.isFinite(systemData.uses.max)) systemData.uses.max = 0;
+
+    const useState = getAbilityUseState(this);
+    if (useState.tracked) {
+      systemData.uses.value = useState.currentUses;
+      systemData.uses.max = useState.maxUses;
+      systemData.recharge.period = useState.period;
+      systemData.recharge.formula = useState.formula;
     }
 
     if (Array.isArray(systemData.keywords)) {
@@ -573,8 +916,25 @@ export class D8Item extends Item {
       systemData.xpCost = systemData.classification === 'legendary' ? 80 : 40;
     }
 
-    // Normalize usage fields if missing
-    if (!systemData.usage) systemData.usage = { mode: 'passive', uses: null, recharge: null };
+    const usage = getNormalizedFeatUsage(systemData);
+    const useState = getFeatUseState(this);
+    if (useState.tracked) {
+      usage.uses.value = useState.currentUses;
+      usage.uses.max = useState.maxUses;
+      usage.recharge.period = useState.period;
+      usage.recharge.formula = useState.formula;
+    }
+
+    if (Array.isArray(systemData.keywords)) {
+      systemData.keywords = systemData.keywords.map(keyword => String(keyword || '').trim()).filter(Boolean);
+    } else if (typeof systemData.keywords === 'string') {
+      systemData.keywords = systemData.keywords.split(',').map(keyword => keyword.trim()).filter(Boolean);
+    } else {
+      systemData.keywords = [];
+    }
+
+    systemData.usage = usage;
+    systemData.usageType = usage.mode;
 
     itemData.system = systemData;
   }
@@ -824,6 +1184,8 @@ export class D8Item extends Item {
         return this._rollWeave();
       case 'action':
         return this._rollAction();
+      case 'ability':
+        return this._rollAbility();
       case 'feat':
       case 'trait':
         return this._displayFeature();
@@ -838,9 +1200,13 @@ export class D8Item extends Item {
   async _rollWeapon() {
     const actor = this.actor;
     const item = this;
-    
+
     // Use the new combat system
-    return game.legends.combat.rollWeaponAttack(actor, item);
+    const result = await game.legends.combat.rollWeaponAttack(actor, item);
+    if (result != null) {
+      await game.legends?.effectEngine?.handleActorActivity?.(actor, 'combat-action');
+    }
+    return result;
   }
   
   /**
@@ -852,30 +1218,110 @@ export class D8Item extends Item {
     
     // Check if actor has enough energy
     const totalCost = item.system.totalEnergyCost;
-    if (actor.system.energy && actor.system.energy.value < totalCost) {
-      ui.notifications.warn(`Not enough Energy! Need ${totalCost}, have ${actor.system.energy.value}`);
+    if (actor.system.energy && actor.system.energy.current < totalCost) {
+      ui.notifications.warn(`Not enough Energy! Need ${totalCost}, have ${actor.system.energy.current}`);
       return;
     }
-    
+
     // Roll the weave
-    game.legends.rollWeave(actor, item);
+    const result = await game.legends.rollWeave(actor, item);
+    if (result != null) {
+      await game.legends?.effectEngine?.handleActorActivity?.(actor, 'cast-weave');
+    }
+    return result;
   }
 
   async _rollAction() {
     const actionKey = slugifyActionName(this.name);
 
+    let result;
+
     switch (actionKey) {
       case 'grapple':
-        return this._rollGrappleAction();
+        result = await this._rollGrappleAction();
+        break;
       case 'hide':
-        return this._rollHideAction();
+        result = await this._rollHideAction();
+        break;
       case 'stalk':
-        return this._rollStalkAction();
+        result = await this._rollStalkAction();
+        break;
       case 'release-grapple':
-        return this._rollReleaseGrappleAction();
+        result = await this._rollReleaseGrappleAction();
+        break;
       default:
-        return this._displayDescription();
+        result = await this._displayDescription();
+        break;
     }
+
+    if (this.system.actionType === 'combat' && result != null) {
+      await game.legends?.effectEngine?.handleActorActivity?.(this.actor, 'combat-action');
+    }
+
+    return result;
+  }
+
+  _getChannelDivinityCost() {
+    const usage = String(this.system?.usage || '').trim();
+    if (!usage) return 0;
+
+    const match = usage.match(/uses?\s+(\d+)\s+channel divinity/i);
+    if (match) {
+      return Number.parseInt(match[1], 10) || 0;
+    }
+
+    return /channel divinity/i.test(usage) ? 1 : 0;
+  }
+
+  async _rollAbility() {
+    const actor = this.actor;
+    const useState = getAbilityUseState(this);
+    const channelDivinityCost = this._getChannelDivinityCost();
+    const actionCost = String(this.system?.actionCost || '').toLowerCase();
+    const usageMessages = [];
+
+    if (useState.tracked) {
+      if (useState.currentUses <= 0) {
+        const periodLabel = useState.period === 'shortRest' ? 'short rest' : 'long rest';
+        ui.notifications.warn(`${this.name} has no uses remaining until a ${periodLabel}.`);
+        return null;
+      }
+    }
+
+    if (channelDivinityCost > 0) {
+      const currentChannelDivinity = Number(actor.system?.channelDivinity?.current ?? 0);
+      if (currentChannelDivinity < channelDivinityCost) {
+        ui.notifications.warn(`Not enough Channel Divinity! Need ${channelDivinityCost}, have ${currentChannelDivinity}.`);
+        return null;
+      }
+    }
+
+    const itemUpdates = {};
+    if (useState.tracked) {
+      const remainingUses = useState.currentUses - 1;
+      itemUpdates['system.uses.value'] = remainingUses;
+      itemUpdates['system.uses.max'] = useState.maxUses;
+      itemUpdates['system.recharge.period'] = useState.period;
+      itemUpdates['system.recharge.formula'] = useState.formula;
+      usageMessages.push(`${remainingUses}/${useState.maxUses} use${useState.maxUses === 1 ? '' : 's'} remaining.`);
+    }
+
+    if (Object.keys(itemUpdates).length > 0) {
+      await this.update(itemUpdates);
+    }
+
+    if (channelDivinityCost > 0) {
+      const currentChannelDivinity = Number(actor.system?.channelDivinity?.current ?? 0);
+      const remainingChannelDivinity = currentChannelDivinity - channelDivinityCost;
+      await actor.update({ 'system.channelDivinity.current': remainingChannelDivinity });
+      usageMessages.push(`Spent ${channelDivinityCost} Channel Divinity. ${remainingChannelDivinity} remaining.`);
+    }
+
+    const result = await this._displayAbility(usageMessages.join(' '));
+    if (actionCost.includes('[combat]') && result != null) {
+      await game.legends?.effectEngine?.handleActorActivity?.(actor, 'combat-action');
+    }
+    return result;
   }
 
   _getPrimaryTargetToken() {
@@ -1245,6 +1691,18 @@ export class D8Item extends Item {
     const enrichedBenefits = item.system.benefits
       ? await TextEditor.enrichHTML(item.system.benefits, { async: true })
       : '';
+    const usageState = item.type === 'feat' ? getFeatUseState(item) : null;
+    const usageText = item.type === 'feat' ? String(item.system?.usage?.text || '').trim() : '';
+    const usageParts = [];
+
+    if (item.type === 'feat') {
+      if (item.system?.usage?.mode) usageParts.push(item.system.usage.mode);
+      if (usageText) usageParts.push(usageText);
+      if (usageState?.tracked) {
+        const rechargeLabel = usageState.period === 'shortRest' ? 'Short Rest' : 'Long Rest';
+        usageParts.push(`${usageState.currentUses}/${usageState.maxUses} uses remaining (${rechargeLabel})`);
+      }
+    }
 
     ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
@@ -1253,6 +1711,27 @@ export class D8Item extends Item {
           <h3>${item.name}</h3>
           <div class="description">${enrichedDesc}</div>
           ${enrichedBenefits ? `<div class="benefits"><strong>Benefits:</strong> ${enrichedBenefits}</div>` : ''}
+          ${usageParts.length > 0 ? `<div class="usage-summary"><strong>Usage:</strong> ${usageParts.join(' | ')}</div>` : ''}
+        </div>
+      `
+    });
+  }
+
+  async _displayAbility(usageSummary = '') {
+    const item = this;
+    const TextEditor = foundry.applications.ux.TextEditor.implementation;
+    const descRaw = typeof item.system.description === 'string'
+      ? item.system.description
+      : (item.system.description?.value || '');
+    const enrichedDesc = await TextEditor.enrichHTML(descRaw, { async: true });
+
+    ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `
+        <div class="d8-item d8-ability">
+          <h3>${item.name}</h3>
+          <div class="description">${enrichedDesc}</div>
+          ${usageSummary ? `<div class="usage-summary"><strong>Usage:</strong> ${usageSummary}</div>` : ''}
         </div>
       `
     });

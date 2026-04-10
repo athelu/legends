@@ -27,7 +27,7 @@ All standard magic works by channeling one or more of the Eight Energies:
 The **Primary Energy** determines what the weave fundamentally does. Supporting energies expand that effect by adding range, duration, area, barriers, movement, perception, and other refinements.
 
 ## Necromancy
-The Necromantic arts are  lost to the current inhabitant of Athelu. Player characters should be forbidden from taking any weaves with the [Necromantic] keyword. Necromancy is a part of the knowledge of the First men that has been lost to time. It is up to the DM to determine if this knowledge can be recovered, but if I can be it should only be done during gameplay, exploration, or finding some trove of ancient knowledge.
+The Necromantic arts are lost to the current inhabitant of Athelu. Player characters should be forbidden from taking any weaves with the [Necromantic] keyword. Necromancy is a part of the knowledge of the First men that has been lost to time. It is up to the DM to determine if this knowledge can be recovered, but if it can be, it should only be done during gameplay, exploration, or finding some trove of ancient knowledge.
 The first men knew the Necromantic arts well from their study of pneuma, and how it calls to the Daemons outside the physical realm.
 Necromanctic magic has a tarnishing effect upon the Pneuma of the user. The daemons that are attracted are more selfish or vile, and further influence the mind of the Magic user. 
 
@@ -52,7 +52,7 @@ Sorcerers, on the other hand, have such an indomitable understanding of self tha
 Sorcerers and Mageborn have such a divergent understanding of magic that they cannot learn to master their abilities in the same way. A person born with innate magical ability will only succeed in controlling their power once they understand how they need to access it.  Although the resultant magical effect may be the same, the way a mageborn and a sorcerer accomplish the feat are not the same. Sorcerous Origin characters use **Wisdom** as their casting stat, work with all eight energies, and gain reality-bending abilities such as **Harmonic Weaving**.
 
 ## Diabolist
-Diabolists are often misunderstood - if not feared. The people of the world have come to expect the arcane to announce itself through glowing eyes. Diabolists do not have an innate magical ability - but instead are awakened. The following arcance magical traditions are considered diabolits. 
+Diabolists are often misunderstood - if not feared. The people of the world have come to expect the arcane to announce itself through glowing eyes. Diabolists do not have an innate magical ability - but instead are awakened. The following arcane magical traditions are considered diabolists.
 
 
 ### Eldritch Pact

@@ -21,11 +21,20 @@
     "usageType": "reaction",
     "usage": {
       "mode": "reaction",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Once per turn (reaction)"
     },
-    "keywords": "[Magic], [Reaction]",
+    "keywords": [
+      "[Magic]",
+      "[Reaction]"
+    ],
     "notes": "",
     "effects": []
   },

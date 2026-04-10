@@ -5,7 +5,7 @@
   "img": "icons/svg/poison.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All attribute dice: Add 2 to die results.  Long and short rests provide no benefit..Target takes [[/damage 8]] damage each hour until the condition is removed. <strong>Recovery:</strong> [[/save type=fortitude]] at end of 4 hours (1 success). Antidote can remove condition early.</p>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All attribute dice: Add 2 to die results. Long and short rests provide no benefit. Target takes [[/damage 8]] damage each hour until the condition is removed. <strong>Recovery:</strong> [[/save type=fortitude]] at end of 4 hours (1 success). Antidote can remove condition early.</p>"
     },
     "label": "Poisoned (Deadly)",
     "category": "incapacitation",

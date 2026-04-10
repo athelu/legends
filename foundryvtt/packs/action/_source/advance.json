@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Move up to your speed in feet. This movement may be interrupted by another action. Advancing through difficult terrain costs double. Advancing through another creature's space requires their permission or an Acrobatics check. Moving Diagonally more than once during an advance costs 7.5 ft.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

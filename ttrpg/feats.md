@@ -94,10 +94,10 @@ When creating new feats, follow these guidelines:
 
 #### Arcane Recovery
 **Prerequisites:** Int 4, any magical tradition trait
-**Usage:** Once per day during short rest
+**Usage:** Once per short rest
 **Keyword:** [Magic]
 **Description:** Your understanding of magical theory goes beyond just weaving. You know how to coax energy back from the edges of dissipation, reclaiming what would otherwise fade into the cosmos. 
-**Benefit:** Once per day during short rest, recover Energy equal to your Intelligence × 2
+**Benefit:** Once per short rest, recover Energy equal to your Intelligence × 2
 
 #### Arcane Theory
 **Prerequisites:** Mageborn trait, Int 3, Arcana 3
@@ -246,13 +246,6 @@ When creating new feats, follow these guidelines:
 **Description:** They thought missing was safe. They were wrong. You've learned to exploit that instant, turning their mistake into your opportunity.
 **Benefit:** When a creature misses you with a melee attack, as a [Reaction] you may make one melee weapon attack against that creature
 
-#### Counterspell
-**Prerequisites:** Arcana 5, any magical tradition trait
-**Usage:** Reaction
-**Keyword:** [Magic], [Skill], [Reacion]
-**Description:** Magic follows patterns, and you know them intimately. When you see someone beginning to weave, you recognize the structure they're building and know exactly where to pull the thread to make it all unravel.
-**Benefit:** When you see a creature within 60 feet casting a weave, you can use your reaction to attempt to counter it. Make opposed Arcana check. If you win by 1+ net success, the weave fails. Costs Energy equal to half the weave's cost (minimum 2)
-
 #### Covering Fire
 **Prerequisites:** Dex 3, Ranged 3
 **Usage:** 2 [Combat] actions, lasts until start of your next turn
@@ -326,7 +319,7 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Usage:** Triggers when Precision Training activates
 **Keyword:** [Combat], [Discipline]
 **Description:** The perfect strike is not just more damage. Sometimes you need to create openings for the next strike.
-**Benefit:** When Precision Training triggers, in addition to the +1 success you may immediately choose one of the following effects at no additional cost.Only one effect may be chosen per Precision Training trigger.:
+**Benefit:** When Precision Training triggers, in addition to the +1 success you may immediately choose one of the following effects at no additional cost. Only one effect may be chosen per Precision Training trigger:
 - **Stagger:** Target is Dazed until end of their next turn
 - **Breach:** Target's DR is reduced by 4 until end of your next turn (minimum 0)
 - **Expose:** Target has Misfortune on their next attack roll
@@ -585,7 +578,7 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Prerequisites:** Agi 4, Melee 4, Exploit Weakness
 **Usage:** Passive
 **Keyword:** [Combat], [Shadow]
-**Description:** When an ally occupies the opponents  attention, you find the angle they cannot cover.
+**Description:** When an ally occupies the opponent's attention, you find the angle they cannot cover.
 **Benefit:** When you make a melee attack against a target that has an ally within 5 feet of them, subtract 1 from both of your attack dice.
 
 #### Flawless Execution
@@ -598,9 +591,9 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 #### Flowing Guard
 **Prerequisites:** Wis 3
 **Usage:** Unlimited (entering stance), reaction costs Luck
-**Keyword:** [Defense], [Ascetic], [Reacion]
+**Keyword:** [Defense], [Ascetic], [Reaction]
 **Description:** Movement is life, stillness is death. You've learned to read the rhythm of incoming attacks and flow around them rather than absorb them — turning the moment an enemy misses into the moment they regret it.
-**Benefit:** As 1 [Combat] action, enter defensive meditation until start of your next turn: attacks against you add 1 to both attack dice. When an attack misses you while in Patient Defense, you can spend 1 Luck to make an immediate unarmed strike as a [Reacion]
+**Benefit:** As 1 [Combat] action, enter defensive meditation until start of your next turn: attacks against you add 1 to both attack dice. When an attack misses you while in Flowing Guard, you can spend 1 Luck to make an immediate unarmed strike as a [Reaction]
 
 #### Fluid Strikes
 **Prerequisites:** Agi 5, Melee 5, Two-Weapon Fighting feat
@@ -617,8 +610,8 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Benefit:** When you use Rapid Strikes, you can spend 2 Luck to make a fourth attack as part of the same action (add 3 to the skill die for this attack). All four attacks still count as one [Combat] action
 
 #### Forager
-**Prerequisites:** Survival 3
-**Usage:** Once per day
+**Prerequisites:** wilderness 3
+**Usage:** Once per long rest
 **Keyword:** [Wilderness], [Skill]
 **Description:** Food, water, medicine; it's all out there if you know where the wilderness keeps its secrets.
 **Benefit:** Find food and water for 6 people per day with Survival check (Simple task). 2 successes = find medicinal herbs worth 1d8 × 5 gp
@@ -707,7 +700,7 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Usage:** Passive expansion of Imbue Item options
 **Keyword:** [Magic], [Infuser]
 **Description:** You have developed a personal catalogue of infusion formulae of specific combinations of energy and material that you have refined through repetition into reliable, potent effects. Where improvised infusions scatter energy broadly, your formulae focus it to precise purpose.
-**Benefit:** Choose two Infusion Formulae from the list below, usable as alternatives when using Imbue Item or Prepared Infusion. Each formula replaces the standard weapon or armor effect for that infusion.Can be taken again at Tier 4 to choose two additional formulae.:
+**Benefit:** Choose two Infusion Formulae from the list below, usable as alternatives when using Imbue Item or Prepared Infusion. Each formula replaces the standard weapon or armor effect for that infusion. Can be taken again at Tier 4 to choose two additional formulae:
 - **Kinetic Store:** Weapon; the next single attack ignores DR entirely and deals +12 damage instead of the standard per-hit bonus. Expends after one trigger.
 - **Ablative Ward:** Armor; grants +6 DR but the infusion ends after absorbing 16 total damage
 - **Phase Step:** Boots or footwear; bearer may teleport up to 15 feet as a [Minor] action once before expiring
@@ -877,7 +870,7 @@ This ability does not reveal magically concealed information and cannot compel a
 **Usage:** Passive range extension via active infused objects; detonation is a [Reaction] that consumes the infusion
 **Keyword:** [Magic], [Infuser], [Reaction]
 **Description:** An infused object carries your magical signature. If you can reach the object, you can reach anything the object touches.
-**Benefit:** When you have an active infused object in play you may cast weaves targeting that object's location or bearer without being adjacent to them. Range is determined normally from your position to the target. Additionally, you may detonate an active infusion as a [Reaction] when the bearer is hit by an attack, The infusion ends immediately but deals damage equal to your Intelligence × 2 to the attacker using your chosen elemental energy type. No save.
+**Benefit:** When you have an active infused object in play you may cast weaves targeting that object's location or bearer without being adjacent to them. Range is determined normally from your position to the target. Additionally, you may detonate an active infusion as a [Reaction] when the bearer is hit by an attack. The infusion ends immediately but deals damage equal to your Intelligence × 2 to the attacker using your chosen elemental energy type. No save.
 
 #### Opportunist
 **Prerequisites:** Agi 4, Melee 4
@@ -1467,7 +1460,7 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
 **Prerequisites:** Chosen combat skill 5
 **Usage:** Passive
 **Keyword:** [Combat]
-**Description:** This weapon is like an extension of your body.In your hands, this weapon becomes significantly more dangerous than it would be for anyone else.
+**Description:** This weapon is like an extension of your body.
 **Benefit:** Choose one weapon type (longswords, bows, spears, etc.). When attacking with that weapon type, subtract 1 from your combat skill die result before comparing (minimum 1). Can be taken multiple times for different weapon types
 
 #### Weapon Weaver
@@ -1605,9 +1598,9 @@ Legendary feats count toward the standard feat limits. The only difference is th
 **Prerequisites:** Sorcerous Origin trait, Wis 7
 **Usage:** Passive, always on
 **Keyword:** [Magic], [Sorcerer]
-**Description:** The lucky rolls come a little more often, the catastrophic failures find a way to recover, and luck tends to  bend in your favor.
+**Description:** The lucky rolls come a little more often, the catastrophic failures find a way to recover, and luck tends to bend in your favor.
 **Benefit:** Your perfect self-knowledge has impressed reality itself. You gain permanent benefits:
-  - When you roll any saving throw, subract 1 from your highest die
+  - When you roll any saving throw: subtract 1 from your highest die
   - When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses
   - When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave
 

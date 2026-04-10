@@ -23,11 +23,21 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "When using Rapid Strikes, costs 4 Energy total"
     },
-    "keywords": "[Combat], [Ascetic], [Magic]",
+    "keywords": [
+      "[Combat]",
+      "[Ascetic]",
+      "[Magic]"
+    ],
     "notes": "",
     "effects": []
   },

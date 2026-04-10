@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Requires at least one free hand. Make opposed Athletics check (Strength + Athletics vs target's Athletics, Acrobatics or Might)",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

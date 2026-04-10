@@ -5,7 +5,7 @@
   "img": "icons/svg/sleep.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All rolls add 3 to both die results. Movement speed reduced to quarter. Can only take 1 action per turn.Cannot take reactions.Receive no benefit from short rests. <strong>Recovery:</strong> Long rest removes 1 level of Exhaustion</p>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All rolls add 3 to both die results. Movement speed reduced to quarter. Can only take 1 action per turn. Cannot take reactions. Receive no benefit from short rests. <strong>Recovery:</strong> Long rest removes 1 level of Exhaustion</p>"
     },
     "label": "Near Collapse",
     "category": "physical",

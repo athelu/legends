@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Consume or administer a potion to another creature to gain its effects. The unconscious/willing creature must be adjacent. Drinking a potion while threatened provokes Opportunity Attacks",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

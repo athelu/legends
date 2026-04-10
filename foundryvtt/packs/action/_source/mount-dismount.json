@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Mount or dismount a creature/vehicle. The mount must be within 5 feet and willing. Mounting/dismounting doesn't provoke Opportunity Attacks.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

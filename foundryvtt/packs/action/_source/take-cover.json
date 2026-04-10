@@ -5,13 +5,13 @@
   "img": "icons/skills/social/wave-halt-stop.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free ] action during a move.</p>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free] action during a move.</p>"
     },
     "actionType": "interact",
     "actionCost": "1",
     "requirements": "",
     "trigger": "",
-    "effect": "Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free ] action during a move.",
+    "effect": "Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free] action during a move.",
     "appliesEffects": [
       {
         "effectId": "Covered",

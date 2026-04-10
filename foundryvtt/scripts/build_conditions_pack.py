@@ -325,7 +325,7 @@ def extract_check_data(text):
     attributes = []
     labels = []
 
-    for match in re.finditer(r'((?:[A-Za-z]+(?:\s*,\s*|\s+or\s+|\s+and\s+|/))*[A-Za-z]+)\s+check\b', text, re.IGNORECASE):
+    for match in re.finditer(r'((?:[A-Za-z]+(?:\s*,\s*|\s*,?\s+or\s+|\s*,?\s+and\s+|/))*[A-Za-z]+)\s+check\b', text, re.IGNORECASE):
         options_text = match.group(1).strip()
         options_text = re.sub(r'^(?:make\s+|with\s+|by\s+)', '', options_text, flags=re.IGNORECASE)
         options_text = re.sub(r'^(?:an?\s+)', '', options_text, flags=re.IGNORECASE)

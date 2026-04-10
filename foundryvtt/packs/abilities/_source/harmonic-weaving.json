@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: [Free] (declared when making weaving roll) Frequency: Wisdom + Tier times per long rest Effect: When you make a weaving roll, you can declare \"Harmonic\" to reroll one die (Potential OR Mastery, your choice). You must take the new result. Your perfect self-knowledge allows you to adjust reality's response to your will.</p>\n<h3>Eldritch Pact Abilities</h3>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> [Free] (declared when making weaving roll)</li>\n<li><strong>Frequency:</strong> Wisdom + Tier times per long rest</li>\n<li><strong>Effect:</strong> When you make a weaving roll, you can declare \"Harmonic\" to reroll one die (Potential OR Mastery, your choice). You must take the new result. Your perfect self-knowledge allows you to adjust reality's response to your will.</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Sorcerous Origin Abilities",
+    "keywords": [],
     "trigger": "",
-    "frequency": "",
-    "effect": "",
-    "isActive": false
+    "frequency": "Wisdom + Tier times per long rest",
+    "effect": "When you make a weaving roll, you can declare \"Harmonic\" to reroll one die (Potential OR Mastery, your choice). You must take the new result. Your perfect self-knowledge allows you to adjust reality's response to your will.",
+    "isActive": false,
+    "actionCost": "[Free] (declared when making weaving roll)",
+    "requirements": "",
+    "range": "",
+    "target": "",
+    "usage": "",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!89dfe3f15cdb4218"

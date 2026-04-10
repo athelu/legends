@@ -26,11 +26,20 @@
     "usageType": "active",
     "usage": {
       "mode": "active",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Applies whenever you use Ritual Casting"
     },
-    "keywords": "[Magic], [Mageborn]",
+    "keywords": [
+      "[Magic]",
+      "[Mageborn]"
+    ],
     "notes": "",
     "effects": []
   },

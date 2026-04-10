@@ -19,15 +19,25 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>As 1 [Combat] action, enter defensive meditation until start of your next turn: attacks against you add 1 to both attack dice. When an attack misses you while in Patient Defense, you can spend 1 Luck to make an immediate unarmed strike as a [Reacion]</p>",
+    "benefits": "<p>As 1 [Combat] action, enter defensive meditation until start of your next turn: attacks against you add 1 to both attack dice. When an attack misses you while in Flowing Guard, you can spend 1 Luck to make an immediate unarmed strike as a [Reaction]</p>",
     "usageType": "reaction",
     "usage": {
       "mode": "reaction",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Unlimited (entering stance), reaction costs Luck"
     },
-    "keywords": "[Defense], [Ascetic], [Reacion]",
+    "keywords": [
+      "[Defense]",
+      "[Ascetic]",
+      "[Reaction]"
+    ],
     "notes": "",
     "effects": []
   },

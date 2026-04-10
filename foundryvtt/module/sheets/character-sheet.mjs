@@ -8,6 +8,24 @@ import { SKILL_ATTRIBUTE_SHORT, SKILL_LABELS } from '../skill-utils.mjs';
 const { ActorSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 
+const ITEM_COMPENDIUM_PACKS = {
+  weapon: 'legends.weapons',
+  armor: 'legends.armor',
+  shield: 'legends.armor',
+  equipment: 'legends.equipment',
+  weave: 'legends.weaves',
+  feat: 'legends.feats',
+  trait: 'legends.traits',
+  flaw: 'legends.flaws',
+  background: 'legends.backgrounds',
+  ancestry: 'legends.ancestries',
+  action: 'legends.action',
+  actions: 'legends.action',
+  ability: 'legends.abilities',
+  abilities: 'legends.abilities',
+  condition: 'legends.conditions'
+};
+
 export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
   static DEFAULT_OPTIONS = {
@@ -20,6 +38,11 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     actions: {
       shortRest: D8CharacterSheet.#onShortRest,
       longRest: D8CharacterSheet.#onLongRest,
+      awardXp: D8CharacterSheet.#onAwardXp,
+      spendXp: D8CharacterSheet.#onSpendXp,
+      toggleTrainingCheckbox: D8CharacterSheet.#onToggleTrainingCheckbox,
+      toggleProgressionPhase: D8CharacterSheet.#onToggleProgressionPhase,
+      toggleManualOverride: D8CharacterSheet.#onToggleManualOverride,
       skillRoll: D8CharacterSheet.#onSkillRoll,
       weaponAttack: D8CharacterSheet.#onWeaponAttack,
       itemCreate: D8CharacterSheet.#onItemCreate,
@@ -123,11 +146,30 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
   /** Handle numeric input changes and immediately update the actor */
   async _onNumericInputChange(event) {
-      for (let [key, label] of Object.entries(SKILL_LABELS)) {
+    const input = event.currentTarget;
     const fieldName = input.name;
     const value = input.value;
     
     if (!fieldName || value === '') return;
+
+    const canEditAdvancementFields = this._canEditAdvancementFields();
+    const isXpField = fieldName === 'system.tier.xp' || fieldName === 'system.tier.unspent';
+    if (isXpField && !game.legends?.progression?.canEditXPFields?.(this.document, game.user)) {
+      ui.notifications.warn('XP values are locked outside character creation or manual override.');
+      input.value = this._getNestedValue(this.document.system, fieldName.replace('system.', '')) || 0;
+      return;
+    }
+
+    const isAdvancementField = fieldName.startsWith('system.skills.')
+      || /^system\.attributes\.[^.]+\.value$/.test(fieldName)
+      || /^system\.mastery\.[^.]+\.value$/.test(fieldName)
+      || /^system\.potentials\.[^.]+\.value$/.test(fieldName);
+
+    if (isAdvancementField && !canEditAdvancementFields) {
+      ui.notifications.warn('Skills, attributes, mastery, and potentials are locked outside character creation or manual override.');
+      input.value = this._getNestedValue(this.document.system, fieldName.replace('system.', '')) || 0;
+      return;
+    }
     
     // Convert to number if it's a numeric field
     const numValue = input.type === 'number' ? Number(value) : value;
@@ -135,6 +177,23 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     // Create update object
     const updateData = {};
     updateData[fieldName] = numValue;
+
+    if (fieldName === 'system.tier.xp') {
+      const tierInfo = game.legends?.progression?.getTierInfoFromXp?.(numValue);
+      if (tierInfo) {
+        updateData['system.tier.value'] = tierInfo.current;
+        const currentUnspent = Number(this.document.system.tier?.unspent || 0);
+        updateData['system.tier.unspent'] = Math.min(tierInfo.xp, Math.max(0, currentUnspent));
+      }
+    }
+
+    if (fieldName === 'system.tier.unspent') {
+      updateData[fieldName] = Math.min(
+        Math.max(0, Number(numValue)),
+        Number(this.document.system.tier?.xp || 0)
+      );
+      input.value = updateData[fieldName];
+    }
     
     try {
       // Update the actor immediately
@@ -142,7 +201,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       
       if (Object.keys(expanded).length === 0) {
         console.warn('Update data expansion failed for field:', fieldName);
-          attr: SKILL_ATTRIBUTE_SHORT[key],
+        return;
       }
       
       await this.document.update(expanded);
@@ -160,6 +219,10 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     return path.split('.').reduce((current, key) => current?.[key], obj);
   }
 
+  _canEditAdvancementFields() {
+    return Boolean(this.isEditable && game.legends?.progression?.canEditXPFields?.(this.actor, game.user));
+  }
+
   /** @override */
   async _prepareContext(options) {
     const context = await super._prepareContext(options);
@@ -168,6 +231,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.system = foundry.utils.deepClone(this.actor.system);
     context.flags = actorData.flags;
     context.actor = actorData;
+    context.training = game.legends?.training?.getTrainingState?.(this.actor) || { skills: {}, mastery: {} };
     context.owner = this.actor.isOwner;
     context.editable = this.isEditable;
 
@@ -180,6 +244,22 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     this._prepareMagicalTraitHelpers(context);
     context.primaryAncestry = context.ancestries[0] || null;
     context.tier = this._getTierInfo(context.system.tier?.xp ?? 0);
+    context.progression = game.legends?.progression?.getActorProgressionState?.(this.actor) || {
+      phase: 'advancement',
+      phaseLabel: 'Advancement',
+      manualOverride: false,
+      nextPhaseLabel: 'Switch to Creation',
+      lastTransaction: null,
+      unspent: context.system.tier?.unspent ?? 0
+    };
+    context.canEditXpFields = this._canEditAdvancementFields();
+    context.canEditAdvancementFields = context.canEditXpFields;
+    context.canAwardXp = Boolean(this.isEditable && game.legends?.progression?.canAwardXP?.(this.actor, game.user));
+    context.canSpendXp = Boolean(this.isEditable && game.legends?.progression?.canSpendXP?.(this.actor, game.user));
+    context.canManageProgression = Boolean(this.isEditable && game.legends?.progression?.canManageProgression?.(this.actor, game.user));
+    context.xpFieldHint = context.canEditXpFields
+      ? 'XP fields can be edited directly in character creation or manual override mode.'
+      : 'XP fields are locked outside character creation or manual override.';
     return context;
   }
 
@@ -282,6 +362,14 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.flaws = flaws;
     context.backgrounds = backgrounds;
     context.ancestries = ancestries;
+    const traitPointsSpent = traits.reduce((total, item) => total + Number(item.system?.pointCost || 0), 0);
+    const flawPointsEarned = flaws.reduce((total, item) => total + Number(item.system?.pointValue || 0), 0);
+    context.traitPointSummary = {
+      spent: traitPointsSpent,
+      earned: flawPointsEarned,
+      remaining: flawPointsEarned - traitPointsSpent,
+      isOverspent: traitPointsSpent > flawPointsEarned
+    };
 
     // Action categories
     context.combatActions = combatActions;
@@ -358,6 +446,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         base: base,
         bonus: bonus,
         total: effective,
+        checked: Boolean(context.training?.skills?.[key]),
         attr: SKILL_ATTRIBUTE_SHORT[key],
         breakdown
       });
@@ -370,23 +459,25 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Prepare magical trait helper data for template
    */
   _prepareMagicalTraitHelpers(context) {
-    const magicalTrait = context.system.magicalTrait;
-    
-    // Auto-detect magical trait if not already set
-    if (!magicalTrait || !magicalTrait.type) {
-      // Check if actor has a magical trait item but magicalTrait.type isn't set
-      const detectedTrait = game.legends.magicalTraits.detectPrimaryMagicalTrait(this.actor);
-      if (detectedTrait) {
-        console.log(`Legends | Auto-detected magical trait: ${detectedTrait.type} (not configured)`);
-        // Set the type flag so the setup UI appears
-        this.actor.update({
-          'system.magicalTrait.type': detectedTrait.type,
-          'system.magicalTrait.isSetup': false
-        }).then(() => {
-          // Re-render to show setup button
-          this.render();
-        });
-      }
+    const magicalTrait = context.system.magicalTrait || {};
+    const detectedTrait = !magicalTrait.type
+      ? game.legends.magicalTraits.detectPrimaryMagicalTrait(this.actor)
+      : null;
+    const effectiveTraitType = magicalTrait.type || detectedTrait?.type || '';
+
+    if (!context.system.magicalTrait || typeof context.system.magicalTrait !== 'object') {
+      context.system.magicalTrait = {};
+    }
+
+    if (effectiveTraitType && !context.system.magicalTrait.type) {
+      context.system.magicalTrait.type = effectiveTraitType;
+    }
+
+    if (detectedTrait && context.system.magicalTrait.isSetup == null) {
+      context.system.magicalTrait.isSetup = false;
+    }
+
+    if (!effectiveTraitType) {
       return;
     }
     
@@ -401,8 +492,8 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       'alchemical-tradition': 'Alchemical Tradition'
     };
     
-    context.magicalTraitDisplayName = traitNames[magicalTrait.type] || magicalTrait.type;
-    context.isAlchemicalTradition = magicalTrait.type === 'alchemical-tradition';
+    context.magicalTraitDisplayName = traitNames[effectiveTraitType] || effectiveTraitType;
+    context.isAlchemicalTradition = effectiveTraitType === 'alchemical-tradition';
     
     // Enrich casting stat display
     if (context.system.castingStat && context.system.castingStat.value && context.system.attributes) {
@@ -429,26 +520,9 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Get tier information from XP
    */
   _getTierInfo(xp) {
-    const tiers = [
-      { tier: 1, xp: 0 },
-      { tier: 2, xp: 100 },
-      { tier: 3, xp: 200 },
-      { tier: 4, xp: 400 },
-      { tier: 5, xp: 800 },
-      { tier: 6, xp: 1600 }
-    ];
-
-    let currentTier = 1;
-    for (let i = tiers.length - 1; i >= 0; i--) {
-      if (xp >= tiers[i].xp) {
-        currentTier = tiers[i].tier;
-        break;
-      }
-    }
-
-    return {
-      current: currentTier,
-      xp: xp
+    return game.legends?.progression?.getTierInfoFromXp?.(xp) || {
+      current: 1,
+      xp: Number(xp || 0)
     };
   }
 
@@ -584,7 +658,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static async #onItemCreate(event, target) {
     const type = target.dataset.type;
     const data = {
-      name: `New ${type.capitalize()}`,
+      name: `New ${type ? type.charAt(0).toUpperCase() + type.slice(1) : 'Item'}`,
       type: type,
       system: {}
     };
@@ -634,29 +708,18 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       return;
     }
 
-    const packNames = {
-      'weapon': 'legends.weapons',
-      'armor': 'legends.armor',
-      'shield': 'legends.armor',
-      'equipment': 'legends.equipment',
-      'weave': 'legends.weaves',
-      'feat': 'legends.feats',
-      'trait': 'legends.traits',
-      'flaw': 'legends.flaws',
-      'background': 'legends.backgrounds',
-      'ancestry': 'legends.ancestries',
-      'action': 'legends.action',
-      'actions': 'legends.action',
-      'ability': 'legends.abilities',
-      'abilities': 'legends.abilities',
-      'condition': 'legends.conditions'
-    };
-
-    const packName = packNames[compendiumType];
+    const packName = ITEM_COMPENDIUM_PACKS[compendiumType];
 
     if (!packName) {
       ui.notifications.warn(`No compendium configured for type: ${compendiumType}`);
       return;
+    }
+
+    if (['trait', 'flaw'].includes(compendiumType)) {
+      const progressionState = game.legends?.progression?.getActorProgressionState?.(this.actor);
+      if (progressionState?.isCreation) {
+        return this.#showTraitFlawCreationWorkflow(compendiumType, packName);
+      }
     }
 
     const pack = game.packs.get(packName);
@@ -666,6 +729,129 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     } else {
       ui.notifications.warn(`Compendium pack "${packName}" not found. Check system.json configuration.`);
     }
+  }
+
+  static #getTraitFlawPointSummary(actor) {
+    const traits = actor.items.filter((item) => item.type === 'trait');
+    const flaws = actor.items.filter((item) => item.type === 'flaw');
+    const spent = traits.reduce((total, item) => total + Number(item.system?.pointCost || 0), 0);
+    const earned = flaws.reduce((total, item) => total + Number(item.system?.pointValue || 0), 0);
+    return {
+      spent,
+      earned,
+      remaining: earned - spent,
+      isOverspent: spent > earned
+    };
+  }
+
+  static async #showTraitFlawCreationWorkflow(type, packName) {
+    const pack = game.packs.get(packName);
+    if (!pack) {
+      ui.notifications.warn(`Compendium pack "${packName}" not found. Check system.json configuration.`);
+      return;
+    }
+
+    const actor = this.actor;
+    const pointSummary = this.#getTraitFlawPointSummary(actor);
+    const ownedNames = new Set(
+      actor.items
+        .filter((item) => item.type === type)
+        .map((item) => String(item.name || '').trim().toLowerCase())
+    );
+
+    const documents = await pack.getDocuments();
+    const options = documents
+      .filter((entry) => !ownedNames.has(String(entry.name || '').trim().toLowerCase()))
+      .map((entry) => {
+        const pointDelta = type === 'trait'
+          ? Number(entry.system?.pointCost || 0)
+          : Number(entry.system?.pointValue || 0);
+        const requiresGMApproval = Boolean(entry.system?.requiresGMApproval);
+        const disabled = type === 'trait' && pointDelta > pointSummary.remaining;
+        const reason = disabled
+          ? `Requires ${pointDelta} points, only ${pointSummary.remaining} available.`
+          : requiresGMApproval
+            ? 'Requires GM approval.'
+            : '';
+        return {
+          document: entry,
+          pointDelta,
+          disabled,
+          reason,
+          label: type === 'trait'
+            ? `${entry.name} (${pointDelta} points)`
+            : `${entry.name} (+${pointDelta} points)`
+        };
+      })
+      .sort((left, right) => left.label.localeCompare(right.label));
+
+    const availableOptions = options.filter((option) => !option.disabled);
+    if (type === 'trait' && availableOptions.length === 0) {
+      ui.notifications.warn(`${actor.name} does not have enough unspent flaw points to add another trait during creation.`);
+      return;
+    }
+
+    if (!options.length) {
+      ui.notifications.warn(`No ${type}s are available to import.`);
+      return;
+    }
+
+    const optionMarkup = options.map((option, index) => {
+      const suffix = option.reason ? ` - ${option.reason}` : '';
+      return `<option value="${index}" ${option.disabled ? 'disabled' : ''}>${Handlebars.escapeExpression(option.label + suffix)}</option>`;
+    }).join('');
+
+    const titleLabel = type === 'trait' ? 'Add Trait' : 'Add Flaw';
+    const budgetNote = type === 'trait'
+      ? `<div style="font-size: 12px; color: #666;">Traits spend flaw points during creation. Only affordable traits can be selected.</div>`
+      : `<div style="font-size: 12px; color: #666;">Flaws add points to the creation budget and can still require GM approval.</div>`;
+
+    const selectedOption = await foundry.applications.api.DialogV2.wait({
+      window: { title: `${titleLabel}: ${actor.name}` },
+      content: `
+        <form style="padding: 10px; display: flex; flex-direction: column; gap: 10px;">
+          <div><strong>Creation Point Budget</strong>: ${pointSummary.spent} spent / ${pointSummary.earned} earned (${pointSummary.remaining} remaining)</div>
+          <div class="form-group">
+            <label>Select a ${type}</label>
+            <select name="creationImport" style="width: 100%; padding: 6px;">
+              ${optionMarkup}
+            </select>
+          </div>
+          ${budgetNote}
+        </form>
+      `,
+      buttons: [
+        {
+          action: 'import',
+          label: titleLabel,
+          default: true,
+          callback: (event, button, dialog) => {
+            const index = Number.parseInt(dialog.element.querySelector('[name="creationImport"]')?.value || '-1', 10);
+            return options[index] || null;
+          }
+        },
+        {
+          action: 'cancel',
+          label: 'Cancel'
+        }
+      ]
+    });
+
+    if (!selectedOption) return;
+
+    if (selectedOption.disabled) {
+      ui.notifications.warn(selectedOption.reason || `That ${type} is not currently available.`);
+      return;
+    }
+
+    const itemData = selectedOption.document.toObject();
+    const [created] = await actor.createEmbeddedDocuments('Item', [itemData]);
+    if (!created) {
+      ui.notifications.error(`Failed to add ${selectedOption.document.name}.`);
+      return;
+    }
+
+    ui.notifications.info(`${created.name} added to ${actor.name}.`);
   }
 
   /**
@@ -721,10 +907,27 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Handle short rest button click
    */
   static async #onShortRest(event, target) {
+    const restState = this.actor.getRestRecoveryState?.('shortRest') || {};
+    const con = this.actor.system.attributes.constitution.value;
+    const hpRestore = restState.blocksHpRecovery ? 0 : Math.floor(con / (restState.halvesHpRecovery ? 2 : 1));
+    let content = `<p>Take a short rest (1 hour)?</p>`;
+
+    if (restState.blocksAllBenefits) {
+      content += `<p>You will recover <strong>no short rest benefits</strong> because of <strong>${restState.blockedBy}</strong>.</p>`;
+    } else if (restState.blocksShortRestBenefits) {
+      content += `<p>You will recover <strong>no short rest benefits</strong> because of <strong>${restState.shortRestBlockedBy}</strong>.</p>`;
+    } else {
+      content += `<p>You will regain <strong>${hpRestore} HP</strong> and <strong>1 Luck</strong>.</p>`;
+      if (restState.blocksHpRecovery) {
+        content += `<p><strong>HP recovery is blocked</strong> by <strong>${restState.hpBlockedBy}</strong>.</p>`;
+      } else if (restState.halvesHpRecovery) {
+        content += `<p><strong>HP recovery is halved</strong> by <strong>${restState.hpHalvedBy}</strong>.</p>`;
+      }
+    }
+
     const confirmed = await foundry.applications.api.DialogV2.confirm({
       window: { title: "Short Rest" },
-      content: `<p>Take a short rest (1 hour)?</p>
-                <p>You will regain <strong>${this.actor.system.attributes.constitution.value} HP</strong> and <strong>1 Luck</strong>.</p>`
+      content
     });
 
     if (!confirmed) return;
@@ -736,16 +939,32 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    */
   static async #onLongRest(event, target) {
     const con = this.actor.system.attributes.constitution.value;
-    const hpRestore = con * 4;
+    const restState = this.actor.getRestRecoveryState?.('longRest') || {};
+    const hpRestore = restState.blocksHpRecovery ? 0 : Math.floor((con * 4) / (restState.halvesHpRecovery ? 2 : 1));
 
     let content = `<p>Take a long rest (8 hours)?</p>
                   <p>You will regain <strong>${hpRestore} HP</strong> and restore all <strong>Luck</strong> to maximum.`;
 
-    if (this.actor.system.energy) {
+    if (restState.blocksAllBenefits) {
+      content = `<p>Take a long rest (8 hours)?</p>
+                 <p>You will recover <strong>no rest benefits</strong> because of <strong>${restState.blockedBy}</strong>.</p>`;
+    } else if (this.actor.system.magicalTrait?.type && this.actor.system.magicalTrait.type !== 'alchemical-tradition') {
       content += ` All <strong>Energy</strong> will also be restored.`;
     }
 
-    content += `</p>`;
+    if (!restState.blocksAllBenefits && (this.actor.system.channelDivinity?.max ?? 0) > 0) {
+      content += ` All <strong>Channel Divinity</strong> uses will also be restored.`;
+    }
+
+    if (!restState.blocksAllBenefits) {
+      content += `</p>`;
+      if (restState.halvesHpRecovery) {
+        content += `<p><strong>HP recovery is halved</strong> by <strong>${restState.hpHalvedBy}</strong>.</p>`;
+      }
+      if (restState.exhaustionCondition) {
+        content += `<p><strong>${restState.exhaustionCondition}</strong> will improve by one step.</p>`;
+      }
+    }
 
     const confirmed = await foundry.applications.api.DialogV2.confirm({
       window: { title: "Long Rest" },
@@ -778,6 +997,49 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       ui.notifications.error(`Failed to setup magical traits: ${error.message}`);
     }
   }
+
+  static async #onAwardXp(event, target) {
+    await game.legends?.progression?.showAwardXPDialog?.(this.actor);
+    this.render();
+  }
+
+  static async #onSpendXp(event, target) {
+    await game.legends?.progression?.showSpendXPDialog?.(this.actor);
+    this.render();
+  }
+
+  static async #onToggleProgressionPhase(event, target) {
+    if (!game.user.isGM) {
+      ui.notifications.warn('Only the GM can change progression phase.');
+      return;
+    }
+
+    await game.legends?.progression?.cycleProgressionPhase?.(this.actor);
+    this.render();
+  }
+
+  static async #onToggleManualOverride(event, target) {
+    if (!game.user.isGM) {
+      ui.notifications.warn('Only the GM can toggle manual override.');
+      return;
+    }
+
+    await game.legends?.progression?.toggleManualOverride?.(this.actor);
+    this.render();
+  }
+
+  static async #onToggleTrainingCheckbox(event, target) {
+    const type = String(target.dataset.trainingType || '').trim();
+    const key = String(target.dataset.trainingKey || '').trim();
+    if (!type || !key) {
+      ui.notifications.warn('Training checkbox is missing its target.');
+      return;
+    }
+
+    await game.legends?.training?.toggleTrainingCheckbox?.(this.actor, type, key, { notify: true, source: 'sheet-toggle' });
+    this.render();
+  }
+
   /**
    * Handle expanding/collapsing item details
    * Universal system for all item types (weapons, armor, feats, etc.)
@@ -882,7 +1144,9 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     
     // Item description
     if (system.description?.value) {
-      html += `<div class=\"description\">${system.description.value}</div>`;
+      const TextEditor = foundry.applications.ux.TextEditor.implementation;
+      const enrichedDescription = await TextEditor.enrichHTML(system.description.value, { async: true });
+      html += `<div class=\"description\">${enrichedDescription}</div>`;
     }
     
     // Type-specific details
@@ -912,6 +1176,9 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       case 'action':
         html += D8CharacterSheet._generateActionSummary(system);
         break;
+      case 'ability':
+        html += D8CharacterSheet._generateAbilitySummary(system);
+        break;
       case 'condition':
         html += D8CharacterSheet._generateConditionSummary(system);
         break;
@@ -932,21 +1199,6 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       html += `<div class="detail-row"><span class="detail-label">Speed:</span><span class="detail-value">${system.speed} ft</span></div>`;
     }
     if (Number.isFinite(system.lifespan) && system.lifespan > 0) {
-    if (system.requirements) {
-      html += `<div class="detail-row"><span class="detail-label">Requirements:</span><span class="detail-value">${system.requirements}</span></div>`;
-    }
-    if (system.trigger) {
-      html += `<div class="detail-row"><span class="detail-label">Trigger:</span><span class="detail-value">${system.trigger}</span></div>`;
-    }
-    if (system.range) {
-      html += `<div class="detail-row"><span class="detail-label">Range:</span><span class="detail-value">${system.range}</span></div>`;
-    }
-    if (system.target) {
-      html += `<div class="detail-row"><span class="detail-label">Target:</span><span class="detail-value">${system.target}</span></div>`;
-    }
-    if (system.frequency) {
-      html += `<div class="detail-row"><span class="detail-label">Frequency:</span><span class="detail-value">${system.frequency}</span></div>`;
-    }
       html += `<div class="detail-row"><span class="detail-label">Lifespan:</span><span class="detail-value">${system.lifespan} years</span></div>`;
     }
     if (system.traits) {
@@ -976,6 +1228,59 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     }
     if (system.physicalDescription) {
       html += `<h4>Physical Description</h4><div class="details-section"><div class="detail-row"><span class="detail-value">${system.physicalDescription.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+
+    return html;
+  }
+
+  /**
+   * Generate ability-specific summary content
+   */
+  static _generateAbilitySummary(system) {
+    let html = '<div class="details-section">';
+
+    if (system.abilityType) {
+      html += `<div class="detail-row"><span class="detail-label">Type:</span><span class="detail-value">${system.abilityType}</span></div>`;
+    }
+    if (system.source) {
+      html += `<div class="detail-row"><span class="detail-label">Source:</span><span class="detail-value">${system.source}</span></div>`;
+    }
+    if (system.actionCost) {
+      html += `<div class="detail-row"><span class="detail-label">Cost:</span><span class="detail-value">${system.actionCost}</span></div>`;
+    }
+    if (system.requirements) {
+      html += `<div class="detail-row"><span class="detail-label">Requirements:</span><span class="detail-value">${system.requirements}</span></div>`;
+    }
+    if (system.trigger) {
+      html += `<div class="detail-row"><span class="detail-label">Trigger:</span><span class="detail-value">${system.trigger}</span></div>`;
+    }
+    if (system.range) {
+      html += `<div class="detail-row"><span class="detail-label">Range:</span><span class="detail-value">${system.range}</span></div>`;
+    }
+    if (system.target) {
+      html += `<div class="detail-row"><span class="detail-label">Target:</span><span class="detail-value">${system.target}</span></div>`;
+    }
+    if (system.frequency) {
+      html += `<div class="detail-row"><span class="detail-label">Frequency:</span><span class="detail-value">${system.frequency}</span></div>`;
+    }
+    if ((system.uses?.max || 0) > 0) {
+      html += `<div class="detail-row"><span class="detail-label">Uses:</span><span class="detail-value">${system.uses.value}/${system.uses.max}</span></div>`;
+    }
+    if (system.recharge?.period) {
+      const rechargeLabel = system.recharge.period === 'shortRest' ? 'Short Rest' : 'Long Rest';
+      html += `<div class="detail-row"><span class="detail-label">Recharge:</span><span class="detail-value">${rechargeLabel}</span></div>`;
+    }
+    if (system.usage) {
+      html += `<div class="detail-row"><span class="detail-label">Usage:</span><span class="detail-value">${system.usage}</span></div>`;
+    }
+    html += '</div>';
+
+    if (system.keywords?.length) {
+      html += D8CharacterSheet._generateTraitTags(system.keywords);
+    }
+
+    if (system.effect) {
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Effect:</span><span class="detail-value">${system.effect.replace(/\n/g, '<br>')}</span></div></div>`;
     }
 
     return html;
@@ -1042,8 +1347,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Generate shield-specific summary content
    */
   static _generateShieldSummary(system) {
-    let html = '';
-    const linkedAbilities = Array.isArray(system.linkedAbilities) ? system.linkedAbilities : [];
+    let html = '<div class="details-section">';
 
     html += '<div class=\"details-section\">';
 
@@ -1051,11 +1355,34 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Type:</span><span class=\"detail-value\">${system.shieldType}</span></div>`;
     }
 
+    if (system.requirements) {
+      html += `<div class="detail-row"><span class="detail-label">Requirements:</span><span class="detail-value">${system.requirements}</span></div>`;
+    }
+    if (system.trigger) {
+      html += `<div class="detail-row"><span class="detail-label">Trigger:</span><span class="detail-value">${system.trigger}</span></div>`;
+    }
+    if (system.range) {
+      html += `<div class="detail-row"><span class="detail-label">Range:</span><span class="detail-value">${system.range}</span></div>`;
+    }
+    if (system.target) {
+      html += `<div class="detail-row"><span class="detail-label">Target:</span><span class="detail-value">${system.target}</span></div>`;
+    }
+    if (system.frequency) {
+      html += `<div class="detail-row"><span class="detail-label">Frequency:</span><span class="detail-value">${system.frequency}</span></div>`;
+    }
     if (system.handUsage) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Hand Usage:</span><span class=\"detail-value\">${system.handUsage}</span></div>`;
     }
 
     if (system.meleeDefense) {
+
+    if (system.effect) {
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Effect:</span><span class="detail-value">${system.effect.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+
+    if (system.special) {
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Special:</span><span class="detail-value">${system.special.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Melee Defense:</span><span class=\"detail-value\">${system.meleeDefense}</span></div>`;
     }
 
@@ -1159,6 +1486,13 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    */
   static _generateFeatSummary(system) {
     let html = '';
+    const usage = system.usage && typeof system.usage === 'object' ? system.usage : null;
+    const usageMode = usage?.mode || system.usageType || '';
+    const usageText = typeof usage?.text === 'string' ? usage.text.trim() : '';
+    const trackedUses = Number(usage?.uses?.max || 0) > 0;
+    const rechargeLabel = usage?.recharge?.period === 'shortRest'
+      ? 'Short Rest'
+      : (usage?.recharge?.period === 'longRest' ? 'Long Rest' : '');
 
     if (system.classification) {
       const classificationLabel = system.classification === 'legendary' ? 'Legendary' : 'Standard';
@@ -1176,8 +1510,19 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       }
     }
     
-    if (system.usageType) {
-      html += `<div class=\"detail-row\"><span class=\"detail-label\">Usage:</span><span class=\"detail-value\">${system.usageType}</span></div>`;
+    if (usageMode) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Usage:</span><span class=\"detail-value\">${usageMode}</span></div>`;
+    }
+
+    if (usageText) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Usage Text:</span><span class=\"detail-value\">${usageText}</span></div>`;
+    }
+
+    if (trackedUses) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Uses:</span><span class=\"detail-value\">${usage.uses.value}/${usage.uses.max}</span></div>`;
+      if (rechargeLabel) {
+        html += `<div class=\"detail-row\"><span class=\"detail-label\">Recharge:</span><span class=\"detail-value\">${rechargeLabel}</span></div>`;
+      }
     }
     
     if (system.keywords?.length) {
@@ -1206,11 +1551,13 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     // Attribute names map
     const attrNames = {
       strength: 'Str',
+      constitution: 'Con',
       agility: 'Agi',
-      endurance: 'End',
+      dexterity: 'Dex',
       intelligence: 'Int',
       wisdom: 'Wis',
-      charisma: 'Cha'
+      charisma: 'Cha',
+      luck: 'Luck'
     };
     
     // Skill names map
@@ -1278,19 +1625,41 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    * Generate action summary content
    */
   static _generateActionSummary(system) {
-    let html = '';
-    
-    html += '<div class=\"details-section\">';
+    let html = '<div class=\"details-section\">';
+
     if (system.actionType) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Type:</span><span class=\"detail-value\">${system.actionType}</span></div>`;
     }
     if (system.actionCost) {
       html += `<div class=\"detail-row\"><span class=\"detail-label\">Cost:</span><span class=\"detail-value\">${system.actionCost}</span></div>`;
     }
+    if (system.requirements) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Requirements:</span><span class=\"detail-value\">${system.requirements}</span></div>`;
+    }
+    if (system.trigger) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Trigger:</span><span class=\"detail-value\">${system.trigger}</span></div>`;
+    }
+    if (system.range) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Range:</span><span class=\"detail-value\">${system.range}</span></div>`;
+    }
+    if (system.target) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Target:</span><span class=\"detail-value\">${system.target}</span></div>`;
+    }
+    if (system.frequency) {
+      html += `<div class=\"detail-row\"><span class=\"detail-label\">Frequency:</span><span class=\"detail-value\">${system.frequency}</span></div>`;
+    }
     html += '</div>';
     
     if (system.keywords?.length) {
       html += D8CharacterSheet._generateTraitTags(system.keywords);
+    }
+
+    if (system.effect) {
+      html += `<div class=\"details-section\"><div class=\"detail-row\"><span class=\"detail-label\">Effect:</span><span class=\"detail-value\">${system.effect.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+
+    if (system.special) {
+      html += `<div class=\"details-section\"><div class=\"detail-row\"><span class=\"detail-label\">Special:</span><span class=\"detail-value\">${system.special.replace(/\n/g, '<br>')}</span></div></div>`;
     }
     
     return html;

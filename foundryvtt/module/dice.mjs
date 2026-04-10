@@ -10,7 +10,24 @@
  * @returns {Promise<void>}
  */
 export async function showRollDialog(options) {
-  const { actor, attrValue, skillValue, attrLabel, skillLabel, onRollComplete, defaultModifier = 0, defaultApplyToAttr = true, defaultApplyToSkill = true } = options;
+  const {
+    actor,
+    attrValue,
+    skillValue,
+    attrLabel,
+    skillLabel,
+    onRollComplete,
+    defaultModifier = 0,
+    defaultApplyToAttr = true,
+    defaultApplyToSkill = true,
+    defaultFortune = 0,
+    defaultMisfortune = 0,
+  } = options;
+
+  const markTraining = async () => {
+    if (!options.actor || !options.skillKey) return;
+    await game.legends?.training?.markTrainingCheckbox?.(options.actor, 'skill', options.skillKey);
+  };
 
   return foundry.applications.api.DialogV2.wait({
     window: { title: `Roll: ${skillLabel}` },
@@ -72,14 +89,15 @@ export async function showRollDialog(options) {
           const modifier = parseInt(rawValue) || 0;
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
-          const result = await rollD8Check({
+          const result = await resolveD8DialogRoll({
             ...options,
             modifier,
             applyToAttr,
             applyToSkill,
-            fortune: 0,
-            misfortune: 0
+            fortune: defaultFortune,
+            misfortune: defaultMisfortune
           });
+          await markTraining();
           if (onRollComplete) await onRollComplete(result);
           return result;
         }
@@ -94,13 +112,13 @@ export async function showRollDialog(options) {
           const modifier = baseModifier + 2; // Apply MAP penalty
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
-          const result = await rollD8Check({
+          const result = await resolveD8DialogRoll({
             ...options,
             modifier,
             applyToAttr,
             applyToSkill,
-            fortune: 0,
-            misfortune: 0
+            fortune: defaultFortune,
+            misfortune: defaultMisfortune
           });
           if (onRollComplete) await onRollComplete(result);
           return result;
@@ -116,13 +134,13 @@ export async function showRollDialog(options) {
           const modifier = baseModifier + 4; // Apply MAP penalty
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
-          const result = await rollD8Check({
+          const result = await resolveD8DialogRoll({
             ...options,
             modifier,
             applyToAttr,
             applyToSkill,
-            fortune: 0,
-            misfortune: 0
+            fortune: defaultFortune,
+            misfortune: defaultMisfortune
           });
           if (onRollComplete) await onRollComplete(result);
           return result;
@@ -141,6 +159,8 @@ export async function showRollDialog(options) {
             applyToAttr,
             applyToSkill,
             isFortune: true,
+            fortune: defaultFortune + 1,
+            misfortune: defaultMisfortune,
             onRollComplete
           });
         }
@@ -158,6 +178,8 @@ export async function showRollDialog(options) {
             applyToAttr,
             applyToSkill,
             isFortune: false,
+            fortune: defaultFortune,
+            misfortune: defaultMisfortune + 1,
             onRollComplete
           });
         }
@@ -172,7 +194,24 @@ export async function showRollDialog(options) {
  * @returns {Promise<void>}
  */
 export async function showSkillCheckDialog(options) {
-  const { actor, attrValue, skillValue, attrLabel, skillLabel, onRollComplete, defaultModifier = 0, defaultApplyToAttr = true, defaultApplyToSkill = true } = options;
+  const {
+    actor,
+    attrValue,
+    skillValue,
+    attrLabel,
+    skillLabel,
+    onRollComplete,
+    defaultModifier = 0,
+    defaultApplyToAttr = true,
+    defaultApplyToSkill = true,
+    defaultFortune = 0,
+    defaultMisfortune = 0,
+  } = options;
+
+  const markTraining = async () => {
+    if (!options.actor || !options.skillKey || options.isSave) return;
+    await game.legends?.training?.markTrainingCheckbox?.(options.actor, 'skill', options.skillKey);
+  };
 
   return foundry.applications.api.DialogV2.wait({
     window: { title: `Roll: ${skillLabel}` },
@@ -228,14 +267,15 @@ export async function showSkillCheckDialog(options) {
           const modifier = parseInt(rawValue) || 0;
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
-          const result = await rollD8Check({
+          const result = await resolveD8DialogRoll({
             ...options,
             modifier,
             applyToAttr,
             applyToSkill,
-            fortune: 0,
-            misfortune: 0
+            fortune: defaultFortune,
+            misfortune: defaultMisfortune
           });
+          await markTraining();
           if (onRollComplete) await onRollComplete(result);
           return result;
         }
@@ -253,6 +293,8 @@ export async function showSkillCheckDialog(options) {
             applyToAttr,
             applyToSkill,
             isFortune: true,
+            fortune: defaultFortune + 1,
+            misfortune: defaultMisfortune,
             onRollComplete
           });
         }
@@ -270,6 +312,8 @@ export async function showSkillCheckDialog(options) {
             applyToAttr,
             applyToSkill,
             isFortune: false,
+            fortune: defaultFortune,
+            misfortune: defaultMisfortune + 1,
             onRollComplete
           });
         }
@@ -278,13 +322,33 @@ export async function showSkillCheckDialog(options) {
   });
 }
 
+async function resolveD8DialogRoll(options) {
+  const { fortune = 0, misfortune = 0 } = options;
+
+  if (fortune > misfortune) {
+    return showDiceAssignmentDialog({
+      ...options,
+      isFortune: true,
+    });
+  }
+
+  if (misfortune > fortune) {
+    return showDiceAssignmentDialog({
+      ...options,
+      isFortune: false,
+    });
+  }
+
+  return rollD8Check(options);
+}
+
 /**
  * Show dice assignment dialog for Fortune/Misfortune
  * @param {Object} options - Roll options including isFortune flag
  * @returns {Promise<void>}
  */
 async function showDiceAssignmentDialog(options) {
-  const { actor, attrLabel, skillLabel, isFortune } = options;
+  const { actor, attrLabel, skillLabel, isFortune, fortune = isFortune ? 1 : 0, misfortune = isFortune ? 0 : 1 } = options;
 
   // Roll 3d8
   const roll = new Roll('3d8');
@@ -314,6 +378,11 @@ async function showDiceAssignmentDialog(options) {
     defaultAttrIdx = sortedIndices[0].idx;
     defaultSkillIdx = sortedIndices[1].idx;
   }
+
+  const markTraining = async () => {
+    if (!options.actor || !options.skillKey || options.isSave) return;
+    await game.legends?.training?.markTrainingCheckbox?.(options.actor, 'skill', options.skillKey);
+  };
 
   return foundry.applications.api.DialogV2.wait({
     window: { title: `${isFortune ? 'Fortune' : 'Misfortune'} - Assign Dice` },
@@ -384,10 +453,11 @@ async function showDiceAssignmentDialog(options) {
             ...options,
             attrDie, skillDie, discarded,
             allResults: results,
-            fortune: isFortune ? 1 : 0,
-            misfortune: isFortune ? 0 : 1
+            fortune,
+            misfortune
           });
 
+          await markTraining();
           if (options.onRollComplete) await options.onRollComplete(result);
           return result;
         }
@@ -877,15 +947,15 @@ export async function rollWeaveCheck(options = {}) {
   }
   // Deduct energy
   const totalEnergyCost = primaryCost + supportingCost;
-  const currentEnergy = actor.system.energy.value;
+  const currentEnergy = actor.system.energy.current;
   
   if (totalSuccesses === 0) {
     // Failed weave - lose half energy
     const energyLost = Math.ceil(totalEnergyCost / 2);
-    await actor.update({ 'system.energy.value': Math.max(0, currentEnergy - energyLost) });
+    await actor.update({ 'system.energy.current': Math.max(0, currentEnergy - energyLost) });
   } else {
     // Successful weave - lose full energy
-    await actor.update({ 'system.energy.value': Math.max(0, currentEnergy - totalEnergyCost) });
+    await actor.update({ 'system.energy.current': Math.max(0, currentEnergy - totalEnergyCost) });
   }
   
   // Collect all rolls for Dice So Nice
