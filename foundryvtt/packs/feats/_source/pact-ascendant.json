@@ -26,11 +26,20 @@
     "usageType": "free",
     "usage": {
       "mode": "free",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Instant Recovery once per long rest as [Free] action; max Energy reduced until long rest"
     },
-    "keywords": "[Magic], [Pact]",
+    "keywords": [
+      "[Magic]",
+      "[Pact]"
+    ],
     "notes": "",
     "effects": []
   },

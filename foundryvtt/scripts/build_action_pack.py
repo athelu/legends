@@ -41,6 +41,26 @@ def slugify(value):
     return slug.strip('-')
 
 
+def load_existing_actions(source_dir):
+    """Load existing action source JSON keyed by slug so rebuilds can preserve manual automation data."""
+    existing_actions = {}
+
+    for json_file in source_dir.glob('*.json'):
+        try:
+            with open(json_file, 'r', encoding='utf-8') as handle:
+                item = json.load(handle)
+        except (OSError, json.JSONDecodeError):
+            continue
+
+        name = str(item.get('name') or json_file.stem).strip()
+        if not name:
+            continue
+
+        existing_actions[slugify(name)] = item
+
+    return existing_actions
+
+
 def clean_metadata_value_line(value):
     """Remove markdown emphasis wrappers that leak into parsed metadata values."""
     cleaned = value.strip()
@@ -151,11 +171,13 @@ def parse_actions_md(md_file):
     }
 
     action_starts = []
+    section_starts = []
     current_section_type = None
 
     for idx, line in enumerate(lines):
         section_match = re.match(r'^##\s+(.+)', line)
         if section_match:
+            section_starts.append(idx)
             section_name = section_match.group(1).strip().lower()
             if 'reaction' in section_name:
                 current_section_type = 'reaction'
@@ -205,7 +227,12 @@ def parse_actions_md(md_file):
     seen_names = set()
 
     for index, (start_idx, action_name, type_key) in enumerate(action_starts):
-        end_idx = action_starts[index + 1][0] if index + 1 < len(action_starts) else len(lines)
+        next_action_idx = action_starts[index + 1][0] if index + 1 < len(action_starts) else len(lines)
+        next_section_idx = next(
+            (section_idx for section_idx in section_starts if section_idx > start_idx),
+            len(lines)
+        )
+        end_idx = min(next_action_idx, next_section_idx)
         section_text = '\n'.join(lines[start_idx + 1:end_idx])
 
         if allowed_types is not None and type_key not in allowed_types:
@@ -228,6 +255,7 @@ def parse_actions_md(md_file):
                 'requirements': '',
                 'trigger': '',
                 'effect': '',
+                'appliesEffects': [],
                 'keywords': [],
                 'range': '',
                 'target': '',
@@ -297,6 +325,7 @@ def main():
 
         source_dir = script_dir / 'foundryvtt' / 'packs' / 'action' / '_source'
         source_dir.mkdir(parents=True, exist_ok=True)
+        existing_actions = load_existing_actions(source_dir)
 
         print('  Cleaning old JSON files...')
         for old_file in source_dir.glob('*.json'):
@@ -304,6 +333,11 @@ def main():
         print('  Removed old files')
 
         for item in items:
+            existing_item = existing_actions.get(slugify(item['name']))
+            if existing_item:
+                existing_applies_effects = existing_item.get('system', {}).get('appliesEffects')
+                if isinstance(existing_applies_effects, list):
+                    item['system']['appliesEffects'] = existing_applies_effects
             json_file = source_dir / f"{slugify(item['name'])}.json"
             with open(json_file, 'w', encoding='utf-8') as f:
                 ensure_key(item)

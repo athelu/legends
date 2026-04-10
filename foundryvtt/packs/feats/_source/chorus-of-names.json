@@ -27,11 +27,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Once per encounter, 2 [Combat] actions"
     },
-    "keywords": "[Magic], [Invoker]",
+    "keywords": [
+      "[Magic]",
+      "[Invoker]"
+    ],
     "notes": "",
     "effects": []
   },

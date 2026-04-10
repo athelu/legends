@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Combat] action Range: 30 feet Effect: Choose up to 6 allies within range who can see you. They gain +2 DR for 1 minute. Ambis's protective blessing shields them like a mother shielding her children. Usage: Uses 1 Channel Divinity</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> 30 feet</li>\n<li><strong>Effect:</strong> Choose up to 6 allies within range who can see you. They gain +2 DR for 1 minute. Ambis's protective blessing shields them like a mother shielding her children.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "Choose up to 6 allies within range who can see you. They gain +2 DR for 1 minute. Ambis's protective blessing shields them like a mother shielding her children.",
+    "isActive": false,
+    "actionCost": "1 [Combat] action",
+    "requirements": "",
+    "range": "30 feet",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!bd115ea8de5942b0"

@@ -5,7 +5,7 @@
   "img": "icons/svg/fire.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Hair or clothing lightly burned, minor distraction.Subtract 1 from one die on your next action. <strong>Recovery:</strong> Automatically ends after your next action</p>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Hair or clothing lightly burned, minor distraction. Add 1 to your ability die on your next action. <strong>Recovery:</strong> Automatically ends after your next action</p>"
     },
     "label": "Singed",
     "category": "magic",

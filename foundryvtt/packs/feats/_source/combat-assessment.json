@@ -23,11 +23,19 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Unlimited (costs action)"
     },
-    "keywords": "[Combat]",
+    "keywords": [
+      "[Combat]"
+    ],
     "notes": "",
     "effects": []
   },

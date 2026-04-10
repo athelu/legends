@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 3
+        "cost": 5
       }
     },
     "range": "60ft cone",
@@ -24,7 +24,7 @@
     "target": "cone",
     "savingThrow": "reflex",
     "effect": "A blast of cold air erupts from your hands. All creatures in a 60-foot cone take 40 cold damage. Each target takes the full listed damage and makes their own save.",
-    "effectType": "control",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
@@ -47,24 +47,25 @@
         },
         "3": {
           "appliesEffects": true,
-          "description": "Enhanced damage (48) + Slowed",
-          "duration": "Enhanced damage (48) + Slowed"
+          "description": "Enhanced damage (48) + Slowed (minor)",
+          "duration": "Enhanced damage (48) + Slowed (minor)"
         }
       }
     },
-    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + Slowed",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + Slowed (minor)",
     "weavingRoll": "Water Potential + Water Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {
-        "effectId": "slowed",
+        "effectId": "Slowed (minor)",
         "params": {}
       }
     ],
     "deliveryMethod": "save",
     "tags": [
       "aoe",
-      "ranged"
+      "ranged",
+      "ritual"
     ]
   },
   "effects": [],

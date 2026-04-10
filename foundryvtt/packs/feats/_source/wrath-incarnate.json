@@ -28,11 +28,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "1"
+      },
       "text": "Exhaustion immunity is passive while in fury; battlefield presence once per long rest"
     },
-    "keywords": "[Combat], [Savage]",
+    "keywords": [
+      "[Combat]",
+      "[Savage]"
+    ],
     "notes": "",
     "effects": []
   },

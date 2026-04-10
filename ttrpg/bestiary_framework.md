@@ -629,13 +629,13 @@ At higher tiers, NPCs should invest in Constitution to survive tier-appropriate 
 
 #### **Undead**
 - **Undead Immunities:** Immune to poison damage, Poisoned condition, disease, exhaustion
-- **Mindless (if applicable):** immune to mind-affecting effects effects (Beguiling Weave, fear, Sleep), fear, psychic effects
+- **Mindless (if applicable):** immune to mind-affecting effects (Beguiling Weave, fear, Sleep), fear, psychic effects
 - **Does not need:** Air, food, drink, sleep
 - **Negative Healing (optional):** Healed by negative energy, harmed by positive
 
 #### **Construct**
 - **Construct Immunities:** Immune to poison, Poisoned, disease, exhaustion, Paralyzed, Petrified
-- **Mindless (if applicable):** immune to mind-affecting effects effects (Beguiling Weave, fear, Sleep), fear, psychic effects
+- **Mindless (if applicable):** immune to mind-affecting effects (Beguiling Weave, fear, Sleep), fear, psychic effects
 - **Does not need:** Air, food, drink, sleep
 
 #### **Aberration**

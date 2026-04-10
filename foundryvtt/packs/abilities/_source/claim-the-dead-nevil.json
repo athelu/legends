@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Interact] action Range: Touch Effect: Touch a corpse. It is preserved from decay indefinitely and cannot become undead through any means. This is a funerary rite, not necromancy - you are consecrating the body and claiming the soul for Nevil's realm. The corpse is protected until you release it or it is desecrated. Usage: Uses 1 Channel Divinity</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Interact] action</li>\n<li><strong>Range:</strong> Touch</li>\n<li><strong>Effect:</strong> Touch a corpse. It is preserved from decay indefinitely and cannot become undead through any means. This is a funerary rite, not necromancy - you are consecrating the body and claiming the soul for Nevil's realm. The corpse is protected until you release it or it is desecrated.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "Touch a corpse. It is preserved from decay indefinitely and cannot become undead through any means. This is a funerary rite, not necromancy - you are consecrating the body and claiming the soul for Nevil's realm. The corpse is protected until you release it or it is desecrated.",
+    "isActive": false,
+    "actionCost": "1 [Interact] action",
+    "requirements": "",
+    "range": "Touch",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!a4f6acb2d24743c2"

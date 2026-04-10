@@ -12,20 +12,29 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "perception:3",
+      "skills": "wilderness:3, perception:3",
       "feats": [],
       "tier": 0,
-      "other": "Survival 3"
+      "other": ""
     },
     "benefits": "<p>Subtract 1 from both dice when tracking. Can track across difficult terrain at normal speed. Can determine number, size, and condition of tracked creatures</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Passive"
     },
-    "keywords": "[Wilderness], [Skill]",
+    "keywords": [
+      "[Wilderness]",
+      "[Skill]"
+    ],
     "notes": "",
     "effects": []
   },

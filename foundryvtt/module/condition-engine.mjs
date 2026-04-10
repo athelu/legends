@@ -1545,34 +1545,105 @@ function applyConditionModifiers(rollData) {
   const actor = rollData.actor;
   if (!actor) return;
 
-  const conditions = actor.items.filter(i => i.type === 'condition');
+  const items = actor.items.filter(i => i.type === 'condition' || i.type === 'effect');
 
   let totalModifier = 0;
-  const modifierSources = [];
+  let fortune = Number(rollData.fortune) || 0;
+  let misfortune = Number(rollData.misfortune) || 0;
+  let requiresManualDieChoice = Boolean(rollData.requiresManualDieChoice);
+  const modifierSources = Array.isArray(rollData.conditionModifiers) ? [...rollData.conditionModifiers] : [];
 
-  for (const condition of conditions) {
-    if (!condition.system.activeEffects) continue;
+  for (const item of items) {
+    if (!item.system.activeEffects) continue;
 
-    for (const effect of condition.system.activeEffects) {
-      // Check if this effect applies to this roll
-      const applies = checkEffectApplies(effect, rollData);
-      if (!applies) continue;
+    for (const effect of item.system.activeEffects) {
+      const application = getRollEffectApplication(effect, rollData);
+      if (!application) continue;
 
-      const value = parseInt(effect.value) || 0;
-      totalModifier += value;
-      modifierSources.push({
-        name: condition.name,
-        value: value,
-        notes: effect.notes
-      });
+      if (application.type === 'modifier') {
+        totalModifier += application.value;
+        if (application.requiresManualDieChoice) {
+          requiresManualDieChoice = true;
+        }
+        modifierSources.push({
+          name: item.name,
+          value: application.value,
+          notes: effect.notes
+        });
+        continue;
+      }
+
+      if (application.type === 'fortune') {
+        fortune += application.value;
+        continue;
+      }
+
+      if (application.type === 'misfortune') {
+        misfortune += application.value;
+      }
     }
   }
 
-  // Apply the modifier to the roll
   if (totalModifier !== 0) {
     rollData.modifier = (rollData.modifier || 0) + totalModifier;
+  }
+
+  if (modifierSources.length > 0) {
     rollData.conditionModifiers = modifierSources;
   }
+
+  if (fortune > 0) {
+    rollData.fortune = fortune;
+  }
+
+  if (misfortune > 0) {
+    rollData.misfortune = misfortune;
+  }
+
+  if (requiresManualDieChoice) {
+    rollData.requiresManualDieChoice = true;
+    rollData.defaultApplyToAttr = false;
+    rollData.defaultApplyToSkill = false;
+  }
+}
+
+function getRollEffectApplication(effect, rollData) {
+  if (!checkEffectApplies(effect, rollData)) {
+    return null;
+  }
+
+  const key = effect.key;
+  const mode = String(effect.mode || '').toLowerCase();
+  const parsedValue = Number.parseInt(effect.value, 10);
+  const value = Number.isFinite(parsedValue) ? parsedValue : 0;
+
+  if (key === 'diceMod.fortune-minor') {
+    return {
+      type: 'modifier',
+      value,
+      requiresManualDieChoice: true
+    };
+  }
+
+  if (mode === 'fortune') {
+    return {
+      type: 'fortune',
+      value: Math.max(1, value || 1)
+    };
+  }
+
+  if (mode === 'misfortune') {
+    return {
+      type: 'misfortune',
+      value: Math.max(1, value || 1)
+    };
+  }
+
+  return {
+    type: 'modifier',
+    value,
+    requiresManualDieChoice: false
+  };
 }
 
 /**
@@ -1583,6 +1654,11 @@ function applyConditionModifiers(rollData) {
  */
 function checkEffectApplies(effect, rollData) {
   const key = effect.key;
+  const rollModifierKey = key.startsWith('diceMod.') ? key.slice('diceMod.'.length) : '';
+
+  if (key === 'diceMod.fortune-minor') {
+    return true;
+  }
 
   // Check for all rolls modifier
   if (key === 'diceMod.allRolls') {
@@ -1598,6 +1674,24 @@ function checkEffectApplies(effect, rollData) {
   if (key.startsWith('skillDiceMod.') && rollData.skillKey) {
     const skillName = key.split('.')[1];
     return rollData.skillKey === skillName;
+  }
+
+  if (rollModifierKey) {
+    if (rollData.isAttack && rollModifierKey === 'attack') {
+      return true;
+    }
+
+    if (rollData.skillKey && rollModifierKey === rollData.skillKey) {
+      return true;
+    }
+
+    if (rollData.attrKey && rollModifierKey === rollData.attrKey) {
+      return true;
+    }
+
+    if (rollData.isSave && rollModifierKey === rollData.saveType) {
+      return true;
+    }
   }
 
   // Check for attribute-specific modifiers

@@ -55,15 +55,9 @@
     "targetingSuccessScaling": "0 = fails, 1 = half damage (2), 2= full damage (4), 3 = enhanced damage (8 total)",
     "weavingRoll": "Earth Potential + Earth Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
-    "appliesEffects": [
-      {
-        "effectId": "prone",
-        "params": {}
-      }
-    ],
+    "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [
-      "control",
       "touch"
     ]
   },

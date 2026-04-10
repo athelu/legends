@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Combat] action Range: 30-foot radius centered on you Effect: All allies within range who can see or hear you gain temporary HP equal to your Wisdom score + your Tier. Your presence and Alkira's blessing fortify your companions. Usage: Uses 1 Channel Divinity</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> 30-foot radius centered on you</li>\n<li><strong>Effect:</strong> All allies within range who can see or hear you gain temporary HP equal to your Wisdom score + your Tier. Your presence and Alkira's blessing fortify your companions.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "All allies within range who can see or hear you gain temporary HP equal to your Wisdom score + your Tier. Your presence and Alkira's blessing fortify your companions.",
+    "isActive": false,
+    "actionCost": "1 [Combat] action",
+    "requirements": "",
+    "range": "30-foot radius centered on you",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!552db344751e4edc"

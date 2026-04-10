@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Move while Prone. Costs 2 feet of movement for every 1 foot crawled",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

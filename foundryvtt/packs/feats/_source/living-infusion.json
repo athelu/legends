@@ -25,11 +25,20 @@
     "usageType": "active",
     "usage": {
       "mode": "active",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Uses one Imbue Item charge; touch required; willing creatures only"
     },
-    "keywords": "[Magic], [Infuser]",
+    "keywords": [
+      "[Magic]",
+      "[Infuser]"
+    ],
     "notes": "",
     "effects": []
   },

@@ -5,7 +5,7 @@
   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Make a [[/check skill=stealth]] with the aid of partial cover or greater. [[/check skill=stealth]] is opposed by enemy's Perception.</p>\n<ul>\n<li><strong>Margin 1 +:</strong> You can the Hidden condition</li>\n</ul>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Make a [[/check skill=stealth]] with the aid of partial cover or greater. [[/check skill=stealth]] is opposed by enemy's Perception.</p>\n<ul>\n<li><strong>Margin 1 +:</strong> You gain the Hidden condition</li>\n</ul>"
     },
     "actionType": "move",
     "actionCost": "1",
@@ -22,7 +22,7 @@
     "range": "",
     "target": "",
     "frequency": "",
-    "special": "Margin 1 +: You can the Hidden condition"
+    "special": "Margin 1 +: You gain the Hidden condition"
   },
   "effects": [],
   "_key": "!items!9d244235b1a7d46a"

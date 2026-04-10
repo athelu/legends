@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Combat] action Range: Touch (melee touch attack) Effect: Make a melee touch attack (Agility + Melee Combat opposed by target's Agility + Melee Combat). On hit, deal Negative damage equal to your Tier × 8. This is the touch of natural death, not undeath - you channel Nevil's power over endings. Damage Type: Negative (energy), Half DR Usage: Uses 1 Channel Divinity</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> Touch (melee touch attack)</li>\n<li><strong>Effect:</strong> Make a melee touch attack (Agility + Melee Combat opposed by target's Agility + Melee Combat). On hit, deal Negative damage equal to your Tier × 8. This is the touch of natural death, not undeath - you channel Nevil's power over endings.</li>\n<li><strong>Damage Type:</strong> Negative (energy), Half DR</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "Make a melee touch attack (Agility + Melee Combat opposed by target's Agility + Melee Combat). On hit, deal Negative damage equal to your Tier × 8. This is the touch of natural death, not undeath - you channel Nevil's power over endings.",
+    "isActive": false,
+    "actionCost": "1 [Combat] action",
+    "requirements": "",
+    "range": "Touch (melee touch attack)",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!5dadf5bd60464fc4"

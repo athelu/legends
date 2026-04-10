@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Trigger a magic item's power or property. Some items specify different action costs (may require 2 actions or be [Free]) which overrides this default action.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Bright light fills a 60ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy.</p>"
+      "value": "<p>Bright light fills a 20ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -16,14 +16,14 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 7
+        "cost": 8
       }
     },
-    "range": "Medium, 60 ft. (60-foot radius sphere)",
-    "duration": "10 minutes",
+    "range": "Medium, 60 ft. (20-foot radius sphere)",
+    "duration": "1 minute",
     "target": "sphere",
     "savingThrow": "none",
-    "effect": "Bright light fills a 60ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy.",
+    "effect": "Bright light fills a 20ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy.",
     "effectType": "utility",
     "damage": {
       "base": 0,

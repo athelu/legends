@@ -33,8 +33,8 @@ A condition may carry both keywords when it both penalizes the creature and crea
 
 ### Bound
 **Keyword:** [Hindered]
-**Effect:** Tied up or bound in chains or shackles. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune.Automatically fail Reflex saves.
-**Recovery:** Use 1 action to make a Acrobatics, Might or devices check
+**Effect:** Tied up or bound in chains or shackles. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune. Automatically fail Reflex saves.
+**Recovery:** Use 1 action to make an Acrobatics, Might, or Devices check
 - 2 successes: Remove Bound condition
 
 ### Charmed
@@ -121,7 +121,7 @@ Exhaustion can be gained from the following:
 
 ### Fatigued (Exhaustion Level 1)
 **Keyword:** [Hindered]
-**Effect:** All skill checks: Add 1 to attribute die results.Cannot benefit from HP recovery for short rests.
+**Effect:** All skill checks: Add 1 to attribute die results. Cannot benefit from HP recovery for short rests.
 **Recovery:** Long rest removes 1 level of Exhaustion
 
 ### Exhausted  (Exhaustion Level 2)
@@ -136,7 +136,7 @@ Exhaustion can be gained from the following:
 
 ### Near Collapse  (Exhaustion Level 4)
 **Keyword:** [Hindered]
-**Effect:** All rolls add 3 to both die results. Movement speed reduced to quarter. Can only take 1 action per turn.Cannot take reactions.Receive no benefit from short rests.
+**Effect:** All rolls add 3 to both die results. Movement speed reduced to quarter. Can only take 1 action per turn. Cannot take reactions. Receive no benefit from short rests.
 **Recovery:** Long rest removes 1 level of Exhaustion
 
 ### Collapse  (Exhaustion Level 5)
@@ -151,7 +151,7 @@ If the source of fear is destroyed or defeated, the character immediately downgr
 
 ### Frightened (Level 1 Fear)
 **Keyword:** [Hindered]
-**Effect:** Can act normally but suffers the penaltyAdd 1 to die results while the source of fear is perceived.
+**Effect:** Can act normally but suffers the following: Add 1 to die results while the source of fear is perceived.
 **Recovery:** At the end of each turn, make Will save.
 - 1+ success: Condition ends
 **Ally Assistance:** An ally within 5 feet can use an [Interact] action with Persuasion or Intimidate check:
@@ -159,7 +159,7 @@ If the source of fear is destroyed or defeated, the character immediately downgr
 
 ### Fleeing (Level 2 Fear)
 **Keyword:** [Hindered]
-**Effect:** Must use movement to get away from the fear source by the safest1 route available. Cannot willingly move closer to the fear source. Can engage other threats that aren't the source of fear. Add 1 to all die results.
+**Effect:** Must use movement to get away from the fear source by the safest route available. Cannot willingly move closer to the fear source. Can engage other threats that aren't the source of fear. Add 1 to all die results.
 **Recovery:** At the end of each turn, make Will save.
 - 1 success: Downgrade to Frightened
 - 2 successes: Condition ends completely
@@ -182,7 +182,7 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 
 ### Singed (Level 1 Fire)
 **Keyword:** [Hindered]
-**Effect:** Hair or clothing lightly burned, minor distraction.Subtract 1 from one die on your next action.
+**Effect:** Hair or clothing lightly burned, minor distraction. Add 1 to your ability die on your next action.
 **Recovery:** Automatically ends after your next action
 
 ### Smoldering (Level 2 Fire)
@@ -225,6 +225,11 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 **Effect:** Your location is unknown; enemies do not know which square you occupy. Enemies cannot directly target you with attacks or single-target weaves. While hidden you have Fortune on your first [combat] action. Making a [combat] action removes the hidden condition. 
 **Recovery:** Opposed by Observers perception check
 
+### Incapacitated
+**Keyword:** [Hindered]
+**Effect:** Cannot take actions or reactions. Movement speed reduced to 0.
+**Recovery:** The source of the condition will describe the recovery conditions.
+
 ### Invisible
 **Keyword:** [Tactical]
 **Effect:** Magically induced state of Invisibility. Grants Hidden condition.
@@ -244,12 +249,12 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 
 ### Poisoned (Strong)
 **Keyword:** [Hindered]
-**Effect:** All attribute dice: Add 2 to die results.  HP regeneration from short/long rests reduced by half.Target takes 4 damage each hour until the condition is removed.
+**Effect:** All attribute dice: Add 2 to die results. HP regeneration from short/long rests reduced by half. Target takes 4 damage each hour until the condition is removed.
 **Recovery:** Fortitude save at end of 4 hours (1 success). Medicine check (2 successes) can end Poisoned early.
 
 ### Poisoned (Deadly)
 **Keyword:** [Hindered]
-**Effect:** All attribute dice: Add 2 to die results.  Long and short rests provide no benefit..Target takes 8 damage each hour until the condition is removed.
+**Effect:** All attribute dice: Add 2 to die results. Long and short rests provide no benefit. Target takes 8 damage each hour until the condition is removed.
 **Recovery:** Fortitude save at end of 4 hours (1 success). Antidote can remove condition early.
 
 ### Prone
@@ -259,7 +264,7 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 
 ### Restrained
 **Keyword:** [Hindered]
-**Effect:** Placed in a hold or lock by an opponent. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune.Automatically fail Reflex saves.
+**Effect:** Placed in a hold or lock by an opponent. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune. Automatically fail Reflex saves.
 **Recovery:** Use 1 action to make an opposed Athletics, Might or Acrobatics check
 - Margin 1: Reduce condition to Grappled.
 - Margin 2: Remove Restrained condition.

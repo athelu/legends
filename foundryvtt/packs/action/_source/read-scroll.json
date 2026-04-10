@@ -5,13 +5,14 @@
   "img": "icons/skills/trades/construction-gloves-yellow.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 2 <strong>Requirements:</strong> Ability to read, appropriate magical knowledge <strong>Effect:</strong> Cast the spell containedin the scroll. [[/check skill=arcane]] required. The scroll is consumed after use. Provokes Opportunity Attacks.</p>"
+      "value": "<p><strong>Cost:</strong> 2 <strong>Requirements:</strong> Ability to read, appropriate magical knowledge <strong>Effect:</strong> Cast the spell contained in the scroll. [[/check skill=arcane]] required. The scroll is consumed after use. Provokes Opportunity Attacks.</p>"
     },
     "actionType": "activate",
     "actionCost": "2",
     "requirements": "Ability to read, appropriate magical knowledge",
     "trigger": "",
-    "effect": "Cast the spell containedin the scroll. Arcane check required. The scroll is consumed after use. Provokes Opportunity Attacks.",
+    "effect": "Cast the spell contained in the scroll. Arcane check required. The scroll is consumed after use. Provokes Opportunity Attacks.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

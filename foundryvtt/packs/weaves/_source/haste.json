@@ -55,12 +55,7 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Time Mastery",
-    "appliesEffects": [
-      {
-        "effectId": "haste",
-        "params": {}
-      }
-    ],
+    "appliesEffects": [],
     "deliveryMethod": "automatic",
     "tags": [
       "buff",

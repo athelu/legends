@@ -1,4 +1,5 @@
 import { normalizeSkillKey } from './skill-utils.mjs';
+import { awardXP } from './progression.mjs';
 
 const BACKGROUND_FLAG_SCOPE = 'legends';
 const BACKGROUND_FLAG_KEY = 'backgroundGrants';
@@ -415,10 +416,17 @@ export async function applyBackgroundGrants(actor, background) {
     const current = Number(actor.system.skills?.[skillKey] ?? 0);
     updates[`system.skills.${skillKey}`] = Math.max(0, current + Number(amount || 0));
   }
-  updates['system.tier.xp'] = Math.max(0, Number(actor.system.tier?.xp || 0) + Number(xpGrant || 0));
 
   if (Object.keys(updates).length) {
     await actor.update(updates);
+  }
+
+  if (Number(xpGrant || 0) !== 0) {
+    await awardXP(actor, Number(xpGrant || 0), {
+      reason: `Background grant: ${background.name}`,
+      category: 'background',
+      source: 'background-grant'
+    });
   }
 
   const nextState = await ensureBackgroundGrantedItems(actor, background, state[background.id] || {}, itemGrants);
@@ -442,10 +450,17 @@ export async function revokeBackgroundGrants(actor, background) {
     const current = Number(actor.system.skills?.[skillKey] ?? 0);
     updates[`system.skills.${skillKey}`] = Math.max(0, current - Number(amount || 0));
   }
-  updates['system.tier.xp'] = Math.max(0, Number(actor.system.tier?.xp || 0) - appliedXP);
 
   if (Object.keys(updates).length) {
     await actor.update(updates);
+  }
+
+  if (appliedXP !== 0) {
+    await awardXP(actor, -appliedXP, {
+      reason: `Background revoked: ${background.name}`,
+      category: 'background',
+      source: 'background-revoke'
+    });
   }
 
   const grantedIds = actor.items

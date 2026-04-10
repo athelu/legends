@@ -12,6 +12,7 @@
     "requirements": "Target must be within your melee reach (typically 5 feet)",
     "trigger": "",
     "effect": "Make an opposed attack roll (Agility + Melee Combat vs opponent's Agility + Melee Combat)",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

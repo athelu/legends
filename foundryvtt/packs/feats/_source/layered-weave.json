@@ -25,11 +25,20 @@
     "usageType": "active",
     "usage": {
       "mode": "active",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Applies to Ritual Casting only; ritual takes 20 minutes"
     },
-    "keywords": "[Magic], [Mageborn]",
+    "keywords": [
+      "[Magic]",
+      "[Mageborn]"
+    ],
     "notes": "",
     "effects": []
   },

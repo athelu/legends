@@ -12,6 +12,7 @@
     "requirements": "Wielding two weapons, off-hand weapon must have Light property",
     "trigger": "",
     "effect": "When wielding two weapons, you may make two attacks with a single [Combat] action. The Off-hand weapon must have the Light property. The attack uses a Shared Attribute Roll (roll attribute once, applies to both attacks). Roll skill die separately for each weapon.\n- First Two-Weapon Action: First attack: Add 1 to both die results, Second attack: Add 2 to both die results\n- Second Two-Weapon Action: First attack: Add 2 to both die results, Second attack: Add 3 to both die results\n- Second Two-Weapon Action: First attack: Add 3 to both die results, Second attack: Add 4 to both die results",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

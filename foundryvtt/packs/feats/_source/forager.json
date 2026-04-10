@@ -12,20 +12,29 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "",
+      "skills": "wilderness:3",
       "feats": [],
       "tier": 0,
-      "other": "Survival 3"
+      "other": ""
     },
     "benefits": "<p>Find food and water for 6 people per day with Survival check (Simple task). 2 successes = find medicinal herbs worth 1d8 × 5 gp</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
-      "text": "Once per day"
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "1"
+      },
+      "text": "Once per long rest"
     },
-    "keywords": "[Wilderness], [Skill]",
+    "keywords": [
+      "[Wilderness]",
+      "[Skill]"
+    ],
     "notes": "",
     "effects": []
   },

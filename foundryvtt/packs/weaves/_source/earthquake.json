@@ -16,10 +16,10 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 7
+        "cost": 8
       }
     },
-    "range": "Medium, 60 ft. (50-foot radius)",
+    "range": "Medium, 60 ft. (20-foot radius)",
     "duration": "1 minute",
     "target": "sphere",
     "savingThrow": "reflex",
@@ -52,7 +52,7 @@
         }
       }
     },
-    "targetingSuccessScaling": "0 = Fails, 1 = Prone (1 round, 25ft radius), 2 = Prone (1 minute, 50ft radius), 3 = Prone (1 minute, 100ft radius)",
+    "targetingSuccessScaling": "0 = Fails, 1 = Prone (1 round, 20ft radius), 2 = Prone (1 minute, 20ft radius), 3 = Prone (1 minute, 40ft radius)",
     "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [

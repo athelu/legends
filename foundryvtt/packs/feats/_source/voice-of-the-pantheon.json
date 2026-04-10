@@ -27,11 +27,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Short rest Channel Divinity renewal is passive and permanent; full presence once per long rest for 1 minute"
     },
-    "keywords": "[Magic], [Divine]",
+    "keywords": [
+      "[Magic]",
+      "[Divine]"
+    ],
     "notes": "",
     "effects": []
   },

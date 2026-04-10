@@ -12,20 +12,28 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "",
+      "skills": "wilderness:4",
       "feats": [],
       "tier": 0,
-      "other": "Survival 4"
+      "other": ""
     },
     "benefits": "<p>Choose terrain type (forest, mountains, swamp, etc.). In chosen terrain: difficult terrain doesn't slow travel, Fortune on initiative rolls, Wilderness checks subtract 1 from both dice, enemy ambushes add 1 to both stealth dice</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Passive"
     },
-    "keywords": "[Wilderness]",
+    "keywords": [
+      "[Wilderness]"
+    ],
     "notes": "Can take multiple times for different terrains",
     "effects": []
   },

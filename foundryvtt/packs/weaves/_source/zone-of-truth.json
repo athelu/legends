@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 5
+        "cost": 7
       }
     },
     "range": "Close, 30 ft. (15-foot radius sphere)",
@@ -60,6 +60,7 @@
     "tags": [
       "aoe",
       "ranged",
+      "ritual",
       "zone"
     ]
   },

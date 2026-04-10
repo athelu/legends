@@ -49,8 +49,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
-**Description:** Touch a willing creature. For the duration, target is immune to Frightened condition and gains temporary HP equal to your Positive Potential at the start of each of its turns. When weave ends, any remaining temporary HP is lost.
-**Applies Effects:** heroism
+**Description:** Touch a willing creature. For the duration, target is immune to the Frightened condition and gains temporary HP equal to your Positive Potential at the start of each of its turns. When the weave ends, any remaining temporary HP is lost.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
 
@@ -80,11 +79,11 @@
 **Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Target takes 8 cold damage. This is an attack weave—no saving throw allowed.
-**Applies Effects:** slowed
+**Applies Effects:** Slowed (minor)
 **Saving Throw:** None
 **Damage Type:** Cold (energy)
 **DR Interaction:** Half DR
-**Targeting Success Scaling:** 0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + slowed
+**Targeting Success Scaling:** 0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + Slowed (minor)
 
 ### Identify
 **Primary Energy:** Space 3 (revealing magical properties)

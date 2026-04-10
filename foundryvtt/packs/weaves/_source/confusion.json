@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 5
+        "cost": 6
       }
     },
     "range": "Medium, 60 ft. (10-foot radius)",
@@ -55,12 +55,7 @@
     "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 1 minute (20-foot radius)",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
-    "appliesEffects": [
-      {
-        "effectId": "dazed",
-        "params": {}
-      }
-    ],
+    "appliesEffects": [],
     "deliveryMethod": "save",
     "tags": [
       "aoe",

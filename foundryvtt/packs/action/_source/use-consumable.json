@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Use a consumable item (oil, poison, alchemical item, etc.). Some consumables may have different action costs (see item description).",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

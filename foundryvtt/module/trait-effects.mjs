@@ -4,6 +4,7 @@
  */
 
 import * as magicalTraits from './magical-traits.mjs';
+import { awardXP } from './progression.mjs';
 
 // ========================================
 // INITIALIZATION
@@ -131,8 +132,12 @@ export async function applyTraitEffects(actor, traitItem) {
     }
     
     // Modifier traits are also passive
-    if (['gifted-mage', 'balanced-channeler'].includes(traitType)) {
+    if (traitType === 'gifted-mage') {
       return await magicalTraits.applyGiftedMage(actor, traitItem);
+    }
+
+    if (traitType === 'balanced-channeler') {
+      return await magicalTraits.applyBalancedChanneler(actor, traitItem);
     }
   }
   
@@ -149,8 +154,10 @@ export async function applyTraitEffects(actor, traitItem) {
         return true;  // Already handled above
       
       case 'gifted-mage':
-      case 'balanced-channeler':
         return await magicalTraits.applyGiftedMage(actor, traitItem);
+
+      case 'balanced-channeler':
+        return await magicalTraits.applyBalancedChanneler(actor, traitItem);
       
       default:
         // Non-magical traits
@@ -197,7 +204,6 @@ async function applySimpleTraitEffects(actor, traitItem) {
     const skill = await chooseSkill(actor);
     if (skill) {
       updates[`system.skills.${skill}`] = 5;
-      updates['system.tier.xp'] = (actor.system.tier.xp || 0) + 40;
       ui.notifications.info(`${skill} set to rank 5, gained 40 XP`);
     }
   }
@@ -215,6 +221,13 @@ async function applySimpleTraitEffects(actor, traitItem) {
   // Apply updates if any
   if (Object.keys(updates).length > 0) {
     await actor.update(updates);
+    if (name.includes('mentor')) {
+      await awardXP(actor, 40, {
+        reason: `${traitItem.name}: Mentor bonus`,
+        category: 'trait',
+        source: 'trait-effect'
+      });
+    }
     return true;
   }
   

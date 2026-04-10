@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Move through water/ Costs 2 feet of movement for every 1 foot swum. Athletics check required for rough water, strong currents, or swimming while armored.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

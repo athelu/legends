@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Use a class feature, feat, or special ability that doesn't fit other categories. If the ability specifies that it takes more than 1 action than use its stated action cost.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

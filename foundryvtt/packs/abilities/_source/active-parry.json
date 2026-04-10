@@ -5,20 +5,26 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "Once per round as a [Free] action (no reaction cost), Attacker must reroll one of their success dice."
+      "value": "<ul>\n<li><strong>Action Cost:</strong> [Free] (no reaction cost)</li>\n<li><strong>Trigger:</strong> When an attacker hits you with a melee attack</li>\n<li><strong>Frequency:</strong> Once per round</li>\n<li><strong>Effect:</strong> Attacker must reroll one of their success dice.</li>\n</ul>"
     },
-    "abilityType": "reaction",
+    "abilityType": "triggered",
     "trigger": "When an attacker hits you with a melee attack",
-    "effect": "The attacker rerolls one of their success dice.",
+    "effect": "Attacker must reroll one of their success dice.",
     "frequency": "Once per round",
-    "source": "Buckler Shield",
+    "source": "Buckler Abilities",
     "appliesEffects": [],
     "keywords": [
       "Shield",
       "Defense",
       "Reaction"
     ],
-    "isActive": false
+    "isActive": false,
+    "actionCost": "[Free] (no reaction cost)",
+    "requirements": "",
+    "range": "",
+    "target": "",
+    "usage": ""
   },
-  "effects": []
+  "effects": [],
+  "_key": "!items!35dc5e87866c454a"
 }

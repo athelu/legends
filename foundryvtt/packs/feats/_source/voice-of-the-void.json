@@ -26,11 +26,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Pact Conduit expansion is passive and permanent; patron presence once per long rest, 1 minute, followed by one level of Exhaustion"
     },
-    "keywords": "[Magic], [Pact]",
+    "keywords": [
+      "[Magic]",
+      "[Pact]"
+    ],
     "notes": "",
     "effects": []
   },

@@ -23,11 +23,19 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "shortRest",
+        "formula": "1"
+      },
       "text": "Once per short rest"
     },
-    "keywords": "[Morale]",
+    "keywords": [
+      "[Morale]"
+    ],
     "notes": "",
     "effects": []
   },

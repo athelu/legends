@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Your movement doesn't provoke Opportunity Attacks for the rest of your turn. You may move up to your full speed. You cannot end your movement within melee reach of an enemy.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

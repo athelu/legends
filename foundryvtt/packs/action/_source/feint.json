@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Make opposed Deception check (Charisma + Deception vs target's Empathy + Wisdom)",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

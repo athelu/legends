@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Use thieves' tools, healer's kit, artisan's tools, etc. Time requirements vary by task complexity. Will require skill checks (Devices for locks, Medicine for healer's kit, etc.)",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

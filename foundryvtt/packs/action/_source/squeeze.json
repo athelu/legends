@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Move through a space one size smaller than you. It costs 2 feet of movement for every 1 foot traveled. All attacks and skill checks: Add 1 to both die results. Attacks against you have Fortune",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

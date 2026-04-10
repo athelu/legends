@@ -1,7 +1,17 @@
-#### Active Parry 
-- **Effect:** Once per round as a [Free] action (no reaction cost), Attacker must reroll one of their success dice.
+## Equipment Abilities
+
+### Buckler Abilities
+
+#### Active Parry
+- **Action Cost:** [Free] (no reaction cost)
+- **Trigger:** When an attacker hits you with a melee attack
+- **Frequency:** Once per round
+- **Effect:** Attacker must reroll one of their success dice.
+
+### Shield Abilities
 
 #### Shield Defense
+- **Frequency:** Passive
 - **Effect:** Grants Fortune on defensive melee combat rolls.
 
 ## Magical Trait Abilities

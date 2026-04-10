@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or one Poisoned condition.</p>"
+      "value": "<p>Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned.</p>"
     },
     "weaveType": "simple",
     "actionCost": 2,
@@ -23,7 +23,7 @@
     "duration": "Instantaneous",
     "target": "single",
     "savingThrow": "none",
-    "effect": "Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or one Poisoned condition.",
+    "effect": "Touch a creature and end one condition affecting it: Blinded, Deafened, Paralyzed, or Poisoned.",
     "effectType": "utility",
     "damage": {
       "base": 0,

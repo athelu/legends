@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 4
+        "cost": 6
       }
     },
     "range": "Medium, 60 ft.",
@@ -64,7 +64,8 @@
     "deliveryMethod": "save",
     "tags": [
       "aoe",
-      "ranged"
+      "ranged",
+      "ritual"
     ]
   },
   "effects": [],

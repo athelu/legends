@@ -24,7 +24,7 @@
     "target": "",
     "savingThrow": "none",
     "effect": "Target takes 8 cold damage. This is an attack weave—no saving throw allowed.",
-    "effectType": "control",
+    "effectType": "utility",
     "damage": {
       "base": 0,
       "type": "",
@@ -47,17 +47,17 @@
         },
         "3": {
           "appliesEffects": true,
-          "description": "enhanced damage (16) + slowed",
-          "duration": "enhanced damage (16) + slowed"
+          "description": "enhanced damage (16) + Slowed (minor)",
+          "duration": "enhanced damage (16) + Slowed (minor)"
         }
       }
     },
-    "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + slowed",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + Slowed (minor)",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {
-        "effectId": "slowed",
+        "effectId": "Slowed (minor)",
         "params": {}
       }
     ],

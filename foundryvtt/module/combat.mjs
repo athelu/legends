@@ -266,19 +266,56 @@ export async function executeWeaponAttack(actor, weapon, attackMode, target) {
   // Determine which skill to use
   const skillKey = attackMode.skill === 'melee' ? 'meleeCombat' : 'rangedCombat';
   const skill = actor.system.skillsEffective?.[skillKey] ?? actor.system.skills[skillKey] ?? 0;
+  let defaultModifier = 0;
+  let defaultApplyToAttr = true;
+  let defaultApplyToSkill = true;
+
+  try {
+    const featMods = featEffects.computeFeatModifiers(actor);
+    const skillModifier = featMods.skillDiceModifiers?.[skillKey];
+    if (skillModifier) {
+      defaultModifier = skillModifier.value || 0;
+      defaultApplyToAttr = !!skillModifier.applyToAttr;
+      defaultApplyToSkill = !!skillModifier.applyToSkill;
+    }
+  } catch {
+    // Ignore feat modifier lookup failures.
+  }
   
   // Determine which attribute to use for attack roll
   // Melee: Agility, Ranged/Thrown: Dexterity
   const attrKey = attackMode.skill === 'melee' ? 'agility' : 'dexterity';
   const attribute = actor.system.attributesEffective?.[attrKey] ? { value: actor.system.attributesEffective[attrKey], label: actor.system.attributes[attrKey]?.label || attrKey } : actor.system.attributes[attrKey];
+
+  const rollData = {
+    actor,
+    skillKey,
+    attrKey,
+    attrValue: attribute.value,
+    skillValue: typeof skill === 'object' ? skill.value ?? skill : skill,
+    isAttack: true,
+    isSave: false,
+    modifier: defaultModifier,
+    defaultApplyToAttr,
+    defaultApplyToSkill,
+    fortune: 0,
+    misfortune: 0,
+  };
+  Hooks.call('preRollSkillCheck', rollData);
   
   // Show the roll dialog
   await showRollDialog({
     actor: actor,
+    skillKey: skillKey,
     attrValue: attribute.value,
     skillValue: (typeof skill === 'object' ? skill.value ?? skill : skill),
     attrLabel: attribute.label,
     skillLabel: 'Combat',
+    defaultModifier: rollData.modifier || 0,
+    defaultApplyToAttr: rollData.defaultApplyToAttr ?? defaultApplyToAttr,
+    defaultApplyToSkill: rollData.defaultApplyToSkill ?? defaultApplyToSkill,
+    defaultFortune: rollData.fortune || 0,
+    defaultMisfortune: rollData.misfortune || 0,
     onRollComplete: async (rollResult) => {
       // Wait for the dice roll message to post first
       await new Promise(resolve => setTimeout(resolve, 100));
@@ -486,6 +523,7 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
   
   await showSkillCheckDialog({
     actor: defender,
+    skillKey: 'meleeCombat',
     attrValue: agility.value,
     skillValue: skillValue,
     attrLabel: agility.label,

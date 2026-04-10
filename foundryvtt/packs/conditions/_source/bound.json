@@ -5,7 +5,7 @@
   "img": "icons/svg/net.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Tied up or bound in chains or shackles. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune.Automatically fail Reflex saves. <strong>Recovery:</strong> Use 1 action to make a Acrobatics, Might or [[/check skill=devices]]</p>\n<ul>\n<li>2 successes: Remove Bound condition</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Tied up or bound in chains or shackles. Movement speed reduced to 0. Cannot take [Move] actions. All attacks and skill checks: Add 2 to both die results. Attacks against you have Fortune. Automatically fail Reflex saves. <strong>Recovery:</strong> Use 1 action to make an Acrobatics, Might, or [[/check skill=devices]]</p>\n<ul>\n<li>2 successes: Remove Bound condition</li>\n</ul>"
     },
     "label": "Bound",
     "category": "movement",
@@ -42,7 +42,7 @@
         ],
         "attributes": [],
         "opposed": false,
-        "label": "Acrobatics, Might or devices"
+        "label": "Acrobatics, Might, or Devices"
       },
       "downgrades": {
         "2_success": null

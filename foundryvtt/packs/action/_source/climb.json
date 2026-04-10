@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Move along a vertical surface. Costs 2 feet of movement for every 1 foot climbed. Athletics check required for difficult climbs (smooth walls, overhangs)",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

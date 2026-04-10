@@ -2,7 +2,16 @@
  * Extend the base Actor class for D8 TTRPG
  */
 import * as featEffects from "../feat-effects.mjs";
+import { buildAbilityRechargeUpdate, buildFeatRechargeUpdate } from "./item.mjs";
+import { getTierInfoFromXp } from "../progression.mjs";
 import { normalizeSkillKey, syncSkillAliases } from "../skill-utils.mjs";
+import { normalizeTrainingState } from "../training.mjs";
+
+const NO_REST_BENEFIT_CONDITIONS = new Set(['Poisoned (Deadly)']);
+const NO_SHORT_REST_BENEFIT_CONDITIONS = new Set(['Exhausted', 'Severely Exhausted', 'Near Collapse']);
+const NO_SHORT_REST_HP_CONDITIONS = new Set(['Fatigued']);
+const HALF_REST_HP_CONDITIONS = new Set(['Poisoned (Weak)', 'Poisoned (Strong)']);
+const EXHAUSTION_CONDITION_CHAIN = ['Fatigued', 'Exhausted', 'Severely Exhausted', 'Near Collapse', 'Collapse'];
 
 export class D8Actor extends Actor {
   
@@ -17,6 +26,10 @@ export class D8Actor extends Actor {
       syncSkillAliases(this.system.skills);
     }
 
+    const usesMagicalEnergy = this.type === 'character'
+      && !!this.system?.magicalTrait?.type
+      && this.system.magicalTrait.type !== 'alchemical-tradition';
+
     // Calculate HP based on Constitution
     if (this.type === 'character' || this.type === 'npc') {
       const con = this.system.attributes.constitution.value;
@@ -29,13 +42,16 @@ export class D8Actor extends Actor {
     }
     
     // Calculate Energy Pool for magical characters
-    if (this.type === 'character' && this.system.energy) {
+    if (usesMagicalEnergy && this.system.energy) {
       this.system.energy.max = this._calculateEnergyPool();
       
       // Ensure current energy doesn't exceed max
-      if (this.system.energy.value > this.system.energy.max) {
-        this.system.energy.value = this.system.energy.max;
+      if (this.system.energy.current > this.system.energy.max) {
+        this.system.energy.current = this.system.energy.max;
       }
+    } else if (this.system.energy) {
+      this.system.energy.max = 0;
+      this.system.energy.current = 0;
     }
     
     // Set luck max from attribute
@@ -46,6 +62,21 @@ export class D8Actor extends Actor {
       if (this.system.luck.current > this.system.luck.max) {
         this.system.luck.current = this.system.luck.max;
       }
+    }
+
+    if (this.type === 'character') {
+      const tierInfo = getTierInfoFromXp(this.system?.tier?.xp ?? 0);
+      this.system.tier = this.system.tier || {};
+      this.system.tier.xp = tierInfo.xp;
+      this.system.tier.value = tierInfo.current;
+      this.system.tier.unspent = Math.min(tierInfo.xp, Math.max(0, Number(this.system.tier.unspent || 0)));
+      this.system.progression = this.system.progression || {};
+      this.system.progression.phase = this.system.progression.phase === 'creation' ? 'creation' : 'advancement';
+      this.system.progression.manualOverride = Boolean(this.system.progression.manualOverride);
+      this.system.progression.transactions = Array.isArray(this.system.progression.transactions)
+        ? this.system.progression.transactions
+        : [];
+      this.system.training = normalizeTrainingState(this.system.training);
     }
   }
   
@@ -106,6 +137,41 @@ _prepareCharacterData(actorData) {
         linkedAbilities: item.system.linkedAbilities || []
       });
     }
+  }
+
+  _getActiveConditionNames() {
+    return new Set(
+      this.items
+        .filter(item => item.type === 'condition')
+        .map(item => String(item.name || '').trim())
+        .filter(Boolean)
+    );
+  }
+
+  getRestRecoveryState(restType) {
+    const conditionNames = this._getActiveConditionNames();
+    const blockedBy = Array.from(conditionNames).find(name => NO_REST_BENEFIT_CONDITIONS.has(name)) || '';
+    const shortRestBlockedBy = restType === 'shortRest' && !blockedBy
+      ? Array.from(conditionNames).find(name => NO_SHORT_REST_BENEFIT_CONDITIONS.has(name)) || ''
+      : '';
+    const hpBlockedBy = blockedBy
+      || (restType === 'shortRest' ? Array.from(conditionNames).find(name => NO_SHORT_REST_HP_CONDITIONS.has(name)) || '' : '');
+    const hpHalvedBy = hpBlockedBy
+      ? ''
+      : Array.from(conditionNames).find(name => HALF_REST_HP_CONDITIONS.has(name)) || '';
+    const exhaustionCondition = [...EXHAUSTION_CONDITION_CHAIN].reverse().find(name => conditionNames.has(name)) || '';
+
+    return {
+      blockedBy,
+      shortRestBlockedBy,
+      hpBlockedBy,
+      hpHalvedBy,
+      exhaustionCondition,
+      blocksAllBenefits: Boolean(blockedBy),
+      blocksShortRestBenefits: Boolean(shortRestBlockedBy),
+      blocksHpRecovery: Boolean(hpBlockedBy),
+      halvesHpRecovery: Boolean(hpHalvedBy),
+    };
   }
 
   // Store aggregated DR totals and a simple summary value
@@ -303,19 +369,51 @@ _prepareCharacterData(actorData) {
    */
   async shortRest() {
     const updates = {};
+    const restoredAbilities = [];
+    const restoredFeats = [];
+    const restState = this.getRestRecoveryState('shortRest');
     
     // Regain HP equal to Constitution
     const con = this.system.attributes.constitution.value;
-    const newHP = Math.min(this.system.hp.value + con, this.system.hp.max);
+    const hpRecovery = restState.blocksHpRecovery
+      ? 0
+      : Math.floor(con / (restState.halvesHpRecovery ? 2 : 1));
+    const newHP = Math.min(this.system.hp.value + hpRecovery, this.system.hp.max);
     updates['system.hp.value'] = newHP;
     
     // Regain 1 Luck
-    if (this.system.luck) {
+    if (!restState.blocksAllBenefits && !restState.blocksShortRestBenefits && this.system.luck) {
       const newLuck = Math.min(this.system.luck.current + 1, this.system.luck.max);
       updates['system.luck.current'] = newLuck;
     }
+
+    const abilityUpdates = restState.blocksAllBenefits || restState.blocksShortRestBenefits
+      ? []
+      : this.items
+          .filter(item => item.type === 'ability')
+          .map(item => {
+            const update = buildAbilityRechargeUpdate(item, 'shortRest');
+            if (update) restoredAbilities.push(item.name);
+            return update;
+          })
+          .filter(Boolean);
+
+    const featUpdates = restState.blocksAllBenefits || restState.blocksShortRestBenefits
+      ? []
+      : this.items
+          .filter(item => item.type === 'feat')
+          .map(item => {
+            const update = buildFeatRechargeUpdate(item, 'shortRest');
+            if (update) restoredFeats.push(item.name);
+            return update;
+          })
+          .filter(Boolean);
     
     await this.update(updates);
+
+    if (abilityUpdates.length > 0 || featUpdates.length > 0) {
+      await this.updateEmbeddedDocuments('Item', [...abilityUpdates, ...featUpdates]);
+    }
     
     ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this }),
@@ -324,8 +422,14 @@ _prepareCharacterData(actorData) {
           <h3>Short Rest</h3>
           <p>${this.name} takes a short rest (1 hour)</p>
           <ul>
-            <li>Regained ${con} HP</li>
-            <li>Regained 1 Luck</li>
+            <li>${hpRecovery > 0 ? `Regained ${hpRecovery} HP` : 'Recovered no HP'}</li>
+            <li>${restState.blocksAllBenefits || restState.blocksShortRestBenefits ? 'Recovered no Luck' : 'Regained 1 Luck'}</li>
+            ${restoredAbilities.length > 0 ? `<li>Recharged abilities: ${restoredAbilities.join(', ')}</li>` : ''}
+            ${restoredFeats.length > 0 ? `<li>Recharged feats: ${restoredFeats.join(', ')}</li>` : ''}
+            ${restState.blocksAllBenefits ? `<li>No short rest benefits due to ${restState.blockedBy}</li>` : ''}
+            ${!restState.blocksAllBenefits && restState.blocksShortRestBenefits ? `<li>No short rest benefits due to ${restState.shortRestBlockedBy}</li>` : ''}
+            ${!restState.blocksAllBenefits && !restState.blocksShortRestBenefits && restState.blocksHpRecovery ? `<li>No HP recovery due to ${restState.hpBlockedBy}</li>` : ''}
+            ${!restState.blocksHpRecovery && restState.halvesHpRecovery ? `<li>HP recovery halved due to ${restState.hpHalvedBy}</li>` : ''}
           </ul>
         </div>
       `
@@ -337,26 +441,77 @@ _prepareCharacterData(actorData) {
    */
   async longRest() {
     const updates = {};
+    const usesMagicalEnergy = !!this.system?.magicalTrait?.type && this.system.magicalTrait.type !== 'alchemical-tradition';
+    const restoresChannelDivinity = (this.system.channelDivinity?.max ?? 0) > 0;
+    const restoredAbilities = [];
+    const restoredFeats = [];
+    const restState = this.getRestRecoveryState('longRest');
+    let exhaustionRecovery = '';
     
     // Regain HP equal to Constitution × 4
     const con = this.system.attributes.constitution.value;
-    const newHP = Math.min(this.system.hp.value + (con * 4), this.system.hp.max);
+    const hpRecovery = restState.blocksHpRecovery
+      ? 0
+      : Math.floor((con * 4) / (restState.halvesHpRecovery ? 2 : 1));
+    const newHP = Math.min(this.system.hp.value + hpRecovery, this.system.hp.max);
     updates['system.hp.value'] = newHP;
     
     // Restore all Luck
-    if (this.system.luck) {
+    if (!restState.blocksAllBenefits && this.system.luck) {
       updates['system.luck.current'] = this.system.luck.max;
     }
     
     // Restore all Energy
-    if (this.system.energy) {
-      updates['system.energy.value'] = this.system.energy.max;
+    if (!restState.blocksAllBenefits && usesMagicalEnergy && this.system.energy) {
+      updates['system.energy.current'] = this.system.energy.max;
+    }
+
+    if (!restState.blocksAllBenefits && restoresChannelDivinity) {
+      updates['system.channelDivinity.current'] = this.system.channelDivinity.max;
     }
     
     // Clear temporary HP
     updates['system.hp.temp'] = 0;
+
+    const abilityUpdates = restState.blocksAllBenefits
+      ? []
+      : this.items
+          .filter(item => item.type === 'ability')
+          .map(item => {
+            const update = buildAbilityRechargeUpdate(item, 'longRest');
+            if (update) restoredAbilities.push(item.name);
+            return update;
+          })
+          .filter(Boolean);
+
+    const featUpdates = restState.blocksAllBenefits
+      ? []
+      : this.items
+          .filter(item => item.type === 'feat')
+          .map(item => {
+            const update = buildFeatRechargeUpdate(item, 'longRest');
+            if (update) restoredFeats.push(item.name);
+            return update;
+          })
+          .filter(Boolean);
     
     await this.update(updates);
+
+    if (abilityUpdates.length > 0 || featUpdates.length > 0) {
+      await this.updateEmbeddedDocuments('Item', [...abilityUpdates, ...featUpdates]);
+    }
+
+    if (!restState.blocksAllBenefits && restState.exhaustionCondition) {
+      const currentIndex = EXHAUSTION_CONDITION_CHAIN.indexOf(restState.exhaustionCondition);
+      const nextCondition = currentIndex > 0 ? EXHAUSTION_CONDITION_CHAIN[currentIndex - 1] : '';
+      await game.legends?.removeCondition?.(this, restState.exhaustionCondition);
+      if (nextCondition) {
+        await game.legends?.applyCondition?.(this, nextCondition, { source: 'long-rest-recovery' });
+        exhaustionRecovery = `${restState.exhaustionCondition} downgraded to ${nextCondition}`;
+      } else {
+        exhaustionRecovery = `${restState.exhaustionCondition} removed`;
+      }
+    }
     
     ChatMessage.create({
       speaker: ChatMessage.getSpeaker({ actor: this }),
@@ -365,9 +520,15 @@ _prepareCharacterData(actorData) {
           <h3>Long Rest</h3>
           <p>${this.name} takes a long rest (8 hours)</p>
           <ul>
-            <li>Regained ${con * 4} HP</li>
-            <li>Restored all Luck to ${this.system.luck.max}</li>
-            ${this.system.energy ? `<li>Restored all Energy to ${this.system.energy.max}</li>` : ''}
+            <li>${hpRecovery > 0 ? `Regained ${hpRecovery} HP` : 'Recovered no HP'}</li>
+            <li>${restState.blocksAllBenefits ? 'Recovered no Luck' : `Restored all Luck to ${this.system.luck.max}`}</li>
+            ${!restState.blocksAllBenefits && usesMagicalEnergy && this.system.energy ? `<li>Restored all Energy to ${this.system.energy.max}</li>` : ''}
+            ${!restState.blocksAllBenefits && restoresChannelDivinity ? `<li>Restored all Channel Divinity uses to ${this.system.channelDivinity.max}</li>` : ''}
+            ${restoredAbilities.length > 0 ? `<li>Recharged abilities: ${restoredAbilities.join(', ')}</li>` : ''}
+            ${restoredFeats.length > 0 ? `<li>Recharged feats: ${restoredFeats.join(', ')}</li>` : ''}
+            ${restState.blocksAllBenefits ? `<li>No rest benefits due to ${restState.blockedBy}</li>` : ''}
+            ${!restState.blocksHpRecovery && restState.halvesHpRecovery ? `<li>HP recovery halved due to ${restState.hpHalvedBy}</li>` : ''}
+            ${exhaustionRecovery ? `<li>${exhaustionRecovery}</li>` : ''}
           </ul>
         </div>
       `

@@ -19,15 +19,23 @@
       "tier": 0,
       "other": "any magical tradition trait"
     },
-    "benefits": "<p>Once per day during short rest, recover Energy equal to your Intelligence × 2</p>",
+    "benefits": "<p>Once per short rest, recover Energy equal to your Intelligence × 2</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
-      "text": "Once per day during short rest"
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "shortRest",
+        "formula": "1"
+      },
+      "text": "Once per short rest"
     },
-    "keywords": "[Magic]",
+    "keywords": [
+      "[Magic]"
+    ],
     "notes": "",
     "effects": []
   },

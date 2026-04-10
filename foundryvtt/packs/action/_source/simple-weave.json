@@ -12,6 +12,7 @@
     "requirements": "Ability to weave, sufficient Energy",
     "trigger": "",
     "effect": "Cast a single-energy weave (Primary Energy only, no Supporting Energy). See (Magic System) for full weaving rules and Simple Weave limitations",
+    "appliesEffects": [],
     "keywords": [],
     "range": "Touch to 5 feet maximum (no supporting energy for range)",
     "target": "",

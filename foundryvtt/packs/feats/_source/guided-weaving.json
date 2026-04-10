@@ -25,11 +25,21 @@
     "usageType": "active",
     "usage": {
       "mode": "active",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "Wisdom"
+      },
       "text": "Wisdom times per long rest"
     },
-    "keywords": "[Magic], [Sorcerer], [Reaction]",
+    "keywords": [
+      "[Magic]",
+      "[Sorcerer]",
+      "[Reaction]"
+    ],
     "notes": "",
     "effects": []
   },

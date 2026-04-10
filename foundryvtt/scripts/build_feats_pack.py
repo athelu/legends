@@ -33,12 +33,20 @@ KEYWORD_ICONS = {
     'savage':     'icons/skills/melee/strike-axe-blood-red.webp',
 }
 
+RECHARGE_PERIODS = {
+    'short': 'shortRest',
+    'long': 'longRest',
+}
+
 
 def _choose_icon(keywords):
     """Pick an icon based on the feat's keywords, falling back to default."""
     if not keywords:
         return DEFAULT_FEAT_ICON
-    kw_lower = keywords.lower()
+    if isinstance(keywords, (list, tuple, set)):
+        kw_lower = ' '.join(str(keyword) for keyword in keywords).lower()
+    else:
+        kw_lower = str(keywords).lower()
     for keyword, icon in KEYWORD_ICONS.items():
         if keyword in kw_lower:
             return icon
@@ -123,14 +131,43 @@ def _parse_usage_type(usage_text):
     return 'active'
 
 
+def _parse_recharge_text(usage_text):
+    """Infer recharge data from a usage string when possible."""
+    if not usage_text:
+        return {'period': '', 'formula': ''}
+
+    candidates = [usage_text.strip()]
+    for segment in re.split(r'[.;]', usage_text):
+        candidate = segment.strip()
+        if candidate and candidate not in candidates:
+            candidates.append(candidate)
+
+    for candidate in candidates:
+        once_match = re.match(r'^(?:.+?\s+)?once per (short|long) rest$', candidate, re.IGNORECASE)
+        if once_match:
+            return {
+                'period': RECHARGE_PERIODS.get(once_match.group(1).lower(), ''),
+                'formula': '1',
+            }
+
+        times_match = re.match(r'^(.+?)\s+times per\s+(short|long)\s+rest$', candidate, re.IGNORECASE)
+        if times_match:
+            return {
+                'period': RECHARGE_PERIODS.get(times_match.group(2).lower(), ''),
+                'formula': times_match.group(1).strip(),
+            }
+
+    return {'period': '', 'formula': ''}
+
+
 def _extract_keywords(keyword_text):
     """Normalize bracketed keyword lists while preserving existing storage format."""
     if not keyword_text:
-        return ''
+        return []
     bracketed = [f'[{match.strip()}]' for match in re.findall(r'\[([^\]]+)\]', keyword_text)]
     if bracketed:
-        return ', '.join(bracketed)
-    return ', '.join(part.strip() for part in keyword_text.split(',') if part.strip())
+        return bracketed
+    return [part.strip() for part in keyword_text.split(',') if part.strip()]
 
 
 # Attribute abbreviation -> system key mapping
@@ -150,7 +187,7 @@ SKILL_MAP = {
     'athletics': 'athletics', 'might': 'might',
     'acrobatics': 'acrobatics', 'stealth': 'stealth',
     'thievery': 'thievery', 'devices': 'devices',
-    'perception': 'perception', 'wilderness': 'wilderness',
+    'perception': 'perception', 'wilderness': 'wilderness', 'survival': 'wilderness',
     'medicine': 'medicine', 'empathy': 'empathy', 'religion': 'religion',
     'arcana': 'arcane', 'arcane': 'arcane',
     'history': 'history', 'society': 'society',
@@ -333,11 +370,17 @@ def parse_feats_md(md_file):
                 'usageType': 'passive',
                 'usage': {
                     'mode': 'passive',
-                    'uses': None,
-                    'recharge': None,
+                    'uses': {
+                        'value': 0,
+                        'max': 0,
+                    },
+                    'recharge': {
+                        'period': '',
+                        'formula': '',
+                    },
                     'text': ''
                 },
-                'keywords': '',
+                'keywords': [],
                 'notes': '',
                 'effects': []
             },
@@ -351,10 +394,14 @@ def parse_feats_md(md_file):
 
         # Parse usage details from standardized usage field
         item['system']['usageType'] = _parse_usage_type(usage_text)
+        recharge = _parse_recharge_text(usage_text)
         item['system']['usage'] = {
             'mode': item['system']['usageType'],
-            'uses': None,
-            'recharge': None,
+            'uses': {
+                'value': 0,
+                'max': 0,
+            },
+            'recharge': recharge,
             'text': usage_text.strip()
         }
 
@@ -418,6 +465,15 @@ def main():
         # Save to _source/
         source_dir = script_dir / "foundryvtt" / "packs" / "feats" / "_source"
         source_dir.mkdir(parents=True, exist_ok=True)
+        expected_files = {
+            f"{item['name'].lower().replace(' ', '-').replace('/', '-')}.json"
+            for item in items
+        }
+
+        for existing_file in source_dir.glob('*.json'):
+            if existing_file.name not in expected_files:
+                existing_file.unlink()
+                print(f"  Removed stale file: {existing_file.name}")
         
         for item in items:
             json_file = source_dir / f"{item['name'].lower().replace(' ', '-').replace('/', '-')}.json"

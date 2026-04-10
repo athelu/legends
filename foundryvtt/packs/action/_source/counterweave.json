@@ -5,13 +5,14 @@
   "img": "icons/skills/melee/shield-block-gray-yellow.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Requirements:</strong> Ability to weave, Space energy available <strong>Trigger:</strong> You see a creature weaving within medium range (60ft) <strong>Effect:</strong> Attempt to counter the weave (see CounterWeave in Weaves). Requires successful [[/check skill=arcane]] to identify the weave first</p>"
+      "value": "<p><strong>Requirements:</strong> Ability to weave, Space energy available <strong>Trigger:</strong> You see a creature weaving within medium range (60ft) <strong>Effect:</strong> Attempt to counter the weave (see Counterweave in Weaves). Requires successful [[/check skill=arcane]] to identify the weave first</p>"
     },
     "actionType": "reaction",
     "actionCost": "",
     "requirements": "Ability to weave, Space energy available",
     "trigger": "You see a creature weaving within medium range (60ft)",
-    "effect": "Attempt to counter the weave (see CounterWeave in Weaves). Requires successful Arcane check to identify the weave first",
+    "effect": "Attempt to counter the weave (see Counterweave in Weaves). Requires successful Arcane check to identify the weave first",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

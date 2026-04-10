@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "You are hit by an attack while wielding a shield",
     "effect": "Once per round, Gain +6 DR against this attack only",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Move through an Enemy space. Make an Acrobatics check Opposed by enemy's Reflex save.",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

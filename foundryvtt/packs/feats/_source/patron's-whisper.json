@@ -26,11 +26,20 @@
     "usageType": "reaction",
     "usage": {
       "mode": "reaction",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Patron guidance once per long rest (10 minutes); Pact Gift as Reaction costs 2 Luck"
     },
-    "keywords": "[Magic], [Pact]",
+    "keywords": [
+      "[Magic]",
+      "[Pact]"
+    ],
     "notes": "",
     "effects": []
   },

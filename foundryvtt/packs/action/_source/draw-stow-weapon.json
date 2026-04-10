@@ -12,6 +12,7 @@
     "requirements": "",
     "trigger": "",
     "effect": "Draw a weapon or stow it in its sheath/holster. Can draw/stow ONE weapon as a [Free] action once per turn as part of movement. Drawing two weapons requires Quick Draw feat or two separate actions. Doesn't provoke Opportunity Attacks",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

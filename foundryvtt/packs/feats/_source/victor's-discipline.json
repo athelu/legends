@@ -27,11 +27,20 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "1"
+      },
       "text": "Combat Clarity once per long rest; passive benefits always active"
     },
-    "keywords": "[Combat], [Discipline]",
+    "keywords": [
+      "[Combat]",
+      "[Discipline]"
+    ],
     "notes": "",
     "effects": []
   },

@@ -65,20 +65,29 @@ export function getExistingPrimaryMagicalTrait(actor) {
  * @returns {object} { valid: boolean, reason: string }
  */
 export function validateMagicalTraitApplication(actor, traitType) {
+  const normalizedTraitType = String(traitType || '').toLowerCase();
   const existingTrait = getExistingPrimaryMagicalTrait(actor);
+  const progressionPhase = actor?.system?.progression?.phase === 'creation' ? 'creation' : 'advancement';
   
   // Modifiers (Gifted Mage, Balanced Channeler) are passive - no validation needed
   // They should be added to the sheet BEFORE applying primary magical traits
   // They're detected by getPotentialGenerationMode() when primary trait is applied
-  if (['gifted-mage', 'balanced-channeler'].includes(traitType.toLowerCase())) {
+  if (['gifted-mage', 'balanced-channeler'].includes(normalizedTraitType)) {
     return { valid: true };
+  }
+
+  if (['mageborn', 'sorcerous-origin'].includes(normalizedTraitType) && progressionPhase !== 'creation') {
+    return {
+      valid: false,
+      reason: `${normalizedTraitType === 'mageborn' ? 'Mageborn' : 'Sorcerous Origin'} can only be gained during character creation.`
+    };
   }
   
   // Primary magical traits cannot stack
   const primaryTraits = ['mageborn', 'divine-gift', 'sorcerous-origin', 
                          'invoker', 'infuser', 'eldritch-pact', 'alchemical-tradition'];
   
-  if (primaryTraits.includes(traitType.toLowerCase())) {
+  if (primaryTraits.includes(normalizedTraitType)) {
     if (existingTrait) {
       return {
         valid: false,
@@ -137,6 +146,7 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
   }
   
   const abilityNamesToGrant = [];
+  const magicalTraitUpdate = updates['system.magicalTrait'] || {};
   
   // Determine which abilities to grant
   switch (traitType) {
@@ -146,7 +156,7 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
       
     case 'divine-gift':
       // Grant Channel Divinity abilities based on patron
-      const patron = updates['system.magicalTrait'].patron || 'generalist';
+      const patron = magicalTraitUpdate.patron || 'generalist';
       
       switch (patron) {
         case 'alkira':
@@ -203,7 +213,7 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
       
     case 'eldritch-pact':
       // Grant pact-specific abilities based on pact type
-      const pactType = updates['system.magicalTrait.eldritchPact.pactType'];
+      const pactType = magicalTraitUpdate.pactType || updates['system.magicalTrait.pactType'];
       
       switch (pactType) {
         case 'survivor':

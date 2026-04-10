@@ -5,13 +5,14 @@
   "img": "icons/skills/trades/construction-gloves-yellow.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Equip or remove a shield. Drawing/stowing a shield requires focused effort and cannot be done as part of a [Move] action. The shield must be readily accessible (on your back, at your side, etc.)</p>\n<h2>Interact Actions</h2>\n<p>Interact actions involve manipulating objects, the environment, or simple physical tasks that don't require specialized skills. Many Interact actions can be combined with movement for efficiency.</p>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Equip or remove a shield. Drawing/stowing a shield requires focused effort and cannot be done as part of a [Move] action. The shield must be readily accessible (on your back, at your side, etc.)</p>"
     },
     "actionType": "activate",
     "actionCost": "1",
     "requirements": "",
     "trigger": "",
-    "effect": "Equip or remove a shield. Drawing/stowing a shield requires focused effort and cannot be done as part of a [Move] action. The shield must be readily accessible (on your back, at your side, etc.)\n\n## Interact Actions\nInteract actions involve manipulating objects, the environment, or simple physical tasks that don't require specialized skills. Many Interact actions can be combined with movement for efficiency.",
+    "effect": "Equip or remove a shield. Drawing/stowing a shield requires focused effort and cannot be done as part of a [Move] action. The shield must be readily accessible (on your back, at your side, etc.)",
+    "appliesEffects": [],
     "keywords": [],
     "range": "",
     "target": "",

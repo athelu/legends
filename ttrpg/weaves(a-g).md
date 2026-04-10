@@ -123,10 +123,10 @@
 
 ### Calm Emotions
 **Primary Energy:** Positive 4 (soothing emotional turmoil)
-**Supporting Energy:** Space 6 (medium range + 20ft radius + 1 minute)
+**Supporting Energy:** Space 8 (medium range + 20ft radius + 1 minute)
 **Range:** Medium, 60 ft. (20-foot radius sphere)
 **Duration:** 1 minute
-**Total Cost:** 10 Energy
+**Total Cost:** 12 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
@@ -204,10 +204,10 @@
 
 ### Confusion
 **Primary Energy:** Negative 6 (mental chaos and discord)
-**Supporting Energy:** Space 5 (medium range + 10ft radius + 1 minute)
+**Supporting Energy:** Space 6 (medium range + 10ft radius + 1 minute)
 **Range:** Medium, 60 ft. (10-foot radius)
 **Duration:** 1 minute
-**Total Cost:** 11 Energy
+**Total Cost:** 12 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
@@ -228,7 +228,7 @@
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = Fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons
 
-### CounterWeave
+### Counterweave
 **Primary Energy:** Space 4 (disrupting magical energy)
 **Supporting Energy:** None (medium range 60ft, reaction)
 **Range:** Medium, 60 ft.
@@ -315,17 +315,17 @@
 
 ### Earthquake
 **Primary Energy:** Earth 8 (major terrain disruption)
-**Supporting Energy:** Space 7 (medium range + 50ft radius + 1 minute)
-**Range:** Medium, 60 ft. (50-foot radius)
+**Supporting Energy:** Space 8 (medium range + 20ft radius + 1 minute)
+**Range:** Medium, 60 ft. (20-foot radius)
 **Duration:** 1 minute
-**Total Cost:** 15 Energy
+**Total Cost:** 16 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
 **Description:** Ground shakes violently in area. All creatures make Reflex save. Compare your targeting successes to their save successes. If you have more, creatures fall Prone. Structures may collapse (GM discretion). Area becomes difficult terrain.
 **Applies Effects:** prone
 **Saving Throw:** Reflex
-**Targeting Success Scaling:** 0 = Fails, 1 = Prone (1 round, 25ft radius), 2 = Prone (1 minute, 50ft radius), 3 = Prone (1 minute, 100ft radius)
+**Targeting Success Scaling:** 0 = Fails, 1 = Prone (1 round, 20ft radius), 2 = Prone (1 minute, 20ft radius), 3 = Prone (1 minute, 40ft radius)
 
 ### Ethereal Shift
 **Primary Energy:** Space 7 (shifting to ethereal plane)
@@ -385,10 +385,10 @@
 
 ### Fireball
 **Primary Energy:** Fire 5 (exploding ball of flame, damage)
-**Supporting Energy:** Space 4 (medium range 60ft + area 20ft radius)
+**Supporting Energy:** Space 6 (medium range 60ft + area 20ft radius)
 **Range:** Medium, 60 ft.
 **Duration:** Instantaneous
-**Total Cost:** 9 Energy
+**Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Fire Potential + Fire Mastery + Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Fire Mastery
@@ -473,10 +473,10 @@
 
 ### Fortune's Favor
 **Primary Energy:** Positive 3 (divine blessing)
-**Supporting Energy:** Space 5 (close range + 3 targets + 1 minute)
+**Supporting Energy:** Space 4 (close range + 3 targets + 1 minute)
 **Range:** Close, 30 ft.
 **Duration:** 1 minute
-**Total Cost:** 8 Energy
+**Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
@@ -486,19 +486,19 @@
 
 ### Freezing Blast
 **Primary Energy:** Water 6 (freezing blast, high damage)
-**Supporting Energy:** Space 3 (60ft cone)
+**Supporting Energy:** Space 5 (60ft cone)
 **Range:** 60ft cone
 **Duration:** Instantaneous
-**Total Cost:** 9 Energy
+**Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Water Potential + Water Mastery + Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
 **Description:** A blast of cold air erupts from your hands. All creatures in a 60-foot cone take 40 cold damage. Each target takes the full listed damage and makes their own save.
-**Applies Effects:** slowed
+**Applies Effects:** Slowed (minor)
 **Saving Throw:** Reflex
 **Damage Type:** Cold (energy)
 **DR Interaction:** Half DR
-**Targeting Success Scaling:** 0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + Slowed
+**Targeting Success Scaling:** 0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + Slowed (minor)
 
 ### Frost Touch
 **Primary Energy:** Water 2 (freezing touch, damage)
@@ -517,10 +517,10 @@
 
 ### Gentle Descent
 **Primary Energy:** Air 2 (slowing fall with updraft)
-**Supporting Energy:** Space 5 (close range + 5 creatures + up to 1 minute)
+**Supporting Energy:** Space 4 (close range + 5 creatures + up to 1 minute)
 **Range:** Close, 30 ft.
 **Duration:** Up to 1 minute (until they land)
-**Total Cost:** 7 Energy
+**Total Cost:** 6 Energy
 **Action:** [Reaction] when you or creature within close range falls
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Air Mastery

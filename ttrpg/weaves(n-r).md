@@ -177,14 +177,14 @@
 
 ### Radiant Sphere
 **Primary Energy:** Fire 4 (creating bright magical light)
-**Supporting Energy:** Space 7 (medium range + 60ft radius + duration 10 minutes)
-**Range:** Medium, 60 ft. (60-foot radius sphere)
-**Duration:** 10 minutes
-**Total Cost:** 11 Energy
+**Supporting Energy:** Space 8 (medium range + 20ft radius + duration 1 minute)
+**Range:** Medium, 60 ft. (20-foot radius sphere)
+**Duration:** 1 minute
+**Total Cost:** 12 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Fire Potential + Fire Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Fire Mastery
-**Description:** Bright light fills a 60ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy.
+**Description:** Bright light fills a 20ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 1 hour
 
@@ -218,14 +218,14 @@
 
 ### Revealing Light
 **Primary Energy:** Positive 2 (revealing light outlining creatures)
-**Supporting Energy:** Space 4 (medium range + 20ft cube + 1 minute)
-**Range:** Medium, 60 ft. (20-foot cube)
+**Supporting Energy:** Space 6 (medium range + 10ft radius + 1 minute)
+**Range:** Medium, 60 ft. (10-foot radius)
 **Duration:** 1 minute
-**Total Cost:** 6 Energy
+**Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
-**Description:** All objects and creatures in 20-foot cube at medium range are outlined in violet light. Targets make Reflex save. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.
+**Description:** All objects and creatures in 10-foot radius at medium range are outlined in violet light. Targets make Reflex save. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.
 **Applies Effects:** revealed
 **Saving Throw:** Reflex
-**Targeting Success Scaling:** 0 = fails, 1 = 10-ft cube, 2= 20-ft cube, 3 = 30-ft cube + revealed
+**Targeting Success Scaling:** 0 = fails, 1 = 5-ft radius, 2= 10-ft radius, 3 = 10-ft radius + revealed

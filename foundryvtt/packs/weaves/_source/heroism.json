@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Touch a willing creature. For the duration, target is immune to Frightened condition and gains temporary HP equal to your Positive Potential at the start of each of its turns. When weave ends, any remaining temporary HP is lost.</p>"
+      "value": "<p>Touch a willing creature. For the duration, target is immune to the Frightened condition and gains temporary HP equal to your Positive Potential at the start of each of its turns. When the weave ends, any remaining temporary HP is lost.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -23,7 +23,7 @@
     "duration": "1 minute",
     "target": "single",
     "savingThrow": "none",
-    "effect": "Touch a willing creature. For the duration, target is immune to Frightened condition and gains temporary HP equal to your Positive Potential at the start of each of its turns. When weave ends, any remaining temporary HP is lost.",
+    "effect": "Touch a willing creature. For the duration, target is immune to the Frightened condition and gains temporary HP equal to your Positive Potential at the start of each of its turns. When the weave ends, any remaining temporary HP is lost.",
     "effectType": "buff",
     "damage": {
       "base": 0,
@@ -55,12 +55,7 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Positive Potential + Positive Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
-    "appliesEffects": [
-      {
-        "effectId": "heroism",
-        "params": {}
-      }
-    ],
+    "appliesEffects": [],
     "deliveryMethod": "automatic",
     "tags": [
       "buff",

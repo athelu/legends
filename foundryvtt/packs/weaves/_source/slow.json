@@ -16,7 +16,7 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 4
+        "cost": 5
       }
     },
     "range": "Medium, 60 ft. (up to 4 targets)",
@@ -24,7 +24,7 @@
     "target": "multiple",
     "savingThrow": "will",
     "effect": "Up to 4 targets make Will saves. Compare your targeting successes to each target's save successes. Those you beat have only 2 actions per turn (instead of 3), Misfortune on Agility checks and Reflex saves, and Misfortune on attacks. Targets can repeat save at end of each turn (1 success ends effect).",
-    "effectType": "control",
+    "effectType": "debuff",
     "damage": {
       "base": 0,
       "type": "",
@@ -57,7 +57,7 @@
     "targetingRoll": "Casting Stat + Time Mastery",
     "appliesEffects": [
       {
-        "effectId": "Slowed",
+        "effectId": "Slowed (Major)",
         "params": {}
       }
     ],

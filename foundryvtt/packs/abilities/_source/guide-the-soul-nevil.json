@@ -5,15 +5,21 @@
   "img": "icons/svg/magic.svg",
   "system": {
     "description": {
-      "value": "<p>Action Cost: 1 [Combat] action Range: Touch Effect: Touch a dying creature (at 0 HP or negative HP). They automatically stabilize at 0 HP. Additionally, for 1 minute, they subtract 1 from both dice on all stabilization attempts and cannot die from reaching negative HP equal to their Constitution (death threshold suspended). You ease their passage, giving them a chance to cling to life. Usage: Uses 1 Channel Divinity</p>"
+      "value": "<ul>\n<li><strong>Action Cost:</strong> 1 [Combat] action</li>\n<li><strong>Range:</strong> Touch</li>\n<li><strong>Effect:</strong> Touch a dying creature (at 0 HP or negative HP). They automatically stabilize at 0 HP. Additionally, for 1 minute, they subtract 1 from both dice on all stabilization attempts and cannot die from reaching negative HP equal to their Constitution (death threshold suspended). You ease their passage, giving them a chance to cling to life.</li>\n<li><strong>Usage:</strong> Uses 1 Channel Divinity</li>\n</ul>"
     },
-    "abilityType": "passive",
-    "source": "",
-    "keywords": "",
+    "abilityType": "active",
+    "source": "Divine Gift Abilities - Channel Divinity",
+    "keywords": [],
     "trigger": "",
     "frequency": "",
-    "effect": "",
-    "isActive": false
+    "effect": "Touch a dying creature (at 0 HP or negative HP). They automatically stabilize at 0 HP. Additionally, for 1 minute, they subtract 1 from both dice on all stabilization attempts and cannot die from reaching negative HP equal to their Constitution (death threshold suspended). You ease their passage, giving them a chance to cling to life.",
+    "isActive": false,
+    "actionCost": "1 [Combat] action",
+    "requirements": "",
+    "range": "Touch",
+    "target": "",
+    "usage": "Uses 1 Channel Divinity",
+    "appliesEffects": []
   },
   "effects": [],
   "_key": "!items!f5e82c26080543b1"

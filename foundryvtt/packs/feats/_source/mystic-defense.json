@@ -23,11 +23,20 @@
     "usageType": "passive",
     "usage": {
       "mode": "passive",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Passive"
     },
-    "keywords": "[Defense], [Ascetic]",
+    "keywords": [
+      "[Defense]",
+      "[Ascetic]"
+    ],
     "notes": "Can be combined with Savage Resilience if you meet both prerequisites; use the better DR",
     "effects": []
   },

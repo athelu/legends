@@ -23,11 +23,21 @@
     "usageType": "special",
     "usage": {
       "mode": "special",
-      "uses": null,
-      "recharge": null,
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
       "text": "Costs 2 Luck when using Rapid Strikes"
     },
-    "keywords": "[Combat], [Ascetic], [Unarmed]",
+    "keywords": [
+      "[Combat]",
+      "[Ascetic]",
+      "[Unarmed]"
+    ],
     "notes": "",
     "effects": []
   },
