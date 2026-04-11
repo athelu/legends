@@ -70,107 +70,126 @@
 
     <!-- Details Tab -->
     <div class="tab details" data-group="primary" data-tab="details">
-      
-      <!-- Armor Type -->
-      <div class="form-group">
-        <label>Armor Type</label>
-        <select name="system.armorType" class="armor-type-select">
-          <option value="light" {{#if (eq system.armorType "light")}}selected{{/if}}>Light Armor</option>
-          <option value="medium" {{#if (eq system.armorType "medium")}}selected{{/if}}>Medium Armor</option>
-          <option value="heavy" {{#if (eq system.armorType "heavy")}}selected{{/if}}>Heavy Armor</option>
-        </select>
-      </div>
-
-      <!-- ARMOR-ONLY FIELDS (hidden for shields) -->
-      <div class="armor-only-fields">
-        
-        <!-- Damage Reduction -->
-        <h3>Damage Reduction (DR)</h3>
-        <div class="form-group-row">
+      <div class="item-details-stack">
+        <section class="detail-card">
+          <h3>Classification</h3>
           <div class="form-group">
-            <label>Slashing DR</label>
-            <input type="number" name="system.dr.slashing" value="{{system.dr.slashing}}" data-dtype="Number" min="0" />
-            <small>Default damage type</small>
+            <label>Armor Type</label>
+            <select name="system.armorType" class="armor-type-select">
+              <option value="light" {{#if (eq system.armorType "light")}}selected{{/if}}>Light Armor</option>
+              <option value="medium" {{#if (eq system.armorType "medium")}}selected{{/if}}>Medium Armor</option>
+              <option value="heavy" {{#if (eq system.armorType "heavy")}}selected{{/if}}>Heavy Armor</option>
+            </select>
           </div>
+        </section>
+
+        <section class="detail-card armor-only-fields">
+          <h3>Damage Reduction</h3>
+          <p class="detail-hint">Set each protection value directly. Slashing is the default physical damage profile for the summary header.</p>
+          <div class="detail-field-stack compact-numbers">
+            <div class="form-group">
+              <label>Slashing DR</label>
+              <input type="number" name="system.dr.slashing" value="{{system.dr.slashing}}" data-dtype="Number" min="0" />
+              <small>Primary damage type</small>
+            </div>
+            <div class="form-group">
+              <label>Piercing DR</label>
+              <input type="number" name="system.dr.piercing" value="{{system.dr.piercing}}" data-dtype="Number" min="0" />
+            </div>
+            <div class="form-group">
+              <label>Bludgeoning DR</label>
+              <input type="number" name="system.dr.bludgeoning" value="{{system.dr.bludgeoning}}" data-dtype="Number" min="0" />
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-card armor-only-fields">
+          <h3>Movement And Stealth</h3>
+          <div class="detail-field-stack">
+            <div class="form-group">
+              <label>Stealth Penalty Type</label>
+              <select name="system.stealthPenalty" class="stealth-penalty-select">
+                <option value="none" {{#if (eq system.stealthPenalty "none")}}selected{{/if}}>None (No penalty)</option>
+                <option value="noisy" {{#if (eq system.stealthPenalty "noisy")}}selected{{/if}}>Noisy (+1 to both dice on Stealth checks)</option>
+                <option value="loud" {{#if (eq system.stealthPenalty "loud")}}selected{{/if}}>Loud (+2 to both dice on Stealth checks)</option>
+              </select>
+              <small>Stealth penalty applies while the armor is worn</small>
+            </div>
+
+            <div class="form-group">
+              <label>Swim Penalty</label>
+              <input type="text" name="system.swimPenalty" value="{{system.swimPenalty}}" placeholder="Auto-computed" readonly />
+              <small>Automatically determined by armor type</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-card armor-only-fields">
+          <h3>Don And Doff</h3>
+          <p class="detail-hint">These values are currently derived from the selected armor type.</p>
+          <div class="detail-field-stack">
+            <div class="form-group">
+              <label>Don Time</label>
+              <input type="text" name="system.donTime" value="{{system.donTime}}" placeholder="Auto-computed" readonly />
+              <small>Automatically set by armor type</small>
+            </div>
+
+            <div class="form-group">
+              <label>Doff Time</label>
+              <input type="text" name="system.doffTime" value="{{system.doffTime}}" placeholder="Auto-computed" readonly />
+              <small>Automatically set by armor type</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-card">
+          <h3>Physical Properties</h3>
+          <div class="detail-field-stack compact-numbers">
+            <div class="form-group">
+              <label>Weight (lbs)</label>
+              <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
+            </div>
+            <div class="form-group">
+              <label>Cost (gp)</label>
+              <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
+            </div>
+            <div class="form-group">
+              <label>Quantity</label>
+              <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-card">
+          <h3>Carry State</h3>
+          <div class="detail-field-stack">
+            <div class="form-group">
+              <label>Carry Method</label>
+              <select name="system.encumbrance.carryState">
+                {{#each carryOptions as |option|}}
+                <option value="{{option.value}}" {{#if (eq ../system.encumbrance.carryState option.value)}}selected{{/if}}>{{option.label}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Container</label>
+              <select name="system.encumbrance.containerId">
+                <option value="">Not stored</option>
+                {{#each containerOptions as |option|}}
+                <option value="{{option.value}}" {{#if (eq ../system.encumbrance.containerId option.value)}}selected{{/if}}>{{option.label}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-card">
+          <h3>Notes</h3>
           <div class="form-group">
-            <label>Piercing DR</label>
-            <input type="number" name="system.dr.piercing" value="{{system.dr.piercing}}" data-dtype="Number" min="0" />
+            <label>Special Notes</label>
+            <textarea name="system.notes" rows="4" placeholder="Additional notes about this armor">{{system.notes}}</textarea>
           </div>
-          <div class="form-group">
-            <label>Bludgeoning DR</label>
-            <input type="number" name="system.dr.bludgeoning" value="{{system.dr.bludgeoning}}" data-dtype="Number" min="0" />
-          </div>
-        </div>
-
-        <!-- Help Section -->
-        <div class="help-section" style="background: #f7fafc; padding: 10px; border-radius: 4px; margin: 10px 0;">
-          <h4 style="margin: 0 0 5px 0;">Armor DR Values</h4>
-          <ul style="margin: 5px 0; padding-left: 20px; font-size: 12px;">
-            <li><strong>Slashing DR</strong>: Default protection (primary damage type)</li>
-            <li><strong>Piercing DR</strong>: Protection against piercing damage</li>
-            <li><strong>Bludgeoning DR</strong>: Protection against bludgeoning damage</li>
-          </ul>
-          <p style="margin: 5px 0; font-size: 11px; font-style: italic;">
-            Example: Chain Mail has Slashing DR 5, Piercing DR 5, Bludgeoning DR 4
-          </p>
-        </div>
-
-        <!-- Stealth Penalty -->
-        <h3>Stealth Penalty</h3>
-        <div class="form-group">
-          <label>Stealth Penalty Type</label>
-          <select name="system.stealthPenalty" class="stealth-penalty-select">
-            <option value="none" {{#if (eq system.stealthPenalty "none")}}selected{{/if}}>None (No penalty)</option>
-            <option value="noisy" {{#if (eq system.stealthPenalty "noisy")}}selected{{/if}}>Noisy (+1 to both dice on Stealth checks)</option>
-            <option value="loud" {{#if (eq system.stealthPenalty "loud")}}selected{{/if}}>Loud (+2 to both dice on Stealth checks)</option>
-          </select>
-          <small>Stealth penalty applies when wearing this armor</small>
-        </div>
-
-        <!-- Don/Doff Time -->
-        <h3>Don/Doff Time</h3>
-        <p style="font-size: 12px; margin-bottom: 10px;">Don/Doff times and swim penalties are auto-determined by armor type.</p>
-        <div class="form-group-row">
-          <div class="form-group">
-            <label>Don Time</label>
-            <input type="text" name="system.donTime" value="{{system.donTime}}" placeholder="Auto-computed" readonly />
-            <small>Automatically set by armor type</small>
-          </div>
-          <div class="form-group">
-            <label>Doff Time</label>
-            <input type="text" name="system.doffTime" value="{{system.doffTime}}" placeholder="Auto-computed" readonly />
-            <small>Automatically set by armor type</small>
-          </div>
-        </div>
-
-        <!-- Swim Penalty -->
-        <div class="form-group">
-          <label>Swim Penalty</label>
-          <input type="text" name="system.swimPenalty" value="{{system.swimPenalty}}" placeholder="Auto-computed" readonly />
-          <small>Automatically determined by armor type</small>
-        </div>
-      </div>
-
-      <!-- Physical Properties -->
-      <div class="form-group-row">
-        <div class="form-group">
-          <label>Weight (lbs)</label>
-          <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
-        </div>
-        <div class="form-group">
-          <label>Cost (gp)</label>
-          <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
-        </div>
-        <div class="form-group">
-          <label>Quantity</label>
-          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
-        </div>
-      </div>
-
-      <!-- Notes -->
-      <div class="form-group">
-        <label>Notes</label>
-        <textarea name="system.notes" rows="3" placeholder="Additional notes about this armor">{{system.notes}}</textarea>
+        </section>
       </div>
 
     </div>

@@ -13,6 +13,12 @@
     "quantity": 1,
     "equipped": false,
     "capacity": "",
+    "container": {
+      "profile": "saddlebags",
+      "capacity": 0,
+      "reduction": 0,
+      "mounted": false
+    },
     "brightLight": 0,
     "dimLight": 0,
     "duration": "",

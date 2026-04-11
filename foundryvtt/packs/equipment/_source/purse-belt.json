@@ -13,6 +13,12 @@
     "quantity": 1,
     "equipped": false,
     "capacity": "3 lbs",
+    "container": {
+      "profile": "body-worn",
+      "capacity": 3,
+      "reduction": 0.75,
+      "mounted": false
+    },
     "brightLight": 0,
     "dimLight": 0,
     "duration": "",

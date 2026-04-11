@@ -2,13 +2,102 @@
  * LegendsD8 TTRPG Item Sheet
  * Foundry VTT V13 - Application V2 (HandlebarsApplicationMixin + ItemSheetV2)
  * Uses: static DEFAULT_OPTIONS, static PARTS, _prepareContext(), data-action event delegation
- * Dynamic template selection via _configureRenderOptions() based on item type
  */
 import { parseBackgroundItemGrants, parseBackgroundSkillBonuses } from '../backgrounds.mjs';
 import { SKILL_LABELS } from '../skill-utils.mjs';
 
 const { ItemSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
+const ITEM_TEMPLATE_ROOT = "systems/legends/templates/item";
+const PHYSICAL_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment']);
+const VALID_CARRY_STATES = new Set(['', 'carried', 'equipped', 'container', 'mounted']);
+const CONTAINER_PROFILE_OPTIONS = [
+  { value: 'frame', label: 'Frame Container (50% contents weight)' },
+  { value: 'body-worn', label: 'Body-worn Container (75% contents weight)' },
+  { value: 'saddlebags', label: 'Saddlebags (0 while mounted, full if carried)' },
+  { value: 'custom', label: 'Custom' },
+];
+
+function buildCarryOptions(item) {
+  const isContainerEquipment = item.type === 'equipment' && item.system?.equipmentType === 'container';
+  const options = [
+    { value: '', label: 'Auto' },
+    { value: 'carried', label: isContainerEquipment ? 'On person / carried' : 'Hand-carried / unpacked' },
+  ];
+
+  if (!isContainerEquipment) {
+    options.push({ value: 'equipped', label: 'Equipped / body-supported' });
+  }
+
+  options.push({ value: 'container', label: 'Stored in container' });
+  options.push({ value: 'mounted', label: 'On mount / off actor' });
+  return options;
+}
+
+function buildContainerOptions(item) {
+  const actor = item.actor;
+  if (!actor) return [];
+
+  return actor.items
+    .filter(candidate => candidate.type === 'equipment'
+      && candidate.system?.equipmentType === 'container'
+      && candidate.id !== item.id)
+    .map(candidate => {
+      const profile = String(candidate.system?.container?.profile || '').trim() || 'custom';
+      const capacity = Math.max(0, Number(candidate.system?.container?.capacity ?? 0) || 0);
+      const details = [];
+      if (profile) details.push(profile);
+      if (capacity > 0) details.push(`${capacity} lbs`);
+      return {
+        value: candidate.id,
+        label: details.length > 0 ? `${candidate.name} (${details.join(', ')})` : candidate.name,
+      };
+    });
+}
+
+function sanitizeCarryData(expanded, itemType) {
+  if (!PHYSICAL_ITEM_TYPES.has(itemType)) return;
+
+  expanded.system = expanded.system || {};
+  if (!expanded.system.encumbrance || typeof expanded.system.encumbrance !== 'object' || Array.isArray(expanded.system.encumbrance)) {
+    expanded.system.encumbrance = {};
+  }
+
+  const rawCarryState = typeof expanded.system.encumbrance.carryState === 'string'
+    ? expanded.system.encumbrance.carryState.trim()
+    : '';
+  const containerId = typeof expanded.system.encumbrance.containerId === 'string'
+    ? expanded.system.encumbrance.containerId.trim()
+    : '';
+  const carryState = VALID_CARRY_STATES.has(rawCarryState) ? rawCarryState : '';
+
+  expanded.system.encumbrance.carryState = carryState === 'container' && !containerId ? '' : carryState;
+  expanded.system.encumbrance.containerId = expanded.system.encumbrance.carryState === 'container' ? containerId : '';
+}
+
+function sanitizeEquipmentContainerData(expanded) {
+  expanded.system = expanded.system || {};
+  if (!expanded.system.container || typeof expanded.system.container !== 'object' || Array.isArray(expanded.system.container)) {
+    expanded.system.container = {};
+  }
+
+  const rawProfile = typeof expanded.system.container.profile === 'string'
+    ? expanded.system.container.profile.trim()
+    : '';
+  const validProfiles = new Set(CONTAINER_PROFILE_OPTIONS.map(option => option.value));
+  const profile = validProfiles.has(rawProfile) ? rawProfile : 'custom';
+  const capacity = Math.max(0, Number(expanded.system.container.capacity ?? 0) || 0);
+  const reduction = Math.min(1, Math.max(0, Number(expanded.system.container.reduction ?? 1) || 1));
+
+  expanded.system.container.profile = profile;
+  expanded.system.container.capacity = capacity;
+  expanded.system.container.reduction = profile === 'frame'
+    ? 0.5
+    : (profile === 'body-worn'
+      ? 0.75
+      : (profile === 'saddlebags' ? 0 : reduction));
+  expanded.system.container.mounted = Boolean(expanded.system.container.mounted);
+}
 
 export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
 
@@ -105,9 +194,9 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     options.parts = ["sheet"];
     options.window = options.window || {};
     options.window.title = this.title;
-    // Dynamically set the template based on item type
-    this.constructor.PARTS.sheet.template =
-      `systems/legends/templates/item/item-${this.document.type}-sheet.hbs`;
+    if (["armor", "shield"].includes(this.document.type)) {
+      options.position = { width: 620, height: 720 };
+    }
   }
 
   /** @override */
@@ -116,6 +205,10 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
 
     const rect = this.element?.getBoundingClientRect?.();
     if (!rect) return;
+    if (["armor", "shield"].includes(this.document.type) && (rect.width < 580 || rect.height < 620)) {
+      this.setPosition({ width: 620, height: 720 });
+      return;
+    }
     if (rect.width < 480 || rect.height < 320) {
       this.setPosition({ width: 520, height: 480 });
     }
@@ -129,6 +222,11 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     context.system = itemData.system;
     context.flags = itemData.flags;
     context.item = itemData;
+    context.isPhysicalItem = PHYSICAL_ITEM_TYPES.has(this.document.type);
+    context.isContainerEquipment = this.document.type === 'equipment' && context.system.equipmentType === 'container';
+    context.carryOptions = context.isPhysicalItem ? buildCarryOptions(this.document) : [];
+    context.containerOptions = context.isPhysicalItem ? buildContainerOptions(this.document) : [];
+    context.containerProfileOptions = CONTAINER_PROFILE_OPTIONS;
 
     // CRITICAL: Set these for the editor helper
     context.owner = this.document.isOwner;
@@ -426,6 +524,11 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     // nested objects with numeric keys, which corrupts actual arrays.
     // Reconstruct any such arrays before passing to the update.
     const expanded = foundry.utils.expandObject(formData);
+    sanitizeCarryData(expanded, this.document.type);
+
+    if (this.document.type === 'equipment') {
+      sanitizeEquipmentContainerData(expanded);
+    }
 
     // Fix system.effects (feat effects builder)
     if (expanded.system?.effects && !Array.isArray(expanded.system.effects)) {
@@ -976,3 +1079,98 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     }, 150);
   }
 }
+
+export class D8AbilityItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-ability-sheet.hbs` }
+  };
+}
+
+export class D8ActionItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-action-sheet.hbs` }
+  };
+}
+
+export class D8AncestryItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-ancestry-sheet.hbs` }
+  };
+}
+
+export class D8ArmorItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-armor-sheet.hbs` }
+  };
+}
+
+export class D8BackgroundItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-background-sheet.hbs` }
+  };
+}
+
+export class D8ConditionItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-condition-sheet.hbs` }
+  };
+}
+
+export class D8EquipmentItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-equipment-sheet.hbs` }
+  };
+}
+
+export class D8FeatItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-feat-sheet.hbs` }
+  };
+}
+
+export class D8FlawItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-flaw-sheet.hbs` }
+  };
+}
+
+export class D8ShieldItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-shield-sheet.hbs` }
+  };
+}
+
+export class D8TraitItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-trait-sheet.hbs` }
+  };
+}
+
+export class D8WeaponItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-weapon-sheet.hbs` }
+  };
+}
+
+export class D8WeaveItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-weave-sheet.hbs` }
+  };
+}
+
+export const ITEM_SHEET_CLASS_MAP = {
+  ability: D8AbilityItemSheet,
+  action: D8ActionItemSheet,
+  ancestry: D8AncestryItemSheet,
+  armor: D8ArmorItemSheet,
+  background: D8BackgroundItemSheet,
+  condition: D8ConditionItemSheet,
+  equipment: D8EquipmentItemSheet,
+  feat: D8FeatItemSheet,
+  flaw: D8FlawItemSheet,
+  shield: D8ShieldItemSheet,
+  trait: D8TraitItemSheet,
+  weapon: D8WeaponItemSheet,
+  weave: D8WeaveItemSheet,
+  effect: D8ItemSheet,
+};

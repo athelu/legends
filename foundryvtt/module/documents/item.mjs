@@ -8,6 +8,120 @@ const ABILITY_RECHARGE_PERIODS = {
 };
 
 const FEAT_USAGE_MODES = ['passive', 'active', 'reaction', 'free', 'special', 'unlimited', 'once'];
+const VALID_CARRY_STATES = new Set(['', 'carried', 'equipped', 'container', 'mounted']);
+const CONTAINER_PROFILE_PRESETS = {
+  frame: { reduction: 0.5 },
+  'body-worn': { reduction: 0.75 },
+  saddlebags: { reduction: 0 },
+  custom: { reduction: 1 },
+};
+
+function normalizeItemNameKey(value) {
+  return String(value || '')
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function parseCapacityPounds(value) {
+  const match = String(value || '').match(/(\d+(?:\.\d+)?)\s*lbs?/i);
+  if (!match) return 0;
+  const parsed = Number.parseFloat(match[1]);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : 0;
+}
+
+function inferContainerDefaults(itemName, legacyCapacity = '') {
+  const normalizedName = normalizeItemNameKey(itemName);
+  const parsedCapacity = parseCapacityPounds(legacyCapacity);
+
+  if (normalizedName.includes('backpack')) {
+    return { profile: 'frame', capacity: parsedCapacity || 30 };
+  }
+  if (normalizedName.includes('rucksack')) {
+    return { profile: 'frame', capacity: parsedCapacity || 40 };
+  }
+  if (normalizedName.includes('pouch')) {
+    return { profile: 'body-worn', capacity: parsedCapacity || 5 };
+  }
+  if (normalizedName.includes('purse')) {
+    return { profile: 'body-worn', capacity: parsedCapacity || 3 };
+  }
+  if (normalizedName.includes('satchel')) {
+    return { profile: 'body-worn', capacity: parsedCapacity || 15 };
+  }
+  if (normalizedName.includes('saddlebag')) {
+    return { profile: 'saddlebags', capacity: parsedCapacity || 0 };
+  }
+
+  return {
+    profile: parsedCapacity > 0 ? 'custom' : '',
+    capacity: parsedCapacity,
+  };
+}
+
+function getDefaultCarryState(itemType, systemData = {}) {
+  const equipmentType = String(systemData?.equipmentType || '').trim().toLowerCase();
+  if (itemType === 'equipment' && equipmentType === 'container') {
+    return '';
+  }
+  if (itemType === 'weapon' || itemType === 'armor' || itemType === 'shield') {
+    return '';
+  }
+  if (systemData?.equipped) {
+    return '';
+  }
+  return '';
+}
+
+function normalizePhysicalCarryData(systemData, itemType) {
+  if (!systemData.encumbrance || typeof systemData.encumbrance !== 'object' || Array.isArray(systemData.encumbrance)) {
+    systemData.encumbrance = {};
+  }
+
+  const rawCarryState = typeof systemData.encumbrance.carryState === 'string'
+    ? systemData.encumbrance.carryState.trim()
+    : '';
+  const carryState = VALID_CARRY_STATES.has(rawCarryState)
+    ? rawCarryState
+    : getDefaultCarryState(itemType, systemData);
+  const containerId = typeof systemData.encumbrance.containerId === 'string'
+    ? systemData.encumbrance.containerId.trim()
+    : '';
+
+  systemData.encumbrance.carryState = carryState;
+  systemData.encumbrance.containerId = containerId;
+}
+
+function normalizeEquipmentContainerData(systemData, itemName) {
+  if (!systemData.container || typeof systemData.container !== 'object' || Array.isArray(systemData.container)) {
+    systemData.container = {};
+  }
+
+  const inferredDefaults = inferContainerDefaults(itemName, systemData.capacity);
+  const rawProfile = typeof systemData.container.profile === 'string'
+    ? systemData.container.profile.trim()
+    : '';
+  const profile = Object.hasOwn(CONTAINER_PROFILE_PRESETS, rawProfile)
+    ? rawProfile
+    : inferredDefaults.profile;
+  const preset = CONTAINER_PROFILE_PRESETS[profile] || null;
+  const parsedLegacyCapacity = parseCapacityPounds(systemData.capacity);
+  const storedCapacity = Number(systemData.container.capacity);
+  const capacity = Math.max(
+    0,
+    Number.isFinite(storedCapacity) ? storedCapacity : (inferredDefaults.capacity || parsedLegacyCapacity || 0)
+  );
+  const storedReduction = Number(systemData.container.reduction);
+  const reduction = preset
+    ? preset.reduction
+    : Math.min(1, Math.max(0, Number.isFinite(storedReduction) ? storedReduction : 1));
+
+  systemData.container.profile = profile;
+  systemData.container.capacity = capacity;
+  systemData.container.reduction = reduction;
+  systemData.container.mounted = Boolean(systemData.container.mounted);
+}
 
 function slugifyActionName(name) {
   return String(name || '')
@@ -829,6 +943,8 @@ export class D8Item extends Item {
 
     systemData.consumable = Boolean(systemData.consumable);
     systemData.requiresAttunement = Boolean(systemData.requiresAttunement);
+    normalizePhysicalCarryData(systemData, 'equipment');
+    normalizeEquipmentContainerData(systemData, itemData.name);
 
     itemData.system = systemData;
   }
@@ -1057,6 +1173,8 @@ export class D8Item extends Item {
         return normalizedMode;
       });
     }
+
+    normalizePhysicalCarryData(systemData, 'weapon');
   }
     /**
    * Prepare Armor-specific data
@@ -1109,6 +1227,8 @@ export class D8Item extends Item {
     if (!Array.isArray(systemData.shieldAbilities)) {
       systemData.shieldAbilities = [];
     }
+
+    normalizePhysicalCarryData(systemData, 'armor');
   }
 
   /**
@@ -1142,6 +1262,8 @@ export class D8Item extends Item {
     if (systemData.plantedMode === undefined) {
       systemData.plantedMode = false;
     }
+
+    normalizePhysicalCarryData(systemData, 'shield');
   }
   
   /**

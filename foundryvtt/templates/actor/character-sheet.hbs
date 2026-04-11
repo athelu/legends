@@ -22,7 +22,7 @@
         </div>
       </div>
       <div class="info-line">
-        <label>Race:</label>
+        <label>Ancestry:</label>
         <div class="header-choice-group">
           {{#if primaryAncestry}}
           <span class="derived-field" title="From ancestry item">{{primaryAncestry.name}}</span>
@@ -32,6 +32,25 @@
           {{#if canChangeOriginChoices}}
           <button type="button" class="header-choice-button" data-action="changeHeaderChoice" data-item-type="ancestry">{{#if primaryAncestry}}Change{{else}}Choose{{/if}}</button>
           {{/if}}
+        </div>
+      </div>
+      <div class="info-line">
+        <label>Nationality:</label>
+        <div class="header-choice-group">
+          {{#if originLabel}}
+          <span class="derived-field" title="Nationality determines native language">{{originLabel}}</span>
+          {{else}}
+          <span class="derived-field" title="Nationality determines native language">Not selected</span>
+          {{/if}}
+          {{#if canChangeOriginChoices}}
+          <button type="button" class="header-choice-button" data-action="changeOrigin">{{#if originLabel}}Change{{else}}Choose{{/if}}</button>
+          {{/if}}
+        </div>
+      </div>
+      <div class="info-line">
+        <label>Languages:</label>
+        <div class="header-choice-group">
+          <span class="derived-field" title="Known languages are tracked from nationality and Language skill ranks">{{#if system.languages.display}}{{system.languages.display}}{{else}}No languages assigned{{/if}}</span>
         </div>
       </div>
       <div class="info-line">
@@ -157,6 +176,56 @@
             <div class="resource-row dr-row">
               <label>DR</label>
               <span class="dr-value">{{system.dr.total}}</span>
+            </div>
+
+            <div class="resource-row wealth-row coins-row">
+              <label>Coins</label>
+              <div class="coin-inputs">
+                <div class="coin-group">
+                  <span class="coin-label">gp</span>
+                  <input type="number" name="system.currency.gp" value="{{system.currency.gp}}" data-dtype="Number" class="resource-current" min="0" />
+                </div>
+                <div class="coin-group">
+                  <span class="coin-label">sp</span>
+                  <input type="number" name="system.currency.sp" value="{{system.currency.sp}}" data-dtype="Number" class="resource-current" min="0" />
+                </div>
+                <div class="coin-group">
+                  <span class="coin-label">cp</span>
+                  <input type="number" name="system.currency.cp" value="{{system.currency.cp}}" data-dtype="Number" class="resource-current" min="0" />
+                </div>
+              </div>
+            </div>
+
+            <div class="resource-row wealth-row">
+              <label>Coin Value</label>
+              <span class="wealth-value" title="{{system.wealth.coins.totalGp}} gp total">{{system.wealth.coins.display}}</span>
+            </div>
+
+            <div class="resource-row wealth-row">
+              <label>Gear Value</label>
+              <span class="wealth-value" title="{{system.wealth.equipment.itemCount}} items counted, {{system.wealth.equipment.totalGp}} gp total">{{system.wealth.equipment.display}}</span>
+            </div>
+
+            <div class="resource-row wealth-row total-wealth-row">
+              <label>Total Wealth</label>
+              <span class="wealth-value" title="{{system.wealth.total.totalGp}} gp total">{{system.wealth.total.display}}</span>
+            </div>
+
+            <div class="resource-row encumbrance-row">
+              <label>Load</label>
+              <span class="wealth-value">{{system.encumbrance.effectiveWeight}} lbs</span>
+            </div>
+
+            <div class="resource-row encumbrance-row">
+              <label>Status</label>
+              <span class="wealth-value {{system.encumbrance.tier}}">{{system.encumbrance.tierLabel}}</span>
+            </div>
+
+            <div class="resource-row encumbrance-row">
+              <label>Limits</label>
+              <span class="wealth-value" title="Unencumbered {{system.encumbrance.thresholds.unencumbered}} lbs, Encumbered {{system.encumbrance.thresholds.encumbered}} lbs, Heavily Encumbered {{system.encumbrance.thresholds.heavilyEncumbered}} lbs, Maximum {{system.encumbrance.thresholds.max}} lbs">
+                U {{system.encumbrance.thresholds.unencumbered}} / E {{system.encumbrance.thresholds.encumbered}} / H {{system.encumbrance.thresholds.heavilyEncumbered}}
+              </span>
             </div>
           </div>
 
@@ -894,6 +963,35 @@
 
     {{!-- Equipment Tab --}}
     <div class="tab equipment" data-group="primary" data-tab="equipment">
+      <section class="encumbrance-overview">
+        <div class="encumbrance-overview-header">
+          <h3>Encumbrance</h3>
+          <span class="encumbrance-tier {{system.encumbrance.tier}}">{{system.encumbrance.tierLabel}}</span>
+        </div>
+        <div class="encumbrance-overview-grid">
+          <div><strong>Effective Load:</strong> {{system.encumbrance.effectiveWeight}} lbs</div>
+          <div><strong>Unencumbered:</strong> {{system.encumbrance.thresholds.unencumbered}} lbs</div>
+          <div><strong>Encumbered:</strong> {{system.encumbrance.thresholds.encumbered}} lbs</div>
+          <div><strong>Heavy / Max:</strong> {{system.encumbrance.thresholds.heavilyEncumbered}} lbs</div>
+          {{#if system.encumbrance.powerfulBuild}}
+          <div><strong>Trait:</strong> Powerful Build active</div>
+          {{/if}}
+          {{#if system.encumbrance.overLimit}}
+          <div><strong>Warning:</strong> Cannot move until load is reduced.</div>
+          {{/if}}
+        </div>
+        {{#if (hasItems system.encumbrance.containers)}}
+        <div class="encumbrance-container-list">
+          {{#each system.encumbrance.containers as |container|}}
+          <div class="encumbrance-container-item">
+            <strong>{{container.name}}</strong>
+            <span>{{container.profileLabel}}: {{container.rawWeight}} lbs raw, {{container.effectiveWeight}} lbs effective{{#if container.capacity}} / {{container.capacity}} lbs capacity{{/if}}{{#if container.overflowWeight}} / {{container.overflowWeight}} lbs overflow{{/if}}{{#if container.mounted}} / mounted{{/if}}</span>
+          </div>
+          {{/each}}
+        </div>
+        {{/if}}
+      </section>
+
       {{!-- Armor Section --}}
       <div class="inventory-header">
         <h3>Armor</h3>
@@ -1058,6 +1156,39 @@
 
     {{!-- Biography Tab --}}
     <div class="tab biography" data-group="primary" data-tab="biography">
+      <div class="language-management-panel">
+        <h3>Languages</h3>
+        <p class="creation-lock-note">Languages are tracked on the actor. Nationality sets the native language, and Language skill ranks grant additional selectable languages.</p>
+        <div class="resource-row language-row">
+          <label>Native</label>
+          <span class="wealth-value">{{#if system.languages.nativeLabel}}{{system.languages.nativeLabel}}{{else}}Unassigned{{/if}}</span>
+        </div>
+        <div class="resource-row language-row">
+          <label>Known</label>
+          <span class="wealth-value">{{#if system.languages.display}}{{system.languages.display}}{{else}}No languages selected{{/if}}</span>
+        </div>
+        <div class="language-selection-header">
+          <h4>Additional Languages</h4>
+          <span class="language-selection-count">{{additionalLanguageCount}} / {{system.languages.capacity}} selected</span>
+        </div>
+        <div class="language-choice-grid">
+          {{#each languageOptions}}
+          <button
+            type="button"
+            class="language-choice-chip{{#if isNative}} is-native{{/if}}{{#if isSelected}} is-selected{{/if}}"
+            data-action="toggleLanguageOption"
+            data-language-key="{{key}}"
+            title="{{description}}"
+            {{#if isNative}}disabled{{/if}}
+            {{#if isDisabled}}disabled{{/if}}>
+            <span class="language-choice-label">{{label}}</span>
+            {{#if isNative}}<span class="language-choice-meta">Native</span>{{/if}}
+            {{#if isSelected}}<span class="language-choice-meta">Selected</span>{{/if}}
+          </button>
+          {{/each}}
+        </div>
+        <p class="creation-lock-note">Your Language skill grants {{system.languages.capacity}} additional language slot{{#unless (eq system.languages.capacity 1)}}s{{/unless}} beyond your native language.</p>
+      </div>
       {{editor enrichedBiography target="system.biography.value" button=true owner=owner editable=editable}}
     </div>
   </section>

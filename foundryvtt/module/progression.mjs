@@ -14,6 +14,7 @@ const TIER_THRESHOLDS = [
 ];
 
 const MAX_TRANSACTION_HISTORY = 100;
+const DEFAULT_SESSION_XP_AWARD = 24;
 
 const ATTRIBUTE_LABELS = {
   strength: 'Strength',
@@ -152,6 +153,16 @@ export function canManageProgression(actor, user = game.user) {
   return Boolean(actor && user?.isGM);
 }
 
+function canManagePartyAwards(user = game.user) {
+  return Boolean(user?.isGM);
+}
+
+function getAwardablePlayerCharacters() {
+  return game.actors
+    .filter((actor) => actor?.type === 'character' && actor.hasPlayerOwner)
+    .sort((left, right) => String(left.name || '').localeCompare(String(right.name || '')));
+}
+
 export async function awardXP(actor, amount, options = {}) {
   if (!actor) return null;
 
@@ -231,9 +242,10 @@ function buildAwardDialogContent(actor) {
   return `
     <form class="legends-xp-dialog" style="padding: 10px; display: flex; flex-direction: column; gap: 10px;">
       <div><strong>${actor.name}</strong> currently has <strong>${state.totalXp}</strong> total XP and <strong>${state.unspent}</strong> unspent XP.</div>
+      <div style="font-size: 12px; color: #666;">Default session award is <strong>${DEFAULT_SESSION_XP_AWARD} XP</strong>.</div>
       <div class="form-group">
         <label>Amount</label>
-        <input type="number" name="amount" value="40" min="1" step="1" />
+        <input type="number" name="amount" value="${DEFAULT_SESSION_XP_AWARD}" min="1" step="1" />
       </div>
       <div class="form-group">
         <label>Reason</label>
@@ -243,6 +255,28 @@ function buildAwardDialogContent(actor) {
         <label>Notes</label>
         <textarea name="notes" rows="3" placeholder="Optional notes"></textarea>
       </div>
+    </form>
+  `;
+}
+
+function buildPartyAwardDialogContent(characters) {
+  return `
+    <form class="legends-xp-dialog" style="padding: 10px; display: flex; flex-direction: column; gap: 10px;">
+      <div><strong>${characters.length}</strong> player characters will receive XP.</div>
+      <div style="font-size: 12px; color: #666;">Default session award is <strong>${DEFAULT_SESSION_XP_AWARD} XP</strong> per player character.</div>
+      <div class="form-group">
+        <label>Amount</label>
+        <input type="number" name="amount" value="${DEFAULT_SESSION_XP_AWARD}" min="1" step="1" />
+      </div>
+      <div class="form-group">
+        <label>Reason</label>
+        <input type="text" name="reason" value="Session award" placeholder="Session award" />
+      </div>
+      <div class="form-group">
+        <label>Notes</label>
+        <textarea name="notes" rows="3" placeholder="Optional notes for every award"></textarea>
+      </div>
+      <div style="font-size: 12px; color: #666;">Recipients: ${characters.map((actor) => actor.name).join(', ')}</div>
     </form>
   `;
 }
@@ -321,7 +355,9 @@ function formatPotentialPurchaseLabel(potentialKey, currentRank, label) {
 function buildSelectOptionsMarkup(options, selectedIndex = 0) {
   return options.map((option, index) => {
     const selected = index === selectedIndex ? 'selected' : '';
-    return `<option value="${index}" ${selected}>${option.label}</option>`;
+    const disabled = option.disabled ? 'disabled' : '';
+    const detail = option.disabled && option.description ? ` - ${option.description}` : '';
+    return `<option value="${index}" ${selected} ${disabled}>${option.label}${detail}</option>`;
   }).join('');
 }
 
@@ -413,6 +449,7 @@ function getAvailableSkillPurchases(actor) {
       const current = Number(value?.value ?? value ?? 0);
       const cost = current <= 0 ? 4 : 8 * current;
       const hasCheckbox = canBypassCheckboxRequirement || hasSkillCheckbox(actor, key);
+      const disabled = current >= 8 || cost > state.unspent || !hasCheckbox;
       return {
         type: 'skill',
         key,
@@ -420,13 +457,17 @@ function getAvailableSkillPurchases(actor) {
         next: current + 1,
         cost,
         label: formatSkillPurchaseLabel(key, current),
-        disabled: current >= 8 || cost > state.unspent || !hasCheckbox,
-        description: hasCheckbox
-          ? `${SKILL_LABELS[key] || key} increases from ${current} to ${current + 1}.`
-          : `${SKILL_LABELS[key] || key} needs a training checkbox before it can be advanced.`
+        disabled,
+        description: !hasCheckbox
+          ? `${SKILL_LABELS[key] || key} needs a training checkbox before it can be advanced.`
+          : current >= 8
+            ? `${SKILL_LABELS[key] || key} is already at the maximum rank.`
+            : cost > state.unspent
+              ? `${SKILL_LABELS[key] || key} costs ${cost} XP and only ${state.unspent} XP is unspent.`
+              : `${SKILL_LABELS[key] || key} increases from ${current} to ${current + 1}.`
       };
     })
-    .filter((entry) => !entry.disabled);
+    .sort((left, right) => left.label.localeCompare(right.label));
 }
 
 function getAvailableMasteryPurchases(actor) {
@@ -517,6 +558,18 @@ async function showPurchaseSelectionDialog(actor, category, options) {
     return null;
   }
 
+  const availableOptions = options.filter((entry) => !entry.disabled);
+  if (!availableOptions.length) {
+    const categoryLabel = category.charAt(0).toUpperCase() + category.slice(1);
+    ui.notifications.warn(`No ${categoryLabel.toLowerCase()} purchases are currently available for ${actor.name}.`);
+    return null;
+  }
+
+  const selectedIndex = Math.max(0, options.findIndex((entry) => !entry.disabled));
+  const helperText = category === 'skill'
+    ? 'All skills are shown. Skills you cannot currently buy are greyed out with the reason appended.'
+    : 'Only purchases you can currently afford and qualify for are shown.';
+
   return foundry.applications.api.DialogV2.wait({
     window: { title: `Spend XP: ${actor.name}` },
     content: `
@@ -525,10 +578,10 @@ async function showPurchaseSelectionDialog(actor, category, options) {
         <div class="form-group">
           <label>Choose a ${category}</label>
           <select name="purchase" style="width: 100%; padding: 6px;">
-            ${buildSelectOptionsMarkup(options)}
+            ${buildSelectOptionsMarkup(options, selectedIndex)}
           </select>
         </div>
-        <div style="font-size: 12px; color: #666;">Only purchases you can currently afford and qualify for are shown.</div>
+        <div style="font-size: 12px; color: #666;">${helperText}</div>
       </form>
     `,
     buttons: [
@@ -538,7 +591,8 @@ async function showPurchaseSelectionDialog(actor, category, options) {
         default: true,
         callback: (event, button, dialog) => {
           const index = Number.parseInt(dialog.element.querySelector('[name="purchase"]')?.value || '0', 10);
-          return options[index] || null;
+          const selected = options[index] || null;
+          return selected && !selected.disabled ? selected : null;
         }
       },
       {
@@ -663,6 +717,77 @@ export async function showAwardXPDialog(actor) {
     category: 'award',
     source: 'sheet-award',
     notify: true
+  });
+}
+
+export async function awardPartyXP(amount, options = {}) {
+  if (!canManagePartyAwards()) {
+    ui.notifications.warn('Only the GM can award XP to the party.');
+    return [];
+  }
+
+  const characters = getAwardablePlayerCharacters();
+  if (!characters.length) {
+    ui.notifications.warn('No player characters are available to award XP.');
+    return [];
+  }
+
+  const results = [];
+  for (const actor of characters) {
+    const updated = await awardXP(actor, amount, {
+      ...options,
+      notify: false,
+      category: options.category || 'award',
+      source: options.source || 'party-award',
+    });
+
+    if (updated) {
+      results.push(updated);
+    }
+  }
+
+  if (results.length) {
+    ui.notifications.info(`${Math.abs(Number(amount) || 0)} XP awarded to ${results.length} player characters.`);
+  }
+
+  return results;
+}
+
+export async function showAwardPartyXPDialog() {
+  if (!canManagePartyAwards()) {
+    ui.notifications.warn('Only the GM can award XP to the party.');
+    return [];
+  }
+
+  const characters = getAwardablePlayerCharacters();
+  if (!characters.length) {
+    ui.notifications.warn('No player characters are available to award XP.');
+    return [];
+  }
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Award XP: All Player Characters' },
+    content: buildPartyAwardDialogContent(characters),
+    buttons: [
+      {
+        action: 'award',
+        label: 'Award XP To All',
+        default: true,
+        callback: (event, button, dialog) => getDialogFormValues(dialog)
+      },
+      {
+        action: 'cancel',
+        label: 'Cancel'
+      }
+    ]
+  });
+
+  if (!result?.amount) return [];
+  return awardPartyXP(result.amount, {
+    reason: result.reason || 'XP award',
+    notes: result.notes,
+    category: 'award',
+    source: 'party-award',
   });
 }
 

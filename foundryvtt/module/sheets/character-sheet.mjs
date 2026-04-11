@@ -4,9 +4,54 @@
  * Uses: static DEFAULT_OPTIONS, static PARTS, _prepareContext(), data-action event delegation
  */
 import { SKILL_ATTRIBUTE_SHORT, SKILL_LABELS } from '../skill-utils.mjs';
+import { getLanguageDefinitions, getOriginLabel, getOriginOptionsForAncestry, getNativeLanguageKeyForOrigin, normalizeLanguageKey, normalizeOriginKey } from '../languages.mjs';
 
 const { ActorSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
+const PURCHASE_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment']);
+
+function normalizeCurrencyAmount(value) {
+  return Math.max(0, Math.floor(Number(value) || 0));
+}
+
+function normalizeCurrencyData(currencyData = {}) {
+  return {
+    gp: normalizeCurrencyAmount(currencyData.gp),
+    sp: normalizeCurrencyAmount(currencyData.sp),
+    cp: normalizeCurrencyAmount(currencyData.cp),
+  };
+}
+
+function currencyToCp(currencyData = {}) {
+  const normalized = normalizeCurrencyData(currencyData);
+  return (normalized.gp * 100) + (normalized.sp * 10) + normalized.cp;
+}
+
+function gpToCp(value) {
+  return Math.max(0, Math.round((Number(value) || 0) * 100));
+}
+
+function cpToCurrency(totalCp) {
+  const normalizedCp = Math.max(0, Math.floor(Number(totalCp) || 0));
+  return {
+    gp: Math.floor(normalizedCp / 100),
+    sp: Math.floor((normalizedCp % 100) / 10),
+    cp: normalizedCp % 10,
+  };
+}
+
+function formatCurrencyFromCp(totalCp) {
+  const currency = cpToCurrency(totalCp);
+  const parts = [];
+  if (currency.gp) parts.push(`${currency.gp} gp`);
+  if (currency.sp) parts.push(`${currency.sp} sp`);
+  if (currency.cp || parts.length === 0) parts.push(`${currency.cp} cp`);
+  return parts.join(' ');
+}
+
+function escapeHtml(value) {
+  return Handlebars.escapeExpression(String(value ?? ''));
+}
 
 const ITEM_COMPENDIUM_PACKS = {
   weapon: 'legends.weapons',
@@ -57,6 +102,8 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       itemView: D8CharacterSheet.#onItemView,
       setupMagicalTraits: D8CharacterSheet.#onSetupMagicalTraits,
       changeHeaderChoice: D8CharacterSheet.#onChangeHeaderChoice,
+      changeOrigin: D8CharacterSheet.#onChangeOrigin,
+      toggleLanguageOption: D8CharacterSheet.#onToggleLanguageOption,
     },
     dragDrop: [{ dragSelector: ".item-list .item", dropSelector: null }]
   };
@@ -197,6 +244,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       || /^system\.attributes\.[^.]+\.value$/.test(fieldName)
       || /^system\.mastery\.[^.]+\.value$/.test(fieldName)
       || /^system\.potentials\.[^.]+\.value$/.test(fieldName);
+    const isCurrencyField = /^system\.currency\.(gp|sp|cp)$/.test(fieldName);
 
     if (isAdvancementField && !canEditAdvancementFields) {
       ui.notifications.warn('Skills, attributes, mastery, and potentials are locked outside character creation or manual override.');
@@ -207,6 +255,11 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const numValue = input.type === 'number' ? Number(value) : value;
     const updateData = {};
     updateData[fieldName] = numValue;
+
+    if (isCurrencyField) {
+      updateData[fieldName] = Math.max(0, Math.floor(Number(numValue) || 0));
+      input.value = updateData[fieldName];
+    }
 
     if (fieldName === 'system.tier.xp') {
       const tierInfo = game.legends?.progression?.getTierInfoFromXp?.(numValue);
@@ -287,6 +340,23 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.canSpendXp = Boolean(this.isEditable && game.legends?.progression?.canSpendXP?.(this.actor, game.user));
     context.canManageProgression = Boolean(this.isEditable && game.legends?.progression?.canManageProgression?.(this.actor, game.user));
     context.canChangeOriginChoices = Boolean(this.isEditable && context.progression?.isCreation);
+    context.originLabel = getOriginLabel(context.system.biography?.origin);
+    context.canManageLanguages = Boolean(this.isEditable);
+    context.languageOptions = getLanguageDefinitions().map((entry) => {
+      const nativeKey = context.system.languages?.native || '';
+      const selectedKeys = Array.isArray(context.system.languages?.selected) ? context.system.languages.selected : [];
+      const capacity = Number(context.system.languages?.capacity || 0);
+      const isNative = entry.key === nativeKey;
+      const isSelected = selectedKeys.includes(entry.key);
+      const isDisabled = !isNative && !isSelected && selectedKeys.length >= capacity;
+      return {
+        ...entry,
+        isNative,
+        isSelected,
+        isDisabled,
+      };
+    });
+    context.additionalLanguageCount = Array.isArray(context.system.languages?.selected) ? context.system.languages.selected.length : 0;
     context.xpFieldHint = context.canEditXpFields
       ? 'XP fields can be edited directly in character creation or manual override mode.'
       : 'XP fields are locked outside character creation or manual override.';
@@ -325,6 +395,13 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     for (let item of this.actor.items) {
       const i = item.toObject(false);
       i.img = i.img || "icons/svg/item-bag.svg";
+      if (context.system?.encumbrance?.items?.[i._id]) {
+        i.system = i.system || {};
+        i.system.encumbrance = {
+          ...(i.system.encumbrance || {}),
+          ...context.system.encumbrance.items[i._id],
+        };
+      }
 
       switch (i.type) {
         case 'weapon':
@@ -392,7 +469,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.flaws = flaws;
     context.backgrounds = backgrounds;
     context.ancestries = ancestries;
-    const traitPointsSpent = traits.reduce((total, item) => total + Number(item.system?.pointCost || 0), 0);
+    const traitPointsSpent = traits.reduce((total, item) => total + Math.abs(Number(item.system?.pointCost || 0)), 0);
     const flawPointsEarned = flaws.reduce((total, item) => total + Number(item.system?.pointValue || 0), 0);
     context.traitPointSummary = {
       spent: traitPointsSpent,
@@ -609,6 +686,78 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       return;
     }
 
+    const isCompendiumDrop = typeof data?.uuid === 'string' && data.uuid.startsWith('Compendium.');
+    const itemCost = Number(item?.system?.cost ?? 0);
+    const itemQuantity = Math.max(1, Math.floor(Number(item?.system?.quantity ?? 1) || 1));
+    const shouldPromptForPurchase = this.actor?.type === 'character'
+      && isCompendiumDrop
+      && item
+      && PURCHASE_ITEM_TYPES.has(item.type)
+      && Number.isFinite(itemCost)
+      && itemCost > 0;
+
+    if (shouldPromptForPurchase) {
+      const currentCurrency = normalizeCurrencyData(this.actor.system?.currency);
+      const totalCostCp = gpToCp(itemCost * itemQuantity);
+      const currentCoinsCp = currencyToCp(currentCurrency);
+      const canAfford = currentCoinsCp >= totalCostCp;
+      const remainingCurrency = canAfford ? cpToCurrency(currentCoinsCp - totalCostCp) : currentCurrency;
+
+      const buttonConfigs = [];
+      if (canAfford) {
+        buttonConfigs.push({
+          action: 'pay',
+          label: `Pay ${formatCurrencyFromCp(totalCostCp)}`,
+          default: true,
+          callback: () => 'pay',
+        });
+      }
+      buttonConfigs.push({
+        action: 'loot',
+        label: 'Take As Loot',
+        callback: () => 'loot',
+      });
+      buttonConfigs.push({
+        action: 'cancel',
+        label: 'Cancel',
+        callback: () => 'cancel',
+      });
+
+      const purchaseChoice = await foundry.applications.api.DialogV2.wait({
+        window: { title: `Acquire Item: ${item.name}` },
+        position: { width: 460 },
+        content: `
+          <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <div><strong>${escapeHtml(item.name)}</strong></div>
+            <div>Cost: <strong>${escapeHtml(formatCurrencyFromCp(totalCostCp))}</strong>${itemQuantity > 1 ? ` for quantity ${itemQuantity}` : ''}</div>
+            <div>Your coins: <strong>${escapeHtml(formatCurrencyFromCp(currentCoinsCp))}</strong></div>
+            ${canAfford ? `<div>After purchase: <strong>${escapeHtml(formatCurrencyFromCp(currencyToCp(remainingCurrency)))}</strong></div>` : '<div style="color: #c53030;"><strong>You cannot currently afford this item.</strong></div>'}
+            <div style="font-size: 12px; color: #666;">Choose whether this item is a purchase or free loot.</div>
+          </div>
+        `,
+        buttons: buttonConfigs,
+        rejectClose: false,
+      });
+
+      if (!purchaseChoice || purchaseChoice === 'cancel') {
+        return;
+      }
+
+      const creationResult = await super._onDropItem(event, data);
+      if (purchaseChoice === 'pay' && creationResult !== false) {
+        await this.actor.update({
+          'system.currency.gp': remainingCurrency.gp,
+          'system.currency.sp': remainingCurrency.sp,
+          'system.currency.cp': remainingCurrency.cp,
+        });
+        ui.notifications.info(`${this.actor.name} paid ${formatCurrencyFromCp(totalCostCp)} for ${item.name}.`);
+      } else if (purchaseChoice === 'loot' && creationResult !== false) {
+        ui.notifications.info(`${item.name} added to ${this.actor.name} as free loot.`);
+      }
+
+      return creationResult;
+    }
+
     return super._onDropItem(event, data);
   }
 
@@ -756,7 +905,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static #getTraitFlawPointSummary(actor) {
     const traits = actor.items.filter((item) => item.type === 'trait');
     const flaws = actor.items.filter((item) => item.type === 'flaw');
-    const spent = traits.reduce((total, item) => total + Number(item.system?.pointCost || 0), 0);
+    const spent = traits.reduce((total, item) => total + Math.abs(Number(item.system?.pointCost || 0)), 0);
     const earned = flaws.reduce((total, item) => total + Number(item.system?.pointValue || 0), 0);
     return {
       spent,
@@ -786,7 +935,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       .filter((entry) => !ownedNames.has(String(entry.name || '').trim().toLowerCase()))
       .map((entry) => {
         const pointDelta = type === 'trait'
-          ? Number(entry.system?.pointCost || 0)
+          ? Math.abs(Number(entry.system?.pointCost || 0))
           : Number(entry.system?.pointValue || 0);
         const requiresGMApproval = Boolean(entry.system?.requiresGMApproval);
         const disabled = type === 'trait' && pointDelta > pointSummary.remaining;
@@ -953,7 +1102,12 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
       await existingItem.delete();
       if (itemType === 'ancestry') {
-        await this.actor.update({ 'system.biography.ancestry': '' });
+        await this.actor.update({
+          'system.biography.ancestry': '',
+          'system.biography.origin': '',
+          'system.languages.native': '',
+          'system.languages.selected': [],
+        });
       }
     }
 
@@ -964,6 +1118,112 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     }
 
     pack.render(true);
+  }
+
+  static async #onChangeOrigin(event, target) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    const progressionState = game.legends?.progression?.getActorProgressionState?.(this.actor);
+    if (!progressionState?.isCreation) {
+      ui.notifications.warn('Origin can only be changed during character creation.');
+      return;
+    }
+
+    const primaryAncestry = this.actor.items.find((item) => item.type === 'ancestry');
+    if (!primaryAncestry) {
+      ui.notifications.warn('Choose an ancestry before selecting an origin.');
+      return;
+    }
+
+    const options = getOriginOptionsForAncestry(primaryAncestry.name);
+    if (!options.length) {
+      ui.notifications.warn(`No origin options are configured for ${primaryAncestry.name}.`);
+      return;
+    }
+
+    const currentOrigin = normalizeOriginKey(this.actor.system?.biography?.origin);
+    const selectedIndex = Math.max(0, options.findIndex((option) => option.key === currentOrigin));
+    const result = await foundry.applications.api.DialogV2.wait({
+      window: { title: `Choose Nationality: ${this.actor.name}` },
+      content: `
+        <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+          <div><strong>${escapeHtml(primaryAncestry.name)}</strong> nationality determines the native language assigned during creation.</div>
+          <div class="form-group">
+            <label>Nationality</label>
+            <select name="originChoice" style="width: 100%; padding: 6px;">
+              ${options.map((option, index) => `<option value="${index}" ${index === selectedIndex ? 'selected' : ''}>${escapeHtml(option.label)}${option.requiresGMApproval ? ' (GM approval)' : ''}</option>`).join('')}
+            </select>
+          </div>
+          <div style="font-size: 12px; color: #666;">Some nationalities may require GM approval based on campaign scope.</div>
+        </form>
+      `,
+      buttons: [
+        {
+          action: 'apply',
+          label: 'Apply Nationality',
+          default: true,
+          callback: (dialogEvent, button, dialog) => options[Number.parseInt(dialog.element.querySelector('[name="originChoice"]')?.value || `${selectedIndex}`, 10)] || null,
+        },
+        {
+          action: 'cancel',
+          label: 'Cancel',
+        },
+      ],
+    });
+
+    if (!result) return;
+    if (result.requiresGMApproval && !game.user?.isGM) {
+      ui.notifications.warn(`${result.label} requires GM approval.`);
+      return;
+    }
+
+    const nativeLanguage = getNativeLanguageKeyForOrigin(result.key);
+    const selectedLanguages = Array.isArray(this.actor.system?.languages?.selected)
+      ? this.actor.system.languages.selected.filter((entry) => entry !== nativeLanguage)
+      : [];
+
+    await this.actor.update({
+      'system.biography.origin': result.key,
+      'system.languages.native': nativeLanguage,
+      'system.languages.selected': selectedLanguages,
+    });
+  }
+
+  static async #onToggleLanguageOption(event, target) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (!this.isEditable) {
+      ui.notifications.warn('You cannot edit languages on this actor.');
+      return;
+    }
+
+    const languageKey = normalizeLanguageKey(target.dataset.languageKey);
+    const nativeLanguage = normalizeLanguageKey(this.actor.system?.languages?.native);
+    if (!languageKey || languageKey === nativeLanguage) {
+      return;
+    }
+
+    const capacity = Math.max(0, Math.floor(Number(this.actor.system?.languages?.capacity ?? 0) || 0));
+    const currentSelections = Array.isArray(this.actor.system?.languages?.selected)
+      ? [...this.actor.system.languages.selected]
+      : [];
+    const existingIndex = currentSelections.indexOf(languageKey);
+
+    if (existingIndex >= 0) {
+      currentSelections.splice(existingIndex, 1);
+      await this.actor.update({ 'system.languages.selected': currentSelections });
+      return;
+    }
+
+    if (currentSelections.length >= capacity) {
+      ui.notifications.warn(`This character can only select ${capacity} additional language${capacity === 1 ? '' : 's'}.`);
+      return;
+    }
+
+    currentSelections.push(languageKey);
+    await this.actor.update({ 'system.languages.selected': currentSelections });
   }
 
   /**
@@ -1077,7 +1337,10 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       return;
     }
 
-    await game.legends?.progression?.cycleProgressionPhase?.(this.actor);
+    const nextPhase = await game.legends?.progression?.cycleProgressionPhase?.(this.actor);
+    if (nextPhase === 'creation') {
+      await game.legends?.characterCreation?.launchCharacterCreationWorkflow?.(this.actor);
+    }
     this.render();
   }
 
@@ -1225,6 +1488,9 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         break;
       case 'shield':
         html += D8CharacterSheet._generateShieldSummary(system);
+        break;
+      case 'equipment':
+        html += D8CharacterSheet._generateEquipmentSummary(system);
         break;
       case 'weave':
         html += D8CharacterSheet._generateWeaveSummary(system);
@@ -1492,6 +1758,57 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
     if (system.notes) {
       html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Notes:</span><span class="detail-value">${system.notes.replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+
+    return html;
+  }
+
+  static _generateEquipmentSummary(system) {
+    let html = '<div class="details-section">';
+
+    if (system.equipmentType) {
+      html += `<div class="detail-row"><span class="detail-label">Category:</span><span class="detail-value">${system.equipmentType}</span></div>`;
+    }
+    if (Number.isFinite(system.weight) && system.weight > 0) {
+      html += `<div class="detail-row"><span class="detail-label">Weight:</span><span class="detail-value">${system.weight} lbs</span></div>`;
+    }
+    if (Number.isFinite(system.cost) && system.cost > 0) {
+      html += `<div class="detail-row"><span class="detail-label">Cost:</span><span class="detail-value">${system.cost} gp</span></div>`;
+    }
+    if (Number.isFinite(system.quantity) && system.quantity > 0) {
+      html += `<div class="detail-row"><span class="detail-label">Quantity:</span><span class="detail-value">${system.quantity}</span></div>`;
+    }
+    if (system.encumbrance?.carryLabel) {
+      html += `<div class="detail-row"><span class="detail-label">Carry:</span><span class="detail-value">${system.encumbrance.carryLabel}</span></div>`;
+    }
+    if (system.encumbrance?.containerName) {
+      html += `<div class="detail-row"><span class="detail-label">Container:</span><span class="detail-value">${system.encumbrance.containerName}</span></div>`;
+    }
+    if (Number.isFinite(system.encumbrance?.effectiveWeight)) {
+      html += `<div class="detail-row"><span class="detail-label">Effective Weight:</span><span class="detail-value">${system.encumbrance.effectiveWeight} lbs</span></div>`;
+    }
+
+    if (system.equipmentType === 'container') {
+      const profile = system.container?.profile || 'custom';
+      html += `<div class="detail-row"><span class="detail-label">Profile:</span><span class="detail-value">${profile}</span></div>`;
+      if (Number.isFinite(system.container?.capacity) && system.container.capacity > 0) {
+        html += `<div class="detail-row"><span class="detail-label">Capacity:</span><span class="detail-value">${system.container.capacity} lbs</span></div>`;
+      }
+      if (profile === 'saddlebags') {
+        html += `<div class="detail-row"><span class="detail-label">Mounted:</span><span class="detail-value">${system.container?.mounted ? 'Yes' : 'No'}</span></div>`;
+      } else if (Number.isFinite(system.container?.reduction)) {
+        html += `<div class="detail-row"><span class="detail-label">Contents Multiplier:</span><span class="detail-value">${system.container.reduction}</span></div>`;
+      }
+    }
+
+    html += '</div>';
+
+    if (system.properties) {
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Properties:</span><span class="detail-value">${String(system.properties).replace(/\n/g, '<br>')}</span></div></div>`;
+    }
+
+    if (system.notes) {
+      html += `<div class="details-section"><div class="detail-row"><span class="detail-label">Notes:</span><span class="detail-value">${String(system.notes).replace(/\n/g, '<br>')}</span></div></div>`;
     }
 
     return html;

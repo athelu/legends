@@ -57,10 +57,35 @@
       <!-- Container Properties (if applicable) -->
       {{#if (eq system.equipmentType "container")}}
       <h3>Container Properties</h3>
-      <div class="form-group">
-        <label>Capacity</label>
-        <input type="text" name="system.capacity" value="{{system.capacity}}" placeholder="e.g., 30 lbs, 1 cubic ft" />
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Container Profile</label>
+          <select name="system.container.profile">
+            {{#each containerProfileOptions as |option|}}
+            <option value="{{option.value}}" {{#if (eq ../system.container.profile option.value)}}selected{{/if}}>{{option.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Capacity (lbs)</label>
+          <input type="number" name="system.container.capacity" value="{{system.container.capacity}}" data-dtype="Number" step="0.1" min="0" />
+        </div>
       </div>
+      {{#if (eq system.container.profile "custom")}}
+      <div class="form-group">
+        <label>Contents Weight Multiplier</label>
+        <input type="number" name="system.container.reduction" value="{{system.container.reduction}}" data-dtype="Number" step="0.05" min="0" max="1" />
+        <small>Use decimals such as 0.5 for half weight or 0.75 for three-quarter weight.</small>
+      </div>
+      {{/if}}
+      {{#if (eq system.container.profile "saddlebags")}}
+      <div class="form-group">
+        <label class="checkbox">
+          <input type="checkbox" name="system.container.mounted" {{#if system.container.mounted}}checked{{/if}} />
+          Currently mounted on a beast or vehicle
+        </label>
+      </div>
+      {{/if}}
       {{/if}}
 
       <!-- Light Source Properties (if applicable) -->
@@ -152,6 +177,30 @@
           Equipped/Active
         </label>
       </div>
+
+      {{#if isPhysicalItem}}
+      <h3>Carry State</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Carry Method</label>
+          <select name="system.encumbrance.carryState">
+            {{#each carryOptions as |option|}}
+            <option value="{{option.value}}" {{#if (eq ../system.encumbrance.carryState option.value)}}selected{{/if}}>{{option.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Container</label>
+          <select name="system.encumbrance.containerId">
+            <option value="">Not stored</option>
+            {{#each containerOptions as |option|}}
+            <option value="{{option.value}}" {{#if (eq ../system.encumbrance.containerId option.value)}}selected{{/if}}>{{option.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+      </div>
+      <small>Choose Auto to follow the default handling for this item type. Stored items use the selected container's encumbrance rules.</small>
+      {{/if}}
 
       <!-- Notes -->
       <div class="form-group">

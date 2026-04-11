@@ -1,0 +1,20 @@
+{
+  "_id": "63f1c663f290af3e",
+  "name": "Award Session XP to All Player Characters",
+  "type": "script",
+  "author": "legends-system",
+  "img": "icons/svg/coins.svg",
+  "scope": "global",
+  "folder": null,
+  "ownership": {
+    "default": 0
+  },
+  "command": "(async () => {\n  if (!game.user?.isGM) {\n    ui.notifications.warn('Only the GM can run the session XP award macro.');\n    return;\n  }\n\n  if (!game.legends?.progression?.showAwardPartyXPDialog) {\n    ui.notifications.error('Legends progression tools are not available yet.');\n    return;\n  }\n\n  await game.legends.progression.showAwardPartyXPDialog();\n})();",
+  "flags": {
+    "legends": {
+      "systemMacro": true,
+      "macroKey": "award-session-xp-all-players"
+    }
+  },
+  "_key": "!macros!63f1c663f290af3e"
+}

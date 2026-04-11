@@ -109,7 +109,22 @@ Cold is a stacking condition and making a successful saving throw will reduce th
 
 ### Dying
 **Effect:** You are at 0 HP or below. Cannot take actions, reactions, or move. Unconscious condition active. Blinded condition active. Prone condition active
-**Recovery:** See Dying Mechanic section
+**Recovery:** See Dying Mechanic section.
+
+## Encumbered
+**Keyword:** [Hindered]
+**Trigger:** Effective carried weight exceeds Str × 10 lbs
+**Effect:** Movement speed reduced by 10 feet. Add 1 to both dice on Athletics
+and Acrobatics checks.
+**Recovery:** Reduce effective carried weight to Str × 10 lbs or below.
+
+## Heavily Encumbered
+**Keyword:** [Hindered]
+**Trigger:** Effective carried weight exceeds Str × 15 lbs
+**Effect:** Movement speed reduced by 20 feet (minimum 5 feet). Add 2 to both
+dice on Athletics and Acrobatics checks. Add 1 to both dice on all other
+Agility-based skill checks. Cannot use the Disengage action. Cannot Jump.
+**Recovery:** Reduce effective carried weight to Str × 15 lbs or below.
 
 ## Exhaustion Effects
 Exhaustion is a stacking condition and making a successful saving throw will reduce the level of the condition down the stack. 
@@ -309,5 +324,5 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 
 ### Weakened
 **Keyword:** [Hindered]
-**Effect:** Physical strength impaired. Strength based skill checks: Add 1 to ability die results. Melee damage: Reduce by 2 (minimum 1). Carrying capacity: Halved
+**Effect:** Physical strength impaired. Strength based skill checks: Add 1 to ability die results. Melee damage: Reduce by 2 (minimum 1). When Weakened, recalculate carrying capacity thresholds using Str ÷ 2 (rounded down, minimum 1) for the duration of the condition.
 **Recovery:** Typically 1 minute to 1 hour unless specified otherwise

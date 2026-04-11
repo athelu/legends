@@ -84,6 +84,7 @@ npm run pack:feats
 npm run pack:armor
 npm run pack:weapons
 npm run pack:weaves
+npm run pack:macros
 # etc.
 ```
 
@@ -254,6 +255,8 @@ npm run unpack:armor
 | `npm run pack:<name>` | Compile specific pack (e.g., `pack:feats`) |
 | `npm run unpack:all` | Extract all packs to source files |
 | `npm run unpack:<name>` | Extract specific pack to source files |
+
+System utility macros are published in the `macros` pack. Rebuild them with `npm run pack:macros`.
 
 ## Troubleshooting
 

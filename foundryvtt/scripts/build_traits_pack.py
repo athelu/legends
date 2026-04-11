@@ -4,7 +4,9 @@ Build traits compendium pack from parsed traits.md documentation.
 """
 
 import json
+import os
 import re
+import subprocess
 from pathlib import Path
 from pack_utils import build_pack_from_source, generate_stable_id, ensure_key, md_to_html, apply_enrichers
 
@@ -85,6 +87,21 @@ def _generate_trait_id(name):
     """Generate a stable ID for a trait from its canonical name."""
     normalized_name = re.sub(r'\s+', ' ', name).strip().lower()
     return generate_stable_id(f'trait:{normalized_name}')
+
+
+def _slugify_filename(name):
+    """Create a Windows-safe slug for generated trait source files."""
+    slug = name.lower()
+    slug = re.sub(r"[\\/]+", "-", slug)
+    slug = re.sub(r"[^\w\s-]", "", slug)
+    slug = re.sub(r"\s+", "-", slug)
+    slug = re.sub(r"-+", "-", slug)
+    return slug.strip('-') or 'trait'
+
+
+def _npm_command():
+    """Return the platform-appropriate npm executable for subprocess calls."""
+    return 'npm.cmd' if os.name == 'nt' else 'npm'
 
 
 def _extract_trait_sections(content):
@@ -350,14 +367,21 @@ def main():
         source_dir = script_dir / "foundryvtt" / "packs" / "traits" / "_source"
         source_dir.mkdir(parents=True, exist_ok=True)
         
-        # Clean old JSON files to prevent orphaned entries
-        print("  Cleaning old JSON files...")
-        for old_file in source_dir.glob("*.json"):
+        # Clean previously generated files to prevent orphaned entries.
+        # Keep documentation artifacts like TRAIT_ITEM_SPEC.md intact.
+        print("  Cleaning generated trait source files...")
+        removed_files = 0
+        for old_file in source_dir.iterdir():
+            if old_file.is_dir():
+                continue
+            if old_file.suffix.lower() == '.md':
+                continue
             old_file.unlink()
-        print(f"  Removed old files")
+            removed_files += 1
+        print(f"  Removed {removed_files} old generated files")
         
         for item in items:
-            json_file = source_dir / f"{item['name'].lower().replace(' ', '-').replace('/', '-').replace('(', '').replace(')', '')}.json"
+            json_file = source_dir / f"{_slugify_filename(item['name'])}.json"
             with open(json_file, 'w', encoding='utf-8') as f:
                 ensure_key(item)
                 json.dump(item, f, indent=2, ensure_ascii=False)
@@ -367,8 +391,26 @@ def main():
     print("\nBuilding traits pack...")
     pack_dir = script_dir / "foundryvtt" / "packs" / "traits"
     success = build_pack_from_source(pack_dir, "traits")
+
+    if not success:
+        return 1
+
+    print("\nCompiling traits pack to LevelDB...")
+    try:
+        subprocess.run(
+            [_npm_command(), "run", "pack:traits"],
+            cwd=script_dir,
+            check=True,
+        )
+    except FileNotFoundError:
+        print("  Warning: npm was not found, so the live traits compendium was not rebuilt.")
+        print("  Run 'npm run pack:traits' manually once npm is available.")
+        return 1
+    except subprocess.CalledProcessError as exc:
+        print(f"  Error: failed to compile traits pack (exit code {exc.returncode}).")
+        return exc.returncode or 1
     
-    return 0 if success else 1
+    return 0
 
 
 if __name__ == "__main__":

@@ -13,6 +13,12 @@
     "quantity": 1,
     "equipped": false,
     "capacity": "30 lbs of equipment",
+    "container": {
+      "profile": "frame",
+      "capacity": 30,
+      "reduction": 0.5,
+      "mounted": false
+    },
     "brightLight": 0,
     "dimLight": 0,
     "duration": "",
