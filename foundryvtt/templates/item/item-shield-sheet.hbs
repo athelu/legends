@@ -52,80 +52,115 @@
 
     <!-- Details Tab -->
     <div class="tab details" data-group="primary" data-tab="details">
-      
-      <!-- Shield Type -->
-      <div class="form-group">
-        <label>Shield Type</label>
-        <select name="system.shieldType" class="shield-type-select">
-          <option value="light" {{#if (eq system.shieldType "light")}}selected{{/if}}>Light Shield</option>
-          <option value="medium" {{#if (eq system.shieldType "medium")}}selected{{/if}}>Medium Shield</option>
-          <option value="heavy" {{#if (eq system.shieldType "heavy")}}selected{{/if}}>Heavy Shield</option>
-        </select>
-      </div>
+      <div class="item-details-stack">
+        <section class="detail-card">
+          <h3>Classification</h3>
+          <div class="detail-field-stack">
+            <div class="form-group">
+              <label>Shield Type</label>
+              <select name="system.shieldType" class="shield-type-select">
+                <option value="light" {{#if (eq system.shieldType "light")}}selected{{/if}}>Light Shield</option>
+                <option value="medium" {{#if (eq system.shieldType "medium")}}selected{{/if}}>Medium Shield</option>
+                <option value="heavy" {{#if (eq system.shieldType "heavy")}}selected{{/if}}>Heavy Shield</option>
+              </select>
+            </div>
 
-      <!-- Hand Usage -->
-      <div class="form-group">
-        <label>Hand Usage</label>
-        <input type="text" name="system.handUsage" value="{{system.handUsage}}" placeholder="e.g., Occupies off-hand completely" />
-        <small>Describe how the shield occupies hands/slots</small>
-      </div>
+            <div class="form-group">
+              <label>Requirements</label>
+              <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="e.g., Strength 3 minimum" />
+              <small>Attribute or skill requirements to use this shield</small>
+            </div>
+          </div>
+        </section>
 
-      <!-- Melee Defense -->
-      <div class="form-group">
-        <label>Melee Defense Benefit</label>
-        <input type="text" name="system.meleeDefense" value="{{system.meleeDefense}}" placeholder="e.g., Fortune on defensive melee combat rolls" />
-        <small>Passive melee defense bonus or ability</small>
-      </div>
+        <section class="detail-card">
+          <h3>Usage</h3>
+          <div class="detail-field-stack">
+            <div class="form-group">
+              <label>Hand Usage</label>
+              <input type="text" name="system.handUsage" value="{{system.handUsage}}" placeholder="e.g., Occupies off-hand completely" />
+              <small>Describe how the shield occupies hands or slots</small>
+            </div>
 
-      <!-- Reactions -->
-      <h3>Shield Reactions</h3>
-      <div class="form-group">
-        <label>Reactions (JSON array)</label>
-        <textarea name="system.reactions" rows="4" placeholder='[{"name":"Shield Block","type":"melee","description":"Force Misfortune on one attack"},{"name":"Ranged Defense","type":"ranged","description":"Force Misfortune on ranged attacks"}]'>{{json system.reactions}}</textarea>
-        <small>Define reactions as JSON objects with name, type, and description</small>
-      </div>
+            <div class="form-group">
+              <label>Melee Defense Benefit</label>
+              <input type="text" name="system.meleeDefense" value="{{system.meleeDefense}}" placeholder="e.g., Fortune on defensive melee combat rolls" />
+              <small>Passive melee defense bonus or ability</small>
+            </div>
 
-      <!-- Requirements -->
-      <div class="form-group">
-        <label>Requirements</label>
-        <input type="text" name="system.requirements" value="{{system.requirements}}" placeholder="e.g., Strength 3 minimum" />
-        <small>Attribute or skill requirements to use this shield</small>
-      </div>
+            <label class="checkbox detail-checkbox">
+              <input type="checkbox" name="system.plantedMode" value="true" {{#if system.plantedMode}}checked{{/if}} />
+              <span>Has planted mode</span>
+            </label>
+          </div>
+        </section>
 
-      <!-- Special Abilities -->
-      <div class="form-group">
-        <label>Special Abilities</label>
-        <textarea name="system.specialAbilities" rows="3" placeholder="e.g., Can be slung on back (1 Minor action to ready)">{{system.specialAbilities}}</textarea>
-        <small>Unique abilities or properties of this shield</small>
-      </div>
+        <section class="detail-card">
+          <h3>Reactions</h3>
+          <div class="form-group">
+            <label>Reactions (JSON array)</label>
+            <textarea name="system.reactions" rows="5" placeholder='[{"name":"Shield Block","type":"melee","description":"Force Misfortune on one attack"},{"name":"Ranged Defense","type":"ranged","description":"Force Misfortune on ranged attacks"}]'>{{json system.reactions}}</textarea>
+            <small>Define reactions as JSON objects with name, type, and description</small>
+          </div>
+        </section>
 
-      <!-- Planted Mode (for Pavise) -->
-      <div class="form-group">
-        <label>Has Planted Mode</label>
-        <input type="checkbox" name="system.plantedMode" value="true" {{#if system.plantedMode}}checked{{/if}} />
-        <small>Check if this shield has a planted/stationary mode</small>
-      </div>
+        <section class="detail-card">
+          <h3>Special Rules</h3>
+          <div class="form-group">
+            <label>Special Abilities</label>
+            <textarea name="system.specialAbilities" rows="4" placeholder="e.g., Can be slung on back (1 Minor action to ready)">{{system.specialAbilities}}</textarea>
+            <small>Unique abilities or handling rules for this shield</small>
+          </div>
+        </section>
 
-      <!-- Physical Properties -->
-      <div class="form-group-row">
-        <div class="form-group">
-          <label>Weight (lbs)</label>
-          <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
-        </div>
-        <div class="form-group">
-          <label>Cost (gp)</label>
-          <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
-        </div>
-        <div class="form-group">
-          <label>Quantity</label>
-          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
-        </div>
-      </div>
+        <section class="detail-card">
+          <h3>Physical Properties</h3>
+          <div class="detail-field-stack compact-numbers">
+            <div class="form-group">
+              <label>Weight (lbs)</label>
+              <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
+            </div>
+            <div class="form-group">
+              <label>Cost (gp)</label>
+              <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
+            </div>
+            <div class="form-group">
+              <label>Quantity</label>
+              <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
+            </div>
+          </div>
+        </section>
 
-      <!-- Notes -->
-      <div class="form-group">
-        <label>Notes</label>
-        <textarea name="system.notes" rows="3" placeholder="Additional notes about this shield">{{system.notes}}</textarea>
+        <section class="detail-card">
+          <h3>Carry State</h3>
+          <div class="detail-field-stack">
+            <div class="form-group">
+              <label>Carry Method</label>
+              <select name="system.encumbrance.carryState">
+                {{#each carryOptions as |option|}}
+                <option value="{{option.value}}" {{#if (eq ../system.encumbrance.carryState option.value)}}selected{{/if}}>{{option.label}}</option>
+                {{/each}}
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Container</label>
+              <select name="system.encumbrance.containerId">
+                <option value="">Not stored</option>
+                {{#each containerOptions as |option|}}
+                <option value="{{option.value}}" {{#if (eq ../system.encumbrance.containerId option.value)}}selected{{/if}}>{{option.label}}</option>
+                {{/each}}
+              </select>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-card">
+          <h3>Notes</h3>
+          <div class="form-group">
+            <label>Special Notes</label>
+            <textarea name="system.notes" rows="4" placeholder="Additional notes about this shield">{{system.notes}}</textarea>
+          </div>
+        </section>
       </div>
 
     </div>

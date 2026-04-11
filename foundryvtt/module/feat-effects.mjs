@@ -1,5 +1,7 @@
 import { normalizeSkillKey } from './skill-utils.mjs';
 
+const ENERGY_KEYS = new Set(['fire', 'water', 'earth', 'air', 'positive', 'negative', 'time', 'space']);
+
 /**
  * Feat validation and usage handlers for Legends
  */
@@ -88,7 +90,69 @@ export function validatePrereqs(actor, item) {
     }
   }
 
+  const otherText = String(prereqs.other || '').trim();
+  if (otherText) {
+    reasons.push(...validateOtherPrereqs(actor, otherText));
+  }
+
   return reasons;
+}
+
+function validateOtherPrereqs(actor, otherText) {
+  const reasons = [];
+  const parts = otherText.split(/[;,]/).map(part => part.trim()).filter(Boolean);
+
+  for (const part of parts) {
+    const masteryMatch = part.match(/^(fire|water|earth|air|positive|negative|time|space)\s+mastery\s+(\d+)$/i);
+    if (masteryMatch) {
+      const energyKey = masteryMatch.group(1).toLowerCase();
+      const required = Number(masteryMatch.group(2) || 0);
+      const current = Number(actor.system?.mastery?.[energyKey]?.value ?? 0);
+      if (current < required) reasons.push(`Requires ${capitalize(energyKey)} Mastery ${required}+ (actor has ${current})`);
+      continue;
+    }
+
+    const potentialMatch = part.match(/^(fire|water|earth|air|positive|negative|time|space)\s+potential\s+(\d+)$/i);
+    if (potentialMatch) {
+      const energyKey = potentialMatch.group(1).toLowerCase();
+      const required = Number(potentialMatch.group(2) || 0);
+      const current = Number(actor.system?.potentials?.[energyKey]?.value ?? 0);
+      if (current < required) reasons.push(`Requires ${capitalize(energyKey)} Potential ${required}+ (actor has ${current})`);
+      continue;
+    }
+
+    if (/^any\s+magical\s+tradition\s+trait$/i.test(part)) {
+      const magicalTraitType = String(actor.system?.magicalTrait?.type || '').trim().toLowerCase();
+      if (!magicalTraitType) reasons.push('Requires any magical tradition trait');
+      continue;
+    }
+
+    if (/^(must be a spellcaster|spellcaster)$/i.test(part)) {
+      const magicalTraitType = String(actor.system?.magicalTrait?.type || '').trim().toLowerCase();
+      if (!magicalTraitType || magicalTraitType === 'alchemical-tradition') {
+        reasons.push('Requires a spellcasting magical trait');
+      }
+      continue;
+    }
+
+    const castingAttributeMatch = part.match(/^casting\s+attribute\s+(\d+)$/i);
+    if (castingAttributeMatch) {
+      const required = Number(castingAttributeMatch.group(1) || 0);
+      const castingStatKey = String(actor.system?.castingStat?.value || '').trim();
+      const current = Number(actor.system?.attributes?.[castingStatKey]?.value ?? 0);
+      if (!castingStatKey || current < required) {
+        reasons.push(`Requires Casting Attribute ${required}+ (actor has ${current})`);
+      }
+      continue;
+    }
+  }
+
+  return reasons;
+}
+
+function capitalize(value) {
+  if (!value) return '';
+  return value.charAt(0).toUpperCase() + value.slice(1);
 }
 
 function parseSkillString(str) {

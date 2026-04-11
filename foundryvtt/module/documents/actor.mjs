@@ -3,6 +3,7 @@
  */
 import * as featEffects from "../feat-effects.mjs";
 import { buildAbilityRechargeUpdate, buildFeatRechargeUpdate } from "./item.mjs";
+import { buildActorLanguageState, getNativeLanguageKeyForOrigin, getOriginLabel, isOriginValidForAncestry, normalizeActorLanguageData, normalizeOriginKey } from "../languages.mjs";
 import { getTierInfoFromXp } from "../progression.mjs";
 import { normalizeSkillKey, syncSkillAliases } from "../skill-utils.mjs";
 import { normalizeTrainingState } from "../training.mjs";
@@ -12,6 +13,335 @@ const NO_SHORT_REST_BENEFIT_CONDITIONS = new Set(['Exhausted', 'Severely Exhaust
 const NO_SHORT_REST_HP_CONDITIONS = new Set(['Fatigued']);
 const HALF_REST_HP_CONDITIONS = new Set(['Poisoned (Weak)', 'Poisoned (Strong)']);
 const EXHAUSTION_CONDITION_CHAIN = ['Fatigued', 'Exhausted', 'Severely Exhausted', 'Near Collapse', 'Collapse'];
+const WEALTH_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment']);
+const PHYSICAL_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment']);
+const VALID_CARRY_STATES = new Set(['', 'carried', 'equipped', 'container', 'mounted']);
+const CONTAINER_PROFILE_LABELS = {
+  frame: 'Frame Container',
+  'body-worn': 'Body-worn Pouch',
+  saddlebags: 'Saddlebags',
+  custom: 'Custom Container',
+};
+
+function normalizeCurrencyAmount(value) {
+  return Math.max(0, Math.floor(Number(value) || 0));
+}
+
+function normalizeCurrencyData(currencyData = {}) {
+  return {
+    gp: normalizeCurrencyAmount(currencyData.gp),
+    sp: normalizeCurrencyAmount(currencyData.sp),
+    cp: normalizeCurrencyAmount(currencyData.cp),
+  };
+}
+
+function gpToCp(value) {
+  return Math.max(0, Math.round((Number(value) || 0) * 100));
+}
+
+function buildWealthBreakdown(totalCp) {
+  const normalizedCp = Math.max(0, Math.floor(Number(totalCp) || 0));
+  const gp = Math.floor(normalizedCp / 100);
+  const sp = Math.floor((normalizedCp % 100) / 10);
+  const cp = normalizedCp % 10;
+  const parts = [];
+  if (gp) parts.push(`${gp} gp`);
+  if (sp) parts.push(`${sp} sp`);
+  if (cp || parts.length === 0) parts.push(`${cp} cp`);
+
+  return {
+    gp,
+    sp,
+    cp,
+    totalCp: normalizedCp,
+    totalGp: normalizedCp / 100,
+    display: parts.join(' '),
+  };
+}
+
+function roundWeight(value) {
+  return Math.max(0, Math.round(Number(value) || 0));
+}
+
+function getListedWeight(item) {
+  const weight = Number(item?.system?.weight ?? 0);
+  const quantity = Math.max(0, Number(item?.system?.quantity ?? 1) || 0);
+  if (!Number.isFinite(weight) || weight <= 0 || quantity <= 0) return 0;
+  return weight * quantity;
+}
+
+function normalizeCarryState(item) {
+  const explicit = String(item?.system?.encumbrance?.carryState || '').trim();
+  if (VALID_CARRY_STATES.has(explicit) && explicit) {
+    return explicit;
+  }
+
+  if (item?.type === 'weapon' || item?.type === 'armor' || item?.type === 'shield') {
+    return item?.system?.equipped ? 'equipped' : 'carried';
+  }
+
+  if (item?.type === 'equipment') {
+    const equipmentType = String(item?.system?.equipmentType || '').trim().toLowerCase();
+    if (equipmentType === 'container') {
+      return 'carried';
+    }
+    return item?.system?.equipped ? 'equipped' : 'carried';
+  }
+
+  return 'carried';
+}
+
+function getCarryStateLabel(carryState) {
+  switch (carryState) {
+    case 'equipped':
+      return 'Equipped';
+    case 'mounted':
+      return 'Mounted';
+    case 'container':
+      return 'Stored in Container';
+    case 'carried':
+    default:
+      return 'Carried';
+  }
+}
+
+function getCarryRate(carryState) {
+  switch (carryState) {
+    case 'equipped':
+      return 0.5;
+    case 'mounted':
+      return 0;
+    case 'carried':
+    case 'container':
+    default:
+      return 1;
+  }
+}
+
+function getContainerConfig(item) {
+  if (item?.type !== 'equipment' || item?.system?.equipmentType !== 'container') {
+    return null;
+  }
+
+  const containerData = item.system?.container || {};
+  const profile = String(containerData.profile || '').trim() || 'custom';
+  const capacity = Math.max(0, Number(containerData.capacity ?? 0) || 0);
+  const reduction = Math.min(1, Math.max(0, Number(containerData.reduction ?? 1) || 1));
+  const mounted = Boolean(containerData.mounted);
+
+  return {
+    profile,
+    profileLabel: CONTAINER_PROFILE_LABELS[profile] || 'Container',
+    capacity,
+    reduction,
+    mounted,
+  };
+}
+
+function computeContainerContentsState(containerConfig, rawContentsWeight) {
+  const rawWeight = Math.max(0, Number(rawContentsWeight) || 0);
+  if (!containerConfig || rawWeight <= 0) {
+    return {
+      effectiveWeight: 0,
+      overflowWeight: 0,
+      supportedWeight: 0,
+      effectiveRate: 1,
+    };
+  }
+
+  if (containerConfig.profile === 'saddlebags') {
+    return {
+      effectiveWeight: containerConfig.mounted ? 0 : roundWeight(rawWeight),
+      overflowWeight: 0,
+      supportedWeight: rawWeight,
+      effectiveRate: containerConfig.mounted ? 0 : 1,
+    };
+  }
+
+  if (containerConfig.capacity <= 0) {
+    return {
+      effectiveWeight: roundWeight(rawWeight),
+      overflowWeight: 0,
+      supportedWeight: 0,
+      effectiveRate: 1,
+    };
+  }
+
+  const supportedWeight = Math.min(rawWeight, containerConfig.capacity);
+  const overflowWeight = Math.max(0, rawWeight - containerConfig.capacity);
+  const effectiveWeight = roundWeight((supportedWeight * containerConfig.reduction) + overflowWeight);
+
+  return {
+    effectiveWeight,
+    overflowWeight: roundWeight(overflowWeight),
+    supportedWeight: roundWeight(supportedWeight),
+    effectiveRate: rawWeight > 0 ? effectiveWeight / rawWeight : containerConfig.reduction,
+  };
+}
+
+function hasPowerfulBuild(actor, ancestryEffects) {
+  if (String(ancestryEffects?.traits || '').toLowerCase().includes('powerful build')) {
+    return true;
+  }
+
+  return actor.items.some(item => {
+    if (item.type !== 'trait') return false;
+    return String(item.name || '').trim().toLowerCase() === 'powerful build';
+  });
+}
+
+export function buildActorEncumbranceState(actor, ancestryEffects = null) {
+  const strengthScore = Math.max(
+    0,
+    Number(actor?.system?.attributesEffective?.strength ?? actor?.system?.attributes?.strength?.value ?? 0) || 0
+  );
+  const powerfulBuild = hasPowerfulBuild(actor, ancestryEffects);
+  const thresholdMultiplier = powerfulBuild ? 1.5 : 1;
+  const thresholds = {
+    unencumbered: roundWeight(strengthScore * 10 * thresholdMultiplier),
+    encumbered: roundWeight(strengthScore * 15 * thresholdMultiplier),
+    heavilyEncumbered: roundWeight(strengthScore * 20 * thresholdMultiplier),
+    max: roundWeight(strengthScore * 20 * thresholdMultiplier),
+  };
+
+  const physicalItems = actor.items.filter(item => PHYSICAL_ITEM_TYPES.has(item.type));
+  const itemsById = new Map(physicalItems.map(item => [item.id, item]));
+  const containerItems = new Map(
+    physicalItems
+      .filter(item => item.type === 'equipment' && item.system?.equipmentType === 'container')
+      .map(item => [item.id, item])
+  );
+  const childrenByContainer = new Map();
+  const roots = new Set();
+  const itemState = {};
+
+  for (const item of physicalItems) {
+    const carryState = normalizeCarryState(item);
+    const listedWeight = getListedWeight(item);
+    const rawContainerId = String(item.system?.encumbrance?.containerId || '').trim();
+    const assignedContainer = rawContainerId && rawContainerId !== item.id ? containerItems.get(rawContainerId) : null;
+
+    itemState[item.id] = {
+      carryState,
+      carryLabel: getCarryStateLabel(carryState),
+      containerId: assignedContainer?.id || '',
+      containerName: assignedContainer?.name || '',
+      listedWeight: roundWeight(listedWeight),
+      effectiveWeight: 0,
+      rate: getCarryRate(carryState),
+      isContainer: containerItems.has(item.id),
+    };
+
+    if (assignedContainer) {
+      const children = childrenByContainer.get(assignedContainer.id) || [];
+      children.push(item.id);
+      childrenByContainer.set(assignedContainer.id, children);
+      continue;
+    }
+
+    roots.add(item.id);
+  }
+
+  for (const item of physicalItems) {
+    if (itemState[item.id]?.containerId) continue;
+    roots.add(item.id);
+  }
+
+  const containers = [];
+  let effectiveWeight = 0;
+
+  for (const rootId of roots) {
+    const rootItem = itemsById.get(rootId);
+    if (!rootItem) continue;
+
+    const rootState = itemState[rootId];
+    const rootListedWeight = rootState?.listedWeight || 0;
+    const descendantIds = [];
+    const stack = [...(childrenByContainer.get(rootId) || [])];
+    const visited = new Set();
+
+    while (stack.length > 0) {
+      const currentId = stack.pop();
+      if (!currentId || visited.has(currentId)) continue;
+      visited.add(currentId);
+      descendantIds.push(currentId);
+      for (const childId of (childrenByContainer.get(currentId) || [])) {
+        if (!visited.has(childId)) stack.push(childId);
+      }
+    }
+
+    if (rootState?.isContainer) {
+      const containerConfig = getContainerConfig(rootItem);
+      const selfWeight = roundWeight(rootListedWeight * getCarryRate(rootState.carryState));
+      const rawContentsWeight = roundWeight(descendantIds.reduce((total, itemId) => {
+        return total + (itemState[itemId]?.listedWeight || 0);
+      }, 0));
+      const contentsState = computeContainerContentsState(containerConfig, rawContentsWeight);
+
+      rootState.effectiveWeight = selfWeight + contentsState.effectiveWeight;
+      effectiveWeight += rootState.effectiveWeight;
+
+      for (const itemId of descendantIds) {
+        itemState[itemId].effectiveWeight = roundWeight(itemState[itemId].listedWeight * contentsState.effectiveRate);
+        itemState[itemId].carryLabel = rootItem.name
+          ? `Stored in ${rootItem.name}`
+          : 'Stored in Container';
+        itemState[itemId].containerName = rootItem.name || itemState[itemId].containerName;
+      }
+
+      containers.push({
+        id: rootItem.id,
+        name: rootItem.name,
+        profile: containerConfig?.profile || 'custom',
+        profileLabel: containerConfig?.profileLabel || 'Container',
+        mounted: Boolean(containerConfig?.mounted),
+        capacity: roundWeight(containerConfig?.capacity || 0),
+        rawWeight: rawContentsWeight,
+        effectiveWeight: contentsState.effectiveWeight,
+        overflowWeight: contentsState.overflowWeight,
+        supportedWeight: contentsState.supportedWeight,
+      });
+      continue;
+    }
+
+    rootState.effectiveWeight = roundWeight(rootListedWeight * getCarryRate(rootState.carryState));
+    effectiveWeight += rootState.effectiveWeight;
+
+    for (const itemId of descendantIds) {
+      itemState[itemId].effectiveWeight = itemState[itemId].listedWeight;
+      itemState[itemId].carryLabel = 'Invalid container assignment';
+      itemState[itemId].containerName = '';
+      effectiveWeight += itemState[itemId].effectiveWeight;
+    }
+  }
+
+  let tier = 'unencumbered';
+  let tierLabel = 'Unencumbered';
+  let conditionName = '';
+  if (effectiveWeight > thresholds.encumbered) {
+    tier = effectiveWeight > thresholds.max ? 'over-limit' : 'heavily-encumbered';
+    tierLabel = effectiveWeight > thresholds.max ? 'Over Maximum' : 'Heavily Encumbered';
+    conditionName = 'Heavily Encumbered';
+  } else if (effectiveWeight > thresholds.unencumbered) {
+    tier = 'encumbered';
+    tierLabel = 'Encumbered';
+    conditionName = 'Encumbered';
+  }
+
+  return {
+    strength: strengthScore,
+    powerfulBuild,
+    effectiveWeight,
+    tier,
+    tierLabel,
+    conditionName,
+    overLimit: effectiveWeight > thresholds.max,
+    canMove: effectiveWeight <= thresholds.max,
+    thresholds,
+    containers,
+    items: itemState,
+  };
+}
 
 export class D8Actor extends Actor {
   
@@ -76,6 +406,10 @@ export class D8Actor extends Actor {
       this.system.progression.transactions = Array.isArray(this.system.progression.transactions)
         ? this.system.progression.transactions
         : [];
+      this.system.currency = normalizeCurrencyData(this.system.currency);
+      this.system.biography = this.system.biography || {};
+      this.system.biography.origin = normalizeOriginKey(this.system.biography.origin);
+      this.system.languages = normalizeActorLanguageData(this.system.languages);
       this.system.training = normalizeTrainingState(this.system.training);
     }
   }
@@ -97,6 +431,15 @@ export class D8Actor extends Actor {
 _prepareCharacterData(actorData) {
   const systemData = actorData.system;
   const ancestryEffects = this._collectAncestryEffects(actorData.items);
+  const ancestryName = ancestryEffects.primaryName || '';
+  const skillRank = Math.max(0, Math.floor(Number(systemData.skills?.language ?? 0) || 0));
+  const currentOrigin = normalizeOriginKey(systemData.biography?.origin);
+  const validOrigin = isOriginValidForAncestry(currentOrigin, ancestryName) ? currentOrigin : '';
+  const fallbackNativeLanguage = getNativeLanguageKeyForOrigin(validOrigin);
+  const languageState = buildActorLanguageState({
+    ...systemData.languages,
+    native: systemData.languages?.native || fallbackNativeLanguage,
+  }, skillRank);
   // Aggregate DR per damage type from equipped armor
   let slashingTotal = 0;
   let piercingTotal = 0;
@@ -142,6 +485,20 @@ _prepareCharacterData(actorData) {
   // Store aggregated DR totals and a simple summary value
   if (!systemData.dr) systemData.dr = {};
   systemData.ancestryEffects = ancestryEffects;
+  systemData.biography.origin = validOrigin;
+  systemData.biography.originLabel = getOriginLabel(validOrigin);
+  systemData.languages = {
+    ...systemData.languages,
+    native: languageState.nativeKey,
+    nativeLabel: languageState.nativeLabel,
+    selected: languageState.selectedKeys,
+    selectedLabels: languageState.selectedLabels,
+    known: languageState.knownKeys,
+    knownLabels: languageState.knownLabels,
+    capacity: languageState.capacity,
+    display: languageState.display,
+  };
+  systemData.languagesList = languageState.knownLabels.join('\n');
   systemData.dr.slashing = slashingTotal;
   systemData.dr.piercing = piercingTotal;
   systemData.dr.bludgeoning = bludgeoningTotal;
@@ -171,6 +528,33 @@ _prepareCharacterData(actorData) {
     // Attach computed actions/reactions for UI
     systemData.featActions = featMods.actions || [];
     systemData.featReactions = featMods.reactions || [];
+
+      const normalizedCurrency = normalizeCurrencyData(systemData.currency);
+      systemData.currency = normalizedCurrency;
+      const coinTotalCp = (normalizedCurrency.gp * 100) + (normalizedCurrency.sp * 10) + normalizedCurrency.cp;
+
+      let equipmentTotalCp = 0;
+      let equipmentItemCount = 0;
+      for (const item of actorData.items) {
+        if (!WEALTH_ITEM_TYPES.has(item.type)) continue;
+        const cost = Number(item.system?.cost ?? 0);
+        if (!Number.isFinite(cost) || cost <= 0) continue;
+        const quantity = Math.max(0, Number(item.system?.quantity ?? 1) || 0);
+        if (quantity <= 0) continue;
+        equipmentItemCount += 1;
+        equipmentTotalCp += gpToCp(cost * quantity);
+      }
+
+      systemData.wealth = {
+        coins: buildWealthBreakdown(coinTotalCp),
+        equipment: {
+          ...buildWealthBreakdown(equipmentTotalCp),
+          itemCount: equipmentItemCount,
+        },
+        total: buildWealthBreakdown(coinTotalCp + equipmentTotalCp),
+      };
+
+        systemData.encumbrance = buildActorEncumbranceState(actorData, ancestryEffects);
   }
 
   _getActiveConditionNames() {

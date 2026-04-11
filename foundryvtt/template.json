@@ -6,7 +6,8 @@
         "biography": {
           "value": "",
           "background": "",
-          "ancestry": ""
+          "ancestry": "",
+          "origin": ""
         }
       }
     },
@@ -72,6 +73,10 @@
         "wilderness": 0,
         "religion": 0
       },
+      "languages": {
+        "native": "",
+        "selected": []
+      },
       "hp": {
         "value": 16,
         "max": 16,
@@ -88,6 +93,11 @@
       "energy": {
         "current": 0,
         "max": 0
+      },
+      "currency": {
+        "gp": 0,
+        "sp": 0,
+        "cp": 0
       },
       "potentials": {
         "fire": {
@@ -225,6 +235,24 @@
           "time": false,
           "space": false
         }
+      },
+      "encumbrance": {
+        "strength": 0,
+        "powerfulBuild": false,
+        "effectiveWeight": 0,
+        "tier": "unencumbered",
+        "tierLabel": "Unencumbered",
+        "conditionName": "",
+        "overLimit": false,
+        "canMove": true,
+        "thresholds": {
+          "unencumbered": 0,
+          "encumbered": 0,
+          "heavilyEncumbered": 0,
+          "max": 0
+        },
+        "containers": [],
+        "items": {}
       }
     },
     "npc": {
@@ -294,7 +322,11 @@
         "weight": 0,
         "cost": 0,
         "quantity": 1,
-        "equipped": false
+        "equipped": false,
+        "encumbrance": {
+          "carryState": "",
+          "containerId": ""
+        }
       }
     },
     "weapon": {
@@ -361,6 +393,12 @@
       "templates": ["common", "physical"],
       "equipmentType": "adventuring-gear",
       "capacity": "",
+      "container": {
+        "profile": "",
+        "capacity": 0,
+        "reduction": 1,
+        "mounted": false
+      },
       "brightLight": 0,
       "dimLight": 0,
       "duration": "",

@@ -110,6 +110,13 @@
       "path": "packs/effects",
       "type": "Item",
       "system": "legends"
+    },
+    {
+      "name": "macros",
+      "label": "Legends - Macros",
+      "path": "packs/macros",
+      "type": "Macro",
+      "system": "legends"
     }
   ],
   "languages": [

@@ -9,6 +9,8 @@ current item sheets.
 
 import json
 import re
+import shutil
+import subprocess
 from pathlib import Path
 
 from pack_utils import build_pack_from_source, generate_stable_id, ensure_key, md_to_html, apply_enrichers
@@ -355,11 +357,27 @@ def main():
                 json.dump(item, f, indent=2, ensure_ascii=False)
             print(f"  Saved {json_file.name}")
 
-    print("\nBuilding armor pack...")
+    print("\nValidating armor pack source...")
     pack_dir = script_dir / "foundryvtt" / "packs" / "armor"
     success = build_pack_from_source(pack_dir, "armor")
 
-    return 0 if success else 1
+    if not success:
+        return 1
+
+    npm_executable = shutil.which("npm") or shutil.which("npm.cmd")
+    if not npm_executable:
+        print("  npm was not found on PATH; source JSON was updated but the LevelDB pack was not rebuilt.")
+        print("  Run 'npm run pack:armor' from the repository root to compile the pack.")
+        return 0
+
+    print("\nCompiling armor pack...")
+    try:
+        subprocess.run([npm_executable, "run", "pack:armor"], cwd=script_dir, check=True)
+    except subprocess.CalledProcessError as exc:
+        print(f"  Failed to compile armor pack: {exc}")
+        return exc.returncode or 1
+
+    return 0
 
 
 if __name__ == "__main__":

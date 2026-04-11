@@ -8,13 +8,13 @@
  */
 
 // Import document classes
-import { D8Actor } from "./documents/actor.mjs";
+import { D8Actor, buildActorEncumbranceState } from "./documents/actor.mjs";
 import { D8Item } from "./documents/item.mjs";
 
 // Import sheet classes
 import { D8CharacterSheet } from "./sheets/character-sheet.mjs";
 import { D8NPCSheet } from "./sheets/npc-sheet.mjs";
-import { D8ItemSheet } from "./sheets/item-sheet.mjs";
+import { D8ItemSheet, ITEM_SHEET_CLASS_MAP } from "./sheets/item-sheet.mjs";
 
 // Import helpers
 import * as dice from "./dice.mjs";
@@ -26,6 +26,8 @@ import * as traitEffects from "./trait-effects.mjs";
 import * as effectEngine from "./effect-engine.mjs";
 import * as magicalTraits from "./magical-traits.mjs";
 import * as backgrounds from "./backgrounds.mjs";
+import * as characterCreation from "./character-creation.mjs";
+import * as languages from "./languages.mjs";
 import * as progression from "./progression.mjs";
 import * as training from "./training.mjs";
 import { initializeConditionEngine, initializeChatHandlers, handleRecoveryResult } from "./condition-engine.mjs";
@@ -35,6 +37,23 @@ console.warn("Legends | legends.mjs evaluated", import.meta.url);
 globalThis.__legendsModuleLoaded = true;
 
 const ELEMENTAL_ENERGIES = ["earth", "air", "fire", "water"];
+const ENCUMBRANCE_SYNC_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment', 'trait', 'feat', 'ancestry']);
+const ENCUMBRANCE_CONDITION_NAMES = ['Encumbered', 'Heavily Encumbered'];
+const SESSION_XP_MACRO_NAME = 'Award Session XP to All Player Characters';
+const SESSION_XP_MACRO_KEY = 'award-session-xp-all-players';
+const SESSION_XP_MACRO_COMMAND = `(async () => {
+  if (!game.user?.isGM) {
+    ui.notifications.warn('Only the GM can run the session XP award macro.');
+    return;
+  }
+
+  if (!game.legends?.progression?.showAwardPartyXPDialog) {
+    ui.notifications.error('Legends progression tools are not available yet.');
+    return;
+  }
+
+  await game.legends.progression.showAwardPartyXPDialog();
+})();`;
 
 function resolveWeaveEnergyType(actor, energyType) {
   if (energyType !== "variable-elemental") {
@@ -74,12 +93,62 @@ function getDefaultSheetClassMap() {
     ["character", "legends.D8CharacterSheet"],
     ["npc", "legends.D8NPCSheet"]
   ].filter(([type]) => actorTypes.includes(type)));
-  const itemSheets = Object.fromEntries(itemTypes.map((type) => [type, "legends.D8ItemSheet"]));
+  const itemSheets = Object.fromEntries(
+    itemTypes.map((type) => {
+      const SheetClass = ITEM_SHEET_CLASS_MAP[type] || D8ItemSheet;
+      return [type, `legends.${SheetClass.name}`];
+    })
+  );
 
   return {
     Actor: actorSheets,
     Item: itemSheets
   };
+}
+
+function getItemSheetRegistrations() {
+  const itemTypes = Object.keys(game.system?.documentTypes?.Item || {});
+  const registrations = new Map();
+
+  for (const type of itemTypes) {
+    const SheetClass = ITEM_SHEET_CLASS_MAP[type] || D8ItemSheet;
+    const existing = registrations.get(SheetClass.name);
+    if (existing) {
+      existing.types.push(type);
+      continue;
+    }
+
+    registrations.set(SheetClass.name, {
+      SheetClass,
+      types: [type],
+    });
+  }
+
+  return Array.from(registrations.values());
+}
+
+async function syncActorEncumbranceConditions(actor) {
+  if (!actor || actor.type !== 'character') return;
+
+  const encumbranceState = buildActorEncumbranceState(actor, actor.system?.ancestryEffects || null);
+  const targetCondition = encumbranceState.conditionName || '';
+  const activeConditions = new Set(
+    actor.items
+      .filter(item => item.type === 'condition')
+      .map(item => String(item.name || '').trim())
+      .filter(Boolean)
+  );
+
+  for (const conditionName of ENCUMBRANCE_CONDITION_NAMES) {
+    if (conditionName === targetCondition) continue;
+    if (activeConditions.has(conditionName)) {
+      await removeCondition(actor, conditionName);
+    }
+  }
+
+  if (targetCondition && !activeConditions.has(targetCondition)) {
+    await applyCondition(actor, targetCondition, { source: 'encumbrance-sync' });
+  }
 }
 
 async function ensureDefaultSheets() {
@@ -137,6 +206,43 @@ function getFirstStatusId(activeEffect) {
     return Array.from(statuses)[0] ?? null;
   }
   return null;
+}
+
+async function ensureSystemMacros() {
+  if (!game.user?.isGM || !game.macros) {
+    return;
+  }
+
+  const existingMacro = game.macros.find((macro) => macro.getFlag('legends', 'macroKey') === SESSION_XP_MACRO_KEY);
+  const macroData = {
+    name: SESSION_XP_MACRO_NAME,
+    type: 'script',
+    scope: 'global',
+    img: 'icons/svg/coins.svg',
+    command: SESSION_XP_MACRO_COMMAND,
+    ownership: { default: 0 },
+    flags: {
+      legends: {
+        systemMacro: true,
+        macroKey: SESSION_XP_MACRO_KEY,
+      },
+    },
+  };
+
+  if (existingMacro) {
+    const needsUpdate = existingMacro.name !== macroData.name
+      || existingMacro.type !== macroData.type
+      || existingMacro.img !== macroData.img
+      || existingMacro.command !== macroData.command
+      || existingMacro.getFlag('legends', 'systemMacro') !== true;
+
+    if (needsUpdate) {
+      await existingMacro.update(macroData);
+    }
+    return;
+  }
+
+  await Macro.create(macroData);
 }
 
 async function removeConditionBySource(actor, conditionName, sourceActorId) {
@@ -359,6 +465,8 @@ Hooks.once('init', async function() {
     chat,
     combat,
     backgrounds,
+    characterCreation,
+    languages,
     progression,
     training,
     featEffects,
@@ -399,10 +507,13 @@ Hooks.once('init', async function() {
     });
 
     SheetConfig.unregisterSheet(ItemDocumentClass, "core", foundry.applications.sheets.ItemSheetV2);
-    SheetConfig.registerSheet(ItemDocumentClass, "legends", D8ItemSheet, {
-      makeDefault: true,
-      label: "D8.SheetLabels.Item"
-    });
+    for (const { SheetClass, types } of getItemSheetRegistrations()) {
+      SheetConfig.registerSheet(ItemDocumentClass, "legends", SheetClass, {
+        types,
+        makeDefault: true,
+        label: "D8.SheetLabels.Item"
+      });
+    }
   } else {
     foundry.documents.collections.Actors.unregisterSheet("core", foundry.applications.sheets.ActorSheetV2);
     foundry.documents.collections.Actors.registerSheet("legends", D8CharacterSheet, {
@@ -418,10 +529,13 @@ Hooks.once('init', async function() {
     });
 
     foundry.documents.collections.Items.unregisterSheet("core", foundry.applications.sheets.ItemSheetV2);
-    foundry.documents.collections.Items.registerSheet("legends", D8ItemSheet, {
-      makeDefault: true,
-      label: "D8.SheetLabels.Item"
-    });
+    for (const { SheetClass, types } of getItemSheetRegistrations()) {
+      foundry.documents.collections.Items.registerSheet("legends", SheetClass, {
+        types,
+        makeDefault: true,
+        label: "D8.SheetLabels.Item"
+      });
+    }
   }
 
   // Preload Handlebars templates
@@ -511,6 +625,12 @@ Hooks.once('ready', async function() {
   } catch (err) {
     console.warn('Legends | Error applying shield-linked items on ready', err);
   }
+
+  try {
+    await ensureSystemMacros();
+  } catch (err) {
+    console.warn('Legends | Failed to publish system macros', err);
+  }
 });
 
 /* -------------------------------------------- */
@@ -557,6 +677,16 @@ Hooks.on('preCreateItem', async (item) => {
   }
 });
 
+Hooks.on('createItem', async (item) => {
+  try {
+    if (!item || item.type === 'condition' || !ENCUMBRANCE_SYNC_ITEM_TYPES.has(item.type)) return;
+    if (item.actor?.type !== 'character') return;
+    await syncActorEncumbranceConditions(item.actor);
+  } catch (err) {
+    console.warn('Legends | Error syncing encumbrance on item creation', err);
+  }
+});
+
 // Handle condition removal via token HUD
 Hooks.on('preDeleteActiveEffect', async (activeEffect, options, userId) => {
   // Only handle our condition marker effects
@@ -592,6 +722,16 @@ Hooks.on('updateItem', async (item, diff, options, userId) => {
   }
 });
 
+Hooks.on('updateItem', async (item, diff, options, userId) => {
+  try {
+    if (!item || item.type === 'condition' || !ENCUMBRANCE_SYNC_ITEM_TYPES.has(item.type)) return;
+    if (item.actor?.type !== 'character') return;
+    await syncActorEncumbranceConditions(item.actor);
+  } catch (err) {
+    console.warn('Legends | Error syncing encumbrance on item update', err);
+  }
+});
+
 Hooks.on('deleteItem', async (item, options, userId) => {
   try {
     if (!item || item.type !== 'shield') return;
@@ -602,6 +742,16 @@ Hooks.on('deleteItem', async (item, options, userId) => {
     await shields.syncShieldLinkedItemsForActor(actor);
   } catch (err) {
     console.warn('Legends | Error handling shield removal', err);
+  }
+});
+
+Hooks.on('deleteItem', async (item, options, userId) => {
+  try {
+    if (!item || item.type === 'condition' || !ENCUMBRANCE_SYNC_ITEM_TYPES.has(item.type)) return;
+    if (item.actor?.type !== 'character') return;
+    await syncActorEncumbranceConditions(item.actor);
+  } catch (err) {
+    console.warn('Legends | Error syncing encumbrance on item deletion', err);
   }
 });
 
@@ -617,6 +767,16 @@ Hooks.on('deleteItem', async (item, options, userId) => {
     await magicalTraits.handleMagicalTraitRemoval(actor, item);
   } catch (err) {
     console.error('Legends | Error handling trait removal', err);
+  }
+});
+
+Hooks.on('updateActor', async (actor, diff, options, userId) => {
+  try {
+    if (!actor || actor.type !== 'character') return;
+    if (!foundry.utils.hasProperty(diff, 'system.attributes.strength.value')) return;
+    await syncActorEncumbranceConditions(actor);
+  } catch (err) {
+    console.warn('Legends | Error syncing encumbrance on actor update', err);
   }
 });
 

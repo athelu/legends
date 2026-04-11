@@ -15,18 +15,40 @@
   <section class="sheet-body">
     <!-- Description Tab -->
     <div class="tab description" data-group="primary" data-tab="description">
-      <div class="feat-description-section">
-        <h3>Description</h3>
-        <div class="feat-editor-wrap">
-          {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
-        </div>
-      </div>
+      <div class="feat-overview-grid">
+        <div class="feat-main-column">
+          <div class="feat-description-section">
+            <h3>Description</h3>
+            <div class="feat-editor-wrap">
+              {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+            </div>
+          </div>
 
-      <div class="feat-benefits-section">
-        <h3>Benefits</h3>
-        <div class="feat-editor-wrap">
-          {{editor enrichedBenefits target="system.benefits" button=true owner=owner editable=editable}}
+          <div class="feat-benefits-section">
+            <h3>Benefits</h3>
+            <div class="feat-editor-wrap">
+              {{editor enrichedBenefits target="system.benefits" button=true owner=owner editable=editable}}
+            </div>
+          </div>
         </div>
+
+        <aside class="feat-side-column">
+          <div class="feat-sidebar-section">
+            <h3>Keywords</h3>
+            <div class="form-group">
+              <label>Keywords (comma-separated)</label>
+              <input type="text" name="system.keywords" value="{{system.keywords}}" placeholder="[Combat], [Magic], [Skill]" />
+            </div>
+          </div>
+
+          <div class="feat-sidebar-section">
+            <h3>Special Notes</h3>
+            <div class="form-group">
+              <label>Notes</label>
+              <textarea name="system.notes" rows="8" placeholder="Any special rules or clarifications">{{system.notes}}</textarea>
+            </div>
+          </div>
+        </aside>
       </div>
     </div>
 
@@ -160,19 +182,6 @@
       {{#if featRechargeLabel}}
       <p class="hint">Derived recharge: {{featRechargeLabel}}</p>
       {{/if}}
-      </div>
-
-      <!-- Keywords/Tags -->
-      <div class="form-group">
-        <label>Keywords (comma-separated)</label>
-        <input type="text" name="system.keywords" value="{{system.keywords}}" placeholder="[Combat], [Magic], [Skill]" />
-      </div>
-
-      <!-- Special Notes -->
-      <div class="form-group">
-        <label>Special Notes</label>
-        <textarea name="system.notes" rows="3" placeholder="Any special rules or clarifications">{{system.notes}}</textarea>
-      </div>
 
     </div>
 
