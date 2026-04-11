@@ -121,6 +121,8 @@ The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents
 
 **Hard Task (2 successes):** Perform field surgery, diagnose a rare disease, treat severe injuries without magical aid, create an antidote to an unknown poison, identify cause of death.
 
+**Extended Applications:** Medicine can be used to restore HP during combat, improve short and long rest recovery, and treat diseases. See the Medicine Applications section in conditions for full rules on Field Dressing, Administered Treatment, Evening Treatment, and disease treatment procedures.
+
 ---
 
 ### Melee Combat (Agility)

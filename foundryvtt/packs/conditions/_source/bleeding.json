@@ -5,7 +5,7 @@
   "img": "icons/svg/blood.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Take [[/damage 2]] damage per stack at the end of each of your turns. Multiple bleeding effects add together (2 stacks = [[/damage 4]] damage per turn, 3 stacks = [[/damage 6]] damage per turn). If at 0 HP or below, bleeding damage stops. Add your total bleeding stack count to both dice when making stabilization saves. <strong>Recovery:</strong> Magical healing removes all bleeding stacks. Target may Use 1 action to make a [[/check skill=medicine]] to reduce bleeding.</p>\n<ul>\n<li>2 successes: Remove 1 bleeding stack</li>\n</ul>\n<p><strong>Ally Assistance:</strong> An ally within 5 feet may Use 1 action to make a [[/check skill=medicine]].</p>\n<ul>\n<li>1 successes: Remove 1 bleeding stack</li>\n<li>2 successes: Remove all bleeding stacks</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Take [[/damage 2]] damage per stack at the end of each of your turns. Multiple bleeding effects add together (2 stacks = [[/damage 4]] damage per turn, 3 stacks = [[/damage 6]] damage per turn). If at 0 HP or below, bleeding damage stops. Add your total bleeding stack count to both dice when making stabilization saves. <strong>Recovery:</strong> Magical healing removes all bleeding stacks. Target may use 1 [Interact] action to make a [[/check skill=medicine]] (rank 1 required) to reduce bleeding:</p>\n<ul>\n<li><strong>1 success:</strong> Remove 1 bleeding stack.</li>\n<li><strong>2 successes:</strong> Remove all bleeding stacks.</li>\n</ul>\n<p><strong>Ally Assistance:</strong> An ally within 5 feet may use 1 [Interact] action to make a [[/check skill=medicine]]:</p>\n<ul>\n<li><strong>1 success:</strong> Remove 1 bleeding stack.</li>\n<li><strong>2 successes:</strong> Remove all bleeding stacks.</li>\n</ul>\n<p>See Medicine Applications in this full Field Dressing rules.</p>"
     },
     "label": "Bleeding",
     "category": "damage-over-time",
@@ -42,10 +42,6 @@
       },
       "assistance": {
         "range": 5,
-        "downgrades": {
-          "1_success": "reduceStacks:1",
-          "2_success": null
-        },
         "check": {
           "skill": "medicine",
           "attribute": "",
@@ -56,9 +52,6 @@
           "opposed": false,
           "label": "Medicine"
         }
-      },
-      "downgrades": {
-        "2_success": "reduceStacks:1"
       }
     }
   },

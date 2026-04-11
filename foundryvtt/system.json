@@ -112,6 +112,13 @@
       "system": "legends"
     },
     {
+      "name": "rules",
+      "label": "Legends - Rules Reference",
+      "path": "packs/rules",
+      "type": "JournalEntry",
+      "system": "legends"
+    },
+    {
       "name": "macros",
       "label": "Legends - Macros",
       "path": "packs/macros",

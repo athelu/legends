@@ -69,7 +69,14 @@ function sanitizeCarryData(expanded, itemType) {
   const containerId = typeof expanded.system.encumbrance.containerId === 'string'
     ? expanded.system.encumbrance.containerId.trim()
     : '';
+  const equipped = Boolean(expanded.system.equipped);
   const carryState = VALID_CARRY_STATES.has(rawCarryState) ? rawCarryState : '';
+
+  if (equipped) {
+    expanded.system.encumbrance.carryState = carryState === 'container' ? '' : carryState;
+    expanded.system.encumbrance.containerId = '';
+    return;
+  }
 
   expanded.system.encumbrance.carryState = carryState === 'container' && !containerId ? '' : carryState;
   expanded.system.encumbrance.containerId = expanded.system.encumbrance.carryState === 'container' ? containerId : '';

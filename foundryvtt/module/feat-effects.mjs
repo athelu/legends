@@ -105,8 +105,8 @@ function validateOtherPrereqs(actor, otherText) {
   for (const part of parts) {
     const masteryMatch = part.match(/^(fire|water|earth|air|positive|negative|time|space)\s+mastery\s+(\d+)$/i);
     if (masteryMatch) {
-      const energyKey = masteryMatch.group(1).toLowerCase();
-      const required = Number(masteryMatch.group(2) || 0);
+      const energyKey = String(masteryMatch[1] || '').toLowerCase();
+      const required = Number(masteryMatch[2] || 0);
       const current = Number(actor.system?.mastery?.[energyKey]?.value ?? 0);
       if (current < required) reasons.push(`Requires ${capitalize(energyKey)} Mastery ${required}+ (actor has ${current})`);
       continue;
@@ -114,8 +114,8 @@ function validateOtherPrereqs(actor, otherText) {
 
     const potentialMatch = part.match(/^(fire|water|earth|air|positive|negative|time|space)\s+potential\s+(\d+)$/i);
     if (potentialMatch) {
-      const energyKey = potentialMatch.group(1).toLowerCase();
-      const required = Number(potentialMatch.group(2) || 0);
+      const energyKey = String(potentialMatch[1] || '').toLowerCase();
+      const required = Number(potentialMatch[2] || 0);
       const current = Number(actor.system?.potentials?.[energyKey]?.value ?? 0);
       if (current < required) reasons.push(`Requires ${capitalize(energyKey)} Potential ${required}+ (actor has ${current})`);
       continue;
@@ -137,7 +137,7 @@ function validateOtherPrereqs(actor, otherText) {
 
     const castingAttributeMatch = part.match(/^casting\s+attribute\s+(\d+)$/i);
     if (castingAttributeMatch) {
-      const required = Number(castingAttributeMatch.group(1) || 0);
+      const required = Number(castingAttributeMatch[1] || 0);
       const castingStatKey = String(actor.system?.castingStat?.value || '').trim();
       const current = Number(actor.system?.attributes?.[castingStatKey]?.value ?? 0);
       if (!castingStatKey || current < required) {

@@ -72,12 +72,16 @@ function getListedWeight(item) {
 
 function normalizeCarryState(item) {
   const explicit = String(item?.system?.encumbrance?.carryState || '').trim();
+  const isEquipped = Boolean(item?.system?.equipped);
   if (VALID_CARRY_STATES.has(explicit) && explicit) {
+    if (isEquipped && explicit === 'container') {
+      return 'equipped';
+    }
     return explicit;
   }
 
   if (item?.type === 'weapon' || item?.type === 'armor' || item?.type === 'shield') {
-    return item?.system?.equipped ? 'equipped' : 'carried';
+    return isEquipped ? 'equipped' : 'carried';
   }
 
   if (item?.type === 'equipment') {
@@ -85,7 +89,7 @@ function normalizeCarryState(item) {
     if (equipmentType === 'container') {
       return 'carried';
     }
-    return item?.system?.equipped ? 'equipped' : 'carried';
+    return isEquipped ? 'equipped' : 'carried';
   }
 
   return 'carried';

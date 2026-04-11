@@ -89,6 +89,12 @@ function normalizePhysicalCarryData(systemData, itemType) {
     ? systemData.encumbrance.containerId.trim()
     : '';
 
+  if (systemData.equipped) {
+    systemData.encumbrance.carryState = carryState === 'container' ? '' : carryState;
+    systemData.encumbrance.containerId = '';
+    return;
+  }
+
   systemData.encumbrance.carryState = carryState;
   systemData.encumbrance.containerId = containerId;
 }
