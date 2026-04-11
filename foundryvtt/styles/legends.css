@@ -697,6 +697,49 @@
   gap: 4px;
 }
 
+.legends .skills-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.legends .skills-header h3 {
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--d8-border);
+  color: var(--d8-text);
+  font-size: 16px;
+  text-transform: uppercase;
+  flex: 1;
+}
+
+.legends .skills-reference-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border: 1px solid var(--d8-accent);
+  border-radius: 999px;
+  background: linear-gradient(to bottom, rgba(45, 55, 72, 0.95), rgba(26, 32, 44, 0.95));
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.legends .skills-reference-button:hover {
+  background: linear-gradient(to bottom, var(--d8-primary), var(--d8-accent));
+  transform: translateY(-1px);
+}
+
+.legends .skills-reference-button i {
+  font-size: 11px;
+}
+
 .legends .skill-row {
   display: flex;
   align-items: left;
@@ -2993,6 +3036,14 @@
   align-items: center;
 }
 
+.legends .equipment-list .item-header [data-action="itemEquip"].equipped i {
+  color: #2f855a;
+}
+
+.legends .equipment-list [data-action="itemEquip"]:not(.equipped) i {
+  color: #9ca3af;
+}
+
 /* Note: Quantity input styling handled via inline styles in template
    due to Foundry's ApplicationV2 overriding CSS selectors */
 
@@ -3014,6 +3065,11 @@
 
 .legends .equipment-list .item-header.container-row {
   background: rgba(148, 163, 184, 0.08);
+}
+
+.legends .equipment-list .item-header.container-row.drag-over {
+  background: rgba(209, 139, 71, 0.18);
+  box-shadow: inset 0 0 0 1px rgba(209, 139, 71, 0.7);
 }
 
 .legends .equipment-list .item-header.over-capacity,

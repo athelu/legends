@@ -307,6 +307,14 @@ function getCreationFeatItems(actor) {
   return actor.items.filter((item) => item.type === 'feat' && item.getFlag('legends', 'creation.freeFeat'));
 }
 
+function isDialogSelectionCancelled(selection, requiredKey = null) {
+  if (selection == null) return true;
+  if (selection === 'cancel') return true;
+  if (typeof selection === 'object' && String(selection.action || '').trim().toLowerCase() === 'cancel') return true;
+  if (requiredKey && (typeof selection !== 'object' || selection[requiredKey] == null)) return true;
+  return false;
+}
+
 async function showWizardDialog({ title, content, buttons, position, ...dialogOptions }) {
   return foundry.applications.api.DialogV2.wait({
     window: { title },
@@ -323,6 +331,11 @@ function mapValuesToPoolIndices(currentValues, pool) {
   const selections = [];
 
   for (const value of currentValues) {
+    if (!Number.isFinite(value)) {
+      selections.push(null);
+      continue;
+    }
+
     const matchIndex = remainingIndices.findIndex((poolIndex) => pool[poolIndex] === value);
     if (matchIndex >= 0) {
       selections.push(remainingIndices.splice(matchIndex, 1)[0]);
@@ -333,6 +346,17 @@ function mapValuesToPoolIndices(currentValues, pool) {
   }
 
   return selections;
+}
+
+function getAttributeAssignmentSeedValues(actor, state, method, pool) {
+  const savedMethod = String(state?.attributes?.method || '').trim();
+  const savedValues = Array.isArray(state?.attributes?.values) ? state.attributes.values : [];
+
+  if (savedMethod === method && savedValues.length === pool.length) {
+    return savedValues.map((value) => Number.isFinite(Number(value)) ? Number(value) : null);
+  }
+
+  return pool.map(() => null);
 }
 
 function renderAttributeAssignmentSelectors(root, pool, initialSelections) {
@@ -350,21 +374,24 @@ function renderAttributeAssignmentSelectors(root, pool, initialSelections) {
         .filter((entry) => entry.poolIndex === selectedIndices[selectIndex] || !reservedByOthers.has(entry.poolIndex));
 
       const currentSelection = selectedIndices[selectIndex];
-      const nextSelection = availableIndices.some((entry) => entry.poolIndex === currentSelection)
-        ? currentSelection
-        : (availableIndices[0]?.poolIndex ?? currentSelection);
+      const nextSelection = currentSelection == null
+        ? null
+        : (availableIndices.some((entry) => entry.poolIndex === currentSelection)
+          ? currentSelection
+          : null);
 
       selectedIndices[selectIndex] = nextSelection;
-      select.innerHTML = availableIndices
+      const optionMarkup = availableIndices
         .map((entry) => `<option value="${entry.poolIndex}" ${entry.poolIndex === nextSelection ? 'selected' : ''}>${entry.value}</option>`)
         .join('');
-      select.value = String(nextSelection);
+      select.innerHTML = `<option value="" ${nextSelection == null ? 'selected' : ''}>Select value</option>${optionMarkup}`;
+      select.value = nextSelection == null ? '' : String(nextSelection);
     });
   };
 
   selects.forEach((select, selectIndex) => {
     select.addEventListener('change', () => {
-      selectedIndices[selectIndex] = Number.parseInt(select.value || '0', 10);
+      selectedIndices[selectIndex] = select.value === '' ? null : Number.parseInt(select.value, 10);
       syncSelectOptions();
     });
   });
@@ -464,7 +491,8 @@ async function applyAttributeAssignments(actor, values, metadata) {
 
 async function runArrayAssignmentStep(actor, method, pool) {
   while (true) {
-    const currentValues = getCurrentAttributes(actor);
+    const state = getWorkflowState(actor);
+    const currentValues = getAttributeAssignmentSeedValues(actor, state, method, pool);
     const { rows, selectedPoolIndices } = buildAttributePoolAssignmentMarkup(pool, currentValues);
     const poolLabel = pool.join(', ');
     const result = await showWizardDialog({
@@ -487,7 +515,10 @@ async function runArrayAssignmentStep(actor, method, pool) {
           label: 'Apply Attributes',
           default: true,
           callback: (event, button, dialog) => {
-            const selections = ATTRIBUTE_KEYS.map((key) => Number.parseInt(dialog.element.querySelector(`[name="attr-${key}"]`)?.value || '-1', 10));
+            const selections = ATTRIBUTE_KEYS.map((key) => {
+              const rawValue = dialog.element.querySelector(`[name="attr-${key}"]`)?.value ?? '';
+              return rawValue === '' ? null : Number.parseInt(rawValue, 10);
+            });
             return { action: 'apply', selections };
           },
         },
@@ -503,6 +534,10 @@ async function runArrayAssignmentStep(actor, method, pool) {
     });
 
     if (!result || result.action === 'skip') return true;
+    if (result.selections.some((index) => !Number.isInteger(index) || index < 0 || index >= pool.length)) {
+      ui.notifications.warn('Assign a value to every attribute before applying the array.');
+      continue;
+    }
 
     const chosenValues = result.selections.map((index) => pool[index]);
     const isValid = chosenValues.length === pool.length
@@ -901,10 +936,19 @@ async function addTraitOrFlaw(actor, type) {
     })
     .sort((left, right) => left.label.localeCompare(right.label));
 
+  const availableOptions = options.filter((option) => !option.disabled);
+
   if (!options.length) {
     ui.notifications.warn(`No ${type}s are available to add.`);
     return false;
   }
+
+  if (type === 'trait' && !availableOptions.length) {
+    ui.notifications.info('No traits are currently affordable. Add flaws first to earn trait points.');
+    return 'unavailable';
+  }
+
+  const initialIndex = Math.max(0, options.findIndex((option) => !option.disabled));
 
   const selected = await showWizardDialog({
     title: `Character Creation: Add ${type === 'trait' ? 'Trait' : 'Flaw'}`,
@@ -915,7 +959,7 @@ async function addTraitOrFlaw(actor, type) {
         <div class="form-group">
           <label>Select a ${type}</label>
           <select name="creationChoice" style="width: 100%; padding: 6px;">
-            ${options.map((option, index) => `<option value="${index}" ${option.disabled ? 'disabled' : ''}>${escapeHtml(option.label)}${option.reason ? ` - ${escapeHtml(option.reason)}` : ''}</option>`).join('')}
+            ${options.map((option, index) => `<option value="${index}" ${option.disabled ? 'disabled' : ''} ${index === initialIndex ? 'selected' : ''}>${escapeHtml(option.label)}${option.reason ? ` - ${escapeHtml(option.reason)}` : ''}</option>`).join('')}
           </select>
         </div>
       </form>
@@ -925,16 +969,17 @@ async function addTraitOrFlaw(actor, type) {
         action: 'add',
         label: `Add ${type === 'trait' ? 'Trait' : 'Flaw'}`,
         default: true,
-        callback: (event, button, dialog) => options[Number.parseInt(dialog.element.querySelector('[name="creationChoice"]')?.value || '-1', 10)] || null,
+        callback: (event, button, dialog) => options[Number.parseInt(dialog.element.querySelector('[name="creationChoice"]')?.value || String(initialIndex), 10)] || null,
       },
       {
         action: 'cancel',
         label: 'Cancel',
+        callback: () => 'cancel',
       },
     ],
   });
 
-  if (!selected) return false;
+  if (isDialogSelectionCancelled(selected, 'document')) return 'cancel';
   if (selected.disabled) {
     ui.notifications.warn(selected.reason || `That ${type} is not currently available.`);
     return false;
@@ -980,11 +1025,12 @@ async function removeTraitOrFlaw(actor, type) {
       {
         action: 'cancel',
         label: 'Cancel',
+        callback: () => 'cancel',
       },
     ],
   });
 
-  if (!selected) return false;
+  if (isDialogSelectionCancelled(selected, 'id')) return 'cancel';
   await selected.delete();
   ui.notifications.info(`${selected.name} removed from ${actor.name}.`);
   return true;
@@ -1131,6 +1177,7 @@ async function chooseStartingFeat(actor) {
       {
         action: 'cancel',
         label: 'Cancel',
+        callback: () => 'cancel',
       },
     ],
     render: (event, dialog) => {
@@ -1138,7 +1185,7 @@ async function chooseStartingFeat(actor) {
     },
   });
 
-  if (!selected) return false;
+  if (isDialogSelectionCancelled(selected, 'feat')) return 'cancel';
   if (selected.disabled) {
     ui.notifications.warn(selected.reasons[0] || `${selected.feat.name} is not currently available.`);
     return false;
@@ -1189,11 +1236,12 @@ async function removeStartingFeat(actor) {
       {
         action: 'cancel',
         label: 'Cancel',
+        callback: () => 'cancel',
       },
     ],
   });
 
-  if (!selected) return false;
+  if (isDialogSelectionCancelled(selected, 'id')) return 'cancel';
   await selected.delete();
   ui.notifications.info(`${selected.name} removed.`);
   return true;

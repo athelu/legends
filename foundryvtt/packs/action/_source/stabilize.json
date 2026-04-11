@@ -1,0 +1,24 @@
+{
+  "_id": "2998ea767e1c0d94",
+  "name": "Stabilize",
+  "type": "action",
+  "img": "icons/skills/social/wave-halt-stop.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Make a [[/check skill=medicine]] against a creature at 0 HP or below. Require 1+ rank in Medicine.</p>\n<ul>\n<li><strong>1 success:</strong> The creature stabilizes at 0 HP and is no longer dying. They remain unconscious.</li>\n<li><strong>2 successes:</strong> As above. The creature also regains HP equal to your Wisdom score and regains consciousness.</li>\n</ul>"
+    },
+    "actionType": "interact",
+    "actionCost": "1",
+    "requirements": "",
+    "trigger": "",
+    "effect": "Make a Medicine check against a creature at 0 HP or below. Require 1+ rank in Medicine.\n- **1 success:** The creature stabilizes at 0 HP and is no longer dying. They remain unconscious.\n- **2 successes:** As above. The creature also regains HP equal to your Wisdom score and regains consciousness.",
+    "appliesEffects": [],
+    "keywords": [],
+    "range": "",
+    "target": "",
+    "frequency": "",
+    "special": ""
+  },
+  "effects": [],
+  "_key": "!items!2998ea767e1c0d94"
+}

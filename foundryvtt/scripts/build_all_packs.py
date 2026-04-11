@@ -16,6 +16,7 @@ This script runs all individual pack builders in sequence:
  - build_flaws_pack.py (parses flaws.md)
  - build_feats_pack.py (parses feats.md)
 - build_action_pack.py (parses actions.md)
+- build_rules_pack.py (parses skills.md into journal reference pages)
 - build_ability_pack.py (builds from JSON sources)
 
 Usage:
@@ -51,6 +52,7 @@ def main():
         "build_flaws_pack.py",
         "build_feats_pack.py",
         "build_action_pack.py",
+        "build_rules_pack.py",
         "build_ability_pack.py",
         "build_backgrounds_pack.py",
         "build_ancestries_pack.py",

@@ -24,14 +24,24 @@ def generate_stable_id(seed):
     return hashlib.sha256(normalized_seed.encode('utf-8')).hexdigest()[:16]
 
 
-def ensure_key(item):
-    """Ensure the item has a _key field required by the Foundry CLI (ClassicLevel).
+DOCUMENT_COLLECTION_KEYS = {
+    'Item': 'items',
+    'Actor': 'actors',
+    'JournalEntry': 'journal',
+    'Macro': 'macros',
+    'RollTable': 'tables',
+}
 
-    The _key format is '!items!<_id>' for item-type documents.
+
+def ensure_key(item, collection='items'):
+    """Ensure a document has the ClassicLevel _key expected by the Foundry CLI.
+
+    The _key format is '!<collection>!<_id>', for example '!items!<_id>' or
+    '!journal!<_id>'.
     """
     if '_key' not in item:
         _id = item.get('_id', generate_id())
-        item['_key'] = f"!items!{_id}"
+        item['_key'] = f"!{collection}!{_id}"
     return item
 
 
@@ -322,40 +332,87 @@ def load_json_files(source_dir):
     return items
 
 
-def validate_items(items):
+def validate_items(items, document_type='Item'):
     """
     Validate and fix items for Foundry compatibility.
     
     Args:
-        items: List of item data dictionaries
+        items: List of document data dictionaries
+        document_type: Foundry document type name
         
     Returns:
-        Validated items list
+        Validated document list
     """
+    collection = DOCUMENT_COLLECTION_KEYS.get(document_type, 'items')
+
     for item in items:
         # Ensure _id exists
         if '_id' not in item:
             item['_id'] = generate_id()
 
         # Ensure _key exists (required by Foundry CLI ClassicLevel packer)
-        ensure_key(item)
+        ensure_key(item, collection=collection)
             
         # Ensure name exists
         if 'name' not in item:
             item['name'] = "Unnamed Item"
-            
+
+        if document_type == 'JournalEntry':
+            if 'pages' not in item:
+                item['pages'] = []
+            if 'folder' not in item:
+                item['folder'] = None
+            if 'sort' not in item:
+                item['sort'] = 0
+            if 'ownership' not in item:
+                item['ownership'] = {'default': 0}
+            if 'flags' not in item:
+                item['flags'] = {}
+
+            for index, page in enumerate(item['pages']):
+                if '_id' not in page:
+                    page['_id'] = generate_id()
+                if '_key' not in page:
+                    page['_key'] = f"!journal.pages!{item['_id']}.{page['_id']}"
+                if 'name' not in page:
+                    page['name'] = f'Page {index + 1}'
+                if 'type' not in page:
+                    page['type'] = 'text'
+                if 'title' not in page:
+                    page['title'] = {'show': True, 'level': 1}
+                if 'sort' not in page:
+                    page['sort'] = index * 1000
+                if 'ownership' not in page:
+                    page['ownership'] = {'default': 0}
+                if 'flags' not in page:
+                    page['flags'] = {}
+                if 'system' not in page:
+                    page['system'] = {}
+                if 'src' not in page:
+                    page['src'] = None
+
+                if page.get('type') == 'text':
+                    text_data = page.setdefault('text', {})
+                    if 'content' not in text_data:
+                        text_data['content'] = ''
+                    if 'markdown' not in text_data:
+                        text_data['markdown'] = ''
+                    if 'format' not in text_data:
+                        text_data['format'] = 1
+            continue
+
         # Ensure type exists
         if 'type' not in item:
             item['type'] = "item"
-            
+
         # Ensure system object exists
         if 'system' not in item:
             item['system'] = {}
-            
+
         # Ensure effects array exists
         if 'effects' not in item:
             item['effects'] = []
-        
+
         # Set default image if not specified
         if 'img' not in item:
             item['img'] = "icons/svg/item-bag.svg"
@@ -380,7 +437,7 @@ def write_db_file(output_path, items):
     return
 
 
-def build_pack_from_source(pack_dir, pack_name=None):
+def build_pack_from_source(pack_dir, pack_name=None, document_type='Item'):
     """
     Validate _source JSON files for a pack.
     
@@ -409,7 +466,7 @@ def build_pack_from_source(pack_dir, pack_name=None):
         print(f"  No items found in _source/")
         return False
     
-    items = validate_items(items)
+    items = validate_items(items, document_type=document_type)
     print(f"  ✓ Validated {len(items)} items")
     print(f"  Next step: Run 'npm run pack:{pack_name}' to compile to LevelDB format")
     return True

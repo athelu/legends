@@ -103,6 +103,7 @@ function buildNestedEquipmentRows(equipment = [], encumbranceState = {}) {
       ...item,
       depth,
       isContainer,
+      isWearable: item.system?.equipmentType === 'clothing',
       childCount: childIds.length,
       canAssignContainer: !isContainer && containerChoices.length > 0,
       storageOptions: containerChoices
@@ -148,7 +149,8 @@ const ITEM_COMPENDIUM_PACKS = {
   actions: 'legends.action',
   ability: 'legends.abilities',
   abilities: 'legends.abilities',
-  condition: 'legends.conditions'
+  condition: 'legends.conditions',
+  rules: 'legends.rules'
 };
 
 export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
@@ -185,7 +187,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       changeOrigin: D8CharacterSheet.#onChangeOrigin,
       toggleLanguageOption: D8CharacterSheet.#onToggleLanguageOption,
     },
-    dragDrop: [{ dragSelector: ".item-list .item", dropSelector: null }]
+    dragDrop: [{ dragSelector: ".items-list .item-collapsible[data-item-id]", dropSelector: null }]
   };
 
   static PARTS = {
@@ -402,7 +404,18 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       value = field.value;
     }
 
-    await item.update({ [`system.${itemField}`]: value });
+    const updateData = { [`system.${itemField}`]: value };
+    if (itemField === 'encumbrance.containerId' && value) {
+      updateData['system.equipped'] = false;
+    }
+    if (itemField === 'equipped' && value) {
+      updateData['system.encumbrance.containerId'] = '';
+      if (item.system?.encumbrance?.carryState === 'container') {
+        updateData['system.encumbrance.carryState'] = '';
+      }
+    }
+
+    await item.update(updateData);
   }
 
   /** Helper to get nested values from object */
@@ -777,6 +790,81 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         });
       });
     }
+
+    const containerTargets = this.element.querySelectorAll('[data-container-drop-target="true"]');
+    containerTargets.forEach((target) => {
+      target.addEventListener('dragenter', this._onContainerDragEnter.bind(this));
+      target.addEventListener('dragover', this._onContainerDragOver.bind(this));
+      target.addEventListener('dragleave', this._onContainerDragLeave.bind(this));
+      target.addEventListener('drop', this._onContainerDragLeave.bind(this));
+    });
+  }
+
+  _onContainerDragEnter(event) {
+    event.preventDefault();
+    event.currentTarget.classList.add('drag-over');
+  }
+
+  _onContainerDragOver(event) {
+    event.preventDefault();
+    event.currentTarget.classList.add('drag-over');
+  }
+
+  _onContainerDragLeave(event) {
+    event.currentTarget.classList.remove('drag-over');
+  }
+
+  _getDropTargetContainer(event) {
+    const target = event.target instanceof Element
+      ? event.target.closest('[data-container-drop-target="true"][data-item-id]')
+      : null;
+    const itemId = target?.dataset.itemId;
+    if (!itemId) return null;
+
+    const item = this.actor.items.get(itemId) || null;
+    if (!item || item.type !== 'equipment' || item.system?.equipmentType !== EQUIPMENT_CONTAINER_TYPE) {
+      return null;
+    }
+
+    return item;
+  }
+
+  _canStoreItemInContainer(item, container) {
+    if (!item || !container) return false;
+    if (!PURCHASE_ITEM_TYPES.has(item.type)) return false;
+    if (item.id === container.id) return false;
+    if (item.type === 'equipment' && item.system?.equipmentType === EQUIPMENT_CONTAINER_TYPE) return false;
+    return true;
+  }
+
+  async _assignItemToContainer(item, container) {
+    if (!this._canStoreItemInContainer(item, container)) return false;
+    await item.update({
+      'system.encumbrance.containerId': container.id,
+      'system.equipped': false,
+      'system.encumbrance.carryState': item.system?.encumbrance?.carryState === 'container'
+        ? 'container'
+        : '',
+    });
+    return true;
+  }
+
+  async _assignCreatedDropToContainer(creationResult, container) {
+    const createdItems = Array.isArray(creationResult)
+      ? creationResult
+      : (creationResult ? [creationResult] : []);
+
+    const assignments = createdItems.filter((item) => this._canStoreItemInContainer(item, container));
+    if (!assignments.length) return false;
+
+    await Promise.all(assignments.map((item) => item.update({
+      'system.encumbrance.containerId': container.id,
+      'system.equipped': false,
+      'system.encumbrance.carryState': item.system?.encumbrance?.carryState === 'container'
+        ? 'container'
+        : '',
+    })));
+    return true;
   }
 
   /** @override */
@@ -791,10 +879,19 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       return;
     }
 
+    const targetContainer = this._getDropTargetContainer(event);
     const item = await Item.implementation.fromDropData(data);
     if ( item?.type === "condition" ) {
       await game.legends.applyCondition(this.actor, item.name);
       return;
+    }
+
+    if (targetContainer && item?.parent?.id === this.actor.id) {
+      const stored = await this._assignItemToContainer(item, targetContainer);
+      if (stored) {
+        ui.notifications.info(`${item.name} stored in ${targetContainer.name}.`);
+        return item;
+      }
     }
 
     const isCompendiumDrop = typeof data?.uuid === 'string' && data.uuid.startsWith('Compendium.');
@@ -855,6 +952,9 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       }
 
       const creationResult = await super._onDropItem(event, data);
+      if (targetContainer && creationResult !== false) {
+        await this._assignCreatedDropToContainer(creationResult, targetContainer);
+      }
       if (purchaseChoice === 'pay' && creationResult !== false) {
         await this.actor.update({
           'system.currency.gp': remainingCurrency.gp,
@@ -869,7 +969,11 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       return creationResult;
     }
 
-    return super._onDropItem(event, data);
+    const creationResult = await super._onDropItem(event, data);
+    if (targetContainer && creationResult !== false) {
+      await this._assignCreatedDropToContainer(creationResult, targetContainer);
+    }
+    return creationResult;
   }
 
   /* -------------------------------------------- */
@@ -975,7 +1079,15 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const li = target.closest(".item-collapsible");
     const item = this.actor.items.get(li.dataset.itemId);
     if (item) {
-      return item.update({ 'system.equipped': !item.system.equipped });
+      const nextEquipped = !item.system.equipped;
+      const updateData = { 'system.equipped': nextEquipped };
+      if (nextEquipped) {
+        updateData['system.encumbrance.containerId'] = '';
+        if (item.system?.encumbrance?.carryState === 'container') {
+          updateData['system.encumbrance.carryState'] = '';
+        }
+      }
+      return item.update(updateData);
     }
   }
 
@@ -984,6 +1096,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
    */
   static async #onOpenCompendium(event, target) {
     const compendiumType = target.dataset.compendium || target.dataset.type;
+    const entryName = String(target.dataset.entryName || '').trim();
 
     if (!compendiumType) {
       ui.notifications.warn("Button is missing data-compendium or data-type attribute.");
@@ -1007,6 +1120,22 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const pack = game.packs.get(packName);
 
     if (pack) {
+      if (entryName) {
+        const index = await pack.getIndex();
+        const entry = index.find((document) => document.name === entryName);
+
+        if (!entry) {
+          ui.notifications.warn(`Reference entry "${entryName}" was not found in ${pack.metadata.label}.`);
+          return pack.render(true);
+        }
+
+        const document = await pack.getDocument(entry._id);
+        if (document?.sheet) {
+          document.sheet.render(true);
+          return;
+        }
+      }
+
       pack.render(true);
     } else {
       ui.notifications.warn(`Compendium pack "${packName}" not found. Check system.json configuration.`);

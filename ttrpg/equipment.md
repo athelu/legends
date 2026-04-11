@@ -259,6 +259,10 @@ Rock-hard biscuits that store indefinitely. One pound provides minimal but adequ
 **Cost:** 2 gp | **Weight:** 0.5 lbs
 A simple cloth or straw hat providing basic protection from sun and rain.
 
+### Healer's Kit
+**Cost:** 30 gp, **Weight:** 3 lbs
+A healer's kit subtracts 1 from one Medicine die on any Medicine check. A standard kit contains 8 uses before it is exhausted. Each application of Field Dressing, Evening Treatment, or Administered Treatment consumes one use. Stabilize and Remove Condition do not consume kit uses.
+
 ### Herbalism Kit
 **Cost:** 30 gp | **Weight:** 3 lbs
 A collection of pouches, vials, and tools for identifying, harvesting, and preparing medicinal herbs and natural remedies.

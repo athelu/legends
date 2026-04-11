@@ -20,11 +20,13 @@ A condition may carry both keywords when it both penalizes the creature and crea
 ### Bleeding
 **Keyword:** [Hindered]
 **Effect:** Take 2 damage per stack at the end of each of your turns. Multiple bleeding effects add together (2 stacks = 4 damage per turn, 3 stacks = 6 damage per turn). If at 0 HP or below, bleeding damage stops. Add your total bleeding stack count to both dice when making stabilization saves.
-**Recovery:** Magical healing removes all bleeding stacks. Target may Use 1 action to make a Medicine check to reduce bleeding.
-- 2 successes: Remove 1 bleeding stack
-**Ally Assistance:** An ally within 5 feet may Use 1 action to make a Medicine check.
-- 1 successes: Remove 1 bleeding stack
-- 2 successes: Remove all bleeding stacks
+**Recovery:** Magical healing removes all bleeding stacks. Target may use 1 [Interact] action to make a Medicine check (rank 1 required) to reduce bleeding:
+- **1 success:** Remove 1 bleeding stack.
+- **2 successes:** Remove all bleeding stacks.
+**Ally Assistance:** An ally within 5 feet may use 1 [Interact] action to make a Medicine check:
+- **1 success:** Remove 1 bleeding stack.
+- **2 successes:** Remove all bleeding stacks.
+See Medicine Applications in this full Field Dressing rules.
 
 ### Blinded
 **Keyword:** [Hindered]
@@ -228,7 +230,7 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 ### Grievously Wounded
 **Keyword:** [Hindered]
 **Effect:** Applied when you regain consciousness at 0 HP or below. Can only take one action per turn. Cannot take reactions. Gain the Clumsy and Dazzled Conditions.
-**Recovery:** Condition ends when healed above 1 HP
+**Recovery:** Condition ends when healed above 1 HP through magical healing OR a successful Medicine check (rank 3 required, 2 successes) by an ally. Self-treatment cannot remove this condition. See Medicine Applications.
 
 ### Hidden
 **Keyword:** [Tactical]
@@ -255,17 +257,17 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 ### Poisoned (Weak)
 **Keyword:** [Hindered]
 **Effect:** All attribute dice: Add 1 to die results. HP regeneration from short/long rests reduced by half.
-**Recovery:** Fortitude save at end of 1 hour (1 success). Medicine check (2 successes) can end Poisoned early.
+**Recovery:** Fortitude save at end of 1 hour (1 success cures). Medicine check by self or ally (rank 2 required, 2 successes) can end Poisoned early. See Medicine Applications.
 
 ### Poisoned (Strong)
 **Keyword:** [Hindered]
-**Effect:** All attribute dice: Add 2 to die results. HP regeneration from short/long rests reduced by half. Target takes 4 damage each hour until the condition is removed.
-**Recovery:** Fortitude save at end of 4 hours (1 success). Medicine check (2 successes) can end Poisoned early.
+**Effect:** All attribute dice: Add 2 to die results. HP regeneration from short/long rests reduced by half.Target takes 4 damage each hour until the condition is removed.
+**Recovery:** Fortitude save at end of 4 hours (1 success cures). Medicine check by self or ally (rank 3 required, 2 successes) can end Poisoned early. See Medicine Applications.
 
 ### Poisoned (Deadly)
 **Keyword:** [Hindered]
-**Effect:** All attribute dice: Add 2 to die results. Long and short rests provide no benefit. Target takes 8 damage each hour until the condition is removed.
-**Recovery:** Fortitude save at end of 4 hours (1 success). Antidote can remove condition early.
+**Effect:** All attribute dice: Add 2 to die results. Long and short rests provide no benefit..Target takes 8 damage each hour until the condition is removed.
+**Recovery:** Fortitude save at end of 4 hours (1 success). Medicine check (rank 4 required, 2 successes) suppresses  symptoms for 4 hours but does not cure. Antidote or magical healing required for full cure. See Medicine Applications.
 
 ### Prone
 **Keyword:** [Hindered], [Tactical]
@@ -289,7 +291,7 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 **Effect:** Constitution and bodily functions impaired. Fortitude saves: Add 1 to die results. Cannot benefit from food or drink
 **Recovery:** Typically 10 minutes to 1 hour unless specified otherwise. Medicine check (1 success) can end early
 
-### Slowed (minor)
+### Slowed (Minor)
 **Keyword:** [Hindered]
 **Effect:** Movement speed reduced by 10 feet, Initiative -1.
 **Recovery:** Unless otherwise specified, Will save at end of turn.
@@ -299,7 +301,7 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 **Keyword:** [Hindered]
 **Effect:** Movement speed reduced by 10 feet, Can only take 2 action per turn. Initiative -1. Haste weave can counteract.
 **Recovery:** Unless otherwise specified, Will save at end of turn.
-- 1 success: Reduce condition to  Slowed (minor) 
+- 1 success: Reduce condition to Slowed (Minor)
 - 1 success: Remove Slowed condition
 
 ### Stunned

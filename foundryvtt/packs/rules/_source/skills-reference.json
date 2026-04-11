@@ -1,0 +1,607 @@
+{
+  "_id": "8e63ca5600a2380d",
+  "_key": "!journal!8e63ca5600a2380d",
+  "name": "Skills Reference",
+  "pages": [
+    {
+      "_id": "61cdc713dad3ba9c",
+      "name": "Overview",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p>The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents training and expertise in specific areas. Skills range from rank 0 (untrained) to rank 8 (legendary mastery).</p>\n<p><strong>Skill Checks:</strong></p>\n<ul>\n<li>Roll attribute die + skill die</li>\n<li>Each die that rolls under its value = 1 success</li>\n<li>Rolling a natural 1 always succeeds</li>\n<li>Rolling an 8 always fails</li>\n<li>Easy tasks require 1 success</li>\n<li>Hard tasks require 2 successes</li>\n</ul>",
+        "markdown": "The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents training and expertise in specific areas. Skills range from rank 0 (untrained) to rank 8 (legendary mastery).\n\n**Skill Checks:**\n- Roll attribute die + skill die\n- Each die that rolls under its value = 1 success\n- Rolling a natural 1 always succeeds\n- Rolling an 8 always fails\n- Easy tasks require 1 success\n- Hard tasks require 2 successes",
+        "format": 1
+      },
+      "sort": 0,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.61cdc713dad3ba9c"
+    },
+    {
+      "_id": "5aa79ff30a425951",
+      "name": "Acrobatics",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Agility</p>\n<p><strong>Description:</strong> Balance, tumbling, contortion, and coordinated movement. Used for maintaining footing on difficult terrain, performing gymnastic feats, and moving with precision.</p>\n<p><strong>Simple Task (1 success):</strong> Walk across a narrow beam, perform a basic flip, maintain balance on unstable ground, tumble to reduce falling damage from 10 feet.</p>\n<p><strong>Hard Task (2 successes):</strong> Swing from a chandelier to another platform, walk a tightrope while under attack, contort through a small opening, perform a complex acrobatic routine, tumble to reduce falling damage from 30 feet.</p>",
+        "markdown": "**Governing Attribute:** Agility\n\n**Description:** Balance, tumbling, contortion, and coordinated movement. Used for maintaining footing on difficult terrain, performing gymnastic feats, and moving with precision.\n\n**Simple Task (1 success):** Walk across a narrow beam, perform a basic flip, maintain balance on unstable ground, tumble to reduce falling damage from 10 feet.\n\n**Hard Task (2 successes):** Swing from a chandelier to another platform, walk a tightrope while under attack, contort through a small opening, perform a complex acrobatic routine, tumble to reduce falling damage from 30 feet.",
+        "format": 1
+      },
+      "sort": 1000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.5aa79ff30a425951"
+    },
+    {
+      "_id": "72dcba8f71ea3f75",
+      "name": "Arcane",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Intelligence</p>\n<p><strong>Description:</strong> Knowledge of magical theory, spell identification, and understanding of arcane phenomena. Used to recall magical lore, identify weaves being cast, and understand magical effects.</p>\n<p><strong>Simple Task (1 success):</strong> Identify a common magical effect, recall basic information about a well-known magical creature, recognize a spell being cast (if you know it).</p>\n<p><strong>Hard Task (2 successes):</strong> Identify a rare or complex weave being cast, recall obscure magical theory, determine the purpose of a magical ritual, identify the school or energy type of an unknown magical effect.</p>",
+        "markdown": "**Governing Attribute:** Intelligence\n\n**Description:** Knowledge of magical theory, spell identification, and understanding of arcane phenomena. Used to recall magical lore, identify weaves being cast, and understand magical effects.\n\n**Simple Task (1 success):** Identify a common magical effect, recall basic information about a well-known magical creature, recognize a spell being cast (if you know it).\n\n**Hard Task (2 successes):** Identify a rare or complex weave being cast, recall obscure magical theory, determine the purpose of a magical ritual, identify the school or energy type of an unknown magical effect.",
+        "format": 1
+      },
+      "sort": 2000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.72dcba8f71ea3f75"
+    },
+    {
+      "_id": "071e82552f516a6d",
+      "name": "Athletics",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Strength</p>\n<p><strong>Description:</strong> Running, jumping, climbing, and swimming. Used for physical exertion requiring strength and stamina.</p>\n<p><strong>Simple Task (1 success):</strong> Climb a rope or ladder, swim in calm water, jump across a 5-foot gap, run for an extended period without tiring.</p>\n<p><strong>Hard Task (2 successes):</strong> Climb a sheer wall without equipment, swim against a strong current, jump across a 15-foot chasm, chase down a fleeing target over rough terrain.</p>",
+        "markdown": "**Governing Attribute:** Strength\n\n**Description:** Running, jumping, climbing, and swimming. Used for physical exertion requiring strength and stamina.\n\n**Simple Task (1 success):** Climb a rope or ladder, swim in calm water, jump across a 5-foot gap, run for an extended period without tiring.\n\n**Hard Task (2 successes):** Climb a sheer wall without equipment, swim against a strong current, jump across a 15-foot chasm, chase down a fleeing target over rough terrain.",
+        "format": 1
+      },
+      "sort": 3000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.071e82552f516a6d"
+    },
+    {
+      "_id": "025ee92e0a7037f3",
+      "name": "Craft",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Dexterity</p>\n<p><strong>Description:</strong> Craft is a family of keyworded skills rather than a single broad discipline. Each craft is learned, tracked, and advanced separately. <strong>Craft: Blacksmith</strong>, <strong>Craft: Tailor</strong>, <strong>Craft: Bowyer</strong>, and <strong>Craft: Alchemist</strong> are all different skills even though they share the same governing attribute. Use the full Crafting rules in the Core System to determine tools, time, workshop needs, and results.</p>\n<p><strong>Simple Task (1 success):</strong> Complete routine work in your specific craft with proper tools and materials, identify competent workmanship in your area, perform basic repairs, or produce a simple item during the required downtime.</p>\n<p><strong>Hard Task (2 successes):</strong> Complete a demanding commission in your specific craft, identify a subtle flaw or signature technique, repair heavily damaged gear in poor conditions, or produce a complex item that requires high-quality materials, long work periods, or workshop access.</p>\n<p><strong>Example Keyword Skill:</strong> <strong>Craft: Alchemist</strong> covers brewing preparations, extracting magical components, mixing reagents safely, and producing alchemical items under the downtime and harvesting rules.</p>",
+        "markdown": "**Governing Attribute:** Dexterity\n\n**Description:** Craft is a family of keyworded skills rather than a single broad discipline. Each craft is learned, tracked, and advanced separately. **Craft: Blacksmith**, **Craft: Tailor**, **Craft: Bowyer**, and **Craft: Alchemist** are all different skills even though they share the same governing attribute. Use the full Crafting rules in the Core System to determine tools, time, workshop needs, and results.\n\n**Simple Task (1 success):** Complete routine work in your specific craft with proper tools and materials, identify competent workmanship in your area, perform basic repairs, or produce a simple item during the required downtime.\n\n**Hard Task (2 successes):** Complete a demanding commission in your specific craft, identify a subtle flaw or signature technique, repair heavily damaged gear in poor conditions, or produce a complex item that requires high-quality materials, long work periods, or workshop access.\n\n**Example Keyword Skill:** **Craft: Alchemist** covers brewing preparations, extracting magical components, mixing reagents safely, and producing alchemical items under the downtime and harvesting rules.",
+        "format": 1
+      },
+      "sort": 4000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.025ee92e0a7037f3"
+    },
+    {
+      "_id": "d886f1d6a187ab1b",
+      "name": "Deception",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Charisma</p>\n<p><strong>Description:</strong> Lying convincingly, creating believable cover stories, and misleading others. Used to present false information as truth. Whether to protect yourself, manipulate others, or manufacture relationships between third parties. Deception can shift attitude up or down the scale, but carries the risk of discovery. See Social Interactions in the Core System for full rules.</p>\n<p><strong>Simple Task (1 success):</strong> Tell a convincing lie to a disinterested party, maintain a basic disguise under casual observation, bluff about your intentions when the stakes are low.</p>\n<p><strong>Hard Task (2 successes):</strong> Maintain a complex lie under direct questioning, impersonate a specific person to those familiar with them, plant a rumor that shifts how one NPC regards another.</p>",
+        "markdown": "**Governing Attribute:** Charisma\n\n**Description:** Lying convincingly, creating believable cover stories, and misleading others. Used to present false information as truth. Whether to protect yourself, manipulate others, or manufacture relationships between third parties. Deception can shift attitude up or down the scale, but carries the risk of discovery. See Social Interactions in the Core System for full rules.\n\n**Simple Task (1 success):** Tell a convincing lie to a disinterested party, maintain a basic disguise under casual observation, bluff about your intentions when the stakes are low.\n\n**Hard Task (2 successes):** Maintain a complex lie under direct questioning, impersonate a specific person to those familiar with them, plant a rumor that shifts how one NPC regards another.",
+        "format": 1
+      },
+      "sort": 5000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.d886f1d6a187ab1b"
+    },
+    {
+      "_id": "a8d6b8fceb6ed8ac",
+      "name": "Devices",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Dexterity</p>\n<p><strong>Description:</strong> Working with locks, traps, and mechanical devices. Used to pick locks, disable traps, and understand complex mechanisms.</p>\n<p><strong>Simple Task (1 success):</strong> Pick a simple lock, identify a basic trap, understand how a common mechanism works, disable a simple trap.</p>\n<p><strong>Hard Task (2 successes):</strong> Pick a complex lock quickly, disable an intricate trap without triggering it, understand and manipulate a sophisticated mechanism, identify a well-hidden trap.</p>",
+        "markdown": "**Governing Attribute:** Dexterity\n\n**Description:** Working with locks, traps, and mechanical devices. Used to pick locks, disable traps, and understand complex mechanisms.\n\n**Simple Task (1 success):** Pick a simple lock, identify a basic trap, understand how a common mechanism works, disable a simple trap.\n\n**Hard Task (2 successes):** Pick a complex lock quickly, disable an intricate trap without triggering it, understand and manipulate a sophisticated mechanism, identify a well-hidden trap.",
+        "format": 1
+      },
+      "sort": 6000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.a8d6b8fceb6ed8ac"
+    },
+    {
+      "_id": "a9758e7bfa2fa4a3",
+      "name": "Empathy",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Wisdom</p>\n<p><strong>Description:</strong> Reading emotions, understanding motivations, and sensing deception. Used to interpret body language and emotional states.</p>\n<p><strong>Simple Task (1 success):</strong> Sense if someone is lying (opposed by their Deception), determine a person's general emotional state, comfort someone in distress.</p>\n<p><strong>Hard Task (2 successes):</strong> Discern hidden motivations or ulterior motives, read the emotional dynamics in a complex social situation, sense if someone is under magical compulsion.</p>",
+        "markdown": "**Governing Attribute:** Wisdom\n\n**Description:** Reading emotions, understanding motivations, and sensing deception. Used to interpret body language and emotional states.\n\n**Simple Task (1 success):** Sense if someone is lying (opposed by their Deception), determine a person's general emotional state, comfort someone in distress.\n\n**Hard Task (2 successes):** Discern hidden motivations or ulterior motives, read the emotional dynamics in a complex social situation, sense if someone is under magical compulsion.",
+        "format": 1
+      },
+      "sort": 7000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.a9758e7bfa2fa4a3"
+    },
+    {
+      "_id": "8aabf80778ee43b1",
+      "name": "History",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Intelligence</p>\n<p><strong>Description:</strong> Knowledge of past events, historical figures, ancient civilizations, and legendary occurrences. Used to recall facts about history.</p>\n<p><strong>Simple Task (1 success):</strong> Recall common historical events, identify a famous historical figure, know basic facts about a well-known ancient civilization.</p>\n<p><strong>Hard Task (2 successes):</strong> Recall obscure historical details, connect seemingly unrelated historical events, identify the historical period of an ancient artifact, know details about forgotten civilizations.</p>",
+        "markdown": "**Governing Attribute:** Intelligence\n\n**Description:** Knowledge of past events, historical figures, ancient civilizations, and legendary occurrences. Used to recall facts about history.\n\n**Simple Task (1 success):** Recall common historical events, identify a famous historical figure, know basic facts about a well-known ancient civilization.\n\n**Hard Task (2 successes):** Recall obscure historical details, connect seemingly unrelated historical events, identify the historical period of an ancient artifact, know details about forgotten civilizations.",
+        "format": 1
+      },
+      "sort": 8000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.8aabf80778ee43b1"
+    },
+    {
+      "_id": "59443281c2a80ad8",
+      "name": "Intimidate",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Charisma</p>\n<p><strong>Description:</strong> Using threat, violence, or force of personality to coerce compliance. Intimidate does not improve relationships instaed it extracts what you need at the cost of goodwill. Can impose the Frightened condition or force immediate compliance, always moving the target's attitude one step toward Hostile. See Social Interactions in the Core System for full rules.</p>\n<p><strong>Simple Task (1 success):</strong> Coerce a common person into immediate compliance, establish dominance in a social situation, make someone back down from a confrontation.</p>\n<p><strong>Hard Task (2 successes):</strong> Frighten or coerce a trained warrior, authority figure, or someone with strong reason to resist; cow a hostile crowd into standing down</p>",
+        "markdown": "**Governing Attribute:** Charisma\n\n**Description:** Using threat, violence, or force of personality to coerce compliance. Intimidate does not improve relationships instaed it extracts what you need at the cost of goodwill. Can impose the Frightened condition or force immediate compliance, always moving the target's attitude one step toward Hostile. See Social Interactions in the Core System for full rules.\n\n**Simple Task (1 success):** Coerce a common person into immediate compliance, establish dominance in a social situation, make someone back down from a confrontation.\n\n**Hard Task (2 successes):** Frighten or coerce a trained warrior, authority figure, or someone with strong reason to resist; cow a hostile crowd into standing down",
+        "format": 1
+      },
+      "sort": 9000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.59443281c2a80ad8"
+    },
+    {
+      "_id": "bcebf3b4d97f2102",
+      "name": "Investigate",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Intelligence</p>\n<p><strong>Description:</strong> Analyzing clues, deducing conclusions, and piecing together evidence. Used for detective work and solving mysteries.</p>\n<p><strong>Simple Task (1 success):</strong> Find obvious clues at a scene, follow a clear trail of evidence, notice when something is out of place.</p>\n<p><strong>Hard Task (2 successes):</strong> Piece together subtle clues to form a conclusion, reconstruct events from minimal evidence, find well-hidden evidence, deduce the identity of a culprit from circumstantial evidence.</p>",
+        "markdown": "**Governing Attribute:** Intelligence\n\n**Description:** Analyzing clues, deducing conclusions, and piecing together evidence. Used for detective work and solving mysteries.\n\n**Simple Task (1 success):** Find obvious clues at a scene, follow a clear trail of evidence, notice when something is out of place.\n\n**Hard Task (2 successes):** Piece together subtle clues to form a conclusion, reconstruct events from minimal evidence, find well-hidden evidence, deduce the identity of a culprit from circumstantial evidence.",
+        "format": 1
+      },
+      "sort": 10000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.bcebf3b4d97f2102"
+    },
+    {
+      "_id": "6f3ac8429355109c",
+      "name": "Language",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Intelligence</p>\n<p><strong>Description:</strong> Understanding and deciphering languages. Your rank equals the number of languages you know. Used to communicate and translate.</p>\n<p><strong>Simple Task (1 success):</strong> Understand basic communication in a language you know, get the gist of a written text in a familiar language, recognize a language family.</p>\n<p><strong>Hard Task (2 successes):</strong> Decipher an ancient or dead language (if related to one you know), understand complex technical or poetic writing, translate idioms and cultural references accurately.</p>\n<p><strong>Note:</strong> Rank in Language = number of languages known. Rank 0 = common tongue only, Rank 1 = common + 1 language, Rank 3 = common + 3 languages, etc.</p>",
+        "markdown": "**Governing Attribute:** Intelligence\n\n**Description:** Understanding and deciphering languages. Your rank equals the number of languages you know. Used to communicate and translate.\n\n**Simple Task (1 success):** Understand basic communication in a language you know, get the gist of a written text in a familiar language, recognize a language family.\n\n**Hard Task (2 successes):** Decipher an ancient or dead language (if related to one you know), understand complex technical or poetic writing, translate idioms and cultural references accurately.\n\n**Note:** Rank in Language = number of languages known. Rank 0 = common tongue only, Rank 1 = common + 1 language, Rank 3 = common + 3 languages, etc.",
+        "format": 1
+      },
+      "sort": 11000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.6f3ac8429355109c"
+    },
+    {
+      "_id": "05d444cb41589b33",
+      "name": "Medicine",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Wisdom</p>\n<p><strong>Description:</strong> Treating injuries, diagnosing illnesses, and understanding anatomy. Used for healing and medical knowledge.</p>\n<p><strong>Simple Task (1 success):</strong> Stabilize a dying creature, diagnose a common illness, treat minor wounds, identify common poisons.</p>\n<p><strong>Hard Task (2 successes):</strong> Perform field surgery, diagnose a rare disease, treat severe injuries without magical aid, create an antidote to an unknown poison, identify cause of death.</p>\n<p><strong>Extended Applications:</strong> Medicine can be used to restore HP during combat, improve short and long rest recovery, and treat diseases. See the Medicine Applications section in conditions for full rules on Field Dressing, Administered Treatment, Evening Treatment, and disease treatment procedures.</p>",
+        "markdown": "**Governing Attribute:** Wisdom\n\n**Description:** Treating injuries, diagnosing illnesses, and understanding anatomy. Used for healing and medical knowledge.\n\n**Simple Task (1 success):** Stabilize a dying creature, diagnose a common illness, treat minor wounds, identify common poisons.\n\n**Hard Task (2 successes):** Perform field surgery, diagnose a rare disease, treat severe injuries without magical aid, create an antidote to an unknown poison, identify cause of death.\n\n**Extended Applications:** Medicine can be used to restore HP during combat, improve short and long rest recovery, and treat diseases. See the Medicine Applications section in conditions for full rules on Field Dressing, Administered Treatment, Evening Treatment, and disease treatment procedures.",
+        "format": 1
+      },
+      "sort": 12000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.05d444cb41589b33"
+    },
+    {
+      "_id": "71b81e21d5874072",
+      "name": "Melee Combat",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Agility</p>\n<p><strong>Description:</strong> Fighting with weapons in hand-to-hand combat. Used for attack and defense with melee weapons.</p>\n<p><strong>Simple Task (1 success):</strong> Hit an unarmored, stationary target in practice, parry a slow or clumsy attack, maintain your weapon properly.</p>\n<p><strong>Hard Task (2 successes):</strong> Strike a heavily armored opponent in combat, parry multiple rapid attacks, disarm an opponent, strike a specific weak point.</p>\n<p><strong>Note:</strong> Most melee combat is opposed rolls (your successes vs. opponent's successes).</p>",
+        "markdown": "**Governing Attribute:** Agility\n\n**Description:** Fighting with weapons in hand-to-hand combat. Used for attack and defense with melee weapons.\n\n**Simple Task (1 success):** Hit an unarmored, stationary target in practice, parry a slow or clumsy attack, maintain your weapon properly.\n\n**Hard Task (2 successes):** Strike a heavily armored opponent in combat, parry multiple rapid attacks, disarm an opponent, strike a specific weak point.\n\n**Note:** Most melee combat is opposed rolls (your successes vs. opponent's successes).",
+        "format": 1
+      },
+      "sort": 13000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.71b81e21d5874072"
+    },
+    {
+      "_id": "c7c930beca8f6920",
+      "name": "Might",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Strength</p>\n<p><strong>Description:</strong> Raw physical power for breaking, lifting, and forcing. Used for feats of pure strength.</p>\n<p><strong>Simple Task (1 success):</strong> Break down a wooden door, lift a heavy object (100+ lbs), bend iron bars, hold a gate open.</p>\n<p><strong>Hard Task (2 successes):</strong> Break down a reinforced door, lift an extremely heavy object (300+ lbs), break chains, force open a portcullis.</p>",
+        "markdown": "**Governing Attribute:** Strength\n\n**Description:** Raw physical power for breaking, lifting, and forcing. Used for feats of pure strength.\n\n**Simple Task (1 success):** Break down a wooden door, lift a heavy object (100+ lbs), bend iron bars, hold a gate open.\n\n**Hard Task (2 successes):** Break down a reinforced door, lift an extremely heavy object (300+ lbs), break chains, force open a portcullis.",
+        "format": 1
+      },
+      "sort": 14000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.c7c930beca8f6920"
+    },
+    {
+      "_id": "3d5f8cc66c5b646b",
+      "name": "Perception",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Wisdom</p>\n<p><strong>Description:</strong> Noticing details, spotting hidden things, and remaining alert. Used to detect danger and observe your surroundings.</p>\n<p><strong>Simple Task (1 success):</strong> Notice an obvious detail, spot someone in plain sight, hear a loud noise, detect a strong smell.</p>\n<p><strong>Hard Task (2 successes):</strong> Spot a hidden or camouflaged creature, notice a subtle detail others miss, hear a faint sound through a door, detect the smell of poison in food.</p>",
+        "markdown": "**Governing Attribute:** Wisdom\n\n**Description:** Noticing details, spotting hidden things, and remaining alert. Used to detect danger and observe your surroundings.\n\n**Simple Task (1 success):** Notice an obvious detail, spot someone in plain sight, hear a loud noise, detect a strong smell.\n\n**Hard Task (2 successes):** Spot a hidden or camouflaged creature, notice a subtle detail others miss, hear a faint sound through a door, detect the smell of poison in food.",
+        "format": 1
+      },
+      "sort": 15000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.3d5f8cc66c5b646b"
+    },
+    {
+      "_id": "588ee1adce4f4fe7",
+      "name": "Perform",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Charisma</p>\n<p><strong>Description:</strong> Entertaining others through music, acting, dance, or other performance arts. Used to captivate audiences.</p>\n<p><strong>Simple Task (1 success):</strong> Perform adequately for a friendly audience, remember the words/notes to a common song, perform a basic dance.</p>\n<p><strong>Hard Task (2 successes):</strong> Captivate a hostile or indifferent audience, perform a complex piece flawlessly, improvise a performance that moves people emotionally, perform while under stress.</p>",
+        "markdown": "**Governing Attribute:** Charisma\n\n**Description:** Entertaining others through music, acting, dance, or other performance arts. Used to captivate audiences.\n\n**Simple Task (1 success):** Perform adequately for a friendly audience, remember the words/notes to a common song, perform a basic dance.\n\n**Hard Task (2 successes):** Captivate a hostile or indifferent audience, perform a complex piece flawlessly, improvise a performance that moves people emotionally, perform while under stress.",
+        "format": 1
+      },
+      "sort": 16000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.588ee1adce4f4fe7"
+    },
+    {
+      "_id": "cccc46910753dbb9",
+      "name": "Persuasion",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Charisma</p>\n<p><strong>Description:</strong> Convincing others through honest appeal, reason, charm, and social grace. Persuasion works with the truth to move a target's attitude up the scale, whether toward yourself or to build goodwill between third parties. Typically an opposed skill test when the target has any investment in resisting. See Social Interactions in the Core System for full rules.</p>\n<p><strong>Simple Task (1 success):</strong> Shift a cooperative or indifferent NPC's attitude one step in your favor, negotiate a fair deal, make a strong first impression.</p>\n<p><strong>Hard Task (2 successes):</strong> Shift attitude two steps, convince someone to change their position on a matter they care about, sway a skeptical audience, broker goodwill between two parties with reason to distrust each other.</p>",
+        "markdown": "**Governing Attribute:** Charisma\n\n**Description:** Convincing others through honest appeal, reason, charm, and social grace. Persuasion works with the truth to move a target's attitude up the scale, whether toward yourself or to build goodwill between third parties. Typically an opposed skill test when the target has any investment in resisting. See Social Interactions in the Core System for full rules.\n\n**Simple Task (1 success):** Shift a cooperative or indifferent NPC's attitude one step in your favor, negotiate a fair deal, make a strong first impression.\n\n**Hard Task (2 successes):** Shift attitude two steps, convince someone to change their position on a matter they care about, sway a skeptical audience, broker goodwill between two parties with reason to distrust each other.",
+        "format": 1
+      },
+      "sort": 17000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.cccc46910753dbb9"
+    },
+    {
+      "_id": "9365b5c34f9e253b",
+      "name": "Ranged Combat",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Dexterity</p>\n<p><strong>Description:</strong> Fighting with bows, crossbows, thrown weapons, and other ranged attacks. Used for attacking at distance.</p>\n<p><strong>Simple Task (1 success):</strong> Hit a stationary target at short range, shoot accurately in good conditions, maintain your ranged weapon.</p>\n<p><strong>Hard Task (2 successes):</strong> Hit a moving target at long range, shoot accurately in poor conditions (wind, rain, darkness), hit a specific small target, shoot while moving.</p>\n<p><strong>Note:</strong> Ranged combat often uses fixed difficulty rather than opposed rolls.</p>",
+        "markdown": "**Governing Attribute:** Dexterity\n\n**Description:** Fighting with bows, crossbows, thrown weapons, and other ranged attacks. Used for attacking at distance.\n\n**Simple Task (1 success):** Hit a stationary target at short range, shoot accurately in good conditions, maintain your ranged weapon.\n\n**Hard Task (2 successes):** Hit a moving target at long range, shoot accurately in poor conditions (wind, rain, darkness), hit a specific small target, shoot while moving.\n\n**Note:** Ranged combat often uses fixed difficulty rather than opposed rolls.",
+        "format": 1
+      },
+      "sort": 18000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.9365b5c34f9e253b"
+    },
+    {
+      "_id": "021afa47b01de3f6",
+      "name": "Religion",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Wisdom</p>\n<p><strong>Description:</strong> Knowledge of gods, religious practices, holy symbols, and divine magic. Used to recall religious lore and identify divine phenomena.</p>\n<p><strong>Simple Task (1 success):</strong> Recognize common religious symbols, recall basic tenets of major faiths, perform a common religious ritual, identify a well-known divine weave.</p>\n<p><strong>Hard Task (2 successes):</strong> Recall obscure religious lore, identify symbols of forgotten gods, understand the theological implications of a religious text, recognize a rare divine manifestation.</p>",
+        "markdown": "**Governing Attribute:** Wisdom\n\n**Description:** Knowledge of gods, religious practices, holy symbols, and divine magic. Used to recall religious lore and identify divine phenomena.\n\n**Simple Task (1 success):** Recognize common religious symbols, recall basic tenets of major faiths, perform a common religious ritual, identify a well-known divine weave.\n\n**Hard Task (2 successes):** Recall obscure religious lore, identify symbols of forgotten gods, understand the theological implications of a religious text, recognize a rare divine manifestation.",
+        "format": 1
+      },
+      "sort": 19000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.021afa47b01de3f6"
+    },
+    {
+      "_id": "5344d488174b1221",
+      "name": "Society",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Intelligence</p>\n<p><strong>Description:</strong> Understanding of social structures, laws, customs, and current events. Used to navigate civilization and recall cultural knowledge.</p>\n<p><strong>Simple Task (1 success):</strong> Know basic laws and customs of your region, understand social etiquette for common situations, recognize local nobility or authority figures.</p>\n<p><strong>Hard Task (2 successes):</strong> Navigate complex political situations, understand obscure legal precedents, recall the customs of foreign cultures, identify the power structures in an unfamiliar organization.</p>",
+        "markdown": "**Governing Attribute:** Intelligence\n\n**Description:** Understanding of social structures, laws, customs, and current events. Used to navigate civilization and recall cultural knowledge.\n\n**Simple Task (1 success):** Know basic laws and customs of your region, understand social etiquette for common situations, recognize local nobility or authority figures.\n\n**Hard Task (2 successes):** Navigate complex political situations, understand obscure legal precedents, recall the customs of foreign cultures, identify the power structures in an unfamiliar organization.",
+        "format": 1
+      },
+      "sort": 20000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.5344d488174b1221"
+    },
+    {
+      "_id": "059876301d478172",
+      "name": "Stealth",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Agility</p>\n<p><strong>Description:</strong> Moving quietly, hiding, and avoiding detection. Used to remain unseen and unheard.</p>\n<p><strong>Simple Task (1 success):</strong> Sneak past an inattentive guard, hide in heavy shadows or dense foliage, move quietly across soft ground.</p>\n<p><strong>Hard Task (2 successes):</strong> Sneak past an alert guard, hide in plain sight using minimal cover, move silently across creaky floorboards or brittle ground, remain hidden while being actively searched for.</p>\n<p><strong>Note:</strong> Stealth is usually opposed by Perception.</p>",
+        "markdown": "**Governing Attribute:** Agility\n\n**Description:** Moving quietly, hiding, and avoiding detection. Used to remain unseen and unheard.\n\n**Simple Task (1 success):** Sneak past an inattentive guard, hide in heavy shadows or dense foliage, move quietly across soft ground.\n\n**Hard Task (2 successes):** Sneak past an alert guard, hide in plain sight using minimal cover, move silently across creaky floorboards or brittle ground, remain hidden while being actively searched for.\n\n**Note:** Stealth is usually opposed by Perception.",
+        "format": 1
+      },
+      "sort": 21000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.059876301d478172"
+    },
+    {
+      "_id": "ed2b6f61470bdb3d",
+      "name": "Thievery",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Dexterity</p>\n<p><strong>Description:</strong> Pickpocketing, sleight of hand, and manipulating small objects without being noticed. Used for subtle manual dexterity.</p>\n<p><strong>Simple Task (1 success):</strong> Palm a small object, pickpocket a distracted person, perform a simple card trick, hide a small item on your person.</p>\n<p><strong>Hard Task (2 successes):</strong> Pickpocket an alert person, plant evidence on someone without them noticing, perform complex sleight of hand that fools careful observers, steal a worn item (like a ring or necklace).</p>",
+        "markdown": "**Governing Attribute:** Dexterity\n\n**Description:** Pickpocketing, sleight of hand, and manipulating small objects without being noticed. Used for subtle manual dexterity.\n\n**Simple Task (1 success):** Palm a small object, pickpocket a distracted person, perform a simple card trick, hide a small item on your person.\n\n**Hard Task (2 successes):** Pickpocket an alert person, plant evidence on someone without them noticing, perform complex sleight of hand that fools careful observers, steal a worn item (like a ring or necklace).",
+        "format": 1
+      },
+      "sort": 22000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.ed2b6f61470bdb3d"
+    },
+    {
+      "_id": "0e5e8cad21c31f02",
+      "name": "Wilderness",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Wisdom</p>\n<p><strong>Description:</strong> Survival skills, tracking, and knowledge of nature. Combines nature lore and outdoor survival.</p>\n<p><strong>Simple Task (1 success):</strong> Find food and water in abundant wilderness, follow obvious tracks, predict tomorrow's weather, identify common plants and animals.</p>\n<p><strong>Hard Task (2 successes):</strong> Survive in harsh environments (desert, arctic, etc.), track a creature trying to hide its trail, predict weather days in advance, identify rare plants or dangerous creatures, navigate without landmarks.</p>",
+        "markdown": "**Governing Attribute:** Wisdom\n\n**Description:** Survival skills, tracking, and knowledge of nature. Combines nature lore and outdoor survival.\n\n**Simple Task (1 success):** Find food and water in abundant wilderness, follow obvious tracks, predict tomorrow's weather, identify common plants and animals.\n\n**Hard Task (2 successes):** Survive in harsh environments (desert, arctic, etc.), track a creature trying to hide its trail, predict weather days in advance, identify rare plants or dangerous creatures, navigate without landmarks.",
+        "format": 1
+      },
+      "sort": 23000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.0e5e8cad21c31f02"
+    },
+    {
+      "_id": "0df0a65527789be4",
+      "name": "Writing",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Governing Attribute:</strong> Dexterity</p>\n<p><strong>Description:</strong> Beautiful handwriting, forgery, and creating written documents. Used for calligraphy and document manipulation.</p>\n<p><strong>Simple Task (1 success):</strong> Write legibly and clearly, copy a document accurately, create a basic written message.</p>\n<p><strong>Hard Task (2 successes):</strong> Forge a signature or document convincingly, create beautiful calligraphy, write clearly while in motion or under stress, detect a forged document.</p>",
+        "markdown": "**Governing Attribute:** Dexterity\n\n**Description:** Beautiful handwriting, forgery, and creating written documents. Used for calligraphy and document manipulation.\n\n**Simple Task (1 success):** Write legibly and clearly, copy a document accurately, create a basic written message.\n\n**Hard Task (2 successes):** Forge a signature or document convincingly, create beautiful calligraphy, write clearly while in motion or under stress, detect a forged document.",
+        "format": 1
+      },
+      "sort": 24000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.0df0a65527789be4"
+    },
+    {
+      "_id": "5385b7c928896653",
+      "name": "Using Skills in Play",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<h3>Skill Checks</h3>\n<p>When the GM calls for a skill check:</p>\n<ol>\n<li>Determine if the task is Simple (1 success) or Hard (2 successes)</li>\n<li>Roll your governing Attribute die + Skill die</li>\n<li>Count successes (rolling under the value = success, natural 1 = always success)</li>\n<li>Compare to the required successes</li>\n</ol>\n<h3>Opposed Checks</h3>\n<p>Some skills are opposed by another character's skill:</p>\n<ul>\n<li><strong>Stealth vs. Perception:</strong> Sneaking past a guard</li>\n<li><strong>Deception vs. Empathy:</strong> Lying to someone</li>\n<li><strong>Thievery vs. Perception:</strong> Pickpocketing</li>\n</ul>\n<p>Both sides roll their relevant skills and count successes. Higher successes wins.</p>\n<h3>Combat Skills</h3>\n<p>Melee Combat and Ranged Combat are used for attacking:</p>\n<ul>\n<li><strong>Melee Combat:</strong> Opposed rolls against opponent's Melee Combat</li>\n<li><strong>Ranged Combat:</strong> Fixed difficulty based on range (see Combat rules)</li>\n</ul>\n<h3>Skill Synergy</h3>\n<p>The GM may grant Fortune or subtract penalties when multiple skills could apply:</p>\n<ul>\n<li>Using Investigate + History to analyze ancient ruins</li>\n<li>Using Wilderness + Medicine to create natural remedies</li>\n<li>Using Society + Deception to blend into a noble gathering</li>\n</ul>\n<h3>Taking Your Time</h3>\n<p>When not under time pressure, the GM may allow you to automatically succeed at Simple tasks if your skill rank is 3+, or at Hard tasks if your skill rank is 6+.</p>",
+        "markdown": "### Skill Checks\nWhen the GM calls for a skill check:\n1. Determine if the task is Simple (1 success) or Hard (2 successes)\n2. Roll your governing Attribute die + Skill die\n3. Count successes (rolling under the value = success, natural 1 = always success)\n4. Compare to the required successes\n\n### Opposed Checks\nSome skills are opposed by another character's skill:\n- **Stealth vs. Perception:** Sneaking past a guard\n- **Deception vs. Empathy:** Lying to someone\n- **Thievery vs. Perception:** Pickpocketing\n\nBoth sides roll their relevant skills and count successes. Higher successes wins.\n\n### Combat Skills\nMelee Combat and Ranged Combat are used for attacking:\n- **Melee Combat:** Opposed rolls against opponent's Melee Combat\n- **Ranged Combat:** Fixed difficulty based on range (see Combat rules)\n\n### Skill Synergy\nThe GM may grant Fortune or subtract penalties when multiple skills could apply:\n- Using Investigate + History to analyze ancient ruins\n- Using Wilderness + Medicine to create natural remedies\n- Using Society + Deception to blend into a noble gathering\n\n### Taking Your Time\nWhen not under time pressure, the GM may allow you to automatically succeed at Simple tasks if your skill rank is 3+, or at Hard tasks if your skill rank is 6+.",
+        "format": 1
+      },
+      "sort": 25000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.5385b7c928896653"
+    },
+    {
+      "_id": "621dab636dea108f",
+      "name": "Skill Advancement",
+      "type": "text",
+      "title": {
+        "show": true,
+        "level": 1
+      },
+      "text": {
+        "content": "<p><strong>Starting Skills:</strong> Determined by your Background (see Part 9: Backgrounds)</p>\n<p><strong>Improving Skills:</strong></p>\n<ul>\n<li>Rank 0\u21921: 4 XP</li>\n<li>Rank 1\u21922: 8 XP (8 \u00d7 current rank)</li>\n<li>Rank 2\u21923: 16 XP</li>\n<li>Rank 3\u21924: 24 XP</li>\n<li>Maximum: Skill rank cannot exceed governing attribute</li>\n</ul>\n<p><strong>Example:</strong> To improve Medicine from rank 2 to rank 3 costs 16 XP (8 \u00d7 2). If your Wisdom is 4, you can't raise Medicine above rank 4.</p>",
+        "markdown": "**Starting Skills:** Determined by your Background (see Part 9: Backgrounds)\n\n**Improving Skills:**\n- Rank 0\u21921: 4 XP\n- Rank 1\u21922: 8 XP (8 \u00d7 current rank)\n- Rank 2\u21923: 16 XP\n- Rank 3\u21924: 24 XP\n- Maximum: Skill rank cannot exceed governing attribute\n\n**Example:** To improve Medicine from rank 2 to rank 3 costs 16 XP (8 \u00d7 2). If your Wisdom is 4, you can't raise Medicine above rank 4.",
+        "format": 1
+      },
+      "sort": 26000,
+      "ownership": {
+        "default": 0
+      },
+      "flags": {},
+      "src": null,
+      "system": {},
+      "_key": "!journal.pages!8e63ca5600a2380d.621dab636dea108f"
+    }
+  ],
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  },
+  "flags": {}
+}

@@ -1,13 +1,13 @@
 {
   "_id": "29bc6857a6aedd0b",
-  "name": "Slowed (minor)",
+  "name": "Slowed (Minor)",
   "type": "condition",
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
       "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Movement speed reduced by 10 feet, Initiative -1. <strong>Recovery:</strong> Unless otherwise specified, [[/save type=will]] at end of turn.</p>\n<ul>\n<li>1 success: Remove Slowed condition</li>\n</ul>"
     },
-    "label": "Slowed (minor)",
+    "label": "Slowed (Minor)",
     "category": "movement",
     "keywords": [
       "Hindered"
@@ -36,7 +36,7 @@
         "type": "will"
       },
       "promptPlayer": true,
-      "chatMessage": "Make a [[/save type=will]] to recover from Slowed (minor)",
+      "chatMessage": "Make a [[/save type=will]] to recover from Slowed (Minor)",
       "downgrades": {
         "1_success": null
       }

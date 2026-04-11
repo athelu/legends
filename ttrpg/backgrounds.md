@@ -212,7 +212,7 @@ To the common folk, the life of a noble seems one of idyllic luxury, but growing
 #### Nomad
 Traveling far and wide, you picked up basic tactics for surviving on the road and in unknown lands, getting by with few supplies and even fewer comforts. As an adventurer, you travel still, often into even more dangerous places. The difference is that now you have companions and you're not sure yet whether that makes things easier or more complicated.
 **Skills:** Wilderness 2, Athletics 2, Perception 1, Society 1, +40 XP
-**Equipment:** Tent, traveler's clothes, hemp rope, waterskin, work boots
+**Equipment:** Tent, traveler's clothes, hemp rope, wineskin, work boots
 **Feature** - Wanderer's Knowledge: You know routes and shortcuts across wilderness and can find nomadic communities for trade or information.
 
 #### Refugee

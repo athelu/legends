@@ -5,7 +5,7 @@
   "img": "icons/svg/poison.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All attribute dice: Add 1 to die results. HP regeneration from short/long rests reduced by half. <strong>Recovery:</strong> [[/save type=fortitude]] at end of 1 hour (1 success). [[/check skill=medicine]] (2 successes) can end Poisoned early.</p>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> All attribute dice: Add 1 to die results. HP regeneration from short/long rests reduced by half. <strong>Recovery:</strong> [[/save type=fortitude]] at end of 1 hour (1 success cures). [[/check skill=medicine]] by self or ally (rank 2 required, 2 successes) can end Poisoned early. See Medicine Applications.</p>"
     },
     "label": "Poisoned (Weak)",
     "category": "damage-over-time",

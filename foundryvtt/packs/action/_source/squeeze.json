@@ -5,13 +5,13 @@
   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Move through a space one size smaller than you. It costs 2 feet of movement for every 1 foot traveled. All attacks and skill checks: Add 1 to both die results. Attacks against you have Fortune</p>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Move through a space one size smaller than you. It costs 2 feet of movement for every 1 foot traveled. All attacks and skill checks: Add 1 to both die results. Attacks against you have Fortune.</p>"
     },
     "actionType": "move",
     "actionCost": "1",
     "requirements": "",
     "trigger": "",
-    "effect": "Move through a space one size smaller than you. It costs 2 feet of movement for every 1 foot traveled. All attacks and skill checks: Add 1 to both die results. Attacks against you have Fortune",
+    "effect": "Move through a space one size smaller than you. It costs 2 feet of movement for every 1 foot traveled. All attacks and skill checks: Add 1 to both die results. Attacks against you have Fortune.",
     "appliesEffects": [],
     "keywords": [],
     "range": "",
