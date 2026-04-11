@@ -111,19 +111,14 @@ Cold is a stacking condition and making a successful saving throw will reduce th
 **Effect:** You are at 0 HP or below. Cannot take actions, reactions, or move. Unconscious condition active. Blinded condition active. Prone condition active
 **Recovery:** See Dying Mechanic section.
 
-## Encumbered
+### Encumbered
 **Keyword:** [Hindered]
-**Trigger:** Effective carried weight exceeds Str × 10 lbs
-**Effect:** Movement speed reduced by 10 feet. Add 1 to both dice on Athletics
-and Acrobatics checks.
+**Effect:** If your effective carried weight exceeds Str × 10 lbs, your movement speed is reduced by 10 feet. Add 1 to both dice on Athletics and Acrobatics checks.
 **Recovery:** Reduce effective carried weight to Str × 10 lbs or below.
 
-## Heavily Encumbered
+### Heavily Encumbered
 **Keyword:** [Hindered]
-**Trigger:** Effective carried weight exceeds Str × 15 lbs
-**Effect:** Movement speed reduced by 20 feet (minimum 5 feet). Add 2 to both
-dice on Athletics and Acrobatics checks. Add 1 to both dice on all other
-Agility-based skill checks. Cannot use the Disengage action. Cannot Jump.
+**Effect:** If your effective carried weight exceeds Str × 15 lbs, your movement speed reduced by 20 feet (minimum 5 feet). Add 2 to both dice on Athletics and Acrobatics checks. Add 1 to both dice on all other Agility-based skill checks. Cannot use the Disengage action. Cannot Jump.
 **Recovery:** Reduce effective carried weight to Str × 15 lbs or below.
 
 ## Exhaustion Effects

@@ -9,6 +9,7 @@ import { getLanguageDefinitions, getOriginLabel, getOriginOptionsForAncestry, ge
 const { ActorSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const PURCHASE_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment']);
+const EQUIPMENT_CONTAINER_TYPE = 'container';
 
 function normalizeCurrencyAmount(value) {
   return Math.max(0, Math.floor(Number(value) || 0));
@@ -51,6 +52,85 @@ function formatCurrencyFromCp(totalCp) {
 
 function escapeHtml(value) {
   return Handlebars.escapeExpression(String(value ?? ''));
+}
+
+function buildNestedEquipmentRows(equipment = [], encumbranceState = {}) {
+  const orderById = new Map(equipment.map((item, index) => [item._id, index]));
+  const equipmentById = new Map(equipment.map(item => [item._id, item]));
+  const containerStatusById = new Map((encumbranceState?.containers || []).map(container => [container.id, container]));
+  const containerChoices = equipment
+    .filter(item => item.system?.equipmentType === EQUIPMENT_CONTAINER_TYPE)
+    .map(item => ({
+      id: item._id,
+      name: item.name,
+    }));
+
+  const childrenByContainer = new Map();
+  const rootIds = [];
+
+  for (const item of equipment) {
+    const requestedContainerId = String(item.system?.encumbrance?.containerId || '').trim();
+    const validContainer = requestedContainerId
+      && requestedContainerId !== item._id
+      && equipmentById.get(requestedContainerId)?.system?.equipmentType === EQUIPMENT_CONTAINER_TYPE;
+
+    if (validContainer && item.system?.equipmentType !== EQUIPMENT_CONTAINER_TYPE) {
+      const children = childrenByContainer.get(requestedContainerId) || [];
+      children.push(item._id);
+      childrenByContainer.set(requestedContainerId, children);
+      continue;
+    }
+
+    rootIds.push(item._id);
+  }
+
+  const sortIds = (ids = []) => ids.sort((left, right) => (orderById.get(left) ?? 0) - (orderById.get(right) ?? 0));
+  sortIds(rootIds);
+  for (const childIds of childrenByContainer.values()) {
+    sortIds(childIds);
+  }
+
+  const rows = [];
+  const visit = (itemId, depth = 0) => {
+    const item = equipmentById.get(itemId);
+    if (!item) return;
+
+    const isContainer = item.system?.equipmentType === EQUIPMENT_CONTAINER_TYPE;
+    const containerStatus = containerStatusById.get(itemId) || null;
+    const childIds = childrenByContainer.get(itemId) || [];
+
+    rows.push({
+      ...item,
+      depth,
+      isContainer,
+      childCount: childIds.length,
+      canAssignContainer: !isContainer && containerChoices.length > 0,
+      storageOptions: containerChoices
+        .filter(option => option.id !== item._id)
+        .map(option => ({
+          ...option,
+          selected: option.id === item.system?.encumbrance?.containerId,
+        })),
+      containerStatus,
+      containerLoadDisplay: isContainer
+        ? `${containerStatus?.rawWeight ?? 0}${containerStatus?.capacity ? ` / ${containerStatus.capacity}` : ''} lbs`
+        : '',
+      isOverCapacity: Boolean(containerStatus?.overflowWeight > 0),
+      effectiveWeightDisplay: Number.isFinite(item.system?.encumbrance?.effectiveWeight)
+        ? `${item.system.encumbrance.effectiveWeight} lbs`
+        : '0 lbs',
+    });
+
+    for (const childId of childIds) {
+      visit(childId, depth + 1);
+    }
+  };
+
+  for (const rootId of rootIds) {
+    visit(rootId, 0);
+  }
+
+  return rows;
 }
 
 const ITEM_COMPENDIUM_PACKS = {
@@ -158,10 +238,18 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     super._attachPartListeners(partId, htmlElement, options);
     
     // Add change listeners to all numeric inputs
-    const numericInputs = htmlElement.querySelectorAll('input[type="number"]');
+    const numericInputs = htmlElement.querySelectorAll('input[type="number"]:not([data-item-field])');
     numericInputs.forEach(input => {
       input.addEventListener('change', this._onNumericInputChange.bind(this));
       input.addEventListener('blur', this._onNumericInputChange.bind(this));
+    });
+
+    const embeddedItemFields = htmlElement.querySelectorAll('[data-item-field]');
+    embeddedItemFields.forEach(field => {
+      field.addEventListener('change', this._onEmbeddedItemFieldChange.bind(this));
+      if (field instanceof HTMLInputElement) {
+        field.addEventListener('blur', this._onEmbeddedItemFieldChange.bind(this));
+      }
     });
 
     // Add click listener for profile image to open file picker
@@ -293,6 +381,28 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       const currentValue = this._getNestedValue(this.document.system, fieldName.replace('system.', ''));
       input.value = currentValue || 0;
     }
+  }
+
+  async _onEmbeddedItemFieldChange(event) {
+    const field = event.currentTarget;
+    const itemId = field.dataset.itemId;
+    const itemField = field.dataset.itemField;
+    if (!itemId || !itemField) return;
+
+    const item = this.actor.items.get(itemId);
+    if (!item) return;
+
+    let value;
+    if (field instanceof HTMLInputElement && field.type === 'number') {
+      value = Math.max(0, Number(field.value) || 0);
+      field.value = value;
+    } else if (field instanceof HTMLInputElement && field.type === 'checkbox') {
+      value = field.checked;
+    } else {
+      value = field.value;
+    }
+
+    await item.update({ [`system.${itemField}`]: value });
   }
 
   /** Helper to get nested values from object */
@@ -463,6 +573,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.armor = armor;
     context.shields = shields;
     context.equipment = equipment;
+    context.equipmentRows = buildNestedEquipmentRows(equipment, context.system?.encumbrance || {});
     context.weaves = weaves;
     context.feats = feats;
     context.traits = traits;

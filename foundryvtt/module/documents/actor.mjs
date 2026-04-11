@@ -190,11 +190,25 @@ function hasPowerfulBuild(actor, ancestryEffects) {
   });
 }
 
+function hasCondition(actor, conditionName) {
+  const normalizedName = String(conditionName || '').trim().toLowerCase();
+  if (!normalizedName) return false;
+
+  return actor.items.some(item => {
+    if (item.type !== 'condition') return false;
+    return String(item.name || '').trim().toLowerCase() === normalizedName;
+  });
+}
+
 export function buildActorEncumbranceState(actor, ancestryEffects = null) {
-  const strengthScore = Math.max(
+  const baseStrength = Math.max(
     0,
     Number(actor?.system?.attributesEffective?.strength ?? actor?.system?.attributes?.strength?.value ?? 0) || 0
   );
+  const weakened = hasCondition(actor, 'Weakened');
+  const strengthScore = weakened
+    ? Math.max(1, Math.floor(baseStrength / 2))
+    : baseStrength;
   const powerfulBuild = hasPowerfulBuild(actor, ancestryEffects);
   const thresholdMultiplier = powerfulBuild ? 1.5 : 1;
   const thresholds = {
@@ -329,7 +343,9 @@ export function buildActorEncumbranceState(actor, ancestryEffects = null) {
   }
 
   return {
+    baseStrength,
     strength: strengthScore,
+    weakened,
     powerfulBuild,
     effectiveWeight,
     tier,

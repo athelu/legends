@@ -5,7 +5,7 @@
   "img": "icons/svg/downgrade.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Physical strength impaired. Strength based skill checks: Add 1 to ability die results. Melee damage: Reduce by 2 (minimum 1). Carrying capacity: Halved <strong>Recovery:</strong> Typically 1 minute to 1 hour unless specified otherwise</p>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Physical strength impaired. Strength based skill checks: Add 1 to ability die results. Melee damage: Reduce by 2 (minimum 1). When Weakened, recalculate carrying capacity thresholds using Str ÷ 2 (rounded down, minimum 1) for the duration of the condition. <strong>Recovery:</strong> Typically 1 minute to 1 hour unless specified otherwise</p>"
     },
     "label": "Weakened",
     "category": "magic",
