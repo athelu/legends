@@ -1,0 +1,32 @@
+{
+  "_id": "f5850feda360fcce",
+  "name": "Encumbered",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> If your effective carried weight exceeds Str × 10 lbs, your movement speed is reduced by 10 feet. Add 1 to both dice on Athletics and Acrobatics checks. <strong>Recovery:</strong> Reduce effective carried weight to Str × 10 lbs or below.</p>"
+    },
+    "label": "Encumbered",
+    "category": "magic",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
+  },
+  "flags": {},
+  "_key": "!items!f5850feda360fcce"
+}

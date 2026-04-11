@@ -2893,6 +2893,8 @@
 
 .legends .equipment-list .items-header .item-name,
 .legends .equipment-list .items-header .item-quantity,
+.legends .equipment-list .items-header .item-location,
+.legends .equipment-list .items-header .item-capacity,
 .legends .equipment-list .items-header .item-controls {
   color: white !important;
   font-weight: bold;
@@ -2911,6 +2913,7 @@
   padding: 8px;
   transition: background-color 0.2s;
   cursor: pointer;
+  padding-left: calc(8px + (var(--equipment-depth, 0) * 18px));
 }
 
 .legends .equipment-list .item-header:hover {
@@ -2932,6 +2935,19 @@
   font-weight: 500;
 }
 
+.legends .equipment-list .item-name-primary {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.legends .equipment-list .item-name-secondary {
+  font-size: 11px;
+  color: #6b7280;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
 .legends .equipment-list .items-header > .item-quantity,
 .legends .equipment-list .item-header > .item-quantity {
   flex: 0 0 80px !important;
@@ -2949,6 +2965,25 @@
   margin: 0 !important;
 }
 
+.legends .equipment-list .items-header > .item-location,
+.legends .equipment-list .item-header > .item-location {
+  flex: 0 0 150px;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.legends .equipment-list .items-header > .item-capacity,
+.legends .equipment-list .item-header > .item-capacity {
+  flex: 0 0 110px;
+  min-width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
 .legends .equipment-list .items-header > .item-controls,
 .legends .equipment-list .item-header > .item-controls {
   flex: 0 0 120px;
@@ -2960,6 +2995,35 @@
 
 /* Note: Quantity input styling handled via inline styles in template
    due to Foundry's ApplicationV2 overriding CSS selectors */
+
+.legends .equipment-list .item-location select {
+  width: 100%;
+  min-width: 0;
+  padding: 4px 6px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 12px;
+}
+
+.legends .equipment-list .item-location-label,
+.legends .equipment-list .item-capacity-value {
+  font-size: 12px;
+  color: #374151;
+}
+
+.legends .equipment-list .item-header.container-row {
+  background: rgba(148, 163, 184, 0.08);
+}
+
+.legends .equipment-list .item-header.over-capacity,
+.legends .equipment-list .item-capacity-value.over-capacity {
+  color: #b91c1c !important;
+}
+
+.legends .equipment-list .item-header.over-capacity {
+  background: rgba(254, 226, 226, 0.55);
+}
 
 /* Item summary content */
 .legends .equipment-list .item-summary {

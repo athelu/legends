@@ -5,7 +5,7 @@
   "img": "icons/svg/unconscious.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Effect:</strong> You are at 0 HP or below. Cannot take actions, reactions, or move. Unconscious condition active. Blinded condition active. Prone condition active <strong>Recovery:</strong> See Dying Mechanic section</p>"
+      "value": "<p><strong>Effect:</strong> You are at 0 HP or below. Cannot take actions, reactions, or move. Unconscious condition active. Blinded condition active. Prone condition active <strong>Recovery:</strong> See Dying Mechanic section.</p>"
     },
     "label": "Dying",
     "category": "incapacitation",

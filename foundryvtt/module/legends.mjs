@@ -39,6 +39,7 @@ globalThis.__legendsModuleLoaded = true;
 const ELEMENTAL_ENERGIES = ["earth", "air", "fire", "water"];
 const ENCUMBRANCE_SYNC_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment', 'trait', 'feat', 'ancestry']);
 const ENCUMBRANCE_CONDITION_NAMES = ['Encumbered', 'Heavily Encumbered'];
+const ENCUMBRANCE_RELEVANT_CONDITIONS = new Set(['weakened']);
 const SESSION_XP_MACRO_NAME = 'Award Session XP to All Player Characters';
 const SESSION_XP_MACRO_KEY = 'award-session-xp-all-players';
 const SESSION_XP_MACRO_COMMAND = `(async () => {
@@ -149,6 +150,15 @@ async function syncActorEncumbranceConditions(actor) {
   if (targetCondition && !activeConditions.has(targetCondition)) {
     await applyCondition(actor, targetCondition, { source: 'encumbrance-sync' });
   }
+}
+
+function shouldSyncEncumbranceForItem(item) {
+  if (!item) return false;
+  if (ENCUMBRANCE_SYNC_ITEM_TYPES.has(item.type)) return true;
+  if (item.type !== 'condition') return false;
+
+  const normalizedName = String(item.name || '').trim().toLowerCase();
+  return ENCUMBRANCE_RELEVANT_CONDITIONS.has(normalizedName);
 }
 
 async function ensureDefaultSheets() {
@@ -679,7 +689,7 @@ Hooks.on('preCreateItem', async (item) => {
 
 Hooks.on('createItem', async (item) => {
   try {
-    if (!item || item.type === 'condition' || !ENCUMBRANCE_SYNC_ITEM_TYPES.has(item.type)) return;
+    if (!shouldSyncEncumbranceForItem(item)) return;
     if (item.actor?.type !== 'character') return;
     await syncActorEncumbranceConditions(item.actor);
   } catch (err) {
@@ -724,7 +734,7 @@ Hooks.on('updateItem', async (item, diff, options, userId) => {
 
 Hooks.on('updateItem', async (item, diff, options, userId) => {
   try {
-    if (!item || item.type === 'condition' || !ENCUMBRANCE_SYNC_ITEM_TYPES.has(item.type)) return;
+    if (!shouldSyncEncumbranceForItem(item)) return;
     if (item.actor?.type !== 'character') return;
     await syncActorEncumbranceConditions(item.actor);
   } catch (err) {
@@ -747,7 +757,7 @@ Hooks.on('deleteItem', async (item, options, userId) => {
 
 Hooks.on('deleteItem', async (item, options, userId) => {
   try {
-    if (!item || item.type === 'condition' || !ENCUMBRANCE_SYNC_ITEM_TYPES.has(item.type)) return;
+    if (!shouldSyncEncumbranceForItem(item)) return;
     if (item.actor?.type !== 'character') return;
     await syncActorEncumbranceConditions(item.actor);
   } catch (err) {

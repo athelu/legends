@@ -1112,29 +1112,70 @@
           <div class="item-image"></div>
           <div class="item-name">Name</div>
           <div class="item-quantity">Qty</div>
+          <div class="item-location">Stored In</div>
+          <div class="item-capacity">Load</div>
           <div class="item-controls">Actions</div>
         </li>
         
-        {{#each equipment as |item id|}}
+        {{#each equipmentRows as |item id|}}
         <li class="item-collapsible" data-item-id="{{item._id}}">
           
           {{!-- Item Header (Always Visible, Clickable) --}}
-          <div class="item-header" data-action="expandItem">
+          <div class="item-header {{#if item.isContainer}}container-row{{/if}} {{#if item.isOverCapacity}}over-capacity{{/if}}" data-action="expandItem" style="--equipment-depth: {{item.depth}};">
             <i class="item-caret fas fa-caret-right"></i>
             <div class="item-image">
               <img src="{{item.img}}" title="{{item.name}}" width="24" height="24"/>
             </div>
             
-            <h4 class="item-name">{{item.name}}</h4>
+            <div class="item-name">
+              <div class="item-name-primary">{{item.name}}</div>
+              {{#if item.isContainer}}
+              <div class="item-name-secondary">
+                {{#if item.childCount}}{{item.childCount}} stored item{{#unless (eq item.childCount 1)}}s{{/unless}}{{else}}Empty container{{/if}}
+              </div>
+              {{else if item.system.encumbrance.containerName}}
+              <div class="item-name-secondary">Inside {{item.system.encumbrance.containerName}}</div>
+              {{/if}}
+            </div>
             
             <div class="item-quantity">
               <input type="number" 
                      name="items.{{item._id}}.system.quantity" 
                      value="{{item.system.quantity}}" 
+                     data-item-id="{{item._id}}"
+                     data-item-field="quantity"
                      data-dtype="Number" 
                      min="0"
                      style="width: 60px !important; max-width: 60px !important; padding: 3px 6px !important; text-align: center !important; border: 1px solid #cbd5e0 !important; border-radius: 3px !important; background: white !important; font-weight: bold !important; color: #2d3748 !important; font-size: 13px !important; box-shadow: none !important; height: auto !important;"
                      onclick="event.stopPropagation()"/>
+            </div>
+
+            <div class="item-location">
+              {{#if item.isContainer}}
+              <span class="item-location-label">Container</span>
+              {{else if item.canAssignContainer}}
+              <select name="items.{{item._id}}.system.encumbrance.containerId"
+                      data-item-id="{{item._id}}"
+                      data-item-field="encumbrance.containerId"
+                      onclick="event.stopPropagation()">
+                <option value="">Not stored</option>
+                {{#each item.storageOptions as |option|}}
+                <option value="{{option.id}}" {{#if option.selected}}selected{{/if}}>{{option.name}}</option>
+                {{/each}}
+              </select>
+              {{else}}
+              <span class="item-location-label">Not stored</span>
+              {{/if}}
+            </div>
+
+            <div class="item-capacity">
+              {{#if item.isContainer}}
+              <span class="item-capacity-value {{#if item.isOverCapacity}}over-capacity{{/if}}" title="{{#if item.containerStatus.overflowWeight}}{{item.containerStatus.overflowWeight}} lbs overflow{{/if}}">
+                {{item.containerLoadDisplay}}
+              </span>
+              {{else}}
+              <span class="item-capacity-value">{{item.effectiveWeightDisplay}}</span>
+              {{/if}}
             </div>
             
             <div class="item-controls">

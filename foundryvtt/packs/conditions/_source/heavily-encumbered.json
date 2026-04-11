@@ -1,0 +1,32 @@
+{
+  "_id": "b5f9d2068983183a",
+  "name": "Heavily Encumbered",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> If your effective carried weight exceeds Str × 15 lbs, your movement speed reduced by 20 feet (minimum 5 feet). Add 2 to both dice on Athletics and Acrobatics checks. Add 1 to both dice on all other Agility-based skill checks. Cannot use the Disengage action. Cannot Jump. <strong>Recovery:</strong> Reduce effective carried weight to Str × 15 lbs or below.</p>"
+    },
+    "label": "Heavily Encumbered",
+    "category": "magic",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
+  },
+  "flags": {},
+  "_key": "!items!b5f9d2068983183a"
+}
