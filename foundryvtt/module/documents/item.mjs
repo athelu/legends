@@ -713,6 +713,14 @@ export class D8Item extends Item {
       if (typeof systemData[field] !== 'string') systemData[field] = '';
     }
 
+    if (!Array.isArray(systemData.abilityGrants)) {
+      systemData.abilityGrants = [];
+    }
+
+    if (!systemData.originAbilityGrants || typeof systemData.originAbilityGrants !== 'object' || Array.isArray(systemData.originAbilityGrants)) {
+      systemData.originAbilityGrants = {};
+    }
+
     systemData.requiresGMApproval = Boolean(systemData.requiresGMApproval);
     systemData.abilityModifiers = foundry.utils.deepClone(systemData.bonuses.attributes);
     itemData.system = systemData;

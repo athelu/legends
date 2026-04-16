@@ -14,6 +14,19 @@
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = fails, 1 = Frightened, 2= Frightened (12), 3 = Frightened (16)
 
+### Nevil's Clarity
+**Primary Energy:** Negative 4 (glimpsing possibility)
+**Supporting Energy:** Time 2 (duration 1 minute)
+**Range:** Touch
+**Duration:** 1 minute
+**Total Cost:** 6 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Negative Mastery
+**Description:** Target gains +2 Intelligence for the duration. Recalculate Intelligence-based checks and casting values if Intelligence is the target's casting stat. If this changes max Energy Pool, current Energy does not increase when this weave is applied. This bonus does not stack with other beneficial Intelligence modifiers; use the highest bonus.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
+
 ### Null Sphere
 **Primary Energy:** Space 8 (negating magical energies in area)
 **Supporting Energy:** Time 3 (duration 10 minutes)
@@ -216,6 +229,19 @@
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = triggering attack only, 2= 1 turn, 3 = 1 turn (+4 DR)
 
+### Recall Soul
+**Primary Energy:** Positive 8
+**Supporting Energy:** Time 4
+**Range:** Touch
+**Duration:** Permanent (if successful)
+**Total Cost:** 12 Energy
+**Action:** Complex weave (2 actions), requires 1 hour of uninterrupted ritual casting
+**Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Positive Mastery
+**Description:** On success, the creature returns to life at 1 HP with the Grievously Wounded condition and Exhausted (Level 2). Rare materials consumed during the ritual with a combined value of at least 500 gp (sanctified oils, incense prepared from components tied to the Positive plane, and ideally a personal object belonging to the deceased). Divine Gift casters of Ambis or Nevil subtract 1 from both weaving dice.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails. 1 = success; Exhausted Level 3, one attribute permanently reduced by 1, 2 = success, 3 = success; exhausted Level 1
+
 ### Revealing Light
 **Primary Energy:** Positive 2 (revealing light outlining creatures)
 **Supporting Energy:** Space 6 (medium range + 10ft radius + 1 minute)
@@ -229,3 +255,16 @@
 **Applies Effects:** revealed
 **Saving Throw:** Reflex
 **Targeting Success Scaling:** 0 = fails, 1 = 5-ft radius, 2= 10-ft radius, 3 = 10-ft radius + revealed
+
+### Rudlu's Fortune
+**Primary Energy:** Space 4 (drawing on fate's edge)
+**Supporting Energy:** Time 2 (duration 1 minute)
+**Range:** Touch
+**Duration:** 1 minute
+**Total Cost:** 6 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
+**Description:** Target gains +2 Luck for the duration. For saves and complication checks, treat the target's Current Luck as 2 higher, but this weave grants no spendable Luck points. This bonus does not stack with other beneficial Luck modifiers; use the highest bonus.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes

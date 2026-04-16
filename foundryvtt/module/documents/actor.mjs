@@ -452,7 +452,11 @@ _prepareCharacterData(actorData) {
   const systemData = actorData.system;
   const ancestryEffects = this._collectAncestryEffects(actorData.items);
   const ancestryName = ancestryEffects.primaryName || '';
-  const skillRank = Math.max(0, Math.floor(Number(systemData.skills?.language ?? 0) || 0));
+  const languageSkillData = systemData.skills?.language;
+  const languageSkillRank = typeof languageSkillData === 'object'
+    ? Number(languageSkillData?.value ?? 0)
+    : Number(languageSkillData ?? 0);
+  const skillRank = Math.max(0, Math.floor(languageSkillRank || 0));
   const currentOrigin = normalizeOriginKey(systemData.biography?.origin);
   const validOrigin = isOriginValidForAncestry(currentOrigin, ancestryName) ? currentOrigin : '';
   const fallbackNativeLanguage = getNativeLanguageKeyForOrigin(validOrigin);

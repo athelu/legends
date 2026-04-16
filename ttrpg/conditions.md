@@ -109,6 +109,11 @@ Cold is a stacking condition and making a successful saving throw will reduce th
 **Effect:** Spatial awareness or balance impaired. Perception checks: Add 1 to both die results. Initiative: -1. Opponents receive the concealed condition to your attacks.
 **Recovery:** Typically 1 round unless specified otherwise.
 
+### Drowning
+**Keyword:** [Hindered]
+**Effect:** Target gains the Fleeing condition (water is source). If they do not reach air in a number of rounds equal to their Constitution score, they gain the unconscious condition.
+**Recovery:** The Fleeing condition ends immediately if the character reaches air. If the target is unconscious, an ally with Medicine 2+ may spend 1 minute administering aid. On success, the drowning target makes a Fortitude save (1 success) to regain consciousness. On failure, they remain unconscious.
+
 ### Dying
 **Effect:** You are at 0 HP or below. Cannot take actions, reactions, or move. Unconscious condition active. Blinded condition active. Prone condition active
 **Recovery:** See Dying Mechanic section.
@@ -237,6 +242,11 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 **Effect:** Your location is unknown; enemies do not know which square you occupy. Enemies cannot directly target you with attacks or single-target weaves. While hidden you have Fortune on your first [combat] action. Making a [combat] action removes the hidden condition. 
 **Recovery:** Opposed by Observers perception check
 
+### Immobilized
+**Keyword:** [Hindered]
+**Effect:** Movement speed reduced to 0. Cannot take [Move] actions. Attacks against you subtract 1 from both attack dice.
+**Recovery:** The source of the condition will describe the recovery conditions.
+
 ### Incapacitated
 **Keyword:** [Hindered]
 **Effect:** Cannot take actions or reactions. Movement speed reduced to 0.
@@ -253,6 +263,11 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 **Recovery:** At the end of each turn, make Fortitude save.
 - 1 success: Subtract 1 from both die results on next recovery save
 - 2 successes: Remove Paralyzed condition
+
+### Pinned
+**Keyword:** [Hindered]
+**Effect:** Movement speed reduced to 0. Cannot take [Move] actions. The target can still attack, use abilities, and take other actions normally.
+**Recovery:** The source of the condition will describe the recovery conditions.
 
 ### Poisoned (Weak)
 **Keyword:** [Hindered]

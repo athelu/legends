@@ -1,6 +1,6 @@
 import { validatePrereqs } from './feat-effects.mjs';
 import { getNativeLanguageKeyForOrigin, getOriginOptionsForAncestry, normalizeOriginKey } from './languages.mjs';
-import { setupMagicalTraits } from './magical-traits.mjs';
+import { detectPrimaryMagicalTrait, setupMagicalTraits } from './magical-traits.mjs';
 import { getActorProgressionState, showSpendXPDialog } from './progression.mjs';
 import { SKILL_LABELS, normalizeSkillKey } from './skill-utils.mjs';
 
@@ -167,6 +167,15 @@ function formatKeywordList(keywords) {
   return String(keywords || '').trim();
 }
 
+function formatPickerLabel(value) {
+  return String(value || '')
+    .trim()
+    .split(/[_\-\s]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
 function buildStartingFeatPreview(entry) {
   const feat = entry.feat;
   const system = feat.system || {};
@@ -213,6 +222,235 @@ function renderStartingFeatPicker(root, options, initialIndex) {
       row.style.background = rowIndex === safeIndex ? 'rgba(209, 139, 71, 0.10)' : (options[rowIndex]?.disabled ? 'rgba(120, 120, 120, 0.10)' : 'rgba(255, 255, 255, 0.03)');
     });
     if (preview) preview.innerHTML = buildStartingFeatPreview(options[safeIndex]);
+  };
+
+  rows.forEach((row, rowIndex) => {
+    row.addEventListener('click', () => syncSelection(rowIndex));
+    row.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        syncSelection(rowIndex);
+      }
+    });
+  });
+
+  syncSelection(initialIndex);
+}
+
+function buildTraitOrFlawPreview(entry, type, summary) {
+  const document = entry.document;
+  const system = document.system || {};
+  const pointValue = type === 'trait'
+    ? Math.abs(Number(system.pointCost || 0))
+    : Number(system.pointValue || 0);
+  const typeLabel = type === 'trait'
+    ? `${pointValue} point${pointValue === 1 ? '' : 's'}`
+    : `+${pointValue} point${pointValue === 1 ? '' : 's'}`;
+  const category = type === 'trait' ? formatPickerLabel(system.traitType) : formatPickerLabel(system.flawType);
+  const secondaryMeta = type === 'trait'
+    ? (system.isMagical ? 'Magical' : '')
+    : formatPickerLabel(system.severity);
+  const statusTone = entry.disabled ? '#a64545' : '#567a43';
+  const statusText = entry.disabled
+    ? (entry.reason || 'Not currently available')
+    : (type === 'trait'
+      ? `Affordable with ${summary.remaining} point${summary.remaining === 1 ? '' : 's'} remaining.`
+      : 'Available to add now.');
+  const details = [category, secondaryMeta].filter(Boolean).join(' • ');
+  const description = String(system.description?.value || '').trim();
+  const benefits = String(type === 'trait' ? system.benefits : system.mechanicalEffects || '').trim();
+  const roleplayingImpact = String(system.roleplayingImpact || '').trim();
+  const notes = String(system.notes || '').trim();
+  const requirements = String(system.requirements || system.requiresExistingTrait || '').trim();
+  const overcomeMethod = String(system.overcomeMethod || '').trim();
+
+  return `
+    <div style="display: flex; flex-direction: column; gap: 10px; min-height: 420px;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <h3 style="margin: 0;">${escapeHtml(document.name)}</h3>
+          <span style="font-size: 12px; color: #666;">${escapeHtml(type === 'trait' ? 'Trait' : 'Flaw')} • ${escapeHtml(typeLabel)}</span>
+        </div>
+        <div style="margin-top: 6px; font-size: 12px; color: ${statusTone};">${escapeHtml(statusText)}</div>
+      </div>
+      ${details ? `<div><strong>Category:</strong> ${escapeHtml(details)}</div>` : ''}
+      ${requirements ? `<div><strong>${type === 'trait' ? 'Requirements' : 'Prerequisites'}:</strong> ${escapeHtml(requirements)}</div>` : ''}
+      ${system.requiresGMApproval ? '<div><strong>Approval:</strong> GM approval required.</div>' : ''}
+      <div><strong>Creation Budget:</strong> ${summary.spent} spent / ${summary.earned} earned (${summary.remaining} remaining)</div>
+      ${description ? `<div><strong>Description</strong><div style="margin-top: 6px;">${description}</div></div>` : ''}
+      ${benefits ? `<div><strong>${type === 'trait' ? 'Benefits' : 'Mechanical Effects'}</strong><div style="margin-top: 6px;">${benefits}</div></div>` : ''}
+      ${roleplayingImpact ? `<div><strong>Roleplaying Impact</strong><div style="margin-top: 6px;">${roleplayingImpact}</div></div>` : ''}
+      ${overcomeMethod ? `<div><strong>Overcoming This Flaw</strong><div style="margin-top: 6px; white-space: pre-wrap;">${escapeHtml(overcomeMethod)}</div></div>` : ''}
+      ${notes ? `<div><strong>Notes</strong><div style="margin-top: 6px;">${notes}</div></div>` : ''}
+    </div>
+  `;
+}
+
+function renderTraitOrFlawPicker(root, options, initialIndex, type, summary) {
+  const input = root.querySelector('[name="creationChoice"]');
+  const preview = root.querySelector('[data-trait-flaw-preview]');
+  const rows = Array.from(root.querySelectorAll('[data-trait-flaw-option]'));
+
+  const syncSelection = (index) => {
+    const safeIndex = Math.max(0, Math.min(index, options.length - 1));
+    if (input) input.value = String(safeIndex);
+    rows.forEach((row, rowIndex) => {
+      row.style.borderColor = rowIndex === safeIndex ? '#d18b47' : 'rgba(209, 139, 71, 0.25)';
+      row.style.background = rowIndex === safeIndex ? 'rgba(209, 139, 71, 0.10)' : (options[rowIndex]?.disabled ? 'rgba(120, 120, 120, 0.10)' : 'rgba(255, 255, 255, 0.03)');
+    });
+    if (preview) preview.innerHTML = buildTraitOrFlawPreview(options[safeIndex], type, summary);
+  };
+
+  rows.forEach((row, rowIndex) => {
+    row.addEventListener('click', () => syncSelection(rowIndex));
+    row.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        syncSelection(rowIndex);
+      }
+    });
+  });
+
+  syncSelection(initialIndex);
+}
+
+function formatSignedValue(value) {
+  const numericValue = Number(value || 0);
+  return numericValue > 0 ? `+${numericValue}` : String(numericValue);
+}
+
+function formatAttributeModifierSummary(modifiers = {}) {
+  return Object.entries(modifiers)
+    .filter(([, value]) => Number(value || 0) !== 0)
+    .map(([key, value]) => `${ATTRIBUTE_LABELS[key] || formatPickerLabel(key)} ${formatSignedValue(value)}`)
+    .join(', ');
+}
+
+function formatDocumentList(items = []) {
+  const entries = Array.isArray(items) ? items.map((entry) => String(entry || '').trim()).filter(Boolean) : [];
+  if (!entries.length) return '';
+  return `<ul style="margin: 6px 0 0 18px;">${entries.map((entry) => `<li>${escapeHtml(entry)}</li>`).join('')}</ul>`;
+}
+
+function buildCompendiumDocumentPreview(document) {
+  const system = document.system || {};
+  const type = String(document.type || '').trim();
+  const description = String(system.description?.value || '').trim();
+  const notes = String(system.notes || '').trim();
+
+  if (type === 'ancestry') {
+    const modifiers = formatAttributeModifierSummary(system.abilityModifiers || system.bonuses?.attributes || {});
+    const detailBits = [
+      system.size ? `Size: ${formatPickerLabel(system.size)}` : '',
+      Number(system.speed || 0) > 0 ? `Speed: ${Number(system.speed)} ft.` : '',
+      Number(system.lifespan || 0) > 0 ? `Lifespan: ${Number(system.lifespan)} years` : '',
+    ].filter(Boolean).join(' • ');
+
+    return `
+      <div style="display: flex; flex-direction: column; gap: 10px; min-height: 420px;">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+            <h3 style="margin: 0;">${escapeHtml(document.name)}</h3>
+            <span style="font-size: 12px; color: #666;">Ancestry</span>
+          </div>
+          ${detailBits ? `<div style="margin-top: 6px; font-size: 12px; color: #666;">${escapeHtml(detailBits)}</div>` : ''}
+        </div>
+        ${modifiers ? `<div><strong>Attribute Modifiers:</strong> ${escapeHtml(modifiers)}</div>` : '<div><strong>Attribute Modifiers:</strong> None</div>'}
+        ${String(system.traits || '').trim() ? `<div><strong>Traits:</strong> ${escapeHtml(system.traits)}</div>` : ''}
+        ${String(system.languages || '').trim() ? `<div><strong>Languages:</strong> ${escapeHtml(system.languages)}</div>` : ''}
+        ${String(system.specialAbilities || '').trim() ? `<div><strong>Special Abilities:</strong><div style="margin-top: 6px; white-space: pre-wrap;">${escapeHtml(system.specialAbilities)}</div></div>` : ''}
+        ${String(system.senses || '').trim() ? `<div><strong>Senses:</strong> ${escapeHtml(system.senses)}</div>` : ''}
+        ${description ? `<div><strong>Description</strong><div style="margin-top: 6px;">${description}</div></div>` : ''}
+        ${String(system.culture || '').trim() ? `<div><strong>Culture</strong><div style="margin-top: 6px; white-space: pre-wrap;">${escapeHtml(system.culture)}</div></div>` : ''}
+        ${notes ? `<div><strong>Notes</strong><div style="margin-top: 6px;">${notes}</div></div>` : ''}
+      </div>
+    `;
+  }
+
+  if (type === 'background') {
+    const grantedSkills = Object.entries(system.grantedSkills || {})
+      .filter(([, value]) => Number(value || 0) > 0)
+      .map(([key, value]) => `${SKILL_LABELS[key] || formatPickerLabel(key)} ${Number(value)}`);
+    const equipmentItems = Array.isArray(system.itemGrants)
+      ? system.itemGrants.map((entry) => {
+        const quantity = Number(entry?.quantity || 1);
+        const name = String(entry?.sourceName || entry?.originalText || '').trim();
+        if (!name) return '';
+        return quantity > 1 ? `${name} x${quantity}` : name;
+      }).filter(Boolean)
+      : String(system.startingEquipment || '').split(/\r?\n/).map((entry) => entry.trim()).filter(Boolean);
+    const detailBits = [
+      Number(system.startingXP || 0) > 0 ? `Starting XP: ${Number(system.startingXP)}` : '',
+      String(system.skillBonuses || '').trim() ? `Skill Grants: ${String(system.skillBonuses).trim()}` : '',
+    ].filter(Boolean).join(' • ');
+
+    return `
+      <div style="display: flex; flex-direction: column; gap: 10px; min-height: 420px;">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+            <h3 style="margin: 0;">${escapeHtml(document.name)}</h3>
+            <span style="font-size: 12px; color: #666;">Background</span>
+          </div>
+          ${detailBits ? `<div style="margin-top: 6px; font-size: 12px; color: #666;">${escapeHtml(detailBits)}</div>` : ''}
+        </div>
+        ${grantedSkills.length ? `<div><strong>Granted Skills</strong>${formatDocumentList(grantedSkills)}</div>` : ''}
+        ${String(system.features || '').trim() ? `<div><strong>Feature</strong><div style="margin-top: 6px; white-space: pre-wrap;">${escapeHtml(system.features)}</div></div>` : ''}
+        ${equipmentItems.length ? `<div><strong>Starting Equipment</strong>${formatDocumentList(equipmentItems)}</div>` : ''}
+        ${String(system.suggestedFeats || '').trim() ? `<div><strong>Suggested Feats:</strong> ${escapeHtml(system.suggestedFeats)}</div>` : ''}
+        ${description ? `<div><strong>Description</strong><div style="margin-top: 6px;">${description}</div></div>` : ''}
+        ${String(system.traits || '').trim() ? `<div><strong>Associated Traits:</strong> ${escapeHtml(system.traits)}</div>` : ''}
+        ${notes ? `<div><strong>Notes</strong><div style="margin-top: 6px;">${notes}</div></div>` : ''}
+      </div>
+    `;
+  }
+
+  return `
+    <div style="display: flex; flex-direction: column; gap: 10px; min-height: 420px;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <h3 style="margin: 0;">${escapeHtml(document.name)}</h3>
+          <span style="font-size: 12px; color: #666;">${escapeHtml(formatPickerLabel(type || 'item'))}</span>
+        </div>
+      </div>
+      ${description ? `<div><strong>Description</strong><div style="margin-top: 6px;">${description}</div></div>` : ''}
+      ${notes ? `<div><strong>Notes</strong><div style="margin-top: 6px;">${notes}</div></div>` : ''}
+    </div>
+  `;
+}
+
+function getCompendiumDocumentMeta(document) {
+  const system = document.system || {};
+  if (document.type === 'ancestry') {
+    return [
+      system.size ? formatPickerLabel(system.size) : '',
+      Number(system.speed || 0) > 0 ? `${Number(system.speed)} ft.` : '',
+      system.requiresGMApproval ? 'GM approval' : '',
+    ].filter(Boolean).join(' • ');
+  }
+
+  if (document.type === 'background') {
+    return [
+      Number(system.startingXP || 0) > 0 ? `${Number(system.startingXP)} XP` : '',
+      String(system.skillBonuses || '').trim() || '',
+    ].filter(Boolean).join(' • ');
+  }
+
+  return formatPickerLabel(document.type || '');
+}
+
+function renderCompendiumDocumentPicker(root, documents, initialIndex) {
+  const input = root.querySelector('[name="compendiumChoice"]');
+  const preview = root.querySelector('[data-compendium-preview]');
+  const rows = Array.from(root.querySelectorAll('[data-compendium-option]'));
+
+  const syncSelection = (index) => {
+    const safeIndex = Math.max(0, Math.min(index, documents.length - 1));
+    if (input) input.value = String(safeIndex);
+    rows.forEach((row, rowIndex) => {
+      row.style.borderColor = rowIndex === safeIndex ? '#d18b47' : 'rgba(209, 139, 71, 0.25)';
+      row.style.background = rowIndex === safeIndex ? 'rgba(209, 139, 71, 0.10)' : 'rgba(255, 255, 255, 0.03)';
+    });
+    if (preview) preview.innerHTML = buildCompendiumDocumentPreview(documents[safeIndex]);
   };
 
   rows.forEach((row, rowIndex) => {
@@ -679,17 +917,35 @@ async function chooseCompendiumDocument(packName, title, options = {}) {
     return null;
   }
 
+  const initialIndex = Math.max(0, documents.findIndex((document) => {
+    if (!options.initialSelectionName) return false;
+    return String(document.name || '').trim().toLowerCase() === String(options.initialSelectionName || '').trim().toLowerCase();
+  }));
+
   const result = await showWizardDialog({
     title,
-    position: { width: 520 },
+    position: { width: 980 },
     content: `
       <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
         ${options.description ? `<div>${options.description}</div>` : ''}
-        <div class="form-group">
-          <label>Select an option</label>
-          <select name="compendiumChoice" style="width: 100%; padding: 6px;">
-            ${documents.map((doc, index) => `<option value="${index}">${escapeHtml(doc.name)}</option>`).join('')}
-          </select>
+        <div style="font-size: 12px; color: #666;">Review the list on the left and use the preview on the right before confirming your selection.</div>
+        <input type="hidden" name="compendiumChoice" value="${initialIndex >= 0 ? initialIndex : 0}" />
+        <div style="display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 14px; align-items: start;">
+          <div>
+            <label style="display: block; margin-bottom: 6px;">Select an option</label>
+            <div style="display: flex; flex-direction: column; gap: 6px; max-height: 460px; overflow-y: auto; padding-right: 4px;">
+              ${documents.map((doc, index) => `
+                <div
+                  data-compendium-option="${index}"
+                  tabindex="0"
+                  style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px; cursor: pointer;">
+                  <div style="font-weight: 600;">${escapeHtml(doc.name)}</div>
+                  <div style="font-size: 12px; color: #666; margin-top: 2px;">${escapeHtml(getCompendiumDocumentMeta(doc))}</div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+          <div data-compendium-preview style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 10px; padding: 12px; max-height: 460px; overflow-y: auto;"></div>
         </div>
       </form>
     `,
@@ -706,9 +962,14 @@ async function chooseCompendiumDocument(packName, title, options = {}) {
         callback: () => null,
       },
     ],
+    render: (event, dialog) => {
+      renderCompendiumDocumentPicker(dialog.element, documents, initialIndex >= 0 ? initialIndex : 0);
+    },
   });
 
-  return result || null;
+  if (isDialogSelectionCancelled(result)) return null;
+  if (typeof result?.toObject === 'function') return result;
+  return null;
 }
 
 async function replaceSingleActorItem(actor, type, document) {
@@ -740,6 +1001,7 @@ async function runAncestryStep(actor) {
   const choice = await chooseCompendiumDocument('legends.ancestries', `Character Creation: Step 2 of 9`, {
     description: `<div><strong>Choose Ancestry</strong>${current ? `<br />Current ancestry: <strong>${escapeHtml(current.name)}</strong>` : ''}</div>`,
     confirmLabel: current ? 'Replace Ancestry' : 'Choose Ancestry',
+    initialSelectionName: current?.name,
   });
 
   if (!choice) return true;
@@ -878,6 +1140,7 @@ async function runBackgroundStep(actor) {
         filter: (entry) => String(entry.name || '').trim().toLowerCase() === result.name.toLowerCase(),
         confirmLabel: 'Use Rolled Background',
         skipLabel: 'Choose Manually Instead',
+        initialSelectionName: result.name,
       });
     }
   }
@@ -886,6 +1149,7 @@ async function runBackgroundStep(actor) {
     choice = await chooseCompendiumDocument('legends.backgrounds', `Character Creation: Step 4 of 9`, {
       description: '<div>Select a background. Background grants will be applied automatically.</div>',
       confirmLabel: current ? 'Replace Background' : 'Choose Background',
+      initialSelectionName: current?.name,
     });
   }
 
@@ -952,15 +1216,34 @@ async function addTraitOrFlaw(actor, type) {
 
   const selected = await showWizardDialog({
     title: `Character Creation: Add ${type === 'trait' ? 'Trait' : 'Flaw'}`,
-    position: { width: 520 },
+    position: { width: 980 },
     content: `
       <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
         <div><strong>Creation Point Budget</strong>: ${summary.spent} spent / ${summary.earned} earned (${summary.remaining} remaining)</div>
-        <div class="form-group">
-          <label>Select a ${type}</label>
-          <select name="creationChoice" style="width: 100%; padding: 6px;">
-            ${options.map((option, index) => `<option value="${index}" ${option.disabled ? 'disabled' : ''} ${index === initialIndex ? 'selected' : ''}>${escapeHtml(option.label)}${option.reason ? ` - ${escapeHtml(option.reason)}` : ''}</option>`).join('')}
-          </select>
+        <div style="font-size: 12px; color: #666;">Showing all ${type}s so players can review costs and details before deciding.${type === 'trait' ? ' Unaffordable traits remain visible until enough flaw points are available.' : ''}</div>
+        <input type="hidden" name="creationChoice" value="${initialIndex >= 0 ? initialIndex : 0}" />
+        <div style="display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 14px; align-items: start;">
+          <div>
+            <label style="display: block; margin-bottom: 6px;">${type === 'trait' ? 'Traits' : 'Flaws'}</label>
+            <div style="display: flex; flex-direction: column; gap: 6px; max-height: 460px; overflow-y: auto; padding-right: 4px;">
+              ${options.map((option, index) => {
+                const category = type === 'trait'
+                  ? formatPickerLabel(option.document.system?.traitType)
+                  : formatPickerLabel(option.document.system?.flawType);
+                const statusText = option.disabled ? 'Not available now' : 'Available now';
+                return `
+                  <div
+                    data-trait-flaw-option="${index}"
+                    tabindex="0"
+                    style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px; cursor: pointer; opacity: ${option.disabled ? '0.65' : '1'};">
+                    <div style="font-weight: 600;">${escapeHtml(option.label)}</div>
+                    <div style="font-size: 12px; color: #666; margin-top: 2px;">${escapeHtml([category, statusText].filter(Boolean).join(' • '))}</div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+          <div data-trait-flaw-preview style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 10px; padding: 12px; max-height: 460px; overflow-y: auto;"></div>
         </div>
       </form>
     `,
@@ -977,6 +1260,9 @@ async function addTraitOrFlaw(actor, type) {
         callback: () => 'cancel',
       },
     ],
+    render: (event, dialog) => {
+      renderTraitOrFlawPicker(dialog.element, options, initialIndex >= 0 ? initialIndex : 0, type, summary);
+    },
   });
 
   if (isDialogSelectionCancelled(selected, 'document')) return 'cancel';
@@ -1041,7 +1327,8 @@ async function runTraitsAndFlawsStep(actor) {
     const summary = getTraitFlawPointSummary(actor);
     const traits = actor.items.filter((item) => item.type === 'trait');
     const flaws = actor.items.filter((item) => item.type === 'flaw');
-    const canSetupMagic = Boolean(actor.system?.magicalTrait?.type) && !actor.system?.magicalTrait?.isSetup;
+    const detectedPrimaryMagicalTrait = detectPrimaryMagicalTrait(actor);
+    const canSetupMagic = Boolean(detectedPrimaryMagicalTrait) && !actor.system?.magicalTrait?.isSetup;
 
     const action = await showWizardDialog({
       title: `Character Creation: Step 5 of 9`,
@@ -1078,13 +1365,12 @@ async function runTraitsAndFlawsStep(actor) {
         continue;
       }
 
-      if (canSetupMagic) {
-        const setupNow = await foundry.applications.api.DialogV2.confirm({
-          window: { title: `Character Creation: Magical Trait Setup` },
-          content: `<p><strong>${actor.name}</strong> has a primary magical trait that has not been configured yet.</p><p>Run the magical trait setup now before continuing?</p>`,
-        });
-        if (setupNow) {
-          await setupMagicalTraits(actor);
+      const pendingPrimaryMagicalTrait = detectPrimaryMagicalTrait(actor);
+      if (pendingPrimaryMagicalTrait && !actor.system?.magicalTrait?.isSetup) {
+        ui.notifications.info(`${actor.name} must complete magical trait setup before finishing Traits and Flaws.`);
+        const setupCompleted = await setupMagicalTraits(actor);
+        if (!setupCompleted || !actor.system?.magicalTrait?.isSetup) {
+          ui.notifications.warn('Magical trait setup is required before continuing to XP spending.');
           continue;
         }
       }

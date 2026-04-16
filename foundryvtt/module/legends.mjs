@@ -26,10 +26,12 @@ import * as traitEffects from "./trait-effects.mjs";
 import * as effectEngine from "./effect-engine.mjs";
 import * as magicalTraits from "./magical-traits.mjs";
 import * as backgrounds from "./backgrounds.mjs";
+import * as ancestryGrants from "./ancestry-grants.mjs";
 import * as characterCreation from "./character-creation.mjs";
 import * as languages from "./languages.mjs";
 import * as progression from "./progression.mjs";
 import * as training from "./training.mjs";
+import * as visionTools from "./vision-tools.mjs";
 import { initializeConditionEngine, initializeChatHandlers, handleRecoveryResult } from "./condition-engine.mjs";
 import { registerEnrichers } from "./enrichers.mjs";
 
@@ -482,7 +484,9 @@ Hooks.once('init', async function() {
     featEffects,
     traitEffects,
     magicalTraits,
-    effectEngine
+    ancestryGrants,
+    effectEngine,
+    visionTools
   };
 
   // DEPRECATED: Backward compatibility alias
@@ -571,12 +575,18 @@ Hooks.once('init', async function() {
   // Initialize background grant handlers
   backgrounds.initializeBackgroundHandlers();
 
+  // Initialize ancestry ability grant handlers
+  ancestryGrants.initializeAncestryGrantHandlers();
+
   // Initialize condition engine
   initializeConditionEngine();
   initializeChatHandlers();
 
   // Initialize effect engine
   effectEngine.initializeEffectEngine();
+
+  // Initialize native Foundry token vision/light sync
+  visionTools.initializeVisionHooks();
 
   // Register custom TextEditor enrichers (inline rolls)
   registerEnrichers();
@@ -630,7 +640,9 @@ Hooks.once('ready', async function() {
   try {
     for (const actor of game.actors.values()) {
       await backgrounds.syncBackgroundsForActor(actor);
+      await ancestryGrants.syncAncestryGrantsForActor(actor);
       await shields.syncShieldLinkedItemsForActor(actor);
+      await visionTools.syncActorTokenVision(actor);
     }
   } catch (err) {
     console.warn('Legends | Error applying shield-linked items on ready', err);

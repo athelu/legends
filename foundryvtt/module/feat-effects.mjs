@@ -101,8 +101,81 @@ export function validatePrereqs(actor, item) {
 function validateOtherPrereqs(actor, otherText) {
   const reasons = [];
   const parts = otherText.split(/[;,]/).map(part => part.trim()).filter(Boolean);
+  const ownedItemNames = actor.items.map((entry) => String(entry.name || '').trim().toLowerCase());
+
+  const getSkillValue = (skillKey) => {
+    const direct = actor.system?.skills?.[skillKey];
+    const normalized = actor.system?.skills?.[normalizeSkillKey(skillKey)];
+    const source = direct ?? normalized;
+    return Number(source?.value ?? source ?? 0);
+  };
+
+  const getAllSkillValues = () => Object.keys(actor.system?.skills || {}).map((skillKey) => getSkillValue(skillKey));
+
+  const getElementalMasteryValues = () => {
+    const mastery = actor.system?.mastery || {};
+    return ['fire', 'water', 'earth', 'air'].map((energyKey) => Number(mastery?.[energyKey]?.value ?? 0));
+  };
 
   for (const part of parts) {
+    const normalizedPart = String(part || '').trim().toLowerCase();
+
+    if (normalizedPart.includes('pneuma strike')) {
+      const hasPneumaStrike = ownedItemNames.some((name) => name.includes('pneuma strike'));
+      if (!hasPneumaStrike) reasons.push('Requires feat/trait: Pneuma Strike');
+      // Continue parsing this part for additional constraints like mastery thresholds.
+    }
+
+    const anySkillRankMatch = normalizedPart.match(/^any\s+skill\s+rank\s+(\d+)$/i);
+    if (anySkillRankMatch) {
+      const required = Number(anySkillRankMatch[1] || 0);
+      const highest = getAllSkillValues().reduce((max, current) => Math.max(max, current), 0);
+      if (highest < required) reasons.push(`Requires any skill rank ${required}+ (highest is ${highest})`);
+      continue;
+    }
+
+    const chosenCombatSkillMatch = normalizedPart.match(/^chosen\s+combat\s+skill\s+(\d+)$/i);
+    if (chosenCombatSkillMatch) {
+      const required = Number(chosenCombatSkillMatch[1] || 0);
+      const melee = getSkillValue('meleeCombat');
+      const ranged = getSkillValue('rangedCombat');
+      const highestCombat = Math.max(melee, ranged);
+      if (highestCombat < required) reasons.push(`Requires chosen combat skill ${required}+ (best combat skill is ${highestCombat})`);
+      continue;
+    }
+
+    const anyElementalMasteryMatch = normalizedPart.match(/^any\s+elemental\s+mastery\s+(\d+)$/i);
+    if (anyElementalMasteryMatch) {
+      const required = Number(anyElementalMasteryMatch[1] || 0);
+      const highest = getElementalMasteryValues().reduce((max, current) => Math.max(max, current), 0);
+      if (highest < required) reasons.push(`Requires any elemental Mastery ${required}+ (highest is ${highest})`);
+      continue;
+    }
+
+    const chosenElementalMasteryMatch = normalizedPart.match(/^chosen\s+elemental\s+mastery\s+(\d+)$/i);
+    if (chosenElementalMasteryMatch) {
+      const required = Number(chosenElementalMasteryMatch[1] || 0);
+      const highest = getElementalMasteryValues().reduce((max, current) => Math.max(max, current), 0);
+      if (highest < required) reasons.push(`Requires chosen elemental Mastery ${required}+ (highest is ${highest})`);
+      continue;
+    }
+
+    const elementalMasteryInlineMatch = normalizedPart.match(/\b(any|chosen)\s+elemental\s+mastery\s+(\d+)\b/i);
+    if (elementalMasteryInlineMatch) {
+      const required = Number(elementalMasteryInlineMatch[2] || 0);
+      const highest = getElementalMasteryValues().reduce((max, current) => Math.max(max, current), 0);
+      if (highest < required) reasons.push(`Requires ${elementalMasteryInlineMatch[1]} elemental Mastery ${required}+ (highest is ${highest})`);
+      continue;
+    }
+
+    const namedFeatLikeReq = part.match(/^[a-z][a-z\s'()\-]+$/i);
+    if (namedFeatLikeReq
+      && !/\b(mastery|potential|attribute|spellcaster|skill\s+rank|combat\s+skill)\b/i.test(normalizedPart)
+      && !ownedItemNames.some((name) => name === normalizedPart || name.includes(normalizedPart) || normalizedPart.includes(name))) {
+      reasons.push(`Requires feat/trait: ${part}`);
+      continue;
+    }
+
     const masteryMatch = part.match(/^(fire|water|earth|air|positive|negative|time|space)\s+mastery\s+(\d+)$/i);
     if (masteryMatch) {
       const energyKey = String(masteryMatch[1] || '').toLowerCase();

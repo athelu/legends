@@ -151,8 +151,8 @@ def build_skills_reference(skills_md_path):
     sort = 0
 
     if overview_markdown:
-                pages.append(build_text_page('Overview', overview_markdown, 'journal:skills-reference:overview', sort))
-                sort += 1000
+        pages.append(build_text_page('Overview', overview_markdown, 'journal:skills-reference:overview', sort))
+        sort += 1000
 
     for skill_name, attribute, body in parse_skill_pages(skills_markdown):
         page_markdown = f'**Governing Attribute:** {attribute}\n\n{body}'.strip()
@@ -194,22 +194,87 @@ def build_skills_reference(skills_md_path):
     }
 
 
+def build_section_reference(title, journal_slug, md_path, included_sections):
+    content = md_path.read_text(encoding='utf-8')
+    sections = parse_top_level_sections(content)
+    journal_id = generate_stable_id(f'journal:{journal_slug}')
+
+    pages = []
+    sort = 0
+    for section_name, section_body in sections:
+        if section_name not in included_sections:
+            continue
+
+        pages.append(
+            build_text_page(
+                section_name,
+                section_body,
+                f'journal:{journal_slug}:section:{slugify(section_name)}',
+                sort,
+            )
+        )
+        sort += 1000
+
+    if not pages:
+        return None
+
+    for page in pages:
+        page['_key'] = f"!journal.pages!{journal_id}.{page['_id']}"
+
+    return {
+        '_id': journal_id,
+        '_key': f"!journal!{journal_id}",
+        'name': title,
+        'pages': pages,
+        'folder': None,
+        'sort': 0,
+        'ownership': {
+            'default': 0,
+        },
+        'flags': {},
+    }
+
+
 def main():
     script_dir = Path(__file__).resolve().parent
     pack_dir = script_dir.parent / 'packs' / 'rules'
     source_dir = pack_dir / '_source'
     skills_md_path = script_dir.parent.parent / 'ttrpg' / 'skills.md'
+    combat_md_path = script_dir.parent.parent / 'ttrpg' / 'combat.md'
 
     source_dir.mkdir(parents=True, exist_ok=True)
 
     for existing_file in source_dir.glob('*.json'):
         existing_file.unlink()
 
-    journal = build_skills_reference(skills_md_path)
-    output_path = source_dir / 'skills-reference.json'
-    output_path.write_text(f"{json.dumps(journal, indent=2)}\n", encoding='utf-8')
+    journals = [
+        ('skills-reference.json', build_skills_reference(skills_md_path)),
+        (
+            'combat-visibility-reference.json',
+            build_section_reference(
+                'Combat Visibility Reference',
+                'combat-visibility-reference',
+                combat_md_path,
+                {
+                    'Line of Sight & Targeting',
+                    'Area Effect Weaves',
+                    'Targeting Hidden Creatures',
+                    'Invisibility',
+                    'Special Senses and Line of Sight',
+                    'Light & Visibility',
+                },
+            ),
+        ),
+    ]
 
-    print(f'Generated rules reference source: {output_path}')
+    for filename, journal in journals:
+        if journal is None:
+            continue
+
+        output_path = source_dir / filename
+        output_path.write_text(f"{json.dumps(journal, indent=2)}\n", encoding='utf-8')
+        print(f'Generated rules reference source: {output_path}')
+
     success = build_pack_from_source(pack_dir, 'rules', document_type='JournalEntry')
     return 0 if success else 1
 

@@ -615,7 +615,15 @@ function mapSemanticKey(semanticKey) {
     
     // Visibility
     'visibility.invisible': 'system.visibility.invisible',
+    'visibility.hidden': 'system.visibility.hidden',
     'visibility.concealed': 'system.visibility.concealed',
+
+    // Vision and special senses
+    'vision.lowLight': 'system.vision.lowLight',
+    'vision.darkvision': 'system.vision.darkvision',
+    'vision.blindsight': 'system.vision.blindsight',
+    'vision.tremorsense': 'system.vision.tremorsense',
+    'vision.perfectSight': 'system.vision.perfectSight',
   };
   
   return keyMap[semanticKey] || null;

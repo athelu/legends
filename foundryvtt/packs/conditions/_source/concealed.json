@@ -5,7 +5,7 @@
   "img": "icons/svg/invisible.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Tactical] <strong>Effect:</strong> Your location is known, but you are difficult to see clearly. Attackers add 1 to both dice when attacking you. <strong>Recovery:</strong> Lasts as long as environmental condition persists.</p>"
+      "value": "<p><strong>Keyword:</strong> [Tactical] <strong>Effect:</strong> Your location is known, but you are difficult to see clearly. This commonly applies in dim light, shadows, mist, smoke, or similar obscuring conditions. Attackers add 1 to both dice when attacking you. <strong>Recovery:</strong> Lasts as long as the environmental condition persists.</p>"
     },
     "label": "Concealed",
     "category": "visibility",

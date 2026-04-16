@@ -1,5 +1,6 @@
 import { validatePrereqs } from './feat-effects.mjs';
 import { SKILL_LABELS } from './skill-utils.mjs';
+import { getLanguageDefinitions, normalizeLanguageKey } from './languages.mjs';
 import { MASTERY_KEYS, hasMasteryCheckbox, hasSkillCheckbox, clearMasteryCheckbox, clearSkillCheckbox } from './training.mjs';
 
 const TIER_THRESHOLDS = [
@@ -352,13 +353,300 @@ function formatPotentialPurchaseLabel(potentialKey, currentRank, label) {
   return `${label || potentialKey} ${currentRank} -> ${currentRank + 1} (${16 * currentRank} XP)`;
 }
 
-function buildSelectOptionsMarkup(options, selectedIndex = 0) {
-  return options.map((option, index) => {
-    const selected = index === selectedIndex ? 'selected' : '';
-    const disabled = option.disabled ? 'disabled' : '';
-    const detail = option.disabled && option.description ? ` - ${option.description}` : '';
-    return `<option value="${index}" ${selected} ${disabled}>${option.label}${detail}</option>`;
-  }).join('');
+function formatCategoryLabel(value) {
+  return String(value || '')
+    .trim()
+    .split(/[_\-\s]+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(' ');
+}
+
+function buildPurchaseOptionPreview(option, category, actor) {
+  if (!option) return '<div>No option selected.</div>';
+
+  if (option.type === 'feat') {
+    const feat = option.feat;
+    const system = feat.system || {};
+    const prereqText = typeof system.prerequisites === 'string'
+      ? system.prerequisites
+      : '';
+    const statusTone = option.disabled ? '#a64545' : '#567a43';
+    const statusText = option.disabled
+      ? (option.description || 'Not currently available')
+      : `Available for ${option.cost} XP.`;
+    const reasonHtml = Array.isArray(option.reasons) && option.reasons.length
+      ? `<ul style="margin: 8px 0 0 18px;">${option.reasons.map((reason) => `<li>${Handlebars.escapeExpression(reason)}</li>`).join('')}</ul>`
+      : '<div style="margin-top: 8px; color: #567a43;">This character currently meets the listed prerequisites.</div>';
+
+    return `
+      <div style="display: flex; flex-direction: column; gap: 10px; min-height: 420px;">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+            <h3 style="margin: 0;">${Handlebars.escapeExpression(feat.name)}</h3>
+            <span style="font-size: 12px; color: #666;">${Handlebars.escapeExpression(system.classification === 'legendary' ? 'Legendary Feat' : 'Standard Feat')} • ${option.cost} XP</span>
+          </div>
+          <div style="margin-top: 6px; font-size: 12px; color: ${statusTone};">${Handlebars.escapeExpression(statusText)}</div>
+        </div>
+        ${prereqText ? `<div><strong>Prerequisites:</strong> ${Handlebars.escapeExpression(prereqText)}</div>` : '<div><strong>Prerequisites:</strong> None listed</div>'}
+        <div>
+          <strong>Eligibility</strong>
+          ${reasonHtml}
+        </div>
+        ${system.description?.value ? `<div><strong>Description</strong><div style="margin-top: 6px;">${system.description.value}</div></div>` : ''}
+        ${system.benefits ? `<div><strong>Benefits</strong><div style="margin-top: 6px;">${system.benefits}</div></div>` : ''}
+        ${String(system.notes || '').trim() ? `<div><strong>Notes</strong><div style="margin-top: 6px; white-space: pre-wrap;">${Handlebars.escapeExpression(system.notes)}</div></div>` : ''}
+      </div>
+    `;
+  }
+
+  const label = option.type === 'attribute'
+    ? (ATTRIBUTE_LABELS[option.key] || option.key)
+    : option.type === 'skill'
+      ? (SKILL_LABELS[option.key] || option.key)
+      : option.type === 'mastery'
+        ? (MASTERY_LABELS[option.key] || option.key)
+        : option.type === 'potential'
+          ? (actor.system?.potentials?.[option.key]?.label || option.key)
+          : option.label;
+  const typeLabel = formatCategoryLabel(category || option.type);
+  const statusTone = option.disabled ? '#a64545' : '#567a43';
+  const statusText = option.disabled
+    ? (option.description || 'Not currently available')
+    : `Available for ${option.cost} XP.`;
+
+  return `
+    <div style="display: flex; flex-direction: column; gap: 10px; min-height: 320px;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <h3 style="margin: 0;">${Handlebars.escapeExpression(label)}</h3>
+          <span style="font-size: 12px; color: #666;">${Handlebars.escapeExpression(typeLabel)} • ${option.cost} XP</span>
+        </div>
+        <div style="margin-top: 6px; font-size: 12px; color: ${statusTone};">${Handlebars.escapeExpression(statusText)}</div>
+      </div>
+      <div><strong>Current Rank:</strong> ${option.current}</div>
+      <div><strong>New Rank:</strong> ${option.next}</div>
+      <div><strong>Cost:</strong> ${option.cost} XP</div>
+      ${String(option.description || '').trim() ? `<div><strong>Details</strong><div style="margin-top: 6px; white-space: pre-wrap;">${Handlebars.escapeExpression(option.description)}</div></div>` : ''}
+    </div>
+  `;
+}
+
+function renderPurchaseOptionPicker(root, options, initialIndex, category, actor) {
+  const input = root.querySelector('[name="purchase"]');
+  const preview = root.querySelector('[data-purchase-preview]');
+  const rows = Array.from(root.querySelectorAll('[data-purchase-option]'));
+
+  const syncSelection = (index) => {
+    const safeIndex = Math.max(0, Math.min(index, options.length - 1));
+    if (input) input.value = String(safeIndex);
+    rows.forEach((row, rowIndex) => {
+      row.style.borderColor = rowIndex === safeIndex ? '#d18b47' : 'rgba(209, 139, 71, 0.25)';
+      row.style.background = rowIndex === safeIndex ? 'rgba(209, 139, 71, 0.10)' : (options[rowIndex]?.disabled ? 'rgba(120, 120, 120, 0.10)' : 'rgba(255, 255, 255, 0.03)');
+    });
+    if (preview) preview.innerHTML = buildPurchaseOptionPreview(options[safeIndex], category, actor);
+  };
+
+  rows.forEach((row, rowIndex) => {
+    row.addEventListener('click', () => syncSelection(rowIndex));
+    row.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        syncSelection(rowIndex);
+      }
+    });
+  });
+
+  syncSelection(initialIndex);
+}
+
+function buildLanguageSelectionPreview(languageOption, { nativeLanguage, selectedKeys, capacity }) {
+  if (!languageOption) return '<div>No language selected.</div>';
+
+  const isNative = languageOption.key === nativeLanguage;
+  const isSelected = selectedKeys.includes(languageOption.key);
+  const status = isNative
+    ? 'Native language'
+    : (isSelected ? 'Selected as additional language' : 'Available to select');
+
+  return `
+    <div style="display: flex; flex-direction: column; gap: 10px; min-height: 320px;">
+      <div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+          <h3 style="margin: 0;">${Handlebars.escapeExpression(languageOption.label)}</h3>
+          <span style="font-size: 12px; color: #666;">Language</span>
+        </div>
+        <div style="margin-top: 6px; font-size: 12px; color: ${isNative ? '#567a43' : (isSelected ? '#2b6cb0' : '#666')};">${Handlebars.escapeExpression(status)}</div>
+      </div>
+      <div><strong>Additional Slots:</strong> ${selectedKeys.length} / ${capacity}</div>
+      <div>
+        <strong>Lore</strong>
+        <div style="margin-top: 6px; line-height: 1.5;">${Handlebars.escapeExpression(languageOption.description || 'No lore description is currently defined for this language.')}</div>
+      </div>
+    </div>
+  `;
+}
+
+function renderLanguageSelectionPicker(root, definitions, nativeLanguage, capacity, initialSelectedKeys) {
+  const hiddenInput = root.querySelector('[name="selectedLanguageKeys"]');
+  const preview = root.querySelector('[data-language-picker-preview]');
+  const rows = Array.from(root.querySelectorAll('[data-language-picker-option]'));
+  const counter = root.querySelector('[data-language-picker-count]');
+  const selected = new Set(initialSelectedKeys);
+
+  const syncState = (focusIndex = 0) => {
+    const boundedIndex = Math.max(0, Math.min(focusIndex, definitions.length - 1));
+
+    rows.forEach((row, rowIndex) => {
+      const option = definitions[rowIndex];
+      if (!option) return;
+
+      const isNative = option.key === nativeLanguage;
+      const isSelected = selected.has(option.key);
+      const isAtCapacity = selected.size >= capacity;
+      const isDisabled = isNative || (!isSelected && isAtCapacity);
+
+      row.style.opacity = isDisabled ? '0.65' : '1';
+      row.style.cursor = isNative ? 'not-allowed' : 'pointer';
+      row.style.borderColor = rowIndex === boundedIndex ? '#d18b47' : 'rgba(209, 139, 71, 0.25)';
+      row.style.background = rowIndex === boundedIndex
+        ? 'rgba(209, 139, 71, 0.10)'
+        : (isSelected ? 'rgba(66, 153, 225, 0.10)' : 'rgba(255, 255, 255, 0.03)');
+
+      const status = row.querySelector('[data-language-picker-status]');
+      if (status) {
+        status.textContent = isNative ? 'Native' : (isSelected ? 'Selected' : (isDisabled ? 'No slots' : 'Available'));
+      }
+    });
+
+    if (counter) counter.textContent = `${selected.size} / ${capacity} selected`;
+    if (hiddenInput) hiddenInput.value = JSON.stringify([...selected]);
+    if (preview) {
+      preview.innerHTML = buildLanguageSelectionPreview(definitions[boundedIndex], {
+        nativeLanguage,
+        selectedKeys: [...selected],
+        capacity,
+      });
+    }
+  };
+
+  rows.forEach((row, rowIndex) => {
+    const option = definitions[rowIndex];
+    if (!option) return;
+
+    row.addEventListener('click', () => {
+      const isNative = option.key === nativeLanguage;
+      if (isNative) {
+        syncState(rowIndex);
+        return;
+      }
+
+      const isSelected = selected.has(option.key);
+      if (isSelected) {
+        selected.delete(option.key);
+        syncState(rowIndex);
+        return;
+      }
+
+      if (selected.size >= capacity) {
+        ui.notifications.warn(`This character can only select ${capacity} additional language${capacity === 1 ? '' : 's'}.`);
+        syncState(rowIndex);
+        return;
+      }
+
+      selected.add(option.key);
+      syncState(rowIndex);
+    });
+
+    row.addEventListener('keydown', (dialogEvent) => {
+      if (dialogEvent.key === 'Enter' || dialogEvent.key === ' ') {
+        dialogEvent.preventDefault();
+        row.click();
+      }
+    });
+  });
+
+  syncState(0);
+}
+
+async function showLanguageSelectionDialog(actor, capacityOverride = null) {
+  const definitions = getLanguageDefinitions();
+  if (!definitions.length) return null;
+
+  const nativeLanguage = normalizeLanguageKey(actor.system?.languages?.native);
+  const languageSkillData = actor.system?.skills?.language;
+  const languageRank = typeof languageSkillData === 'object'
+    ? Number(languageSkillData?.value ?? 0)
+    : Number(languageSkillData ?? 0);
+  const capacity = Math.max(0, Math.floor(Number(capacityOverride ?? languageRank) || 0));
+  const validLanguageKeys = new Set(definitions.map((entry) => entry.key));
+  const selectedKeys = Array.isArray(actor.system?.languages?.selected)
+    ? actor.system.languages.selected
+        .map((entry) => normalizeLanguageKey(entry))
+        .filter((entry, index, collection) => entry && entry !== nativeLanguage && validLanguageKeys.has(entry) && collection.indexOf(entry) === index)
+        .slice(0, capacity)
+    : [];
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: `Choose Languages: ${actor.name}` },
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <div><strong>Additional Languages</strong> are granted by your Language skill rank.</div>
+        <div style="font-size: 12px; color: #666;">Select up to ${capacity} additional language${capacity === 1 ? '' : 's'} and review each language's lore in the preview panel.</div>
+        <div style="font-size: 12px; color: #666;" data-language-picker-count>${selectedKeys.length} / ${capacity} selected</div>
+        <input type="hidden" name="selectedLanguageKeys" value='${Handlebars.escapeExpression(JSON.stringify(selectedKeys))}' />
+        <div style="display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 14px; align-items: start;">
+          <div>
+            <label style="display: block; margin-bottom: 6px;">Languages</label>
+            <div style="display: flex; flex-direction: column; gap: 6px; max-height: 460px; overflow-y: auto; padding-right: 4px;">
+              ${definitions.map((entry, index) => {
+                const isNative = entry.key === nativeLanguage;
+                const isSelected = selectedKeys.includes(entry.key);
+                const status = isNative ? 'Native' : (isSelected ? 'Selected' : 'Available');
+                return `
+                  <div
+                    data-language-picker-option="${index}"
+                    tabindex="0"
+                    style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px; cursor: pointer; opacity: ${isNative ? '0.65' : '1'};">
+                    <div style="font-weight: 600;">${Handlebars.escapeExpression(entry.label)}</div>
+                    <div data-language-picker-status style="font-size: 12px; color: #666; margin-top: 2px;">${Handlebars.escapeExpression(status)}</div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+          <div data-language-picker-preview style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 10px; padding: 12px; max-height: 460px; overflow-y: auto;"></div>
+        </div>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'apply',
+        label: 'Apply Languages',
+        default: true,
+        callback: (dialogEvent, button, dialog) => {
+          const raw = String(dialog.element.querySelector('[name="selectedLanguageKeys"]')?.value || '[]');
+          try {
+            const parsed = JSON.parse(raw);
+            return Array.isArray(parsed) ? parsed : selectedKeys;
+          } catch (error) {
+            console.warn('Failed to parse selected language keys from picker dialog.', error);
+            return selectedKeys;
+          }
+        },
+      },
+      {
+        action: 'cancel',
+        label: 'Cancel',
+      },
+    ],
+    render: (dialogEvent, dialog) => {
+      renderLanguageSelectionPicker(dialog.element, definitions, nativeLanguage, capacity, selectedKeys);
+    },
+  });
+
+  if (!result) return null;
+  return result;
 }
 
 async function showPurchaseCategoryDialog(actor) {
@@ -570,24 +858,45 @@ async function showPurchaseSelectionDialog(actor, category, options) {
     ? 'All skills are shown. Skills you cannot currently buy are greyed out with the reason appended.'
     : 'Only purchases you can currently afford and qualify for are shown.';
 
+  const categoryLabel = formatCategoryLabel(category);
+
   return foundry.applications.api.DialogV2.wait({
     window: { title: `Spend XP: ${actor.name}` },
     content: `
       <form class="legends-xp-dialog" style="padding: 10px; display: flex; flex-direction: column; gap: 10px;">
         <div><strong>${actor.name}</strong> has <strong>${getActorProgressionState(actor).unspent}</strong> unspent XP.</div>
-        <div class="form-group">
-          <label>Choose a ${category}</label>
-          <select name="purchase" style="width: 100%; padding: 6px;">
-            ${buildSelectOptionsMarkup(options, selectedIndex)}
-          </select>
-        </div>
         <div style="font-size: 12px; color: #666;">${helperText}</div>
+        <input type="hidden" name="purchase" value="${selectedIndex >= 0 ? selectedIndex : 0}" />
+        <div style="display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 14px; align-items: start;">
+          <div>
+            <label style="display: block; margin-bottom: 6px;">Choose a ${category}</label>
+            <div style="display: flex; flex-direction: column; gap: 6px; max-height: 460px; overflow-y: auto; padding-right: 4px;">
+              ${options.map((option, index) => {
+                const status = option.disabled ? 'Not available now' : 'Available now';
+                const meta = option.type === 'feat'
+                  ? `${option.cost} XP • ${option.feat.system?.classification === 'legendary' ? 'Legendary' : 'Standard'} • ${status}`
+                  : `${option.current} -> ${option.next} • ${option.cost} XP • ${status}`;
+                return `
+                  <div
+                    data-purchase-option="${index}"
+                    tabindex="0"
+                    style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px; cursor: pointer; opacity: ${option.disabled ? '0.65' : '1'};">
+                    <div style="font-weight: 600;">${Handlebars.escapeExpression(option.label)}</div>
+                    <div style="font-size: 12px; color: #666; margin-top: 2px;">${Handlebars.escapeExpression(meta)}</div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
+          </div>
+          <div data-purchase-preview style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 10px; padding: 12px; max-height: 460px; overflow-y: auto;"></div>
+        </div>
       </form>
     `,
+    position: { width: 980 },
     buttons: [
       {
         action: 'choose',
-        label: `Buy ${category.charAt(0).toUpperCase() + category.slice(1)}`,
+        label: `Buy ${categoryLabel}`,
         default: true,
         callback: (event, button, dialog) => {
           const index = Number.parseInt(dialog.element.querySelector('[name="purchase"]')?.value || '0', 10);
@@ -599,7 +908,10 @@ async function showPurchaseSelectionDialog(actor, category, options) {
         action: 'cancel',
         label: 'Cancel'
       }
-    ]
+    ],
+    render: (event, dialog) => {
+      renderPurchaseOptionPicker(dialog.element, options, selectedIndex >= 0 ? selectedIndex : 0, category, actor);
+    }
   });
 }
 
@@ -624,6 +936,13 @@ async function purchaseSkill(actor, option) {
     notify: false
   });
   ui.notifications.info(`${actor.name} increased ${SKILL_LABELS[option.key] || option.key} to ${option.next} for ${option.cost} XP.`);
+
+  if (option.key === 'language') {
+    const selectedLanguages = await showLanguageSelectionDialog(actor, option.next);
+    if (selectedLanguages) {
+      await actor.update({ 'system.languages.selected': selectedLanguages });
+    }
+  }
 }
 
 async function purchaseMastery(actor, option) {

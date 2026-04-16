@@ -14,6 +14,45 @@
 **DR Interaction:** Half DR
 **Targeting Success Scaling:** 0 = Miss, 1 = Half damage (4), 2 = Full damage (8), 3 = Enhanced damage (16) + applies Sickened
 
+### Alkira's Vigor
+**Primary Energy:** Positive 3 (enhancing physical combat capability)
+**Supporting Energy:** Time 2 (duration 1 minute)
+**Range:** Touch
+**Duration:** 1 minute
+**Total Cost:** 5 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Positive Mastery
+**Description:** Target gains +2 Strength for the duration. Recalculate Strength-based checks, melee damage, and carrying thresholds. This bonus does not stack with other beneficial Strength modifiers; use the highest bonus.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
+
+### Ambis's Grace
+**Primary Energy:** Positive 4 (radiating warmth and personal authority)
+**Supporting Energy:** Time 2 (duration 1 minute)
+**Range:** Touch
+**Duration:** 1 minute
+**Total Cost:** 6 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Positive Mastery
+**Description:** Target gains +2 Charisma for the duration. Recalculate Charisma-based checks and casting values if Charisma is the target's casting stat. This bonus does not stack with other beneficial Charisma modifiers; use the highest bonus.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
+
+### Athore's Endurance
+**Primary Energy:** Earth 3 (hardening body and constitution)
+**Supporting Energy:** Time 2 (duration 1 minute)
+**Range:** Touch
+**Duration:** 1 minute
+**Total Cost:** 5 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Earth Potential + Earth Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Earth Mastery
+**Description:** Target gains +2 Constitution for the duration. Recalculate Constitution-dependent values, including Fortitude saves and max HP. Current HP does not increase when this weave is applied; if current HP exceeds max HP when the weave ends, reduce current HP to the new maximum. This bonus does not stack with other beneficial Constitution modifiers; use the highest bonus.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
+
 ### Banishment
 **Primary Energy:** Space 6 (forcibly ejecting to another plane)
 **Supporting Energy:** Time 2 (duration 1 minute)
@@ -107,6 +146,21 @@
 **Applies Effects:** paralyzed
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
+
+### Blight
+**Primary Energy:** Negative 4 (withering of living tissue)
+**Supporting Energy:** Space 1 (close range 30ft)
+**Range:** Close, 30 ft.
+**Duration:** Instantaneous
+**Total Cost:** 5 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
+**Targeting Roll:** Casting Stat + Negative Mastery
+**Description:** Channel necrotic entropy into a living creature or plant, withering tissue and draining vitality. Against plants and plant creatures, this weave is devastating; they make no save and take full damage. Against other living creatures, target makes Fortitude save.
+**Saving Throw:** Fortitude (living creatures); none (plants)
+**Damage Type:** Negative (energy)
+**DR Interaction:** Half DR
+**Targeting Success Scaling:** 0 = Fails,  1 = Half damage (10), 2 = Full damage (20) + Weakened condition until end of target's next turn, 3 = Enhanced damage (28) + Weakened condition for 1 minute (Fortitude save at end of each turn, 1 success ends)
 
 ### Breach
 **Primary Energy:** Space 2 (forcing locks and barriers open)
@@ -285,6 +339,19 @@
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = Fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour
 
+### Enschede's Hand
+**Primary Energy:** Space 3 (precision and fine control)
+**Supporting Energy:** Time 2 (duration 1 minute)
+**Range:** Touch
+**Duration:** 1 minute
+**Total Cost:** 5 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
+**Description:** Target gains +2 Dexterity for the duration. Recalculate Dexterity-based checks and combat values. This bonus does not stack with other beneficial Dexterity modifiers; use the highest bonus.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
+
 ### Disintegrate
 **Primary Energy:** Negative 8 (reducing matter to dust, extreme damage)
 **Supporting Energy:** Space 2 (medium range 60ft)
@@ -352,6 +419,20 @@
 **Description:** Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes Will save. Compare your targeting successes to their save successes. If you have more, creature must serve you for duration or until completing one task. Must negotiate payment/service.
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = Fails, 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours
+
+### False Visage
+**Primary Energy:** Space 4 (bending light
+**Supporting Energy:** Time 3 (duration 10 minutes)
+**Range:** Self, Touch
+**Duration:** 10 minutes (or until broken)
+**Total Cost:** 7 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
+**Description:** Alter your appearance to resemble a specific humanoid creature of the same size category. The illusion covers clothing, equipment, and surface features: voice, height within a few inches, build, and distinguishing marks. Physical interaction does not automatically reveal the illusion, but a careful observer may attempt a Perception check opposed by your Space Mastery to notice inconsistencies. The weave does not replicate scent, weight, or the texture of materials. Breaks if you take damage exceeding your Tier × 4 in a single hit.
+**Saving Throw:** Perception vs Space Mastery (to disbelieve)
+**Applies Effects:** none (passive disguise)
+**Targeting Success Scaling:** 0 = Fails, 1 = 1 minute; surface features only, 2 = 10 minutes; full appearance including voice,  3 = 1 hour; perfect rendering.
 
 ### Fear
 **Primary Energy:** Negative 5 (projecting terror, mental effect)
@@ -527,6 +608,7 @@
 **Description:** Up to 5 falling creatures within close range descend 60 feet per round and take no falling damage. Weave lasts until they land (up to 1 minute).
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = Fails, 1 = 1 creature, 2 = 5 creatures, 3 = 10 creatures
+
 
 ### Grasping Vines
 **Primary Energy:** Earth 3 (animating plants to restrain)

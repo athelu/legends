@@ -329,7 +329,7 @@
       <div class="inventory-header">
         <h3>Actions & Reactions</h3>
         <button type="button" data-action="openCompendium" data-type="action" title="Add from Compendium">
-          <i class="fas fa-book"></i> Add from Compendium
+          <i class="fas fa-book"></i> Add Action
         </button>
       </div>
 
@@ -1227,21 +1227,16 @@
           <h4>Additional Languages</h4>
           <span class="language-selection-count">{{additionalLanguageCount}} / {{system.languages.capacity}} selected</span>
         </div>
-        <div class="language-choice-grid">
-          {{#each languageOptions}}
+        <div class="language-selection-header">
+          <span class="creation-lock-note">Use the picker to review language lore before selecting.</span>
           <button
             type="button"
-            class="language-choice-chip{{#if isNative}} is-native{{/if}}{{#if isSelected}} is-selected{{/if}}"
-            data-action="toggleLanguageOption"
-            data-language-key="{{key}}"
-            title="{{description}}"
-            {{#if isNative}}disabled{{/if}}
-            {{#if isDisabled}}disabled{{/if}}>
-            <span class="language-choice-label">{{label}}</span>
-            {{#if isNative}}<span class="language-choice-meta">Native</span>{{/if}}
-            {{#if isSelected}}<span class="language-choice-meta">Selected</span>{{/if}}
+            class="skills-reference-button language-picker-button"
+            data-action="openLanguagePicker"
+            {{#unless canManageLanguages}}disabled{{/unless}}>
+            <i class="fas fa-language"></i>
+            <span>Choose Languages</span>
           </button>
-          {{/each}}
         </div>
         <p class="creation-lock-note">Your Language skill grants {{system.languages.capacity}} additional language slot{{#unless (eq system.languages.capacity 1)}}s{{/unless}} beyond your native language.</p>
       </div>
