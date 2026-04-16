@@ -107,6 +107,19 @@
 **DR Interaction:** Ignore
 **Targeting Success Scaling:** 0 = fails, 1 = 1/2 damage (8), 2= full damage (16), 3 = +8 damage (24 total) + deafened
 
+### Shu-Jahan's Sight
+**Primary Energy:** Positive 4 (sharpening natural intuition)
+**Supporting Energy:** Time 2 (duration 1 minute)
+**Range:** Touch
+**Duration:** 1 minute
+**Total Cost:** 6 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Positive Mastery
+**Description:** Target gains +2 Wisdom for the duration. Recalculate Wisdom-based checks, Will saves, and casting values if Wisdom is the target's casting stat. This bonus does not stack with other beneficial Wisdom modifiers; use the highest bonus.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
+
 ### Shape Earth
 **Primary Energy:** Earth 2 (manipulating soil and stone)
 **Supporting Energy:** Space 1 (close range)

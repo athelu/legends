@@ -11,6 +11,15 @@ from pack_utils import build_pack_from_source, generate_stable_id, ensure_key, m
 
 ATTRIBUTE_NAMES = ['strength', 'constitution', 'agility', 'dexterity', 'intelligence', 'wisdom', 'charisma', 'luck']
 
+HUMAN_ETHNICITY_ORIGIN_KEYS = {
+    'bellicosian': 'bellicosian-empire',
+    'coudassian': 'republic-of-coudassis',
+    'echartesh': 'the-echartean-empire',
+    'mersagian': 'kingdom-of-meresaw',
+    'odani': 'odani',
+    'urjack': 'urjack',
+}
+
 
 def generate_ancestry_id(name):
     normalized_name = re.sub(r'\s+', ' ', name).strip().lower()
@@ -135,6 +144,138 @@ def extract_culture(section_body):
     return '\n\n'.join(blocks).strip()
 
 
+def split_either_options(text):
+    normalized = text.replace('/', ' or ')
+    parts = [part.strip(' .,:;') for part in re.split(r'\s+or\s+', normalized, flags=re.IGNORECASE) if part.strip()]
+    return list(dict.fromkeys(parts))
+
+
+def parse_skill_grant(description):
+    if not description:
+        return None
+
+    any_match = re.search(
+        r'gain\s+(\d+)\s+free\s+rank(?:s)?\s+in\s+any\s+skill',
+        description,
+        flags=re.IGNORECASE,
+    )
+    if any_match:
+        return {
+            'mode': 'any',
+            'ranks': int(any_match.group(1)),
+            'options': [],
+        }
+
+    either_match = re.search(
+        r'gain\s+(\d+)\s+free\s+rank(?:s)?\s+in\s+either\s+(.+?)(?:\.|$)',
+        description,
+        flags=re.IGNORECASE,
+    )
+    if either_match:
+        options = split_either_options(either_match.group(2))
+        if options:
+            return {
+                'mode': 'oneOf',
+                'ranks': int(either_match.group(1)),
+                'options': options,
+            }
+
+    fixed_match = re.search(
+        r'gain\s+(\d+)\s+free\s+rank(?:s)?\s+in\s+([A-Za-z][A-Za-z\s\-]+?)(?:\s+at\s+character\s+creation|\.|$)',
+        description,
+        flags=re.IGNORECASE,
+    )
+    if fixed_match:
+        return {
+            'mode': 'fixed',
+            'ranks': int(fixed_match.group(1)),
+            'skill': fixed_match.group(2).strip(' .,:;'),
+            'options': [],
+        }
+
+    return None
+
+
+def parse_ability_line(line):
+    stripped = line.strip()
+    if not stripped:
+        return None
+    if stripped.startswith('|') or stripped.startswith('---'):
+        return None
+
+    match = re.match(r'^\*\*([^*]+?):\*\*\s*(.+)$', stripped)
+    if not match:
+        match = re.match(r'^\*\*([^*]+)\*\*:\s*(.+)$', stripped)
+    if not match:
+        match = re.match(r'^([^:*][^:]{1,120}):\s*(.+)$', stripped)
+    if not match:
+        return None
+
+    name = markdown_to_plaintext(match.group(1)).strip(' .')
+    description = markdown_to_plaintext(match.group(2)).strip()
+    if not name or not description:
+        return None
+
+    grant = {
+        'id': slugify(name),
+        'name': name,
+        'description': description,
+    }
+    skill_grant = parse_skill_grant(description)
+    if skill_grant:
+        grant['skillGrant'] = skill_grant
+    return grant
+
+
+def extract_ancestry_ability_grants(section_text):
+    match = re.search(r'^##\s+[^\n]*abilities\s*$([\s\S]*?)(?=^##\s+|^#\s+|\Z)', section_text, flags=re.IGNORECASE | re.MULTILINE)
+    if not match:
+        return []
+
+    body = match.group(1)
+    subheading_match = re.search(r'^#{3,}\s+', body, flags=re.MULTILINE)
+    if subheading_match:
+        body = body[:subheading_match.start()]
+
+    grants = []
+    seen_ids = set()
+    for line in body.splitlines():
+        parsed = parse_ability_line(line)
+        if not parsed:
+            continue
+        grant_id = parsed['id']
+        if grant_id in seen_ids:
+            continue
+        seen_ids.add(grant_id)
+        grants.append(parsed)
+    return grants
+
+
+def extract_human_origin_ability_grants(section_text):
+    grants = {}
+    for ethnicity_name, origin_key in HUMAN_ETHNICITY_ORIGIN_KEYS.items():
+        section_match = re.search(
+            rf'^###\s+{re.escape(ethnicity_name)}\s*$([\s\S]*?)(?=^###\s+|^##\s+|^#\s+|\Z)',
+            section_text,
+            flags=re.IGNORECASE | re.MULTILINE,
+        )
+        if not section_match:
+            continue
+
+        block = section_match.group(1)
+        parsed_grant = None
+        for line in block.splitlines():
+            parsed = parse_ability_line(line)
+            if parsed:
+                parsed_grant = parsed
+                break
+
+        if parsed_grant:
+            grants[origin_key] = parsed_grant
+
+    return grants
+
+
 def parse_ancestries_md(md_file):
     """
     Parse ancestry.md and extract ancestry items.
@@ -189,6 +330,8 @@ def parse_ancestries_md(md_file):
                 'languages': '',
                 'specialAbilities': '',
                 'senses': '',
+                'abilityGrants': [],
+                'originAbilityGrants': {},
                 'lifespan': 0,
                 'culture': '',
                 'physicalDescription': '',
@@ -203,6 +346,14 @@ def parse_ancestries_md(md_file):
         item['system']['physicalDescription'] = extract_physical_description(section, description)
         item['system']['culture'] = extract_culture(section)
         item['system']['abilityModifiers'] = dict(item['system']['bonuses']['attributes'])
+        ability_grants = extract_ancestry_ability_grants(section)
+        item['system']['abilityGrants'] = ability_grants
+        item['system']['specialAbilities'] = '\n'.join(
+            f"{grant['name']}: {grant['description']}" for grant in ability_grants
+        )
+
+        if item_name.strip().lower() in {'human', 'humans'}:
+            item['system']['originAbilityGrants'] = extract_human_origin_ability_grants(section)
         
         # Extract image path if specified
         img_match = re.search(r'\*?\*?Image:?\*?\*?\s*`?([^`\n|]+)`?', description)

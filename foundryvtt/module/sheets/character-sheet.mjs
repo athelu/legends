@@ -185,6 +185,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       setupMagicalTraits: D8CharacterSheet.#onSetupMagicalTraits,
       changeHeaderChoice: D8CharacterSheet.#onChangeHeaderChoice,
       changeOrigin: D8CharacterSheet.#onChangeOrigin,
+      openLanguagePicker: D8CharacterSheet.#onOpenLanguagePicker,
       toggleLanguageOption: D8CharacterSheet.#onToggleLanguageOption,
     },
     dragDrop: [{ dragSelector: ".items-list .item-collapsible[data-item-id]", dropSelector: null }]
@@ -1430,6 +1431,203 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     });
   }
 
+  static #buildLanguagePickerPreview(languageOption, { nativeLanguage, selectedKeys, capacity }) {
+    if (!languageOption) return '<div>No language selected.</div>';
+
+    const isNative = languageOption.key === nativeLanguage;
+    const isSelected = selectedKeys.includes(languageOption.key);
+    const status = isNative
+      ? 'Native language'
+      : (isSelected ? 'Selected as additional language' : 'Available to select');
+
+    return `
+      <div style="display: flex; flex-direction: column; gap: 10px; min-height: 320px;">
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+            <h3 style="margin: 0;">${escapeHtml(languageOption.label)}</h3>
+            <span style="font-size: 12px; color: #666;">Language</span>
+          </div>
+          <div style="margin-top: 6px; font-size: 12px; color: ${isNative ? '#567a43' : (isSelected ? '#2b6cb0' : '#666')};">${escapeHtml(status)}</div>
+        </div>
+        <div><strong>Additional Slots:</strong> ${selectedKeys.length} / ${capacity}</div>
+        <div>
+          <strong>Lore</strong>
+          <div style="margin-top: 6px; line-height: 1.5;">${escapeHtml(languageOption.description || 'No lore description is currently defined for this language.')}</div>
+        </div>
+      </div>
+    `;
+  }
+
+  static #renderLanguagePicker(root, definitions, nativeLanguage, capacity, initialSelectedKeys) {
+    const hiddenInput = root.querySelector('[name="selectedLanguageKeys"]');
+    const preview = root.querySelector('[data-language-picker-preview]');
+    const rows = Array.from(root.querySelectorAll('[data-language-picker-option]'));
+    const counter = root.querySelector('[data-language-picker-count]');
+    const selected = new Set(initialSelectedKeys);
+
+    const syncState = (focusIndex = 0) => {
+      const boundedIndex = Math.max(0, Math.min(focusIndex, definitions.length - 1));
+
+      rows.forEach((row, rowIndex) => {
+        const option = definitions[rowIndex];
+        if (!option) return;
+
+        const isNative = option.key === nativeLanguage;
+        const isSelected = selected.has(option.key);
+        const isAtCapacity = selected.size >= capacity;
+        const isDisabled = isNative || (!isSelected && isAtCapacity);
+
+        row.dataset.disabled = isDisabled ? 'true' : 'false';
+        row.style.opacity = isDisabled ? '0.65' : '1';
+        row.style.cursor = isNative ? 'not-allowed' : 'pointer';
+        row.style.borderColor = rowIndex === boundedIndex ? '#d18b47' : 'rgba(209, 139, 71, 0.25)';
+        row.style.background = rowIndex === boundedIndex
+          ? 'rgba(209, 139, 71, 0.10)'
+          : (isSelected ? 'rgba(66, 153, 225, 0.10)' : 'rgba(255, 255, 255, 0.03)');
+
+        const status = row.querySelector('[data-language-picker-status]');
+        if (status) {
+          status.textContent = isNative ? 'Native' : (isSelected ? 'Selected' : (isDisabled ? 'No slots' : 'Available'));
+        }
+      });
+
+      if (counter) counter.textContent = `${selected.size} / ${capacity} selected`;
+      if (hiddenInput) hiddenInput.value = JSON.stringify([...selected]);
+      if (preview) {
+        preview.innerHTML = D8CharacterSheet.#buildLanguagePickerPreview(definitions[boundedIndex], {
+          nativeLanguage,
+          selectedKeys: [...selected],
+          capacity,
+        });
+      }
+    };
+
+    rows.forEach((row, rowIndex) => {
+      const option = definitions[rowIndex];
+      if (!option) return;
+
+      row.addEventListener('click', () => {
+        const isNative = option.key === nativeLanguage;
+        if (isNative) {
+          syncState(rowIndex);
+          return;
+        }
+
+        const isSelected = selected.has(option.key);
+        if (isSelected) {
+          selected.delete(option.key);
+          syncState(rowIndex);
+          return;
+        }
+
+        if (selected.size >= capacity) {
+          ui.notifications.warn(`This character can only select ${capacity} additional language${capacity === 1 ? '' : 's'}.`);
+          syncState(rowIndex);
+          return;
+        }
+
+        selected.add(option.key);
+        syncState(rowIndex);
+      });
+
+      row.addEventListener('keydown', (dialogEvent) => {
+        if (dialogEvent.key === 'Enter' || dialogEvent.key === ' ') {
+          dialogEvent.preventDefault();
+          row.click();
+        }
+      });
+    });
+
+    syncState(0);
+  }
+
+  static async #onOpenLanguagePicker(event, target) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    if (!this.isEditable) {
+      ui.notifications.warn('You cannot edit languages on this actor.');
+      return;
+    }
+
+    const definitions = getLanguageDefinitions();
+    if (!definitions.length) {
+      ui.notifications.warn('No language definitions are configured.');
+      return;
+    }
+
+    const nativeLanguage = normalizeLanguageKey(this.actor.system?.languages?.native);
+    const capacity = Math.max(0, Math.floor(Number(this.actor.system?.languages?.capacity ?? 0) || 0));
+    const validLanguageKeys = new Set(definitions.map((entry) => entry.key));
+    const selectedKeys = Array.isArray(this.actor.system?.languages?.selected)
+      ? this.actor.system.languages.selected
+          .map((entry) => normalizeLanguageKey(entry))
+          .filter((entry, index, collection) => entry && entry !== nativeLanguage && validLanguageKeys.has(entry) && collection.indexOf(entry) === index)
+          .slice(0, capacity)
+      : [];
+
+    const result = await foundry.applications.api.DialogV2.wait({
+      window: { title: `Choose Languages: ${this.actor.name}` },
+      content: `
+        <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+          <div><strong>Additional Languages</strong> are granted by your Language skill rank.</div>
+          <div style="font-size: 12px; color: #666;">Select up to ${capacity} additional language${capacity === 1 ? '' : 's'} and review each language's lore in the preview panel.</div>
+          <div style="font-size: 12px; color: #666;" data-language-picker-count>${selectedKeys.length} / ${capacity} selected</div>
+          <input type="hidden" name="selectedLanguageKeys" value='${escapeHtml(JSON.stringify(selectedKeys))}' />
+          <div style="display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 14px; align-items: start;">
+            <div>
+              <label style="display: block; margin-bottom: 6px;">Languages</label>
+              <div style="display: flex; flex-direction: column; gap: 6px; max-height: 460px; overflow-y: auto; padding-right: 4px;">
+                ${definitions.map((entry, index) => {
+                  const isNative = entry.key === nativeLanguage;
+                  const isSelected = selectedKeys.includes(entry.key);
+                  const status = isNative ? 'Native' : (isSelected ? 'Selected' : 'Available');
+                  return `
+                    <div
+                      data-language-picker-option="${index}"
+                      tabindex="0"
+                      style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px; cursor: pointer; opacity: ${isNative ? '0.65' : '1'};">
+                      <div style="font-weight: 600;">${escapeHtml(entry.label)}</div>
+                      <div data-language-picker-status style="font-size: 12px; color: #666; margin-top: 2px;">${escapeHtml(status)}</div>
+                    </div>
+                  `;
+                }).join('')}
+              </div>
+            </div>
+            <div data-language-picker-preview style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 10px; padding: 12px; max-height: 460px; overflow-y: auto;"></div>
+          </div>
+        </form>
+      `,
+      buttons: [
+        {
+          action: 'apply',
+          label: 'Apply Languages',
+          default: true,
+          callback: (dialogEvent, button, dialog) => {
+            const raw = String(dialog.element.querySelector('[name="selectedLanguageKeys"]')?.value || '[]');
+            try {
+              const parsed = JSON.parse(raw);
+              return Array.isArray(parsed) ? parsed : selectedKeys;
+            } catch (error) {
+              console.warn('Failed to parse selected language keys from picker dialog.', error);
+              return selectedKeys;
+            }
+          },
+        },
+        {
+          action: 'cancel',
+          label: 'Cancel',
+        },
+      ],
+      render: (dialogEvent, dialog) => {
+        D8CharacterSheet.#renderLanguagePicker(dialog.element, definitions, nativeLanguage, capacity, selectedKeys);
+      },
+    });
+
+    if (!result) return;
+    await this.actor.update({ 'system.languages.selected': result });
+  }
+
   static async #onToggleLanguageOption(event, target) {
     event.preventDefault();
     event.stopPropagation();
@@ -1707,10 +1905,10 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   static async _generateItemSummaryHTML(item) {
     const system = item.system;
     let html = '';
+    const TextEditor = foundry.applications.ux.TextEditor.implementation;
     
     // Item description
     if (system.description?.value) {
-      const TextEditor = foundry.applications.ux.TextEditor.implementation;
       const enrichedDescription = await TextEditor.enrichHTML(system.description.value, { async: true });
       html += `<div class=\"description\">${enrichedDescription}</div>`;
     }
@@ -1737,6 +1935,10 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         break;
       case 'feat':
         html += D8CharacterSheet._generateFeatSummary(system);
+        if (String(system.benefits || '').trim()) {
+          const enrichedBenefits = await TextEditor.enrichHTML(system.benefits, { async: true });
+          html += `<div class=\"details-section\"><div class=\"detail-row\"><span class=\"detail-label\">Benefits:</span><span class=\"detail-value\">${enrichedBenefits}</span></div></div>`;
+        }
         break;
       case 'trait':
       case 'flaw':

@@ -7,21 +7,31 @@ Humans can hail from any of the nations or regions on the continent of Estaea. T
 
 ### Bellicosian
 Bellicosians tend to be slightly taller on average, and of fair/pale complexion. Building and clothing styles are Asiatic in inspiration. Bellicosian names follow traditional Germanic and Slavic styles.
+**Martial Culture:** Military discipline and fanatical religious devotion define Bellicosian society. Gain 1 free rank in either Melee Combat or Religion.
 
 ### Coudassian
 Coudassians vary in complexion, with the southerners having a honey or coffee complexion and the northerners being more pale. Coudassian names follow Spanish, Portuguese and Italian styles.
+**Old Blood:** Coudassians built their civilization through trade, negotiation, and sea travel across a vast and varied nation. Gain 1 free rank in either Persuasion or Athletics.
 
 ### Echartesh
 In Appearance the Echartesh have swarthy skin, and long, dark hair. Eyes tend to be light brown, but blue, green, yellow/amber are also seen. Echartesh names follow Jewish and Arabic styles.
+**Tradecraft:** The Echartesh are deeply philosophical, with strong traditions around fate, law, and forbidden knowledge. Gain 1 free rank in either Arcane or Society.
 
 ### Mersagian
 Mersagian populace vary in appearance with the Northerners being quite pale and with all shades of hair and eye color. The Central and southern Meresaw populace tends to be olive skinned with darker hair and eyes. Mersagian names follow traditional English and American styles. It is quite possible to have a name from any of the other regions as the kingdom of Meresaw is very cosmopolitan.
+**Cosmopolitan:** The most diverse and adaptable of the human peoples, the Mersagian kingdom absorbs cultures readily. Gain 1 free rank in either Empathy or Deception.
 
 ### Odani
 The Odani people are made up of the Reshi and Tandu tribes. They populate the southern coast of what is considered the Mersaw Kingdom. Their skin is dark, deep shades of black and brown, but eye color tends to be light such as blue, green, amber, or grey.
+**Coastal Hunter:** The Reshi and Tandu tribes of the southern coast are skilled hunters and warriors shaped by the sea and desert. Gain 1 free rank in either Wilderness or Ranged Combat.
 
 ### Urjack
-The Urjack are a solitary people who inhabit the Lackabier peaks mountain range in eastern Estaea. They are taller and broader than most humans from the other realms. Light eye color is common, as well as blonde hair, but browns and reds occur as well.  
+The Urjack are a solitary people who inhabit the Lackabier peaks mountain range in eastern Estaea. They are taller and broader than most humans from the other realms. Light eye color is common, as well as blonde hair, but browns and reds occur as well.
+**Mountain Peoples:** The solitary Urjack of the Lackabier peaks are renowned for physical endurance and self-reliance in harsh terrain. Gain 1 free rank in either Athletics or Might.
+
+## Human Abilities
+**Adaptable:** At character creation, gain 1 free rank in any skill of your choice. This rank does not cost XP.
+**Resourceful:** Once per session, when you fail a skill check, you may immediately attempt it again using a different skill that you can narratively justify. The GM must approve the substitution. The second roll stands regardless of result.
 
 ### Human Characteristics
 | Characteristics | Male | Female |
@@ -132,7 +142,7 @@ With this in mind, think of the age you envision the character at, regardless of
 
 ---
 
-# Elves
+# Elven
 In the Third Age, the Goddess Hirnaloyta brought elves into the world of Athelu. Crafted in her image, she imbued in them a love for the world and all its creatures. Elves explored and settled Estaea, building remarkable cities and works of art that blended harmoniously with the nature of the world. The reign of elves was brought short however by the dwarven wars. 
 
 ## The Diaspora
@@ -143,6 +153,12 @@ Many survivors of the dwarven wars came together to form small, isolated tribes 
 The people of the Meresaw kingdom were the first to encounter a unified elven nation. The new Elven kingdom rose out of the ashes of the east, beyond the Lockabier peaks. Here they had time to regroup and recover many of their ancestral ways. 
 The humans of the Meresaw Kingdom welcomed the elven kingdom, offering peace and trade. Both sides had much to learn, both of the history of Estaea, and of the new Human nations that had arisen in the absence of the elves. 
 Elves are tall, thin, fair skinned humanoids with pointed ears. They have a delicate and beautiful way about them. Elves may grow light facial hair (mustache or goatee).
+
+## Elven abilities
+**Low-Light Vision:** Elves treat dim light as bright light. They do not see in total darkness.
+Keen Awareness: Gain 1 free rank in Perception at character creation. This rank does not cost XP.
+**Graceful Precision:** Subtract 1 from the skill die only on Acrobatics checks.
+**Otherworldly:** Persuasion and Deception checks against strangers or unfamiliar humans add 1 to the skill die only. This penalty disappears once the NPC's attitude reaches Cooperative or better.
 
 #### Elven Characteristics
 | Characteristics | Male     | Female   |

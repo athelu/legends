@@ -1511,8 +1511,8 @@ Legendary feats count toward the standard feat limits. The only difference is th
 **Benefit:** Your mastery of ranged combat grants permanent benefits:
 - Keen Eye now triggers on matching pairs where only one die is a success
 - Threatening Sightline no longer adds 1 to both dice 
-- When you apply the third Bleeding stack to a target, they immediately gain the Pinned condition (no [Move] actions) until the Bleeding is fully removed
-- **Deadeye Shot:** Once per long rest, declare before rolling. This attack automatically achieves Margin 3 regardless of the dice result, and the target cannot benefit from cover of any kind. If Keen Eye triggers naturally on this shot, the target is also Immobilized (Restrained) until the end of their next turn.
+- When you apply the third Bleeding stack to a target, they immediately gain the Pinned condition until the Bleeding is fully removed.
+- **Deadeye Shot:** Once per long rest, declare before rolling. This attack automatically achieves Margin 3 regardless of the dice result, and the target cannot benefit from cover of any kind. If Keen Eye triggers naturally on this shot, the target is gains the Immobilized condition until the end of their next turn.
 
 #### Diamond Soul
 **Prerequisites:** Wis 5

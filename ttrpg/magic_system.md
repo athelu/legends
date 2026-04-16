@@ -351,16 +351,28 @@ Choose the appropriate table based on what you're trying to accomplish.
 |-------------|-------------------------------------------------|---------------|
 | Energy Cost | Effect Power                                    | Power Level   |
 |             |                                                 |               |
-| 2           | Minor (+1 to one thing)                         | Cantrip       |
-| 3           | Basic (+2 to one thing or +1 to multiple)       | 1st level     |
-| 4           | Moderate (+2 to multiple or significant bonus)  | 2nd level     |
-| 5           | Strong (major stat change or multiple benefits) | 3rd level     |
-| 6           | Major (transformation-level or party-wide)      | 4th level     |
-| 7           | Exceptional (multiple major benefits)           | 5th-6th level |
+| 2           | Minor: +1 to one hard attribute, or minor mechanical bonus | Cantrip       |
+| 3           | Basic: +2 to one hard attribute, or +1 to one soft attribute, or +1 to multiple things | 1st level     |
+| 4           | Moderate: +2 to one soft attribute, or +2 to multiple things, or significant bonus  | 2nd level     |
+| 5           | Strong: major stat change or multiple benefits | 3rd level     |
+| 6           | Major: transformation-level or party-wide      | 4th level     |
+| 7           | Exceptional: multiple major benefits           | 5th-6th level |
 | 8           | Reality-altering (permanent or overwhelming)    | 8th-9th level |
-|             |                                                 |               |
+
 
 **Notes:** Duration from Supporting Energy (Time). Multiple targets require Supporting Energy (Space).
+
+
+### Attribute Modifier Rules
+
+| Attribute Class | Attributes | +1 cost | +2 cost |
+|-----------------|------------|---------|---------|
+| Hard  | Strength, Constitution, Agility, Dexterity | 2 | 3 |
+| Soft  | Intelligence, Wisdom, Charisma, Luck | 3 | 4 |
+
+**Notes:** Beneficial attribute modifiers do not stack with other beneficial attribute modifiers to the same attribute. You only apply the highest current bonus to that attribute. Harmful attribute modifiers do not stack with other harmful modifiers to the same attribute unless an effect explicitly says it stacks. If a source says a harmul modifier stacks, it must state a cap or recovery method.
+
+
 
 4. **Primary Energy:** Control & Crowd Control
   **Energy Types:** Space (mind effects), Earth (physical restraint), Time (temporal effects)

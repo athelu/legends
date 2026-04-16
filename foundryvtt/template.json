@@ -8,6 +8,18 @@
           "background": "",
           "ancestry": "",
           "origin": ""
+        },
+        "visibility": {
+          "concealed": false,
+          "hidden": false,
+          "invisible": false
+        },
+        "vision": {
+          "lowLight": false,
+          "darkvision": 0,
+          "blindsight": 0,
+          "tremorsense": 0,
+          "perfectSight": 0
         }
       }
     },
@@ -551,6 +563,8 @@
       "languages": "",
       "specialAbilities": "",
       "senses": "",
+      "abilityGrants": [],
+      "originAbilityGrants": {},
       "lifespan": 0,
       "culture": "",
       "physicalDescription": "",

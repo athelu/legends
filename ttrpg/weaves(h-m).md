@@ -53,6 +53,19 @@
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
 
+### Hirnaloyta's Step
+**Primary Energy:** Air 3 (quickening reflex and movement)
+**Supporting Energy:** Time 2 (duration 1 minute)
+**Range:** Touch
+**Duration:** 1 minute
+**Total Cost:** 5 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Air Potential + Air Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Air Mastery
+**Description:** Target gains +2 Agility for the duration. Recalculate Agility-based checks, Reflex saves, and initiative. This bonus does not stack with other beneficial Agility modifiers; use the highest bonus.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
+
 ### Holy Fire
 **Primary Energy:** Positive 2 (radiant fire, damage)
 **Supporting Energy:** Space 2 (medium range)

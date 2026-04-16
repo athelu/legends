@@ -125,6 +125,11 @@
   border-top: 1px solid var(--d8-border);
 }
 
+.legends .ancestry-list .item-collapsible.expanded .item-summary {
+  max-height: 700px;
+  overflow-y: auto;
+}
+
 .legends .item-summary-content {
   padding: 1rem;
   border-left: 3px solid var(--d8-primary);
@@ -740,6 +745,11 @@
   font-size: 11px;
 }
 
+.legends .skills-reference-button span {
+  color: #f8fafc;
+  text-shadow: 0 1px 1px rgba(15, 23, 42, 0.45);
+}
+
 .legends .skill-row {
   display: flex;
   align-items: left;
@@ -1074,6 +1084,16 @@
   font-size: 12px;
   font-weight: 700;
   color: var(--d8-secondary);
+}
+
+.legends .language-picker-button {
+  font-size: 11px;
+  padding: 5px 10px;
+}
+
+.legends .language-picker-button[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
 }
 
 .legends .language-choice-grid {
@@ -1783,8 +1803,17 @@
   background: #fff;
 }
 
-.legends.sheet.item .feat-editor-wrap .editor {
+.legends.sheet.item .tab.description .feat-editor-wrap .editor {
   min-height: 140px;
+  margin-bottom: 0;
+}
+
+.legends.sheet.item .tab.description .feat-editor-wrap .editor .editor-content {
+  min-height: 120px;
+}
+
+.legends.sheet.item .sheet-body > .tab.description.active {
+  overflow-y: auto;
 }
 
 .legends.sheet.item .feat-sidebar-section {

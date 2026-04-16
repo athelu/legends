@@ -175,6 +175,60 @@ Combat actions have a penalty that is triggered if more than one is taken during
 - Third [Combat] action: Add 2 to both die results
 All other keyword types can be used multiple times without penalty.
 
+## Disease
+Disease represents prolonged illness contracted from creature attacks, environmental hazards, or contaminated sources. Unlike poison, disease has an incubation period before symptoms manifest and progresses through saves over time rather than resolving quickly.
+
+### Contracting Disease
+When a creature or effect exposes a character to disease, they make an immediate Fortitude save (Constitution + Current Luck). On success, they fight off the infection and are not affected. On failure, the disease takes hold and enters incubation.
+
+### Incubation
+Each disease has an incubation period listed in its entry (typically 1–8 days). During incubation, the character shows no symptoms and suffers no mechanical effects. At the end of the incubation period, the disease becomes Active and its effects begin.
+
+### Active Disease
+Once active, the disease applies its listed effects immediately. At the end of each long rest, the character makes a Fortitude save to determine progression:
+| Result | Outcome |
+|--------|---------|
+| 2 successes | Disease is cured: all effects end immediately |
+| 1 success | No change: disease persists, effects continue | 
+| 0 successes | Disease worsens: apply next severity effect (see individual disease) |
+
+If the disease has no further severity stage to worsen to, a failure at the worst stage instead deals the listed damage directly.
+
+### Recovery
+Magical healing (Minor Restoration or Major Restoration) can cure a disease immediately without a save. Additionaly, a successful Medicine check (2 successes) can reduce the disease one severity stage. A character may only attempt one Medicine check per disease per long rest regardless of who performs the check.
+
+### Disease Severity Tags
+Diseases carry a severity tag indicating how dangerous they are:
+- [Mild] Uncomfortable but not life-threatening. Easy task Fortitude save (1 success) to prevent from progressing.
+- [Serious] Significant threat. Hard task Fortitude save (2 successes) to cure; 1 success = no change; 0 successes = worsen.
+- [Deadly]  Life-threatening. Hard task Fortitude save (2 successes) to cure; anything less = worsen.
+
+## Attribute Drain
+Some creatures and effects can temporarily reduce a character's core attributes, often instead of inflicting damage directly. These attacks may drain strength, clouded mind,  or weaken the characters constitution.
+
+### Mechanics
+When a character suffers attribute drain, reduce the specified attribute by the listed amount immediately. This affects all calculations derived from that attribute for the duration:
+
+**Skill caps:** Skills cannot exceed the drained attribute value. If a skill currently exceeds the drained value, it is treated as equal to the drained value until restored (the actual rank is unaffected and does not need to be re-purchased).
+**HP:** If Constitution is drained, current HP does not change, but the max HP ceiling drops accordingly. If current HP exceeds the new maximum, reduce it to the new maximum.
+**Saves:** Saving throws using the drained attribute use the reduced value.
+If a creature suffers an attribute drain attack that would reduce the targeted attribute to 0, the character receives the Dead condition.
+
+### Restoration
+All drained attribute points restore automatically after a long rest, regardless of how many points were drained. There is no partial restoration on a short rest.
+Magical restoration: Major Restoration can restore all attribute drain immediately without requiring rest.
+
+## Life Drain
+Some creatures, like particularly powerful undead, certain daemons, or magical necromantic effects, can reduce a character's maximum HP rather than dealing standard damage. This represents the draining of vital essence, a weakening of the pneuma's ability to sustain the body.
+
+### Mechanics
+When a character suffers life drain, reduce their maximum HP by the listed amount. Their current HP is unaffected unless it now exceeds the new maximum, in which case reduce current HP to the new maximum.
+
+### Restoration
+Maximum HP lost to life drain restores fully after a long rest.
+
+**Magical restoration:** Any magical healing effect that restores HP also restores an equal amount of lost maximum HP, up to the amount drained. A character with their max HP reduced by 8 who receives 12 healing restores 8 maximum HP (back to normal) and gains whatever current HP the remaining 4 healing provides.
+
 ## Social Interactions
 When characters attempt to influence the attitudes and behavior of NPCs, the outcome depends on both the approach taken and the existing relationship between the parties. Social skills — Persuasion, Deception, and Intimidate — each operate differently, but all interact with the same underlying Attitude Scale.
 
