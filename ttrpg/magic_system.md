@@ -500,13 +500,13 @@ Supporting Energy modifies the delivery and scope of your Primary effect.
 | 3+     | Long (120 feet) |
 
 ##### Supporting Energy: Area Effect (typically Air or Space)
-| Energy | Radius   |  Cone  |   Line  |
+| Energy | Diameter |  Cone  |   Line  |
 |--------|----------|--------|---------|
-|   1    |  5 ft    | 15 ft  | 30 ft   |
-|   2    | 10 ft    | 20 ft  | 60 ft   |
-|   3    | 15 ft    | 30 ft  | 120 ft  |
-|   4    | 20 ft    | 40 ft  |    -    |
-|   5    | 30 ft    | 60 ft  |    -    |
+|   1    | 10 ft    | 15 ft  | 30 ft   |
+|   2    | 20 ft    | 20 ft  | 60 ft   |
+|   3    | 30 ft    | 30 ft  | 120 ft  |
+|   4    | 40 ft    | 40 ft  |    -    |
+|   5    | 60 ft    | 60 ft  |    -    |
 
 **AOE Damage Application:**
 When a damage weave affects multiple targets through area effect:

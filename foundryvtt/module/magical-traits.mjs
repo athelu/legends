@@ -181,7 +181,6 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
           abilityNamesToGrant.push('Blessing of the Trickster (Rudlu)', 'Curse of Misfortune (Rudlu)', "Trickster's Escape (Rudlu)");
           break;
         case 'shu-jahan':
-        case 'shuJahan':
           abilityNamesToGrant.push('Knowledge of the Ages (Shu-Jahan)', 'Read Thoughts (Shu-Jahan)', "Philosopher's Insight (Shu-Jahan)");
           break;
         case 'generalist':
@@ -218,19 +217,15 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
       
       switch (pactType) {
         case 'survivor':
-        case 'survivorsBargain':
           abilityNamesToGrant.push("Scavenged Power (Survivor's Bargain)");
           break;
         case 'desperate':
-        case 'desperateDeal':
           abilityNamesToGrant.push('Borrowed Vitality (Desperate Deal)');
           break;
         case 'answered':
-        case 'answeredCry':
           abilityNamesToGrant.push('Void Resonance (Answered Cry)', 'Void Speech (Answered Cry)');
           break;
         case 'stolen':
-        case 'stolenShard':
           abilityNamesToGrant.push('Unstable Surge (Stolen Shard)', "Shard's Terror (Stolen Shard)");
           break;
       }
@@ -284,58 +279,45 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
     'eldritch-pact': 'Eldritch Pact',
     'alchemical-tradition': 'Alchemical Tradition'
   };
-
+  
   const modeDescriptions = {
-    normal: 'Standard rolling',
-    gifted: 'Gifted Mage: roll an extra die and drop the lowest.',
-    balanced: 'Balanced Channeler: use the fixed array [5, 4, 3, 3, 2, 2, 1, 1].'
+    'normal': 'Standard rolling',
+    'gifted': '🌟 <strong>Gifted Mage</strong>: Roll 9d8 and drop the lowest',
+    'balanced': '⚖️ <strong>Balanced Channeler</strong>: Use fixed array [5,4,3,3,2,2,1,1]'
   };
-
+  
   const traitName = traitNames[primaryTrait.type] || primaryTrait.type;
   const modeDesc = primaryTrait.type === 'alchemical-tradition'
-    ? 'No potential generation is required for this path.'
+    ? 'No potential generation required'
     : (modeDescriptions[mode] || 'Standard rolling');
   const workflowSteps = primaryTrait.type === 'alchemical-tradition'
     ? `
-      <ul style="margin: 6px 0 0 18px;">
+      <ol>
         <li>Set Intelligence as your effective casting stat</li>
-        <li>Mark Alchemical Tradition as configured</li>
-        <li>Unlock alchemical preparation play</li>
-      </ul>
+        <li>Mark Alchemical Tradition as configured on the actor</li>
+        <li>Use Craft: Alchemist and the downtime rules to create preparations</li>
+      </ol>
     `
     : `
-      <ul style="margin: 6px 0 0 18px;">
-        <li>Roll or assign magical potentials</li>
-        <li>Choose your trait-specific magical identity</li>
-        <li>Finalize energy assignments and mastery</li>
-      </ul>
+      <ol>
+        <li>Generating your Magical Potentials</li>
+        <li>Making trait-specific choices</li>
+        <li>Assigning potentials to energy types</li>
+      </ol>
     `;
-
+  
   return Dialog.confirm({
-    title: 'Setup Magical Traits',
+    title: "Setup Magical Traits",
     content: `
-      <div style="padding: 8px 4px; display: flex; flex-direction: column; gap: 10px;">
-        <div>
-          <div style="font-size: 18px; font-weight: 700;">Ready to configure your magical powers?</div>
-          <div style="font-size: 12px; color: #666; margin-top: 4px;">This walkthrough now matches the newer character-creation selection flow.</div>
-        </div>
-        <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
-          <div style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px;">
-            <div style="font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.04em;">Primary Trait</div>
-            <div style="font-weight: 600; margin-top: 4px;">${traitName}</div>
-          </div>
-          <div style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px;">
-            <div style="font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.04em;">Generation Mode</div>
-            <div style="font-weight: 600; margin-top: 4px;">${mode === 'gifted' ? 'Gifted' : mode === 'balanced' ? 'Balanced' : 'Standard'}</div>
-          </div>
-        </div>
-        <div style="font-size: 13px;">${modeDesc}</div>
-        <div>
-          <strong>This setup will guide you through:</strong>
-          ${workflowSteps}
-        </div>
-        <div style="font-size: 12px; color: #666;">Make sure any modifier traits such as Gifted Mage or Balanced Channeler are already chosen before continuing.</div>
-      </div>
+      <h3>Ready to setup your magical powers?</h3>
+      <p><strong>Primary Trait:</strong> ${traitName}</p>
+      <p><strong>Generation Mode:</strong> ${modeDesc}</p>
+      <hr>
+      <p>You will be guided through:</p>
+      ${workflowSteps}
+      <p><em>This cannot be easily undone. Make sure you have all desired modifier traits 
+      (Gifted Mage, Balanced Channeler) added first.</em></p>
+      <p>Ready to begin?</p>
     `,
     defaultYes: false
   });
@@ -686,188 +668,41 @@ export function createPotentialsObject(assignments) {
 // DIALOG FUNCTIONS
 // ========================================
 
-function escapeHtml(value) {
-  return Handlebars.escapeExpression(String(value ?? ''));
-}
-
-function getEnergyDescription(energyKey) {
-  const descriptions = {
-    fire: 'Passion, destruction, explosive force, and raw heat.',
-    water: 'Adaptability, flow, restoration, and resilience.',
-    earth: 'Stability, endurance, shape, and patient strength.',
-    air: 'Movement, swiftness, sound, and freedom.',
-    positive: 'Life, blessing, radiance, and restorative magic.',
-    negative: 'Decay, endings, entropy, and underworld power.',
-    time: 'Fate, rhythm, memory, and the pull of destiny.',
-    space: 'Distance, perception, motion, and impossible geometry.'
-  };
-
-  return descriptions[energyKey] || 'A channel for distinctive magical potential.';
-}
-
-function buildBadgeList(entries = []) {
-  const list = Array.isArray(entries) ? entries.filter(Boolean) : [entries].filter(Boolean);
-  if (!list.length) return '';
-
-  return `
-    <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px;">
-      ${list.map((entry) => `
-        <span style="border: 1px solid rgba(209, 139, 71, 0.35); border-radius: 999px; padding: 2px 8px; font-size: 11px; color: #5a4a34; background: rgba(209, 139, 71, 0.08);">
-          ${escapeHtml(entry)}
-        </span>
-      `).join('')}
-    </div>
-  `;
-}
-
-function buildMagicalSelectionPreview(option) {
-  const details = Array.isArray(option?.details) ? option.details.filter(Boolean) : [];
-
-  return `
-    <div style="display: flex; flex-direction: column; gap: 10px; min-height: 320px;">
-      <div>
-        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
-          <h3 style="margin: 0;">${escapeHtml(option?.title || option?.label || option?.key || 'Option')}</h3>
-          ${option?.subtitle ? `<span style="font-size: 12px; color: #666;">${escapeHtml(option.subtitle)}</span>` : ''}
-        </div>
-        ${buildBadgeList(option?.badges || [])}
-      </div>
-      ${option?.bonusText ? `<div><strong>Mechanical Impact:</strong> ${escapeHtml(option.bonusText)}</div>` : ''}
-      ${option?.description ? `<div><strong>Overview</strong><div style="margin-top: 6px;">${escapeHtml(option.description)}</div></div>` : ''}
-      ${option?.story ? `<div><strong>Story Cue</strong><div style="margin-top: 6px;"><em>${escapeHtml(option.story)}</em></div></div>` : ''}
-      ${details.length ? `<div><strong>Details</strong><ul style="margin: 6px 0 0 18px;">${details.map((detail) => `<li>${escapeHtml(detail)}</li>`).join('')}</ul></div>` : ''}
-    </div>
-  `;
-}
-
-function renderMagicalOptionPicker(root, options, initialIndex = 0) {
-  const container = root instanceof HTMLElement ? root : (root?.[0] || root);
-  if (!container) return;
-
-  const input = container.querySelector('[name="magicalChoice"]');
-  const preview = container.querySelector('[data-magical-preview]');
-  const rows = Array.from(container.querySelectorAll('[data-magical-option]'));
-
-  const syncSelection = (index) => {
-    const safeIndex = Math.max(0, Math.min(index, options.length - 1));
-    if (input) input.value = String(safeIndex);
-
-    rows.forEach((row, rowIndex) => {
-      row.style.borderColor = rowIndex === safeIndex ? '#d18b47' : 'rgba(209, 139, 71, 0.25)';
-      row.style.background = rowIndex === safeIndex ? 'rgba(209, 139, 71, 0.10)' : 'rgba(255, 255, 255, 0.03)';
-    });
-
-    if (preview) preview.innerHTML = buildMagicalSelectionPreview(options[safeIndex]);
-  };
-
-  rows.forEach((row, rowIndex) => {
-    row.addEventListener('click', () => syncSelection(rowIndex));
-    row.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        syncSelection(rowIndex);
-      }
-    });
-  });
-
-  syncSelection(initialIndex);
-}
-
-async function showMagicalSelectionDialog({
-  title,
-  heading,
-  description = '',
-  options = [],
-  confirmLabel = 'Confirm',
-  cancelLabel = 'Cancel',
-}) {
-  if (!Array.isArray(options) || !options.length) return null;
-
-  return new Promise((resolve) => {
-    let settled = false;
-    const finish = (value) => {
-      if (settled) return;
-      settled = true;
-      resolve(value);
-    };
-
-    const dialog = new Dialog({
-      title,
-      content: `
-        <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
-          <div><strong>${escapeHtml(heading)}</strong></div>
-          ${description ? `<div style="font-size: 12px; color: #666;">${escapeHtml(description)}</div>` : ''}
-          <input type="hidden" name="magicalChoice" value="0" />
-          <div style="display: grid; grid-template-columns: minmax(260px, 320px) minmax(0, 1fr); gap: 14px; align-items: start;">
-            <div>
-              <label style="display: block; margin-bottom: 6px;">Select an option</label>
-              <div style="display: flex; flex-direction: column; gap: 6px; max-height: 440px; overflow-y: auto; padding-right: 4px;">
-                ${options.map((option, index) => `
-                  <div
-                    data-magical-option="${index}"
-                    tabindex="0"
-                    style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px; cursor: pointer;">
-                    <div style="font-weight: 600;">${escapeHtml(option.title || option.label || option.key || `Option ${index + 1}`)}</div>
-                    ${option.subtitle ? `<div style="font-size: 12px; color: #666; margin-top: 2px;">${escapeHtml(option.subtitle)}</div>` : ''}
-                  </div>
-                `).join('')}
-              </div>
-            </div>
-            <div data-magical-preview style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 10px; padding: 12px; max-height: 440px; overflow-y: auto;"></div>
-          </div>
-        </form>
-      `,
-      buttons: {
-        ok: {
-          icon: '<i class="fas fa-check"></i>',
-          label: confirmLabel,
-          callback: (html) => {
-            const root = html?.[0] || html;
-            const value = root?.querySelector('[name="magicalChoice"]')?.value || '0';
-            const selectedIndex = Number.parseInt(String(value), 10);
-            finish(options[selectedIndex]?.key ?? null);
-          }
-        },
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: cancelLabel,
-          callback: () => finish(null)
-        }
-      },
-      default: 'ok',
-      render: (html) => renderMagicalOptionPicker(html?.[0] || html, options, 0),
-      close: () => finish(null)
-    });
-
-    dialog.render(true);
-  });
-}
-
-async function showEnergySelectionDialog({ title, heading, description = '', energies = [], confirmLabel = 'Confirm' }) {
-  const options = energies.map((energy) => ({
-    key: energy,
-    title: `${ENERGY_TYPES[energy]?.icon || ''} ${ENERGY_TYPES[energy]?.label || energy}`.trim(),
-    subtitle: 'Energy Choice',
-    description: getEnergyDescription(energy),
-    bonusText: description,
-    badges: [ENERGY_TYPES[energy]?.label || energy],
-    details: ['This selection will influence your magical focus and final setup.']
-  }));
-
-  return showMagicalSelectionDialog({ title, heading, description, options, confirmLabel });
-}
-
 /**
  * Show dialog to choose elemental affinity
  * @returns {Promise<string>} Chosen element
  */
 export async function showAffinityDialog() {
-  return showEnergySelectionDialog({
-    title: 'Choose Elemental Affinity',
-    heading: 'Choose your Elemental Affinity',
-    description: 'Your affinity receives a +2 potential bonus, to a maximum of 8.',
-    energies: ELEMENTAL_ENERGIES,
-    confirmLabel: 'Choose Affinity'
+  return new Promise((resolve) => {
+    const dialog = new Dialog({
+      title: "Choose Elemental Affinity",
+      content: `
+        <form>
+          <div class="form-group">
+            <label>Choose your Elemental Affinity:</label>
+            <select id="affinity" name="affinity">
+              ${ELEMENTAL_ENERGIES.map(e => 
+                `<option value="${e}">${ENERGY_TYPES[e].label} ${ENERGY_TYPES[e].icon}</option>`
+              ).join('')}
+            </select>
+          </div>
+          <p><em>Your affinity will receive +2 bonus (max 8 total)</em></p>
+        </form>
+      `,
+      buttons: {
+        ok: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Confirm",
+          callback: (html) => {
+            const affinity = html.find('[name="affinity"]').val();
+            resolve(affinity);
+          }
+        }
+      },
+      default: "ok",
+      close: () => resolve(null)
+    });
+    dialog.render(true);
   });
 }
 
@@ -877,15 +712,40 @@ export async function showAffinityDialog() {
  * @returns {Promise<string>} Chosen energy
  */
 export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMultiple = []) {
+  // Combine single exclude and multiple excludes
   const excluded = excludeEnergy ? [excludeEnergy, ...excludeMultiple] : excludeMultiple;
-  const availableEnergies = ALL_ENERGIES.filter((energy) => !excluded.includes(energy));
-
-  return showEnergySelectionDialog({
-    title: 'Choose Secondary Focus',
-    heading: 'Choose your Secondary Focus',
-    description: 'Your secondary focus receives a +1 potential bonus, to a maximum of 8.',
-    energies: availableEnergies,
-    confirmLabel: 'Choose Focus'
+  const availableEnergies = ALL_ENERGIES.filter(e => !excluded.includes(e));
+  
+  return new Promise((resolve) => {
+    const dialog = new Dialog({
+      title: "Choose Secondary Focus",
+      content: `
+        <form>
+          <div class="form-group">
+            <label>Choose your Secondary Focus:</label>
+            <select id="secondary" name="secondary">
+              ${availableEnergies.map(e => 
+                `<option value="${e}">${ENERGY_TYPES[e].label} ${ENERGY_TYPES[e].icon}</option>`
+              ).join('')}
+            </select>
+          </div>
+          <p><em>Your secondary focus will receive +1 bonus (max 8 total)</em></p>
+        </form>
+      `,
+      buttons: {
+        ok: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Confirm",
+          callback: (html) => {
+            const secondary = html.find('[name="secondary"]').val();
+            resolve(secondary);
+          }
+        }
+      },
+      default: "ok",
+      close: () => resolve(null)
+    });
+    dialog.render(true);
   });
 }
 
@@ -894,47 +754,38 @@ export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMult
  * @returns {Promise<string>} Chosen patron key
  */
 export async function showPatronDialog() {
-  const patronSummaries = {
-    alkira: 'A martial patron of discipline, conquest, and iron order.',
-    ambis: 'A nurturing divine path centered on mercy, protection, and life.',
-    athore: 'Justice, judgment, law, and the weight of righteous truth.',
-    enschede: 'Fate, prophecy, timing, and the unseen pattern of events.',
-    hirnaloyta: 'Nature, growth, renewal, and the old living world.',
-    nevil: 'Death, endings, memory, and reverence for the underworld.',
-    rudlu: 'Luck, trickery, misdirection, and impossible chances.',
-    shuJahan: 'Wisdom, philosophy, reflection, and transcendental knowledge.',
-    generalist: 'A broad devotion to the full pantheon rather than one divine source.'
-  };
-
-  const options = Object.entries(DIVINE_PATRONS).map(([key, data]) => {
-    const [title, subtitle] = String(data.name || key).split(' - ');
-    const favoredEnergies = [data.primary, data.secondary, data.tertiary]
-      .filter(Boolean)
-      .map((energy) => `${ENERGY_TYPES[energy]?.icon || ''} ${ENERGY_TYPES[energy]?.label || energy}`.trim());
-
-    return {
-      key,
-      title,
-      subtitle: subtitle || 'Divine Patron',
-      description: patronSummaries[key] || 'Your chosen patron shapes your miracles and favored energies.',
-      bonusText: key === 'generalist'
-        ? 'Choose three favored energies; each receives a +1 bonus.'
-        : `${ENERGY_TYPES[data.primary]?.label || 'Primary'} receives +2, and ${ENERGY_TYPES[data.secondary]?.label || 'Secondary'} receives +1.`,
-      badges: favoredEnergies,
-      details: [
-        key === 'generalist'
-          ? 'Generalists gain a wider but flatter spread of divine affinities.'
-          : `Channel Divinity abilities and granted powers will align with ${title}.`
-      ]
-    };
-  });
-
-  return showMagicalSelectionDialog({
-    title: 'Choose Divine Patron',
-    heading: 'Choose which deity you serve',
-    description: 'Your patron determines your divine affinities and granted abilities.',
-    options,
-    confirmLabel: 'Choose Patron'
+  return new Promise((resolve) => {
+    const patronsHtml = Object.entries(DIVINE_PATRONS).map(([key, data]) => 
+      `<option value="${key}">${data.name}</option>`
+    ).join('');
+    
+    const dialog = new Dialog({
+      title: "Choose Divine Patron",
+      content: `
+        <form>
+          <div class="form-group">
+            <label>Choose which deity you serve:</label>
+            <select id="patron" name="patron">
+              ${patronsHtml}
+            </select>
+          </div>
+          <p><em>Your patron determines your energy affinities</em></p>
+        </form>
+      `,
+      buttons: {
+        ok: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Confirm",
+          callback: (html) => {
+            const patron = html.find('[name="patron"]').val();
+            resolve(patron);
+          }
+        }
+      },
+      default: "ok",
+      close: () => resolve(null)
+    });
+    dialog.render(true);
   });
 }
 
@@ -943,23 +794,47 @@ export async function showPatronDialog() {
  * @returns {Promise<string>} Chosen manifestation key
  */
 export async function showForceOfWillDialog() {
-  const options = Object.entries(FORCE_OF_WILL).map(([key, data]) => ({
-    key,
-    title: data.name,
-    subtitle: 'Force of Will',
-    description: `Favored energies: ${data.energies.map((energy) => ENERGY_TYPES[energy]?.label || energy).join(' and ')}.`,
-    bonusText: 'Your chosen primary manifestation energy receives +2. You will select a secondary focus afterward for +1.',
-    story: data.story,
-    badges: data.energies.map((energy) => `${ENERGY_TYPES[energy]?.icon || ''} ${ENERGY_TYPES[energy]?.label || energy}`.trim()),
-    details: ['This defines the narrative shape of your sorcerous power.']
-  }));
-
-  return showMagicalSelectionDialog({
-    title: 'Choose Force of Will',
-    heading: 'Choose your Force of Will manifestation',
-    description: 'Each manifestation suggests a different expression of innate sorcery.',
-    options,
-    confirmLabel: 'Choose Manifestation'
+  return new Promise((resolve) => {
+    const manifestationsHtml = Object.entries(FORCE_OF_WILL).map(([key, data]) => 
+      `<option value="${key}">${data.name}</option>`
+    ).join('');
+    
+    const dialog = new Dialog({
+      title: "Choose Force of Will",
+      content: `
+        <form>
+          <div class="form-group">
+            <label>Choose your Force of Will manifestation:</label>
+            <select id="manifestation" name="manifestation">
+              ${manifestationsHtml}
+            </select>
+          </div>
+          <div id="manifestation-story" style="margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.1);">
+            <em>${FORCE_OF_WILL.unchangingStone.story}</em>
+          </div>
+        </form>
+        <script>
+          $('[name="manifestation"]').on('change', function() {
+            const key = $(this).val();
+            const story = ${JSON.stringify(Object.fromEntries(Object.entries(FORCE_OF_WILL).map(([k,v]) => [k, v.story])))};
+            $('#manifestation-story em').text(story[key]);
+          });
+        </script>
+      `,
+      buttons: {
+        ok: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Confirm",
+          callback: (html) => {
+            const manifestation = html.find('[name="manifestation"]').val();
+            resolve(manifestation);
+          }
+        }
+      },
+      default: "ok",
+      close: () => resolve(null)
+    });
+    dialog.render(true);
   });
 }
 
@@ -968,23 +843,40 @@ export async function showForceOfWillDialog() {
  * @returns {Promise<string>} Chosen pact key
  */
 export async function showPactTypeDialog() {
-  const options = Object.entries(PACT_TYPES).map(([key, data]) => ({
-    key,
-    title: data.name,
-    subtitle: 'Eldritch Pact',
-    description: `Favored energies: ${data.energies.map((energy) => ENERGY_TYPES[energy]?.label || energy).join(', ')}.`,
-    bonusText: `${ENERGY_TYPES[data.primary]?.label || 'Primary'} receives +2, and ${ENERGY_TYPES[data.secondary]?.label || 'Secondary'} receives +1.`,
-    story: data.story,
-    badges: data.energies.map((energy) => `${ENERGY_TYPES[energy]?.icon || ''} ${ENERGY_TYPES[energy]?.label || energy}`.trim()),
-    details: ['Your pact type determines the feel and focus of your gained power.']
-  }));
-
-  return showMagicalSelectionDialog({
-    title: 'Choose Eldritch Pact',
-    heading: 'Choose your Pact Type',
-    description: 'Select the story and energy profile that matches your bargain.',
-    options,
-    confirmLabel: 'Choose Pact'
+  return new Promise((resolve) => {
+    const pactsHtml = Object.entries(PACT_TYPES).map(([key, data]) => 
+      `<option value="${key}">${data.name}</option>`
+    ).join('');
+    
+    const dialog = new Dialog({
+      title: "Choose Eldritch Pact",
+      content: `
+        <form>
+          <div class="form-group">
+            <label>Choose your Pact Type:</label>
+            <select id="pact" name="pact">
+              ${pactsHtml}
+            </select>
+          </div>
+          <div id="pact-story" style="margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.1);">
+            <em>${PACT_TYPES.survivorsBargain.story}</em>
+          </div>
+        </form>
+      `,
+      buttons: {
+        ok: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Confirm",
+          callback: (html) => {
+            const pact = html.find('[name="pact"]').val();
+            resolve(pact);
+          }
+        }
+      },
+      default: "ok",
+      close: () => resolve(null)
+    });
+    dialog.render(true);
   });
 }
 
@@ -1043,57 +935,49 @@ function findOptimalRollForBonus(rolls, bonus, max = 8) {
  */
 export async function showAssignmentDialog(rolls, energies, preAssigned = {}) {
   return new Promise((resolve) => {
-    let assignments = { ...preAssigned };
-
+    let assignments = {...preAssigned};
+    const availableRolls = [...rolls];
+    
+    // Filter out pre-assigned energies from the dropdown
     const preAssignedKeys = Object.keys(preAssigned);
-    const availableEnergies = energies.filter((energy) => !preAssignedKeys.includes(energy));
-
-    const energyOptions = availableEnergies.map((energy) =>
-      `<option value="${energy}">${ENERGY_TYPES[energy]?.icon || ''} ${ENERGY_TYPES[energy]?.label || energy}</option>`
+    const availableEnergies = energies.filter(e => !preAssignedKeys.includes(e));
+    
+    const energyOptions = availableEnergies.map(e => 
+      `<option value="${e}">${ENERGY_TYPES[e].label}</option>`
     ).join('');
-
+    
     const rollsHtml = rolls.map((roll, idx) => `
-      <div style="display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 10px; align-items: center; border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px;">
-        <div style="border-radius: 999px; background: rgba(209, 139, 71, 0.14); padding: 6px 0; text-align: center; font-weight: 700;">${roll}</div>
-        <div>
-          <label style="display: block; font-size: 12px; color: #666; margin-bottom: 4px;">Assign this roll</label>
-          <select name="energy-${idx}" style="width: 100%; padding: 6px;">
-            <option value="">Unassigned</option>
-            ${energyOptions}
-          </select>
-        </div>
+      <div class="roll-assignment" data-roll-index="${idx}">
+        <span class="roll-value">${roll}</span>
+        <select name="energy-${idx}">
+          <option value="">Unassigned</option>
+          ${energyOptions}
+        </select>
       </div>
     `).join('');
-
-    const assignedPreview = Object.keys(preAssigned).length > 0
-      ? `
-        <div style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 10px;">
-          <strong>Locked-in bonuses</strong>
-          <ul style="margin: 6px 0 0 18px;">
-            ${Object.entries(preAssigned).map(([energy, value]) => `
-              <li>${escapeHtml(ENERGY_TYPES[energy]?.label || energy)}: ${escapeHtml(String(value))}</li>
-            `).join('')}
-          </ul>
-        </div>
-      `
-      : '';
-
+    
     const dialog = new Dialog({
-      title: 'Assign Potential Rolls',
+      title: "Assign Potential Rolls",
       content: `
-        <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
-          <div><strong>Assign each remaining roll to an energy type</strong></div>
-          <div style="font-size: 12px; color: #666;">This finalizes your potential spread for the selected magical path.</div>
-          ${assignedPreview}
-          <div style="display: flex; flex-direction: column; gap: 8px;">
+        <form>
+          <p>Assign each roll to an energy type:</p>
+          <div class="roll-assignments">
             ${rollsHtml}
           </div>
+          ${Object.keys(preAssigned).length > 0 ? `
+            <p style="margin-top: 10px;"><strong>Pre-assigned bonuses:</strong></p>
+            <ul>
+              ${Object.entries(preAssigned).map(([e, v]) => 
+                `<li>${ENERGY_TYPES[e].label}: +${v}</li>`
+              ).join('')}
+            </ul>
+          ` : ''}
         </form>
       `,
       buttons: {
         ok: {
           icon: '<i class="fas fa-check"></i>',
-          label: 'Apply Potentials',
+          label: "Confirm",
           callback: (html) => {
             rolls.forEach((roll, idx) => {
               const energy = html.find(`[name="energy-${idx}"]`).val();
@@ -1103,14 +987,9 @@ export async function showAssignmentDialog(rolls, energies, preAssigned = {}) {
             });
             resolve(assignments);
           }
-        },
-        cancel: {
-          icon: '<i class="fas fa-times"></i>',
-          label: 'Cancel',
-          callback: () => resolve(null)
         }
       },
-      default: 'ok',
+      default: "ok",
       close: () => resolve(null)
     });
     dialog.render(true);
@@ -1482,12 +1361,26 @@ export async function applySorcerousOriginWorkflow(actor, traitItem, mode) {
   const manifestation = FORCE_OF_WILL[manifestationKey];
   
   // Step 3: Choose primary energy from manifestation options
-  const primaryEnergy = await showEnergySelectionDialog({
-    title: 'Choose Primary Energy',
-    heading: `Choose your primary energy for ${manifestation.name}`,
-    description: 'This primary energy receives a +2 potential bonus, to a maximum of 8.',
-    energies: manifestation.energies,
-    confirmLabel: 'Choose Primary Energy'
+  const primaryEnergy = await new Promise((resolve) => {
+    const dialog = new Dialog({
+      title: "Choose Primary Energy",
+      content: `
+        <p>Choose your primary energy for ${manifestation.name}:</p>
+        <select id="primary">
+          ${manifestation.energies.map(e => 
+            `<option value="${e}">${ENERGY_TYPES[e].label}</option>`
+          ).join('')}
+        </select>
+      `,
+      buttons: {
+        ok: {
+          label: "Confirm",
+          callback: (html) => resolve(html.find('#primary').val())
+        }
+      },
+      default: "ok"
+    });
+    dialog.render(true);
   });
   
   // Step 4: Choose secondary focus

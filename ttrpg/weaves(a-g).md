@@ -231,15 +231,15 @@
 **Targeting Success Scaling:** 0 = Fails, 1 = 2 questions, 2 = 3 questions, 3 = 4 questions
 
 ### Complex Illusion
-**Primary Energy:** Space 7 (complex illusion + medium range + 10ft radius)
+**Primary Energy:** Space 6 (complex illusion + medium range + 20ft cube area)
 **Supporting Energy:** Time 3 (duration 10 minutes)
-**Range:** Medium, 60 ft. (10-foot radius)
+**Range:** Medium, 60 ft. (20-foot cube)
 **Duration:** 10 minutes
-**Total Cost:** 10 Energy
+**Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
-**Description:** Create an illusion of an object, creature, or phenomenon within a 20-foot radius at medium range. The illusion includes sight, sound, smell, and temperature effects. Physical interaction reveals it as an illusion.
+**Description:** Create an illusion of an object, creature, or phenomenon within a 20-foot cube at medium range. The illusion includes sight, sound, smell, and temperature effects. Physical interaction reveals it as an illusion.
 **Saving Throw:** Perception vs Space Mastery
 **Targeting Success Scaling:** 0 = Fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour
 
@@ -278,7 +278,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
-**Description:** Create up to 10 gallons of clean water in an open container. Or create rain in 15ft readius that extinguishes open flames.
+**Description:** Create up to 10 gallons of clean water in an open container. Or create rain in 30ft cube that extinguishes open flames.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = Fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons
 
@@ -420,19 +420,6 @@
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = Fails, 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours
 
-### False Life
-**Primary Energy:** Negative 2 (animating a buffer of necrotic vitality)
-**Supporting Energy:** Time 3 (duration 10 minutes)
-**Range:** Self, Touch
-**Duration:** 10 minutes
-**Total Cost:** 5 Energy
-**Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery
-**Targeting Roll:** Casting Stat + Negative Mastery
-**Description:** Bolster yourself with a facsimile of life. Gain temporary HP equal to your Negative Potential + your Negative Mastery rank. These temporary HP last for the duration or until depleted. You may only have one instance of False Life active at a time; casting it again while the first is active replaces it.
-Saving Throw: None
-**Targeting Success Scaling:** 0 = fails, 1 = temporary HP equal to Negative Potential only, 2 = temporary HP equal to Negative Potential + Negative Mastery, 3 = temporary HP equal to (Negative Potential + Negative Mastery) × 2
-
 ### False Visage
 **Primary Energy:** Space 4 (bending light
 **Supporting Energy:** Time 3 (duration 10 minutes)
@@ -449,10 +436,10 @@ Saving Throw: None
 
 ### Fear
 **Primary Energy:** Negative 5 (projecting terror, mental effect)
-**Supporting Energy:** Space 5 (30ft cone + 1 minute)
+**Supporting Energy:** Space 4 (30ft cone + 1 minute)
 **Range:** 30ft cone
 **Duration:** 1 minute
-**Total Cost:** 10 Energy
+**Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
@@ -551,19 +538,6 @@ Saving Throw: None
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = Fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour
 
-### Fog Cloud
-**Primary Energy:** Water 2 (conjuring thick moisture and vapor)
-**Supporting Energy:** Space 8 (medium range + 20ft radius + duration 1 minute)
-**Range:** Medium, 60 ft. (20-foot radius sphere)
-**Duration:** 1 minute
-**Total Cost:** 10 Energy
-**Action:** Complex weave (2 actions)
-**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery
-**Targeting Roll:** Casting Stat + Water Mastery
-**Description:** Conjure a sphere of thick fog at medium range. The area is heavily obscured; all creatures within the fog have the Concealed condition against all attacks, and vision-based Perception checks through the fog automatically fail. Wind of moderate or greater speed disperses the fog. The fog otherwise persists for the duration regardless of weather.
-**Saving Throw:** None
-**Targeting Success Scaling:** 0 = fails, 1 = 10ft radius (1 round), 2 = 20ft radius (1 minute), 3 = 40ft radius (10 minutes)
-
 ### Force Armor
 **Primary Energy:** Space 3 (force armor)
 **Supporting Energy:** Time 4 (duration 1 hour)
@@ -638,8 +612,8 @@ Saving Throw: None
 
 ### Grasping Vines
 **Primary Energy:** Earth 3 (animating plants to restrain)
-**Supporting Energy:** Space 6 (medium range + 10ft radius + 1 minute)
-**Range:** Medium, 60 ft. (10-foot radius)
+**Supporting Energy:** Space 6 (medium range + 20ft square + 1 minute)
+**Range:** Medium, 60 ft. (20-foot square)
 **Duration:** 1 minute
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
@@ -652,8 +626,8 @@ Saving Throw: None
 
 ### Grease
 **Primary Energy:** Water 2 (slippery oil/grease, effect)
-**Supporting Energy:** Space 4 (close range + 5ft radius + 1 minute)
-**Range:** Close, 30 ft. (5-foot radius)
+**Supporting Energy:** Space 4 (close range + 10ft square + 1 minute)
+**Range:** Close, 30 ft. (10-foot square)
 **Duration:** 1 minute
 **Total Cost:** 6 Energy
 **Action:** Complex weave (2 actions)

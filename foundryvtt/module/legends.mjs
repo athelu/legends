@@ -165,7 +165,7 @@ function shouldSyncEncumbranceForItem(item) {
 
 async function ensureDefaultSheets() {
   const SheetConfig = foundry.applications?.apps?.DocumentSheetConfig;
-  if (!SheetConfig?.updateDefaultSheets || !game.settings?.get) {
+  if (!SheetConfig?.updateDefaultSheets || !game.settings?.get || !game.settings?.set) {
     return;
   }
 
@@ -183,7 +183,7 @@ async function ensureDefaultSheets() {
     }
   }
 
-  if (changed && game.ready && game.settings?.set) {
+  if (changed) {
     await game.settings.set("core", "sheetClasses", current);
   }
 
@@ -631,7 +631,6 @@ Hooks.on("dropCanvasData", async function(canvas, data) {
 
 Hooks.once('ready', async function() {
   console.log('Legends | System Ready');
-  await ensureDefaultSheets();
   logSheetDiagnostics('ready');
 
   // Register conditions as status effects for token HUD (packs are fully loaded at ready)

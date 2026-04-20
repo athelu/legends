@@ -294,73 +294,6 @@ function buildPlaceholderItem(grant, background, grantIndex) {
   };
 }
 
-function escapeHtml(value) {
-  return Handlebars.escapeExpression(String(value ?? ''));
-}
-
-function getGrantOptionMeta(option, doc = null) {
-  const bits = [];
-  if (doc?.type) bits.push(String(doc.type).charAt(0).toUpperCase() + String(doc.type).slice(1));
-  if (Number(option?.quantity || 1) > 1) bits.push(`Qty ${Number(option.quantity)}`);
-  const system = doc?.system || {};
-  if (Number(system?.cost || 0) > 0) bits.push(`${Number(system.cost)} cost`);
-  if (Number(system?.weight || 0) > 0) bits.push(`${Number(system.weight)} wt`);
-  return bits.join(' • ');
-}
-
-function buildGrantOptionPreview(option) {
-  const doc = option?.previewDoc;
-  const system = doc?.system || {};
-  const description = String(system?.description?.value || '').trim();
-  const notes = String(system?.notes || '').trim();
-  const meta = getGrantOptionMeta(option, doc);
-
-  return `
-    <div style="display: flex; flex-direction: column; gap: 10px; min-height: 320px;">
-      <div>
-        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
-          <h3 style="margin: 0;">${escapeHtml(option?.sourceName || option?.name || 'Item')}</h3>
-          ${meta ? `<span style="font-size: 12px; color: #666;">${escapeHtml(meta)}</span>` : ''}
-        </div>
-      </div>
-      ${option?.originalText ? `<div><strong>Granted By</strong><div style="margin-top: 6px;">${escapeHtml(option.originalText)}</div></div>` : ''}
-      ${description ? `<div><strong>Description</strong><div style="margin-top: 6px;">${description}</div></div>` : '<div><strong>Description</strong><div style="margin-top: 6px; color: #666;">No detailed description is available for this item.</div></div>'}
-      ${notes ? `<div><strong>Notes</strong><div style="margin-top: 6px;">${notes}</div></div>` : ''}
-    </div>
-  `;
-}
-
-function renderGrantOptionPicker(root, options, initialIndex = 0) {
-  const container = root instanceof HTMLElement ? root : (root?.[0] || root);
-  if (!container) return;
-
-  const input = container.querySelector('[name="grantChoice"]');
-  const preview = container.querySelector('[data-background-grant-preview]');
-  const rows = Array.from(container.querySelectorAll('[data-background-grant-option]'));
-
-  const syncSelection = (index) => {
-    const safeIndex = Math.max(0, Math.min(index, options.length - 1));
-    if (input) input.value = String(safeIndex);
-    rows.forEach((row, rowIndex) => {
-      row.style.borderColor = rowIndex === safeIndex ? '#d18b47' : 'rgba(209, 139, 71, 0.25)';
-      row.style.background = rowIndex === safeIndex ? 'rgba(209, 139, 71, 0.10)' : 'rgba(255, 255, 255, 0.03)';
-    });
-    if (preview) preview.innerHTML = buildGrantOptionPreview(options[safeIndex]);
-  };
-
-  rows.forEach((row, rowIndex) => {
-    row.addEventListener('click', () => syncSelection(rowIndex));
-    row.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter' || event.key === ' ') {
-        event.preventDefault();
-        syncSelection(rowIndex);
-      }
-    });
-  });
-
-  syncSelection(initialIndex);
-}
-
 async function chooseGrantOption(background, grant, previousSelection = null) {
   let options = [];
 
@@ -385,43 +318,24 @@ async function chooseGrantOption(background, grant, previousSelection = null) {
 
   if (!options.length) return null;
 
-  const previewOptions = await Promise.all(options.map(async (option) => {
-    const resolved = await resolveGrantDocument(option);
-    return {
-      ...option,
-      previewDoc: resolved?.doc || null
-    };
-  }));
-
-  const defaultIndex = Math.max(0, previewOptions.findIndex(option =>
+  const defaultIndex = Math.max(0, options.findIndex(option =>
     previousSelection && option.sourceName === previousSelection.sourceName && option.pack === previousSelection.pack
   ));
 
   return foundry.applications.api.DialogV2.wait({
     window: { title: `${background.name} Starting Item` },
-    position: { width: 980 },
+    position: { width: 420 },
     rejectClose: false,
     content: `
-      <form class="legends-background-grant-choice" style="padding: 10px; display: flex; flex-direction: column; gap: 10px;">
-        <div><strong>Choose an item for:</strong> ${escapeHtml(grant.originalText || background.name)}</div>
-        <div style="font-size: 12px; color: #666;">Review the list on the left and the item preview on the right before confirming your choice.</div>
-        <input type="hidden" name="grantChoice" value="${defaultIndex >= 0 ? defaultIndex : 0}" />
-        <div style="display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 14px; align-items: start;">
-          <div>
-            <label style="display: block; margin-bottom: 6px;">Select an item</label>
-            <div style="display: flex; flex-direction: column; gap: 6px; max-height: 460px; overflow-y: auto; padding-right: 4px;">
-              ${previewOptions.map((option, index) => `
-                <div
-                  data-background-grant-option="${index}"
-                  tabindex="0"
-                  style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px; cursor: pointer;">
-                  <div style="font-weight: 600;">${escapeHtml(option.sourceName || option.name)}</div>
-                  <div style="font-size: 12px; color: #666; margin-top: 2px;">${escapeHtml(getGrantOptionMeta(option, option.previewDoc))}</div>
-                </div>
-              `).join('')}
-            </div>
-          </div>
-          <div data-background-grant-preview style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 10px; padding: 12px; max-height: 460px; overflow-y: auto;"></div>
+      <form class="legends-background-grant-choice" style="padding: 10px;">
+        <div class="form-group">
+          <label><strong>Choose an item for:</strong></label>
+          <div style="margin: 6px 0 10px;">${grant.originalText || background.name}</div>
+          <select name="grantChoice" style="width: 100%; padding: 6px;">
+            ${options.map((option, index) => `
+              <option value="${index}" ${index === defaultIndex ? 'selected' : ''}>${option.sourceName || option.name}</option>
+            `).join('')}
+          </select>
         </div>
       </form>
     `,
@@ -432,20 +346,14 @@ async function chooseGrantOption(background, grant, previousSelection = null) {
         default: true,
         callback: (event, button, dialog) => {
           const selectedIndex = Number.parseInt(dialog.element.querySelector('[name="grantChoice"]')?.value || `${defaultIndex}`, 10);
-          const selected = previewOptions[selectedIndex] || null;
-          if (!selected) return null;
-          const { previewDoc, ...grantSelection } = selected;
-          return grantSelection;
+          return options[selectedIndex] || null;
         }
       },
       {
         action: 'cancel',
         label: 'Cancel'
       }
-    ],
-    render: (event, dialog) => {
-      renderGrantOptionPicker(dialog.element, previewOptions, defaultIndex >= 0 ? defaultIndex : 0);
-    }
+    ]
   });
 }
 

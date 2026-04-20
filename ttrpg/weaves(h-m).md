@@ -1,9 +1,9 @@
 ### HailStorm
 **Primary Energy:** Water 5 (hailstorm, physical ice chunks)
-**Supporting Energy:** Space 6 (medium range + 20ft radius)
+**Supporting Energy:** Space 4 (medium range + 20ft radius)
 **Range:** Medium, 60 ft. (20-foot radius)
 **Duration:** Instantaneous
-**Total Cost:** 11 Energy
+**Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
@@ -112,9 +112,9 @@
 **Targeting Success Scaling:** 0 = fails, 1 = basic function only, 2 = full properties, 3 = learn curse details
 
 ### Illusory Torment
-**Primary Energy:** Space 7 (illusory effect + medium range)
+**Primary Energy:** Space 7 (illusory effect + medium range + 10ft cube)
 **Supporting Energy:** Time 2 (duration 1 minute)
-**Range:** Medium, 60 ft.
+**Range:** Medium, 60 ft. (10-foot cube)
 **Duration:** 1 minute
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
@@ -280,15 +280,15 @@
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
 
 ### Mesmerizing Pattern
-**Primary Energy:** Space 7 (mesmerizing illusion + medium range + 15ft radius)
+**Primary Energy:** Space 9 (mesmerizing illusion + medium range + 30ft cube)
 **Supporting Energy:** Time 2 (duration 1 minute)
-**Range:** Medium, 60 ft. (15-foot radius)
+**Range:** Medium, 60 ft. (30-foot cube)
 **Duration:** 1 minute
-**Total Cost:** 9 Energy
+**Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
-**Description:** Create a twisting pattern of colors in 30-foot radius at medium range. All creatures in area make Will saves. Compare your targeting successes to each target's save successes. Those you beat become Charmed and Incapacitated, staring at the pattern. Weave ends for a creature if it takes damage or if someone uses action to shake them (1 success ends effect). Creatures immune to charm are immune.
+**Description:** Create a twisting pattern of colors in 30-foot cube at medium range. All creatures in area make Will saves. Compare your targeting successes to each target's save successes. Those you beat become Charmed and Incapacitated, staring at the pattern. Weave ends for a creature if it takes damage or if someone uses action to shake them (1 success ends effect). Creatures immune to charm are immune.
 **Applies Effects:** charmed, Incapacitated
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes

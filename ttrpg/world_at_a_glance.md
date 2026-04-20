@@ -168,68 +168,20 @@ Human visitors are received with genuine warmth, though access to elven cities i
 **Melvantharis —** One of the oldest elven cities in the world, Melvantharis sits in a mountain range at the eastern edge of the grasslands. It survived the Dwarven War only barely, and what was rebuilt is magnificent and largely empty; there are significantly more houses than families, and elves of pure cultural heritage are offered incentives to occupy abandoned homes. The ancient white marble construction is precise and cool, some of it carved directly into the mountainside and integrated with underground rivers considered sacred. The city governs itself through a body called the City Circle, which has administered Melvantharis for centuries in the absence of a surviving royal line. Its politics are hardline by elven standards: human visitors are permitted but closely supervised, and those who come to stay do so under strict conditions and with the understanding that they will not leave. Melvantharis trades in marble and wood sculptures, alchemical herbs, and, increasingly, weapons. Population: approximately 200,000.
  
 ## THE ECHARTEAN EMPIRE
-Echartea is a large island off the mainland's southeastern coast, separated from the Onseth Jungles by the Harpway Channel. The empire extends south through a chain of tropical islands, each a garrison port and commercial node in a network the Echartesh have spent centuries building. Mainlanders encounter Echartea as a ship in their harbor or a price they cannot argue with. Both are accurate representations.
+Echartea is a large island off the southeastern coast of the mainland, the seat of an empire that extends through a chain of islands running south into tropical waters. Mainlanders who have never visited know it primarily through its ships and its merchants: the Echartesh are the dominant naval power in the known world, and their vessels are unmistakable.
 
-The empire does not expand through conquest the way Bellicose does. It expands through presence. An Echartean fleet anchored in a foreign harbor is a statement the harbor's owners must respond to; the ships do not need to fire to make the point. Trading partners who have tested what happens when the fleet stops calling have not repeated the experiment.
+Echartesh ships are enormous, colorful, and faster than anything their size has any right to be. They come in several configurations but share a distinctive aesthetic that makes them identifiable at distance; a sailor who has seen one Echartesh vessel can recognize the next without difficulty. They are capable of navigating the Elisumnaessavia River as far inland as the edge of Llewelyn Wood, which gives the Echartesh reach into the continent’s interior that no other sea power can match.
 
-### Government
-Eight Alryayi, the high priests of Enschede, hold final authority over all matters the empire considers significant. Below them an Admiralty Council of eight administers the actual machinery of governance: naval operations, commerce, the temple's secular affairs, the island territories, foreign relations, internal justice, infrastructure, and the slave trade. Each councillor holds a specific domain and answers to the Alryayi collectively.
+### Faith and the Sea
+Enschede, the goddess of fate, is the patron deity of Echartea, and the relationship between the Echartesh and their goddess shapes the culture at every level. The sea is understood as Enschede’s most direct expression in the material world: unforgiving, indifferent, capable of damning or rewarding without explanation. A people who have built their civilization on it have absorbed those qualities into their own character.
 
-There is no hereditary nobility in Echartean society. Rank accumulates rather than descends, though the children of powerful people accumulate it faster. The path upward moves through the temple, the fleet, and the merchant houses, and most people who reach the Admiralty Council have passed through all of them at different stages.
+No Echartesh vessel sails without a Herald of Enschede aboard. The Heralds are trained navigators and devout priests, responsible for reading winds and currents and ensuring the ship holds its best course. Service at sea is a prerequisite for advancement within the Temple; an Alryayi, the high priests of Enschede, will have spent years on the water before reaching that rank.
 
-When an Alryayi dies, the remaining seven select a replacement from the senior temple hierarchy. The process is not public and its criteria are not documented.
-
-### The Faith
-The Echartesh relationship with Enschede is less devotion than hard-won mutual understanding. She does not promise safety. She does not answer prayers in any directy way. What she offers is the comfort of inevitability: the knowledge that fate moves as it moves, and that reading its currents is both possible and sufficient.
-
-The prohibition on divination is the faith's most visible rule to outsiders. Foreknowledge of future events is considered a direct taunt to Enschede, an assertion that a mortal can see what fate has arranged and position themselves accordingly. The Alryayi enforce the prohibition within temple jurisdiction, which covers most of the empire's significant institutions.
-
-The Heralds of Enschede serve aboard every Echartesh vessel of meaningful size. They are trained navigators first, responsible for reading wind and weather and maintaining the ritual observances that keep the crew in right relationship with the sea. An aspirant to any temple position above the entry ranks must have served at sea for a minimum of three years.
-
-### The Fleet
-The shipyards of Bashowita operate without pause, consuming timber from the southern islands and iron from mainland trade to produce vessels that the Echartesh regard as unremarkable.
-Echartean ships are immediately recognizable. They are often large, deep-water vessels large enough that approaching sailors misjudge scale at distance. Ships are painted in bright patterns that identify the fleet, the ship's class, and the commanding Herald.
-
-Hull designs have been refined over generations and produce vessels that perform well in open ocean and in the river mouths and coastal passages where smaller craft expect an advantage. Echartean galleys ascend the Elisumnaessavia River through the heart of Llewelyn Wood to trade with Meresaw's interior, something no other ocean-going vessel can manage.
-
-The fleet's command structure follows the temple hierarchy. A Herald aboard any vessel outranks the captain on matters touching the faith, weather interpretation, and contested course decisions. In practice, Heralds and captains who cannot work together do not work together long, and both careers suffer.
-
-### Trade and Economy
-The Echartesh source spices from the southern islands and have spent generations ensuring that no one else can do so in meaningful quantity. The price on spice is set in Bashowita; negotiation is available only on delivery schedules.
-
-Echartean dyes are more strategically important than most mainland buyers realize. Certain colors require ingredients found only within the island chain. Echartean red, a specific, recognizable shade that appears on noble garments across Coudassis and in the Meresagian court, is named after the empire because no one else produces it.
-
-The slave trade is just another practical commodity to Echartea. Bellicose and Coudassis represent the primary markets. The Echartesh operate as intermediaries. The trade is administered through its assigned Admiralty councillor, subject to the same ledger requirements as any other high-volume commodity.
-
-Echartean merchants speak all the major mainland languages well. Echartean itself is rarely encountered on the continent; the merchants see no advantage in teaching it to people they negotiate with.
+The prohibition most distinctive to Echartesh religious practice is the ban on divination. Foreknowledge of coming events is considered a direct taunt to Enschede, an assertion that a mortal can see what fate has arranged and thereby sidestep it. The Alryayi enforce this within their temples with considerable thoroughness. Visitors to Echartea who practice or seek divination are advised to keep that fact to themselves.
 
 ### People and Culture
-The Echartesh are tropical in appearance. Skin tones run deep, eyes most commonly dark, hair typically black or very dark brown. Body ornamentation carries specific meaning.
+The Echartesh are tropical in climate and appearance, dressing in bright, loosely fitted lightweight fabrics suited to the heat and humidity of their islands. Tattooing, piercing, and scarring are common forms of personal ornamentation, their patterns carrying social and religious meaning that outsiders rarely learn to read accurately.
+Echartesh cities are built from stone, brick, and adobe, their architecture marked by minarets, domes, arches, and columns. Buildings are typically flat-roofed, the upper surfaces given over to gardens and outdoor living. Coastal buildings use half-round roof tiles to manage the frequent and sometimes torrential rains.
 
-Tattooing, scarring, and piercing are practiced across all levels of Echartean society, with patterns and placement communicating information that Echartesh read fluently and outsiders almost never interpret correctly. A Herald's tattoos mark years of service and the storms survived. A merchant's piercings indicate trade house affiliation and the markets they are authorized to operate in. Most outsiders assume the ornamentation is only decorative.
-
-Clothing is lightweight and loosely fitted, chosen for the heat and humidity that characterize the island chain for most of the year. Color combinations and patterns are unconventional to mainland standards. 
-
-Cities are built from stone, brick, and adobe, organized around harbor districts on the coast and temple compounds inland. Minarets and domed rooftops appear throughout the empire. Buildings are flat-roofed, upper surfaces given over to gardens and sleeping during the warmest months. Coastal buildings use half-round roof tiles designed to shed the torrential seasonal rains.
-
-The Echartesh do not dislike mainlanders. They find them useful as trading partners and somewhat provincial in most other respects. The courtesy extended to mainland visitors is the specific consideration one offers to someone whose behavior is comprehensible but not particularly interesting.
-
-### Foreign Relations
-The empire maintains formal diplomatic relations with every mainland nation. For the Echartesh, every arrangement should produce more benefit for Echartea than it costs.
-
-Coudassis is the oldest relationship. The republic's appetite for what the empire supplies has made the partnership durable enough to survive several disputes over port fees and monopoly terms.
-
-Meresaw is more complicated. The kingdom has never relied on Echartean trade the way Coudassis does, which gives it a leverage the Echartesh find inconvenient. The river access that Echartean galleys hold is valuable precisely because Meresaw controls the land the river runs through. The Meresagian alliance with the Elven Kingdom adds another layer; the Echartesh do not have a clear read on what the elves want from the arrangement, and things they cannot read make them careful.
-
-Bellicose is the empire's primary strategic concern. Bellicose has a demonstrated appetite for expansion along every border it shares with its neighbors. Echartean policy maintains enough commercial usefulness to make conflict more expensive than cooperation.
-
-### Navigating the Empire
-Visitors who arrive expecting the familiar mechanics of mainland ports will need to adjust. The arrangement-through-intermediary that functions as bribery in Coudassis does not work here in the same way. The Echartesh are not incorruptible; they work through established channels, recognized trade house contacts, and the slow accumulation of demonstrated reliability.
-
-Magic users face specific constraints. Divination draws temple attention quickly. Other arcane practice is not prohibited but requires registration with the temple on arrival. The preocess involves documentation, a nominal fee, and an interview whose questions seem designed to determine something other than what they appear to be asking.
-
-### Cities of the Empire
-**Bashowita -** The capital sits on Echartea's northern coast where a deep natural harbor opens onto the Harpway Channel, wide enough that a fleet assembles inside without crowding. The temple complex of Enschede occupies the highest point of the central hill, its eight minarets visible from sea well before the harbor entrance comes into view; sailors use them as a navigation landmark. The city descends from the temple in levels: the administrative ward where the Admiralty Council maintains its offices; the trade ward where merchant houses operate their warehouses and auction halls and the slave market that occupies the eastern harbor front; the harbor ward itself, which functions around the clock; and the residential districts spreading up the inland slopes, organized by trade house affiliation rather than by status. Population: approximately 500,000.
-
-**Damietta -** The second city of the empire sits on the southern tip of Echartea where the island narrows toward the first of the southern chain. Damietta predates Bashowita's rise to primacy by several centuries and carries the fact without particular modesty. Where Bashowita is organized around moving cargo between ocean and continent, Damietta faces south and considers itself the guardian of what the empire actually is. The temple hierarchy there is older and considerably more conservative than the Bashowita establishment, and the Alryayi have historically been selected from its ranks at a disproportionate rate. The harbor handles deep southern island traffic, the vessels that move goods from the source rather than to the customer, and the fleet yards that build the heavy southern patrol ships. The architecture is older, the stone darker, the minarets more severe in proportion. Population: approximately 100,000.
+Outside their own empire, the Echartesh appear primarily as traders. They control the spice trade of the southern islands and supply luxurious fabrics, exotic dyes, and animals to the mainland markets. They are also significant participants in the slave trade, supplying considerable demand in both Bellicose and Coudassis. Echartesh merchants speak all the major mainland languages fluently; Echartean itself is rarely encountered on the continent outside of Echartesh company.
 
