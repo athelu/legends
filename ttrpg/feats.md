@@ -1470,6 +1470,12 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
 **Description:** You may combine a weapon attack and a Simple Weave into a single action. It does not bypass the need to make weaving checks.
 **Benefit:** When you take a [Combat] action with a melee weapon, can cast one Simple Weave (2 Energy cost or less) as part of the same action. You still make the normal weaving check for the weave (Potential + Mastery for each energy used). Both the attack and the weave use the same [Combat] action
 
+#### Weave Binding
+**Prerequisites:** Infuser trait, Int 5, Craft 5, Extended Infusion feat
+**Usage:** Downtime only, follows crafting time rules
+**Description:** You have learned to encode a complete weave into a physical object rather than a simple effect, creating items that carry spells as activatable properties.
+**Benefit:** During downtime, you may bind one weave from your available energies into an object. The bound weave follows the scroll creation rules for time and material cost (Energy cost × 5 gp), but the result is a permanent activatable item rather than a one-use scroll. The item can be activated by anyone using the standard Activate Magic Item action. You may have a number of bound items active equal to your Tier. Creating a new bound item beyond this limit causes the oldest to go inert.
+
 #### Whirlwind Strike
 **Prerequisites:** Str or Agi 5, Melee 5
 **Usage:** Once per turn

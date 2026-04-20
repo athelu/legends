@@ -118,8 +118,9 @@ export function normalizeOriginKey(value) {
 
 function inferAncestryKey(ancestryName) {
   const normalized = normalizeLookupKey(ancestryName);
-  if (normalized === 'humans' || normalized === 'human') return 'humans';
-  if (normalized === 'elves' || normalized === 'elf') return 'elves';
+  if (!normalized) return '';
+  if (/(^|-)?humans?(-|$)/.test(normalized)) return 'humans';
+  if (/(^|-)?el(f|ves|ven)(-|$)/.test(normalized)) return 'elves';
   return normalized;
 }
 

@@ -39,10 +39,10 @@
 
 ### Shadow Sphere
 **Primary Energy:** Negative 3 (creating magical darkness)
-**Supporting Energy:** Space 7 (medium range + 15ft radius + duration 10 minutes)
+**Supporting Energy:** Space 8 (medium range + 15ft radius + duration 10 minutes)
 **Range:** Medium, 60 ft. (15-foot radius sphere)
 **Duration:** 10 minutes
-**Total Cost:** 10 Energy
+**Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
@@ -349,14 +349,14 @@
 
 ### Thunder Burst
 **Primary Energy:** Air 3 (wave of thunderous force)
-**Supporting Energy:** Space 1 (15-foot cube area)
-**Range:** Self (15-foot cube)
+**Supporting Energy:** Space 1 (15-foot cone)
+**Range:** Self (15-foot cone)
 **Duration:** Instantaneous
 **Total Cost:** 4 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
-**Description:** All creatures in 15-foot cube originating from you take 12 thunder damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.
+**Description:** All creatures in 15-foot cone originating from you take 12 thunder damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.
 **Applies Effects:** Prone
 **Saving Throw:** Fortitude
 **Damage Type:** Thunder (sonic energy)
