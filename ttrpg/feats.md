@@ -225,6 +225,13 @@ When creating new feats, follow these guidelines:
     - **1-2 total successes:** Deal 8 damage, choose damage type or split
     - **0 successes:** Deal 4, choose type
 
+#### Compounding Toxins
+**Prerequisites:** Dex 4, Medicine or Wilderness 4
+**Usage:** Passive
+**Keyword:** [Poisoner]
+**Description:** The poison softens them up.
+**Benefit:** When you deal damage to a creature that already has any Poisoned condition, add your Dexterity score to the damage. This triggers once per attack, not per Poisoned stack. Does not stack with Exploit Weakness.
+
 #### Conduit Mastery
 **Prerequisites:** Eldritch Pact trait, Cha 5
 **Usage:** Passive
@@ -681,6 +688,13 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Description:** Your enlightened state grants moments of perfect clarity where you perceive the optimal weave before it happens
 **Benefit:** This is the core ability of Sorcerous Origin, automatically gained with the trait. When you cast a weave, you can reroll one die (either a Potential die or Mastery die) and take the better result. Can use this Wisdom times per long rest
 
+#### Healing Current
+**Prerequisites:** Wis 4, any magical tradition trait, positive energy Mastery 3
+**Usage:** Passive, triggers when you cast healing weaves
+**Keyword:** [Magic], [Heal]
+**Description:** The flow of energy lingers after the weave completes.
+**Benefit:** When you cast a healing weave targeting a creature at 0 HP or below, they regain consciousness immediately and stand up as a [Free] action. Additionally, when you cast any Positive-primary healing weave, the target gains temporary HP equal to your Wisdom score that last until the next long rest. This temporary HP is applied after the healing resolves and does not count toward any healing totals.
+
 #### Hollow Form
 **Prerequisites:** Wis 6
 **Usage:** Once per long rest
@@ -778,6 +792,13 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Keyword:** [Skill]
 **Description:** Not every tongue comes naturally, but you have never met one you couldn't eventually master.
 **Benefit:** For languages known gain +2; learn new languages faster
+
+#### Lingering Toxin
+**Prerequisites:** Dex 3, Medicine or Wilderness 3
+**Usage:** Passive
+**Keyword:** [Poisoner]
+**Description:** The dose that doesn't drop them keeps working.
+**Benefit:** When a creature makes a successful Fortitude save against a poison you applied or created, they gain the Poisoned (Weak) condition for 1 round instead of suffering no effect. A critical success (2 successes) on their save still negates entirely.
 
 #### Living Infusion
 **Prerequisites:** Infuser trait, Int 5, Craft 5
@@ -907,6 +928,13 @@ This ability does not reveal magically concealed information and cannot compel a
 **Description:** You have learned to reach into the pact and demand more than it would willingly give.
 **Benefit:** Once per short rest, you may declare a Pact Surge before making a weaving roll. You may spend Energy up to double your Potential in that energy for this one weave (ignoring the Potential ceiling entirely). For every point spent beyond your normal Potential ceiling, add 1 to both dice on the weaving roll.
 
+#### Paralytic Expertise
+**Prerequisites:** Dex 4, Craft: Alchemist 3, Venom Crafter feat
+**Usage:** Passive
+**Keyword:** [Poisoner], [Alchemist]
+**Description:** Paralysis is just the beginning of the problem.
+**Benefit:** When a creature becomes Paralyzed from one of your preparations, they cannot attempt to break free on their first turn. Starting on their second turn, recovery proceeds normally.
+
 #### Patron’s Favor
 **Prerequisites:** Divine Gift trait, Wis 6, Religion 6, Sustained Prayer feat
 **Usage:** Once per long rest; must be declared before rolling
@@ -976,6 +1004,13 @@ This ability does not reveal magically concealed information and cannot compel a
   - Make weaving check for chosen element (Potential + Mastery). Can take multiple times for different elements
   - **1 success:** Deal +4 elemental damage
   - **2+ successes:** Deal +8 elemental damage
+
+#### Poison Proficiency
+**Prerequisites:** Dex 3, Craft or Thievery 2
+**Usage:** Passive
+**Keyword:** [Skill], [Poisoner]
+**Description:** You know which end of the vial to open.
+**Benefit:** Applying poison costs a [Minor] action instead of a [Combat] action. Identifying a poison by sight or smell requires only 1 success on a Medicine or Wilderness check.
 
 #### Power Attack
 **Prerequisites:** Str 3, Melee 3
@@ -1059,6 +1094,13 @@ This ability does not reveal magically concealed information and cannot compel a
 **Description:** The right speech, delivered with conviction in the right moment, reminds people why they're still fighting.
 **Benefit:** During a short rest, you can give a rousing speech to inspire your companions. Choose up to 6 allies who can hear and understand you. Each gains temporary HP equal to your Tier + your Charisma score. These temporary HP last until their next long rest
 
+#### Rapid Stabilization
+**Prerequisites:** Wis 3, Medicine 3
+**Usage:** Passive
+**Keyword:** [Heal]
+**Description:** Getting someone out of the dying condition fast means not always elegant.
+**Benefit:** Stabilize costs 1 [Minor] action instead of 1 [Interact] action. On 2 successes, the creature regains HP equal to your Wisdom score plus your Medicine rank rather than Wisdom alone.
+
 #### Rapid Strikes
 **Prerequisites:** Agi 4, Wis 3, Melee 4, Unarmed Mastery feat
 **Usage:** Once per turn
@@ -1106,6 +1148,20 @@ This ability does not reveal magically concealed information and cannot compel a
 **Keyword:** [Magic], [Invoker]
 **Description:** The syllables you speak don't fade when the sound does.
 **Benefit:** When you use Words of Power, the effect extends to the next two rolls your allies make instead of just one. Additionally, you may include yourself as one of the targets of Words of Power. Energy spent on Words of Power is refunded after each short rest.
+
+#### Restorative Touch
+**Prerequisites:** Wis 3, Medicine 3
+**Usage:** Passive
+**Keyword:** [Heal]
+**Description:** You have learned to read what a wound actually needs.
+**Benefit:** When you use Field Dressing, Administered Treatment, or Evening Treatment, add your Medicine rank to the HP restored in addition to the standard formula. This applies to your own self-treatment where permitted
+
+#### Resurgence
+**Prerequisites:** Wis 5, any magical tradition trait, Positive Mastery 4, Healing Current feat
+**Usage:** Passive
+**Keyword:** [Magic], [Heal]
+**Description:** Healing builds on itself when you guide it correctly.
+**Benefit:** When you restore HP to a creature, add your Casting Stat score to the amount healed. This applies to weave-based healing only, not Medicine checks. When you cast a healing weave and achieve 3 or more targeting successes, the target also removes one [Hindered] condition of their choice.
 
 #### Retribution
 **Prerequisites:** Str 5, Melee 5, Aggressive Block feat
@@ -1341,12 +1397,26 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
 **Description:** Some people are just harder to kill. You are more resilient, allowying you to take punishment that would drop others.
 **Benefit:** Gain HP equal to Con × current Tier
 
+#### Toxin Amplifier
+**Prerequisites:** Dex 5, Craft: Alchemist 4, Venom Crafter feat
+**Usage:** Passive
+**Keyword:** [Poisoner], [Alchemist]
+**Description:** A dose that should weaken instead devastates.
+**Benefit:** Negative-primary preparations you create impose their condition at one step higher on the severity track: Poisoned (Weak) becomes Poisoned (Strong), Poisoned (Strong) becomes Poisoned (Deadly). A preparation already causing Poisoned (Deadly) is unaffected.
+
 #### Tracker
 **Prerequisites:** Survival 3, Perception 3
 **Usage:** Passive
 **Keyword:** [Wilderness], [Skill]
 **Description:** Every creature leaves a trail and you can read these signs like a book, following trails that others wouldn't even notice exist.
 **Benefit:** Subtract 1 from both dice when tracking. Can track across difficult terrain at normal speed. Can determine number, size, and condition of tracked creatures
+
+#### Triage Specialist
+**Prerequisites:** Wis 4, Medicine 4
+**Usage:** Passive; emergency stabilization once per combat
+**Keyword:** [Heal]
+**Description:** In the moment that matters, you do not hesitate.
+**Benefit:** Once per combat, when a creature within 10 feet drops to 0 HP, you may use a [Reaction] to immediately attempt Stabilize on them. Additionally, you may now use Field Dressing on a creature in the Dying condition. A successful Field Dressing on a Dying creature stabilizes them at 0 HP in addition to the normal HP restoration, which applies when they regain consciousness.
 
 #### Tripping Strike
 **Prerequisites:** Str 4, Melee 5
@@ -1406,17 +1476,24 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
 **Keyword:** [Combat], [Discipline]
 **Description:** Lesser fighters control a space. You control the entire engagement.
 **Benefit:** You gain the following permanent combat presence abilities:
-- Opportunity attacks against you add 2 to both attack dice (Does not stack with Evasive Fighter)
-- When you hit a target with a melee attack, you may move up to 5 feet as a [Free] action without provoking opportunity attacks
+- Opportunity attacks against you add 2 to both attack dice (Does not stack with Evasive Fighter).
+- When you hit a target with a melee attack, you may move up to 5 feet as a [Free] action without provoking opportunity attacks.
 - When a creature attempts to disengage from melee with you, make an immediate attack against them as a [Reaction] before they move. This does not consume your normal reaction if you have already used it this round.
-- Creatures that start their turn adjacent to you must succeed on a Will save (opposed by your Strength + Intimidate or Melee Combat ) or cannot willingly move away from you that turn
+- Creatures that start their turn adjacent to you must succeed on a Will save (opposed by your Strength + Intimidate or Melee Combat ) or cannot willingly move away from you that turn.
 
 #### Urban Tracker
 **Prerequisites:** Investigation 4, Society 3
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** Being able to track prey through the urban wilderness, inside crowds and alleys instead of forests and fields. The patterns and principles are much the same.
-**Benefit:** In urban environments, can track people through crowds using Investigation. Learn useful information about neighborhoods (safe houses, gang territories, guard patrols) with Society check. When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route
+**Benefit:** In urban environments, can track people through crowds using Investigation. Learn useful information about neighborhoods (safe houses, gang territories, guard patrols) with Society check. When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route.
+
+#### Venom Crafter
+**Prerequisites:** Dex 4, Craft: Alchemist 2
+**Usage:** Passive
+**Keyword:** [Poisoner], [Alchemist]
+**Description:** Your poisons do not behave like other people's poisons.
+**Benefit:** Negative-primary preparations you create impose Misfortune on the target's Fortitude save. This applies to Applied, Ingested, and Thrown catalysts.
 
 #### Vessel of Faith
 **Prerequisites:** Divine Gift trait, Wis 4, Religion 4, Devoted Channeler feat
@@ -1573,6 +1650,16 @@ Legendary feats count toward the standard feat limits. The only difference is th
 - **Sustained Exposure:** Exposed Strike now triggers on every attack against a feinted target until the start of your next turn, not just the next attack.
 - **Elusive Blade:** Opportunity attacks against you have Misfortune.
 
+#### Living Grace
+**Prerequisites:** Wis 7, any magical tradition trait, Positive Mastery 6, Resurgence feat
+**Usage:** Passive; Surge of Life once per long rest
+**Keyword:** [Magic], [Heal]
+**Description:** You have made healing into something the body remembers after you leave.
+**Benefit:** Your healing carries permanent enhancements.
+- **Persistent Healing:** When you restore HP to a creature with a healing weave, they gain a Healing Resonance that lasts 1 minute. While a creature has Healing Resonance, the next time they would take damage that would reduce them to 0 HP, they instead drop to 1 HP and the Resonance is consumed. A creature can only benefit from one Healing Resonance at a time.
+- **Overflowing Restoration:** Healing weaves you cast can exceed a target's maximum HP by up to your Wisdom score, with the excess converting directly to temporary HP rather than being lost.
+- **Surge of Life:** Once per long rest, as 2 [Combat] actions, release a pulse of healing energy in a 30-foot radius centered on you. All allies within range who are below their maximum HP immediately heal HP equal to your Positive Mastery × your Casting Stat. Allies who are at 0 HP are stabilized and regain HP equal to your Casting Stat score. This healing does not require targeting rolls.
+
 #### Master Artificer
 **Prerequisites:** Infuser trait, Int 7, Craft 7
 **Usage:** Master Infusion once per long rest, requires 1 hour of uninterrupted work; passive extra Imbue Item use
@@ -1583,6 +1670,16 @@ Legendary feats count toward the standard feat limits. The only difference is th
 - A weapon that permanently deals +8 elemental damage of your chosen type on every hit
 - Armor with permanently +4 DR
 - An object that permanently grants the bearer Fortune on one specific skill of your choice when held.
+
+#### Master Poisoner
+**Prerequisites:** Dex 6, Craft: Alchemist 6, Toxin Amplifier feat, Paralytic Expertise feat
+**Usage:** Passive; Signature Toxin once per long rest
+**Keyword:** [Poisoner], [Alchemist]
+**Description:** You have spent years studying what the body can withstand and, more importantly, what it cannot.
+**Benefit:** Your poisoncraft gains the following permanent abilities.
+- **Insidious Formulation:** Creatures with resistance or immunity to poison damage or the Poisoned condition still take half damage from your poison preparations and must still make saves, though they add 2 to both save dice. Constructs and undead remain fully immune.
+- **Precise Dose:** When a creature fails a save against your poison by 2 or more net successes apply one additional condition from the following: Blinded, Weakened, Slowed (Major), or Disoriented. This condition lasts until the Poisoned condition is cured.
+- **Signature Toxin:** Once per long rest you may prepare one dose of your Signature Toxin. It functions as a Poisoned (Deadly) preparation with the following additional properties: it cannot be detected by smell or taste, the incubation delay before symptoms manifest is up to 1 hour at your discretion, and it bypasses the insidious formulation penalty for resistant creatures (they make saves at normal difficulty). The dose expires after 24 hours.
 
 #### Phantom
 **Prerequisites:** Agi 7, Dirty Fighter feat, Shadow Step feat

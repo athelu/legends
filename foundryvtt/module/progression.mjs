@@ -1,7 +1,7 @@
 import { validatePrereqs } from './feat-effects.mjs';
 import { SKILL_LABELS } from './skill-utils.mjs';
 import { getLanguageDefinitions, normalizeLanguageKey } from './languages.mjs';
-import { MASTERY_KEYS, hasMasteryCheckbox, hasSkillCheckbox, clearMasteryCheckbox, clearSkillCheckbox } from './training.mjs';
+import { MASTERY_KEYS, MASTERY_LABELS, hasMasteryCheckbox, hasSkillCheckbox, clearMasteryCheckbox, clearSkillCheckbox } from './training.mjs';
 
 const TIER_THRESHOLDS = [
   { tier: 1, xp: 0 },

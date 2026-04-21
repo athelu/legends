@@ -591,9 +591,6 @@ Hooks.once('init', async function() {
   // Register custom TextEditor enrichers (inline rolls)
   registerEnrichers();
 
-  await ensureDefaultSheets();
-  logSheetDiagnostics('post-init');
-
   game.legends = game.legends || {};
   game.legends.debugSheetDiagnostics = () => {
     logSheetDiagnostics('manual');
@@ -631,6 +628,9 @@ Hooks.on("dropCanvasData", async function(canvas, data) {
 
 Hooks.once('ready', async function() {
   console.log('Legends | System Ready');
+
+  await ensureDefaultSheets();
+  logSheetDiagnostics('post-init');
   logSheetDiagnostics('ready');
 
   // Register conditions as status effects for token HUD (packs are fully loaded at ready)

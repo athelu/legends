@@ -77,17 +77,17 @@ const ORIGIN_DEFINITIONS = [
   {
     key: 'odani',
     label: 'Odani Communities',
-    ancestries: ['humans'],
+    ancestries: ['humans', 'elves'],
     nativeLanguage: 'odani',
-    summary: 'Humans raised among the Odani typically speak Odani as their native language.',
+    summary: 'Characters raised among the Odani typically speak Odani as their native language.',
     requiresGMApproval: false,
   },
   {
     key: 'urjack',
     label: 'Urjack Highlands',
-    ancestries: ['humans'],
+    ancestries: ['humans', 'elves'],
     nativeLanguage: 'urjack',
-    summary: 'Humans raised in the Urjack highlands typically speak Urjack as their native language.',
+    summary: 'Characters raised in the Urjack highlands typically speak Urjack as their native language.',
     requiresGMApproval: false,
   },
   {
