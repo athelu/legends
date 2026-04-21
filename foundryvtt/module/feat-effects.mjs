@@ -117,6 +117,11 @@ function validateOtherPrereqs(actor, otherText) {
     return ['fire', 'water', 'earth', 'air'].map((energyKey) => Number(mastery?.[energyKey]?.value ?? 0));
   };
 
+  const getAllMasteryValues = () => {
+    const mastery = actor.system?.mastery || {};
+    return ['fire', 'water', 'earth', 'air', 'positive', 'negative', 'time', 'space'].map((energyKey) => Number(mastery?.[energyKey]?.value ?? 0));
+  };
+
   for (const part of parts) {
     const normalizedPart = String(part || '').trim().toLowerCase();
 
@@ -165,6 +170,32 @@ function validateOtherPrereqs(actor, otherText) {
       const required = Number(elementalMasteryInlineMatch[2] || 0);
       const highest = getElementalMasteryValues().reduce((max, current) => Math.max(max, current), 0);
       if (highest < required) reasons.push(`Requires ${elementalMasteryInlineMatch[1]} elemental Mastery ${required}+ (highest is ${highest})`);
+      continue;
+    }
+
+    // "any Energy Mastery X" — any of the 8 energy types (elemental + conceptual)
+    const anyEnergyMasteryMatch = normalizedPart.match(/\b(any|chosen)\s+energy\s+mastery\s+(\d+)\b/i);
+    if (anyEnergyMasteryMatch) {
+      const required = Number(anyEnergyMasteryMatch[2] || 0);
+      const highest = getAllMasteryValues().reduce((max, current) => Math.max(max, current), 0);
+      if (highest < required) reasons.push(`Requires any energy Mastery ${required}+ (highest is ${highest})`);
+      continue;
+    }
+
+    // "Two non-combat skills rank 5+" — X non-combat skills at rank Y+
+    const nonCombatSkillCountMatch = normalizedPart.match(/^(\w+)\s+non[- ]combat\s+skills?\s+rank\s+(\d+)\+?$/i);
+    if (nonCombatSkillCountMatch) {
+      const WORD_TO_NUMBER = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10 };
+      const countWord = String(nonCombatSkillCountMatch[1] || '').toLowerCase();
+      const countRequired = WORD_TO_NUMBER[countWord] ?? Number(nonCombatSkillCountMatch[1]);
+      const rankRequired = Number(nonCombatSkillCountMatch[2]);
+      const COMBAT_SKILLS = new Set(['meleeCombat', 'rangedCombat']);
+      const nonCombatAtRank = Object.keys(actor.system?.skills || {})
+        .filter((key) => !COMBAT_SKILLS.has(key))
+        .filter((key) => getSkillValue(key) >= rankRequired).length;
+      if (nonCombatAtRank < countRequired) {
+        reasons.push(`Requires ${nonCombatSkillCountMatch[1]} non-combat skill${countRequired !== 1 ? 's' : ''} rank ${rankRequired}+ (has ${nonCombatAtRank})`);
+      }
       continue;
     }
 

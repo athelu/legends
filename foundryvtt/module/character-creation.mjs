@@ -213,6 +213,7 @@ function renderStartingFeatPicker(root, options, initialIndex) {
   const input = root.querySelector('[name="featChoice"]');
   const preview = root.querySelector('[data-starting-feat-preview]');
   const rows = Array.from(root.querySelectorAll('[data-starting-feat-option]'));
+  const hideToggle = root.querySelector('[name="hideUnqualified"]');
 
   const syncSelection = (index) => {
     const safeIndex = Math.max(0, Math.min(index, options.length - 1));
@@ -222,6 +223,23 @@ function renderStartingFeatPicker(root, options, initialIndex) {
       row.style.background = rowIndex === safeIndex ? 'rgba(209, 139, 71, 0.10)' : (options[rowIndex]?.disabled ? 'rgba(120, 120, 120, 0.10)' : 'rgba(255, 255, 255, 0.03)');
     });
     if (preview) preview.innerHTML = buildStartingFeatPreview(options[safeIndex]);
+  };
+
+  const applyHideFilter = () => {
+    const hiding = hideToggle?.checked ?? false;
+    rows.forEach((row, rowIndex) => {
+      if (options[rowIndex]?.disabled) {
+        row.style.display = hiding ? 'none' : '';
+      }
+    });
+    // If the currently selected row is now hidden, jump to first visible non-disabled
+    if (hiding) {
+      const currentIndex = Number.parseInt(input?.value || '0', 10);
+      if (options[currentIndex]?.disabled) {
+        const firstAvailable = options.findIndex((opt) => !opt.disabled);
+        if (firstAvailable >= 0) syncSelection(firstAvailable);
+      }
+    }
   };
 
   rows.forEach((row, rowIndex) => {
@@ -234,7 +252,10 @@ function renderStartingFeatPicker(root, options, initialIndex) {
     });
   });
 
+  if (hideToggle) hideToggle.addEventListener('change', applyHideFilter);
+
   syncSelection(initialIndex);
+  applyHideFilter();
 }
 
 function buildTraitOrFlawPreview(entry, type, summary) {
@@ -1190,37 +1211,29 @@ async function addTraitOrFlaw(actor, type) {
       const pointDelta = type === 'trait'
         ? Math.abs(Number(entry.system?.pointCost || 0))
         : Number(entry.system?.pointValue || 0);
-      const disabled = type === 'trait' && pointDelta > summary.remaining;
       return {
         document: entry,
-        disabled,
+        disabled: false,
         label: type === 'trait' ? `${entry.name} (${pointDelta} points)` : `${entry.name} (+${pointDelta} points)`,
-        reason: disabled ? `Requires ${pointDelta} points, only ${summary.remaining} available.` : '',
+        reason: '',
       };
     })
     .sort((left, right) => left.label.localeCompare(right.label));
-
-  const availableOptions = options.filter((option) => !option.disabled);
 
   if (!options.length) {
     ui.notifications.warn(`No ${type}s are available to add.`);
     return false;
   }
 
-  if (type === 'trait' && !availableOptions.length) {
-    ui.notifications.info('No traits are currently affordable. Add flaws first to earn trait points.');
-    return 'unavailable';
-  }
-
-  const initialIndex = Math.max(0, options.findIndex((option) => !option.disabled));
+  const initialIndex = 0;
 
   const selected = await showWizardDialog({
     title: `Character Creation: Add ${type === 'trait' ? 'Trait' : 'Flaw'}`,
     position: { width: 980 },
     content: `
       <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
-        <div><strong>Creation Point Budget</strong>: ${summary.spent} spent / ${summary.earned} earned (${summary.remaining} remaining)</div>
-        <div style="font-size: 12px; color: #666;">Showing all ${type}s so players can review costs and details before deciding.${type === 'trait' ? ' Unaffordable traits remain visible until enough flaw points are available.' : ''}</div>
+        <div><strong>Creation Point Budget</strong>: ${summary.spent} spent / ${summary.earned} earned (${summary.remaining >= 0 ? summary.remaining + ' remaining' : Math.abs(summary.remaining) + ' over budget'})</div>
+        <div style="font-size: 12px; color: #666;">Choose any ${type}. Point balance will be checked when you continue.</div>
         <input type="hidden" name="creationChoice" value="${initialIndex >= 0 ? initialIndex : 0}" />
         <div style="display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 14px; align-items: start;">
           <div>
@@ -1230,14 +1243,13 @@ async function addTraitOrFlaw(actor, type) {
                 const category = type === 'trait'
                   ? formatPickerLabel(option.document.system?.traitType)
                   : formatPickerLabel(option.document.system?.flawType);
-                const statusText = option.disabled ? 'Not available now' : 'Available now';
                 return `
                   <div
                     data-trait-flaw-option="${index}"
                     tabindex="0"
-                    style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px; cursor: pointer; opacity: ${option.disabled ? '0.65' : '1'};">
+                    style="border: 1px solid rgba(209, 139, 71, 0.25); border-radius: 8px; padding: 8px 10px; cursor: pointer;">
                     <div style="font-weight: 600;">${escapeHtml(option.label)}</div>
-                    <div style="font-size: 12px; color: #666; margin-top: 2px;">${escapeHtml([category, statusText].filter(Boolean).join(' • '))}</div>
+                    ${category ? `<div style="font-size: 12px; color: #666; margin-top: 2px;">${escapeHtml(category)}</div>` : ''}
                   </div>
                 `;
               }).join('')}
@@ -1266,10 +1278,6 @@ async function addTraitOrFlaw(actor, type) {
   });
 
   if (isDialogSelectionCancelled(selected, 'document')) return 'cancel';
-  if (selected.disabled) {
-    ui.notifications.warn(selected.reason || `That ${type} is not currently available.`);
-    return false;
-  }
 
   const [created] = await actor.createEmbeddedDocuments('Item', [selected.document.toObject()]);
   if (!created) {
@@ -1361,7 +1369,12 @@ async function runTraitsAndFlawsStep(actor) {
     if (!action) return false;
     if (action === 'continue') {
       if (summary.isOverspent) {
-        ui.notifications.warn(`${actor.name} has spent more trait points than they have earned from flaws.`);
+        const deficit = summary.spent - summary.earned;
+        await foundry.applications.api.DialogV2.prompt({
+          window: { title: 'Point Budget Imbalance' },
+          content: `<p style="padding: 8px;"><strong>${actor.name}</strong> has spent <strong>${summary.spent}</strong> trait point${summary.spent !== 1 ? 's' : ''} but only earned <strong>${summary.earned}</strong> from flaws — <strong>${deficit} point${deficit !== 1 ? 's' : ''} over budget</strong>. You must add more flaws or remove traits before continuing.</p>`,
+          ok: { label: 'OK' },
+        });
         continue;
       }
 
@@ -1436,7 +1449,13 @@ async function chooseStartingFeat(actor) {
         <input type="hidden" name="featChoice" value="${initialIndex >= 0 ? initialIndex : 0}" />
         <div style="display: grid; grid-template-columns: minmax(280px, 340px) minmax(0, 1fr); gap: 14px; align-items: start;">
           <div>
-            <label style="display: block; margin-bottom: 6px;">Feats</label>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px;">
+              <label style="margin: 0;">Feats</label>
+              <label style="display: flex; align-items: center; gap: 5px; font-size: 12px; color: #666; cursor: pointer; margin: 0;">
+                <input type="checkbox" name="hideUnqualified" style="margin: 0;" />
+                Hide unqualified
+              </label>
+            </div>
             <div style="display: flex; flex-direction: column; gap: 6px; max-height: 460px; overflow-y: auto; padding-right: 4px;">
               ${options.map((entry, index) => `
                 <div

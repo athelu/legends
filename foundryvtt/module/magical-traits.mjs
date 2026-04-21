@@ -306,21 +306,49 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
       </ol>
     `;
   
-  return Dialog.confirm({
-    title: "Setup Magical Traits",
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Character Creation: Setup Magical Trait' },
+    position: { width: 500 },
+    rejectClose: false,
     content: `
-      <h3>Ready to setup your magical powers?</h3>
-      <p><strong>Primary Trait:</strong> ${traitName}</p>
-      <p><strong>Generation Mode:</strong> ${modeDesc}</p>
-      <hr>
-      <p>You will be guided through:</p>
-      ${workflowSteps}
-      <p><em>This cannot be easily undone. Make sure you have all desired modifier traits 
-      (Gifted Mage, Balanced Channeler) added first.</em></p>
-      <p>Ready to begin?</p>
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <p style="margin: 0;">You are about to configure <strong>${traitName}</strong> as your primary magical trait.</p>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <div><strong>Primary Trait:</strong> ${traitName}</div>
+          <div><strong>Generation Mode:</strong> ${modeDesc}</div>
+        </div>
+        <div>
+          <div style="margin-bottom: 4px;"><strong>You will be guided through:</strong></div>
+          <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px;">
+            ${primaryTrait.type === 'alchemical-tradition'
+              ? `<li>Set Intelligence as your effective casting stat</li>
+                 <li>Mark Alchemical Tradition as configured on the actor</li>
+                 <li>Use Craft: Alchemist and the downtime rules to create preparations</li>`
+              : `<li>Generating your Magical Potentials</li>
+                 <li>Making trait-specific choices</li>
+                 <li>Assigning potentials to energy types</li>`
+            }
+          </ol>
+        </div>
+        <p style="margin: 0; font-size: 12px; color: #666;"><em>This cannot be easily undone. Make sure you have all desired modifier traits (Gifted Mage, Balanced Channeler) added first.</em></p>
+      </form>
     `,
-    defaultYes: false
+    buttons: [
+      {
+        action: 'confirm',
+        label: 'Begin Setup',
+        default: true,
+        callback: () => true,
+      },
+      {
+        action: 'cancel',
+        label: 'Cancel',
+        callback: () => false,
+      },
+    ],
   });
+
+  return result === true;
 }
 
 /**
@@ -340,17 +368,23 @@ export async function setupMagicalTraits(actor) {
   
   // Step 2: Check if already setup
   if (actor.system.magicalTrait?.isSetup) {
-    const confirm = await Dialog.confirm({
-      title: "Magical Traits Already Setup",
+    const confirm = await foundry.applications.api.DialogV2.wait({
+      window: { title: 'Magical Traits Already Setup' },
+      position: { width: 460 },
+      rejectClose: false,
       content: `
-        <p>Your magical traits have already been configured.</p>
-        <p>Re-running setup will reset all your potentials, mastery, and related abilities.</p>
-        <p>Are you sure you want to continue?</p>
+        <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+          <p style="margin: 0;">Your magical traits have already been configured.</p>
+          <p style="margin: 0; font-size: 12px; color: #666;">Re-running setup will reset all your potentials, mastery, and related abilities. Are you sure you want to continue?</p>
+        </form>
       `,
-      defaultYes: false
+      buttons: [
+        { action: 'confirm', label: 'Reset and Re-run', default: false, callback: () => true },
+        { action: 'cancel', label: 'Cancel', default: true, callback: () => false },
+      ],
     });
-    
-    if (!confirm) return false;
+
+    if (confirm !== true) return false;
   }
   
   // Step 3: Detect modifiers
@@ -417,21 +451,31 @@ export async function showWorkflowIntroDialog(traitName, mode) {
     balanced: "<strong>Balanced Channeler detected!</strong> You will use a fixed array instead of rolling."
   };
   
-  return Dialog.confirm({
-    title: `Apply ${traitName}`,
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: `Apply ${traitName}` },
+    position: { width: 460 },
+    rejectClose: false,
     content: `
-      <p>You are about to apply the <strong>${traitName}</strong> magical trait.</p>
-      <p>${modeText[mode]}</p>
-      <p>You will be guided through:</p>
-      <ol>
-        <li>Generating your Magical Potentials</li>
-        <li>Making trait-specific choices</li>
-        <li>Assigning potentials to energy types</li>
-      </ol>
-      <p>Ready to begin?</p>
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <p style="margin: 0;">You are about to apply the <strong>${traitName}</strong> magical trait.</p>
+        <p style="margin: 0;">${modeText[mode]}</p>
+        <div>
+          <div style="margin-bottom: 4px;"><strong>You will be guided through:</strong></div>
+          <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px;">
+            <li>Generating your Magical Potentials</li>
+            <li>Making trait-specific choices</li>
+            <li>Assigning potentials to energy types</li>
+          </ol>
+        </div>
+      </form>
     `,
-    defaultYes: true
+    buttons: [
+      { action: 'confirm', label: 'Begin', default: true, callback: () => true },
+      { action: 'cancel', label: 'Cancel', callback: () => false },
+    ],
   });
+
+  return result === true;
 }
 
 export const ENERGY_TYPES = {
