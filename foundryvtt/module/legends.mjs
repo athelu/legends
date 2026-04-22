@@ -32,6 +32,9 @@ import * as languages from "./languages.mjs";
 import * as progression from "./progression.mjs";
 import * as training from "./training.mjs";
 import * as visionTools from "./vision-tools.mjs";
+import * as identification from "./identification.mjs";
+import * as scrollUse from "./scroll-use.mjs";
+import * as socialCheck from "./social-check.mjs";
 import { initializeConditionEngine, initializeChatHandlers, handleRecoveryResult } from "./condition-engine.mjs";
 import { registerEnrichers } from "./enrichers.mjs";
 
@@ -445,6 +448,9 @@ Hooks.once('init', async function() {
   console.log('Legends | Initializing Legends System');
   ui.notifications?.info?.('Legends init loaded (sheet diagnostics enabled)');
 
+  // Register settings
+  socialCheck.registerSettings();
+
   // Create the main game.legends namespace
   game.legends = {
     // Document classes
@@ -486,7 +492,10 @@ Hooks.once('init', async function() {
     magicalTraits,
     ancestryGrants,
     effectEngine,
-    visionTools
+    visionTools,
+    identification,
+    scrollUse,
+    socialCheck
   };
 
   // DEPRECATED: Backward compatibility alias
@@ -877,6 +886,18 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
       misfortune: 0,
     };
     Hooks.call('preRollSkillCheck', rollData);
+
+    // Social skill interception — apply hidden attitude context
+    if (socialCheck.SOCIAL_SKILLS.has(normalizedSkillKey)) {
+      const ctx = socialCheck.resolveSocialContext();
+      if (ctx) {
+        socialCheck.applyContextToRollData(rollData, ctx);
+        socialCheck.whisperSocialContext(actor, normalizedSkillKey, ctx);
+        if (ctx.blocked) {
+          ui.notifications.warn('This social interaction faces extreme resistance. The GM has allowed the roll.');
+        }
+      }
+    }
 
     // Show roll dialog instead of rolling immediately
     return dice.showSkillCheckDialog({

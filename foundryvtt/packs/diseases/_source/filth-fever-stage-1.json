@@ -1,0 +1,57 @@
+{
+  "_id": "3d72aa398bc6d3bc",
+  "name": "Filth Fever (Stage 1)",
+  "type": "disease",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Filth Fever — <strong>Severity:</strong> [Mild] — <strong>Stage 1</strong></p>\n<p><strong>Effects:</strong> Sickened condition. Fortitude saves: add 1 to die results.</p>\n<p><strong>Recovery:</strong> [[/save type=fortitude]] at end of each long rest (Easy task — 1 success cures).</p>"
+    },
+    "diseaseName": "Filth Fever",
+    "severity": "mild",
+    "vector": "Wounds from rats, refuse, contaminated water",
+    "incubationFormula": "1d8",
+    "stage": "active",
+    "stageNumber": 1,
+    "gmOnly": false,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Filth Fever (Incubating)",
+      "Filth Fever (Stage 1)",
+      "Filth Fever (Stage 2)",
+      "Filth Fever (Stage 3)"
+    ],
+    "activeEffects": [
+      {
+        "key": "diceMod.save.fortitude",
+        "mode": "add",
+        "value": 1,
+        "notes": "Fortitude saves: add 1 to die results"
+      }
+    ],
+    "appliesConditions": [
+      "Sickened"
+    ],
+    "specialRules": "",
+    "overlayPriority": 25,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "longRest",
+      "method": "save",
+      "save": {
+        "type": "fortitude",
+        "successesNeeded": 1
+      },
+      "outcomes": {
+        "2successes": "cured",
+        "1success": "cured",
+        "0successes": "worsen"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Filth Fever (Stage 1)."
+    }
+  },
+  "flags": {},
+  "_key": "!items!3d72aa398bc6d3bc"
+}

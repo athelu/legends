@@ -5,10 +5,11 @@
  */
 import { SKILL_ATTRIBUTE_SHORT, SKILL_LABELS } from '../skill-utils.mjs';
 import { getLanguageDefinitions, getOriginLabel, getOriginOptionsForAncestry, getNativeLanguageKeyForOrigin, normalizeLanguageKey, normalizeOriginKey } from '../languages.mjs';
+import { getDisplayName, DEFAULT_UNIDENTIFIED_NAMES } from '../identification.mjs';
 
 const { ActorSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
-const PURCHASE_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment']);
+const PURCHASE_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment', 'scroll']);
 const EQUIPMENT_CONTAINER_TYPE = 'container';
 
 function normalizeCurrencyAmount(value) {
@@ -179,9 +180,12 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       itemRoll: D8CharacterSheet.#onItemRoll,
       openCompendium: D8CharacterSheet.#onOpenCompendium,
       conditionRemove: D8CharacterSheet.#onConditionRemove,
+      conditionReveal: D8CharacterSheet.#onConditionReveal,
       itemChat: D8CharacterSheet.#onItemChat,
       expandItem: D8CharacterSheet.#onExpandItem,
       itemView: D8CharacterSheet.#onItemView,
+      itemIdentify: D8CharacterSheet.#onItemIdentify,
+      itemUseScroll: D8CharacterSheet.#onItemUseScroll,
       setupMagicalTraits: D8CharacterSheet.#onSetupMagicalTraits,
       changeHeaderChoice: D8CharacterSheet.#onChangeHeaderChoice,
       changeOrigin: D8CharacterSheet.#onChangeOrigin,
@@ -438,6 +442,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.actor = actorData;
     context.training = game.legends?.training?.getTrainingState?.(this.actor) || { skills: {}, mastery: {} };
     context.owner = this.actor.isOwner;
+    context.isGM = game.user.isGM;
     context.editable = this.isEditable;
 
     // Prepare character data
@@ -527,6 +532,12 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         };
       }
 
+      // Identification display helpers
+      i.isUnidentified = (i.system?.isMagical === true) && (i.system?.identified !== true);
+      i.displayName = i.isUnidentified
+        ? (String(i.system?.unidentifiedName || '').trim() || DEFAULT_UNIDENTIFIED_NAMES[i.type] || 'Unidentified Item')
+        : i.name;
+
       switch (i.type) {
         case 'weapon':
           weapons.push(i);
@@ -538,6 +549,9 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
           shields.push(i);
           break;
         case 'equipment':
+          equipment.push(i);
+          break;
+        case 'scroll':
           equipment.push(i);
           break;
         case 'weave':
@@ -580,6 +594,9 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         case 'condition':
           conditions.push(i);
           break;
+        case 'disease':
+          conditions.push(i);
+          break;
       }
     }
 
@@ -614,8 +631,10 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     // Abilities
     context.abilities = abilities;
 
-    // Conditions
-    context.conditions = conditions;
+    // Conditions — split by gmOnly visibility
+    const isGM = game.user.isGM;
+    context.conditions = isGM ? conditions.filter(c => !c.system?.gmOnly) : conditions.filter(c => !c.system?.gmOnly);
+    context.hiddenConditions = isGM ? conditions.filter(c => c.system?.gmOnly) : [];
   }
 
   /**
@@ -887,6 +906,11 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       return;
     }
 
+    // Weave drop: prompt to create scroll or add to weave list
+    if (item?.type === "weave") {
+      return await this._onDropWeave(event, data, item);
+    }
+
     if (targetContainer && item?.parent?.id === this.actor.id) {
       const stored = await this._assignItemToContainer(item, targetContainer);
       if (stored) {
@@ -975,6 +999,147 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       await this._assignCreatedDropToContainer(creationResult, targetContainer);
     }
     return creationResult;
+  }
+
+  /**
+   * Handle dropping a weave item onto a character sheet.
+   * - Characters without a magical trait: only option is to create a scroll.
+   * - Characters with a magical trait: prompt to add to weave list or create a scroll.
+   */
+  async _onDropWeave(event, data, weaveItem) {
+    const hasMagicalTrait = !!game.legends.magicalTraits.detectPrimaryMagicalTrait(this.actor);
+    const alreadyHasWeave = this.actor.items.some(
+      i => i.type === 'weave' && i.name === weaveItem.name
+    );
+
+    let choice;
+    if (hasMagicalTrait) {
+      const buttons = [
+        {
+          action: 'weave-list',
+          label: 'Add to Weave List',
+          default: !alreadyHasWeave,
+          callback: () => 'weave-list',
+        },
+        {
+          action: 'scroll',
+          label: 'Create Scroll',
+          default: alreadyHasWeave,
+          callback: () => 'scroll',
+        },
+        {
+          action: 'cancel',
+          label: 'Cancel',
+          callback: () => 'cancel',
+        },
+      ];
+
+      choice = await foundry.applications.api.DialogV2.wait({
+        window: { title: `Add Weave: ${weaveItem.name}` },
+        position: { width: 420 },
+        content: `
+          <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <div><strong>${escapeHtml(weaveItem.name)}</strong></div>
+            <div style="font-size: 13px; color: #444;">How would you like to add this weave?</div>
+            ${alreadyHasWeave ? '<div style="font-size: 12px; color: #b45309; font-style: italic;">This weave is already in your weave list.</div>' : ''}
+          </div>
+        `,
+        buttons,
+        rejectClose: false,
+      });
+    } else {
+      // No magical trait — only scroll option; show brief confirm
+      choice = await foundry.applications.api.DialogV2.wait({
+        window: { title: `Create Scroll: ${weaveItem.name}` },
+        position: { width: 380 },
+        content: `
+          <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
+            <div><strong>${escapeHtml(weaveItem.name)}</strong></div>
+            <div style="font-size: 13px; color: #444;">
+              This character cannot cast weaves directly.<br>
+              Create a scroll for this weave in your inventory?
+            </div>
+          </div>
+        `,
+        buttons: [
+          {
+            action: 'scroll',
+            label: 'Create Scroll',
+            default: true,
+            callback: () => 'scroll',
+          },
+          {
+            action: 'cancel',
+            label: 'Cancel',
+            callback: () => 'cancel',
+          },
+        ],
+        rejectClose: false,
+      });
+    }
+
+    if (!choice || choice === 'cancel') return;
+
+    if (choice === 'weave-list') {
+      // Add weave directly to actor's weave list
+      const creationResult = await super._onDropItem(event, data);
+      return creationResult;
+    }
+
+    if (choice === 'scroll') {
+      return await this._createScrollFromWeave(weaveItem, data?.uuid);
+    }
+  }
+
+  /**
+   * Create a scroll item on this actor encoding the given weave.
+   */
+  async _createScrollFromWeave(weaveItem, weaveUuid = '') {
+    const weaveSystem = weaveItem.system ?? {};
+    const scrollData = {
+      name: `Scroll of ${weaveItem.name}`,
+      type: 'scroll',
+      img: weaveItem.img || 'icons/sundries/scrolls/scroll-bound-brown-gold.webp',
+      system: {
+        description: { value: weaveSystem.description?.value ?? weaveSystem.description ?? '' },
+        weight: 0.1,
+        cost: 0,
+        quantity: 1,
+        equipped: false,
+        consumable: true,
+        uses: { value: 1, max: 1 },
+        sourceWeave: {
+          name: weaveItem.name,
+          img: weaveItem.img || '',
+          uuid: weaveUuid || '',
+          energyCost: {
+            primary: {
+              type: weaveSystem.energyCost?.primary?.type ?? '',
+              cost: weaveSystem.energyCost?.primary?.cost ?? 0,
+            },
+            supporting: {
+              type: weaveSystem.energyCost?.supporting?.type ?? '',
+              cost: weaveSystem.energyCost?.supporting?.cost ?? 0,
+            },
+          },
+          weaveType: weaveSystem.weaveType ?? 'simple',
+          actionCost: weaveSystem.actionCost ?? 1,
+          range: weaveSystem.range ?? '',
+          target: weaveSystem.target ?? '',
+          duration: weaveSystem.duration ?? '',
+          savingThrow: weaveSystem.savingThrow ?? '',
+          deliveryMethod: weaveSystem.deliveryMethod ?? 'save',
+          description: weaveSystem.description?.value ?? weaveSystem.description ?? '',
+        },
+        notes: '',
+      },
+    };
+
+    const created = await this.actor.createEmbeddedDocuments('Item', [scrollData]);
+    if (created?.length) {
+      ui.notifications.info(`Scroll of ${weaveItem.name} added to ${this.actor.name}'s inventory.`);
+    }
+    return created;
   }
 
   /* -------------------------------------------- */
@@ -1070,6 +1235,25 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const li = target.closest(".item-collapsible");
     const item = this.actor.items.get(li.dataset.itemId);
     if (item) return item.delete();
+  }
+
+  /**
+   * Handle identifying a magic item via Arcana or Religion skill check.
+   */
+  static async #onItemIdentify(event, target) {
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
+    const item = this.actor.items.get(li.dataset.itemId);
+    if (!item) return;
+    return game.legends.identification.openIdentifyDialog(this.actor, item);
+  }
+
+  static async #onItemUseScroll(event, target) {
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
+    const item = this.actor.items.get(li.dataset.itemId);
+    if (!item) return;
+    return game.legends.scrollUse.useScroll(this.actor, item);
   }
 
   /**
@@ -1274,6 +1458,25 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     if (conditionName) {
       await game.legends.removeCondition(this.actor, conditionName);
     }
+  }
+
+  /**
+   * Reveal a hidden (gmOnly) condition to the player by clearing the gmOnly flag.
+   * Also clears incubation stage if it was a disease in incubation.
+   */
+  static async #onConditionReveal(event, target) {
+    if (!game.user.isGM) return;
+    const itemId = target.closest('.condition-item')?.dataset?.itemId;
+    if (!itemId) return;
+    const item = this.actor.items.get(itemId);
+    if (!item) return;
+    const updateData = { 'system.gmOnly': false };
+    // Transition disease from incubating → active on reveal
+    if (item.system?.diseaseStage === 'incubating') {
+      updateData['system.diseaseStage'] = 'active';
+    }
+    await item.update(updateData);
+    ui.notifications.info(`${item.name} is now visible to the player.`);
   }
 
   /**

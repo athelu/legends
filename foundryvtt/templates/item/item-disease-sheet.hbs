@@ -1,0 +1,184 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Disease Stage Name"/></h1>
+      <div class="header-tags">
+        <span class="tag severity-{{system.severity}}">{{capitalize system.severity}}</span>
+        {{#if system.gmOnly}}<span class="tag gm-only-tag">GM Only</span>{{/if}}
+        <span class="tag disease-stage-{{system.stage}}">
+          {{#if (eq system.stage "incubating")}}Incubating{{else}}Stage {{system.stageNumber}}{{/if}}
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+    <a class="item" data-tab="gm">GM / Tracking</a>
+  </nav>
+
+  <section class="sheet-body">
+
+    {{!-- Description Tab --}}
+    <div class="tab description" data-group="primary" data-tab="description">
+      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab details" data-group="primary" data-tab="details">
+
+      <div class="form-group">
+        <label>Disease Name</label>
+        <input type="text" name="system.diseaseName" value="{{system.diseaseName}}" placeholder="e.g. Filth Fever"/>
+        <span class="hint">Parent disease family name (shared by all stages).</span>
+      </div>
+
+      <div class="form-group">
+        <label>Severity</label>
+        <select name="system.severity">
+          <option value="mild"    {{#if (eq system.severity "mild")}}selected{{/if}}>[Mild] — Easy task to cure (1 success)</option>
+          <option value="serious" {{#if (eq system.severity "serious")}}selected{{/if}}>[Serious] — Hard task to cure (2 successes)</option>
+          <option value="deadly"  {{#if (eq system.severity "deadly")}}selected{{/if}}>[Deadly] — Hard task; 1 success = no change, 0 = worsen</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Vector</label>
+        <input type="text" name="system.vector" value="{{system.vector}}" placeholder="e.g. Wounds from rats, refuse, contaminated water"/>
+      </div>
+
+      <div class="form-group">
+        <label>Incubation Formula</label>
+        <input type="text" name="system.incubationFormula" value="{{system.incubationFormula}}" placeholder="e.g. 1d8"/>
+        <span class="hint">Roll this when the disease is contracted to set incubation length.</span>
+      </div>
+
+      <div class="form-group">
+        <label>Stage</label>
+        <select name="system.stage">
+          <option value="incubating" {{#if (eq system.stage "incubating")}}selected{{/if}}>Incubating (no symptoms yet)</option>
+          <option value="active"     {{#if (eq system.stage "active")}}selected{{/if}}>Active</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Stage Number</label>
+        <input type="number" name="system.stageNumber" value="{{system.stageNumber}}" data-dtype="Number" min="0" max="10"/>
+        <span class="hint">0 = incubating, 1–N = active stages.</span>
+      </div>
+
+      <div class="form-group">
+        <label>Progression Chain</label>
+        <input type="text" name="system.progressionChain" value="{{system.progressionChain}}"
+               placeholder="e.g. Filth Fever (Incubating), Filth Fever (Stage 1), ..."/>
+        <span class="hint">Comma-separated list of all stage names in order (incubating → worst).</span>
+      </div>
+
+      <div class="form-group">
+        <label>Applies Conditions</label>
+        <input type="text" name="system.appliesConditions" value="{{system.appliesConditions}}"
+               placeholder="e.g. Sickened, Fatigued"/>
+        <span class="hint">Conditions this stage inflicts (applied automatically when this stage is active).</span>
+      </div>
+
+      <div class="form-group">
+        <label>Special Rules</label>
+        <textarea name="system.specialRules" rows="3"
+                  placeholder="Complex effects not encodable as activeEffects...">{{system.specialRules}}</textarea>
+        <span class="hint">Narrative rules the GM must apply manually (e.g. "No natural HP recovery").</span>
+      </div>
+
+    </div>
+
+    {{!-- GM / Tracking Tab --}}
+    <div class="tab gm" data-group="primary" data-tab="gm">
+
+      <fieldset class="gm-visibility-section">
+        <legend><i class="fas fa-eye-slash"></i> Player Visibility</legend>
+
+        <div class="form-group">
+          <label>Hidden from Player (GM Only)</label>
+          <input type="checkbox" name="system.gmOnly" {{#if system.gmOnly}}checked{{/if}}/>
+          <span class="hint">Check this during incubation. Uncheck (or use Reveal button on sheet) when the disease manifests.</span>
+        </div>
+      </fieldset>
+
+      <fieldset class="gm-visibility-section" style="margin-top:8px;">
+        <legend><i class="fas fa-hourglass-half"></i> Incubation Tracking</legend>
+
+        <div class="form-group">
+          <label>Incubation Period (days)</label>
+          <input type="number" name="system.incubationDays" value="{{system.incubationDays}}"
+                 data-dtype="Number" min="0" max="30"/>
+          <span class="hint">Result of the incubation formula roll (set when contracted).</span>
+        </div>
+
+        <div class="form-group">
+          <label>Days Remaining</label>
+          <input type="number" name="system.incubationRemaining" value="{{system.incubationRemaining}}"
+                 data-dtype="Number" min="0" max="30"/>
+          <span class="hint">Decrement each in-game day. Reveal to player when this reaches 0.</span>
+        </div>
+      </fieldset>
+
+      <fieldset class="gm-visibility-section" style="margin-top:8px;">
+        <legend><i class="fas fa-dice-d6"></i> Damage Tick (Worst Stage)</legend>
+
+        <div class="form-group">
+          <label>Per-Rest Damage Formula</label>
+          <input type="text" name="system.damageTick.formula"
+                 value="{{system.damageTick.formula}}" placeholder="e.g. 4 or 1d6"/>
+          <span class="hint">Damage dealt per failed long rest save at the worst stage. Leave blank if none.</span>
+        </div>
+      </fieldset>
+
+      <fieldset class="gm-visibility-section" style="margin-top:8px;">
+        <legend><i class="fas fa-shield-alt"></i> Recovery Save</legend>
+
+        <div class="form-group">
+          <label>Save Type</label>
+          <select name="system.recovery.save.type">
+            <option value="fortitude" {{#if (eq system.recovery.save.type "fortitude")}}selected{{/if}}>Fortitude</option>
+            <option value="will"      {{#if (eq system.recovery.save.type "will")}}selected{{/if}}>Will</option>
+            <option value="reflex"    {{#if (eq system.recovery.save.type "reflex")}}selected{{/if}}>Reflex</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Successes Needed to Cure</label>
+          <input type="number" name="system.recovery.save.successesNeeded"
+                 value="{{system.recovery.save.successesNeeded}}" data-dtype="Number" min="1" max="2"/>
+          <span class="hint">1 for [Mild], 2 for [Serious]/[Deadly].</span>
+        </div>
+
+        <div class="form-group">
+          <label>On 1 Success (if need 2)</label>
+          <select name="system.recovery.outcomes.1success">
+            <option value="cured"    {{#if (eq system.recovery.outcomes.1success "cured")}}selected{{/if}}>Cured</option>
+            <option value="noChange" {{#if (eq system.recovery.outcomes.1success "noChange")}}selected{{/if}}>No Change</option>
+            <option value="worsen"   {{#if (eq system.recovery.outcomes.1success "worsen")}}selected{{/if}}>Worsen</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>On 0 Successes</label>
+          <select name="system.recovery.outcomes.0successes">
+            <option value="worsen" {{#if (eq system.recovery.outcomes.0successes "worsen")}}selected{{/if}}>Worsen to next stage</option>
+            <option value="damage" {{#if (eq system.recovery.outcomes.0successes "damage")}}selected{{/if}}>Damage (worst stage)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Chat Prompt</label>
+          <input type="text" name="system.recovery.chatMessage"
+                 value="{{system.recovery.chatMessage}}"
+                 placeholder="e.g. Make a Fortitude save to recover from Filth Fever."/>
+        </div>
+      </fieldset>
+
+    </div>
+
+  </section>
+</form>

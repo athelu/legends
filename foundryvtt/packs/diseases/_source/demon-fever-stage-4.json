@@ -1,0 +1,54 @@
+{
+  "_id": "df82fa3db9d0dda9",
+  "name": "Demon Fever (Stage 4)",
+  "type": "disease",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Demon Fever — <strong>Severity:</strong> [Deadly] — <strong>Stage 4</strong></p>\n<p><strong>Effects:</strong> As Stage 3. Failure at this stage deals [[/damage 12]] damage per long rest and the character makes a [[/save type=will]] (Hard task) or acts erratically for 1d8 hours (GM determines behavior). Death is possible if untreated.</p>\n<p><strong>Recovery:</strong> [[/save type=fortitude]] at end of each long rest (Hard task — 2 successes cures; 1 success = no change; 0 = worsen). Magical healing alone suppresses symptoms for 24 hours but does not cure; Major Restoration cures completely.</p>"
+    },
+    "diseaseName": "Demon Fever",
+    "severity": "deadly",
+    "vector": "Daemon claws or bites, nexus-adjacent contamination, exposure to corrupted pneuma",
+    "incubationFormula": "1d8",
+    "stage": "active",
+    "stageNumber": 4,
+    "gmOnly": false,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Demon Fever (Incubating)",
+      "Demon Fever (Stage 1)",
+      "Demon Fever (Stage 2)",
+      "Demon Fever (Stage 3)",
+      "Demon Fever (Stage 4)"
+    ],
+    "activeEffects": [],
+    "appliesConditions": [],
+    "specialRules": "On failed long rest save: character makes a Will save (Hard task) or acts erratically for 1d8 hours (GM determines behavior). Death is possible if untreated.",
+    "overlayPriority": 25,
+    "damageTick": {
+      "frequency": "longRest",
+      "formula": "12",
+      "applyOnFailure": true,
+      "chatMessage": "[[/damage 12]] damage from Demon Fever (Stage 4) — failed long rest save."
+    },
+    "recovery": {
+      "trigger": "longRest",
+      "method": "save",
+      "save": {
+        "type": "fortitude",
+        "successesNeeded": 2
+      },
+      "outcomes": {
+        "2successes": "cured",
+        "1success": "noChange",
+        "0successes": "damage"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Demon Fever (Stage 4)."
+    }
+  },
+  "flags": {},
+  "_key": "!items!df82fa3db9d0dda9"
+}

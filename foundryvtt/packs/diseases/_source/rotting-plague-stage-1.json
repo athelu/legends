@@ -1,0 +1,58 @@
+{
+  "_id": "266a976184ca9a52",
+  "name": "Rotting Plague (Stage 1)",
+  "type": "disease",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Rotting Plague — <strong>Severity:</strong> [Serious] — <strong>Stage 1</strong></p>\n<p><strong>Effects:</strong> Weakened condition. Strength-based checks: add 1 to die results.</p>\n<p><strong>Recovery:</strong> [[/save type=fortitude]] at end of each long rest (Hard task — 2 successes cures; 1 success = no change; 0 = worsen).</p>"
+    },
+    "diseaseName": "Rotting Plague",
+    "severity": "serious",
+    "vector": "Undead claws, corpse-handling without protection, necrotic wounds",
+    "incubationFormula": "2d8",
+    "stage": "active",
+    "stageNumber": 1,
+    "gmOnly": false,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Rotting Plague (Incubating)",
+      "Rotting Plague (Stage 1)",
+      "Rotting Plague (Stage 2)",
+      "Rotting Plague (Stage 3)",
+      "Rotting Plague (Stage 4)"
+    ],
+    "activeEffects": [
+      {
+        "key": "diceMod.attribute.strength",
+        "mode": "add",
+        "value": 1,
+        "notes": "Strength-based checks: add 1 to die results"
+      }
+    ],
+    "appliesConditions": [
+      "Weakened"
+    ],
+    "specialRules": "",
+    "overlayPriority": 25,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "longRest",
+      "method": "save",
+      "save": {
+        "type": "fortitude",
+        "successesNeeded": 2
+      },
+      "outcomes": {
+        "2successes": "cured",
+        "1success": "noChange",
+        "0successes": "worsen"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Rotting Plague (Stage 1)."
+    }
+  },
+  "flags": {},
+  "_key": "!items!266a976184ca9a52"
+}

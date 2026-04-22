@@ -30,6 +30,35 @@
         </div>
       </div>
 
+      <div class="resource-row">
+        <div class="resource npc-type">
+          <label>Type</label>
+          <select name="system.npcType">
+            <option value="npc" {{#if (eq system.npcType "npc")}}selected{{/if}}>NPC</option>
+            <option value="monster" {{#if (eq system.npcType "monster")}}selected{{/if}}>Monster</option>
+          </select>
+        </div>
+
+        <div class="resource attitude {{system.attitude}}">
+          <label>Attitude</label>
+          <select name="system.attitude">
+            <option value="devoted"       {{#if (eq system.attitude "devoted")}}selected{{/if}}>Devoted</option>
+            <option value="friendly"      {{#if (eq system.attitude "friendly")}}selected{{/if}}>Friendly</option>
+            <option value="cooperative"   {{#if (eq system.attitude "cooperative")}}selected{{/if}}>Cooperative</option>
+            <option value="indifferent"   {{#if (eq system.attitude "indifferent")}}selected{{/if}}>Indifferent</option>
+            <option value="uncooperative" {{#if (eq system.attitude "uncooperative")}}selected{{/if}}>Uncooperative</option>
+            <option value="hostile"       {{#if (eq system.attitude "hostile")}}selected{{/if}}>Hostile</option>
+            <option value="hatred"        {{#if (eq system.attitude "hatred")}}selected{{/if}}>Hatred</option>
+          </select>
+          {{#if isGM}}
+          <a class="item-control social-context-btn" data-action="setSocialContext"
+             title="Set as context for next social skill roll (GM only)">
+            <i class="fas fa-theater-masks"></i>
+          </a>
+          {{/if}}
+        </div>
+      </div>
+
       <div class="dr-info">
         <label>DR</label>
         <span class="dr-value">{{system.dr.total}}</span>

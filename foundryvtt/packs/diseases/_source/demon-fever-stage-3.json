@@ -1,0 +1,49 @@
+{
+  "_id": "4d84d6b76a447263",
+  "name": "Demon Fever (Stage 3)",
+  "type": "disease",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Demon Fever — <strong>Severity:</strong> [Deadly] — <strong>Stage 3</strong></p>\n<p><strong>Effects:</strong> As Stage 2. The character cannot benefit from long rests — their pneuma is too disrupted to settle. Luck does not restore on rest.</p>\n<p><strong>Recovery:</strong> [[/save type=fortitude]] at end of each long rest (Hard task — 2 successes cures; 1 success = no change; 0 = worsen). Magical healing alone suppresses symptoms for 24 hours but does not cure; Major Restoration cures completely.</p>"
+    },
+    "diseaseName": "Demon Fever",
+    "severity": "deadly",
+    "vector": "Daemon claws or bites, nexus-adjacent contamination, exposure to corrupted pneuma",
+    "incubationFormula": "1d8",
+    "stage": "active",
+    "stageNumber": 3,
+    "gmOnly": false,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Demon Fever (Incubating)",
+      "Demon Fever (Stage 1)",
+      "Demon Fever (Stage 2)",
+      "Demon Fever (Stage 3)",
+      "Demon Fever (Stage 4)"
+    ],
+    "activeEffects": [],
+    "appliesConditions": [],
+    "specialRules": "Character cannot benefit from long rests — their pneuma is too disrupted. Luck does not restore on rest.",
+    "overlayPriority": 25,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "longRest",
+      "method": "save",
+      "save": {
+        "type": "fortitude",
+        "successesNeeded": 2
+      },
+      "outcomes": {
+        "2successes": "cured",
+        "1success": "noChange",
+        "0successes": "worsen"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Demon Fever (Stage 3)."
+    }
+  },
+  "flags": {},
+  "_key": "!items!4d84d6b76a447263"
+}

@@ -1,0 +1,35 @@
+{
+  "_id": "4be938c9446f9907",
+  "name": "Rotting Plague (Incubating)",
+  "type": "disease",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Rotting Plague — <strong>Severity:</strong> [Serious]</p>\n<p>The character has been exposed to Rotting Plague but shows no symptoms yet. The disease is incubating. At the end of the incubation period, Stage 1 effects begin.</p>\n<p><strong>Vector:</strong> Undead claws, corpse-handling without protection, necrotic wounds</p>\n<p><strong>Incubation:</strong> Roll 2d8 days.</p>"
+    },
+    "diseaseName": "Rotting Plague",
+    "severity": "serious",
+    "vector": "Undead claws, corpse-handling without protection, necrotic wounds",
+    "incubationFormula": "2d8",
+    "stage": "incubating",
+    "stageNumber": 0,
+    "gmOnly": true,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Rotting Plague (Incubating)",
+      "Rotting Plague (Stage 1)",
+      "Rotting Plague (Stage 2)",
+      "Rotting Plague (Stage 3)",
+      "Rotting Plague (Stage 4)"
+    ],
+    "activeEffects": [],
+    "appliesConditions": [],
+    "specialRules": "",
+    "overlayPriority": 25,
+    "damageTick": null,
+    "recovery": null
+  },
+  "flags": {},
+  "_key": "!items!4be938c9446f9907"
+}

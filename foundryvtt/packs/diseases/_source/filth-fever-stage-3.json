@@ -1,0 +1,53 @@
+{
+  "_id": "4dbabe1b06e34f62",
+  "name": "Filth Fever (Stage 3)",
+  "type": "disease",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Filth Fever — <strong>Severity:</strong> [Mild] — <strong>Stage 3</strong></p>\n<p><strong>Effects:</strong> As Stage 2. Failure at this stage deals [[/damage 4]] damage per long rest until cured.</p>\n<p><strong>Recovery:</strong> [[/save type=fortitude]] at end of each long rest (Easy task — 1 success cures).</p>"
+    },
+    "diseaseName": "Filth Fever",
+    "severity": "mild",
+    "vector": "Wounds from rats, refuse, contaminated water",
+    "incubationFormula": "1d8",
+    "stage": "active",
+    "stageNumber": 3,
+    "gmOnly": false,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Filth Fever (Incubating)",
+      "Filth Fever (Stage 1)",
+      "Filth Fever (Stage 2)",
+      "Filth Fever (Stage 3)"
+    ],
+    "activeEffects": [],
+    "appliesConditions": [],
+    "specialRules": "",
+    "overlayPriority": 25,
+    "damageTick": {
+      "frequency": "longRest",
+      "formula": "4",
+      "applyOnFailure": true,
+      "chatMessage": "[[/damage 4]] damage from Filth Fever (Stage 3) — failed long rest save."
+    },
+    "recovery": {
+      "trigger": "longRest",
+      "method": "save",
+      "save": {
+        "type": "fortitude",
+        "successesNeeded": 1
+      },
+      "outcomes": {
+        "2successes": "cured",
+        "1success": "cured",
+        "0successes": "damage"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Filth Fever (Stage 3)."
+    }
+  },
+  "flags": {},
+  "_key": "!items!4dbabe1b06e34f62"
+}

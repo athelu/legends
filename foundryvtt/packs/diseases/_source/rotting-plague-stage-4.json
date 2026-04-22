@@ -1,0 +1,54 @@
+{
+  "_id": "9f7cb98b77b2de6f",
+  "name": "Rotting Plague (Stage 4)",
+  "type": "disease",
+  "img": "icons/svg/skull.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Rotting Plague — <strong>Severity:</strong> [Serious] — <strong>Stage 4</strong></p>\n<p><strong>Effects:</strong> As Stage 3. Failure at this stage deals [[/damage 8]] damage per long rest until cured.</p>\n<p><strong>Recovery:</strong> [[/save type=fortitude]] at end of each long rest (Hard task — 2 successes cures; 1 success = no change; 0 = worsen).</p>"
+    },
+    "diseaseName": "Rotting Plague",
+    "severity": "serious",
+    "vector": "Undead claws, corpse-handling without protection, necrotic wounds",
+    "incubationFormula": "2d8",
+    "stage": "active",
+    "stageNumber": 4,
+    "gmOnly": false,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Rotting Plague (Incubating)",
+      "Rotting Plague (Stage 1)",
+      "Rotting Plague (Stage 2)",
+      "Rotting Plague (Stage 3)",
+      "Rotting Plague (Stage 4)"
+    ],
+    "activeEffects": [],
+    "appliesConditions": [],
+    "specialRules": "",
+    "overlayPriority": 25,
+    "damageTick": {
+      "frequency": "longRest",
+      "formula": "8",
+      "applyOnFailure": true,
+      "chatMessage": "[[/damage 8]] damage from Rotting Plague (Stage 4) — failed long rest save."
+    },
+    "recovery": {
+      "trigger": "longRest",
+      "method": "save",
+      "save": {
+        "type": "fortitude",
+        "successesNeeded": 2
+      },
+      "outcomes": {
+        "2successes": "cured",
+        "1success": "noChange",
+        "0successes": "damage"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Rotting Plague (Stage 4)."
+    }
+  },
+  "flags": {},
+  "_key": "!items!9f7cb98b77b2de6f"
+}

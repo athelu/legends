@@ -318,11 +318,16 @@
       },
       "cr": {
         "value": 0
+      },
+      "npcType": "npc",
+      "attitude": "indifferent",
+      "biography": {
+        "value": ""
       }
     }
   },
   "Item": {
-    "types": ["weapon", "armor", "shield", "equipment", "weave", "feat", "trait", "flaw", "background", "ancestry", "action", "ability", "condition", "effect"],
+    "types": ["weapon", "armor", "shield", "equipment", "weave", "scroll", "feat", "trait", "flaw", "background", "ancestry", "action", "ability", "condition", "effect", "disease"],
     "templates": {
       "common": {
         "description": {
@@ -338,7 +343,12 @@
         "encumbrance": {
           "carryState": "",
           "containerId": ""
-        }
+        },
+        "isMagical": false,
+        "identified": true,
+        "unidentifiedName": "",
+        "unidentifiedDescription": "",
+        "identifyDC": "normal"
       }
     },
     "weapon": {
@@ -459,6 +469,35 @@
       "actionCost": 1,
       "appliesEffects": [],
       "tags": []
+    },
+    "scroll": {
+      "templates": ["common", "physical"],
+      "isMagical": true,
+      "sourceWeave": {
+        "name": "",
+        "img": "",
+        "uuid": "",
+        "energyCost": {
+          "primary": { "type": "", "cost": 0 },
+          "supporting": { "type": "", "cost": 0 }
+        },
+        "weaveType": "simple",
+        "actionCost": 1,
+        "range": "",
+        "target": "",
+        "duration": "",
+        "savingThrow": "",
+        "deliveryMethod": "save",
+        "description": ""
+      },
+      "uses": {
+        "value": 1,
+        "max": 1
+      },
+      "consumable": true,
+      "rarity": "",
+      "requiresAttunement": false,
+      "notes": ""
     },
     "feat": {
       "templates": ["common"],
@@ -622,6 +661,10 @@
       "stacks": 1,
       "severity": "moderate",
       "overlayPriority": 20,
+      "gmOnly": false,
+      "diseaseStage": "",
+      "incubationDays": 0,
+      "incubationRemaining": 0,
       "damageTick": null,
       "recovery": {
         "trigger": "onEvent",
@@ -697,6 +740,25 @@
         "valueFormula": "",
         "durationFormula": ""
       }
+    },
+    "disease": {
+      "templates": ["common"],
+      "diseaseName": "",
+      "severity": "mild",
+      "vector": "",
+      "incubationFormula": "1d8",
+      "stage": "incubating",
+      "stageNumber": 0,
+      "gmOnly": true,
+      "incubationDays": 0,
+      "incubationRemaining": 0,
+      "progressionChain": [],
+      "activeEffects": [],
+      "appliesConditions": [],
+      "specialRules": "",
+      "overlayPriority": 25,
+      "damageTick": null,
+      "recovery": null
     }
   }
 }

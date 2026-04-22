@@ -9,7 +9,7 @@ import { SKILL_LABELS } from '../skill-utils.mjs';
 const { ItemSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const ITEM_TEMPLATE_ROOT = "systems/legends/templates/item";
-const PHYSICAL_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment']);
+const PHYSICAL_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment', 'scroll']);
 const VALID_CARRY_STATES = new Set(['', 'carried', 'equipped', 'container', 'mounted']);
 const CONTAINER_PROFILE_OPTIONS = [
   { value: 'frame', label: 'Frame Container (50% contents weight)' },
@@ -914,6 +914,33 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       }
     }
 
+    if (this.document.type === 'scroll') {
+      if (!expanded.system?.sourceWeave || typeof expanded.system.sourceWeave !== 'object') {
+        expanded.system.sourceWeave = {};
+      }
+      expanded.system.sourceWeave.name = String(expanded.system.sourceWeave.name || '').trim();
+      expanded.system.sourceWeave.uuid = String(expanded.system.sourceWeave.uuid || '').trim();
+
+      if (!expanded.system.uses || typeof expanded.system.uses !== 'object') {
+        expanded.system.uses = { value: 1, max: 1 };
+      }
+      expanded.system.uses.value = Math.max(0, Number(expanded.system.uses.value) || 0);
+      expanded.system.uses.max = Math.max(1, Number(expanded.system.uses.max) || 1);
+      expanded.system.notes = String(expanded.system.notes || '').trim();
+    }
+
+    // Sanitize identification fields for all physical item types
+    if (PHYSICAL_ITEM_TYPES.has(this.document.type)) {
+      expanded.system.isMagical = Boolean(expanded.system?.isMagical);
+      expanded.system.identified = Boolean(expanded.system?.identified);
+      const validDCs = ['normal', 'hard', 'expert', 'master'];
+      if (!validDCs.includes(expanded.system?.identifyDC)) {
+        expanded.system.identifyDC = 'normal';
+      }
+      expanded.system.unidentifiedName = String(expanded.system?.unidentifiedName || '').trim();
+      expanded.system.unidentifiedDescription = String(expanded.system?.unidentifiedDescription || '').trim();
+    }
+
     // Flatten back and return
     return foundry.utils.flattenObject(expanded);
   }
@@ -1123,6 +1150,12 @@ export class D8ConditionItemSheet extends D8ItemSheet {
   };
 }
 
+export class D8DiseaseItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-disease-sheet.hbs` }
+  };
+}
+
 export class D8EquipmentItemSheet extends D8ItemSheet {
   static PARTS = {
     sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-equipment-sheet.hbs` }
@@ -1165,6 +1198,12 @@ export class D8WeaveItemSheet extends D8ItemSheet {
   };
 }
 
+export class D8ScrollItemSheet extends D8ItemSheet {
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-scroll-sheet.hbs` }
+  };
+}
+
 export const ITEM_SHEET_CLASS_MAP = {
   ability: D8AbilityItemSheet,
   action: D8ActionItemSheet,
@@ -1172,9 +1211,11 @@ export const ITEM_SHEET_CLASS_MAP = {
   armor: D8ArmorItemSheet,
   background: D8BackgroundItemSheet,
   condition: D8ConditionItemSheet,
+  disease: D8DiseaseItemSheet,
   equipment: D8EquipmentItemSheet,
   feat: D8FeatItemSheet,
   flaw: D8FlawItemSheet,
+  scroll: D8ScrollItemSheet,
   shield: D8ShieldItemSheet,
   trait: D8TraitItemSheet,
   weapon: D8WeaponItemSheet,
