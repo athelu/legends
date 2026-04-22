@@ -82,6 +82,42 @@
         <input type="number" name="system.overlayPriority" value="{{system.overlayPriority}}" data-dtype="Number" min="0" />
       </div>
 
+      {{!-- GM-Only / Disease Tracking --}}
+      {{#if owner}}
+      <fieldset class="gm-visibility-section">
+        <legend><i class="fas fa-eye-slash"></i> GM Visibility &amp; Disease Tracking</legend>
+
+        <div class="form-group">
+          <label>Hidden from Player (GM Only)</label>
+          <input type="checkbox" name="system.gmOnly" {{#if system.gmOnly}}checked{{/if}}/>
+          <span class="hint">When checked, this condition is invisible on the player's sheet during incubation.</span>
+        </div>
+
+        <div class="form-group">
+          <label>Disease Stage</label>
+          <select name="system.diseaseStage">
+            <option value=""        {{#if (eq system.diseaseStage "")}}selected{{/if}}>— (not a disease)</option>
+            <option value="incubating" {{#if (eq system.diseaseStage "incubating")}}selected{{/if}}>Incubating</option>
+            <option value="active"     {{#if (eq system.diseaseStage "active")}}selected{{/if}}>Active</option>
+            <option value="worsened"   {{#if (eq system.diseaseStage "worsened")}}selected{{/if}}>Worsened</option>
+            <option value="critical"   {{#if (eq system.diseaseStage "critical")}}selected{{/if}}>Critical</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Incubation Period (days)</label>
+          <input type="number" name="system.incubationDays" value="{{system.incubationDays}}" data-dtype="Number" min="0" max="30"/>
+          <span class="hint">Total incubation length from the disease entry (e.g. 1d8 result).</span>
+        </div>
+
+        <div class="form-group">
+          <label>Days Remaining</label>
+          <input type="number" name="system.incubationRemaining" value="{{system.incubationRemaining}}" data-dtype="Number" min="0" max="30"/>
+          <span class="hint">Decrement each in-game day. When 0, reveal the condition to the player.</span>
+        </div>
+      </fieldset>
+      {{/if}}
+
     </div>
   </section>
 </form>

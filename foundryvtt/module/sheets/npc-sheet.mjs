@@ -18,6 +18,7 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       itemCreate: D8NPCSheet.#onItemCreate,
       itemEdit: D8NPCSheet.#onItemEdit,
       itemDelete: D8NPCSheet.#onItemDelete,
+      setSocialContext: D8NPCSheet.#onSetSocialContext,
     },
     form: { submitOnChange: true },
     window: { resizable: true }
@@ -129,9 +130,21 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
   /** @override - Handle form submission properly for ActorSheetV2 */
   async _processSubmitData(event, form, submitData) {
-    // Expand the flattened submission data
     const expanded = foundry.utils.expandObject(submitData);
-    // Update the actor document with the expanded data
+
+    // When switching to monster type, default attitude to hostile if it was indifferent.
+    // When switching to npc type, default attitude to indifferent if it was hostile.
+    const prevNpcType = this.actor.system?.npcType ?? 'npc';
+    const newNpcType = expanded.system?.npcType;
+    if (newNpcType && newNpcType !== prevNpcType) {
+      const currentAttitude = expanded.system?.attitude ?? this.actor.system?.attitude ?? 'indifferent';
+      if (newNpcType === 'monster' && currentAttitude === 'indifferent') {
+        expanded.system.attitude = 'hostile';
+      } else if (newNpcType === 'npc' && currentAttitude === 'hostile') {
+        expanded.system.attitude = 'indifferent';
+      }
+    }
+
     await this.document.update(expanded);
   }
 
@@ -144,6 +157,7 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     context.flags = actorData.flags;
     context.actor = actorData;
     context.owner = this.actor.isOwner;
+    context.isGM = game.user.isGM;
     context.editable = this.isEditable;
 
     // Prepare NPC data
@@ -273,5 +287,14 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     if (confirmed) {
       await item.delete();
     }
+  }
+
+  /**
+   * Open the GM-only social context setter pre-filled with this NPC's current attitude.
+   * Only usable by GMs (the button is hidden from players in the template).
+   */
+  static async #onSetSocialContext(event, target) {
+    const attitude = this.actor.system?.attitude ?? 'indifferent';
+    return game.legends.socialCheck.openGMContextSetter(attitude);
   }
 }

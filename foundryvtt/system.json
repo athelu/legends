@@ -124,6 +124,20 @@
       "path": "packs/macros",
       "type": "Macro",
       "system": "legends"
+    },
+    {
+      "name": "tables",
+      "label": "Legends - Tables",
+      "path": "packs/tables",
+      "type": "RollTable",
+      "system": "legends"
+    },
+    {
+      "name": "diseases",
+      "label": "Legends - Diseases",
+      "path": "packs/diseases",
+      "type": "Item",
+      "system": "legends"
     }
   ],
   "languages": [

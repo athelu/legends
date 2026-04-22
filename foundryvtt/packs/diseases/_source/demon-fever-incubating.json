@@ -1,0 +1,35 @@
+{
+  "_id": "b324e9fbcbce065c",
+  "name": "Demon Fever (Incubating)",
+  "type": "disease",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Demon Fever — <strong>Severity:</strong> [Deadly]</p>\n<p>The character has been exposed to Demon Fever but shows no symptoms yet. The disease is incubating. At the end of the incubation period, Stage 1 effects begin.</p>\n<p><strong>Vector:</strong> Daemon claws or bites, nexus-adjacent contamination, exposure to corrupted pneuma</p>\n<p><strong>Incubation:</strong> Roll 1d8 days.</p>"
+    },
+    "diseaseName": "Demon Fever",
+    "severity": "deadly",
+    "vector": "Daemon claws or bites, nexus-adjacent contamination, exposure to corrupted pneuma",
+    "incubationFormula": "1d8",
+    "stage": "incubating",
+    "stageNumber": 0,
+    "gmOnly": true,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Demon Fever (Incubating)",
+      "Demon Fever (Stage 1)",
+      "Demon Fever (Stage 2)",
+      "Demon Fever (Stage 3)",
+      "Demon Fever (Stage 4)"
+    ],
+    "activeEffects": [],
+    "appliesConditions": [],
+    "specialRules": "",
+    "overlayPriority": 25,
+    "damageTick": null,
+    "recovery": null
+  },
+  "flags": {},
+  "_key": "!items!b324e9fbcbce065c"
+}

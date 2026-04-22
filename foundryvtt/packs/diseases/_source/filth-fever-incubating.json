@@ -1,0 +1,34 @@
+{
+  "_id": "20ec58f16f458c38",
+  "name": "Filth Fever (Incubating)",
+  "type": "disease",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Filth Fever — <strong>Severity:</strong> [Mild]</p>\n<p>The character has been exposed to Filth Fever but shows no symptoms yet. The disease is incubating. At the end of the incubation period, Stage 1 effects begin.</p>\n<p><strong>Vector:</strong> Wounds from rats, refuse, contaminated water</p>\n<p><strong>Incubation:</strong> Roll 1d8 days.</p>"
+    },
+    "diseaseName": "Filth Fever",
+    "severity": "mild",
+    "vector": "Wounds from rats, refuse, contaminated water",
+    "incubationFormula": "1d8",
+    "stage": "incubating",
+    "stageNumber": 0,
+    "gmOnly": true,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Filth Fever (Incubating)",
+      "Filth Fever (Stage 1)",
+      "Filth Fever (Stage 2)",
+      "Filth Fever (Stage 3)"
+    ],
+    "activeEffects": [],
+    "appliesConditions": [],
+    "specialRules": "",
+    "overlayPriority": 25,
+    "damageTick": null,
+    "recovery": null
+  },
+  "flags": {},
+  "_key": "!items!20ec58f16f458c38"
+}

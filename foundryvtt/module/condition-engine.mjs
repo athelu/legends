@@ -769,6 +769,7 @@ async function rollConditionSaveWithFortune(actor, condition, saveType, options 
           // Apply recovery result
           if (onComplete) await onComplete(successes);
           else if (condition.type === 'condition') await handleRecoveryResult(actor, condition, successes);
+          else if (condition.type === 'disease') await handleDiseaseRecoveryResult(actor, condition, successes);
           else await handleEffectRecoveryResult(actor, condition, successes);
           
           return successes;
@@ -871,6 +872,7 @@ async function rollConditionSave(actor, condition, saveType = 'fortitude', optio
   // Apply recovery result
   if (onComplete) await onComplete(successes);
   else if (condition.type === 'condition') await handleRecoveryResult(actor, condition, successes);
+  else if (condition.type === 'disease') await handleDiseaseRecoveryResult(actor, condition, successes);
   else await handleEffectRecoveryResult(actor, condition, successes);
   
   return successes;
@@ -1091,6 +1093,110 @@ async function getOpposedRecoveryMargin(actor, item, successes) {
 }
 
 /**
+ * Handle recovery save results for disease items.
+ * Diseases use system.recovery.outcomes keyed by '2successes', '1success', '0successes'
+ * rather than the downgrade-chain model used by conditions.
+ *
+ * @param {Actor} actor - The actor who made the save
+ * @param {Item} disease - The disease item being recovered from
+ * @param {number} successes - Number of successes rolled (0, 1, or 2)
+ */
+export async function handleDiseaseRecoveryResult(actor, disease, successes) {
+  const recovery = disease.system.recovery;
+  const outcomes = recovery?.outcomes ?? {};
+  const needed = recovery?.save?.successesNeeded ?? 1;
+
+  // Map success count to outcome key
+  let outcomeKey;
+  if (successes >= needed) {
+    outcomeKey = `${needed}successes`;
+  } else if (successes === 1 && needed > 1) {
+    outcomeKey = '1success';
+  } else {
+    outcomeKey = '0successes';
+  }
+
+  const action = outcomes[outcomeKey] ?? 'noChange';
+  const diseaseName = disease.system.diseaseName || disease.name;
+
+  if (action === 'cured') {
+    // Remove all stages of this disease family from the actor
+    const chain = disease.system.progressionChain ?? [];
+    for (const stageName of chain) {
+      const stageItem = actor.items.find(i => i.type === 'disease' && i.name === stageName);
+      if (stageItem) await stageItem.delete();
+    }
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>${actor.name}</strong> has fully recovered from <strong>${diseaseName}</strong>!</p>`
+    });
+
+  } else if (action === 'worsen') {
+    const chain = disease.system.progressionChain ?? [];
+    const currentIndex = chain.indexOf(disease.name);
+    const nextName = currentIndex >= 0 && currentIndex + 1 < chain.length ? chain[currentIndex + 1] : null;
+
+    if (nextName) {
+      // Advance to the next stage from the diseases compendium
+      await disease.delete();
+      const pack = game.packs.get('legends.diseases');
+      if (pack) {
+        const index = await pack.getIndex();
+        const entry = index.find(e => e.name === nextName);
+        if (entry) {
+          const nextItem = await pack.getDocument(entry._id);
+          await actor.createEmbeddedDocuments('Item', [nextItem.toObject()]);
+        }
+      }
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>${actor.name}</strong>'s <strong>${diseaseName}</strong> worsens to <strong>${nextName}</strong>!</p>`
+      });
+    } else {
+      // Already at worst stage — apply damage tick
+      const tick = disease.system.damageTick;
+      if (tick?.formula) {
+        const roll = new Roll(tick.formula);
+        await roll.evaluate();
+        const currentHp = actor.system.hp?.value ?? 0;
+        await actor.update({ 'system.hp.value': Math.max(0, currentHp - roll.total) });
+        await ChatMessage.create({
+          speaker: ChatMessage.getSpeaker({ actor }),
+          content: `<p><strong>${actor.name}</strong> suffers <strong>${roll.total}</strong> damage from <strong>${disease.name}</strong> (disease worsens but cannot progress further).</p>`,
+          rolls: [roll]
+        });
+      } else {
+        await ChatMessage.create({
+          speaker: ChatMessage.getSpeaker({ actor }),
+          content: `<p><strong>${actor.name}</strong>'s <strong>${disease.name}</strong> shows no improvement (already at worst stage).</p>`
+        });
+      }
+    }
+
+  } else if (action === 'damage') {
+    const tick = disease.system.damageTick;
+    if (tick?.formula) {
+      const roll = new Roll(tick.formula);
+      await roll.evaluate();
+      const currentHp = actor.system.hp?.value ?? 0;
+      await actor.update({ 'system.hp.value': Math.max(0, currentHp - roll.total) });
+      await ChatMessage.create({
+        speaker: ChatMessage.getSpeaker({ actor }),
+        content: `<p><strong>${actor.name}</strong> suffers <strong>${roll.total}</strong> damage from <strong>${disease.name}</strong>.</p>`,
+        rolls: [roll]
+      });
+    }
+
+  } else {
+    // noChange
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor }),
+      content: `<p><strong>${actor.name}</strong>'s <strong>${disease.name}</strong> shows no improvement.</p>`
+    });
+  }
+}
+
+/**
  * Handle recovery save results
  * @param {Actor} actor - The actor who made the save
  * @param {Item} condition - The condition being recovered from
@@ -1278,6 +1384,8 @@ async function chooseRecoveryCheckOption(actor, item, recoveryTarget = 'primary'
       }
       if (item.type === 'condition') {
         await handleRecoveryResult(actor, item, successes, { downgrades, margin });
+      } else if (item.type === 'disease') {
+        await handleDiseaseRecoveryResult(actor, item, successes);
       } else {
         await handleEffectRecoveryResult(actor, item, successes, { downgrades, margin });
       }
@@ -1545,7 +1653,11 @@ function applyConditionModifiers(rollData) {
   const actor = rollData.actor;
   if (!actor) return;
 
-  const items = actor.items.filter(i => i.type === 'condition' || i.type === 'effect');
+  const items = actor.items.filter(i =>
+    i.type === 'condition' ||
+    i.type === 'effect' ||
+    (i.type === 'disease' && i.system?.stage !== 'incubating' && !i.system?.gmOnly)
+  );
 
   let totalModifier = 0;
   let fortune = Number(rollData.fortune) || 0;
@@ -1802,7 +1914,10 @@ function renderTokenConditionOverlay(token, controlled) {
   const actor = token.actor;
   if (!actor) return;
 
-  const conditions = actor.items.filter(i => i.type === 'condition');
+  const conditions = actor.items.filter(i =>
+    i.type === 'condition' ||
+    (i.type === 'disease' && i.system?.stage !== 'incubating' && (game.user.isGM || !i.system?.gmOnly))
+  );
   if (conditions.length === 0) return;
 
   // Create overlay container
@@ -2003,6 +2118,8 @@ export function initializeChatHandlers() {
           const onComplete = async (successes) => {
             if (item.type === 'condition') {
               await handleRecoveryResult(actor, item, successes, { downgrades });
+            } else if (item.type === 'disease') {
+              await handleDiseaseRecoveryResult(actor, item, successes);
             } else {
               await handleEffectRecoveryResult(actor, item, successes, { downgrades });
             }

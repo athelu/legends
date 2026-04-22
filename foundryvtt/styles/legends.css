@@ -405,6 +405,39 @@
   object-fit: cover;
 }
 
+/* NPC Attitude & Type row */
+.legends.sheet.actor.npc .resource.npc-type,
+.legends.sheet.actor.npc .resource.attitude {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.legends.sheet.actor.npc .social-context-btn {
+  cursor: pointer;
+  color: #5a3a8a;
+  font-size: 13px;
+  padding: 1px 3px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+.legends.sheet.actor.npc .social-context-btn:hover { color: #3a1a6a; }
+
+.legends.sheet.actor.npc .resource.attitude select {
+  font-weight: bold;
+  border-radius: 3px;
+  padding: 1px 4px;
+}
+
+/* Attitude color coding */
+.legends.sheet.actor.npc .resource.attitude.devoted select   { color: #1a6e1a; background: #d4f5d4; }
+.legends.sheet.actor.npc .resource.attitude.friendly select  { color: #276b27; background: #e6f5e6; }
+.legends.sheet.actor.npc .resource.attitude.cooperative select { color: #3a5f8a; background: #ddeeff; }
+.legends.sheet.actor.npc .resource.attitude.indifferent select { color: #555; background: #eee; }
+.legends.sheet.actor.npc .resource.attitude.uncooperative select { color: #8a5f00; background: #fff3cc; }
+.legends.sheet.actor.npc .resource.attitude.hostile select   { color: #8a1f1f; background: #ffe0e0; }
+.legends.sheet.actor.npc .resource.attitude.hatred select    { color: #fff; background: #8a0000; }
+
 .legends .header-info {
   display: flex;
   flex-direction: column;
@@ -4057,6 +4090,86 @@
 /* ========================================
    CONDITION SYSTEM
    ======================================== */
+
+/* GM-Only Hidden / Incubating Conditions Section */
+.hidden-conditions-section {
+  margin-top: 8px;
+  border: 1px dashed #8b4513;
+  border-radius: 4px;
+  padding: 6px 8px;
+  background: rgba(139, 69, 19, 0.06);
+}
+
+.hidden-conditions-section .inventory-header h3 {
+  color: #8b4513;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.hidden-conditions-section .gm-only-tag {
+  font-size: 10px;
+  font-weight: normal;
+  color: #a0522d;
+  font-style: italic;
+}
+
+.condition-item.hidden-condition {
+  border-left: 3px solid #8b4513;
+  background: rgba(139, 69, 19, 0.05);
+  opacity: 0.9;
+}
+
+.condition-item.hidden-condition .condition-name {
+  font-style: italic;
+}
+
+.disease-stage-incubating {
+  color: #a0522d;
+  font-size: 10px;
+}
+
+.disease-stage-active {
+  color: #c0392b;
+}
+
+.disease-stage-worsened,
+.disease-stage-critical {
+  color: #8b0000;
+  font-weight: bold;
+}
+
+.condition-reveal-btn {
+  color: #27ae60;
+  cursor: pointer;
+}
+
+.condition-reveal-btn:hover {
+  color: #1e8449;
+}
+
+/* Disease fieldset in condition item sheet */
+.gm-visibility-section {
+  border: 1px dashed #8b4513;
+  border-radius: 4px;
+  padding: 8px 10px;
+  margin-top: 10px;
+}
+
+.gm-visibility-section legend {
+  color: #8b4513;
+  font-size: 12px;
+  padding: 0 4px;
+}
+
+.gm-visibility-section .hint {
+  font-size: 10px;
+  color: #666;
+  font-style: italic;
+  display: block;
+  margin-top: 2px;
+}
 
 /* Token Condition Overlay */
 .legends-condition-overlay {

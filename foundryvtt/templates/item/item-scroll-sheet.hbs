@@ -1,0 +1,167 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Scroll Name"/></h1>
+      <div class="header-tag">Scroll</div>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+  </nav>
+
+  <section class="sheet-body">
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
+      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+
+      <!-- Source Weave -->
+      <h3>Encoded Weave</h3>
+      {{#if system.sourceWeave.name}}
+      <div class="scroll-weave-summary" style="background: rgba(0,0,0,0.05); border: 1px solid #ccc; border-radius: 4px; padding: 8px 12px; margin-bottom: 12px;">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+          {{#if system.sourceWeave.img}}
+          <img src="{{system.sourceWeave.img}}" width="32" height="32" style="border: none; object-fit: contain;"/>
+          {{/if}}
+          <strong>{{system.sourceWeave.name}}</strong>
+          <span style="color: #666; font-size: 12px;">({{system.sourceWeave.weaveType}})</span>
+        </div>
+        <div class="form-group-row" style="gap: 16px; flex-wrap: wrap;">
+          {{#if system.sourceWeave.energyCost.primary.type}}
+          <div style="font-size: 12px;"><strong>Energy:</strong> {{system.sourceWeave.energyCost.primary.type}} {{system.sourceWeave.energyCost.primary.cost}}
+            {{#if system.sourceWeave.energyCost.supporting.type}}+ {{system.sourceWeave.energyCost.supporting.type}} {{system.sourceWeave.energyCost.supporting.cost}}{{/if}}
+          </div>
+          {{/if}}
+          {{#if system.sourceWeave.range}}
+          <div style="font-size: 12px;"><strong>Range:</strong> {{system.sourceWeave.range}}</div>
+          {{/if}}
+          {{#if system.sourceWeave.target}}
+          <div style="font-size: 12px;"><strong>Target:</strong> {{system.sourceWeave.target}}</div>
+          {{/if}}
+          {{#if system.sourceWeave.duration}}
+          <div style="font-size: 12px;"><strong>Duration:</strong> {{system.sourceWeave.duration}}</div>
+          {{/if}}
+          {{#if system.sourceWeave.actionCost}}
+          <div style="font-size: 12px;"><strong>Action Cost:</strong> {{system.sourceWeave.actionCost}}</div>
+          {{/if}}
+        </div>
+      </div>
+      {{else}}
+      <div style="color: #888; font-style: italic; margin-bottom: 12px; font-size: 13px;">No weave encoded — drag a weave onto a character sheet to create a scroll.</div>
+      {{/if}}
+
+      <!-- Manual override for source weave name/uuid if needed -->
+      <div class="form-group">
+        <label>Weave Name</label>
+        <input type="text" name="system.sourceWeave.name" value="{{system.sourceWeave.name}}" placeholder="Name of the encoded weave"/>
+      </div>
+      <div class="form-group">
+        <label>Weave UUID</label>
+        <input type="text" name="system.sourceWeave.uuid" value="{{system.sourceWeave.uuid}}" placeholder="Compendium UUID (optional)"/>
+      </div>
+
+      <!-- Physical Properties -->
+      <h3>Physical Properties</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Weight (lbs)</label>
+          <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Cost (gp)</label>
+          <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+
+      <!-- Uses -->
+      <h3>Uses</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Uses Remaining</label>
+          <input type="number" name="system.uses.value" value="{{system.uses.value}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Max Uses</label>
+          <input type="number" name="system.uses.max" value="{{system.uses.max}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+
+      <!-- Carry State -->
+      {{#if carryOptions.length}}
+      <h3>Carry State</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Status</label>
+          <select name="system.encumbrance.carryState">
+            {{#each carryOptions as |option|}}
+            <option value="{{option.value}}" {{#if (eq ../system.encumbrance.carryState option.value)}}selected{{/if}}>{{option.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        {{#if containerOptions.length}}
+        <div class="form-group">
+          <label>Container</label>
+          <select name="system.encumbrance.containerId">
+            <option value="">— None —</option>
+            {{#each containerOptions as |option|}}
+            <option value="{{option.value}}" {{#if (eq ../system.encumbrance.containerId option.value)}}selected{{/if}}>{{option.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      <!-- Notes -->
+      <div class="form-group">
+        <label>Notes</label>
+        <textarea name="system.notes" rows="3" placeholder="Additional notes...">{{system.notes}}</textarea>
+      </div>
+
+      <!-- Identification -->
+      <h3>Identification</h3>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" name="system.isMagical" {{#if system.isMagical}}checked{{/if}} />
+          Magic Item
+        </label>
+      </div>
+      {{#if system.isMagical}}
+      <div class="form-group">
+        <label>
+          <input type="checkbox" name="system.identified" {{#if system.identified}}checked{{/if}} />
+          Identified by players
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Unidentified Name</label>
+        <input type="text" name="system.unidentifiedName" value="{{system.unidentifiedName}}" placeholder="e.g. Unidentified Scroll (auto if blank)" />
+      </div>
+      <div class="form-group">
+        <label>Identification Difficulty</label>
+        <select name="system.identifyDC">
+          <option value="normal" {{#if (eq system.identifyDC "normal")}}selected{{/if}}>Normal — 1 success</option>
+          <option value="hard" {{#if (eq system.identifyDC "hard")}}selected{{/if}}>Hard — 2 successes</option>
+          <option value="expert" {{#if (eq system.identifyDC "expert")}}selected{{/if}}>Expert — 2 successes, +1 per die</option>
+          <option value="master" {{#if (eq system.identifyDC "master")}}selected{{/if}}>Master — 2 successes, +2 per die</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Unidentified Description</label>
+        <textarea name="system.unidentifiedDescription" rows="3" placeholder="What the scroll looks like before identification...">{{system.unidentifiedDescription}}</textarea>
+      </div>
+      {{/if}}
+
+    </div>
+  </section>
+</form>

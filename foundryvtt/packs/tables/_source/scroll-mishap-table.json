@@ -1,0 +1,106 @@
+{
+  "_id": "a1b2c3d4e5f60001",
+  "_key": "!tables!a1b2c3d4e5f60001",
+  "name": "Scroll Mishap Table",
+  "img": "icons/svg/d8.svg",
+  "description": "<p>Rolled when a character <strong>without a magical trait</strong> fails a targeting roll while using a scroll. The stored energy releases through an untrained conduit and produces an uncontrolled effect.</p><p>Roll 1d8 and apply the corresponding result.</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "r1000000000000001",
+      "_key": "!tables.results!a1b2c3d4e5f60001.r1000000000000001",
+      "type": 0,
+      "text": "<strong>Discharge</strong> — The energy releases harmlessly in a vivid but non-damaging display.",
+      "img": "icons/svg/d8.svg",
+      "range": [1, 1],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r1000000000000002",
+      "_key": "!tables.results!a1b2c3d4e5f60001.r1000000000000002",
+      "type": 0,
+      "text": "<strong>Backlash</strong> — The energy reverses into the reader. They take damage equal to the scroll's Energy cost using the scroll's primary energy type. Half DR applies.",
+      "img": "icons/svg/d8.svg",
+      "range": [2, 2],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r1000000000000003",
+      "_key": "!tables.results!a1b2c3d4e5f60001.r1000000000000003",
+      "type": 0,
+      "text": "<strong>Misfire</strong> — The weave triggers but strikes a random creature within range instead of the intended target, including allies. Use a normal targeting roll against the new target.",
+      "img": "icons/svg/d8.svg",
+      "range": [3, 3],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r1000000000000004",
+      "_key": "!tables.results!a1b2c3d4e5f60001.r1000000000000004",
+      "type": 0,
+      "text": "<strong>Diminished</strong> — The weave triggers with Margin 1 effect.",
+      "img": "icons/svg/d8.svg",
+      "range": [4, 4],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r1000000000000005",
+      "_key": "!tables.results!a1b2c3d4e5f60001.r1000000000000005",
+      "type": 0,
+      "text": "<strong>Overload</strong> — The weave triggers at full effect against the intended target. The reader also gains the Dazed condition until the end of their next turn.",
+      "img": "icons/svg/d8.svg",
+      "range": [5, 5],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r1000000000000006",
+      "_key": "!tables.results!a1b2c3d4e5f60001.r1000000000000006",
+      "type": 0,
+      "text": "<strong>Surge</strong> — For 1 minute the reader deals 4 damage of that energy type on any successful melee strike, but also takes 4 damage of that type at the start of each of their turns until the effect ends.",
+      "img": "icons/svg/d8.svg",
+      "range": [6, 6],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r1000000000000007",
+      "_key": "!tables.results!a1b2c3d4e5f60001.r1000000000000007",
+      "type": 0,
+      "text": "<strong>Resonance</strong> — The weave triggers normally against its intended target. The reader is also struck by the same effect at Margin 1.",
+      "img": "icons/svg/d8.svg",
+      "range": [7, 7],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r1000000000000008",
+      "_key": "!tables.results!a1b2c3d4e5f60001.r1000000000000008",
+      "type": 0,
+      "text": "<strong>Unraveling</strong> — Every creature in a 15-foot radius centered on the reader (including the reader) makes a Reflex save — Hard (2 successes) if the scroll's Energy cost exceeds 8, Easy (1 success) otherwise. Those who fail take damage equal to the scroll's Energy cost using the primary energy type. Half DR applies.",
+      "img": "icons/svg/d8.svg",
+      "range": [8, 8],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "_id": "943955d7ab277531",
+  "name": "Demon Fever (Stage 1)",
+  "type": "disease",
+  "img": "icons/svg/daze.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Disease:</strong> Demon Fever — <strong>Severity:</strong> [Deadly] — <strong>Stage 1</strong></p>\n<p><strong>Effects:</strong> Disoriented condition. Intelligence and Wisdom checks: add 1 to both die results. The character's eyes occasionally flicker with unnatural light.</p>\n<p><strong>Recovery:</strong> [[/save type=fortitude]] at end of each long rest (Hard task — 2 successes cures; 1 success = no change; 0 = worsen). Magical healing alone suppresses symptoms for 24 hours but does not cure; Major Restoration cures completely.</p>"
+    },
+    "diseaseName": "Demon Fever",
+    "severity": "deadly",
+    "vector": "Daemon claws or bites, nexus-adjacent contamination, exposure to corrupted pneuma",
+    "incubationFormula": "1d8",
+    "stage": "active",
+    "stageNumber": 1,
+    "gmOnly": false,
+    "incubationDays": 0,
+    "incubationRemaining": 0,
+    "progressionChain": [
+      "Demon Fever (Incubating)",
+      "Demon Fever (Stage 1)",
+      "Demon Fever (Stage 2)",
+      "Demon Fever (Stage 3)",
+      "Demon Fever (Stage 4)"
+    ],
+    "activeEffects": [
+      {
+        "key": "diceMod.attribute.intelligence",
+        "mode": "add",
+        "value": 1,
+        "notes": "Intelligence checks: add 1 to die results"
+      },
+      {
+        "key": "diceMod.attribute.wisdom",
+        "mode": "add",
+        "value": 1,
+        "notes": "Wisdom checks: add 1 to die results"
+      }
+    ],
+    "appliesConditions": [
+      "Disoriented"
+    ],
+    "specialRules": "",
+    "overlayPriority": 25,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "longRest",
+      "method": "save",
+      "save": {
+        "type": "fortitude",
+        "successesNeeded": 2
+      },
+      "outcomes": {
+        "2successes": "cured",
+        "1success": "noChange",
+        "0successes": "worsen"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Demon Fever (Stage 1)."
+    }
+  },
+  "flags": {},
+  "_key": "!items!943955d7ab277531"
+}

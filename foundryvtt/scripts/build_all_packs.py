@@ -57,6 +57,7 @@ def main():
         "build_backgrounds_pack.py",
         "build_ancestries_pack.py",
         "build_conditions_pack.py",
+        "build_diseases_pack.py",
         "build_weaves_pack.py",
         "build_equipment_pack.py",
     ]
