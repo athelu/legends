@@ -1,0 +1,34 @@
+{
+  "_id": "591534eff051be53",
+  "name": "Healer's Kit",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A healer's kit subtracts 1 from one Medicine die on any [[/check skill=medicine]]. A standard kit contains 8 uses before it is exhausted. Each application of Field Dressing, Evening Treatment, or Administered Treatment consumes one use. Stabilize and Remove Condition do not consume kit uses.</p>"
+    },
+    "equipmentType": "tools",
+    "weight": 0,
+    "cost": 30.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!591534eff051be53"
+}

@@ -172,6 +172,9 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       toggleProgressionPhase: D8CharacterSheet.#onToggleProgressionPhase,
       toggleManualOverride: D8CharacterSheet.#onToggleManualOverride,
       skillRoll: D8CharacterSheet.#onSkillRoll,
+      craftSkillRoll: D8CharacterSheet.#onCraftSkillRoll,
+      addCraftSkill: D8CharacterSheet.#onAddCraftSkill,
+      removeCraftSkill: D8CharacterSheet.#onRemoveCraftSkill,
       weaponAttack: D8CharacterSheet.#onWeaponAttack,
       itemCreate: D8CharacterSheet.#onItemCreate,
       itemEdit: D8CharacterSheet.#onItemEdit,
@@ -703,6 +706,25 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     }
 
     context.skillList = skillList;
+
+    // Prepare craft skill list (dynamic specializations, all governed by DEX)
+    const craftSkills = context.system.craftSkills || {};
+    const craftTraining = context.training?.craftSkills || {};
+    const craftSkillList = [];
+    for (const [keyword, rankRaw] of Object.entries(craftSkills)) {
+      const base = typeof rankRaw === 'number' ? rankRaw : 0;
+      craftSkillList.push({
+        keyword,
+        label: `Craft: ${keyword}`,
+        base,
+        bonus: 0,
+        total: base,
+        checked: Boolean(craftTraining[keyword]),
+        attr: 'dex',
+        breakdown: ''
+      });
+    }
+    context.craftSkillList = craftSkillList;
   }
 
   /**
@@ -739,11 +761,13 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       'infuser': 'Infuser',
       'sorcerous-origin': 'Sorcerous Origin',
       'eldritch-pact': 'Eldritch Pact',
-      'alchemical-tradition': 'Alchemical Tradition'
+      'alchemical-tradition': 'Alchemical Tradition',
+      'summoner': 'Summoner'
     };
     
     context.magicalTraitDisplayName = traitNames[effectiveTraitType] || effectiveTraitType;
     context.isAlchemicalTradition = effectiveTraitType === 'alchemical-tradition';
+    context.isSummoner = effectiveTraitType === 'summoner';
     
     // Enrich casting stat display
     if (context.system.castingStat && context.system.castingStat.value && context.system.attributes) {
@@ -1209,7 +1233,44 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     return game.legends.rollSkillCheck(this.actor, skill);
   }
 
-  static async #onItemCreate(event, target) {
+  static async #onCraftSkillRoll(event, target) {
+    let keyword = target.dataset.keyword;
+    if (!keyword) {
+      const row = target.closest('.craft-skill-row');
+      if (row) keyword = row.dataset.keyword;
+    }
+    if (!keyword) {
+      ui.notifications.warn('Craft skill roll is missing its target keyword.');
+      return;
+    }
+    return game.legends.rollCraftSkillCheck(this.actor, keyword);
+  }
+
+  static async #onAddCraftSkill(event, target) {
+    const keyword = await foundry.applications.api.DialogV2.prompt({
+      window: { title: 'Add Craft Skill' },
+      position: { width: 360 },
+      content: `<form><div class="form-group"><label>Specialization:</label><input type="text" name="keyword" placeholder="e.g. Blacksmith" autofocus style="width:100%;"/></div></form>`,
+      ok: { label: 'Add', callback: (event, button, dialog) => dialog.element.querySelector('[name="keyword"]').value.trim() }
+    });
+    if (!keyword) return;
+    await this.actor.update({
+      [`system.craftSkills.${keyword}`]: 0,
+      [`system.training.craftSkills.${keyword}`]: false
+    });
+    this.render();
+  }
+
+  static async #onRemoveCraftSkill(event, target) {
+    const keyword = target.dataset.keyword
+      || target.closest('.craft-skill-row')?.dataset.keyword;
+    if (!keyword) return;
+    await this.actor.update({
+      [`system.craftSkills.-=${keyword}`]: null,
+      [`system.training.craftSkills.-=${keyword}`]: null
+    });
+    this.render();
+  }
     const type = target.dataset.type;
     const name = `New ${type ? type.charAt(0).toUpperCase() + type.slice(1) : 'Item'}`;
     const itemData = {

@@ -21,7 +21,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Your perfect self-knowledge has impressed reality itself. You gain permanent benefits:</p>\n<ul>\n<li>When you roll any saving throw, subtract 1 from your highest die</li>\n<li>When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses</li>\n<li>When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave</li>\n</ul>",
+    "benefits": "<p>Your perfect self-knowledge has impressed reality itself. You gain permanent benefits:</p>\n<ul>\n<li>When you roll any saving throw: subtract 1 from your highest die</li>\n<li>When you roll double 1s on ANY roll (not just weaving), restore all Harmonic Weaving uses</li>\n<li>When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave</li>\n</ul>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

@@ -1,0 +1,44 @@
+{
+  "_id": "5b2773fc40f6d884",
+  "name": "Triage Specialist",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>In the moment that matters, you do not hesitate.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 4
+      },
+      "skills": "medicine:4",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per combat, when a creature within 10 feet drops to 0 HP, you may use a [Reaction] to immediately attempt Stabilize on them. Additionally, you may now use Field Dressing on a creature in the Dying condition. A successful Field Dressing on a Dying creature stabilizes them at 0 HP in addition to the normal HP restoration, which applies when they regain consciousness.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive; emergency stabilization once per combat"
+    },
+    "keywords": [
+      "[Heal]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!5b2773fc40f6d884"
+}

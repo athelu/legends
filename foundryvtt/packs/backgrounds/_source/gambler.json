@@ -21,6 +21,7 @@
       "perception": 1,
       "society": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

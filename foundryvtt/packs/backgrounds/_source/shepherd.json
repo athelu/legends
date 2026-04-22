@@ -21,6 +21,7 @@
       "athletics": 1,
       "medicine": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

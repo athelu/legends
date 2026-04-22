@@ -1,0 +1,48 @@
+{
+  "_id": "020320d275fa4bd9",
+  "name": "Twin Calling",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Two signals sent simultaneously, both answered.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 5
+      },
+      "skills": "",
+      "feats": [
+        "Summoner",
+        "Resonant Call"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per short rest, summon two creatures with a single summoning weave. Pay energy cost for each creature separately. Make one weaving roll applied to both summons. Make separate targeting rolls for each creature's disposition.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "shortRest",
+        "formula": "1"
+      },
+      "text": "Once per short rest"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Summoner]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!020320d275fa4bd9"
+}

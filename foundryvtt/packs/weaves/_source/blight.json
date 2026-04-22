@@ -1,0 +1,68 @@
+{
+  "_id": "37b5855ef7e63de1",
+  "name": "Blight",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Channel necrotic entropy into a living creature or plant, withering tissue and draining vitality. Against plants and plant creatures, this weave is devastating; they make no save and take full damage. Against other living creatures, target makes [[/save type=fortitude]].</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "negative",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "space",
+        "cost": 1
+      }
+    },
+    "range": "Close, 30 ft.",
+    "duration": "Instantaneous",
+    "target": "",
+    "savingThrow": "fortitude",
+    "effect": "Channel necrotic entropy into a living creature or plant, withering tissue and draining vitality. Against plants and plant creatures, this weave is devastating; they make no save and take full damage. Against other living creatures, target makes Fortitude save.",
+    "effectType": "buff",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "half",
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "Half damage (10)",
+          "duration": "Half damage (10)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "Full damage (20) + Weakened condition until end of target's next turn",
+          "duration": "Full damage (20) + Weakened condition until end of target's next turn"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "Enhanced damage (28) + Weakened condition for 1 minute (Fortitude save at end of each turn",
+          "duration": "Enhanced damage (28) + Weakened condition for 1 minute (Fortitude save at end of each turn"
+        }
+      }
+    },
+    "targetingSuccessScaling": "0 = Fails,  1 = Half damage (10), 2 = Full damage (20) + Weakened condition until end of target's next turn, 3 = Enhanced damage (28) + Weakened condition for 1 minute (Fortitude save at end of each turn, 1 success ends)",
+    "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
+    "targetingRoll": "Casting Stat + Negative Mastery",
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "buff",
+      "defensive",
+      "ranged"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!37b5855ef7e63de1"
+}

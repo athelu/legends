@@ -1,0 +1,68 @@
+{
+  "_id": "106c4b6551ad69f3",
+  "name": "Hirnaloyta's Step",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Target gains +2 Agility for the duration. Recalculate Agility-based checks, Reflex saves, and initiative. This bonus does not stack with other beneficial Agility modifiers; use the highest bonus.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "range": "Touch",
+    "duration": "1 minute",
+    "target": "single",
+    "savingThrow": "none",
+    "effect": "Target gains +2 Agility for the duration. Recalculate Agility-based checks, Reflex saves, and initiative. This bonus does not stack with other beneficial Agility modifiers; use the highest bonus.",
+    "effectType": "buff",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
+    },
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
+    "weavingRoll": "Air Potential + Air Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
+    "appliesEffects": [],
+    "deliveryMethod": "automatic",
+    "tags": [
+      "buff",
+      "touch",
+      "utility"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!106c4b6551ad69f3"
+}

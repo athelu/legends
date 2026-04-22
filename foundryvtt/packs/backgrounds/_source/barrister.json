@@ -19,6 +19,7 @@
       "society": 3,
       "persuasion": 2
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

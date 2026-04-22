@@ -17,7 +17,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>In urban environments, can track people through crowds using Investigation. Learn useful information about neighborhoods (safe houses, gang territories, guard patrols) with [[/check skill=society]]. When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route</p>",
+    "benefits": "<p>In urban environments, can track people through crowds using Investigation. Learn useful information about neighborhoods (safe houses, gang territories, guard patrols) with [[/check skill=society]]. When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route.</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

@@ -255,6 +255,13 @@ def _parse_prerequisites(prereq_text, prereqs):
             remaining.append(part_stripped)
             continue
 
+        # Check for "Craft: Specialization N" style — colon prevents normal skill match;
+        # the system has a single 'craft' skill key so all specializations map there.
+        craft_spec_m = re.match(r'^[Cc]raft\s*:\s*\S+\s+(\d+)$', part_stripped)
+        if craft_spec_m:
+            _append_skill(prereqs, 'craft', int(craft_spec_m.group(1)))
+            continue
+
         # Check for attribute requirement: "Str 4", "Agi 5", "Str or Agi 4"
         # Pattern: optional "AttrAbbr or " prefix, then AttrAbbr + number
         attr_m = re.match(

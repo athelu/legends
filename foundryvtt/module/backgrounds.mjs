@@ -161,6 +161,13 @@ export function parseBackgroundSkillBonuses(text) {
       continue;
     }
 
+    // Handle "Craft: Keyword N" specialization syntax
+    const craftKwMatch = part.match(/^[Cc]raft\s*:\s*(.+?)\s+(\d+)$/);
+    if (craftKwMatch) {
+      skills['craft'] = Number.parseInt(craftKwMatch[2], 10);
+      continue;
+    }
+
     const skillMatch = part.match(/^(.+?)\s+(\d+)$/);
     if (!skillMatch) continue;
 
@@ -430,8 +437,19 @@ export async function applyBackgroundGrants(actor, background) {
     'system.biography.background': background.name
   };
   for (const [skillKey, amount] of Object.entries(skillGrants)) {
-    const current = Number(actor.system.skills?.[skillKey] ?? 0);
-    updates[`system.skills.${skillKey}`] = Math.max(0, current + Number(amount || 0));
+    if (skillKey === 'craft') {
+      const keyword = background.system.craftKeyword;
+      if (keyword && keyword !== '(choice)') {
+        const current = Number(actor.system.craftSkills?.[keyword] ?? 0);
+        updates[`system.craftSkills.${keyword}`] = Math.max(0, current + Number(amount || 0));
+        updates[`system.training.craftSkills.${keyword}`] = Boolean(actor.system.training?.craftSkills?.[keyword] ?? false);
+      } else {
+        console.warn(`Legends | Background "${background.name}" grants Craft but has no fixed keyword — player must add manually.`);
+      }
+    } else {
+      const current = Number(actor.system.skills?.[skillKey] ?? 0);
+      updates[`system.skills.${skillKey}`] = Math.max(0, current + Number(amount || 0));
+    }
   }
 
   if (Object.keys(updates).length) {

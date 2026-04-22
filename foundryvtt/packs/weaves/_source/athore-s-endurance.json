@@ -1,0 +1,69 @@
+{
+  "_id": "dee7453837660fb7",
+  "name": "Athore's Endurance",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Target gains +2 Constitution for the duration. Recalculate Constitution-dependent values, including Fortitude saves and max HP. Current HP does not increase when this weave is applied; if current HP exceeds max HP when the weave ends, reduce current HP to the new maximum. This bonus does not stack with other beneficial Constitution modifiers; use the highest bonus.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "earth",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "range": "Touch",
+    "duration": "1 minute",
+    "target": "single",
+    "savingThrow": "none",
+    "effect": "Target gains +2 Constitution for the duration. Recalculate Constitution-dependent values, including Fortitude saves and max HP. Current HP does not increase when this weave is applied; if current HP exceeds max HP when the weave ends, reduce current HP to the new maximum. This bonus does not stack with other beneficial Constitution modifiers; use the highest bonus.",
+    "effectType": "buff",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
+    },
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
+    "weavingRoll": "Earth Potential + Earth Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Earth Mastery",
+    "appliesEffects": [],
+    "deliveryMethod": "automatic",
+    "tags": [
+      "buff",
+      "debuff",
+      "touch",
+      "utility"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!dee7453837660fb7"
+}

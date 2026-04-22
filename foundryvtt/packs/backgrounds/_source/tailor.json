@@ -8,7 +8,7 @@
       "value": "<p>Fabric, thread, and needle were your tools, and with them you created everything from simple work clothes to elaborate gowns. You learned that clothes speak volumes about the wearers status, wealth, taste, even personality. This eye for detail serves you well in any situation.</p>"
     },
     "startingXP": 40,
-    "skillBonuses": "Craft 2, Society 2, Perception 1, Persuasion 1, +40 XP",
+    "skillBonuses": "Craft: Tailor 2, Society 2, Perception 1, Persuasion 1, +40 XP",
     "startingEquipment": "Sewing kit\nfine clothes\nshoes",
     "suggestedFeats": "",
     "features": "Fashion Sense: You understand clothing and status. Can identify someone's social position by their attire, create convincing disguises, and know current fashion trends.",
@@ -21,6 +21,7 @@
       "perception": 1,
       "persuasion": 1
     },
+    "craftKeyword": "Tailor",
     "itemGrants": [
       {
         "mode": "reference",

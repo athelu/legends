@@ -1,0 +1,5 @@
+2026/02/15-13:30:49.306 1230 Delete type=3 #1
+2026/02/15-13:30:49.309 6108 Level-0 table #5: started
+2026/02/15-13:30:49.311 6108 Level-0 table #5: 2941 bytes OK
+2026/02/15-13:30:49.313 6108 Delete type=0 #3
+2026/02/15-13:30:49.313 6108 Manual compaction at level-0 from '!items!drbonus0000000001' @ 72057594037927935 : 1 .. '!items!temphp00000000001' @ 0 : 0; will stop at (end)

@@ -1,0 +1,44 @@
+{
+  "_id": "0e43fc0a3ae894e5",
+  "name": "Rapid Stabilization",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Getting someone out of the dying condition fast means not always elegant.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 3
+      },
+      "skills": "medicine:3",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Stabilize costs 1 [Minor] action instead of 1 [Interact] action. On 2 successes, the creature regains HP equal to your Wisdom score plus your Medicine rank rather than Wisdom alone.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Heal]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!0e43fc0a3ae894e5"
+}

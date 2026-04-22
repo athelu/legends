@@ -1,0 +1,68 @@
+{
+  "_id": "53d9ac84bd55771d",
+  "name": "Rudlu's Fortune",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Target gains +2 Luck for the duration. For saves and complication checks, treat the target's Current Luck as 2 higher, but this weave grants no spendable Luck points. This bonus does not stack with other beneficial Luck modifiers; use the highest bonus.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "range": "Touch",
+    "duration": "1 minute",
+    "target": "single",
+    "savingThrow": "none",
+    "effect": "Target gains +2 Luck for the duration. For saves and complication checks, treat the target's Current Luck as 2 higher, but this weave grants no spendable Luck points. This bonus does not stack with other beneficial Luck modifiers; use the highest bonus.",
+    "effectType": "buff",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
+    },
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
+    "appliesEffects": [],
+    "deliveryMethod": "automatic",
+    "tags": [
+      "buff",
+      "touch",
+      "utility"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!53d9ac84bd55771d"
+}

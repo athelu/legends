@@ -1,0 +1,47 @@
+{
+  "_id": "cbe73374ce6ab1e0",
+  "name": "Resurgence",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Healing builds on itself when you guide it correctly.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 5
+      },
+      "skills": "",
+      "feats": [
+        "Healing Current"
+      ],
+      "tier": 0,
+      "other": "any magical tradition trait, Positive Mastery 4"
+    },
+    "benefits": "<p>When you restore HP to a creature, add your Casting Stat score to the amount healed. This applies to weave-based healing only, not Medicine checks. When you cast a healing weave and achieve 3 or more targeting successes, the target also removes one [Hindered] condition of their choice.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Heal]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!cbe73374ce6ab1e0"
+}

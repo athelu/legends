@@ -20,6 +20,7 @@
       "empathy": 1,
       "history": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

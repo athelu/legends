@@ -42,7 +42,7 @@ export function getExistingPrimaryMagicalTrait(actor) {
   
   const primaryTraits = [
     'mageborn', 'divine gift', 'sorcerous origin', 
-    'invoker', 'infuser', 'eldritch pact', 'alchemical tradition'
+    'invoker', 'infuser', 'eldritch pact', 'alchemical tradition', 'summoner'
   ];
   
   for (const item of actor.items) {
@@ -85,7 +85,7 @@ export function validateMagicalTraitApplication(actor, traitType) {
   
   // Primary magical traits cannot stack
   const primaryTraits = ['mageborn', 'divine-gift', 'sorcerous-origin', 
-                         'invoker', 'infuser', 'eldritch-pact', 'alchemical-tradition'];
+                         'invoker', 'infuser', 'eldritch-pact', 'alchemical-tradition', 'summoner'];
   
   if (primaryTraits.includes(normalizedTraitType)) {
     if (existingTrait) {
@@ -114,7 +114,8 @@ export function detectPrimaryMagicalTrait(actor) {
     { pattern: 'infuser', type: 'infuser' },
     { pattern: 'sorcerous origin', type: 'sorcerous-origin' },
     { pattern: 'eldritch pact', type: 'eldritch-pact' },
-    { pattern: 'alchemical tradition', type: 'alchemical-tradition' }
+    { pattern: 'alchemical tradition', type: 'alchemical-tradition' },
+    { pattern: 'summoner', type: 'summoner' }
   ];
   
   for (const item of actor.items) {
@@ -233,6 +234,10 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
 
     case 'alchemical-tradition':
       break;
+
+    case 'summoner':
+      // Summoner gains access to Summoning weaves — no compendium ability needed
+      break;
   }
   
   // Fetch and create abilities
@@ -277,7 +282,8 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
     'infuser': 'Infuser',
     'sorcerous-origin': 'Sorcerous Origin',
     'eldritch-pact': 'Eldritch Pact',
-    'alchemical-tradition': 'Alchemical Tradition'
+    'alchemical-tradition': 'Alchemical Tradition',
+    'summoner': 'Summoner'
   };
   
   const modeDescriptions = {
@@ -287,15 +293,21 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
   };
   
   const traitName = traitNames[primaryTrait.type] || primaryTrait.type;
-  const modeDesc = primaryTrait.type === 'alchemical-tradition'
+  const noPoolTrait = ['alchemical-tradition', 'summoner'].includes(primaryTrait.type);
+  const modeDesc = noPoolTrait
     ? 'No potential generation required'
     : (modeDescriptions[mode] || 'Standard rolling');
-  const workflowSteps = primaryTrait.type === 'alchemical-tradition'
+  const workflowSteps = noPoolTrait
     ? `
       <ol>
-        <li>Set Intelligence as your effective casting stat</li>
-        <li>Mark Alchemical Tradition as configured on the actor</li>
-        <li>Use Craft: Alchemist and the downtime rules to create preparations</li>
+        ${primaryTrait.type === 'summoner'
+          ? `<li>Choose your Primary Resonance (daemon affinity)</li>
+             <li>Set Charisma as your effective casting stat</li>
+             <li>Gain access to Summoning weaves for all eight energies</li>`
+          : `<li>Set Intelligence as your effective casting stat</li>
+             <li>Mark Alchemical Tradition as configured on the actor</li>
+             <li>Use Craft: Alchemist and the downtime rules to create preparations</li>`
+        }
       </ol>
     `
     : `
@@ -324,6 +336,10 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
               ? `<li>Set Intelligence as your effective casting stat</li>
                  <li>Mark Alchemical Tradition as configured on the actor</li>
                  <li>Use Craft: Alchemist and the downtime rules to create preparations</li>`
+              : primaryTrait.type === 'summoner'
+              ? `<li>Choose your Primary Resonance (daemon affinity)</li>
+                 <li>Set Charisma as your effective casting stat</li>
+                 <li>Gain access to Summoning weaves for all eight energies</li>`
               : `<li>Generating your Magical Potentials</li>
                  <li>Making trait-specific choices</li>
                  <li>Assigning potentials to energy types</li>`
@@ -422,6 +438,9 @@ export async function setupMagicalTraits(actor) {
         break;
       case 'alchemical-tradition':
         success = await applyAlchemicalTraditionWorkflow(actor, primaryTrait.item, mode);
+        break;
+      case 'summoner':
+        success = await applySummonerWorkflow(actor, primaryTrait.item, mode);
         break;
       default:
         ui.notifications.error(`Unknown magical trait type: ${primaryTrait.type}`);
@@ -602,6 +621,52 @@ export const PACT_TYPES = {
     primary: 'fire',
     secondary: 'negative',
     story: "You found/touched/stole something not meant for you. This power wasn't offered—you took it."
+  }
+};
+
+// Summoner Primary Resonance configurations
+export const SUMMONER_RESONANCES = {
+  earth: {
+    name: "Earth — Elementals, Fae, Nephilim",
+    primary: 'earth',
+    secondary: 'water',
+    daemons: ['Elementals', 'Fae', 'Nephilim']
+  },
+  air: {
+    name: "Air — Elementals, Fae, Nephilim",
+    primary: 'air',
+    secondary: 'fire',
+    daemons: ['Elementals', 'Fae', 'Nephilim']
+  },
+  fire: {
+    name: "Fire — Elementals, Fae, Nephilim",
+    primary: 'fire',
+    secondary: 'air',
+    daemons: ['Elementals', 'Fae', 'Nephilim']
+  },
+  water: {
+    name: "Water — Elementals, Fae, Nephilim",
+    primary: 'water',
+    secondary: 'earth',
+    daemons: ['Elementals', 'Fae', 'Nephilim']
+  },
+  positive: {
+    name: "Positive — Outsiders",
+    primary: 'positive',
+    secondary: 'space',
+    daemons: ['Outsiders']
+  },
+  negative: {
+    name: "Negative — Shadow Creatures, Outsiders",
+    primary: 'negative',
+    secondary: 'space',
+    daemons: ['Shadow Creatures', 'Outsiders']
+  },
+  space: {
+    name: "Space — Aberrations",
+    primary: 'space',
+    secondary: 'time',
+    daemons: ['Aberrations']
   }
 };
 
@@ -823,6 +888,46 @@ export async function showPatronDialog() {
           callback: (html) => {
             const patron = html.find('[name="patron"]').val();
             resolve(patron);
+          }
+        }
+      },
+      default: "ok",
+      close: () => resolve(null)
+    });
+    dialog.render(true);
+  });
+}
+
+/**
+ * Show dialog to choose Summoner Primary Resonance
+ * @returns {Promise<string>} Chosen resonance key
+ */
+export async function showPrimaryResonanceDialog() {
+  return new Promise((resolve) => {
+    const resonancesHtml = Object.entries(SUMMONER_RESONANCES).map(([key, data]) =>
+      `<option value="${key}">${data.name}</option>`
+    ).join('');
+    
+    const dialog = new Dialog({
+      title: "Choose Primary Resonance",
+      content: `
+        <form>
+          <div class="form-group">
+            <label>Choose your Primary Resonance:</label>
+            <select id="resonance" name="resonance">
+              ${resonancesHtml}
+            </select>
+          </div>
+          <p><em>Your resonance determines which daemon categories your pneuma naturally attracts and grants bonuses to your primary and secondary energies.</em></p>
+        </form>
+      `,
+      buttons: {
+        ok: {
+          icon: '<i class="fas fa-check"></i>',
+          label: "Confirm",
+          callback: (html) => {
+            const resonance = html.find('[name="resonance"]').val();
+            resolve(resonance);
           }
         }
       },
@@ -1320,7 +1425,76 @@ export async function applyAlchemicalTraditionWorkflow(actor, traitItem, mode) {
 }
 
 /**
- * Infuser workflow - called from setupMagicalTraits()
+ * Summoner workflow - called from setupMagicalTraits()
+ */
+export async function applySummonerWorkflow(actor, traitItem, mode) {
+  ui.notifications.info("Setting up Summoner...");
+
+  // Step 1: Choose Primary Resonance
+  const resonanceKey = await showPrimaryResonanceDialog();
+  if (!resonanceKey) {
+    ui.notifications.warn("Summoner application cancelled");
+    return false;
+  }
+
+  const resonance = SUMMONER_RESONANCES[resonanceKey];
+
+  // Step 2: Roll 8 potentials and apply resonance bonuses
+  const rolls = await rollPotentials(8, mode);
+  const availableRolls = [...rolls];
+
+  const primaryIndex = findOptimalRollForBonus(availableRolls, 2);
+  const primaryRoll = availableRolls.splice(primaryIndex, 1)[0];
+
+  const secondaryIndex = findOptimalRollForBonus(availableRolls, 1);
+  const secondaryRoll = availableRolls.splice(secondaryIndex, 1)[0];
+
+  const preAssigned = {
+    [resonance.primary]: Math.min(primaryRoll + 2, 8),
+    [resonance.secondary]: Math.min(secondaryRoll + 1, 8)
+  };
+
+  // Step 3: Assign remaining rolls
+  const remainingEnergies = ALL_ENERGIES.filter(
+    e => e !== resonance.primary && e !== resonance.secondary
+  );
+  const assignments = await showAssignmentDialog(
+    availableRolls,
+    remainingEnergies,
+    preAssigned
+  );
+
+  if (!assignments) {
+    ui.notifications.warn("Summoner application cancelled");
+    return false;
+  }
+
+  // Step 4: Build updates
+  const updates = {
+    'system.potentials': createPotentialsObject(assignments),
+    'system.mastery': initializeMastery(ALL_ENERGIES),
+    'system.castingStat.value': 'charisma',
+    'system.magicalTrait': {
+      type: 'summoner',
+      subtype: 'summoner',
+      primaryResonance: resonanceKey,
+      primaryEnergy: resonance.primary,
+      secondaryEnergy: resonance.secondary,
+      daemonCategories: resonance.daemons,
+      availableEnergies: ALL_ENERGIES,
+      isSetup: true
+    }
+  };
+
+  await grantMagicalTraitAbilities(actor, 'summoner', updates);
+  await actor.update(updates);
+
+  ui.notifications.info(`Summoner trait applied! Primary Resonance: ${resonance.name}`);
+  return true;
+}
+
+/**
+ * Apply Gifted Mage trait (passive modifier)
  */
 export async function applyInfuserWorkflow(actor, traitItem, mode) {
   ui.notifications.info(`Setting up Infuser (${mode} mode)...`);

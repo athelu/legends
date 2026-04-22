@@ -1,0 +1,48 @@
+{
+  "_id": "b232775a4c6891e2",
+  "name": "Broad Resonance",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your pneuma no longer broadcasts on a single frequency.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 5
+      },
+      "skills": "",
+      "feats": [
+        "Summoner",
+        "Planar Attunement"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>You may call daemon categories from any of the six Primary Resonance energy types. Time-aspected daemons and Drakes remain inaccessible regardless.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Summoner]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!b232775a4c6891e2"
+}

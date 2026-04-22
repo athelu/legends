@@ -21,6 +21,7 @@
       "wilderness": 1,
       "meleeCombat": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

@@ -5,7 +5,6 @@ export const SKILL_LABELS = {
   thievery: 'Thievery',
   writing: 'Writing',
   rangedCombat: 'Ranged Combat',
-  craft: 'Craft',
   acrobatics: 'Acrobatics',
   meleeCombat: 'Melee Combat',
   stealth: 'Stealth',
@@ -32,7 +31,6 @@ export const SKILL_ATTRIBUTE_KEYS = {
   thievery: 'dexterity',
   writing: 'dexterity',
   rangedCombat: 'dexterity',
-  craft: 'dexterity',
   acrobatics: 'agility',
   meleeCombat: 'agility',
   stealth: 'agility',
@@ -59,7 +57,6 @@ export const SKILL_ATTRIBUTE_SHORT = {
   thievery: 'dex',
   writing: 'dex',
   rangedCombat: 'dex',
-  craft: 'dex',
   acrobatics: 'agi',
   meleeCombat: 'agi',
   stealth: 'agi',
@@ -79,6 +76,9 @@ export const SKILL_ATTRIBUTE_SHORT = {
   deception: 'cha'
 };
 
+export const CRAFT_SKILL_ATTRIBUTE = 'dexterity';
+export const CRAFT_SKILL_ATTRIBUTE_SHORT = 'dex';
+
 export const LEGACY_SKILL_KEYS = {
   wilderness: ['survival'],
   empathy: ['insight']
@@ -90,7 +90,6 @@ const RAW_SKILL_ALIASES = {
   devices: 'devices',
   thievery: 'thievery',
   writing: 'writing',
-  craft: 'craft',
   acrobatics: 'acrobatics',
   stealth: 'stealth',
   language: 'language',

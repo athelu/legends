@@ -8,7 +8,7 @@
       "value": "<p>You've spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else's command. At least now when you're risking your life there's treasure involved instead of just a silver a day and aching muscles.</p>"
     },
     "startingXP": 40,
-    "skillBonuses": "Might 2, Athletics 2, Devices 1, Craft 1, +40 XP",
+    "skillBonuses": "Might 2, Athletics 2, Devices 1, Craft: Mason 1, +40 XP",
     "startingEquipment": "Work clothes\nwork gloves\nwork boots",
     "suggestedFeats": "",
     "features": "Hard Worker: You can find manual labor work in any settlement and are trusted by working folk.",
@@ -21,6 +21,7 @@
       "devices": 1,
       "craft": 1
     },
+    "craftKeyword": "Mason",
     "itemGrants": [
       {
         "mode": "reference",

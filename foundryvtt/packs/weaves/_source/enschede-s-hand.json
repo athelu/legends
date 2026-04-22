@@ -1,0 +1,68 @@
+{
+  "_id": "2a969008075e2ced",
+  "name": "Enschede's Hand",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Target gains +2 Dexterity for the duration. Recalculate Dexterity-based checks and combat values. This bonus does not stack with other beneficial Dexterity modifiers; use the highest bonus.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 3
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 2
+      }
+    },
+    "range": "Touch",
+    "duration": "1 minute",
+    "target": "single",
+    "savingThrow": "none",
+    "effect": "Target gains +2 Dexterity for the duration. Recalculate Dexterity-based checks and combat values. This bonus does not stack with other beneficial Dexterity modifiers; use the highest bonus.",
+    "effectType": "buff",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 round",
+          "duration": "1 round"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "1 minute",
+          "duration": "1 minute"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "10 minutes",
+          "duration": "10 minutes"
+        }
+      }
+    },
+    "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
+    "appliesEffects": [],
+    "deliveryMethod": "automatic",
+    "tags": [
+      "buff",
+      "touch",
+      "utility"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!2a969008075e2ced"
+}

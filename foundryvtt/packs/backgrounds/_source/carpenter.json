@@ -8,7 +8,7 @@
       "value": "<p>Every beam tells a story about stress and weight, every joint reveals the skill of its maker. You shaped wood into structures that will outlast you, learning patience and precision in equal measure. Adventuring might represent a departure from your careful craft, but the ability to assess a structure's integrity has saved your life more than once. Wood isn't the only thing that breaks in predictable ways.</p>"
     },
     "startingXP": 40,
-    "skillBonuses": "Craft 2, Might 2, Devices 1, Perception 1, +40 XP",
+    "skillBonuses": "Craft: Woodworker 2, Might 2, Devices 1, Perception 1, +40 XP",
     "startingEquipment": "Carpenter's tools\nwork clothes\nwork boots\nwork gloves",
     "suggestedFeats": "",
     "features": "Structural Assessment: You can quickly evaluate the integrity of wooden structures and identify construction methods.",
@@ -21,6 +21,7 @@
       "devices": 1,
       "perception": 1
     },
+    "craftKeyword": "Woodworker",
     "itemGrants": [
       {
         "mode": "reference",

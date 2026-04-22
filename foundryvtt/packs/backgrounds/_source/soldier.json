@@ -20,6 +20,7 @@
       "athletics": 1,
       "intimidate": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

@@ -1,0 +1,44 @@
+{
+  "_id": "f322d4190c997819",
+  "name": "Restorative Touch",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have learned to read what a wound actually needs.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 3
+      },
+      "skills": "medicine:3",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you use Field Dressing, Administered Treatment, or Evening Treatment, add your Medicine rank to the HP restored in addition to the standard formula. This applies to your own self-treatment where permitted</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Heal]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!f322d4190c997819"
+}

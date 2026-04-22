@@ -1,0 +1,44 @@
+{
+  "_id": "412d29e9f943e324",
+  "name": "Lingering Toxin",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The dose that doesn't drop them keeps working.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 3
+      },
+      "skills": "wilderness:3, medicine:3",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When a creature makes a successful [[/save type=fortitude]] against a poison you applied or created, they gain the Poisoned (Weak) condition for 1 round instead of suffering no effect. A critical success (2 successes) on their save still negates entirely.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Poisoner]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!412d29e9f943e324"
+}

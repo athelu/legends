@@ -1,0 +1,47 @@
+{
+  "_id": "087c763b7c712431",
+  "name": "Resonant Call",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The signal reaches further without losing fidelity.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "",
+      "feats": [
+        "Summoner"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Reduce the summoning Tier gap penalty by 1 (minimum 0).</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Summoner]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!087c763b7c712431"
+}

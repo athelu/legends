@@ -176,6 +176,13 @@ When creating new feats, follow these guidelines:
 **Description:** When you speak something's true name as part of a binding weave, the magic carries an authority that transcends ordinary compulsion.
 **Benefit:** When you cast a control or compulsion weave against a creature you have used True Name Seeker on, that creature adds 1 to both saving throw dice. Additionally, if the creature fails its save, the condition duration increases by one step on the duration table. This benefit applies once per creature per encounter.
 
+#### Broad Resonance
+**Prerequisites:** Summoner trait, Cha 5, Planar Attunement feat
+**Usage:** Passive
+**Keyword:** [Magic], [Summoner]
+**Description:** Your pneuma no longer broadcasts on a single frequency.
+**Benefit:** You may call daemon categories from any of the six Primary Resonance energy types. Time-aspected daemons and Drakes remain inaccessible regardless.
+
 #### Brutal Critical
 **Prerequisites:** Str 5, Melee 5, Primal Fury feat
 **Usage:** Passive, requires Primal Fury active
@@ -224,6 +231,13 @@ When creating new feats, follow these guidelines:
     - **3-4 total successes:** Deal 12 damage, choose damage type or split
     - **1-2 total successes:** Deal 8 damage, choose damage type or split
     - **0 successes:** Deal 4, choose type
+
+#### Compelling Presence
+**Prerequisites:** Summoner trait, Cha 4
+**Usage:** Passive
+**Keyword:** [Magic], [Summoner]
+**Description:** What answers your call arrives better disposed than it might otherwise choose to be.
+**Benefit:** Add 1 to targeting successes when determining disposition, to a maximum of 3. A result of 1 becomes 2, a result of 2 becomes 3. A failed summon (0 successes) is unaffected.
 
 #### Compounding Toxins
 **Prerequisites:** Dex 4, Medicine or Wilderness 4
@@ -338,6 +352,13 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Keyword:** [Magic], [Mageborn]
 **Description:** You have learned to push Ritual Casting into territory that defies what combat magic can accomplish.
 **Benefit:** When using Ritual Casting, you may now select two benefits from the Ritual Mastery list instead of one. Additionally, you may extend duration up to two steps on the duration table instead of one.
+
+#### Deepened Bond
+**Prerequisites:** Summoner trait, Cha 5, Compelling Presence feat
+**Usage:** Passive, once per long rest special
+**Keyword:** [Magic], [Summoner]
+**Description:** Some daemons have answered your call enough times that the relationship has become something more than transactional.
+**Benefit:** Choose one creature type from the established daemon taxonomy (Elementals, Fae, Nephilim, Outsiders, Shadow plane creatures, or Aberrations). Creatures of that type always arrive at minimum Cooperative disposition regardless of targeting roll result, provided the weaving roll succeeds. Once per long rest, a creature of that type arrives Friendly automatically without requiring a targeting roll.
 
 #### Deflect Missiles
 **Prerequisites:** Agi 4, Dex 3
@@ -559,6 +580,13 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Keyword:** [Magic], [Infuser
 **Description:** Through obsessive study of how magical energy degrades within matter, you have found ways to slow the inevitable decay.
 **Benefit:** Your Imbue Item duration increases from 1 minute to 10 minutes. Your Prepared Infusions now persist until the end of your next long rest rather than expiring at long rest. Additionally you may now prepare up to four dormant infusions instead of two.
+
+#### Extended Tether
+**Prerequisites:** Summoner trait, Cha 4, Time Mastery 3
+**Usage:** Passive
+**Keyword:** [Magic], [Summoner]
+**Description:** The connection holds longer for the same expenditure.
+**Benefit:** When casting a summoning weave, extend the duration one step on the duration table at no additional Time energy cost.
 
 #### Fast Healer
 **Prerequisites:** Con 4
@@ -975,6 +1003,13 @@ This ability does not reveal magically concealed information and cannot compel a
 **Description:** For one minute, you stop stealing and simply live inside the current. Every weave finds its harmony naturally.
 **Benefit:** Once per long rest, you can enter a state of "Perfect Harmony" for 1 minute. During this time, every weave you cast automatically benefits from Harmonic Weaving (reroll one die per weave) without expending uses. You still have your normal Harmonic uses after this ends
 
+#### Planar Attunement
+**Prerequisites:** Summoner trait, Cha 3, chosen energy Mastery 3
+**Usage:** Passive
+**Keyword:** [Magic], [Summoner]
+**Description:** Your pneuma has learned a second frequency.
+**Benefit:** Choose one daemon category outside your Primary Resonance (Elementals, Fae, Nephilim, Outsiders, Shadow plane creatures, or Aberrations) and its corresponding energy. Your summoning weaves using that energy treat your Mastery in it as 2 higher for weaving rolls only. Can be taken multiple times for different categories.
+
 #### Pneuma Burst
 **Prerequisites:** Pneuma Strike (any element), Elemental Burst, any elemental Mastery 6
 **Usage:** Enhancement to Elemental Burst
@@ -1141,6 +1176,13 @@ This ability does not reveal magically concealed information and cannot compel a
 **Keyword:** [Save], [General]
 **Description:** What would leave another person struggling to recover, you shake off, or at least cut short.
 **Benefit:** Fortitude saves: subtract 1 from die results; success on ongoing effect ends it
+
+#### Resonant Call
+**Prerequisites:** Summoner trait, Cha 4
+**Usage:** Passive
+**Keyword:** [Magic], [Summoner]
+**Description:** The signal reaches further without losing fidelity.
+**Benefit:** Reduce the summoning Tier gap penalty by 1 (minimum 0).
 
 #### Resonant Words
 **Prerequisites:** Invoker trait, Cha 3
@@ -1432,6 +1474,13 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
 **Description:** Every creature has a true name woven into its nature. You have learned to listen for the echo of it.
 **Benefit:** As a [Minor] action, study one creature you can see within 60 feet. Make a Charisma + Arcane check (Hard task, 2 successes). On success, you learn the creature's dominant energy type, any immunities or resistances, and whether it is susceptible to compulsion effects. Until the end of the encounter, your weaves targeting that creature subtract 1 from one targeting die of your choice. You may use this once per short rest.
 
+#### Twin Calling
+**Prerequisites:** Summoner trait, Cha 5, Resonant Call feat
+**Usage:** Once per short rest
+**Keyword:** [Magic], [Summoner]
+**Description:** Two signals sent simultaneously, both answered.
+**Benefit:** Once per short rest, summon two creatures with a single summoning weave. Pay energy cost for each creature separately. Make one weaving roll applied to both summons. Make separate targeting rolls for each creature's disposition.
+
 #### Two-Weapon Fighting
 **Prerequisites:** Agi 4, Dex 3
 **Usage:** Passive
@@ -1670,6 +1719,13 @@ Legendary feats count toward the standard feat limits. The only difference is th
 - A weapon that permanently deals +8 elemental damage of your chosen type on every hit
 - Armor with permanently +4 DR
 - An object that permanently grants the bearer Fortune on one specific skill of your choice when held.
+
+#### Master of the Between
+**Prerequisites:** Summoner trait, Cha 7, Broad Resonance feat, Deepened Bond feat
+**Usage:** Passive benefits always active; special ability once per long rest
+**Keyword:** [Magic], [Summoner]
+**Description:** The planes know your name the way you know theirs.
+**Benefit:** Your summoning limit increases by 2 (Charisma score + 2 combined Tier). The Tier gap penalty no longer applies to creatures within your Deepened Bond creature type. Once per long rest, call a creature whose Tier would exceed your Charisma-based summoning limit by 1. This creature arrives Friendly regardless of targeting roll and remains for 10 minutes at no additional energy cost beyond the initial summoning weave. Time-aspected daemons and Drakes remain inaccessible through this feat.
 
 #### Master Poisoner
 **Prerequisites:** Dex 6, Craft: Alchemist 6, Toxin Amplifier feat, Paralytic Expertise feat

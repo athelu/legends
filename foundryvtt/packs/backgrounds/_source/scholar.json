@@ -19,6 +19,7 @@
       "history": 3,
       "society": 2
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

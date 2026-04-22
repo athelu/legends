@@ -21,6 +21,7 @@
       "intimidate": 1,
       "society": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "choice",
