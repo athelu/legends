@@ -1,0 +1,106 @@
+{
+  "_id": "elveye0000000001",
+  "_key": "!tables!elveye0000000001",
+  "name": "Elven Eye Color (d8)",
+  "img": "icons/svg/d8.svg",
+  "description": "<p>Roll 1d8 to determine your elven character's eye color. Elves can have unusual tints such as blue with green flecks, gray with violet hints, or green with gold specks.</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "r0000000000000001",
+      "_key": "!tables.results!elveye0000000001.r0000000000000001",
+      "type": 0,
+      "text": "<strong>Blue</strong> — Clear sky blue to deep sapphire",
+      "img": "icons/svg/d8.svg",
+      "range": [1, 1],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000002",
+      "_key": "!tables.results!elveye0000000001.r0000000000000002",
+      "type": 0,
+      "text": "<strong>Brown</strong> — Light hazel to deep chocolate",
+      "img": "icons/svg/d8.svg",
+      "range": [2, 2],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000003",
+      "_key": "!tables.results!elveye0000000001.r0000000000000003",
+      "type": 0,
+      "text": "<strong>Green</strong> — Emerald to forest green",
+      "img": "icons/svg/d8.svg",
+      "range": [3, 3],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000004",
+      "_key": "!tables.results!elveye0000000001.r0000000000000004",
+      "type": 0,
+      "text": "<strong>Gray</strong> — Pale silver to storm gray",
+      "img": "icons/svg/d8.svg",
+      "range": [4, 4],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000005",
+      "_key": "!tables.results!elveye0000000001.r0000000000000005",
+      "type": 0,
+      "text": "<strong>Amber</strong> — Golden honey to burnished copper",
+      "img": "icons/svg/d8.svg",
+      "range": [5, 5],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000006",
+      "_key": "!tables.results!elveye0000000001.r0000000000000006",
+      "type": 0,
+      "text": "<strong>Violet</strong> — Lavender to deep purple",
+      "img": "icons/svg/d8.svg",
+      "range": [6, 6],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000007",
+      "_key": "!tables.results!elveye0000000001.r0000000000000007",
+      "type": 0,
+      "text": "<strong>Orange</strong> — Pale orange to deep sunset",
+      "img": "icons/svg/d8.svg",
+      "range": [7, 7],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000008",
+      "_key": "!tables.results!elveye0000000001.r0000000000000008",
+      "type": 0,
+      "text": "<strong>Unusual</strong> — Heterochromia or a rare tinted shade. Roll twice for heterochromia, or choose a tinted example: blue with green flecks, brown with amber rings, gray with violet hints, or green with gold specks.",
+      "img": "icons/svg/d8.svg",
+      "range": [8, 8],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

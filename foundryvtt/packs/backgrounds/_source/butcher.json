@@ -8,7 +8,7 @@
       "value": "<p>Your apprenticeship involved sharp knives, practical anatomy, and an understanding of how to get the best cuts. The work was bloody, demanding, and surprisingly educational. You know more about sinew and bone than most people ever will.</p>"
     },
     "startingXP": 40,
-    "skillBonuses": "Might 2, Medicine 2, Craft 1, Society 1, +40 XP",
+    "skillBonuses": "Might 2, Medicine 2, Craft: Cook 1, Society 1, +40 XP",
     "startingEquipment": "Cleaver\napron\nmeat hook\nwork clothes\nwork boots",
     "suggestedFeats": "",
     "features": "Anatomy Knowledge: You know the best cuts and methods for processing animals.",
@@ -21,6 +21,7 @@
       "craft": 1,
       "society": 1
     },
+    "craftKeyword": "Cook",
     "itemGrants": [
       {
         "mode": "reference",

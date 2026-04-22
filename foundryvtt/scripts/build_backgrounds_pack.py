@@ -178,6 +178,7 @@ def load_source_catalog(script_dir: Path):
 def parse_skill_bonuses(text: str):
     skills = {}
     starting_xp = 0
+    craft_keyword = None  # populated when a Craft: Keyword N entry is found
 
     for raw_part in text.split(','):
         part = raw_part.strip()
@@ -187,6 +188,16 @@ def parse_skill_bonuses(text: str):
         xp_match = re.match(r'^\+?(\d+)\s*xp$', part, flags=re.IGNORECASE)
         if xp_match:
             starting_xp = int(xp_match.group(1))
+            continue
+
+        # Handle "Craft: Keyword N" and "Craft: (choice) N"
+        craft_kw_match = re.match(r'^[Cc]raft\s*:\s*(.+?)\s+(\d+)$', part)
+        if craft_kw_match:
+            keyword = craft_kw_match.group(1).strip()
+            rank = int(craft_kw_match.group(2))
+            skills['craft'] = rank
+            # Record keyword; "(choice)" means player picks at character creation
+            craft_keyword = keyword
             continue
 
         skill_match = re.match(r'^(.+?)\s+(\d+)$', part)
@@ -200,7 +211,7 @@ def parse_skill_bonuses(text: str):
 
         skills[skill_key] = int(skill_match.group(2))
 
-    return skills, starting_xp
+    return skills, starting_xp, craft_keyword
 
 
 def resolve_item_grant(raw_entry: str, catalog: dict):
@@ -293,7 +304,7 @@ def parse_backgrounds_md(md_file):
             elif stripped:
                 description_lines.append(stripped)
 
-        granted_skills, starting_xp = parse_skill_bonuses(skills_text)
+        granted_skills, starting_xp, craft_keyword = parse_skill_bonuses(skills_text)
         item_grants = [grant for grant in (resolve_item_grant(entry, catalog) for entry in re.split(r'\r?\n|,', equipment_text)) if grant]
 
         item = {
@@ -312,6 +323,7 @@ def parse_backgrounds_md(md_file):
                 'traits': '',
                 'notes': '',
                 'grantedSkills': granted_skills,
+                'craftKeyword': craft_keyword,
                 'itemGrants': item_grants,
             },
             'effects': []

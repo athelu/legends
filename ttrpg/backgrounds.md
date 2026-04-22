@@ -37,7 +37,7 @@ Crumbling ruins called to you louder than the comforts of civilization. You've s
 
 #### Artisan
 As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith's apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships. Your guild connections remain strong which is useful when you need work, materials, or a favor.
-**Skills:** Craft 2, Society 2, Persuasion 1, Devices 1, +40 XP
+**Skills:** Craft: (choice) 2, Society 2, Persuasion 1, Devices 1, +40 XP
 **Equipment:** Artisan's tools (choose type), common clothes, belt pouch, shoes
 **Feature** - Guild Membership: You have connections with artisan guilds. Can find work, get fair prices on materials, and access guild resources in cities.
 
@@ -79,13 +79,13 @@ Numbers don't lie, but the people who record them often do. You spent your days 
 
 #### Butcher
 Your apprenticeship involved sharp knives, practical anatomy, and an understanding of how to get the best cuts. The work was bloody, demanding, and surprisingly educational. You know more about sinew and bone than most people ever will.
-**Skills:** Might 2, Medicine 2, Craft 1, Society 1, +40 XP
+**Skills:** Might 2, Medicine 2, Craft: Cook 1, Society 1, +40 XP
 **Equipment:** Cleaver, apron, meat hook, work clothes, work boots
 **Feature** - Anatomy Knowledge: You know the best cuts and methods for processing animals.
 
 #### Carpenter
 Every beam tells a story about stress and weight, every joint reveals the skill of its maker. You shaped wood into structures that will outlast you, learning patience and precision in equal measure. Adventuring might represent a departure from your careful craft, but the ability to assess a structure's integrity has saved your life more than once. Wood isn't the only thing that breaks in predictable ways.
-**Skills:** Craft 2, Might 2, Devices 1, Perception 1, +40 XP
+**Skills:** Craft: Woodworker 2, Might 2, Devices 1, Perception 1, +40 XP
 **Equipment:** Carpenter's tools, work clothes, work boots, work gloves
 **Feature** - Structural Assessment: You can quickly evaluate the integrity of wooden structures and identify construction methods.
 
@@ -97,7 +97,7 @@ You traveled from place to place, peddling false fortunes in one town, pretendin
 
 #### Cook
 You transformed ingredients into something that warmed both body and spirit. Whether you worked in a noble's kitchen with exotic spices or a roadside inn with whatever was available, you understand that a good meal creates community. Adventuring might pay better than kitchen work, but you still find yourself feeding your companions.
-**Skills:** Craft 2, Wilderness 2, Perception 1, Society 1, +40 XP
+**Skills:** Craft: Cook 2, Wilderness 2, Perception 1, Society 1, +40 XP
 **Equipment:** Apron, work clothes, shoes
 **Feature** - Comfort Food: Meals you prepare during rests grant one additional HP recovery (once per rest, applies to whole party).
 
@@ -133,13 +133,13 @@ You might have been an actor, a dancer, a musician, a street magician, or any ot
 
 #### Farmer
 With a strong back and an understanding of seasonal cycles, you tilled the land and tended crops. Your farm could have been razed by invaders, you could have lost the family tying you to the land, or you might have simply tired of the drudgery. Whatever the reason, you still find yourself reading the weather and judging soil quality out of habit.
-**Skills:** Wilderness 2, Might 2, Athletics 1, Craft 1, +40 XP
+**Skills:** Wilderness 2, Might 2, Athletics 1, Craft: Cook 1, +40 XP
 **Equipment:** Common clothes, work gloves, work boots
 **Feature** - Rural Knowledge: You understand seasons, weather, and crops, gaining useful insights about agricultural communities.
 
 #### Fisher
 The water was your livelihood and your teacher. You might have left because the catches grew thin, or perhaps you realized the biggest fish weren't in the water at all. Either way, patience is a virtue you've mastered, and the sea's lessons apply to more than just fishing.
-**Skills:** Wilderness 2, Athletics 2, Perception 1, Craft 1, +40 XP
+**Skills:** Wilderness 2, Athletics 2, Perception 1, Craft: Cook 1, +40 XP
 **Equipment:** Net, common clothes, shoes
 **Feature** - Water Sense: You understand water, tides, and aquatic life.
 
@@ -181,7 +181,7 @@ You made your living uncovering truths that others wanted hidden. You developed 
 
 #### Laborer
 You've spent years performing arduous physical labor. It was a difficult life, but you somehow survived. You may have embraced adventuring as an easier method to make your way in the world, or you might adventure under someone else's command. At least now when you're risking your life there's treasure involved instead of just a silver a day and aching muscles.
-**Skills:** Might 2, Athletics 2, Devices 1, Craft 1, +40 XP
+**Skills:** Might 2, Athletics 2, Devices 1, Craft: Mason 1, +40 XP
 **Equipment:** Work clothes, work gloves, work boots
 **Feature** - Hard Worker: You can find manual labor work in any settlement and are trusted by working folk.
 
@@ -199,7 +199,7 @@ Bringing in lawbreakers or fighting in petty wars lined your pockets. Maybe you 
 
 #### Miner
 You earned a living wrenching precious minerals from the lightless depths of the earth. Adventuring might have seemed lucrative or glamorous compared to this backbreaking labor and if you have to head back underground, this time you plan to do so armed with a real weapon instead of a miner's pick. At least now the things trying to kill you might be guarding treasure instead of just being cave-ins.
-**Skills:** Might 2, Athletics 2, Perception 1, Craft 1, +40 XP
+**Skills:** Might 2, Athletics 2, Perception 1, Craft: Mason 1, +40 XP
 **Equipment:** Lantern, work clothes, hemp rope, work boots
 **Feature** - Underground Sense: You can navigate underground spaces and identify minerals and stone quality.
 
@@ -253,7 +253,7 @@ You spent long days and nights watching over flocks, responsible for their safet
 
 #### Smith
 Fire, hammer, and patience were your tools and your teachers. You shaped metal into tools, weapons, and art, learning that true craftsmanship cannot be rushed. It could be that you tired of making swords for others to wield, or the business was no longer supporting you. You understand the value of good equipment, and you know how to keep it maintained in the field. Your companions will thank you for that.
-**Skills:** Craft 3, Might 2, +32 XP
+**Skills:** Craft: Blacksmith 3, Might 2, +32 XP
 **Equipment:** Smith's tools, hammer, apron, work gloves, work clothes, work boots
 **Feature** - Master Craftsman: You can repair weapons and armor in the field, assess metal quality and craftsmanship, and create or modify metal items with proper materials and time.
 
@@ -277,7 +277,7 @@ You served a knight or noble warrior, learning combat, chivalry, and the respons
 
 #### Tailor
 Fabric, thread, and needle were your tools, and with them you created everything from simple work clothes to elaborate gowns. You learned that clothes speak volumes about the wearers status, wealth, taste, even personality. This eye for detail serves you well in any situation.
-**Skills:** Craft 2, Society 2, Perception 1, Persuasion 1, +40 XP
+**Skills:** Craft: Tailor 2, Society 2, Perception 1, Persuasion 1, +40 XP
 **Equipment:** Sewing kit, fine clothes, shoes
 **Feature** - Fashion Sense: You understand clothing and status. Can identify someone's social position by their attire, create convincing disguises, and know current fashion trends.
 

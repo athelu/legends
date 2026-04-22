@@ -1,0 +1,48 @@
+{
+  "_id": "882281211f9032c0",
+  "name": "Master Poisoner",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have spent years studying what the body can withstand and, more importantly, what it cannot.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 6
+      },
+      "skills": "craft:6",
+      "feats": [
+        "Toxin Amplifier",
+        "Paralytic Expertise"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your poisoncraft gains the following permanent abilities.</p>\n<ul>\n<li><strong>Insidious Formulation:</strong> Creatures with resistance or immunity to poison damage or the Poisoned condition still take half damage from your poison preparations and must still make saves, though they add 2 to both save dice. Constructs and undead remain fully immune.</li>\n<li><strong>Precise Dose:</strong> When a creature fails a save against your poison by 2 or more net successes apply one additional condition from the following: Blinded, Weakened, Slowed (Major), or Disoriented. This condition lasts until the Poisoned condition is cured.</li>\n<li><strong>Signature Toxin:</strong> Once per long rest you may prepare one dose of your Signature Toxin. It functions as a Poisoned (Deadly) preparation with the following additional properties: it cannot be detected by smell or taste, the incubation delay before symptoms manifest is up to 1 hour at your discretion, and it bypasses the insidious formulation penalty for resistant creatures (they make saves at normal difficulty). The dose expires after 24 hours.</li>\n</ul>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "1"
+      },
+      "text": "Passive; Signature Toxin once per long rest"
+    },
+    "keywords": [
+      "[Poisoner]",
+      "[Alchemist]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!882281211f9032c0"
+}

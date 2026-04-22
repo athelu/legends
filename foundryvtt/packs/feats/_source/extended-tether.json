@@ -1,0 +1,47 @@
+{
+  "_id": "d2db973f15960547",
+  "name": "Extended Tether",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The connection holds longer for the same expenditure.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "",
+      "feats": [
+        "Summoner"
+      ],
+      "tier": 0,
+      "other": "Time Mastery 3"
+    },
+    "benefits": "<p>When casting a summoning weave, extend the duration one step on the duration table at no additional Time energy cost.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Summoner]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!d2db973f15960547"
+}

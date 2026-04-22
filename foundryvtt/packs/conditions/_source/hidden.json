@@ -5,7 +5,7 @@
   "img": "icons/svg/invisible.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Tactical] <strong>Effect:</strong> Your location is unknown; enemies do not know which square you occupy. This commonly applies in darkness, magical darkness, or when invisibility and terrain fully obscure you. Enemies cannot directly target you with attacks or single-target weaves. While hidden you have Fortune on your first [combat] action. Making a [combat] action removes the hidden condition. <strong>Recovery:</strong> Opposed by Observers [[/check skill=perception]]</p>"
+      "value": "<p><strong>Keyword:</strong> [Tactical] <strong>Effect:</strong> Your location is unknown; enemies do not know which square you occupy. Enemies cannot directly target you with attacks or single-target weaves. While hidden you have Fortune on your first [combat] action. Making a [combat] action removes the hidden condition. <strong>Recovery:</strong> Opposed by Observers [[/check skill=perception]]</p>"
     },
     "label": "Hidden",
     "category": "visibility",

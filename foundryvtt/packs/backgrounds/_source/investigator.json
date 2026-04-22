@@ -19,6 +19,7 @@
       "investigate": 3,
       "perception": 2
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

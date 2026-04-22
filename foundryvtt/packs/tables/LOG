@@ -1,0 +1,15 @@
+2026/04/22-19:13:12.605 4a90 Recovering log #13
+2026/04/22-19:13:12.610 4a90 Delete type=0 #13
+2026/04/22-19:13:12.610 4a90 Delete type=3 #11
+2026/04/22-19:13:12.615 634 Level-0 table #19: started
+2026/04/22-19:13:12.617 634 Level-0 table #19: 13859 bytes OK
+2026/04/22-19:13:12.619 634 Delete type=0 #17
+2026/04/22-19:13:12.619 634 Manual compaction at level-0 from '!tables!a1b2c3d4e5f60001' @ 72057594037927935 : 1 .. '!tables.results!humhtx0000000001.r0000000000000008' @ 0 : 0; will stop at (end)
+2026/04/22-19:13:12.619 634 Manual compaction at level-1 from '!tables!a1b2c3d4e5f60001' @ 72057594037927935 : 1 .. '!tables.results!humhtx0000000001.r0000000000000008' @ 0 : 0; will stop at '!tables.results!humhtx0000000001.r0000000000000008' @ 254 : 1
+2026/04/22-19:13:12.620 634 Compacting 1@1 + 1@2 files
+2026/04/22-19:13:12.622 634 Generated table #20@1: 119 keys, 13859 bytes
+2026/04/22-19:13:12.622 634 Compacted 1@1 + 1@2 files => 13859 bytes
+2026/04/22-19:13:12.623 634 compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/04/22-19:13:12.624 634 Delete type=2 #15
+2026/04/22-19:13:12.624 634 Delete type=2 #19
+2026/04/22-19:13:12.624 634 Manual compaction at level-1 from '!tables.results!humhtx0000000001.r0000000000000008' @ 254 : 1 .. '!tables.results!humhtx0000000001.r0000000000000008' @ 0 : 0; will stop at (end)

@@ -19,6 +19,7 @@
       "history": 3,
       "investigate": 2
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

@@ -44,6 +44,13 @@ export function normalizeTrainingState(trainingState = {}) {
     normalized.mastery[key] = normalizeBoolean(inputMastery[key]);
   }
 
+  // Pass through craft skills training (dynamic keys)
+  const craftSkills = {};
+  for (const [keyword, value] of Object.entries(trainingState?.craftSkills || {})) {
+    craftSkills[keyword] = normalizeBoolean(value);
+  }
+  normalized.craftSkills = craftSkills;
+
   return normalized;
 }
 
@@ -64,6 +71,7 @@ export function hasMasteryCheckbox(actor, masteryKey) {
 function getTrainingPath(type, key) {
   if (type === 'skill') return `system.training.skills.${key}`;
   if (type === 'mastery') return `system.training.mastery.${key}`;
+  if (type === 'craftSkill') return `system.training.craftSkills.${key}`;
   return '';
 }
 
@@ -77,7 +85,9 @@ export async function setTrainingCheckbox(actor, type, key, checked, { notify = 
   await actor.update({ [path]: value });
 
   if (notify) {
-    const label = type === 'mastery' ? (MASTERY_LABELS[key] || key) : (SKILL_LABELS[key] || key);
+    const label = type === 'mastery' ? (MASTERY_LABELS[key] || key)
+      : type === 'craftSkill' ? `Craft: ${key}`
+      : (SKILL_LABELS[key] || key);
     ui.notifications.info(`${label} checkbox ${value ? 'marked' : 'cleared'} for ${actor.name}.`);
   }
 
@@ -115,7 +125,9 @@ export async function toggleTrainingCheckbox(actor, type, key, options = {}) {
 
   const checked = type === 'mastery'
     ? hasMasteryCheckbox(actor, key)
-    : hasSkillCheckbox(actor, key);
+    : type === 'craftSkill'
+      ? Boolean(actor?.system?.training?.craftSkills?.[key])
+      : hasSkillCheckbox(actor, key);
 
   return setTrainingCheckbox(actor, type, key, !checked, options);
 }

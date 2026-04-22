@@ -21,6 +21,7 @@
       "perception": 1,
       "wilderness": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

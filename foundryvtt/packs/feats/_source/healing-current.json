@@ -1,0 +1,45 @@
+{
+  "_id": "a4b94d5db79e4a31",
+  "name": "Healing Current",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The flow of energy lingers after the weave completes.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 4
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 0,
+      "other": "any magical tradition trait, positive energy Mastery 3"
+    },
+    "benefits": "<p>When you cast a healing weave targeting a creature at 0 HP or below, they regain consciousness immediately and stand up as a [Free] action. Additionally, when you cast any Positive-primary healing weave, the target gains temporary HP equal to your Wisdom score that last until the next long rest. This temporary HP is applied after the healing resolves and does not count toward any healing totals.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive, triggers when you cast healing weaves"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Heal]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!a4b94d5db79e4a31"
+}

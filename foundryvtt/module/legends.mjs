@@ -459,6 +459,7 @@ Hooks.once('init', async function() {
 
     // Rolling functions
     rollSkillCheck,
+    rollCraftSkillCheck,
     rollSavingThrow,
     rollInitiative,
     rollWeave,
@@ -912,6 +913,38 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
       defaultApplyToSkill: rollData.defaultApplyToSkill ?? defaultApplyToSkill,
       defaultFortune: rollData.fortune || 0,
       defaultMisfortune: rollData.misfortune || 0,
+      onRollComplete,
+    });
+  }
+
+
+/**
+ * Roll a craft skill check for a specific keyword (e.g. Blacksmith, Cook).
+ * Craft skills always use Dexterity as their governing attribute.
+ */
+  export async function rollCraftSkillCheck(actor, keyword, options = {}) {
+    const { onRollComplete = null } = options;
+    const rank = Number(actor.system.craftSkills?.[keyword] ?? 0);
+    const attrKey = 'dexterity';
+    const attr = actor.system.attributesEffective?.[attrKey]
+      ? { value: actor.system.attributesEffective[attrKey], label: 'Dexterity' }
+      : actor.system.attributes?.[attrKey];
+    if (!attr) {
+      ui.notifications.error('Dexterity attribute not found.');
+      return;
+    }
+    return dice.showSkillCheckDialog({
+      actor,
+      skillKey: `craft:${keyword}`,
+      attrValue: attr.value,
+      skillValue: rank,
+      attrLabel: 'Dex',
+      skillLabel: `Craft: ${keyword}`,
+      defaultModifier: 0,
+      defaultApplyToAttr: true,
+      defaultApplyToSkill: true,
+      defaultFortune: 0,
+      defaultMisfortune: 0,
       onRollComplete,
     });
   }

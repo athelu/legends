@@ -1,0 +1,106 @@
+{
+  "_id": "humhgt0000000001",
+  "_key": "!tables!humhgt0000000001",
+  "name": "Human Height & Build (d8)",
+  "img": "icons/svg/d8.svg",
+  "description": "<p>Roll 1d8 to determine your human character's height and build. After rolling, you may adjust height by ±2 inches and weight by ±15 lbs to taste.</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "r0000000000000001",
+      "_key": "!tables.results!humhgt0000000001.r0000000000000001",
+      "type": 0,
+      "text": "<strong>Frail/Petite</strong> — Male: 5'0\", 90 lbs | Female: 5'0\", 90 lbs",
+      "img": "icons/svg/d8.svg",
+      "range": [1, 1],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000002",
+      "_key": "!tables.results!humhgt0000000001.r0000000000000002",
+      "type": 0,
+      "text": "<strong>Lean/Skinny</strong> — Male: 5'3\", 120 lbs | Female: 5'2\", 100 lbs",
+      "img": "icons/svg/d8.svg",
+      "range": [2, 2],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000003",
+      "_key": "!tables.results!humhgt0000000001.r0000000000000003",
+      "type": 0,
+      "text": "<strong>Slender</strong> — Male: 5'6\", 145 lbs | Female: 5'4\", 115 lbs",
+      "img": "icons/svg/d8.svg",
+      "range": [3, 3],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000004",
+      "_key": "!tables.results!humhgt0000000001.r0000000000000004",
+      "type": 0,
+      "text": "<strong>Average</strong> — Male: 5'9\", 175 lbs | Female: 5'6\", 130 lbs",
+      "img": "icons/svg/d8.svg",
+      "range": [4, 4],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000005",
+      "_key": "!tables.results!humhgt0000000001.r0000000000000005",
+      "type": 0,
+      "text": "<strong>Athletic/Sturdy</strong> — Male: 6'0\", 200 lbs | Female: 5'8\", 145 lbs",
+      "img": "icons/svg/d8.svg",
+      "range": [5, 5],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000006",
+      "_key": "!tables.results!humhgt0000000001.r0000000000000006",
+      "type": 0,
+      "text": "<strong>Muscular/Broad</strong> — Male: 6'3\", 230 lbs | Female: 5'10\", 165 lbs",
+      "img": "icons/svg/d8.svg",
+      "range": [6, 6],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000007",
+      "_key": "!tables.results!humhgt0000000001.r0000000000000007",
+      "type": 0,
+      "text": "<strong>Heavy/Stocky</strong> — Male: 6'6\", 265 lbs | Female: 6'1\", 200 lbs",
+      "img": "icons/svg/d8.svg",
+      "range": [7, 7],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000008",
+      "_key": "!tables.results!humhgt0000000001.r0000000000000008",
+      "type": 0,
+      "text": "<strong>Massive/Powerful</strong> — Male: 7'0\", 300 lbs | Female: 6'6\", 240 lbs",
+      "img": "icons/svg/d8.svg",
+      "range": [8, 8],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

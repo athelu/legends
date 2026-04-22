@@ -1030,8 +1030,139 @@ async function runAncestryStep(actor) {
   if (created) {
     await updateWorkflowState(actor, { ancestry: { name: created.name, completedAt: new Date().toISOString() } });
     ui.notifications.info(`${actor.name} ancestry set to ${created.name}.`);
+    await runAppearanceStep(actor, created.name);
   }
   return true;
+}
+
+const APPEARANCE_OPTIONS = {
+  Human: {
+    heightBuild: ['Frail/Petite', 'Lean/Skinny', 'Slender', 'Average', 'Athletic/Sturdy', 'Muscular/Broad', 'Heavy/Stocky', 'Massive/Powerful'],
+    eyeColor:    ['Blue', 'Dark Brown', 'Light Brown', 'Green', 'Gray', 'Amber', 'Mixed/Hazel', 'Unusual'],
+    hairColor:   ['Black', 'Dark Brown', 'Medium Brown', 'Light Brown', 'Blonde', 'Red', 'Light Blonde', 'White/Gray'],
+    hairTexture: ['Straight and fine', 'Straight and thick', 'Wavy and loose', 'Wavy and full', 'Curly', 'Tightly curled', 'Coiled/Kinky', 'Mixed/Unique pattern'],
+  },
+  Elven: {
+    heightBuild: ['Frail/Gaunt', 'Lean/Skinny', 'Slender', 'Average', 'Athletic/Sturdy', 'Muscular/Broad', 'Heavy/Stocky', 'Massive/Powerful'],
+    eyeColor:    ['Blue', 'Brown', 'Green', 'Gray', 'Amber', 'Violet', 'Orange', 'Unusual'],
+    hairColor:   ['Black', 'Dark Brown', 'Brown', 'Light Brown', 'Blonde', 'Red', 'White', 'Gray'],
+    hairTexture: null,
+  },
+};
+
+function randomPick(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+async function runAppearanceStep(actor, ancestryName) {
+  const bio = actor.system?.biography ?? {};
+  const opts = APPEARANCE_OPTIONS[ancestryName] ?? null;
+
+  const datalist = (id, items) => items?.length
+    ? `<datalist id="${id}">${items.map((v) => `<option value="${escapeHtml(v)}"></option>`).join('')}</datalist>`
+    : '';
+
+  const field = (id, listId, placeholder, current, items) => `
+    <input id="${id}" type="text"${items?.length ? ` list="${listId}"` : ''}
+      placeholder="${placeholder}" value="${escapeHtml(current ?? '')}"
+      style="padding:2px 6px;min-width:0;"/>
+    ${datalist(listId, items)}`;
+
+  const rollBtn = (fieldId, items) => items?.length
+    ? `<button type="button" class="appearance-roll-btn" data-field="${fieldId}"
+         data-options="${escapeHtml(JSON.stringify(items))}"
+         style="flex:none;padding:1px 8px;font-size:10px;cursor:pointer;" title="Pick randomly">&#x1F3B2;</button>`
+    : `<span></span>`;
+
+  const content = `
+    <form style="padding:12px;display:flex;flex-direction:column;gap:8px;">
+      <div><strong>Optional: Record Appearance</strong></div>
+      <div style="font-size:12px;color:#666;margin-bottom:4px;">
+        Choose from the dropdown, type a custom value, or click 🎲 to pick randomly.
+        Leave any field blank to fill in later.
+      </div>
+      <div style="display:grid;grid-template-columns:90px 1fr auto;align-items:center;gap:5px 8px;">
+
+        <label style="font-weight:bold;font-size:11px;">Build</label>
+        ${field('app-heightBuild', 'dl-heightBuild', 'e.g. Average, Athletic', bio.height, opts?.heightBuild)}
+        ${rollBtn('app-heightBuild', opts?.heightBuild)}
+
+        <label style="font-weight:bold;font-size:11px;">Height</label>
+        <input id="app-height" type="text" placeholder='e.g. 5&apos;9"'
+          value="${escapeHtml(bio.height?.match(/^\d/) ? bio.height : '')}" style="padding:2px 6px;"/>
+        <span></span>
+
+        <label style="font-weight:bold;font-size:11px;">Weight</label>
+        <input id="app-weight" type="text" placeholder="e.g. 175 lbs"
+          value="${escapeHtml(bio.weight ?? '')}" style="padding:2px 6px;"/>
+        <span></span>
+
+        <label style="font-weight:bold;font-size:11px;">Eye Color</label>
+        ${field('app-eyeColor', 'dl-eyeColor', 'e.g. Blue, Amber', bio.eyeColor, opts?.eyeColor)}
+        ${rollBtn('app-eyeColor', opts?.eyeColor)}
+
+        <label style="font-weight:bold;font-size:11px;">Hair Color</label>
+        ${field('app-hairColor', 'dl-hairColor', 'e.g. Dark Brown, Red', bio.hairColor, opts?.hairColor)}
+        ${rollBtn('app-hairColor', opts?.hairColor)}
+
+        ${opts?.hairTexture ? `
+        <label style="font-weight:bold;font-size:11px;">Hair Texture</label>
+        ${field('app-hairTexture', 'dl-hairTexture', 'e.g. Wavy and full', bio.hairTexture, opts.hairTexture)}
+        ${rollBtn('app-hairTexture', opts.hairTexture)}
+        ` : ''}
+
+      </div>
+    </form>
+  `;
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Character Creation: Appearance (Optional)' },
+    content,
+    position: { width: 480 },
+    rejectClose: false,
+    render: (event, html) => {
+      html.querySelectorAll('.appearance-roll-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const items = JSON.parse(btn.dataset.options || '[]');
+          if (!items.length) return;
+          const picked = randomPick(items);
+          const input = html.querySelector(`#${btn.dataset.field}`);
+          if (input) { input.value = picked; input.dispatchEvent(new Event('input')); }
+        });
+      });
+    },
+    buttons: [
+      {
+        action: 'save',
+        label: 'Save Appearance',
+        default: true,
+        callback: (event, button, dialog) => {
+          const get = (id) => dialog.element.querySelector(`#${id}`)?.value?.trim() ?? '';
+          return {
+            build:       get('app-heightBuild'),
+            height:      get('app-height'),
+            weight:      get('app-weight'),
+            eyeColor:    get('app-eyeColor'),
+            hairColor:   get('app-hairColor'),
+            hairTexture: get('app-hairTexture'),
+          };
+        },
+      },
+      { action: 'skip', label: 'Skip', callback: () => null },
+    ],
+  });
+
+  if (result && result !== 'skip') {
+    const updates = {};
+    // Combine build + specific height into the height field
+    const heightParts = [result.build, result.height].filter(Boolean);
+    if (heightParts.length) updates['system.biography.height'] = heightParts.join(' — ');
+    if (result.weight)      updates['system.biography.weight'] = result.weight;
+    if (result.eyeColor)    updates['system.biography.eyeColor'] = result.eyeColor;
+    if (result.hairColor)   updates['system.biography.hairColor'] = result.hairColor;
+    if (result.hairTexture) updates['system.biography.hairTexture'] = result.hairTexture;
+    if (Object.keys(updates).length) await actor.update(updates);
+  }
 }
 
 async function runOriginStep(actor) {

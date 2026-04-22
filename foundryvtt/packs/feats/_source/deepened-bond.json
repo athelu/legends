@@ -1,0 +1,48 @@
+{
+  "_id": "caa959d8f117e728",
+  "name": "Deepened Bond",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Some daemons have answered your call enough times that the relationship has become something more than transactional.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 5
+      },
+      "skills": "",
+      "feats": [
+        "Summoner",
+        "Compelling Presence"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Choose one creature type from the established daemon taxonomy (Elementals, Fae, Nephilim, Outsiders, Shadow plane creatures, or Aberrations). Creatures of that type always arrive at minimum Cooperative disposition regardless of targeting roll result, provided the weaving roll succeeds. Once per long rest, a creature of that type arrives Friendly automatically without requiring a targeting roll.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive, once per long rest special"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Summoner]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!caa959d8f117e728"
+}

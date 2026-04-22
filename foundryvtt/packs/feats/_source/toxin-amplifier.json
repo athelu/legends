@@ -1,0 +1,47 @@
+{
+  "_id": "b2a26001dda79894",
+  "name": "Toxin Amplifier",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>A dose that should weaken instead devastates.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 5
+      },
+      "skills": "craft:4",
+      "feats": [
+        "Venom Crafter"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Negative-primary preparations you create impose their condition at one step higher on the severity track: Poisoned (Weak) becomes Poisoned (Strong), Poisoned (Strong) becomes Poisoned (Deadly). A preparation already causing Poisoned (Deadly) is unaffected.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Poisoner]",
+      "[Alchemist]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!b2a26001dda79894"
+}

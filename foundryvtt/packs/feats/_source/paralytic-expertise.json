@@ -1,0 +1,47 @@
+{
+  "_id": "0675c0163f1b7319",
+  "name": "Paralytic Expertise",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Paralysis is just the beginning of the problem.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 4
+      },
+      "skills": "craft:3",
+      "feats": [
+        "Venom Crafter"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When a creature becomes Paralyzed from one of your preparations, they cannot attempt to break free on their first turn. Starting on their second turn, recovery proceeds normally.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Poisoner]",
+      "[Alchemist]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!0675c0163f1b7319"
+}

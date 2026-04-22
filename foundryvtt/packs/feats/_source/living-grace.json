@@ -1,0 +1,47 @@
+{
+  "_id": "d4343ebcc5c059e3",
+  "name": "Living Grace",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have made healing into something the body remembers after you leave.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "wisdom": 7
+      },
+      "skills": "",
+      "feats": [
+        "Resurgence"
+      ],
+      "tier": 0,
+      "other": "any magical tradition trait, Positive Mastery 6"
+    },
+    "benefits": "<p>Your healing carries permanent enhancements.</p>\n<ul>\n<li><strong>Persistent Healing:</strong> When you restore HP to a creature with a healing weave, they gain a Healing Resonance that lasts 1 minute. While a creature has Healing Resonance, the next time they would take damage that would reduce them to 0 HP, they instead drop to 1 HP and the Resonance is consumed. A creature can only benefit from one Healing Resonance at a time.</li>\n<li><strong>Overflowing Restoration:</strong> Healing weaves you cast can exceed a target's maximum HP by up to your Wisdom score, with the excess converting directly to temporary HP rather than being lost.</li>\n<li><strong>Surge of Life:</strong> Once per long rest, as 2 [Combat] actions, release a pulse of healing energy in a 30-foot radius centered on you. All allies within range who are below their maximum HP immediately heal HP equal to your Positive Mastery × your Casting Stat. Allies who are at 0 HP are stabilized and regain HP equal to your Casting Stat score. This healing does not require targeting rolls.</li>\n</ul>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "1"
+      },
+      "text": "Passive; Surge of Life once per long rest"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Heal]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!d4343ebcc5c059e3"
+}

@@ -1,0 +1,106 @@
+{
+  "_id": "humeye0000000001",
+  "_key": "!tables!humeye0000000001",
+  "name": "Human Eye Color (d8)",
+  "img": "icons/svg/d8.svg",
+  "description": "<p>Roll 1d8 to determine your human character's eye color.</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "r0000000000000001",
+      "_key": "!tables.results!humeye0000000001.r0000000000000001",
+      "type": 0,
+      "text": "<strong>Blue</strong> — Pale ice blue to deep sapphire",
+      "img": "icons/svg/d8.svg",
+      "range": [1, 1],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000002",
+      "_key": "!tables.results!humeye0000000001.r0000000000000002",
+      "type": 0,
+      "text": "<strong>Dark Brown</strong> — Deep chocolate to nearly black",
+      "img": "icons/svg/d8.svg",
+      "range": [2, 2],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000003",
+      "_key": "!tables.results!humeye0000000001.r0000000000000003",
+      "type": 0,
+      "text": "<strong>Light Brown</strong> — Hazel to warm chestnut",
+      "img": "icons/svg/d8.svg",
+      "range": [3, 3],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000004",
+      "_key": "!tables.results!humeye0000000001.r0000000000000004",
+      "type": 0,
+      "text": "<strong>Green</strong> — Light jade to deep emerald",
+      "img": "icons/svg/d8.svg",
+      "range": [4, 4],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000005",
+      "_key": "!tables.results!humeye0000000001.r0000000000000005",
+      "type": 0,
+      "text": "<strong>Gray</strong> — Pale silver to steel gray",
+      "img": "icons/svg/d8.svg",
+      "range": [5, 5],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000006",
+      "_key": "!tables.results!humeye0000000001.r0000000000000006",
+      "type": 0,
+      "text": "<strong>Amber</strong> — Golden honey to burnished copper",
+      "img": "icons/svg/d8.svg",
+      "range": [6, 6],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000007",
+      "_key": "!tables.results!humeye0000000001.r0000000000000007",
+      "type": 0,
+      "text": "<strong>Mixed/Hazel</strong> — Green-brown or blue-gray combinations",
+      "img": "icons/svg/d8.svg",
+      "range": [7, 7],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000008",
+      "_key": "!tables.results!humeye0000000001.r0000000000000008",
+      "type": 0,
+      "text": "<strong>Unusual</strong> — Heterochromia or very rare shade. Roll twice for two colors, or choose: heterochromia, very pale gray (near white), deep green with amber center, or blue with brown central heterochromia.",
+      "img": "icons/svg/d8.svg",
+      "range": [8, 8],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

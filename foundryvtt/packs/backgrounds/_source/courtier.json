@@ -21,6 +21,7 @@
       "empathy": 2,
       "perform": 2
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

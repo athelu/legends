@@ -1,0 +1,45 @@
+{
+  "_id": "085d14eb65077bf3",
+  "name": "Venom Crafter",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your poisons do not behave like other people's poisons.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 4
+      },
+      "skills": "craft:2",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Negative-primary preparations you create impose Misfortune on the target's [[/save type=fortitude]]. This applies to Applied, Ingested, and Thrown catalysts.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Poisoner]",
+      "[Alchemist]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!085d14eb65077bf3"
+}

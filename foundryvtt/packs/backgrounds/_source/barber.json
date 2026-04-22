@@ -21,6 +21,7 @@
       "persuasion": 1,
       "devices": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

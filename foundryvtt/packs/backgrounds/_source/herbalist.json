@@ -19,6 +19,7 @@
       "medicine": 3,
       "wilderness": 2
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

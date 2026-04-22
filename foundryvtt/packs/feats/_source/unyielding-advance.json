@@ -20,7 +20,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>You gain the following permanent combat presence abilities:</p>\n<ul>\n<li>Opportunity attacks against you add 2 to both attack dice (Does not stack with Evasive Fighter)</li>\n<li>When you hit a target with a melee attack, you may move up to 5 feet as a [Free] action without provoking opportunity attacks</li>\n<li>When a creature attempts to disengage from melee with you, make an immediate attack against them as a [Reaction] before they move. This does not consume your normal reaction if you have already used it this round.</li>\n<li>Creatures that start their turn adjacent to you must succeed on a [[/save type=will]] (opposed by your Strength + Intimidate or Melee Combat ) or cannot willingly move away from you that turn</li>\n</ul>",
+    "benefits": "<p>You gain the following permanent combat presence abilities:</p>\n<ul>\n<li>Opportunity attacks against you add 2 to both attack dice (Does not stack with Evasive Fighter).</li>\n<li>When you hit a target with a melee attack, you may move up to 5 feet as a [Free] action without provoking opportunity attacks.</li>\n<li>When a creature attempts to disengage from melee with you, make an immediate attack against them as a [Reaction] before they move. This does not consume your normal reaction if you have already used it this round.</li>\n<li>Creatures that start their turn adjacent to you must succeed on a [[/save type=will]] (opposed by your Strength + Intimidate or Melee Combat ) or cannot willingly move away from you that turn.</li>\n</ul>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

@@ -1,0 +1,49 @@
+{
+  "_id": "b558fe5d8d3773be",
+  "name": "Master of the Between",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>The planes know your name the way you know theirs.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 7
+      },
+      "skills": "",
+      "feats": [
+        "Summoner",
+        "Broad Resonance",
+        "Deepened Bond"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your summoning limit increases by 2 (Charisma score + 2 combined Tier). The Tier gap penalty no longer applies to creatures within your Deepened Bond creature type. Once per long rest, call a creature whose Tier would exceed your Charisma-based summoning limit by 1. This creature arrives Friendly regardless of targeting roll and remains for 10 minutes at no additional energy cost beyond the initial summoning weave. Time-aspected daemons and Drakes remain inaccessible through this feat.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "1"
+      },
+      "text": "Passive benefits always active; special ability once per long rest"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Summoner]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!b558fe5d8d3773be"
+}

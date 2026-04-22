@@ -1,0 +1,32 @@
+{
+  "_id": "88ea6893a8de8987",
+  "name": "Immobilized",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Movement speed reduced to 0. Cannot take [Move] actions. Attacks against you subtract 1 from both attack dice. <strong>Recovery:</strong> The source of the condition will describe the recovery conditions.</p>"
+    },
+    "label": "Immobilized",
+    "category": "magic",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
+    "activeEffects": [],
+    "appliesConditions": [],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "manual",
+      "removeOnSuccess": false
+    }
+  },
+  "flags": {},
+  "_key": "!items!88ea6893a8de8987"
+}

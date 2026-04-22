@@ -1,0 +1,40 @@
+{
+  "_id": "e1797c961618b1a6",
+  "name": "Drowning",
+  "type": "condition",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Target gains the Fleeing condition (water is source). If they do not reach air in a number of rounds equal to their Constitution score, they gain the unconscious condition. <strong>Recovery:</strong> The Fleeing condition ends immediately if the character reaches air. If the target is unconscious, an ally with Medicine 2+ may spend 1 minute administering aid. On success, the drowning target makes a [[/save type=fortitude]] (1 success) to regain consciousness. On failure, they remain unconscious.</p>"
+    },
+    "label": "Drowning",
+    "category": "magic",
+    "keywords": [
+      "Hindered"
+    ],
+    "tokenIcon": "icons/svg/hazard.svg",
+    "activeEffects": [],
+    "appliesConditions": [
+      "Fleeing",
+      "unconscious"
+    ],
+    "progressionChain": [],
+    "stacking": "replace",
+    "stacks": 1,
+    "severity": "moderate",
+    "overlayPriority": 20,
+    "damageTick": null,
+    "recovery": {
+      "trigger": "onEvent",
+      "method": "save",
+      "removeOnSuccess": true,
+      "save": {
+        "type": "fortitude"
+      },
+      "promptPlayer": true,
+      "chatMessage": "Make a [[/save type=fortitude]] to recover from Drowning"
+    }
+  },
+  "flags": {},
+  "_key": "!items!e1797c961618b1a6"
+}

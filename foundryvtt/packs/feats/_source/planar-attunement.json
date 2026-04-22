@@ -1,0 +1,47 @@
+{
+  "_id": "5092bf715f822457",
+  "name": "Planar Attunement",
+  "type": "feat",
+  "img": "icons/magic/symbols/star-rising-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your pneuma has learned a second frequency.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 3
+      },
+      "skills": "",
+      "feats": [
+        "Summoner"
+      ],
+      "tier": 0,
+      "other": "chosen energy Mastery 3"
+    },
+    "benefits": "<p>Choose one daemon category outside your Primary Resonance (Elementals, Fae, Nephilim, Outsiders, Shadow plane creatures, or Aberrations) and its corresponding energy. Your summoning weaves using that energy treat your Mastery in it as 2 higher for weaving rolls only. Can be taken multiple times for different categories.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Magic]",
+      "[Summoner]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!5092bf715f822457"
+}

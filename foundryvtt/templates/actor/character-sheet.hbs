@@ -4,53 +4,81 @@
   <header class="sheet-header">
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
     <div class="header-info">
-      <div class="info-line">
-        <label>Name:</label>
-        <input name="name" type="text" value="{{actor.name}}" placeholder="Character Name"/>
-      </div>
-      <div class="info-line">
-        <label>Background:</label>
-        <div class="header-choice-group">
-          {{#if primaryBackground}}
-          <span class="derived-field" title="From background item">{{primaryBackground.name}}</span>
-          {{else}}
-          <input type="text" name="system.biography.background" value="{{system.biography.background}}" placeholder="Background"/>
-          {{/if}}
-          {{#if canChangeOriginChoices}}
-          <button type="button" class="header-choice-button" data-action="changeHeaderChoice" data-item-type="background">{{#if primaryBackground}}Change{{else}}Choose{{/if}}</button>
-          {{/if}}
+      <div class="header-columns">
+        {{!-- Left column: identity fields --}}
+        <div class="header-col">
+          <div class="info-line">
+            <label>Name:</label>
+            <input name="name" type="text" value="{{actor.name}}" placeholder="Character Name"/>
+          </div>
+          <div class="info-line">
+            <label>Background:</label>
+            <div class="header-choice-group">
+              {{#if primaryBackground}}
+              <span class="derived-field" title="From background item">{{primaryBackground.name}}</span>
+              {{else}}
+              <input type="text" name="system.biography.background" value="{{system.biography.background}}" placeholder="Background"/>
+              {{/if}}
+              {{#if canChangeOriginChoices}}
+              <button type="button" class="header-choice-button" data-action="changeHeaderChoice" data-item-type="background">{{#if primaryBackground}}Change{{else}}Choose{{/if}}</button>
+              {{/if}}
+            </div>
+          </div>
+          <div class="info-line">
+            <label>Ancestry:</label>
+            <div class="header-choice-group">
+              {{#if primaryAncestry}}
+              <span class="derived-field" title="From ancestry item">{{primaryAncestry.name}}</span>
+              {{else}}
+              <input type="text" name="system.biography.ancestry" value="{{system.biography.ancestry}}" placeholder="Ancestry"/>
+              {{/if}}
+              {{#if canChangeOriginChoices}}
+              <button type="button" class="header-choice-button" data-action="changeHeaderChoice" data-item-type="ancestry">{{#if primaryAncestry}}Change{{else}}Choose{{/if}}</button>
+              {{/if}}
+            </div>
+          </div>
+          <div class="info-line">
+            <label>Nationality:</label>
+            <div class="header-choice-group">
+              {{#if originLabel}}
+              <span class="derived-field" title="Nationality determines native language">{{originLabel}}</span>
+              {{else}}
+              <span class="derived-field" title="Nationality determines native language">Not selected</span>
+              {{/if}}
+              {{#if canChangeOriginChoices}}
+              <button type="button" class="header-choice-button" data-action="changeOrigin">{{#if originLabel}}Change{{else}}Choose{{/if}}</button>
+              {{/if}}
+            </div>
+          </div>
+          <div class="info-line">
+            <label>Languages:</label>
+            <div class="header-choice-group">
+              <span class="derived-field" title="Known languages are tracked from nationality and Language skill ranks">{{#if system.languages.display}}{{system.languages.display}}{{else}}No languages assigned{{/if}}</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="info-line">
-        <label>Ancestry:</label>
-        <div class="header-choice-group">
-          {{#if primaryAncestry}}
-          <span class="derived-field" title="From ancestry item">{{primaryAncestry.name}}</span>
-          {{else}}
-          <input type="text" name="system.biography.ancestry" value="{{system.biography.ancestry}}" placeholder="Ancestry"/>
-          {{/if}}
-          {{#if canChangeOriginChoices}}
-          <button type="button" class="header-choice-button" data-action="changeHeaderChoice" data-item-type="ancestry">{{#if primaryAncestry}}Change{{else}}Choose{{/if}}</button>
-          {{/if}}
-        </div>
-      </div>
-      <div class="info-line">
-        <label>Nationality:</label>
-        <div class="header-choice-group">
-          {{#if originLabel}}
-          <span class="derived-field" title="Nationality determines native language">{{originLabel}}</span>
-          {{else}}
-          <span class="derived-field" title="Nationality determines native language">Not selected</span>
-          {{/if}}
-          {{#if canChangeOriginChoices}}
-          <button type="button" class="header-choice-button" data-action="changeOrigin">{{#if originLabel}}Change{{else}}Choose{{/if}}</button>
-          {{/if}}
-        </div>
-      </div>
-      <div class="info-line">
-        <label>Languages:</label>
-        <div class="header-choice-group">
-          <span class="derived-field" title="Known languages are tracked from nationality and Language skill ranks">{{#if system.languages.display}}{{system.languages.display}}{{else}}No languages assigned{{/if}}</span>
+        {{!-- Right column: appearance fields --}}
+        <div class="header-col">
+          <div class="info-line">
+            <label>Build:</label>
+            <input type="text" name="system.biography.height" value="{{system.biography.height}}" placeholder="e.g. Average, 5'9&quot;"/>
+          </div>
+          <div class="info-line">
+            <label>Weight:</label>
+            <input type="text" name="system.biography.weight" value="{{system.biography.weight}}" placeholder="e.g. 175 lbs"/>
+          </div>
+          <div class="info-line">
+            <label>Eyes:</label>
+            <input type="text" name="system.biography.eyeColor" value="{{system.biography.eyeColor}}" placeholder="Eye color"/>
+          </div>
+          <div class="info-line">
+            <label>Hair:</label>
+            <input type="text" name="system.biography.hairColor" value="{{system.biography.hairColor}}" placeholder="Hair color"/>
+          </div>
+          <div class="info-line">
+            <label>Texture:</label>
+            <input type="text" name="system.biography.hairTexture" value="{{system.biography.hairTexture}}" placeholder="Hair texture"/>
+          </div>
         </div>
       </div>
       <div class="info-line">
@@ -127,6 +155,38 @@
               </button>
             </div>
             {{/each}}
+          </div>
+
+          {{!-- Craft Skills (dynamic specializations) --}}
+          <div class="craft-skills-section">
+            <div class="craft-skills-header">
+              <h4>Craft Skills</h4>
+              <button type="button" class="add-craft-skill-button" data-action="addCraftSkill" title="Add a craft specialization">
+                <i class="fas fa-plus"></i>
+              </button>
+            </div>
+            {{#if craftSkillList.length}}
+            <div class="skills-list craft-skills-list">
+              {{#each craftSkillList}}
+              <div class="skill-row craft-skill-row" data-keyword="{{keyword}}">
+                <input type="checkbox" class="training-checkbox" data-action="toggleTrainingCheckbox" data-training-type="craftSkill" data-training-key="{{keyword}}" {{checked checked}} title="Training checkbox for {{label}}"/>
+                <label class="skill-name">{{label}}</label>
+                <span class="skill-attr">&lt;{{attr}}&gt;</span>
+                <input type="number" name="system.craftSkills.{{keyword}}" value="{{base}}" data-dtype="Number" class="skill-base {{#unless ../canEditAdvancementFields}}readonly-field{{/unless}}" {{#unless ../canEditAdvancementFields}}readonly title="Locked outside character creation or manual override"{{/unless}}/>
+                <span class="skill-bonus">{{#if (gt bonus 0)}}+{{/if}}{{bonus}}</span>
+                <span class="skill-total">{{total}}</span>
+                <button type="button" data-action="craftSkillRoll" data-keyword="{{keyword}}" title="Roll {{label}}">
+                  <i class="fas fa-dice-d8"></i>
+                </button>
+                <button type="button" data-action="removeCraftSkill" data-keyword="{{keyword}}" title="Remove {{label}}" class="craft-skill-remove">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              {{/each}}
+            </div>
+            {{else}}
+            <p class="craft-skills-empty no-items">No craft specializations.</p>
+            {{/if}}
           </div>
         </div>
 

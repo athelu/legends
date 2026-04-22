@@ -1,0 +1,73 @@
+{
+  "_id": "aea411a68f7e4c97",
+  "name": "False Visage",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Alter your appearance to resemble a specific humanoid creature of the same size category. The illusion covers clothing, equipment, and surface features: voice, height within a few inches, build, and distinguishing marks. Physical interaction does not automatically reveal the illusion, but a careful observer may attempt a [[/check skill=perception]] opposed by your Space Mastery to notice inconsistencies. The weave does not replicate scent, weight, or the texture of materials. Breaks if you take damage exceeding your Tier × 4 in a single hit.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "space",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 3
+      }
+    },
+    "range": "Self, Touch",
+    "duration": "10 minutes (or until broken)",
+    "target": "single",
+    "savingThrow": "none",
+    "effect": "Alter your appearance to resemble a specific humanoid creature of the same size category. The illusion covers clothing, equipment, and surface features: voice, height within a few inches, build, and distinguishing marks. Physical interaction does not automatically reveal the illusion, but a careful observer may attempt a Perception check opposed by your Space Mastery to notice inconsistencies. The weave does not replicate scent, weight, or the texture of materials. Breaks if you take damage exceeding your Tier × 4 in a single hit.",
+    "effectType": "divination",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "Fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "1 minute; surface features only",
+          "duration": "1 minute; surface features only"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "10 minutes; full appearance including voice",
+          "duration": "10 minutes; full appearance including voice"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "1 hour; perfect rendering.",
+          "duration": "1 hour; perfect rendering."
+        }
+      }
+    },
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 minute; surface features only, 2 = 10 minutes; full appearance including voice,  3 = 1 hour; perfect rendering.",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
+    "appliesEffects": [
+      {
+        "effectId": "none (passive disguise)",
+        "params": {}
+      }
+    ],
+    "deliveryMethod": "automatic",
+    "tags": [
+      "divination",
+      "touch",
+      "utility"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!aea411a68f7e4c97"
+}

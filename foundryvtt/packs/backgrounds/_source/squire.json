@@ -21,6 +21,7 @@
       "society": 1,
       "empathy": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "weapon-choice",

@@ -553,6 +553,62 @@ The Alchemist's most powerful productions require dedicated downtime, physical c
 - Crafted preparations never expire.
 - **Critical Failure on Mixing:** If the Craft: Alchemist check during any crafted preparation session results in a critical failure (double 8s), the preparation activates immediately upon completion. Offensive preparations release in the workspace. The Alchemist and any nearby creatures may be affected. The preparation is consumed. 
 
+### Summoner (-7)
+**Requirements:** Charisma ≥ 3
+
+Your pneuma does not channel inward like other magic users. It radiates outward, broadcasting across the barriers between the material plane and the external planes in a signal that daemons perceive and orient toward. You have learned to shape that broadcast with enough precision to call specific beings to your location, holding them in the material world for as long as the connection remains energetically coherent.
+
+Your eyes glow violet only when a summoning completes, the light fading once the daemon stabilizes its presence. While a summoned daemon is present, a faint violet luminescence surrounds it; visible evidence of the pneuma-tether anchoring it here.
+
+**The Nature of Summoning:** Daemons you call are not bound or compelled. They arrive because your pneuma is resonant to them and they stay because the connection holds. They will generally cooperate, but they are not mindless tools. A daemon asked to act against its fundamental nature may refuse regardless of disposition.
+
+Summoned daemons understand the summoner's spoken instructions and will follow them within the bounds of their disposition and nature. Issuing instructions beyond a single simple command costs the summoner 1 [Minor] action on their turn. Summoned creatures act on their own initiative using their bestiary stat block.
+
+Drakes: Drakes are the spawn of the great dragon daemons of legend. Summoning them is not available at character creation and cannot be accessed through normal feat investment. A summoner who discovers this possibility through play does so through story, not mechanics.
+
+**Benefits:**
+- Roll 8d8, assign to eight Magical Potentials.
+- Use Charisma as Casting Stat.
+- Gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 0, untrained).
+- Can weave summoner magic using all 8 energies.Energy Pool: Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
+- Choose Primary Resonance from the seven options below. This determines which daemon categories your pneuma naturally attracts and grants your energy bonuses. Assign rolls strategically to maximize bonuses without waste:
+
+| Primary Source | Daemon Categories | Primary Bonus | Secondary Bonus |
+|---|---|---|---|
+| Earth | Elementals, Fae, Nephilim | Earth +2 | Water +1 |
+| Air | Elementals, Fae, Nephilim | Air +2 | Fire +1 |
+| Fire | Elementals, Fae, Nephilim | Fire +2 | Air +1 |
+| Water | Elementals, Fae, Nephilim | Water +2 | Earth +1 |
+| Positive | Outsiders | Positive +2 | Space +1 |
+| Negative | Shadow creatures, Outsiders | Negative +2 | Space +1 |
+| Space | Aberrations | Space +2 | Time +1 |
+
+#### Summoning Weaves
+Summoning uses the native energy of the daemon's home plane as Primary and Time as Supporting. The weaving roll uses Primary Potential + Primary Mastery / Time Potential + Time Mastery. The targeting roll uses Charisma + Primary Energy Mastery.
+
+Summoning is a Complex Weave costing 2 [Combat] actions. The creature appears in an unoccupied space within 30 feet of the summoner.
+
+- **Tier Gap Penalty:** For each Tier the summoned creature exceeds the summoner's current Tier, add 1 to both dice on the weaving roll. The targeting roll is unaffected by Tier gap.
+- **Summoning Limit:** You can have summoned daemons with combined Tier equal to your Charisma score present simultaneously. Summoning beyond this limit causes the oldest summoned creature to immediately return to its plane.
+- **Dismissal:** You can dismiss your summoned daemon as a [Free] action at any time.
+
+**Targeting Success**
+The results of the targeting roll for the summoning weave determine the disposition (social attitude) of the summoned daemon.
+- **0 successes:** The call reaches the planes but the connection collapses. Energy is spent, no creature arrives. On a critical failure (double 8s), something briefly crossed over on its own terms before departing (GM discretion on narrative consequence.)
+- **1 success:** The creature arrives Indifferent. It will follow clear simple instructions that don't conflict with its nature. Complex commands require a basic Empathy check.
+- **2 successes:** The creature arrives Cooperative. It follows instructions within its capability without requiring persuasion, provided those instructions don't violate its fundamental nature. Summoner may specify a daemon category within their accessible types.
+- **3 successes:** The creature arrives Friendly. It actively tries to fulfill the summoner's intent rather than the literal instruction. Summoner may describe more specific characteristics and the GM honors reasonable requests.
+
+**Summoning Tier**
+| Tier | Cost |
+|---|---|
+| 1/4 | 1 |
+| 1/2 | 2 |
+| 1 | 3 |
+| 2 | 4 |
+| 3 | 5 |
+| 4 | 6 |
+| 5 | 7 |
 
 ## MAGICAL ENHANCEMENT TRAITS
 

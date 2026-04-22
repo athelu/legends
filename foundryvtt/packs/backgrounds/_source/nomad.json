@@ -9,7 +9,7 @@
     },
     "startingXP": 40,
     "skillBonuses": "Wilderness 2, Athletics 2, Perception 1, Society 1, +40 XP",
-    "startingEquipment": "Tent\ntraveler's clothes\nhemp rope\nwaterskin\nwork boots",
+    "startingEquipment": "Tent\ntraveler's clothes\nhemp rope\nwineskin\nwork boots",
     "suggestedFeats": "",
     "features": "Wanderer's Knowledge: You know routes and shortcuts across wilderness and can find nomadic communities for trade or information.",
     "sampleNames": "",
@@ -21,6 +21,7 @@
       "perception": 1,
       "society": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",
@@ -50,13 +51,11 @@
         "sourceId": "80bb5d0cbb1888e5"
       },
       {
-        "mode": "reference",
+        "mode": "placeholder",
         "itemType": "equipment",
-        "pack": "legends.equipment",
-        "sourceName": "Waterskin",
+        "sourceName": "wineskin",
         "quantity": 1,
-        "originalText": "waterskin",
-        "sourceId": "c4a16e4b3f3ac1af"
+        "originalText": "wineskin"
       },
       {
         "mode": "reference",

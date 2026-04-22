@@ -19,6 +19,7 @@
       "arcane": 3,
       "history": 2
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

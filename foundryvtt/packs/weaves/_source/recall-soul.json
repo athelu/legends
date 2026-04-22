@@ -1,0 +1,64 @@
+{
+  "_id": "258e987d3d8dafc0",
+  "name": "Recall Soul",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>On success, the creature returns to life at 1 HP with the Grievously Wounded condition and Exhausted (Level 2). Rare materials consumed during the ritual with a combined value of at least 500 gp (sanctified oils, incense prepared from components tied to the Positive plane, and ideally a personal object belonging to the deceased). Divine Gift casters of Ambis or Nevil subtract 1 from both weaving dice.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "positive",
+        "cost": 8
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 4
+      }
+    },
+    "range": "Touch",
+    "duration": "Permanent (if successful)",
+    "target": "single",
+    "savingThrow": "none",
+    "effect": "On success, the creature returns to life at 1 HP with the Grievously Wounded condition and Exhausted (Level 2). Rare materials consumed during the ritual with a combined value of at least 500 gp (sanctified oils, incense prepared from components tied to the Positive plane, and ideally a personal object belonging to the deceased). Divine Gift casters of Ambis or Nevil subtract 1 from both weaving dice.",
+    "effectType": "utility",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails. 1 = success; Exhausted Level 3",
+          "duration": null
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "success",
+          "duration": "success"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "success; exhausted Level 1",
+          "duration": "success; exhausted Level 1"
+        }
+      }
+    },
+    "targetingSuccessScaling": "0 = fails. 1 = success; Exhausted Level 3, one attribute permanently reduced by 1, 2 = success, 3 = success; exhausted Level 1",
+    "weavingRoll": "Positive Potential + Positive Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Positive Mastery",
+    "appliesEffects": [],
+    "deliveryMethod": "automatic",
+    "tags": [
+      "necromantic",
+      "ritual",
+      "touch",
+      "utility"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!258e987d3d8dafc0"
+}

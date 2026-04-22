@@ -8,7 +8,7 @@
       "value": "<p>As an apprentice, you practiced a particular form of building or crafting, developing specialized skill. You might have been a blacksmith's apprentice toiling over the forge for countless hours, a young tailor sewing garments of all kinds, or a shipwright shaping the hulls of ships. Your guild connections remain strong which is useful when you need work, materials, or a favor.</p>"
     },
     "startingXP": 40,
-    "skillBonuses": "Craft 2, Society 2, Persuasion 1, Devices 1, +40 XP",
+    "skillBonuses": "Craft: (choice) 2, Society 2, Persuasion 1, Devices 1, +40 XP",
     "startingEquipment": "Artisan's tools (choose type)\ncommon clothes\nbelt pouch\nshoes",
     "suggestedFeats": "",
     "features": "Guild Membership: You have connections with artisan guilds. Can find work, get fair prices on materials, and access guild resources in cities.",
@@ -21,6 +21,7 @@
       "persuasion": 1,
       "devices": 1
     },
+    "craftKeyword": "(choice)",
     "itemGrants": [
       {
         "mode": "reference",

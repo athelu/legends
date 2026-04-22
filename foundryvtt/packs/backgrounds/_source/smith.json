@@ -8,7 +8,7 @@
       "value": "<p>Fire, hammer, and patience were your tools and your teachers. You shaped metal into tools, weapons, and art, learning that true craftsmanship cannot be rushed. It could be that you tired of making swords for others to wield, or the business was no longer supporting you. You understand the value of good equipment, and you know how to keep it maintained in the field. Your companions will thank you for that.</p>"
     },
     "startingXP": 32,
-    "skillBonuses": "Craft 3, Might 2, +32 XP",
+    "skillBonuses": "Craft: Blacksmith 3, Might 2, +32 XP",
     "startingEquipment": "Smith's tools\nhammer\napron\nwork gloves\nwork clothes\nwork boots",
     "suggestedFeats": "",
     "features": "Master Craftsman: You can repair weapons and armor in the field, assess metal quality and craftsmanship, and create or modify metal items with proper materials and time.",
@@ -19,6 +19,7 @@
       "craft": 3,
       "might": 2
     },
+    "craftKeyword": "Blacksmith",
     "itemGrants": [
       {
         "mode": "reference",

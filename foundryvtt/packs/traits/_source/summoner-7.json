@@ -1,0 +1,28 @@
+{
+  "_id": "1a14cdea607cac7a",
+  "name": "Summoner (-7)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your pneuma does not channel inward like other magic users. It radiates outward, broadcasting across the barriers between the material plane and the external planes in a signal that daemons perceive and orient toward. You have learned to shape that broadcast with enough precision to call specific beings to your location, holding them in the material world for as long as the connection remains energetically coherent.</p>\n<p>Your eyes glow violet only when a summoning completes, the light fading once the daemon stabilizes its presence. While a summoned daemon is present, a faint violet luminescence surrounds it; visible evidence of the pneuma-tether anchoring it here.</p>\n<p><strong>The Nature of Summoning:</strong> Daemons you call are not bound or compelled. They arrive because your pneuma is resonant to them and they stay because the connection holds. They will generally cooperate, but they are not mindless tools. A daemon asked to act against its fundamental nature may refuse regardless of disposition.</p>\n<p>Summoned daemons understand the summoner's spoken instructions and will follow them within the bounds of their disposition and nature. Issuing instructions beyond a single simple command costs the summoner 1 [Minor] action on their turn. Summoned creatures act on their own initiative using their bestiary stat block.</p>\n<p>Drakes: Drakes are the spawn of the great dragon daemons of legend. Summoning them is not available at character creation and cannot be accessed through normal feat investment. A summoner who discovers this possibility through play does so through story, not mechanics.</p>"
+    },
+    "pointCost": -7,
+    "traitType": "physical",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "Charisma ≥ 3",
+    "benefits": "<ul>\n<li>Roll 8d8, assign to eight Magical Potentials.</li>\n<li>Use Charisma as Casting Stat.</li>\n<li>Gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 0, untrained).</li>\n<li>Can weave summoner magic using all 8 energies.Energy Pool: Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)</li>\n<li>Choose Primary Resonance from the seven options below. This determines which daemon categories your pneuma naturally attracts and grants your energy bonuses. Assign rolls strategically to maximize bonuses without waste:</li>\n</ul>\n<p>| Primary Source | Daemon Categories | Primary Bonus | Secondary Bonus | |---|---|---|---| | Earth | Elementals, Fae, Nephilim | Earth +2 | Water +1 | | Air | Elementals, Fae, Nephilim | Air +2 | Fire +1 | | Fire | Elementals, Fae, Nephilim | Fire +2 | Air +1 | | Water | Elementals, Fae, Nephilim | Water +2 | Earth +1 | | Positive | Outsiders | Positive +2 | Space +1 | | Negative | Shadow creatures, Outsiders | Negative +2 | Space +1 | | Space | Aberrations | Space +2 | Time +1 |</p>\n<h4>Summoning Weaves</h4>\n<p>Summoning uses the native energy of the daemon's home plane as Primary and Time as Supporting. The weaving roll uses Primary Potential + Primary Mastery / Time Potential + Time Mastery. The targeting roll uses Charisma + Primary Energy Mastery.</p>\n<p>Summoning is a Complex Weave costing 2 [Combat] actions. The creature appears in an unoccupied space within 30 feet of the summoner.</p>\n<ul>\n<li><strong>Tier Gap Penalty:</strong> For each Tier the summoned creature exceeds the summoner's current Tier, add 1 to both dice on the weaving roll. The targeting roll is unaffected by Tier gap.</li>\n<li><strong>Summoning Limit:</strong> You can have summoned daemons with combined Tier equal to your Charisma score present simultaneously. Summoning beyond this limit causes the oldest summoned creature to immediately return to its plane.</li>\n<li><strong>Dismissal:</strong> You can dismiss your summoned daemon as a [Free] action at any time.</li>\n</ul>\n<p><strong>Targeting Success</strong> The results of the targeting roll for the summoning weave determine the disposition (social attitude) of the summoned daemon.</p>\n<ul>\n<li><strong>0 successes:</strong> The call reaches the planes but the connection collapses. Energy is spent, no creature arrives. On a critical failure (double 8s), something briefly crossed over on its own terms before departing (GM discretion on narrative consequence.)</li>\n<li><strong>1 success:</strong> The creature arrives Indifferent. It will follow clear simple instructions that don't conflict with its nature. Complex commands require a basic [[/check skill=empathy]].</li>\n<li><strong>2 successes:</strong> The creature arrives Cooperative. It follows instructions within its capability without requiring persuasion, provided those instructions don't violate its fundamental nature. Summoner may specify a daemon category within their accessible types.</li>\n<li><strong>3 successes:</strong> The creature arrives Friendly. It actively tries to fulfill the summoner's intent rather than the literal instruction. Summoner may describe more specific characteristics and the GM honors reasonable requests.</li>\n</ul>\n<p><strong>Summoning Tier</strong> | Tier | Cost | |---|---| | 1/4 | 1 | | 1/2 | 2 | | 1 | 3 | | 2 | 4 | | 3 | 5 | | 4 | 6 | | 5 | 7 |</p>\n<h2>MAGICAL ENHANCEMENT TRAITS</h2>",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!1a14cdea607cac7a"
+}

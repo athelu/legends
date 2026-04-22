@@ -21,6 +21,7 @@
       "acrobatics": 1,
       "perception": 1
     },
+    "craftKeyword": null,
     "itemGrants": [
       {
         "mode": "reference",

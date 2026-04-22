@@ -1,5 +1,15 @@
-2026/02/15-13:30:49.306 1230 Delete type=3 #1
-2026/02/15-13:30:49.309 6108 Level-0 table #5: started
-2026/02/15-13:30:49.311 6108 Level-0 table #5: 2941 bytes OK
-2026/02/15-13:30:49.313 6108 Delete type=0 #3
-2026/02/15-13:30:49.313 6108 Manual compaction at level-0 from '!items!drbonus0000000001' @ 72057594037927935 : 1 .. '!items!temphp00000000001' @ 0 : 0; will stop at (end)
+2026/04/22-18:55:54.513 4e1c Recovering log #4
+2026/04/22-18:55:54.518 4e1c Delete type=0 #4
+2026/04/22-18:55:54.518 4e1c Delete type=3 #2
+2026/04/22-18:55:54.522 97dc Level-0 table #9: started
+2026/04/22-18:55:54.524 97dc Level-0 table #9: 2941 bytes OK
+2026/04/22-18:55:54.525 97dc Delete type=0 #7
+2026/04/22-18:55:54.525 97dc Manual compaction at level-0 from '!items!drbonus0000000001' @ 72057594037927935 : 1 .. '!items!temphp00000000001' @ 0 : 0; will stop at (end)
+2026/04/22-18:55:54.526 97dc Manual compaction at level-1 from '!items!drbonus0000000001' @ 72057594037927935 : 1 .. '!items!temphp00000000001' @ 0 : 0; will stop at '!items!temphp00000000001' @ 12 : 1
+2026/04/22-18:55:54.526 97dc Compacting 1@1 + 1@2 files
+2026/04/22-18:55:54.527 97dc Generated table #10@1: 6 keys, 2941 bytes
+2026/04/22-18:55:54.527 97dc Compacted 1@1 + 1@2 files => 2941 bytes
+2026/04/22-18:55:54.529 97dc compacted to: files[ 0 0 1 0 0 0 0 ]
+2026/04/22-18:55:54.529 97dc Delete type=2 #5
+2026/04/22-18:55:54.529 97dc Delete type=2 #9
+2026/04/22-18:55:54.530 97dc Manual compaction at level-1 from '!items!temphp00000000001' @ 12 : 1 .. '!items!temphp00000000001' @ 0 : 0; will stop at (end)

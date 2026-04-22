@@ -1,0 +1,106 @@
+{
+  "_id": "humhcl0000000001",
+  "_key": "!tables!humhcl0000000001",
+  "name": "Human Hair Color (d8)",
+  "img": "icons/svg/d8.svg",
+  "description": "<p>Roll 1d8 to determine your human character's hair color.</p>",
+  "formula": "1d8",
+  "replacement": true,
+  "displayRoll": true,
+  "results": [
+    {
+      "_id": "r0000000000000001",
+      "_key": "!tables.results!humhcl0000000001.r0000000000000001",
+      "type": 0,
+      "text": "<strong>Black</strong> — Jet black to charcoal",
+      "img": "icons/svg/d8.svg",
+      "range": [1, 1],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000002",
+      "_key": "!tables.results!humhcl0000000001.r0000000000000002",
+      "type": 0,
+      "text": "<strong>Dark Brown</strong> — Deep chocolate to espresso",
+      "img": "icons/svg/d8.svg",
+      "range": [2, 2],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000003",
+      "_key": "!tables.results!humhcl0000000001.r0000000000000003",
+      "type": 0,
+      "text": "<strong>Medium Brown</strong> — Chestnut to cocoa",
+      "img": "icons/svg/d8.svg",
+      "range": [3, 3],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000004",
+      "_key": "!tables.results!humhcl0000000001.r0000000000000004",
+      "type": 0,
+      "text": "<strong>Light Brown</strong> — Sandy to mousy brown",
+      "img": "icons/svg/d8.svg",
+      "range": [4, 4],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000005",
+      "_key": "!tables.results!humhcl0000000001.r0000000000000005",
+      "type": 0,
+      "text": "<strong>Blonde</strong> — Dirty blonde to golden",
+      "img": "icons/svg/d8.svg",
+      "range": [5, 5],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000006",
+      "_key": "!tables.results!humhcl0000000001.r0000000000000006",
+      "type": 0,
+      "text": "<strong>Red</strong> — Auburn to copper to bright red",
+      "img": "icons/svg/d8.svg",
+      "range": [6, 6],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000007",
+      "_key": "!tables.results!humhcl0000000001.r0000000000000007",
+      "type": 0,
+      "text": "<strong>Light Blonde</strong> — Honey to platinum blonde",
+      "img": "icons/svg/d8.svg",
+      "range": [7, 7],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    },
+    {
+      "_id": "r0000000000000008",
+      "_key": "!tables.results!humhcl0000000001.r0000000000000008",
+      "type": 0,
+      "text": "<strong>Special</strong> — White, gray, or unusual shade. Options: prematurely gray or white (young), naturally gray (middle age), strawberry blonde (red-blonde mix), or very light platinum blonde.",
+      "img": "icons/svg/d8.svg",
+      "range": [8, 8],
+      "drawn": false,
+      "weight": 1,
+      "flags": {}
+    }
+  ],
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "ownership": {
+    "default": 0
+  }
+}

@@ -39,7 +39,7 @@ Within each culture - some action is taken upon the birth of an Arcanist. It nor
 This could be placement with an established magical college, or given to the local wise woman, but all people understand that when they find a newborn Arcanist, it is essential they are brought somewhere to teach them. 
 Not all Arcanists are able to learn to use their magic the same way - and it requires skill and training to identify how to best teach an Arcanist. Some Arcanists access their magic through their understanding of the world and their intellect. Others harness their arcane power through the knowledge of self.  This distinction represents the next levels of classification of mages: The Mageborn and the Sorcerer.
 
-## The Seven Traditions
+## The Eight Traditions
 
 The current magical traditions in Legends are:
 
@@ -53,7 +53,6 @@ Sorcerers and Mageborn have such a divergent understanding of magic that they ca
 
 ## Diabolist
 Diabolists are often misunderstood - if not feared. The people of the world have come to expect the arcane to announce itself through glowing eyes. Diabolists do not have an innate magical ability - but instead are awakened. The following arcane magical traditions are considered diabolists.
-
 
 ### Eldritch Pact
 Some major trauma or event normally spurs this awakening. At some point the diabolist is forced to access power outside of themselves to survive or accomplish some greater deed. Diabolists are rare because the circumstances surrounding their awakening are rare - or in most cases fatal. 
@@ -69,6 +68,11 @@ Infusers are diabolists who have discovered links between rare elements, symbols
 
 ### Alchemical Tradition
 Alchemists do not weave by opening their pneuma to the planes in the same way as other traditions. Instead, they harvest magical concentration from the physical world and encode effects into preparations, reagents, and volatile mixtures. Alchemists use **Craft: Alchemist** and **Intelligence** to identify, prepare, and resolve these effects. Their preparations obey the same energy logic as weaves, but rely on components, downtime, and catalysts rather than a personal Energy pool.
+
+### Summoner
+Summoners do not channel magic inward. Their pneuma radiates outward across the barriers between the material plane and the external planes, broadcasting a signal that daemons perceive and orient toward. Through careful shaping of that broadcast, a Summoner calls specific beings to their location and holds them in the material world for as long as the energetic connection remains coherent.
+
+Summoned daemons are not bound or compelled — they arrive because the Summoner's pneuma resonates with them, and they stay because the connection holds. They will generally cooperate, but they are not mindless tools and will not act against their fundamental nature. Summoners use **Charisma** as their casting stat, work with all eight energies, and choose a **Primary Resonance** at creation that determines which daemon categories their pneuma naturally attracts and which energies receive bonuses. Their eyes glow violet only at the moment a summoning completes, fading once the daemon stabilizes.
 
 ## Divine Gift
 Devout weavers who open their pneuma through faith, prayer, and disciplined devotion. Divine Gift characters use **Wisdom** as their casting stat, work with all eight energies, and gain **Channel Divinity** uses equal to their current tier per long rest. Their patron choice determines their favored divine expressions.

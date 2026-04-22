@@ -7,7 +7,12 @@
           "value": "",
           "background": "",
           "ancestry": "",
-          "origin": ""
+          "origin": "",
+          "height": "",
+          "weight": "",
+          "eyeColor": "",
+          "hairColor": "",
+          "hairTexture": ""
         },
         "visibility": {
           "concealed": false,
@@ -66,7 +71,6 @@
         "thievery": 0,
         "writing": 0,
         "rangedCombat": 0,
-        "craft": 0,
         "acrobatics": 0,
         "meleeCombat": 0,
         "stealth": 0,
@@ -85,6 +89,7 @@
         "wilderness": 0,
         "religion": 0
       },
+      "craftSkills": {},
       "languages": {
         "native": "",
         "selected": []
@@ -218,7 +223,6 @@
           "thievery": false,
           "writing": false,
           "rangedCombat": false,
-          "craft": false,
           "acrobatics": false,
           "meleeCombat": false,
           "stealth": false,
@@ -237,6 +241,7 @@
           "wilderness": false,
           "religion": false
         },
+        "craftSkills": {},
         "mastery": {
           "earth": false,
           "air": false,

@@ -1,0 +1,45 @@
+{
+  "_id": "3655c9b79f1cfd37",
+  "name": "Poison Proficiency",
+  "type": "feat",
+  "img": "icons/sundries/books/book-open-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>You know which end of the vial to open.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 3
+      },
+      "skills": "thievery:2, craft:2",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Applying poison costs a [Minor] action instead of a [Combat] action. Identifying a poison by sight or smell requires only 1 success on a Medicine or [[/check skill=wilderness]].</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Skill]",
+      "[Poisoner]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!3655c9b79f1cfd37"
+}
