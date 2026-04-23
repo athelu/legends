@@ -192,10 +192,13 @@ async function _consumeScroll(actor, item) {
 
 /**
  * Build roll parameters depending on whether the reader has a magical trait.
+ * Uses the scroll's weave primary energy for the mastery die (not the actor's
+ * own primary energy), so the check reflects the power level encoded in the scroll.
  * @param {Actor} actor
+ * @param {Item}  item   - the scroll being used
  * @returns {{ attrValue, skillValue, attrLabel, skillLabel, defaultModifier, hasMagicalTrait }}
  */
-function _buildRollParams(actor) {
+function _buildRollParams(actor, item) {
   const trait = detectPrimaryMagicalTrait(actor);
 
   if (trait) {
@@ -205,10 +208,11 @@ function _buildRollParams(actor) {
       actor.system?.attributes?.[castingStatKey]?.label ??
       castingStatKey.charAt(0).toUpperCase() + castingStatKey.slice(1);
 
-    const primaryEnergy = actor.system?.magicalTrait?.primaryEnergy ?? '';
-    const masteryValue = primaryEnergy ? _getMasteryValue(actor, primaryEnergy) : 0;
-    const masteryLabel = primaryEnergy
-      ? (actor.system?.mastery?.[primaryEnergy]?.label ?? `${primaryEnergy} Mastery`)
+    // Use the scroll's weave primary energy, not the actor's own primary energy
+    const scrollEnergy = item.system?.sourceWeave?.energyCost?.primary?.type ?? '';
+    const masteryValue = scrollEnergy ? _getMasteryValue(actor, scrollEnergy) : 0;
+    const masteryLabel = scrollEnergy
+      ? (actor.system?.mastery?.[scrollEnergy]?.label ?? `${scrollEnergy.charAt(0).toUpperCase() + scrollEnergy.slice(1)} Mastery`)
       : 'Energy Mastery';
 
     return {
@@ -260,7 +264,7 @@ export async function useScroll(actor, item) {
     if (!proceed) return;
   }
 
-  const rollParams = _buildRollParams(actor);
+  const rollParams = _buildRollParams(actor, item);
   const weaveName = item.system?.sourceWeave?.name || item.name;
 
   // Build a descriptive subtitle for the dialog

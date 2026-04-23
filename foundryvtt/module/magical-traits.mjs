@@ -236,7 +236,8 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
       break;
 
     case 'summoner':
-      // Summoner gains access to Summoning weaves — no compendium ability needed
+      // Summoner's unique weave is granted directly from the weaves compendium
+      // (see applySummonerWorkflow for auto-grant logic)
       break;
   }
   
@@ -293,7 +294,7 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
   };
   
   const traitName = traitNames[primaryTrait.type] || primaryTrait.type;
-  const noPoolTrait = ['alchemical-tradition', 'summoner'].includes(primaryTrait.type);
+  const noPoolTrait = ['alchemical-tradition'].includes(primaryTrait.type);
   const modeDesc = noPoolTrait
     ? 'No potential generation required'
     : (modeDescriptions[mode] || 'Standard rolling');
@@ -338,6 +339,7 @@ async function showSetupConfirmationDialog(primaryTrait, mode) {
                  <li>Use Craft: Alchemist and the downtime rules to create preparations</li>`
               : primaryTrait.type === 'summoner'
               ? `<li>Choose your Primary Resonance (daemon affinity)</li>
+                 <li>Roll 8 Magical Potentials and assign them across all energy types</li>
                  <li>Set Charisma as your effective casting stat</li>
                  <li>Gain access to Summoning weaves for all eight energies</li>`
               : `<li>Generating your Magical Potentials</li>
@@ -773,6 +775,23 @@ export function createPotentialsObject(assignments) {
   return potentials;
 }
 
+/**
+ * Calculate the initial energy pool so it can be set to full at creation time.
+ * Mirrors actor._calculateEnergyPool() but works from the pending assignments
+ * before the actor update has been applied.
+ * @param {Actor} actor
+ * @param {Object} assignments - energy -> value map
+ * @param {string} castingStat - e.g. 'intelligence'
+ * @returns {number}
+ */
+function calcInitialEnergy(actor, assignments, castingStat) {
+  const potentialSum = Object.values(assignments).reduce((a, b) => a + b, 0);
+  const castingStatValue = actor.system.attributes[castingStat]?.value || 0;
+  const constitution = actor.system.attributes.constitution.value;
+  // Mastery is all 0 at creation, masterySum = 0
+  return potentialSum + (castingStatValue * 2) + constitution;
+}
+
 // ========================================
 // DIALOG FUNCTIONS
 // ========================================
@@ -782,37 +801,37 @@ export function createPotentialsObject(assignments) {
  * @returns {Promise<string>} Chosen element
  */
 export async function showAffinityDialog() {
-  return new Promise((resolve) => {
-    const dialog = new Dialog({
-      title: "Choose Elemental Affinity",
-      content: `
-        <form>
-          <div class="form-group">
-            <label>Choose your Elemental Affinity:</label>
-            <select id="affinity" name="affinity">
-              ${ELEMENTAL_ENERGIES.map(e => 
-                `<option value="${e}">${ENERGY_TYPES[e].label} ${ENERGY_TYPES[e].icon}</option>`
-              ).join('')}
-            </select>
-          </div>
-          <p><em>Your affinity will receive +2 bonus (max 8 total)</em></p>
-        </form>
-      `,
-      buttons: {
-        ok: {
-          icon: '<i class="fas fa-check"></i>',
-          label: "Confirm",
-          callback: (html) => {
-            const affinity = html.find('[name="affinity"]').val();
-            resolve(affinity);
-          }
-        }
+  const affinityHtml = ELEMENTAL_ENERGIES.map(e =>
+    `<option value="${e}">${ENERGY_TYPES[e].label} ${ENERGY_TYPES[e].icon}</option>`
+  ).join('');
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Choose Elemental Affinity' },
+    position: { width: 420 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-weight: bold;">Elemental Affinity:</label>
+          <select name="affinity" style="width: 100%;">
+            ${affinityHtml}
+          </select>
+        </div>
+        <p style="margin: 0; font-size: 12px; color: #666;"><em>Your affinity will receive +2 bonus (max 8 total)</em></p>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'confirm',
+        label: 'Confirm',
+        default: true,
+        callback: (event, button, dialog) => dialog.element.querySelector('[name="affinity"]').value,
       },
-      default: "ok",
-      close: () => resolve(null)
-    });
-    dialog.render(true);
+      { action: 'cancel', label: 'Cancel', callback: () => null },
+    ],
   });
+
+  return (result && result !== 'cancel') ? result : null;
 }
 
 /**
@@ -825,37 +844,37 @@ export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMult
   const excluded = excludeEnergy ? [excludeEnergy, ...excludeMultiple] : excludeMultiple;
   const availableEnergies = ALL_ENERGIES.filter(e => !excluded.includes(e));
   
-  return new Promise((resolve) => {
-    const dialog = new Dialog({
-      title: "Choose Secondary Focus",
-      content: `
-        <form>
-          <div class="form-group">
-            <label>Choose your Secondary Focus:</label>
-            <select id="secondary" name="secondary">
-              ${availableEnergies.map(e => 
-                `<option value="${e}">${ENERGY_TYPES[e].label} ${ENERGY_TYPES[e].icon}</option>`
-              ).join('')}
-            </select>
-          </div>
-          <p><em>Your secondary focus will receive +1 bonus (max 8 total)</em></p>
-        </form>
-      `,
-      buttons: {
-        ok: {
-          icon: '<i class="fas fa-check"></i>',
-          label: "Confirm",
-          callback: (html) => {
-            const secondary = html.find('[name="secondary"]').val();
-            resolve(secondary);
-          }
-        }
+  const secondaryHtml = availableEnergies.map(e =>
+    `<option value="${e}">${ENERGY_TYPES[e].label} ${ENERGY_TYPES[e].icon}</option>`
+  ).join('');
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Choose Secondary Focus' },
+    position: { width: 420 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-weight: bold;">Secondary Focus:</label>
+          <select name="secondary" style="width: 100%;">
+            ${secondaryHtml}
+          </select>
+        </div>
+        <p style="margin: 0; font-size: 12px; color: #666;"><em>Your secondary focus will receive +1 bonus (max 8 total)</em></p>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'confirm',
+        label: 'Confirm',
+        default: true,
+        callback: (event, button, dialog) => dialog.element.querySelector('[name="secondary"]').value,
       },
-      default: "ok",
-      close: () => resolve(null)
-    });
-    dialog.render(true);
+      { action: 'cancel', label: 'Cancel', callback: () => null },
+    ],
   });
+
+  return (result && result !== 'cancel') ? result : null;
 }
 
 /**
@@ -863,39 +882,37 @@ export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMult
  * @returns {Promise<string>} Chosen patron key
  */
 export async function showPatronDialog() {
-  return new Promise((resolve) => {
-    const patronsHtml = Object.entries(DIVINE_PATRONS).map(([key, data]) => 
-      `<option value="${key}">${data.name}</option>`
-    ).join('');
-    
-    const dialog = new Dialog({
-      title: "Choose Divine Patron",
-      content: `
-        <form>
-          <div class="form-group">
-            <label>Choose which deity you serve:</label>
-            <select id="patron" name="patron">
-              ${patronsHtml}
-            </select>
-          </div>
-          <p><em>Your patron determines your energy affinities</em></p>
-        </form>
-      `,
-      buttons: {
-        ok: {
-          icon: '<i class="fas fa-check"></i>',
-          label: "Confirm",
-          callback: (html) => {
-            const patron = html.find('[name="patron"]').val();
-            resolve(patron);
-          }
-        }
+  const patronsHtml = Object.entries(DIVINE_PATRONS).map(([key, data]) =>
+    `<option value="${key}">${data.name}</option>`
+  ).join('');
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Choose Divine Patron' },
+    position: { width: 420 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-weight: bold;">Divine Patron:</label>
+          <select name="patron" style="width: 100%;">
+            ${patronsHtml}
+          </select>
+        </div>
+        <p style="margin: 0; font-size: 12px; color: #666;"><em>Your patron determines your energy affinities</em></p>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'confirm',
+        label: 'Confirm',
+        default: true,
+        callback: (event, button, dialog) => dialog.element.querySelector('[name="patron"]').value,
       },
-      default: "ok",
-      close: () => resolve(null)
-    });
-    dialog.render(true);
+      { action: 'cancel', label: 'Cancel', callback: () => null },
+    ],
   });
+
+  return (result && result !== 'cancel') ? result : null;
 }
 
 /**
@@ -903,39 +920,41 @@ export async function showPatronDialog() {
  * @returns {Promise<string>} Chosen resonance key
  */
 export async function showPrimaryResonanceDialog() {
-  return new Promise((resolve) => {
-    const resonancesHtml = Object.entries(SUMMONER_RESONANCES).map(([key, data]) =>
-      `<option value="${key}">${data.name}</option>`
-    ).join('');
-    
-    const dialog = new Dialog({
-      title: "Choose Primary Resonance",
-      content: `
-        <form>
-          <div class="form-group">
-            <label>Choose your Primary Resonance:</label>
-            <select id="resonance" name="resonance">
-              ${resonancesHtml}
-            </select>
-          </div>
-          <p><em>Your resonance determines which daemon categories your pneuma naturally attracts and grants bonuses to your primary and secondary energies.</em></p>
-        </form>
-      `,
-      buttons: {
-        ok: {
-          icon: '<i class="fas fa-check"></i>',
-          label: "Confirm",
-          callback: (html) => {
-            const resonance = html.find('[name="resonance"]').val();
-            resolve(resonance);
-          }
-        }
+  const resonancesHtml = Object.entries(SUMMONER_RESONANCES).map(([key, data]) =>
+    `<option value="${key}">${data.name}</option>`
+  ).join('');
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Choose Primary Resonance' },
+    position: { width: 480 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-weight: bold;">Primary Resonance:</label>
+          <select name="resonance" style="width: 100%;">
+            ${resonancesHtml}
+          </select>
+        </div>
+        <p style="margin: 0; font-size: 12px; color: #666;"><em>Your resonance determines which daemon categories your pneuma naturally attracts and grants bonuses to your primary and secondary energies.</em></p>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'confirm',
+        label: 'Confirm',
+        default: true,
+        callback: (event, button, dialog) => dialog.element.querySelector('[name="resonance"]').value,
       },
-      default: "ok",
-      close: () => resolve(null)
-    });
-    dialog.render(true);
+      {
+        action: 'cancel',
+        label: 'Cancel',
+        callback: () => null,
+      },
+    ],
   });
+
+  return (result && result !== 'cancel') ? result : null;
 }
 
 /**
@@ -943,48 +962,51 @@ export async function showPrimaryResonanceDialog() {
  * @returns {Promise<string>} Chosen manifestation key
  */
 export async function showForceOfWillDialog() {
-  return new Promise((resolve) => {
-    const manifestationsHtml = Object.entries(FORCE_OF_WILL).map(([key, data]) => 
-      `<option value="${key}">${data.name}</option>`
-    ).join('');
-    
-    const dialog = new Dialog({
-      title: "Choose Force of Will",
-      content: `
-        <form>
-          <div class="form-group">
-            <label>Choose your Force of Will manifestation:</label>
-            <select id="manifestation" name="manifestation">
-              ${manifestationsHtml}
-            </select>
-          </div>
-          <div id="manifestation-story" style="margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.1);">
-            <em>${FORCE_OF_WILL.unchangingStone.story}</em>
-          </div>
-        </form>
-        <script>
-          $('[name="manifestation"]').on('change', function() {
-            const key = $(this).val();
-            const story = ${JSON.stringify(Object.fromEntries(Object.entries(FORCE_OF_WILL).map(([k,v]) => [k, v.story])))};
-            $('#manifestation-story em').text(story[key]);
-          });
-        </script>
-      `,
-      buttons: {
-        ok: {
-          icon: '<i class="fas fa-check"></i>',
-          label: "Confirm",
-          callback: (html) => {
-            const manifestation = html.find('[name="manifestation"]').val();
-            resolve(manifestation);
-          }
-        }
+  const stories = Object.fromEntries(Object.entries(FORCE_OF_WILL).map(([k, v]) => [k, v.story]));
+  const manifestationsHtml = Object.entries(FORCE_OF_WILL).map(([key, data]) =>
+    `<option value="${key}">${data.name}</option>`
+  ).join('');
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Choose Force of Will' },
+    position: { width: 480 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-weight: bold;">Force of Will Manifestation:</label>
+          <select name="manifestation" style="width: 100%;">
+            ${manifestationsHtml}
+          </select>
+        </div>
+        <div id="manifestation-story" style="padding: 8px; background: rgba(0,0,0,0.15); border-radius: 4px; font-size: 12px;">
+          <em>${FORCE_OF_WILL.unchangingStone.story}</em>
+        </div>
+      </form>
+    `,
+    render: (event, dialog) => {
+      const select = dialog.element.querySelector('[name="manifestation"]');
+      const storyBox = dialog.element.querySelector('#manifestation-story');
+      select.addEventListener('change', () => {
+        storyBox.innerHTML = `<em>${stories[select.value] ?? ''}</em>`;
+      });
+    },
+    buttons: [
+      {
+        action: 'confirm',
+        label: 'Confirm',
+        default: true,
+        callback: (event, button, dialog) => dialog.element.querySelector('[name="manifestation"]').value,
       },
-      default: "ok",
-      close: () => resolve(null)
-    });
-    dialog.render(true);
+      {
+        action: 'cancel',
+        label: 'Cancel',
+        callback: () => null,
+      },
+    ],
   });
+
+  return (result && result !== 'cancel') ? result : null;
 }
 
 /**
@@ -992,41 +1014,51 @@ export async function showForceOfWillDialog() {
  * @returns {Promise<string>} Chosen pact key
  */
 export async function showPactTypeDialog() {
-  return new Promise((resolve) => {
-    const pactsHtml = Object.entries(PACT_TYPES).map(([key, data]) => 
-      `<option value="${key}">${data.name}</option>`
-    ).join('');
-    
-    const dialog = new Dialog({
-      title: "Choose Eldritch Pact",
-      content: `
-        <form>
-          <div class="form-group">
-            <label>Choose your Pact Type:</label>
-            <select id="pact" name="pact">
-              ${pactsHtml}
-            </select>
-          </div>
-          <div id="pact-story" style="margin-top: 10px; padding: 10px; background: rgba(0,0,0,0.1);">
-            <em>${PACT_TYPES.survivorsBargain.story}</em>
-          </div>
-        </form>
-      `,
-      buttons: {
-        ok: {
-          icon: '<i class="fas fa-check"></i>',
-          label: "Confirm",
-          callback: (html) => {
-            const pact = html.find('[name="pact"]').val();
-            resolve(pact);
-          }
-        }
+  const stories = Object.fromEntries(Object.entries(PACT_TYPES).map(([k, v]) => [k, v.story]));
+  const pactsHtml = Object.entries(PACT_TYPES).map(([key, data]) =>
+    `<option value="${key}">${data.name}</option>`
+  ).join('');
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Choose Eldritch Pact' },
+    position: { width: 480 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-weight: bold;">Pact Type:</label>
+          <select name="pact" style="width: 100%;">
+            ${pactsHtml}
+          </select>
+        </div>
+        <div id="pact-story" style="padding: 8px; background: rgba(0,0,0,0.15); border-radius: 4px; font-size: 12px;">
+          <em>${PACT_TYPES.survivorsBargain.story}</em>
+        </div>
+      </form>
+    `,
+    render: (event, dialog) => {
+      const select = dialog.element.querySelector('[name="pact"]');
+      const storyBox = dialog.element.querySelector('#pact-story');
+      select.addEventListener('change', () => {
+        storyBox.innerHTML = `<em>${stories[select.value] ?? ''}</em>`;
+      });
+    },
+    buttons: [
+      {
+        action: 'confirm',
+        label: 'Confirm',
+        default: true,
+        callback: (event, button, dialog) => dialog.element.querySelector('[name="pact"]').value,
       },
-      default: "ok",
-      close: () => resolve(null)
-    });
-    dialog.render(true);
+      {
+        action: 'cancel',
+        label: 'Cancel',
+        callback: () => null,
+      },
+    ],
   });
+
+  return (result && result !== 'cancel') ? result : null;
 }
 
 /**
@@ -1082,67 +1114,99 @@ function findOptimalRollForBonus(rolls, bonus, max = 8) {
  * @param {Object} preAssigned - Pre-assigned energy bonuses {energy: bonus}
  * @returns {Promise<Object>} Map of energy -> value
  */
-export async function showAssignmentDialog(rolls, energies, preAssigned = {}) {
-  return new Promise((resolve) => {
-    let assignments = {...preAssigned};
-    const availableRolls = [...rolls];
-    
-    // Filter out pre-assigned energies from the dropdown
-    const preAssignedKeys = Object.keys(preAssigned);
-    const availableEnergies = energies.filter(e => !preAssignedKeys.includes(e));
-    
-    const energyOptions = availableEnergies.map(e => 
-      `<option value="${e}">${ENERGY_TYPES[e].label}</option>`
-    ).join('');
-    
-    const rollsHtml = rolls.map((roll, idx) => `
-      <div class="roll-assignment" data-roll-index="${idx}">
-        <span class="roll-value">${roll}</span>
-        <select name="energy-${idx}">
-          <option value="">Unassigned</option>
-          ${energyOptions}
-        </select>
-      </div>
-    `).join('');
-    
-    const dialog = new Dialog({
-      title: "Assign Potential Rolls",
-      content: `
-        <form>
-          <p>Assign each roll to an energy type:</p>
-          <div class="roll-assignments">
-            ${rollsHtml}
-          </div>
-          ${Object.keys(preAssigned).length > 0 ? `
-            <p style="margin-top: 10px;"><strong>Pre-assigned bonuses:</strong></p>
-            <ul>
-              ${Object.entries(preAssigned).map(([e, v]) => 
-                `<li>${ENERGY_TYPES[e].label}: +${v}</li>`
-              ).join('')}
-            </ul>
-          ` : ''}
-        </form>
-      `,
-      buttons: {
-        ok: {
-          icon: '<i class="fas fa-check"></i>',
-          label: "Confirm",
-          callback: (html) => {
-            rolls.forEach((roll, idx) => {
-              const energy = html.find(`[name="energy-${idx}"]`).val();
-              if (energy) {
-                assignments[energy] = (assignments[energy] || 0) + roll;
-              }
-            });
-            resolve(assignments);
-          }
-        }
+export async function showAssignmentDialog(rolls, energies, preAssigned = {}, options = {}) {
+  const { allRolls = null, preAssignedDetails = {} } = options;
+  let assignments = {...preAssigned};
+
+  // Filter out pre-assigned energies from the dropdown
+  const preAssignedKeys = Object.keys(preAssigned);
+  const availableEnergies = energies.filter(e => !preAssignedKeys.includes(e));
+
+  const energyOptions = availableEnergies.map(e =>
+    `<option value="${e}">${ENERGY_TYPES[e].label}</option>`
+  ).join('');
+
+  const rollsHtml = rolls.map((roll, idx) => `
+    <div class="roll-assignment" data-roll-index="${idx}" style="display: flex; align-items: center; gap: 8px;">
+      <span class="roll-value" style="font-weight: bold; min-width: 24px; text-align: right;">${roll}</span>
+      <select name="energy-${idx}" style="flex: 1;">
+        <option value="">— Choose energy —</option>
+        ${energyOptions}
+      </select>
+    </div>
+  `).join('');
+
+  // Roll summary bar (all rolls sorted descending)
+  const displayRolls = allRolls ? [...allRolls].sort((a, b) => b - a) : null;
+  const rollSummaryHtml = displayRolls ? `
+    <div style="padding: 6px 8px; background: rgba(0,0,0,0.1); border-radius: 4px; font-size: 12px;">
+      <strong>All rolls:</strong> ${displayRolls.join(', ')} <span style="color: #888;">(${displayRolls.length} dice)</span>
+    </div>
+  ` : '';
+
+  // Pre-assigned section with breakdown of roll + bonus
+  const preAssignedHtml = Object.keys(preAssigned).length > 0 ? `
+    <div style="padding: 8px; background: rgba(0,0,0,0.15); border-radius: 4px; font-size: 12px;">
+      <strong>Pre-assigned (best rolls chosen automatically):</strong>
+      <ul style="margin: 4px 0 0 0; padding-left: 18px;">
+        ${Object.entries(preAssigned).map(([e, v]) => {
+          const d = preAssignedDetails[e];
+          const note = d
+            ? ` <span style="color:#888;">(rolled ${d.roll} + ${d.bonus} bonus${d.roll + d.bonus > 8 ? ', capped at 8' : ''})</span>`
+            : '';
+          return `<li>${ENERGY_TYPES[e].label}: <strong>${v}</strong>${note}</li>`;
+        }).join('')}
+      </ul>
+    </div>
+  ` : '';
+
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Assign Potential Rolls' },
+    position: { width: 480 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        ${rollSummaryHtml}
+        <p style="margin: 0; font-weight: bold;">Assign each remaining roll to an energy type:</p>
+        <div class="roll-assignments" style="display: flex; flex-direction: column; gap: 6px;">
+          ${rollsHtml}
+        </div>
+        ${preAssignedHtml}
+      </form>
+    `,
+    render: (event, dialog) => {
+      const selects = Array.from(dialog.element.querySelectorAll('select[name^="energy-"]'));
+      function syncOptions() {
+        const used = new Set(selects.map(s => s.value).filter(v => v));
+        selects.forEach(sel => {
+          const current = sel.value;
+          sel.querySelectorAll('option').forEach(opt => {
+            if (!opt.value) return;
+            opt.disabled = used.has(opt.value) && opt.value !== current;
+          });
+        });
+      }
+      selects.forEach(sel => sel.addEventListener('change', syncOptions));
+      syncOptions();
+    },
+    buttons: [
+      {
+        action: 'confirm',
+        label: 'Confirm',
+        default: true,
+        callback: (event, button, dialog) => {
+          rolls.forEach((roll, idx) => {
+            const energy = dialog.element.querySelector(`[name="energy-${idx}"]`)?.value;
+            if (energy) assignments[energy] = (assignments[energy] || 0) + roll;
+          });
+          return assignments;
+        },
       },
-      default: "ok",
-      close: () => resolve(null)
-    });
-    dialog.render(true);
+      { action: 'cancel', label: 'Cancel', callback: () => null },
+    ],
   });
+
+  return (result && result !== 'cancel') ? result : null;
 }
 
 // ========================================
@@ -1191,12 +1255,17 @@ export async function applyMagebornWorkflow(actor, traitItem, mode) {
     [affinity]: Math.min(affinityRoll + 2, 8),
     [secondary]: Math.min(secondaryRoll + 1, 8)
   };
+  const preAssignedDetails = {
+    [affinity]: { roll: affinityRoll, bonus: 2 },
+    [secondary]: { roll: secondaryRoll, bonus: 1 }
+  };
   
   // Let player assign remaining rolls
   const assignments = await showAssignmentDialog(
     availableRolls, 
     ALL_ENERGIES.filter(e => e !== affinity && e !== secondary),
-    preAssigned
+    preAssigned,
+    { allRolls: rolls, preAssignedDetails }
   );
   
   if (!assignments) {
@@ -1209,6 +1278,7 @@ export async function applyMagebornWorkflow(actor, traitItem, mode) {
     'system.potentials': createPotentialsObject(assignments),
     'system.mastery': initializeMastery(ALL_ENERGIES),
     'system.castingStat.value': 'intelligence',
+    'system.energy.current': calcInitialEnergy(actor, assignments, 'intelligence'),
     'system.magicalTrait': {
       type: 'mageborn',
       subtype: 'arcane',
@@ -1252,6 +1322,7 @@ export async function applyDivineGiftWorkflow(actor, traitItem, mode) {
   // Step 3: Intelligently assign bonuses to maximize value
   const availableRolls = [...rolls]; // Copy array
   let preAssigned = {};
+  let preAssignedDetails = {};
   let remainingRolls = [];
   
   if (patronKey === 'generalist') {
@@ -1268,6 +1339,7 @@ export async function applyDivineGiftWorkflow(actor, traitItem, mode) {
       const rollIndex = findOptimalRollForBonus(availableRolls, 1);
       const roll = availableRolls.splice(rollIndex, 1)[0];
       preAssigned[energy] = Math.min(roll + 1, 8);
+      preAssignedDetails[energy] = { roll, bonus: 1 };
     }
     remainingRolls = availableRolls;
   } else {
@@ -1282,6 +1354,10 @@ export async function applyDivineGiftWorkflow(actor, traitItem, mode) {
       [patron.primary]: Math.min(primaryRoll + 2, 8),
       [patron.secondary]: Math.min(secondaryRoll + 1, 8)
     };
+    preAssignedDetails = {
+      [patron.primary]: { roll: primaryRoll, bonus: 2 },
+      [patron.secondary]: { roll: secondaryRoll, bonus: 1 }
+    };
     remainingRolls = availableRolls;
   }
   
@@ -1290,7 +1366,8 @@ export async function applyDivineGiftWorkflow(actor, traitItem, mode) {
   const assignments = await showAssignmentDialog(
     remainingRolls,
     energiesForDialog,
-    preAssigned
+    preAssigned,
+    { allRolls: rolls, preAssignedDetails }
   );
   
   if (!assignments) {
@@ -1305,6 +1382,7 @@ export async function applyDivineGiftWorkflow(actor, traitItem, mode) {
     'system.potentials': createPotentialsObject(assignments),
     'system.mastery': initializeMastery(ALL_ENERGIES),
     'system.castingStat.value': 'wisdom',
+    'system.energy.current': calcInitialEnergy(actor, assignments, 'wisdom'),
     'system.magicalTrait': {
       type: 'divine-gift',
       subtype: 'divine',
@@ -1348,6 +1426,10 @@ export async function applyInvokerWorkflow(actor, traitItem, mode) {
     air: Math.min(airRoll + 2, 8),
     positive: Math.min(positiveRoll + 1, 8)
   };
+  const preAssignedDetails = {
+    air: { roll: airRoll, bonus: 2 },
+    positive: { roll: positiveRoll, bonus: 1 }
+  };
   
   // Step 3: Choose one elemental or conceptual for 5th slot
   const chosenElement = await showSecondaryFocusDialog();
@@ -1361,7 +1443,8 @@ export async function applyInvokerWorkflow(actor, traitItem, mode) {
   const assignments = await showAssignmentDialog(
     availableRolls,
     availableEnergies,
-    preAssigned
+    preAssigned,
+    { allRolls: rolls, preAssignedDetails }
   );
   
   if (!assignments) {
@@ -1376,6 +1459,7 @@ export async function applyInvokerWorkflow(actor, traitItem, mode) {
     'system.potentials': createPotentialsObject(assignments),
     'system.mastery': initializeMastery(invokerEnergies),
     'system.castingStat.value': 'charisma',
+    'system.energy.current': calcInitialEnergy(actor, assignments, 'charisma'),
     'system.magicalTrait': {
       type: 'invoker',
       subtype: 'diabolist',
@@ -1453,6 +1537,10 @@ export async function applySummonerWorkflow(actor, traitItem, mode) {
     [resonance.primary]: Math.min(primaryRoll + 2, 8),
     [resonance.secondary]: Math.min(secondaryRoll + 1, 8)
   };
+  const preAssignedDetails = {
+    [resonance.primary]: { roll: primaryRoll, bonus: 2 },
+    [resonance.secondary]: { roll: secondaryRoll, bonus: 1 }
+  };
 
   // Step 3: Assign remaining rolls
   const remainingEnergies = ALL_ENERGIES.filter(
@@ -1461,7 +1549,8 @@ export async function applySummonerWorkflow(actor, traitItem, mode) {
   const assignments = await showAssignmentDialog(
     availableRolls,
     remainingEnergies,
-    preAssigned
+    preAssigned,
+    { allRolls: rolls, preAssignedDetails }
   );
 
   if (!assignments) {
@@ -1474,6 +1563,7 @@ export async function applySummonerWorkflow(actor, traitItem, mode) {
     'system.potentials': createPotentialsObject(assignments),
     'system.mastery': initializeMastery(ALL_ENERGIES),
     'system.castingStat.value': 'charisma',
+    'system.energy.current': calcInitialEnergy(actor, assignments, 'charisma'),
     'system.magicalTrait': {
       type: 'summoner',
       subtype: 'summoner',
@@ -1488,6 +1578,22 @@ export async function applySummonerWorkflow(actor, traitItem, mode) {
 
   await grantMagicalTraitAbilities(actor, 'summoner', updates);
   await actor.update(updates);
+
+  // Grant the Summon Daemon weave automatically
+  const weavesPack = game.packs.get('legends.weaves');
+  if (weavesPack) {
+    const weaveIndex = await weavesPack.getIndex();
+    const weaveEntry = weaveIndex.find(e => e.name === 'Summon Daemon');
+    if (weaveEntry) {
+      const weaveDoc = await weavesPack.getDocument(weaveEntry._id);
+      if (weaveDoc) {
+        await actor.createEmbeddedDocuments('Item', [weaveDoc.toObject()]);
+        ui.notifications.info('Summon Daemon weave added to your weave list.');
+      }
+    } else {
+      console.warn('Summon Daemon weave not found in legends.weaves compendium — pack may need to be rebuilt.');
+    }
+  }
 
   ui.notifications.info(`Summoner trait applied! Primary Resonance: ${resonance.name}`);
   return true;
@@ -1515,6 +1621,10 @@ export async function applyInfuserWorkflow(actor, traitItem, mode) {
     earth: Math.min(earthRoll + 2, 8),
     space: Math.min(spaceRoll + 1, 8)
   };
+  const preAssignedDetails = {
+    earth: { roll: earthRoll, bonus: 2 },
+    space: { roll: spaceRoll, bonus: 1 }
+  };
   
   // Step 3: Choose one elemental or conceptual for 5th slot
   const chosenElement = await showSecondaryFocusDialog();
@@ -1528,7 +1638,8 @@ export async function applyInfuserWorkflow(actor, traitItem, mode) {
   const assignments = await showAssignmentDialog(
     availableRolls,
     availableEnergies,
-    preAssigned
+    preAssigned,
+    { allRolls: rolls, preAssignedDetails }
   );
   
   if (!assignments) {
@@ -1543,6 +1654,7 @@ export async function applyInfuserWorkflow(actor, traitItem, mode) {
     'system.potentials': createPotentialsObject(assignments),
     'system.mastery': initializeMastery(infuserEnergies),
     'system.castingStat.value': 'intelligence',
+    'system.energy.current': calcInitialEnergy(actor, assignments, 'intelligence'),
     'system.magicalTrait': {
       type: 'infuser',
       subtype: 'diabolist',
@@ -1579,27 +1691,32 @@ export async function applySorcerousOriginWorkflow(actor, traitItem, mode) {
   const manifestation = FORCE_OF_WILL[manifestationKey];
   
   // Step 3: Choose primary energy from manifestation options
-  const primaryEnergy = await new Promise((resolve) => {
-    const dialog = new Dialog({
-      title: "Choose Primary Energy",
-      content: `
-        <p>Choose your primary energy for ${manifestation.name}:</p>
-        <select id="primary">
-          ${manifestation.energies.map(e => 
-            `<option value="${e}">${ENERGY_TYPES[e].label}</option>`
-          ).join('')}
-        </select>
-      `,
-      buttons: {
-        ok: {
-          label: "Confirm",
-          callback: (html) => resolve(html.find('#primary').val())
-        }
+  const primaryEnergy = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Choose Primary Energy' },
+    position: { width: 420 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-weight: bold;">Primary Energy for ${manifestation.name}:</label>
+          <select name="primary" style="width: 100%;">
+            ${manifestation.energies.map(e =>
+              `<option value="${e}">${ENERGY_TYPES[e].label}</option>`
+            ).join('')}
+          </select>
+        </div>
+      </form>
+    `,
+    buttons: [
+      {
+        action: 'confirm',
+        label: 'Confirm',
+        default: true,
+        callback: (event, button, dialog) => dialog.element.querySelector('[name="primary"]').value,
       },
-      default: "ok"
-    });
-    dialog.render(true);
-  });
+      { action: 'cancel', label: 'Cancel', callback: () => null },
+    ],
+  }).then(r => (r && r !== 'cancel') ? r : null);
   
   // Step 4: Choose secondary focus
   const secondary = await showSecondaryFocusDialog(primaryEnergy);
@@ -1621,11 +1738,16 @@ export async function applySorcerousOriginWorkflow(actor, traitItem, mode) {
     [primaryEnergy]: Math.min(primaryRoll + 2, 8),
     [secondary]: Math.min(secondaryRoll + 1, 8)
   };
+  const preAssignedDetails = {
+    [primaryEnergy]: { roll: primaryRoll, bonus: 2 },
+    [secondary]: { roll: secondaryRoll, bonus: 1 }
+  };
   
   const assignments = await showAssignmentDialog(
     availableRolls,
     ALL_ENERGIES.filter(e => e !== primaryEnergy && e !== secondary),
-    preAssigned
+    preAssigned,
+    { allRolls: rolls, preAssignedDetails }
   );
   
   if (!assignments) {
@@ -1638,6 +1760,7 @@ export async function applySorcerousOriginWorkflow(actor, traitItem, mode) {
     'system.potentials': createPotentialsObject(assignments),
     'system.mastery': initializeMastery(ALL_ENERGIES),
     'system.castingStat.value': 'wisdom',
+    'system.energy.current': calcInitialEnergy(actor, assignments, 'wisdom'),
     'system.magicalTrait': {
       type: 'sorcerous-origin',
       subtype: 'sorcerous',
@@ -1688,6 +1811,10 @@ export async function applyEldritchPactWorkflow(actor, traitItem, mode) {
     [pact.primary]: Math.min(primaryRoll + 2, 8),
     [pact.secondary]: Math.min(secondaryRoll + 1, 8)
   };
+  const preAssignedDetails = {
+    [pact.primary]: { roll: primaryRoll, bonus: 2 },
+    [pact.secondary]: { roll: secondaryRoll, bonus: 1 }
+  };
   
   // Step 4: Assign remaining rolls
   const remainingEnergies = pact.energies.filter(
@@ -1696,7 +1823,8 @@ export async function applyEldritchPactWorkflow(actor, traitItem, mode) {
   const assignments = await showAssignmentDialog(
     availableRolls,
     remainingEnergies,
-    preAssigned
+    preAssigned,
+    { allRolls: rolls, preAssignedDetails }
   );
   
   if (!assignments) {
@@ -1709,6 +1837,7 @@ export async function applyEldritchPactWorkflow(actor, traitItem, mode) {
     'system.potentials': createPotentialsObject(assignments),
     'system.mastery': initializeMastery(pact.energies),
     'system.castingStat.value': 'charisma',
+    'system.energy.current': calcInitialEnergy(actor, assignments, 'charisma'),
     'system.magicalTrait': {
       type: 'eldritch-pact',
       subtype: 'diabolist',

@@ -3,7 +3,7 @@
  * Foundry VTT V13 - Application V2 (HandlebarsApplicationMixin + ActorSheetV2)
  * Uses: static DEFAULT_OPTIONS, static PARTS, _prepareContext(), data-action event delegation
  */
-import { SKILL_ATTRIBUTE_SHORT, SKILL_LABELS } from '../skill-utils.mjs';
+import { SKILL_ATTRIBUTE_SHORT, SKILL_LABELS, CRAFT_TYPES } from '../skill-utils.mjs';
 import { getLanguageDefinitions, getOriginLabel, getOriginOptionsForAncestry, getNativeLanguageKeyForOrigin, normalizeLanguageKey, normalizeOriginKey } from '../languages.mjs';
 import { getDisplayName, DEFAULT_UNIDENTIFIED_NAMES } from '../identification.mjs';
 
@@ -705,6 +705,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       });
     }
 
+    skillList.sort((a, b) => a.label.localeCompare(b.label));
     context.skillList = skillList;
 
     // Prepare craft skill list (dynamic specializations, all governed by DEX)
@@ -1036,8 +1037,16 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       i => i.type === 'weave' && i.name === weaveItem.name
     );
 
+    // Check if this weave is restricted to a specific magical trait type
+    const requiredTrait = weaveItem.system?.requiredTrait;
+    const actorTraitType = this.actor.system?.magicalTrait?.type;
+    const meetsTraitRequirement = !requiredTrait || actorTraitType === requiredTrait;
+
+    // Block adding a trait-restricted weave to a weave list if requirements aren't met
+    const canAddToWeaveList = hasMagicalTrait && meetsTraitRequirement;
+
     let choice;
-    if (hasMagicalTrait) {
+    if (canAddToWeaveList) {
       const buttons = [
         {
           action: 'weave-list',
@@ -1072,17 +1081,18 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         rejectClose: false,
       });
     } else {
-      // No magical trait — only scroll option; show brief confirm
+      // Cannot add to weave list — either no magical trait, or wrong trait type for this weave
+      const restrictionNote = (hasMagicalTrait && requiredTrait && !meetsTraitRequirement)
+        ? `<div style="font-size: 12px; color: #c53030; font-style: italic;">This weave requires the <strong>Summoner</strong> trait and cannot be added to this character's weave list.</div>`
+        : `<div style="font-size: 13px; color: #444;">This character cannot cast weaves directly.<br>Create a scroll for this weave in your inventory?</div>`;
+
       choice = await foundry.applications.api.DialogV2.wait({
         window: { title: `Create Scroll: ${weaveItem.name}` },
         position: { width: 380 },
         content: `
           <div style="padding: 12px; display: flex; flex-direction: column; gap: 8px;">
             <div><strong>${escapeHtml(weaveItem.name)}</strong></div>
-            <div style="font-size: 13px; color: #444;">
-              This character cannot cast weaves directly.<br>
-              Create a scroll for this weave in your inventory?
-            </div>
+            ${restrictionNote}
           </div>
         `,
         buttons: [
@@ -1152,7 +1162,21 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
           target: weaveSystem.target ?? '',
           duration: weaveSystem.duration ?? '',
           savingThrow: weaveSystem.savingThrow ?? '',
+          effect: weaveSystem.effect ?? '',
+          effectType: weaveSystem.effectType ?? '',
           deliveryMethod: weaveSystem.deliveryMethod ?? 'save',
+          damage: {
+            base: weaveSystem.damage?.base ?? 0,
+            type: weaveSystem.damage?.type ?? '',
+            drInteraction: weaveSystem.damage?.drInteraction ?? '',
+            scaling: weaveSystem.damage?.scaling ?? {},
+          },
+          targetingSuccessScaling: weaveSystem.targetingSuccessScaling ?? '',
+          weavingRoll: weaveSystem.weavingRoll ?? '',
+          targetingRoll: weaveSystem.targetingRoll ?? '',
+          appliesEffects: Array.isArray(weaveSystem.appliesEffects) ? [...weaveSystem.appliesEffects] : [],
+          requiredTrait: weaveSystem.requiredTrait ?? '',
+          tags: Array.isArray(weaveSystem.tags) ? [...weaveSystem.tags] : [],
           description: weaveSystem.description?.value ?? weaveSystem.description ?? '',
         },
         notes: '',
@@ -1247,12 +1271,38 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   }
 
   static async #onAddCraftSkill(event, target) {
+    const existing = new Set(Object.keys(this.actor.system.craftSkills || {}));
+    const isAlchemist = this.actor.system.magicalTrait?.type === 'alchemical-tradition';
+
+    const available = CRAFT_TYPES.filter(c =>
+      !existing.has(c.keyword) && (!c.alchemistOnly || isAlchemist)
+    );
+
+    if (available.length === 0) {
+      ui.notifications.info('All available craft skills have already been added.');
+      return;
+    }
+
+    const options = available.map(c =>
+      `<option value="${c.keyword}">${c.label}</option>`
+    ).join('');
+
     const keyword = await foundry.applications.api.DialogV2.prompt({
       window: { title: 'Add Craft Skill' },
       position: { width: 360 },
-      content: `<form><div class="form-group"><label>Specialization:</label><input type="text" name="keyword" placeholder="e.g. Blacksmith" autofocus style="width:100%;"/></div></form>`,
-      ok: { label: 'Add', callback: (event, button, dialog) => dialog.element.querySelector('[name="keyword"]').value.trim() }
+      content: `
+        <form style="padding: 8px;">
+          <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+            <label style="font-weight: bold;">Craft Specialization:</label>
+            <select name="keyword" style="width: 100%;">
+              ${options}
+            </select>
+          </div>
+        </form>
+      `,
+      ok: { label: 'Add', callback: (event, button, dialog) => dialog.element.querySelector('[name="keyword"]').value }
     });
+
     if (!keyword) return;
     await this.actor.update({
       [`system.craftSkills.${keyword}`]: 0,
@@ -1271,6 +1321,8 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     });
     this.render();
   }
+
+  static async #onItemCreate(event, target) {
     const type = target.dataset.type;
     const name = `New ${type ? type.charAt(0).toUpperCase() + type.slice(1) : 'Item'}`;
     const itemData = {

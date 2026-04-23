@@ -588,6 +588,9 @@ Hooks.once('init', async function() {
   // Initialize ancestry ability grant handlers
   ancestryGrants.initializeAncestryGrantHandlers();
 
+  // Initialize shield helpers (exposes game.legends.shields)
+  shields.initializeShieldHelpers();
+
   // Initialize condition engine
   initializeConditionEngine();
   initializeChatHandlers();
@@ -832,122 +835,122 @@ Hooks.on("hotbarDrop", (bar, data, slot) => {
  * @param {string} skillKey - The skill being tested
  * @param {Object} options - Additional rolling options
  */
-  export async function rollSkillCheck(actor, skillKey, options = {}) {
-    const { onRollComplete = null } = options;
-    const normalizedSkillKey = normalizeSkillKey(skillKey) || skillKey;
-    // Get skill value (prefer effective value computed from feats)
-      const skillValue = getSkillValue(actor.system.skillsEffective || {}, normalizedSkillKey) || getSkillValue(actor.system.skills || {}, normalizedSkillKey);
-      // Prefill any dice modifiers from feats
-      let defaultModifier = 0;
-      let defaultApplyToAttr = true;
-      let defaultApplyToSkill = true;
-      try {
-        const featMods = featEffects.computeFeatModifiers(actor);
-        const s = featMods.skillDiceModifiers?.[normalizedSkillKey] || featMods.skillDiceModifiers?.[skillKey];
-        if (s) {
-          defaultModifier = s.value || 0;
-          defaultApplyToAttr = !!s.applyToAttr;
-          defaultApplyToSkill = !!s.applyToSkill;
-        }
-      } catch (err) {
-        // ignore
-      }
-    
-    // Map skill keys to their governing attributes
-    // Get the attribute key for this skill
-    const attrKey = SKILL_ATTRIBUTE_KEYS[normalizedSkillKey];
-    
-    if (!attrKey) {
-      console.error(`Unknown skill: ${skillKey}`);
-      ui.notifications.error(`Unknown skill: ${skillKey}`);
-      return;
+export async function rollSkillCheck(actor, skillKey, options = {}) {
+  const { onRollComplete = null } = options;
+  const normalizedSkillKey = normalizeSkillKey(skillKey) || skillKey;
+  // Get skill value (prefer effective value computed from feats)
+  const skillValue = getSkillValue(actor.system.skillsEffective || {}, normalizedSkillKey) || getSkillValue(actor.system.skills || {}, normalizedSkillKey);
+  // Prefill any dice modifiers from feats
+  let defaultModifier = 0;
+  let defaultApplyToAttr = true;
+  let defaultApplyToSkill = true;
+  try {
+    const featMods = featEffects.computeFeatModifiers(actor);
+    const s = featMods.skillDiceModifiers?.[normalizedSkillKey] || featMods.skillDiceModifiers?.[skillKey];
+    if (s) {
+      defaultModifier = s.value || 0;
+      defaultApplyToAttr = !!s.applyToAttr;
+      defaultApplyToSkill = !!s.applyToSkill;
     }
-    
-    const attr = actor.system.attributesEffective?.[attrKey] ? { value: actor.system.attributesEffective[attrKey], label: actor.system.attributes[attrKey]?.label || attrKey } : actor.system.attributes[attrKey];
-    
-    if (!attr) {
-      console.error(`Attribute not found: ${attrKey}`);
-      ui.notifications.error(`Attribute not found: ${attrKey}`);
-      return;
-    }
-    
-    const resolvedSkillValue = typeof skillValue === 'object' ? skillValue.value ?? skillValue : skillValue;
-    const rollData = {
-      actor,
-      skillKey: normalizedSkillKey,
-      attrKey,
-      attrValue: attr.value,
-      skillValue: resolvedSkillValue,
-      isAttack: false,
-      isSave: false,
-      modifier: defaultModifier,
-      defaultApplyToAttr,
-      defaultApplyToSkill,
-      fortune: 0,
-      misfortune: 0,
-    };
-    Hooks.call('preRollSkillCheck', rollData);
-
-    // Social skill interception — apply hidden attitude context
-    if (socialCheck.SOCIAL_SKILLS.has(normalizedSkillKey)) {
-      const ctx = socialCheck.resolveSocialContext();
-      if (ctx) {
-        socialCheck.applyContextToRollData(rollData, ctx);
-        socialCheck.whisperSocialContext(actor, normalizedSkillKey, ctx);
-        if (ctx.blocked) {
-          ui.notifications.warn('This social interaction faces extreme resistance. The GM has allowed the roll.');
-        }
-      }
-    }
-
-    // Show roll dialog instead of rolling immediately
-    return dice.showSkillCheckDialog({
-      actor,
-      skillKey: normalizedSkillKey,
-      attrValue: attr.value,
-      skillValue: resolvedSkillValue,
-      attrLabel: attr.label,
-      skillLabel: game.i18n.localize(`D8.Skills.${normalizedSkillKey}`),
-      defaultModifier: rollData.modifier || 0,
-      defaultApplyToAttr: rollData.defaultApplyToAttr ?? defaultApplyToAttr,
-      defaultApplyToSkill: rollData.defaultApplyToSkill ?? defaultApplyToSkill,
-      defaultFortune: rollData.fortune || 0,
-      defaultMisfortune: rollData.misfortune || 0,
-      onRollComplete,
-    });
+  } catch (err) {
+    // ignore
   }
+
+  // Map skill keys to their governing attributes
+  // Get the attribute key for this skill
+  const attrKey = SKILL_ATTRIBUTE_KEYS[normalizedSkillKey];
+
+  if (!attrKey) {
+    console.error(`Unknown skill: ${skillKey}`);
+    ui.notifications.error(`Unknown skill: ${skillKey}`);
+    return;
+  }
+
+  const attr = actor.system.attributesEffective?.[attrKey] ? { value: actor.system.attributesEffective[attrKey], label: actor.system.attributes[attrKey]?.label || attrKey } : actor.system.attributes[attrKey];
+
+  if (!attr) {
+    console.error(`Attribute not found: ${attrKey}`);
+    ui.notifications.error(`Attribute not found: ${attrKey}`);
+    return;
+  }
+
+  const resolvedSkillValue = typeof skillValue === 'object' ? skillValue.value ?? skillValue : skillValue;
+  const rollData = {
+    actor,
+    skillKey: normalizedSkillKey,
+    attrKey,
+    attrValue: attr.value,
+    skillValue: resolvedSkillValue,
+    isAttack: false,
+    isSave: false,
+    modifier: defaultModifier,
+    defaultApplyToAttr,
+    defaultApplyToSkill,
+    fortune: 0,
+    misfortune: 0,
+  };
+  Hooks.call('preRollSkillCheck', rollData);
+
+  // Social skill interception — apply hidden attitude context
+  if (socialCheck.SOCIAL_SKILLS.has(normalizedSkillKey)) {
+    const ctx = socialCheck.resolveSocialContext();
+    if (ctx) {
+      socialCheck.applyContextToRollData(rollData, ctx);
+      socialCheck.whisperSocialContext(actor, normalizedSkillKey, ctx);
+      if (ctx.blocked) {
+        ui.notifications.warn('This social interaction faces extreme resistance. The GM has allowed the roll.');
+      }
+    }
+  }
+
+  // Show roll dialog instead of rolling immediately
+  return dice.showSkillCheckDialog({
+    actor,
+    skillKey: normalizedSkillKey,
+    attrValue: attr.value,
+    skillValue: resolvedSkillValue,
+    attrLabel: attr.label,
+    skillLabel: game.i18n.localize(`D8.Skills.${normalizedSkillKey}`),
+    defaultModifier: rollData.modifier || 0,
+    defaultApplyToAttr: rollData.defaultApplyToAttr ?? defaultApplyToAttr,
+    defaultApplyToSkill: rollData.defaultApplyToSkill ?? defaultApplyToSkill,
+    defaultFortune: rollData.fortune || 0,
+    defaultMisfortune: rollData.misfortune || 0,
+    onRollComplete,
+  });
+}
 
 
 /**
  * Roll a craft skill check for a specific keyword (e.g. Blacksmith, Cook).
  * Craft skills always use Dexterity as their governing attribute.
  */
-  export async function rollCraftSkillCheck(actor, keyword, options = {}) {
-    const { onRollComplete = null } = options;
-    const rank = Number(actor.system.craftSkills?.[keyword] ?? 0);
-    const attrKey = 'dexterity';
-    const attr = actor.system.attributesEffective?.[attrKey]
-      ? { value: actor.system.attributesEffective[attrKey], label: 'Dexterity' }
-      : actor.system.attributes?.[attrKey];
-    if (!attr) {
-      ui.notifications.error('Dexterity attribute not found.');
-      return;
-    }
-    return dice.showSkillCheckDialog({
-      actor,
-      skillKey: `craft:${keyword}`,
-      attrValue: attr.value,
-      skillValue: rank,
-      attrLabel: 'Dex',
-      skillLabel: `Craft: ${keyword}`,
-      defaultModifier: 0,
-      defaultApplyToAttr: true,
-      defaultApplyToSkill: true,
-      defaultFortune: 0,
-      defaultMisfortune: 0,
-      onRollComplete,
-    });
+export async function rollCraftSkillCheck(actor, keyword, options = {}) {
+  const { onRollComplete = null } = options;
+  const rank = Number(actor.system.craftSkills?.[keyword] ?? 0);
+  const attrKey = 'dexterity';
+  const attr = actor.system.attributesEffective?.[attrKey]
+    ? { value: actor.system.attributesEffective[attrKey], label: 'Dexterity' }
+    : actor.system.attributes?.[attrKey];
+  if (!attr) {
+    ui.notifications.error('Dexterity attribute not found.');
+    return;
   }
+  return dice.showSkillCheckDialog({
+    actor,
+    skillKey: `craft:${keyword}`,
+    attrValue: attr.value,
+    skillValue: rank,
+    attrLabel: 'Dex',
+    skillLabel: `Craft: ${keyword}`,
+    defaultModifier: 0,
+    defaultApplyToAttr: true,
+    defaultApplyToSkill: true,
+    defaultFortune: 0,
+    defaultMisfortune: 0,
+    onRollComplete,
+  });
+}
 
 
 /**

@@ -5,7 +5,7 @@
     <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
     <div class="header-info">
       <div class="header-columns">
-        {{!-- Left column: identity fields --}}
+        {{!-- Left column: identity + progression fields --}}
         <div class="header-col">
           <div class="info-line">
             <label>Name:</label>
@@ -56,8 +56,17 @@
               <span class="derived-field" title="Known languages are tracked from nationality and Language skill ranks">{{#if system.languages.display}}{{system.languages.display}}{{else}}No languages assigned{{/if}}</span>
             </div>
           </div>
+          {{!-- Progression fields at the bottom of the left column --}}
+          <div class="info-line header-tier-row">
+            <label>Tier:</label>
+            <span class="tier-display">{{tier.current}}</span>
+            <label class="xp-label">Total XP:</label>
+            <input type="number" name="system.tier.xp" value="{{tier.xp}}" data-dtype="Number" class="xp-input" title="{{xpFieldHint}}" {{#unless canEditXpFields}}readonly{{/unless}}/>
+            <label class="xp-label">Unspent XP:</label>
+            <input type="number" name="system.tier.unspent" value="{{progression.unspent}}" data-dtype="Number" class="xp-input" title="{{xpFieldHint}}" {{#unless canEditXpFields}}readonly{{/unless}}/>
+          </div>
         </div>
-        {{!-- Right column: appearance fields --}}
+        {{!-- Right column: appearance + rest buttons + progression controls --}}
         <div class="header-col">
           <div class="info-line">
             <label>Build:</label>
@@ -79,36 +88,39 @@
             <label>Texture:</label>
             <input type="text" name="system.biography.hairTexture" value="{{system.biography.hairTexture}}" placeholder="Hair texture"/>
           </div>
+          {{!-- Rest buttons + progression controls share the bottom of the right column --}}
+          <div class="header-bottom-right">
+            <div class="header-rest-buttons">
+              <button type="button" data-action="shortRest" title="Short Rest (1 hour): Regain Con HP + 1 Luck">
+                <i class="fas fa-moon"></i> Short Rest
+              </button>
+              <button type="button" data-action="longRest" title="Long Rest (8 hours): Regain (Con × 4) HP, restore all Luck & Energy">
+                <i class="fas fa-bed"></i> Long Rest
+              </button>
+            </div>
+            <div class="header-progression-controls">
+              <div class="info-line progression-line">
+                <span class="progression-badge">{{progression.phaseLabel}}</span>
+                {{#if progression.manualOverride}}
+                <span class="progression-badge warning">Manual</span>
+                {{/if}}
+                {{#if canAwardXp}}
+                <button type="button" class="progression-button" data-action="awardXp">Award XP</button>
+                {{/if}}
+                {{#if canSpendXp}}
+                <button type="button" class="progression-button" data-action="spendXp">Spend XP</button>
+                {{/if}}
+              </div>
+              {{#if canManageProgression}}
+              <div class="info-line progression-line">
+                <button type="button" class="progression-button" data-action="toggleProgressionPhase">{{progression.nextPhaseLabel}}</button>
+                <button type="button" class="progression-button" data-action="toggleManualOverride">{{#if progression.manualOverride}}Disable Manual Override{{else}}Enable Manual Override{{/if}}</button>
+              </div>
+              {{/if}}
+            </div>
+          </div>
         </div>
       </div>
-      <div class="info-line">
-        <label>Tier:</label>
-        <span class="tier-display">{{tier.current}}</span>
-        <label class="xp-label">Total XP:</label>
-        <input type="number" name="system.tier.xp" value="{{tier.xp}}" data-dtype="Number" class="xp-input" title="{{xpFieldHint}}" {{#unless canEditXpFields}}readonly{{/unless}}/>
-        <label class="xp-label">Unspent XP:</label>
-        <input type="number" name="system.tier.unspent" value="{{progression.unspent}}" data-dtype="Number" class="xp-input" title="{{xpFieldHint}}" {{#unless canEditXpFields}}readonly{{/unless}}/>
-      </div>
-      <div class="info-line progression-line">
-        <label>Mode:</label>
-        <span class="progression-badge">{{progression.phaseLabel}}</span>
-        {{#if progression.manualOverride}}
-        <span class="progression-badge warning">Manual Override</span>
-        {{/if}}
-        {{#if canAwardXp}}
-        <button type="button" class="progression-button" data-action="awardXp">Award XP</button>
-        {{/if}}
-        {{#if canSpendXp}}
-        <button type="button" class="progression-button" data-action="spendXp">Spend XP</button>
-        {{/if}}
-      </div>
-      {{#if canManageProgression}}
-      <div class="info-line progression-line">
-        <label>Controls:</label>
-        <button type="button" class="progression-button" data-action="toggleProgressionPhase">{{progression.nextPhaseLabel}}</button>
-        <button type="button" class="progression-button" data-action="toggleManualOverride">{{#if progression.manualOverride}}Disable Manual Override{{else}}Enable Manual Override{{/if}}</button>
-      </div>
-      {{/if}}
     </div>
   </header>
 
@@ -295,15 +307,7 @@
             </div>
           </div>
 
-          {{!-- Rest Buttons --}}
-          <div class="rest-buttons">
-            <button type="button" data-action="shortRest" title="Short Rest (1 hour): Regain Con HP + 1 Luck">
-              <i class="fas fa-moon"></i> Short Rest
-            </button>
-            <button type="button" data-action="longRest" title="Long Rest (8 hours): Regain (Con × 4) HP, restore all Luck & Energy">
-              <i class="fas fa-bed"></i> Long Rest
-            </button>
-          </div>
+          {{!-- Rest Buttons (moved to header) --}}
         </div>
       </div>
     </div>
@@ -1073,22 +1077,22 @@
     {{!-- Equipment Tab --}}
     <div class="tab equipment" data-group="primary" data-tab="equipment">
       <section class="encumbrance-overview">
-        <div class="encumbrance-overview-header">
-          <h3>Encumbrance</h3>
+        <div class="encumbrance-summary-row">
+          <span><strong>Load:</strong> {{system.encumbrance.effectiveWeight}} lbs</span>
+          <span class="encumbrance-divider">|</span>
+          <span><strong>Unencumbered:</strong> {{system.encumbrance.thresholds.unencumbered}} lbs</span>
+          <span class="encumbrance-divider">|</span>
+          <span><strong>Encumbered:</strong> {{system.encumbrance.thresholds.encumbered}} lbs</span>
+          <span class="encumbrance-divider">|</span>
+          <span><strong>Heavy / Max:</strong> {{system.encumbrance.thresholds.heavilyEncumbered}} lbs</span>
           <span class="encumbrance-tier {{system.encumbrance.tier}}">{{system.encumbrance.tierLabel}}</span>
         </div>
-        <div class="encumbrance-overview-grid">
-          <div><strong>Effective Load:</strong> {{system.encumbrance.effectiveWeight}} lbs</div>
-          <div><strong>Unencumbered:</strong> {{system.encumbrance.thresholds.unencumbered}} lbs</div>
-          <div><strong>Encumbered:</strong> {{system.encumbrance.thresholds.encumbered}} lbs</div>
-          <div><strong>Heavy / Max:</strong> {{system.encumbrance.thresholds.heavilyEncumbered}} lbs</div>
-          {{#if system.encumbrance.powerfulBuild}}
-          <div><strong>Trait:</strong> Powerful Build active</div>
-          {{/if}}
-          {{#if system.encumbrance.overLimit}}
-          <div><strong>Warning:</strong> Cannot move until load is reduced.</div>
-          {{/if}}
-        </div>
+        {{#if system.encumbrance.powerfulBuild}}
+        <div class="encumbrance-warning">Powerful Build active</div>
+        {{/if}}
+        {{#if system.encumbrance.overLimit}}
+        <div class="encumbrance-warning">⚠ Cannot move until load is reduced.</div>
+        {{/if}}
         {{#if (hasItems system.encumbrance.containers)}}
         <div class="encumbrance-container-list">
           {{#each system.encumbrance.containers as |container|}}
