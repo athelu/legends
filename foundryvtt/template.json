@@ -473,6 +473,7 @@
       "targetingRoll": "",
       "actionCost": 1,
       "appliesEffects": [],
+      "requiredTrait": "",
       "tags": []
     },
     "scroll": {
@@ -492,7 +493,21 @@
         "target": "",
         "duration": "",
         "savingThrow": "",
+        "effect": "",
+        "effectType": "",
         "deliveryMethod": "save",
+        "damage": {
+          "base": 0,
+          "type": "",
+          "drInteraction": "",
+          "scaling": {}
+        },
+        "targetingSuccessScaling": "",
+        "weavingRoll": "",
+        "targetingRoll": "",
+        "appliesEffects": [],
+        "requiredTrait": "",
+        "tags": [],
         "description": ""
       },
       "uses": {

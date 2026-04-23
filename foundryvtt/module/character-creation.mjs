@@ -1118,15 +1118,15 @@ async function runAppearanceStep(actor, ancestryName) {
   const result = await foundry.applications.api.DialogV2.wait({
     window: { title: 'Character Creation: Appearance (Optional)' },
     content,
-    position: { width: 480 },
+    position: { width: 480, top: Math.round(window.innerHeight / 2 - 300), left: Math.round(window.innerWidth / 2 - 240) },
     rejectClose: false,
-    render: (event, html) => {
-      html.querySelectorAll('.appearance-roll-btn').forEach((btn) => {
+    render: (event, dialog) => {
+      dialog.element.querySelectorAll('.appearance-roll-btn').forEach((btn) => {
         btn.addEventListener('click', () => {
           const items = JSON.parse(btn.dataset.options || '[]');
           if (!items.length) return;
           const picked = randomPick(items);
-          const input = html.querySelector(`#${btn.dataset.field}`);
+          const input = dialog.element.querySelector(`#${btn.dataset.field}`);
           if (input) { input.value = picked; input.dispatchEvent(new Event('input')); }
         });
       });

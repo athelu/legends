@@ -139,18 +139,30 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 .legends .encumbrance-overview {
-  margin: 0 0 16px;
-  padding: 12px 14px;
+  margin: 0 0 10px;
+  padding: 6px 12px;
   border: 1px solid #d6d3c6;
-  border-radius: 8px;
+  border-radius: 6px;
   background: linear-gradient(180deg, rgba(255, 251, 235, 0.95), rgba(248, 244, 228, 0.95));
 }
-.legends .encumbrance-overview-header {
+.legends .encumbrance-summary-row {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 10px;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 13px;
+}
+.legends .encumbrance-summary-row .encumbrance-tier {
+  margin-left: auto;
+}
+.legends .encumbrance-divider {
+  color: #b0a896;
+  user-select: none;
+}
+.legends .encumbrance-warning {
+  font-size: 12px;
+  color: #92400e;
+  margin-top: 4px;
 }
 .legends .encumbrance-tier {
   display: inline-flex;
@@ -173,12 +185,6 @@
 .legends .wealth-value.over-limit {
   background: #fee2e2;
   color: #991b1b;
-}
-.legends .encumbrance-overview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 8px 14px;
-  font-size: 13px;
 }
 .legends .encumbrance-container-list {
   display: grid;
@@ -818,8 +824,8 @@
 }
 
 .legends .training-checkbox {
-  width: 14px;
-  height: 14px;
+  width: 11px;
+  height: 11px;
   margin: 0;
   accent-color: var(--d8-success);
   cursor: pointer;
@@ -1200,7 +1206,8 @@
   margin-top: 15px;
 }
 
-.legends .rest-buttons button {
+.legends .rest-buttons button,
+.legends .header-rest-buttons button {
   padding: 10px 15px;
   border: 2px solid transparent;
   border-radius: 4px;
@@ -1214,32 +1221,76 @@
   gap: 8px;
 }
 
-.legends .rest-buttons [data-action="shortRest"] {
+.legends .rest-buttons [data-action="shortRest"],
+.legends .header-rest-buttons [data-action="shortRest"] {
   background: linear-gradient(to bottom, var(--d8-info), #3182ce);
   color: white;
   border-color: #2c5282;
 }
 
-.legends .rest-buttons [data-action="shortRest"]:hover {
+.legends .rest-buttons [data-action="shortRest"]:hover,
+.legends .header-rest-buttons [data-action="shortRest"]:hover {
   background: linear-gradient(to bottom, #3182ce, #2c5282);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.legends .rest-buttons [data-action="longRest"] {
+.legends .rest-buttons [data-action="longRest"],
+.legends .header-rest-buttons [data-action="longRest"] {
   background: linear-gradient(to bottom, #805ad5, #6b46c1);
   color: white;
   border-color: #553c9a;
 }
 
-.legends .rest-buttons [data-action="longRest"]:hover {
+.legends .rest-buttons [data-action="longRest"]:hover,
+.legends .header-rest-buttons [data-action="longRest"]:hover {
   background: linear-gradient(to bottom, #6b46c1, #553c9a);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
-.legends .rest-buttons button i {
+.legends .rest-buttons button i,
+.legends .header-rest-buttons button i {
   font-size: 14px;
+}
+
+.legends .header-rest-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.legends .header-rest-buttons button {
+  padding: 6px 12px;
+  font-size: 12px;
+}
+
+/* Bottom-right block: rest buttons + progression controls side-by-side */
+.legends .header-bottom-right {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.legends .header-bottom-right .header-rest-buttons {
+  flex: 0 0 auto;
+}
+
+.legends .header-progression-controls {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-start;
+}
+
+/* Tier row inside the left column */
+.legends .header-tier-row {
+  margin-top: auto;
+  padding-top: 8px;
 }
 
 /* ========================================

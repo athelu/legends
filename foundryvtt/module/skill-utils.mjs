@@ -79,6 +79,30 @@ export const SKILL_ATTRIBUTE_SHORT = {
 export const CRAFT_SKILL_ATTRIBUTE = 'dexterity';
 export const CRAFT_SKILL_ATTRIBUTE_SHORT = 'dex';
 
+/**
+ * Defined craft keyword types. `alchemistOnly: true` means the option is
+ * restricted to characters with the alchemical-tradition magical trait.
+ */
+export const CRAFT_TYPES = [
+  { keyword: 'Armorsmith',   label: 'Craft: Armorsmith' },
+  { keyword: 'Blacksmith',   label: 'Craft: Blacksmith' },
+  { keyword: 'Bowyer',       label: 'Craft: Bowyer' },
+  { keyword: 'Brewer',       label: 'Craft: Brewer' },
+  { keyword: 'Cartographer', label: 'Craft: Cartographer' },
+  { keyword: 'Cobbler',      label: 'Craft: Cobbler' },
+  { keyword: 'Cook',         label: 'Craft: Cook' },
+  { keyword: 'Fletcher',     label: 'Craft: Fletcher' },
+  { keyword: 'Glassblower',  label: 'Craft: Glassblower' },
+  { keyword: 'Jeweler',      label: 'Craft: Jeweler' },
+  { keyword: 'Leatherworker',label: 'Craft: Leatherworker' },
+  { keyword: 'Mason',        label: 'Craft: Mason' },
+  { keyword: 'Scribe',       label: 'Craft: Scribe' },
+  { keyword: 'Shipwright',   label: 'Craft: Shipwright' },
+  { keyword: 'Tailor',       label: 'Craft: Tailor' },
+  { keyword: 'Woodworker',   label: 'Craft: Woodworker' },
+  { keyword: 'Alchemist',    label: 'Craft: Alchemist', alchemistOnly: true },
+];
+
 export const LEGACY_SKILL_KEYS = {
   wilderness: ['survival'],
   empathy: ['insight']

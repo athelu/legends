@@ -120,6 +120,13 @@ When creating new feats, follow these guidelines:
 **Description:** After being struck once, you adapt instantly to that opponent's style
 **Benefit:** When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn
 
+#### Beast of Burden
+**Prerequisites:** Str 5, Might 4
+**Usage:** Passive
+**Keyword:** [General]
+**Description:** Your body stopped complaining about carrying extra weight a long time ago.
+**Benefit:** Your encumbrance thresholds use Strength × 12 for Encumbered and Strength × 18 for Heavily Encumbered instead of the standard multiples. You ignore the dice penalties from the Encumbered condition entirely. Heavily Encumbered still reduces your speed but does not add to your dice.
+
 #### Beast Whisperer
 **Prerequisites:** Wis 4, Wilderness 4
 **Usage:** Passive communication, action to calm
@@ -252,6 +259,13 @@ When creating new feats, follow these guidelines:
 **Keyword:** [Magic], [Pact]
 **Description:** You have refined your ability to push the conduit to its limits without losing control entirely. The overspending that would leave another caster fumbling through wild energies you channel with something approaching precision.
 **Benefit:** You ignore the first two points of overspending penalty on your Primary pact energy (instead of the usual zero). For your Secondary pact energy, you ignore the first point of overspending penalty. On your remaining three pact energies, overspending penalties apply normally.
+
+#### Controlled Threat
+**Prerequisites:** Cha 4, Intimidate 4
+**Usage:** Passive
+**Keyword:** [Social]
+**Description:** You can make the implicit threat do the work so the explicit one never has to land.
+**Benefit:** When you successfully Coerce an NPC, their attitude drops only after the interaction ends rather than immediately. Treat the target as Cooperative for the purpose of further social checks. Additionally, when you successfully Frighten an NPC, you may choose to have them become Uncooperative instead of Hostile at the encounter's end.
 
 #### Coordinated Strike
 **Prerequisites:** Agi 4, any combat skill 4
@@ -671,6 +685,13 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Keyword:** [Skill]. [General]
 **Description:** Luck runs in cycles. You've learned to feel when the wheel is about to turn and give it a nudge in the direction you prefer
 **Benefit:** Once per session, after seeing any roll result (yours or an enemy's), force a reroll and choose which result to use
+
+#### Graceful Exit
+**Prerequisites:** Agi 3, Deception 3
+**Usage:** Once per scene
+**Keyword:** [Social], [Shadow]
+**Description:** Knowing when a conversation has turned against you and leaving before it fully collapses is its own skill.
+**Benefit:** When a social interaction is going badly. The interaction ends without the negative attitude shift triggering. The NPC retains their current attitude rather than worsening it. You cannot use this ability if violence has already started or if you have already attempted to exit and been stopped.
 
 #### Grappling Mastery
 **Prerequisites:** Str 5, Athletics 4
