@@ -1,0 +1,170 @@
+{
+  "_id": "9102ff1531bb6dba",
+  "name": "Fracture Crawler",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Fracture Crawlers operate at the edge of what is comprehensible about force damage — they do not simply damage things, they damage the relationship between things. The action loss from Reality Fracture is disruptive in ways that go beyond the lost action: a creature that loses one of its three actions has fundamentally changed what it can accomplish on its turn, and the loss stacks badly with Disoriented if both conditions apply. Fracture Aura makes staying near one actively costly. Reality Tear creates a hazard that forces enemies to make choices about movement that they would not otherwise face. A summoner who places a Fracture Crawler in a chokepoint and lets Fracture Aura work on enemies passing through while Reality Tear threatens anyone attempting to advance will find it controls space in a way that belies its tier.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 60,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 3,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 3,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 24,
+      "max": 24,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 5,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 3,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 30,
+      "climb": 40,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "",
+    "hpMultiplier": 8,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Tremorsense 60 ft, Seam Sense 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Reality Fracture [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 7 damage (Ignore DR); target's DR reduced by 2 for 1 minute; target must succeed on a Will save (1 success) or lose 1 action on their next turn as their sense of sequential time briefly misfires</li>\n<li><em>Margin 2:</em> 10 damage (7 + 3 Str) + 4 force damage (Ignore DR); DR reduced by 3; action loss without save; target Disoriented for 1 minute</li>\n<li><em>Margin 3:</em> 10 damage + 4 force damage; DR reduced by 4; action loss; Disoriented; target makes Will save (Hard task, 2 successes) or loses their [Reaction] until the start of their next turn — the fracture disrupts their ability to respond to events as they occur</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Phase Walk:</strong> As Seam Crawler; can pass through objects up to 10 feet thick.</li>\n<li><strong>Seam Sense:</strong> 120 ft range.</li>\n<li><strong>Fracture Aura:</strong> Creatures that start their turn within 10 feet of the Fracture Crawler must succeed on a Will save (1 success) or their sense of distance misfires — all their ranged attacks this turn add 1 to both attack dice.</li>\n<li><strong>Reality Tear (1/short rest) [Combat]:</strong> As a [Combat] action, the Fracture Crawler tears a 10-foot diameter hole in the planar fabric at a location within 30 feet. The tear persists for 1 minute. Creatures that pass through it are subjected to 10 force damage (Ignore DR) and must make a Will save (1 success) or be teleported 1d6 × 10 feet in a random direction. The tear is visible to Arcane-skilled characters as a faint ripple in the air and appears on any planar detection effect.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Fracture Crawler",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!9102ff1531bb6dba"
+}

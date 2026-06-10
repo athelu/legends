@@ -1,0 +1,170 @@
+{
+  "_id": "38332c1030c6c3ba",
+  "name": "Basilisk",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 3,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 90,
+      "max": 90,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 4,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 20,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "monstrosity",
+    "creatureSubtype": "",
+    "hpMultiplier": 18,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "Basilisks rely on their petrifying gaze to control the battlefield. They wait for enemies to fail saves and become Restrained, then close for poisonous bites. Against multiple foes, they position to catch as many in their gaze as possible. Smart enemies avert their eyes but suffer severe combat penalties.",
+    "attacksNotes": "<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agi 3 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><strong><em>Margin 1:</strong></em> 8 damage (heavy natural weapon) + Poisoned</li>\n<li><strong><em>Margin 2:</strong></em> 13 damage (8 + 5 Str) + Poisoned</li>\n</ul> **Poison Bite:**\n<ul>\n<li>On any hit, target becomes Poisoned\n<ul>\n<li><strong><em>Duration:</strong></em> 1 hour OR until cured by Medicine check (2 successes) or magical healing</li>\n</ul></li>\n</ul></li>\n<li><strong>Special Abilities:</strong>\n<ul>\n<li><strong>Petrifying Gaze (Passive, at-will):</strong> When a creature that can see the basilisk's eyes starts its turn within 30 feet, the basilisk can force it to make a Fortitude save:\n<ul>\n<li><strong><em>0 successes:</strong></em> Begin turning to stone - Restrained</li>\n<li>At end of affected creature's next turn, make another Fortitude save:\n<ul>\n<li><strong><em>0 successes:</strong></em> Turned to stone (Petrified - effectively dead until restored by magic)</li>\n<li><strong><em>1+ successes:</strong></em> Restrained condition ends, no longer turning to stone</li>\n</ul></li>\n</ul></li>\n<li><strong>Averting Eyes:</strong> Creatures can choose to avert eyes as a [Free] action. While averting:\n<ul>\n<li>Immune to petrifying gaze</li>\n<li>All attacks against basilisk have Misfortune</li>\n<li>Basilisk's attacks against averting creature subtract 1 from both dice</li>\n</ul></li>\n</ul></li>\n<li><strong>Thick Scales:</strong> Natural DR 4 (already included in stat block)</li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Petrifying Gaze (Passive, at-will):</strong> When a creature that can see the basilisk's eyes starts its turn within 30 feet, the basilisk can force it to make a Fortitude save:\n<ul>\n<li><strong><em>0 successes:</strong></em> Begin turning to stone - Restrained</li>\n<li>At end of affected creature's next turn, make another Fortitude save:\n<ul>\n<li><strong><em>0 successes:</strong></em> Turned to stone (Petrified - effectively dead until restored by magic)</li>\n<li><strong><em>1+ successes:</strong></em> Restrained condition ends, no longer turning to stone</li>\n</ul></li>\n</ul>\n<ul>\n<li><strong>Averting Eyes:</strong> Creatures can choose to avert eyes as a [Free] action. While averting:\n<ul>\n<li>Immune to petrifying gaze</li>\n<li>All attacks against basilisk have Misfortune</li>\n<li>Basilisk's attacks against averting creature subtract 1 from both dice</li>\n</ul></li>\n</ul></li>\n<li><strong>Thick Scales:</strong> Natural DR 4 (already included in stat block)</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Basilisk",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!38332c1030c6c3ba"
+}

@@ -1,0 +1,170 @@
+{
+  "_id": "b5bfc7ea26878db8",
+  "name": "Shadow Lurker",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Shadow Lurkers hunt from above. They use Ceiling Stalker to position on ceilings or high walls, drop onto targets from advantage, and drain Current Luck — which degrades save capability in a way that compounds across the encounter. A target who has taken three hits from a Shadow Lurker is functionally unable to resist saves effectively for the rest of the session. A summoner who calls one to soften a high-priority target before a difficult encounter, or to reduce a spellcaster's save capability during a negotiation that might turn hostile, will find it performs that specific function cleanly. It will not tell the summoner what it has learned about the environment from its ceiling vantage. A summoner who asks will get an accurate answer.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 2,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 14,
+      "max": 14,
+      "temp": 0
+    },
+    "dr": {
+      "value": 1,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 0.25
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 6,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 3,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 3,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 40,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "shadow",
+    "creatureSubtype": "passive",
+    "hpMultiplier": 7,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Shadow Claw [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 5 damage + 3 Negative damage (Half DR); target's Current Luck reduced by 1</li>\n<li><em>Margin 2:</em> 7 damage (5 + 2 Str) + 3 Negative damage; Current Luck reduced by 2; target gains Disoriented condition until end of their next turn</li>\n<li><em>Margin 3:</em> 7 damage + 3 Negative damage; Current Luck reduced by 3; Disoriented; target makes Will save (1 success) or Frightened until end of their next turn as the darkness seems to press in around them</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Amorphous:</strong> As Shade.</li>\n<li><strong>Shadow Form:</strong> As Shade.</li>\n<li><strong>Ceiling Stalker:</strong> Can move across ceilings and vertical surfaces without Athletics checks. When attacking from above, subtract 1 from both attack dice.</li>\n<li><strong>Luck Drain:</strong> Current Luck reduced by the Shadow Lurker's attacks does not return until the target takes a long rest. This is cumulative across multiple hits.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Shadow Lurker",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!b5bfc7ea26878db8"
+}

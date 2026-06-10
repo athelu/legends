@@ -37,7 +37,13 @@
       "[Magic]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "toggle.state",
+        "stateKey": "elementalMantle",
+        "label": "Elemental Mantle"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!45b77c2e7cdaeb90"

@@ -1,0 +1,170 @@
+{
+  "_id": "6f363a60a265933d",
+  "name": "Blade Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Blade Aetherim are the first Aetherim capable of functioning as a primary combatant rather than a support presence. Holy Blade's destruction of low-HP undead at Margin 3 makes them highly effective in encounters involving significant undead threats. Turn Undead clears the engagement zone of undead entirely in many cases, allowing other combatants to focus on non-undead threats. A summoner who calls one into an undead-heavy encounter will find it efficiently handles that specific problem while maintaining Protective Aura support for allies. Against living opponents it is capable but not exceptional — capable enough to hold its own, not so effective that a summoner should expect it to carry the fight.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 48,
+      "max": 48,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 4,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 4,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 3,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 5,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 60,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 12,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Truesight 30 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Holy Blade [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + 6 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 13 damage (8 + 5 Str) + 6 Positive damage; undead and evil-aligned creatures Frightened for 1 minute; Will save (1 success) to resist</li>\n<li><em>Margin 3:</em> 13 damage + 6 Positive damage; Frightened; no save; undead must make Fortitude save (1 success) or destroyed outright if below half HP</li>\n</ul></li>\n<li><strong>Radiant Arc [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 4), Range: 60 ft\n<ul>\n<li>Net 1: 8 Positive damage (Half DR); target Dazzled until end of their next turn. Net 2: 12 Positive damage + Blinded until end of their next turn; no save. Net 3: 12 Positive damage + Blinded + Revealed for 1 minute.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Healing Touch (3/short rest):</strong> Restores 10 HP per use. Can now stabilize dying creatures automatically with a touch as a [Minor] action — no Medicine check required.</li>\n<li><strong>Protective Aura:</strong> As Shield Aetherim, extended to 20 feet.</li>\n<li><strong>Turn Undead (1/encounter) [Combat]:</strong> As a [Combat] action, releases a pulse of Positive energy in a 30-foot radius. All undead in range make a Will save (opposed by Wis 5 + Religion 4). On failure, undead are Frightened and must move away from the Blade Aetherim as fast as possible for 1 minute. They cannot willingly move closer for the duration.</li>\n<li><strong>Detect Evil:</strong> As above.</li>\n<li><strong>Continual Radiance:</strong> Bright light 30-foot radius.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Blade Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!6f363a60a265933d"
+}

@@ -1,0 +1,56 @@
+{
+  "_id": "athendr0000000001",
+  "name": "Athore's Endurance",
+  "type": "effect",
+  "img": "icons/svg/shield.svg",
+  "system": {
+    "label": "Athore's Endurance",
+    "category": "buff",
+    "effectType": "attribute-mod",
+    "description": {
+      "value": "<p>Target gains +2 Constitution for the duration. Recalculate Constitution-dependent values including Fortitude saves and max HP. If current HP exceeds max HP when the effect ends, reduce current HP to the new maximum. This bonus does not stack with other beneficial Constitution modifiers; use the highest bonus.</p>"
+    },
+    "tokenIcon": "",
+    "badge": {
+      "type": "none",
+      "value": 0,
+      "max": 0
+    },
+    "activeEffects": [
+      {
+        "key": "system.attributes.constitution.tempValue",
+        "mode": "add",
+        "value": "2",
+        "notes": "+2 Constitution"
+      }
+    ],
+    "stacking": "highest",
+    "overlayPriority": 10,
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0,
+      "potential": 0
+    },
+    "grantedBy": "Athore's Endurance",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 3 ? 10 : ${netSuccesses} >= 2 ? 1 : ${netSuccesses} >= 1 ? 0.1 : 0"
+    }
+  },
+  "flags": {},
+  "_key": "!items!athendr0000000001"
+}

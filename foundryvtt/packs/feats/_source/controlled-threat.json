@@ -1,0 +1,44 @@
+{
+  "_id": "3c34f3e9a81a0dd5",
+  "name": "Controlled Threat",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>You can make the implicit threat do the work so the explicit one never has to land.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "charisma": 4
+      },
+      "skills": "intimidate:4",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you successfully Coerce an NPC, their attitude drops only after the interaction ends rather than immediately. Treat the target as Cooperative for the purpose of further social checks. Additionally, when you successfully Frighten an NPC, you may choose to have them become Uncooperative instead of Hostile at the encounter's end.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Social]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!3c34f3e9a81a0dd5"
+}

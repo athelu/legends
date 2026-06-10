@@ -39,7 +39,13 @@
       "[Reaction]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "toggle.state",
+        "stateKey": "flowingGuard",
+        "label": "Flowing Guard"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!1560741bc36c0181"

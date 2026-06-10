@@ -38,7 +38,13 @@
       "[Savage]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "action.add",
+        "description": "Primal Multiattack: two melee attacks as 1 Combat action",
+        "when": "primalFury"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!29456a0fcf95775e"

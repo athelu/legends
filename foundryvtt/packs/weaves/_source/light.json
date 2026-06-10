@@ -24,7 +24,7 @@
     "target": "sphere",
     "savingThrow": "reflex",
     "effect": "Object you touch sheds bright light in 20ft radius and dim light for another 20 feet. Can be cast on a hostile creature (Reflex save to avoid).",
-    "effectType": "utility",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour",
     "weavingRoll": "Fire Potential + Fire Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "revealed",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "save",
     "tags": [
       "aoe",

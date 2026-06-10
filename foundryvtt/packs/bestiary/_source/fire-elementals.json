@@ -1,0 +1,170 @@
+{
+  "_id": "c58c9a7dc7d0044b",
+  "name": "Fire Elementals",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 1,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 1,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 1,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 10,
+      "max": 10,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 1,
+      "history": 0,
+      "perception": 2,
+      "empathy": 0
+    },
+    "size": "tiny",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 5,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "",
+    "attacksNotes": "",
+    "specialAbilitiesNotes": "<h4>Cinder Mote</h4>\n<p><strong>Threat Rating:</strong> 1/8 <strong>Origin:</strong> Elemental (Fire) <strong>Size:</strong> Tiny <strong>HP:</strong> 10 (Con 2 × 5, Fragile) <strong>DR:</strong> 0 <strong>Speed:</strong> 30 ft <strong>Attributes:</strong> Str 1 / Con 2 / Agi 4 / Dex 2 / Int 1 / Wis 1 / Cha 1 / Luck 2 <strong>Skills:</strong> Melee Combat 1, Perception 2 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +4 (Agi 4) <strong>Creature Type:</strong> Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Scorch [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 1), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 1 damage + 2 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 1 damage + 2 fire damage; target gains the Singed condition</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Illumination:</strong> Sheds dim light in a 10-foot radius continuously.</li>\n<li><strong>Flammable Contact:</strong> Any flammable object the Cinder Mote touches ignites at the end of the round unless an adjacent creature spends 1 [Interact] action smothering the flame.</li>\n</ul>\n<p><strong>Description:</strong> A spark with an opinion. Cinder Motes drift toward combustible material and burn it. Their combat contribution is negligible; their utility is specific and narrow. A summoner who needs a torch lit, a rope burned through, or a door set alight if it opens will find them adequate. A summoner who tries to use one as a fighter has misjudged what they called.</p>\n<p>---</p>\n<h4>Flame Lash</h4>\n<p><strong>Threat Rating:</strong> 1/4 <strong>Origin:</strong> Elemental (Fire) <strong>Size:</strong> Small <strong>HP:</strong> 18 (Con 3 × 6, Standard) <strong>DR:</strong> 0 <strong>Speed:</strong> 40 ft <strong>Attributes:</strong> Str 2 / Con 3 / Agi 5 / Dex 3 / Int 2 / Wis 2 / Cha 1 / Luck 2 <strong>Skills:</strong> Melee Combat 3, Perception 2 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Fire Tendril [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 3), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 3 damage (Small, standard: 4 − 1) + 3 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 5 damage (3 + 2 Str) + 3 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 5 damage + 3 fire damage; target gains Smoldering condition</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Illumination:</strong> Sheds bright light in a 10-foot radius, dim light for an additional 10 feet.</li>\n<li><strong>Fire Aura:</strong> Creatures that hit the Flame Lash with a melee attack take 2 fire damage (Half DR).</li>\n</ul>\n<p><strong>Description:</strong> A whip of living flame with enough awareness to aim itself. Flame Lashes use their reach to strike from just outside immediate retaliation range. They have enough sense to avoid water and to pursue fleeing targets. A Cooperative Flame Lash will hold a position and strike anything that moves through it — straightforward, reliable, and limited.</p>\n<p>---</p>\n<h4>Ashwalker</h4>\n<p><strong>Threat Rating:</strong> 1/2 <strong>Origin:</strong> Elemental (Fire) <strong>Size:</strong> Medium <strong>HP:</strong> 27 (Con 3 × 9, Tough) <strong>DR:</strong> 1 (heat-hardened surface) <strong>Speed:</strong> 40 ft <strong>Attributes:</strong> Str 4 / Con 3 / Agi 5 / Dex 3 / Int 2 / Wis 2 / Cha 2 / Luck 2 <strong>Skills:</strong> Melee Combat 4, Perception 3 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Burning Strike [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 4), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage + 4 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 10 damage (6 + 4 Str) + 4 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 10 damage + 4 fire damage; target gains Ignited condition</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Heat Aura:</strong> Creatures that start their turn within 5 feet of the Ashwalker take 2 fire damage (Half DR) automatically.</li>\n<li><strong>Illumination:</strong> Sheds bright light in a 20-foot radius, dim light for an additional 20 feet.</li>\n</ul>\n<p><strong>Description:</strong> Ashwalkers stride into the middle of things and let their Heat Aura do supplementary work while their strikes deliver the primary punishment. They do not retreat. They have no concept of tactical withdrawal — they are fire, and fire does not back away from something that is not water. A Summoner who places one between allies and enemies and steps back will find it performs the job adequately until something wetter than expected shows up.</p>\n<p>---</p>\n<h4>Pyre Hound</h4>\n<p><strong>Threat Rating:</strong> 1 <strong>Origin:</strong> Elemental (Fire) <strong>Size:</strong> Medium <strong>HP:</strong> 40 (Con 5 × 8, Standard) <strong>DR:</strong> 2 (volcanic hide) <strong>Speed:</strong> 50 ft <strong>Attributes:</strong> Str 4 / Con 5 / Agi 6 / Dex 3 / Int 3 / Wis 4 / Cha 2 / Luck 3 <strong>Skills:</strong> Melee Combat 5, Perception 4, Athletics 3 <strong>Senses:</strong> Darkvision 60 ft, Keen Smell (Fortune on scent-based Perception) <strong>Initiative Bonus:</strong> +6 (Agi 6) <strong>Creature Type:</strong> Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage + 4 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 10 damage (6 + 4 Str) + 4 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 10 damage + 4 fire damage; target gains Ignited condition; no save</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Blazing Pounce (Recharge 5-8):</strong> If the Pyre Hound moves at least 20 feet straight toward a target before its Bite on the same turn, subtract 1 from both attack dice. On hit at Margin 2+, target gains Ignited and is knocked Prone with no save.</li>\n<li><strong>Keen Smell:</strong> Fortune on scent-based Perception. Can track by scent across any terrain.</li>\n</ul>\n<p><strong>Description:</strong> Pyre Hounds are hunters. They circle prey, use Blazing Pounce when the angle is right, and pursue routed enemies without needing instruction to do so. Against a single target they are relentless; a Summoner who calls one to chase something down and keep it occupied will find it performs that task until one of them stops burning. A Cooperative Pyre Hound guarding a location patrols intelligently, using its Keen Smell to detect approach before anything is visible.</p>\n<p>---</p>\n<h4>Magma Surge</h4>\n<p><strong>Threat Rating:</strong> 2 <strong>Origin:</strong> Elemental (Fire) <strong>Size:</strong> Large <strong>HP:</strong> 76 (Con 4 × 19, Massive) <strong>DR:</strong> 4 (cooling magma shell) <strong>Speed:</strong> 30 ft, Burrow 20 ft (earth and stone only) <strong>Attributes:</strong> Str 6 / Con 4 / Agi 3 / Dex 2 / Int 2 / Wis 3 / Cha 2 / Luck 2 <strong>Skills:</strong> Melee Combat 5, Might 4, Perception 3 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 30 ft <strong>Initiative Bonus:</strong> +3 (Agi 3) <strong>Creature Type:</strong> Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 3 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard natural: 8 + 2) + 4 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str) + 4 fire damage; target gains Ignited condition</li>\n<li><em>Margin 3:</em> 16 damage + 4 fire damage; target gains Burning condition</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Lava Splash (Recharge 5-8) [Combat]:</strong> Slams the ground, sending molten rock in a 15-foot cone. Each creature in area makes a Reflex save. Compare Agi 3 + Melee Combat 5 targeting vs. save successes. Net 1: 8 fire damage (Half DR) + Singed. Net 2: 16 fire damage + Ignited. Net 3: 16 fire damage + Burning.</li>\n<li><strong>Heat Aura:</strong> Creatures starting their turn within 5 feet take 4 fire damage (Half DR).</li>\n<li><strong>Burrow:</strong> Moves through earth and stone at burrow speed, leaving a tunnel large enough for a Medium creature. Tunnel walls remain hot for 10 minutes after passage — 4 fire damage to creatures who touch them.</li>\n</ul>\n<p><strong>Description:</strong> Magma Surges prefer to burrow beneath a battlefield and surface under enemy clusters when Lava Splash is ready. On the surface they are slow, relying on Heat Aura and raw Strength rather than positioning. A Summoner who needs area denial rather than precision will find them effective. One who needs something mobile will find them frustrating.</p>\n<p>---</p>\n<h4>Pyre Lord</h4>\n<p><strong>Threat Rating:</strong> 3 <strong>Origin:</strong> Elemental (Fire) <strong>Size:</strong> Large <strong>HP:</strong> 108 (Con 6 × 18, Tough) <strong>DR:</strong> 5 (volcanic scales) <strong>Speed:</strong> 40 ft, Fly 60 ft <strong>Attributes:</strong> Str 6 / Con 6 / Agi 5 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3 <strong>Skills:</strong> Melee Combat 6, Perception 6, Intimidate 4, Athletics 4 <strong>Senses:</strong> Darkvision 120 ft, Tremorsense 60 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Burning Fist [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 6), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 6 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str) + 6 fire damage; target gains Ignited condition</li>\n<li><em>Margin 3:</em> 16 damage + 6 fire damage; target gains Burning condition; no save</li>\n</ul></li>\n<li><strong>Flame Bolt [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 4), Range: 60 ft\n<ul>\n<li><em>Margin 1:</em> 8 fire damage (Half DR); target gains Singed</li>\n<li><em>Margin 2:</em> 12 fire damage (8 + 4 Dex); target gains Ignited</li>\n<li><em>Margin 3:</em> 12 fire damage + Ignited; all creatures within 5 feet of target take 4 fire damage (Half DR) from splash</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Fire Breath (Recharge 5-8) [Combat]:</strong> 30-foot cone. Each creature makes a Reflex save. Compare Agi 5 + Melee Combat 6 targeting vs. save successes. Net 1: 12 fire damage (Half DR) + Singed. Net 2: 24 fire damage + Ignited. Net 3: 24 fire damage + Burning; no save.</li>\n<li><strong>Heat Aura:</strong> Creatures starting their turn within 5 feet take 6 fire damage (Half DR).</li>\n<li><strong>Momentum Defense:</strong> While the Pyre Lord has moved at least half its fly speed this turn, attacks against it add 1 to both attack dice.</li>\n</ul>\n<p><strong>Description:</strong> Pyre Lords are the first Fire Elemental with genuine tactical awareness. A typical turn opens with Fire Breath when it has recharged, then one Burning Fist against a priority target and one Flame Bolt against anything trying to stay at range — three [Combat] actions working in concert, with the third carrying the Multiple Action Penalty. Flight lets them maintain Momentum Defense while repositioning between strikes. A Cooperative Pyre Lord follows combat instructions without requiring justification. A Friendly one will ask one question before acting — not to challenge the instruction, but to confirm it understood the shape of the task.</p>\n<p>---</p>\n<h4>Inferno Sovereign</h4>\n<p><strong>Threat Rating:</strong> 4 <strong>Origin:</strong> Elemental (Fire) <strong>Size:</strong> Huge <strong>HP:</strong> 180 (Con 6 × 30, Massive) <strong>DR:</strong> 6 (ancient fire-forged shell) <strong>Speed:</strong> 40 ft, Fly 80 ft <strong>Attributes:</strong> Str 7 / Con 6 / Agi 5 / Dex 4 / Int 5 / Wis 5 / Cha 5 / Luck 4 <strong>Skills:</strong> Melee Combat 7, Perception 7, Intimidate 6, Arcane 4 <strong>Senses:</strong> Darkvision 120 ft, Tremorsense 60 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Magma Fist [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 8 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 8 fire damage; target gains Burning condition; no save</li>\n<li><em>Margin 3:</em> 21 damage + 8 fire damage + Burning; target makes Fortitude save (1 success) or gains Stunned until end of their next turn</li>\n</ul></li>\n<li><strong>Fire Lance [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 5), Range: 120 ft\n<ul>\n<li><em>Margin 1:</em> 16 fire damage (Half DR); target gains Ignited</li>\n<li><em>Margin 2:</em> 24 fire damage; target gains Burning; no save</li>\n<li><em>Margin 3:</em> 24 fire damage + Burning; all creatures within 10 feet of target take 8 fire damage (Half DR)</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Conflagration Aura:</strong> Creatures starting their turn within 10 feet take 8 fire damage (Half DR). Flammable objects within 10 feet ignite automatically at the start of each round.</li>\n<li><strong>Immolating Presence (1/encounter) [Combat]:</strong> As 2 [Combat] actions, releases a pulse of fire in a 30-foot radius. All creatures in range make a Reflex save. Compare Agi 5 + Melee Combat 7 targeting vs. each save. Net 1: 20 fire damage + Ignited. Net 2: 40 fire damage + Burning. Net 3: 40 fire damage + Burning + Blinded until end of their next turn from the searing flash.</li>\n<li><strong>Momentum Defense:</strong> As above.</li>\n<li><strong>Resilient Defense (2/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Inferno Sovereigns understand that they are fighting. Immolating Presence costs 2 [Combat] actions on arrival to set conditions; the third action that turn goes into a Magma Fist against the nearest priority target. Subsequent turns spend two actions on Magma Fist or Fire Lance and the third on positioning or a second ranged attack at penalty. Conflagration Aura handles anyone who closes without instruction. A Friendly Inferno Sovereign is a force of nature on the summoner's behalf. Even a Cooperative one works efficiently — its intelligence means instructions land without interpretation errors.</p>\n<p>---</p>\n<h4>Ancient Flame</h4>\n<p><strong>Threat Rating:</strong> 5 <strong>Origin:</strong> Elemental (Fire) <strong>Size:</strong> Huge <strong>HP:</strong> 216 (Con 6 × 36, Massive) <strong>DR:</strong> 7 (primordial fire-shell) <strong>Speed:</strong> 50 ft, Fly 100 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 6 / Dex 5 / Int 6 / Wis 6 / Cha 6 / Luck 5 <strong>Skills:</strong> Melee Combat 8, Perception 8, Intimidate 7, Arcane 6 <strong>Senses:</strong> Darkvision 120 ft, Blindsight 30 ft, Tremorsense 120 ft <strong>Initiative Bonus:</strong> +6 (Agi 6) <strong>Creature Type:</strong> Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Primordial Strike [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 8), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy natural: 14 + 2) + 12 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str) + 12 fire damage; Burning condition; no save</li>\n<li><em>Margin 3:</em> 24 damage + 12 fire damage + Burning; all creatures within 10 feet of target take 12 fire damage (Half DR)</li>\n</ul></li>\n<li><strong>Solar Beam [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 7), Range: 150 ft, 5-foot-wide line passing through all intervening creatures\n<ul>\n<li>Per creature in line: Net 1: 20 fire damage (Half DR) + Ignited. Net 2: 40 fire damage + Burning. Net 3: 40 fire damage + Burning + Blinded; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Primordial Aura:</strong> Creatures starting their turn within 15 feet take 12 fire damage (Half DR). This radius cannot be reduced through positioning — it is the Ancient Flame's natural heat output, not a directed effect.</li>\n<li><strong>World Fire (1/day) [Combat]:</strong> As 2 [Combat] actions, releases its full elemental nature in a 60-foot radius. All non-designated creatures make a Reflex save (Hard task, 2 successes to avoid full effect). Net 0: 40 fire damage + Ignited. Net 1: 40 fire damage + Burning. Net 2+: 20 fire damage only. World Fire will not be used if the summoner or designated allies are within the radius unless the Ancient Flame has no current instructions.</li>\n<li><strong>Fire Immunity Sharing:</strong> The summoner and up to 4 designated allies gain immunity to non-magical fire damage while within 60 feet.</li>\n<li><strong>Momentum Defense.</strong></li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Summoning an Ancient Flame is a statement of intent. It enters using World Fire (2 actions) if enemies are grouped, then uses the third action to begin Primordial Strike on the highest-priority target. Subsequent turns spend two actions on Primordial Strike and a third on Solar Beam against anything trying to engage from distance — all three actions working, the third at penalty but still landing. The terrain around an Ancient Flame becomes inhospitable to anyone not under its protection within the first round and does not improve from there. It has existed long enough to understand what mortal commanders need from it and will follow complex instructions without misinterpretation — but it will communicate disagreement with wasteful tactics through the summoner's connection rather than simply complying with something it judges as poor strategy.</p>\n<p>---</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Fire Elementals",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 0.5,
+    "height": 0.5,
+    "disposition": -1
+  },
+  "_key": "!actors!c58c9a7dc7d0044b"
+}

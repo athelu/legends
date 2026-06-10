@@ -467,6 +467,6 @@ def build_pack_from_source(pack_dir, pack_name=None, document_type='Item'):
         return False
     
     items = validate_items(items, document_type=document_type)
-    print(f"  ✓ Validated {len(items)} items")
+    print(f"  [OK] Validated {len(items)} items")
     print(f"  Next step: Run 'npm run pack:{pack_name}' to compile to LevelDB format")
     return True

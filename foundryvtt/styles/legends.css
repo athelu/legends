@@ -898,6 +898,149 @@
   background: linear-gradient(to bottom, var(--d8-accent), #1a202c);
   transform: translateY(-1px);
 }
+
+/* NPC skill remove button */
+.legends .skill-remove-btn {
+  padding: 2px 5px;
+  color: var(--d8-danger, #e53e3e);
+  cursor: pointer;
+  border-radius: 3px;
+  line-height: 1;
+  opacity: 0.6;
+  transition: opacity 0.15s, background 0.15s;
+}
+.legends .skill-remove-btn:hover {
+  opacity: 1;
+  background: rgba(229, 62, 62, 0.1);
+}
+
+/* NPC initiative badge in header */
+.legends .initiative-info {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 1px 6px;
+  background: var(--d8-bg-light);
+  border: 1px solid var(--d8-border);
+  border-radius: 999px;
+  font-size: 10px;
+  color: var(--d8-secondary);
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+/* === NPC Details Tab === */
+.legends .details-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.legends .details-row .form-group {
+  flex: 1 1 80px;
+  min-width: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.legends .details-row .form-group label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--d8-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.legends .details-row .form-group input,
+.legends .details-row .form-group select {
+  width: 100%;
+  padding: 3px 5px;
+  border: 1px solid var(--d8-border);
+  border-radius: 3px;
+  background: white;
+  font-size: 12px;
+}
+
+/* Single wide form-group used outside details-row */
+.legends .tab.details > .form-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.legends .tab.details > .form-group label {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--d8-secondary);
+  white-space: nowrap;
+  min-width: 90px;
+}
+.legends .tab.details > .form-group input {
+  flex: 1;
+  padding: 3px 6px;
+  border: 1px solid var(--d8-border);
+  border-radius: 3px;
+  font-size: 12px;
+}
+
+/* === Chip sections (immunities / resistances / languages) === */
+.legends .chip-section {
+  margin-bottom: 12px;
+}
+.legends .chip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+.legends .chip-header h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--d8-text);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid var(--d8-border);
+  padding-bottom: 4px;
+  flex: 1;
+}
+.legends .chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-height: 26px;
+}
+.legends .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  background: var(--d8-bg-light);
+  border: 1px solid var(--d8-border);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--d8-text);
+}
+.legends .chip-resistance {
+  border-color: var(--d8-info, #3182ce);
+  color: var(--d8-info, #3182ce);
+  background: rgba(49, 130, 206, 0.08);
+}
+.legends .chip-language {
+  border-color: var(--d8-success, #38a169);
+  color: var(--d8-success, #38a169);
+  background: rgba(56, 161, 105, 0.08);
+}
+.legends .chip-remove {
+  cursor: pointer;
+  opacity: 0.5;
+  line-height: 1;
+  font-size: 10px;
+  transition: opacity 0.15s;
+}
+.legends .chip-remove:hover {
+  opacity: 1;
+}
+
 /* === Attributes Section === */
 .legends .attributes-list {
   display: flex;
@@ -1064,6 +1207,89 @@
 
 .legends .resource-row.dr-row {
   border-left: 4px solid var(--d8-success);
+}
+
+/* === Combat Toggle Buttons === */
+.legends .feat-toggles-section {
+  margin-top: 8px;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-left: 4px solid var(--d8-border);
+}
+
+.legends .feat-toggles-heading {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--d8-text-muted, #888);
+}
+
+.legends .feat-toggles-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.legends .feat-toggle-btn {
+  padding: 3px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--d8-text-muted, #aaa);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.legends .feat-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: var(--d8-text);
+}
+
+.legends .feat-toggle-btn.active {
+  background: rgba(220, 80, 60, 0.35);
+  border-color: rgba(220, 80, 60, 0.7);
+  color: #f5c6b8;
+  box-shadow: 0 0 6px rgba(220, 80, 60, 0.4);
+}
+
+.legends .feat-toggle-btn.active:hover {
+  background: rgba(220, 80, 60, 0.5);
+}
+
+/* === Feat Use Button (Cat 7 limited-use feats) === */
+.legends .feat-use-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  border: 1px solid rgba(180, 140, 80, 0.45);
+  border-radius: 3px;
+  background: rgba(180, 140, 80, 0.12);
+  color: var(--d8-gold, #c69963);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.legends .feat-use-btn:hover:not(.depleted) {
+  background: rgba(180, 140, 80, 0.28);
+  border-color: rgba(180, 140, 80, 0.75);
+}
+
+.legends .feat-use-btn.depleted {
+  background: rgba(100, 100, 100, 0.1);
+  border-color: rgba(150, 150, 150, 0.25);
+  color: var(--d8-text-muted, #888);
+  cursor: not-allowed;
+  opacity: 0.65;
 }
 
 .legends .resource-row.wealth-row {
@@ -3778,6 +4004,184 @@
 
 .legends-combat-result .apply-damage-btn:hover {
   background: #660000;
+}
+
+/* === On-Hit Feat Effect Buttons (Cat 5) === */
+.legends-combat-result .on-hit-effects {
+  margin-top: 10px;
+  padding: 8px;
+  background: rgba(100, 80, 160, 0.08);
+  border-left: 3px solid rgba(100, 80, 160, 0.5);
+  border-radius: 3px;
+}
+
+.legends-combat-result .on-hit-effects > strong {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+.legends-combat-result .hit-btn-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.legends-combat-result .legends-hit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 9px;
+  background: rgba(100, 80, 160, 0.15);
+  border: 1px solid rgba(100, 80, 160, 0.4);
+  border-radius: 3px;
+  color: #c0b0e8;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  text-align: left;
+}
+
+.legends-combat-result .legends-hit-btn small {
+  font-weight: 400;
+  opacity: 0.75;
+  font-size: 10px;
+}
+
+.legends-combat-result .legends-hit-btn:hover {
+  background: rgba(100, 80, 160, 0.32);
+  border-color: rgba(140, 110, 210, 0.7);
+  color: #ddd0ff;
+}
+
+/* ─── On-Hit Condition Drag Chips ─────────────────────────────────────────── */
+.legends-combat-result .hit-drag-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(100, 80, 160, 0.2);
+}
+
+.legends-combat-result .draggable-effect.hit-condition-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px dashed rgba(140, 110, 210, 0.5);
+  border-radius: 10px;
+  cursor: grab;
+  user-select: none;
+  color: #c8b8f0;
+  font-size: 11px;
+  transition: background 0.15s, border-color 0.15s, transform 0.1s;
+}
+
+.legends-combat-result .draggable-effect.hit-condition-chip i {
+  font-size: 11px;
+  color: #a090d8;
+}
+
+.legends-combat-result .draggable-effect.hit-condition-chip .drag-hint {
+  font-size: 10px;
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.legends-combat-result .draggable-effect.hit-condition-chip:hover {
+  background: rgba(140, 110, 210, 0.2);
+  border-color: rgba(160, 130, 220, 0.75);
+  color: #ddd0ff;
+  transform: translateY(-1px);
+}
+
+.legends-combat-result .draggable-effect.hit-condition-chip:active {
+  cursor: grabbing;
+  transform: translateY(0);
+}
+
+/* ─── Cat 4: Reaction Section ─────────────────────────────────────────────── */
+.legends-combat-result .reaction-section {
+  margin-top: 8px;
+  padding: 7px 10px;
+  background: rgba(180, 120, 20, 0.08);
+  border-left: 3px solid rgba(200, 140, 30, 0.55);
+  border-radius: 3px;
+}
+
+.legends-combat-result .reaction-heading {
+  display: block;
+  font-size: 11px;
+  color: #c89030;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.legends-combat-result .reaction-btn-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.legends-combat-result .legends-reaction-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 9px;
+  background: rgba(180, 120, 20, 0.12);
+  border: 1px solid rgba(200, 140, 30, 0.45);
+  border-radius: 3px;
+  color: #d4a040;
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  text-align: left;
+  width: 100%;
+}
+
+.legends-combat-result .legends-reaction-btn .reaction-note {
+  font-weight: 400;
+  opacity: 0.75;
+  font-size: 10px;
+}
+
+.legends-combat-result .legends-reaction-btn .reaction-ally {
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.85;
+  font-size: 10px;
+}
+
+.legends-combat-result .legends-reaction-btn .reaction-passive {
+  font-weight: 400;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.legends-combat-result .legends-reaction-btn:hover {
+  background: rgba(200, 140, 30, 0.28);
+  border-color: rgba(220, 160, 40, 0.75);
+  color: #f0c060;
+}
+
+.legends-combat-result .legends-reaction-btn.is-passive {
+  opacity: 0.85;
+  font-style: italic;
+}
+
+/* Reaction result follow-up cards */
+.legends-combat-result.reaction-result,
+.legends-combat-result.reaction-prompt {
+  border-left: 3px solid rgba(200, 140, 30, 0.6);
+  background: rgba(180, 120, 20, 0.06);
 }
 
 /* Damage Applied Notification */

@@ -1,0 +1,38 @@
+{
+  "_id": "b0726dc3e7d48aaf",
+  "name": "Using Magic Implements (Rods, Staves, Wands)",
+  "type": "staff",
+  "img": "icons/weapons/staves/staff-ornate-gold.webp",
+  "system": {
+    "description": {
+      "value": "<h3>Requirements</h3>\n<p>Only characters with a <strong>magical trait</strong> that grants an energy pool can activate an implement's weaves:</p>\n<p>| Trait | Casting Stat | Notes | |---|---|---| | Mageborn | Intelligence | | | Divine Gift | Wisdom | | | Invoker | Charisma | | | Infuser | Intelligence | | | Sorcerous Origin | Wisdom | | | Eldritch Pact | Charisma | | | Summoner | Charisma | Uses summoning energy pool |</p>\n<p><strong>Alchemical Tradition</strong> characters <strong>cannot</strong> activate implements. Alchemists brew preparations using physical materials; they do not channel magical energy directly. An alchemist holding a wand is just holding a stick.</p>\n<h3>Activation</h3>\n<ol>\n<li>The wielder selects a weave from the implement's list of granted weaves.</li>\n<li>The implement must have sufficient <strong>charges</strong> to cover the weave's charge cost.</li>\n<li>A <strong>targeting roll</strong> is made to deliver the effect.</li>\n<li>Charges are consumed whether or not the targeting roll succeeds — the attempt itself costs the charge.</li>\n</ol>\n<h3>Targeting Roll</h3>\n<p>The effect is assumed successfully woven (no casting roll is needed — the implement holds the weave). Only targeting is required.</p>\n<p>Roll <strong>2d8</strong> and check each die:</p>\n<ul>\n<li><strong>Die 1</strong> vs. the wielder's <strong>Casting Stat</strong> (Intelligence, Wisdom, or Charisma — determined by magical trait)</li>\n<li><strong>Die 2</strong> vs. the wielder's <strong>mastery level</strong> for the implement's <strong>Primary Energy</strong> type</li>\n</ul>\n<p>If the implement has an <strong>Attack Bonus</strong>, it is applied as a bonus to both dice (each die result is reduced by the attack bonus, making the target threshold easier to meet).</p>\n<p>| Targeting Successes | Result | |---|---| | 0 | Miss — effect fails to reach the target; charges still consumed | | 1 | Margin 1 — effect lands at reduced potency | | 2 | Margin 2 — effect lands at full potency | | 2 + Critical | Critical — both dice roll a natural 1; full effect, all Luck restored |</p>\n<h3>Charges</h3>\n<p>Each implement has a <strong>charge pool</strong> (e.g. 10/10). Charges replenish according to the item's <strong>recharge period</strong>:</p>\n<ul>\n<li><strong>Short Rest</strong> — replenishes automatically at the end of a short rest (also replenishes on long rest)</li>\n<li><strong>Long Rest</strong> — replenishes automatically at the end of a long rest only</li>\n<li><strong>Never</strong> — charges do not replenish; the implement is finite</li>\n</ul>\n<p>---</p>"
+    },
+    "primaryEnergy": "",
+    "charges": {
+      "value": 0,
+      "max": 0,
+      "recharge": "",
+      "rechargePeriod": "dawn"
+    },
+    "properties": [],
+    "grantedWeaves": [],
+    "isMagical": true,
+    "identified": true,
+    "weight": 4.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "",
+    "requiresAttunement": false,
+    "notes": "",
+    "implementType": "staff",
+    "attackBonus": 0,
+    "damage": {
+      "base": 6,
+      "type": "bludgeoning",
+      "properties": []
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

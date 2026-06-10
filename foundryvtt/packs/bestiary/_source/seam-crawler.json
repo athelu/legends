@@ -1,0 +1,170 @@
+{
+  "_id": "31950de3b7e74a67",
+  "name": "Seam Crawler",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Seam Crawlers are scouts and compromisers — creatures that perceive weak points in physical and planar barriers and erode them. Their Phase Claw's DR reduction is their primary contribution to an encounter: a target that has taken three or four hits from a Seam Crawler is substantially less protected against everything else in the fight. Phase Walk allows them to pass through walls to flank, escape, or reach a target that has retreated behind cover. A summoner who uses one to pre-erode a high-DR target's defenses before committing larger assets will find it pays dividends disproportionate to its tier. The Seam Sense ability is also useful outside of combat — a summoner who wants to know whether a location has a thin boundary to a specific plane can direct the Seam Crawler to survey and report back.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 30,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 2,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 12,
+      "max": 12,
+      "temp": 0
+    },
+    "dr": {
+      "value": 1,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 0.25
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 5,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 2,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 3,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "small",
+    "speed": {
+      "walk": 30,
+      "fly": 20,
+      "climb": 30,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "",
+    "hpMultiplier": 6,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Tremorsense 30 ft, Seam Sense 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Phase Claw [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 3), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 4 damage (Ignore DR); target's DR reduced by 1 for 1 minute (the phase claw creates micro-tears in whatever barrier DR represents — armor, toughness, magical protection)</li>\n<li><em>Margin 2:</em> 6 damage (4 + 2 Str) + 2 force damage (Ignore DR); DR reduced by 2 for 1 minute; target's next defensive roll adds 1 to both dice</li>\n<li><em>Margin 3:</em> 6 damage + 2 force damage; DR reduced by 3 for 1 minute; defensive roll penalty; target makes Will save (1 success) or loses spatial orientation briefly — their next [Move] action moves them in a random direction rather than their intended direction</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Seam Sense:</strong> The Seam Crawler perceives thin points in the planar fabric — locations where the boundary between the prime material and adjacent planes is weaker. It knows where these seams are within 60 feet automatically. This is primarily useful as flavor and as a tool for a summoner who needs to know where planar boundaries are thin.</li>\n<li><strong>Phase Walk:</strong> Once per round, can move through a single solid object up to 5 feet thick as part of its movement. It must end its movement in a legal (unoccupied, solid-floored) space.</li>\n<li><strong>DR Erosion:</strong> The DR reduction from Phase Claw stacks across hits. A target that has been hit twice has DR reduced by 2 (or more, depending on margins). This reduction applies to all damage types.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Seam Crawler",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!31950de3b7e74a67"
+}

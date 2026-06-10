@@ -37,7 +37,15 @@
       "[Savage]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": -1,
+        "applyTo": "both",
+        "when": "belowHalfHP"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!7a42a6e997c9e8d8"

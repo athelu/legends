@@ -1,0 +1,170 @@
+{
+  "_id": "58545ceb27a988c1",
+  "name": "Shadow Creatures",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 1,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 2,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 10,
+      "max": 10,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 5,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 2,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "shadow",
+    "creatureSubtype": "passive",
+    "hpMultiplier": 5,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft",
+    "tactics": "",
+    "attacksNotes": "",
+    "specialAbilitiesNotes": "<h4>Shade</h4>\n<p><strong>Threat Rating:</strong> 1/8 <strong>Origin:</strong> Shadow <strong>Size:</strong> Medium <strong>HP:</strong> 10 (Con 2 × 5, Fragile) <strong>DR:</strong> 0 <strong>Speed:</strong> 40 ft <strong>Attributes:</strong> Str 1 / Con 2 / Agi 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2 <strong>Skills:</strong> Melee Combat 2, Stealth 5, Perception 3 <strong>Senses:</strong> Darkvision 120 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep. <strong>Sunlight Sensitivity:</strong> In bright light, adds 1 to both attack dice and skill check dice.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Strength Drain [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 2), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 4 Negative damage (Ignore DR); target's Strength reduced by 1 for 1 hour</li>\n<li><em>Margin 2:</em> 4 Negative damage; Strength reduced by 2 for 1 hour; target gains Weakened condition</li>\n<li><em>Margin 3:</em> 4 Negative damage; Strength reduced by 3 for 1 hour; Weakened; target makes Fortitude save (1 success) or movement speed reduced by 10 until Strength restores</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Amorphous:</strong> Can move through spaces as narrow as 1 inch without squeezing.</li>\n<li><strong>Shadow Form:</strong> While in dim light or darkness, DR increases to 6 against all non-magical damage and non-Positive energy damage. Positive energy ignores this entirely.</li>\n<li><strong>Shadow Spawn:</strong> If a non-undead creature is killed while their Strength has been reduced to 0 by the Shade's attacks, a new Shade rises from their shadow at the start of the next round. This new Shade is not under the summoner's control — it is a free Shadow creature that has just arrived on the prime material through the death. The summoner's Summoning Limit does not apply to it.</li>\n</ul>\n<p><strong>Description:</strong> Shades are the most basic expression of the Shadow Plane's predatory nature — barely-manifested hunger that drains strength through contact. Their combat capability is minimal against anything that fights back effectively, but Strength Drain accumulates across hits in a way that compounds. A target hit three times by a Shade over the course of a fight has lost significant Strength, which affects their melee damage, carry capacity, and Athletics checks. Shadow Form in darkness makes them genuinely difficult to put down through mundane means. A summoner who calls one for direct combat will be disappointed. One who calls one to weaken a specific target over several rounds while other elements of the encounter occupy that target's attention will find it performs the role adequately.</p>\n<p>---</p>\n<h4>Shadow Lurker</h4>\n<p><strong>Threat Rating:</strong> 1/4 <strong>Origin:</strong> Shadow <strong>Size:</strong> Medium <strong>HP:</strong> 14 (Con 2 × 7, Standard) <strong>DR:</strong> 1 <strong>Speed:</strong> 40 ft, Climb 40 ft <strong>Attributes:</strong> Str 2 / Con 2 / Agi 5 / Dex 4 / Int 3 / Wis 3 / Cha 2 / Luck 3 <strong>Skills:</strong> Melee Combat 3, Stealth 6, Perception 4, Athletics 3 <strong>Senses:</strong> Darkvision 120 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep. <strong>Sunlight Sensitivity:</strong> In bright light, adds 1 to both attack dice and skill check dice.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Shadow Claw [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 5 damage + 3 Negative damage (Half DR); target's Current Luck reduced by 1</li>\n<li><em>Margin 2:</em> 7 damage (5 + 2 Str) + 3 Negative damage; Current Luck reduced by 2; target gains Disoriented condition until end of their next turn</li>\n<li><em>Margin 3:</em> 7 damage + 3 Negative damage; Current Luck reduced by 3; Disoriented; target makes Will save (1 success) or Frightened until end of their next turn as the darkness seems to press in around them</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Amorphous:</strong> As Shade.</li>\n<li><strong>Shadow Form:</strong> As Shade.</li>\n<li><strong>Ceiling Stalker:</strong> Can move across ceilings and vertical surfaces without Athletics checks. When attacking from above, subtract 1 from both attack dice.</li>\n<li><strong>Luck Drain:</strong> Current Luck reduced by the Shadow Lurker's attacks does not return until the target takes a long rest. This is cumulative across multiple hits.</li>\n</ul>\n<p><strong>Description:</strong> Shadow Lurkers hunt from above. They use Ceiling Stalker to position on ceilings or high walls, drop onto targets from advantage, and drain Current Luck — which degrades save capability in a way that compounds across the encounter. A target who has taken three hits from a Shadow Lurker is functionally unable to resist saves effectively for the rest of the session. A summoner who calls one to soften a high-priority target before a difficult encounter, or to reduce a spellcaster's save capability during a negotiation that might turn hostile, will find it performs that specific function cleanly. It will not tell the summoner what it has learned about the environment from its ceiling vantage. A summoner who asks will get an accurate answer.</p>\n<p>---</p>\n<h4>Shade Walker</h4>\n<p><strong>Threat Rating:</strong> 1/2 <strong>Origin:</strong> Shadow <strong>Size:</strong> Medium <strong>HP:</strong> 27 (Con 3 × 9, Tough) <strong>DR:</strong> 2 (shadow substance) <strong>Speed:</strong> 40 ft, Climb 40 ft <strong>Attributes:</strong> Str 4 / Con 3 / Agi 5 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3 <strong>Skills:</strong> Melee Combat 5, Stealth 6, Perception 4, Deception 3 <strong>Senses:</strong> Darkvision 120 ft, See Invisibility <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep. <strong>Sunlight Sensitivity:</strong> In bright light, adds 1 to both attack dice and skill check dice.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Shadow Strike [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + 4 Negative damage (Ignore DR); target loses 2 from Current Luck</li>\n<li><em>Margin 2:</em> 12 damage (8 + 4 Str) + 4 Negative damage; Current Luck reduced by 3; target Disoriented until start of their next turn; target loses the Hidden condition if they had it</li>\n<li><em>Margin 3:</em> 12 damage + 4 Negative damage; Current Luck reduced by 4; Disoriented; target also Dazed until end of their next turn — the shadow energy disrupts their timing and coordination</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Amorphous:</strong> As above.</li>\n<li><strong>Shadow Form:</strong> As above.</li>\n<li><strong>Planar Step (1/short rest):</strong> As a [Move] action, steps briefly into the Shadow Plane and re-emerges up to 30 feet away in any dim or dark location it can see. Does not provoke opportunity attacks. Cannot be used in bright light.</li>\n<li><strong>See Invisibility:</strong> Sees invisible creatures and objects within normal sight range.</li>\n</ul>\n<p><strong>Description:</strong> Shade Walkers are assassins. They use Planar Step to close distance without exposure, strike from darkness, and retreat before retaliation. See Invisibility means they are not countered by the standard defensive measure of simply turning invisible. The Negative damage on Shadow Strike ignores DR entirely at Margin 1 — the shadow energy bypasses physical protection because it is not attacking the body but the life force animating it. A summoner who needs a specific target's Luck depleted quickly, or who needs an invisible or concealed target hit without first locating them, will find Shade Walkers capable of both. Their intelligence is sufficient to follow moderately complex instructions and they do not require simplification.</p>\n<p>---</p>\n<h4>Dark Stalker</h4>\n<p><strong>Threat Rating:</strong> 1 <strong>Origin:</strong> Shadow <strong>Size:</strong> Medium <strong>HP:</strong> 40 (Con 5 × 8, Standard) <strong>DR:</strong> 3 (dense shadow-substance) <strong>Speed:</strong> 50 ft, Climb 50 ft <strong>Attributes:</strong> Str 4 / Con 5 / Agi 6 / Dex 5 / Int 5 / Wis 5 / Cha 4 / Luck 4 <strong>Skills:</strong> Melee Combat 6, Stealth 7, Perception 5, Deception 4, Athletics 4 <strong>Senses:</strong> Darkvision 120 ft, Devil's Sight, See Invisibility <strong>Initiative Bonus:</strong> +6 (Agi 6) <strong>Creature Type:</strong> Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Shadow Blade [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 6), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + 6 Negative damage (Ignore DR); target loses 3 from Current Luck</li>\n<li><em>Margin 2:</em> 12 damage (8 + 4 Str) + 6 Negative damage; Current Luck reduced by 4; target Disoriented + Dazed until end of their next turn; no save</li>\n<li><em>Margin 3:</em> 12 damage + 6 Negative damage; Current Luck reduced by 5; Disoriented + Dazed; target makes Will save (1 success) or Frightened until end of their next turn as the accumulated shadow energy overwhelms their sense of safety</li>\n</ul></li>\n<li><strong>Shadow Bolt [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 4), Range: 60 ft\n<ul>\n<li>Net 1: 8 Negative damage (Half DR); target loses 2 from Current Luck. Net 2: 12 Negative damage + Disoriented until end of their next turn; Current Luck reduced by 3; no save. Net 3: 12 Negative damage + Dazed for 1 minute; Current Luck reduced by 4; Will save each round to end.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Shadow Form:</strong> As above; DR increases to 8 against non-magical, non-Positive damage in dim light or darkness.</li>\n<li><strong>Planar Step (2/short rest):</strong> As Shade Walker; usable twice per short rest. The Dark Stalker has spent enough time on the prime material to cross more fluidly.</li>\n<li><strong>Devil's Sight:</strong> Sees through magical darkness as if bright light.</li>\n<li><strong>Death Sense:</strong> Automatically detects creatures below half HP within 60 feet and knows their precise location regardless of concealment or invisibility.</li>\n<li><strong>Shadow Ambush:</strong> When the Dark Stalker attacks on the same turn it used Planar Step, it has Fortune on that attack.</li>\n</ul>\n<p><strong>Description:</strong> Dark Stalkers are the first Shadow creature with genuine tactical sophistication. They manage their Planar Steps as resources — one to open with Shadow Ambush from an unexpected angle, one held for extraction when the engagement turns unfavorable. Death Sense ensures they always know which target is most vulnerable. Shadow Form in darkness gives them DR 8 against mundane attacks, making them effectively immune to conventional weapons while in their preferred environment. A summoner who controls lighting conditions — ensuring the engagement happens in dim light or darkness — will find a Dark Stalker performs at well above its TR. The creature is also the first Shadow creature that actively evaluates when retreat serves its interests better than continued engagement, which it will execute without prompting if the tactical situation warrants it.</p>\n<p>---</p>\n<h4>Nightmare</h4>\n<p><strong>Threat Rating:</strong> 2 <strong>Origin:</strong> Shadow <strong>Size:</strong> Large <strong>HP:</strong> 76 (Con 4 × 19, Massive) <strong>DR:</strong> 3 (shadow-dense hide) <strong>Speed:</strong> 70 ft, Fly 100 ft <strong>Attributes:</strong> Str 6 / Con 4 / Agi 6 / Dex 4 / Int 4 / Wis 4 / Cha 5 / Luck 4 <strong>Skills:</strong> Melee Combat 6, Perception 5, Intimidate 5, Athletics 5, Stealth 4 <strong>Senses:</strong> Darkvision 120 ft, Devil's Sight <strong>Initiative Bonus:</strong> +6 (Agi 6) <strong>Creature Type:</strong> Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Flaming Hooves [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 6), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 12 damage (Large, standard: 8 + 2 + 2 shadow density) + 4 fire damage (Half DR); target gains Singed condition</li>\n<li><em>Margin 2:</em> 18 damage (12 + 6 Str) + 4 fire damage; target knocked Prone; no save; target gains Ignited condition</li>\n<li><em>Margin 3:</em> 18 damage + 4 fire damage; Prone + Ignited; target makes Fortitude save (1 success) or Stunned until end of their next turn from the concussive force of the hooves</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Ethereal Stride (1/day):</strong> The Nightmare can carry up to 3 riders into the Ethereal Plane for up to 1 hour, moving through solid objects during transit. All passengers return to the prime material simultaneously when the Nightmare ends the stride or when the duration expires. Passengers ejected mid-stride by the duration expiring appear at the Nightmare's current location.</li>\n<li><strong>Smoke Trail:</strong> When the Nightmare moves at full speed (40+ feet in a turn), it generates a 10-foot-wide trail of obscuring smoke that persists for 1 minute. The smoke provides concealment to creatures within it. The Nightmare moves through its own smoke without penalty.</li>\n<li><strong>Terror Mount:</strong> A rider on a Nightmare adds 2 to both dice on Intimidate checks against creatures who can see the mount. This is not a bonus — the sight of something burning and flying through shadow genuinely terrifies most people.</li>\n<li><strong>Devil's Sight.</strong></li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Nightmares are mounts first and combatants second. Their primary value to a summoner is speed — 70 feet on the ground, 100 feet in the air, and the ability to carry passengers through the Ethereal Plane briefly. As a combat asset they are capable but not exceptional at their tier. As a transport asset they have no equivalent at TR 2. A summoner who needs to cross a significant distance quickly, exit a location through walls, or arrive somewhere that should not be accessible will find a Nightmare solves the problem efficiently. Their fire-dealing hooves are a feature of their nature rather than a primary tactic; they fight when they must and prefer to outrun problems when the option exists.</p>\n<p>---</p>\n<h4>Void Shade</h4>\n<p><strong>Threat Rating:</strong> 3 <strong>Origin:</strong> Shadow <strong>Size:</strong> Large <strong>HP:</strong> 108 (Con 6 × 18, Tough) <strong>DR:</strong> 4 (concentrated shadow-matter) <strong>Speed:</strong> 50 ft, Fly 60 ft <strong>Attributes:</strong> Str 5 / Con 6 / Agi 6 / Dex 5 / Int 6 / Wis 6 / Cha 5 / Luck 5 <strong>Skills:</strong> Melee Combat 7, Stealth 7, Perception 6, Deception 5, Arcane 4 <strong>Senses:</strong> Darkvision 120 ft, Devil's Sight, See Invisibility, Truesight 30 ft <strong>Initiative Bonus:</strong> +6 (Agi 6) <strong>Creature Type:</strong> Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Void Touch [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 8 Negative damage (Ignore DR); target loses 4 from Current Luck; target's maximum HP reduced by 8 until long rest (life drain)</li>\n<li><em>Margin 2:</em> 15 damage (10 + 5 Str) + 8 Negative damage; Current Luck reduced by 5; max HP reduced by 12; target Weakened + Sickened for 1 minute; no save</li>\n<li><em>Margin 3:</em> 15 damage + 8 Negative damage; Current Luck reduced by 6; max HP reduced by 16; Weakened + Sickened; target makes Fortitude save (1 success) or gains 1 Exhaustion level as the life drain reaches deeper than surface vitality</li>\n</ul></li>\n<li><strong>Shadow Tendril [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 5), Range: 60 ft\n<ul>\n<li>Net 1: 12 Negative damage (Half DR); target loses 3 from Current Luck; max HP reduced by 6. Net 2: 20 Negative damage; Current Luck reduced by 4; max HP reduced by 10; Weakened for 1 minute; no save. Net 3: 20 Negative damage; Current Luck reduced by 5; max HP reduced by 14; Weakened + Disoriented for 1 minute; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Shadow Form:</strong> DR increases to 10 against non-magical, non-Positive damage in dim light or darkness.</li>\n<li><strong>Life Drain Aura:</strong> Creatures within 10 feet that are not Shadow creatures lose 2 from their maximum HP at the start of each of their turns. This maximum HP loss persists until long rest. A creature reduced to 0 maximum HP by this aura dies — their life energy has been entirely consumed.</li>\n<li><strong>Darkness Shroud (1/encounter) [Combat]:</strong> As a [Combat] action, creates a 30-foot radius of magical darkness centered on itself. This darkness persists for 1 minute and moves with the Void Shade. The Void Shade sees through it normally. Other Shadow creatures see through it. All other creatures are effectively Blinded within it.</li>\n<li><strong>Planar Step (3/short rest):</strong> As Dark Stalker; usable three times per short rest.</li>\n<li><strong>Resilient Defense (2/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Void Shades introduce life drain as a sustained battlefield effect rather than a single-hit consequence. The Life Drain Aura erodes maximum HP from everything nearby every round, creating a timer that forces enemies to either engage the Void Shade directly or retreat from its proximity. Darkness Shroud combined with the Void Shade's ability to see through it creates a zone where it fights at full effectiveness against Blinded opponents. Shadow Form at DR 10 in darkness makes conventional weapons nearly useless against it while the darkness is active. A summoner who establishes dim or dark conditions before calling a Void Shade will find it functions at a tier above its rating. One who calls it into a brightly lit environment will find it still capable but operating at a disadvantage it will attempt to remedy by moving toward whatever shadow is available.</p>\n<p>---</p>\n<h4>Shadow Lord</h4>\n<p><strong>Threat Rating:</strong> 4 <strong>Origin:</strong> Shadow <strong>Size:</strong> Large <strong>HP:</strong> 180 (Con 6 × 30, Massive) <strong>DR:</strong> 5 (ancient shadow-matter) <strong>Speed:</strong> 60 ft, Fly 80 ft <strong>Attributes:</strong> Str 6 / Con 6 / Agi 7 / Dex 6 / Int 7 / Wis 7 / Cha 6 / Luck 6 <strong>Skills:</strong> Melee Combat 8, Stealth 8, Perception 7, Deception 6, Arcane 6, Intimidate 6 <strong>Senses:</strong> Darkvision 120 ft, Devil's Sight, See Invisibility, Truesight 60 ft <strong>Initiative Bonus:</strong> +7 (Agi 7) <strong>Creature Type:</strong> Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Shadow Rend [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 8), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Large, heavy: 12 + 2) + 10 Negative damage (Ignore DR); target loses 5 from Current Luck; max HP reduced by 12 until long rest</li>\n<li><em>Margin 2:</em> 20 damage (14 + 6 Str) + 10 Negative damage; Current Luck reduced by 6; max HP reduced by 18; Weakened + Sickened + Disoriented for 1 minute; no save</li>\n<li><em>Margin 3:</em> 20 damage + 10 Negative damage; all conditions; max HP reduced by 24; target makes Fortitude save (Hard task, 2 successes) or gains 1 Exhaustion level and loses 1 point of Constitution permanently until Major Restoration</li>\n</ul></li>\n<li><strong>Void Lance [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 6), Range: 120 ft\n<ul>\n<li>Net 1: 16 Negative damage (Half DR); Current Luck reduced by 4; max HP reduced by 8. Net 2: 28 Negative damage; Current Luck reduced by 6; max HP reduced by 14; Weakened + Sickened for 1 minute; no save. Net 3: 28 Negative damage; all conditions; max HP reduced by 20; target makes Fortitude save (1 success) or Stunned until end of their next turn.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Shadow Form:</strong> DR increases to 12 against non-magical, non-Positive damage in dim light or darkness. In complete darkness, the Shadow Lord is effectively immune to non-magical, non-Positive damage.</li>\n<li><strong>Life Drain Aura:</strong> 20-foot radius; creatures lose 4 from maximum HP per round. As Void Shade.</li>\n<li><strong>Darkness Domain (1/encounter) [Combat]:</strong> As 2 [Combat] actions, creates permanent magical darkness in a 60-foot radius centered on itself. Permanent until dispelled by a Positive energy weave of sufficient cost or by the Shadow Lord's dismissal. The Shadow Lord and Shadow creatures see through it normally. All other creatures are Blinded within it.</li>\n<li><strong>Shadow Army (1/day):</strong> As a [Combat] action, the Shadow Lord calls 1d4 Shade Walkers from the Shadow Plane. They appear in unoccupied spaces within 30 feet and act on the Shadow Lord's initiative, following its direction. They are not under the summoner's control. Duration: 1 hour or until dismissed.</li>\n<li><strong>Planar Step (at-will):</strong> The Shadow Lord steps between shadows freely, teleporting up to 30 feet to any dim or dark location it can see as a [Move] action. No per-rest limit.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Shadow Lords reshape engagements through darkness rather than through direct force. Darkness Domain creates permanent darkness across a 60-foot radius, immediately giving the Shadow Lord and any Shadow creatures present a massive advantage against opponents who cannot see in magical darkness. Shadow Army calls additional Shadow creatures under the Shadow Lord's direction, not the summoner's — which is a useful addition to the fight or a complication depending on whether instructions to the Shadow Lord are precise. Life Drain Aura at 20 feet erodes maximum HP at 4 per round from everything nearby. Planar Step at-will makes positioning it very difficult — it is always exactly where it chooses to be. A summoner who deploys one in an environment with any natural darkness and gives it clear instructions will find it turns the entire encounter into a fight that happens on its terms rather than the enemy's.</p>\n<p>---</p>\n<h4>The Endless Dark</h4>\n<p><strong>Threat Rating:</strong> 5 <strong>Origin:</strong> Shadow <strong>Size:</strong> Huge <strong>HP:</strong> 216 (Con 6 × 36, Massive) <strong>DR:</strong> 6 (primordial shadow-matter) <strong>Speed:</strong> 60 ft, Fly 100 ft <strong>Attributes:</strong> Str 7 / Con 6 / Agi 7 / Dex 7 / Int 8 / Wis 8 / Cha 7 / Luck 7 <strong>Skills:</strong> Melee Combat 8, Stealth 8, Perception 8, Deception 7, Arcane 7, Intimidate 7 <strong>Senses:</strong> Darkvision unlimited, Devil's Sight, See Invisibility, Truesight 120 ft, Perfect Sight 60 ft <strong>Initiative Bonus:</strong> +7 (Agi 7) <strong>Creature Type:</strong> Shadow — Darkvision unlimited range. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+4 DR). Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Void Rend [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 8), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2) + 14 Negative damage (Ignore DR); target loses 6 from Current Luck; max HP reduced by 16 until long rest</li>\n<li><em>Margin 2:</em> 23 damage (16 + 7 Str) + 14 Negative damage; Current Luck reduced by 8; max HP reduced by 24; Weakened + Sickened + Disoriented + Dazed for 1 minute; no save</li>\n<li><em>Margin 3:</em> 23 damage + 14 Negative damage; all conditions; max HP reduced by 32; target makes Fortitude save (Hard task, 2 successes) or loses 2 points of Constitution permanently until Major Restoration; target also loses 1 point of Wisdom permanently until Major Restoration as the void touches their mind</li>\n</ul></li>\n<li><strong>Shadow Annihilation [Combat]:</strong> Ranged attack (Dex 7 + Ranged Combat 8), Range: 200 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 24 Negative damage (Half DR); Current Luck reduced by 5; max HP reduced by 12. Net 2: 40 Negative damage; Current Luck reduced by 8; max HP reduced by 20; Weakened + Sickened; no save. Net 3: 40 Negative damage; all conditions; max HP reduced by 28; Stunned until end of their next turn; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Shadow Form:</strong> In dim light or darkness, immune to all non-magical damage and non-Positive energy damage. In bright light, DR 6 applies normally.</li>\n<li><strong>Life Drain Aura:</strong> 30-foot radius; creatures lose 6 from maximum HP per round. A creature reduced to 0 maximum HP dies.</li>\n<li><strong>World Darkness (1/day) [Combat]:</strong> As 2 [Combat] actions, the Endless Dark extends its nature across a 120-foot radius. All light sources within the radius — magical and mundane — are suppressed for 1 hour. Positive energy weaves of cost 8 or higher can suppress the darkness within their area while active. The Endless Dark and all Shadow creatures see through it with perfect clarity.</li>\n<li><strong>Shadow Army (1/day):</strong> As Shadow Lord, but calls 2d4 Shade Walkers and 1d4 Dark Stalkers.</li>\n<li><strong>Planar Step (at-will):</strong> As Shadow Lord; range increases to 60 feet; can step to any shadow within line of sight regardless of distance.</li>\n<li><strong>Consuming Darkness:</strong> When a creature dies within 60 feet of the Endless Dark, the Endless Dark regains HP equal to that creature's Constitution score × 4. This triggers regardless of what killed the creature.</li>\n<li><strong>Cold Immunity Sharing:</strong> The summoner and up to 4 designated allies gain immunity to cold damage while within 60 feet.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> The Endless Dark is the Shadow Plane's full predatory nature distilled into a single entity. World Darkness suppresses all light across 120 feet for an hour — after it goes up, the battlefield belongs to Shadow creatures unless the opposing force has significant Positive energy capability. Shadow Form in that darkness grants complete immunity to non-magical damage. Life Drain Aura reduces maximum HP by 6 every round from everything within 30 feet. Shadow Annihilation handles grouped enemies at 200 feet. Consuming Darkness means deaths in the area heal it. A summoner who calls one into an encounter has determined that the encounter ends in darkness, and the Endless Dark will ensure that determination is accurate. It is old enough to understand precisely what summoners need from it and will follow clear instructions without requiring them to be simplified. What it will also do, without prompting and without being asked, is evaluate whether the summoner is someone worth cooperating with again. It remembers. The Shadow Plane is very patient.</p>\n<p>---</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Shadow Creatures",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!58545ceb27a988c1"
+}

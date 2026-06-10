@@ -1,0 +1,49 @@
+{
+  "_id": "d857b3fb7e4e9df2",
+  "name": "Fluid Transition",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>The throw opens the distance or closes it, whichever you need.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 5,
+        "dexterity": 4
+      },
+      "skills": "",
+      "feats": [
+        "Disrupting Throw"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you make a thrown weapon attack, you may move up to 10 feet before or after the attack without provoking opportunity attacks. This movement does not consume a [Move] action.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Thrown]",
+      "[Move]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!d857b3fb7e4e9df2"
+}

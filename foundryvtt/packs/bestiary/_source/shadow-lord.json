@@ -1,0 +1,170 @@
+{
+  "_id": "0c98b97af3be9621",
+  "name": "Shadow Lord",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Shadow Lords reshape engagements through darkness rather than through direct force. Darkness Domain creates permanent darkness across a 60-foot radius, immediately giving the Shadow Lord and any Shadow creatures present a massive advantage against opponents who cannot see in magical darkness. Shadow Army calls additional Shadow creatures under the Shadow Lord's direction, not the summoner's — which is a useful addition to the fight or a complication depending on whether instructions to the Shadow Lord are precise. Life Drain Aura at 20 feet erodes maximum HP at 4 per round from everything nearby. Planar Step at-will makes positioning it very difficult — it is always exactly where it chooses to be. A summoner who deploys one in an environment with any natural darkness and gives it clear instructions will find it turns the entire encounter into a fight that happens on its terms rather than the enemy's.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 7,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 7,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 7,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 6,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 6,
+      "max": 6
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 6,
+      "stealth": 8,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 6,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 6,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 7,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 60,
+      "fly": 80,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "shadow",
+    "creatureSubtype": "passive",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Devil's Sight, See Invisibility, Truesight 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Shadow Rend [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 8), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Large, heavy: 12 + 2) + 10 Negative damage (Ignore DR); target loses 5 from Current Luck; max HP reduced by 12 until long rest</li>\n<li><em>Margin 2:</em> 20 damage (14 + 6 Str) + 10 Negative damage; Current Luck reduced by 6; max HP reduced by 18; Weakened + Sickened + Disoriented for 1 minute; no save</li>\n<li><em>Margin 3:</em> 20 damage + 10 Negative damage; all conditions; max HP reduced by 24; target makes Fortitude save (Hard task, 2 successes) or gains 1 Exhaustion level and loses 1 point of Constitution permanently until Major Restoration</li>\n</ul></li>\n<li><strong>Void Lance [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 6), Range: 120 ft\n<ul>\n<li>Net 1: 16 Negative damage (Half DR); Current Luck reduced by 4; max HP reduced by 8. Net 2: 28 Negative damage; Current Luck reduced by 6; max HP reduced by 14; Weakened + Sickened for 1 minute; no save. Net 3: 28 Negative damage; all conditions; max HP reduced by 20; target makes Fortitude save (1 success) or Stunned until end of their next turn.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Shadow Form:</strong> DR increases to 12 against non-magical, non-Positive damage in dim light or darkness. In complete darkness, the Shadow Lord is effectively immune to non-magical, non-Positive damage.</li>\n<li><strong>Life Drain Aura:</strong> 20-foot radius; creatures lose 4 from maximum HP per round. As Void Shade.</li>\n<li><strong>Darkness Domain (1/encounter) [Combat]:</strong> As 2 [Combat] actions, creates permanent magical darkness in a 60-foot radius centered on itself. Permanent until dispelled by a Positive energy weave of sufficient cost or by the Shadow Lord's dismissal. The Shadow Lord and Shadow creatures see through it normally. All other creatures are Blinded within it.</li>\n<li><strong>Shadow Army (1/day):</strong> As a [Combat] action, the Shadow Lord calls 1d4 Shade Walkers from the Shadow Plane. They appear in unoccupied spaces within 30 feet and act on the Shadow Lord's initiative, following its direction. They are not under the summoner's control. Duration: 1 hour or until dismissed.</li>\n<li><strong>Planar Step (at-will):</strong> The Shadow Lord steps between shadows freely, teleporting up to 30 feet to any dim or dark location it can see as a [Move] action. No per-rest limit.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Shadow Lord",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!0c98b97af3be9621"
+}

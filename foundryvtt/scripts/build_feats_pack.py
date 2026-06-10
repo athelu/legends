@@ -201,6 +201,78 @@ SKILL_MAP = {
 }
 
 
+def _parse_effects(effects_text):
+    """
+    Parse structured **Effects:** field into a list of effect objects.
+
+    Format: one effect per line (or semicolon-separated on one line).
+    Each effect starts with its type, followed by key=value pairs:
+
+        roll.modifier rollType=attack value=-1 applyTo=both when=unarmored
+        initiative.modify value=2
+        condition.immunity conditionName="Surprised,Frightened"
+        toggle.state stateKey=primalFury label="Primal Fury"
+
+    Array-valued fields (conditionName, etc.) may be comma-separated inside quotes
+    or without quotes. Quoted values handle spaces. Lines beginning with # are comments.
+    """
+    if not effects_text:
+        return []
+
+    # Allow semicolons as line separators in addition to actual newlines
+    raw_lines = re.split(r'[;\n]', effects_text)
+    effects = []
+
+    # Fields whose values should be split into lists by comma
+    ARRAY_FIELDS = {'conditionname', 'damagetypes', 'effects'}
+
+    for raw_line in raw_lines:
+        line = raw_line.strip()
+        if not line or line.startswith('#'):
+            continue
+
+        # Tokenize: handle key="value with spaces" as one token, then plain key=value, then bare words
+        tokens = re.findall(r'\w+="[^"]*"|\w+=\S+|\S+', line)
+        if not tokens:
+            continue
+
+        eff = {}
+        # First token without '=' is the type
+        if '=' not in tokens[0]:
+            eff['type'] = tokens[0]
+            kv_tokens = tokens[1:]
+        else:
+            kv_tokens = tokens
+
+        for token in kv_tokens:
+            if '=' not in token:
+                continue
+            key, _, val = token.partition('=')
+            key = key.strip()        # preserve camelCase; do NOT lowercase
+            key_lower = key.lower()  # used only for array-field lookup
+            val = val.strip().strip('"')
+
+            # Convert numeric strings
+            if re.fullmatch(r'-?\d+', val):
+                val = int(val)
+            elif re.fullmatch(r'-?\d+\.\d+', val):
+                val = float(val)
+            elif val.lower() == 'true':
+                val = True
+            elif val.lower() == 'false':
+                val = False
+
+            if key_lower in ARRAY_FIELDS and isinstance(val, str) and ',' in val:
+                val = [v.strip() for v in val.split(',') if v.strip()]
+
+            eff[key] = val
+
+        if eff.get('type'):
+            effects.append(eff)
+
+    return effects
+
+
 def _append_skill(prereqs, skill_key, value):
     """Append a skill:rank entry to the skills string (comma-separated format)."""
     entry = f"{skill_key}:{value}"
@@ -354,6 +426,7 @@ def parse_feats_md(md_file):
         benefit_text = canonical_fields.get('benefit', '') or canonical_fields.get('benefits', '')
         note_text = canonical_fields.get('note', '') or canonical_fields.get('notes', '')
         image_text = canonical_fields.get('image', '')
+        effects_text = canonical_fields.get('effects', '') or canonical_fields.get('effect', '')
         description_text = canonical_fields.get('description', '') or free_body
         
         item = {
@@ -425,6 +498,10 @@ def parse_feats_md(md_file):
 
         if note_text:
             item['system']['notes'] = note_text.strip()
+
+        # Parse structured Effects field into system.effects[]
+        if effects_text:
+            item['system']['effects'] = _parse_effects(effects_text)
 
         # Choose icon based on keywords (can be overridden by explicit Image: field)
         item['img'] = _choose_icon(item['system']['keywords'])

@@ -1,0 +1,170 @@
+{
+  "_id": "83dce7001b09dbe3",
+  "name": "FIRE NEPHILIM",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 3,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 36,
+      "max": 36,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 3,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 3,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 4,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 35,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 9,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "",
+    "attacksNotes": "",
+    "specialAbilitiesNotes": "<h4>Ember Kin</h4>\n<p><strong>Threat Rating:</strong> 1/2 <strong>Origin:</strong> Nephilim (Fire) <strong>Size:</strong> Large <strong>HP:</strong> 36 (Con 4 × 9, Tough) <strong>DR:</strong> 2 (heat-hardened skin) <strong>Speed:</strong> 35 ft <strong>Attributes:</strong> Str 5 / Con 4 / Agi 3 / Dex 2 / Int 3 / Wis 3 / Cha 3 / Luck 2 <strong>Skills:</strong> Melee Combat 4, Intimidate 3, Perception 3, Athletics 3 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +3 (Agi 3) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 3 + Melee Combat 4), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard natural: 8 + 2) + 2 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 15 damage (10 + 5 Str) + 2 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 15 damage + 2 fire damage; target gains Ignited condition</li>\n</ul></li>\n<li><strong>Rock Throw [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 1), Range: 40/80 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage</li>\n<li><em>Margin 2:</em> 8 damage; target knocked Prone</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Heat Aura:</strong> Creatures starting their turn within 5 feet take 2 fire damage (Half DR).</li>\n<li><strong>Powerful Build.</strong></li>\n</ul>\n<p><strong>Description:</strong> Ember Kin are young Fire Nephilim — large, hot, and straightforward. They advance and hit things. Their Heat Aura is a minor hazard rather than a primary threat at this tier. A summoner who needs a Large creature that frightens enemies through sheer physical presence and hits harder than anything of equivalent TR will find them adequate. They understand simple instructions and execute them without embellishment.</p>\n<p>---</p>\n<h4>Ashborn</h4>\n<p><strong>Threat Rating:</strong> 1 <strong>Origin:</strong> Nephilim (Fire) <strong>Size:</strong> Large <strong>HP:</strong> 56 (Con 4 × 14, Tough) <strong>DR:</strong> 3 (volcanic skin) <strong>Speed:</strong> 35 ft <strong>Attributes:</strong> Str 6 / Con 4 / Agi 3 / Dex 2 / Int 3 / Wis 3 / Cha 3 / Luck 3 <strong>Skills:</strong> Melee Combat 5, Intimidate 4, Perception 3, Athletics 4 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +3 (Agi 3) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Burning Fist [Combat]:</strong> Melee attack (Agi 3 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 4 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str) + 4 fire damage; target gains Ignited condition</li>\n<li><em>Margin 3:</em> 16 damage + 4 fire damage; target gains Burning condition; no save</li>\n</ul></li>\n<li><strong>Lava Spit [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 30 ft\n<ul>\n<li><em>Margin 1:</em> 6 fire damage (Half DR); target gains Singed</li>\n<li><em>Margin 2:</em> 10 fire damage; target gains Ignited; no save</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Heat Aura:</strong> Creatures starting their turn within 5 feet take 4 fire damage (Half DR).</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Smoldering Wounds:</strong> When the Ashborn deals Ignited or Burning condition to a target, that target cannot remove the condition through normal means (dropping and rolling, ally assistance) for 1 round. Magical healing still removes it.</li>\n</ul>\n<p><strong>Description:</strong> Ashborn have developed enough control over their elemental nature to direct it precisely. Smoldering Wounds prevents easy condition removal, meaning enemies who take Ignited from a Burning Fist are going to burn for at least one full round. Lava Spit handles targets trying to stay out of melee range. A summoner who keeps an Ashborn engaged with a single priority target will find it converts that target's hit points into fire conditions efficiently.</p>\n<p>---</p>\n<h4>Cinder Giant</h4>\n<p><strong>Threat Rating:</strong> 2 <strong>Origin:</strong> Nephilim (Fire) <strong>Size:</strong> Large <strong>HP:</strong> 76 (Con 4 × 19, Massive) <strong>DR:</strong> 4 (thick volcanic hide) <strong>Speed:</strong> 35 ft <strong>Attributes:</strong> Str 6 / Con 4 / Agi 4 / Dex 3 / Int 4 / Wis 4 / Cha 4 / Luck 3 <strong>Skills:</strong> Melee Combat 5, Intimidate 5, Perception 4, Athletics 4 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +4 (Agi 4) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Magma Strike [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 6 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str) + 6 fire damage; target gains Ignited condition</li>\n<li><em>Margin 3:</em> 16 damage + 6 fire damage; target gains Burning condition; all creatures within 5 feet of target take 4 fire damage (Half DR) from magma splash</li>\n</ul></li>\n<li><strong>Volcanic Hurl [Combat]:</strong> Ranged attack (Dex 3 + Ranged Combat 3), Range: 60/120 ft\n<ul>\n<li><em>Margin 1:</em> 10 fire damage (Half DR); target gains Ignited</li>\n<li><em>Margin 2:</em> 16 fire damage; target gains Ignited; all creatures within 5 feet take 4 fire damage (Half DR)</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Heat Aura:</strong> Creatures starting their turn within 10 feet take 6 fire damage (Half DR).</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Smoldering Wounds:</strong> As Ashborn.</li>\n<li><strong>Intimidating Presence:</strong> As a [Combat] action, the Cinder Giant roars and displays its full elemental nature. All creatures within 30 feet that can see and hear it make a Will save (opposed by Cha 4 + Intimidate 5). On failure, target gains the Frightened condition until end of their next turn. Creatures immune to fear are unaffected.</li>\n</ul>\n<p><strong>Description:</strong> Cinder Giants have grown into their authority. The Heat Aura is now a genuine battlefield hazard at 10 feet rather than a minor inconvenience, and Intimidating Presence gives them a meaningful action economy option against grouped enemies who haven't committed yet. Volcanic Hurl's splash damage means clustered enemies take incidental fire damage even when the hurl targets only one of them. A summoner who gives one a target and keeps allies out of the Heat Aura radius will find it handles the engagement without requiring further management.</p>\n<p>---</p>\n<h4>Magma Lord</h4>\n<p><strong>Threat Rating:</strong> 3 <strong>Origin:</strong> Nephilim (Fire) <strong>Size:</strong> Huge <strong>HP:</strong> 108 (Con 6 × 18, Tough) <strong>DR:</strong> 5 (primordial volcanic hide) <strong>Speed:</strong> 40 ft <strong>Attributes:</strong> Str 7 / Con 6 / Agi 4 / Dex 3 / Int 5 / Wis 5 / Cha 5 / Luck 4 <strong>Skills:</strong> Melee Combat 6, Intimidate 6, Perception 5, Athletics 5 <strong>Senses:</strong> Darkvision 120 ft <strong>Initiative Bonus:</strong> +4 (Agi 4) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Inferno Fist [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 6), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 8 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 8 fire damage; target gains Burning condition; no save</li>\n<li><em>Margin 3:</em> 21 damage + 8 fire damage + Burning; target makes Fortitude save (1 success) or Stunned until end of their next turn from the concussive force of the blow</li>\n</ul></li>\n<li><strong>Magma Hurl [Combat]:</strong> Ranged attack (Dex 3 + Ranged Combat 4), Range: 80/160 ft, 10-foot radius on impact\n<ul>\n<li>Per creature in radius: Net 1: 12 fire damage (Half DR) + Singed. Net 2: 20 fire damage + Ignited. Net 3: 20 fire damage + Burning; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Heat Aura:</strong> Creatures starting their turn within 10 feet take 8 fire damage (Half DR).</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Smoldering Wounds:</strong> As above.</li>\n<li><strong>Intimidating Presence:</strong> As Cinder Giant, but the Will save is a Hard task (2 successes to resist), and on failure the target gains Frightened for 1 minute rather than until end of their next turn.</li>\n<li><strong>Resilient Defense (2/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Magma Lords are the point at which Fire Nephilim become a genuine threat to organized groups rather than individual combatants. Intimidating Presence at Hard task scatters most formations on arrival. Magma Hurl's 10-foot radius means ranged enemies cannot cluster without taking shared fire damage on every throw. The Heat Aura at this range punishes anyone who tries to engage in melee without significant fire resistance. A summoner deploying one against a disciplined formation should expect the formation to stop being disciplined within the first round.</p>\n<p>---</p>\n<h4>Flame Titan</h4>\n<p><strong>Threat Rating:</strong> 4 <strong>Origin:</strong> Nephilim (Fire) <strong>Size:</strong> Huge <strong>HP:</strong> 180 (Con 6 × 30, Massive) <strong>DR:</strong> 6 (ancient volcanic shell) <strong>Speed:</strong> 40 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 4 / Dex 4 / Int 6 / Wis 6 / Cha 6 / Luck 5 <strong>Skills:</strong> Melee Combat 7, Intimidate 7, Perception 6, Athletics 6 <strong>Senses:</strong> Darkvision 120 ft <strong>Initiative Bonus:</strong> +4 (Agi 4) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>World-Breaker Fist [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 10 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 22 damage (14 + 8 Str) + 10 fire damage; Burning condition + target knocked Prone; no save</li>\n<li><em>Margin 3:</em> 22 damage + 10 fire damage + Burning + Prone; all creatures within 10 feet of target take 8 fire damage (Half DR) from the impact shockwave</li>\n</ul></li>\n<li><strong>Inferno Hurl [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 5), Range: 120 ft, 15-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 16 fire damage (Half DR) + Ignited. Net 2: 28 fire damage + Burning. Net 3: 28 fire damage + Burning; target makes Fortitude save (1 success) or Stunned until end of their next turn.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Conflagration Aura:</strong> Creatures starting their turn within 15 feet take 10 fire damage (Half DR). Flammable objects within 15 feet ignite at the start of each round.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Smoldering Wounds:</strong> As above.</li>\n<li><strong>Intimidating Presence:</strong> As Magma Lord.</li>\n<li><strong>Fire Immunity Sharing:</strong> The summoner and up to 2 designated allies gain immunity to non-magical fire damage while within 30 feet.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> A Flame Titan's Conflagration Aura reshapes the battlefield simply by existing — any environment with flammable material becomes a fire hazard within 15 feet of it, and enemies without fire resistance face meaningful damage just for closing to melee range. Fire Immunity Sharing protects the summoner and two allies from the collateral environmental damage the Flame Titan inevitably generates. Inferno Hurl's 15-foot radius means it can suppress entire squads at range while closing to melee. A summoner who designates protected allies immediately on summoning and then stays clear will find the Flame Titan manages its own engagement effectively.</p>\n<p>---</p>\n<h4>Worldfire Colossus</h4>\n<p><strong>Threat Rating:</strong> 5 <strong>Origin:</strong> Nephilim (Fire) <strong>Size:</strong> Huge <strong>HP:</strong> 216 (Con 6 × 36, Massive) <strong>DR:</strong> 7 (primordial fire-flesh) <strong>Speed:</strong> 45 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 5 / Dex 4 / Int 7 / Wis 7 / Cha 7 / Luck 6 <strong>Skills:</strong> Melee Combat 8, Intimidate 8, Perception 7, Athletics 7 <strong>Senses:</strong> Darkvision 120 ft, Tremorsense 60 ft (heat signatures) <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Cataclysm Strike [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 8), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2) + 12 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str) + 12 fire damage; Burning + Prone; no save; all creatures within 10 feet take 10 fire damage (Half DR)</li>\n<li><em>Margin 3:</em> 24 damage + 12 fire damage + Burning + Prone + Stunned until end of their next turn; area damage increases to 16 fire</li>\n</ul></li>\n<li><strong>World-Flame Hurl [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 6), Range: 150 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 20 fire damage (Half DR) + Ignited. Net 2: 36 fire damage + Burning. Net 3: 36 fire damage + Burning + Blinded until end of their next turn from the searing flash; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Primordial Aura:</strong> Creatures starting their turn within 20 feet take 14 fire damage (Half DR). Flammable terrain within 20 feet ignites and continues burning — the area becomes Difficult Terrain as fire spreads at normal rates.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>World-Burning Presence (1/day) [Combat]:</strong> As 2 [Combat] actions, the Worldfire Colossus expresses its full elemental nature in a 60-foot radius. All non-designated creatures make a Reflex save (Hard task, 2 successes). Failure: 48 fire damage + Burning + Blinded for 1 minute. 1 success: 24 fire damage + Ignited. 2 successes: 12 fire damage only. The ground within the radius ignites if flammable; non-flammable surfaces become superheated (4 fire damage per round to creatures standing on them for the next minute).</li>\n<li><strong>Fire Immunity Sharing:</strong> The summoner and up to 4 designated allies gain immunity to non-magical fire damage within 60 feet.</li>\n<li><strong>Intimidating Presence:</strong> As Magma Lord.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> A Worldfire Colossus is a living catastrophe that has agreed, for now, to catastrophe on the summoner's behalf. World-Burning Presence on arrival sets the terms of the engagement — after it goes off, the battlefield is a fire hazard for everyone not designated as protected. The Primordial Aura at 20 feet means enemies cannot close without taking 14 fire damage per round before any attack lands. A summoner who calls one has made a decision about how this fight ends, and the Colossus will execute that decision with a thoroughness that renders tactical nuance largely irrelevant.</p>\n<p>---</p>\n<p>---</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "FIRE NEPHILIM",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!83dce7001b09dbe3"
+}

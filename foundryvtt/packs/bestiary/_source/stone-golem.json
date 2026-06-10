@@ -1,0 +1,178 @@
+{
+  "_id": "a3702db9aeb43ced",
+  "name": "Stone Golem",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 60,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 1,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 0,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "construct",
+    "creatureSubtype": "Immune to poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified. Mindless: immune to mind-affecting effects (Beguiling Weave, fear, Sleep",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [
+        "poison",
+        "psychic"
+      ],
+      "conditions": [
+        "exhaustion",
+        "paralyzed",
+        "petrified",
+        "poisoned"
+      ]
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Blindsight 60 ft",
+    "tactics": "Stone golems advance inexorably, using Slow to cripple multiple enemies before crushing them with massive slams. They ignore most damage types and magic, making them terrifying juggernauts. Golems follow orders literally and never retreat.",
+    "attacksNotes": "<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 7), Reach: 10 ft\n<ul>\n<li><strong><em>Margin 1:</strong></em> 12 damage (Large, two-handed natural: 10 + 2)</li>\n<li><strong><em>Margin 2:</strong></em> 19 damage (12 + 7 Str)</li>\n</ul></li>\n<li><strong>Multiattack [Combat]:</strong> The golem makes two slam attacks\n<ul>\n<li><strong><em>Shared Attribute Roll (Agi 2):</strong></em> Roll once, apply to both attacks</li>\n</ul></li>\n<li><strong>Special Abilities:</strong>\n<ul>\n<li><strong>Large Size:</strong> Occupies 10×10 ft space, 10 ft reach</li>\n<li><strong>Magic Resistance:</strong> Subtract 1 from both dice on saving throws against magical effects</li>\n<li><strong>Slow (Recharge 6-8) [Combat]:</strong> Targets up to 3 creatures within 10 feet. Targets make Will save:\n<ul>\n<li><strong><em>0 successes:</strong></em> Can only take 2 actions per turn (instead of 3) and cannot take reactions for 1 minute</li>\n<li><strong><em>1+ successes:</strong></em> No effect</li>\n<li>Add 1 to both Will save dice (difficulty of resisting)</li>\n<li>Affected creatures can repeat save at end of each turn (1 success ends early)</li>\n</ul></li>\n<li><strong>Immutable Form:</strong> Immune to any weave that would alter its form (transformation, Beastial Transformation, etc.)</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Large Size:</strong> Occupies 10×10 ft space, 10 ft reach\n<ul>\n<li><strong>Magic Resistance:</strong> Subtract 1 from both dice on saving throws against magical effects</li>\n<li><strong>Slow (Recharge 6-8) [Combat]:</strong> Targets up to 3 creatures within 10 feet. Targets make Will save:\n<ul>\n<li><strong><em>0 successes:</strong></em> Can only take 2 actions per turn (instead of 3) and cannot take reactions for 1 minute</li>\n<li><strong><em>1+ successes:</strong></em> No effect</li>\n<li>Add 1 to both Will save dice (difficulty of resisting)</li>\n<li>Affected creatures can repeat save at end of each turn (1 success ends early)</li>\n</ul></li>\n<li><strong>Immutable Form:</strong> Immune to any weave that would alter its form (transformation, Beastial Transformation, etc.)</li>\n</ul></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Stone Golem",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!a3702db9aeb43ced"
+}

@@ -6,6 +6,7 @@
 import { SKILL_ATTRIBUTE_SHORT, SKILL_LABELS, CRAFT_TYPES } from '../skill-utils.mjs';
 import { getLanguageDefinitions, getOriginLabel, getOriginOptionsForAncestry, getNativeLanguageKeyForOrigin, normalizeLanguageKey, normalizeOriginKey } from '../languages.mjs';
 import { getDisplayName, DEFAULT_UNIDENTIFIED_NAMES } from '../identification.mjs';
+import { getFeatUseState } from '../documents/item.mjs';
 
 const { ActorSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
@@ -189,11 +190,16 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       itemView: D8CharacterSheet.#onItemView,
       itemIdentify: D8CharacterSheet.#onItemIdentify,
       itemUseScroll: D8CharacterSheet.#onItemUseScroll,
+      itemUseImplement: D8CharacterSheet.#onItemUseImplement,
+      itemUseRod: D8CharacterSheet.#onItemUseRod,
+      itemUseRing: D8CharacterSheet.#onItemUseRing,
       setupMagicalTraits: D8CharacterSheet.#onSetupMagicalTraits,
       changeHeaderChoice: D8CharacterSheet.#onChangeHeaderChoice,
       changeOrigin: D8CharacterSheet.#onChangeOrigin,
       openLanguagePicker: D8CharacterSheet.#onOpenLanguagePicker,
       toggleLanguageOption: D8CharacterSheet.#onToggleLanguageOption,
+      featToggle: D8CharacterSheet.#onFeatToggle,
+      featUse: D8CharacterSheet.#onFeatUse,
     },
     dragDrop: [{ dragSelector: ".items-list .item-collapsible[data-item-id]", dropSelector: null }]
   };
@@ -454,6 +460,7 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const featMods = game.legends?.featEffects?.computeFeatModifiers?.(this.actor) || {};
     this._prepareAttributes(context, featMods);
     this._prepareSkills(context, featMods);
+    context.featToggles = this._prepareFeatToggles();
     this._prepareMagicalTraitHelpers(context);
     context.primaryBackground = context.backgrounds[0] || null;
     context.primaryAncestry = context.ancestries[0] || null;
@@ -600,6 +607,12 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
         case 'disease':
           conditions.push(i);
           break;
+        case 'rod':
+        case 'staff':
+        case 'wand':
+        case 'ring':
+          equipment.push(i);
+          break;
       }
     }
 
@@ -638,6 +651,29 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const isGM = game.user.isGM;
     context.conditions = isGM ? conditions.filter(c => !c.system?.gmOnly) : conditions.filter(c => !c.system?.gmOnly);
     context.hiddenConditions = isGM ? conditions.filter(c => c.system?.gmOnly) : [];
+  }
+
+  /**
+   * Build the list of toggleable combat states from the actor's feat items.
+   * Returns objects with { stateKey, label, active } for each toggle.state effect found.
+   */
+  _prepareFeatToggles() {
+    const toggleStates = this.actor.flags?.legends?.toggleStates ?? {};
+    const seen = new Set();
+    const result = [];
+    for (const item of this.actor.items) {
+      if (item.type !== 'feat') continue;
+      for (const eff of item.system?.effects ?? []) {
+        if (eff.type !== 'toggle.state' || !eff.stateKey || seen.has(eff.stateKey)) continue;
+        seen.add(eff.stateKey);
+        result.push({
+          stateKey: eff.stateKey,
+          label: eff.label || eff.stateKey,
+          active: Boolean(toggleStates[eff.stateKey]),
+        });
+      }
+    }
+    return result;
   }
 
   /**
@@ -1369,6 +1405,30 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     return game.legends.scrollUse.useScroll(this.actor, item);
   }
 
+  static async #onItemUseImplement(event, target) {
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
+    const item = this.actor.items.get(li.dataset.itemId);
+    if (!item) return;
+    return game.legends.implementUse.useImplement(this.actor, item);
+  }
+
+  static async #onItemUseRing(event, target) {
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
+    const item = this.actor.items.get(li.dataset.itemId);
+    if (!item) return;
+    return game.legends.implementUse.useRing(this.actor, item);
+  }
+
+  static async #onItemUseRod(event, target) {
+    event.stopPropagation();
+    const li = target.closest(".item-collapsible");
+    const item = this.actor.items.get(li.dataset.itemId);
+    if (!item) return;
+    return game.legends.implementUse.useRod(this.actor, item);
+  }
+
   /**
    * Handle equipping/unequipping an item
    */
@@ -1942,6 +2002,54 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
     if (!result) return;
     await this.actor.update({ 'system.languages.selected': result });
+  }
+
+  /**
+   * Handle feat use button click — spend one use of a limited-use feat.
+   */
+  static async #onFeatUse(event, target) {
+    event.stopPropagation();
+    const li = target.closest('[data-item-id]');
+    const itemId = li?.dataset.itemId;
+    if (!itemId) return;
+    const feat = this.actor.items.get(itemId);
+    if (!feat) return;
+
+    const useState = getFeatUseState(feat);
+    if (!useState.tracked || useState.maxUses <= 0) return;
+
+    if (useState.currentUses <= 0) {
+      const periodLabel = useState.period === 'shortRest' ? 'short rest' : 'long rest';
+      ui.notifications.warn(`${feat.name} has no uses remaining. Recharges on ${periodLabel}.`);
+      return;
+    }
+
+    const newValue = useState.currentUses - 1;
+    await feat.update({
+      'system.usage.uses.value': newValue,
+      'system.usage.uses.max': useState.maxUses,
+      'system.usage.recharge.period': useState.period,
+      'system.usage.recharge.formula': useState.formula,
+    });
+
+    const periodLabel = useState.period === 'shortRest' ? 'short rest' : 'long rest';
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+      content: `<p><strong>${this.actor.name}</strong> uses <em>${feat.name}</em>. ` +
+        `(${newValue}/${useState.maxUses} remaining — recharges on ${periodLabel})</p>`,
+    });
+  }
+
+  /**
+   * Handle feat combat toggle button click.
+   * Flips the toggle state for the given stateKey and triggers any exit hooks.
+   */
+  static async #onFeatToggle(event, target) {
+    event.preventDefault();
+    const stateKey = target.dataset.stateKey;
+    if (!stateKey) return;
+    const current = Boolean(this.actor.flags?.legends?.toggleStates?.[stateKey]);
+    await game.legends?.featEffects?.setToggleState?.(this.actor, stateKey, !current);
   }
 
   static async #onToggleLanguageOption(event, target) {

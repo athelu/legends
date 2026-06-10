@@ -1,0 +1,170 @@
+{
+  "_id": "abc511c2f4bd1370",
+  "name": "Voice Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Voice Aetherim are authority figures. Mass Healing sustains entire parties; Divine Authority suppresses aggression in a single target without charm immunity applying; Word of Light stuns enemies through spoken command. A summoner who calls one into a complex encounter involving both combat and potential negotiation will find it capable of contributing meaningfully in both registers. It will also express opinions about the encounter's participants based on what Detect Evil and Truesight reveal — observations delivered matter-of-factly and without diplomatic softening, because Voice Aetherim have no particular investment in sparing feelings when the truth is relevant.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 7,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 64,
+      "max": 64,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 5,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 5,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 5,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 6,
+      "empathy": 6
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 70,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 16,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Truesight 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Radiant Strike [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + 8 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 12 damage (8 + 4 Str) + 8 Positive damage; undead Frightened for 1 minute; Will save (Hard task, 2 successes) to resist</li>\n<li><em>Margin 3:</em> 12 damage + 8 Positive damage; Frightened; no save; undead at half HP or below destroyed outright</li>\n</ul></li>\n<li><strong>Word of Light [Combat]:</strong> Ranged attack (Cha 6 + Religion 5), Range: 60 ft — a spoken word of divine authority, not a physical projectile\n<ul>\n<li>Net 1: Target makes Will save (1 success) or Dazed until end of their next turn. Net 2: Target Stunned until end of their next turn; Will save (Hard task, 2 successes) to resist. Net 3: Target Stunned for 1 minute; Will save (Hard task, 2 successes) each round to end; undead also take 16 Positive damage (Half DR); no save on damage.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Mass Healing (1/short rest) [Combat]:</strong> As 2 [Combat] actions, releases a pulse of Positive energy in a 30-foot radius. All living allies in range heal HP equal to the Voice Aetherim's Wisdom score (7). Cannot affect undead or constructs.</li>\n<li><strong>Protective Aura:</strong> Extended to 30 feet; DR bonus increases to +3.</li>\n<li><strong>Turn Undead:</strong> As Blade Aetherim; Will save is now Hard task (2 successes to resist).</li>\n<li><strong>Divine Authority:</strong> When the Voice Aetherim addresses a creature directly and that creature fails a Will save (opposed by Cha 6 + Persuasion 5), the creature cannot take harmful actions for 1 round as divine authority momentarily overwhelms their aggression. This is not Charm — it is a direct expression of Positive plane authority.</li>\n<li><strong>Detect Evil:</strong> As above; range extends to 120 feet.</li>\n<li><strong>Continual Radiance:</strong> Bright light 40-foot radius.</li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Voice Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!abc511c2f4bd1370"
+}

@@ -38,7 +38,14 @@
       "[Defense]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": 1,
+        "applyTo": "both"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!d322f1358fa562e9"

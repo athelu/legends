@@ -13,8 +13,8 @@ const NO_SHORT_REST_BENEFIT_CONDITIONS = new Set(['Exhausted', 'Severely Exhaust
 const NO_SHORT_REST_HP_CONDITIONS = new Set(['Fatigued']);
 const HALF_REST_HP_CONDITIONS = new Set(['Poisoned (Weak)', 'Poisoned (Strong)']);
 const EXHAUSTION_CONDITION_CHAIN = ['Fatigued', 'Exhausted', 'Severely Exhausted', 'Near Collapse', 'Collapse'];
-const WEALTH_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment']);
-const PHYSICAL_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment']);
+const WEALTH_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment', 'rod', 'staff', 'wand', 'ring']);
+const PHYSICAL_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment', 'rod', 'staff', 'wand', 'ring']);
 const VALID_CARRY_STATES = new Set(['', 'carried', 'equipped', 'container', 'mounted']);
 const CONTAINER_PROFILE_LABELS = {
   frame: 'Frame Container',
@@ -22,6 +22,47 @@ const CONTAINER_PROFILE_LABELS = {
   saddlebags: 'Saddlebags',
   custom: 'Custom Container',
 };
+
+/**
+ * Roll charges recharge for a rod/staff/wand item on a rest.
+ * @param {Item} item
+ * @param {'shortRest'|'longRest'} restType
+ * @returns {Promise<{update: object, name: string, gained: number, newValue: number, max: number}|null>}
+ */
+async function buildImplementRechargeUpdate(item, restType) {
+  const system = item.system;
+  const period  = system?.charges?.rechargePeriod;
+  const max     = Number(system?.charges?.max   || 0);
+  const current = Number(system?.charges?.value || 0);
+  const formula = String(system?.charges?.recharge || '').trim();
+
+  if (!period || max <= 0) return null;
+
+  // longRest also satisfies shortRest-period items; dawn/dusk/never are not triggered by rests
+  const triggers = restType === 'longRest' ? ['shortRest', 'longRest'] : ['shortRest'];
+  if (!triggers.includes(period)) return null;
+  if (current >= max) return null;
+
+  let gained = max - current; // default: full restore when no formula
+  if (formula) {
+    try {
+      const roll = await new Roll(formula).evaluate();
+      gained = Math.min(Math.max(0, Math.round(roll.total)), max - current);
+    } catch (err) {
+      console.warn(`legends | Failed to evaluate recharge formula "${formula}" for ${item.name}:`, err);
+    }
+  }
+
+  if (gained <= 0) return null;
+
+  return {
+    update:   { _id: item.id, 'system.charges.value': current + gained },
+    name:     item.name,
+    gained,
+    newValue: current + gained,
+    max,
+  };
+}
 
 function normalizeCurrencyAmount(value) {
   return Math.max(0, Math.floor(Number(value) || 0));
@@ -381,11 +422,16 @@ export class D8Actor extends Actor {
       && this.system.magicalTrait.type !== 'alchemical-tradition';
 
     // Calculate HP based on Constitution
-    if (this.type === 'character' || this.type === 'npc') {
+    if (this.type === 'character') {
       const con = this.system.attributes.constitution.value;
       this.system.hp.max = con * 8;
-      
-      // Ensure current HP doesn't exceed max
+      if (this.system.hp.value > this.system.hp.max) {
+        this.system.hp.value = this.system.hp.max;
+      }
+    } else if (this.type === 'npc') {
+      const con = this.system.attributes.constitution.value;
+      const mult = Number(this.system.hpMultiplier) || 8;
+      this.system.hp.max = con * mult;
       if (this.system.hp.value > this.system.hp.max) {
         this.system.hp.value = this.system.hp.max;
       }
@@ -553,6 +599,34 @@ _prepareCharacterData(actorData) {
     systemData.featActions = featMods.actions || [];
     systemData.featReactions = featMods.reactions || [];
 
+    // Feat HP bonus (flat) — stacked on top of the con * 8 base set earlier
+    if (featMods.hp) {
+      systemData.hp.max += featMods.hp;
+      if (systemData.hp.value > systemData.hp.max) systemData.hp.value = systemData.hp.max;
+    }
+    // Extra HP recovered per short rest (e.g. Fast Healer feat)
+    systemData.hp.shortRestBonus = featMods.hpShortRestBonus || 0;
+
+    // Flat initiative bonus
+    systemData.initiative = (systemData.initiative ?? 0) + (featMods.initiative || 0);
+
+    // Condition immunities list (checked by applyCondition when applying conditions)
+    // Merge feat immunities with any immunities granted by active effect items
+    const effectItemImmunities = actorData.items
+      .filter(i => (i.type === 'effect' || i.type === 'condition') && Array.isArray(i.system?.conditionImmunities))
+      .flatMap(i => i.system.conditionImmunities);
+    const allImmunities = [...featMods.conditionImmunities, ...effectItemImmunities];
+    systemData.conditionImmunities = allImmunities.length ? allImmunities : [];
+
+    // Toggle-state registry (used by character sheet to render toggle buttons)
+    systemData.featToggleStates = featMods.toggleStates || [];
+
+    // Feat damage bonuses by scope — stored for use in calculateDamage
+    if (Object.keys(featMods.damage).length) {
+      systemData.damage = systemData.damage || {};
+      systemData.damage.featBonus = featMods.damage;
+    }
+
       const normalizedCurrency = normalizeCurrencyData(systemData.currency);
       systemData.currency = normalizedCurrency;
       const coinTotalCp = (normalizedCurrency.gp * 100) + (normalizedCurrency.sp * 10) + normalizedCurrency.cp;
@@ -579,6 +653,11 @@ _prepareCharacterData(actorData) {
       };
 
         systemData.encumbrance = buildActorEncumbranceState(actorData, ancestryEffects);
+
+      // Compute binding.used from items currently bound to this actor
+      if (systemData.binding) {
+        systemData.binding.used = actorData.items.filter(i => i.system?.bound === true).length;
+      }
   }
 
   _getActiveConditionNames() {
@@ -692,7 +771,15 @@ _prepareCharacterData(actorData) {
    */
   _prepareNPCData(actorData) {
     const systemData = actorData.system;
-    // NPC-specific calculations can go here
+
+    // Flat DR for NPCs: natural base + bonus (no per-type armor aggregation)
+    const base = systemData.dr?.value ?? 0;
+    const bonus = systemData.dr?.bonus ?? 0;
+    if (!systemData.dr) systemData.dr = {};
+    systemData.dr.total = base + bonus;
+
+    // Derive initiative from Agility
+    systemData.initiative = systemData.attributes?.agility?.value ?? 0;
   }
   
   /**
@@ -783,9 +870,10 @@ _prepareCharacterData(actorData) {
     
     // Regain HP equal to Constitution
     const con = this.system.attributes.constitution.value;
+    const shortRestBonus = this.system.hp?.shortRestBonus || 0;
     const hpRecovery = restState.blocksHpRecovery
       ? 0
-      : Math.floor(con / (restState.halvesHpRecovery ? 2 : 1));
+      : Math.floor(con / (restState.halvesHpRecovery ? 2 : 1)) + shortRestBonus;
     const newHP = Math.min(this.system.hp.value + hpRecovery, this.system.hp.max);
     updates['system.hp.value'] = newHP;
     
@@ -816,11 +904,24 @@ _prepareCharacterData(actorData) {
             return update;
           })
           .filter(Boolean);
-    
+
+    const implementResults = restState.blocksAllBenefits || restState.blocksShortRestBenefits
+      ? []
+      : await Promise.all(
+          this.items
+            .filter(item => ['rod', 'staff', 'wand', 'ring'].includes(item.type))
+            .map(item => buildImplementRechargeUpdate(item, 'shortRest'))
+        );
+    const implementUpdates = implementResults.filter(Boolean);
+
     await this.update(updates);
 
-    if (abilityUpdates.length > 0 || featUpdates.length > 0) {
-      await this.updateEmbeddedDocuments('Item', [...abilityUpdates, ...featUpdates]);
+    if (abilityUpdates.length > 0 || featUpdates.length > 0 || implementUpdates.length > 0) {
+      await this.updateEmbeddedDocuments('Item', [
+        ...abilityUpdates,
+        ...featUpdates,
+        ...implementUpdates.map(r => r.update),
+      ]);
     }
     
     ChatMessage.create({
@@ -834,6 +935,7 @@ _prepareCharacterData(actorData) {
             <li>${restState.blocksAllBenefits || restState.blocksShortRestBenefits ? 'Recovered no Luck' : 'Regained 1 Luck'}</li>
             ${restoredAbilities.length > 0 ? `<li>Recharged abilities: ${restoredAbilities.join(', ')}</li>` : ''}
             ${restoredFeats.length > 0 ? `<li>Recharged feats: ${restoredFeats.join(', ')}</li>` : ''}
+            ${implementUpdates.length > 0 ? `<li>Recharged implements: ${implementUpdates.map(r => `${r.name} (${r.gained} charge${r.gained !== 1 ? 's' : ''}, now ${r.newValue}/${r.max})`).join(', ')}</li>` : ''}
             ${restState.blocksAllBenefits ? `<li>No short rest benefits due to ${restState.blockedBy}</li>` : ''}
             ${!restState.blocksAllBenefits && restState.blocksShortRestBenefits ? `<li>No short rest benefits due to ${restState.shortRestBlockedBy}</li>` : ''}
             ${!restState.blocksAllBenefits && !restState.blocksShortRestBenefits && restState.blocksHpRecovery ? `<li>No HP recovery due to ${restState.hpBlockedBy}</li>` : ''}
@@ -902,11 +1004,24 @@ _prepareCharacterData(actorData) {
             return update;
           })
           .filter(Boolean);
-    
+
+    const implementResults = restState.blocksAllBenefits
+      ? []
+      : await Promise.all(
+          this.items
+            .filter(item => ['rod', 'staff', 'wand', 'ring'].includes(item.type))
+            .map(item => buildImplementRechargeUpdate(item, 'longRest'))
+        );
+    const implementUpdates = implementResults.filter(Boolean);
+
     await this.update(updates);
 
-    if (abilityUpdates.length > 0 || featUpdates.length > 0) {
-      await this.updateEmbeddedDocuments('Item', [...abilityUpdates, ...featUpdates]);
+    if (abilityUpdates.length > 0 || featUpdates.length > 0 || implementUpdates.length > 0) {
+      await this.updateEmbeddedDocuments('Item', [
+        ...abilityUpdates,
+        ...featUpdates,
+        ...implementUpdates.map(r => r.update),
+      ]);
     }
 
     if (!restState.blocksAllBenefits && restState.exhaustionCondition) {
@@ -934,6 +1049,7 @@ _prepareCharacterData(actorData) {
             ${!restState.blocksAllBenefits && restoresChannelDivinity ? `<li>Restored all Channel Divinity uses to ${this.system.channelDivinity.max}</li>` : ''}
             ${restoredAbilities.length > 0 ? `<li>Recharged abilities: ${restoredAbilities.join(', ')}</li>` : ''}
             ${restoredFeats.length > 0 ? `<li>Recharged feats: ${restoredFeats.join(', ')}</li>` : ''}
+            ${implementUpdates.length > 0 ? `<li>Recharged implements: ${implementUpdates.map(r => `${r.name} (${r.gained} charge${r.gained !== 1 ? 's' : ''}, now ${r.newValue}/${r.max})`).join(', ')}</li>` : ''}
             ${restState.blocksAllBenefits ? `<li>No rest benefits due to ${restState.blockedBy}</li>` : ''}
             ${!restState.blocksHpRecovery && restState.halvesHpRecovery ? `<li>HP recovery halved due to ${restState.hpHalvedBy}</li>` : ''}
             ${exhaustionRecovery ? `<li>${exhaustionRecovery}</li>` : ''}

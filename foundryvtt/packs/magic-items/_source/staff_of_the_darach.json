@@ -1,0 +1,71 @@
+{
+  "_id": "094908fad1540187",
+  "name": "Staff of the Darach",
+  "type": "staff",
+  "img": "icons/weapons/staves/staff-ornate-gold.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Type:</strong> Staff <strong>Rarity:</strong> Rare <strong>Attack Bonus:</strong> +1 <strong>Primary Energy:</strong> earth <strong>Damage:</strong> 1d6 bludgeoning (Versatile) <strong>Weight:</strong> 4 <strong>Charges:</strong> 10/10 (recharge: 1d8 at Long Rest) <strong>Description:</strong> A jagged length of blackened wood crowned with a green-glowing orb wreathed in thorns. The light it casts is the wrong shade of green. <strong>Properties:</strong></p>\n<ul>\n<li>Functions as a magic quarterstaff with [Versatile]. Attacks subtract 1 from the skill die (magic weapon bonus).</li>\n<li>While held, subtract 1 from one targeting die on all weave targeting rolls.</li>\n<li><strong>Verdant Veil (Passive):</strong> While carrying the staff, the wielder has Fortune on Stealth checks and leaves no tracks in natural terrain. Creatures tracking by scent or mundane means automatically fail unless they have magic or Tremorsense.</li>\n</ul>\n<h3>Granted Weaves</h3>\n<p>| Weave | Charge Cost | |---|---| | Grasping Vines | 1 | | Revealing Light | 1 | | Barkward | 2 | | Speak with Plants | 2 | | Shape Stone | 4 | | Biting Swarm (Grasping Vines, Greater + Toxic Mist combined effect) | 4 |</p>\n<p><strong>Biting Swarm (4 charges):</strong> Calls a 20-foot diameter swarm of biting insects at medium range. Every creature in the area makes a Reflex save. Creatures that fail take 12 piercing damage, gain the Poisoned (Weak) condition, and treat the swarm's area as difficult terrain for 1 minute.</p>\n<p>---</p>"
+    },
+    "primaryEnergy": "earth",
+    "charges": {
+      "value": 10,
+      "max": 10,
+      "recharge": "1d8",
+      "rechargePeriod": "longRest"
+    },
+    "properties": [],
+    "grantedWeaves": [
+      {
+        "name": "Grasping Vines",
+        "chargeCost": 1,
+        "description": ""
+      },
+      {
+        "name": "Revealing Light",
+        "chargeCost": 1,
+        "description": ""
+      },
+      {
+        "name": "Barkward",
+        "chargeCost": 2,
+        "description": ""
+      },
+      {
+        "name": "Speak with Plants",
+        "chargeCost": 2,
+        "description": ""
+      },
+      {
+        "name": "Shape Stone",
+        "chargeCost": 4,
+        "description": ""
+      },
+      {
+        "name": "Biting Swarm (Grasping Vines, Greater + Toxic Mist combined effect)",
+        "chargeCost": 4,
+        "description": ""
+      }
+    ],
+    "isMagical": true,
+    "identified": true,
+    "weight": 4.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "rare",
+    "requiresAttunement": false,
+    "notes": "",
+    "implementType": "staff",
+    "attackBonus": 1,
+    "damage": {
+      "base": 6,
+      "type": "bludgeoning",
+      "properties": [
+        "versatile"
+      ]
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

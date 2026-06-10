@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 1 minute (20-foot radius)",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "disoriented",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "save",
     "tags": [
       "aoe",

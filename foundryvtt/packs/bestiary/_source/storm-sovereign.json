@@ -1,0 +1,170 @@
+{
+  "_id": "4e8185d1d607c164",
+  "name": "Storm Sovereign",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Storm Sovereign's Aura displaces enemies constantly. A typical turn spends two actions on Gale Fist against whoever Storm Sovereign Aura failed to clear and a third on Tempest Bolt against anything trying to engage from range — three actions, the third at MAP but still at Ranged Combat 7 and Agi 8, which makes that penalty manageable. Lightning Immunity Sharing is a notable battlefield benefit — a summoner who builds their party around a Storm Sovereign can deny an entire damage type to grouped enemies without any additional resource cost. Clear target priority is the only instruction it strictly requires; the Sovereign determines execution from there.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 60,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 8,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 7,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 6,
+      "thievery": 0,
+      "rangedCombat": 7,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 8,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 0,
+      "fly": 120,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Blindsight 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Gale Fist [Combat]:</strong> Melee attack (Agi 8 + Melee Combat 8), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 10 lightning damage (Half DR); target pushed 20 feet and knocked Prone; no save</li>\n<li><em>Margin 2:</em> 20 damage (14 + 6 Str) + 10 lightning damage; Prone + Stunned until end of their next turn</li>\n<li><em>Margin 3:</em> 20 damage + 10 lightning damage + Stunned; all creatures within 10 feet of target take 8 lightning damage (Half DR) from the discharge</li>\n</ul></li>\n<li><strong>Tempest Bolt [Combat]:</strong> Ranged attack (Dex 7 + Ranged Combat 7), Range: 180 ft\n<ul>\n<li>Net 1: 24 lightning damage (Half DR) + Dazed until end of their next turn. Net 2: 48 lightning damage + Stunned + Dazed for 1 minute. Net 3: 48 lightning damage + Stunned + Dazed + Deafened for 1 minute; Fortitude save (2 successes) to reduce Deafened to 1 round only.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Storm Sovereign Aura:</strong> Creatures within 20 feet that are not designated must make a Fortitude save at the start of their turn (Hard task, 2 successes). Failure: pushed 15 feet and Deafened for 1 round. The summoner and designated allies are immune.</li>\n<li><strong>Lightning Immunity Sharing:</strong> The summoner and up to 4 designated allies gain immunity to non-magical lightning damage while within 60 feet.</li>\n<li><strong>Eye of the Storm:</strong> As Elder Gale.</li>\n<li><strong>Momentum Defense.</strong></li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Storm Sovereign",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!4e8185d1d607c164"
+}

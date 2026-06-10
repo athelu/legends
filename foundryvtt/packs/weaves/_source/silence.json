@@ -24,7 +24,7 @@
     "target": "sphere",
     "savingThrow": "none",
     "effect": "Create 20-foot radius sphere of silence centered on a point at close range. No sound can be created within or pass through the sphere. Creatures inside are Deafened. Verbal components of weaves can't be performed inside (blocks invokers and most casters). Can cast on object; sphere moves with object.",
-    "effectType": "utility",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 10 minutes (30-foot radius)",
     "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "deafened",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "automatic",
     "tags": [
       "aoe",

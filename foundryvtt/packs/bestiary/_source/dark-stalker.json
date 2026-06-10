@@ -1,0 +1,170 @@
+{
+  "_id": "4901232c37c8ed95",
+  "name": "Dark Stalker",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Dark Stalkers are the first Shadow creature with genuine tactical sophistication. They manage their Planar Steps as resources — one to open with Shadow Ambush from an unexpected angle, one held for extraction when the engagement turns unfavorable. Death Sense ensures they always know which target is most vulnerable. Shadow Form in darkness gives them DR 8 against mundane attacks, making them effectively immune to conventional weapons while in their preferred environment. A summoner who controls lighting conditions — ensuring the engagement happens in dim light or darkness — will find a Dark Stalker performs at well above its TR. The creature is also the first Shadow creature that actively evaluates when retreat serves its interests better than continued engagement, which it will execute without prompting if the tactical situation warrants it.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 40,
+      "max": 40,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 4,
+      "stealth": 7,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 4,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 5,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 50,
+      "fly": 0,
+      "climb": 50,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "shadow",
+    "creatureSubtype": "passive",
+    "hpMultiplier": 8,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Devil's Sight, See Invisibility",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Shadow Blade [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 6), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + 6 Negative damage (Ignore DR); target loses 3 from Current Luck</li>\n<li><em>Margin 2:</em> 12 damage (8 + 4 Str) + 6 Negative damage; Current Luck reduced by 4; target Disoriented + Dazed until end of their next turn; no save</li>\n<li><em>Margin 3:</em> 12 damage + 6 Negative damage; Current Luck reduced by 5; Disoriented + Dazed; target makes Will save (1 success) or Frightened until end of their next turn as the accumulated shadow energy overwhelms their sense of safety</li>\n</ul></li>\n<li><strong>Shadow Bolt [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 4), Range: 60 ft\n<ul>\n<li>Net 1: 8 Negative damage (Half DR); target loses 2 from Current Luck. Net 2: 12 Negative damage + Disoriented until end of their next turn; Current Luck reduced by 3; no save. Net 3: 12 Negative damage + Dazed for 1 minute; Current Luck reduced by 4; Will save each round to end.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Shadow Form:</strong> As above; DR increases to 8 against non-magical, non-Positive damage in dim light or darkness.</li>\n<li><strong>Planar Step (2/short rest):</strong> As Shade Walker; usable twice per short rest. The Dark Stalker has spent enough time on the prime material to cross more fluidly.</li>\n<li><strong>Devil's Sight:</strong> Sees through magical darkness as if bright light.</li>\n<li><strong>Death Sense:</strong> Automatically detects creatures below half HP within 60 feet and knows their precise location regardless of concealment or invisibility.</li>\n<li><strong>Shadow Ambush:</strong> When the Dark Stalker attacks on the same turn it used Planar Step, it has Fortune on that attack.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Dark Stalker",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!4901232c37c8ed95"
+}

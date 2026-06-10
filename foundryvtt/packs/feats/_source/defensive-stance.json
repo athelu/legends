@@ -38,7 +38,13 @@
       "[Defense]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "toggle.state",
+        "stateKey": "defensiveStance",
+        "label": "Defensive Stance"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!09e40eaa67220e37"

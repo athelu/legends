@@ -1,0 +1,170 @@
+{
+  "_id": "905b99578c82ef8d",
+  "name": "Voidcaller",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>The Voidcaller is the first Aberration in this tier with genuine intelligence — not intelligence in the sense of mortal cognitive capability, but something that can evaluate situations, anticipate responses, and adjust behavior accordingly. The Signal is a passive effect it does not consciously control, which creates a complication for a summoner who needs allies nearby: the Signal damages and drains Current Luck from everyone within 30 feet without discrimination. A summoner who deploys one should plan for allies to maintain distance or accept ongoing Luck drain. Spatial Awareness means it cannot be flanked, ambushed, or approached from an unexpected angle — it always knows exactly where every creature is in a significant radius. Void Gate creates displacement hazards that can remove targets from effective positions. The Confusion from Void Tendril turns targets against their allies for the duration, which can be more disruptive than the damage.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 8,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 7,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 6,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 108,
+      "max": 108,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 6,
+      "max": 6
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 5,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "rangedCombat": 5,
+      "arcane": 7,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 4,
+      "history": 0,
+      "perception": 7,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 20,
+      "fly": 60,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "",
+    "hpMultiplier": 18,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Seam Sense 300 ft, See Invisibility, Truesight 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Void Tendril [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 5), Range: 60 ft\n<ul>\n<li><em>Net 1:</em> 14 force damage (Ignore DR); target loses 3 from Current Luck; target makes Will save (1 success) or Confused until end of their next turn</li>\n<li><em>Net 2:</em> 22 force damage; Current Luck reduced by 4; Confused without save for 1 minute; target's allies cannot be seen as allies — they appear as threats until the Confusion clears</li>\n<li><em>Net 3:</em> 22 force damage; Current Luck reduced by 5; Confused for 1 minute; target must succeed on Will save (Hard task, 2 successes) or be Dominated for 1 round — they take 1 action this round following the Voidcaller's instruction before the Confusion reasserts</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>The Signal:</strong> The Voidcaller continuously broadcasts something — not language, not images, but a transmission in a cognitive format that mortal minds were not designed to receive. Any creature that begins its turn within 30 feet of the Voidcaller must succeed on a Will save (1 success) or take 8 force damage (Ignore DR) and lose 2 from Current Luck as their mind attempts to process the signal. Creatures that succeed are not immune to subsequent saves — the Signal continues each round. Creatures reduced to 0 Current Luck by this effect fall Unconscious for 1 hour — their mind has shut down to protect itself.</li>\n<li><strong>Spatial Awareness:</strong> The Voidcaller knows the precise location of every creature within 300 feet regardless of concealment, invisibility, or barriers. This is not a skill or sense — it perceives the spatial displacement of objects and beings directly.</li>\n<li><strong>Void Gate (1/day) [Combat]:</strong> As 2 [Combat] actions, opens a two-way gate to the Space between planes at a point within 60 feet. Creatures that enter the gate voluntarily or are pushed through it are expelled 1d6 × 30 feet in a random direction (on the prime material, not into the Space). The gate persists for 1 minute and is 10 feet in diameter. The Voidcaller can close it early as a free action.</li>\n<li><strong>Arcane Disruption:</strong> When the Voidcaller is targeted by a weave that requires an attack roll, it may use its [Reaction] to force the attacker to reroll, taking the worse result. Once per encounter.</li>\n<li><strong>Resilient Defense (2/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Voidcaller",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!905b99578c82ef8d"
+}

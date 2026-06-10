@@ -52,12 +52,12 @@
         }
       }
     },
-    "targetingSuccessScaling": "0 = Fails, 1 = 1 minute; surface features only, 2 = 10 minutes; full appearance including voice,  3 = 1 hour; perfect rendering.",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 minute; surface features only, 2 = 10 minutes; full appearance including voice, 3 = 1 hour; perfect rendering.",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {
-        "effectId": "none (passive disguise)",
+        "effectId": "False Visage",
         "params": {}
       }
     ],

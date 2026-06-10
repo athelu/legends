@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = Fails,  1 = Half damage (10), 2 = Full damage (20) + Weakened condition until end of target's next turn, 3 = Enhanced damage (28) + Weakened condition for 1 minute (Fortitude save at end of each turn, 1 success ends)",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "weakened",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "save",
     "tags": [
       "buff",

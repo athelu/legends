@@ -1,0 +1,170 @@
+{
+  "_id": "8fdc6c372462cfc6",
+  "name": "Stormcall",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Stormcalls fight from altitude, opening with Wind Blade against the closest threat, then spending a second action on Lightning Arc against anything at range, and using a third action to reposition while maintaining Momentum Defense. The MAP on that third action is real but the Stormcall accepts it — staying in motion matters more than clean dice. Agi 7 means they act before most of what they face. A summoner who gives a Stormcall a target designation and stays out of the way will find it requires little management.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 30,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 3,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 7,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 40,
+      "max": 40,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 4,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 5,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 0,
+      "fly": 70,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 8,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Blindsight 30 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Wind Blade [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage; target pushed 10 feet</li>\n<li><em>Margin 2:</em> 9 damage (6 + 3 Str); target pushed 10 feet and knocked Prone; no save</li>\n<li><em>Margin 3:</em> 9 damage + Prone + Stunned until end of their next turn from a concentrated wind impact</li>\n</ul></li>\n<li><strong>Lightning Arc [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 4), Range: 60 ft\n<ul>\n<li><em>Margin 1:</em> 8 lightning damage (Half DR)</li>\n<li><em>Margin 2:</em> 13 lightning damage (8 + 5 Dex); target gains Dazed condition until end of their next turn</li>\n<li><em>Margin 3:</em> 13 lightning damage + Dazed + Stunned until end of their next turn</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Momentum Defense:</strong> As above.</li>\n<li><strong>Storm Body:</strong> Grapple attempts add 1 to both dice. If successfully grappled, the Stormcall makes a Fortitude save at the start of its turn (1 success) to break free automatically.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Stormcall",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!8fdc6c372462cfc6"
+}

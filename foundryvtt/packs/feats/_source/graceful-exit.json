@@ -1,0 +1,45 @@
+{
+  "_id": "c5bae278fa2ac8ad",
+  "name": "Graceful Exit",
+  "type": "feat",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>Knowing when a conversation has turned against you and leaving before it fully collapses is its own skill.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 3
+      },
+      "skills": "deception:3",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When a social interaction is going badly. The interaction ends without the negative attitude shift triggering. The NPC retains their current attitude rather than worsening it. You cannot use this ability if violence has already started or if you have already attempted to exit and been stopped.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Once per scene"
+    },
+    "keywords": [
+      "[Social]",
+      "[Shadow]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!c5bae278fa2ac8ad"
+}

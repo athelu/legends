@@ -24,7 +24,7 @@
     "target": "sphere",
     "savingThrow": "will",
     "effect": "All creatures in a 20-foot radius sphere at medium range must make Will saves. Compare your targeting successes to each target's save successes. Those you beat can choose to be affected (suppressing Charmed or Frightened) or you can suppress hostility (they become indifferent if not directly threatened). Creatures immune to charm are immune to this weave.",
-    "effectType": "utility",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
@@ -55,10 +55,16 @@
     "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "charmed",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "save",
     "tags": [
       "aoe",
+      "control",
       "ranged",
       "ritual"
     ]

@@ -1,0 +1,170 @@
+{
+  "_id": "b3bb03a155256ace",
+  "name": "Shadow Hound",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Shadow Hounds are the Negative plane's predators — built around finding weakness and exploiting it. Death Sense means they always know which target in the encounter is most vulnerable; they will pursue that target instinctively unless given explicit priority instructions. Luck Drain at Margin 3 degrades a target's save capability over the course of an encounter in a way that compounds — a target who has been bitten three times is functionally unable to resist saves effectively. A summoner who calls one to hunt a specific target and keeps it focused will find it devastatingly effective. One who calls it without designation will find it picking the most vulnerable target in the room, which may not be an enemy.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 3,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 2,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 27,
+      "max": 27,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 5,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 50,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fiend",
+    "creatureSubtype": "+2 DR each",
+    "hpMultiplier": 9,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Devil's Sight, Keen Smell (Fortune on scent-based Perception)",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage + 4 Negative damage (Half DR)</li>\n<li><em>Margin 2:</em> 10 damage (6 + 4 Str) + 4 Negative damage; target makes Fortitude save (1 success) or Weakened until end of their next turn</li>\n<li><em>Margin 3:</em> 10 damage + 4 Negative damage; Weakened; no save; target also loses 2 from their Current Luck pool as the negative energy drains vitality directly</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Shadow Meld:</strong> In dim light or darkness, Fortune on Stealth checks. Attacks against it add 1 to both dice.</li>\n<li><strong>Death Sense:</strong> Automatically detects creatures below half HP within 60 feet. Knows their precise location regardless of concealment or darkness.</li>\n<li><strong>Pack Hunt:</strong> When an ally is within 5 feet of the target, subtract 1 from both attack dice.</li>\n<li><strong>Luck Drain:</strong> When the Shadow Hound's bite drains Luck at Margin 3, that Luck does not return until the target takes a long rest. The target's Current Luck maximum is effectively reduced for the remainder of the session.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Shadow Hound",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!b3bb03a155256ace"
+}

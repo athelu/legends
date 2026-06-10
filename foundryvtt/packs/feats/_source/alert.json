@@ -38,7 +38,16 @@
       "[General]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "initiative.modify",
+        "value": 2
+      },
+      {
+        "type": "condition.immunity",
+        "conditionName": "Surprised"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!8d088d1827dd4656"

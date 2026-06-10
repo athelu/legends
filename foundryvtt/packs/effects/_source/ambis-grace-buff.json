@@ -1,0 +1,56 @@
+{
+  "_id": "ambgrac0000000001",
+  "name": "Ambis's Grace",
+  "type": "effect",
+  "img": "icons/svg/sun.svg",
+  "system": {
+    "label": "Ambis's Grace",
+    "category": "buff",
+    "effectType": "attribute-mod",
+    "description": {
+      "value": "<p>Target gains +2 Charisma for the duration. Recalculate Charisma-based checks and casting values if Charisma is the target's casting stat. This bonus does not stack with other beneficial Charisma modifiers; use the highest bonus.</p>"
+    },
+    "tokenIcon": "",
+    "badge": {
+      "type": "none",
+      "value": 0,
+      "max": 0
+    },
+    "activeEffects": [
+      {
+        "key": "system.attributes.charisma.tempValue",
+        "mode": "add",
+        "value": "2",
+        "notes": "+2 Charisma"
+      }
+    ],
+    "stacking": "highest",
+    "overlayPriority": 10,
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0,
+      "potential": 0
+    },
+    "grantedBy": "Ambis's Grace",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 3 ? 10 : ${netSuccesses} >= 2 ? 1 : ${netSuccesses} >= 1 ? 0.1 : 0"
+    }
+  },
+  "flags": {},
+  "_key": "!items!ambgrac0000000001"
+}

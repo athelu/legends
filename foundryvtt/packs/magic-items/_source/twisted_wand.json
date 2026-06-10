@@ -1,0 +1,41 @@
+{
+  "_id": "7e9f2a1b3c4d5e6f",
+  "name": "Twisted Wand",
+  "type": "wand",
+  "img": "icons/weapons/wands/wand-gem-violet.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Type:</strong> Wand &nbsp;|&nbsp; <strong>Rarity:</strong> Uncommon &nbsp;|&nbsp; <strong>Primary Energy:</strong> Earth &nbsp;|&nbsp; <strong>Weight:</strong> 1 &nbsp;|&nbsp; <strong>Charges:</strong> 5/5 (recharge: 1d8/2 at Long Rest)</p><p>This wand has 5 charges. As an action the wielder may expend a charge, causing tall grass, weeds, and other plants to grow and wrap around creatures in the area of effect or those that enter the area. This functions identically to the weave <strong>Grasping Vines</strong>.</p><p>The wand regains 1d8/2 (rounded normally) charges after a long rest. If you expend the wand's last charge, roll a d8 — on an 8, the wand crumbles into ash and is destroyed.</p><h3>Granted Weaves</h3><table><thead><tr><th>Weave</th><th>Charge Cost</th></tr></thead><tbody><tr><td>Grasping Vines</td><td>1</td></tr></tbody></table>"
+    },
+    "primaryEnergy": "earth",
+    "charges": {
+      "value": 5,
+      "max": 5,
+      "recharge": "1d8/2",
+      "rechargePeriod": "longRest"
+    },
+    "properties": [],
+    "grantedWeaves": [
+      {
+        "name": "Grasping Vines",
+        "chargeCost": 1,
+        "description": ""
+      }
+    ],
+    "isMagical": true,
+    "identified": true,
+    "weight": 1.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "uncommon",
+    "requiresBinding": false,
+    "bound": false,
+    "bodySlot": "none",
+    "notes": "If the last charge is expended, roll 1d8; on a result of 8 the wand is destroyed.",
+    "implementType": "wand",
+    "attackBonus": 0
+  },
+  "effects": [],
+  "flags": {}
+}

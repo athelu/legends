@@ -3,8 +3,76 @@
  * Foundry VTT V13 - Application V2 (HandlebarsApplicationMixin + ActorSheetV2)
  * Uses: static DEFAULT_OPTIONS, static PARTS, _prepareContext(), data-action event delegation
  */
+import { SKILL_LABELS, SKILL_ATTRIBUTE_KEYS, SKILL_ATTRIBUTE_SHORT } from '../skill-utils.mjs';
+import { getLanguageDefinitions } from '../languages.mjs';
+
 const { ActorSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
+
+// ── Reference data ──────────────────────────────────────────────────────────
+
+const SIZE_OPTIONS = [
+  { value: 'tiny',        label: 'Tiny' },
+  { value: 'small',       label: 'Small' },
+  { value: 'medium',      label: 'Medium' },
+  { value: 'large',       label: 'Large' },
+  { value: 'huge',        label: 'Huge' },
+  { value: 'gargantuan',  label: 'Gargantuan' },
+];
+
+const CREATURE_TYPE_OPTIONS = [
+  { value: 'humanoid',    label: 'Humanoid' },
+  { value: 'beast',       label: 'Beast' },
+  { value: 'undead',      label: 'Undead' },
+  { value: 'construct',   label: 'Construct' },
+  { value: 'elemental',   label: 'Elemental' },
+  { value: 'drake',       label: 'Drake' },
+  { value: 'monstrosity', label: 'Monstrosity' },
+  { value: 'nephilim',    label: 'Nephilim' },
+  { value: 'fey',         label: 'Fey' },
+  { value: 'fiend',       label: 'Fiend' },
+  { value: 'celestial',   label: 'Celestial' },
+  { value: 'aberration',  label: 'Aberration' },
+  { value: 'plant',       label: 'Plant' },
+  { value: 'swarm',       label: 'Swarm' },
+  { value: 'other',       label: 'Other' },
+];
+
+const HP_MULTIPLIER_OPTIONS = [
+  { value: 6,  label: '×6 — Fragile' },
+  { value: 7,  label: '×7 — Weak' },
+  { value: 8,  label: '×8 — Standard' },
+  { value: 9,  label: '×9 — Tough' },
+  { value: 10, label: '×10 — Hardy' },
+  { value: 12, label: '×12 — Resilient' },
+  { value: 15, label: '×15 — Massive' },
+  { value: 19, label: '×19 — Titanic' },
+  { value: 30, label: '×30 — Legendary' },
+];
+
+const DAMAGE_TYPES = [
+  // Physical
+  'slashing', 'piercing', 'bludgeoning',
+  // Physical qualifier — for constructs / golems immune to non-magical weapons
+  'nonmagical-physical',
+  // Elemental / energy
+  'fire', 'cold', 'lightning', 'thunder',
+  'necrotic', 'radiant', 'poison',
+  'acid', 'force', 'psychic',
+  // System-specific potential energy types
+  'positive', 'negative',
+];
+
+const CONDITION_TYPES = [
+  'bleeding', 'blinded', 'burning', 'charmed',
+  'deafened', 'disease', 'exhaustion',
+  'frightened', 'grappled', 'paralyzed',
+  'petrified', 'poisoned', 'prone',
+  'restrained', 'slowed', 'unconscious',
+];
+
+// Derived from the world language registry — keys are canonical, labels are display names
+const LANGUAGE_OPTIONS = getLanguageDefinitions().map(l => ({ key: l.key, label: l.label }));
 
 export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
@@ -19,6 +87,14 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       itemEdit: D8NPCSheet.#onItemEdit,
       itemDelete: D8NPCSheet.#onItemDelete,
       setSocialContext: D8NPCSheet.#onSetSocialContext,
+      addSkill: D8NPCSheet.#onAddSkill,
+      removeSkill: D8NPCSheet.#onRemoveSkill,
+      addImmunity: D8NPCSheet.#onAddImmunity,
+      removeImmunity: D8NPCSheet.#onRemoveImmunity,
+      addResistance: D8NPCSheet.#onAddResistance,
+      removeResistance: D8NPCSheet.#onRemoveResistance,
+      addLanguage: D8NPCSheet.#onAddLanguage,
+      removeLanguage: D8NPCSheet.#onRemoveLanguage,
     },
     form: { submitOnChange: true },
     window: { resizable: true }
@@ -33,8 +109,9 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     primary: {
       initial: "main",
       tabs: [
-        { id: "main", label: "Main" },
-        { id: "combat", label: "Combat" }
+        { id: "main",    label: "Main" },
+        { id: "details", label: "Details" },
+        { id: "combat",  label: "Combat" }
       ]
     }
   };
@@ -162,6 +239,39 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
     // Prepare NPC data
     this._prepareItems(context);
+
+    // Prepare active skills (only those with a rank > 0)
+    const rawSkills = context.system.skills || {};
+    context.activeSkills = Object.entries(SKILL_LABELS)
+      .map(([key, label]) => {
+        const raw = rawSkills[key];
+        const value = typeof raw === 'number' ? raw : (raw?.value ?? 0);
+        return { key, label, value, attrShort: SKILL_ATTRIBUTE_SHORT[key] || '' };
+      })
+      .filter(s => s.value > 0)
+      .sort((a, b) => a.label.localeCompare(b.label));
+
+    // Details tab data
+    context.sizeOptions        = SIZE_OPTIONS;
+    context.creatureTypeOptions = CREATURE_TYPE_OPTIONS;
+    context.hpMultiplierOptions = HP_MULTIPLIER_OPTIONS;
+
+    const sys = context.system;
+    context.immunityDamageChips  = (sys.immunities?.damageTypes  || []).map(t => ({ value: t, label: _capitalize(t) }));
+    context.immunityCondChips    = (sys.immunities?.conditions   || []).map(t => ({ value: t, label: _capitalize(t) }));
+    context.resistanceChips      = (sys.resistances              || []).map(r => ({
+      value: r.type, dr: r.dr,
+      label: `${_capitalize(r.type)} (DR +${r.dr})`
+    }));
+    context.languageChips = (sys.languages || []).map(k => ({
+      value: k,
+      label: LANGUAGE_OPTIONS.find(l => l.key === k)?.label ?? k
+    }));
+
+    // Speed display: only non-zero entries beyond walk
+    context.speedExtras = Object.entries(sys.speed || {})
+      .filter(([k, v]) => k !== 'walk' && v > 0)
+      .map(([k, v]) => ({ key: k, label: _capitalize(k), value: v }));
 
     return context;
   }
@@ -297,4 +407,247 @@ export class D8NPCSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const attitude = this.actor.system?.attitude ?? 'indifferent';
     return game.legends.socialCheck.openGMContextSetter(attitude);
   }
+
+  /**
+   * Open a V2 dialog to pick a skill and rank to assign to this NPC.
+   */
+  static async #onAddSkill(event, target) {
+    const existing = this.actor.system.skills || {};
+
+    // Group unassigned skills by governing attribute
+    const ATTR_LABELS = {
+      strength: 'Strength', agility: 'Agility', dexterity: 'Dexterity',
+      intelligence: 'Intelligence', wisdom: 'Wisdom', charisma: 'Charisma'
+    };
+    const byAttr = {};
+    for (const [key, label] of Object.entries(SKILL_LABELS)) {
+      const raw = existing[key];
+      const current = typeof raw === 'number' ? raw : (raw?.value ?? 0);
+      if (current > 0) continue; // already assigned
+      const attr = SKILL_ATTRIBUTE_KEYS[key] || 'other';
+      if (!byAttr[attr]) byAttr[attr] = [];
+      byAttr[attr].push({ key, label });
+    }
+
+    if (!Object.keys(byAttr).length) {
+      ui.notifications.info('All skills are already assigned to this NPC.');
+      return;
+    }
+
+    let options = '';
+    for (const [attr, skills] of Object.entries(byAttr)) {
+      options += `<optgroup label="${ATTR_LABELS[attr] || attr}">`;
+      for (const { key, label } of skills) {
+        options += `<option value="${key}">${label}</option>`;
+      }
+      options += '</optgroup>';
+    }
+
+    const result = await foundry.applications.api.DialogV2.wait({
+      window: { title: 'Add NPC Skill' },
+      position: { width: 320 },
+      rejectClose: false,
+      content: `
+        <div class="form-group">
+          <label>Skill</label>
+          <select name="skillKey" style="flex:1">${options}</select>
+        </div>
+        <div class="form-group">
+          <label>Rank (1–8)</label>
+          <input type="number" name="skillRank" value="1" min="1" max="8" style="flex:1"/>
+        </div>`,
+      buttons: [
+        {
+          action: 'add',
+          label: 'Add Skill',
+          default: true,
+          callback: (event, button, dialog) => ({
+            key: dialog.element.querySelector('[name="skillKey"]')?.value,
+            rank: Number(dialog.element.querySelector('[name="skillRank"]')?.value) || 1
+          })
+        },
+        { action: 'cancel', label: 'Cancel' }
+      ]
+    });
+
+    if (result?.key) {
+      const rank = Math.max(1, Math.min(8, result.rank));
+      await this.actor.update({ [`system.skills.${result.key}`]: rank });
+    }
+  }
+
+  /**
+   * Remove a skill from the NPC by zeroing its rank.
+   */
+  static async #onRemoveSkill(event, target) {
+    const skill = target.closest('[data-skill]')?.dataset.skill;
+    if (!skill) return;
+    await this.actor.update({ [`system.skills.${skill}`]: 0 });
+  }
+
+  // ── Immunity handlers ──────────────────────────────────────────────────────
+
+  static async #onAddImmunity(event, target) {
+    const kind = target.dataset.kind; // 'damage' or 'condition'
+    const isDamage = kind === 'damage';
+    const pool = isDamage ? DAMAGE_TYPES : CONDITION_TYPES;
+    const existing = isDamage
+      ? (this.actor.system.immunities?.damageTypes || [])
+      : (this.actor.system.immunities?.conditions  || []);
+    const available = pool.filter(t => !existing.includes(t));
+
+    if (!available.length) {
+      ui.notifications.info(`All ${isDamage ? 'damage type' : 'condition'} immunities are already assigned.`);
+      return;
+    }
+
+    const opts = available.map(t => `<option value="${t}">${_capitalize(t)}</option>`).join('');
+    const result = await foundry.applications.api.DialogV2.wait({
+      window: { title: `Add ${isDamage ? 'Damage' : 'Condition'} Immunity` },
+      position: { width: 300 },
+      rejectClose: false,
+      content: `<div class="form-group"><label>${isDamage ? 'Damage Type' : 'Condition'}</label>
+                 <select name="val" style="flex:1">${opts}</select></div>`,
+      buttons: [
+        {
+          action: 'add', label: 'Add', default: true,
+          callback: (ev, btn, dlg) => dlg.element.querySelector('[name="val"]')?.value
+        },
+        { action: 'cancel', label: 'Cancel' }
+      ]
+    });
+
+    if (!result) return;
+    const updated = [...existing, result];
+    const path = isDamage ? 'system.immunities.damageTypes' : 'system.immunities.conditions';
+    await this.actor.update({ [path]: updated });
+  }
+
+  static async #onRemoveImmunity(event, target) {
+    const kind  = target.dataset.kind;
+    const value = target.dataset.value;
+    const isDamage = kind === 'damage';
+    const path = isDamage ? 'system.immunities.damageTypes' : 'system.immunities.conditions';
+    const existing = isDamage
+      ? (this.actor.system.immunities?.damageTypes || [])
+      : (this.actor.system.immunities?.conditions  || []);
+    await this.actor.update({ [path]: existing.filter(t => t !== value) });
+  }
+
+  // ── Resistance handlers ────────────────────────────────────────────────────
+
+  static async #onAddResistance(event, target) {
+    const existing = this.actor.system.resistances || [];
+    const usedTypes = existing.map(r => r.type);
+    const available = DAMAGE_TYPES.filter(t => !usedTypes.includes(t));
+
+    if (!available.length) {
+      ui.notifications.info('Resistances for all damage types are already set.');
+      return;
+    }
+
+    const opts = available.map(t => `<option value="${t}">${_capitalize(t)}</option>`).join('');
+    const result = await foundry.applications.api.DialogV2.wait({
+      window: { title: 'Add Damage Resistance' },
+      position: { width: 320 },
+      rejectClose: false,
+      content: `
+        <div class="form-group">
+          <label>Damage Type</label>
+          <select name="rType" style="flex:1">${opts}</select>
+        </div>
+        <div class="form-group">
+          <label>DR Bonus</label>
+          <input type="number" name="rDr" value="1" min="1" max="20" style="flex:1"/>
+        </div>`,
+      buttons: [
+        {
+          action: 'add', label: 'Add', default: true,
+          callback: (ev, btn, dlg) => ({
+            type: dlg.element.querySelector('[name="rType"]')?.value,
+            dr:   Number(dlg.element.querySelector('[name="rDr"]')?.value) || 1
+          })
+        },
+        { action: 'cancel', label: 'Cancel' }
+      ]
+    });
+
+    if (result?.type) {
+      await this.actor.update({ 'system.resistances': [...existing, { type: result.type, dr: result.dr }] });
+    }
+  }
+
+  static async #onRemoveResistance(event, target) {
+    const value = target.dataset.value;
+    const updated = (this.actor.system.resistances || []).filter(r => r.type !== value);
+    await this.actor.update({ 'system.resistances': updated });
+  }
+
+  // ── Language handlers ──────────────────────────────────────────────────────
+
+  static async #onAddLanguage(event, target) {
+    const existing = this.actor.system.languages || [];
+
+    const available = LANGUAGE_OPTIONS.filter(l => !existing.includes(l.key));
+
+    const opts = available
+      .map(l => `<option value="${l.key}">${l.label}</option>`)
+      .join('');
+
+    const customOpt = `<option value="__custom__">— Enter custom —</option>`;
+
+    const result = await foundry.applications.api.DialogV2.wait({
+      window: { title: 'Add Language' },
+      position: { width: 300 },
+      rejectClose: false,
+      content: `
+        <div class="form-group">
+          <label>Language</label>
+          <select name="lang" style="flex:1">
+            ${opts}
+            ${customOpt}
+          </select>
+        </div>
+        <div class="form-group" id="customLangGroup" style="display:none">
+          <label>Custom</label>
+          <input type="text" name="customLang" placeholder="Language name" style="flex:1"/>
+        </div>`,
+      render: (event, dialog) => {
+        const sel = dialog.element.querySelector('[name="lang"]');
+        const grp = dialog.element.querySelector('#customLangGroup');
+        sel?.addEventListener('change', () => {
+          grp.style.display = sel.value === '__custom__' ? '' : 'none';
+        });
+      },
+      buttons: [
+        {
+          action: 'add', label: 'Add', default: true,
+          callback: (ev, btn, dlg) => {
+            const sel = dlg.element.querySelector('[name="lang"]')?.value;
+            if (sel === '__custom__') return dlg.element.querySelector('[name="customLang"]')?.value?.trim() || null;
+            return sel || null;
+          }
+        },
+        { action: 'cancel', label: 'Cancel' }
+      ]
+    });
+
+    if (result && !existing.includes(result)) {
+      await this.actor.update({ 'system.languages': [...existing, result] });
+    }
+  }
+
+  static async #onRemoveLanguage(event, target) {
+    const value = target.dataset.value;
+    const updated = (this.actor.system.languages || []).filter(l => l !== value);
+    await this.actor.update({ 'system.languages': updated });
+  }
+}
+
+// ── Module helpers ─────────────────────────────────────────────────────────
+
+function _capitalize(str) {
+  if (!str) return '';
+  // Handle compound keys like 'nonmagical-physical' → 'Non-Magical Physical'
+  return str.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('-');
 }

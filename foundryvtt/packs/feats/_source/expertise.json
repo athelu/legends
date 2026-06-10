@@ -35,7 +35,15 @@
       "[Skill]"
     ],
     "notes": "Can be taken multiple times for different skills",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "skill",
+        "value": -1,
+        "applyTo": "both",
+        "target": "chosen"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!d16a9b7e1360e405"

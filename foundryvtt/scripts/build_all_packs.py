@@ -60,6 +60,8 @@ def main():
         "build_diseases_pack.py",
         "build_weaves_pack.py",
         "build_equipment_pack.py",
+        "build_magic_items_pack.py",
+        "build_bestiary_pack.py",
     ]
     
     print("Building all Legends system packs...")

@@ -39,14 +39,15 @@
 
 ### Shadow Sphere
 **Primary Energy:** Negative 3 (creating magical darkness)
-**Supporting Energy:** Space 7 (medium range + 15ft radius + duration 10 minutes)
+**Supporting Energy:** Earth 7 (medium range + 15ft radius + duration 10 minutes)
 **Range:** Medium, 60 ft. (15-foot radius sphere)
 **Duration:** 10 minutes
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Negative Potential + Negative Mastery / Earth Potential + Earth Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Magical darkness fills a 15ft radius sphere at medium range. Blocks normal and magical light (unless from higher energy weave). Creatures inside are Blinded to creatures outside.
+**Applies Effects:** blinded
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 10 minutes (30-foot radius)
 
@@ -80,12 +81,12 @@
 
 ### Shape Water
 **Primary Energy:** Water 2 (manipulating water)
-**Supporting Energy:** Space 1 (close range)
+**Supporting Energy:** Earth 1 (close range)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous (or 1 hour for changes)
 **Total Cost:** 3 Energy per effect
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Water Potential + Water Mastery / Earth Potential + Earth Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Choose one: (1) Move up to 5ft cube of water up to 5 feet, (2) Shape water into simple forms that last 1 hour, (3) Change color/opacity for 1 hour, (4) Freeze water (unfrozen creatures can escape with Reflex save).
 **Saving Throw:** Reflex
@@ -93,12 +94,12 @@
 
 ### Shatter
 **Primary Energy:** Air 4 (destructive sonic vibration)
-**Supporting Energy:** Space 4 (medium range + 10ft radius)
+**Supporting Energy:** Earth 4 (medium range + 10ft radius)
 **Range:** Medium, 60 ft. (10-foot radius sphere)
 **Duration:** Instantaneous
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Air Potential + Air Mastery / Earth Potential + Earth Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Create sudden loud ringing in 10-foot radius sphere. All creatures in area take 16 thunder damage. Creatures make Fortitude saves to reduce damage. Nonmagical objects made of crystal, glass, or similar material take double damage and shatter if reduced to 0 HP.
 **Applies Effects:** Deafened
@@ -117,6 +118,7 @@
 **Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Target gains +2 Wisdom for the duration. Recalculate Wisdom-based checks, Will saves, and casting values if Wisdom is the target's casting stat. This bonus does not stack with other beneficial Wisdom modifiers; use the highest bonus.
+**Applies Effects:** Shu-Jahan's Sight
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
 
@@ -143,6 +145,7 @@
 **Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Create 20-foot radius sphere of silence centered on a point at close range. No sound can be created within or pass through the sphere. Creatures inside are Deafened. Verbal components of weaves can't be performed inside (blocks invokers and most casters). Can cast on object; sphere moves with object.
+**Applies Effects:** deafened
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 10 minutes (30-foot radius)
 
@@ -161,12 +164,12 @@
 
 ### Sleep
 **Primary Energy:** Positive 3 (inducing magical slumber)
-**Supporting Energy:** Space 6 (medium range + 10ft radius + Duration)
+**Supporting Energy:** Air 6 (medium range + 10ft radius + Duration)
 **Range:** Medium, 60 ft. (10-foot radius)
 **Duration:** 1 minute (or until awakened)
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Creatures in area make Will saves. Starting with lowest HP targets, compare your targeting successes to their save successes. Those you beat fall Unconscious for 1 minute. Awakens if damaged or shaken (action). Doesn't affect constructs or undead.
 **Applies Effects:** Asleep
@@ -175,12 +178,12 @@
 
 ### Slow
 **Primary Energy:** Time 4 (decelerating personal time)
-**Supporting Energy:** Space 5 (medium range + 4 targets)
+**Supporting Energy:** Air 5 (medium range + 4 targets)
 **Range:** Medium, 60 ft. (up to 4 targets)
 **Duration:** 1 minute (until save succeeds)
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Time Potential + Time Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Time Potential + Time Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Time Mastery
 **Description:** Up to 4 targets make Will saves. Compare your targeting successes to each target's save successes. Those you beat have only 2 actions per turn (instead of 3), Misfortune on Agility checks and Reflex saves, and Misfortune on attacks. Targets can repeat save at end of each turn (1 success ends effect).
 **Applies Effects:** Slowed (Major)
@@ -270,38 +273,40 @@
 
 ### Suggestion
 **Primary Energy:** Negative 4 (planting compulsion in mind)
-**Supporting Energy:** Space 7 (medium range, duration up to 4 hours)
+**Supporting Energy:** Air 7 (medium range, duration up to 4 hours)
 **Range:** Medium, 60 ft.
 **Duration:** 4 hours (or until completed)
 **Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Negative Potential + Negative Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, you suggest a course of activity (1-2 sentences) that sounds reasonable. Target pursues the activity for the duration or until completing it. Obviously harmful suggestions end the weave. Creatures immune to charm are immune.
+**Applies Effects:** charmed
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = fails, 1 = 1 hour, 2= 4 hours, 3 = 12 hours
 
 ### Suggestion, Mass
 **Primary Energy:** Negative 6 (planting compulsion in multiple minds)
-**Supporting Energy:** Space 8 (medium range/ 4 targets + Duration 4 hours)
+**Supporting Energy:** air 8 (medium range/ 4 targets + Duration 4 hours)
 **Range:** Medium, 60 ft. (up to 4 creatures)
 **Duration:** 4 hours (or until completed)
 **Total Cost:** 14 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Negative Potential + Negative Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Up to 12 creatures you can see at medium range make Will saves. Compare your targeting successes to each target's save successes. Those you beat follow your suggested course of activity (1-2 sentences) that sounds reasonable. Targets pursue activity for 4 hours or until completing it. Obviously harmful suggestions end weave for that target. Creatures immune to charm are immune.
+**Applies Effects:** charmed
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = fails, 1 = 1 hour, 2= 4 hours, 3 = 12 hours
 
 ### Summon Elemental
 **Primary Energy:** Matching elemental energy (Earth/Air/Fire/Water) 6
-**Supporting Energy:** Space 5 (close range, duration 10 minutes)
+**Supporting Energy:** Time 5 (close range, duration 10 minutes)
 **Range:** Close, 30 ft.
 **Duration:** 10 minutes
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Primary Potential + Primary Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Primary Potential + Primary Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Primary Mastery
 **Description:** Summon an elemental matching your Primary Energy at close range. Elemental has HP = (Your Potential × 6), deals 10 damage, uses your Mastery for attacks, and has special abilities based on type. You can command it as [Free] action.
 **Saving Throw:** None
@@ -317,17 +322,18 @@
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Move object up to 500 lbs up to 30 feet per round at medium range. Can use to restrain creature (opposed check: your Space Mastery vs their Athletics). Restrained creature can retry each round (1 success escapes).
+**Applies Effects:** restrained
 **Saving Throw:** Athletics vs Space Mastery
 **Targeting Success Scaling:** 0 = fails, 1 = 100 lbs (1 minute), 2= 500 lbs (10 minutes), 3 = 1000 lbs (1 hour)
 
 ### Telekinetic Shove
 **Primary Energy:** Space 2 (force push/pull)
-**Supporting Energy:** Space 1 (close range)
+**Supporting Energy:** Air 1 (close range)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 3 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Push or pull one creature/object up to 10 feet. Target makes Fortitude save to resist (if creature). Compare your targeting successes to their save successes.
 **Applies Effects:** Prone
@@ -349,12 +355,12 @@
 
 ### Thunder Burst
 **Primary Energy:** Air 3 (wave of thunderous force)
-**Supporting Energy:** Space 1 (15-foot cube area)
+**Supporting Energy:** Earth 1 (15-foot cube area)
 **Range:** Self (15-foot cube)
 **Duration:** Instantaneous
 **Total Cost:** 4 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Air Potential + Air Mastery / Earth Potential + Earth Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** All creatures in 15-foot cube originating from you take 12 thunder damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.
 **Applies Effects:** Prone
@@ -378,12 +384,12 @@
 
 ### Toxic Mist
 **Primary Energy:** Negative 2 (negative poison)
-**Supporting Energy:** Space 1 (touch or 10 feet)
+**Supporting Energy:** Air 1 (touch or 10 feet)
 **Range:** Touch or 10 feet
 **Duration:** Instantaneous
 **Total Cost:** 3 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Negative Potential + Negative Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Target takes 8 poison damage. Target makes Fortitude save to reduce damage.
 **Applies Effects:** Poisoned (Weak)
@@ -394,12 +400,12 @@
 
 ### Uncontrollable Laughter
 **Primary Energy:** Negative 2 (overwhelming with uncontrollable mirth)
-**Supporting Energy:** Space 3 (close range, duration up to 1 minute)
+**Supporting Energy:** Air 3 (close range, duration up to 1 minute)
 **Range:** Close, 30 ft.
 **Duration:** 1 minute (until save succeeds)
 **Total Cost:** 5 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Negative Potential + Negative Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Target at close range makes Will save. Compare your targeting successes to their save successes. If you have more, target falls Prone with uncontrollable laughter. Can repeat save at end of each turn (with Fortune if they took damage since last turn, 1 success ends effect). Creatures with Intelligence 1 aren't affected.
 **Applies Effects:** Incapacitated
@@ -408,12 +414,12 @@
 
 ### Unerring Bolt
 **Primary Energy:** Space 3 (force bolts that always hit)
-**Supporting Energy:** Space 2 (medium range)
+**Supporting Energy:** Air 2 (medium range)
 **Range:** Medium, 60 ft.
 **Duration:** Instantaneous
 **Total Cost:** 5 Energy for 3 bolts
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Create 3 glowing darts of force. Each dart deals 4 damage. Can target same creature or divide among multiple.
 **Saving Throw:** None
@@ -423,12 +429,12 @@
 
 ### Unweave
 **Primary Energy:** Space 4 (negating magical effects)
-**Supporting Energy:** Space 2 (medium range)
+**Supporting Energy:** Air 2 (medium range)
 **Range:** Medium, 60 ft.
 **Duration:** Instantaneous
 **Total Cost:** 6 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** End one magical effect on a creature, object, or area. Compare your targeting successes to the original caster's successes. If you equal or beat them, effect ends. Can target multiple effects (weakest first).
 **Saving Throw:** Opposed weaving check (Your Space weaving vs Original caster's weaving)
@@ -452,12 +458,12 @@
 
 ### Wall of Fire
 **Primary Energy:** Fire 5 (curtain of flames)
-**Supporting Energy:** Space 7 (medium range + wall area, duration 10 minutes)
+**Supporting Energy:** Earth 7 (medium range + wall area, duration 10 minutes)
 **Range:** Medium, 60 ft. (60 feet long, 20 feet high OR ring 20 feet diameter)
 **Duration:** 10 minutes
 **Total Cost:** 12 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Fire Potential + Fire Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Fire Potential + Fire Mastery / Earth Potential + Earth Mastery
 **Targeting Roll:** Casting Stat + Fire Mastery
 **Description:** Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals 16 fire damage to creatures within 10 feet (choose side when casting). Passing through wall deals 24 fire damage. Provides total cover.
 **Applies Effects:** Ignited
@@ -481,12 +487,12 @@
 
 ### Wall of Ice
 **Primary Energy:** Water 5 (barrier of solid ice)
-**Supporting Energy:** Space 6 (medium range + wall area, duration 1 minute)
+**Supporting Energy:** Air 6 (medium range + wall area, duration 1 minute)
 **Range:** Medium, 60 ft. (60 feet long, 20 feet high OR hemisphere 10 feet diameter)
 **Duration:** 1 minute
 **Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Water Potential + Water Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Create wall of ice at medium range up to 60 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter). Each 10ft section has HP = 12 + Water Potential, DR 6 vs nonmagical damage. Creatures within area when created make Reflex save or take 8 cold damage. Wall melts naturally over time.
 **Applies Effects:** Frosted
@@ -497,12 +503,12 @@
 
 ### Wall of Stone
 **Primary Energy:** Earth 6 (solid stone barrier)
-**Supporting Energy:** Space 2 (medium range + wall area)
+**Supporting Energy:** Water 2 (medium range + wall area)
 **Range:** Medium, 60 ft. (60 feet long, 20 feet high)
 **Duration:** Permanent
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Earth Potential + Earth Mastery / Water Potential + Water Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
 **Description:** Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 8. Can shape into crenellations, bridges, etc.
 **Saving Throw:** None
@@ -549,12 +555,12 @@
 
 ### Web
 **Primary Energy:** Earth 4 (sticky webbing control effect)
-**Supporting Energy:** Space 8 (medium range + 20ft radius + 1 minute)
+**Supporting Energy:** Air 8 (medium range + 20ft radius + 1 minute)
 **Range:** Medium, 60 ft. (20-foot radius)
 **Duration:** 1 minute
 **Total Cost:** 12 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Earth Potential + Earth Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
 **Description:** Fill area with sticky webs anchored to surfaces. Creatures in area when created or entering area make Reflex save. Compare their successes to your targeting successes. If you have more, target becomes Restrained. Restrained creatures can use action + Athletics or Acrobatics check (2 successes needed) to escape. Webs are flammable; fire damage to 5ft area destroys webs in that section.
 **Applies Effects:** Restrained
@@ -563,12 +569,12 @@
 
 ### Whispered Message
 **Primary Energy:** Air 2 (transmitting sound across distance)
-**Supporting Energy:** Space 1 (close range)
+**Supporting Energy:** Air 1 (close range)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 3 Energy
 **Action:** Complex Weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Air Potential + Air Mastery 
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Point at a creature within close range and whisper a message. Target (and only target) hears the message and can whisper a reply that only you hear. Weave transmits through most barriers but is blocked by 1 foot of stone, 1 inch of common metal, thin sheet of lead, or 3 feet of wood.
 **Saving Throw:** None
@@ -576,12 +582,12 @@
 
 ### Zone of Truth
 **Primary Energy:** Positive 4 (creating area of enforced honesty)
-**Supporting Energy:** Space 7 (close range + 15ft radius, duration 10 minutes)
+**Supporting Energy:** Air 7 (close range + 15ft radius, duration 10 minutes)
 **Range:** Close, 30 ft. (15-foot radius sphere)
 **Duration:** 10 minutes
 **Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Create 15-foot radius sphere at close range. All creatures in area make Will saves. Compare your targeting successes to each target's save successes. Those you beat can't speak deliberate lies while in the zone. They can be evasive, remain silent, or speak misleading truths. You know which creatures failed their saves. Creatures immune to charm are immune.
 **Saving Throw:** Will

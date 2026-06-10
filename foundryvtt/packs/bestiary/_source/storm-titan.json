@@ -1,0 +1,170 @@
+{
+  "_id": "26375317d64888cd",
+  "name": "Storm Titan",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Storm Titans are Agi 8 — they act before almost everything they face and maintain that advantage through their entire engagement. Cyclone Aura at Hard task difficulty continuously displaces enemies regardless of how many actions they spend trying to hold position. Skyfire Bolt handles grouped formations at 150 feet. World Storm Fist's discharge damage at Margin 2 and 3 means the area around the primary target takes significant lightning damage as well. A summoner who keeps clear of the Cyclone Aura radius and lets the Storm Titan work will find most engagements resolved decisively and quickly.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 8,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 7,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 7,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 50,
+      "fly": 100,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>World Storm Fist [Combat]:</strong> Melee attack (Agi 8 + Melee Combat 8), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 10 lightning damage (Half DR); target pushed 20 feet + Prone; no save</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 10 lightning damage; pushed 20 feet + Prone + Stunned until end of their next turn; all creatures within 15 feet of target take 10 lightning damage (Half DR) from discharge</li>\n<li><em>Margin 3:</em> 21 damage + 10 lightning damage + Prone + Stunned; area discharge increases to 16 lightning damage; all affected creatures also Deafened for 1 minute</li>\n</ul></li>\n<li><strong>Skyfire Bolt [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 6), Range: 150 ft, 15-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 20 lightning damage (Half DR) + Dazed. Net 2: 36 lightning damage + Stunned until end of their next turn. Net 3: 36 lightning damage + Stunned + Prone; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Cyclone Aura:</strong> Creatures starting their turn within 20 feet make a Fortitude save (Hard task, 2 successes) or pushed 20 feet directly away and knocked Prone. Ranged attacks through the aura add 2 to both dice.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Momentum:</strong> As above.</li>\n<li><strong>Lightning Immunity Sharing:</strong> The summoner and up to 3 designated allies gain immunity to non-magical lightning damage within 60 feet.</li>\n<li><strong>Intimidating Presence:</strong> As Tempest Lord.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Storm Titan",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!26375317d64888cd"
+}

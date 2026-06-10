@@ -1,0 +1,170 @@
+{
+  "_id": "921fcde6ad88f444",
+  "name": "Boulder Soldier",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Boulder Soldiers are siege engines that walk. They advance slowly, shrug off mundane weapons entirely, and hit hard enough to flatten anyone who does not step back. Rock Throw handles opponents attempting to stay outside their reach. Tremor Strike is their battlefield opener when enemies have clustered — a single action that resets the positioning of everything nearby. A summoner who needs a wall broken or a cluster of fighters scattered will find them effective. Speed and nuance are not in their vocabulary.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 60,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 56,
+      "max": 56,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 3,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 5,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 25,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 25
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 14,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2)</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str); target knocked Prone; no save</li>\n<li><em>Margin 3:</em> 16 damage + Prone; target Restrained until they succeed on Might check (Hard task, 2 successes) as a [Combat] action</li>\n</ul></li>\n<li><strong>Rock Throw [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 1), Range: 60/120 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage</li>\n<li><em>Margin 2:</em> 12 damage (10 + 2 Dex); target knocked Prone</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Immovable:</strong> As Granite Ward.</li>\n<li><strong>Earth Bond:</strong> As Granite Ward.</li>\n<li><strong>Tremor Strike (1/encounter) [Combat]:</strong> As a [Combat] action, slams both fists into the ground simultaneously. All creatures within 15 feet standing on natural ground make a Reflex save. Compare Agi 2 + Might 5 targeting vs. each save. Net 1: 8 bludgeoning damage + Prone. Net 2: 16 bludgeoning damage + Prone + Restrained. This is a single action producing simultaneous strikes — use Shared Attribute Roll (Agi 2), roll Might separately.</li>\n</ul>",
+    "reactionsNotes": "<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 6.</li>\n</ul>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Boulder Soldier",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!921fcde6ad88f444"
+}

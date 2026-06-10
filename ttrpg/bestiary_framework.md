@@ -27,27 +27,74 @@ Monsters use the same tier system as characters, including fractional ratings:
 
 ---
 
-## Creature Sizes
+## Creature Size
+
+Size governs how much space a creature occupies, how far its natural weapons reach, how much damage those weapons deal, and how the creature interacts with grappling, cover, attack difficulty, and movement.
 
 ### Size Categories
 
-| Size | Space | Reach | Weapon Damage Modifier |
-|------|-------|-------|------------------------|
-| Tiny | 2.5 ft × 2.5 ft | 0 ft | -2 damage (min 2) |
-| Small | 5 ft × 5 ft | 5 ft | -1 damage (min 2) |
-| Medium | 5 ft × 5 ft | 5 ft | Normal |
-| Large | 10 ft × 10 ft | 5-10 ft* | +2 damage |
-| Huge | 15 ft × 15 ft | 10-15 ft* | +4 damage |
-| Gargantuan | 20 ft × 20 ft | 15-20 ft* | +6 damage |
+| Size | Space | Natural Reach | Grapple Limit |
+|------|-------|---------------|---------------|
+| Tiny | 2.5 × 2.5 ft | 0 ft (must enter target's space) | Up to one size larger (Small) |
+| Small | 5 × 5 ft | 5 ft | Up to one size larger (Medium) |
+| Medium | 5 × 5 ft | 5 ft | Up to one size larger (Large) |
+| Large | 10 × 10 ft | 10 ft | Up to one size larger (Huge) |
+| Huge | 15 × 15 ft | 15 ft | Up to one size larger (Gargantuan) |
+| Gargantuan | 20 × 20 ft | 20 ft | Any size |
 
-*Reach with natural weapons. Weapons add their own reach.
+**Natural reach with [Reach] weapons:** Add +5 ft to the creature's natural reach. A Large creature wielding a spear reaches 15 ft, not 10 ft.
 
-### Size-Based Natural Weapons
+### Size and Attack Difficulty
 
-Natural weapons (bite, claw, slam, etc.) deal damage based on size:
+When attacking a creature of a different size, apply the following modifier to both attack dice. The modifier is based on the size difference between attacker and target.
 
-| Size | Light Nat. Weapon | Standard Nat. Weapon | Heavy Nat. Weapon |
-|------|-------------------|----------------------|-------------------|
+| Target is... | Attack Dice Modifier |
+|---|---|
+| Two or more sizes larger than attacker | Subtract 1 from both dice |
+| One size larger than attacker | No modifier |
+| Same size as attacker | No modifier |
+| One size smaller than attacker | Add 1 to both dice |
+| Two sizes smaller than attacker | Add 2 to both dice |
+| Three or more sizes smaller than attacker | Add 3 to both dice |
+
+This modifier applies to melee and ranged attacks. It does not apply to weaves that use saving throws — size doesn't meaningfully help a creature dodge a Fireball.
+
+Tiny creatures present the sharpest challenge. A Medium creature attacking a Tiny creature adds 1 to both attack dice. A Large creature attacking a Tiny creature adds 2. At the lower end, a Medium creature attacking a Gargantuan creature subtracts 1 from both attack dice — the creature is simply hard to miss. The attack landing isn't the problem. What it does in return is.
+
+### Weapon Sizes
+
+All weapons in the equipment tables are Medium by default. A creature wields weapons sized for its own size category. When a creature uses a weapon built for a different size, the grip requirement shifts and a damage modifier applies.
+
+**Grip shift by size difference:** Each size category of difference shifts the grip requirement one step. One step heavier means one-handed becomes two-handed, and two-handed becomes unwieldable. One step lighter means two-handed becomes one-handed, and one-handed becomes effectively light (usable in off-hand).
+
+**Grip steps from lightest to heaviest:**
+- Light (one hand, off-hand eligible)
+- One-handed (one hand, no off-hand benefit)
+- Two-handed (requires both hands)
+- Cannot wield
+
+| Weapon Built For | Wielded By | Grip Requirement | Damage Modifier | Attack Dice |
+|-----------------|------------|-----------------|-----------------|-------------|
+| Medium | Small | One step heavier | −2 (minimum 2) | No change |
+| Medium | Medium | As listed | Normal | No change |
+| Medium | Large | One step lighter | −2 | No change |
+| Large | Small | Cannot wield | — | — |
+| Large | Medium | One step heavier | +2 | Add 1 to both dice |
+| Large | Large | As listed | Normal | No change |
+| Large | Huge | One step lighter | −2 | No change |
+
+The pattern generalizes across all size categories. Each size category of difference shifts grip one step and applies a ±2 damage modifier. Two or more categories of difference in either direction makes the weapon unwieldable, with one exception: a creature using a weapon two or more sizes smaller than itself treats it as a Light weapon with −4 damage (minimum 2), representing using a weapon entirely unsuited to its frame.
+
+**[Versatile] weapons and size:** A [Versatile] weapon used by a creature one size smaller loses the versatile benefit — the grip has already shifted to two-handed, so there is no one-handed option remaining and no additional benefit from gripping it with both hands. Use the size-adjusted damage value at two-handed grip.
+
+**Weapons built for non-Medium sizes** are not listed in the equipment tables. They exist in the world — an ogre's greatclub is a Large two-handed weapon — but players purchasing equipment buy Medium weapons by default. The GM determines availability and cost of other sizes.
+
+### Natural Weapon Damage by Size
+
+Natural weapons fall into three weight categories. The creature's stat block specifies which category applies to each attack.
+
+| Size | Light | Standard | Heavy |
+|------|-------|----------|-------|
 | Tiny | 2 | 3 | 4 |
 | Small | 3 | 4 | 6 |
 | Medium | 4 | 6 | 8 |
@@ -55,10 +102,81 @@ Natural weapons (bite, claw, slam, etc.) deal damage based on size:
 | Huge | 8 | 10 | 12 |
 | Gargantuan | 10 | 12 | 14 |
 
-**Examples:**
-- Light: Tiny claws, rat bite
-- Standard: Wolf bite, claw attack
-- Heavy: Bear bite, dragon bite
+**Light:** Small, fast natural weapons. Rat bite, imp claw, sprite sting.
+**Standard:** Primary natural weapons. Wolf bite, bear claw, orc fist.
+**Heavy:** The creature's defining weapon. Dragon bite, owlbear beak, giant's slam.
+
+A [Reach] natural weapon adds +5 ft to natural reach but does not change its damage category.
+
+### Size and Grappling
+
+A creature can only initiate a grapple against a target no more than one size category larger than itself. A grappled creature that is smaller than its grappler adds 1 to both escape attempt dice. A grappled creature that is the same size or larger uses normal escape rules.
+
+Grapple, Shove, Trip, and Disarm attempts follow the same one-size-larger limit. A creature cannot Shove a target two or more size categories larger than itself.
+
+### Size and Carrying Capacity
+
+Size categories above Medium scale Strength-based carrying thresholds. Powerful Build grants a creature the next size category's thresholds regardless of actual size.
+
+| Size | Unencumbered | Encumbered | Heavily Encumbered | Max |
+|------|-------------|------------|-------------------|-----|
+| Tiny | Str × 5 | Str × 7 | Str × 10 | Str × 10 |
+| Small | Str × 8 | Str × 12 | Str × 16 | Str × 16 |
+| Medium | Str × 10 | Str × 15 | Str × 20 | Str × 20 |
+| Large | Str × 15 | Str × 22 | Str × 30 | Str × 30 |
+| Huge | Str × 20 | Str × 30 | Str × 40 | Str × 40 |
+| Gargantuan | Str × 30 | Str × 45 | Str × 60 | Str × 60 |
+
+### Size and Movement Through Spaces
+
+A creature moves through a space one size smaller than itself at half speed, adding 1 to both attack and skill dice while squeezing. Attacks against a squeezing creature have Fortune. Two or more sizes smaller is impassable.
+
+Moving through an ally's space costs no check but cannot end there. Moving through a hostile creature's space requires Tumble Through regardless of size difference.
+
+### Size and Cover (Creatures as Obstacles)
+
+The comparison is between the intervening creature and the target, not the attacker.
+
+- Intervening creature same size as target: Partial Cover
+- Intervening creature one size larger than target: Half Cover
+- Intervening creature two or more sizes larger than target: Full Cover
+
+---
+
+## Swarms
+
+A swarm is a mass of Tiny or Small creatures acting as a unified threat — a colony of rats, a cloud of hornets, a carpet of centipedes. The stat block represents the collective, not any individual within it.
+
+### Swarm Properties
+
+**Space:** 5 × 5 ft. A swarm occupies one standard grid square.
+
+**Swarm Body:** A swarm can occupy the same space as another creature and move through any opening large enough for its constituent creatures. A swarm of rats flows under a door. A swarm of hornets surrounds a target entirely.
+
+**Damage Resistance:** Physical damage (Slashing, Piercing, Bludgeoning) is halved against swarms. Individual weapons are simply not efficient against hundreds of small targets. Fire, acid, thunder, and area-effect weaves bypass this resistance entirely.
+
+**Area Vulnerability:** Any weave or effect that covers the swarm's full space deals full damage. No saving throw is required on the damage application, though saves still apply to conditions from those effects.
+
+**Cannot Be Grappled or Restrained:** Grapple, Shove, Trip, and Disarm attempts automatically fail against a swarm. Forced movement effects also fail.
+
+**Reduced Output:** When a swarm drops to half its maximum HP or below, its damage is halved. Individual creatures have been killed or scattered. The stat block lists both damage values.
+
+**Condition Immunities:** Grappled, Restrained, Prone, Bleeding.
+
+**Size and Attack Difficulty with Swarms:** Swarms use the standard size modifier table when attacking. A swarm of Tiny creatures attacking a Large target subtracts 1 from both attack dice — the individual creatures are hard to miss when the target fills that much space. Note that Pack Tactics stacks with this modifier; a swarm of rats attacking a giant with Pack Tactics active is quite accurate, which is correct behavior.
+
+### Swarm Attack Resolution
+
+A swarm attacking a creature in its space does not use a standard opposed melee roll. The target makes a Reflex save opposed by the swarm's attack roll.
+
+- Target loses (margin 0 or less for the target): full swarm damage
+- Target wins (margin 1+ for the target): half swarm damage
+
+Swarms cannot make opportunity attacks and do not benefit from flanking.
+
+### Swarm Stat Block Notes
+
+Specify the constituent creature type. Carry over relevant special abilities from the constituent creature — disease transmission, poison delivery, and similar effects — and note whether they trigger on full damage, half damage, or both. The stat block should list damage at full strength and damage at half strength separately. Whether secondary effects like disease transmission persist at half strength is worth specifying in the individual entry rather than leaving it to interpretation.
 
 ---
 
@@ -84,7 +202,7 @@ Natural weapons (bite, claw, slam, etc.) deal damage based on size:
 - **TR 2 to 4:** Skills can exceed attribute by +2 maximum
 - **TR 5 to 8:** Skills can exceed attribute by +3 maximum
 
-This represents innate talent, specialized training, or supernatural ability. 
+This represents innate talent, specialized training, or supernatural ability.
 
 **Examples:**
 - Wolf (TR 1/4, Agi 4): Melee Combat can be 4 or 5 (max +1)
@@ -102,8 +220,6 @@ This represents innate talent, specialized training, or supernatural ability.
 
 ## CRITICAL DISTINCTION: Humanoids vs Monsters
 
----
-
 ### IMPORTANT: Humanoid NPCs Use PC Creation Rules
 
 **The attribute benchmarks table applies ONLY to non-humanoid creatures** (beasts, monstrosities, undead, constructs, dragons, etc.).
@@ -111,16 +227,7 @@ This represents innate talent, specialized training, or supernatural ability.
 **Humanoid NPCs (guards, soldiers, bandits, adventurers, etc.) MUST be built using standard PC creation rules:**
 
 1. **Use PC Attribute Array:** 5, 4, 3, 3, 3, 2, 2, 2 (total 24)
-   - Assign these values based on the NPC's role
-   - Example: Guard might use Str 5, Con 4, Agi 3, Wis 3, Dex 3, Luck 2, Cha 2, Int 2
-
-2. **Follow PC Creation Process:**
-   - Choose appropriate background (Guard, Soldier, Criminal, etc.)
-   - Background provides skill ranks and bonus XP
-   - Spend XP according to threat rating tier
-   - Select 2 starting feats + purchased feats per tier limits
-   - Calculate HP = Constitution × 8
-
+2. **Follow PC Creation Process:** Choose background, spend XP per tier, select feats, calculate HP = Constitution × 8
 3. **XP Budgets for Humanoid NPCs:**
 
 | Threat | Tier | XP Beyond Background | Max Purchased Feats | Target Success Rate* |
@@ -142,14 +249,14 @@ This represents innate talent, specialized training, or supernatural ability.
 
 ## XP SPENDING STRATEGY FOR HUMANOID NPCs
 
-The natural progression of the Legends system creates **three distinct phases** of character development. Following this rhythm creates properly scaled NPCs that match their tier expectations.
+The natural progression of the Legends system creates **three distinct phases** of character development.
 
 ### The Three Phases of Progression
 
 #### Phase 1: Journeyman (Tiers 1-2)
 **Focus: Skills first, attributes second**
 
-**Philosophy:** Characters are learning their trades. They maximize efficiency by raising skills to their attribute caps before investing in expensive attribute increases.
+Characters are learning their trades. They maximize efficiency by raising skills to their attribute caps before investing in expensive attribute increases.
 
 **XP Distribution:**
 - 70-80% on skills
@@ -157,367 +264,65 @@ The natural progression of the Legends system creates **three distinct phases** 
 - 10% on feats (2 starting + 0-2 purchased)
 
 **Typical Progression:**
-- **Tier 1/2 (TR 1/4):** Background skills only, no additional advancement
+- **Tier 1/4 (TR 1/4):** Background skills only, no additional advancement
 - **Tier 1/2 (TR 1/2):** Background skills + raise primary skill from 1→3 or 2→3
 - **Tier 1 (TR 1):** Background skills + raise primary skill to cap (equal to attribute)
 
-**Example - Town Guard (TR 1):**
-- Attributes: Str 5, Con 4, Agi 3 (from initial array)
-- Skills: Melee Combat 3 (capped by Agi 3), Perception 3, Society 2
-- XP: 104 skill XP, 40 feat XP = 144 of 150-180 available
-- Success rate: ~68% (appropriate for tier)
-
-**Why this works:**
-- Skills cost 8 × rank (cheap)
-- Attributes cost 16 × rank (expensive)
-- Skills max at attribute value (no benefit from higher skills until attribute rises)
-- Creates competent but still growing combatants
-
 ---
 
-#### Phase 2: Expert to Master (Tiers 3-5) ⚠️ **INFLECTION POINT**
+#### Phase 2: Expert to Master (Tiers 3-5) — INFLECTION POINT
 **Focus: Attributes + Skills in tandem**
 
-**Philosophy:** This is where the **critical transition** occurs. To continue progressing, characters MUST invest in raising attributes to enable higher skill caps. The skill-only strategy hits a wall.
+To continue progressing, characters MUST invest in raising attributes to enable higher skill caps.
 
 **XP Distribution:**
 - 40% on attributes (breaking through caps)
 - 40% on skills (keeping pace with new attribute values)
 - 20% on feats
 
-**The Mathematical Reality:**
-At Tier 3, a character with Agi 5, Melee 5 has reached their ceiling. To grow further requires:
-- Agi 5→6 = 80 XP (opens Melee 6 possibility)
-- Melee 5→6 = 40 XP
-- **Total: 120 XP investment** to gain 1 rank in combat effectiveness
-
-This is expensive but **necessary** - without it, Tier 3 characters are indistinguishable from Tier 2.
-
-**Typical Progression:**
-- **Tier 3 (TR 3):** Raise 1-2 primary attributes by 1 rank, raise skills to match
-- **Tier 4 (TR 4):** Continue raising attributes, push skills to 6-7
-- **Tier 5 (TR 5):** Achieve mastery (8/8) in primary attribute + skill
-
-**Example - Knight-Captain (TR 3):**
-- Attributes: Str 5, Con 6 (raised from 5), Agi 5 (raised from 4), other 3s and 2s
-- Skills: Melee Combat 5, Athletics 4, Intimidate 4, Perception 3
-- XP: 128 attribute XP, 232 skill XP, 160 feat XP = 520 of 480-540 available
-- Success rate: ~87% (appropriate jump from Tier 2's 81%)
-
-**Example - Master-at-Arms (TR 4):**
-- Attributes: Str 5, Con 6, Agi 5, Wis 4, other 3s and 2s
-- Skills: Melee Combat 6 (capped by Agi 5... wait for Agi 6), Athletics 5, Perception 5
-- XP: 144 attribute XP, 292 skill XP, 240 feat XP = 676 of 720-780 available
-- Success rate: ~90% (can improve further by raising Agi to 6)
-
-**Why this works:**
-- Breaks through the Tier 2 plateau (87% vs 81%)
-- Creates clear power progression
-- Attributes enable skill growth (skills can't exceed attributes)
-- Matches D&D 6-8 power level expectations
+At Tier 3, a character with Agi 5, Melee 5 has reached their ceiling. To grow further requires raising the attribute first, then the skill. Without attribute investment at this tier, a Tier 3 NPC will feel indistinguishable from a Tier 2 NPC.
 
 ---
 
 #### Phase 3: Legendary (Tiers 6-8)
 **Focus: Perfection and breadth**
 
-**Philosophy:** Primary attributes and skills have reached or are approaching 8/8 mastery. Focus shifts to perfecting secondary attributes, spreading expertise, and collecting powerful feat combinations.
+Primary attributes and skills have reached or are approaching 8/8 mastery. Focus shifts to perfecting secondary attributes, spreading expertise, and collecting powerful feat combinations.
 
 **XP Distribution:**
 - 30% on attributes (bringing secondaries to 7-8)
 - 30% on skills (spreading expertise broadly)
 - 40% on feats (building legendary feat trees)
 
-**Typical Progression:**
-- **Tier 6 (TR 6):** Primary at 8/8, secondary attributes at 6-7
-- **Tier 7 (TR 7):** Multiple attributes at 7-8, many skills at 6+
-- **Tier 8 (TR 8):** Multiple attributes at 8, multiple skills at 8, 18 total feats
-
-**Example - Legendary Weapon Master (TR 8):**
-- Attributes: Str 8, Con 8, Agi 8, Wis 6, Dex 5, others 3-4
-- Skills: Melee Combat 8, Ranged Combat 6, Athletics 8, Perception 6, Intimidate 6, Acrobatics 6
-- Success rate: 100% on primary actions (mastery achieved)
-
-**Why this works:**
-- Character has achieved mastery in their specialty
-- Spreading to secondaries creates well-rounded legendary figures
-- Multiple 8s represent decades/centuries of training
-- Feat collection creates unique legendary abilities
-
 ---
 
-## TIER-BY-TIER XP SPENDING EXAMPLES
-
-### TR 1/4 - Civilian/Untrained (Tier 1, ~0 XP)
-**Attributes:** 5, 4, 3, 3, 3, 2, 2, 2 (initial array)
-**Background:** Farmer, Guard, Laborer, etc.
-**XP Spending:** Background skills only
-**Feats:** 0-2 starting (many don't invest in combat training)
-
-**Example:**
-- Background: Farmer (Wilderness 2, Might 2, Athletics 1, Craft 1)
-- Additional XP: 0
-- Feats: None
-- Result: Competent at farming, weak in combat
-
----
-
-### TR 1/2 - Early Professional (Tier 1, ~70 XP)
-**XP Priority:** Skills first
-**Strategy:** Raise 1-2 primary skills from background ranks to 3
-
-**Example - Bandit:**
-- Background: Criminal (Stealth 2, Thievery 2, Deception 2, Intimidate 2, +24 XP)
-- Additional XP: 70 XP
-  - Ranged Combat 0→3 = 28 XP
-  - Melee Combat 0→2 = 12 XP
-  - Reserve: 30 XP
-- Feats: Precise Shot, Swift Movement (2 starting)
-- Result: Agi 4, Ranged 3 = ~78% success on archery
-
----
-
-### TR 1 - Experienced Professional (Tier 1, ~150 XP)
-**XP Priority:** Skills to caps, maybe 1 attribute for prerequisites
-**Strategy:** Max out primary skill to attribute cap
-
-**Example - Guard Captain:**
-- Background: Soldier (Melee Combat 3, Athletics 1, Intimidate 1, +36 XP)
-- Additional XP: 150 XP
-  - Melee Combat 3→4 = 24 XP
-  - Athletics 1→3 = 20 XP
-  - Intimidate 1→3 = 20 XP
-  - Perception 0→3 = 28 XP
-  - Society 0→2 = 12 XP
-  - Feats: 40 XP (Power Attack)
-  - Total: 144 XP
-- Result: Agi 3, Melee 4 = ~68% success
-
----
-
-### TR 2 - Elite Professional (Tier 2, ~270 XP)
-**XP Priority:** Still mostly skills, but hitting caps hard
-**Strategy:** Max skills, consider 1 attribute raise for HP or feats
-
-**Example - Royal Guard:**
-- Background: Soldier (Melee Combat 3, Athletics 1, Intimidate 1, +36 XP)
-- Additional XP: 270 XP
-  - Skills: Melee 3→5 (56), Athletics 1→3 (20), Intimidate 1→3 (20), Perception 0→3 (28), Society 0→2 (12) = 136 XP
-  - Attributes: Con 4→5 (64 XP) for HP boost
-  - Feats: 80 XP (Power Attack, Formation Fighting)
-  - Total: 280 XP
-- Result: Agi 4, Melee 5 = ~81% success
-- **Problem:** This is approaching the skill cap (Melee 5 capped by Agi 4)
-
----
-
-### TR 3 - Hero (Tier 3, ~510 XP) ⚠️ **CRITICAL TIER**
-**XP Priority:** MUST raise attributes to continue progression
-**Strategy:** Raise 1-2 key attributes, raise skills to match new caps
-
-**Example - Knight-Captain:**
-- Background: Squire (Melee Combat 2, Athletics 2, Society 1, Empathy 1, +40 XP)
-- Additional XP: 510 XP
-  - **Attributes (critical investment):**
-    - Con 5→6 = 80 XP (HP and survivability)
-    - Agi 4→5 = 64 XP (enables Melee 6 in future, better defense)
-    - Cha 3→4 = 48 XP (enables Intimidating Presence feat)
-    - Total Attributes: 192 XP
-  - **Skills:**
-    - Melee Combat 2→5 = 72 XP
-    - Athletics 2→3 = 16 XP
-    - Society 1→3 = 24 XP
-    - Intimidate 0→4 = 60 XP
-    - Perception 0→3 = 28 XP
-    - Total Skills: 200 XP
-  - **Feats:** 120 XP (Shield Master, Defensive Stance, Power Attack, Formation Fighting, Devastating Charge)
-  - **Total:** 512 XP
-
-**Result:** Agi 5, Melee 5 = ~87% success (significant jump from TR 2's 81%)
-
-**Why Tier 3 is critical:**
-- Without attribute raises, stays at TR 2 performance
-- Attribute investment is expensive but essential
-- This is where "heroes" emerge from "professionals"
-
----
-
-### TR 4 - Champion (Tier 4, ~750 XP)
-**XP Priority:** Continue attribute growth, push skills to 6-7
-**Strategy:** Get primary attribute to 6, max primary skill to 6-7
-
-**Example - Master-at-Arms:**
-- Background: Soldier (Melee Combat 3, Athletics 1, Intimidate 1, +36 XP)
-- Additional XP: 750 XP
-  - **Attributes:**
-    - Con 5→6 = 80 XP
-    - Agi 4→5 = 64 XP
-    - Total: 144 XP
-  - **Skills:**
-  - **Skills (corrected):**
-    - Melee 3→6 = 96 XP
-    - Athletics 1→5 = 80 XP
-    - Intimidate 1→3 = 24 XP
-    - Perception 0→4 = 60 XP
-    - Ranged Combat 0→3 = 28 XP
-    - Acrobatics 0→2 = 12 XP
-    - Total: 300 XP
-  - **Feats:** 8 purchased × 40 = 320 XP
-  - **Total:** 144 + 300 + 320 = 764 XP (within 750-780 budget) ✓
-
-**Result:** Agi 5, Melee 6 = ~90% success
-
----
-
-### TR 5 - Master (Tier 5, ~990 XP)
-**XP Priority:** Push toward 8/8 in primary
-**Strategy:** Primary attribute to 7-8, primary skill to 7-8
-
-**Example - Weapon Master:**
-- Attributes: Agi 5→7 (80 + 96 = 176 XP), Con 6→7 (96 XP), Str 5→6 (80 XP)
-- Skills: Melee to 7, Athletics to 6, multiple combat skills to 5+
-- Result: Agi 7, Melee 7 = ~98% success
-
----
-
-### TR 6-8 - Legendary (Tier 6-8, 1200+ XP)
-**XP Priority:** Multiple 8s, broad expertise
-**Strategy:** Primary at 8/8, secondaries at 6-8, massive feat collection
-
-**Example - Legendary Master (TR 8):**
-- Attributes: Str 8, Con 8, Agi 8, Wis 6, Dex 5
-- Skills: Melee 8, Athletics 8, multiple skills at 6+
-- Feats: 18 total (2 starting + 16 purchased)
-- Result: 100% success on primary actions
-
----
 ## SPELLCASTER XP SPENDING
 
-For magical humanoid NPCs (Mageborn, Divine Gift, etc.), the same three-phase progression applies with one key difference:
+For magical humanoid NPCs, the same three-phase progression applies. Mastery costs the same as skills (8 × rank — efficient). Potentials cost the same as attributes (16 × rank — expensive). Prioritize Mastery before Potentials, exactly as martials prioritize Skills before Attributes.
 
-**Mastery vs Potentials:**
-- **Mastery:** 8 × rank (same as skills - EFFICIENT)
-- **Potentials:** 16 × rank (same as attributes - EXPENSIVE)
+Nearly all complex weaves use Space for range/area and Time for duration. An effective caster needs high Mastery in their primary energy, strong Space Mastery, and solid Time Mastery. A Fire 6 / Space 5 / Time 4 mage is far more effective than a Fire 6 / Air 5 / Water 4 mage because the first can actually deliver fire damage at range with area coverage.
 
-**Strategy: Prioritize Mastery over Potentials**
+### Universal Pattern for Casters
 
-Just like martials prioritize Skills over Attributes, casters should prioritize Mastery over Potentials.
+**Tier 1-2:** Primary Element Mastery 3-5, Space Mastery 2-4, Time Mastery 1-3
 
-### CRITICAL: Space and Time are Universal Supporting Energies
+**Tier 3-4:** Primary Element Mastery 5-6, Space Mastery 4-5, Time Mastery 3-4, Secondary Element 2-3
 
-**Looking at the actual weaves in the system, nearly ALL complex weaves use:**
-- **Space** for range and area effects
-- **Time** for duration and concentration
-
-**Typical Weave Structure:**
-- Primary Energy: Fire 4 (damage effect)
-- Supporting Energy: Space 2 (medium range 60ft) + Time 1 (duration 1 round)
-- Weaving Roll: Fire Potential + Fire Mastery + Space Potential + Space Mastery + Time Potential + Time Mastery (6d8)
-
-**This means effective casters need:**
-1. **Primary specialization** (one elemental energy at high mastery)
-2. **Space Mastery** (used in almost every weave for range/area)
-3. **Time Mastery** (used in almost every weave for duration)
-4. **Secondary elements** (dabbling in 1-2 other energies at low ranks)
-
-### Revised Example - Battle Mage (TR 2)
-**Specialization: Fire with Space/Time support**
-- **Potentials:** Start with initial rolls (Fire 6, Space 5, Time 4, others 2-4) - don't raise yet
-- **Mastery priorities:**
-  - Fire Mastery 0→5 = 120 XP (primary specialization)
-  - Space Mastery 0→4 = 60 XP (universal supporting energy)
-  - Time Mastery 0→3 = 28 XP (universal supporting energy)
-  - Total Mastery: 208 XP
-- **Attributes:** Int 5→6 (80 XP) - needed for higher Fire Mastery cap
-- **Total magic XP:** 288 XP of 310 available
-- **Result:** Int 6, Fire 5, Space 4, Time 3 = effective Fire Bolt caster (rolls 6d8: Fire Pot 6 + Fire Mas 5 + Space Pot 5 + Space Mas 4 + Time Pot 4 + Time Mas 3)
-
-**Why this works:**
-- Fire Mastery 5 makes primary attack weaves powerful
-- Space Mastery 4 gives range and area coverage (used in EVERY combat weave)
-- Time Mastery 3 provides duration for buffs and control (used in most weaves)
-- This matches how weaves are actually structured in the system
-
-### Revised Example - Archmage (TR 4, 300 years of study)
-**Specialization: Fire specialist with strong Space/Time foundation**
-- **Mastery investments:**
-  - Fire Mastery 0→6 = 168 XP (primary specialization - devastating damage)
-  - Space Mastery 0→5 = 120 XP (universal support - all weaves)
-  - Time Mastery 0→4 = 60 XP (universal support - all weaves)
-  - Air Mastery 0→3 = 28 XP (secondary element - Lightning Bolt)
-  - Water Mastery 0→2 = 12 XP (tertiary element - dabbling)
-  - Total: 388 XP (highly efficient)
-- **Potential investments:**
-  - Fire 6→7 = 96 XP (enables future Mastery 7)
-  - Space 5→6 = 80 XP (critical for high-level weaves)
-  - Total: 176 XP (only raised when needed for caps)
-- **Attributes:** Int 5→6 = 80 XP
-- **Total magic investment:** 644 XP of 790 available
-
-**Result:** Three centuries of focused magical study creates:
-- **Fire Mastery 6** = devastating fire damage
-- **Space Mastery 5** = excellent range, area, and teleportation
-- **Time Mastery 4** = strong duration and concentration effects
-- This reflects actual weave construction: primary element + Space + Time
-
-### The Universal Pattern for Casters
-
-**Tier 1-2: Establish Foundation**
-- Primary Element Mastery 3-5
-- Space Mastery 2-4 (essential for range)
-- Time Mastery 1-3 (essential for duration)
-
-**Tier 3-4: Specialize and Expand**
-- Primary Element Mastery 5-6
-- Space Mastery 4-5 (advanced teleportation, area effects)
-- Time Mastery 3-4 (long durations, complex concentration)
-- Secondary Element Mastery 2-3 (versatility)
-
-**Tier 5-8: Master and Perfect**
-- Primary Element Mastery 7-8 (legendary power)
-- Space Mastery 6-7 (teleportation networks, demi-planes)
-- Time Mastery 5-6 (permanent effects, time manipulation)
-- Multiple secondary elements at 4-5 (broad expertise)
-
-### Why Space and Time Matter More Than Multiple Elements
-
-**Looking at Fire Bolt:**
-- Primary: Fire 4
-- Supporting: Space 2 (range), Time 1 (duration)
-- **Without Space Mastery:** Forced to use touch-range only (dangerous!)
-- **Without Time Mastery:** Effects are weaker, shorter duration
-
-**Looking at Fireball:**
-- Primary: Fire 6
-- Supporting: Space 3 (range + area)
-- **Without Space Mastery:** Can't create area effects or reach distant targets
-
-**Conclusion:** A Fire 6 / Space 5 / Time 4 mage is far more effective than a Fire 6 / Air 5 / Water 4 mage, because the first can actually USE their fire magic at range with area effects and duration, while the second is limited to touch-range fire with poor area coverage.
+**Tier 5-8:** Primary Element Mastery 7-8, Space Mastery 6-7, Time Mastery 5-6, multiple secondaries at 4-5
 
 ---
+
 ## KEY TAKEAWAYS FOR HUMANOID NPC DESIGN
 
-### 1. Respect the Three Phases
-- **Tiers 1-2:** Skills first (80% of XP)
-- **Tiers 3-5:** Attributes + Skills together (40%/40%)
-- **Tiers 6-8:** Breadth and mastery (30%/30%/40% feats)
+**Respect the three phases.** Tiers 1-2 spend on skills first. Tiers 3-5 split between attributes and skills. Tiers 6-8 spread broad and invest in feats.
 
-### 2. Tier 3 is the Inflection Point
-- Without attribute raises, TR 3 NPCs will feel like TR 2
-- Budget 80-150 XP for attribute advancement at TR 3
-- This creates the power jump expected of "heroes"
+**Tier 3 is the inflection point.** Without attribute raises, Tier 3 NPCs feel like Tier 2. Budget 80-150 XP for attributes at this tier.
 
-### 3. Skills Cost Half What Attributes Do
-- Skill 3→4 = 24 XP
-- Attribute 5→6 = 80 XP
-- Always max skills before raising attributes (except for prerequisites or caps)
+**Skills cost half what attributes do.** Always max skills before raising attributes except for prerequisites or caps.
 
-### 4. For Casters: Mastery Before Potentials
-- Same principle as Skills before Attributes
-- Mastery is rolled every weave, Potentials mainly affect Energy pool
-- Three centuries of study = Mastery 6-7, not necessarily Potential 8
+**For casters: Mastery before Potentials.** Same principle. Mastery is rolled every weave. Potentials mainly affect the Energy pool.
 
-### 5. Success Rate Progression Should Feel Smooth
+**Success rate progression should feel smooth:**
 
 | Tier | Target Success (1+) | Feel |
 |------|---------------------|------|
@@ -527,41 +332,15 @@ Just like martials prioritize Skills over Attributes, casters should prioritize 
 | 4 | 95-98% | Champion |
 | 5-8 | 98-100% | Mastery |
 
-### 6. Don't Forget HP Scaling
-Constitution raises aren't just for casters:
-- Con 4 = 32 HP
-- Con 5 = 40 HP
-- Con 6 = 48 HP
+**Don't forget HP scaling.** Con raises matter for survivability at higher tiers.
 
-At higher tiers, NPCs should invest in Constitution to survive tier-appropriate threats.
 ---
-
-
-## FINAL CHECKLIST FOR HUMANOID NPC CREATION
-
-✅ Used standard PC attribute array (5,4,3,3,3,2,2,2)
-✅ Selected appropriate background for role
-✅ Calculated XP budget: Background + Tier XP
-✅ Followed tier-appropriate XP spending strategy:
-   - Tiers 1-2: Skills first
-   - Tiers 3-5: Attributes + Skills
-   - Tiers 6-8: Breadth + Feats
-✅ Selected 2 starting feats + appropriate purchased feats (max 2 per tier)
-✅ Verified success rate matches tier expectations
-✅ HP = Constitution × 8
-✅ Equipment follows equipment.md, armor.md, weapons.md
-✅ No class restrictions on armor/weapons
----
-
-**This framework ensures humanoid NPCs scale smoothly from Tier 1 through Tier 8, matching player character progression and creating appropriately challenging encounters at every tier.**
 
 ## Hit Point Calculation Tables
 
 ### HP Formula by Creature Type
 
-**HP = Constitution × HP Multiplier (from table below)**
-
-**HP Multiplier Table:**
+**HP = Constitution × HP Multiplier**
 
 | Threat Rating | Fragile (×) | Standard (×) | Tough (×) | Massive (×) |
 |--------------|-------------|--------------|-----------|-------------|
@@ -577,125 +356,122 @@ At higher tiers, NPCs should invest in Constitution to survive tier-appropriate 
 | 7 | 26 | 36 | 44 | 56 |
 | 8 | 30 | 42 | 52 | 66 |
 
-**How to use:** Find the intersection of Threat Rating and creature type category to get the multiplier. Multiply this by the creature's Constitution score to calculate total HP.
-
 ### Creature Type Categories
 
-**Fragile:**
-- Small beasts (rats, bats)
-- Tiny creatures
-- Low-Con spellcasters
-- Swarms (use special swarm rules)
+**Fragile:** Small beasts, Tiny creatures, low-Con spellcasters, swarms
 
-**Standard:**
-- Most humanoids
-- Medium beasts
-- Constructs (medium toughness)
-- Undead (standard)
+**Standard:** Most humanoids, medium beasts, constructs (medium toughness), standard undead
 
-**Tough:**
-- Warriors, soldiers
-- Large beasts
-- Armored constructs
-- Tough undead (zombies)
-- Most monstrosities
+**Tough:** Warriors and soldiers, large beasts, armored constructs, tough undead (zombies), most monstrosities
 
-**Massive:**
-- Giants
-- Dragons
-- Huge+ creatures
-- Siege monsters
-- Legendary creatures
+**Massive:** Giants, dragons, Huge+ creatures, siege monsters, legendary creatures
 
-**Example:** 
-- Goblin (Threat 1/4, Con 2, Fragile): 2 × 6 = 12 HP
-- Orc Warrior (Threat 1/2, Con 4, Tough): 4 × 9 = 36 HP
-- Young Dragon (Threat 4, Con 6, Massive): 6 × 30 = 180 HP
 ---
 
 ## Creature Type Keywords
 
 ### Creature Type Traits
 
-#### **Beast**
-- Natural animal (not magical)
-- Normal intelligence (Int 1-2)
-- No special immunities
+#### Beast
+Natural animal (not magical). Normal intelligence (Int 1-2). No special immunities.
 
-#### **Monstrosity**
-- Magical or unnatural creature
-- May have unusual anatomy
-- No standard immunities
+#### Monstrosity
+Magical or unnatural creature. May have unusual anatomy. No standard immunities.
 
-#### **Undead**
-- **Undead Immunities:** Immune to poison damage, Poisoned condition, disease, exhaustion
-- **Mindless (if applicable):** immune to mind-affecting effects (Beguiling Weave, fear, Sleep), fear, psychic effects
-- **Does not need:** Air, food, drink, sleep
-- **Negative Healing (optional):** Healed by negative energy, harmed by positive
+#### Undead
+**Undead Immunities:** Immune to poison damage, Poisoned condition, disease, exhaustion.
+**Mindless (if applicable):** Immune to mind-affecting effects (Beguiling Weave, fear, Sleep), fear, psychic effects.
+**Does not need:** Air, food, drink, sleep.
+**Negative Healing (optional):** Healed by negative energy, harmed by positive.
 
-#### **Construct**
-- **Construct Immunities:** Immune to poison, Poisoned, disease, exhaustion, Paralyzed, Petrified
-- **Mindless (if applicable):** immune to mind-affecting effects (Beguiling Weave, fear, Sleep), fear, psychic effects
-- **Does not need:** Air, food, drink, sleep
+#### Construct
+**Construct Immunities:** Immune to poison, Poisoned, disease, exhaustion, Paralyzed, Petrified.
+**Mindless (if applicable):** Immune to mind-affecting effects, fear, psychic effects.
+**Does not need:** Air, food, drink, sleep.
 
-#### **Aberration**
-- Alien biology
-- Often has alien mind (Fortune vs mental effects or vulnerability, varies)
-- Unusual anatomy
+#### Aberration
+Alien biology. Often has alien mind (Fortune vs mental effects or vulnerability, varies). Unusual anatomy.
 
-#### **Dragon**
-- **Dragon Senses:** Darkvision 120 ft, Blindsight 30-60 ft (varies by age)
-- **Frightful Presence:** Can impose fear conditions
-- **Energy Affinity:** Resistance or immunity to one energy type
+#### Drake
+**Drake Senses:** Darkvision 120 ft, Blindsight 30-60 ft (varies by age).
+**Frightful Presence:** Can impose fear conditions.
+**Energy Affinity:** Resistance or immunity to one energy type.
 
-#### **Elemental**
-- **Elemental Body:** Immune to poison, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious
-- **Elemental Immunity:** Immune to associated element (fire elemental = immune to fire)
-- **Does not need:** Air, food, drink, sleep
+#### Elemental
+**Elemental Body:** Immune to poison, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious.
+**Elemental Immunity:** Immune to associated element (fire elemental = immune to fire).
+**Does not need:** Air, food, drink, sleep.
 
-#### **Fiend (Demon/Devil)**
-- **Fiend Resistances:** Often resistant to cold, fire, lightning
-- **Magic Resistance:** Subtract 1 from both dice on saves vs magical effects
-- **Devil's Sight (Devils):** See through magical darkness
-- **Chaotic Nature (Demons):** Unpredictable, may have random effects
+#### Fiend (Demon/Devil)
+**Fiend Resistances:** Often resistant to cold, fire, lightning.
+**Magic Resistance:** Subtract 1 from both dice on saves vs magical effects.
+**Devil's Sight (Devils):** See through magical darkness.
 
-#### **Celestial**
-- **Celestial Resistances:** Often resistant to positive, negative energy
-- **Magic Resistance:** Subtract 1 from both dice on saves vs magical effects
-- **Holy Aura:** May deal positive damage or have protective effects
+#### Celestial
+**Celestial Resistances:** Often resistant to positive, negative energy.
+**Magic Resistance:** Subtract 1 from both dice on saves vs magical effects.
 
-#### **Fey**
-- **Fey Ancestry:** Fortune on saves vs charm effects
-- **Magic Affinity:** Often can innately weave
-- **Iron Weakness (optional):** Takes extra damage from cold iron
+#### Fey
+**Fey Ancestry:** Fortune on saves vs charm effects.
+**Magic Affinity:** Often can innately weave.
+**Iron Weakness (optional):** Takes extra damage from cold iron.
 
-#### **Giant**
-- **Large Size or bigger**
-- **Powerful Build:** Count as one size larger for carrying, pushing, dragging
-- **Rock Throwing (many):** Can throw boulders as ranged weapons
+#### Giant
+Large size or bigger. **Powerful Build:** Count as one size larger for carrying, pushing, dragging.
 
-#### **Humanoid**
-- Standard mortal creature
-- No special immunities
-- Uses equipment normally
+#### Humanoid
+Standard mortal creature. No special immunities. Uses equipment normally.
 
-#### **Ooze**
-- **Ooze Immunities:** Immune to Blinded, Deafened, Exhaustion, Frightened, Prone
-- **Mindless:** immune to mind-affecting effects (Beguiling Weave, fear, Sleep), fear, psychic effects
-- **Amorphous:** Can squeeze through tiny spaces
-- **Corrosive (many):** Deals acid damage, dissolves equipment
+#### Nephilim
+Daemons from the elemental planes that manifest on the prime material as giant humanoids. Their physical form is the elemental energy of their home plane made flesh — a Fire Nephilim bleeds magma, an Earth Nephilim sheds gravel when struck. They are a subtype of Giant and carry all Giant traits unless noted otherwise.
 
-#### **Plant**
-- **Plant Immunities:** Often immune to Blinded, Deafened, Exhaustion
-- **Vulnerability to Fire (many):** Takes extra fire damage
-- **False Appearance (many):** Appears to be normal vegetation
+- **Size:** Large minimum. Many are Huge.
+- **Powerful Build:** Counts as one size category larger for carrying, pushing, dragging, and lifting.
+- **Elemental Affinity:** Each Nephilim is associated with one of the four classical elements. They are immune to damage from their associated element and have Resistance (+2 DR) against one additional damage type appropriate to their element (see individual entries).
+- **Elemental Aura:** Most Nephilim passively express their element in a 5-foot radius. The specific effect varies by entry.
+- **Creature Type:** Nephilim entries use the tag **Nephilim (Giant)** to indicate both their functional category and their daemon origin.
+- **Does not need:** Air, food, drink, or sleep in the conventional sense. Nephilim sustain themselves on elemental energy from their home plane.
 
-#### **Swarm**
-- **Swarm Body:** Can occupy other creatures' spaces
-- **Swarm Resistance:** Resistant to bludgeoning, piercing, slashing (half damage)
-- **Swarm Vulnerability:** Vulnerable to area effects (take double damage)
-- **Cannot be Grappled or Restrained**
-- **Reduced Damage (half HP):** Damage output reduced by half when below half HP
+**Damage type associations by element:**
+
+| Element | Immunity | Resistance (+2 DR) |
+|---------|----------|--------------------|
+| Fire | Fire | Lightning |
+| Air | Lightning | Cold |
+| Earth | Piercing (non-magical) | Bludgeoning (non-magical) |
+| Water | Cold | Fire |
+
+#### Shadow
+Creatures native to the Shadow Plane — the dark reflection of the prime material where light is dim, color is absent, and life energy is sparse. Shadow creatures are not undead. They are living things shaped by a lightless environment where competition for vital energy is constant.
+
+- **Darkvision:** Minimum 120 ft. Shadow creatures above TR 1/2 can see through magical darkness as if it were dim light (Devil's Sight).
+- **Shadow Meld (Passive):** In dim light or darkness, Shadow creatures have Fortune on Stealth checks, and attacks against them add 1 to both dice.
+- **Sunlight Sensitivity:** Most Shadow creatures (noted in individual entries) add 1 to both attack dice and skill check dice while in bright light. Creatures without this notation have adapted to cross between planes without penalty.
+- **Positive Vulnerability:** Shadow creatures take full damage from Positive energy — no DR reduction applies. This is the one universal weakness across the entire creature type.
+- **Cold Resistance:** Shadow creatures have Resistance to cold damage (+2 DR). The Shadow Plane is profoundly cold.
+- **Does not need:** Air, food, drink, or sleep as mortals understand these.
+
+**Shadow Subtype Note:** Some Shadow creatures are the corrupted remnants of things that were once mortal or elemental — these may carry secondary tags (Shadow/Fae, Shadow/Elemental) indicating their origin. Pure Shadow creatures carry no secondary tag.
+
+#### Ooze
+**Ooze Immunities:** Immune to Blinded, Deafened, Exhaustion, Frightened, Prone.
+**Mindless:** Immune to mind-affecting effects, fear, psychic effects.
+**Amorphous:** Can squeeze through tiny spaces.
+**Corrosive (many):** Deals acid damage, dissolves equipment.
+
+#### Plant
+**Plant Immunities:** Often immune to Blinded, Deafened, Exhaustion.
+**Vulnerability to Fire (many):** Takes extra fire damage.
+**False Appearance (many):** Appears to be normal vegetation.
+
+#### Swarm
+**Swarm Body:** Can occupy other creatures' spaces. Moves through openings large enough for constituent creatures.
+**Swarm Resistance:** Halved damage from Slashing, Piercing, Bludgeoning. Full damage from fire, acid, thunder, and area-effect weaves.
+**Area Vulnerability:** Area effects covering the swarm's space deal full damage without a damage save.
+**Cannot be Grappled, Restrained, Tripped, or Disarmed.**
+**Reduced Damage (half HP):** Damage output halved when below half HP.
+**Condition Immunities:** Grappled, Restrained, Prone, Bleeding.
+**Size:** Always 5 × 5 ft regardless of constituent creature size.
 
 ---
 
@@ -703,53 +479,29 @@ At higher tiers, NPCs should invest in Constitution to survive tier-appropriate 
 
 ### Standard Vision Types
 
-#### **Normal Vision**
-- Sees in normal light
-- Cannot see in darkness
-- Standard for most humanoids
+#### Normal Vision
+Sees in normal light. Cannot see in darkness. Standard for most humanoids.
 
-#### **Low-Light Vision**
-- Sees twice as far in dim light
-- Treats dim light as bright light
-- Cannot see in complete darkness
-- Common: Elves, halflings, some beasts
+#### Low-Light Vision
+Treats dim light as bright light. Cannot see in complete darkness. Common: elves, some beasts.
 
-#### **Darkvision (specify range)**
-- Sees in darkness as if dim light (black and white only)
-- Sees in dim light as if bright light
-- Most common ranges: 60 ft, 90 ft, 120 ft
-- Common: Dwarves, undead, subterranean creatures
+#### Darkvision (specify range)
+Sees in darkness as if dim light (black and white only). Sees in dim light as if bright light. Most common ranges: 60 ft, 90 ft, 120 ft.
 
-#### **Superior Darkvision (specify range)**
-- As darkvision but sees in darkness as if bright light (in color)
-- Range typically 120 ft
-- Rare: Drow, some aberrations
+#### Superior Darkvision (specify range)
+As Darkvision but sees in darkness as if bright light (in color). Range typically 120 ft.
 
-#### **Blindsight (specify range)**
-- Perceives surroundings without relying on sight (echolocation, tremorsense, etc.)
-- Not affected by Blinded condition, invisibility, or darkness
-- Cannot perceive beyond range
-- Common ranges: 10 ft, 30 ft, 60 ft
-- Common: Bats, oozes, some dragons
+#### Blindsight (specify range)
+Perceives surroundings without relying on sight. Not affected by Blinded condition, invisibility, or darkness. Does not work around corners or through solid barriers. Any target detected using only Blindsight gains the Concealed condition to the detecting creature. Common ranges: 10 ft, 30 ft, 60 ft.
 
-#### **Tremorsense (specify range)**
-- Type of Blindsight that detects vibrations
-- Only works against creatures touching the ground
-- Common: Burrowing creatures, earth elementals
+#### Tremorsense (specify range)
+Detects vibrations through surfaces. Only works against creatures touching the ground. Any target detected using only Tremorsense gains the Concealed condition.
 
-#### **Perfect Sight (specify range)**
-- Sees in normal and magical darkness
-- Sees invisible creatures and objects
-- Detects illusory effects and sees through them
-- Perceives true form of shapechangers
-- Sees into Ethereal Plane
-- Range typically 60 ft or 120 ft
-- Rare: Very powerful creatures, divine beings
+#### Perfect Sight (specify range)
+Ignores the Hidden condition of targets. Sees through magical darkness and illusory effects within range.
 
-#### **Blind**
-- Cannot use sight-based perception
-- Relies entirely on other senses
-- Has Blinded condition penalties (unless has Blindsight)
+#### Seam Sense (specify range)
+Perceives thin points in the planar fabric — locations where the boundary between the prime material and adjacent planes is weaker than usual. A creature with Seam Sense automatically knows where these planar seams are within the specified range. This sense does not detect creatures or objects and has no effect on normal combat targeting. It is primarily relevant for planar navigation, identifying summoning locations, and locating weaknesses in dimensional barriers. Seam Sense is native to Aberrations that exist partly between planes.
 
 ---
 
@@ -757,30 +509,15 @@ At higher tiers, NPCs should invest in Constitution to survive tier-appropriate 
 
 ### Monsters with Equipment
 
-When a monster wields manufactured weapons or wears armor:
+When a monster wields manufactured weapons or wears armor, apply weapon size rules from the Creature Size section. A Large creature using a Medium weapon uses a weapon one size smaller than itself — apply the appropriate grip shift and damage modifier.
 
-#### **Weapons:**
-- Use standard weapon damage tables
-- Apply Size modifier to damage
-- Gain weapon properties (reach, versatile, etc.)
-- Can be disarmed
+Weapons: Use standard weapon damage tables, apply size modifiers, gain weapon properties (reach, versatile, etc.). Can be disarmed.
 
-#### **Armor:**
-- Provides DR as normal
-- May affect stealth
+Armor: Provides DR as normal. May affect stealth.
 
-#### **Shields:**
-- Grants Shield Block reaction
-- Provides +1 DR (standard shield) or +2 DR (tower shield)
+Shields: Grant Shield Block reaction. Standard shield reactions apply.
 
-#### **Other Gear:**
-- Potions, scrolls, magic items work as normal
-- Can be stolen or used against monster
-- Include in treasure when monster dies
-
-**Formatting Note:** List equipped items separately in stat block:
-- **Equipment:** Chain mail (DR 4), longsword, shield (DR +1)
-- Total DR from armor/shield shown in main DR stat
+List equipped items separately in the stat block. Total DR from armor and shield appears in the main DR stat.
 
 ---
 
@@ -788,18 +525,9 @@ When a monster wields manufactured weapons or wears armor:
 
 ### Mandatory Combat Skill Listings
 
-**All monsters must list:**
-- **Melee Combat rank** (if they make melee attacks)
-- **Ranged Combat rank** (if they make ranged attacks)
-
-**Format in stat block:**
-```
-Skills: Melee Combat 4, Ranged Combat 2, Perception 3, Stealth 4
-```
+All monsters must list Melee Combat rank (if they make melee attacks) and Ranged Combat rank (if they make ranged attacks).
 
 ### Skill Rank Guidelines
-
-Monster skills should be set to give reasonable success rates in combat:
 
 | Threat | Skill Rank (combat) | With Attribute 4 | Success Rate (1+) |
 |--------|---------------------|------------------|-------------------|
@@ -810,7 +538,7 @@ Monster skills should be set to give reasonable success rates in combat:
 | 4 | 5-6 | 6/6 | 86-94% |
 | 5+ | 6-8 | 7/7-8/8 | 94-100% |
 
-**Remember:** Skills can exceed attributes for monsters to represent specialized combat ability.
+Skills can exceed attributes for monsters to represent specialized combat ability.
 
 ---
 
@@ -822,37 +550,13 @@ Monster skills should be set to give reasonable success rates in combat:
 - **Cost:** 1 [Combat] action
 - **Effect:** Make multiple specified attacks as part of a single action
 - **Shared Attribute Roll:** Roll the governing attribute once, apply to all attacks. Roll skill die separately for each attack.
-- **No Multiple Action Penalty:** Multiattack counts as ONE [Combat] action, so no penalty between the attacks within the Multiattack
-- **Frequency:** Can only use Multiattack once per turn (cannot be combined with additional [Combat] actions to make more Multiattacks)
-- **Movement:** Can move before or after Multiattack, but movement between individual attacks within Multiattack is not allowed
+- **No Multiple Action Penalty** between the attacks within the Multiattack — it counts as ONE [Combat] action
+- **Frequency:** Once per turn. Cannot be combined with additional [Combat] actions to make more Multiattacks.
+- **Movement:** Can move before or after Multiattack, but not between individual attacks within the Multiattack.
 
 ### Multiattack and Additional Actions
 
-If a monster uses Multiattack as its first [Combat] action:
-- **Second [Combat] action:** Add 1 to both dice (normal multiple action penalty)
-- **Third [Combat] action:** Add 2 to both dice (normal multiple action penalty)
-
-**Example Turn:**
-1. **Action 1:** Multiattack (bite + 2 claws) - no penalty
-2. **Action 2:** Single bite attack - add 1 to both dice
-3. **Action 3:** Move action - no penalty (not a [Combat] action)
-
-### Multiattack Format
-
-**Format in stat block:**
-```
-Multiattack: The owlbear makes one bite and two claw attacks.
-  - Shared Attribute Roll (Agi), roll skill separately for each attack
-  - Bite: (Agi + Melee Combat 4 vs defense)
-  - Claw 1: (Agi + Melee Combat 4 vs defense)
-  - Claw 2: (Agi + Melee Combat 4 vs defense)
-```
-
-**Example Combat:**
-- Owlbear has Agi 4, Melee Combat 5
-- Uses Multiattack: Roll Agi die once (1d8, need <4), roll skill die three times (1d8, need <5)
-- If Agi die rolls 3: All attacks get that 3 for attribute portion
-- Skill rolls separately: 4, 2, 6 = two hit (3/4 and 3/2), one miss (3/6)
+If a monster uses Multiattack as its first [Combat] action, subsequent [Combat] actions apply the standard Multiple Action Penalty.
 
 ---
 
@@ -860,25 +564,13 @@ Multiattack: The owlbear makes one bite and two claw attacks.
 
 ### Recharge Mechanics (Using d8)
 
-Some abilities recharge during combat:
+Some abilities recharge during combat by rolling 1d8 at the start of the creature's turn.
 
-**Recharge 7-8:**
-- At start of creature's turn, roll 1d8
-- On 7-8, ability recharges and can be used again
-- Common for very powerful abilities (ancient dragon breath)
+**Recharge 7-8:** Recharges on 7 or 8. Very powerful abilities (ancient dragon breath).
+**Recharge 6-8:** Recharges on 6, 7, or 8. Powerful abilities (adult dragon breath).
+**Recharge 5-8:** Recharges on 5, 6, 7, or 8. Moderate abilities (young dragon breath).
 
-**Recharge 6-8:**
-- Recharges on 6, 7, or 8
-- Common for powerful abilities (adult dragon breath)
-
-**Recharge 5-8:**
-- Recharges on 5, 6, 7, or 8
-- Common for moderate abilities (young dragon breath)
-
-**Limited Uses:**
-- "3/day" - Can use 3 times, resets after long rest
-- "1/day" - Can use once, resets after long rest
-- "Recharge after short rest" - Returns after 10-minute rest
+Limited Uses: "3/day" resets after long rest. "1/day" resets after long rest. "Recharge after short rest" returns after 10 minutes.
 
 ### Regeneration
 
@@ -886,52 +578,23 @@ Some abilities recharge during combat:
 ```
 Regeneration X: Regains X HP at start of its turn if it has at least 1 HP.
   - Suppressed by: [damage type(s)]
-  - If takes [specified damage], regeneration doesn't function next turn
-```
-
-**Example:**
-```
-Regeneration 10: Regains 10 HP at start of turn.
-  - Suppressed by: Fire, acid damage
 ```
 
 ### Damage Resistances & Vulnerabilities
 
-Use standardized format:
-
 **Resistance Tiers:**
-- **Resistance:** +1 DR vs specified type
-- **Greater Resistance:** +2 DR vs specified type
-- **Legendary Resistance:** +4 DR vs specified type
+- **Resistance:** +2 DR vs specified type
+- **Greater Resistance:** +4 DR vs specified type
+- **Legendary Resistance:** +8 DR vs specified type
 - **Immunity:** No damage from source, cannot be affected
 - **Vulnerability:** +50% damage from type (rounded up)
 - **Weakness:** DR halved (rounded down) vs type
-
-**Format in stat block:**
-```
-Resistances: Fire (Greater Resistance, +2 DR), Cold (Resistance, +1 DR)
-Immunities: Poison damage, Poisoned condition
-Vulnerabilities: Lightning (+50% damage)
-```
 
 ---
 
 ## Action Economy & Reactions
 
-### Monster Action Economy
-
-Monsters use the same 3 actions per turn as PCs:
-- Can take 3 actions from [Combat], [Move], [Interact], etc.
-- Subject to Multiple Action Penalty for multiple [Combat] actions
-- One [Minor] action free with [Move]
-
-### Universal Monster Reactions
-
-All monsters can potentially use:
-- **Opportunity Attack:** When enemy leaves reach (if has melee capability)
-- **Shield Block:** If wielding shield
-
-Some monsters have special reactions listed in their abilities.
+Monsters use the same 3 actions per turn as PCs and are subject to the same Multiple Action Penalty for multiple [Combat] actions. All monsters can potentially use Opportunity Attack when an enemy leaves their melee reach, and Shield Block if wielding a shield.
 
 ---
 
@@ -939,9 +602,8 @@ Some monsters have special reactions listed in their abilities.
 
 ### Action Points (replaces Legendary Actions)
 
-Some powerful monsters (typically Threat 4+) have **Action Points** representing their superior combat prowess:
+Some powerful monsters (typically Threat 4+) have **Action Points** representing their superior combat prowess.
 
-**Action Points:**
 - Creature has 3 Action Points
 - Can spend Action Points at end of any other creature's turn
 - Regains all Action Points at start of its turn
@@ -954,19 +616,54 @@ Some powerful monsters (typically Threat 4+) have **Action Points** representing
 - **Special Ability (2 points):** Use a specified special ability
 - **Cast Weave (3 points):** Cast a weave
 
-**Format in stat block:**
-```
-Action Points (3/round): Can spend at end of other creatures' turns
-  - Move (1 pt): Move up to half speed
-  - Claw Attack (1 pt): Make one claw attack
-  - Wing Attack (2 pts): All within 15 ft make Reflex save or take damage and knocked prone; dragon flies up to half speed
-```
-
 ### Resilient Defense (replaces Legendary Resistance)
 
-**Resilient Defense (X/day):**
-- When the creature fails a saving throw, it can choose to succeed instead
-- Common amounts: 1/day (Threat 3-4), 2/day (Threat 5-6), 3/day (Threat 7-8)
+**Resilient Defense (X/day):** When the creature fails a saving throw, it can choose to succeed instead. Common amounts: 1/day (Threat 3-4), 2/day (Threat 5-6), 3/day (Threat 7-8).
+
+---
+
+---
+
+## Daemon Categories and Creature Types
+
+The Summoner trait organizes summoned beings into daemon categories (Elementals, Fae, Nephilim, Outsiders, Shadow creatures, Aberrations). These categories describe the being's plane of origin and the Primary Resonance energy used to call them. They do not map one-to-one to creature type keywords.
+
+| Summoner Daemon Category | Creature Type Keyword(s) |
+|---|---|
+| Elementals | Elemental |
+| Fae | Fey |
+| Nephilim | Nephilim (Giant) |
+| Outsiders — Celestial | Celestial |
+| Outsiders — Fiend | Fiend |
+| Shadow creatures | Shadow |
+| Aberrations | Aberration |
+
+Creature type keywords govern immunities, trait interactions, and mechanical behavior. Daemon categories govern what a Summoner can call and what Primary Resonance energy they need. Stat blocks for summoned daemons carry both tags in the creature type line for clarity.
+
+### Standardized Creature Type Trait Blocks
+
+Use these as a starting point when writing new entries. Copy the appropriate block and edit only what the individual creature modifies.
+
+**Elemental (standard):**
+Immune to poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified, Unconscious. Immune to [associated element] damage. Does not need air, food, drink, or sleep.
+
+**Fey (standard):**
+Fortune on saving throws against charm effects. Does not need air, food, drink, or sleep in the conventional sense. Individual entries note additional traits.
+
+**Nephilim/Giant (standard):**
+Occupies [size] space. Powerful Build: counts as one size larger for carrying, pushing, dragging, lifting. Immune to [associated element] damage. Resistance to [secondary element] (+2 DR). Does not need air, food, drink, or sleep.
+
+**Celestial (standard):**
+Immune to poison damage, Poisoned condition, disease, fear. Fortune on saving throws against magic. Does not need air, food, drink, or sleep.
+
+**Fiend (standard):**
+Immune to poison damage, Poisoned condition. Resistance to fire, cold, lightning damage (+2 DR each). Fortune on saving throws against magic. Does not need air, food, drink, or sleep.
+
+**Shadow (standard):**
+Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability (full damage, no DR reduction). Cold Resistance (+2 DR). Sunlight Sensitivity if noted. Does not need air, food, drink, or sleep.
+
+**Aberration (standard):**
+Immune to mind-affecting effects (charm, fear, sleep) in most cases — note exceptions. Fortune on saving throws against magic. Does not need air, food, drink, or sleep.
 
 ---
 
@@ -974,36 +671,34 @@ Action Points (3/round): Can spend at end of other creatures' turns
 
 ```
 ### [Monster Name]
-[Size] [Type], [Typical Alignment]
-
-- **Threat Rating:** X (D&D CR equivalent)
-- **HP:** X (Con Y × Multiplier Z [creature type])
-- **DR:** X (source)
-- **Speed:** X ft, [other movement types]
-- **Attributes:** Str X / Con X / Agi X / Dex X / Int X / Wis X / Cha X / Luck X
-- **Skills:** Melee Combat X, [other skills]
-- **Senses:** [Vision types and ranges]
-- **Equipment:** [If applicable]
-- **Initiative Bonus:** +X (Agi X)
+**Threat Rating:** X
+**Size:** [Tiny/Small/Medium/Large/Huge/Gargantuan] — [Creature Type]
+**HP:** X (Con Y × Multiplier Z [Fragile/Standard/Tough/Massive])
+**DR:** X (source)
+**Speed:** X ft, [other movement types]
+**Attributes:** Str X / Con X / Agi X / Dex X / Int X / Wis X / Cha X / Luck X
+**Skills:** Melee Combat X, [other skills]
+**Senses:** [Vision types and ranges]
+**Equipment:** [If applicable — note weapon size if non-Medium]
+**Initiative Bonus:** +X (Agi X)
+**Languages:** [If applicable]
 
 **Attacks:**
 - **[Attack Name] [Combat]:** [Melee/Ranged] attack ([Attribute + Skill] vs [target])
-  - Range/Reach: X ft
+  - Reach: X ft
   - Margin 1: X damage [type]
-  - Margin 2: X damage + X (attribute mod) [type]
-  - [Special effects]
+  - Margin 2: X damage + X ([attribute] mod) [type]
+  - [Special effects if any]
 
 **Multiattack (if applicable):**
 - Specify attacks included
-- Note Shared Attribute Roll
+- Shared Attribute Roll: roll [Attribute] once, apply to all attacks
 
 **Special Abilities:**
-- **[Ability Name] ([Recharge/Limited]):** Description
-  - Mechanical effect
-  - Saving throw if applicable
+- **[Ability Name] ([Recharge/Limited]):** Description and mechanical effect
 
 **Creature Type Traits:**
-- [List applicable keyword traits]
+- [List applicable keyword traits from the Creature Type Keywords section]
 
 **Resistances/Immunities:**
 - [List with mechanical effects]
@@ -1014,7 +709,7 @@ Action Points (3/round): Can spend at end of other creatures' turns
 **Resilient Defense (if applicable):**
 - X/day
 
-**Tactics:** [Brief description of how creature fights]
+**Tactics:** [How the creature fights, how it uses its abilities, when it retreats or escalates]
 ```
 
 ---
@@ -1024,7 +719,6 @@ Action Points (3/round): Can spend at end of other creatures' turns
 ### Conversion Process
 
 #### 1. Attributes (5e → d8)
-Use this conversion chart:
 
 | 5e Score | D8 Attribute |
 |----------|--------------|
@@ -1037,15 +731,12 @@ Use this conversion chart:
 | 24-27 | 7 |
 | 28-30 | 8 |
 
-**5e Attack Bonus → d8 Attribute + Skill:**
+#### 2. Attack Bonus → Attribute + Skill
 
-The challenge: D&D 5e combines ability modifier + proficiency into one attack bonus, but d8 separates these into attribute + skill.
-
-**Method 1: Break Down the Math**
-1. Convert the 5e ability score to d8 attribute (use table above)
-2. Note the 5e attack bonus
-3. Subtract what the 5e ability modifier was (this reveals the proficiency bonus)
-4. Convert proficiency bonus to skill rank using this table:
+**Method 1 — Break Down the Math:**
+1. Convert 5e ability score to d8 attribute
+2. Subtract the 5e ability modifier from the attack bonus to isolate the proficiency bonus
+3. Convert proficiency bonus to skill rank:
 
 | 5e Proficiency | D8 Skill Rank |
 |----------------|---------------|
@@ -1055,41 +746,12 @@ The challenge: D&D 5e combines ability modifier + proficiency into one attack bo
 | +5 | 6-7 |
 | +6 | 7-8 |
 
-**Examples:**
+**Method 2 — Quick Rule of Thumb:** Convert attribute, then divide the 5e attack bonus by 2 (round as needed) for approximate skill rank. Adjust up for primary skills, down for secondary.
 
-*Orc with Greataxe:*
-- 5e: Str 16 (+3 modifier), +5 to hit
-- Attack breakdown: +3 (Str) + 2 (proficiency) = +5
-- D8: Str 16 → Str 5, proficiency +2 → Melee Combat 3-4
-- **Result: Str 5, Melee Combat 4**
+#### 3. HP (5e → d8)
+Take 5e HP and reduce by 30-40%, then round to match the HP multiplier table.
 
-*Young Dragon Bite:*
-- 5e: Str 23 (+6 modifier), +10 to hit  
-- Attack breakdown: +6 (Str) + 4 (proficiency) = +10
-- D8: Str 23 → Str 6, proficiency +4 → Melee Combat 6-7
-- **Result: Str 6, Melee Combat 7**
-
-**Method 2: Quick Rule of Thumb**
-1. Convert 5e attribute to d8 attribute
-2. Take 5e attack bonus, divide by 2 (round as needed)
-3. That's approximately the d8 skill rank
-4. Adjust based on whether it's a primary skill (keep high) or secondary (reduce by 1)
-
-*Example:* 
-- 5e +8 to hit → d8 Skill rank ~4-5
-- 5e +5 to hit → d8 Skill rank ~2-3
-
-#### 2. HP (5e → d8)
-- Take 5e HP
-- Reduce by 30-40%
-- Round to match HP table multiplier
-
-**Example:**
-- 5e Orc: 15 HP → d8: 10-12 HP
-- 5e Ogre: 59 HP → d8: 35-45 HP
-
-#### 3. AC → DR
-Use this conversion:
+#### 4. AC → DR
 
 | 5e AC | D8 DR |
 |-------|-------|
@@ -1102,49 +764,34 @@ Use this conversion:
 | 22-23 | 6 |
 | 24+ | 7-8 |
 
-**Natural Armor:** If 5e creature has "natural armor," note source in parentheses
+#### 5. Damage (5e → d8)
+Use d8 weapon damage tables with size modifiers applied. Convert average damage to the closest d8 equivalent. Strength or Dexterity modifiers to damage translate to the Margin 2 bonus.
 
-#### 4. Damage (5e → d8)
-- Use d8 weapon damage tables
-- Apply size modifiers
-- Convert average damage to closest d8 equivalent
-- Add attribute modifiers on margin 2+
-
-**Examples:**
-- 5e: 2d6+3 (avg 10) → d8: 8 base + 3 (Str) = 11 on margin 2
-- 5e: 1d8+1 (avg 5) → d8: 4 base + 2 (Str) = 6 on margin 2
-
-#### 5. Save DCs (5e → d8)
-**5e DC → Success Requirement:**
+#### 6. Save DCs (5e → d8)
 
 | 5e DC | D8 Requirement |
 |-------|----------------|
 | 10-12 | 1 success |
-| 13-15 | 1 success (with penalty) OR 2 successes |
+| 13-15 | 1 success (with minor penalty) or 2 successes |
 | 16-18 | 2 successes |
-| 19-21 | 2 successes (with penalty) |
-| 22+ | 2 successes (add to both dice) |
+| 19-21 | 2 successes (with penalty: add 1 to both dice) |
+| 22+ | 2 successes (add 2 to both dice) |
 
-**Penalty Options:**
-- Add 1 to both dice
-- Subtract 1 from both dice (for saves)
-- Add/subtract only from skill die
+#### 7. Special Abilities
+- 5e Advantage/Disadvantage → Fortune/Misfortune
+- 5e Proficiency bonus → approximate d8 skill rank (roughly half)
+- 5e Multiattack → d8 Multiattack with Shared Attribute Roll
+- 5e Legendary Actions → d8 Action Points
+- 5e Legendary Resistance → d8 Resilient Defense
 
-#### 6. Special Abilities
-Convert mechanical effects:
-- **5e Advantage/Disadvantage → d8 Fortune/Misfortune**
-- **5e Proficiency bonus → d8 Skill rank** (roughly half)
-- **5e Multiattack → d8 Multiattack** (with Shared Attribute Roll)
-- **5e Legendary Actions → d8 Action Points**
-- **5e Legendary Resistance → d8 Resilient Defense**
+#### 8. Size Conversion
+5e size categories map directly to d8 size categories. Apply all size rules from the Creature Size section: attack difficulty modifiers, natural weapon damage by size, weapon size adjustments, grapple limits, and carrying capacity.
 
 ---
 
 ## Balancing & Playtesting
 
 ### Success Rate Targets
-
-Monsters should have these minimum success rates for their primary attacks:
 
 | Threat | vs Same-Tier PC Defense | Target Success Rate (1+) |
 |--------|-------------------------|-------------------------|
@@ -1154,16 +801,9 @@ Monsters should have these minimum success rates for their primary attacks:
 | 4-5 | ~70% | At least 7 hits per 10 attacks |
 | 6+ | ~80% | At least 4 hits per 5 attacks |
 
-### Two-Success Requirements
-
-For saves and opposed rolls against same-tier PCs:
-- Low-tier (1-2): Most saves require 1 success
-- Mid-tier (3-4): Some saves require 2 successes
-- High-tier (5+): Many saves require 2 successes, possibly with penalties
+Remember to account for the size modifier when setting skill ranks. A Large creature attacking Medium PCs has no size modifier. A Medium creature attacking a Large monster subtracts 1 from both attack dice. These modifiers affect the effective combat success rate without changing the listed skill rank.
 
 ### Damage Output Benchmarks
-
-Monster damage should threaten but not instantly kill same-tier PCs:
 
 | Threat | Avg Damage per Hit | % of PC HP (Tier-appropriate) |
 |--------|-------------------|------------------------------|
@@ -1173,32 +813,39 @@ Monster damage should threaten but not instantly kill same-tier PCs:
 | 3-4 | 16-24 | 30-50% |
 | 5+ | 24-40+ | 40-60% |
 
-**Elite/Boss Monsters:** Can exceed these by 50-100% due to lower numbers
+Elite/Boss Monsters can exceed these benchmarks by 50-100% due to lower numbers on the field.
 
 ---
 
-## Common Monster Templates
+## FINAL CHECKLIST FOR CREATURE CREATION
 
-### Minion Template
-- Use lowest HP multiplier (Fragile)
-- Reduce skills by 1-2
-- Remove special abilities
-- Perfect for swarms of weak enemies
+**Non-Humanoid Creatures:**
+- [ ] Size category assigned with correct space, reach, and grapple limit
+- [ ] Attack difficulty modifiers noted for expected combat scenarios (creature vs likely PC sizes)
+- [ ] Natural weapon damage pulled from correct size row and weight category
+- [ ] Equipment weapons noted as correct size; grip and damage modifier applied if non-native size
+- [ ] Attribute benchmarks match Threat Rating
+- [ ] Skill ranks within the allowed excess over governing attribute
+- [ ] HP calculated from Con × appropriate multiplier
+- [ ] Creature type traits listed
+- [ ] Resistances, immunities, and vulnerabilities specified
+- [ ] Tactics section explains how size and special abilities work together
 
-### Elite Template
-- Use highest HP multiplier (Massive)
-- Increase primary skills by 1-2
-- Add 1-2 special abilities
-- May have Action Points (1-2)
+**Humanoid NPCs:**
+- [ ] Used standard PC attribute array (5, 4, 3, 3, 3, 2, 2, 2)
+- [ ] Selected appropriate background
+- [ ] XP budget calculated: Background + Tier XP
+- [ ] Followed tier-appropriate XP spending strategy
+- [ ] Selected 2 starting feats + appropriate purchased feats (max 2 per tier)
+- [ ] Success rate matches tier expectations
+- [ ] HP = Constitution × 8
+- [ ] Equipment follows equipment.md, armor.md, weapons.md
 
-### Boss Template
-- Double HP multiplier
-- Increase all relevant skills by 2-3
-- Multiple special abilities
-- Action Points (3)
-- Resilient Defense (2-3/day)
-- Area effects, multiple targets
-
----
-
-*This framework provides the foundation for creating balanced, interesting monsters that challenge players appropriately while respecting the core d8 system mechanics.*
+**Swarms:**
+- [ ] Space listed as 5 × 5 ft
+- [ ] Damage resistance (physical halved) noted
+- [ ] Full damage and half-damage values both listed
+- [ ] Condition immunities listed (Grappled, Restrained, Prone, Bleeding)
+- [ ] Constituent creature type specified
+- [ ] Secondary effects (disease, poison) noted with trigger conditions
+- [ ] Swarm attack resolution uses Reflex save, not opposed melee roll

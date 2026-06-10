@@ -256,6 +256,34 @@
               <span class="dr-value">{{system.dr.total}}</span>
             </div>
 
+            {{!-- Binding --}}
+            {{#if system.binding.max}}
+            <div class="resource-row binding-row">
+              <label>Bound</label>
+              <span class="resource-current binding-used">{{system.binding.used}}</span>
+              <span class="sep">/</span>
+              <span class="resource-max">{{system.binding.max}}</span>
+            </div>
+            {{/if}}
+
+            {{!-- Combat Toggles --}}
+            {{#if featToggles.length}}
+            <div class="feat-toggles-section">
+              <h4 class="feat-toggles-heading">Combat States</h4>
+              <div class="feat-toggles-bar">
+                {{#each featToggles as |toggle|}}
+                <button type="button"
+                  class="feat-toggle-btn {{#if toggle.active}}active{{/if}}"
+                  data-action="featToggle"
+                  data-state-key="{{toggle.stateKey}}"
+                  title="{{toggle.label}}: {{#if toggle.active}}Active — click to deactivate{{else}}Inactive — click to activate{{/if}}">
+                  {{toggle.label}}
+                </button>
+                {{/each}}
+              </div>
+            </div>
+            {{/if}}
+
             <div class="resource-row wealth-row coins-row">
               <label>Coins</label>
               <div class="coin-inputs">
@@ -871,7 +899,12 @@
                 </div>
                 <h4 class="item-name">{{item.name}}</h4>
                 {{#if item.system.usage.uses.max}}
-                <div class="item-detail feat-uses">{{item.system.usage.uses.value}}/{{item.system.usage.uses.max}}</div>
+                <button type="button"
+                  class="feat-use-btn {{#unless (gt item.system.usage.uses.value 0)}}depleted{{/unless}}"
+                  data-action="featUse"
+                  title="{{#if (gt item.system.usage.uses.value 0)}}Use {{item.name}} ({{item.system.usage.uses.value}}/{{item.system.usage.uses.max}} remaining){{else}}No uses remaining{{#if item.system.usage.recharge.period}} — recharges on {{#if (eq item.system.usage.recharge.period "shortRest")}}short rest{{else}}long rest{{/if}}{{/if}}{{/if}}">
+                  <i class="fas fa-bolt"></i> {{item.system.usage.uses.value}}/{{item.system.usage.uses.max}}
+                </button>
                 {{/if}}
                 <div class="item-controls">
                   <a class="item-control" data-action="itemView" title="View"><i class="fas fa-eye"></i></a>
@@ -1310,6 +1343,15 @@
               <a class="item-control" data-action="itemChat" title="Post to Chat"><i class="fas fa-comment"></i></a>
               {{#if (eq item.type "scroll")}}
               <a class="item-control use-scroll-btn" data-action="itemUseScroll" title="Use Scroll"><i class="fas fa-scroll"></i></a>
+              {{/if}}
+              {{#if (or (eq item.type "staff") (eq item.type "wand"))}}
+              <a class="item-control use-implement-btn" data-action="itemUseImplement" title="Activate {{item.name}}"><i class="fas fa-bolt"></i></a>
+              {{/if}}
+              {{#if (eq item.type "rod")}}
+              <a class="item-control use-rod-btn" data-action="itemUseRod" title="Activate {{item.name}}"><i class="fas fa-wand-magic-sparkles"></i></a>
+              {{/if}}
+              {{#if (eq item.type "ring")}}
+              <a class="item-control use-ring-btn" data-action="itemUseRing" title="Activate {{item.name}}"><i class="fas fa-magic"></i></a>
               {{/if}}
               {{#if item.isUnidentified}}
               <a class="item-control identify-btn" data-action="itemIdentify" title="Attempt to Identify"><i class="fas fa-question-circle"></i></a>

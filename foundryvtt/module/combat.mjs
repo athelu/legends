@@ -6,6 +6,7 @@
 
 import { rollD8Check, showRollDialog, showSkillCheckDialog } from './dice.mjs';
 import * as featEffects from './feat-effects.mjs';
+import * as reactions from './reactions.mjs';
 
 /**
  * Roll a weapon attack with targeting support
@@ -269,19 +270,50 @@ export async function executeWeaponAttack(actor, weapon, attackMode, target) {
   let defaultModifier = 0;
   let defaultApplyToAttr = true;
   let defaultApplyToSkill = true;
+  let defaultFortune = 0;
+  let defaultMisfortune = 0;
 
   try {
+    const isRanged = attackMode.skill !== 'melee';
+    // Layer 1: permanent skill.modify dice modifiers (always-on per-skill)
     const featMods = featEffects.computeFeatModifiers(actor);
-    const skillModifier = featMods.skillDiceModifiers?.[skillKey];
-    if (skillModifier) {
-      defaultModifier = skillModifier.value || 0;
-      defaultApplyToAttr = !!skillModifier.applyToAttr;
-      defaultApplyToSkill = !!skillModifier.applyToSkill;
+    const skillDiceMod = featMods.skillDiceModifiers?.[skillKey];
+    if (skillDiceMod) {
+      defaultModifier = skillDiceMod.value || 0;
+      defaultApplyToAttr = !!skillDiceMod.applyToAttr;
+      defaultApplyToSkill = !!skillDiceMod.applyToSkill;
     }
+    // Layer 2: contextual roll.modifier / fortune.grant / misfortune.grant effects
+    const rollMods = featEffects.getFeatRollModifiers(actor, {
+      rollType: 'attack',
+      skillKey,
+      isRanged,
+    });
+    defaultModifier += rollMods.attrModifier;
+    defaultFortune = rollMods.fortune;
+    defaultMisfortune = rollMods.misfortune;
   } catch {
     // Ignore feat modifier lookup failures.
   }
-  
+
+  // Layer 3: weapon attack bonus / penalty (magic weapons)
+  // In the roll-under d8 system, bonus subtracts from die (easier), penalty adds (harder)
+  const weaponAttackBonus = Number(weapon.system?.attackBonus ?? 0);
+  const weaponAttackPenalty = Number(weapon.system?.attackPenalty ?? 0);
+  defaultModifier -= weaponAttackBonus;
+  defaultModifier += weaponAttackPenalty;
+
+  // Layer 4: conditional bonuses (e.g. "+1 vs beasts") based on targeted token's creature type
+  const targetCreatureType = target?.actor?.system?.creatureType ?? null;
+  if (targetCreatureType) {
+    const conditionalBonuses = weapon.system?.conditionalBonuses ?? [];
+    for (const cb of conditionalBonuses) {
+      if (cb.condition === targetCreatureType) {
+        defaultModifier -= Number(cb.value ?? 0);
+      }
+    }
+  }
+
   // Determine which attribute to use for attack roll
   // Melee: Agility, Ranged/Thrown: Dexterity
   const attrKey = attackMode.skill === 'melee' ? 'agility' : 'dexterity';
@@ -298,8 +330,8 @@ export async function executeWeaponAttack(actor, weapon, attackMode, target) {
     modifier: defaultModifier,
     defaultApplyToAttr,
     defaultApplyToSkill,
-    fortune: 0,
-    misfortune: 0,
+    fortune: defaultFortune,
+    misfortune: defaultMisfortune,
   };
   Hooks.call('preRollSkillCheck', rollData);
   
@@ -411,6 +443,8 @@ async function createAttackChatCard(options) {
         damageType: attackConfig.damageType,
         damageAttr: attackConfig.damageAttr,
         defenseType: attackMode.defenseType,
+        damageBonus: Number(weapon.system?.damageBonus ?? 0),
+        criticalDamageBonus: String(weapon.system?.criticalDamageBonus ?? '').trim(),
         attackRollMessageId: attackRollMessageId
       }
     }
@@ -520,6 +554,20 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
   // Get effective skill value (with bonuses from feats/abilities)
   const skill = defender.system.skillsEffective?.meleeCombat ?? defender.system.skills.meleeCombat ?? 0;
   const skillValue = typeof skill === 'object' ? (skill.value ?? skill) : skill;
+
+  // Feat roll modifiers for the defender on a defense roll
+  let defModifier = 0;
+  let defFortune = 0;
+  let defMisfortune = 0;
+  try {
+    const rollMods = featEffects.getFeatRollModifiers(defender, {
+      rollType: 'defense',
+      skillKey: 'meleeCombat',
+    });
+    defModifier = rollMods.attrModifier;
+    defFortune = rollMods.fortune;
+    defMisfortune = rollMods.misfortune;
+  } catch { /* ignore */ }
   
   await showSkillCheckDialog({
     actor: defender,
@@ -529,6 +577,9 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
     attrLabel: agility.label,
     skillLabel: 'Melee Defense',
     isSave: false,
+    defaultModifier: defModifier,
+    defaultFortune: defFortune,
+    defaultMisfortune: defMisfortune,
     onRollComplete: async (rollResult) => {
       // Wait for defense roll to post
       await new Promise(resolve => setTimeout(resolve, 100));
@@ -695,7 +746,42 @@ async function calculateDamage(attackData, attackMessageId, defenseRollMessage, 
     damageAmount = attackData.baseDamage + attrValue;
     damageDescription = `${damageAmount} ${attackData.damageType} damage (base ${attackData.baseDamage} + ${attrValue} ${attackData.damageAttr})`;
   }
-  
+
+  // Apply feat damage bonuses (damage.bonus effects keyed by scope)
+  if (damageAmount > 0) {
+    const featBonus = attacker.system.damage?.featBonus || {};
+    const isRangedAtk = attackData.attackMode?.type === 'ranged';
+    const bonusAll    = Number(featBonus.all    || 0);
+    const bonusMelee  = !isRangedAtk ? Number(featBonus.melee   || 0) : 0;
+    const bonusRanged =  isRangedAtk ? Number(featBonus.ranged  || 0) : 0;
+    const totalFeatDmg = bonusAll + bonusMelee + bonusRanged;
+    if (totalFeatDmg !== 0) {
+      damageAmount += totalFeatDmg;
+      damageDescription += ` (+${totalFeatDmg} feat bonus)`;
+    }
+
+    // Apply flat weapon damage bonus (magic weapons)
+    const weaponDmgBonus = Number(attackData.damageBonus ?? 0);
+    if (weaponDmgBonus !== 0) {
+      damageAmount += weaponDmgBonus;
+      damageDescription += ` (+${weaponDmgBonus} weapon bonus)`;
+    }
+
+    // Apply critical damage bonus (e.g. Moon's Edge: +1d8 on double-1s)
+    const critFormula = String(attackData.criticalDamageBonus ?? '').trim();
+    if (critFormula && attackRollData?.criticalSuccess) {
+      try {
+        const critRoll = await new Roll(critFormula).evaluate();
+        if (game.dice3d) await game.dice3d.showForRoll(critRoll, game.user, true);
+        const critGained = Math.round(critRoll.total);
+        damageAmount += critGained;
+        damageDescription += ` (+${critGained} critical [${critFormula}])`;
+      } catch (err) {
+        console.warn(`legends | Failed to evaluate criticalDamageBonus formula "${critFormula}":`, err);
+      }
+    }
+  }
+
   // Apply shield effect (if any)
   let _shieldNote = '';
   if (shieldEffect && shieldEffect.applied && (shieldEffect.reduction || shieldEffect.reduction === 0)) {
@@ -704,6 +790,38 @@ async function calculateDamage(attackData, attackMessageId, defenseRollMessage, 
     damageAmount = Math.max(0, damageAmount - red);
     damageDescription += ` (reduced by ${red} from shield${shieldEffect.reason ? `: ${shieldEffect.reason}` : ''})`;
     _shieldNote = `<div class="shield-note"><strong>Shield:</strong> ${shieldEffect.reason || ''} (-${red} damage)</div>`;
+  }
+
+  // Build on-hit feat effect buttons (Cat 5)
+  let onHitButtonsHtml = '';
+  if (damageAmount > 0 || margin >= 1) {
+    const hitButtons = featEffects.getOnHitButtons(attacker, {
+      margin,
+      targetId: attackData.targetId,
+      attackMode: attackData.attackMode,
+      weapon: null,  // weapon item not available here; equipment check uses actor items
+    });
+    if (hitButtons.length > 0) {
+      const btns = hitButtons.map(btn => {
+        const dataJson = encodeURIComponent(JSON.stringify(btn));
+        return `<button class="legends-hit-btn" data-hit-btn="${dataJson}">` +
+          `<i class="${btn.icon || 'fas fa-bolt'}"></i> ${btn.featName}` +
+          (btn.note ? ` <small>${btn.note}</small>` : '') +
+          `</button>`;
+      }).join('');
+      const dragChipsHtml = _buildHitDragChipsHtml(hitButtons, attacker.id);
+      onHitButtonsHtml = `<div class="on-hit-effects"><strong>On-Hit Effects:</strong><div class="hit-btn-list">${btns}</div>${dragChipsHtml}</div>`;
+    }
+  }
+
+  // Build reaction buttons (Cat 4) — for the defender's active reactions
+  let reactionButtonsHtml = '';
+  try {
+    reactionButtonsHtml = reactions.buildReactionButtonsHtml(
+      attacker, defender, margin, attackData.attackMode, damageAmount, attackData.damageType
+    );
+  } catch (err) {
+    console.error('Legends | Error building reaction buttons:', err);
   }
 
   // Create comparison result card
@@ -737,6 +855,8 @@ async function calculateDamage(attackData, attackMessageId, defenseRollMessage, 
           </button>
         </div>
       ` : ''}
+      ${onHitButtonsHtml}
+      ${reactionButtonsHtml}
     </div>
   `;
   
@@ -785,7 +905,28 @@ function calculateEffectiveDR(target, damageType) {
   
   // Add any bonus DR (legacy field)
   effectiveDR += target.system.dr?.bonus || 0;
-  
+
+  // Add temporary DR bonus set by Guardian's Protection reaction
+  const tempDRBonus = target.getFlag?.('legends', 'tempDRBonus');
+  if (tempDRBonus > 0) {
+    effectiveDR += tempDRBonus;
+    // Consume the bonus — it applies once per attack
+    target.unsetFlag?.('legends', 'tempDRBonus').catch(() => {});
+  }
+
+  // Subtract persistent DR reduction (Shattering Blow — rest of combat)
+  const persistentDRReduction = target.getFlag?.('legends', 'drReduction') ?? 0;
+  if (persistentDRReduction > 0) {
+    effectiveDR = Math.max(0, effectiveDR - persistentDRReduction);
+  }
+
+  // Subtract one-shot DR reduction (Crushing Advance — this attack only)
+  const onceDRReduction = target.getFlag?.('legends', 'drReductionOnce') ?? 0;
+  if (onceDRReduction > 0) {
+    effectiveDR = Math.max(0, effectiveDR - onceDRReduction);
+    target.unsetFlag?.('legends', 'drReductionOnce').catch(() => {});
+  }
+
   return effectiveDR;
 }
 
@@ -851,7 +992,10 @@ export async function applyDamage(targetId, damage, damageType) {
   const newHP = Math.max(0, currentHP - finalDamage);
   
   await target.update({ 'system.hp.value': newHP });
-  
+
+  // Emit HP change hook — triggers 0-HP reaction prompts (Cat 4)
+  Hooks.call('legends.hpChanged', { target, oldHP: currentHP, newHP });
+
   ui.notifications.info(
     `${target.name} takes ${finalDamage} ${damageType} damage${dr > 0 ? ` (${damage} - ${dr} DR` : ''}${resistance > 0 ? ` - ${resistance} resist` : ''}${dr > 0 ? `)` : ''}`
   );
@@ -866,6 +1010,52 @@ export async function applyDamage(targetId, damage, damageType) {
       </div>
     `
   });
+}
+
+/**
+ * Build draggable condition chip HTML for on-hit feat effects.
+ * Returns an HTML string for a row of chips that can be dragged onto tokens.
+ * Only emits chips for actions that result in a named condition/effect.
+ *
+ * @param {Array} hitButtons - Descriptor objects from getOnHitButtons()
+ * @param {string} attackerId - The attacking actor's ID (used as origin)
+ * @returns {string} HTML string, or '' if no chips to show
+ */
+function _buildHitDragChipsHtml(hitButtons, attackerId) {
+  const chips = [];
+  for (const btn of hitButtons) {
+    if ((btn.action === 'apply') && btn.condition) {
+      chips.push({ condition: btn.condition, featName: btn.featName, icon: btn.icon, note: null });
+    } else if (btn.action === 'save' && btn.condition) {
+      chips.push({ condition: btn.condition, featName: btn.featName, icon: btn.icon, note: `on failed ${btn.saveType} save` });
+    } else if (btn.action === 'choice' && Array.isArray(btn.choices)) {
+      for (const choice of btn.choices) {
+        chips.push({ condition: choice, featName: btn.featName, icon: btn.icon, note: btn.featName });
+      }
+    }
+    // eldritch, dr-reduce, damage, free-attack: no drag chip
+  }
+  if (chips.length === 0) return '';
+
+  const chipHtml = chips.map(c => {
+    const safeCondition = c.condition.replace(/"/g, '&quot;');
+    const safeFeatName  = c.featName.replace(/"/g, '&quot;');
+    return `<span class="draggable-effect hit-condition-chip"` +
+      ` draggable="true"` +
+      ` data-effect-id="${safeCondition}"` +
+      ` data-operation="apply"` +
+      ` data-source-type="item"` +
+      ` data-actor-id="${attackerId}"` +
+      ` data-item-name="${safeFeatName}"` +
+      ` data-params="{}"` +
+      ` title="Drag onto token to apply ${safeCondition}"` +
+      `><i class="${c.icon || 'fas fa-bolt'}"></i>` +
+      `<span>${c.condition}</span>` +
+      (c.note ? `<span class="drag-hint">${c.note}</span>` : '') +
+      `</span>`;
+  }).join('');
+
+  return `<div class="hit-drag-chips">${chipHtml}</div>`;
 }
 
 /**
@@ -1032,5 +1222,196 @@ export function initializeCombatSystem() {
         event.dataTransfer.setData('text/plain', JSON.stringify(dragData));
       });
     });
+
+    // ── Cat 4: Reaction buttons ──────────────────────────────────────────────
+    html.querySelectorAll('.legends-reaction-btn').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.preventDefault();
+        let cfg;
+        try { cfg = JSON.parse(decodeURIComponent(btn.dataset.reaction)); } catch { return; }
+        if (game.legends?.reactions?.resolveReaction) {
+          await game.legends.reactions.resolveReaction(cfg);
+        }
+      });
+    });
+
+    // ── Cat 5: On-hit feat effect buttons ───────────────────────────────────
+    html.querySelectorAll('.legends-hit-btn').forEach(btn => {
+      btn.addEventListener('click', async (event) => {
+        event.preventDefault();
+        let cfg;
+        try { cfg = JSON.parse(decodeURIComponent(btn.dataset.hitBtn)); } catch { return; }
+
+        const target = _resolveActor(cfg.targetId);
+        const attacker = _resolveActor(cfg.attackerId);
+        if (!target) { ui.notifications.warn('Target actor not found.'); return; }
+
+        switch (cfg.action) {
+          case 'apply':
+            await _hitApplyCondition(target, cfg.condition, cfg.featName, attacker);
+            break;
+
+          case 'choice':
+            await _hitChoiceDialog(target, cfg.choices, cfg.featName, attacker);
+            break;
+
+          case 'save':
+            await _hitSaveAndApply(target, cfg.saveType, cfg.condition, cfg.featName, attacker);
+            break;
+
+          case 'eldritch':
+            await _hitEldritchFlag(target, attacker);
+            break;
+
+          case 'dr-reduce':
+            await _hitDrReduce(target, cfg.value ?? 2, cfg.featName, attacker, cfg.persistent ?? false);
+            break;
+
+          case 'damage':
+            await _hitBonusDamage(target, attacker, cfg.featName);
+            break;
+
+          case 'free-attack':
+            await ChatMessage.create({
+              speaker: ChatMessage.getSpeaker({ actor: attacker }),
+              content: `<p><strong>${attacker?.name ?? 'Attacker'}</strong> may make a free [Combat] attack on an adjacent creature (<em>${cfg.featName}</em>).</p>`,
+            });
+            break;
+
+          default:
+            ui.notifications.warn(`Unknown on-hit action: ${cfg.action}`);
+        }
+      });
+    });
+  });
+
+  // Clear persistent combat flags when combat ends
+  Hooks.on('deleteCombat', async (combat) => {
+    for (const combatant of combat.combatants ?? []) {
+      const actor = combatant.actor;
+      if (!actor) continue;
+      const dr = actor.getFlag?.('legends', 'drReduction');
+      if (dr !== undefined && dr !== null) {
+        await actor.unsetFlag('legends', 'drReduction').catch(() => {});
+      }
+      const eldritch = actor.getFlag?.('legends', 'eldritchStrike');
+      if (eldritch !== undefined && eldritch !== null) {
+        await actor.unsetFlag('legends', 'eldritchStrike').catch(() => {});
+      }
+    }
+  });
+}
+
+/** Resolve an actor by ID, checking canvas tokens first then the actor directory. */
+function _resolveActor(id) {
+  if (!id) return null;
+  return canvas.tokens?.placeables.find(t => t.actor?.id === id)?.actor
+    ?? game.actors.get(id)
+    ?? null;
+}
+
+/** Directly apply a condition to the target and post a chat confirmation. */
+async function _hitApplyCondition(target, conditionName, featName, attacker) {
+  if (!conditionName) return;
+  // "Disarmed" has no pack entry — post a narrative message instead
+  if (conditionName === 'Disarmed') {
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: attacker }),
+      content: `<p><em>${featName}</em>: <strong>${target.name}</strong> must drop their held item.</p>`,
+    });
+    return;
+  }
+  await game.legends.applyCondition(target, conditionName, { source: featName });
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content: `<p><em>${featName}</em>: Applied <strong>${conditionName}</strong> to ${target.name}.</p>`,
+  });
+}
+
+/** Open a dialog letting the attacker choose which condition to apply. */
+async function _hitChoiceDialog(target, choices, featName, attacker) {
+  if (!choices?.length) return;
+  const buttons = choices.map(c => ({
+    action: c,
+    label: c,
+    callback: async () => {
+      await _hitApplyCondition(target, c, featName, attacker);
+    },
+  }));
+  await foundry.applications.api.DialogV2.wait({
+    window: { title: `${featName} — choose effect` },
+    rejectClose: false,
+    content: `<p>Apply to <strong>${target.name}</strong>:</p>`,
+    buttons,
+  });
+}
+
+/**
+ * Prompt the target's controller to roll a save;
+ * on 0 successes apply the condition, otherwise post a resist message.
+ */
+async function _hitSaveAndApply(target, saveType, conditionName, featName, attacker) {
+  if (!target.isOwner && !game.user.isGM) {
+    ui.notifications.warn(`Ask ${target.name}'s player to roll a ${saveType} save for ${featName}.`);
+    return;
+  }
+  const result = await game.legends.rollSavingThrow(target, saveType, {
+    flavor: `${featName} — ${saveType} save`,
+  });
+  if (!result) return; // cancelled
+  const successes = result.successes ?? 0;
+  if (successes === 0) {
+    await _hitApplyCondition(target, conditionName, featName, attacker);
+  } else {
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: target }),
+      content: `<p><strong>${target.name}</strong> resists <em>${featName}</em> (${successes} success${successes !== 1 ? 'es' : ''}).</p>`,
+    });
+  }
+}
+
+/** Set the eldritchStrike flag on the target actor so the next weave roll picks it up. */
+async function _hitEldritchFlag(target, attacker) {
+  await target.setFlag('legends', 'eldritchStrike', {
+    sourceActorId: attacker?.id ?? null,
+    timestamp: Date.now(),
+  });
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content: `<p><em>Eldritch Strike:</em> <strong>${target.name}</strong>'s next saving throw against a weave adds +1 to both dice.</p>`,
+  });
+}
+
+/** Apply a DR-reduction flag to the target (Crushing Advance / Shattering Blow). */
+async function _hitDrReduce(target, value, featName, attacker, persistent = false) {
+  if (persistent) {
+    // Shattering Blow: persistent for rest of combat
+    const existing = target.getFlag('legends', 'drReduction') ?? 0;
+    await target.setFlag('legends', 'drReduction', Math.max(existing, value));
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: attacker }),
+      content: `<p><em>${featName}:</em> <strong>${target.name}</strong>'s DR is reduced by ${value} for the remainder of combat.</p>`,
+    });
+  } else {
+    // Crushing Advance: applies to the next damage application only
+    const existing = target.getFlag('legends', 'drReductionOnce') ?? 0;
+    await target.setFlag('legends', 'drReductionOnce', Math.max(existing, value));
+    await ChatMessage.create({
+      speaker: ChatMessage.getSpeaker({ actor: attacker }),
+      content: `<p><em>${featName}:</em> <strong>${target.name}</strong>'s DR is reduced by ${value} for this attack.</p>`,
+    });
+  }
+}
+
+/** Post a prompt to apply Dual Strike bonus Strength damage. */
+async function _hitBonusDamage(target, attacker, featName) {
+  const strValue = attacker?.system?.attributes?.strength?.value
+    ?? attacker?.system?.attributesEffective?.strength
+    ?? 0;
+  await ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: attacker }),
+    content: `<p><em>${featName}:</em> Both TWF attacks hit — bonus <strong>${strValue} Strength damage</strong> to ${target.name}.</p>` +
+      `<button class="apply-damage-btn" data-target-id="${target.id}" data-damage="${strValue}" data-damage-type="physical">` +
+      `<i class="fas fa-heart-broken"></i> Apply ${strValue} Bonus Damage</button>`,
   });
 }

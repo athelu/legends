@@ -1,0 +1,47 @@
+{
+  "_id": "ab43fd54c76392dd",
+  "name": "Shattering Blow",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>There is a point past which armor stops being protection and starts being a liability.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 6
+      },
+      "skills": "meleeCombat:6",
+      "feats": [
+        "Overwhelming Force"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per short rest when you hit with a [Two-Handed] weapon at Margin 2, you may declare a Shattering Blow. The target's DR is reduced by 4 for the remainder of the combat, in addition to the normal DR reduction from Crushing Advance. This reduction applies to all damage sources, not just your attacks. Multiple Shattering Blows against the same target do not stack.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "shortRest",
+        "formula": "1"
+      },
+      "text": "Once per short rest"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Two-Handed]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!ab43fd54c76392dd"
+}

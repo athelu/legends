@@ -1,0 +1,170 @@
+{
+  "_id": "a545f06772b89dc6",
+  "name": "Rift Warden",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>The Rift Warden is described in summoning records as something that has existed between planes long enough that the plane it came from has become secondary to what it has become. Its Partial Discontinuity means it absorbs roughly 25% fewer hits than its HP would suggest — attacks that land occasionally strike portions of it that are not, in that moment, present. Spatial Dominion locks down a 60-foot zone in ways that disadvantage every conventional fighting approach simultaneously. Eye Rays on recharge hits every target in a cone with different effects, meaning the outcome of its activation depends on what the specific targets roll. The Enhanced Signal damages and drains every non-Aberration creature within 60 feet per round, which means positioning allies is a significant tactical concern when a Rift Warden is on the field. A summoner who calls one should prepare for a battlefield that has fundamentally changed in spatial terms — the rules that normally govern movement, range, and tactical positioning are operating differently in its presence.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 7,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 8,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 8,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 7,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 7,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 192,
+      "max": 192,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 7,
+      "max": 7
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 6,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 6,
+      "thievery": 0,
+      "rangedCombat": 7,
+      "arcane": 8,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 8,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 30,
+      "fly": 70,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "",
+    "hpMultiplier": 32,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision unlimited, Seam Sense unlimited, See Invisibility, Truesight 120 ft, Perfect Sight 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Rift Eye [Combat]:</strong> Ranged attack (Dex 7 + Ranged Combat 7), Range: 150 ft\n<ul>\n<li><em>Net 1:</em> 18 force damage (Ignore DR); target loses 4 Current Luck; target makes Will save (1 success) or Confused for 1 minute; target's DR reduced by 3 for 1 minute</li>\n<li><em>Net 2:</em> 30 force damage; Current Luck reduced by 6; Confused without save for 1 minute; DR reduced by 4; target loses their next [Reaction]</li>\n<li><em>Net 3:</em> 30 force damage; Current Luck reduced by 8; Confused; DR reduced by 5; reaction loss; target makes Will save (Hard task, 2 successes) or one of their current weaves or magical abilities becomes unavailable for 1 hour — the spatial disruption severs their connection to that specific capability</li>\n</ul></li>\n<li><strong>Eye Rays (Recharge 5-8) [Combat]:</strong> The Rift Warden fires rays from multiple eyes in a 60-foot cone. Each creature in the cone is subjected to the effects of one randomly determined eye: (1) Disorientation — Disoriented for 1 minute, no save; (2) Spatial Crush — 24 force damage (Ignore DR); (3) Luck Drain — lose 6 Current Luck; (4) Ability Severance — lose access to one magical ability for 1 hour, Will save (Hard, 2 successes) to resist; (5) Petrification — Fortitude save (1 success) or Slowed for 1 minute (2 actions instead of 3); (6) Spatial Shunt — teleported 1d6 × 20 feet in a random direction, Fortitude save (1 success) to resist. Roll once per creature, separately.</li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Partial Discontinuity:</strong> The Rift Warden's body exists partially between planes — portions of it occupy the Space between planes at any given moment. Attacks against it have a 25% chance (roll 6-8 on d8) of passing through a discontinuous portion and dealing no damage. This is determined per hit, after the attack resolves. Area effects are not subject to this — they are too spatially large to miss the parts that are present.</li>\n<li><strong>The Signal (Enhanced):</strong> As Voidcaller's Signal but 60-foot radius, 12 force damage (Ignore DR), and lose 3 Current Luck per round. Creatures reduced to 0 Current Luck fall Unconscious for 8 hours.</li>\n<li><strong>Spatial Dominion (1/day) [Combat]:</strong> As a [Combat] action, the Rift Warden asserts control over the spatial fabric in a 60-foot radius for 1 minute. Within this zone: all teleportation is blocked (as Rift Anchor); difficult terrain costs triple movement; all ranged attacks beyond 30 feet add 2 to both attack dice; the Rift Warden's own movement costs are halved. The Rift Warden cannot be moved out of this zone involuntarily while it persists.</li>\n<li><strong>Antimagic Gaze (1/encounter) [Combat]:</strong> As a [Combat] action, fixes its gaze on a single target within 60 feet. That target's magical abilities are suppressed for 1 round — they cannot use weaves, magical abilities, or magical items. No save. At the end of the round, normal function resumes.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Rift Warden",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!a545f06772b89dc6"
+}

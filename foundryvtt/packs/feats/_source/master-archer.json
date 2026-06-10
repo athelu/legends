@@ -38,7 +38,13 @@
       "[Ranged]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "damage.bonus",
+        "target": "ranged",
+        "value": 2
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!1bfee36535e95e61"

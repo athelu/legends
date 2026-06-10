@@ -9,7 +9,7 @@ import { SKILL_LABELS } from '../skill-utils.mjs';
 const { ItemSheetV2 } = foundry.applications.sheets;
 const { HandlebarsApplicationMixin } = foundry.applications.api;
 const ITEM_TEMPLATE_ROOT = "systems/legends/templates/item";
-const PHYSICAL_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment', 'scroll']);
+const PHYSICAL_ITEM_TYPES = new Set(['weapon', 'armor', 'shield', 'equipment', 'scroll', 'rod', 'staff', 'wand', 'ring']);
 const VALID_CARRY_STATES = new Set(['', 'carried', 'equipped', 'container', 'mounted']);
 const CONTAINER_PROFILE_OPTIONS = [
   { value: 'frame', label: 'Frame Container (50% contents weight)' },
@@ -203,6 +203,12 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     options.window.title = this.title;
     if (["armor", "shield"].includes(this.document.type)) {
       options.position = { width: 620, height: 720 };
+    }
+    if (["rod", "staff", "wand"].includes(this.document.type)) {
+      options.position = { width: 580, height: 640 };
+    }
+    if (this.document.type === 'ring') {
+      options.position = { width: 500, height: 560 };
     }
   }
 
@@ -449,6 +455,10 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       };
     }
 
+    if (this.document.type === 'ring') {
+      context.isOwned = Boolean(this.document.parent);
+    }
+
     return context;
   }
 
@@ -570,6 +580,40 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
     if (this.document.type === 'weapon') {
       if (typeof expanded.system?.reload !== 'string') expanded.system.reload = '';
       if (typeof expanded.system?.requirements !== 'string') expanded.system.requirements = '';
+
+      // Magic weapon properties
+      expanded.system.attackBonus          = Math.max(0, Number(expanded.system?.attackBonus)  || 0);
+      expanded.system.damageBonus          = Math.max(0, Number(expanded.system?.damageBonus)  || 0);
+      expanded.system.attackPenalty        = Math.max(0, Number(expanded.system?.attackPenalty) || 0);
+      expanded.system.damagePenalty        = Math.max(0, Number(expanded.system?.damagePenalty) || 0);
+      expanded.system.criticalDamageBonus  = String(expanded.system?.criticalDamageBonus ?? '').trim();
+
+      // Passive effects — convert numeric-keyed object back to array (Foundry form serialization)
+      if (expanded.system?.passiveEffects && !Array.isArray(expanded.system.passiveEffects)) {
+        const obj = expanded.system.passiveEffects;
+        expanded.system.passiveEffects = Object.keys(obj)
+          .sort((a, b) => Number(a) - Number(b))
+          .map(k => obj[k]);
+      }
+      if (!Array.isArray(expanded.system?.passiveEffects)) expanded.system.passiveEffects = [];
+      expanded.system.passiveEffects = expanded.system.passiveEffects
+        .map(pe => ({ effectId: String(pe?.effectId || '').trim() }))
+        .filter(pe => pe.effectId);
+
+      // Conditional bonuses — convert numeric-keyed object back to array (Foundry form serialization)
+      if (expanded.system?.conditionalBonuses && !Array.isArray(expanded.system.conditionalBonuses)) {
+        const obj = expanded.system.conditionalBonuses;
+        expanded.system.conditionalBonuses = Object.keys(obj)
+          .sort((a, b) => Number(a) - Number(b))
+          .map(k => obj[k]);
+      }
+      if (!Array.isArray(expanded.system?.conditionalBonuses)) expanded.system.conditionalBonuses = [];
+      expanded.system.conditionalBonuses = expanded.system.conditionalBonuses
+        .map(cb => ({
+          value: Math.max(0, Number(cb?.value) || 0),
+          condition: String(cb?.condition || '').trim().toLowerCase()
+        }))
+        .filter(cb => cb.condition && cb.value > 0);
 
       const firstRangedMode = Array.isArray(expanded.system?.attackModes)
         ? expanded.system.attackModes.find(mode => ['ranged', 'thrown'].includes(mode?.type))
@@ -914,6 +958,98 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       }
     }
 
+    if (['rod', 'staff', 'wand'].includes(this.document.type)) {
+      // Charges
+      if (!expanded.system?.charges || typeof expanded.system.charges !== 'object' || Array.isArray(expanded.system.charges)) {
+        expanded.system.charges = {};
+      }
+      expanded.system.charges.value = Math.max(0, Number(expanded.system.charges.value) || 0);
+      expanded.system.charges.max   = Math.max(0, Number(expanded.system.charges.max) || 0);
+      expanded.system.charges.recharge = String(expanded.system.charges.recharge || '').trim();
+      const validPeriods = ['dawn', 'dusk', 'shortRest', 'longRest', 'never'];
+      if (!validPeriods.includes(expanded.system.charges.rechargePeriod)) {
+        expanded.system.charges.rechargePeriod = 'dawn';
+      }
+
+      // Granted weaves — convert numeric-keyed object back to array
+      if (expanded.system?.grantedWeaves && !Array.isArray(expanded.system.grantedWeaves)) {
+        const obj = expanded.system.grantedWeaves;
+        expanded.system.grantedWeaves = Object.keys(obj)
+          .sort((a, b) => Number(a) - Number(b))
+          .map(k => obj[k]);
+      }
+      if (!Array.isArray(expanded.system?.grantedWeaves)) {
+        expanded.system.grantedWeaves = [];
+      }
+      expanded.system.grantedWeaves = expanded.system.grantedWeaves
+        .map(w => ({
+          name:        String(w?.name || '').trim(),
+          chargeCost:  Math.max(0, Number(w?.chargeCost) || 0),
+          description: String(w?.description || '').trim(),
+        }))
+        .filter(w => w.name);
+
+      // Attack bonus
+      expanded.system.attackBonus = Number(expanded.system.attackBonus) || 0;
+
+      // Primary energy
+      const validEnergies = ['', 'earth', 'air', 'fire', 'water', 'positive', 'negative', 'space', 'time'];
+      if (!validEnergies.includes(expanded.system?.primaryEnergy)) {
+        expanded.system.primaryEnergy = '';
+      }
+
+      // Damage (staff and rod only; wand has no damage field)
+      if (this.document.type !== 'wand' && expanded.system?.damage && typeof expanded.system.damage === 'object') {
+        expanded.system.damage.base = Math.max(0, Number(expanded.system.damage.base) || 0);
+        expanded.system.damage.type = String(expanded.system.damage.type || '').trim().toLowerCase();
+      }
+
+      // Rarity / binding / notes
+      expanded.system.requiresBinding = Boolean(expanded.system?.requiresBinding);
+      expanded.system.rarity = String(expanded.system?.rarity || '').trim();
+      expanded.system.notes  = String(expanded.system?.notes  || '').trim();
+    }
+
+    if (this.document.type === 'ring') {
+      // Sanitize ring charges
+      if (!expanded.system?.charges || typeof expanded.system.charges !== 'object' || Array.isArray(expanded.system.charges)) {
+        expanded.system.charges = {};
+      }
+      expanded.system.charges.value = Math.max(0, Number(expanded.system.charges.value) || 0);
+      expanded.system.charges.max   = Math.max(0, Number(expanded.system.charges.max) || 0);
+      const validRingPeriods = ['shortRest', 'longRest', 'never'];
+      if (!validRingPeriods.includes(expanded.system.charges.rechargePeriod)) {
+        expanded.system.charges.rechargePeriod = 'longRest';
+      }
+
+      // Granted weaves — convert numeric-keyed object back to array
+      if (expanded.system?.grantedWeaves && !Array.isArray(expanded.system.grantedWeaves)) {
+        const obj = expanded.system.grantedWeaves;
+        expanded.system.grantedWeaves = Object.keys(obj)
+          .sort((a, b) => Number(a) - Number(b))
+          .map(k => obj[k]);
+      }
+      if (!Array.isArray(expanded.system?.grantedWeaves)) {
+        expanded.system.grantedWeaves = [];
+      }
+      expanded.system.grantedWeaves = expanded.system.grantedWeaves
+        .map(w => ({
+          name:        String(w?.name || '').trim(),
+          chargeCost:  Math.max(0, Number(w?.chargeCost) || 0),
+          description: String(w?.description || '').trim(),
+        }))
+        .filter(w => w.name);
+
+      const validEnergies = ['', 'earth', 'air', 'fire', 'water', 'positive', 'negative', 'space', 'time'];
+      if (!validEnergies.includes(expanded.system?.primaryEnergy)) {
+        expanded.system.primaryEnergy = '';
+      }
+      expanded.system.requiresBinding = Boolean(expanded.system?.requiresBinding);
+      expanded.system.bound = Boolean(expanded.system?.bound);
+      expanded.system.rarity = String(expanded.system?.rarity || '').trim();
+      expanded.system.notes  = String(expanded.system?.notes  || '').trim();
+    }
+
     if (this.document.type === 'scroll') {
       if (!expanded.system?.sourceWeave || typeof expanded.system.sourceWeave !== 'object') {
         expanded.system.sourceWeave = {};
@@ -939,6 +1075,10 @@ export class D8ItemSheet extends HandlebarsApplicationMixin(ItemSheetV2) {
       }
       expanded.system.unidentifiedName = String(expanded.system?.unidentifiedName || '').trim();
       expanded.system.unidentifiedDescription = String(expanded.system?.unidentifiedDescription || '').trim();
+      const VALID_BODY_SLOTS = ['', 'head', 'eyes', 'neck', 'shoulders', 'chest', 'wrists', 'hands', 'ring', 'waist', 'feet', 'none', 'curio'];
+      if (!VALID_BODY_SLOTS.includes(expanded.system?.bodySlot)) expanded.system.bodySlot = '';
+      expanded.system.requiresBinding = Boolean(expanded.system?.requiresBinding);
+      expanded.system.bound = Boolean(expanded.system?.bound);
     }
 
     // Flatten back and return
@@ -1198,6 +1338,60 @@ export class D8WeaveItemSheet extends D8ItemSheet {
   };
 }
 
+export class D8ImplementItemSheet extends D8ItemSheet {
+  static DEFAULT_OPTIONS = {
+    ...D8ItemSheet.DEFAULT_OPTIONS,
+    actions: {
+      ...D8ItemSheet.DEFAULT_OPTIONS?.actions,
+      useGrantedWeave: D8ImplementItemSheet.#onUseGrantedWeave,
+    },
+  };
+
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-implement-sheet.hbs` }
+  };
+
+  static async #onUseGrantedWeave(event, target) {
+    event.stopPropagation();
+    const actor = this.document.parent;
+    if (!actor) {
+      ui.notifications.warn('This implement must be owned by an actor to be used.');
+      return;
+    }
+    const weaveIndex = Number(target.dataset.weaveIndex ?? -1);
+    const weave = this.document.system?.grantedWeaves?.[weaveIndex];
+    if (!weave) return;
+    return game.legends.implementUse.useImplementWeave(actor, this.document, weave);
+  }
+}
+
+export class D8RingItemSheet extends D8ItemSheet {
+  static DEFAULT_OPTIONS = {
+    ...D8ItemSheet.DEFAULT_OPTIONS,
+    actions: {
+      ...D8ItemSheet.DEFAULT_OPTIONS?.actions,
+      useGrantedWeave: D8RingItemSheet.#onUseGrantedWeave,
+    },
+  };
+
+  static PARTS = {
+    sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-ring-sheet.hbs` }
+  };
+
+  static async #onUseGrantedWeave(event, target) {
+    event.stopPropagation();
+    const actor = this.document.parent;
+    if (!actor) {
+      ui.notifications.warn('This ring must be owned by an actor to be used.');
+      return;
+    }
+    const weaveIndex = Number(target.dataset.weaveIndex ?? -1);
+    const weave = this.document.system?.grantedWeaves?.[weaveIndex];
+    if (!weave) return;
+    return game.legends.implementUse.useRingWeave(actor, this.document, weave);
+  }
+}
+
 export class D8ScrollItemSheet extends D8ItemSheet {
   static PARTS = {
     sheet: { template: `${ITEM_TEMPLATE_ROOT}/item-scroll-sheet.hbs` }
@@ -1220,5 +1414,9 @@ export const ITEM_SHEET_CLASS_MAP = {
   trait: D8TraitItemSheet,
   weapon: D8WeaponItemSheet,
   weave: D8WeaveItemSheet,
+  rod:    D8ImplementItemSheet,
+  staff:  D8ImplementItemSheet,
+  wand:   D8ImplementItemSheet,
+  ring:   D8RingItemSheet,
   effect: D8ItemSheet,
 };

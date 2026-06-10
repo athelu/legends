@@ -1,0 +1,47 @@
+{
+  "_id": "f426d8d558684bf4",
+  "name": "Relentless Impact",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Every swing lands with enough force that even a clean block costs something.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 5
+      },
+      "skills": "meleeCombat:5",
+      "feats": [
+        "Crushing Advance"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your DR reduction from Crushing Advance increases to 4. Additionally when you hit with a [Two-Handed] weapon at Margin 2, the target cannot use reactions until the start of their next turn.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Two-Handed]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!f426d8d558684bf4"
+}

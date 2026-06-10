@@ -24,35 +24,32 @@
     "target": "cone",
     "savingThrow": "reflex",
     "effect": "A blast of cold air erupts from your hands. All creatures in a 60-foot cone take 40 cold damage. Each target takes the full listed damage and makes their own save.",
-    "effectType": "utility",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
+      "base": 40,
+      "type": "cold",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "appliesEffects": false,
-          "description": "Fails",
-          "duration": null
+          "damage": 0,
+          "description": "Fails"
         },
         "1": {
-          "appliesEffects": true,
-          "description": "Half damage (20)",
-          "duration": "Half damage (20)"
+          "damage": 20,
+          "description": "half damage"
         },
         "2": {
-          "appliesEffects": true,
-          "description": "Full damage (40)",
-          "duration": "Full damage (40)"
+          "damage": 40,
+          "description": "full damage"
         },
         "3": {
-          "appliesEffects": true,
-          "description": "Enhanced damage (48) + Slowed (minor)",
-          "duration": "Enhanced damage (48) + Slowed (minor)"
+          "damage": 48,
+          "description": "Enhanced damage + applies effects",
+          "appliesEffects": true
         }
       }
     },
-    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + Slowed (minor)",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + applies effects",
     "weavingRoll": "Water Potential + Water Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
@@ -64,6 +61,7 @@
     "deliveryMethod": "save",
     "tags": [
       "aoe",
+      "offensive",
       "ranged",
       "ritual"
     ]

@@ -1,0 +1,170 @@
+{
+  "_id": "1e0fd702daca1acd",
+  "name": "Forest Sovereign",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Forest Sovereign is not a creature a summoner commands. It is a being of significant age and power that has agreed, for reasons of its own, to be present. Ancient Authority can Charm an entire encounter's worth of enemies simultaneously. Sovereign's Gaze applies permanent Charm at Margin 3 with no save. Verdant Aura heals designated allies every round without requiring any action. The Forest Sovereign will follow precise instructions phrased as a proper exchange — something offered, something received, terms stated explicitly. It will then execute those terms with the thoroughness of something that has been keeping careful accounts since before most of the summoner's ancestors were born. A summoner who understands this and negotiates accordingly will find the Forest Sovereign the most capable Fae ally available. One who does not will find it technically cooperative in ways that somehow, over time, trend toward the Forest Sovereign's interests rather than their own.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": true,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 1,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 8,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 8,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 8,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 7,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 200,
+      "max": 200,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 7,
+      "max": 7
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 8,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 8,
+      "acrobatics": 0,
+      "persuasion": 8,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 7,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 7,
+      "history": 0,
+      "perception": 8,
+      "empathy": 8
+    },
+    "size": "large",
+    "speed": {
+      "walk": 50,
+      "fly": 50,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fae",
+    "creatureSubtype": "bark-skin",
+    "hpMultiplier": 40,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Low-Light Vision, Truesight 120 ft, Tremorsense 1 mile (through roots and living plants)",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Branch Slam [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 12 damage (Large, standard: 10... adjusted to 12 for Fae vitality expression) + 8 psychic damage (Ignore DR)</li>\n<li><em>Margin 2:</em> 18 damage (12 + 6 Str) + 8 psychic damage; target Charmed for 1 hour — treats the Forest Sovereign as a trusted authority; Will save (Hard task, 2 successes) to resist; Charmed target will not attack the Forest Sovereign or its designated allies</li>\n<li><em>Margin 3:</em> 18 damage + 8 psychic damage + Charmed; no save; target also Restrained by animate roots for 1 minute as the Forest Sovereign's will reaches through the ground</li>\n</ul></li>\n<li><strong>Sovereign's Gaze [Combat]:</strong> Ranged attack (Cha 8 + Persuasion 8), Range: 60 ft — this is a social/magical attack, not a physical one\n<ul>\n<li>Net 1: Target Charmed for 1 minute; Will save (Hard task, 2 successes) to resist. Net 2: Target Charmed for 1 hour; no save; target also cannot intentionally harm any creature the Forest Sovereign has designated as protected. Net 3: Target Charmed permanently until the Forest Sovereign chooses to release them or they receive Major Restoration; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Forest Domain:</strong> In natural terrain, communicates with all plants and beasts within 1 mile. Animates roots and vines in a 40-foot radius as a [Combat] action — area becomes Difficult Terrain and creatures within it make Reflex saves (1 success) each round or gain 1 Bleeding stack. Duration: 1 minute.</li>\n<li><strong>Verdant Aura:</strong> Allies designated by the Forest Sovereign within 30 feet regain 6 HP at the start of their turns. This includes the summoner.</li>\n<li><strong>Ancient Authority (1/encounter) [Combat]:</strong> As 2 [Combat] actions, addresses all creatures within 60 feet. Each creature that can hear it makes a Will save (Hard task, 2 successes). Failure: Charmed for 1 hour, treating the Forest Sovereign as a trusted sovereign whose reasonable instructions must be followed. 1 success: Charmed until end of their next turn only.</li>\n<li><strong>Fae Compact:</strong> As Court Noble, but the Forest Sovereign's definition of a fair exchange and the summoner's definition may differ significantly. The Forest Sovereign will not be cheated and remembers every interaction — across decades if necessary.</li>\n<li><strong>Sovereign's Resilience (3/day).</strong></li>\n<li><strong>Truesight 120 ft.</strong></li>\n<li><strong>Tremorsense 1 mile.</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Forest Sovereign",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!1e0fd702daca1acd"
+}

@@ -38,7 +38,12 @@
       "[General]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "hp.shortRest.bonus",
+        "formula": "constitution"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!bc19e89334863b2a"

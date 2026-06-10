@@ -24,35 +24,32 @@
     "target": "line",
     "savingThrow": "reflex",
     "effect": "A stroke of lightning forming a line 60 feet long and 5 feet wide blasts out from you. All creatures in the line take 28 lightning damage. Each target takes the full listed damage and makes their own save.",
-    "effectType": "control",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
+      "base": 28,
+      "type": "lightning",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "appliesEffects": false,
-          "description": "fails",
-          "duration": null
+          "damage": 0,
+          "description": "fails"
         },
         "1": {
-          "appliesEffects": true,
-          "description": "half damage (14)",
-          "duration": "half damage (14)"
+          "damage": 14,
+          "description": "half damage"
         },
         "2": {
-          "appliesEffects": true,
-          "description": "full damage (28)",
-          "duration": "full damage (28)"
+          "damage": 28,
+          "description": "full damage"
         },
         "3": {
-          "appliesEffects": true,
-          "description": "enhanced damage (36) + stunned",
-          "duration": "enhanced damage (36) + stunned"
+          "damage": 36,
+          "description": "enhanced damage + applies effects",
+          "appliesEffects": true
         }
       }
     },
-    "targetingSuccessScaling": "0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36) + stunned",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36) + applies effects",
     "weavingRoll": "Air Potential + Air Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
@@ -65,6 +62,7 @@
     "tags": [
       "aoe",
       "control",
+      "offensive",
       "ranged"
     ]
   },

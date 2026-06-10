@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Legends TTRPG system for Foundry VTT",
   "scripts": {
-    "pack:all": "npm run pack:abilities && npm run pack:action && npm run pack:armor && npm run pack:equipment && npm run pack:feats && npm run pack:weapons && npm run pack:weaves && npm run pack:conditions && npm run pack:diseases && npm run pack:ancestries && npm run pack:backgrounds && npm run pack:flaws && npm run pack:traits && npm run pack:effects && npm run pack:rules && npm run pack:macros && npm run pack:tables",
+    "pack:all": "npm run pack:abilities && npm run pack:action && npm run pack:armor && npm run pack:equipment && npm run pack:feats && npm run pack:weapons && npm run pack:weaves && npm run pack:conditions && npm run pack:diseases && npm run pack:ancestries && npm run pack:backgrounds && npm run pack:flaws && npm run pack:traits && npm run pack:effects && npm run pack:rules && npm run pack:macros && npm run pack:tables && npm run pack:magic-items && npm run pack:bestiary",
     "pack:abilities": "fvtt package pack abilities --in foundryvtt/packs/abilities/_source --out foundryvtt/packs",
     "pack:action": "fvtt package pack action --in foundryvtt/packs/action/_source --out foundryvtt/packs",
     "pack:armor": "fvtt package pack armor --in foundryvtt/packs/armor/_source --out foundryvtt/packs",
@@ -21,7 +21,10 @@
     "pack:macros": "fvtt package pack macros --in foundryvtt/packs/macros/_source --out foundryvtt/packs",
     "pack:tables": "fvtt package pack tables --in foundryvtt/packs/tables/_source --out foundryvtt/packs",
     "pack:diseases": "fvtt package pack diseases --in foundryvtt/packs/diseases/_source --out foundryvtt/packs",
-    "unpack:all": "npm run unpack:abilities && npm run unpack:action && npm run unpack:armor && npm run unpack:equipment && npm run unpack:feats && npm run unpack:weapons && npm run unpack:weaves && npm run unpack:conditions && npm run unpack:diseases && npm run unpack:ancestries && npm run unpack:backgrounds && npm run unpack:flaws && npm run unpack:traits && npm run unpack:effects && npm run unpack:rules && npm run unpack:macros",
+    "pack:magic-items": "fvtt package pack magic-items --in foundryvtt/packs/magic-items/_source --out foundryvtt/packs",
+    "unpack:magic-items": "fvtt package unpack magic-items --in foundryvtt/packs --out foundryvtt/packs/magic-items/_source",
+    "pack:bestiary": "fvtt package pack bestiary --in foundryvtt/packs/bestiary/_source --out foundryvtt/packs",
+    "unpack:all": "npm run unpack:abilities && npm run unpack:action && npm run unpack:armor && npm run unpack:equipment && npm run unpack:feats && npm run unpack:weapons && npm run unpack:weaves && npm run unpack:conditions && npm run unpack:diseases && npm run unpack:ancestries && npm run unpack:backgrounds && npm run unpack:flaws && npm run unpack:traits && npm run unpack:effects && npm run unpack:rules && npm run unpack:macros && npm run unpack:magic-items && npm run unpack:bestiary",
     "unpack:abilities": "fvtt package unpack abilities --in foundryvtt/packs --out foundryvtt/packs/abilities/_source",
     "unpack:action": "fvtt package unpack action --in foundryvtt/packs --out foundryvtt/packs/action/_source",
     "unpack:armor": "fvtt package unpack armor --in foundryvtt/packs --out foundryvtt/packs/armor/_source",
@@ -39,6 +42,7 @@
     "unpack:macros": "fvtt package unpack macros --in foundryvtt/packs --out foundryvtt/packs/macros/_source",
     "unpack:tables": "fvtt package unpack tables --in foundryvtt/packs --out foundryvtt/packs/tables/_source",
     "unpack:diseases": "fvtt package unpack diseases --in foundryvtt/packs --out foundryvtt/packs/diseases/_source",
+    "unpack:bestiary": "fvtt package unpack bestiary --in foundryvtt/packs --out foundryvtt/packs/bestiary/_source",
     "build:all": "python foundryvtt/scripts/build_all_packs.py && npm run pack:all"
   },
   "devDependencies": {

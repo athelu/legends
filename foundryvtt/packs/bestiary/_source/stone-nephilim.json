@@ -1,0 +1,170 @@
+{
+  "_id": "4ac24162aa5a59b7",
+  "name": "STONE NEPHILIM",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 30,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 36,
+      "max": 36,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 4,
+      "meleeCombat": 4,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 25,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 15
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 9,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 30 ft",
+    "tactics": "",
+    "attacksNotes": "",
+    "specialAbilitiesNotes": "<h4>Stone Kin</h4>\n<p><strong>Threat Rating:</strong> 1/2 <strong>Origin:</strong> Nephilim (Stone) <strong>Size:</strong> Large <strong>HP:</strong> 36 (Con 4 × 9, Tough) <strong>DR:</strong> 4 (granite flesh) <strong>Speed:</strong> 25 ft, Burrow 15 ft <strong>Attributes:</strong> Str 5 / Con 4 / Agi 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2 <strong>Skills:</strong> Melee Combat 4, Might 4, Perception 3 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 30 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 4), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2)</li>\n<li><em>Margin 2:</em> 15 damage (10 + 5 Str); target knocked Prone; no save</li>\n<li><em>Margin 3:</em> 15 damage + Prone; target Restrained by erupting stone until they succeed on a Might check (Hard task, 2 successes) as a [Combat] action</li>\n</ul></li>\n<li><strong>Rock Throw [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 1), Range: 40/80 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage</li>\n<li><em>Margin 2:</em> 8 damage; target knocked Prone</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> Cannot be knocked Prone by non-magical forced movement. Shoves automatically fail unless the attacker wins an opposed Strength + Athletics check (Hard task, 2 successes).</li>\n<li><strong>Earth Bond:</strong> While on natural earth or stone, regains 4 HP at the start of its turn. Suppressed if it took magical damage this round.</li>\n<li><strong>Powerful Build.</strong></li>\n</ul>\n<p><strong>Description:</strong> Stone Kin are dense, durable, and slow. Mundane weapons accomplish essentially nothing against their piercing and slashing immunity. They hold positions with the same commitment as Earth Elementals — put one in a doorway and it will be there when you return. Their Tremorsense gives them awareness of anything approaching through connected ground, which makes them difficult to ambush and reliable as sentinels even without active instructions.</p>\n<p>---</p>\n<h4>Rockborn</h4>\n<p><strong>Threat Rating:</strong> 1 <strong>Origin:</strong> Nephilim (Stone) <strong>Size:</strong> Large <strong>HP:</strong> 56 (Con 4 × 14, Tough) <strong>DR:</strong> 5 (deep granite flesh) <strong>Speed:</strong> 25 ft, Burrow 20 ft <strong>Attributes:</strong> Str 6 / Con 4 / Agi 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2 <strong>Skills:</strong> Melee Combat 5, Might 5, Perception 3, Intimidate 3 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 60 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Crushing Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2)</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str); target knocked Prone + Grappled; no save; Grappled target takes 6 bludgeoning damage at the start of each of their turns</li>\n<li><em>Margin 3:</em> 16 damage + Prone + Grappled + Restrained; ongoing damage increases to 10</li>\n</ul></li>\n<li><strong>Boulder Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 1), Range: 60/120 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage</li>\n<li><em>Margin 2:</em> 10 damage; target knocked Prone + Stunned until end of their next turn; no save</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> As Stone Kin.</li>\n<li><strong>Earth Bond:</strong> As Stone Kin.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> Creatures Grappled by the Rockborn add 1 to both dice on Athletics, Acrobatics, and Might checks to escape. The stone hand does not tire.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round when hit by a physical attack, reduce incoming damage by 4.</li>\n</ul>\n<p><strong>Description:</strong> Rockborn transition Stone Nephilim from obstacles into active threats. Crushing Slam builds toward Grapple and the ongoing damage that Grapple provides. Stone Grip makes escape from that Grapple genuinely difficult. A summoner who wants something held in place while allies deal with it elsewhere will find a Rockborn with a Grappled target the most efficient delivery mechanism available at this tier.</p>\n<p>---</p>\n<h4>Boulder Giant</h4>\n<p><strong>Threat Rating:</strong> 2 <strong>Origin:</strong> Nephilim (Stone) <strong>Size:</strong> Huge <strong>HP:</strong> 76 (Con 4 × 19, Massive) <strong>DR:</strong> 6 (ancient granite flesh) <strong>Speed:</strong> 30 ft, Burrow 25 ft <strong>Attributes:</strong> Str 7 / Con 4 / Agi 2 / Dex 2 / Int 4 / Wis 4 / Cha 3 / Luck 3 <strong>Skills:</strong> Melee Combat 5, Might 6, Perception 4, Intimidate 4 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 120 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Mountain Fist [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 5), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2)</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str); target Grappled + Prone; no save; ongoing 8 bludgeoning damage per round</li>\n<li><em>Margin 3:</em> 21 damage + Grappled + Prone + Restrained; ongoing damage increases to 14; Fortitude save (Hard task, 2 successes) each round to break free</li>\n</ul></li>\n<li><strong>Mountain Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 80/160 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage</li>\n<li><em>Margin 2:</em> 14 damage; target knocked Prone + Stunned until end of their next turn; all creatures within 10 feet take 6 bludgeoning damage from debris; no save on debris</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> As above.</li>\n<li><strong>Earth Bond:</strong> Regenerates 6 HP per turn on natural earth or stone.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> As Rockborn, but escape checks add 2 to both dice.</li>\n<li><strong>Ground Tremor (1/encounter) [Combat]:</strong> As a [Combat] action, stamps the ground. All creatures within 20 feet on natural ground make a Reflex save (compare Agi 2 + Might 6 targeting vs. save). Net 1: 10 bludgeoning damage + Prone. Net 2: 18 bludgeoning damage + Prone + Restrained by cracking ground. Designated allies immune.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 6.</li>\n</ul>\n<p><strong>Resilient Defense (1/day).</strong></p>\n<p><strong>Description:</strong> Boulder Giants are the point at which Stone Nephilim become genuinely threatening to organized groups. Ground Tremor disrupts formation positioning on arrival. Mountain Fist builds toward a Grapple that enemies find very difficult to escape. Mountain Hurl's debris damage means clustered enemies take area damage even when the throw targets only one. A summoner who has patience and keeps the Boulder Giant engaged consistently will find attrition steadily resolves in their favor.</p>\n<p>---</p>\n<h4>Mountain Lord</h4>\n<p><strong>Threat Rating:</strong> 3 <strong>Origin:</strong> Nephilim (Stone) <strong>Size:</strong> Huge <strong>HP:</strong> 108 (Con 6 × 18, Tough) <strong>DR:</strong> 7 (primordial stone flesh) <strong>Speed:</strong> 30 ft, Burrow 30 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 2 / Dex 2 / Int 5 / Wis 5 / Cha 4 / Luck 4 <strong>Skills:</strong> Melee Combat 6, Might 7, Perception 5, Intimidate 6 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 300 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Earth Breaker [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 6), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2)</li>\n<li><em>Margin 2:</em> 22 damage (14 + 8 Str); target Grappled + Prone + Stunned until end of their next turn; no save; ongoing 12 bludgeoning damage per round while Grappled</li>\n<li><em>Margin 3:</em> 22 damage + Grappled + Prone + Stunned; ongoing increases to 18; target begins being driven into the ground — Engulf triggers at start of their next turn unless they succeed Fortitude save (Hard task, 2 successes)</li>\n</ul></li>\n<li><strong>Seismic Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 80/160 ft, 10-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 14 bludgeoning damage + Prone. Net 2: 22 bludgeoning damage + Prone + Stunned until end of their next turn. Net 3: 22 bludgeoning damage + Prone + Stunned; all creatures within 10 feet of impact take 8 bludgeoning damage from shockwave.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> Magical forced movement requires an opposed check against Str 8 + Might 7 (Hard task, 2 successes).</li>\n<li><strong>Earth Bond:</strong> Regenerates 8 HP per turn.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> Escape checks add 3 to both dice.</li>\n<li><strong>Seismic Slam (Recharge 5-8) [Combat]:</strong> Slams both fists into the ground simultaneously. All creatures within 30 feet on natural ground make a Reflex save. Compare Str 8 + Might 7 targeting vs. each save. Net 1: 20 bludgeoning damage + Prone. Net 2: 32 bludgeoning damage + Prone + Restrained for 1 minute. Net 3: 32 bludgeoning damage + Prone + Restrained + Stunned until end of their next turn. Designated allies immune. Simultaneous slam — Shared Attribute Roll (Str 8), Might rolled separately.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 10.</li>\n</ul>\n<p><strong>Resilient Defense (2/day).</strong></p>\n<p><strong>Description:</strong> Mountain Lords have Tremorsense at 300 feet — nothing approaches on the ground without their awareness. Seismic Slam resets the battlefield on arrival. Earth Breaker at Margin 3 drives targets into the ground and begins Engulfing them. Seismic Hurl's radius means groups of enemies cannot cluster in ranged positions without taking area damage. A summoner who gives one a position to hold and a target priority list will find it requires no further management.</p>\n<p>---</p>\n<h4>Stone Titan</h4>\n<p><strong>Threat Rating:</strong> 4 <strong>Origin:</strong> Nephilim (Stone) <strong>Size:</strong> Huge <strong>HP:</strong> 180 (Con 6 × 30, Massive) <strong>DR:</strong> 8 (deep-forged stone flesh) <strong>Speed:</strong> 30 ft, Burrow 40 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 2 / Dex 2 / Int 6 / Wis 6 / Cha 5 / Luck 5 <strong>Skills:</strong> Melee Combat 7, Might 8, Perception 6, Intimidate 7 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 1 mile <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Continental Fist [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2)</li>\n<li><em>Margin 2:</em> 22 damage (14 + 8 Str); target Grappled + Prone + Restrained; ongoing 16 bludgeoning damage per round; no save; Fortitude save (Hard task, 2 successes) each round to break free</li>\n<li><em>Margin 3:</em> 22 damage + immediately Engulfed (driven into ground); Blinded + Restrained + 24 bludgeoning damage per round; Might check (Hard task, 2 successes) as full [Combat] action to escape, or ally excavates over 3 [Interact] actions</li>\n</ul></li>\n<li><strong>World Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 120/240 ft, 15-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 18 bludgeoning damage + Prone. Net 2: 28 bludgeoning damage + Prone + Stunned until end of their next turn. Net 3: 28 bludgeoning damage + Prone + Stunned; all creatures within 15 feet take 12 bludgeoning damage from shockwave.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> As Mountain Lord; non-magical forced movement is impossible.</li>\n<li><strong>Earth Bond:</strong> Regenerates 10 HP per turn.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> Escape checks add 4 to both dice.</li>\n<li><strong>Seismic Authority (1/day) [Combat]:</strong> As Earthlord entry in Earth Elementals — 60-foot radius seismic event; designated allies immune.</li>\n<li><strong>Piercing and Slashing Immunity Sharing:</strong> The summoner and up to 2 designated allies gain immunity to non-magical piercing and slashing damage while within 30 feet.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 12.</li>\n</ul>\n<p><strong>Resilient Defense (3/day).</strong></p>\n<p><strong>Description:</strong> Stone Titans are the point at which Stone Nephilim become effectively unkillable through mundane means. DR 8 plus Stone Skin plus regeneration plus immunity to non-magical piercing and slashing means conventional weapons accomplish nothing meaningful. Seismic Authority immediately Restrains as many enemies as possible; Continental Fist removes priority targets from the engagement through Engulfing. A summoner who calls one has effectively ended the question of whether the physical fight can be won.</p>\n<p>---</p>\n<h4>World Pillar</h4>\n<p><strong>Threat Rating:</strong> 5 <strong>Origin:</strong> Nephilim (Stone) <strong>Size:</strong> Huge <strong>HP:</strong> 216 (Con 6 × 36, Massive) <strong>DR:</strong> 9 (primordial earth-flesh) <strong>Speed:</strong> 30 ft, Burrow 60 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 2 / Dex 2 / Int 7 / Wis 7 / Cha 6 / Luck 6 <strong>Skills:</strong> Melee Combat 8, Might 8, Perception 7, Intimidate 8 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 2 miles <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>World Crush [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 8), Reach: 20 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2)</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str); target immediately Engulfed (Grappled + Restrained + Prone + Blinded); 24 bludgeoning damage per round; no save; Might check (Hard task, 2 successes) as full [Combat] action each round to escape</li>\n<li><em>Margin 3:</em> 24 damage + Engulfed; damage increases to 36 per round; escape requires ally excavation (4 [Interact] actions) or Might check at Fortune (the stone has begun to fuse around them)</li>\n</ul></li>\n<li><strong>Continental Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 150/300 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 24 bludgeoning damage + Prone. Net 2: 36 bludgeoning damage + Prone + Stunned until end of their next turn. Net 3: 36 bludgeoning damage + Prone + Stunned + Restrained for 1 round by debris; all creatures within 20 feet take 16 bludgeoning damage.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> As Stone Titan; magical forced movement also requires Hard task opposed check.</li>\n<li><strong>Earth Bond:</strong> Regenerates 12 HP per turn.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> Escape checks add 5 to both dice. At Margin 3 Engulf, escape checks have Misfortune instead.</li>\n<li><strong>Continental Tremor (1/day):</strong> As Ancient Stone entry in Earth Elementals — 80-foot radius; designated allies immune.</li>\n<li><strong>Piercing and Slashing Immunity Sharing:</strong> As Stone Titan, extended to 4 designated allies.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 14.</li>\n</ul>\n<p><strong>Resilient Defense (3/day).</strong></p>\n<p><strong>Description:</strong> A World Pillar is the elemental concept of stone given will and scale. It does not fight — it removes things from the fight permanently. World Crush at Margin 2 immediately Engulfs with no save and no preliminary steps. Continental Hurl controls entire approach corridors. DR 9 plus Stone Skin plus regeneration plus elemental immunities means the only meaningful way to damage it is magical. A summoner who calls one has made a decision about what this location will look like when the World Pillar is done with it. That decision is largely irreversible once made.</p>\n<p>---</p>\n<p>---</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "STONE NEPHILIM",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!4ac24162aa5a59b7"
+}

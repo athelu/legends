@@ -1,0 +1,40 @@
+{
+  "_id": "54473a26b7cdd19a",
+  "name": "Ring of Fog Calling",
+  "type": "ring",
+  "img": "icons/equipment/worn/ring-gold-sigil.webp",
+  "system": {
+    "description": {
+      "value": "<p><strong>Type:</strong> Ring <strong>Rarity:</strong> Uncommon <strong>Primary Energy:</strong> air <strong>Weight:</strong> 0 <strong>Charges:</strong> 1/1 (recharge: Long Rest) <strong>Description:</strong> This wooden band has an intricate scene of rolling clouds carved on it. The wearer can use an action to speak the command word to summon a concealing fog centered on themselves.</p>\n<h3>Granted Weaves</h3>\n<p>| Weave | Charge Cost | |---|---| | Fog Cloud | 1 |</p>\n<p><strong>Fog Cloud (1 charge):</strong> Creates a heavily obscured sphere 40 feet in diameter centered on the wearer. All creatures inside gain the Concealed condition against all attackers. Duration: 1 minute or until dispersed by strong wind.</p>"
+    },
+    "primaryEnergy": "air",
+    "charges": {
+      "value": 1,
+      "max": 1,
+      "recharge": "",
+      "rechargePeriod": "longRest"
+    },
+    "properties": [],
+    "grantedWeaves": [
+      {
+        "name": "Fog Cloud",
+        "chargeCost": 1,
+        "description": ""
+      }
+    ],
+    "isMagical": true,
+    "identified": true,
+    "weight": 0.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "uncommon",
+    "requiresAttunement": false,
+    "notes": "",
+    "requiresMagicalTrait": false,
+    "automaticActivation": true,
+    "activationMargin": 2
+  },
+  "effects": [],
+  "flags": {}
+}

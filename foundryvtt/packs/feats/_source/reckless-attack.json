@@ -38,7 +38,20 @@
       "[Savage]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "toggle.state",
+        "stateKey": "recklessAttack",
+        "label": "Reckless Attack"
+      },
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": -1,
+        "applyTo": "both",
+        "when": "recklessAttack"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!7a7d668f933509a1"

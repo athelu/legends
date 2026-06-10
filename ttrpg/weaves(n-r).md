@@ -24,6 +24,7 @@
 **Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Target gains +2 Intelligence for the duration. Recalculate Intelligence-based checks and casting values if Intelligence is the target's casting stat. If this changes max Energy Pool, current Energy does not increase when this weave is applied. This bonus does not stack with other beneficial Intelligence modifiers; use the highest bonus.
+**Applies Effects:** Nevil's Clarity
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
 
@@ -55,7 +56,7 @@
 
 ### Passwall
 **Primary Energy:** Earth 6 (creating temporary passage)
-**Supporting Energy:** Space 1 (close range) / Time 2 (duration 1 minute)
+**Supporting Energy:** Space 1 (close range + duration 1 minute)
 **Range:** Close, 30 ft.
 **Duration:** 1 minute
 **Total Cost:** 9 Energy
@@ -133,6 +134,19 @@
 **Saving Throw:** Perception vs Space Mastery
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes
 
+### Plant Growth
+**Primary Energy:** Earth 4 (accelerating and densifying natural growth)
+**Supporting Energy:** Space 7 (medium range + 30-foot diameter + extended duration)
+**Range:** Medium, 60 ft. (30-foot diameter)
+**Duration:** 8 hours
+**Total Cost:** 11 Energy
+**Action:** Complex weave (2 actions)
+**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
+**Targeting Roll:** Casting Stat + Earth Mastery
+**Description:** Plants in the target area erupt into dense, tangled growth. The area becomes difficult terrain, and movement through it costs 4 feet per foot of distance (double the normal difficult terrain cost). Creatures with a fly speed or climb speed are unaffected. The growth is natural and persists for 8 hours; clearing a 5-foot section takes approximately 10 minutes with cutting tools. Has no effect in areas without plants.
+**Saving Throw:** None
+**Targeting Success Scaling:** 0 = fails, 1 = 20-foot diameter (1 hour), 2 = 30-foot diameter (8 hours), 3 = 30-foot diameter (8 hours) + growth suppresses tracking — creatures passing through leave no trail
+
 ### Preserve Remains
 **Primary Energy:** Positive 2 (preserving deceased)
 **Supporting Energy:** Time 4 (duration 1 hour or until dispelled)
@@ -174,12 +188,12 @@
 
 ### Radiant Bolt
 **Primary Energy:** Positive 4 (radiant energy, damage)
-**Supporting Energy:** Space 3 (medium range + 1 round duration)
+**Supporting Energy:** Air 3 (medium range + 1 round duration)
 **Range:** Medium, 60 ft.
 **Duration:** 1 round (nimbus effect)
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** A bolt of radiant energy strikes the target. Target takes 8 radiant damage. A nimbus of light surrounds the target for one round. The next person to attack the target before the duration ends has Fortune. The nimbus disappears afterward. This is an attack weave—no saving throw allowed.
 **Applies Effects:** blinded
@@ -190,12 +204,12 @@
 
 ### Radiant Sphere
 **Primary Energy:** Fire 4 (creating bright magical light)
-**Supporting Energy:** Space 8 (medium range + 20ft radius + duration 1 minute)
+**Supporting Energy:** Positive 8 (medium range + 20ft radius + duration 1 minute)
 **Range:** Medium, 60 ft. (20-foot radius sphere)
 **Duration:** 1 minute
 **Total Cost:** 12 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Fire Potential + Fire Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Fire Potential + Fire Mastery / Positive Potential + Positive Mastery
 **Targeting Roll:** Casting Stat + Fire Mastery
 **Description:** Bright light fills a 20ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy.
 **Saving Throw:** None
@@ -244,12 +258,12 @@
 
 ### Revealing Light
 **Primary Energy:** Positive 2 (revealing light outlining creatures)
-**Supporting Energy:** Space 6 (medium range + 10ft radius + 1 minute)
+**Supporting Energy:** Air 6 (medium range + 10ft radius + 1 minute)
 **Range:** Medium, 60 ft. (10-foot radius)
 **Duration:** 1 minute
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** All objects and creatures in 10-foot radius at medium range are outlined in violet light. Targets make Reflex save. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.
 **Applies Effects:** revealed
@@ -266,5 +280,6 @@
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Target gains +2 Luck for the duration. For saves and complication checks, treat the target's Current Luck as 2 higher, but this weave grants no spendable Luck points. This bonus does not stack with other beneficial Luck modifiers; use the highest bonus.
+**Applies Effects:** Rudlu's Fortune
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes

@@ -1,0 +1,46 @@
+{
+  "_id": "rudlfort000000001",
+  "name": "Rudlu's Fortune",
+  "type": "effect",
+  "img": "icons/svg/coins.svg",
+  "system": {
+    "label": "Rudlu's Fortune",
+    "category": "buff",
+    "effectType": "attribute-mod",
+    "description": {
+      "value": "<p>Target gains +2 Luck for the duration. For saves and complication checks, treat the target's Current Luck as 2 higher, but this weave grants no spendable Luck points. This bonus does not stack with other beneficial Luck modifiers; use the highest bonus.</p>"
+    },
+    "tokenIcon": "",
+    "badge": { "type": "none", "value": 0, "max": 0 },
+    "activeEffects": [
+      {
+        "key": "system.attributes.luck.tempValue",
+        "mode": "add",
+        "value": "2",
+        "notes": "+2 Luck"
+      }
+    ],
+    "stacking": "highest",
+    "overlayPriority": 10,
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": { "type": "", "id": "", "actor": "", "successes": 0, "potential": 0 },
+    "grantedBy": "Rudlu's Fortune",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 3 ? 10 : ${netSuccesses} >= 2 ? 1 : ${netSuccesses} >= 1 ? 0.1 : 0"
+    }
+  },
+  "flags": {},
+  "_key": "!items!rudlfort000000001"
+}

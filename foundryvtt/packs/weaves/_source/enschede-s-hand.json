@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "Enschede's Hand",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "automatic",
     "tags": [
       "buff",

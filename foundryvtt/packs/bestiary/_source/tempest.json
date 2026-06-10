@@ -1,0 +1,170 @@
+{
+  "_id": "f6a2f30ec8601942",
+  "name": "Tempest",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Tempests open against grouped enemies with Chain Lightning (2 actions), then spend the third on Gale Strike against the nearest pulled-in threat. On subsequent turns they split between two Gale Strikes and position, accepting the MAP on the third action to maintain Momentum Defense. Vortex Presence does the work of bringing enemies into range; the Tempest handles what arrives. A summoner deploying one near structures should be aware that Vortex Presence does not distinguish between enemies it is dragging in and unsecured objects it is also dragging in.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 30,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 7,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 76,
+      "max": 76,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 5,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 6,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 0,
+      "fly": 80,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 19,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Blindsight 30 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Gale Strike [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 6), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2); target pushed 15 feet</li>\n<li><em>Margin 2:</em> 14 damage (10 + 4 Str); target pushed 15 feet and knocked Prone; no save</li>\n<li><em>Margin 3:</em> 14 damage + Prone + Stunned until end of their next turn; all creatures within 5 feet of target when they land take 4 bludgeoning damage from wind-driven impact</li>\n</ul></li>\n<li><strong>Chain Lightning [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 5), Range: 120 ft, up to 3 targets within 30 feet of each other\n<ul>\n<li>Per target: Net 1: 12 lightning damage (Half DR). Net 2: 20 lightning damage + Stunned until end of their next turn. Net 3: 20 lightning damage + Stunned + Dazed for 1 minute.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Vortex Presence:</strong> Creatures starting their turn within 15 feet make a Fortitude save (1 success) or are pulled 10 feet directly toward the Tempest. Flying creatures add 1 to both their save dice.</li>\n<li><strong>Momentum Defense.</strong></li>\n<li><strong>Storm Body.</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Tempest",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!f6a2f30ec8601942"
+}

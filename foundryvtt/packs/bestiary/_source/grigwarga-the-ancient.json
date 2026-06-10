@@ -1,0 +1,185 @@
+{
+  "_id": "14f0d8931a8c309b",
+  "name": "Grigwarga the Ancient",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Grigwarga has lived in the deep swamp long enough that the swamp has started to become her. The water knows where she wants to go. The roots respond before she asks. Travelers who enter her territory rarely realize they are already inside her until the ground moves.</p>\n<p>She is not interested in combat for its own sake. She wants leverage — a promise, a secret, a name she can use later. She will spend considerable effort avoiding a direct fight, and when one becomes unavoidable she fights to create distance and options rather than to destroy. She prefers one enemy confused and cooperative to three enemies dead and their companions angry.</p>\n<p>Her age shows in the patience more than the appearance. She has waited out threats before. She will wait out these ones too, if she survives the encounter.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 3,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 80,
+      "max": 80,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 6,
+      "stealth": 4,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 4,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 30,
+      "burrow": 0
+    },
+    "creatureType": "fae",
+    "creatureSubtype": "",
+    "hpMultiplier": 16,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common",
+      "draconic",
+      "elven"
+    ],
+    "sensesNotes": "Darkvision 60 ft.",
+    "tactics": "Grigwarga approaches through Changed Appearance, gathering information before committing to any course of action. Her opening move in a fight is Suggestion on the most dangerous-looking threat, followed by Hexmark on whoever remains. She uses Vicious Mockery to degrade attack rolls from range and positions her Entangle to fragment the party rather than catch everyone at once — isolated targets are her preference.\n \nShe retreats into Invisible Passage the moment she takes significant damage (below 40 HP), repositioning before reengaging with Fortune on her first strike. She will use her lair's Swamp Mist to cover that retreat and Erupting Roots to slow pursuit. Below 25 HP, she breaks entirely and flees into the water. She does not sacrifice herself for pride.\n\n---",
+    "attacksNotes": "<p><strong>Claws [Combat]:</strong> Melee attack (Agi 3 + Melee Combat 5), Reach 5 ft.</p>\n<ul>\n<li><strong><em>Margin 1:</strong></em> 8 damage</li>\n<li><strong><em>Margin 2:</strong></em> 14 damage (8 + 6 Str)</li>\n</ul>\n<p>While Natural Weapons form is active, Margin 2 damage increases to 18 (see Malleable Form below).</p>",
+    "specialAbilitiesNotes": "<p><strong>Amphibious:</strong> Grigwarga breathes air and water and swims at her full movement speed. <strong>Fae Ancestry:</strong> Fortune on saving throws against charm effects. Grigwarga is a Fae daemon. She does not eat, drink, or sleep, though she does all three when it suits her. <strong>Mimicry:</strong> Grigwarga reproduces sounds she has heard — voices, animals, distant noises. A creature that hears the imitation and has reason to be suspicious may make a Perception check opposed by her Deception to identify it as false. <strong>Malleable Form (At-Will) [Activate]:</strong> As a [Minor] action, Grigwarga shifts her form. She maintains one active option at a time and may switch at the start of any of her turns. Ending one option and adopting another costs the same [Minor] action.</p>\n<ul>\n<li><strong>Aquatic Adaptation:</strong> Grigwarga sprouts gills and webbing. She can breathe underwater without limit and her swim speed becomes 40 ft.</li>\n<li><strong>Changed Appearance:</strong> Grigwarga takes the appearance of any humanoid of the same size. Voice, features, coloration, and distinguishing marks all change. Her attributes and skills do not change. A creature with specific reason to be suspicious may make a Perception check opposed by her Deception (Hard task, 2 successes) to notice something wrong. Physical examination reveals the deception automatically.</li>\n<li><strong>Natural Weapons:</strong> Her claws elongate and harden. Claws gain the [Finesse] property and Margin 2 damage increases to 18 (8 + 6 Str + 4 bonus).</li>\n</ul>\n<p><strong>Invisible Passage (Recharge 5–8) [Combat]:</strong> Costs 2 actions. Grigwarga becomes invisible and gains the [Hidden] condition. She leaves no physical trace — tracking her while invisible requires magic or a successful Perception check (Hard task). Any equipment she carries becomes invisible with her. The effect ends immediately if she takes a [Combat] action or casts a weave. While hidden, her first [Combat] action has Fortune as normal. <strong>Hexmark (1/day) [Combat]:</strong> Costs 2 actions. Grigwarga marks one creature she can see within 60 feet. The target makes a Will save (Wis 4 + Luck, opposed by Grigwarga's Cha 6 + Negative Mastery 3). On failure, whenever Grigwarga deals damage to the marked creature she deals an additional 4 negative damage. The mark lasts 1 hour and transfers to the nearest visible creature if Grigwarga falls unconscious.</p>\n<p>1/day — when Grigwarga fails a saving throw, she may choose to succeed instead.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "Charisma",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 28,
+        "max": 28
+      },
+      "targetingRoll": "Charisma + Primary Energy Mastery",
+      "notes": "<p>Grigwarga casts instinctively rather than through study. Her pool does not refresh mid-encounter.</p>\n<p>| Weave | Energy | Actions | Frequency | |---|---|---|---| | Cutting Words | Negative 2 + Space 2 = 4 | 2 | 3/encounter | | Thorn Whip | Earth 2 | 1 (Simple) | Once per round | | Complex Illusion | Space 6 + Time 3 = 9 | 2 | 1/encounter | | Grasping Vines | Earth 3 + Space 6 = 9 | 2 | 2/encounter | | Suggestion | Negative 4 + Space 7 = 11 | 2 | 1/encounter |</p>\n<p><strong>Thorn Whip (Simple Weave):</strong> Touch range. Deals 8 piercing damage (full DR applies). On Margin 2, the target is pulled 10 feet directly toward Grigwarga.</p>"
+    },
+    "lairActions": {
+      "name": "Living Swamp",
+      "description": "<p>While Grigwarga is in her lair and conscious, the swamp responds to her will. At the start of each round, she may cause one of the following effects without spending any of her actions. Only one effect may be active at a time; triggering a new one ends the previous.</p>",
+      "effects": [
+        {
+          "name": "Erupting Roots",
+          "description": "<p>Roots burst from the ground in a 10-foot square Grigwarga can see within 120 feet. Each creature in that square makes a Reflex save (Agi + Luck, opposed by Grigwarga's Wis 4 + Earth Mastery 4). Those who fail are Restrained. The roots persist until the start of the next round or until a different lair effect is triggered.</p>"
+        },
+        {
+          "name": "Cloying Ground",
+          "description": "<p>A 20-foot square Grigwarga can see within 120 feet becomes difficult terrain until the start of the next round.</p>"
+        },
+        {
+          "name": "Swamp Mist",
+          "description": "<p>Thick mist rolls across a 15-foot area Grigwarga can see within 60 feet. All creatures in the area gain the [Concealed] condition until the start of the next round. When Grigwarga dies or leaves her lair, all active lair effects end immediately and do not refresh.</p>"
+        }
+      ]
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Grigwarga the Ancient",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!14f0d8931a8c309b"
+}

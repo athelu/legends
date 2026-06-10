@@ -28,6 +28,10 @@ export const DEFAULT_UNIDENTIFIED_NAMES = {
   shield:    'Unidentified Shield',
   equipment: 'Unidentified Magic Item',
   scroll:    'Unidentified Scroll',
+  rod:       'Unidentified Rod',
+  staff:     'Unidentified Staff',
+  wand:      'Unidentified Wand',
+  ring:      'Unidentified Ring',
 };
 
 /**

@@ -1,0 +1,174 @@
+{
+  "_id": "4f418a3ffb7895c4",
+  "name": "Earth Elemental Sentinel",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>The Earth Elemental Sentinel is not a creature that hunts. It guards. Something called it here — a nexus, a sacred site, a ward placed by a long-dead mage — and here it remains, patient in the way that stone is patient, which is to say without any awareness that patience is required.</p>\n<p>It does not distinguish between threats and travelers. Anything that enters the area it protects is a threat. It emerges from the ground with no warning, no posturing, no moment of hesitation before the first slam lands.</p>\n<p>Scholars who have survived encounters with Sentinels note that they return underground immediately once a threat is neutralized. They do not pursue beyond their ward boundary. They do not take trophies. They do not remember.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 60,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 1,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 156,
+      "max": 156,
+      "temp": 0
+    },
+    "dr": {
+      "value": 8,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 6,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 20,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 20
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 26,
+    "immunities": {
+      "damageTypes": [
+        "poison"
+      ],
+      "conditions": [
+        "poisoned"
+      ]
+    },
+    "resistances": [],
+    "languages": [
+      "terran"
+    ],
+    "sensesNotes": "Darkvision 60 ft., Tremorsense 60 ft.",
+    "tactics": "The Sentinel opens from below, using Earth Glide to position directly beneath the most clustered group before emerging and immediately triggering Earth Tremor as part of the same turn. It follows with Multiattack against the nearest standing target, prioritizing whatever is closest rather than identifying priority threats — it does not have the intelligence for threat assessment.\n \nAgainst parties that spread out and avoid clustering, it abandons Earth Tremor and commits to grinding down individual targets with Multiattack, relying on its enormous HP pool and DR to outlast them. Thunder damage forces it above ground and disrupts its preferred tactics significantly; a party that identifies this vulnerability early changes the nature of the encounter entirely.\n \nIt does not retreat. It does not negotiate. When the ward boundary is breached it responds, and it continues responding until either the threat is gone or it is destroyed.\n \n---",
+    "attacksNotes": "<p><strong>Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 6), Reach 15 ft. (Huge creature)</p>\n<ul>\n<li><strong><em>Margin 1:</strong></em> 14 damage (Huge, standard natural weapon: 10 + 4)</li>\n<li><strong><em>Margin 2:</strong></em> 21 damage (14 + 7 Str)</li>\n</ul>\n<p><strong>Multiattack [Combat]:</strong> The Sentinel makes two slam attacks.</p>\n<ul>\n<li><strong><em>Shared Attribute Roll (Agi 2):</strong></em> Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p><strong>Earth Glide:</strong> The Sentinel burrows through nonmagical unworked earth and stone without disturbing the material it moves through. It leaves no tunnel, no displaced soil, no warning of its passage until it chooses to emerge. <strong>Tremorsense:</strong> The Sentinel detects all creatures in contact with the ground within 60 feet. The [Hidden] condition does not apply to creatures detected this way, though they still gain the [Concealed] condition against the Sentinel's attacks. <strong>Siege Monster:</strong> The Sentinel deals double damage to objects and structures. <strong>Earth Tremor (Recharge 5–8) [Combat]:</strong> Costs 2 actions. The Sentinel drives its fists into the ground, sending violent tremors through the earth in a 60-foot radius. Every creature on the ground in the area makes a Reflex save (Agi + Luck, opposed by the Sentinel's Con 6 + Wis 3). Creatures that fail take 12 bludgeoning damage (full DR applies — this is physical impact) and gain the Prone condition. Creatures that succeed take no damage. Flying creatures and those not in contact with the ground are unaffected. The Sentinel may use Earth Tremor even while submerged via Earth Glide; when it does, it erupts from the ground as part of the same action.</p>\n<h4>Creature Type Traits — Elemental</h4>\n<ul>\n<li>Immune to poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified, Unconscious</li>\n<li>Mindless: immune to mind-affecting effects (charm, fear, sleep, psychic effects)</li>\n<li>Does not need air, food, drink, or sleep</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Earth Elemental Sentinel",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!4f418a3ffb7895c4"
+}

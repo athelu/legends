@@ -1,0 +1,170 @@
+{
+  "_id": "f89e38dc65273430",
+  "name": "Herald Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Herald Aetherim are messengers of the Positive plane's full authority — not in the sense of divine errands, but in the sense that their presence expresses what the Positive plane is directly and without intermediary. Blinding Presence passively disrupts undead and evil-aligned creatures continuously. Divine Proclamation stuns entire engagements simultaneously. Mass Healing sustains parties through serious combat. Radiant Greatsword at Margin 3 destroys half-HP undead without a save, making them effectively immune to attrition from undead hordes at this tier. A summoner who calls a Herald Aetherim into an undead-heavy or fiend-heavy encounter will find the encounter resolved in a way that involves considerably less danger to allies than it might otherwise. Against living opponents the Herald is still a powerful combatant — just less disproportionately so.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 7,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 7,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 6,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 108,
+      "max": 108,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 6,
+      "max": 6
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 6,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 6,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 6,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 6,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 7,
+      "history": 0,
+      "perception": 7,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 50,
+      "fly": 90,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 18,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Truesight 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Radiant Greatsword [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 12 damage (Large, standard: 10 + 2) + 10 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 18 damage (12 + 6 Str) + 10 Positive damage; evil-aligned creatures and undead make Will save (Hard task, 2 successes) or Blinded for 1 minute + Frightened for 1 minute; both conditions apply simultaneously</li>\n<li><em>Margin 3:</em> 18 damage + 10 Positive damage; Blinded + Frightened; no save; undead at or below half HP destroyed outright</li>\n</ul></li>\n<li><strong>Radiant Arrow [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 6), Range: 120 ft\n<ul>\n<li>Net 1: 12 Positive damage (Half DR); target Revealed for 1 minute. Net 2: 20 Positive damage + Revealed + Blinded until end of their next turn; no save. Net 3: 20 Positive damage + Revealed + Blinded for 1 minute + Frightened for 1 minute; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Mass Healing (2/short rest):</strong> As Voice Aetherim; heals HP equal to Wisdom score (7) to all living allies within 40 feet.</li>\n<li><strong>Blinding Presence:</strong> Evil-aligned creatures and undead within 30 feet make a Fortitude save at the start of their turn (1 success). Failure: Dazzled for 1 round. This is passive and always active.</li>\n<li><strong>Divine Proclamation (1/encounter) [Combat]:</strong> As a [Combat] action, the Herald Aetherim speaks a word of absolute authority. All creatures within 60 feet that can hear it make a Will save (Hard task, 2 successes). Failure: Stunned until end of their next turn and Frightened for 1 minute. 1 success: Dazed until end of their next turn only. Creatures that succeed are immune to this Herald's Divine Proclamation for 24 hours.</li>\n<li><strong>Protective Aura:</strong> 40-foot radius; +4 DR to designated allies.</li>\n<li><strong>Turn Undead:</strong> Will save Hard task (2 successes) to resist; on failure undead flee for 10 minutes; undead at or below half HP when they fail are destroyed.</li>\n<li><strong>Resilient Defense (2/day).</strong></li>\n<li><strong>Continual Radiance:</strong> Bright light 60-foot radius.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Herald Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!f89e38dc65273430"
+}

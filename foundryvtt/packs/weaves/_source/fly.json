@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = Fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour",
     "weavingRoll": "Air Potential + Air Mastery + Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "Flight",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "automatic",
     "tags": [
       "buff",

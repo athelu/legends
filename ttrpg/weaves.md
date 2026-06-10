@@ -18,6 +18,7 @@ Each weave entry includes:
 **Remember:** You can adjust energy expenditure to increase damage, range, area, or duration. Overspending beyond your Mastery adds penalties.
 
 ### Notes on Weave Design
+
 Energy costs can be adjusted by weavers (spend more for more damage, larger area, etc.)
 Success scaling shows what happens at different weaving success levels
 Complex weaves (2 actions) are typically save-based or have area effects
@@ -30,3 +31,8 @@ Increase Duration: +1 Energy per duration step (instant/1 round/1minute/10 minut
 Overspending Penalty Remember: Spending Energy beyond your Mastery in that energy type adds +1 to both dice per point over. Plan your weaves within your capabilities or accept the penalty for heroic moments!
 Attribute buffs/debuffs must follow the Attribute Buff Cost Bands and Attribute Bonus Stacking Rule in magic_system.md.
 These weaves are guidelines. Work with your GM to create unique effects by combining energies in new ways. The eight energies are tools
+
+#### Energy Combination guidelines
+Air + Water for lighting (mimicing how lighting occurs in the real world)
+Negative + another energy makes it bad (poison air, acid water, etc)
+Water + Air for Ice effects

@@ -1,0 +1,170 @@
+{
+  "_id": "a49248e1089d3e14",
+  "name": "Giant Rat",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 2,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 1,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 12,
+      "max": 12,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 3,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 2,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "small",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "beast",
+    "creatureSubtype": "",
+    "hpMultiplier": 6,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Keen Smell",
+    "tactics": "Giant rats rely on Pack Tactics and numbers. They swarm lone targets, attempting to spread disease through repeated bites.",
+    "attacksNotes": "<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 2), Reach: 5 ft\n<ul>\n<li><strong><em>Margin 1:</strong></em> 3 damage (Small size, light natural weapon: 4 - 1 = 3)</li>\n<li><strong><em>Margin 2:</strong></em> 5 damage (3 + 2 Str)</li>\n</ul></li>\n<li><strong>Special Abilities:</strong>\n<ul>\n<li><strong>Pack Tactics:</strong> When an ally is within 5 feet of the target, subtract 1 from both attack dice</li>\n<li><strong>Keen Smell:</strong> Scent-based Perception checks have Fortune</li>\n<li><strong>Disease Carrier:</strong> On hit with margin 2, target must make Fortitude save (1 success needed) or contract Filth Fever\n<ul>\n<li><strong><em>Incubation:</strong></em> 1d8 days</li>\n<li><strong><em>Effect:</strong></em> Poisoned condition until cured</li>\n<li><strong><em>Cure:</strong></em> Two consecutive successful Fortitude saves (1/day) OR magical healing</li>\n</ul></li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Pack Tactics:</strong> When an ally is within 5 feet of the target, subtract 1 from both attack dice\n<ul>\n<li><strong>Keen Smell:</strong> Scent-based Perception checks have Fortune</li>\n<li><strong>Disease Carrier:</strong> On hit with margin 2, target must make Fortitude save (1 success needed) or contract Filth Fever\n<ul>\n<li><strong><em>Incubation:</strong></em> 1d8 days</li>\n<li><strong><em>Effect:</strong></em> Poisoned condition until cured</li>\n<li><strong><em>Cure:</strong></em> Two consecutive successful Fortitude saves (1/day) OR magical healing</li>\n</ul></li>\n</ul></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Giant Rat",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!a49248e1089d3e14"
+}

@@ -1,0 +1,170 @@
+{
+  "_id": "0080c0a69e2e3e3c",
+  "name": "Deep Tide",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Deep Tides prioritize Engulf and build toward it through Slam attacks that accumulate Prone and cold conditions. Cold Surge handles targets trying to stay at range or retreat while the primary target is being held. In water they are apex predators at this tier — Crushing Current makes Engulfed targets suffer severely for every action the Deep Tide spends attacking them. A summoner who has terrain control and patience will find Deep Tides considerably more effective than fighting them straight suggests.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 120,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 76,
+      "max": 76,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 5,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 5,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 5,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 20,
+      "fly": 0,
+      "climb": 0,
+      "swim": 70,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 19,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Blindsight 120 ft (in water)",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 6), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 4 cold damage (Half DR); target pushed 5 feet</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str) + 4 cold damage; target knocked Prone; no save</li>\n<li><em>Margin 3:</em> 16 damage + 4 cold damage + Prone; target gains Numbed condition</li>\n</ul></li>\n<li><strong>Cold Surge [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 4), Range: 40 ft\n<ul>\n<li><em>Margin 1:</em> 8 cold damage (Half DR); target gains Chilled</li>\n<li><em>Margin 2:</em> 12 cold damage (8 + 4 Dex); target gains Numbed</li>\n<li><em>Margin 3:</em> 12 cold damage + Frosted condition; target's next [Move] action costs an additional action</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Engulf (Recharge 5-8) [Combat]:</strong> As Wave Breaker, but damage increases to 12 cold per round. Grappled creature must succeed on a Fortitude save (Hard task, 2 successes) each round or gain 1 Exhaustion level from crushing pressure and cold.</li>\n<li><strong>Crushing Current:</strong> When the Deep Tide hits a Grappled creature with any attack, that creature takes an additional 8 cold damage (Half DR) from water pressure.</li>\n<li><strong>Water Mastery:</strong> As above.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Deep Tide",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!0080c0a69e2e3e3c"
+}

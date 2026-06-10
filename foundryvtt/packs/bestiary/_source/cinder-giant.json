@@ -1,0 +1,170 @@
+{
+  "_id": "b8f01e89b9c735f9",
+  "name": "Cinder Giant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Cinder Giants have grown into their authority. The Heat Aura is now a genuine battlefield hazard at 10 feet rather than a minor inconvenience, and Intimidating Presence gives them a meaningful action economy option against grouped enemies who haven't committed yet. Volcanic Hurl's splash damage means clustered enemies take incidental fire damage even when the hurl targets only one of them. A summoner who gives one a target and keeps allies out of the Heat Aura radius will find it handles the engagement without requiring further management.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 76,
+      "max": 76,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 4,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 35,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 19,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Magma Strike [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 6 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str) + 6 fire damage; target gains Ignited condition</li>\n<li><em>Margin 3:</em> 16 damage + 6 fire damage; target gains Burning condition; all creatures within 5 feet of target take 4 fire damage (Half DR) from magma splash</li>\n</ul></li>\n<li><strong>Volcanic Hurl [Combat]:</strong> Ranged attack (Dex 3 + Ranged Combat 3), Range: 60/120 ft\n<ul>\n<li><em>Margin 1:</em> 10 fire damage (Half DR); target gains Ignited</li>\n<li><em>Margin 2:</em> 16 fire damage; target gains Ignited; all creatures within 5 feet take 4 fire damage (Half DR)</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Heat Aura:</strong> Creatures starting their turn within 10 feet take 6 fire damage (Half DR).</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Smoldering Wounds:</strong> As Ashborn.</li>\n<li><strong>Intimidating Presence:</strong> As a [Combat] action, the Cinder Giant roars and displays its full elemental nature. All creatures within 30 feet that can see and hear it make a Will save (opposed by Cha 4 + Intimidate 5). On failure, target gains the Frightened condition until end of their next turn. Creatures immune to fear are unaffected.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Cinder Giant",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!b8f01e89b9c735f9"
+}

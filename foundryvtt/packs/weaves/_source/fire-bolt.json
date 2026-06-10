@@ -24,35 +24,32 @@
     "target": "",
     "savingThrow": "none",
     "effect": "You hurl a mote of fire at a creature or object within range. Target takes 8 fire damage. This is an attack weave—no saving throw allowed.",
-    "effectType": "utility",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
+      "base": 8,
+      "type": "fire",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "appliesEffects": false,
-          "description": "Miss",
-          "duration": null
+          "damage": 0,
+          "description": "miss"
         },
         "1": {
-          "appliesEffects": true,
-          "description": "Half damage (4)",
-          "duration": "Half damage (4)"
+          "damage": 4,
+          "description": "half damage"
         },
         "2": {
-          "appliesEffects": true,
-          "description": "Full damage (8)",
-          "duration": "Full damage (8)"
+          "damage": 8,
+          "description": "full damage"
         },
         "3": {
-          "appliesEffects": true,
-          "description": "Enhanced damage (16) + ignited",
-          "duration": "Enhanced damage (16) + ignited"
+          "damage": 16,
+          "description": "Enhanced damage + applies effects",
+          "appliesEffects": true
         }
       }
     },
-    "targetingSuccessScaling": "0 = Miss, 1 = Half damage (4), 2 = Full damage (8), 3 = Enhanced damage (16) + ignited",
+    "targetingSuccessScaling": "0 = Miss, 1 = Half damage (4), 2 = Full damage (8), 3 = Enhanced damage (16) + applies effects",
     "weavingRoll": "Fire Potential + Fire Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
@@ -63,6 +60,7 @@
     ],
     "deliveryMethod": "save",
     "tags": [
+      "offensive",
       "ranged"
     ]
   },

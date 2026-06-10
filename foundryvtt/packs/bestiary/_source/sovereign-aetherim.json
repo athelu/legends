@@ -1,0 +1,170 @@
+{
+  "_id": "8b5789352dbaea53",
+  "name": "Sovereign Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Sovereign Aetherim's presence reshapes the terms of any engagement involving undead, fiends, or evil-aligned creatures — Blinding Presence, Turn Undead, and immunity to non-magical weapons mean those categories of opponent cannot effectively engage it. Against living opponents it is still a powerful combatant with significant support capability. Sovereign Healing at this tier can restore an entire party from serious damage in a single action. A summoner whose moral standing is genuinely good will find a Sovereign Aetherim the most capable protective ally available at any tier. One whose standing is ambiguous will find it Cooperative at best, technically compliant, and quietly persistent in noting when its observations suggest the summoner might reconsider a course of action.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 7,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 8,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 7,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 6,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 7,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 6,
+      "max": 6
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 7,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 7,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 7,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 7,
+      "history": 0,
+      "perception": 8,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 50,
+      "fly": 110,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Truesight 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Sovereign Blade [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Large, heavy: 12 + 2) + 14 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 14 Positive damage; all evil-aligned creatures and undead within 10 feet of the target make Will save (Hard task, 2 successes) or Blinded + Frightened for 1 minute; radiant discharge spreads from the impact point</li>\n<li><em>Margin 3:</em> 21 damage + 14 Positive damage; area effect triggers; no save; undead at or below half HP in the area destroyed outright</li>\n</ul></li>\n<li><strong>Heaven's Arrow [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 7), Range: 150 ft\n<ul>\n<li>Net 1: 16 Positive damage (Half DR) + Revealed for 1 hour. Net 2: 28 Positive damage + Revealed + Blinded for 1 minute; no save. Net 3: 28 Positive damage + Revealed + Blinded + Frightened for 1 minute; undead take double damage from this attack; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Sovereign Healing (1/short rest) [Combat]:</strong> As 2 [Combat] actions, releases a wave of Positive energy in a 50-foot radius. All living allies heal HP equal to the Sovereign Aetherim's Wisdom score × 2 (16). Additionally, one ally of the summoner's choice within range is restored from any single condition affecting them. Cannot affect undead or constructs.</li>\n<li><strong>Blinding Presence:</strong> 40-foot radius; Hard task (2 successes) to resist; failure: Blinded for 1 round rather than just Dazzled.</li>\n<li><strong>Divine Proclamation (1/encounter):</strong> As Herald; Will save Hard task; on failure Stunned + Frightened for 1 minute; additionally target cannot take offensive actions against designated allies for the duration.</li>\n<li><strong>Protective Aura:</strong> 50-foot radius; +5 DR to designated allies; allies within the aura cannot be surprised.</li>\n<li><strong>Turn Undead:</strong> All undead within 60 feet make Will save (Hard task). On failure: flee for 1 hour, cannot approach within 60 feet. Undead at or below half HP when they fail: destroyed.</li>\n<li><strong>Immunity to Non-Magical Weapons:</strong> Mundane weapons simply pass through the Sovereign Aetherim's form without effect.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n<li><strong>Continual Radiance:</strong> Bright light 80-foot radius; acts as sunlight for creatures vulnerable to it.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Sovereign Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!8b5789352dbaea53"
+}

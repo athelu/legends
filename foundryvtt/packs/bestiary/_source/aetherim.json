@@ -1,0 +1,170 @@
+{
+  "_id": "db8ca6feff8c6783",
+  "name": "Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 1,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 8,
+      "max": 8,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 2,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 0,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "tiny",
+    "speed": {
+      "walk": 0,
+      "fly": 40,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Truesight 10 ft",
+    "tactics": "",
+    "attacksNotes": "",
+    "specialAbilitiesNotes": "<h4>Mote Aetherim</h4>\n<p><strong>Threat Rating:</strong> 1/8 <strong>Origin:</strong> Positive Plane <strong>Size:</strong> Tiny <strong>HP:</strong> 8 (Con 2 × 4, Fragile) <strong>DR:</strong> 0 <strong>Speed:</strong> 0 ft, Fly 40 ft (Hover) <strong>Attributes:</strong> Str 1 / Con 2 / Agi 4 / Dex 3 / Int 3 / Wis 4 / Cha 3 / Luck 4 <strong>Skills:</strong> Perception 3, Medicine 2 <strong>Senses:</strong> Darkvision 60 ft, Truesight 10 ft <strong>Initiative Bonus:</strong> +4 (Agi 4) <strong>Creature Type:</strong> Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Light Pulse [Combat]:</strong> Ranged attack (Dex 3 + Ranged Combat 1), Range: 10 ft\n<ul>\n<li><em>Margin 1:</em> 2 Positive damage (Half DR); undead and evil-aligned creatures take 4 Positive damage instead</li>\n<li><em>Margin 2:</em> 2 Positive damage; target gains Dazzled condition until end of their next turn from the concentrated light; undead take 4 Positive damage + Frightened until end of their next turn</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Healing Touch (1/short rest):</strong> As a [Interact] action, touches a living creature and restores 4 HP. Cannot raise creatures above their maximum HP. Cannot be used on undead.</li>\n<li><strong>Continual Radiance:</strong> Sheds bright light in a 20-foot radius and dim light for an additional 20 feet. This light suppresses magical darkness of equal or lower energy cost within the bright light radius. The Mote Aetherim cannot suppress this light voluntarily — it is what it is.</li>\n<li><strong>Truth Sense:</strong> Automatically knows when a creature within 10 feet speaks a deliberate lie. Communicates this to the summoner as a [Free] action.</li>\n</ul>\n<p><strong>Description:</strong> A Mote Aetherim is barely more than the Positive plane's awareness made briefly tangible. It has no meaningful combat capability against anything that is not undead. What it has is Healing Touch, reliable truth detection within close range, and the ability to suppress magical darkness simply by existing nearby. A summoner who needs a small amount of healing available without action cost, a truth-detection asset in a conversation, or a light source that cannot be extinguished by darkness weaves will find it adequate. It will answer direct questions about what it perceives with complete honesty, including observations about the summoner's own situation that the summoner may not have asked for.</p>\n<p>---</p>\n<h4>Warden Aetherim</h4>\n<p><strong>Threat Rating:</strong> 1/4 <strong>Origin:</strong> Positive Plane <strong>Size:</strong> Small <strong>HP:</strong> 14 (Con 2 × 7, Standard) <strong>DR:</strong> 2 (divine resilience) <strong>Speed:</strong> 20 ft, Fly 50 ft (Hover) <strong>Attributes:</strong> Str 2 / Con 2 / Agi 5 / Dex 4 / Int 4 / Wis 5 / Cha 4 / Luck 4 <strong>Skills:</strong> Perception 4, Medicine 3, Religion 3 <strong>Senses:</strong> Darkvision 60 ft, Truesight 30 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Radiant Bolt [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 2), Range: 30 ft\n<ul>\n<li><em>Margin 1:</em> 4 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 8 Positive damage; undead and evil-aligned creatures make Will save (1 success) or Frightened until end of their next turn</li>\n<li><em>Margin 3:</em> 8 Positive damage; Frightened condition; no save; target also Revealed — cannot benefit from Hidden, Invisible, or Concealed for 1 minute as radiant light clings to them</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Healing Touch (2/short rest):</strong> As Mote Aetherim, but restores 6 HP per use.</li>\n<li><strong>Detect Evil:</strong> Automatically senses creatures with actively malicious intent within 60 feet and communicates their general direction and distance to the summoner as a [Free] action each round.</li>\n<li><strong>Continual Radiance:</strong> As Mote Aetherim; bright light 20-foot radius.</li>\n<li><strong>Aura of Courage:</strong> Allies within 10 feet of the Warden Aetherim subtract 1 from both dice on saves against the Frightened condition.</li>\n<li><strong>Diminutive Target:</strong> Attacks against the Warden Aetherim add 1 to both dice.</li>\n</ul>\n<p><strong>Description:</strong> Warden Aetherim are scouts and minor guardians. Detect Evil gives them persistent awareness of hostile intent in the area, which they report without being asked — a useful property that occasionally produces information the summoner finds inconvenient. Aura of Courage provides passive protection against fear effects for nearby allies. Radiant Bolt's Reveal effect at Margin 3 counters invisibility and stealth in encounters where those factors are significant. A summoner who deploys one as a persistent lookout and minor healer will find it performs both roles reliably while maintaining a running commentary on anything it considers worth noting.</p>\n<p>---</p>\n<h4>Shield Aetherim</h4>\n<p><strong>Threat Rating:</strong> 1/2 <strong>Origin:</strong> Positive Plane <strong>Size:</strong> Medium <strong>HP:</strong> 32 (Con 4 × 8, Standard) <strong>DR:</strong> 4 (divine plate) <strong>Speed:</strong> 30 ft, Fly 40 ft <strong>Attributes:</strong> Str 4 / Con 4 / Agi 4 / Dex 3 / Int 4 / Wis 5 / Cha 4 / Luck 4 <strong>Skills:</strong> Melee Combat 4, Perception 4, Medicine 3, Religion 3 <strong>Senses:</strong> Darkvision 60 ft, Truesight 30 ft <strong>Initiative Bonus:</strong> +4 (Agi 4) <strong>Creature Type:</strong> Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Radiant Blade [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 4), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage + 4 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 10 damage (6 + 4 Str) + 4 Positive damage; undead and evil-aligned creatures make Will save (1 success) or Frightened until end of their next turn</li>\n<li><em>Margin 3:</em> 10 damage + 4 Positive damage; Frightened condition; no save; target also Blinded until end of their next turn from the concentrated radiant discharge</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Healing Touch (3/short rest):</strong> Restores 8 HP per use.</li>\n<li><strong>Protective Aura:</strong> Allies within 15 feet of the Shield Aetherim gain +2 DR against all damage. This aura is always active.</li>\n<li><strong>Intercept (1/round) [Reaction]:</strong> When an adjacent ally would be hit by an attack, the Shield Aetherim may use a [Reaction] to place itself between the attacker and the ally. The attack targets the Shield Aetherim instead, resolving against its defenses and DR.</li>\n<li><strong>Continual Radiance:</strong> As above.</li>\n<li><strong>Detect Evil:</strong> As Warden Aetherim.</li>\n</ul>\n<p><strong>Description:</strong> Shield Aetherim are bodyguards. Protective Aura provides passive DR to everyone nearby; Intercept redirects attacks from vulnerable allies to the Shield Aetherim itself. They will position themselves adjacent to whoever the summoner designates as the priority protection target and maintain that position until ordered otherwise. A summoner who is concerned about a specific ally — a spellcaster, an injured party member, a person of importance — and places a Shield Aetherim beside them will find that ally considerably harder to damage. The Shield Aetherim will not abandon that position to chase a more interesting fight, which is either their most valuable property or their most frustrating one depending on how the battle develops.</p>\n<p>---</p>\n<h4>Blade Aetherim</h4>\n<p><strong>Threat Rating:</strong> 1 <strong>Origin:</strong> Positive Plane <strong>Size:</strong> Medium <strong>HP:</strong> 48 (Con 4 × 12, Tough — Aetherim vitality at higher tiers reflects their Positive plane origin) <strong>DR:</strong> 4 (divine plate) <strong>Speed:</strong> 40 ft, Fly 60 ft <strong>Attributes:</strong> Str 5 / Con 4 / Agi 5 / Dex 4 / Int 4 / Wis 5 / Cha 5 / Luck 4 <strong>Skills:</strong> Melee Combat 5, Perception 5, Medicine 4, Religion 4, Intimidate 3 <strong>Senses:</strong> Darkvision 60 ft, Truesight 30 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Holy Blade [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + 6 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 13 damage (8 + 5 Str) + 6 Positive damage; undead and evil-aligned creatures Frightened for 1 minute; Will save (1 success) to resist</li>\n<li><em>Margin 3:</em> 13 damage + 6 Positive damage; Frightened; no save; undead must make Fortitude save (1 success) or destroyed outright if below half HP</li>\n</ul></li>\n<li><strong>Radiant Arc [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 4), Range: 60 ft\n<ul>\n<li>Net 1: 8 Positive damage (Half DR); target Dazzled until end of their next turn. Net 2: 12 Positive damage + Blinded until end of their next turn; no save. Net 3: 12 Positive damage + Blinded + Revealed for 1 minute.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Healing Touch (3/short rest):</strong> Restores 10 HP per use. Can now stabilize dying creatures automatically with a touch as a [Minor] action — no Medicine check required.</li>\n<li><strong>Protective Aura:</strong> As Shield Aetherim, extended to 20 feet.</li>\n<li><strong>Turn Undead (1/encounter) [Combat]:</strong> As a [Combat] action, releases a pulse of Positive energy in a 30-foot radius. All undead in range make a Will save (opposed by Wis 5 + Religion 4). On failure, undead are Frightened and must move away from the Blade Aetherim as fast as possible for 1 minute. They cannot willingly move closer for the duration.</li>\n<li><strong>Detect Evil:</strong> As above.</li>\n<li><strong>Continual Radiance:</strong> Bright light 30-foot radius.</li>\n</ul>\n<p><strong>Description:</strong> Blade Aetherim are the first Aetherim capable of functioning as a primary combatant rather than a support presence. Holy Blade's destruction of low-HP undead at Margin 3 makes them highly effective in encounters involving significant undead threats. Turn Undead clears the engagement zone of undead entirely in many cases, allowing other combatants to focus on non-undead threats. A summoner who calls one into an undead-heavy encounter will find it efficiently handles that specific problem while maintaining Protective Aura support for allies. Against living opponents it is capable but not exceptional — capable enough to hold its own, not so effective that a summoner should expect it to carry the fight.</p>\n<p>---</p>\n<h4>Voice Aetherim</h4>\n<p><strong>Threat Rating:</strong> 2 <strong>Origin:</strong> Positive Plane <strong>Size:</strong> Medium <strong>HP:</strong> 64 (Con 4 × 16, Tough) <strong>DR:</strong> 5 (divine resilience, centuries of Positive energy concentration) <strong>Speed:</strong> 40 ft, Fly 70 ft <strong>Attributes:</strong> Str 4 / Con 4 / Agi 5 / Dex 4 / Int 6 / Wis 7 / Cha 6 / Luck 5 <strong>Skills:</strong> Melee Combat 5, Perception 6, Medicine 5, Religion 5, Persuasion 5, Empathy 6 <strong>Senses:</strong> Darkvision 60 ft, Truesight 60 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Radiant Strike [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + 8 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 12 damage (8 + 4 Str) + 8 Positive damage; undead Frightened for 1 minute; Will save (Hard task, 2 successes) to resist</li>\n<li><em>Margin 3:</em> 12 damage + 8 Positive damage; Frightened; no save; undead at half HP or below destroyed outright</li>\n</ul></li>\n<li><strong>Word of Light [Combat]:</strong> Ranged attack (Cha 6 + Religion 5), Range: 60 ft — a spoken word of divine authority, not a physical projectile\n<ul>\n<li>Net 1: Target makes Will save (1 success) or Dazed until end of their next turn. Net 2: Target Stunned until end of their next turn; Will save (Hard task, 2 successes) to resist. Net 3: Target Stunned for 1 minute; Will save (Hard task, 2 successes) each round to end; undead also take 16 Positive damage (Half DR); no save on damage.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Mass Healing (1/short rest) [Combat]:</strong> As 2 [Combat] actions, releases a pulse of Positive energy in a 30-foot radius. All living allies in range heal HP equal to the Voice Aetherim's Wisdom score (7). Cannot affect undead or constructs.</li>\n<li><strong>Protective Aura:</strong> Extended to 30 feet; DR bonus increases to +3.</li>\n<li><strong>Turn Undead:</strong> As Blade Aetherim; Will save is now Hard task (2 successes to resist).</li>\n<li><strong>Divine Authority:</strong> When the Voice Aetherim addresses a creature directly and that creature fails a Will save (opposed by Cha 6 + Persuasion 5), the creature cannot take harmful actions for 1 round as divine authority momentarily overwhelms their aggression. This is not Charm — it is a direct expression of Positive plane authority.</li>\n<li><strong>Detect Evil:</strong> As above; range extends to 120 feet.</li>\n<li><strong>Continual Radiance:</strong> Bright light 40-foot radius.</li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Voice Aetherim are authority figures. Mass Healing sustains entire parties; Divine Authority suppresses aggression in a single target without charm immunity applying; Word of Light stuns enemies through spoken command. A summoner who calls one into a complex encounter involving both combat and potential negotiation will find it capable of contributing meaningfully in both registers. It will also express opinions about the encounter's participants based on what Detect Evil and Truesight reveal — observations delivered matter-of-factly and without diplomatic softening, because Voice Aetherim have no particular investment in sparing feelings when the truth is relevant.</p>\n<p>---</p>\n<h4>Herald Aetherim</h4>\n<p><strong>Threat Rating:</strong> 3 <strong>Origin:</strong> Positive Plane <strong>Size:</strong> Large <strong>HP:</strong> 108 (Con 6 × 18, Tough) <strong>DR:</strong> 6 (divine plate, ancient construction) <strong>Speed:</strong> 50 ft, Fly 90 ft <strong>Attributes:</strong> Str 6 / Con 6 / Agi 6 / Dex 5 / Int 6 / Wis 7 / Cha 7 / Luck 6 <strong>Skills:</strong> Melee Combat 7, Perception 7, Medicine 6, Religion 6, Persuasion 6, Intimidate 6 <strong>Senses:</strong> Darkvision 120 ft, Truesight 120 ft <strong>Initiative Bonus:</strong> +6 (Agi 6) <strong>Creature Type:</strong> Aetherim — Immune to poison damage, Poisoned, disease, fear, necrotic damage. Fortune on saves vs magic. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Radiant Greatsword [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 12 damage (Large, standard: 10 + 2) + 10 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 18 damage (12 + 6 Str) + 10 Positive damage; evil-aligned creatures and undead make Will save (Hard task, 2 successes) or Blinded for 1 minute + Frightened for 1 minute; both conditions apply simultaneously</li>\n<li><em>Margin 3:</em> 18 damage + 10 Positive damage; Blinded + Frightened; no save; undead at or below half HP destroyed outright</li>\n</ul></li>\n<li><strong>Radiant Arrow [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 6), Range: 120 ft\n<ul>\n<li>Net 1: 12 Positive damage (Half DR); target Revealed for 1 minute. Net 2: 20 Positive damage + Revealed + Blinded until end of their next turn; no save. Net 3: 20 Positive damage + Revealed + Blinded for 1 minute + Frightened for 1 minute; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Mass Healing (2/short rest):</strong> As Voice Aetherim; heals HP equal to Wisdom score (7) to all living allies within 40 feet.</li>\n<li><strong>Blinding Presence:</strong> Evil-aligned creatures and undead within 30 feet make a Fortitude save at the start of their turn (1 success). Failure: Dazzled for 1 round. This is passive and always active.</li>\n<li><strong>Divine Proclamation (1/encounter) [Combat]:</strong> As a [Combat] action, the Herald Aetherim speaks a word of absolute authority. All creatures within 60 feet that can hear it make a Will save (Hard task, 2 successes). Failure: Stunned until end of their next turn and Frightened for 1 minute. 1 success: Dazed until end of their next turn only. Creatures that succeed are immune to this Herald's Divine Proclamation for 24 hours.</li>\n<li><strong>Protective Aura:</strong> 40-foot radius; +4 DR to designated allies.</li>\n<li><strong>Turn Undead:</strong> Will save Hard task (2 successes) to resist; on failure undead flee for 10 minutes; undead at or below half HP when they fail are destroyed.</li>\n<li><strong>Resilient Defense (2/day).</strong></li>\n<li><strong>Continual Radiance:</strong> Bright light 60-foot radius.</li>\n</ul>\n<p><strong>Description:</strong> Herald Aetherim are messengers of the Positive plane's full authority — not in the sense of divine errands, but in the sense that their presence expresses what the Positive plane is directly and without intermediary. Blinding Presence passively disrupts undead and evil-aligned creatures continuously. Divine Proclamation stuns entire engagements simultaneously. Mass Healing sustains parties through serious combat. Radiant Greatsword at Margin 3 destroys half-HP undead without a save, making them effectively immune to attrition from undead hordes at this tier. A summoner who calls a Herald Aetherim into an undead-heavy or fiend-heavy encounter will find the encounter resolved in a way that involves considerably less danger to allies than it might otherwise. Against living opponents the Herald is still a powerful combatant — just less disproportionately so.</p>\n<p>---</p>\n<h4>Sovereign Aetherim</h4>\n<p><strong>Threat Rating:</strong> 4 <strong>Origin:</strong> Positive Plane <strong>Size:</strong> Large <strong>HP:</strong> 180 (Con 6 × 30, Massive) <strong>DR:</strong> 7 (ancient divine construction) <strong>Speed:</strong> 50 ft, Fly 110 ft <strong>Attributes:</strong> Str 7 / Con 6 / Agi 6 / Dex 5 / Int 7 / Wis 8 / Cha 7 / Luck 6 <strong>Skills:</strong> Melee Combat 7, Perception 8, Medicine 7, Religion 7, Persuasion 7, Intimidate 7 <strong>Senses:</strong> Darkvision 120 ft, Truesight 120 ft <strong>Initiative Bonus:</strong> +6 (Agi 6) <strong>Creature Type:</strong> Aetherim — Immune to poison damage, Poisoned, disease, fear, necrotic damage, non-magical weapons. Fortune on saves vs magic. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Sovereign Blade [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Large, heavy: 12 + 2) + 14 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 14 Positive damage; all evil-aligned creatures and undead within 10 feet of the target make Will save (Hard task, 2 successes) or Blinded + Frightened for 1 minute; radiant discharge spreads from the impact point</li>\n<li><em>Margin 3:</em> 21 damage + 14 Positive damage; area effect triggers; no save; undead at or below half HP in the area destroyed outright</li>\n</ul></li>\n<li><strong>Heaven's Arrow [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 7), Range: 150 ft\n<ul>\n<li>Net 1: 16 Positive damage (Half DR) + Revealed for 1 hour. Net 2: 28 Positive damage + Revealed + Blinded for 1 minute; no save. Net 3: 28 Positive damage + Revealed + Blinded + Frightened for 1 minute; undead take double damage from this attack; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Sovereign Healing (1/short rest) [Combat]:</strong> As 2 [Combat] actions, releases a wave of Positive energy in a 50-foot radius. All living allies heal HP equal to the Sovereign Aetherim's Wisdom score × 2 (16). Additionally, one ally of the summoner's choice within range is restored from any single condition affecting them. Cannot affect undead or constructs.</li>\n<li><strong>Blinding Presence:</strong> 40-foot radius; Hard task (2 successes) to resist; failure: Blinded for 1 round rather than just Dazzled.</li>\n<li><strong>Divine Proclamation (1/encounter):</strong> As Herald; Will save Hard task; on failure Stunned + Frightened for 1 minute; additionally target cannot take offensive actions against designated allies for the duration.</li>\n<li><strong>Protective Aura:</strong> 50-foot radius; +5 DR to designated allies; allies within the aura cannot be surprised.</li>\n<li><strong>Turn Undead:</strong> All undead within 60 feet make Will save (Hard task). On failure: flee for 1 hour, cannot approach within 60 feet. Undead at or below half HP when they fail: destroyed.</li>\n<li><strong>Immunity to Non-Magical Weapons:</strong> Mundane weapons simply pass through the Sovereign Aetherim's form without effect.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n<li><strong>Continual Radiance:</strong> Bright light 80-foot radius; acts as sunlight for creatures vulnerable to it.</li>\n</ul>\n<p><strong>Description:</strong> A Sovereign Aetherim's presence reshapes the terms of any engagement involving undead, fiends, or evil-aligned creatures — Blinding Presence, Turn Undead, and immunity to non-magical weapons mean those categories of opponent cannot effectively engage it. Against living opponents it is still a powerful combatant with significant support capability. Sovereign Healing at this tier can restore an entire party from serious damage in a single action. A summoner whose moral standing is genuinely good will find a Sovereign Aetherim the most capable protective ally available at any tier. One whose standing is ambiguous will find it Cooperative at best, technically compliant, and quietly persistent in noting when its observations suggest the summoner might reconsider a course of action.</p>\n<p>---</p>\n<h4>Radiant Aetherim</h4>\n<p><strong>Threat Rating:</strong> 5 <strong>Origin:</strong> Positive Plane <strong>Size:</strong> Large <strong>HP:</strong> 216 (Con 6 × 36, Massive) <strong>DR:</strong> 8 (primordial divine construction) <strong>Speed:</strong> 60 ft, Fly 130 ft <strong>Attributes:</strong> Str 7 / Con 6 / Agi 7 / Dex 6 / Int 8 / Wis 8 / Cha 8 / Luck 7 <strong>Skills:</strong> Melee Combat 8, Perception 8, Medicine 8, Religion 8, Persuasion 8, Intimidate 7 <strong>Senses:</strong> Darkvision 120 ft, Truesight 120 ft, Perfect Sight 60 ft <strong>Initiative Bonus:</strong> +7 (Agi 7) <strong>Creature Type:</strong> Aetherim — Immune to poison damage, Poisoned, disease, fear, necrotic damage, non-magical weapons. Fortune on all saves. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Primordial Radiance [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 8), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Large, heavy: 12 + 2) + 16 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 16 Positive damage; all evil-aligned creatures and undead within 20 feet of the target make Will save (Hard task, 2 successes) or Blinded + Frightened for 1 minute + 16 Positive damage (Half DR) from the radiant discharge; living allies in the same radius heal 8 HP</li>\n<li><em>Margin 3:</em> 21 damage + 16 Positive damage; all effects apply with no save; undead at or below half HP in the area destroyed; living allies heal 16 HP</li>\n</ul></li>\n<li><strong>Solar Strike [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 8), Range: 200 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 20 Positive damage (Half DR) + Blinded until end of their next turn. Net 2: 36 Positive damage + Blinded for 1 minute + Frightened for 1 minute; no save. Net 3: 36 Positive damage + Blinded + Frightened; undead take double damage and are destroyed outright if at or below half HP; no save on any effect.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Radiant Healing (1/short rest) [Combat]:</strong> As 2 [Combat] actions, releases the full Positive plane's healing force in a 60-foot radius. All living allies heal to their full maximum HP. All conditions affecting them that are not permanent are removed. Undead and constructs in the radius take 40 Positive damage (Half DR); no save. This ability will not be used if the summoner or designated allies are outside the radius.</li>\n<li><strong>Blinding Presence:</strong> 60-foot radius; Fortitude save Hard task (2 successes); failure: Blinded for 1 minute. This affects all evil-aligned creatures and undead within range, not just those the Radiant Aetherim chooses.</li>\n<li><strong>Divine Proclamation (1/encounter):</strong> As Sovereign; additionally all creatures that fail the save cannot take any action that would harm a living creature for 1 minute — they may move, defend, and use non-harmful abilities, but cannot attack, cast harmful weaves, or apply damaging conditions.</li>\n<li><strong>Protective Aura:</strong> 60-foot radius; +6 DR to designated allies; cannot be surprised; Fortune on all saves within the aura.</li>\n<li><strong>Turn Undead:</strong> All undead within 120 feet make Will save (Hard task). Failure: destroyed outright if at or below half HP; otherwise flee for 24 hours. This triggers automatically at the start of each of the Radiant Aetherim's turns without requiring an action.</li>\n<li><strong>Immunity to Non-Magical Weapons.</strong></li>\n<li><strong>Perfect Sight 60 ft:</strong> Sees through all illusory effects, invisibility, magical darkness, and shapechanges within 60 feet.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n<li><strong>Positive Energy Sharing:</strong> The summoner and up to 6 designated allies gain immunity to necrotic damage and the Poisoned condition while within 60 feet.</li>\n<li><strong>Continual Radiance:</strong> Bright light 100-foot radius; acts as sunlight; suppresses all magical darkness within the radius regardless of energy cost.</li>\n</ul>\n<p><strong>Description:</strong> A Radiant Aetherim is the Positive plane's full authority given form and summoned to act. Radiant Healing at full HP restoration for all allies in a 60-foot radius is a fight-resetting ability with no equivalent in the bestiary. Turn Undead triggers automatically every round, destroying half-HP undead and routing the rest without requiring any action. Blinding Presence at 60 feet means undead and evil-aligned creatures cannot function effectively within the radius. Divine Proclamation prevents all hostile action by everyone who fails the save. A summoner who calls a Radiant Aetherim into an encounter has made a decisive statement about how that encounter ends. The Radiant Aetherim will assess the summoner's moral standing before deciding whether to apply its full capability or merely its baseline cooperation — not as a threat, but as an honest reflection of what the Positive plane is willing to pour through the connection. A summoner whose record warrants it will receive everything the entry describes. The Radiant Aetherim will tell them, clearly and without judgment, if their record does not.</p>\n<p>---</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 0.5,
+    "height": 0.5,
+    "disposition": -1
+  },
+  "_key": "!actors!db8ca6feff8c6783"
+}

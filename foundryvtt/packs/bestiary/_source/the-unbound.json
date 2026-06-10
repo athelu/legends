@@ -1,0 +1,170 @@
+{
+  "_id": "8d22fa863dff59ff",
+  "name": "The Unbound",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>The Unbound is named for what it no longer is. At some point in the incomprehensibly long period of its existence in the Space between planes, it ceased to be bounded by the rules that govern creatures from specific planes. It does not have a home plane. It does not have a form that is consistently present in any given plane. It has imperatives and it has a perspective that has been developing since before the current configuration of planes existed. When a summoner binds one, they are not binding a creature to their will — they are entering into a temporary agreement with something that has agreed to be bound, for reasons that may relate to the summoner's instructions or may relate to something the Unbound has decided the summoner's instructions will accomplish that the summoner has not yet understood. The agreement holds. The Unbound does not break bindings. But a summoner who has called one should be aware that something with a perspective that old has context they do not have.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 7,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 8,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 8,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 8,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 8,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 8,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 216,
+      "max": 216,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 8,
+      "max": 8
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 7,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 8,
+      "arcane": 8,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 7,
+      "history": 0,
+      "perception": 8,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 0,
+      "fly": 80,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "",
+    "hpMultiplier": 36,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision unlimited, Seam Sense unlimited, See Invisibility, Truesight unlimited, Perfect Sight 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Reality Erasure [Combat]:</strong> Ranged attack (Dex 8 + Ranged Combat 8), Range: 200 ft\n<ul>\n<li><em>Net 1:</em> 24 force damage (Ignore DR); target loses 6 Current Luck; DR reduced by 4 for 1 minute; target makes Will save (1 success) or Confused for 1 minute</li>\n<li><em>Net 2:</em> 40 force damage; Current Luck reduced by 8; DR reduced by 6; Confused without save for 1 minute; target loses their [Reaction] and one [Move] action until start of their next turn</li>\n<li><em>Net 3:</em> 40 force damage; Current Luck reduced by 10; DR reduced by 8; Confused; action loss; target makes Will save (Hard task, 2 successes) or is partially erased from continuity — they cannot be targeted by allies' helpful abilities for 1 minute, as they are slightly out of phase with their own timeline</li>\n</ul></li>\n<li><strong>Void Cascade [Combat — Recharge 6-8]:</strong> 40-foot radius centered on a point within 150 feet.\n<ul>\n<li>All creatures in radius: 32 force damage (Ignore DR), no save. Additionally: Will save (1 success) or Disoriented + Confused for 1 minute. Current Luck reduced by 6 regardless of save. DR reduced by 4 for 1 minute regardless of save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>The Signal (Overwhelming):</strong> 90-foot radius. 16 force damage (Ignore DR) and lose 4 Current Luck per round for all non-Aberration creatures. Creatures reduced to 0 Current Luck by this effect do not merely fall Unconscious — they are removed from the encounter entirely, transported involuntarily to a random location 1d6 miles away (in a random direction) where they regain consciousness in 1d6 hours.</li>\n<li><strong>Spatial Sovereignty:</strong> As Rift Warden's Spatial Dominion but the radius is 120 feet, the duration is 10 minutes, and within the zone the Unbound moves at double speed, all enemy teleportation effects fail automatically without saves, and the Unbound can teleport any creature within the zone up to 60 feet as a free action once per round (Will save Hard task, 2 successes, to resist).</li>\n<li><strong>Partial Discontinuity (Enhanced):</strong> As Rift Warden's version but 50% chance (5-8 on d8). The Unbound is substantially less present in the prime material than creatures of its size suggest.</li>\n<li><strong>Eye Rays (Enhanced — 1/round, no recharge):</strong> As Rift Warden's Eye Rays but 80-foot cone. Activates once per round on the Unbound's turn at no action cost — it is not using an action to fire them, it simply does.</li>\n<li><strong>Reality Anchor Destruction:</strong> The Unbound can, as a [Combat] action, target any magical effect, summoning circle, planar boundary marker, or similar spatial construct within 60 feet and attempt to unmake it. The effect ends immediately unless it was created by a TR 5 creature or a weave of cost 12 or higher, in which case the creator makes an opposed Arcane check against the Unbound's Arcane 8 to maintain it.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "The Unbound",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!8d22fa863dff59ff"
+}

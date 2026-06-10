@@ -1,0 +1,46 @@
+{
+  "_id": "4e6d2a549be43a03",
+  "name": "Point Blank",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>The shot at arm's length is harder to aim and worse for the weapon, but the look on their face when it lands is worth it.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 4
+      },
+      "skills": "rangedCombat:4",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you make a ranged attack against a creature within 5 feet, you may immediately move up to 10 feet as a [Free] action after the attack resolves, without provoking opportunity attacks from the creature you attacked. The +1 to both attack dice penalty for shooting while threatened still applies to the attack.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Once per turn"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Ranged]",
+      "[Move]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!4e6d2a549be43a03"
+}

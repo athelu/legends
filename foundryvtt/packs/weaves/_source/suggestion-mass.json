@@ -55,9 +55,15 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 hour, 2= 4 hours, 3 = 12 hours",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "charmed",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "save",
     "tags": [
+      "control",
       "divination",
       "ranged",
       "ritual"

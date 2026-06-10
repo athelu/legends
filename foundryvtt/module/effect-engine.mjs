@@ -233,7 +233,8 @@ export async function applyEffect(options) {
     type: origin.type || 'weave',
     id: origin.id || '',
     actor: origin.actor || origin.actorId || origin.casterId || '',
-    successes: origin.successes || 0
+    successes: origin.successes || 0,
+    potential: origin.potential ?? 0
   };
   
   // Evaluate parameterized formulas
@@ -589,21 +590,39 @@ function mapSemanticKey(semanticKey) {
     // DR
     'system.dr.bonus': 'system.dr.bonus',
     'system.dr.value': 'system.dr.value',
-    
+
     // HP
     'system.hp.temp': 'system.hp.temp',
     'system.hp.max': 'system.hp.max',
-    
+    // Flat HP bonus accumulated by feats (added on top of base HP in prepareDerivedData)
+    'system.hp.bonusFlat': 'system.hp.bonusFlat',
+    // Extra HP recovered per short rest (feats like Fast Healer)
+    'system.hp.shortRestBonus': 'system.hp.shortRestBonus',
+
     // Speed
     'system.speed.base': 'system.speed.base',
     'system.movement.fly': 'system.movement.fly',
     'system.movement.swim': 'system.movement.swim',
     'system.movement.climb': 'system.movement.climb',
-    
+
     // Actions
     'system.actions.max': 'system.actions.max',
     'system.actions.bonus': 'system.actions.bonus',
-    
+
+    // Initiative
+    // Flat bonus added to initiative order/value
+    'system.initiative.bonus': 'system.initiative.bonus',
+
+    // Damage bonuses (flat, scoped by attack type)
+    'system.damage.bonus': 'system.damage.bonus',
+    'system.damage.meleeBonus': 'system.damage.meleeBonus',
+    'system.damage.rangedBonus': 'system.damage.rangedBonus',
+    'system.damage.unarmedBonus': 'system.damage.unarmedBonus',
+
+    // Encumbrance threshold overrides (Beast of Burden)
+    'system.encumbrance.encumberedThreshold': 'system.encumbrance.encumberedThreshold',
+    'system.encumbrance.heavyThreshold': 'system.encumbrance.heavyThreshold',
+
     // Attributes (temporary overrides)
     'system.attributes.strength.tempValue': 'system.attributes.strength.tempValue',
     'system.attributes.constitution.tempValue': 'system.attributes.constitution.tempValue',
@@ -612,7 +631,8 @@ function mapSemanticKey(semanticKey) {
     'system.attributes.intelligence.tempValue': 'system.attributes.intelligence.tempValue',
     'system.attributes.wisdom.tempValue': 'system.attributes.wisdom.tempValue',
     'system.attributes.charisma.tempValue': 'system.attributes.charisma.tempValue',
-    
+    'system.attributes.luck.tempValue': 'system.attributes.luck.tempValue',
+
     // Visibility
     'visibility.invisible': 'system.visibility.invisible',
     'visibility.hidden': 'system.visibility.hidden',

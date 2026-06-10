@@ -41,7 +41,13 @@
       "[Shield]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "dr.modify",
+        "value": 2,
+        "damageTypes": "physical"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!e281f488faa2e4e1"

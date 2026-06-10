@@ -24,7 +24,7 @@
     "target": "sphere",
     "savingThrow": "none",
     "effect": "Magical darkness fills a 15ft radius sphere at medium range. Blocks normal and magical light (unless from higher energy weave). Creatures inside are Blinded to creatures outside.",
-    "effectType": "utility",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 10 minutes (30-foot radius)",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "blinded",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "automatic",
     "tags": [
       "aoe",
