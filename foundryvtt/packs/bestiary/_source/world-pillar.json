@@ -1,0 +1,170 @@
+{
+  "_id": "0e7db4d6b1163d7a",
+  "name": "World Pillar",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A World Pillar is the elemental concept of stone given will and scale. It does not fight — it removes things from the fight permanently. World Crush at Margin 2 immediately Engulfs with no save and no preliminary steps. Continental Hurl controls entire approach corridors. DR 9 plus Stone Skin plus regeneration plus elemental immunities means the only meaningful way to damage it is magical. A summoner who calls one has made a decision about what this location will look like when the World Pillar is done with it. That decision is largely irreversible once made.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 2,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 8,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 7,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 7,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 6,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 216,
+      "max": 216,
+      "temp": 0
+    },
+    "dr": {
+      "value": 9,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 6,
+      "max": 6
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 8,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 8,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 7,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 60
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 36,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 2 miles",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>World Crush [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 8), Reach: 20 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2)</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str); target immediately Engulfed (Grappled + Restrained + Prone + Blinded); 24 bludgeoning damage per round; no save; Might check (Hard task, 2 successes) as full [Combat] action each round to escape</li>\n<li><em>Margin 3:</em> 24 damage + Engulfed; damage increases to 36 per round; escape requires ally excavation (4 [Interact] actions) or Might check at Fortune (the stone has begun to fuse around them)</li>\n</ul></li>\n<li><strong>Continental Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 150/300 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 24 bludgeoning damage + Prone. Net 2: 36 bludgeoning damage + Prone + Stunned until end of their next turn. Net 3: 36 bludgeoning damage + Prone + Stunned + Restrained for 1 round by debris; all creatures within 20 feet take 16 bludgeoning damage.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Immovable:</strong> As Stone Titan; magical forced movement also requires Hard task opposed check.</li>\n<li><strong>Earth Bond:</strong> Regenerates 12 HP per turn.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> Escape checks add 5 to both dice. At Margin 3 Engulf, escape checks have Misfortune instead.</li>\n<li><strong>Continental Tremor (1/day):</strong> As Ancient Stone entry in Earth Elementals — 80-foot radius; designated allies immune.</li>\n<li><strong>Piercing and Slashing Immunity Sharing:</strong> As Stone Titan, extended to 4 designated allies.</li>\n</ul>",
+    "reactionsNotes": "<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 14.</li>\n</ul>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "World Pillar",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!0e7db4d6b1163d7a"
+}

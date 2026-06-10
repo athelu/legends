@@ -1,0 +1,254 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Ring Name"/></h1>
+      <div class="header-tag">Ring &bull; <span style="font-size:11px;color:#27ae60;font-weight:bold;">Any character may use</span></div>
+
+      <div class="weapon-summary-row">
+        <div class="summary-stat">
+          <label>Charges</label>
+          <span class="value">{{system.charges.value}} / {{system.charges.max}}</span>
+        </div>
+
+        {{#if system.rarity}}
+        <div class="summary-stat">
+          <label>Rarity</label>
+          <span class="value">{{system.rarity}}</span>
+        </div>
+        {{/if}}
+
+        <div class="summary-stat">
+          <label>Weight</label>
+          <span class="value">{{system.weight}} lbs</span>
+        </div>
+
+        <div class="summary-stat editable">
+          <label>Qty</label>
+          <input type="number" name="system.quantity" value="{{system.quantity}}" data-dtype="Number" min="0" class="qty-input" />
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="details">Details</a>
+    <a class="item active" data-tab="weaves">Granted Weaves ({{system.grantedWeaves.length}})</a>
+  </nav>
+
+  <section class="sheet-body">
+
+    <!-- Description Tab -->
+    <div class="tab description" data-group="primary" data-tab="description">
+      {{editor enrichedDescription target="system.description.value" button=true owner=owner editable=editable}}
+    </div>
+
+    <!-- Details Tab -->
+    <div class="tab details" data-group="primary" data-tab="details">
+
+      <h3>Charges</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Current</label>
+          <input type="number" name="system.charges.value" value="{{system.charges.value}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Maximum</label>
+          <input type="number" name="system.charges.max" value="{{system.charges.max}}" data-dtype="Number" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Recharge Period</label>
+          <select name="system.charges.rechargePeriod">
+            <option value="shortRest" {{#if (eq system.charges.rechargePeriod "shortRest")}}selected{{/if}}>Short Rest</option>
+            <option value="longRest"  {{#if (eq system.charges.rechargePeriod "longRest")}}selected{{/if}}>Long Rest</option>
+            <option value="never"     {{#if (eq system.charges.rechargePeriod "never")}}selected{{/if}}>Never</option>
+          </select>
+        </div>
+      </div>
+
+      <h3>Activation</h3>
+      <div style="background: rgba(39,174,96,0.07); border-left: 3px solid #27ae60; padding: 8px 12px; margin-bottom: 12px; font-size: 13px; border-radius: 2px;">
+        <strong>No targeting roll required.</strong> Any character may activate this ring &mdash; the effect fires automatically at <strong>Margin 2</strong>.
+      </div>
+
+      <h3>Properties</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Primary Energy</label>
+          <select name="system.primaryEnergy">
+            <option value=""         {{#if (eq system.primaryEnergy "")}}selected{{/if}}>— None —</option>
+            <option value="earth"     {{#if (eq system.primaryEnergy "earth")}}selected{{/if}}>Earth</option>
+            <option value="air"       {{#if (eq system.primaryEnergy "air")}}selected{{/if}}>Air</option>
+            <option value="fire"      {{#if (eq system.primaryEnergy "fire")}}selected{{/if}}>Fire</option>
+            <option value="water"     {{#if (eq system.primaryEnergy "water")}}selected{{/if}}>Water</option>
+            <option value="positive"  {{#if (eq system.primaryEnergy "positive")}}selected{{/if}}>Positive</option>
+            <option value="negative"  {{#if (eq system.primaryEnergy "negative")}}selected{{/if}}>Negative</option>
+            <option value="space"     {{#if (eq system.primaryEnergy "space")}}selected{{/if}}>Space</option>
+            <option value="time"      {{#if (eq system.primaryEnergy "time")}}selected{{/if}}>Time</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Rarity</label>
+          <select name="system.rarity">
+            <option value=""          {{#if (eq system.rarity "")}}selected{{/if}}>— None —</option>
+            <option value="common"    {{#if (eq system.rarity "common")}}selected{{/if}}>Common</option>
+            <option value="uncommon"  {{#if (eq system.rarity "uncommon")}}selected{{/if}}>Uncommon</option>
+            <option value="rare"      {{#if (eq system.rarity "rare")}}selected{{/if}}>Rare</option>
+            <option value="very-rare" {{#if (eq system.rarity "very-rare")}}selected{{/if}}>Very Rare</option>
+            <option value="legendary" {{#if (eq system.rarity "legendary")}}selected{{/if}}>Legendary</option>
+            <option value="artifact"  {{#if (eq system.rarity "artifact")}}selected{{/if}}>Artifact</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Body Slot</label>
+          <select name="system.bodySlot">
+            <option value="ring"      {{#if (eq system.bodySlot "ring")}}selected{{/if}}>Ring (Left or Right)</option>
+            <option value="head"      {{#if (eq system.bodySlot "head")}}selected{{/if}}>Head</option>
+            <option value="eyes"      {{#if (eq system.bodySlot "eyes")}}selected{{/if}}>Eyes</option>
+            <option value="neck"      {{#if (eq system.bodySlot "neck")}}selected{{/if}}>Neck</option>
+            <option value="shoulders" {{#if (eq system.bodySlot "shoulders")}}selected{{/if}}>Shoulders</option>
+            <option value="chest"     {{#if (eq system.bodySlot "chest")}}selected{{/if}}>Chest</option>
+            <option value="wrists"    {{#if (eq system.bodySlot "wrists")}}selected{{/if}}>Wrists</option>
+            <option value="hands"     {{#if (eq system.bodySlot "hands")}}selected{{/if}}>Hands</option>
+            <option value="waist"     {{#if (eq system.bodySlot "waist")}}selected{{/if}}>Waist</option>
+            <option value="feet"      {{#if (eq system.bodySlot "feet")}}selected{{/if}}>Feet</option>
+            <option value="none"      {{#if (eq system.bodySlot "none")}}selected{{/if}}>None (Curio)</option>
+            <option value=""          {{#if (eq system.bodySlot "")}}selected{{/if}}>—</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="system.requiresBinding" {{#if system.requiresBinding}}checked{{/if}} />
+            Requires Binding
+          </label>
+        </div>
+        {{#if isOwned}}
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="system.bound" {{#if system.bound}}checked{{/if}} />
+            Bound
+          </label>
+        </div>
+        {{/if}}
+      </div>
+
+      <h3>Physical</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Weight (lbs)</label>
+          <input type="number" name="system.weight" value="{{system.weight}}" data-dtype="Number" step="0.1" min="0" />
+        </div>
+        <div class="form-group">
+          <label>Cost (gp)</label>
+          <input type="number" name="system.cost" value="{{system.cost}}" data-dtype="Number" min="0" />
+        </div>
+      </div>
+
+      <!-- Carry State -->
+      {{#if carryOptions.length}}
+      <h3>Carry State</h3>
+      <div class="form-group-row">
+        <div class="form-group">
+          <label>Status</label>
+          <select name="system.encumbrance.carryState">
+            {{#each carryOptions as |option|}}
+            <option value="{{option.value}}" {{#if (eq ../system.encumbrance.carryState option.value)}}selected{{/if}}>{{option.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        {{#if containerOptions.length}}
+        <div class="form-group">
+          <label>Container</label>
+          <select name="system.encumbrance.containerId">
+            <option value="">— None —</option>
+            {{#each containerOptions as |option|}}
+            <option value="{{option.value}}" {{#if (eq ../system.encumbrance.containerId option.value)}}selected{{/if}}>{{option.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        {{/if}}
+      </div>
+      {{/if}}
+
+      <!-- Identification -->
+      <h3>Identification</h3>
+      <div class="form-group">
+        <label>
+          <input type="checkbox" name="system.isMagical" {{#if system.isMagical}}checked{{/if}} />
+          Is Magical
+        </label>
+      </div>
+      {{#if system.isMagical}}
+      <div class="form-group">
+        <label>
+          <input type="checkbox" name="system.identified" {{#if system.identified}}checked{{/if}} />
+          Identified by players
+        </label>
+      </div>
+      <div class="form-group">
+        <label>Unidentified Name</label>
+        <input type="text" name="system.unidentifiedName" value="{{system.unidentifiedName}}" placeholder="e.g. Strange Ring (auto if blank)" />
+      </div>
+      <div class="form-group">
+        <label>Identification Difficulty</label>
+        <select name="system.identifyDC">
+          <option value="normal" {{#if (eq system.identifyDC "normal")}}selected{{/if}}>Normal — 1 success</option>
+          <option value="hard"   {{#if (eq system.identifyDC "hard")}}selected{{/if}}>Hard — 2 successes</option>
+          <option value="expert" {{#if (eq system.identifyDC "expert")}}selected{{/if}}>Expert — 2 successes, +1 per die</option>
+          <option value="master" {{#if (eq system.identifyDC "master")}}selected{{/if}}>Master — 2 successes, +2 per die</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Unidentified Description</label>
+        <textarea name="system.unidentifiedDescription" rows="3" placeholder="What the ring looks like before identification...">{{system.unidentifiedDescription}}</textarea>
+      </div>
+      {{/if}}
+
+      {{#if enrichedNotes}}
+      <h3>Notes</h3>
+      <div class="notes-text">{{{enrichedNotes}}}</div>
+      {{/if}}
+
+    </div><!-- /details tab -->
+
+    <!-- Granted Weaves Tab -->
+    <div class="tab weaves active" data-group="primary" data-tab="weaves">
+      {{#if system.grantedWeaves.length}}
+      <table class="granted-weaves-table" style="width: 100%; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th style="text-align: left; padding: 4px 8px; border-bottom: 1px solid #ccc;">Weave</th>
+            <th style="width: 90px; text-align: center; padding: 4px 8px; border-bottom: 1px solid #ccc;">Charges</th>
+            <th style="text-align: left; padding: 4px 8px; border-bottom: 1px solid #ccc;">Notes</th>
+            {{#if isOwned}}<th style="width: 50px; border-bottom: 1px solid #ccc;"></th>{{/if}}
+          </tr>
+        </thead>
+        <tbody>
+          {{#each system.grantedWeaves as |weave|}}
+          <tr style="{{#if @even}}background: rgba(0,0,0,0.03);{{/if}}">
+            <td style="padding: 4px 8px;">
+              <input type="text" name="system.grantedWeaves.{{@index}}.name" value="{{weave.name}}" style="width: 100%;" />
+            </td>
+            <td style="text-align: center; padding: 4px 8px;">
+              <input type="number" name="system.grantedWeaves.{{@index}}.chargeCost" value="{{weave.chargeCost}}" data-dtype="Number" min="0" style="width: 60px; text-align: center;" />
+            </td>
+            <td style="padding: 4px 8px;">
+              <input type="text" name="system.grantedWeaves.{{@index}}.description" value="{{weave.description}}" placeholder="Optional note" style="width: 100%;" />
+            </td>
+            {{#if ../isOwned}}
+            <td style="text-align: center; padding: 4px 8px;">
+              <a class="item-control" data-action="useGrantedWeave" data-weave-index="{{@index}}" title="Activate {{weave.name}} ({{weave.chargeCost}} charge)"><i class="fas fa-magic"></i></a>
+            </td>
+            {{/if}}
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{else}}
+      <p class="hint" style="padding: 16px; color: #888; font-style: italic;">No weaves granted by this ring.</p>
+      {{/if}}
+    </div><!-- /weaves tab -->
+
+  </section>
+</form>

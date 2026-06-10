@@ -24,7 +24,7 @@
     "target": "single",
     "savingThrow": "will",
     "effect": "Humanoid target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, you control target's actions (won't take obviously harmful actions). Target can repeat save when taking damage (1 success ends effect).",
-    "effectType": "utility",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
@@ -55,9 +55,15 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "charmed",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "save",
     "tags": [
+      "control",
       "ranged",
       "ritual"
     ]

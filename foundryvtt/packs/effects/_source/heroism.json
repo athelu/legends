@@ -1,0 +1,57 @@
+{
+  "_id": "heroism00000000001",
+  "name": "Heroism",
+  "type": "effect",
+  "img": "icons/svg/aura.svg",
+  "system": {
+    "label": "Heroism",
+    "category": "buff",
+    "effectType": "temp-hp",
+    "description": {
+      "value": "<p>Target is immune to the Frightened condition and gains temporary HP equal to the caster's Positive Potential. When this effect ends, any remaining temporary HP is lost.</p>"
+    },
+    "tokenIcon": "icons/svg/aura.svg",
+    "badge": {
+      "type": "value",
+      "value": 0,
+      "max": 0
+    },
+    "activeEffects": [
+      {
+        "key": "system.hp.temp",
+        "mode": "add",
+        "value": "${value}",
+        "notes": "Temporary HP from caster's Positive Potential"
+      }
+    ],
+    "conditionImmunities": ["Frightened"],
+    "stacking": "highest",
+    "overlayPriority": 12,
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0,
+      "potential": 0
+    },
+    "grantedBy": "Heroism",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "${origin.potential}",
+      "durationFormula": "${netSuccesses} >= 3 ? 10 : ${netSuccesses} >= 2 ? 1 : ${netSuccesses} >= 1 ? 0.1 : 0"
+    }
+  },
+  "flags": {},
+  "_key": "!items!heroism00000000001"
+}

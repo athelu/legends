@@ -24,7 +24,7 @@
     "target": "",
     "savingThrow": "none",
     "effect": "Move object up to 500 lbs up to 30 feet per round at medium range. Can use to restrain creature (opposed check: your Space Mastery vs their Athletics). Restrained creature can retry each round (1 success escapes).",
-    "effectType": "utility",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
@@ -55,9 +55,15 @@
     "targetingSuccessScaling": "0 = fails, 1 = 100 lbs (1 minute), 2= 500 lbs (10 minutes), 3 = 1000 lbs (1 hour)",
     "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "restrained",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "automatic",
     "tags": [
+      "control",
       "ranged",
       "utility"
     ]

@@ -1,0 +1,195 @@
+{
+  "_id": "aff870790db719cb",
+  "name": "Thug (Human)",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Street criminals - muggers, gang members, hired muscle for criminal organizations. More dangerous than commoners due to actual combat training (Melee 3) and willingness to use violence. Operate in rough neighborhoods, extorting shopkeepers, robbing travelers, collecting debts for loan sharks. Cowards at heart - fight dirty, gang up on isolated victims, flee when facing real danger. May be redeemed or may be irredeemably vicious depending on circumstances. Criminal background gives them underworld contacts for fencing stolen goods.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 3,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 3,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 2,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 24,
+      "max": 24,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 2,
+      "stealth": 3,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 2,
+      "thievery": 2,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 3,
+      "history": 0,
+      "perception": 0,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "humanoid",
+    "creatureSubtype": "",
+    "hpMultiplier": 8,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Normal",
+    "tactics": "Thugs rely on numbers and dirty fighting. They use Swift Movement to dart in, attack with allies nearby (triggering Exploit Weakness for +4 damage), then Disengage as a [Minor] action to avoid retaliation. Prefer ambushes from stealth (Stealth 3) and will flee if facing organized opposition or taking heavy damage. Use Intimidate 2 to cow victims into submission rather than fighting. Will throw daggers only when fleeing or unable to close to melee. In groups of 3+, they surround enemies to constantly trigger Exploit Weakness. One thug distracts while others stab from behind. If one goes down, the rest typically flee unless led by someone more dangerous (like a gang leader or TR 1 Enforcer).",
+    "attacksNotes": "<ul>\n<li><strong>Dagger [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft\n<ul>\n<li><strong><em>Margin 1:</strong></em> 4 damage</li>\n<li><strong><em>Margin 2:</strong></em> 9 damage (4 + 5 Agi)</li>\n</ul></li>\n<li><strong>With Exploit Weakness:</strong> When ally within 5 ft of target OR subtracting from attack dice, add Dex 4 to damage\n<ul>\n<li><strong><em>Margin 1:</strong></em> 8 damage (4 + 4 Dex)</li>\n<li><strong><em>Margin 2:</strong></em> 13 damage (4 + 5 Agi + 4 Dex)</li>\n</ul></li>\n<li><strong>Thrown (Range 30/60 ft):</strong> Use Dex 4 + Ranged Combat 0\n<ul>\n<li><strong><em>Margin 1:</strong></em> 4 damage</li>\n<li><strong><em>Margin 2:</strong></em> 9 damage (4 + 3 Str)</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [
+    {
+      "_id": "3c45d8fb7da3b6e7",
+      "name": "Dagger, crowbar, common clothes, belt pouch, wool hood, low boots",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": {
+          "value": "<p>Dagger, crowbar, common clothes, belt pouch, wool hood, low boots</p>"
+        },
+        "equipmentType": "adventuring-gear",
+        "isMagical": false,
+        "identified": true,
+        "weight": 1,
+        "cost": 0,
+        "quantity": 1,
+        "equipped": true,
+        "rarity": "",
+        "requiresAttunement": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_key": "!items!3c45d8fb7da3b6e7"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Thug (Human)",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!aff870790db719cb"
+}

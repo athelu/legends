@@ -1,0 +1,45 @@
+{
+  "_id": "c3cb916468aa0035",
+  "name": "Crushing Advance",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>The weight behind a two-handed weapon isn't just damage.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [],
+      "tier": 0,
+      "other": "must wield a [Two-Handed] weapon"
+    },
+    "benefits": "<p>When you deal damage with a [Two-Handed] weapon, the target's DR is reduced by 2 for that attack. This applies regardless of which damage type the weapon is dealing.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Two-Handed]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!c3cb916468aa0035"
+}

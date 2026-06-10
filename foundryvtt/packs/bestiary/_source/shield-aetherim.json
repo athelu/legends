@@ -1,0 +1,170 @@
+{
+  "_id": "acd939eef94c457e",
+  "name": "Shield Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Shield Aetherim are bodyguards. Protective Aura provides passive DR to everyone nearby; Intercept redirects attacks from vulnerable allies to the Shield Aetherim itself. They will position themselves adjacent to whoever the summoner designates as the priority protection target and maintain that position until ordered otherwise. A summoner who is concerned about a specific ally — a spellcaster, an injured party member, a person of importance — and places a Shield Aetherim beside them will find that ally considerably harder to damage. The Shield Aetherim will not abandon that position to chase a more interesting fight, which is either their most valuable property or their most frustrating one depending on how the battle develops.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 32,
+      "max": 32,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 3,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 3,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 4,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 40,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 8,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Truesight 30 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Radiant Blade [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 4), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage + 4 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 10 damage (6 + 4 Str) + 4 Positive damage; undead and evil-aligned creatures make Will save (1 success) or Frightened until end of their next turn</li>\n<li><em>Margin 3:</em> 10 damage + 4 Positive damage; Frightened condition; no save; target also Blinded until end of their next turn from the concentrated radiant discharge</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Healing Touch (3/short rest):</strong> Restores 8 HP per use.</li>\n<li><strong>Protective Aura:</strong> Allies within 15 feet of the Shield Aetherim gain +2 DR against all damage. This aura is always active.</li>\n<li><strong>Intercept (1/round) [Reaction]:</strong> When an adjacent ally would be hit by an attack, the Shield Aetherim may use a [Reaction] to place itself between the attacker and the ally. The attack targets the Shield Aetherim instead, resolving against its defenses and DR.</li>\n<li><strong>Continual Radiance:</strong> As above.</li>\n<li><strong>Detect Evil:</strong> As Warden Aetherim.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Shield Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!acd939eef94c457e"
+}

@@ -1,0 +1,170 @@
+{
+  "_id": "9a3ea3f157129bdf",
+  "name": "Rockborn",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Rockborn transition Stone Nephilim from obstacles into active threats. Crushing Slam builds toward Grapple and the ongoing damage that Grapple provides. Stone Grip makes escape from that Grapple genuinely difficult. A summoner who wants something held in place while allies deal with it elsewhere will find a Rockborn with a Grappled target the most efficient delivery mechanism available at this tier.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 60,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 56,
+      "max": 56,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 3,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 5,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 25,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 20
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 14,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Crushing Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2)</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str); target knocked Prone + Grappled; no save; Grappled target takes 6 bludgeoning damage at the start of each of their turns</li>\n<li><em>Margin 3:</em> 16 damage + Prone + Grappled + Restrained; ongoing damage increases to 10</li>\n</ul></li>\n<li><strong>Boulder Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 1), Range: 60/120 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage</li>\n<li><em>Margin 2:</em> 10 damage; target knocked Prone + Stunned until end of their next turn; no save</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Immovable:</strong> As Stone Kin.</li>\n<li><strong>Earth Bond:</strong> As Stone Kin.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> Creatures Grappled by the Rockborn add 1 to both dice on Athletics, Acrobatics, and Might checks to escape. The stone hand does not tire.</li>\n</ul>",
+    "reactionsNotes": "<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round when hit by a physical attack, reduce incoming damage by 4.</li>\n</ul>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Rockborn",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!9a3ea3f157129bdf"
+}

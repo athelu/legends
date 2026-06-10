@@ -1,0 +1,170 @@
+{
+  "_id": "2d814b447d553a8f",
+  "name": "Stone Titan",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Stone Titans are the point at which Stone Nephilim become effectively unkillable through mundane means. DR 8 plus Stone Skin plus regeneration plus immunity to non-magical piercing and slashing means conventional weapons accomplish nothing meaningful. Seismic Authority immediately Restrains as many enemies as possible; Continental Fist removes priority targets from the engagement through Engulfing. A summoner who calls one has effectively ended the question of whether the physical fight can be won.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 1,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 8,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 8,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 8,
+      "meleeCombat": 7,
+      "history": 0,
+      "perception": 6,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 40
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 1 mile",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Continental Fist [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2)</li>\n<li><em>Margin 2:</em> 22 damage (14 + 8 Str); target Grappled + Prone + Restrained; ongoing 16 bludgeoning damage per round; no save; Fortitude save (Hard task, 2 successes) each round to break free</li>\n<li><em>Margin 3:</em> 22 damage + immediately Engulfed (driven into ground); Blinded + Restrained + 24 bludgeoning damage per round; Might check (Hard task, 2 successes) as full [Combat] action to escape, or ally excavates over 3 [Interact] actions</li>\n</ul></li>\n<li><strong>World Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 120/240 ft, 15-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 18 bludgeoning damage + Prone. Net 2: 28 bludgeoning damage + Prone + Stunned until end of their next turn. Net 3: 28 bludgeoning damage + Prone + Stunned; all creatures within 15 feet take 12 bludgeoning damage from shockwave.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Immovable:</strong> As Mountain Lord; non-magical forced movement is impossible.</li>\n<li><strong>Earth Bond:</strong> Regenerates 10 HP per turn.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> Escape checks add 4 to both dice.</li>\n<li><strong>Seismic Authority (1/day) [Combat]:</strong> As Earthlord entry in Earth Elementals — 60-foot radius seismic event; designated allies immune.</li>\n<li><strong>Piercing and Slashing Immunity Sharing:</strong> The summoner and up to 2 designated allies gain immunity to non-magical piercing and slashing damage while within 30 feet.</li>\n</ul>",
+    "reactionsNotes": "<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 12.</li>\n</ul>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Stone Titan",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!2d814b447d553a8f"
+}

@@ -34,7 +34,9 @@ import * as training from "./training.mjs";
 import * as visionTools from "./vision-tools.mjs";
 import * as identification from "./identification.mjs";
 import * as scrollUse from "./scroll-use.mjs";
+import * as implementUse from "./implement-use.mjs";
 import * as socialCheck from "./social-check.mjs";
+import * as reactions from "./reactions.mjs";
 import { initializeConditionEngine, initializeChatHandlers, handleRecoveryResult } from "./condition-engine.mjs";
 import { registerEnrichers } from "./enrichers.mjs";
 
@@ -496,7 +498,9 @@ Hooks.once('init', async function() {
     visionTools,
     identification,
     scrollUse,
-    socialCheck
+    implementUse,
+    socialCheck,
+    reactions
   };
 
   // DEPRECATED: Backward compatibility alias
@@ -575,6 +579,9 @@ Hooks.once('init', async function() {
 
   // Initialize combat handlers
   combat.initializeCombatSystem();
+
+  // Initialize reaction system (Cat 4)
+  reactions.initializeReactions();
   
   // Initialize feat validation & usage handlers
   featEffects.initializeFeatHandlers();
@@ -844,7 +851,10 @@ export async function rollSkillCheck(actor, skillKey, options = {}) {
   let defaultModifier = 0;
   let defaultApplyToAttr = true;
   let defaultApplyToSkill = true;
+  let defaultFortune = 0;
+  let defaultMisfortune = 0;
   try {
+    // Layer 1: permanent skill.modify dice modifiers
     const featMods = featEffects.computeFeatModifiers(actor);
     const s = featMods.skillDiceModifiers?.[normalizedSkillKey] || featMods.skillDiceModifiers?.[skillKey];
     if (s) {
@@ -852,6 +862,14 @@ export async function rollSkillCheck(actor, skillKey, options = {}) {
       defaultApplyToAttr = !!s.applyToAttr;
       defaultApplyToSkill = !!s.applyToSkill;
     }
+    // Layer 2: contextual roll.modifier / fortune.grant / misfortune.grant
+    const rollMods = featEffects.getFeatRollModifiers(actor, {
+      rollType: 'skill',
+      skillKey: normalizedSkillKey,
+    });
+    defaultModifier += rollMods.attrModifier;
+    defaultFortune = rollMods.fortune;
+    defaultMisfortune = rollMods.misfortune;
   } catch (err) {
     // ignore
   }
@@ -886,8 +904,8 @@ export async function rollSkillCheck(actor, skillKey, options = {}) {
     modifier: defaultModifier,
     defaultApplyToAttr,
     defaultApplyToSkill,
-    fortune: 0,
-    misfortune: 0,
+    fortune: defaultFortune,
+    misfortune: defaultMisfortune,
   };
   Hooks.call('preRollSkillCheck', rollData);
 
@@ -996,9 +1014,21 @@ export async function rollSavingThrow(actor, saveType, options = {}) {
   
   // Compute feat-derived save modifiers (if any)
   let defaultModifier = 0;
+  let defaultFortune = 0;
+  let defaultMisfortune = 0;
   try {
+    // Legacy: save.modify effects stored as dice modifier
     const featMods = featEffects.computeFeatModifiers(actor);
-    defaultModifier = featMods.saves?.[normalizedSaveType] ?? 0;
+    const saveMod = featMods.saves?.[normalizedSaveType];
+    if (saveMod) defaultModifier = saveMod.value ?? 0;
+    // Contextual roll.modifier / fortune.grant / misfortune.grant
+    const rollMods = featEffects.getFeatRollModifiers(actor, {
+      rollType: 'save',
+      saveType: normalizedSaveType,
+    });
+    defaultModifier += rollMods.attrModifier;
+    defaultFortune = rollMods.fortune;
+    defaultMisfortune = rollMods.misfortune;
   } catch (err) {
     // ignore
   }
@@ -1013,8 +1043,8 @@ export async function rollSavingThrow(actor, saveType, options = {}) {
     modifier: defaultModifier,
     defaultApplyToAttr: true,
     defaultApplyToSkill: true,
-    fortune: 0,
-    misfortune: 0,
+    fortune: defaultFortune,
+    misfortune: defaultMisfortune,
     isSave: true,
     isAttack: false,
   };
@@ -1022,6 +1052,15 @@ export async function rollSavingThrow(actor, saveType, options = {}) {
   
   // Use modified values from hook
   defaultModifier = rollData.modifier || 0;
+
+  // Consume Eldritch Strike flag — applies only to weave saves (+1 to all dice)
+  if (options.forWeave) {
+    const eldritchData = actor.getFlag?.('legends', 'eldritchStrike');
+    if (eldritchData) {
+      defaultModifier += 1;
+      await actor.unsetFlag('legends', 'eldritchStrike');
+    }
+  }
 
   // Show simplified save dialog (no attack buttons)
   return showSavingThrowDialog({
@@ -1576,22 +1615,27 @@ async function createWeaveCastCard(options) {
         </button>
       </div>
     `;
-  } else if (!hasEffects) {
-    // No save, no damage, and no effects - show generic apply button
+  } else {
+    // No save, no damage - show apply effect button for all remaining weaves.
+    // For weaves with appliesEffects, this triggers calculateWeaveEffect which
+    // calls effectEngine.applyEffect() for each effect. Draggable chips also remain.
+    const applyLabel = hasEffects ? 'Apply Effect to Target' : 'Apply Effect';
+    const applyHint = hasEffects
+      ? `Select target token and click to apply${batchHint}`
+      : `No save allowed. Select your token and click below to apply effect${batchHint}`;
     actionButton = `
       <div class="apply-section">
-        <p><em>No save allowed. Affected targets: Select your token and click below to apply effect${batchHint}</em></p>
+        <p><em>${applyHint}</em></p>
         <button class="apply-effect-button" 
                 data-weave-message-id="{{MESSAGE_ID}}"
                 data-caster-id="${actor.id}"
                 data-weave-id="${weave.id}"
                 data-caster-successes="${effectiveSuccesses}">
-          <i class="fas fa-bolt"></i> Apply Effect
+          <i class="fas fa-bolt"></i> ${applyLabel}
         </button>
       </div>
     `;
   }
-  // If no save, no damage, but has effects, no button needed - just drag the effects
   
   // Calculate actual damage based on targeting successes
   let calculatedDamage = 0;
@@ -1623,50 +1667,27 @@ async function createWeaveCastCard(options) {
   // For save-based weaves, effects are applied automatically after saves, not dragged
   let effectsSection = '';
   if (weave.system.appliesEffects?.length > 0 && !hasSave) {
-    // Check if effects should be shown based on success threshold
-    let showEffects = false;
     const successes = effectiveSuccesses;
-    
-    // Check if this success level enables effects
-    if (weave.system.damage?.scaling && weave.system.damage.scaling[successes.toString()]) {
-      // Use structured scaling data if available
-      showEffects = weave.system.damage.scaling[successes.toString()].appliesEffects === true;
-    } else if (weave.system.targetingSuccessScaling) {
-      // Parse the text-based scaling to determine effect threshold
-      // Look for patterns like "3 = ... + applies [effect]" or "3 = ... + [effect]"
-      const scalingText = weave.system.targetingSuccessScaling.toLowerCase();
-      const lines = scalingText.split('\n').map(l => l.trim());
-      
-      // Find the minimum success level that mentions applying effects
-      let effectThreshold = 0; // Default: always apply if not specified
-      for (const line of lines) {
-        // Match patterns like "- 3 = ... + applies" or "- 3 = ... + ignited"
-        const match = line.match(/^-?\s*(\d+)\s*=.*\+\s*(applies|ignited|sickened|slowed|frightened|stunned|paralyzed|petrified|blinded|deafened|charmed|exhausted)/i);
-        if (match) {
-          const level = parseInt(match[1]);
-          if (effectThreshold === 0 || level < effectThreshold) {
-            effectThreshold = level;
-          }
-        }
-      }
-      
-      // Show effects if we meet or exceed the threshold
-      // If no threshold found in text and it's not a damage weave, show effects at all success levels
-      if (effectThreshold > 0) {
-        showEffects = successes >= effectThreshold;
+
+    const effectsList = weave.system.appliesEffects.map(effectRef => {
+      const effectId = effectRef.effectId || effectRef.name;
+
+      // Determine whether this individual effect is unlocked at the current success level
+      let showThis;
+      if (weave.system.damage?.scaling) {
+        // Use scaling table: cap lookup at the highest defined key
+        const scaling = weave.system.damage.scaling;
+        const maxKey = Math.max(...Object.keys(scaling).map(Number));
+        const lookupKey = Math.min(successes, maxKey);
+        showThis = scaling[lookupKey.toString()]?.appliesEffects === true;
       } else {
-        // No damage weave or effect always applies
-        showEffects = weave.system.effectType !== 'damage' || successes > 0;
+        // No scaling table: show at any positive success count
+        showThis = successes > 0;
       }
-    } else {
-      // If no scaling info at all, show effects for non-damage weaves
-      showEffects = weave.system.effectType !== 'damage' || successes > 0;
-    }
-    
-    if (showEffects) {
-      const effectsList = weave.system.appliesEffects.map(effectRef => {
-        const effectId = effectRef.effectId || effectRef.name;
-        return `
+
+      if (!showThis) return '';
+
+      return `
           <div class="draggable-effect" 
                draggable="true"
                data-effect-id="${effectId}"
@@ -1679,8 +1700,9 @@ async function createWeaveCastCard(options) {
             <em class="drag-hint">(drag to actor)</em>
           </div>
         `;
-      }).join('');
-      
+    }).filter(Boolean).join('');
+
+    if (effectsList) {
       effectsSection = `
         <div class="weave-effects-list">
           <h4>Effects</h4>
@@ -1775,7 +1797,7 @@ export async function handleSaveClick(messageId, weaveData) {
   const saveType = weaveData.savingThrow;
   
   // Show save dialog and get result
-  const result = await rollSavingThrow(defender, saveType);
+  const result = await rollSavingThrow(defender, saveType, { forWeave: true });
   
   // If result is undefined/null, dialog was cancelled
   if (!result) return;
@@ -1802,7 +1824,7 @@ async function handleBatchSave(messageId, weaveData, targetActors) {
   
   // Roll saves for each target
   for (const defender of targetActors) {
-    const result = await rollSavingThrow(defender, saveType);
+    const result = await rollSavingThrow(defender, saveType, { forWeave: true });
     if (result) {
       results.push({
         actor: defender,
@@ -2018,26 +2040,26 @@ async function calculateBatchWeaveEffect(weaveData, weaveMessageId, results, cas
       }
     }
     
-    // Apply effects automatically if conditions are met
-    // Check if effects should apply based on success scaling
-    let shouldApplyEffects = false;
-    
+    // Apply effects automatically if conditions are met — checked per effect against scaling table
     if (margin > 0 && weave.system.appliesEffects && weave.system.appliesEffects.length > 0) {
-      // Check if there's a scaling table with entries
-      const hasScalingEntries = weave.system.damage?.scaling && Object.keys(weave.system.damage.scaling).length > 0;
-      
+      const scaling = weave.system.damage?.scaling;
+      const hasScalingEntries = scaling && Object.keys(scaling).length > 0;
+      let scalingEntry = null;
       if (hasScalingEntries) {
-        // For damage weaves with scaling tables, check if this success level enables effects
-        const scalingEntry = weave.system.damage.scaling[casterSuccesses.toString()];
-        shouldApplyEffects = scalingEntry?.appliesEffects === true;
-      } else {
-        // For non-damage weaves or weaves without scaling, apply effects if margin > 0
-        shouldApplyEffects = true;
+        // Index by net margin (caster successes - save successes), capped at highest defined level
+        const maxKey = Math.max(...Object.keys(scaling).map(Number));
+        const lookupKey = Math.min(margin, maxKey);
+        scalingEntry = scaling[lookupKey.toString()] ?? null;
       }
-    }
-    
-    if (shouldApplyEffects) {
+
       for (const effectRef of weave.system.appliesEffects) {
+        // Use scaling table to determine if this effect fires at the current margin
+        const shouldApplyThis = hasScalingEntries
+          ? scalingEntry?.appliesEffects === true
+          : true; // No scaling table: apply at any positive margin
+
+        if (!shouldApplyThis) continue;
+
         try {
           const appliedEffect = await effectEngine.applyEffect({
             target: defender,
@@ -2052,7 +2074,7 @@ async function calculateBatchWeaveEffect(weaveData, weaveMessageId, results, cas
             params: effectRef.params || {},
             netSuccesses: margin
           });
-          
+
           if (appliedEffect) {
             appliedEffects.push(appliedEffect.name);
           }
@@ -2430,6 +2452,18 @@ function normalizeRecoverySourceData(options = {}) {
 
 async function applyCondition(actor, conditionName, options = {}) {
   try {
+    // Check condition immunities from feats and active effects before applying
+    const immunities = actor?.system?.conditionImmunities ?? [];
+    const effectImmunities = actor?.items
+      ?.filter(i => i.type === 'effect' || i.type === 'condition')
+      ?.flatMap(i => Array.isArray(i.system?.conditionImmunities) ? i.system.conditionImmunities : [])
+      ?? [];
+    const allImmunities = [...immunities, ...effectImmunities];
+    if (allImmunities.some(c => c.toLowerCase() === conditionName.toLowerCase())) {
+      console.log(`Legends | applyCondition: ${actor.name} is immune to ${conditionName} — blocked.`);
+      return null;
+    }
+
     // Get the conditions compendium
     const pack = game.packs.get('legends.conditions');
     if (!pack) {

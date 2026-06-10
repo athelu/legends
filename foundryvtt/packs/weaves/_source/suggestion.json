@@ -24,7 +24,7 @@
     "target": "single",
     "savingThrow": "will",
     "effect": "Target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, you suggest a course of activity (1-2 sentences) that sounds reasonable. Target pursues the activity for the duration or until completing it. Obviously harmful suggestions end the weave. Creatures immune to charm are immune.",
-    "effectType": "utility",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
@@ -55,9 +55,15 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 hour, 2= 4 hours, 3 = 12 hours",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "charmed",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "save",
     "tags": [
+      "control",
       "ranged",
       "ritual"
     ]

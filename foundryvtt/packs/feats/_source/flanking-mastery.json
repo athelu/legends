@@ -38,7 +38,15 @@
       "[Shadow]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": -1,
+        "applyTo": "both",
+        "when": "flanking"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!75655b4973457cdb"

@@ -24,35 +24,32 @@
     "target": "multiple",
     "savingThrow": "reflex",
     "effect": "Lightning arcs to 4 targets within range (first target, then 3 others within 30ft of previous). Each target makes their own Reflex save. Calculate net successes for each target.",
-    "effectType": "control",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
+      "base": 40,
+      "type": "lightning",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "appliesEffects": false,
-          "description": "miss",
-          "duration": null
+          "damage": 0,
+          "description": "miss"
         },
         "1": {
-          "appliesEffects": true,
-          "description": "Half damage (20)",
-          "duration": "Half damage (20)"
+          "damage": 20,
+          "description": "half damage"
         },
         "2": {
-          "appliesEffects": true,
-          "description": "Full damage (40)",
-          "duration": "Full damage (40)"
+          "damage": 40,
+          "description": "full damage"
         },
         "3": {
-          "appliesEffects": true,
-          "description": "Enhanced damage (48) + applies Stunned",
-          "duration": "Enhanced damage (48) + applies Stunned"
+          "damage": 48,
+          "description": "Enhanced damage + applies effects",
+          "appliesEffects": true
         }
       }
     },
-    "targetingSuccessScaling": "0 = miss, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + applies Stunned",
+    "targetingSuccessScaling": "0 = miss, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + applies effects",
     "weavingRoll": "Air Potential + Air Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
@@ -64,6 +61,7 @@
     "deliveryMethod": "save",
     "tags": [
       "control",
+      "offensive",
       "ranged",
       "ritual"
     ]

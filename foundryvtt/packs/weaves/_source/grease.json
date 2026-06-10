@@ -24,7 +24,7 @@
     "target": "area",
     "savingThrow": "reflex",
     "effect": "Area becomes slippery difficult terrain. Creatures entering or starting turn in area make Reflex save or fall Prone. Those running must save or fall. Compare your targeting successes to their save successes.",
-    "effectType": "utility",
+    "effectType": "control",
     "damage": {
       "base": 0,
       "type": "",
@@ -55,10 +55,16 @@
     "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes (20ft square)",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "prone",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "save",
     "tags": [
       "aoe",
+      "control",
       "ranged"
     ]
   },

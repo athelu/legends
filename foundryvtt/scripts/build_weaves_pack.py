@@ -148,10 +148,17 @@ def _parse_applies_effects(effects_str):
                         key, value = param_part.split('=', 1)
                         params[key.strip()] = value.strip()
 
-        applies_effects.append({
+        entry_data = {
             'effectId': effect_id,
-            'params': params
-        })
+            'params': {k: v for k, v in params.items() if k != 'minSuccesses'}
+        }
+        # Promote minSuccesses to a top-level field (not a param)
+        if 'minSuccesses' in params:
+            try:
+                entry_data['minSuccesses'] = int(params['minSuccesses'])
+            except (ValueError, TypeError):
+                entry_data['minSuccesses'] = 1
+        applies_effects.append(entry_data)
     
     return applies_effects
 
@@ -195,7 +202,7 @@ def _parse_damage_scaling(scaling_text, description, base_damage, applies_effect
         # - "Net 1: half damage (14)" (new save format)
         # - "1 success: half damage (4)" (new attack format)
         match = re.match(
-            r'^(?:Net\s+)?(\d+)(?:\s+(?:or\s+less|successes?|success))?[=:]\s*(.+)', 
+            r'^(?:Net\s+)?(\d+)(?:\s+(?:or\s+less|successes?|success))?\s*[=:]\s*(.+)', 
             entry, 
             re.IGNORECASE
         )
@@ -622,6 +629,13 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
                     damage_amount = int(effect_match_simple.group(1))
                     item['system']['damage']['base'] = damage_amount
                     item['system']['effectType'] = 'damage'
+
+            # Parse explicit Damage Base field (overrides Effect field extraction)
+            # Use this when damage is described in the Description field rather than Effect field.
+            damage_base_match = re.search(r'\*\*Damage Base:\*\*\s*(\d+)', description)
+            if damage_base_match:
+                item['system']['damage']['base'] = int(damage_base_match.group(1))
+                item['system']['effectType'] = 'damage'
             
             # Parse Range field
             range_match = re.search(r'\*\*Range:\*\*\s*([^\n]+)', description)

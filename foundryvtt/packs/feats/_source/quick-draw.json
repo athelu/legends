@@ -1,0 +1,46 @@
+{
+  "_id": "813a81163603f5d5",
+  "name": "Quick Draw",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Years of repetition have made the motion automatic.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "agility": 3,
+        "dexterity": 3
+      },
+      "skills": "",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per turn you may draw or stow a weapon as a [Free] action.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Once per turn"
+    },
+    "keywords": [
+      "[Combat]",
+      "[General]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!813a81163603f5d5"
+}

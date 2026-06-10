@@ -1,0 +1,47 @@
+{
+  "_id": "6d6831a01d149bea",
+  "name": "Inevitable",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>There is no clever answer to weight and momentum applied with complete commitment.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 80,
+    "classification": "legendary",
+    "prerequisites": {
+      "attributes": {
+        "strength": 7
+      },
+      "skills": "meleeCombat:7",
+      "feats": [
+        "Shattering Blow"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your attacks with [Two-Handed] weapons ignore the first point of Multiple Action Penalty. Your second [Combat] action adds nothing to both dice instead of adding 1. Additionally, once per long rest when you reduce a creature to 0 HP with a [Two-Handed] weapon, every hostile creature within 30 feet that can see you must make a [[/save type=will]] opposed by your Strength + Intimidate. Failure inflicts Frightened until the start of your next turn. Creatures that succeed are immune to this effect for the remainder of the combat.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "longRest",
+        "formula": "1"
+      },
+      "text": "Passive + once per long rest"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Two-Handed]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!6d6831a01d149bea"
+}

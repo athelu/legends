@@ -1,0 +1,45 @@
+{
+  "_id": "5be75738c658d3bf",
+  "name": "Throwing Arm",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>The throw is not a separate decision from the draw.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 4
+      },
+      "skills": "rangedCombat:3",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you draw a weapon with the [Thrown] property using Quick Draw, you may immediately make a thrown attack with it as part of the same [Combat] action. Drawing and throwing together cost one [Combat] action total</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Thrown]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!5be75738c658d3bf"
+}

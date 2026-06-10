@@ -1,11 +1,11 @@
 ### HailStorm
 **Primary Energy:** Water 5 (hailstorm, physical ice chunks)
-**Supporting Energy:** Space 4 (medium range + 20ft radius)
+**Supporting Energy:** Air 4 (medium range + 20ft radius)
 **Range:** Medium, 60 ft. (20-foot radius)
 **Duration:** Instantaneous
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Water Potential + Water Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Hard ice and hail rain down in a 20-foot radius cylinder. All creatures in the area take 28 bludgeoning and cold damage (physical ice chunks). Each target takes the full listed damage and makes their own save. The ground becomes difficult terrain (costs double movement) until the ice melts.
 **Applies Effects:** Prone
@@ -24,17 +24,18 @@
 **Weaving Roll:** Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Time Mastery
 **Description:** Target at touch gains +1 action per turn (can be used for Move, Attack, or Activate only), subtract 1 from both dice on Reflex saves, and subtract 1 from both dice on Agility checks. When weave ends, target gains 1 level of Exhaustion.
+**Applies Effects:** Haste
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
 
 ### Healing Burst
 **Primary Energy:** Positive 3 (Healing)
-**Supporting Energy:** Space 1 (close range)
+**Supporting Energy:** Air 1 (close range)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Target heals 8 HP. Can target creatures at 0 HP to stabilize and restore consciousness.
 **Saving Throw:** None
@@ -50,6 +51,7 @@
 **Weaving Roll:** Positive Potential + Positive Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Touch a willing creature. For the duration, target is immune to the Frightened condition and gains temporary HP equal to your Positive Potential at the start of each of its turns. When the weave ends, any remaining temporary HP is lost.
+**Applies Effects:** Heroism
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
 
@@ -63,17 +65,18 @@
 **Weaving Roll:** Air Potential + Air Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Target gains +2 Agility for the duration. Recalculate Agility-based checks, Reflex saves, and initiative. This bonus does not stack with other beneficial Agility modifiers; use the highest bonus.
+**Applies Effects:** Hirnaloyta's Step
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
 
 ### Holy Fire
 **Primary Energy:** Positive 2 (radiant fire, damage)
-**Supporting Energy:** Space 2 (medium range)
+**Supporting Energy:** Air 2 (medium range)
 **Range:** Medium, 60 ft.
 **Duration:** Instantaneous
 **Total Cost:** 4 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Target takes 8 radiant damage. This is an attack weave—no saving throw allowed.
 **Applies Effects:** revealed
@@ -84,19 +87,20 @@
 
 ### Ice Shard
 **Primary Energy:** Water 2 (frozen projectile, damage)
-**Supporting Energy:** Space 1 (close range)
+**Supporting Energy:** Air 1 (close range)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 3 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Water Potential + Water Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Water Potential + Water Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Target takes 8 cold damage. This is an attack weave—no saving throw allowed.
+**Damage Base:** 8
 **Applies Effects:** Slowed (minor)
 **Saving Throw:** None
 **Damage Type:** Cold (energy)
 **DR Interaction:** Half DR
-**Targeting Success Scaling:** 0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + Slowed (minor)
+**Targeting Success Scaling:** 0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + applies effects
 
 ### Identify
 **Primary Energy:** Space 3 (revealing magical properties)
@@ -143,12 +147,12 @@
 
 ### Levitate
 **Primary Energy:** Air 3 (lifting target into air)
-**Supporting Energy:** Space 4 (close range + 10 minutes)
+**Supporting Energy:** Earth 4 (close range + 10 minutes)
 **Range:** Close, 30 ft.
 **Duration:** 10 minutes
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Air Potential + Air Mastery / Earth Potential + Earth Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Target at close range rises vertically up to 20 feet (your choice). Can change altitude by 20 feet each round. Target can't move horizontally except by pushing off objects. Unwilling targets get Fortitude save to resist.
 **Saving Throw:** Fortitude
@@ -156,12 +160,12 @@
 
 ### Life Drain
 **Primary Energy:** Negative 2 (siphoning life force)
-**Supporting Energy:** Space 1 (close range)
+**Supporting Energy:** Air 1 (close range)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 3 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Negative Potential + Negative Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Target takes 8 negative damage. You heal HP equal to half the damage dealt (after DR). This is an attack weave—no saving throw allowed.
 **Applies Effects:** weakened
@@ -180,24 +184,26 @@
 **Weaving Roll:** Fire Potential + Fire Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Fire Mastery
 **Description:** Object you touch sheds bright light in 20ft radius and dim light for another 20 feet. Can be cast on a hostile creature (Reflex save to avoid).
+**Applies Effects:** revealed
 **Saving Throw:** Reflex
 **Targeting Success Scaling:** 0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour
 
 ### Lightning Bolt
 **Primary Energy:** Air 5 (electricity in a line, damage)
-**Supporting Energy:** Space 2 (60ft line 5ft wide)
+**Supporting Energy:** Water 2 (60ft line 5ft wide)
 **Range:** 60-foot line, 5 feet wide
 **Duration:** Instantaneous
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Air Potential + Air Mastery / Water Potential + Water Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** A stroke of lightning forming a line 60 feet long and 5 feet wide blasts out from you. All creatures in the line take 28 lightning damage. Each target takes the full listed damage and makes their own save.
+**Damage Base:** 28
 **Applies Effects:** stunned
 **Saving Throw:** Reflex
 **Damage Type:** Lightning (energy)
 **DR Interaction:** Half DR
-**Targeting Success Scaling:** 0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36) + stunned
+**Targeting Success Scaling:** 0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36) + applies effects
 
 ### Lightning Touch
 **Primary Energy:** Air 2 (lightning through touch, damage)
@@ -255,12 +261,12 @@
 
 ### Mend Flesh, Mass
 **Primary Energy:** Positive 4 (healing energy)
-**Supporting Energy:** Space 3 (close range + 6 targets)
+**Supporting Energy:** Air 3 (close range + 6 targets)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Up to 6 creatures you choose within range heal 16 HP each.
 **Saving Throw:** None
@@ -276,6 +282,7 @@
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Humanoid target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, you control target's actions (won't take obviously harmful actions). Target can repeat save when taking damage (1 success ends effect).
+**Applies Effects:** charmed
 **Saving Throw:** Will
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
 

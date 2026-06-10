@@ -1,0 +1,34 @@
+{
+  "_id": "6d4e7da13700772d",
+  "name": "Using Magic Rings",
+  "type": "ring",
+  "img": "icons/equipment/worn/ring-gold-sigil.webp",
+  "system": {
+    "description": {
+      "value": "<h3>Requirements</h3>\n<p>Magic rings require <strong>no magical trait</strong>. Any character may wear and activate a ring — they channel a bound, self-contained effect that requires no personal energy pool.</p>\n<h3>Activation</h3>\n<ol>\n<li>The wearer spends an <strong>Action</strong> and speaks the ring's command word.</li>\n<li>The ring must have at least 1 <strong>charge</strong> available.</li>\n<li>No targeting roll is made — the effect fires automatically at <strong>Margin 2</strong> (full potency).</li>\n<li>1 charge is consumed.</li>\n</ol>\n<p>Because rings are typically utility or buff weaves that affect the wearer or a fixed area, the reliable Margin 2 activation reflects the self-contained nature of the bound weave.</p>\n<h3>Charges</h3>\n<p>Rings use the standard charge model. Most rings have <strong>1/1 charge</strong> that refills automatically after a <strong>Long Rest</strong>.</p>\n<p>| Recharge Period | Meaning | |---|---| | Long Rest | Refills automatically at the end of a long rest | | Short Rest | Refills at the end of a short rest (and on long rest) |</p>\n<p>---</p>"
+    },
+    "primaryEnergy": "",
+    "charges": {
+      "value": 1,
+      "max": 1,
+      "recharge": "",
+      "rechargePeriod": "dawn"
+    },
+    "properties": [],
+    "grantedWeaves": [],
+    "isMagical": true,
+    "identified": true,
+    "weight": 4.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "",
+    "requiresAttunement": false,
+    "notes": "",
+    "requiresMagicalTrait": false,
+    "automaticActivation": true,
+    "activationMargin": 2
+  },
+  "effects": [],
+  "flags": {}
+}

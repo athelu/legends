@@ -1,8 +1,6 @@
-# D8 TTRPG - Skills System
-
 ## Skills Overview
 
-The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents training and expertise in specific areas. Skills range from rank 0 (untrained) to rank 8 (legendary mastery).
+The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents training and expertise in specific areas. Skills range from rank 1 to rank 8.
 
 **Skill Checks:**
 - Roll attribute die + skill die
@@ -272,10 +270,9 @@ When not under time pressure, the GM may allow you to automatically succeed at S
 
 ## Skill Advancement
 
-**Starting Skills:** Determined by your Background (see Part 9: Backgrounds)
+**Starting Skills:** Determined by your Background
 
 **Improving Skills:**
-- Rank 0→1: 4 XP
 - Rank 1→2: 8 XP (8 × current rank)
 - Rank 2→3: 16 XP
 - Rank 3→4: 24 XP

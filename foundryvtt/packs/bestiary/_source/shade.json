@@ -1,0 +1,170 @@
+{
+  "_id": "1a062cb4f8d0f429",
+  "name": "Shade",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Shades are the most basic expression of the Shadow Plane's predatory nature — barely-manifested hunger that drains strength through contact. Their combat capability is minimal against anything that fights back effectively, but Strength Drain accumulates across hits in a way that compounds. A target hit three times by a Shade over the course of a fight has lost significant Strength, which affects their melee damage, carry capacity, and Athletics checks. Shadow Form in darkness makes them genuinely difficult to put down through mundane means. A summoner who calls one for direct combat will be disappointed. One who calls one to weaken a specific target over several rounds while other elements of the encounter occupy that target's attention will find it performs the role adequately.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 1,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 2,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 10,
+      "max": 10,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 5,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 2,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "shadow",
+    "creatureSubtype": "passive",
+    "hpMultiplier": 5,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Strength Drain [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 2), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 4 Negative damage (Ignore DR); target's Strength reduced by 1 for 1 hour</li>\n<li><em>Margin 2:</em> 4 Negative damage; Strength reduced by 2 for 1 hour; target gains Weakened condition</li>\n<li><em>Margin 3:</em> 4 Negative damage; Strength reduced by 3 for 1 hour; Weakened; target makes Fortitude save (1 success) or movement speed reduced by 10 until Strength restores</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Amorphous:</strong> Can move through spaces as narrow as 1 inch without squeezing.</li>\n<li><strong>Shadow Form:</strong> While in dim light or darkness, DR increases to 6 against all non-magical damage and non-Positive energy damage. Positive energy ignores this entirely.</li>\n<li><strong>Shadow Spawn:</strong> If a non-undead creature is killed while their Strength has been reduced to 0 by the Shade's attacks, a new Shade rises from their shadow at the start of the next round. This new Shade is not under the summoner's control — it is a free Shadow creature that has just arrived on the prime material through the death. The summoner's Summoning Limit does not apply to it.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Shade",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!1a062cb4f8d0f429"
+}

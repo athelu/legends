@@ -1,0 +1,170 @@
+{
+  "_id": "1cf2b182f5a3e82e",
+  "name": "Mountain Lord",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Mountain Lords have Tremorsense at 300 feet — nothing approaches on the ground without their awareness. Seismic Slam resets the battlefield on arrival. Earth Breaker at Margin 3 drives targets into the ground and begins Engulfing them. Seismic Hurl's radius means groups of enemies cannot cluster in ranged positions without taking area damage. A summoner who gives one a position to hold and a target priority list will find it requires no further management.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 300,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 8,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 108,
+      "max": 108,
+      "temp": 0
+    },
+    "dr": {
+      "value": 7,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 6,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 7,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 5,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 30
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 18,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 300 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Earth Breaker [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 6), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2)</li>\n<li><em>Margin 2:</em> 22 damage (14 + 8 Str); target Grappled + Prone + Stunned until end of their next turn; no save; ongoing 12 bludgeoning damage per round while Grappled</li>\n<li><em>Margin 3:</em> 22 damage + Grappled + Prone + Stunned; ongoing increases to 18; target begins being driven into the ground — Engulf triggers at start of their next turn unless they succeed Fortitude save (Hard task, 2 successes)</li>\n</ul></li>\n<li><strong>Seismic Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 80/160 ft, 10-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 14 bludgeoning damage + Prone. Net 2: 22 bludgeoning damage + Prone + Stunned until end of their next turn. Net 3: 22 bludgeoning damage + Prone + Stunned; all creatures within 10 feet of impact take 8 bludgeoning damage from shockwave.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Immovable:</strong> Magical forced movement requires an opposed check against Str 8 + Might 7 (Hard task, 2 successes).</li>\n<li><strong>Earth Bond:</strong> Regenerates 8 HP per turn.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> Escape checks add 3 to both dice.</li>\n<li><strong>Seismic Slam (Recharge 5-8) [Combat]:</strong> Slams both fists into the ground simultaneously. All creatures within 30 feet on natural ground make a Reflex save. Compare Str 8 + Might 7 targeting vs. each save. Net 1: 20 bludgeoning damage + Prone. Net 2: 32 bludgeoning damage + Prone + Restrained for 1 minute. Net 3: 32 bludgeoning damage + Prone + Restrained + Stunned until end of their next turn. Designated allies immune. Simultaneous slam — Shared Attribute Roll (Str 8), Might rolled separately.</li>\n</ul>",
+    "reactionsNotes": "<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 10.</li>\n</ul>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Mountain Lord",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!1cf2b182f5a3e82e"
+}

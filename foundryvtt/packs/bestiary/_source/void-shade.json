@@ -1,0 +1,170 @@
+{
+  "_id": "82188e424eb7e4ff",
+  "name": "Void Shade",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Void Shades introduce life drain as a sustained battlefield effect rather than a single-hit consequence. The Life Drain Aura erodes maximum HP from everything nearby every round, creating a timer that forces enemies to either engage the Void Shade directly or retreat from its proximity. Darkness Shroud combined with the Void Shade's ability to see through it creates a zone where it fights at full effectiveness against Blinded opponents. Shadow Form at DR 10 in darkness makes conventional weapons nearly useless against it while the darkness is active. A summoner who establishes dim or dark conditions before calling a Void Shade will find it functions at a tier above its rating. One who calls it into a brightly lit environment will find it still capable but operating at a disadvantage it will attempt to remedy by moving toward whatever shadow is available.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 108,
+      "max": 108,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 5,
+      "stealth": 7,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 4,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 7,
+      "history": 0,
+      "perception": 6,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 50,
+      "fly": 60,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "shadow",
+    "creatureSubtype": "passive",
+    "hpMultiplier": 18,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Devil's Sight, See Invisibility, Truesight 30 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Void Touch [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 8 Negative damage (Ignore DR); target loses 4 from Current Luck; target's maximum HP reduced by 8 until long rest (life drain)</li>\n<li><em>Margin 2:</em> 15 damage (10 + 5 Str) + 8 Negative damage; Current Luck reduced by 5; max HP reduced by 12; target Weakened + Sickened for 1 minute; no save</li>\n<li><em>Margin 3:</em> 15 damage + 8 Negative damage; Current Luck reduced by 6; max HP reduced by 16; Weakened + Sickened; target makes Fortitude save (1 success) or gains 1 Exhaustion level as the life drain reaches deeper than surface vitality</li>\n</ul></li>\n<li><strong>Shadow Tendril [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 5), Range: 60 ft\n<ul>\n<li>Net 1: 12 Negative damage (Half DR); target loses 3 from Current Luck; max HP reduced by 6. Net 2: 20 Negative damage; Current Luck reduced by 4; max HP reduced by 10; Weakened for 1 minute; no save. Net 3: 20 Negative damage; Current Luck reduced by 5; max HP reduced by 14; Weakened + Disoriented for 1 minute; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Shadow Form:</strong> DR increases to 10 against non-magical, non-Positive damage in dim light or darkness.</li>\n<li><strong>Life Drain Aura:</strong> Creatures within 10 feet that are not Shadow creatures lose 2 from their maximum HP at the start of each of their turns. This maximum HP loss persists until long rest. A creature reduced to 0 maximum HP by this aura dies — their life energy has been entirely consumed.</li>\n<li><strong>Darkness Shroud (1/encounter) [Combat]:</strong> As a [Combat] action, creates a 30-foot radius of magical darkness centered on itself. This darkness persists for 1 minute and moves with the Void Shade. The Void Shade sees through it normally. Other Shadow creatures see through it. All other creatures are effectively Blinded within it.</li>\n<li><strong>Planar Step (3/short rest):</strong> As Dark Stalker; usable three times per short rest.</li>\n<li><strong>Resilient Defense (2/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Void Shade",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!82188e424eb7e4ff"
+}

@@ -1,0 +1,170 @@
+{
+  "_id": "e4cbde742834cee7",
+  "name": "Thunder Giant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Thunder Giants hit hard enough that their pushback mechanics start repositioning groups rather than individuals. Chain Bolt's secondary targeting means they can apply Dazed or Stunned to clustered enemies with a single ranged action. Storm Aura's wind interference makes them naturally difficult for archers to engage while the storm presence pushes melee fighters back. A summoner who positions one between enemies and open ground will find the battlefield steadily pushed in a direction that favors the summoner's allies.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 76,
+      "max": 76,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 5,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 5,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 40,
+      "fly": 60,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 19,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Storm Fist [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 6), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 6 lightning damage (Half DR); target pushed 15 feet</li>\n<li><em>Margin 2:</em> 20 damage (14 + 6 Str) + 6 lightning damage; pushed 15 feet + Stunned until end of their next turn; no save</li>\n<li><em>Margin 3:</em> 20 damage + 6 lightning damage + Stunned + Deafened for 1 minute; all creatures within 10 feet of target take 4 lightning damage (Half DR) from the discharge</li>\n</ul></li>\n<li><strong>Chain Bolt [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 4), Range: 80 ft, up to 2 additional targets within 20 feet of the first\n<ul>\n<li>Per target: Net 1: 10 lightning damage (Half DR). Net 2: 16 lightning damage + Dazed until end of their next turn. Net 3: 16 lightning damage + Stunned until end of their next turn.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Storm Aura:</strong> Ranged attacks passing within 15 feet of the Thunder Giant add 1 to both dice from severe wind interference. Creatures starting their turn within 10 feet make a Fortitude save (1 success) or are pushed 5 feet directly away.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Momentum:</strong> As Stormborn.</li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Thunder Giant",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!e4cbde742834cee7"
+}

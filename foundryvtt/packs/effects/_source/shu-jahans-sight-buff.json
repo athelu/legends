@@ -1,0 +1,46 @@
+{
+  "_id": "shujsght000000001",
+  "name": "Shu-Jahan's Sight",
+  "type": "effect",
+  "img": "icons/svg/eye.svg",
+  "system": {
+    "label": "Shu-Jahan's Sight",
+    "category": "buff",
+    "effectType": "attribute-mod",
+    "description": {
+      "value": "<p>Target gains +2 Wisdom for the duration. Recalculate Wisdom-based checks, Will saves, and casting values if Wisdom is the target's casting stat. This bonus does not stack with other beneficial Wisdom modifiers; use the highest bonus.</p>"
+    },
+    "tokenIcon": "",
+    "badge": { "type": "none", "value": 0, "max": 0 },
+    "activeEffects": [
+      {
+        "key": "system.attributes.wisdom.tempValue",
+        "mode": "add",
+        "value": "2",
+        "notes": "+2 Wisdom"
+      }
+    ],
+    "stacking": "highest",
+    "overlayPriority": 10,
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": { "type": "", "id": "", "actor": "", "successes": 0, "potential": 0 },
+    "grantedBy": "Shu-Jahan's Sight",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 3 ? 10 : ${netSuccesses} >= 2 ? 1 : ${netSuccesses} >= 1 ? 0.1 : 0"
+    }
+  },
+  "flags": {},
+  "_key": "!items!shujsght000000001"
+}

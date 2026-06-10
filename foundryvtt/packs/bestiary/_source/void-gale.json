@@ -1,0 +1,170 @@
+{
+  "_id": "0df1478f61618129",
+  "name": "Void Gale",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Void Gales open with Cyclone Manifestation (2 actions) to dominate terrain, then spend the third action on World Wind against the summoner's designated priority target. Subsequent turns run two World Wind strikes against priority targets and a third on Skyfire when enemies cluster — or reverse that order if a formation presents itself first. Primordial Vortex handles anyone attempting to hold ground between turns. A Void Gale does not need tactical guidance — it has existed long enough that it understands what victory requires in most situations and moves toward it. What it needs from the summoner is target designation, ally identification, and confirmation of the rules of engagement. Everything else it handles.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 120,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 8,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 8,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 7,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 7,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 6,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 216,
+      "max": 216,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 6,
+      "max": 6
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 8,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 8,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 0,
+      "fly": 140,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 36,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Blindsight 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>World Wind [Combat]:</strong> Melee attack (Agi 8 + Melee Combat 8), Reach: 20 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy natural: 14 + 2) + 12 lightning damage (Half DR); target pushed 30 feet and knocked Prone; no save</li>\n<li><em>Margin 2:</em> 22 damage (16 + 6 Str) + 12 lightning damage; Prone + Stunned; all creatures within 15 feet of target take 10 lightning damage (Half DR) from discharge</li>\n<li><em>Margin 3:</em> 22 damage + 12 lightning damage + Stunned + Blinded until end of their next turn from the lightning discharge at face range</li>\n</ul></li>\n<li><strong>Skyfire [Combat]:</strong> Ranged attack (Dex 8 + Ranged Combat 8), Range: 200 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 20 lightning damage (Half DR). Net 2: 40 lightning damage + Stunned. Net 3: 40 lightning damage + Stunned + knocked Prone from the concussive thunderclap; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Primordial Vortex:</strong> Creatures within 30 feet that are not designated must make Fortitude saves at the start of their turn (Hard task, 2 successes). Failure: pushed 20 feet, knocked Prone, and Deafened for 1 minute. The summoner and designated allies are immune.</li>\n<li><strong>Cyclone Manifestation (1/day) [Combat]:</strong> As 2 [Combat] actions, the Void Gale establishes a sustained cyclone in a 40-foot radius centered on itself. For 1 minute, all non-designated creatures treat the area as Difficult Terrain, must make Fortitude saves each round (2 successes) or become Restrained by wind, and ranged attacks into or through the area add 2 to both dice. The Void Gale moves normally through its own cyclone.</li>\n<li><strong>Lightning Immunity Sharing:</strong> As Storm Sovereign, extended to 8 designated allies.</li>\n<li><strong>Eye of the Storm:</strong> As Elder Gale.</li>\n<li><strong>Momentum Defense.</strong></li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Void Gale",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!0df1478f61618129"
+}

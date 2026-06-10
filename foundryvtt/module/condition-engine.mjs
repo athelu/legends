@@ -47,9 +47,8 @@ export function initializeConditionEngine() {
   Hooks.on('preRollSkillCheck', applyConditionModifiers);
   Hooks.on('preRollSavingThrow', applyConditionModifiers);
 
-  // Hook into token selection for condition overlay UI
+  // Hook into token selection for condition overlay UI (selected only, not hover)
   Hooks.on('controlToken', renderTokenConditionOverlay);
-  Hooks.on('hoverToken', renderTokenConditionOverlay);
 
   console.log('Legends | Condition Engine initialized');
 }
@@ -1908,8 +1907,8 @@ function renderTokenConditionOverlay(token, controlled) {
   // Remove existing overlays first
   removeTokenConditionOverlay(token);
 
-  // Only show for controlled or hovered tokens
-  if (!controlled && !token._hover) return;
+  // Only show when the token is selected
+  if (!controlled) return;
 
   const actor = token.actor;
   if (!actor) return;
@@ -1925,16 +1924,11 @@ function renderTokenConditionOverlay(token, controlled) {
   overlay.classList.add('legends-condition-overlay');
   overlay.dataset.tokenId = token.id;
 
-  // Position in upper right of token
-  overlay.style.position = 'absolute';
-  overlay.style.right = '10px';
-  overlay.style.top = '10px';
+  // position: fixed is set via CSS; stack conditions vertically to the right of the token
   overlay.style.display = 'flex';
   overlay.style.flexDirection = 'column';
   overlay.style.gap = '4px';
-  overlay.style.alignItems = 'flex-end';
-  overlay.style.pointerEvents = 'auto'; // Changed to auto to allow clicks
-  overlay.style.zIndex = '1000';
+  overlay.style.alignItems = 'flex-start';
 
   // Add each condition
   for (const condition of conditions) {
@@ -1968,7 +1962,9 @@ function renderTokenConditionOverlay(token, controlled) {
     });
 
     // Add tooltip with condition description
-    conditionChip.title = `${condition.name}\n\n${condition.system.description}\n\n[Left Click] Increase severity\n[Right Click] Decrease severity`;
+    const rawDesc = condition.system.description?.value ?? condition.system.description ?? '';
+    const plainDesc = rawDesc.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+    conditionChip.title = `${condition.name}${plainDesc ? '\n\n' + plainDesc : ''}\n\n[Left-click] Increase severity  [Right-click] Decrease / remove`;
 
     // Left click: Increase severity (upgrade in progression)
     conditionChip.addEventListener('click', async (e) => {
@@ -2038,9 +2034,10 @@ function renderTokenConditionOverlay(token, controlled) {
   // Store reference for cleanup
   token._conditionOverlay = overlay;
 
-  // Update position on canvas pan/zoom
+  // Update position on canvas pan/zoom or token move
   const updateHandler = () => updateOverlayPosition(token, overlay);
-  canvas.stage.on('refresh', updateHandler);
+  token._overlayPanHookId   = Hooks.on('canvasPan',    updateHandler);
+  token._overlayMoveHookId  = Hooks.on('refreshToken',  updateHandler);
   token._overlayUpdateHandler = updateHandler;
 }
 
@@ -2053,14 +2050,18 @@ function updateOverlayPosition(token, overlay) {
   if (!token || !overlay) return;
 
   const tokenBounds = token.bounds;
-  const scale = canvas.stage.scale.x;
 
-  // Calculate position in screen coordinates
-  const x = tokenBounds.right * scale;
-  const y = tokenBounds.top * scale;
+  // Use PIXI worldTransform to correctly convert world → screen coords (accounts for pan + zoom)
+  const wt = canvas.stage.worldTransform;
+  const canvasRect = canvas.app.view.getBoundingClientRect();
 
-  overlay.style.left = `${x + 10}px`;
-  overlay.style.top = `${y + 10}px`;
+  // wt.a = scaleX, wt.d = scaleY, wt.tx/ty = stage translation
+  const screenX = tokenBounds.right * wt.a + wt.tx + canvasRect.left;
+  const screenY = tokenBounds.top   * wt.d + wt.ty + canvasRect.top;
+
+  // position: fixed in CSS — left/top are viewport-relative
+  overlay.style.left = `${screenX + 6}px`;
+  overlay.style.top  = `${screenY}px`;
 }
 
 /**
@@ -2073,11 +2074,16 @@ function removeTokenConditionOverlay(token) {
     delete token._conditionOverlay;
   }
 
-  // Remove update handler
-  if (token._overlayUpdateHandler) {
-    canvas.stage.off('refresh', token._overlayUpdateHandler);
-    delete token._overlayUpdateHandler;
+  // Remove update handlers
+  if (token._overlayPanHookId !== undefined) {
+    Hooks.off('canvasPan',   token._overlayPanHookId);
+    delete token._overlayPanHookId;
   }
+  if (token._overlayMoveHookId !== undefined) {
+    Hooks.off('refreshToken', token._overlayMoveHookId);
+    delete token._overlayMoveHookId;
+  }
+  delete token._overlayUpdateHandler;
 
   // Also remove any orphaned overlays
   document.querySelectorAll(`.legends-condition-overlay[data-token-id="${token.id}"]`).forEach(el => el.remove());

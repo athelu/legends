@@ -1,0 +1,44 @@
+{
+  "_id": "a33041de689f1582",
+  "name": "Beast of Burden",
+  "type": "feat",
+  "img": "icons/sundries/books/book-star-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Your body stopped complaining about carrying extra weight a long time ago.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 5
+      },
+      "skills": "might:4",
+      "feats": [],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Your encumbrance thresholds use Strength × 12 for Encumbered and Strength × 18 for Heavily Encumbered instead of the standard multiples. You ignore the dice penalties from the Encumbered condition entirely. Heavily Encumbered still reduces your speed but does not add to your dice.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[General]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!a33041de689f1582"
+}

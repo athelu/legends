@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Positive Potential + Positive Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "Ambis's Grace",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "automatic",
     "tags": [
       "buff",

@@ -1,0 +1,170 @@
+{
+  "_id": "a15004660508598b",
+  "name": "Owlbear",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 108,
+      "max": 108,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 5,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "monstrosity",
+    "creatureSubtype": "",
+    "hpMultiplier": 18,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Keen Sight and Smell",
+    "tactics": "Owlbears charge aggressively, attempting to trigger Aggressive Charge to knock prey prone. They use Multiattack every round, trying to trigger Maul for devastating damage. Wounded owlbears become frenzied and reckless.",
+    "attacksNotes": "<ul>\n<li><strong>Beak [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 6), Reach: 10 ft (Large creature)\n<ul>\n<li><strong><em>Margin 1:</strong></em> 10 damage (Large size, heavy natural weapon: 8 + 2 = 10)</li>\n<li><strong><em>Margin 2:</strong></em> 16 damage (10 + 6 Str)</li>\n</ul>\n<ul>\n<li><strong>Claws [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 6 vs opponent's defense), Reach: 10 ft (Large creature)\n<ul>\n<li><strong><em>Margin 1:</strong></em> 10 damage (Large size, standard natural weapon: 8 + 2 = 10, representing both claws)</li>\n<li><strong><em>Margin 2:</strong></em> 16 damage (10 + 6 Str)</li>\n</ul></li>\n</ul></li>\n<li><strong>Multiattack [Combat]:</strong> The owlbear makes one beak attack and one claw attack\n<ul>\n<li><strong><em>Shared Attribute Roll (Agi 4):</strong></em> Roll once, apply to both attacks</li>\n</ul></li>\n<li><strong>Special Abilities:</strong>\n<ul>\n<li><strong>Large Size:</strong> Occupies 10×10 ft space, 10 ft reach</li>\n<li><strong>Keen Sight and Smell:</strong> Vision and scent-based Perception checks have Fortune</li>\n<li><strong>Maul:</strong> If both attacks (beak AND claw) hit the same target in one turn, target takes additional 8 damage (no attribute modifier, represents crushing embrace)</li>\n<li><strong>Aggressive Charge (Recharge 6-8):</strong> If the owlbear moves at least 20 feet straight toward a target and then hits with a claw attack on the same turn, the target must make a Fortitude save (1 success) or be knocked Prone. If prone, owlbear can immediately make a beak attack as a [Free] action.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Large Size:</strong> Occupies 10×10 ft space, 10 ft reach\n<ul>\n<li><strong>Keen Sight and Smell:</strong> Vision and scent-based Perception checks have Fortune</li>\n<li><strong>Maul:</strong> If both attacks (beak AND claw) hit the same target in one turn, target takes additional 8 damage (no attribute modifier, represents crushing embrace)</li>\n<li><strong>Aggressive Charge (Recharge 6-8):</strong> If the owlbear moves at least 20 feet straight toward a target and then hits with a claw attack on the same turn, the target must make a Fortitude save (1 success) or be knocked Prone. If prone, owlbear can immediately make a beak attack as a [Free] action.</li>\n</ul></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Owlbear",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!a15004660508598b"
+}

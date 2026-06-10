@@ -1,61 +1,51 @@
-# Magic System - Weaving
+## The Magical Gift
+“Gifted” is the term used for magic users, both Arcane and Divine casters. The gift is nothing more than one being able to open their pneuma to the planes and allowing the magical energies to flow through them.
+The term Arcanist is used to refer to natural born arcane magic users. Arcanists are born with a permanent bond to the planes that can strengthen and grow over time. This connection is constant and resonates with their pneuma which in turn causes the eyes of mages to always glow with magical light. 
+Arcane Magic users that can learn to access arcane powers or have been gifted them through some other means are called Diabolists. 
+Divine casters are latent magic users whose access to their magical gift requires faith and a focus to complete the connection.
+Arcane and Divine connections are the opposite sides of a coin. Arcanists tap into the same wild, raw elemental and magical forces as the Divine, but through a different method. 
+While wielding these magic energies, Arcane magic users describe much the same emotions and sensations that their Divine counterparts do: Euphoria, Elation, Intoxication, Joy, Inspiration. 
+For the divine casters these feelings are felt upon the completion of the ritual or prayer. A divine caster’s eyes will glow like an arcanists, but only upon the completion of the spell. 
+Regardless of the physical changes of the magic user, all magical effects produce a violet light whether it be magical flame, magical writing, magical barriers etc. Magical weapons will likewise produce light of this color.
+Magic in this world is anything but subtle and it is the same for its practitioners. Magic effects are very showy, leaving motes of energy, symbols, and other telltale signs that can be interpreted by those who can Sense magic.
 
-### Six Paths to Magic
+Magic in Athelu is the shaping of the Eight Energies through pneuma. It is not subtle. Weaves, wards, divine workings, and infused objects all manifest as visible violet light, glyphs, motes, resonant sounds, or other unmistakable signs that supernatural power is being used.
 
-#### Arcane Weaving (Mageborn Trait)
-- Studied magic, intellectual manipulation of elements
-- Uses Intelligence as Casting Stat
-- Bonus to one elemental energy (Earth, Air, Fire, Water)
-- Bonus to one additional energy (Secondary Focus)
-- **Ritual Casting:** Can cast any weave as a 10-minute ritual for half
-  Energy cost (minimum 1). Cannot be used in combat.
+### Arcanists
+The practices vary from land to land, but Arcanists are born with innate magical ability and are identifiable upon birth. Their pupils and iris are no longer visible, their eyes instead glow with a distinct purple light. 
+Within each culture - some action is taken upon the birth of an Arcanist. It normally involves having the child placed within a learning institution that will teach the Arcanist how to harness their abilities.
+This could be placement with an established magical college, or given to the local wise woman, but all people understand that when they find a newborn Arcanist, it is essential they are brought somewhere to teach them. 
 
-#### Divine Weaving (Divine Gift Trait)
-- Channeled magic, spiritual connection to life/death forces or nature
-- Uses Wisdom as Casting Stat
-- Bonus to chosen divine/elemental energies (see Divine Paths)
-- Includes Channel Divinity ability
+## The Eight Energies
 
-#### Invoker Weaving (Invoker Trait)
-- True name magic, charisma-based casting
-- Uses Charisma as Casting Stat
-- Limited to 4 energies (always includes Air)
-- Includes Words of Power ability
+All magic works by channeling a Primary Energy directed by a Secondary Energy. The Primary Energy defines what the effect fundamentally is. The Secondary Energy defines how it is delivered, what form it takes, and what range, area, or duration it carries.
 
-#### Innate Weaving (Sorcerous Origin Trait)
-- Self-knowledge as magic source
-- Uses Wisdom as Casting Stat
-- Bonus to Primary Magic Potential based upon Manifestation (Unchanging Stone, Thread of Fate, Death's Lesson, or Perfect Self-Perception)
-- Includes Resonant Weaving (ignore first overspending penalty) and Harmonic Weaving (success manipulation)
-- Energy regenerates on long rest
+The eight energies are:
 
-#### Patron Weaving (Eldritch Pact Trait)
-- Powers drawn from an otherworldly patron
-- Uses Charisma as Casting Stat
-- Bonus to Primary Magic Potential based upon Patron
-- Limited to 5 energies
-- Pact Conduit provides passive weaving enhancement based on pact type
+### Fire
+Hunger and intensity with the risk of breaking free from control. Highly focused energy to the point it consumes all fuel. Rage, passion, and violent explosions. Converting earth to energy and heat, Water to steam and being fed and directed by air. Combined with Positive energy to smite evil and banish darkness. Producing ash unstoppable fire when combined with Negative energy.
 
-#### Infuser Weaving (Infuser Trait)
-- Object infusion magic, intelligence-based casting
-- Uses Intelligence as Casting Stat
-- Limited to 5 energies (always includes Earth)
-- Includes Imbue Item ability
-- Requires touch to infuse objects
+### Air
+Movement and pressure, the source of vibration and sound. Compressed into shock waves of thunder, conducting electricity and converting water into cold and ice, fog and clouds. Fueling fire and creating miasmic clouds with negative energy.
 
-### Comparison of Magic Types
+### Earth
+Trees, plants, rocks and sand. The most physical of the elements. Strong, hardy and resistant to change.
 
-| Feature | Mageborn | Divine Gift | Invoker | Infuser | Sorcerous Origin | Eldritch Pact |
-|---------|----------|-------------|---------|---------|------------------|---------------|
-| **Trait** | Arcane Weaving | Divine Weaving | Invoker Weaving | Infuser Weaving | Innate Weaving | Patron Weaving |
-| **Casting Stat** | Intelligence | Wisdom | Charisma | Intelligence | Wisdom | Charisma |
-| **# of Energies** | 8 | 8 | 5 | 5 | 8 | 5 |
-| **Primary Energy** | Elemental (choice) | Divine or Elemental | Air (fixed) | Earth (fixed) | Identity Dependent | Patron-dependent |
-| **Fixed Energies** | None | None | Air, Positive, Space, Time | Earth, Space, Positive, Time | None | Patron-dependent |
-| **Special Ability** | Ritual Casting | Channel Divinity | Words of Power | Imbue Item | Resonant/Harmonic | Pact Conduit (short rest) |
-| **Energy Pool** | Full (8 Potentials) | Full (8 Potentials) | Limited (5 Potentials) | Limited (5 Potentials) | Full (8 Potentials) | Limited (5 Potentials) |
-| **Focus** | Versatile arcane | Divine/nature power | True names, line of sight | Object infusion, touch required | Overpowered weaves | Otherworldly patron power |
-| **Unique Traits** | Half-cost rituals | Channel options | Always includes Air, requires LoS | Always includes Earth, touch required | cast above ability | Short rest energy regen |
+### Water
+The engine of change, ever moving and persistent. Finding the path of least resistance. Absorbing and redirecting force. combined with the other elements to generate steam, ice and mud. On its own, the torrential rain and the flood. With Negative energy Acid and Poison are made.
+
+### Positive
+Lifeforce and energy. Healing and cleansing. Light and brilliance.
+
+### Negative
+Decay and Entropy. The defining of a lifespan, and a critical process for all living things. It harbors no intent, so it cannot be evil. Creation of shadow and darkness
+
+### Time
+Speeding up or slowing down perception or even reality. Compressing what should take days or weeks in to mere moments and expanding seconds into minutes.
+
+### Space
+Space is the void and the unknown. The birthplace of aberrations and the home of eldritch undefinable entities. It is the nothing that surround all creation, constantly trying to break through the barriers of the outer planes and the physical realms. It is the magic of portals, teleportation, pocket dimensions and nightmares.
+
 
 ### Magic Effect Types & Terminology
 
@@ -63,6 +53,17 @@
 Weaves that deal direct harm through elemental or negative energy.  Uses Fire, Air, Water, Earth, or Negative as primary energy. These weaves deal direct harm through elemental or negative energy and are referred to as damage weaves. Key characteristic: targets take HP damage.
 
 **Common Examples:** Fireball, lightning bolt, Hailstorm, acid blast, necrotic blast
+
+**Physical damage** applies full DR. **Energy damage** applies half DR. **Some energy damage ignores DR entirely** when the effect bypasses physical matter to reach the pneuma or mind directly.
+
+#### What Determines Physical vs Energy
+
+**Physical damage requires matter.** Earth is matter directly. Ice and frozen water are matter. Compressed air made solid is matter. Floods carrying mass are matter. Any pairing that produces a physical object or moving mass deals physical damage.
+
+**Energy damage is heat, life force, entropy, light, temporal manipulation, or force that interacts with the target as energy rather than mass.** Steam is energy damage despite being water, because its harm is thermal transfer not impact. Cold as a temperature effect is energy; ice is physical.
+
+**DR is ignored** when the effect reaches past physical matter to touch the pneuma or mind directly. Sonic vibration passes through armor. Spatial voids and pure negative energy projected through space reach what steel cannot stop.
+
 
 #### mind-affecting effects (Mind-Affecting Magic)
 Any weave that alters a creature's mental state, emotions, or thoughts without direct mind control. Typically uses Negative energy (for fear, sleep, mental assault) or Positive energy (for courage, inspiration, euphoria). Creatures immune to psychic effects or described as "mindless" are immune to mind-affecting effects.
@@ -101,17 +102,6 @@ Weaves that gather information, predict the future, or perceive distant location
 
 **Common Examples:** Sense Magic, scrying, foresight, identify, Object Seeking
 
-### The Eight Magical Energies
-1.  Earth - Stone, metal, earth magic
-2.  Air - Wind, lightning, sound
-3.  Fire - Flame, heat, light
-4.  Water - Ice, liquid, steam
-5.  Positive - Healing, growth, life
-6.  Negative - Decay, necrotic, shadow, death
-7.  Time - Haste, slow, temporal manipulation
-8.  Space - Teleportation, portals, distance, barriers
-
-
 ### Pneuma and Necromancy
 
 **Pneuma** is the soul-essence that connects all living beings to the planes. Every creature's pneuma acts as a conduit through which magical energies flow. When a mage weaves fire or a cleric channels healing, they are directing elemental and conceptual energies *through* their pneuma—but they are not manipulating the pneuma itself.
@@ -125,17 +115,16 @@ All eight energies flow *through* pneuma as a conduit, but standard weaving does
 
 #### Necromancy: The Forbidden Art
 
-Necromancy is not simply "death magic" or harmful spells. Necromancy is the direct manipulation, binding, trapping, or consumption of pneuma (souls) themselves. This forbidden knowledge:
+The Necromantic arts are lost to the current inhabitant of Athelu. Player characters should be forbidden from taking any weaves with the [Necromantic] keyword. Necromancy is a part of the knowledge of the First men that has been lost to time. It is up to the DM to determine if this knowledge can be recovered, but if it can be, it should only be done during gameplay, exploration, or finding some trove of ancient knowledge.
+The first men knew the Necromantic arts well from their study of pneuma, and how it calls to the Daemons outside the physical realm.
+Necromanctic magic has a tarnishing effect upon the Pneuma of the user. The daemons that are attracted are more selfish or vile, and further influence the mind of the Magic user. 
 
-- **Was mastered by the First Men** through their study of pneuma and its connection to the outer realms
-- **Has been lost to time** and is unknown to current inhabitants of Athelu
-- **Tarnishes the caster's pneuma**, attracting malevolent daemons and corrupting the soul
-- **Requires GM permission** and significant story justification to learn
-- **Cannot be taken at character creation** it must be discovered through gameplay
+Necromancy is not merely the use of Negative energy. It is the direct manipulation, binding, imprisonment, corruption, or consumption of pneuma itself. These arts belong to the lost knowledge of the First Men and are not normally available to player characters. Weaves with the **[Necromantic]** keyword should remain forbidden unless recovered through play with explicit GM permission. Their use carries narrative and spiritual consequences, including corruption and unwanted attention from malignant powers.
+
 
 #### The [Necromantic] Keyword
 
-Weaves marked with the **[Necromantic]** keyword are forbidden and represent lost First Men knowledge. These weaves don't merely channel Negative energy for harm—they bind, trap, reshape, or consume souls:
+Weaves marked with the **[Necromantic]** keyword are forbidden and represent lost First Men knowledge. These weaves don't merely channel Negative energy for harm, they actually bind, trap, reshape, or consume souls:
 
 **Examples of Necromantic Weaves:**
 - **Bind the Fallen** - Binding soul fragments or echoes to corpses
@@ -167,7 +156,7 @@ If yes to any of these, the weave is necromantic and requires the **[Necromantic
 
 **Using Negative Energy ≠ Necromancy**
 
-A cleric channeling Negative energy to harm living creatures, or a wizard casting Blight to wither plants, is using entropy and decay—not manipulating souls. These are standard (if dark) magical practices and do not carry the corruption and forbidden nature of true necromancy.
+A cleric channeling Negative energy to harm living creatures, or a wizard casting Blight to wither plants, is using entropy and decay, not manipulating souls. These are standard (if dark) magical practices and do not carry the corruption and forbidden nature of true necromancy.
 
 #### GM Guidelines for Necromancy
 
@@ -191,26 +180,10 @@ The forbidden nature of necromancy is a feature, not a bug—it should feel dang
 
 ##### Mastery (1-8, like skills)
 - Trained control of each energy
-- All start at rank 0 (untrained)
+- All start at rank 1
 - Can be raised with XP (costs same as skills)
 - Cannot exceed corresponding Potential
 - Determines reliability when weaving
-
-#### Energy Pool Formula
-Energy Pool = (Sum of 8 Potentials) + (Casting Stat × 2) + Constitution + (Total Mastery Ranks ÷ 2, rounded down)
-Energy regenerates fully after long rest.
-
-#### Determining Magical Potentials
-
-How you determine your Magical Potentials depends on which magical trait you selected during character creation. See **Part 4: Traits** for complete details on:
-
-- **Mageborn** (Arcane Weaving)
-- **Divine Gift** (Divine Weaving)
-- **Invoker Magic** (Invoker Weaving)
-- **Sorcerous Origin** (Innate Weaving)
-- **Eldritch Pact** (Pact Weaving)
-
-Each trait specifies how many dice to roll, which energies you have access to, and which energies receive bonuses based on your chosen specialization (Elemental Affinity, Divine Path, Force of Will Manifestation, Pact Type, or Oath).
 
 
 ### Weaving (Casting) Mechanics
@@ -272,7 +245,6 @@ For attack weaves (single-target direct damage), compare targeting successes dir
 - **2 successes:** Full effect
 - **3 successes:** Enhanced effect
 
-
 ### Weaving While Threatened
 
 ##### Opportunity Attacks from Weaving:
@@ -293,6 +265,81 @@ For attack weaves (single-target direct damage), compare targeting successes dir
 - **Party tactics:** Have allies protect you while weaving
 
 
+### Energy Pairing Reference Table
+
+The following table covers all 56 primary/secondary combinations. The secondary energy covers range, area, and duration costs using the standard tables regardless of which secondary is chosen.
+
+| Primary | Secondary | Damage Type | DR Rule | Character of Effect |
+|---------|-----------|-------------|---------|---------------------|
+| Fire | Air | Energy (Fire) | Half DR | Plasma, explosion, combustion with direction and expansion |
+| Fire | Earth | Physical (Bludgeoning + Fire) | Full DR | Meteor, molten rock arriving as mass with thermal component |
+| Fire | Water | Energy (Fire) | Half DR | Steam, scalding vapor, thermal energy carried through moisture |
+| Fire | Positive | Energy (Radiant) | Half DR | Sacred flame, purifying light, fire that sanctifies |
+| Fire | Negative | Energy (Negative) | Half DR | Necrotic burn, life-consuming fire, heat that drains |
+| Fire | Space | Energy (Fire) | Half DR | Fire placed instantly at distance, combustion without travel |
+| Fire | Time | Energy (Fire) | Half DR | Slow burn, combustion that develops in stages over rounds |
+| Air | Fire | Energy (Sonic) | No DR | Superheated shockwave, sonic with thermal character |
+| Air | Earth | Physical (Bludgeoning) | Full DR | Compressed air as physical force, wind made solid |
+| Air | Water | Physical (Cold + Bludgeoning) | Full DR | Ice shards, frozen projectiles, air crystallized into mass |
+| Air | Positive | Energy (Positive) | Half DR | Restorative wind, breath of life, air that clears corruption |
+| Air | Negative | Energy (Negative) | Half DR | Suffocating entropy, life-draining absence of air |
+| Air | Space | Energy (Sonic) | No DR | Sound crossing impossible distances, targeted vibration |
+| Air | Time | Energy (Sonic) | No DR | Sustained resonance, echoes that build in intensity over time |
+| Earth | Air | Physical (Bludgeoning) | Full DR | Stone given velocity by wind, avalanche, thrown mass |
+| Earth | Fire | Physical (Bludgeoning + Fire) | Full DR | Molten rock, magma as physical mass with fire component |
+| Earth | Water | Physical (Bludgeoning) | Full DR | Liquefaction, sinkhole, saturated earth moving as mass |
+| Earth | Positive | Physical (Bludgeoning) | Full DR | Consecrated stone, earth that fortifies and strengthens |
+| Earth | Negative | Physical (Bludgeoning) | Full DR | Structural decay collapsing as physical damage |
+| Earth | Space | Physical (Bludgeoning) | Full DR | Walls appearing, stone anchored to a specific location |
+| Earth | Time | Physical (Bludgeoning) | Full DR | Petrification, geological force compressed into moments |
+| Water | Air | Physical (Cold + Bludgeoning) | Full DR | Ice formation and projection, frozen mass with impact |
+| Water | Earth | Physical (Bludgeoning) | Full DR | Flood with mass, water carrying crushing weight |
+| Water | Fire | Energy (Fire) | Half DR | Steam, thermal energy through liquid medium |
+| Water | Positive | Energy (Positive) | Half DR | Cleansing water, healing through immersion, restorative liquid |
+| Water | Negative | Energy (Negative) | Half DR | Poison, contamination, corruption carried in liquid |
+| Water | Space | Physical (Cold + Bludgeoning) | Full DR | Water appearing at location with mass and cold impact |
+| Water | Time | Physical (Bludgeoning) | Full DR | Erosion compressed into moments, tidal force commanded |
+| Positive | Air | Energy (Positive) | Half DR | Healing breath, restoration of mind and senses, clarity |
+| Positive | Earth | Energy (Positive) | Half DR | Physical restoration, structural healing of body and bone |
+| Positive | Fire | Energy (Radiant) | Half DR | Radiant purification, sacred light as weapon against darkness |
+| Positive | Water | Energy (Positive) | Half DR | Deep healing that persists and builds over duration |
+| Positive | Negative | Energy (Positive) | Half DR | Balance of forces — unstable, GM adjudicates outcome |
+| Positive | Space | Energy (Positive) | Half DR | Healing at distance, protective aura projected outward |
+| Positive | Time | Energy (Positive) | Half DR | Accelerated recovery, healing of wounds time refused to close |
+| Negative | Air | Energy (Negative) | Half DR | Suffocation of life force, silencing of vitality |
+| Negative | Earth | Energy (Negative) | Half DR | Rot in matter, decay from the structural foundation |
+| Negative | Fire | Energy (Negative) | Half DR | Necrotic burning, life consumed as fuel for entropy |
+| Negative | Water | Energy (Negative) | Half DR | Poison, slow corruption working through a system |
+| Negative | Positive | Energy (Negative) | Half DR | Catastrophic tension — GM adjudicates instability |
+| Negative | Space | Energy (Negative) | No DR | Life drain projected outward, void reaching past armor to pneuma |
+| Negative | Time | Energy (Negative) | Half DR | Accelerated aging, decay running at unnatural speed |
+| Space | Air | Physical (Bludgeoning) | Full DR | Teleportation with violent arrival, kinetic impact at destination |
+| Space | Earth | Physical (Bludgeoning) | Full DR | Barriers and walls appearing, anchored physical mass |
+| Space | Fire | Energy (Fire) | Half DR | Fire placed through spatial fold, combustion at chosen point |
+| Space | Water | Physical (Bludgeoning + Cold) | Full DR | Water mass displaced spatially, cold impact at destination |
+| Space | Positive | Energy (Positive) | Half DR | Sanctuary, protected space, life force as spatial barrier |
+| Space | Negative | Energy (Negative) | No DR | Spatial void, absence reaching what physical armor cannot stop |
+| Space | Time | No damage | — | Planar travel, temporal displacement — no conventional damage |
+| Time | Air | No damage | — | Haste, slow, the subjective pace of time altered |
+| Time | Earth | Physical (Bludgeoning) | Full DR | Petrification, geological force compressed into moments |
+| Time | Fire | Energy (Fire) | Half DR | Combustion in stages, slow burn developing across rounds |
+| Time | Water | Physical (Bludgeoning) | Full DR | Erosion compressed, tidal force arriving in moments |
+| Time | Positive | Energy (Positive) | Half DR | Accelerated healing, restoration of time-damaged wounds |
+| Time | Negative | Energy (Negative) | Half DR | Aging as damage, forced decay at unnatural speed |
+| Time | Space | No damage | — | Deepest pairing — planar and temporal travel, no conventional damage |
+
+#### Edge Case Notes
+
+**Positive/Negative and Negative/Positive** place the two energies most fundamentally in tension with each other. The outcome depends heavily on relative investment and caster intent. Catastrophic failure is possible with insufficient Mastery in both. GM adjudicates.
+
+**Space/Time and Time/Space** do not produce conventional damage. These pairings move targets between planes or through time. The consequence is displacement, not injury.
+
+**Negative/Space and Space/Negative** both ignore DR because the effect reaches past physical matter to touch the pneuma or mind directly. This is the natural home of psychic and life-draining effects in the new model.
+
+**Air producing sonic effects** ignores DR when the secondary is Fire, Space, or Time — pairings where the Air expresses vibration and resonance rather than physical force. Air/Earth and Air/Water produce physical mass instead, which is why those land as full DR physical damage.
+
+**Dual damage types** (Bludgeoning + Fire, Cold + Bludgeoning) apply the relevant DR to each component. A creature with fire resistance but no bludgeoning resistance takes full bludgeoning damage and reduced fire damage from a Fire/Earth meteor.
+
 #### Weave Effect Scaling Tables
 
 ##### PRIMARY ENERGY TABLES
@@ -302,15 +349,15 @@ Choose the appropriate table based on what you're trying to accomplish.
 1. **Primary Energy:** Damage
    **Energy Types:** Fire, Air, Water, Earth, Negative
 
-|             |               |                |                        |
-|-------------|---------------|----------------|------------------------|
-| Energy Cost | Damage Output | Power Level    | D&D Comparison         |
-|             |               |                |                        |
-| 1-2         | 8 damage      | Cantrip        | Fire Bolt avg 5.5      |
-| 3-4         | 16 damage     | 1st-2nd level  | Burning Hands avg 10.5 |
-| 5-6         | 28 damage     | 3rd-4th level  | Fireball avg 28        |
-| 7-8         | 40 damage     | 5th-6th+ level | Chain Lightning avg 45 |
-|             |               |                |                        |
+|             |               |
+|-------------|---------------|
+| Energy Cost | Damage Output |
+|             |               |
+| 1-2         | 8 damage      |
+| 3-4         | 16 damage     |
+| 5-6         | 28 damage     |
+| 7-8         | 40 damage     |
+
 
 ##### Modified by targeting successes (vs saves):
 - Net 0 or less: No effect or minimal effect (see spell description)
@@ -329,38 +376,38 @@ Choose the appropriate table based on what you're trying to accomplish.
 2. **Primary Energy:** Healing
    **Energy Type:** Positive
 
-|             |                     |                     |
-|-------------|---------------------|---------------------|
-| Energy Cost | Healing Output      | Power Level         |
-|             |                     |                     |
-| 2           | 4 HP                | Cantrip (stabilize) |
-| 3           | 8 HP                | 1st level           |
-| 4           | 16 HP               | 2nd level           |
-| 5           | 24 HP               | 3rd level           |
-| 6           | 32 HP               | 4th level           |
-| 7           | 40 HP               | 5th level           |
-| 8           | 48 HP or Raise Dead | 6th+ level          |
-|             |                     |                     |
+|             |                     |
+|-------------|---------------------|
+| Energy Cost | Healing Output      |
+|             |                     |
+| 2           | 4 HP                |
+| 3           | 8 HP                |
+| 4           | 16 HP               |
+| 5           | 24 HP               |
+| 6           | 32 HP               |
+| 7           | 40 HP               |
+| 8           | 48 HP or Raise Dead |
 
-**Notes:** Healing at range or multiple targets requires Supporting Energy (Space).
+
+**Notes:** Healing at range or multiple targets requires Supporting Energy.
 
 3. **Primary Energy:** Buffs & Debuffs
    **Energy Types:** Varies (Earth for physical, Space for magical, Positive/Negative for life/death)
 
-|             |                                                 |               |
-|-------------|-------------------------------------------------|---------------|
-| Energy Cost | Effect Power                                    | Power Level   |
-|             |                                                 |               |
-| 2           | Minor: +1 to one hard attribute, or minor mechanical bonus | Cantrip       |
-| 3           | Basic: +2 to one hard attribute, or +1 to one soft attribute, or +1 to multiple things | 1st level     |
-| 4           | Moderate: +2 to one soft attribute, or +2 to multiple things, or significant bonus  | 2nd level     |
-| 5           | Strong: major stat change or multiple benefits | 3rd level     |
-| 6           | Major: transformation-level or party-wide      | 4th level     |
-| 7           | Exceptional: multiple major benefits           | 5th-6th level |
-| 8           | Reality-altering (permanent or overwhelming)    | 8th-9th level |
+|             |                                                 |
+|-------------|-------------------------------------------------|
+| Energy Cost | Effect Power                                    |
+|             |                                                 |
+| 2           | Minor: +1 to one hard attribute, or minor mechanical bonus |
+| 3           | Basic: +2 to one hard attribute, or +1 to one soft attribute, or +1 to multiple things |
+| 4           | Moderate: +2 to one soft attribute, or +2 to multiple things, or significant bonus  |
+| 5           | Strong: major stat change or multiple benefits |
+| 6           | Major: transformation-level or party-wide      |
+| 7           | Exceptional: multiple major benefits           |
+| 8           | Reality-altering (permanent or overwhelming)   |
 
 
-**Notes:** Duration from Supporting Energy (Time). Multiple targets require Supporting Energy (Space).
+**Notes:** Duration from Supporting Energy.
 
 
 ### Attribute Modifier Rules
@@ -377,108 +424,107 @@ Choose the appropriate table based on what you're trying to accomplish.
 4. **Primary Energy:** Control & Crowd Control
   **Energy Types:** Space (mind effects), Earth (physical restraint), Time (temporal effects)
 
-|             |                                                   |             |
-|-------------|---------------------------------------------------|-------------|
-| Energy Cost | Control Power                                     | Power Level |
-|             |                                                   |             |
-| 2           | Simple Weave control (minor hindrance)            | Cantrip     |
-| 3           | Basic single-target (1 creature hindered)         | 1st level   |
-| 4           | Moderate single-target (1 creature incapacitated) | 2nd level   |
-| 5           | Strong area or domination                         | 3rd level   |
-| 6           | Major control (paralysis/dominate)                | 4th level   |
-| 7           | Mass control or long-term                         | 5th level   |
-| 8           | Overwhelming control                              | 6th+ level  |
-|             |                                                   |             |
+|             |                                                   |
+|-------------|---------------------------------------------------|
+| Energy Cost | Control Power                                     |
+|             |                                                   |
+| 2           | Simple Weave control (minor hindrance)            |
+| 3           | Basic single-target (1 creature hindered)         |
+| 4           | Moderate single-target (1 creature incapacitated) |
+| 5           | Strong area or domination                         |
+| 6           | Major control (paralysis/dominate)                |
+| 7           | Mass control or long-term                         |
+| 8           | Overwhelming control                              |
 
-**Notes:** Targets make saves. Area effects require Supporting Energy (Space).
+
+**Notes:** Targets make saves. Area effects require Supporting Energy.
 
 5. **Primary Energy:** Summons & Conjurations
    **Energy Types:** Matching element (Earth/Air/Fire/Water), Space (extraplanar), Negative (undead)
 
-|             |                                          |               |
-|-------------|------------------------------------------|---------------|
-| Energy Cost | Summon Power                             | Power Level   |
-|             |                                          |               |
-| 3           | Weak creature or simple object           | 1st level     |
-| 4           | Minor combatant or useful object         | 2nd level     |
-| 5           | Moderate creature or complex creation    | 3rd level     |
-| 6           | Strong creature or powerful object       | 4th-5th level |
-| 7           | Major creature or reality creation       | 5th-6th level |
-| 8           | Legendary creature or permanent creation | 8th-9th level |
-|             |                                          |               |
+|             |                                          |
+|-------------|------------------------------------------|
+| Energy Cost | Summon Power                             |
+|             |                                          |
+| 3           | Weak creature or simple object           |
+| 4           | Minor combatant or useful object         |
+| 5           | Moderate creature or complex creation    |
+| 6           | Strong creature or powerful object       |
+| 7           | Major creature or reality creation       |
+| 8           | Legendary creature or permanent creation |
 
-**Notes:** Summoned creature has HP = (Your Potential × 6), uses your Mastery for attacks. Duration from Supporting Energy (Time).
+
+**Notes:** Summoned creature has HP = (Your Potential × 6), uses your Mastery for attacks. Duration from Supporting Energy.
 
 6. **Primary Energy:** Transformations
    **Energy Type:** Space (physical changes)
 
-|             |                                       |               |
-|-------------|---------------------------------------|---------------|
-| Energy Cost | Transformation Scope                  | Power Level   |
-|             |                                       |               |
-| 3           | Cosmetic or minor feature             | 1st level     |
-| 4           | Significant physical changes (self)   | 2nd level     |
-| 5           | Major self-transformation             | 3rd level     |
-| 6           | Transform others or major change      | 4th level     |
-| 7           | Extreme transformation or mass effect | 5th-6th level |
-| 8           | Reality-level transformation          | 8th-9th level |
-|             |                                       |               |
+|             |                                       |
+|-------------|---------------------------------------|
+| Energy Cost | Transformation Scope                  |
+|             |                                       |
+| 3           | Cosmetic or minor feature             |
+| 4           | Significant physical changes (self)   |
+| 5           | Major self-transformation             |
+| 6           | Transform others or major change      |
+| 7           | Extreme transformation or mass effect |
+| 8           | Reality-level transformation          |
 
-**Notes:** Unwilling targets get saves. Duration from Supporting Energy (Time).
+
+**Notes:** Unwilling targets get saves. Duration from Supporting Energy.
 
 7. **Primary Energy:** Utility & Manipulation
    **Energy Types:** Varies by effect (Earth for stone, Water for water, Space for objects)
 
-|             |                                       |               |
-|-------------|---------------------------------------|---------------|
-| Energy Cost | Utility Power                         | Power Level   |
-|             |                                       |               |
-| 2           | Simple Weave utility (minor effect)   | Cantrip       |
-| 3           | Basic utility (useful effect)         | 1st-2nd level |
-| 4           | Moderate utility (significant effect) | 2nd-3rd level |
-| 5           | Strong utility (major convenience)    | 3rd-4th level |
-| 6           | Major utility (powerful effect)       | 4th-5th level |
-| 7           | Exceptional utility (near-impossible) | 5th-7th level |
-| 8           | Reality-level utility                 | 8th-9th level |
-|             |                                       |               |
+|             |                                       |
+|-------------|---------------------------------------|
+| Energy Cost | Utility Power                         |
+|             |                                       |
+| 2           | Simple Weave utility (minor effect)   |
+| 3           | Basic utility (useful effect)         |
+| 4           | Moderate utility (significant effect) |
+| 5           | Strong utility (major convenience)    |
+| 6           | Major utility (powerful effect)       |
+| 7           | Exceptional utility (near-impossible) |
+| 8           | Reality-level utility                 |
 
-** Notes:** Some utilities are permanent (stone shaping). Others need Supporting Energy (Time) for duration.
+
+** Notes:** Some utilities are permanent (stone shaping). Others need Supporting Energy for duration.
 
 8. **Primary Energy:** Protection & Warding
    **Energy Type:** Space (barriers, wards)
 
-|             |                                                  |               |
-|-------------|--------------------------------------------------|---------------|
-| Energy Cost | Protection Level                                 | Power Level   |
-|             |                                                  |               |
-| 2           | Minor ward (brief +2 DR or single resistance)    | Cantrip-1st   |
-| 3           | Basic protection (+2 DR or single resist, 1 min) | 1st-2nd level |
-| 4           | Moderate ward (improved protection)              | 2nd-3rd level |
-| 5           | Strong protection (multiple benefits)            | 3rd level     |
-| 6           | Major ward (DR 4 or powerful defense)            | 4th-5th level |
-| 7           | Mass protection or impenetrable                  | 6th-7th level |
-| 8           | Reality-level protection                         | 8th-9th level |
-|             |                                                  |               |
+|             |                                                  |
+|-------------|--------------------------------------------------|
+| Energy Cost | Protection Level                                 |
+|             |                                                  |
+| 2           | Minor ward (brief +2 DR or single resistance)    |
+| 3           | Basic protection (+2 DR or single resist, 1 min) |
+| 4           | Moderate ward (improved protection)              |
+| 5           | Strong protection (multiple benefits)            |
+| 6           | Major ward (DR 4 or powerful defense)            |
+| 7           | Mass protection or impenetrable                  |
+| 8           | Reality-level protection                         |
 
-**Notes:** Duration from Supporting Energy (Time). Multiple targets need Supporting Energy (Space).
+**Notes:** Duration from Supporting Energy. Multiple targets require Supporting Energy.
 
 9. **Primary Energy:** Scrying, Prophecy
    **Energy Type:** Space (seeing distant/hidden things)
 
-|             |                                     |               |
-|-------------|-------------------------------------|---------------|
-| Energy Cost | Information Level                   | Power Level   |
-|             |                                     |               |
-| 2           | Detect nearby (30ft)                | Cantrip-1st   |
-| 3           | Identify or basic info              | 1st-2nd level |
-| 4           | Extended sense (distant viewing)    | 2nd-3rd level |
-| 5           | Major prophecy (specific answers)   | 3rd-5th level |
-| 6           | Powerful knowledge (see all)        | 5th-6th level |
-| 7           | Reality-piercing sight              | 6th-7th level |
-| 8           | Omniscient-level                    | 8th-9th level |
-|             |                                     |               |
+|             |                                     |
+|-------------|-------------------------------------|
+| Energy Cost | Information Level                   |
+|             |                                     |
+| 2           | Detect nearby (30ft)                |
+| 3           | Identify or basic info              |
+| 4           | Extended sense (distant viewing)    |
+| 5           | Major prophecy (specific answers)   |
+| 6           | Powerful knowledge (see all)        |
+| 7           | Reality-piercing sight              |
+| 8           | Omniscient-level                    |
 
-**Notes:** Duration from Supporting Energy (Time) for ongoing effects.
+
+**Notes:** Duration requires Supporting Energy for ongoing effects.
 
 #### SUPPORTING ENERGY TABLES
 
@@ -1063,75 +1109,3 @@ Most magical conditions allow the target to attempt a save at the end of each of
 When creating custom weaves or adjudicating edge cases, prioritize thematic appropriateness over mechanical optimization. A fire spell should never freeze someone, and a cold spell should never ignite them.
 
 For complete condition descriptions, mechanics, and recovery rules, see the **Conditions** document.
-
-### Channel Divinity (Divine Gift Only)
-
-#### Core Ability
-Automatic for all Divine Gift characters.
-- Action: Channel Divinity [Combat] (2 actions)
-- Uses: Equal to character tier per long rest, or spend 1 Luck point for additional use
-- Range: 30-foot radius centered on you
-- No Roll Required: Channeling automatically succeeds for Heal/Harm intents
-
-#### Available Channel Options by Divine Path
-
-**Good Paths (Divine Gift - Good/Neutral deities):**
-- Channel Positive - HEAL Intent
-- Channel Positive - HARM Intent (undead only)
-- Channel Positive - TURN Intent (undead only)
-
-**Evil Paths (Divine Gift - Evil deities):**
-- Channel Negative - HEAL Intent (undead only)
-- Channel Negative - HARM Intent (living creatures)
-- Channel Negative - COMMAND Intent (undead only)
-
-#### The Six Channel Types
-
-##### 1. Channel Positive - HEAL Intent
-- ALL living creatures within range heal 1d8 HP per 2 Tiers (minimum 1d8)
-- Affects: Living creatures (anything that can be healed)
-- Does NOT affect: Undead
-- Indiscriminate: Heals friends AND enemies
-
-##### 2. Channel Positive - HARM Intent 
-- ALL undead within range take 1d8 positive damage per 2 Tiers (minimum 1d8)
-- Affects: Undead only
-- Does NOT affect: Living creatures
-- No save (raw divine power)
-- Indiscriminate: Damages ALL undead
-
-##### 3. Channel Positive - TURN Intent 
-- All undead within range must resist
-- Channeler rolls: Wisdom + Positive Mastery
-- Each undead rolls: Will save
-- Compare successes:
-  - Undead gets fewer: Flees for 1 minute, cannot approach within 30 feet
-  - Undead equals or exceeds: Resists, no effect
-- Indiscriminate: Turns ALL undead
-
-##### 4. Channel Negative - HEAL Intent (Dragon Cult or Twisted Path only)
-- ALL undead within range heal 1d8 HP per 2 Tiers (minimum 1d8)
-- Affects: Undead only
-- Does NOT affect: Living creatures
-- Indiscriminate: Heals ALL undead
-
-##### 5. Channel Negative - HARM Intent (Dragon Cult or Twisted Path only)
-- ALL living creatures within range take 1d8 negative damage per 2 Tiers (minimum 1d8)
-- Affects: Living creatures only (including the channeler!)
-- Does NOT affect: Undead
-- Reflex save (Agility + Luck): Count successes, reduce damage by 1d8 per success (minimum 0)
-- Indiscriminate: Damages caster, allies, AND enemies
-
-##### 6. Channel Negative - COMMAND Intent (Evil Paths Only)
-- Target one undead within range (not area effect)
-- Channeler rolls: Wisdom + Negative Mastery
-- Target rolls: Will save
-- Compare successes:
-  - You get more: Undead obeys commands for 1 minute
-  - Tie or target wins: Resists, no effect
-
-#### Key Principle
-##### Intent Determines Effect:
-- Heal intent: Only heals (never harms)
-- Harm intent: Only harms (never heals)
-- Special intents: Turn/Command require opposed rolls

@@ -1,0 +1,170 @@
+{
+  "_id": "894efb5d63ad607a",
+  "name": "Void Gnasher",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Void Gnashers are blunt instruments — large, durable, capable of Grappling targets and then applying Reality Crush or Swallow Whole to remove them from the encounter entirely. Their intelligence is below the threshold for complex instruction-following. A summoner who gives one a simple, concrete direction (\"grapple that target, do not release it\") will find it executes that instruction reliably. One who gives complex conditional instructions will find the Gnasher defaulting to its base imperatives, which is to find something to bite. For the specific function of taking a single high-priority target out of an encounter for several rounds, it is unusually effective at its tier. The force damage on Gnashing Maw ignoring DR means armor provides limited protection.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 60,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 48,
+      "max": 48,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 5,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 4,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 40,
+      "fly": 40,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "",
+    "hpMultiplier": 8,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Tremorsense 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Gnashing Maw [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 6), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 12 damage (Large, standard: 8 + 4 from jaw pressure) + 4 force damage (Ignore DR); target is Grappled if they are Medium or smaller (Athletics vs Athletics to escape)</li>\n<li><em>Margin 2:</em> 18 damage (12 + 6 Str) + 4 force damage; Grappled; target takes 6 damage at the start of each of their turns while Grappled as the gnashing continues; target Disoriented while Grappled</li>\n<li><em>Margin 3:</em> 18 damage + 4 force damage; Grappled + ongoing 6 damage + Disoriented; the Gnasher has bitten deeply enough that the target is also Pinned — they cannot take [Move] actions while Grappled</li>\n</ul></li>\n<li><strong>Reality Crush [Combat — Grappled target only]:</strong> Against a target it is currently Grappling, the Void Gnasher folds space slightly around the creature.\n<ul>\n<li><em>Net 1:</em> 14 force damage (Ignore DR); target's Fortitude save or Stunned until end of their next turn. <em>Net 2:</em> 22 force damage; Stunned; target Weakened for 1 minute. <em>Net 3:</em> 22 force damage; Stunned + Weakened; target makes Fortitude save (Hard task, 2 successes) or takes 1d6 × 5 points of damage to their maximum HP as the spatial compression briefly affects their internal coherence.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Aberrant Resilience:</strong> The Void Gnasher's body does not respond to pain or physical trauma in any predictable way. It does not gain the Hindered condition from standard pain-based effects. Effects that specifically say \"creatures immune to pain\" function normally against it.</li>\n<li><strong>Swallow Whole (1/encounter):</strong> If the Void Gnasher has a target Grappled and reduced to below half their maximum HP, it can attempt to Swallow them as a [Combat] action. The target makes a Fortitude save (1 success). On failure, they are Swallowed — they take 6 force damage (Ignore DR) at the start of each of their turns, are Blinded and Immobilized, and can attempt to cut their way out by dealing 20 or more damage to the Gnasher's interior in a single hit (AC for interior is 8). Swallowed creatures are expelled if the Gnasher dies.</li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Void Gnasher",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!894efb5d63ad607a"
+}

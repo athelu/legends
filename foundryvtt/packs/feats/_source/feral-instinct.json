@@ -40,7 +40,24 @@
       "[Savage]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "initiative.modify",
+        "value": 2
+      },
+      {
+        "type": "condition.immunity",
+        "conditionName": "Surprised"
+      },
+      {
+        "type": "condition.immunity",
+        "conditionName": [
+          "Frightened",
+          "Charmed"
+        ],
+        "when": "primalFury"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!376bdd4d59971414"

@@ -1,0 +1,170 @@
+{
+  "_id": "a18aa807f5573a8a",
+  "name": "Boulder Giant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Boulder Giants are the point at which Stone Nephilim become genuinely threatening to organized groups. Ground Tremor disrupts formation positioning on arrival. Mountain Fist builds toward a Grapple that enemies find very difficult to escape. Mountain Hurl's debris damage means clustered enemies take area damage even when the throw targets only one. A summoner who has patience and keeps the Boulder Giant engaged consistently will find attrition steadily resolves in their favor.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 120,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 76,
+      "max": 76,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 4,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 6,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 25
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 19,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Mountain Fist [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 5), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2)</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str); target Grappled + Prone; no save; ongoing 8 bludgeoning damage per round</li>\n<li><em>Margin 3:</em> 21 damage + Grappled + Prone + Restrained; ongoing damage increases to 14; Fortitude save (Hard task, 2 successes) each round to break free</li>\n</ul></li>\n<li><strong>Mountain Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 80/160 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage</li>\n<li><em>Margin 2:</em> 14 damage; target knocked Prone + Stunned until end of their next turn; all creatures within 10 feet take 6 bludgeoning damage from debris; no save on debris</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Immovable:</strong> As above.</li>\n<li><strong>Earth Bond:</strong> Regenerates 6 HP per turn on natural earth or stone.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Stone Grip:</strong> As Rockborn, but escape checks add 2 to both dice.</li>\n<li><strong>Ground Tremor (1/encounter) [Combat]:</strong> As a [Combat] action, stamps the ground. All creatures within 20 feet on natural ground make a Reflex save (compare Agi 2 + Might 6 targeting vs. save). Net 1: 10 bludgeoning damage + Prone. Net 2: 18 bludgeoning damage + Prone + Restrained by cracking ground. Designated allies immune.</li>\n</ul>",
+    "reactionsNotes": "<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 6.</li>\n</ul>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Boulder Giant",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!a18aa807f5573a8a"
+}

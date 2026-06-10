@@ -1,0 +1,46 @@
+{
+  "_id": "hirnstep000000001",
+  "name": "Hirnaloyta's Step",
+  "type": "effect",
+  "img": "icons/svg/wing.svg",
+  "system": {
+    "label": "Hirnaloyta's Step",
+    "category": "buff",
+    "effectType": "attribute-mod",
+    "description": {
+      "value": "<p>Target gains +2 Agility for the duration. Recalculate Agility-based checks, Reflex saves, and initiative. This bonus does not stack with other beneficial Agility modifiers; use the highest bonus.</p>"
+    },
+    "tokenIcon": "",
+    "badge": { "type": "none", "value": 0, "max": 0 },
+    "activeEffects": [
+      {
+        "key": "system.attributes.agility.tempValue",
+        "mode": "add",
+        "value": "2",
+        "notes": "+2 Agility"
+      }
+    ],
+    "stacking": "highest",
+    "overlayPriority": 10,
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": { "type": "", "id": "", "actor": "", "successes": 0, "potential": 0 },
+    "grantedBy": "Hirnaloyta's Step",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 3 ? 10 : ${netSuccesses} >= 2 ? 1 : ${netSuccesses} >= 1 ? 0.1 : 0"
+    }
+  },
+  "flags": {},
+  "_key": "!items!hirnstep000000001"
+}

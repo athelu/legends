@@ -1,0 +1,170 @@
+{
+  "_id": "2a7965dcabebef21",
+  "name": "Thornlord",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Thornlords are mid-tier Fae of the hunting and guardian variety — they emerged from the courts of Fae that protect wild places and have inherited both the capability and the proprietary attitude those courts maintain toward natural terrain. In natural environments they are considerably more capable than their TR suggests: Living Briar turns the entire engagement area into a bleeding hazard, Forest Sense denies surprise entirely, and Tremorsense through plants means they are aware of approach from any direction. A summoner who deploys one in a forest or wilderness setting will find it performs at TR 4 capability. In a dungeon or city it is merely a capable TR 3 combatant that misses the trees.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": true,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 60,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 90,
+      "max": 90,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 5,
+      "religion": 0,
+      "wilderness": 6,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 6,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 35,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fae",
+    "creatureSubtype": "",
+    "hpMultiplier": 18,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Low-Light Vision, Tremorsense 60 ft (through roots and living plants)",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Thorn Lash [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 6), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + target gains 1 Bleeding stack as thorns catch skin</li>\n<li><em>Margin 2:</em> 13 damage (8 + 5 Str) + 2 Bleeding stacks; target makes Reflex save (1 success) or Restrained by animate vines until they succeed on an Athletics check (1 success) as a [Combat] action</li>\n<li><em>Margin 3:</em> 13 damage + 2 Bleeding stacks + Restrained; target's movement speed reduced by 20 even after escaping Restrained, for 1 minute, as thorns remain embedded</li>\n</ul></li>\n<li><strong>Briar Hurl [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 4), Range: 60 ft, 10-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 8 damage + Difficult Terrain in the area for 1 minute. Net 2: 12 damage + Restrained for 1 round + Difficult Terrain. Net 3: 12 damage + Restrained + 1 Bleeding stack + Difficult Terrain.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Living Briar:</strong> In natural terrain, the Thornlord can cause plants within 20 feet to animate as a [Combat] action. Animated plants create Difficult Terrain in the area and creatures moving through them make Reflex saves (1 success) or gain 1 Bleeding stack per 10 feet of movement. Duration: 1 minute.</li>\n<li><strong>Thorn Skin:</strong> Creatures that hit the Thornlord with unarmed strikes or natural weapons take 4 piercing damage.</li>\n<li><strong>Forest Sense:</strong> In natural terrain, the Thornlord cannot be surprised. It is aware of all creatures within 60 feet that are touching natural ground or vegetation.</li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Thornlord",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!2a7965dcabebef21"
+}

@@ -35,7 +35,19 @@
       "[Wilderness]"
     ],
     "notes": "Can take multiple times for different terrains",
-    "effects": []
+    "effects": [
+      {
+        "type": "fortune.grant",
+        "rollType": "initiative"
+      },
+      {
+        "type": "roll.modifier",
+        "rollType": "skill",
+        "skillKey": "wilderness",
+        "value": -1,
+        "applyTo": "both"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!3bc579c5f2216203"

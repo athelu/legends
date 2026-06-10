@@ -1,0 +1,47 @@
+{
+  "_id": "28677919fb97eabd",
+  "name": "Overwhelming Force",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have stopped trying to find the gap in their defense. You are removing the defense.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 5
+      },
+      "skills": "meleeCombat:5",
+      "feats": [
+        "Relentless Impact"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>Once per turn when you hit with a [Two-Handed] weapon, you may declare the strike an Overwhelming blow. The target makes a [[/save type=fortitude]] opposed by your Strength + Melee Combat. On failure they gain the Prone condition. On Margin 2 they are Prone regardless of the save result.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Once per turn"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Two-Handed]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!28677919fb97eabd"
+}

@@ -1,0 +1,48 @@
+{
+  "_id": "falsevisage000001",
+  "name": "False Visage",
+  "type": "effect",
+  "img": "icons/magic/air/wind-stream-purple.webp",
+  "system": {
+    "label": "False Visage",
+    "category": "utility",
+    "effectType": "condition",
+    "description": {
+      "value": "<p>Your appearance is altered by an illusion. Observers must succeed on a Perception check opposed by your Space Mastery to disbelieve. The disguise breaks if you take damage exceeding your Tier × 4 in a single hit.</p>"
+    },
+    "tokenIcon": "icons/magic/air/wind-stream-purple.webp",
+    "badge": {
+      "type": "none",
+      "value": 0,
+      "max": 0
+    },
+    "activeEffects": [],
+    "stacking": "replace",
+    "overlayPriority": 10,
+    "duration": {
+      "type": "minutes",
+      "value": 10,
+      "base": 10,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "none",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0
+    },
+    "grantedBy": "False Visage",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 3 ? 60 : ${netSuccesses} >= 2 ? 10 : 1"
+    }
+  },
+  "flags": {},
+  "_key": "!items!falsevisage000001"
+}

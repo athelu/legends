@@ -43,7 +43,28 @@
       "[Savage]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "toggle.state",
+        "stateKey": "wrathIncarnate",
+        "label": "Wrath Incarnate"
+      },
+      {
+        "type": "dr.modify",
+        "value": 4,
+        "damageTypes": "physical",
+        "when": "wrathIncarnate"
+      },
+      {
+        "type": "condition.immunity",
+        "conditionName": [
+          "Frightened",
+          "Charmed",
+          "Stunned"
+        ],
+        "when": "wrathIncarnate"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!f2c8c12ad6230b80"

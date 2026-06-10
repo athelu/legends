@@ -1,5 +1,61 @@
 # Core System
 
+All characters(martial, magical, and everything between) have two parallel sets of eight defining values: the eight standard attributes and the eight magical Potentials. These are two sides of the same coin, describing the same person from different angles. One is material; the other is planar. Neither causes the other, but they resonate. A person's body and pneuma grow together, shaped by the same life.
+
+Pneuma is universal. Every elf and human in Athelu was created with it woven into their nature. The gap between a mage and a fighter is not the presence of magical potential; it is whether the character has developed conscious access to it and in which direction they have learned to send it.
+
+Nobody in Estaea understands this at a scientific level. The First Men understood pneuma, ley lines, and the external planes as science. That knowledge is gone. What survived is residue: practices, disciplines, rituals, and physical traditions that work without anyone understanding why. Military drilling, religious liturgy, craft traditions, and athletic conditioning all develop Mastery in specific energies through methods whose original rationale has been lost to time. Practitioners describe what they do in terms of discipline, faith, craft, or instinct. All of those descriptions are accurate. None of them is complete.
+
+## The Two Pools
+
+### Attributes (Material)
+The eight standard attributes describing the body and mind:
+- Strength
+- Constitution
+- Agility
+- Dexterity
+- Intelligence
+- Wisdom
+- Charisma
+- Luck
+
+### Potentials (Planar)
+Eight values describing the character's pneuma resonance with the external planes:
+- Earth
+- Water
+- Air
+- Fire
+- Positive
+- Negative
+- Space
+- Time
+
+Potentials are generated at character creation alongside attributes. Every character has all eight. 
+
+## Skills and Mastery
+
+All skills, including the eight Mastery skills corresponding to the eight energies, start at rank 1.
+Every character begins with all eight Mastery skills at rank 1, reflecting the universal presence of pneuma. This baseline represents an unconscious resonance with the body and pneuma shaped by the same life without deliberate cultivation. Conscious development begins at rank 2, purchased through XP at the standard skill cost of 8 × current rank.
+
+Mastery skills are capped by their corresponding Potential value, the same way standard skills are capped by their governing attribute.
+
+## The Energy Pool
+
+Every character has an Energy Pool.
+
+**Pool formula for characters:**
+Sum of all eight Potentials + (Casting Stat × 2) + Constitution + (Total Mastery ranks ÷ 2, rounded down)
+
+This pool fuels both weaving and physical energy expression. The distinction between the two is direction, not resource type.
+
+**External** pushes energy outward through pneuma into the planes and back as a shaped effect called a weave. This requires conscious planar access requiring a trait or flaw.
+
+**Internal** burns energy inward through the body as enhanced capability. This is available to any character who has developed sufficient Potential and Mastery in the relevant energy through feat investment.
+
+Both cost from the same pool. Both recover on the same rest schedule. 
+
+## Dice Rolling 
+
 The Legends RPG system is a success counting system. Characters make rolls and count the number of successes made to determine the outcome of situation during the game. 
 A d8 roll under mechanic is used to determine results. The only dice required for Legends are d8. All checks will be determined with the rolling of 2d8.
 
@@ -138,16 +194,18 @@ As you spend Luck throughout the session, your Current Luck decreases, making it
 ## Resting
 Legends utilizes a short rest and long rest system for resource recovery. 
 ### Short Rest
-A break in adventuring, a minimum of 1 hour, spent to eat, make shor preparations and patch up wounds. A short rest has the following standard benefits:
+A break in adventuring, a minimum of 1 hour, spent to eat, make short preparations and patch up wounds. A short rest has the following standard benefits:
 - Regain HP equal to Constitution attribute
 - Regain 1 Luck point
+- **Bind one magic item** — spend the rest in attentive contact with a magic item that Requires Binding to add it to your Bound items (max 3)
 
 ### Long Rest
-A long rest can only be taken in a safe place and requires a minimum of 8 hours. This is typically a sleeping period.  A long rest has the following standard benefits:
+A long rest can only be taken in a safe place and requires a minimum of 8 hours. This is typically a sleeping period. A long rest has the following standard benefits:
 - Regain HP equal to Constitution × 4
 - Restore all Luck points to maximum
 - Restore all Energy points to maximum
 - Remove certain conditions (GM discretion)
+- **Unbind magic items** — you may deliberately unbind one or more Bound items during a long rest; items not in your possession when you complete the rest automatically unbind
 
 ## Action Economy
 Each character gets 3 actions per turn to use as they see fit. Actions can be spent on a number of activities, such as:
@@ -463,68 +521,6 @@ A character cannot create Simple items in the field if they lack the appropriate
 Items crafted for personal or party use follow the same rules as items crafted for sale. The character still spends the material cost . There is no markup required since no guild or buyer is involved.
 Items crafted for sale without guild involvement may attract legal attention in settlements where guilds hold trade rights. Selling through a guild costs the character a 20% commission but provides legal cover and established buyers.
 
-##### Scroll Creation
-Scrolls are physical documents that store a weave for later use. Creating a scroll requires both a Craft: Scribe skill and a magical trait. The Craft: Scribe skill provides the physical medium; the magical trait provides the encoding.
-A character without a magical trait cannot create scrolls, even with Craft: Scribe. A character with a magical trait but without Craft: Scribe may collaborate with a scribe — the caster provides magical encoding while the scribe handles the physical creation, splitting the downtime requirement between them.
-
-**Requirements for scroll creation:**
-- Craft: Scribe rank 1 or higher.
-- A magical trait.
-- The weave must be one the caster has successfully cast before.
-- The caster must expend Energy equal to the weave's full cost during creation (the Energy is stored in the scroll).
-- Appropriate materials.
-
-**Materials cost:** Total Energy cost of weave × 5 gp
-
-##### Time Required
-| Weave energy cost | Time      |
-|-------------------|-----------|
-| 1-4 Energy        | 1 period  |
-| 5-8 Energy        | 2 periods |
-| 9+ energy         | 3 periods |
-
-
-##### Craft Difficulty
-| Weave energy cost | Successes Required | Modifier |
-|-------------------|--------------------|----------|
-| 1-4 Energy        | 1 success          |   none   |
-| 5-8 Energy        | 2 successes        |   none   |
-| 9+ energy         | 2 successes        | Add 1 to both dice |
-
-**Failure results:**
-- **0 successes:** Materials are lost. The Energy expended is not recovered. Work must restart.
-- **1 success when 2 needed:** Scroll created but unstable. The GM rolls secretly: on a 1–4 (d8) the scroll functions normally; on a 5–8 it fails on use and the reader rolls on the Scroll Mishap Table.
-
-##### Using a Scroll
-Any character who can read may attempt to use a scroll. Reading a scroll costs 2 [Combat] actions and provokes Opportunity Attacks.
-
-**Step 1: Identification:**
-If the scroll is unknown, the character must first identify it with an Arcane check or Sense Magic before use. Failure means the character does not know the effect before triggering it. A character without a magical trait adds 1 to both dice on this check.
-
-**Step 2: Attempt the weave:**
-The reader makes only the targeting roll. The weaving roll is skipped as the scroll handles channeling. This is the primary advantage of scrolls: they bypass the risk of weave failure at the channeling stage.
-Characters with a magical trait use their normal Casting Stat + Primary Energy Mastery.
-Characters without a magical trait use Intelligence + Wisdom, and add 2 to both targeting dice. 
-
-**Step 3: Scroll is consumed**
-Regardless of outcome, the act destroys the scroll.
-
-**Step 4: Apply result:**
-If the targeting roll succeeds, the weave resolves normally for any reader. If the targeting roll fails:
-Characters with a magical trait simply fail. The weave does not trigger. The scroll is consumed.
-Characters without a magical trait roll on the Scroll Mishap Table. The stored energy releases through an untrained conduit and produces an uncontrolled effect.
-
-##### Scroll Mishap
-| d8 |   Result     |       Description     |
-|----|--------------|-----------------------|
-| 1  | Discharge    | The energy releases harmlessly in a vivid but non-damaging display. |
-| 2  | Backlash     | The energy reverses into the reader. They take damage equal to the scroll's Energy cost using the scroll's primary energy type. Half DR applies. |
-| 3  | Misfire      | The weave triggers but strikes a random creature within range instead of the intended target, including allies. Use a normal targeting roll against the new target |
-| 4  | Diminished   | The weave triggers with Margin 1 effect. |
-| 5  | Overload     | The weave triggers at full effect against the intended target. The reader also gains the Dazed condition until the end of their next turn. |
-| 6  | Surge        | For 1 minute the reader deals 4 damage of that energy type on any successful melee strike, but also take 4 damage of that type at the start of each of their turns until the effect ends. |
-| 7  | Resonance    | The weave triggers normally against its intended target. The reader is also struck by the same effect at Margin 1. |
-| 8  | Unraveling   | Every creature in a 15-foot radius centered on the reader, including the reader make a Reflex save, treating the save as a Hard task if the scroll's Energy cost exceeds 8, or an Easy task otherwise. Those who fail take damage equal to the scroll's Energy cost using the primary energy type. Half DR applies. |
 
 #### Research
 Research covers the deliberate pursuit of information whether deciphering an ancient text, investigating a conspiracy, understanding a magical phenomenon, tracing a lineage, or studying a creature.
@@ -625,249 +621,3 @@ Extended downtime has a cost. Characters must eat, sleep somewhere, and maintain
 | Aristocratic   |   8 gp     | Estate or Suite, all needs met. |
 
 Characters who cannot or do not pay lifestyle costs subsist at the Destitute level regardless of their preference. Extended time at Destitute may have narrative consequences at the GM's discretion. Lifestyle costs apply for each day of downtime regardless of how many activities the character pursues that day.
-
-### Alchemical Creation Rules
-Alchemical preparations are physical objects that store magical effects for later use. They are created during downtime using physical components that contain concentrated magical energy, following the energy requirements of weaves from the standard weave list.
-
-Creating a crafted preparation requires three steps. Daily and short rest preparations skip Steps 2 and 3 entirely — they require no components and no check.
-
-**Step 1 — Identify the desired effect and its energy requirements.**
-The Alchemist consults the weave list to determine which energies and what quantities are needed. Any weave on the list may serve as the basis for a preparation, subject to Craft rank limits. The Alchemist may use Arcane checks or Research downtime to identify requirements for unfamiliar weaves.
-
-**Step 2 — Gather components.**
-Physical components containing the required energies at the required potency must be on hand before mixing begins. Each energy point in the weave requires one point of potency in the corresponding component type. A Fire Bolt equivalent (Fire 2, Space 1) requires Fire components totaling potency 2 and Space components totaling potency 1 — or the Space component may be replaced by thrown delivery.
-Components may be combined freely to reach required totals. Two potency-1 Fire components substitute for one potency-2 Fire component.
-
-**Step 3 — Mix the preparation.**
-The Alchemist works for the time determined by the energy cost bracket. At the end of the required time, make a Craft: Alchemist check. Apply results and determine the activation catalyst. On success, produce a number of identical preparations equal to Craft: Alchemist rank.
-
-**Craft: Alchemist Rank Gates:**
-Craft: Alchemist rank governs both the complexity and potency of preparations the Alchemist can produce. Both limits apply simultaneously to all preparation types — daily, short rest, field improvised, and crafted.
-
-| Craft Rank | Max Total Energy Cost | Max Single Component Potency | Crafted Yield |
-|------------|-----------------------|------------------------------|---------------|
-|    1       |           2           |             1                |      1        |
-|    2       |           4           |             2                |      2        |
-|    3       |           6           |             3                |      3        |
-|    4       |           8           |             4                |      4        |
-|    5       |           10          |             5                |      5        |
-|    6       |           12          |             6                |      6        |
-|    7       |           14          |             7                |      7        |
-|    8       |           16          |             8                |      8        |
-
-
-#### Activation Catalysts
-Every preparation has a defined activation method chosen during creation. The catalyst is decided before mixing begins and cannot be changed after completion.
-
-| Catalyst   | Description           | Typical Use                                  |
-|------------|-----------------------|------------------------------|---------------|
-| Ingested   | Consumed by drinking or eating | Healing draughts, attribute tinctures, subtle poisons |
-| Applied    | Spread on a weapon surface or object | Contact poisons, weapon oils, trap components |
-| Thrown     | Hurled as a projectile; activates on impact | Fire flasks, acid vials, frost bombs, offensive preparations |
-| Triggered  | Activates when a specific condition is met (touch, light, sound, proximity) | Trap preparations, delayed effects, defensive items |
-| Immediate  | Activates the moment mixing is complete | Only occurs on critical failure; cannot be chosen intentionally |
-
-A preparation with a Thrown catalyst uses Dexterity + Ranged Combat to hit a target or location (range 30/60 ft). A preparation with an Applied catalyst activates when the coated surface strikes or is contacted. A preparation with a Triggered catalyst requires the Alchemist to define the trigger condition precisely at creation — the GM confirms whether the condition is specific enough to be reliable.
-
-#### Crafting Time
-Crafting time is determined by the total energy cost of the preparation. No per-modifier math is required — the complexity of what is being made determines how long it takes.
-
-| Total Energy Cost | Crafting Time         |
-|-------------------|-----------------------|
-| 1–6               | 4 hours (1 Short Practice block) |
-| 7–12              | 8 hours (1 Downtime Period) |
-| 13–16             | 16 hours (2 Downtime Periods) |
-
-Component cost multiplies by yield; time does not. A Craft rank 4 Alchemist making 4 healing draughts (Positive 3, total energy cost 3) spends 4 hours and walks away with 4 preparations.
-All preparations in a crafted batch must be identical — same weave basis, same activation catalyst.
-
-Example preparations and their crafting times:
-
-| Preparation  |  Energy Basis         | Total Cost | Time    |
-|--------------|-----------------------|------------|---------|
-| Fire Flask   | Fire 2, thrown        | 2          | 4 hours |
-| Frost Bomb   | Water 2, thrown       | 2          | 4 hours |
-| Healing Draught | Positive 3, ingested	3 | 4 hours |
-| Smoke Bomb   | Air 2, triggered	2 | 4 hours |
-| Acid Vial    | Water 3, thrown	3 | 4 hours |
-| Contact Poison (weak) | Negative 2, applied | 2 | 4 hours |
-| Strong Healing Draught | Positive 6, ingested | 6 | 4 hours |
-| Contact Poison (strong) | Negative 4, applied | 4 | 4 hours |
-| Fire Bomb (area) | Fire 5, Space 2 | 7 | 8 hours |
-| Paralytic Poison | Negative 4, Space 2, Paralyzed | 6 | 4 hours |
-| Mass Healing Draught | Positive 5, Space 3 | 8 | 8 hours |
-| Temporal Poison | Negative 3, Time 2, applied | 5 | 8 hours |
-| Greater Fire Bomb | Fire 7, Space 4 | 11 | 8 hours |
-| Legendary Preparation | Any, 13+ | cost	13+ | 16 hours |
-
-#### The Craft Check
-The Alchemist makes a Craft: Alchemist check (Dexterity + Craft: Alchemist rank) at the end of the required time investment.
-
-| Result                  | Outcome                            |
-|-------------------------|------------------------------------|
-| Required successes met  | Preparation completed successfully at full effect |
-| 1 success when 2 needed | Preparation completed but unstable — GM rolls secretly. On 1–4 (d8) it functions normally; on 5–8 it activates immediately when used (Immediate catalyst, regardless of chosen catalyst) |
-| 0 successes, no complication | Work continues — add one additional period, make another check |
-| 0 successes, complication | All components consumed and lost; preparation fails; must restart with new components |
-| Critical failure (double 8s) | Preparation activates immediately in the workspace — see Critical Failure on Mixing |
-
-#### Check difficulty by preparation complexity:
-| Total Energy Cost | Successes Required           |
-|-------------------|------------------------------|
-| 1–4               | 1 success               | 
-| 5–8               | 1 success               | 
-| 9–12              | 2 successes               | 
-| 13+               | 2 successes + Add 1 to both dice |
-
-**Complication check:** When the Alchemist achieves 0 successes, roll 1d8. If the result exceeds Current Luck, a complication occurs and components are lost.
-
-#### Using a Preparation
-Alchemical preparations may be used by any character, no magical trait is required. The magic is contained within the object.
-
-#### Action cost by catalyst:
-| Catalyst     | Action Cost                  |
-|--------------|------------------------------|
-| Ingested     | 1 [Activate] action          |
-| Applied (to own weapon) | 1 [Activate] action |
-| Applied (to another's weapon) | 1 [Interact] action (adjacent ally) |
-| Thrown       | 1 [Combat] action |
-| Triggered    | No action at trigger time — activation is automatic |
-
-- **Targeting:** Preparations that affect a specific target use the following targeting resolution:
-- **Thrown preparations:** Dexterity + Ranged Combat attack roll, then normal weave success scaling applies
-- **Ingested/Applied preparations:** No attack roll — effect resolves automatically on contact
-- **Area preparations (those with Space components):** Normal weave targeting as if cast by the Alchemist, using Intelligence + Craft: Alchemist rank as the targeting roll
-- **Success scaling:** Preparations resolve using the same margin-of-success scaling as weaves. The "targeting roll" for non-thrown preparations uses the Alchemist's Intelligence + Craft: Alchemist rank. The preparation's effect is determined by the number of successes on this roll compared against the target's save (if applicable).
-
-#### Alchemical Components
-Magical energy concentrates in natural objects over time. The degree of concentration depends on proximity to ley lines and nexus points, the age and extremity of the environment, and the specific elemental conditions of the source location. An Alchemist must identify, locate, and correctly harvest these concentrations to use them in preparations.
-
-**Every component has:**
-- **Energy type** — which of the eight energies it contains
-- **Potency** — how many points of that energy it provides (1–8)
-- **Source** — where it comes from
-- **Rarity** — how difficult it is to obtain
-
-Components may be combined to meet energy requirements. Two potency-1 components of the same type substitute for one potency-2 component. Components of different types may not be combined.
-
-#### Component Rarity by Energy Type
-| Rarity       | Energy Types              | General Availability |
-|--------------|---------------------------|----------------------|
-| Common       | Fire, Air, Earth, Water   | Natural geological and environmental sources; low-potency versions purchasable in most markets |
-| Uncommon     | Positive, Negative        | Sites of divine activity, significant death, or prolonged life; purchasable in cities with appropriate contacts |
-| Rare         | Time, Space               | Do not occur naturally in the material world; found only at exceptional nexus points or harvested from specific Daemons |
-
-
-#### Fire Components
-| Component    | Potency | Source     | Availability      |
-|--------------|---------|------------|----------------------|
-| Sulfur       |    1    | Volcanic regions, mineral markets | Common market purchase |
-| Coal (alchemical grade) | 1 | Mining regions, markets | Common market purchase |
-| Obsidian     |    2    | Volcanic terrain | Markets in volcanic regions; Wilderness check elsewhere |
-| Volcanic glass | 3     | Active volcanic terrain | Wilderness check in appropriate terrain |
-| Fire-ley obsidian | 4  | Volcanic terrain adjacent to Fire ley line | Requires ley line location knowledge |
-| Hearthstone | 5–6      | Ancient volcanic formations at nexus-adjacent locations | Nexus exploration |
-
-#### Air Components
-| Component    | Potency | Source     | Availability      |
-|--------------|---------|------------|----------------------|
-| Raptor feather (storm species) | 1 | Highland and coastal regions | Wilderness check or market |
-| Thunderstone | 2 | High mountain peaks, storm-prone ridgelines | Wilderness check in appropriate terrain |
-| Cyclone salt | 3 | Coastal cliff formations in high-wind regions | Wilderness check, coastal highlands |
-| Ley-wind crystal | 4 | Stone formations adjacent to Air ley line | Requires ley line location knowledge |
-| Stormheart crystal | 5–6 | Ancient formations at Air nexus points | Nexus exploration |
-
-
-#### Earth Components
-| Component    | Potency | Source     | Availability      |
-|--------------|---------|------------|----------------------|
-| Iron ore | 1 | Mining regions, markets | Common market purchase |
-| Lodestone | 2 | Specific mineral deposits | Markets in mining cities; Wilderness check elsewhere |
-| Deep granite | 3 | Ancient mine shafts, old mountain formations | Wilderness check in ancient mining regions |
-| Ley-earth mineral | 4 | Mineral deposits adjacent to Earth ley line | Requires ley line location knowledge |
-| Rootstone | 5–6 | Ancient formations at Earth nexus points | Nexus exploration |
-
-#### Water Components
-| Component    | Potency | Source     | Availability      |
-|--------------|---------|------------|----------------------|
-| Sea salt | 1 | Coastal regions | Common market purchase |
-| Deep spring water | 2 | Underground springs | Wilderness check or known location |
-| Glacial ice | 3 | Mountain glaciers, extreme northern terrain | Wilderness check in appropriate terrain |
-| Ley-water mineral | 4 | Springs or seabeds adjacent to Water ley line | Requires ley line location knowledge |
-| Deepshard crystal | 5–6 | Ancient formations at Water nexus points | Nexus exploration |
-
-#### Positive Components
-| Component    | Potency | Source     | Availability      |
-|--------------|---------|------------|----------------------|
-| Temple-blessed herbs | 2 | Temple gardens, available from priests | City temples; requires respectful approach |
-| Shrine-spring water | 3 | Springs adjacent to active temples or shrines | Specific known locations |
-| Nexus-spring water (Positive) | 4–5 | Springs at Positive ley line nexus points | Nexus exploration |
-| First Age holy site remnant | 6 | Ancient sacred sites predating the Dragon devastation | Story acquisition |
-
-#### Negative Components
-| Component    | Potency | Source     | Availability      |
-|--------------|---------|------------|----------------------|
-| Ley-shadow mineral | 2 | Deposits adjacent to Negative ley line | Requires ley line location knowledge |
-| Grave soil | 2 | Ancient burial sites, old battlefields | Wilderness check in historically significant locations |
-| Deep Fens peat | 3 | The Fens region; ancient, death-saturated deposits | Wilderness check in the Fens |
-| Bone Garden residue | 4 | Nevil's sacred site at the Fens | Specific location, may require faction standing |
-| Ley-death crystal | 5–6 | Negative ley line nexus formations | Nexus exploration |
-
-#### Rare Components
-Time and Space energies do not concentrate naturally in the material world. They exist in the planes but barely touch the material realm. The only sources on Athelu are exceptional nexus points where the relevant planes intersect particularly strongly, and certain Daemons whose nature is tied to these conceptual energies.
-
-Daemon harvesting for Time and Space components is GM controlled. The GM determines which creatures in the campaign yield these components, based on the nature of the creature and the story. This is not routine — it requires the Alchemist to know in advance what a specific creature yields, and to be prepared to harvest immediately after defeat.
-
-#### Time Components
-| Component    | Potency | Source     |
-|--------------|---------|------------|
-| Temporal residue | 3 | Sites where Time weaves have been used repeatedly over centuries — extremely rare, GM determined |
-| Time-aspected Daemon essence | 4–6 | Harvested from Daemons with Time affinity — GM controlled |
-| Nexus temporal crystal | 5–7 | Time-aspected nexus point — exceptional rarity, story acquisition |
-
-#### Space Components
-| Component    | Potency | Source     |
-|--------------|---------|------------|
-| Portal fragment | 3 | Remnants of destroyed magical portals in First Age ruins |
-| Space-aspected Daemon essence | 4–6 | Harvested from Daemons with Space affinity — GM controlled |
-| Nexus spatial crystal | 5–7 | Space-aspected nexus point — exceptional rarity, story acquisition |
-
-#### Component Purchasing
-Low-potency Common components are available in most settlements with a market. Higher-potency components and all Uncommon components require larger cities, specialist suppliers, or faction contacts.
-
-| Component Type      | Availability     | Approximate Cost  |
-|---------------------|------------------|-------------------|
-| Common, potency1–2  | Most settlements | 5–15 gp per unit |
-| Common, potency 3–4 | Larger towns, specialist suppliers | 20–50 gp per unit |
-| Common, potency 5–6 | Cities, rare specialty shops | 75–150 gp per unit |
-| Uncommon, potency 2–3 | Cities with temple or guild contacts | 30–75 gp per unit |
-| Uncommon, potency 4–5 | Major cities, significant faction standing | 100–250 gp per unit |
-| Rare (Time/Space) | Cannot generally be purchased	Story | acquisition only |
-
-#### Harvesting Components
-Collecting components from natural sources uses the Wilderness skill.  An Alchemist may gather components directly from appropriate terrain during downtime.
-The Alchemist identifies a likely source location using Wilderness (Easy task for Common components in appropriate terrain; Hard task for specific high-potency locations).
-The Alchemist must spend at least a Short Practice block (4 hours) harvesting. Make a Craft: Alchemist check at the end of this period to determine if  materials were successfully extracted.
-
-#### Harvesting Results
-
-| Result | Yield |
-|--------|-------|
-| 2 successes | Full yield — potency 1–4 components appropriate to location (GM determines specific type and quantity based on terrain) |
-| 1 success | Partial yield — half the normal quantity |
-| 0 successes | Component is contaminated or incorrectly extracted — no usable material |
-
-**Ley-line adjacent harvesting:** When the Alchemist harvests within a confirmed ley line region (located using Arcane or the Pneuma Sensitivity feat), the GM may allow potency 3–5 components appropriate to the ley line's energy type. This requires both the Wilderness check to locate suitable formations and the Craft: Alchemist check to harvest correctly.
-
-**Nexus harvesting:** At a confirmed nexus point, potency 5–7 components may be available. The Alchemist must make an Arcane check (Hard task) to identify the highest-concentration materials before harvesting.
-
-#### Daemons Harvesting 
-When a Daemon that yields Time or Space components has been defeated, the Alchemist may attempt to harvest usable essence. The Alchemist must know in advance what the creature yields and how to extract it (requires prior Research). Harvesting must begin within 1 hour of defeat (magical essence dissipates rapidly). A Short Practice block (4 hours) is required to attempt the harvest. The Alchemist must make a Craft: Alchemist check (Hard task — 2 successes)
-
-#### Daemon Harvesting
-| Result | Yield |
-|--------|-------|
-| 2 successes | Usable essence recovered at full potency (GM determines potency based on creature) |
-| 1 success | Essence recovered at half potency (round down, minimum 1) |
-| 0 successes | Essence contaminated during extraction — no usable material recovered |
-

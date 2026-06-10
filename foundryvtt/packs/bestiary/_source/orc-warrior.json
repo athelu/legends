@@ -1,0 +1,195 @@
+{
+  "_id": "bfe32177cac132b0",
+  "name": "Orc Warrior",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 3,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 2,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 36,
+      "max": 36,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 3,
+      "thievery": 0,
+      "rangedCombat": 2,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 4,
+      "history": 0,
+      "perception": 2,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "humanoid",
+    "creatureSubtype": "",
+    "hpMultiplier": 9,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "Orcs charge aggressively using their Aggressive ability to close quickly. Greataxe wielders focus on devastating damage while shield bearers use Shield Block to protect themselves and hold the line. All orcs fight to the death using Relentless when dropped.",
+    "attacksNotes": "",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Aggressive:</strong> Once per turn as a [Free] action, can move up to speed toward a hostile creature it can see\n<ul>\n<li><strong>Relentless (1/day):</strong> When reduced to 0 HP, make Fortitude save:\n<ul>\n<li><strong><em>1+ successes:</strong></em> Drop to 1 HP instead of 0 HP</li>\n</ul></li>\n</ul></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [
+    {
+      "_id": "39f75e39c1b815ad",
+      "name": "Greataxe OR battleaxe + shield, 2 javelins, leather armor",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": {
+          "value": "<p>Greataxe OR battleaxe + shield, 2 javelins, leather armor</p>"
+        },
+        "equipmentType": "adventuring-gear",
+        "isMagical": false,
+        "identified": true,
+        "weight": 1,
+        "cost": 0,
+        "quantity": 1,
+        "equipped": true,
+        "rarity": "",
+        "requiresAttunement": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_key": "!items!39f75e39c1b815ad"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Orc Warrior",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!bfe32177cac132b0"
+}

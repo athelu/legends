@@ -1,0 +1,170 @@
+{
+  "_id": "eaeea20e29a6efb6",
+  "name": "Earth Elementals",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 10,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 3,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 2,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 1,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 10,
+      "max": 10,
+      "temp": 0
+    },
+    "dr": {
+      "value": 1,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 2,
+      "history": 0,
+      "perception": 2,
+      "empathy": 0
+    },
+    "size": "tiny",
+    "speed": {
+      "walk": 20,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 10
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 5,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 10 ft",
+    "tactics": "",
+    "attacksNotes": "",
+    "specialAbilitiesNotes": "<h4>Pebble Sprite</h4>\n<p><strong>Threat Rating:</strong> 1/8 <strong>Origin:</strong> Elemental (Earth) <strong>Size:</strong> Tiny <strong>HP:</strong> 10 (Con 2 × 5, Fragile) <strong>DR:</strong> 1 (stone skin) <strong>Speed:</strong> 20 ft, Burrow 10 ft (loose soil only) <strong>Attributes:</strong> Str 3 / Con 2 / Agi 2 / Dex 2 / Int 1 / Wis 2 / Cha 1 / Luck 2 <strong>Skills:</strong> Melee Combat 2, Perception 2 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 10 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Gravel Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 1), Range: 20 ft\n<ul>\n<li><em>Margin 1:</em> 2 damage</li>\n<li><em>Margin 2:</em> 2 damage; target makes Reflex save (1 success) or gains Dazzled condition until end of their next turn from gravel in the eyes</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Earth Sense:</strong> Aware of all vibrations through the ground within 10 ft. Cannot be surprised by creatures touching the same surface.</li>\n<li><strong>Stone Shape (minor):</strong> Once per encounter, alters a small quantity of loose stone — fills a crack up to 1 inch wide and 3 feet long, creates a rough step in soft stone, or dislodges a pebble from height to drop on a target below (1 damage, requires height advantage).</li>\n</ul>\n<p><strong>Description:</strong> Pebble Sprites are scouts and minor nuisances. Their Tremorsense within 10 feet tells the summoner what is moving on any surface they occupy, and their minor stone shaping is occasionally exactly what is needed. A summoner who calls one for a fight has made a conceptual error. One called to monitor a floor, plug a small gap, or confirm whether something is approaching through ground vibration will find it performs that task adequately.</p>\n<p>---</p>\n<h4>Stone Lurker</h4>\n<p><strong>Threat Rating:</strong> 1/4 <strong>Origin:</strong> Elemental (Earth) <strong>Size:</strong> Small <strong>HP:</strong> 18 (Con 3 × 6, Standard) <strong>DR:</strong> 3 (stone shell) <strong>Speed:</strong> 20 ft, Burrow 20 ft (earth and stone) <strong>Attributes:</strong> Str 4 / Con 3 / Agi 2 / Dex 2 / Int 2 / Wis 3 / Cha 1 / Luck 2 <strong>Skills:</strong> Melee Combat 3, Might 3, Perception 3 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 30 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 3), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 4 damage (Small, standard: 4 − 1 + 1 for stone density = 4)</li>\n<li><em>Margin 2:</em> 8 damage (4 + 4 Str); target makes Fortitude save (1 success) or knocked Prone</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Submerge:</strong> As a [Move] action, the Stone Lurker submerges into natural earth or stone it is standing on. While submerged it is Hidden and moves at its burrow speed. It must surface to attack.</li>\n<li><strong>Ambush:</strong> When the Stone Lurker attacks on the same turn it surfaced from Submerge, it has Fortune on that attack.</li>\n</ul>\n<p><strong>Description:</strong> Stone Lurkers submerge, position under a target using Tremorsense, surface for an Ambush strike, and submerge again. They are slow and hit moderately hard but are genuinely difficult to pin down while natural ground is available. A summoner who places one under an approach path and tells it to hit anything that walks over it will find the instructions followed precisely and without elaboration.</p>\n<p>---</p>\n<h4>Granite Ward</h4>\n<p><strong>Threat Rating:</strong> 1/2 <strong>Origin:</strong> Elemental (Earth) <strong>Size:</strong> Medium <strong>HP:</strong> 36 (Con 4 × 9, Tough) <strong>DR:</strong> 4 (granite skin) <strong>Speed:</strong> 25 ft, Burrow 20 ft <strong>Attributes:</strong> Str 5 / Con 4 / Agi 2 / Dex 2 / Int 2 / Wis 3 / Cha 1 / Luck 2 <strong>Skills:</strong> Melee Combat 4, Might 4, Perception 3 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 30 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 4), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage (standard natural weapon)</li>\n<li><em>Margin 2:</em> 11 damage (6 + 5 Str); target knocked Prone; no save</li>\n<li><em>Margin 3:</em> 11 damage + Prone; target Restrained by earth and stone until they succeed on a Might check (Hard task, 2 successes) as a [Combat] action</li>\n</ul></li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round when hit by a physical attack, reduce incoming damage by 4.</li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> Cannot be knocked Prone by non-magical forced movement. Shoves automatically fail unless the attacker wins an opposed Strength + Athletics check (Hard task, 2 successes).</li>\n<li><strong>Earth Bond:</strong> While standing on natural earth or stone, regains 4 HP at the start of its turn. Suppressed if it took magical damage this round.</li>\n</ul>\n<p><strong>Description:</strong> Granite Wards hold ground. They plant themselves where the summoner indicates and do not move unless ordered to. Earth Bond makes attrition against them on natural surfaces a slow process. They function best as mobile obstacles — position one in a doorway, narrow pass, or between the summoner and the enemy and it will remain there performing exactly that function until something removes it.</p>\n<p>---</p>\n<h4>Boulder Soldier</h4>\n<p><strong>Threat Rating:</strong> 1 <strong>Origin:</strong> Elemental (Earth) <strong>Size:</strong> Large <strong>HP:</strong> 56 (Con 4 × 14, Tough) <strong>DR:</strong> 5 (layered granite shell) <strong>Speed:</strong> 25 ft, Burrow 25 ft <strong>Attributes:</strong> Str 6 / Con 4 / Agi 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2 <strong>Skills:</strong> Melee Combat 5, Might 5, Perception 3, Intimidate 3 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 60 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2)</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str); target knocked Prone; no save</li>\n<li><em>Margin 3:</em> 16 damage + Prone; target Restrained until they succeed on Might check (Hard task, 2 successes) as a [Combat] action</li>\n</ul></li>\n<li><strong>Rock Throw [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 1), Range: 60/120 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage</li>\n<li><em>Margin 2:</em> 12 damage (10 + 2 Dex); target knocked Prone</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> As Granite Ward.</li>\n<li><strong>Earth Bond:</strong> As Granite Ward.</li>\n<li><strong>Tremor Strike (1/encounter) [Combat]:</strong> As a [Combat] action, slams both fists into the ground simultaneously. All creatures within 15 feet standing on natural ground make a Reflex save. Compare Agi 2 + Might 5 targeting vs. each save. Net 1: 8 bludgeoning damage + Prone. Net 2: 16 bludgeoning damage + Prone + Restrained. This is a single action producing simultaneous strikes — use Shared Attribute Roll (Agi 2), roll Might separately.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 6.</li>\n</ul>\n<p><strong>Description:</strong> Boulder Soldiers are siege engines that walk. They advance slowly, shrug off mundane weapons entirely, and hit hard enough to flatten anyone who does not step back. Rock Throw handles opponents attempting to stay outside their reach. Tremor Strike is their battlefield opener when enemies have clustered — a single action that resets the positioning of everything nearby. A summoner who needs a wall broken or a cluster of fighters scattered will find them effective. Speed and nuance are not in their vocabulary.</p>\n<p>---</p>\n<h4>Mountain Heart</h4>\n<p><strong>Threat Rating:</strong> 2 <strong>Origin:</strong> Elemental (Earth) <strong>Size:</strong> Large <strong>HP:</strong> 76 (Con 4 × 19, Massive) <strong>DR:</strong> 6 (deep granite core) <strong>Speed:</strong> 30 ft, Burrow 30 ft <strong>Attributes:</strong> Str 7 / Con 4 / Agi 2 / Dex 2 / Int 3 / Wis 4 / Cha 2 / Luck 3 <strong>Skills:</strong> Melee Combat 5, Might 6, Perception 4, Intimidate 4 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 120 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Crushing Fist [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2)</li>\n<li><em>Margin 2:</em> 17 damage (10 + 7 Str); target Grappled; no save; Grappled target takes 8 bludgeoning damage at the start of each of their turns</li>\n<li><em>Margin 3:</em> 17 damage + Grappled + Restrained + ongoing 8 damage</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> As above.</li>\n<li><strong>Earth Bond:</strong> As above.</li>\n<li><strong>Engulf (Recharge 5-8) [Combat]:</strong> Drives a Grappled target partially into the earth. Target must already be Grappled by the Mountain Heart. Target makes a Fortitude save (Hard task, 2 successes). Failure: Restrained, Blinded, and takes 12 bludgeoning damage at the start of each turn. Escape requires a Might check (Hard task, 2 successes) as a full [Combat] action, or an ally must dig them out over 2 rounds of [Interact] actions. On 1 success: Restrained only, not Blinded.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 8.</li>\n</ul>\n<p><strong>Description:</strong> Mountain Hearts grab things and do not let go. They spend actions building toward a Grapple and then Engulf the most dangerous held target to remove them from the fight entirely. Against opponents too large or strong to Grapple efficiently they simply hit very hard and regenerate. A summoner who needs something physically held — not slowed, not intimidated, but literally held in place — will find nothing better at this tier.</p>\n<p>---</p>\n<h4>Deepstone Elder</h4>\n<p><strong>Threat Rating:</strong> 3 <strong>Origin:</strong> Elemental (Earth) <strong>Size:</strong> Huge <strong>HP:</strong> 144 (Con 6 × 24, Tough) <strong>DR:</strong> 7 (primordial granite) <strong>Speed:</strong> 30 ft, Burrow 40 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 2 / Dex 2 / Int 5 / Wis 5 / Cha 3 / Luck 3 <strong>Skills:</strong> Melee Combat 6, Might 7, Perception 5, Intimidate 5 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 300 ft <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Ancient Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 6), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2)</li>\n<li><em>Margin 2:</em> 22 damage (14 + 8 Str); target knocked Prone and Stunned until end of their next turn; no save</li>\n<li><em>Margin 3:</em> 22 damage + Prone + Stunned + Restrained by erupting earth; Might check (Hard task, 2 successes) to escape as a [Combat] action</li>\n</ul></li>\n<li><strong>Rock Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 60/120 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge boulder)</li>\n<li><em>Margin 2:</em> 14 damage; target knocked Prone; no save</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> As above.</li>\n<li><strong>Earth Bond:</strong> Regenerates 8 HP per turn on natural earth or stone.</li>\n<li><strong>Ground Shatter (Recharge 5-8) [Combat]:</strong> Slams the earth with both fists simultaneously. All creatures on the ground within 40 feet make a Reflex save. Compare Str 8 + Might 7 targeting vs. each save. Net 1: 16 bludgeoning damage + Prone. Net 2: 24 bludgeoning damage + Prone + Restrained by cracking earth. Net 3: 24 bludgeoning damage + Prone + Restrained + Stunned until end of their next turn. Designated allies are immune. Simultaneous fist slam — Shared Attribute Roll (Str 8), Might rolled separately.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 10.</li>\n</ul>\n<p><strong>Resilient Defense (2/day).</strong></p>\n<p><strong>Description:</strong> Deepstone Elders arrived at their current form by outlasting everything that attempted to move or break them. Tremorsense at 300 feet means nothing on the ground approaches without their awareness. Ground Shatter resets the battlefield on arrival; Ancient Slam handles whatever remains. Their regeneration and DR make sustained mundane damage against them impractical — without magical weapons or significant energy expenditure, fighting a Deepstone Elder on natural ground is an exercise in attrition the attacker will lose.</p>\n<p>---</p>\n<h4>Earthlord</h4>\n<p><strong>Threat Rating:</strong> 4 <strong>Origin:</strong> Elemental (Earth) <strong>Size:</strong> Huge <strong>HP:</strong> 180 (Con 6 × 30, Massive) <strong>DR:</strong> 8 (deep-forged primordial shell) <strong>Speed:</strong> 30 ft, Burrow 50 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 2 / Dex 2 / Int 6 / Wis 6 / Cha 4 / Luck 4 <strong>Skills:</strong> Melee Combat 7, Might 8, Perception 6, Intimidate 6 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 1 mile <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Mountain's Fist [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2)</li>\n<li><em>Margin 2:</em> 22 damage (14 + 8 Str); target Grappled + Restrained + knocked Prone; no save</li>\n<li><em>Margin 3:</em> 22 damage + Grappled + Restrained + Prone; target takes 12 bludgeoning damage at the start of each of their turns; Fortitude save (Hard task, 2 successes) each round to break free</li>\n</ul></li>\n<li><strong>Boulder Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 90/180 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage</li>\n<li><em>Margin 2:</em> 16 damage; target knocked Prone + Stunned until end of their next turn; no save</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> Magical forced movement requires the caster to win an opposed check against the Earthlord's Str 8 + Might 8 (Hard task, 2 successes).</li>\n<li><strong>Earth Bond:</strong> Regenerates 10 HP per turn.</li>\n<li><strong>Seismic Authority (1/day) [Combat]:</strong> Strikes the ground once. A 60-foot radius seismic event occurs. All non-designated creatures on natural ground make Fortitude saves (Hard task, 2 successes). Failure: 32 bludgeoning damage + Prone + Restrained for 1 minute; ally must spend 2 [Interact] actions digging them out or they succeed on a Might check (Hard task, 2 successes) as a full [Combat] action. 1 success: 16 damage + Prone only. Structures in the area may take structural damage at GM discretion.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 12.</li>\n</ul>\n<p><strong>Resilient Defense (3/day).</strong></p>\n<p><strong>Description:</strong> Earthlords do not hurry. Seismic Authority immediately Restrains as many enemies as possible; Mountain's Fist methodically crushes whatever remains. Their regeneration and DR make sustained damage against them impractical without magical investment. A summoner who has a Cooperative Earthlord has not acquired a tool — they have persuaded a geological force to point itself in a useful direction for a while.</p>\n<p>---</p>\n<h4>Ancient Stone</h4>\n<p><strong>Threat Rating:</strong> 5 <strong>Origin:</strong> Elemental (Earth) <strong>Size:</strong> Huge <strong>HP:</strong> 216 (Con 6 × 36, Massive) <strong>DR:</strong> 9 (primordial earth-shell) <strong>Speed:</strong> 30 ft, Burrow 60 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 2 / Dex 2 / Int 7 / Wis 7 / Cha 5 / Luck 5 <strong>Skills:</strong> Melee Combat 8, Might 8, Perception 7, Intimidate 7 <strong>Senses:</strong> Darkvision 60 ft, Tremorsense 2 miles <strong>Initiative Bonus:</strong> +2 (Agi 2) <strong>Creature Type:</strong> Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>World Crush [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 8), Reach: 20 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2)</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str); target Grappled + Restrained + Prone; takes 16 bludgeoning damage at start of each of their turns; no save; Fortitude save (Hard task, 2 successes) each round to break free</li>\n<li><em>Margin 3:</em> 24 damage + Grappled + Restrained + Prone; target begins Engulf — driven 5 feet into the ground at start of their next turn unless they succeed on a Fortitude save (Hard task), adding Blinded and doubling ongoing damage to 32</li>\n</ul></li>\n<li><strong>Mountain Hurl [Combat]:</strong> Ranged attack (Dex 2 + Ranged Combat 2), Range: 120/240 ft\n<ul>\n<li><em>Margin 1:</em> 20 damage</li>\n<li><em>Margin 2:</em> 20 damage; target knocked Prone + Stunned + all creatures within 10 feet take 8 bludgeoning damage from impact debris; no save on debris</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Immovable:</strong> Magical forced movement requires winning an opposed check against Str 8 + Might 8 (Hard task, 2 successes). Non-magical forced movement is impossible.</li>\n<li><strong>Earth Bond:</strong> Regenerates 12 HP per turn.</li>\n<li><strong>Continental Tremor (1/day) [Combat]:</strong> As 2 [Combat] actions, releases the earth's full force in an 80-foot radius. Every non-designated creature on natural ground makes a Fortitude save (Hard task, 2 successes). Failure: 40 bludgeoning damage + Restrained for 1 hour; requires excavation to escape. 1 success: 20 damage + Prone. 2 successes: 10 damage only. Structures in the area take major structural damage.</li>\n<li><strong>Piercing and Slashing Immunity Sharing:</strong> The summoner and up to 4 designated allies gain immunity to non-magical piercing and slashing damage while within 60 feet.</li>\n</ul>\n<p><strong>Reactions:</strong></p>\n<ul>\n<li><strong>Stone Skin [Reaction]:</strong> Once per round, reduce incoming physical damage by 14.</li>\n</ul>\n<p><strong>Resilient Defense (3/day).</strong></p>\n<p><strong>Description:</strong> An Ancient Stone summoned is not a decision about a fight. It is a decision about a place — this ground, held against everything, for as long as necessary. Continental Tremor resets the battlefield completely on arrival. World Crush removes individuals permanently from the engagement. DR 9 combined with Stone Skin and regeneration means mundane weapons accomplish essentially nothing. The Ancient Stone is old enough and intelligent enough to follow complex orders without misinterpretation, and patient enough that it does not distinguish between a fight that lasts ten minutes and one that lasts ten hours. Both are the same to it.</p>\n<p>---</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Earth Elementals",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 0.5,
+    "height": 0.5,
+    "disposition": -1
+  },
+  "_key": "!actors!eaeea20e29a6efb6"
+}

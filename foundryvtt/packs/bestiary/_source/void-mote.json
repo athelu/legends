@@ -1,0 +1,170 @@
+{
+  "_id": "8e68c5c1ecd42143",
+  "name": "Void Mote",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Void Motes are the smallest coherent expressions of Space-between-planes existence that can be called through a summoning. They are not intelligent in any useful sense — they have imperatives but not goals, responses but not reasoning. Their value in combat is almost entirely as a nuisance multiplier: individually they deal negligible damage and their skill check penalty is minor. Three of them around a single target simultaneously, applying Swarm Cohesion to their attacks and stacking the skill check penalty, becomes a meaningful debuff. A summoner who calls a Void Mote expecting a combat asset will be disappointed. One who calls several and directs them to swarm a single high-priority caster or skillful opponent will find the cumulative reality disruption degrades that opponent's effectiveness across the encounter.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 30,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 1,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 1,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 2,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 1,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 6,
+      "max": 6,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 4,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 1,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "tiny",
+    "speed": {
+      "walk": 0,
+      "fly": 30,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "",
+    "hpMultiplier": 6,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Tremorsense 30 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Reality Nibble [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 1), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 2 damage (Ignore DR); target's next skill check adds 1 to the result (makes it harder to succeed, stacks across multiple Void Mote hits in the same encounter)</li>\n<li><em>Margin 2:</em> 2 damage; two stacks of the skill check penalty; target makes Will save (1 success) or gains the Disoriented condition until end of their next turn as local reality briefly stutters around them</li>\n<li><em>Margin 3:</em> 2 damage; three stacks; Disoriented without a save; target also has difficulty distinguishing distances — all ranged attacks they make add 1 to both attack dice until the skill check penalty clears</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Swarm Cohesion:</strong> If 3 or more Void Motes are within 10 feet of the same target, they each subtract 1 from both attack dice.</li>\n<li><strong>Phase Flicker:</strong> When the Void Mote takes damage, it briefly phases between the prime material and the Space between planes, teleporting 1d8 × 5 feet in a random direction as a reaction. This is not controlled — it is an involuntary stress response.</li>\n<li><strong>Incoherence Field:</strong> Creatures that have taken 3 or more hits from Void Motes this encounter find that their sense of position is slightly wrong. Opportunity attacks against them have Fortune.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Void Mote",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 0.5,
+    "height": 0.5,
+    "disposition": -1
+  },
+  "_key": "!actors!8e68c5c1ecd42143"
+}

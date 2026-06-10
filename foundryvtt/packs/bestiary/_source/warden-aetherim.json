@@ -1,0 +1,170 @@
+{
+  "_id": "1ca9bb86e59aae5b",
+  "name": "Warden Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Warden Aetherim are scouts and minor guardians. Detect Evil gives them persistent awareness of hostile intent in the area, which they report without being asked — a useful property that occasionally produces information the summoner finds inconvenient. Aura of Courage provides passive protection against fear effects for nearby allies. Radiant Bolt's Reveal effect at Margin 3 counters invisibility and stealth in encounters where those factors are significant. A summoner who deploys one as a persistent lookout and minor healer will find it performs both roles reliably while maintaining a running commentary on anything it considers worth noting.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 2,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 14,
+      "max": 14,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 0.25
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 3,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 3,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 0,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "small",
+    "speed": {
+      "walk": 20,
+      "fly": 50,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 7,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Truesight 30 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Radiant Bolt [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 2), Range: 30 ft\n<ul>\n<li><em>Margin 1:</em> 4 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 8 Positive damage; undead and evil-aligned creatures make Will save (1 success) or Frightened until end of their next turn</li>\n<li><em>Margin 3:</em> 8 Positive damage; Frightened condition; no save; target also Revealed — cannot benefit from Hidden, Invisible, or Concealed for 1 minute as radiant light clings to them</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Healing Touch (2/short rest):</strong> As Mote Aetherim, but restores 6 HP per use.</li>\n<li><strong>Detect Evil:</strong> Automatically senses creatures with actively malicious intent within 60 feet and communicates their general direction and distance to the summoner as a [Free] action each round.</li>\n<li><strong>Continual Radiance:</strong> As Mote Aetherim; bright light 20-foot radius.</li>\n<li><strong>Aura of Courage:</strong> Allies within 10 feet of the Warden Aetherim subtract 1 from both dice on saves against the Frightened condition.</li>\n<li><strong>Diminutive Target:</strong> Attacks against the Warden Aetherim add 1 to both dice.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Warden Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!1ca9bb86e59aae5b"
+}

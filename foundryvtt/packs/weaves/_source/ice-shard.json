@@ -24,35 +24,32 @@
     "target": "",
     "savingThrow": "none",
     "effect": "Target takes 8 cold damage. This is an attack weave—no saving throw allowed.",
-    "effectType": "utility",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
+      "base": 8,
+      "type": "cold",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "appliesEffects": false,
-          "description": "fails",
-          "duration": null
+          "damage": 0,
+          "description": "fails"
         },
         "1": {
-          "appliesEffects": true,
-          "description": "half damage (4)",
-          "duration": "half damage (4)"
+          "damage": 4,
+          "description": "half damage"
         },
         "2": {
-          "appliesEffects": true,
-          "description": "full damage (8)",
-          "duration": "full damage (8)"
+          "damage": 8,
+          "description": "full damage"
         },
         "3": {
-          "appliesEffects": true,
-          "description": "enhanced damage (16) + Slowed (minor)",
-          "duration": "enhanced damage (16) + Slowed (minor)"
+          "damage": 16,
+          "description": "enhanced damage + applies effects",
+          "appliesEffects": true
         }
       }
     },
-    "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + Slowed (minor)",
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + applies effects",
     "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
@@ -63,6 +60,7 @@
     ],
     "deliveryMethod": "save",
     "tags": [
+      "offensive",
       "ranged"
     ]
   },

@@ -229,23 +229,13 @@ Other reactions include Shield Block (if you're wielding a shield) and Counterwe
 When the gods created Athelu, they wove magic into the fabric of reality itself. This magic flows through eight distinct energies: Earth, Air, Fire, Water, Positive, Negative, Time, and Space. Each energy embodies different aspects of existence, from the physical elements to the concepts of life, death, and reality manipulation.
 Mortals gifted with magical ability can tap into these energies and shape them through an act called weaving. But this isn't some subtle, invisible force. Magic in Athelu announces itself. A mage's eyes glow with violet light constantly. Spells create luminous displays like violet fire, glowing ice, shimmering barriers and the like. Anyone nearby knows when magic is being used.
 
-To become a weaver, you must possess a magical trait chosen during character creation. These traits represent different paths to power:
-- **Mageborn** study magic as a science, understanding the theoretical interactions between energies
-- **Divine** casters channel power through faith, connecting to gods or natural forces
-- **Sorcerers** unlock magic through profound self-knowledge and enlightenment
-- **Warlocks** make pacts with otherworldly patrons who grant them power
-- **Invokers** speak true names and words of power to command reality
-- **Infusers** bind magical energy into physical objects
-
-Each path has unique advantages and limitations, but all can manipulate the same eight energies.
-
 ### How Weaving Works
 A spell (called a weave) combines energies to create effects:
 The **Primary Energy** determines the main effect. Fire creates flames and heat. Positive creates healing and growth. Space allows teleportation and barriers.
 
-**Supporting Energies** provide enhancements like range, duration, and area. That simple fire burst you create with pure Fire energy only works at touch range. Want to throw it 60 feet? Add Space energy. Want it to explode in an area? More Space energy. Want it to keep burning? Add Time energy for duration.
+**Supporting Energies** provide enhancements like range, duration, and area. That simple fire burst you create with pure Fire energy only works at touch range. Want to throw it 60 feet? Add supporting (air) energy. Want it to explode in an area? More Air energy. 
 
-More powerful weaves cost more Energy points from your pool. This pool recharges when you rest for 8 hours, though warlocks and some other casters have ways to regain energy faster.
+More powerful weaves cost more Energy points from your pool. This pool recharges when you rest for 8 hours
 
 The distinction between simple touch-range weaves and complex long-range weaves matters in combat. Simple weaves (1 action, one energy) don't leave you vulnerable. Complex weaves (2 actions, multiple energies) do. Choose wisely based on whether enemies are breathing down your neck or standing at a safe distance.
 

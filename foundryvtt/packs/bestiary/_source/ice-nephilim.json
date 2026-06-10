@@ -1,0 +1,170 @@
+{
+  "_id": "15391f1fed7b355a",
+  "name": "ICE NEPHILIM",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 3,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 36,
+      "max": 36,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 3,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 4,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 9,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "",
+    "attacksNotes": "",
+    "specialAbilitiesNotes": "<h4>Frost Kin</h4>\n<p><strong>Threat Rating:</strong> 1/2 <strong>Origin:</strong> Nephilim (Ice) <strong>Size:</strong> Large <strong>HP:</strong> 36 (Con 4 × 9, Tough) <strong>DR:</strong> 3 (ice-dense flesh) <strong>Speed:</strong> 30 ft (ignores movement penalties from ice and snow) <strong>Attributes:</strong> Str 5 / Con 4 / Agi 3 / Dex 3 / Int 3 / Wis 3 / Cha 2 / Luck 2 <strong>Skills:</strong> Melee Combat 4, Athletics 3, Perception 3 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +3 (Agi 3) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Ice Slam [Combat]:</strong> Melee attack (Agi 3 + Melee Combat 4), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 2 cold damage (Half DR); target gains Chilled condition</li>\n<li><em>Margin 2:</em> 15 damage (10 + 5 Str) + 2 cold damage; target gains Numbed condition; target's movement speed reduced by 10 until end of their next turn</li>\n<li><em>Margin 3:</em> 15 damage + 2 cold damage; target gains Frosted condition; movement speed reduced by 20 until end of their next turn</li>\n</ul></li>\n<li><strong>Ice Shard [Combat]:</strong> Ranged attack (Dex 3 + Ranged Combat 2), Range: 30 ft\n<ul>\n<li><em>Margin 1:</em> 6 cold damage (Half DR); target gains Chilled</li>\n<li><em>Margin 2:</em> 10 cold damage; target gains Numbed; movement speed reduced by 10</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Frost Aura:</strong> Creatures starting their turn within 5 feet take 2 cold damage (Half DR) and gain the Chilled condition.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Ice Stride:</strong> Moves across ice and snow at full speed. Creates a thin frost trail wherever it walks — surfaces within 5 feet of its path become Difficult Terrain for 1 minute.</li>\n</ul>\n<p><strong>Description:</strong> Frost Kin begin the cold stacking process that defines Ice Nephilim at higher tiers. Even at TR 1/2, a target that takes two or three Ice Slam hits will be moving at significantly reduced speed and suffering stacking cold conditions. Ice Stride's Difficult Terrain trail makes repositioning around them increasingly costly. A summoner who keeps a Frost Kin engaged with a single target will find that target significantly impaired within two rounds without necessarily taking catastrophic damage — the goal is impairment, not elimination.</p>\n<p>---</p>\n<h4>Iceborn</h4>\n<p><strong>Threat Rating:</strong> 1 <strong>Origin:</strong> Nephilim (Ice) <strong>Size:</strong> Large <strong>HP:</strong> 56 (Con 4 × 14, Tough) <strong>DR:</strong> 4 (thick ice-flesh) <strong>Speed:</strong> 30 ft (ignores ice and snow movement penalties) <strong>Attributes:</strong> Str 6 / Con 4 / Agi 3 / Dex 3 / Int 3 / Wis 4 / Cha 3 / Luck 3 <strong>Skills:</strong> Melee Combat 5, Athletics 4, Perception 4, Intimidate 3 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +3 (Agi 3) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Glacial Strike [Combat]:</strong> Melee attack (Agi 3 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 4 cold damage (Half DR); target gains Numbed condition</li>\n<li><em>Margin 2:</em> 16 damage (10 + 6 Str) + 4 cold damage; target gains Frosted condition; movement speed halved until end of their next turn</li>\n<li><em>Margin 3:</em> 16 damage + 4 cold damage; target gains Frozen condition; Restrained until they succeed on a Might check (1 success) as a [Combat] action</li>\n</ul></li>\n<li><strong>Frost Lance [Combat]:</strong> Ranged attack (Dex 3 + Ranged Combat 3), Range: 60 ft\n<ul>\n<li><em>Margin 1:</em> 8 cold damage (Half DR); target gains Numbed</li>\n<li><em>Margin 2:</em> 12 cold damage (8 + ... using Dex for ranged: 8 + 3 Dex base... adjusted to 12 total); target gains Frosted + movement speed halved until end of their next turn</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Frost Aura:</strong> Creatures starting their turn within 10 feet take 4 cold damage (Half DR) and gain the Chilled condition.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Ice Stride:</strong> As Frost Kin.</li>\n<li><strong>Permafrost:</strong> Ground within 15 feet of the Iceborn where it has stood for at least 1 round becomes frozen. Frozen ground is Difficult Terrain and creatures moving across it make Acrobatics checks (1 success) or fall Prone.</li>\n</ul>\n<p><strong>Description:</strong> Iceborn can apply the Frozen condition through Glacial Strike, which is the first Ice Nephilim capable of fully Restraining a target through cold alone. Permafrost spreads hazardous terrain passively as they move and stand, meaning the longer an engagement lasts the more difficult the battlefield becomes for anything that relies on movement. A summoner who gives one a target and space to maneuver will find the target increasingly unable to move by the second or third round of contact.</p>\n<p>---</p>\n<h4>Glacier Giant</h4>\n<p><strong>Threat Rating:</strong> 2 <strong>Origin:</strong> Nephilim (Ice) <strong>Size:</strong> Huge <strong>HP:</strong> 76 (Con 4 × 19, Massive) <strong>DR:</strong> 5 (ancient ice-flesh) <strong>Speed:</strong> 35 ft (ignores ice and snow movement penalties) <strong>Attributes:</strong> Str 6 / Con 4 / Agi 3 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3 <strong>Skills:</strong> Melee Combat 5, Athletics 5, Perception 5, Intimidate 4 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +3 (Agi 3) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Permafrost Fist [Combat]:</strong> Melee attack (Agi 3 + Melee Combat 5), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 6 cold damage (Half DR); target gains Frosted condition</li>\n<li><em>Margin 2:</em> 20 damage (14 + 6 Str) + 6 cold damage; target gains Frozen condition + Prone; no save</li>\n<li><em>Margin 3:</em> 20 damage + 6 cold damage + Frozen + Prone; target Grappled as ice encases their limbs; ongoing 8 cold damage per round while Grappled</li>\n</ul></li>\n<li><strong>Glacier Hurl [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 4), Range: 80/160 ft\n<ul>\n<li><em>Margin 1:</em> 12 cold damage (Half DR); target gains Frosted + movement halved</li>\n<li><em>Margin 2:</em> 18 cold damage; target gains Frozen + Prone; no save</li>\n<li><em>Margin 3:</em> 18 cold damage + Frozen + Prone; target Restrained by ice impact for 1 round; Fortitude save (1 success) to move</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Frost Aura:</strong> Creatures starting their turn within 10 feet take 6 cold damage (Half DR) and gain the Numbed condition.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Permafrost:</strong> As Iceborn, extended to 20 feet.</li>\n<li><strong>Ice Stride:</strong> As above.</li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Glacier Giants apply Frozen reliably at Margin 2, which Restrains targets, and then Grapple at Margin 3 to add ongoing cold damage on top of the movement restriction. Glacier Hurl can apply Frozen at range, meaning they can immobilize high-priority targets before closing. The Frost Aura's Numbed condition on everything within 10 feet means enemies fighting in melee are taking stacking cold conditions from proximity alone. A summoner who keeps one engaged consistently will find the battlefield progressively frozen — literally — within a few rounds.</p>\n<p>---</p>\n<h4>Tide Lord</h4>\n<p><strong>Threat Rating:</strong> 3 <strong>Origin:</strong> Nephilim (Ice) <strong>Size:</strong> Huge <strong>HP:</strong> 108 (Con 6 × 18, Tough) <strong>DR:</strong> 6 (primordial ice-flesh) <strong>Speed:</strong> 35 ft (ignores ice and snow movement penalties) <strong>Attributes:</strong> Str 7 / Con 6 / Agi 4 / Dex 5 / Int 5 / Wis 5 / Cha 4 / Luck 4 <strong>Skills:</strong> Melee Combat 6, Athletics 6, Perception 6, Intimidate 5 <strong>Senses:</strong> Darkvision 120 ft <strong>Initiative Bonus:</strong> +4 (Agi 4) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Abyssal Freeze [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 6), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 8 cold damage (Half DR); target gains Frosted + movement halved</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 8 cold damage; target gains Frozen + Prone + Grappled; ongoing 12 cold damage per round; no save</li>\n<li><em>Margin 3:</em> 21 damage + 8 cold damage + Frozen + Prone + Grappled + Restrained; target begins Engulf — driven into ice at start of their next turn unless Fortitude save (Hard task, 2 successes)</li>\n</ul></li>\n<li><strong>Tidal Ice Lance [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 5), Range: 100 ft, 5-foot-wide line\n<ul>\n<li>Per creature in line: Net 1: 16 cold damage (Half DR) + Frosted. Net 2: 28 cold damage + Frozen + movement halved. Net 3: 28 cold damage + Frozen + Prone; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Glacial Aura:</strong> Creatures starting their turn within 15 feet take 8 cold damage (Half DR) and gain the Frosted condition. Creatures already Frosted within the aura gain the Frozen condition instead.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Permafrost:</strong> As above, extended to 30 feet. Permafrost created by the Tide Lord persists for 1 hour after it leaves the area.</li>\n<li><strong>Ice Stride:</strong> As above.</li>\n<li><strong>Resilient Defense (2/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Tide Lords make the Glacial Aura genuinely punishing — Frosted creatures within 15 feet immediately become Frozen, which means any enemy who has taken one hit from the Tide Lord and remains adjacent is automatically Restrained by the aura alone. Tidal Ice Lance applies cold conditions across entire lines of enemies simultaneously. Abyssal Freeze at Margin 3 begins Engulfing, encasing targets in ice rather than earth. A summoner deploying one against a formation will find the formation frozen — in every literal and tactical sense — within two rounds of engagement.</p>\n<p>---</p>\n<h4>Ice Titan</h4>\n<p><strong>Threat Rating:</strong> 4 <strong>Origin:</strong> Nephilim (Ice) <strong>Size:</strong> Huge <strong>HP:</strong> 180 (Con 6 × 30, Massive) <strong>DR:</strong> 7 (ancient glacial flesh) <strong>Speed:</strong> 40 ft (ignores ice and snow movement penalties) <strong>Attributes:</strong> Str 7 / Con 6 / Agi 4 / Dex 6 / Int 6 / Wis 6 / Cha 5 / Luck 5 <strong>Skills:</strong> Melee Combat 7, Athletics 7, Perception 7, Intimidate 6 <strong>Senses:</strong> Darkvision 120 ft <strong>Initiative Bonus:</strong> +4 (Agi 4) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>World Freeze [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 10 cold damage (Half DR); target Frozen + Prone; no save</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 10 cold damage; Frozen + Prone + Grappled + Restrained; ongoing 16 cold damage per round; no save; Fortitude save (Hard task, 2 successes) each round to break free</li>\n<li><em>Margin 3:</em> 21 damage + 10 cold damage + immediately Engulfed in ice; Blinded + Restrained + ongoing 24 cold damage; Might check (Hard task, 2 successes) as full [Combat] action to escape, or ally must melt or break free (2 Interact actions with fire or 3 without)</li>\n</ul></li>\n<li><strong>Glacial Barrage [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 6), Range: 120 ft, up to 3 targets within 30 feet of each other\n<ul>\n<li>Per target: Net 1: 20 cold damage (Half DR) + Frosted. Net 2: 32 cold damage + Frozen + movement halved. Net 3: 32 cold damage + Frozen + Prone; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Absolute Zero Aura:</strong> Creatures starting their turn within 20 feet take 10 cold damage (Half DR). Frosted creatures in this range become Frozen. Frozen creatures in this range take an additional 8 cold damage (Half DR) from the intensifying cold.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Permafrost:</strong> Extended to 40 feet; persists for 8 hours after the Ice Titan leaves.</li>\n<li><strong>Ice Stride:</strong> As above.</li>\n<li><strong>Cold Immunity Sharing:</strong> The summoner and up to 3 designated allies gain immunity to non-magical cold damage within 60 feet.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Ice Titans apply Frozen on any hit at Margin 1 — there is no preliminary Chilled or Numbed step. Absolute Zero Aura compounds existing cold conditions automatically, meaning Frozen enemies adjacent to the Ice Titan take additional damage from the aura every round on top of whatever the Titan is actively doing to them. Glacial Barrage applies Frozen to multiple targets simultaneously at range. A summoner who has a Cooperative Ice Titan targeting a formation will find that formation effectively unable to take offensive action within two rounds — too cold, too slow, too Restrained to threaten anyone who isn't also standing in the aura.</p>\n<p>---</p>\n<h4>Worldsea Colossus</h4>\n<p><strong>Threat Rating:</strong> 5 <strong>Origin:</strong> Nephilim (Ice) <strong>Size:</strong> Huge <strong>HP:</strong> 216 (Con 6 × 36, Massive) <strong>DR:</strong> 8 (primordial glacial flesh) <strong>Speed:</strong> 40 ft (ignores ice and snow movement penalties) <strong>Attributes:</strong> Str 8 / Con 6 / Agi 5 / Dex 7 / Int 7 / Wis 7 / Cha 6 / Luck 6 <strong>Skills:</strong> Melee Combat 8, Athletics 8, Perception 8, Intimidate 7 <strong>Senses:</strong> Darkvision 120 ft, Blindsight 60 ft (cold detection) <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Glacial Apocalypse [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 8), Reach: 20 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2) + 12 cold damage (Half DR); target immediately Frozen + Prone; no save</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str) + 12 cold damage; immediately Engulfed in ice; Blinded + Grappled + Restrained; ongoing 28 cold damage per round; no save; Might check (Hard task, 2 successes) as full [Combat] action each round to escape</li>\n<li><em>Margin 3:</em> 24 damage + 12 cold damage + Engulfed; escape requires Might check with Misfortune, or ally intervention (4 [Interact] actions with fire, 6 without); ongoing damage increases to 40</li>\n</ul></li>\n<li><strong>World Ice Storm [Combat]:</strong> Ranged attack (Dex 7 + Ranged Combat 8), Range: 200 ft, 30-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 28 cold damage (Half DR) + Frozen + Prone. Net 2: 48 cold damage + Frozen + Prone + Restrained for 1 round. Net 3: 48 cold damage + Frozen + Prone + Restrained + Stunned until end of their next turn; no save on any effect.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Primordial Cold Aura:</strong> Creatures starting their turn within 25 feet take 14 cold damage (Half DR). Frosted creatures become Frozen. Frozen creatures take additional 12 cold damage and become Restrained. Restrained creatures take additional 8 cold damage as ice continues accumulating.</li>\n<li><strong>World Glaciation (1/day) [Combat]:</strong> As 2 [Combat] actions, releases the cold of the world's deepest ice in an 80-foot radius. All non-designated creatures make a Fortitude save (Hard task, 2 successes). Failure: 56 cold damage + Frozen for 1 hour + Restrained for 1 hour; escape requires fire or an ally's sustained effort. 1 success: 28 damage + Frozen for 1 minute. 2 successes: 14 damage only. The radius becomes permanent permafrost until magically cleared.</li>\n<li><strong>Cold Immunity Sharing:</strong> The summoner and up to 6 designated allies gain immunity to non-magical cold damage within 60 feet.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Permafrost:</strong> Permanent within 50 feet while present; persists for 24 hours after departure.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> A Worldsea Colossus does not freeze things. It converts the local environment into ice and then continues from there. World Glaciation on arrival creates permanent permafrost across an 80-foot radius and Restrains everything within it for an hour. Primordial Cold Aura compounds cold conditions through multiple stages automatically — a Restrained enemy in the aura takes 34 cold damage per round from aura effects alone before the Colossus attacks them. Glacial Apocalypse Engulfs at Margin 2 with no save. A summoner who calls one has determined that the fight ends in ice, and what the Worldsea Colossus determines is where the ice begins.</p>\n<p>---</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "ICE NEPHILIM",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!15391f1fed7b355a"
+}

@@ -1,0 +1,170 @@
+{
+  "_id": "16b7d9f6ff6f0785",
+  "name": "Rift Feeder",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Rift Feeders exist at an interface between hunting and feeding that involves consuming the fabric of space around their targets rather than the targets themselves. The regeneration from Spatial Hunger means they sustain themselves through dealing damage — a Rift Feeder at the center of a fight is healing as it contributes, which makes attrition strategies ineffective against one. Rift Anchor is specifically designed to counter summon-heavy opponents or mages who rely on Planar Step — it removes that option from the zone for the duration. A summoner who faces an opponent with significant planar movement capability and calls a Rift Feeder as the counter will find the lockdown cleanly removes that option from the encounter. The healing sustains the Rift Feeder through retaliation while it continues dealing DR-eroding force damage.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 80,
+      "max": 80,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 4,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 6,
+      "arcane": 4,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 6,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 0,
+      "fly": 60,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "",
+    "hpMultiplier": 16,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Seam Sense 120 ft, See Invisibility",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Rift Beam [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 6), Range: 80 ft\n<ul>\n<li><em>Net 1:</em> 12 force damage (Ignore DR); target's DR reduced by 2 for 1 minute; target makes Will save (1 success) or Disoriented until end of their next turn</li>\n<li><em>Net 2:</em> 20 force damage; DR reduced by 3; Disoriented without save; target loses 1 [Reaction] until start of their next turn</li>\n<li><em>Net 3:</em> 20 force damage; DR reduced by 4; Disoriented; reaction loss; target is pulled 15 feet directly toward the Rift Feeder as the local spatial distortion acts as a tether — no save</li>\n</ul></li>\n<li><strong>Rift Pulse [Combat — Recharge 6-8]:</strong> 30-foot radius centered on itself.\n<ul>\n<li>All creatures in radius: Will save (1 success) or suffer 16 force damage (Ignore DR), Disoriented for 1 minute, and DR reduced by 3 for 1 minute. On success: 8 force damage and Disoriented until end of their next turn only. No damage reduction for DR.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Spatial Hunger:</strong> The Rift Feeder feeds on planar boundaries. When it deals force damage to a creature, it regains HP equal to half the force damage dealt (rounded down). This includes Rift Pulse.</li>\n<li><strong>Rift Anchor:</strong> Once per encounter, as a [Combat] action, the Rift Feeder designates a 20-foot radius area as an anchor zone. Creatures within the anchor zone cannot use teleportation, planar travel, or planar step abilities for 1 minute. The Rift Feeder is not affected by its own anchor.</li>\n<li><strong>Hovering Form:</strong> Has no ground speed. Cannot be Tripped or Knocked Prone. Immune to ground-based hazards.</li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Rift Feeder",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!16b7d9f6ff6f0785"
+}

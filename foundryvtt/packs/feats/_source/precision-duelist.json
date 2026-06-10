@@ -37,7 +37,21 @@
       "[Combat]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": -1,
+        "applyTo": "skill",
+        "when": "duelistStance"
+      },
+      {
+        "type": "damage.bonus",
+        "target": "melee",
+        "value": 2,
+        "when": "duelistStance"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!8314912ead69237f"

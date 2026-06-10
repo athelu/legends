@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
     "weavingRoll": "Earth Potential + Earth Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "Athore's Endurance",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "automatic",
     "tags": [
       "buff",

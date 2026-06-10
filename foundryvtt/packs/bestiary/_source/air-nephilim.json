@@ -1,0 +1,170 @@
+{
+  "_id": "0024266a31d78231",
+  "name": "AIR NEPHILIM",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 36,
+      "max": 36,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 3,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 2,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 4,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 40,
+      "fly": 30,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 9,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "",
+    "attacksNotes": "",
+    "specialAbilitiesNotes": "<h4>Gale Kin</h4>\n<p><strong>Threat Rating:</strong> 1/2 <strong>Origin:</strong> Nephilim (Air) <strong>Size:</strong> Large <strong>HP:</strong> 36 (Con 4 × 9, Tough) <strong>DR:</strong> 2 (wind-compressed skin) <strong>Speed:</strong> 40 ft, Fly 30 ft <strong>Attributes:</strong> Str 4 / Con 4 / Agi 5 / Dex 3 / Int 3 / Wis 3 / Cha 3 / Luck 2 <strong>Skills:</strong> Melee Combat 4, Perception 4, Athletics 3, Intimidate 2 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +5 (Agi 5) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Wind Strike [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 4), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2); target pushed 5 feet</li>\n<li><em>Margin 2:</em> 14 damage (10 + 4 Str); target pushed 10 feet and knocked Prone; no save</li>\n<li><em>Margin 3:</em> 14 damage + Prone + Stunned until end of their next turn</li>\n</ul></li>\n<li><strong>Gust Hurl [Combat]:</strong> Ranged attack (Dex 3 + Ranged Combat 2), Range: 40 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage; target makes Fortitude save (1 success) or pushed 5 feet</li>\n<li><em>Margin 2:</em> 6 damage; target pushed 10 feet; no save; target knocked Prone</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Wind Aura:</strong> Ranged attacks passing within 10 feet of the Gale Kin add 1 to one die of the attacker's choice from wind interference.</li>\n<li><strong>Powerful Build.</strong></li>\n</ul>\n<p><strong>Description:</strong> Gale Kin are mobile and hit harder than their Strength alone suggests because their strikes carry wind force behind them. The pushback on Wind Strike makes positioning enemies against terrain a viable tactic even at this tier. Wind Aura provides passive protection against ranged attackers. A summoner who uses terrain intelligently — placing the Gale Kin between enemies and a cliff edge, a wall, or a body of water — will find the pushback mechanics considerably more punishing than they appear in flat terrain.</p>\n<p>---</p>\n<h4>Stormborn</h4>\n<p><strong>Threat Rating:</strong> 1 <strong>Origin:</strong> Nephilim (Air) <strong>Size:</strong> Large <strong>HP:</strong> 56 (Con 4 × 14, Tough) <strong>DR:</strong> 3 (storm-compressed skin) <strong>Speed:</strong> 40 ft, Fly 50 ft <strong>Attributes:</strong> Str 5 / Con 4 / Agi 6 / Dex 4 / Int 4 / Wis 4 / Cha 4 / Luck 3 <strong>Skills:</strong> Melee Combat 5, Perception 5, Athletics 4, Intimidate 3 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +6 (Agi 6) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Thunder Blow [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 4 lightning damage (Half DR); target pushed 10 feet</li>\n<li><em>Margin 2:</em> 15 damage (10 + 5 Str) + 4 lightning damage; pushed 10 feet + Stunned until end of their next turn; no save</li>\n<li><em>Margin 3:</em> 15 damage + 4 lightning damage + Stunned + Deafened for 1 minute from the thunderclap at impact</li>\n</ul></li>\n<li><strong>Lightning Throw [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 3), Range: 60 ft\n<ul>\n<li><em>Margin 1:</em> 8 lightning damage (Half DR); target gains Dazed until end of their next turn</li>\n<li><em>Margin 2:</em> 12 lightning damage (8 + 4 Dex); target Stunned until end of their next turn; no save</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Wind Aura:</strong> As Gale Kin, but the interference range extends to 15 feet.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Momentum:</strong> When the Stormborn moves at least 20 feet before making a melee attack, subtract 1 from both attack dice on that attack. The speed of the approach adds force to the strike.</li>\n</ul>\n<p><strong>Description:</strong> Stormborn are fast and hit with enough force to stun reliably at Margin 2. The combination of Momentum and their fly speed means they can build approach distance quickly and deliver Thunder Blow at subtract-1 to both dice consistently. A summoner who gives one space to maneuver will find it applies Stunned more frequently than the raw numbers suggest — the action economy value of reliably stunning a target for a round is significant at this tier.</p>\n<p>---</p>\n<h4>Thunder Giant</h4>\n<p><strong>Threat Rating:</strong> 2 <strong>Origin:</strong> Nephilim (Air) <strong>Size:</strong> Huge <strong>HP:</strong> 76 (Con 4 × 19, Massive) <strong>DR:</strong> 4 (storm-dense flesh) <strong>Speed:</strong> 40 ft, Fly 60 ft <strong>Attributes:</strong> Str 6 / Con 4 / Agi 6 / Dex 4 / Int 4 / Wis 4 / Cha 4 / Luck 3 <strong>Skills:</strong> Melee Combat 6, Perception 5, Athletics 5, Intimidate 5 <strong>Senses:</strong> Darkvision 60 ft <strong>Initiative Bonus:</strong> +6 (Agi 6) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Storm Fist [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 6), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 6 lightning damage (Half DR); target pushed 15 feet</li>\n<li><em>Margin 2:</em> 20 damage (14 + 6 Str) + 6 lightning damage; pushed 15 feet + Stunned until end of their next turn; no save</li>\n<li><em>Margin 3:</em> 20 damage + 6 lightning damage + Stunned + Deafened for 1 minute; all creatures within 10 feet of target take 4 lightning damage (Half DR) from the discharge</li>\n</ul></li>\n<li><strong>Chain Bolt [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 4), Range: 80 ft, up to 2 additional targets within 20 feet of the first\n<ul>\n<li>Per target: Net 1: 10 lightning damage (Half DR). Net 2: 16 lightning damage + Dazed until end of their next turn. Net 3: 16 lightning damage + Stunned until end of their next turn.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Storm Aura:</strong> Ranged attacks passing within 15 feet of the Thunder Giant add 1 to both dice from severe wind interference. Creatures starting their turn within 10 feet make a Fortitude save (1 success) or are pushed 5 feet directly away.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Momentum:</strong> As Stormborn.</li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Thunder Giants hit hard enough that their pushback mechanics start repositioning groups rather than individuals. Chain Bolt's secondary targeting means they can apply Dazed or Stunned to clustered enemies with a single ranged action. Storm Aura's wind interference makes them naturally difficult for archers to engage while the storm presence pushes melee fighters back. A summoner who positions one between enemies and open ground will find the battlefield steadily pushed in a direction that favors the summoner's allies.</p>\n<p>---</p>\n<h4>Tempest Lord</h4>\n<p><strong>Threat Rating:</strong> 3 <strong>Origin:</strong> Nephilim (Air) <strong>Size:</strong> Huge <strong>HP:</strong> 108 (Con 6 × 18, Tough) <strong>DR:</strong> 5 (ancient storm-flesh) <strong>Speed:</strong> 45 ft, Fly 80 ft <strong>Attributes:</strong> Str 7 / Con 6 / Agi 7 / Dex 5 / Int 5 / Wis 5 / Cha 5 / Luck 4 <strong>Skills:</strong> Melee Combat 7, Perception 6, Athletics 6, Intimidate 6 <strong>Senses:</strong> Darkvision 120 ft <strong>Initiative Bonus:</strong> +7 (Agi 7) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Tempest Blow [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 8 lightning damage (Half DR); target pushed 20 feet</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 8 lightning damage; pushed 20 feet + Stunned until end of their next turn + knocked Prone; no save</li>\n<li><em>Margin 3:</em> 21 damage + 8 lightning damage + Stunned + Prone; all creatures within 15 feet of target take 8 lightning damage (Half DR) and are pushed 10 feet from the shockwave</li>\n</ul></li>\n<li><strong>Lightning Lance [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 5), Range: 100 ft, 5-foot-wide line\n<ul>\n<li>Per creature in line: Net 1: 16 lightning damage (Half DR) + Dazed. Net 2: 28 lightning damage + Stunned until end of their next turn. Net 3: 28 lightning damage + Stunned + Deafened for 1 minute.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Vortex Aura:</strong> Creatures starting their turn within 20 feet make a Fortitude save (1 success) or pushed 10 feet directly away. Ranged attacks passing through the aura area add 1 to both dice.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Momentum:</strong> As above.</li>\n<li><strong>Intimidating Presence:</strong> As a [Combat] action, the Tempest Lord releases a thunderclap. All creatures within 40 feet that can hear it make a Will save (Hard task, 2 successes). On failure, target gains Frightened condition for 1 minute. On 1 success, target gains Frightened until end of their next turn.</li>\n<li><strong>Resilient Defense (2/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Tempest Lords are authority figures among Air Nephilim — they communicate in complete sentences, evaluate the battlefield intelligently, and will offer tactical observations whether asked or not. The Vortex Aura keeps enemies constantly displaced, Lightning Lance clears lines, and Tempest Blow at Margin 2 sends targets flying far enough to take falling damage against walls or off ledges. A summoner who briefs one on the full situation rather than just issuing target instructions will find it performs significantly better — Tempest Lords do things with context that they cannot do without it.</p>\n<p>---</p>\n<h4>Storm Titan</h4>\n<p><strong>Threat Rating:</strong> 4 <strong>Origin:</strong> Nephilim (Air) <strong>Size:</strong> Huge <strong>HP:</strong> 180 (Con 6 × 30, Massive) <strong>DR:</strong> 6 (primordial storm-flesh) <strong>Speed:</strong> 50 ft, Fly 100 ft <strong>Attributes:</strong> Str 7 / Con 6 / Agi 8 / Dex 6 / Int 6 / Wis 6 / Cha 6 / Luck 5 <strong>Skills:</strong> Melee Combat 8, Perception 7, Athletics 7, Intimidate 7 <strong>Senses:</strong> Darkvision 120 ft <strong>Initiative Bonus:</strong> +8 (Agi 8) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>World Storm Fist [Combat]:</strong> Melee attack (Agi 8 + Melee Combat 8), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 10 lightning damage (Half DR); target pushed 20 feet + Prone; no save</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 10 lightning damage; pushed 20 feet + Prone + Stunned until end of their next turn; all creatures within 15 feet of target take 10 lightning damage (Half DR) from discharge</li>\n<li><em>Margin 3:</em> 21 damage + 10 lightning damage + Prone + Stunned; area discharge increases to 16 lightning damage; all affected creatures also Deafened for 1 minute</li>\n</ul></li>\n<li><strong>Skyfire Bolt [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 6), Range: 150 ft, 15-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 20 lightning damage (Half DR) + Dazed. Net 2: 36 lightning damage + Stunned until end of their next turn. Net 3: 36 lightning damage + Stunned + Prone; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>Cyclone Aura:</strong> Creatures starting their turn within 20 feet make a Fortitude save (Hard task, 2 successes) or pushed 20 feet directly away and knocked Prone. Ranged attacks through the aura add 2 to both dice.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Momentum:</strong> As above.</li>\n<li><strong>Lightning Immunity Sharing:</strong> The summoner and up to 3 designated allies gain immunity to non-magical lightning damage within 60 feet.</li>\n<li><strong>Intimidating Presence:</strong> As Tempest Lord.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> Storm Titans are Agi 8 — they act before almost everything they face and maintain that advantage through their entire engagement. Cyclone Aura at Hard task difficulty continuously displaces enemies regardless of how many actions they spend trying to hold position. Skyfire Bolt handles grouped formations at 150 feet. World Storm Fist's discharge damage at Margin 2 and 3 means the area around the primary target takes significant lightning damage as well. A summoner who keeps clear of the Cyclone Aura radius and lets the Storm Titan work will find most engagements resolved decisively and quickly.</p>\n<p>---</p>\n<h4>Void Tempest</h4>\n<p><strong>Threat Rating:</strong> 5 <strong>Origin:</strong> Nephilim (Air) <strong>Size:</strong> Huge <strong>HP:</strong> 216 (Con 6 × 36, Massive) <strong>DR:</strong> 7 (world-storm flesh) <strong>Speed:</strong> 55 ft, Fly 120 ft <strong>Attributes:</strong> Str 8 / Con 6 / Agi 8 / Dex 7 / Int 7 / Wis 7 / Cha 7 / Luck 6 <strong>Skills:</strong> Melee Combat 8, Perception 8, Athletics 8, Intimidate 8 <strong>Senses:</strong> Darkvision 120 ft, Blindsight 60 ft (air pressure) <strong>Initiative Bonus:</strong> +8 (Agi 8) <strong>Creature Type:</strong> Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.</p>\n<p><strong>Attacks:</strong></p>\n<ul>\n<li><strong>Worldstorm Strike [Combat]:</strong> Melee attack (Agi 8 + Melee Combat 8), Reach: 20 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2) + 12 lightning damage (Half DR); target pushed 30 feet + Prone; no save</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str) + 12 lightning damage; pushed 30 feet + Prone + Stunned; all creatures within 20 feet of target take 12 lightning damage (Half DR) + Dazed from the discharge</li>\n<li><em>Margin 3:</em> 24 damage + 12 lightning damage + Prone + Stunned; discharge area takes 20 lightning damage + Stunned; no save on area</li>\n</ul></li>\n<li><strong>Heaven's Bolt [Combat]:</strong> Ranged attack (Dex 7 + Ranged Combat 8), Range: 200 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 24 lightning damage (Half DR) + Stunned until end of their next turn. Net 2: 48 lightning damage + Stunned + Deafened for 1 minute. Net 3: 48 lightning damage + Stunned + Deafened + knocked Prone; no save.</li>\n</ul></li>\n</ul>\n<p><strong>Special Abilities:</strong></p>\n<ul>\n<li><strong>World Vortex Aura:</strong> Creatures within 30 feet that are not designated make a Fortitude save at the start of their turn (Hard task, 2 successes). Failure: pushed 30 feet, knocked Prone, and Deafened for 1 minute. 1 success: pushed 15 feet only.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>World-Storm Presence (1/day) [Combat]:</strong> As 2 [Combat] actions, the Void Tempest manifests its full elemental nature in an 80-foot radius. All non-designated creatures make a Reflex save (Hard task, 2 successes). Failure: 48 lightning damage + Stunned for 1 minute + Deafened permanently (Fortitude save, 2 successes, to reduce to 1 hour). 1 success: 24 damage + Stunned until end of their next turn. 2 successes: 12 damage only. Buildings and structures take structural damage.</li>\n<li><strong>Lightning Immunity Sharing:</strong> As Storm Titan, extended to 6 designated allies.</li>\n<li><strong>Intimidating Presence:</strong> As Tempest Lord.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>\n<p><strong>Description:</strong> A Void Tempest is an apex Air Nephilim that has existed long enough to understand mortal warfare at a strategic rather than tactical level. World-Storm Presence on arrival; World Vortex Aura maintaining continuous battlefield control; Heaven's Bolt suppressing enemy formations at range while Worldstorm Strike removes priority targets. It will communicate its assessment of the engagement openly and expects the summoner to engage with that assessment rather than simply repeat instructions. A summoner who treats a Void Tempest as a tool will find it technically compliant. One who treats it as a partner will find it does things with that relationship that compliance alone cannot produce.</p>\n<p>---</p>\n<p>---</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "AIR NEPHILIM",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!0024266a31d78231"
+}

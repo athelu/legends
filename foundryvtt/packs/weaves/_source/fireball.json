@@ -24,35 +24,32 @@
     "target": "sphere",
     "savingThrow": "reflex",
     "effect": "A bright streak flashes from your pointing finger to a point you choose within range and then blossoms with a low roar into an explosion of flame. All creatures in a 20-foot radius sphere take 28 fire damage. Each target takes the full listed damage and makes their own save.",
-    "effectType": "utility",
+    "effectType": "damage",
     "damage": {
-      "base": 0,
-      "type": "",
+      "base": 28,
+      "type": "fire",
       "drInteraction": "half",
       "scaling": {
         "0": {
-          "appliesEffects": false,
-          "description": "Fails",
-          "duration": null
+          "damage": 0,
+          "description": "Fails"
         },
         "1": {
-          "appliesEffects": true,
-          "description": "Half damage (14)",
-          "duration": "Half damage (14)"
+          "damage": 14,
+          "description": "half damage"
         },
         "2": {
-          "appliesEffects": true,
-          "description": "Full damage (28)",
-          "duration": "Full damage (28)"
+          "damage": 28,
+          "description": "full damage"
         },
         "3": {
-          "appliesEffects": true,
-          "description": "Enhanced damage (36) + ignited",
-          "duration": "Enhanced damage (36) + ignited"
+          "damage": 36,
+          "description": "Enhanced damage + applies effects",
+          "appliesEffects": true
         }
       }
     },
-    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (14), 2 = Full damage (28), 3 = Enhanced damage (36) + ignited",
+    "targetingSuccessScaling": "0 = Fails, 1 = Half damage (14), 2 = Full damage (28), 3 = Enhanced damage (36) + applies effects",
     "weavingRoll": "Fire Potential + Fire Mastery + Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
@@ -64,6 +61,7 @@
     "deliveryMethod": "save",
     "tags": [
       "aoe",
+      "offensive",
       "ranged",
       "ritual"
     ]

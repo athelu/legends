@@ -1,0 +1,170 @@
+{
+  "_id": "64f58092db07c1c5",
+  "name": "Tormentor",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Tormentors are intelligent fiends — the first in the category with enough sophistication to evaluate the summoner's intentions rather than simply responding to instructions. They understand that they are being used and they are deciding how much that serves their interests. A Cooperative Tormentor executes instructions cleanly. A Friendly one — which requires exceptional targeting roll results — will proactively share observations from Pain Sense and suggest tactical adjustments. Fear Aura creates a perimeter of psychological pressure around them; Torment rewards them for targeting already-injured opponents, which they will do naturally without instruction. A summoner who calls one should be aware that it remembers the encounter afterward, including everything it learned about the summoner's capabilities, weaknesses, and allies.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 40,
+      "max": 40,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 4,
+      "stealth": 3,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 30,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fiend",
+    "creatureSubtype": "+2 DR each",
+    "hpMultiplier": 8,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Devil's Sight, Truesight 15 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Barbed Claws [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + 1 Bleeding stack</li>\n<li><em>Margin 2:</em> 12 damage (8 + 4 Str) + 2 Bleeding stacks; target makes Will save (1 success) or Frightened until end of their next turn</li>\n<li><em>Margin 3:</em> 12 damage + 2 Bleeding stacks; Frightened; no save; target also Disoriented until end of their next turn — the Tormentor's appearance burns into their perception</li>\n</ul></li>\n<li><strong>Agony Lance [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 3), Range: 30 ft\n<ul>\n<li>Net 1: 6 Negative damage (Half DR); target Sickened until end of their next turn. Net 2: 10 Negative damage + Sickened for 1 minute; Will save (1 success) each round to end. Net 3: 10 Negative damage + Sickened for 1 minute + Weakened for 1 minute; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Fear Aura:</strong> Creatures within 10 feet that are not Fiends make a Will save at the start of their turn (1 success). Failure: Frightened until they move outside the aura. Creatures immune to fear are unaffected.</li>\n<li><strong>Pain Sense:</strong> The Tormentor automatically knows the current HP of every creature within 30 feet. It prioritizes wounded targets instinctively and communicates target HP to the summoner as a [Free] action each round if instructed.</li>\n<li><strong>Torment:</strong> When the Tormentor hits a target that is already suffering any [Hindered] condition, deal an additional 4 Negative damage (Half DR) as the pain of their existing wound compounds.</li>\n<li><strong>Devil's Sight.</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Tormentor",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!64f58092db07c1c5"
+}

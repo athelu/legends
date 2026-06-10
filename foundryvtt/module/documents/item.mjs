@@ -1,5 +1,6 @@
 import { showSkillCheckDialog } from "../dice.mjs";
 import * as featEffects from "../feat-effects.mjs";
+import { applyEffect, removeEffect } from "../effect-engine.mjs";
 import { getSkillValue, normalizeSkillKey, SKILL_ATTRIBUTE_KEYS, SKILL_LABELS } from "../skill-utils.mjs";
 
 const ABILITY_RECHARGE_PERIODS = {
@@ -1911,5 +1912,40 @@ export class D8Item extends Item {
         await this.update({ 'system.equipped': true });
       }
     }
+
+    // Apply passive effects for magic weapons (only the owning user or GM does this)
+    if (
+      this.actor &&
+      this.type === 'weapon' &&
+      game.user.id === userId &&
+      Array.isArray(this.system?.passiveEffects) &&
+      this.system.passiveEffects.length > 0
+    ) {
+      for (const pe of this.system.passiveEffects) {
+        if (!pe?.effectId) continue;
+        await applyEffect({
+          target: this.actor,
+          effect: pe.effectId,
+          origin: { type: 'weapon', id: this.id, actor: this.actor.id },
+        }).catch(err => console.warn(`Legends | passive effect "${pe.effectId}" not applied:`, err));
+      }
+    }
   }
-}
+
+  /**
+   * Handle deleting an owned item — remove any passive effects it applied
+   */
+  async _onDelete(data, options, userId) {
+    await super._onDelete(data, options, userId);
+
+    if (this.actor && this.type === 'weapon' && game.user.id === userId) {
+      const toRemove = this.actor.items.filter(i =>
+        i.type === 'effect' &&
+        i.system?.origin?.type === 'weapon' &&
+        i.system?.origin?.id === this.id
+      );
+      for (const eff of toRemove) {
+        await removeEffect(this.actor, eff.id).catch(() => {});
+      }
+    }
+  }

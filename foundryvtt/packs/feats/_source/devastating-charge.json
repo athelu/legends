@@ -38,7 +38,14 @@
       "[Move]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": -1,
+        "applyTo": "both"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!43d21c8663236170"

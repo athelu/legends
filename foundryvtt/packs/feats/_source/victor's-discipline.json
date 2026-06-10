@@ -42,7 +42,15 @@
       "[Discipline]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": -1,
+        "applyTo": "both",
+        "when": "belowHalfHP"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!8c94b1467fea37f1"

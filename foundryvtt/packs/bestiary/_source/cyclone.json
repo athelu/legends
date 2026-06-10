@@ -1,0 +1,170 @@
+{
+  "_id": "83cb93c6f1625337",
+  "name": "Cyclone",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Cyclones control space by making it uncomfortable to occupy. Buffeting Winds keeps melee fighters pushed back while Wind Strike punishes anyone who closes. Against spellcasters and archers they use their speed to negate distance. The Momentum Defense makes them genuinely difficult to hit while moving, so they rarely stop moving. A summoner who needs a chokepoint held by something that cannot itself be easily held will find them useful.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 20,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 3,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 3,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 2,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 27,
+      "max": 27,
+      "temp": 0
+    },
+    "dr": {
+      "value": 1,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 3,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 4,
+      "history": 0,
+      "perception": 4,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 0,
+      "fly": 60,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 9,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Blindsight 20 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Wind Strike [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 4), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 4 damage (standard natural); target makes Fortitude save (1 success) or pushed 5 feet</li>\n<li><em>Margin 2:</em> 7 damage (4 + 3 Str); target pushed 10 feet; no save</li>\n<li><em>Margin 3:</em> 7 damage; target pushed 10 feet and knocked Prone</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Whirlwind Form:</strong> Can move through spaces as narrow as 1 inch. Grapple attempts against it add 1 to both dice.</li>\n<li><strong>Buffeting Winds:</strong> Creatures ending their turn within 10 feet make a Fortitude save (1 success) or are pushed 5 feet directly away.</li>\n<li><strong>Momentum Defense:</strong> While the Cyclone has moved at least half its fly speed this turn, attacks against it add 1 to both attack dice.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Cyclone",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!83cb93c6f1625337"
+}

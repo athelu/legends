@@ -1,0 +1,170 @@
+{
+  "_id": "05340a5c8865d284",
+  "name": "Ancient Flame",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Summoning an Ancient Flame is a statement of intent. It enters using World Fire (2 actions) if enemies are grouped, then uses the third action to begin Primordial Strike on the highest-priority target. Subsequent turns spend two actions on Primordial Strike and a third on Solar Beam against anything trying to engage from distance — all three actions working, the third at penalty but still landing. The terrain around an Ancient Flame becomes inhospitable to anyone not under its protection within the first round and does not improve from there. It has existed long enough to understand what mortal commanders need from it and will follow complex instructions without misinterpretation — but it will communicate disagreement with wasteful tactics through the summoner's connection rather than simply complying with something it judges as poor strategy.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 30,
+      "tremorsense": 120,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 8,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 6,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 216,
+      "max": 216,
+      "temp": 0
+    },
+    "dr": {
+      "value": 7,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 6,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 8,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 50,
+      "fly": 100,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 36,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Blindsight 30 ft, Tremorsense 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Primordial Strike [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 8), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy natural: 14 + 2) + 12 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str) + 12 fire damage; Burning condition; no save</li>\n<li><em>Margin 3:</em> 24 damage + 12 fire damage + Burning; all creatures within 10 feet of target take 12 fire damage (Half DR)</li>\n</ul></li>\n<li><strong>Solar Beam [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 7), Range: 150 ft, 5-foot-wide line passing through all intervening creatures\n<ul>\n<li>Per creature in line: Net 1: 20 fire damage (Half DR) + Ignited. Net 2: 40 fire damage + Burning. Net 3: 40 fire damage + Burning + Blinded; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Primordial Aura:</strong> Creatures starting their turn within 15 feet take 12 fire damage (Half DR). This radius cannot be reduced through positioning — it is the Ancient Flame's natural heat output, not a directed effect.</li>\n<li><strong>World Fire (1/day) [Combat]:</strong> As 2 [Combat] actions, releases its full elemental nature in a 60-foot radius. All non-designated creatures make a Reflex save (Hard task, 2 successes to avoid full effect). Net 0: 40 fire damage + Ignited. Net 1: 40 fire damage + Burning. Net 2+: 20 fire damage only. World Fire will not be used if the summoner or designated allies are within the radius unless the Ancient Flame has no current instructions.</li>\n<li><strong>Fire Immunity Sharing:</strong> The summoner and up to 4 designated allies gain immunity to non-magical fire damage while within 60 feet.</li>\n<li><strong>Momentum Defense.</strong></li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Ancient Flame",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!05340a5c8865d284"
+}

@@ -40,7 +40,21 @@
       "[Savage]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": -1,
+        "applyTo": "both",
+        "when": "primalFury,belowHalfHP"
+      },
+      {
+        "type": "damage.bonus",
+        "target": "melee",
+        "value": 2,
+        "when": "primalFury,belowHalfHP"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!3b70618e5b3e82c7"

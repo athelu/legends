@@ -1,0 +1,170 @@
+{
+  "_id": "d329bb5f94509e44",
+  "name": "Worldfire Colossus",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Worldfire Colossus is a living catastrophe that has agreed, for now, to catastrophe on the summoner's behalf. World-Burning Presence on arrival sets the terms of the engagement — after it goes off, the battlefield is a fire hazard for everyone not designated as protected. The Primordial Aura at 20 feet means enemies cannot close without taking 14 fire damage per round before any attack lands. A summoner who calls one has made a decision about how this fight ends, and the Colossus will execute that decision with a thoroughness that renders tactical nuance largely irrelevant.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 60,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 8,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 7,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 7,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 7,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 6,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 216,
+      "max": 216,
+      "temp": 0
+    },
+    "dr": {
+      "value": 7,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 6,
+      "max": 6
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 7,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 8,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 7,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 45,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 36,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Tremorsense 60 ft (heat signatures)",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Cataclysm Strike [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 8), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2) + 12 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str) + 12 fire damage; Burning + Prone; no save; all creatures within 10 feet take 10 fire damage (Half DR)</li>\n<li><em>Margin 3:</em> 24 damage + 12 fire damage + Burning + Prone + Stunned until end of their next turn; area damage increases to 16 fire</li>\n</ul></li>\n<li><strong>World-Flame Hurl [Combat]:</strong> Ranged attack (Dex 4 + Ranged Combat 6), Range: 150 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 20 fire damage (Half DR) + Ignited. Net 2: 36 fire damage + Burning. Net 3: 36 fire damage + Burning + Blinded until end of their next turn from the searing flash; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Primordial Aura:</strong> Creatures starting their turn within 20 feet take 14 fire damage (Half DR). Flammable terrain within 20 feet ignites and continues burning — the area becomes Difficult Terrain as fire spreads at normal rates.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>World-Burning Presence (1/day) [Combat]:</strong> As 2 [Combat] actions, the Worldfire Colossus expresses its full elemental nature in a 60-foot radius. All non-designated creatures make a Reflex save (Hard task, 2 successes). Failure: 48 fire damage + Burning + Blinded for 1 minute. 1 success: 24 fire damage + Ignited. 2 successes: 12 fire damage only. The ground within the radius ignites if flammable; non-flammable surfaces become superheated (4 fire damage per round to creatures standing on them for the next minute).</li>\n<li><strong>Fire Immunity Sharing:</strong> The summoner and up to 4 designated allies gain immunity to non-magical fire damage within 60 feet.</li>\n<li><strong>Intimidating Presence:</strong> As Magma Lord.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Worldfire Colossus",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!d329bb5f94509e44"
+}

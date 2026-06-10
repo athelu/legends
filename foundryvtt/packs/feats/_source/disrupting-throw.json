@@ -1,0 +1,47 @@
+{
+  "_id": "acf8f2f7a54eb54d",
+  "name": "Disrupting Throw",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>The throw does not need to be the killing blow. It needs to make them flinch at exactly the wrong moment.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "dexterity": 4
+      },
+      "skills": "rangedCombat:3",
+      "feats": [
+        "Throwing Arm"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you hit with a thrown weapon, the target gains the Disoriented condition until the end of their next turn. If the hit achieves Margin 2, the target also adds 1 to both dice on their next attack roll before the end of their next turn.</p>",
+    "usageType": "special",
+    "usage": {
+      "mode": "special",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Once per turn"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Thrown]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!acf8f2f7a54eb54d"
+}

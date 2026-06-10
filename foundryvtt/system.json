@@ -138,6 +138,20 @@
       "path": "packs/diseases",
       "type": "Item",
       "system": "legends"
+    },
+    {
+      "name": "bestiary",
+      "label": "Legends - Bestiary",
+      "path": "packs/bestiary",
+      "type": "Actor",
+      "system": "legends"
+    },
+    {
+      "name": "magic-items",
+      "label": "Legends - Magic Items",
+      "path": "packs/magic-items",
+      "type": "Item",
+      "system": "legends"
     }
   ],
   "languages": [
@@ -166,7 +180,10 @@
       "action": {},
       "ability": {},
       "condition": {},
-      "effect": {}
+      "effect": {},
+      "rod": {},
+      "staff": {},
+      "wand": {}
     }
   },
   "socket": false,

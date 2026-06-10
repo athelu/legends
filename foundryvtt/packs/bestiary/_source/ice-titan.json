@@ -1,0 +1,170 @@
+{
+  "_id": "8643711ea78ffd54",
+  "name": "Ice Titan",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Ice Titans apply Frozen on any hit at Margin 1 — there is no preliminary Chilled or Numbed step. Absolute Zero Aura compounds existing cold conditions automatically, meaning Frozen enemies adjacent to the Ice Titan take additional damage from the aura every round on top of whatever the Titan is actively doing to them. Glacial Barrage applies Frozen to multiple targets simultaneously at range. A summoner who has a Cooperative Ice Titan targeting a formation will find that formation effectively unable to take offensive action within two rounds — too cold, too slow, too Restrained to threaten anyone who isn't also standing in the aura.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 7,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 7,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 6,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 7,
+      "history": 0,
+      "perception": 7,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>World Freeze [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 10 cold damage (Half DR); target Frozen + Prone; no save</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 10 cold damage; Frozen + Prone + Grappled + Restrained; ongoing 16 cold damage per round; no save; Fortitude save (Hard task, 2 successes) each round to break free</li>\n<li><em>Margin 3:</em> 21 damage + 10 cold damage + immediately Engulfed in ice; Blinded + Restrained + ongoing 24 cold damage; Might check (Hard task, 2 successes) as full [Combat] action to escape, or ally must melt or break free (2 Interact actions with fire or 3 without)</li>\n</ul></li>\n<li><strong>Glacial Barrage [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 6), Range: 120 ft, up to 3 targets within 30 feet of each other\n<ul>\n<li>Per target: Net 1: 20 cold damage (Half DR) + Frosted. Net 2: 32 cold damage + Frozen + movement halved. Net 3: 32 cold damage + Frozen + Prone; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Absolute Zero Aura:</strong> Creatures starting their turn within 20 feet take 10 cold damage (Half DR). Frosted creatures in this range become Frozen. Frozen creatures in this range take an additional 8 cold damage (Half DR) from the intensifying cold.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Permafrost:</strong> Extended to 40 feet; persists for 8 hours after the Ice Titan leaves.</li>\n<li><strong>Ice Stride:</strong> As above.</li>\n<li><strong>Cold Immunity Sharing:</strong> The summoner and up to 3 designated allies gain immunity to non-magical cold damage within 60 feet.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Ice Titan",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!8643711ea78ffd54"
+}

@@ -37,7 +37,12 @@
       "[General]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "hp.bonus",
+        "formula": "constitution * tier"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!81618ea80c829b8d"

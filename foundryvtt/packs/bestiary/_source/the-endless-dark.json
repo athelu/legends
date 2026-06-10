@@ -1,0 +1,170 @@
+{
+  "_id": "4cb138e1a6552050",
+  "name": "The Endless Dark",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>The Endless Dark is the Shadow Plane's full predatory nature distilled into a single entity. World Darkness suppresses all light across 120 feet for an hour — after it goes up, the battlefield belongs to Shadow creatures unless the opposing force has significant Positive energy capability. Shadow Form in that darkness grants complete immunity to non-magical damage. Life Drain Aura reduces maximum HP by 6 every round from everything within 30 feet. Shadow Annihilation handles grouped enemies at 200 feet. Consuming Darkness means deaths in the area heal it. A summoner who calls one into an encounter has determined that the encounter ends in darkness, and the Endless Dark will ensure that determination is accurate. It is old enough to understand precisely what summoners need from it and will follow clear instructions without requiring them to be simplified. What it will also do, without prompting and without being asked, is evaluate whether the summoner is someone worth cooperating with again. It remembers. The Shadow Plane is very patient.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 7,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 7,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 8,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 8,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 7,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 7,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 216,
+      "max": 216,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 7,
+      "max": 7
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 7,
+      "stealth": 8,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 7,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 8,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 60,
+      "fly": 100,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "shadow",
+    "creatureSubtype": "passive",
+    "hpMultiplier": 36,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision unlimited, Devil's Sight, See Invisibility, Truesight 120 ft, Perfect Sight 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Void Rend [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 8), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2) + 14 Negative damage (Ignore DR); target loses 6 from Current Luck; max HP reduced by 16 until long rest</li>\n<li><em>Margin 2:</em> 23 damage (16 + 7 Str) + 14 Negative damage; Current Luck reduced by 8; max HP reduced by 24; Weakened + Sickened + Disoriented + Dazed for 1 minute; no save</li>\n<li><em>Margin 3:</em> 23 damage + 14 Negative damage; all conditions; max HP reduced by 32; target makes Fortitude save (Hard task, 2 successes) or loses 2 points of Constitution permanently until Major Restoration; target also loses 1 point of Wisdom permanently until Major Restoration as the void touches their mind</li>\n</ul></li>\n<li><strong>Shadow Annihilation [Combat]:</strong> Ranged attack (Dex 7 + Ranged Combat 8), Range: 200 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 24 Negative damage (Half DR); Current Luck reduced by 5; max HP reduced by 12. Net 2: 40 Negative damage; Current Luck reduced by 8; max HP reduced by 20; Weakened + Sickened; no save. Net 3: 40 Negative damage; all conditions; max HP reduced by 28; Stunned until end of their next turn; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Shadow Form:</strong> In dim light or darkness, immune to all non-magical damage and non-Positive energy damage. In bright light, DR 6 applies normally.</li>\n<li><strong>Life Drain Aura:</strong> 30-foot radius; creatures lose 6 from maximum HP per round. A creature reduced to 0 maximum HP dies.</li>\n<li><strong>World Darkness (1/day) [Combat]:</strong> As 2 [Combat] actions, the Endless Dark extends its nature across a 120-foot radius. All light sources within the radius — magical and mundane — are suppressed for 1 hour. Positive energy weaves of cost 8 or higher can suppress the darkness within their area while active. The Endless Dark and all Shadow creatures see through it with perfect clarity.</li>\n<li><strong>Shadow Army (1/day):</strong> As Shadow Lord, but calls 2d4 Shade Walkers and 1d4 Dark Stalkers.</li>\n<li><strong>Planar Step (at-will):</strong> As Shadow Lord; range increases to 60 feet; can step to any shadow within line of sight regardless of distance.</li>\n<li><strong>Consuming Darkness:</strong> When a creature dies within 60 feet of the Endless Dark, the Endless Dark regains HP equal to that creature's Constitution score × 4. This triggers regardless of what killed the creature.</li>\n<li><strong>Cold Immunity Sharing:</strong> The summoner and up to 4 designated allies gain immunity to cold damage while within 60 feet.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "The Endless Dark",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!4cb138e1a6552050"
+}

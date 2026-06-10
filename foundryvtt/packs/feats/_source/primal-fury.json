@@ -39,7 +39,34 @@
       "[Savage]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "toggle.state",
+        "stateKey": "primalFury",
+        "label": "Primal Fury",
+        "onExit": "fortitudeExhaustionCheck"
+      },
+      {
+        "type": "damage.bonus",
+        "target": "melee",
+        "value": 2,
+        "when": "primalFury"
+      },
+      {
+        "type": "dr.modify",
+        "value": 2,
+        "damageTypes": "physical",
+        "when": "primalFury"
+      },
+      {
+        "type": "roll.modifier",
+        "rollType": "save",
+        "saveType": "fortitude",
+        "value": -1,
+        "applyTo": "both",
+        "when": "primalFury"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!4c2be8877c62ce32"

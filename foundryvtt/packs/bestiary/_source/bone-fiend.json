@@ -1,0 +1,170 @@
+{
+  "_id": "6f0e8bfa90c2afc1",
+  "name": "Bone Fiend",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Bone Fiends are commanders. They assess before committing, use Wall of Bone to reshape the engagement geometry, Claw to hold high-priority targets, and Tail Sting to degrade the most dangerous opponent's combat effectiveness. Tactical Assessment makes them the first Fiend that actively contributes to the summoner's strategic planning rather than simply executing instructions. A summoner who engages with that assessment will find the Bone Fiend performs considerably above its TR. One who ignores it will find it still performs adequately — it will simply note, for its own satisfaction, that the summoner made an error. Bone Fiends remember everything and find incompetence irritating in a way that, over multiple summonings, tends to express itself in subtle ways that are technically within the terms of their agreement.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 76,
+      "max": 76,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 5,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 5,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 40,
+      "fly": 40,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fiend",
+    "creatureSubtype": "+2 DR each",
+    "hpMultiplier": 19,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Devil's Sight, Truesight 30 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Claw [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2)</li>\n<li><em>Margin 2:</em> 15 damage (10 + 5 Str); target Grappled; no save; Grappled target takes 6 Negative damage (Half DR) at start of each of their turns</li>\n<li><em>Margin 3:</em> 15 damage + Grappled + Restrained; ongoing damage increases to 10 Negative</li>\n</ul></li>\n<li><strong>Tail Sting [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage; target makes Fortitude save (1 success) or Poisoned (Strong) for 1 hour</li>\n<li><em>Margin 2:</em> 8 damage; Poisoned (Strong); no save; target also Weakened for 1 minute</li>\n<li><em>Margin 3:</em> 8 damage; Poisoned (Strong) + Weakened; target loses 3 from Current Luck pool as the venom disrupts vital energy</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Fear Aura:</strong> 10-foot radius; Will save (1 success); failure: Frightened until outside aura.</li>\n<li><strong>Wall of Bone (1/day) [Combat]:</strong> As 2 [Combat] actions, raises a 40-foot-long, 10-foot-high wall of bone and calcified matter from any available surface within 60 feet. Each 10-foot section has HP 20 and DR 4 against non-magical damage. Duration: until destroyed. The wall cannot be raised through living creatures.</li>\n<li><strong>Tactical Assessment:</strong> At the start of combat, the Bone Fiend evaluates the battlefield and communicates its assessment to the summoner — primary threats, potential flanking angles, weakest targets. This assessment is accurate and delivered as a [Free] action on its first turn. Whether the summoner uses it is their decision.</li>\n<li><strong>Resilient Defense (1/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Bone Fiend",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!6f0e8bfa90c2afc1"
+}

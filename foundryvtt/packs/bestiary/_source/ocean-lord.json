@@ -1,0 +1,170 @@
+{
+  "_id": "b3d0016b00abd278",
+  "name": "Ocean Lord",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Ocean Lords open with Maelstrom to immediately cluster enemies, then use Abyssal Strike to lock specific targets into Grapples while the vortex handles everything else. Pressurized Stream freezes high-priority targets that manage to stay at range. A Friendly Ocean Lord coordinates complex engagement sequences without repeated instruction — it understands the shape of a fight well enough to anticipate what the summoner needs next. The Ocean Lord wants to pull everything into deep water. Giving it permission to pursue that agenda is simply a matter of telling it which targets matter most.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 1,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 8,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 7,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 7,
+      "meleeCombat": 7,
+      "history": 0,
+      "perception": 7,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 20,
+      "fly": 0,
+      "climb": 0,
+      "swim": 100,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Blindsight 1 mile (in water)",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Abyssal Strike [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 7), Reach: 15 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Huge, standard: 12 + 2) + 8 cold damage (Half DR); target pushed 15 feet + knocked Prone; no save</li>\n<li><em>Margin 2:</em> 22 damage (14 + 8 Str) + 8 cold damage; Prone + Frosted + Grappled; no save</li>\n<li><em>Margin 3:</em> 22 damage + 8 cold damage + Prone + Frosted + Grappled + Restrained; ongoing 16 cold damage per round while Grappled</li>\n</ul></li>\n<li><strong>Pressurized Stream [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 7), Range: 120 ft\n<ul>\n<li>Net 1: 20 cold damage (Half DR). Net 2: 32 cold damage + Frosted + Restrained by pressurized water column for 1 round. Net 3: 32 cold damage + Frozen condition; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Maelstrom (1/encounter) [Combat]:</strong> As 2 [Combat] actions, creates a 40-foot radius vortex of pressurized water. All creatures in range make Athletics or Acrobatics checks (Hard task, 2 successes) or dragged 20 feet toward the center and knocked Prone. Creatures reaching the center are Grappled and take 16 cold damage per round. Creatures starting their turn in range must check again. Designated allies immune. Lasts 1 minute.</li>\n<li><strong>Water Mastery:</strong> As Abyssal Surge; also immune to fire damage in addition to cold.</li>\n<li><strong>Engulf (Recharge 5-8):</strong> As Abyssal Surge.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Ocean Lord",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!b3d0016b00abd278"
+}

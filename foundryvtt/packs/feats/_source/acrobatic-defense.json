@@ -38,7 +38,15 @@
       "[Defense]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "defense",
+        "value": -1,
+        "applyTo": "both",
+        "when": "unarmored"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!fafa06e06994c0a6"

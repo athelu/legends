@@ -22,19 +22,23 @@ Strength represents raw physical power and the capacity to exert force upon the 
 ## Character Creation Steps
 
 1. **Determine Attributes**
-2. **Choose Ancestry**
-3. **Choose Background**
-4. **Select Traits and Flaws**
-5. **Select 2 Starting Feats**
-6. **Spend Starting XP**
-7. **Calculate Hit Points**
-8. **Select Starting Equipment**
-
-
+2. 
+3. **Choose Ancestry**
+4. **Choose Background**
+5. **Select Traits and Flaws**
+6. **Select 2 Starting Feats**
+7. **Spend Starting XP**
+8. **Calculate Hit Points**
+9. **Select Starting Equipment**
 
 ## Step 1: Determine Attributes
 There are two standard methods available for determining your characters eight core attributes.
 **Random roll:** Roll 8d8. This becomes your attribute pool. You may assign as desired to the core attributes.
+**Standard Array:** Players assign the following values to their core attributes: 5, 4, 3, 3, 3, 2, 2, 2
+
+## Step 2: Determine Potentials
+There are two standard methods available for determining your characters eight energy potentials.
+**Random roll:** Roll 8d8. This becomes your Potential pool. You may assign as desired to the energy potentials.
 **Standard Array:** Players assign the following values to their core attributes: 5, 4, 3, 3, 3, 2, 2, 2
 
 ## Step 2. Determine Ancestry
@@ -94,7 +98,6 @@ These starting feats do NOT count against your tier feat limits.
 ## Step 6. Spend starting XP
 Each character will have XP to spend during their character creation. This is how you choose specific improvements to aid in your character concept. The amount of XP you will have to spend varies based upon the background selected.
 This XP can be spent in the following ways:
-- **Gain New Skill:** 4 xp
 - **Increasing Skill rank:** 8 × current rank
 - **Attributes:** 16 × current rank
 - **Potentials:** 16 × current rank

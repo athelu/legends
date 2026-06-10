@@ -55,7 +55,12 @@
     "targetingSuccessScaling": "0 = Fails, 1 = Half damage (2), 2 = Full damage (4) + attack penalty, 3 = Enhanced damage (8) + attack penalty",
     "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
     "targetingRoll": "Casting Stat + Negative Mastery",
-    "appliesEffects": [],
+    "appliesEffects": [
+      {
+        "effectId": "dazed",
+        "params": {}
+      }
+    ],
     "deliveryMethod": "attack",
     "tags": [
       "divination",

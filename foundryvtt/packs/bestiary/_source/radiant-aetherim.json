@@ -1,0 +1,170 @@
+{
+  "_id": "a7db5b4687d7af87",
+  "name": "Radiant Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Radiant Aetherim is the Positive plane's full authority given form and summoned to act. Radiant Healing at full HP restoration for all allies in a 60-foot radius is a fight-resetting ability with no equivalent in the bestiary. Turn Undead triggers automatically every round, destroying half-HP undead and routing the rest without requiring any action. Blinding Presence at 60 feet means undead and evil-aligned creatures cannot function effectively within the radius. Divine Proclamation prevents all hostile action by everyone who fails the save. A summoner who calls a Radiant Aetherim into an encounter has made a decisive statement about how that encounter ends. The Radiant Aetherim will assess the summoner's moral standing before deciding whether to apply its full capability or merely its baseline cooperation — not as a threat, but as an honest reflection of what the Positive plane is willing to pour through the connection. A summoner whose record warrants it will receive everything the entry describes. The Radiant Aetherim will tell them, clearly and without judgment, if their record does not.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 7,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 8,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 8,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 8,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 7,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 216,
+      "max": 216,
+      "temp": 0
+    },
+    "dr": {
+      "value": 8,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 7,
+      "max": 7
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 8,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 8,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 8,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 8,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 60,
+      "fly": 130,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 36,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Truesight 120 ft, Perfect Sight 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Primordial Radiance [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 8), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 14 damage (Large, heavy: 12 + 2) + 16 Positive damage (Half DR)</li>\n<li><em>Margin 2:</em> 21 damage (14 + 7 Str) + 16 Positive damage; all evil-aligned creatures and undead within 20 feet of the target make Will save (Hard task, 2 successes) or Blinded + Frightened for 1 minute + 16 Positive damage (Half DR) from the radiant discharge; living allies in the same radius heal 8 HP</li>\n<li><em>Margin 3:</em> 21 damage + 16 Positive damage; all effects apply with no save; undead at or below half HP in the area destroyed; living allies heal 16 HP</li>\n</ul></li>\n<li><strong>Solar Strike [Combat]:</strong> Ranged attack (Dex 6 + Ranged Combat 8), Range: 200 ft, 20-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 20 Positive damage (Half DR) + Blinded until end of their next turn. Net 2: 36 Positive damage + Blinded for 1 minute + Frightened for 1 minute; no save. Net 3: 36 Positive damage + Blinded + Frightened; undead take double damage and are destroyed outright if at or below half HP; no save on any effect.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Radiant Healing (1/short rest) [Combat]:</strong> As 2 [Combat] actions, releases the full Positive plane's healing force in a 60-foot radius. All living allies heal to their full maximum HP. All conditions affecting them that are not permanent are removed. Undead and constructs in the radius take 40 Positive damage (Half DR); no save. This ability will not be used if the summoner or designated allies are outside the radius.</li>\n<li><strong>Blinding Presence:</strong> 60-foot radius; Fortitude save Hard task (2 successes); failure: Blinded for 1 minute. This affects all evil-aligned creatures and undead within range, not just those the Radiant Aetherim chooses.</li>\n<li><strong>Divine Proclamation (1/encounter):</strong> As Sovereign; additionally all creatures that fail the save cannot take any action that would harm a living creature for 1 minute — they may move, defend, and use non-harmful abilities, but cannot attack, cast harmful weaves, or apply damaging conditions.</li>\n<li><strong>Protective Aura:</strong> 60-foot radius; +6 DR to designated allies; cannot be surprised; Fortune on all saves within the aura.</li>\n<li><strong>Turn Undead:</strong> All undead within 120 feet make Will save (Hard task). Failure: destroyed outright if at or below half HP; otherwise flee for 24 hours. This triggers automatically at the start of each of the Radiant Aetherim's turns without requiring an action.</li>\n<li><strong>Immunity to Non-Magical Weapons.</strong></li>\n<li><strong>Perfect Sight 60 ft:</strong> Sees through all illusory effects, invisibility, magical darkness, and shapechanges within 60 feet.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n<li><strong>Positive Energy Sharing:</strong> The summoner and up to 6 designated allies gain immunity to necrotic damage and the Poisoned condition while within 60 feet.</li>\n<li><strong>Continual Radiance:</strong> Bright light 100-foot radius; acts as sunlight; suppresses all magical darkness within the radius regardless of energy cost.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Radiant Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!a7db5b4687d7af87"
+}

@@ -39,7 +39,13 @@
       "[Reaction]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "dr.modify",
+        "value": 2,
+        "damageTypes": "physical"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!fe404c411ffb9f27"

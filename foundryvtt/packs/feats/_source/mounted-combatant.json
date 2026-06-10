@@ -12,10 +12,10 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "",
+      "skills": "athletics:4",
       "feats": [],
       "tier": 0,
-      "other": "Riding 4"
+      "other": ""
     },
     "benefits": "<p>Attacks against your mount add 1 to both dice. If mount is hit, you can redirect attack to yourself instead. While mounted, melee attacks against creatures smaller than your mount subtract 1 from both dice</p>",
     "usageType": "passive",
@@ -36,7 +36,14 @@
       "[Mounted]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": -1,
+        "applyTo": "both"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!30bcde9ea94d0aed"

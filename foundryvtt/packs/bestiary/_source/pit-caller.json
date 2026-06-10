@@ -1,0 +1,170 @@
+{
+  "_id": "ae5d93ffb2a5b29b",
+  "name": "Pit Caller",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Pit Callers are the first Fiend the summoner genuinely needs to approach with comprehensive preparation. Infernal Command means other summoned Fiends in the area may switch allegiance if the summoner's disposition bond weakens. Call from the Pit produces creatures under the Pit Caller's control, not the summoner's — which is either a useful addition to the engagement or a serious problem depending on whether the summoner and Pit Caller's current instructions align. Bargain introduces an active negotiation element that no other summoned creature offers. A summoner who has prepared precise, gap-free terms and maintains those terms throughout the summoning will find a Pit Caller an extraordinarily capable ally. One who has not will find it begins working toward its own interests at the first available opportunity, and its interests tend to involve the summoner being obligated to it in ways the summoner did not intend.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 7,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 7,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 160,
+      "max": 160,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 7,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 6,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 6,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 40,
+      "fly": 60,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fiend",
+    "creatureSubtype": "+2 DR each",
+    "hpMultiplier": 32,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Devil's Sight, Truesight 60 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Fiend Blade [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 6), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 10 damage (Large, standard: 8 + 2) + 8 Negative damage (Half DR)</li>\n<li><em>Margin 2:</em> 15 damage (10 + 5 Str) + 8 Negative damage; target Weakened + Sickened for 1 minute; no save</li>\n<li><em>Margin 3:</em> 15 damage + 8 Negative damage + Weakened + Sickened; target also loses 4 from Current Luck pool; target makes Fortitude save (1 success) or gains 1 Exhaustion level</li>\n</ul></li>\n<li><strong>Negative Bolt [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 5), Range: 120 ft\n<ul>\n<li>Net 1: 16 Negative damage (Half DR); target loses 2 from Current Luck. Net 2: 28 Negative damage + Weakened for 1 minute; target loses 4 from Current Luck; no save. Net 3: 28 Negative damage + Weakened + Sickened for 1 minute; target loses 6 from Current Luck; no save.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Call from the Pit (1/day) [Combat]:</strong> As 2 [Combat] actions, tears a rift to the lower Negative plane in a space within 60 feet. From this rift emerge 1d4 Gnashers and 1 Shadow Hound at the start of the Pit Caller's next turn. These creatures are not under the summoner's control — they are under the Pit Caller's control, and the Pit Caller directs them as it chooses. The rift closes after 1 minute. The summoner's Summoning Limit does not apply to these creatures as they are not summoned by the summoner.</li>\n<li><strong>Infernal Command:</strong> Any Fiend of lower TR within 300 feet that is not already under another creature's control must make a Will save (Hard task, 2 successes) at the start of each of their turns or follow the Pit Caller's instructions instead. This includes other summoned Fiends if the summoner's Cooperative or Friendly disposition bond is not actively maintained.</li>\n<li><strong>Fear Aura:</strong> 20-foot radius; Will save Hard task (2 successes); failure: Frightened for 1 minute.</li>\n<li><strong>Bargain:</strong> The Pit Caller can offer the summoner a deal at any point during the summoning. The terms it proposes will appear favorable. The terms it proposes will technically be favorable. The way those terms interact with the summoner's existing obligations, future plans, and the Pit Caller's own longer strategy is something the summoner should evaluate very carefully before accepting.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Pit Caller",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!ae5d93ffb2a5b29b"
+}

@@ -1,0 +1,47 @@
+{
+  "_id": "2b60a12097056bdf",
+  "name": "Weapon's Full Edge",
+  "type": "feat",
+  "img": "icons/skills/melee/hand-grip-sword-orange.webp",
+  "system": {
+    "description": {
+      "value": "<p>Most fighters treat the alternate face of their weapon as a fallback.</p>"
+    },
+    "flavorText": "",
+    "xpCost": 40,
+    "classification": "standard",
+    "prerequisites": {
+      "attributes": {
+        "strength": 4
+      },
+      "skills": "meleeCombat:4",
+      "feats": [
+        "Crushing Advance"
+      ],
+      "tier": 0,
+      "other": ""
+    },
+    "benefits": "<p>When you use a [Two-Handed] weapon's [Alternate-Strike], it deals the same base damage as the weapon's primary damage value. Strength still applies on Margin 2 as normal.</p>",
+    "usageType": "passive",
+    "usage": {
+      "mode": "passive",
+      "uses": {
+        "value": 0,
+        "max": 0
+      },
+      "recharge": {
+        "period": "",
+        "formula": ""
+      },
+      "text": "Passive"
+    },
+    "keywords": [
+      "[Combat]",
+      "[Two-Handed]"
+    ],
+    "notes": "",
+    "effects": []
+  },
+  "effects": [],
+  "_key": "!items!2b60a12097056bdf"
+}

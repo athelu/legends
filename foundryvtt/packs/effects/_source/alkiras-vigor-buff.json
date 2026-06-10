@@ -1,0 +1,56 @@
+{
+  "_id": "alkvigr0000000001",
+  "name": "Alkira's Vigor",
+  "type": "effect",
+  "img": "icons/svg/upgrade.svg",
+  "system": {
+    "label": "Alkira's Vigor",
+    "category": "buff",
+    "effectType": "attribute-mod",
+    "description": {
+      "value": "<p>Target gains +2 Strength for the duration. This bonus does not stack with other beneficial Strength modifiers; use the highest bonus.</p>"
+    },
+    "tokenIcon": "",
+    "badge": {
+      "type": "none",
+      "value": 0,
+      "max": 0
+    },
+    "activeEffects": [
+      {
+        "key": "system.attributes.strength.tempValue",
+        "mode": "add",
+        "value": "2",
+        "notes": "+2 Strength"
+      }
+    ],
+    "stacking": "highest",
+    "overlayPriority": 10,
+    "duration": {
+      "type": "minutes",
+      "value": 1,
+      "base": 1,
+      "scaling": "netSuccesses",
+      "scalingFormula": "",
+      "expireOn": "turnEnd",
+      "sustaining": false
+    },
+    "damageTick": null,
+    "recovery": null,
+    "origin": {
+      "type": "",
+      "id": "",
+      "actor": "",
+      "successes": 0,
+      "potential": 0
+    },
+    "grantedBy": "Alkira's Vigor",
+    "conditions": [],
+    "parameterized": {
+      "valueFormula": "",
+      "durationFormula": "${netSuccesses} >= 3 ? 10 : ${netSuccesses} >= 2 ? 1 : ${netSuccesses} >= 1 ? 0.1 : 0"
+    }
+  },
+  "flags": {},
+  "_key": "!items!alkvigr0000000001"
+}

@@ -37,7 +37,13 @@
       "[Magic]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "toggle.state",
+        "stateKey": "elementalBody",
+        "label": "Elemental Body"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!0a9edd95fd342b9f"

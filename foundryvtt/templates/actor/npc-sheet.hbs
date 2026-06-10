@@ -62,6 +62,7 @@
       <div class="dr-info">
         <label>DR</label>
         <span class="dr-value">{{system.dr.total}}</span>
+        <span class="initiative-info">Init +{{system.initiative}}</span>
       </div>
     </div>
   </header>
@@ -69,6 +70,7 @@
   {{!-- Sheet Tabs --}}
   <nav class="sheet-tabs tabs" data-group="primary">
     <a class="item" data-tab="main">Main</a>
+    <a class="item" data-tab="details">Details</a>
     <a class="item" data-tab="combat">Combat</a>
   </nav>
 
@@ -101,10 +103,232 @@
         </div>
       </div>
 
+      {{!-- Skills Section (picker-based: only shows assigned skills) --}}
+      <div class="skills-section">
+        <div class="skills-header">
+          <h3>Skills</h3>
+          {{#if editable}}
+          <button type="button" data-action="addSkill" class="skills-reference-button" title="Add a skill to this NPC">
+            <i class="fas fa-plus"></i><span>Add Skill</span>
+          </button>
+          {{/if}}
+        </div>
+        {{#if activeSkills.length}}
+        <ol class="skills-list">
+          {{#each activeSkills as |skill|}}
+          <li class="skill-row" data-skill="{{skill.key}}">
+            <button type="button" data-action="skillRoll" data-skill="{{skill.key}}" title="Roll {{skill.label}}">
+              <i class="fas fa-dice"></i>
+            </button>
+            <span class="skill-name">{{skill.label}}</span>
+            <span class="skill-attr">{{skill.attrShort}}</span>
+            <input type="number" name="system.skills.{{skill.key}}" value="{{skill.value}}"
+                   min="0" max="8" data-dtype="Number" class="skill-base"/>
+            {{#if ../editable}}
+            <a data-action="removeSkill" data-skill="{{skill.key}}" title="Remove {{skill.label}}" class="skill-remove-btn">
+              <i class="fas fa-times"></i>
+            </a>
+            {{/if}}
+          </li>
+          {{/each}}
+        </ol>
+        {{else}}
+        <p class="hint">No skills assigned — click <em>Add Skill</em> to assign.</p>
+        {{/if}}
+      </div>
+
       <div class="editor-content">
         <label>Biography</label>
         {{editor system.biography.value target="system.biography.value" button=true owner=owner editable=editable}}
       </div>
+    </div>
+
+    {{!-- Details Tab --}}
+    <div class="tab details" data-group="primary" data-tab="details">
+
+      {{!-- Identity row: size / creature type / subtype --}}
+      <div class="details-row">
+        <div class="form-group">
+          <label>Size</label>
+          <select name="system.size">
+            {{#each sizeOptions as |opt|}}
+            <option value="{{opt.value}}" {{#if (eq ../system.size opt.value)}}selected{{/if}}>{{opt.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Creature Type</label>
+          <select name="system.creatureType">
+            {{#each creatureTypeOptions as |opt|}}
+            <option value="{{opt.value}}" {{#if (eq ../system.creatureType opt.value)}}selected{{/if}}>{{opt.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Subtype</label>
+          <input type="text" name="system.creatureSubtype" value="{{system.creatureSubtype}}" placeholder="e.g. Giant"/>
+        </div>
+      </div>
+
+      {{!-- Speed --}}
+      <div class="details-row">
+        <div class="form-group">
+          <label>Walk (ft)</label>
+          <input type="number" name="system.speed.walk"   value="{{system.speed.walk}}"   min="0" data-dtype="Number"/>
+        </div>
+        <div class="form-group">
+          <label>Fly (ft)</label>
+          <input type="number" name="system.speed.fly"    value="{{system.speed.fly}}"    min="0" data-dtype="Number"/>
+        </div>
+        <div class="form-group">
+          <label>Climb (ft)</label>
+          <input type="number" name="system.speed.climb"  value="{{system.speed.climb}}"  min="0" data-dtype="Number"/>
+        </div>
+        <div class="form-group">
+          <label>Swim (ft)</label>
+          <input type="number" name="system.speed.swim"   value="{{system.speed.swim}}"   min="0" data-dtype="Number"/>
+        </div>
+        <div class="form-group">
+          <label>Burrow (ft)</label>
+          <input type="number" name="system.speed.burrow" value="{{system.speed.burrow}}" min="0" data-dtype="Number"/>
+        </div>
+      </div>
+
+      {{!-- HP multiplier + Natural DR --}}
+      <div class="details-row">
+        <div class="form-group">
+          <label>HP Formula</label>
+          <select name="system.hpMultiplier">
+            {{#each hpMultiplierOptions as |opt|}}
+            <option value="{{opt.value}}" {{#if (eq ../system.hpMultiplier opt.value)}}selected{{/if}}>{{opt.label}}</option>
+            {{/each}}
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Natural DR</label>
+          <input type="number" name="system.dr.value" value="{{system.dr.value}}" min="0" data-dtype="Number"/>
+        </div>
+      </div>
+
+      {{!-- Senses --}}
+      <div class="form-group">
+        <label>Senses Notes</label>
+        <input type="text" name="system.sensesNotes" value="{{system.sensesNotes}}"
+               placeholder="e.g. Keen Smell, Spider Climb"/>
+      </div>
+      <div class="details-row">
+        <div class="form-group">
+          <label>Darkvision (ft)</label>
+          <input type="number" name="system.vision.darkvision"  value="{{system.vision.darkvision}}"  min="0" data-dtype="Number"/>
+        </div>
+        <div class="form-group">
+          <label>Blindsight (ft)</label>
+          <input type="number" name="system.vision.blindsight"  value="{{system.vision.blindsight}}"  min="0" data-dtype="Number"/>
+        </div>
+        <div class="form-group">
+          <label>Tremorsense (ft)</label>
+          <input type="number" name="system.vision.tremorsense" value="{{system.vision.tremorsense}}" min="0" data-dtype="Number"/>
+        </div>
+      </div>
+
+      {{!-- Damage Immunities --}}
+      <div class="chip-section">
+        <div class="chip-header">
+          <h3>Damage Immunities</h3>
+          {{#if editable}}
+          <button type="button" data-action="addImmunity" data-kind="damage" class="skills-reference-button">
+            <i class="fas fa-plus"></i><span>Add</span>
+          </button>
+          {{/if}}
+        </div>
+        <div class="chip-list">
+          {{#each immunityDamageChips as |chip|}}
+          <span class="chip">
+            {{chip.label}}
+            {{#if ../editable}}
+            <a data-action="removeImmunity" data-kind="damage" data-value="{{chip.value}}" class="chip-remove"><i class="fas fa-times"></i></a>
+            {{/if}}
+          </span>
+          {{/each}}
+          {{#unless immunityDamageChips.length}}<span class="hint">None</span>{{/unless}}
+        </div>
+      </div>
+
+      {{!-- Condition Immunities --}}
+      <div class="chip-section">
+        <div class="chip-header">
+          <h3>Condition Immunities</h3>
+          {{#if editable}}
+          <button type="button" data-action="addImmunity" data-kind="condition" class="skills-reference-button">
+            <i class="fas fa-plus"></i><span>Add</span>
+          </button>
+          {{/if}}
+        </div>
+        <div class="chip-list">
+          {{#each immunityCondChips as |chip|}}
+          <span class="chip">
+            {{chip.label}}
+            {{#if ../editable}}
+            <a data-action="removeImmunity" data-kind="condition" data-value="{{chip.value}}" class="chip-remove"><i class="fas fa-times"></i></a>
+            {{/if}}
+          </span>
+          {{/each}}
+          {{#unless immunityCondChips.length}}<span class="hint">None</span>{{/unless}}
+        </div>
+      </div>
+
+      {{!-- Damage Resistances --}}
+      <div class="chip-section">
+        <div class="chip-header">
+          <h3>Damage Resistances</h3>
+          {{#if editable}}
+          <button type="button" data-action="addResistance" class="skills-reference-button">
+            <i class="fas fa-plus"></i><span>Add</span>
+          </button>
+          {{/if}}
+        </div>
+        <div class="chip-list">
+          {{#each resistanceChips as |chip|}}
+          <span class="chip chip-resistance">
+            {{chip.label}}
+            {{#if ../editable}}
+            <a data-action="removeResistance" data-value="{{chip.value}}" class="chip-remove"><i class="fas fa-times"></i></a>
+            {{/if}}
+          </span>
+          {{/each}}
+          {{#unless resistanceChips.length}}<span class="hint">None</span>{{/unless}}
+        </div>
+      </div>
+
+      {{!-- Languages --}}
+      <div class="chip-section">
+        <div class="chip-header">
+          <h3>Languages</h3>
+          {{#if editable}}
+          <button type="button" data-action="addLanguage" class="skills-reference-button">
+            <i class="fas fa-plus"></i><span>Add</span>
+          </button>
+          {{/if}}
+        </div>
+        <div class="chip-list">
+          {{#each languageChips as |chip|}}
+          <span class="chip chip-language">
+            {{chip.label}}
+            {{#if ../editable}}
+            <a data-action="removeLanguage" data-value="{{chip.value}}" class="chip-remove"><i class="fas fa-times"></i></a>
+            {{/if}}
+          </span>
+          {{/each}}
+          {{#unless languageChips.length}}<span class="hint">None</span>{{/unless}}
+        </div>
+      </div>
+
+      {{!-- Tactics --}}
+      <div class="editor-content">
+        <label>Tactics</label>
+        {{editor system.tactics target="system.tactics" button=true owner=owner editable=editable}}
+      </div>
+
     </div>
 
     {{!-- Combat Tab --}}

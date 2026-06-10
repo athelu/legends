@@ -1,0 +1,170 @@
+{
+  "_id": "d511b97445ff3be1",
+  "name": "Worldsea Colossus",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Worldsea Colossus does not freeze things. It converts the local environment into ice and then continues from there. World Glaciation on arrival creates permanent permafrost across an 80-foot radius and Restrains everything within it for an hour. Primordial Cold Aura compounds cold conditions through multiple stages automatically — a Restrained enemy in the aura takes 34 cold damage per round from aura effects alone before the Colossus attacks them. Glacial Apocalypse Engulfs at Margin 2 with no save. A summoner who calls one has determined that the fight ends in ice, and what the Worldsea Colossus determines is where the ice begins.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 60,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 8,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 7,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 7,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 7,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 6,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 216,
+      "max": 216,
+      "temp": 0
+    },
+    "dr": {
+      "value": 8,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 6,
+      "max": 6
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 8,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 8,
+      "history": 0,
+      "perception": 8,
+      "empathy": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 36,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Blindsight 60 ft (cold detection)",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Glacial Apocalypse [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 8), Reach: 20 ft\n<ul>\n<li><em>Margin 1:</em> 16 damage (Huge, heavy: 14 + 2) + 12 cold damage (Half DR); target immediately Frozen + Prone; no save</li>\n<li><em>Margin 2:</em> 24 damage (16 + 8 Str) + 12 cold damage; immediately Engulfed in ice; Blinded + Grappled + Restrained; ongoing 28 cold damage per round; no save; Might check (Hard task, 2 successes) as full [Combat] action each round to escape</li>\n<li><em>Margin 3:</em> 24 damage + 12 cold damage + Engulfed; escape requires Might check with Misfortune, or ally intervention (4 [Interact] actions with fire, 6 without); ongoing damage increases to 40</li>\n</ul></li>\n<li><strong>World Ice Storm [Combat]:</strong> Ranged attack (Dex 7 + Ranged Combat 8), Range: 200 ft, 30-foot radius\n<ul>\n<li>Per creature in radius: Net 1: 28 cold damage (Half DR) + Frozen + Prone. Net 2: 48 cold damage + Frozen + Prone + Restrained for 1 round. Net 3: 48 cold damage + Frozen + Prone + Restrained + Stunned until end of their next turn; no save on any effect.</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Primordial Cold Aura:</strong> Creatures starting their turn within 25 feet take 14 cold damage (Half DR). Frosted creatures become Frozen. Frozen creatures take additional 12 cold damage and become Restrained. Restrained creatures take additional 8 cold damage as ice continues accumulating.</li>\n<li><strong>World Glaciation (1/day) [Combat]:</strong> As 2 [Combat] actions, releases the cold of the world's deepest ice in an 80-foot radius. All non-designated creatures make a Fortitude save (Hard task, 2 successes). Failure: 56 cold damage + Frozen for 1 hour + Restrained for 1 hour; escape requires fire or an ally's sustained effort. 1 success: 28 damage + Frozen for 1 minute. 2 successes: 14 damage only. The radius becomes permanent permafrost until magically cleared.</li>\n<li><strong>Cold Immunity Sharing:</strong> The summoner and up to 6 designated allies gain immunity to non-magical cold damage within 60 feet.</li>\n<li><strong>Powerful Build.</strong></li>\n<li><strong>Permafrost:</strong> Permanent within 50 feet while present; persists for 24 hours after departure.</li>\n<li><strong>Resilient Defense (3/day).</strong></li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Worldsea Colossus",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!d511b97445ff3be1"
+}

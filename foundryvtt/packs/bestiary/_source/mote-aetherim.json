@@ -1,0 +1,170 @@
+{
+  "_id": "6f3f04c20febfe3e",
+  "name": "Mote Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Mote Aetherim is barely more than the Positive plane's awareness made briefly tangible. It has no meaningful combat capability against anything that is not undead. What it has is Healing Touch, reliable truth detection within close range, and the ability to suppress magical darkness simply by existing nearby. A summoner who needs a small amount of healing available without action cost, a truth-detection asset in a conversation, or a light source that cannot be extinguished by darkness weaves will find it adequate. It will answer direct questions about what it perceives with complete honesty, including observations about the summoner's own situation that the summoner may not have asked for.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 1,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 8,
+      "max": 8,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 0,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 2,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 0,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "tiny",
+    "speed": {
+      "walk": 0,
+      "fly": 40,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Truesight 10 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Light Pulse [Combat]:</strong> Ranged attack (Dex 3 + Ranged Combat 1), Range: 10 ft\n<ul>\n<li><em>Margin 1:</em> 2 Positive damage (Half DR); undead and evil-aligned creatures take 4 Positive damage instead</li>\n<li><em>Margin 2:</em> 2 Positive damage; target gains Dazzled condition until end of their next turn from the concentrated light; undead take 4 Positive damage + Frightened until end of their next turn</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Healing Touch (1/short rest):</strong> As a [Interact] action, touches a living creature and restores 4 HP. Cannot raise creatures above their maximum HP. Cannot be used on undead.</li>\n<li><strong>Continual Radiance:</strong> Sheds bright light in a 20-foot radius and dim light for an additional 20 feet. This light suppresses magical darkness of equal or lower energy cost within the bright light radius. The Mote Aetherim cannot suppress this light voluntarily — it is what it is.</li>\n<li><strong>Truth Sense:</strong> Automatically knows when a creature within 10 feet speaks a deliberate lie. Communicates this to the summoner as a [Free] action.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Mote Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 0.5,
+    "height": 0.5,
+    "disposition": -1
+  },
+  "_key": "!actors!6f3f04c20febfe3e"
+}

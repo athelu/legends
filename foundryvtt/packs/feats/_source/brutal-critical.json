@@ -40,7 +40,15 @@
       "[Savage]"
     ],
     "notes": "",
-    "effects": []
+    "effects": [
+      {
+        "type": "roll.modifier",
+        "rollType": "attack",
+        "value": 0,
+        "applyTo": "both",
+        "when": "primalFury"
+      }
+    ]
   },
   "effects": [],
   "_key": "!items!17bf12a1ff1bf015"

@@ -1,0 +1,170 @@
+{
+  "_id": "6bfb08773721b8fc",
+  "name": "Boggart",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Boggarts ambush from shadows, apply Frightened conditions through Frightful Visage to scatter formation fighters, then close for claw strikes on isolated targets. They are selfish and not suicidal — a Boggart that is clearly losing will attempt to flee unless held by Cooperative or Friendly disposition. Troublemaker is their most distinctively Fae ability, producing minor environmental sabotage that compounds the chaos of an encounter in ways that are difficult to anticipate. A summoner who wants a fight disrupted rather than won directly will find Boggarts more effective than their TR suggests.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": true,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 3,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 4,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 27,
+      "max": 27,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 3,
+      "stealth": 4,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 3,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 4,
+      "history": 0,
+      "perception": 3,
+      "empathy": 0
+    },
+    "size": "small",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fae",
+    "creatureSubtype": "",
+    "hpMultiplier": 9,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Low-Light Vision",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Claws [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 4), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 5 damage (Small, standard: 6 − 1)</li>\n<li><em>Margin 2:</em> 9 damage (5 + 4 Str); target makes Will save (1 success) or gains Frightened condition until end of their next turn</li>\n<li><em>Margin 3:</em> 9 damage; Frightened condition; no save; target also gains Disoriented until end of their next turn as the Boggart's appearance burns into their perception</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Frightful Visage:</strong> As a [Combat] action, the Boggart distorts its face into something fundamentally wrong. One creature within 30 feet that can see it makes a Will save (opposed by Cha 3 + Intimidate 3). On failure, target gains Frightened until end of their next turn.</li>\n<li><strong>Shadow Meld:</strong> In dim light or darkness, the Boggart has Fortune on Stealth checks.</li>\n<li><strong>Troublemaker:</strong> Once per encounter, the Boggart can spend 1 minute interacting with an unattended object to sabotage it in a minor way — a door latch that sticks, a buckle that releases under pressure, a torch that goes out at the worst moment. The GM determines when the sabotage activates. The Boggart cannot sabotage magical items.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Boggart",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!6bfb08773721b8fc"
+}

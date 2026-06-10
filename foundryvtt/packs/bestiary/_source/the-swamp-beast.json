@@ -1,0 +1,183 @@
+{
+  "_id": "56d6b97758978985",
+  "name": "The Swamp Beast",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>The Swamp Beast is old enough that the swamp has stopped being its habitat and started being its body. The vines that reach toward intruders are not a separate thing from the creature — they are its nerves, extended outward through the waterlogged soil. The spores it releases are its breath. The acid is the only part that feels like a weapon, and even that is just digestion accelerated.</p>\n<p>It does not hunt in any meaningful sense. It sits, and things come to it, and when they do it absorbs them. The process is patient and thorough and entirely without malice.</p>\n<p>What makes it dangerous beyond its raw physical capability is the lightning. Parties that identify its absorption trait and have a mage with a full load of lightning weaves have accidentally created the worst possible situation for themselves — a creature that heals faster than they can damage it through conventional means, now surging with temporary HP and fully alert to the threat.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 60,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 2,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 1,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 156,
+      "max": 156,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 4,
+      "religion": 0,
+      "wilderness": 0,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 0,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 5,
+      "meleeCombat": 6,
+      "history": 0,
+      "perception": 0,
+      "empathy": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 20,
+      "fly": 0,
+      "climb": 0,
+      "swim": 20,
+      "burrow": 0
+    },
+    "creatureType": "monstrosity",
+    "creatureSubtype": "",
+    "hpMultiplier": 26,
+    "immunities": {
+      "damageTypes": [
+        "lightning"
+      ],
+      "conditions": [
+        "blinded",
+        "deafened",
+        "exhaustion"
+      ]
+    },
+    "resistances": [],
+    "languages": [],
+    "sensesNotes": "Blindsight 60 ft. (blind beyond this radius)",
+    "tactics": "The Swamp Beast begins most encounters already in position, motionless and indistinguishable from the surrounding mire. It waits until something comes within 10 feet before erupting.\n \nIts priority is Engulf. Every turn it uses Multiattack targeting the same creature, trying to trigger the [Free] Engulf. Once something is engulfed, it ignores that target's allies until they become a more immediate threat, grinding down the engulfed creature with automatic damage each round while slamming anything that gets close.\n \nSpit Acid is its only ranged option and it uses it on clustered groups or when melee is temporarily unavailable — not saved, spent when the opportunity presents itself. It has no capacity for tactical patience beyond the initial ambush.\n \nThe lair's Spore Cloud goes up immediately if the party tries to spread out or stay at range, forcing them to either enter the cloud or cede the terrain. Grasping Roots targets ranged attackers or spellcasters the Beast can perceive through Blindsight, pinning them in place.\n \nAgainst fire or lightning weaves it reacts with something that reads as aggression but is closer to hunger — it moves toward the source of lightning specifically, absorbing what it can and closing to melee range where ranged casters are most vulnerable.\n \nIt does not retreat. It does not recognize the concept.",
+    "attacksNotes": "<p><strong>Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 6), Reach 10 ft. (Large creature)</p>\n<ul>\n<li><strong><em>Margin 1:</strong></em> 10 damage (Large, standard natural weapon: 8 + 2)</li>\n<li><strong><em>Margin 2:</strong></em> 16 damage (10 + 6 Str)</li>\n</ul>\n<p><strong>Multiattack [Combat]:</strong> The Swamp Beast makes two slam attacks.</p>\n<ul>\n<li><strong><em>Shared Attribute Roll (Agi 2):</strong></em> Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.</li>\n<li><strong><em>Engulf Trigger:</strong></em> If both slam attacks hit the same Medium or smaller target in the same turn, the Swamp Beast immediately uses Engulf on that target as a [Free] action.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p><strong>Blindsight:</strong> The Swamp Beast perceives its surroundings through vibration and chemical detection within 60 feet. It cannot perceive anything beyond this radius and is effectively blind to it. The [Hidden] condition does not apply to creatures within 60 feet, though they still gain [Concealed] against the Beast's attacks. <strong>Lightning Absorption:</strong> The Swamp Beast is immune to lightning damage. Whenever it would take lightning damage, it instead regains HP equal to the damage that would have been dealt. This recovery cannot exceed its maximum HP. <strong>Lightning Surge:</strong> When the Swamp Beast absorbs lightning damage, in addition to recovering HP it gains temporary HP equal to half the absorbed amount (rounded down) until the start of its next turn. These temporary HP are lost at the start of its next turn regardless of whether they were depleted. <strong>False Appearance:</strong> While the Swamp Beast remains motionless in swamp terrain, it is indistinguishable from a mound of rotting vegetation. A creature that succeeds on a Perception check (Hard task, 2 successes) notices something wrong before the Beast moves. <strong>Engulf [Free]:</strong> Triggered when both Multiattack slams hit the same Medium or smaller target. The Swamp Beast engulfs the target, drawing it into its mass. The engulfed creature gains the Blinded, Restrained, and Bound conditions simultaneously and cannot breathe. At the start of each of the Swamp Beast's turns, an engulfed creature makes a Fortitude save (Con + Luck, opposed by the Beast's Con 6 + Wis 3). On failure, the creature takes 12 bludgeoning damage (full DR applies — this is crushing physical force). On success, no damage that turn. The Swamp Beast can have only one creature engulfed at a time. The engulfed creature moves with the Beast when it moves. To escape, the creature must win an opposed Athletics or Acrobatics check against the Beast's Might 5 + Str 6 on its turn, spending a [Combat] action (2 successes required). An adjacent ally may attempt the same check as a [Combat] action to pull the engulfed creature free. The engulfed creature is released immediately if the Swamp Beast is reduced to 0 HP. <strong>Spit Acid (Recharge 5–8) [Combat]:</strong> Costs 2 actions. The Beast expels a stream of acidic fluid in a 15-foot cone. Every creature in the area makes a Reflex save (Agi + Luck, opposed by the Beast's Con 6 + Wis 3). Creatures that fail take 28 acid damage (half DR applies — energy damage). Creatures that succeed take 14 acid damage.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "Living Swamp",
+      "description": "<p>While the Swamp Beast is in its territory and conscious, the swamp around it responds as an extension of its body. At the start of each round, the Beast may cause one of the following effects without spending any of its actions. Only one effect may be active at a time; triggering a new one ends the previous.</p>",
+      "effects": [
+        {
+          "name": "Grasping Roots",
+          "description": "<p>Up to three roots or vines erupt from the ground at points the Beast can perceive within 60 feet. Each root targets one creature. Each targeted creature makes a Reflex save (Agi + Luck, opposed by the Beast's Might 5 + Con 6). Creatures that fail are Restrained. Each root is a separate object: HP 12, DR 2, immune to poison and psychic damage. A root disappears when reduced to 0 HP, when the Beast triggers a different lair effect, or when the Beast dies. A Restrained creature is released when its root is destroyed.</p>"
+        },
+        {
+          "name": "Spore Cloud",
+          "description": "<p>A cloud of toxic spores fills a 20-foot radius sphere centered on a point the Beast can perceive within 60 feet. The cloud does not move once placed. Every creature in the cloud when it appears makes a Fortitude save (Con + Luck, opposed by the Beast's Con 6 + Wis 3). Creatures that fail take 16 poison damage (half DR applies). Creatures that succeed take 8 poison damage. Any creature that ends its turn inside the cloud takes 8 poison damage automatically with no save. All creatures within the cloud gain the Blinded condition while inside it. The cloud persists until the Beast triggers a different lair effect or dies. When the Swamp Beast dies, all active lair effects end immediately and the roots collapse.</p>"
+        }
+      ]
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "The Swamp Beast",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!56d6b97758978985"
+}

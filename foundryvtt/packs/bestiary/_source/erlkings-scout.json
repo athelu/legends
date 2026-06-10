@@ -1,0 +1,170 @@
+{
+  "_id": "84ea46d85f9b88cb",
+  "name": "Erlking's Scout",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Erlking's Scouts serve the great Fae hunting lords and carry their patron's methodology — patient, methodical, and relentless toward a designated target. They designate quarry at the start of combat and pursue that creature until it is down, switching only when directly ordered. Hunter's Arrow's marking ability denies concealment to high-priority targets for an hour, which matters considerably in environments where Stealth or magical invisibility are significant factors. A summoner who needs something found, marked, and prevented from hiding will find an Erlking's Scout effective without requiring much instruction.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": true,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 5,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 4,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 52,
+      "max": 52,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 4,
+      "max": 4
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "writing": 0,
+      "deception": 0,
+      "stealth": 6,
+      "religion": 0,
+      "wilderness": 4,
+      "acrobatics": 0,
+      "persuasion": 0,
+      "society": 0,
+      "athletics": 0,
+      "medicine": 0,
+      "devices": 0,
+      "perform": 0,
+      "craft": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "rangedCombat": 5,
+      "arcane": 0,
+      "investigate": 0,
+      "language": 0,
+      "might": 0,
+      "meleeCombat": 5,
+      "history": 0,
+      "perception": 6,
+      "empathy": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 20,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fae",
+    "creatureSubtype": "",
+    "hpMultiplier": 13,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Low-Light Vision, Truesight 30 ft",
+    "tactics": "",
+    "attacksNotes": "<ul>\n<li><strong>Fae Blade [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage + 4 psychic damage (Ignore DR)</li>\n<li><em>Margin 2:</em> 12 damage (8 + 4 Str) + 4 psychic damage; target makes Will save (1 success) or Disoriented until end of their next turn</li>\n<li><em>Margin 3:</em> 12 damage + 4 psychic damage + Disoriented; target also cannot benefit from Fortune on their next roll as fae magic disrupts their momentum</li>\n</ul></li>\n<li><strong>Hunter's Arrow [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 5), Range: 80/160/320 ft\n<ul>\n<li><em>Margin 1:</em> 8 damage</li>\n<li><em>Margin 2:</em> 13 damage (8 + 5 Dex); target cannot benefit from the Hidden or Invisible condition for 1 hour — marked by fae scent that cuts through magical concealment</li>\n<li><em>Margin 3:</em> 13 damage + marked; target also gains the Revealed condition for 1 hour</li>\n</ul></li>\n</ul>",
+    "specialAbilitiesNotes": "<ul>\n<li><strong>Hunter's Mark:</strong> As a [Minor] action, designates one creature as quarry. Against the quarry, subtract 1 from both attack dice. Only one quarry at a time; changing quarry requires another [Minor] action.</li>\n<li><strong>Fae Step (1/short rest):</strong> As a [Move] action, teleports up to 30 feet to any unoccupied space it can see. Does not provoke opportunity attacks.</li>\n<li><strong>Truesight 30 ft:</strong> Sees through invisibility, illusory effects, shapechanges, and into the Ethereal Plane within 30 feet.</li>\n</ul>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "earth": 0,
+        "water": 0,
+        "space": 0,
+        "time": 0,
+        "air": 0,
+        "positive": 0,
+        "negative": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Erlking's Scout",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!84ea46d85f9b88cb"
+}

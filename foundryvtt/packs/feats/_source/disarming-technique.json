@@ -20,7 +20,7 @@
       "tier": 0,
       "other": "chosen combat skill 5"
     },
-    "benefits": "<p>When you hit with a weapon attack, force target to make a [[/save type=fortitude]] (opposed by your attack). If you win by 1+ successes, target drops one held item of your choice</p>",
+    "benefits": "<p>When you hit with a weapon attack, force target to make a [[/save type=fortitude]] (opposed by your attack). If you win by 1+ successes, target drops one held item of your choice.</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",
