@@ -94,7 +94,7 @@ At 7+ cost with Negative Mastery 4+, Presence activates: the character's proximi
 | 5 (4+1) | +4 bludgeoning | Target's DR reduced by 2 until end of their next turn | 1 — 1 round |
 | 7 (6+1) | +4 bludgeoning | Target's DR reduced by 2 + Weakened condition | 2 — 1 minute |
 
-**Presence (7+ cost, Negative Mastery 4+ required):** Objects and weapons held by creatures within 10 feet become unreliable. Affected creatures must succeed on a Fortitude save against the internal roll result or their weapon or shield provides no benefit until the start of their next turn. The item does not break — it fails in that moment only.
+**Presence (7+ cost, Negative Mastery 4+ required):** Objects and weapons held by creatures within 20 feet become unreliable. Affected creatures must succeed on a Fortitude save against the internal roll result or their weapon or shield provides no benefit until the start of their next turn. The item does not break — it fails in that moment only.
 
 **Exhaustion:** Always triggers Exhaustion check when Presence is active.
 **Tell:** Faint smell of old stone and dust. Cracks appear briefly in surfaces touched. Metal handled by the character tarnishes visibly within minutes.

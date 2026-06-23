@@ -300,15 +300,15 @@ Primary attributes and skills have reached or are approaching 8/8 mastery. Focus
 
 For magical humanoid NPCs, the same three-phase progression applies. Mastery costs the same as skills (8 × rank — efficient). Potentials cost the same as attributes (16 × rank — expensive). Prioritize Mastery before Potentials, exactly as martials prioritize Skills before Attributes.
 
-Nearly all complex weaves use Space for range/area and Time for duration. An effective caster needs high Mastery in their primary energy, strong Space Mastery, and solid Time Mastery. A Fire 6 / Space 5 / Time 4 mage is far more effective than a Fire 6 / Air 5 / Water 4 mage because the first can actually deliver fire damage at range with area coverage.
+An effective caster needs high Mastery in their primary energy, and a strong supporting Mastery that flavors their type of weaving.
 
 ### Universal Pattern for Casters
 
-**Tier 1-2:** Primary Element Mastery 3-5, Space Mastery 2-4, Time Mastery 1-3
+**Tier 1-2:** Primary Element Mastery 3-5, Suporting Mastery 2-4, Time Mastery 1-3
 
-**Tier 3-4:** Primary Element Mastery 5-6, Space Mastery 4-5, Time Mastery 3-4, Secondary Element 2-3
+**Tier 3-4:** Primary Element Mastery 5-6, Supporting Mastery 4-5, Time Mastery 3-4, Secondary Element 2-3
 
-**Tier 5-8:** Primary Element Mastery 7-8, Space Mastery 6-7, Time Mastery 5-6, multiple secondaries at 4-5
+**Tier 5-8:** Primary Element Mastery 7-8, Supporting Mastery 6-7, Time Mastery 5-6, multiple secondaries at 4-5
 
 ---
 

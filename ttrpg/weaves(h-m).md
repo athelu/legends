@@ -10,18 +10,18 @@
 **Description:** Hard ice and hail rain down in a 20-foot radius cylinder. All creatures in the area take 28 bludgeoning and cold damage (physical ice chunks). Each target takes the full listed damage and makes their own save. The ground becomes difficult terrain (costs double movement) until the ice melts.
 **Applies Effects:** Prone
 **Saving Throw:** Reflex
-**Damage Type:** bludgeoning
+**Damage Type:** Physical (Cold + Bludgeoning)
 **DR Interaction:** Full DR
 **Targeting Success Scaling:** 0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36) + prone
 
 ### Haste
 **Primary Energy:** Time 5 (accelerating personal time, major buff)
-**Supporting Energy:** Time 2 (duration 1 minute)
+**Supporting Energy:** Air 2 (duration 1 minute)
 **Range:** Touch
 **Duration:** 1 minute
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Time Potential + Time Mastery
+**Weaving Roll:** Time Potential + Time Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Time Mastery
 **Description:** Target at touch gains +1 action per turn (can be used for Move, Attack, or Activate only), subtract 1 from both dice on Reflex saves, and subtract 1 from both dice on Agility checks. When weave ends, target gains 1 level of Exhaustion.
 **Applies Effects:** Haste
@@ -94,12 +94,12 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Water Potential + Water Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
-**Description:** Target takes 8 cold damage. This is an attack weave—no saving throw allowed.
+**Description:** Target takes 8 cold and bludgeoning damage. This is an attack weave—no saving throw allowed.
 **Damage Base:** 8
 **Applies Effects:** Slowed (minor)
 **Saving Throw:** None
-**Damage Type:** Cold (energy)
-**DR Interaction:** Half DR
+**Damage Type:** Physical (Cold + Bludgeoning)
+**DR Interaction:** Full DR
 **Targeting Success Scaling:** 0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + applies effects
 
 ### Identify
@@ -205,8 +205,8 @@
 **DR Interaction:** Half DR
 **Targeting Success Scaling:** 0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36) + applies effects
 
-### Lightning Touch
-**Primary Energy:** Air 2 (lightning through touch, damage)
+### Thunder Touch
+**Primary Energy:** Air 2 (sonic vibration through touch, damage)
 **Supporting Energy:** None (touch range only)
 **Range:** Touch
 **Duration:** Instantaneous
@@ -214,10 +214,10 @@
 **Action:** Simple weave (1 action)
 **Weaving Roll:** Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
-**Description:** Touch a target and release a jolt of electricity. Target takes 4 lightning damage.
+**Description:** Touch a target and channel a burst of sonic vibration into them. Target takes 4 thunder damage. This is an attack weave—no saving throw allowed.
 **Saving Throw:** None
-**Damage Type:** Lightning (energy)
-**DR Interaction:** Half DR
+**Damage Type:** Thunder (sonic)
+**DR Interaction:** No DR
 **Targeting Success Scaling:** 0 = fails, 1 = half damage (2), 2 = full damage (4), 3 = enhanced damage (8)
 
 ### Major Restoration

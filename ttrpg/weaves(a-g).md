@@ -1,17 +1,17 @@
 ### Acid Blast
-**Primary Energy:** Water 2 (acidic vapor damage)
-**Supporting Energy:** Air 1 (close range 30ft)
+**Primary Energy:** Water 2 (acidic corrosion damage)
+**Supporting Energy:** Negative 1 (close range 30ft)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 3 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Water Potential + Water Mastery / Air Potential + Air Mastery
+**Weaving Roll:** Water Potential + Water Mastery / Negative Potential + Negative Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Single-target ranged attack. Target takes 8 acid damage.
 **Damage Base:** 8
 **Applies Effects:** sickened
 **Saving Throw:** None
-**Damage Type:** Acid
+**Damage Type:** Acid (energy)
 **DR Interaction:** Half DR
 **Targeting Success Scaling:** 0 = Miss, 1 = Half damage (4), 2 = Full damage (8), 3 = Enhanced damage (16) + applies effects
 
@@ -342,7 +342,7 @@
 **Duration:** 10 minutes
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Touch a surface to create an extradimensional space holding up to 8 Medium creatures. The surface may be closed like a door. From outside door and the space are invisible. Space holds up to 12 hours of air.
 **Saving Throw:** None
@@ -411,7 +411,7 @@
 **Duration:** 1 hour
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** You step into the border of the Ethereal Plane. You can see and hear the material plane (dim and muted). Can move through objects and creatures. Cannot affect or be affected by anything on material plane. Can end early as [Free] action.
 **Saving Throw:** None
@@ -424,7 +424,7 @@
 **Duration:** 1 hour
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions), takes 1 hour to cast
-**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Bind one extraplanar creature (celestial, elemental, fey, fiend) at close range (30ft) to your service. Creature makes Will save. Compare your targeting successes to their save successes. If you have more, creature must serve you for duration or until completing one task. Must negotiate payment/service.
 **Saving Throw:** Will
@@ -545,7 +545,7 @@
 **Duration:** 10 minutes
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery + Time Potential + Time Mastery
+**Weaving Roll:** Air Potential + Air Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Target at touch gains flying speed equal to their normal movement speed. If weave ends while airborne, target falls.
 **Applies Effects:** Flight
@@ -559,7 +559,7 @@
 **Duration:** 1 hour
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery + Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Target at touch gains DR 5 (doesn't stack with worn armor). Counts as no armor for purposes of Acrobatic Defense and similar abilities.
 **Applies Effects:** dr-bonus (value=5)
@@ -589,12 +589,12 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Water Potential + Water Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
-**Description:** A blast of cold air erupts from your hands. All creatures in a 60-foot cone take 40 cold damage. Each target takes the full listed damage and makes their own save.
+**Description:** A barrage of frozen shards and sleet erupts from your hands. All creatures in a 60-foot cone take 40 cold and bludgeoning damage. Each target takes the full listed damage and makes their own save.
 **Applies Effects:** Slowed (minor)
 **Saving Throw:** Reflex
 **Damage Base:** 40
-**Damage Type:** Cold (energy)
-**DR Interaction:** Half DR
+**Damage Type:** Physical (Cold + Bludgeoning)
+**DR Interaction:** Full DR
 **Targeting Success Scaling:** 0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + applies effects
 
 ### Frost Touch

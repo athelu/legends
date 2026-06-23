@@ -1025,7 +1025,7 @@ Creature Type: Outsider/Celestial (immune to poison, disease, fear; Fortune on s
 Attacks:
   - Light Ray [Combat]: Ranged attack (Dex 4 + Ranged Combat 2), Range: 30 ft
     - Margin 1: 4 Positive damage (Half DR)
-    - Margin 2: 8 Positive damage (Half DR); undead and creatures of evil alignment take double damage
+    - Margin 2: 8 Positive damage (Half DR); undead and fiends take double damage
 Special Abilities:
   - Continual Flame: Sheds bright light in a 20-foot radius. This light suppresses magical darkness of equal or lower energy cost.
   - Detect Evil: The Archon automatically senses creatures with malicious intent within 60 feet. It communicates this information to the summoner as a [Free] action.
@@ -1047,7 +1047,7 @@ Creature Type: Outsider/Celestial (immune to poison, disease, fear; Fortune on s
 Attacks:
   - Holy Sword [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft
     - Margin 1: 8 damage + 4 Positive damage (Half DR)
-    - Margin 2: 12 damage (8 + 4... using Int/Wis-based bonus: 8 + 4 Positive = 12) + 4 Positive damage; undead and evil-aligned creatures gain Frightened condition
+    - Margin 2: 12 damage (8 + 4... using Int/Wis-based bonus: 8 + 4 Positive = 12) + 4 Positive damage; undead and fiends gain Frightened condition
     - Margin 3: 12 damage + 4 Positive damage; condition applies with no save
   - Bite [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft
     - Margin 1: 6 damage (standard natural weapon)
@@ -1055,8 +1055,8 @@ Attacks:
 Multiattack [Combat]: The Hound Archon makes one Sword attack and one Bite. Shared Attribute Roll (Agi 4).
 Special Abilities:
   - Change Shape: The Hound Archon can assume the form of any Medium humanoid as a [Interact] action. Its stats do not change; the form is cosmetic only.
-  - Magic Circle: Once per encounter, the Hound Archon can establish a 10-foot diameter zone of protection centered on a point within 30 feet. Evil-aligned creatures cannot enter this zone and cannot charm, frighten, or possess creatures within it. Duration 10 minutes.
-Tactics: Hound Archons are guardians first. They position to protect the summoner and designated allies, using Magic Circle to establish a safe zone when under pressure. They engage threats directly with their multiattack, prioritizing undead and evil-aligned creatures. They can disguise themselves to blend into a crowd if needed for a protection mission.
+  - Magic Circle: Once per encounter, the Hound Archon can establish a 10-foot diameter zone of protection centered on a point within 30 feet. Fiends and corrupted creatures cannot enter this zone and cannot charm, frighten, or possess creatures within it. Duration 10 minutes.
+Tactics: Hound Archons are guardians first. They position to protect the summoner and designated allies, using Magic Circle to establish a safe zone when under pressure. They engage threats directly with their multiattack, prioritizing undead and fiends. They can disguise themselves to blend into a crowd if needed for a protection mission.
 
 ### Solar Aspect (Celestial)
 Threat Rating: 4
@@ -1072,19 +1072,19 @@ Creature Type: Outsider/Celestial (immune to poison, disease, fear, charm, necro
 Attacks:
   - Radiant Greatsword [Combat]: Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft
     - Margin 1: 16 damage + 16 Positive damage (Half DR)
-    - Margin 2: 23 damage (16 + 7 Str) + 16 Positive damage; evil-aligned creatures make Will save or become Blinded until end of their next turn
+    - Margin 2: 23 damage (16 + 7 Str) + 16 Positive damage; fiends and corrupted creatures make a Will save or become Blinded until end of their next turn
     - Margin 3: 23 damage + 16 Positive damage; Blinded condition, no save
   - Radiant Arrow [Combat]: Ranged attack (Dex 5 + Ranged Combat 6), Range: 120 ft
     - Margin 1: 12 damage + 12 Positive damage (Half DR)
     - Margin 2: 17 damage + 12 Positive damage; target is Revealed (cannot gain Invisible, Hidden, or Concealed) for 1 minute
 Multiattack [Combat]: Two Radiant Greatsword attacks or two Radiant Arrows. Shared Attribute Roll.
 Special Abilities:
-  - Blinding Presence: Creatures of evil alignment that begin their turn within 30 feet make a Fortitude save (1 success) or gain the Dazzled condition until they move out of range.
-  - Divine Awareness: Cannot be surprised. Knows the alignment and intent of any creature within 60 feet.
+  - Blinding Presence: Fiends and corrupted creatures that begin their turn within 30 feet make a Fortitude save (1 success) or gain the Dazzled condition until they move out of range.
+  - Divine Awareness: Cannot be surprised. Knows the nature and intent of any creature within 60 feet.
   - Empower Good (1/day): As 2 [Combat] actions, all allies within 60 feet gain temporary HP equal to 40 and Fortune on all attack rolls and saves for 1 minute.
   - Resilient Defense (3/day).
   - Celestial Compact: A Solar Aspect will not arrive for a Summoner it judges to be acting in bad faith. This is a purely GM determination — a Solar Aspect called by a character who has recently committed serious moral wrongs arrives only at Indifferent regardless of targeting roll, and may use its Divine Awareness to announce its assessment to the party before deciding whether to cooperate.
-Tactics: Solar Aspects fight with authority and precision. Empower Good goes up first when allies need it; otherwise they alternate between suppressing the most dangerous enemy with Radiant Greatsword and denying concealment with Radiant Arrows. Their Blinding Presence passively disrupts evil-aligned opponents throughout the fight.
+Tactics: Solar Aspects fight with authority and precision. Empower Good goes up first when allies need it; otherwise they alternate between suppressing the most dangerous enemy with Radiant Greatsword and denying concealment with Radiant Arrows. Their Blinding Presence passively disrupts fiends and corrupted opponents throughout the fight.
 
 ### Imp (Fiend)
 Threat Rating: 1/4
@@ -1105,7 +1105,7 @@ Special Abilities:
   - Invisibility (At-Will): Imp can become invisible as a [Minor] action. Ends if it attacks.
   - Change Shape: Can assume the form of a small beast (rat, raven, spider) as a [Interact] action.
   - Devil's Sight: Sees through magical darkness.
-  - Pocket Fiend: Imps are frequently used as spies and familiars by dark-aligned casters. A Cooperative Imp will gather information reliably, though it exaggerates its own contribution significantly when reporting back.
+  - Pocket Fiend: Imps are frequently used as spies and familiars by casters of dark intent. A Cooperative Imp will gather information reliably, though it exaggerates its own contribution significantly when reporting back.
 Tactics: Imps avoid combat. They spy, report, and sting when they have an overwhelming advantage. A Summoner who treats an Imp like a combat asset will be disappointed; one who treats it like an intelligence resource will get more than expected, though the information will always have a slight self-serving editorial slant.
 
 ### Shadow Hound (Fiend)
@@ -3253,7 +3253,7 @@ Fae honor the letter of agreements with absolute precision and the spirit of the
 
 Low-tier Fae are mischievous and small, their power more disruptive than destructive. Mid-tier Fae are capable combatants and considerably more alien in their reasoning. High-tier Fae are beings of genuine power whose cooperation represents a significant advantage and whose displeasure tends to persist across multiple encounters, multiple years, and occasionally multiple generations.
 
-Pure Fae are largely neutral in alignment. Corrupted Fae — those that have spent extended time near Negative energy ley lines — are a different matter and are noted where relevant.
+Pure Fae have no inherent moral orientation. Corrupted Fae — those that have spent extended time near Negative energy ley lines — are a different matter and are noted where relevant.
 
 **Creature Type: Fey**
 All Fae share: Fortune on saving throws against charm effects. Do not need air, food, drink, or sleep in the conventional sense — they sustain themselves on elemental energy and the ambient magic of whatever plane they currently inhabit.

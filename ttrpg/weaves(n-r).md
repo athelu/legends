@@ -15,15 +15,15 @@
 **Targeting Success Scaling:** 0 = fails, 1 = Frightened, 2= Frightened (12), 3 = Frightened (16)
 
 ### Nevil's Clarity
-**Primary Energy:** Negative 4 (glimpsing possibility)
+**Primary Energy:** Space 4 (sharpening perception through spatial clarity)
 **Supporting Energy:** Time 2 (duration 1 minute)
 **Range:** Touch
 **Duration:** 1 minute
 **Total Cost:** 6 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery
-**Targeting Roll:** Casting Stat + Negative Mastery
-**Description:** Target gains +2 Intelligence for the duration. Recalculate Intelligence-based checks and casting values if Intelligence is the target's casting stat. If this changes max Energy Pool, current Energy does not increase when this weave is applied. This bonus does not stack with other beneficial Intelligence modifiers; use the highest bonus.
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Targeting Roll:** Casting Stat + Space Mastery
+**Description:** Target gains +2 Intelligence for the duration. The void-like clarity of Space energy strips away distraction and sharpens cognition. Recalculate Intelligence-based checks and casting values if Intelligence is the target's casting stat. If this changes max Energy Pool, current Energy does not increase when this weave is applied. This bonus does not stack with other beneficial Intelligence modifiers; use the highest bonus.
 **Applies Effects:** Nevil's Clarity
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes
@@ -56,12 +56,12 @@
 
 ### Passwall
 **Primary Energy:** Earth 6 (creating temporary passage)
-**Supporting Energy:** Space 1 (close range + duration 1 minute)
+**Supporting Energy:** Space 3 ( Range Close 30ft, duration 1 minute)
 **Range:** Close, 30 ft.
 **Duration:** 1 minute
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
 **Description:** Create a passage at close range up to 5 feet wide, 8 feet tall, and 20 feet deep through wood, plaster, or stone. When weave ends, creatures still in passage are ejected safely.
 **Saving Throw:** None

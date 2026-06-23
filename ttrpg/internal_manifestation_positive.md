@@ -79,7 +79,7 @@ At 7 cost active during a long rest, the character recovers HP equal to Constitu
 |-------------|--------|------------------------|
 | 3 (2+1) | Regain 1 HP per round, suppress one Bleeding stack per round | 2 — 1 minute |
 | 5 (4+1) | Regain 2 HP per round, suppress all Bleeding, +1 to Fortitude saves | 3 — 10 minutes |
-| 7 (6+1) | Regain 3 HP per round, suppress all Bleeding, +2 Fortitude saves, remove one poison severity stage per minute | 4 — 1 hour |
+| 7 (6+1) | Regain 3 HP per round, suppress all Bleeding, +2 Fortitude saves, remove one poison severity stage per minute, remove one disease severity stage once per scene | 4 — 1 hour |
 
 **Tell:** Slow visible improvement in color and alertness over the duration. Wounds close gradually. The character moves more freely as the duration continues. Faint warmth emanates from the skin.
 **Combat/Non-Combat:** Both. Strongest total recovery output in the system at 7 cost over a full scene.
@@ -108,13 +108,13 @@ At 7 cost active during a long rest, the character recovers HP equal to Constitu
 **Table:** Buff/Debuff for protective effects. Presence uses internal roll as save target.
 **Expression:** Healing at the boundary of the self — Positive energy anchored spatially creates a protective field that extends slightly beyond the body. At higher investment the character becomes a source of restorative presence that benefits those nearby.
 
-At 7 cost with Space Mastery 3+, Presence activates: allies within 10 feet regain 1 HP at the start of each round while in range. This is the only internal manifestation Presence effect that benefits rather than harms nearby creatures. If the character is knocked unconscious the Presence effect ends immediately.
+At 7 cost with Space Mastery 3+, Presence activates: allies within 20 feet regain 1 HP at the start of each round while in range. This is the only internal manifestation Presence effect that benefits rather than harms nearby creatures. If the character is knocked unconscious the Presence effect ends immediately.
 
 | Primary Cost | Effect | Secondary Duration Cost |
 |-------------|--------|------------------------|
 | 3 (2+1) | +2 DR all damage types, regain 1 HP per round | 2 — 1 minute |
 | 5 (4+1) | +4 DR all damage types, regain 1 HP per round, immune to Grievously Wounded | 3 — 10 minutes |
-| 7 (6+1) | As above + Presence: allies within 10 feet regain 1 HP per round | 4 — 1 hour |
+| 7 (6+1) | As above + Presence: allies within 20 feet regain 1 HP per round | 4 — 1 hour |
 
 **Exhaustion:** Always triggers Exhaustion check when Presence is active, even for beneficial Presence.
 **Tell:** A warmth others can feel when standing near the character. Faint golden-white quality to the light immediately around them. Animals and children are instinctively drawn toward them. Observers will likely identify this as divine expression.
