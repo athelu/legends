@@ -33,6 +33,7 @@ Attribute buffs/debuffs must follow the Attribute Buff Cost Bands and Attribute 
 These weaves are guidelines. Work with your GM to create unique effects by combining energies in new ways. The eight energies are tools
 
 #### Energy Combination guidelines
-Air + Water for lighting (mimicing how lighting occurs in the real world)
-Negative + another energy makes it bad (poison air, acid water, etc)
-Water + Air for Ice effects
+Air + Water for lightning (mimicking how lightning occurs in the real world — energy damage, Half DR)
+Air + Negative for poison gas and miasma (Half DR)
+Water + Air for ice (Physical — Cold + Bludgeoning, Full DR)
+Water + Negative for acid and liquid poison (Half DR)

@@ -138,9 +138,9 @@ Oozes come in a variety of shapes and sizes, from small puddles of slime to mass
 
 ## Outsiders
 
-Outsiders are deamons from the non-elemental planes. Outsiders can be classified into different categories based on their alignment, physical form, and powers. Some common types of outsiders include:
-Celestials: These are typically beings of good alignment that hail from the positive plane. They are often associated with virtues such as courage, compassion, and justice.
-Fiends: These are typically beings of evil alignment that come from the negative Plane. They are often associated with traits such as cruelty, deception, and corruption.
+Outsiders are deamons from the non-elemental planes. Outsiders can be classified into different categories based on their origin, physical form, and powers. Some common types of outsiders include:
+Celestials: These are typically beings of virtuous nature that hail from the positive plane. They are often associated with virtues such as courage, compassion, and justice.
+Fiends: These are typically beings of malicious nature that come from the negative Plane. They are often associated with traits such as cruelty, deception, and corruption.
 Outsider Beings: These are entities that do not fit into the other categories of outsiders. They can be humanoid, animalistic, or even amorphous in form.
 Outsiders are often seen as powerful and enigmatic creatures, and their motives and goals may be difficult for mortals to understand.  They are viewed with both reverence and fear, and their interactions with the mortal world can have profound consequences. 
 

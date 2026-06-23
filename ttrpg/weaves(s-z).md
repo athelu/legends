@@ -94,12 +94,12 @@
 
 ### Shatter
 **Primary Energy:** Air 4 (destructive sonic vibration)
-**Supporting Energy:** Earth 4 (medium range + 10ft radius)
+**Supporting Energy:** Space 4 (medium range + 10ft radius)
 **Range:** Medium, 60 ft. (10-foot radius sphere)
 **Duration:** Instantaneous
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery / Earth Potential + Earth Mastery
+**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Create sudden loud ringing in 10-foot radius sphere. All creatures in area take 16 thunder damage. Creatures make Fortitude saves to reduce damage. Nonmagical objects made of crystal, glass, or similar material take double damage and shatter if reduced to 0 HP.
 **Applies Effects:** Deafened
@@ -355,14 +355,14 @@
 
 ### Thunder Burst
 **Primary Energy:** Air 3 (wave of thunderous force)
-**Supporting Energy:** Earth 1 (15-foot cube area)
-**Range:** Self (15-foot cube)
+**Supporting Energy:** Space 1 (10-foot diameter sphere)
+**Range:** Self (10-foot diameter sphere)
 **Duration:** Instantaneous
 **Total Cost:** 4 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery / Earth Potential + Earth Mastery
+**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
-**Description:** All creatures in 15-foot cube originating from you take 12 thunder damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.
+**Description:** A thunderous burst erupts outward from you in all directions. All creatures within 10 feet take 12 thunder damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.
 **Applies Effects:** Prone
 **Saving Throw:** Fortitude
 **Damage Type:** Thunder (sonic energy)
@@ -383,18 +383,18 @@
 **Targeting Success Scaling:** 0 = fails, 1 = 10 minutes, 2= 1 hour, 3 = 4 hours
 
 ### Toxic Mist
-**Primary Energy:** Negative 2 (negative poison)
-**Supporting Energy:** Air 1 (touch or 10 feet)
-**Range:** Touch or 10 feet
+**Primary Energy:** Air 2 (airborne poison cloud)
+**Supporting Energy:** Negative 1 (close range 30ft)
+**Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 3 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Air Potential + Air Mastery
-**Targeting Roll:** Casting Stat + Negative Mastery
+**Weaving Roll:** Air Potential + Air Mastery / Negative Potential + Negative Mastery
+**Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Target takes 8 poison damage. Target makes Fortitude save to reduce damage.
 **Applies Effects:** Poisoned (Weak)
 **Saving Throw:** Fortitude
-**Damage Type:** Poison
+**Damage Type:** Poison (energy)
 **DR Interaction:** Half DR
 **Targeting Success Scaling:** 0 = fails, 1 = half damage (4), 2= full damage (8), 3 = enhanced damage (16) + Poisoned (Weak)
 
@@ -497,18 +497,18 @@
 **Description:** Create wall of ice at medium range up to 60 feet long, 20 feet high, 1 foot thick (or hemisphere 10 feet diameter). Each 10ft section has HP = 12 + Water Potential, DR 6 vs nonmagical damage. Creatures within area when created make Reflex save or take 8 cold damage. Wall melts naturally over time.
 **Applies Effects:** Frosted
 **Saving Throw:** Reflex
-**Damage Type:** Cold (energy)
-**DR Interaction:** Half DR
+**Damage Type:** Physical (Cold + Bludgeoning)
+**DR Interaction:** Full DR
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round (6 HP), 2= full effect (12 HP), 3 = 10 minutes (24 HP) + frosted
 
 ### Wall of Stone
-**Primary Energy:** Earth 6 (solid stone barrier)
-**Supporting Energy:** Water 2 (medium range + wall area)
+**Primary Energy:** Earth 6 (solid stone barrier anchored at location)
+**Supporting Energy:** Space 2 (medium range + wall area)
 **Range:** Medium, 60 ft. (60 feet long, 20 feet high)
 **Duration:** Permanent
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Earth Potential + Earth Mastery / Water Potential + Water Mastery
+**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
 **Description:** Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 8. Can shape into crenellations, bridges, etc.
 **Saving Throw:** None
@@ -569,12 +569,12 @@
 
 ### Whispered Message
 **Primary Energy:** Air 2 (transmitting sound across distance)
-**Supporting Energy:** Air 1 (close range)
+**Supporting Energy:** Space 1 (close range)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 3 Energy
 **Action:** Complex Weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery 
+**Weaving Roll:** Air Potential + Air Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
 **Description:** Point at a creature within close range and whisper a message. Target (and only target) hears the message and can whisper a reply that only you hear. Weave transmits through most barriers but is blocked by 1 foot of stone, 1 inch of common metal, thin sheet of lead, or 3 feet of wood.
 **Saving Throw:** None

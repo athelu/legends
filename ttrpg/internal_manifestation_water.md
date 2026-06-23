@@ -72,7 +72,7 @@ At 7 cost, force redirection activates: once per round when hit by a melee physi
 |-------------|--------|------------------------|
 | 3 (2+1) | Regain 1 HP at the start of each of your turns | 2 — 1 minute |
 | 5 (4+1) | Regain 2 HP at the start of each turn, suppress one Bleeding stack per round | 3 — 10 minutes |
-| 7 (6+1) | Regain 3 HP at start of each turn, suppress all Bleeding, +2 to Fortitude saves | 4 — 1 hour |
+| 7 (6+1) | Regain 3 HP at start of each turn, immune to Bleeding condition, +2 to Fortitude saves | 4 — 1 hour |
 
 **Non-Combat:** At any investment level, activating Water/Positive during a short rest adds the HP recovery per minute to the rest's total recovery. At 7 cost, reduces one Exhaustion level during a short rest rather than requiring a long rest.
 **Tell:** Minor wounds visibly close during the duration. Skin takes on a faint luminescent quality at the surface. The character seems less affected by exertion as the effect persists.
@@ -91,7 +91,7 @@ Touch delivery requires a successful unarmed strike or grapple — the target mu
 |-------------|--------|------------------------|
 | 3 (2+1) | Immune to own poison and disease effects, touch delivers Weak poison (Fortitude save vs internal roll) | 2 — 1 minute |
 | 5 (4+1) | As above + touch delivers Strong poison, immune to Weak and Strong poisons from external sources | 3 — 10 minutes |
-| 7 (6+1) | As above + Presence: creatures within 10 feet make Fortitude save each round vs internal roll or gain Sickened condition | 4 — 1 hour |
+| 7 (6+1) | As above + Presence: creatures within 20 feet make Fortitude save each round vs internal roll or gain Sickened condition | 4 — 1 hour |
 
 **Exhaustion:** Always triggers Exhaustion check when Presence is active.
 **Tell:** Faint discoloration at fingertips and lips. The character's breath has a medicinal or chemical quality. Small plants wilt after extended proximity.

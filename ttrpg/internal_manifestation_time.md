@@ -115,9 +115,9 @@ Constitution reduction follows the Attribute Drain rules from the core system. I
 
 | Primary Cost | Combat Effect | Presence (7+ only) | Secondary Duration Cost |
 |-------------|--------------|-------------------|------------------------|
-| 3 (2+1) | +2 Negative energy damage, target's Constitution reduced by 1 until end of scene — cosmetic aging at impact | — | 0 — instantaneous |
+| 3 (2+1) | +2 Negative energy damage, target's Constitution reduced by 1 until end of scene | — | 0 — instantaneous |
 | 5 (4+1) | +4 Negative energy damage, target's Constitution reduced by 1 until end of scene, Weakened condition | — | 1 — 1 round |
-| 7 (6+1) | +4 Negative energy damage, target's Constitution reduced by 2 until end of scene, Weakened condition | Temporal aging aura 10 feet: Fortitude save vs internal roll or Constitution reduced by 1 until end of scene | 2 — 1 minute |
+| 7 (6+1) | +4 Negative energy damage, target's Constitution reduced by 2 until end of scene, Weakened condition | Temporal aging aura 20 feet: Fortitude save vs internal roll or Constitution reduced by 1 until end of scene | 2 — 1 minute |
 
 **HP Cost option:** Pay 4 HP to upgrade one tier. At 7 cost with HP payment, Presence activates regardless of Mastery threshold.
 **Exhaustion:** The 7 cost tier and any HP cost activation always trigger Exhaustion check.

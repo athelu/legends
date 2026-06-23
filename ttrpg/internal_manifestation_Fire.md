@@ -88,7 +88,7 @@ Mechanically, suppression means: treat current Exhaustion level as one step lowe
 
 The HP cost buys one tier upgrade on the Expression table without additional energy expenditure. You are trading recoverable HP for energy efficiency.
 
-At 7+ primary cost with Negative Mastery 4+, Presence activates: nearby creatures within 15 feet feel the consuming hunger. Will save against the internal roll result or gain the Frightened condition (Level 1 Fear).
+At 7+ primary cost with Negative Mastery 4+, Presence activates: nearby creatures within 20 feet feel the consuming hunger. Will save against the internal roll result or gain the Frightened condition (Level 1 Fear).
 
 | Primary Cost | Standard Effect | With HP Cost (4 HP) | Presence (7+ only) |
 |-------------|----------------|--------------------|--------------------|
@@ -116,8 +116,8 @@ At 7+ primary cost with Negative Mastery 4+, Presence activates: nearby creature
 | Primary Cost | Effect | Secondary Duration Cost |
 |-------------|--------|------------------------|
 | 3 (2+1) | Heat sensing 30 feet | 2 — 1 minute |
-| 5 (4+1) | Heat sensing 60 feet + blink up to 15 feet once per activation | 2 — 1 minute |
-| 7 (6+1) | Heat sensing 60 feet + blink up to 30 feet, usable once per round | 3 — 10 minutes |
+| 5 (4+1) | Heat sensing 60 feet + blink up to 15 feet once per activation | 3 — 10 minutes |
+| 7 (6+1) | Heat sensing 60 feet + blink up to 30 feet, usable once per round | 4 — 1 hour |
 
 **Tell:** Movement leaves faint scorch marks at origin points. Heat afterimage briefly visible where the character stood.
 **Combat/Non-Combat:** Both. Heat sensing is strong non-combat utility for tracking, navigation in darkness, and detecting ambush through walls or concealment.

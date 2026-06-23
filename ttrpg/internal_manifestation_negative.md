@@ -23,15 +23,15 @@ Negative primary has the strongest Presence effects in the system, the best offe
 
 The HP cost buys a tier upgrade: at 3 cost with HP payment, performs as 5 cost. At 5 with HP payment, performs as 7 cost.
 
-At 7 cost with HP payment and Negative Mastery 4+, Presence activates: creatures within 15 feet make a Will save against the internal roll result or gain the Frightened condition (Level 1 Fear).
+At 7 cost with HP payment and Negative Mastery 4+, Presence activates: creatures within 20 feet make a Will save against the internal roll result or gain the Frightened condition (Level 1 Fear).
 
 **DR:** Both components are energy damage. Fire component: half DR. Negative component: half DR.
 
-| Primary Cost | Bonus Fire Damage | Bonus Negative Damage | HP Cost Option | Secondary Duration Cost |
-|-------------|------------------|----------------------|----------------|------------------------|
-| 3 (2+1) | +1 fire | +1 Negative | 4 HP: performs as 5 cost | 0 — instantaneous |
-| 5 (4+1) | +2 fire | +2 Negative | 4 HP: performs as 7 cost | 1 — 1 round |
-| 7 (6+1) | +4 fire | +4 Negative | 4 HP: Presence activates | 2 — 1 minute |
+| Primary Cost | Bonus Fire Damage | Bonus Negative Damage | Condition on Margin 2+ | HP Cost Option | Secondary Duration Cost |
+|-------------|------------------|----------------------|------------------------|----------------|------------------------|
+| 3 (2+1) | +1 fire | +1 Negative | Weakened | 4 HP: performs as 5 cost | 0 — instantaneous |
+| 5 (4+1) | +2 fire | +2 Negative | Weakened + target DR -2 | 4 HP: performs as 7 cost | 1 — 1 round |
+| 7 (6+1) | +4 fire | +4 Negative | Weakened + target DR -3 | 4 HP: Presence activates | 2 — 1 minute |
 
 **Exhaustion:** Always triggers Exhaustion check. HP cost plus energy cost represents significant self-expenditure.
 **Tell:** Eyes darken at the edges. Heat emanates but the character is cold to the touch. Nearby flames burn lower. Targets struck feel an absence rather than an impact.
@@ -50,9 +50,9 @@ Creatures within range make a Fortitude save against the internal roll result ea
 
 | Primary Cost | Range | Effect on Failed Save | Secondary Duration Cost |
 |-------------|-------|----------------------|------------------------|
-| 3 (2+1) | 15 feet | Weakened condition, save each round | 1 — 1 round |
-| 5 (4+1) | 20 feet | Weakened + Fatigued (1 Exhaustion level), save each round | 2 — 1 minute |
-| 7 (6+1) | 30 feet | Weakened + Exhausted (2 Exhaustion levels), save each round | 3 — 10 minutes |
+| 3 (2+1) | 10 feet | Weakened condition, save each round | 1 — 1 round |
+| 5 (4+1) | 15 feet | Weakened + Fatigued (1 Exhaustion level), save each round | 2 — 1 minute |
+| 7 (6+1) | 20 feet | Weakened + Exhausted (2 Exhaustion levels), save each round | 3 — 10 minutes |
 
 **Exhaustion:** Always triggers Exhaustion check regardless of energy spent.
 **Tell:** The character's own breath becomes visible as cold vapor despite ambient temperature. Color drains from their immediate surroundings. Targets feel cold even in warm environments.
@@ -129,9 +129,9 @@ Targets make a Fortitude save against the internal roll result. On failure, they
 
 | Primary Cost | Range | Effect on Failed Save | Secondary Duration Cost |
 |-------------|-------|----------------------|------------------------|
-| 3 (2+1) | 30 feet | Target loses 2 maximum HP until long rest | 0 — instantaneous |
-| 5 (4+1) | 30 feet | Target loses 4 maximum HP until long rest, Weakened condition | 1 — 1 round |
-| 7 (6+1) | 30 feet | Target loses 6 maximum HP until long rest, Weakened + Frightened (Will save vs internal roll) | 2 — 1 minute |
+| 3 (2+1) | 10 feet | Target loses 2 maximum HP until long rest | 0 — instantaneous |
+| 5 (4+1) | 15 feet | Target loses 4 maximum HP until long rest, Weakened condition | 1 — 1 round |
+| 7 (6+1) | 20 feet | Target loses 6 maximum HP until long rest, Weakened + Frightened (Will save vs internal roll) | 2 — 1 minute |
 
 **HP Cost option:** Pay 4 HP to upgrade one tier on the life drain effect.
 **Exhaustion:** Always triggers Exhaustion check regardless of energy spent.
@@ -151,9 +151,9 @@ The visual aging effect on targets has significant social and psychological impa
 
 | Primary Cost | Combat Effect | Presence (7+ only) | Secondary Duration Cost |
 |-------------|--------------|-------------------|------------------------|
-| 3 (2+1) | +2 Negative energy damage, target ages visibly at impact point — cosmetic only | — | 0 — instantaneous |
+| 3 (2+1) | +2 Negative energy damage, Clumsy condition on margin 2+ | — | 0 — instantaneous |
 | 5 (4+1) | +4 Negative energy damage, Weakened condition as tissue ages at impact | — | 1 — 1 round |
-| 7 (6+1) | +4 Negative energy damage, Weakened, reduce target's Agility by 1 until end of scene | Aging aura 10 feet: Fortitude save vs internal roll or Weakened | 2 — 1 minute |
+| 7 (6+1) | +4 Negative energy damage, Weakened, reduce target's Agility by 1 until end of scene | Aging aura 20 feet: Fortitude save vs internal roll or Weakened | 2 — 1 minute |
 
 **HP Cost option:** Pay 4 HP to upgrade one tier. At 7 cost with HP payment, Presence activates regardless of Mastery threshold.
 **Exhaustion:** The 7 cost tier and any HP cost activation always triggers Exhaustion check.

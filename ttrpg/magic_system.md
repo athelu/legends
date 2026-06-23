@@ -50,7 +50,7 @@ Space is the void and the unknown. The birthplace of aberrations and the home of
 ### Magic Effect Types & Terminology
 
 #### Damage Effects (Destructive Magic)
-Weaves that deal direct harm through elemental or negative energy.  Uses Fire, Air, Water, Earth, or Negative as primary energy. These weaves deal direct harm through elemental or negative energy and are referred to as damage weaves. Key characteristic: targets take HP damage.
+These weaves deal direct harm either through energy or physical damage and are referred to as damage weaves. Key characteristic: targets take HP damage.
 
 **Common Examples:** Fireball, lightning bolt, Hailstorm, acid blast, necrotic blast
 
@@ -164,7 +164,7 @@ If players discover lost First Men texts or forbidden knowledge:
 
 1. **Require significant in-game discovery** - This cannot simply be learned through normal advancement
 2. **Warn of consequences** - Necromancy attracts daemons and corrupts the caster's pneuma
-3. **Consider alignment and story** - This is dark magic with serious narrative weight
+3. **Consider moral weight and story** - This is dark magic with serious narrative weight
 4. **Use sparingly** - Necromancy should remain rare and dangerous, not a common tool
 5. **Apply penalties** - Regular use might impose Misfortune on certain rolls, attract unwanted attention, or cause other story consequences
 
@@ -280,9 +280,9 @@ The following table covers all 56 primary/secondary combinations. The secondary 
 | Fire | Time | Energy (Fire) | Half DR | Slow burn, combustion that develops in stages over rounds |
 | Air | Fire | Energy (Sonic) | No DR | Superheated shockwave, sonic with thermal character |
 | Air | Earth | Physical (Bludgeoning) | Full DR | Compressed air as physical force, wind made solid |
-| Air | Water | Physical (Cold + Bludgeoning) | Full DR | Ice shards, frozen projectiles, air crystallized into mass |
+| Air | Water | Energy (Lightning) | Half DR | Lightning and pure electricity/energy effects |
 | Air | Positive | Energy (Positive) | Half DR | Restorative wind, breath of life, air that clears corruption |
-| Air | Negative | Energy (Negative) | Half DR | Suffocating entropy, life-draining absence of air |
+| Air | Negative | Energy (Negative) | Half DR | poison gas, miasma, fumes |
 | Air | Space | Energy (Sonic) | No DR | Sound crossing impossible distances, targeted vibration |
 | Air | Time | Energy (Sonic) | No DR | Sustained resonance, echoes that build in intensity over time |
 | Earth | Air | Physical (Bludgeoning) | Full DR | Stone given velocity by wind, avalanche, thrown mass |
@@ -296,7 +296,7 @@ The following table covers all 56 primary/secondary combinations. The secondary 
 | Water | Earth | Physical (Bludgeoning) | Full DR | Flood with mass, water carrying crushing weight |
 | Water | Fire | Energy (Fire) | Half DR | Steam, thermal energy through liquid medium |
 | Water | Positive | Energy (Positive) | Half DR | Cleansing water, healing through immersion, restorative liquid |
-| Water | Negative | Energy (Negative) | Half DR | Poison, contamination, corruption carried in liquid |
+| Water | Negative | Energy (Negative) | Half DR | Poison, acid, contamination, corruption carried in liquid |
 | Water | Space | Physical (Cold + Bludgeoning) | Full DR | Water appearing at location with mass and cold impact |
 | Water | Time | Physical (Bludgeoning) | Full DR | Erosion compressed into moments, tidal force commanded |
 | Positive | Air | Energy (Positive) | Half DR | Healing breath, restoration of mind and senses, clarity |
@@ -528,16 +528,9 @@ Choose the appropriate table based on what you're trying to accomplish.
 
 #### SUPPORTING ENERGY TABLES
 
-Supporting Energy modifies the delivery and scope of your Primary effect.
+Supporting Energy modifies the delivery and scope of your Primary effect. Use the energy pairing reference table to undestand which energies to pair for the desired effect
 
-**Range Energy:** Space.
-**Area Energy:** Space
-**Duration Energy:** Time.
-**Range/Area and Duration:** Supporting Space energy covers the cost of both (add costs together).
-- ***Exception***
-   When your Primary Energy IS Space, add the area/range cost to the primary energy cost.
-   use time for the duration cost.
-##### Supporting Energy: Range (typically Air or Space)
+##### Supporting Energy: Range
 | Energy | Range    |
 |--------|----------|
 | 0      | Touch |
@@ -545,7 +538,7 @@ Supporting Energy modifies the delivery and scope of your Primary effect.
 | 2      | Medium (60 feet) |
 | 3+     | Long (120 feet) |
 
-##### Supporting Energy: Area Effect (typically Air or Space)
+##### Supporting Energy: Area Effect
 | Energy | Diameter |  Cone  |   Line  |
 |--------|----------|--------|---------|
 |   1    | 10 ft    | 15 ft  | 30 ft   |
@@ -564,7 +557,7 @@ When a damage weave affects multiple targets through area effect:
 - First target: 16 fire damage (makes own save)
 - Second target: 16 fire damage (makes own save)
 
-##### Supporting Energy: Duration (typically Time or element)
+##### Supporting Energy: Duration
 | Energy | Duration     |
 |--------|--------------|
 | 0      | Instantaneous |
@@ -581,7 +574,7 @@ When a damage weave affects multiple targets through area effect:
 Simple Weaves use only a single energy type (no supporting energy) and are limited in scope:
 
 **Range Limitations:**
-- **No Air or Space for range** = Touch to 5-10 feet maximum
+- Touch to 5 feet maximum
 - Simple damage weaves are energy emanations from the caster's body, not shaped projectiles
 - Think "channeling fire through your palm" vs "shaping and hurling a fire bolt"
 
@@ -611,13 +604,10 @@ When casting a weave with duration (using Time or Space for duration component),
 - **1 hour casting time:** -6 to duration energy cost
 
 **Rules:**
-- Only reduces the energy spent on duration (Time cost, or the duration portion of Space cost)
+- Only reduces the energy spent on duration
 - Cannot reduce duration cost below 0
 - Cannot be used in combat or while threatened
 - Interruption causes failure and wastes half the total Energy (rounded up)
-
-**Interaction with Ritual Casting (Mageborn):**
-The Mageborn Ritual Casting trait (half total Energy for 10-minute ritual) is separate and more powerful. If both could apply, use whichever is better.
 
 **Example: Barkward for All-Day Protection**
 - Standard: Earth 4 + Space 2 (touch + 1 minute) = 6 Energy, 2 actions
@@ -625,8 +615,6 @@ The Mageborn Ritual Casting trait (half total Energy for 10-minute ritual) is se
   - With 1 hour casting: Space 7 - 6 = Space 1 for duration portion
   - Final: Earth 4 + Space 1 = 5 Energy, requires 1 hour
 
-**Design Philosophy:**
-Simple Weaves represent raw magical energy channeled directly through the caster's body without the time, concentration, and shaping required for Complex Weaves. They are instinctive bursts of power rather than carefully crafted effects.
 
 ### Building Spells with the Tables
 
@@ -634,13 +622,13 @@ Simple Weaves represent raw magical energy channeled directly through the caster
 
 **Simple Weave (1 action):**
 - Uses only Primary Energy (no supporting energy)
-- Limited to touch or 5-10ft range
+- Limited to touch or 5ft range
 - Single target, instantaneous effect
 - Does NOT provoke opportunity attacks
 - Examples: Fire Burst, Lightning Touch, Frost Touch
 
 **Complex Weave (2 actions):**
-- Uses Primary + Supporting Energy (or multiple energies)
+- Uses Primary + Supporting Energy
 - Can achieve range, area effects, or duration
 - DOES provoke opportunity attacks when cast while threatened
 - Examples: Fire Bolt, Fireball, Flame Burst
@@ -650,15 +638,15 @@ Simple Weaves represent raw magical energy channeled directly through the caster
 2.  Decide if you need range/area/duration (if yes → Complex Weave)
 3.  Find the appropriate Primary Energy cost from the table
 4.  If Complex: Add Supporting Energy for:
-    - Range (if not touch): Air/Space 1-3
-    - Area (if multiple targets): Space 1-3+
-    - Duration (if not instant): Time 1-8
+    - Range (if not touch)
+    - Area (if multiple targets)
+    - Duration (if not instant)
 5.  Calculate total Energy cost
 6.  Determine action cost: Simple (1 action) or Complex (2 actions)
 
 ##### Example - Fireball:
 - Primary: Fire 5 (24 damage, 3rd level power)
-- Supporting: Space 3 (medium range + 20ft radius)
+- Supporting: Air 3 (medium range + 20ft radius)
 - Total: 8 Energy
 
 ##### Example - Mend Flesh:
