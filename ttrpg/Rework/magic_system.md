@@ -1,4 +1,4 @@
-# The Magical Gift
+## The Magical Gift
 “Gifted” is the term used for magic users, both Arcane and Divine casters. The gift is nothing more than one being able to open their pneuma to the planes and allowing the magical energies to flow through them.
 The term Arcanist is used to refer to natural born arcane magic users. Arcanists are born with a permanent bond to the planes that can strengthen and grow over time. This connection is constant and resonates with their pneuma which in turn causes the eyes of mages to always glow with magical light. 
 Arcane Magic users that can learn to access arcane powers or have been gifted them through some other means are called Diabolists. 
@@ -10,6 +10,11 @@ Regardless of the physical changes of the magic user, all magical effects produc
 Magic in this world is anything but subtle and it is the same for its practitioners. Magic effects are very showy, leaving motes of energy, symbols, and other telltale signs that can be interpreted by those who can Sense magic.
 
 Magic in Athelu is the shaping of the Eight Energies through pneuma. It is not subtle. Weaves, wards, divine workings, and infused objects all manifest as visible violet light, glyphs, motes, resonant sounds, or other unmistakable signs that supernatural power is being used.
+
+### Arcanists
+The practices vary from land to land, but Arcanists are born with innate magical ability and are identifiable upon birth. Their pupils and iris are no longer visible, their eyes instead glow with a distinct purple light. 
+Within each culture - some action is taken upon the birth of an Arcanist. It normally involves having the child placed within a learning institution that will teach the Arcanist how to harness their abilities.
+This could be placement with an established magical college, or given to the local wise woman, but all people understand that when they find a newborn Arcanist, it is essential they are brought somewhere to teach them. 
 
 ## The Eight Energies
 
@@ -40,54 +45,6 @@ Speeding up or slowing down perception or even reality. Compressing what should 
 
 ### Space
 Space is the void and the unknown. The birthplace of aberrations and the home of eldritch undefinable entities. It is the nothing that surround all creation, constantly trying to break through the barriers of the outer planes and the physical realms. It is the magic of portals, teleportation, pocket dimensions and nightmares.
-
-The **Primary Energy** determines what the weave fundamentally does. Supporting energies expand that effect by adding range, duration, area, barriers, movement, perception, and other refinements.
-
-## Arcanists
-The practices vary from land to land, but Arcanists are born with innate magical ability and are identifiable upon birth. Their pupils and iris are no longer visible, their eyes instead glow with a distinct purple light. 
-Within each culture - some action is taken upon the birth of an Arcanist. It normally involves having the child placed within a learning institution that will teach the Arcanist how to harness their abilities.
-This could be placement with an established magical college, or given to the local wise woman, but all people understand that when they find a newborn Arcanist, it is essential they are brought somewhere to teach them. 
-Not all Arcanists are able to learn to use their magic the same way - and it requires skill and training to identify how to best teach an Arcanist. Some Arcanists access their magic through their understanding of the world and their intellect. Others harness their arcane power through the knowledge of self.  This distinction represents the next levels of classification of mages: The Mageborn and the Sorcerer.
-
-## The Eight Traditions
-
-The current magical traditions in Legends are:
-
-### Mageborn
-Mageborn represent the most populace group of Arcanists. Mageborn create magic through very careful study of the world around them - not just the physical world or the prime material, but the outer realms of the planes as well. It is through a clear understanding (at least to the mage) of how these components interact that allows them to exploit their connections to create magical effects. Mageborn use **Intelligence** as their casting stat, work with all eight energies, and gain **Ritual Casting**, allowing any weave to be cast as a 10-minute ritual for half Energy cost outside combat.
-
-### Sorcerous Origin
-Sorcerers, on the other hand, have such an indomitable understanding of self that they can produce magical effects almost from sheer force of will alone. Sorcerers are so confident in their place in the universe that it would be anathema for the universe to deny them access to such powers. Sorcerers need not understand fully where their power comes from, only that it is available to them. 
-
-Sorcerers and Mageborn have such a divergent understanding of magic that they cannot learn to master their abilities in the same way. A person born with innate magical ability will only succeed in controlling their power once they understand how they need to access it.  Although the resultant magical effect may be the same, the way a mageborn and a sorcerer accomplish the feat are not the same. Sorcerous Origin characters use **Wisdom** as their casting stat, work with all eight energies, and gain reality-bending abilities such as **Harmonic Weaving**.
-
-## Diabolist
-Diabolists are often misunderstood - if not feared. The people of the world have come to expect the arcane to announce itself through glowing eyes. Diabolists do not have an innate magical ability - but instead are awakened. The following arcane magical traditions are considered diabolists.
-
-### Eldritch Pact
-Some major trauma or event normally spurs this awakening. At some point the diabolist is forced to access power outside of themselves to survive or accomplish some greater deed. Diabolists are rare because the circumstances surrounding their awakening are rare - or in most cases fatal. 
-Near death experience is the most consistent method of awakening; Someone subjected to such stress and trauma that they open themselves up to anything to save themselves.
-These events create diabolists known as Warlocks. Eldritch Pact characters will often have a tale of how they came into their powers but most commonly it will involve having someone - or something - grant them the strength they needed to survive. This outside force is called a patron. Warlocks and their patrons are forever linked. The Eldritch Pact character gets their magical ability and their power from this connection. Like Divine casters, their eyes glow with the familiar magical light only upon the completion of their magic. Eldritch Pact characters use **Charisma** as their casting stat, work with five patron-defined energies, and recover their power on a **short rest** rather than a long rest.
-
-### Invoker
-Invokers are diabolists that have discovered the connection between the spoken word and magic. This connection may not be fully understood, and in some cases may even be accidental. These words often are not of any spoken language and are rarely words used in the incantations of other arcanists - but these sounds have power when spoken by an invoker.  Invokers use **Charisma** as their casting stat and work with five energies: Air, Positive, Space, Time, and one chosen additional energy. They gain **Words of Power**, usable a number of times per short rest equal to their current tier.
-
-### Infuser
-Other diabolists are researchers of the arcane. Though not having an innate magical ability, there are many who attempt to understand the arcane with a philosophical approach. These researchers can discover pieces of magic interwoven into everyday life.
-Infusers are diabolists who have discovered links between rare elements, symbols, and magic. Through clever craftsmanship and skill, infusers can imbue magical energy into their creations. Infusers use **Intelligence** as their casting stat and work with five energies centered on Earth and Space. They gain **Imbue Item**, allowing them to temporarily charge weapons and armor with magical effects.
-
-### Alchemical Tradition
-Alchemists do not weave by opening their pneuma to the planes in the same way as other traditions. Instead, they harvest magical concentration from the physical world and encode effects into preparations, reagents, and volatile mixtures. Alchemists use **Craft: Alchemist** and **Intelligence** to identify, prepare, and resolve these effects. Their preparations obey the same energy logic as weaves, but rely on components, downtime, and catalysts rather than a personal Energy pool.
-
-Alchemical preparations use the weave list as their foundation. The Alchemist determines the desired effect by referencing the same energy combinations used by ordinary weaves, then substitutes harvested components, tools, and catalysts for direct channeling. Thrown alchemical preparations may substitute limited Space cost with physical delivery, but broader spatial effects still require real Space components.
-
-### Summoner
-Summoners do not channel magic inward. Their pneuma radiates outward across the barriers between the material plane and the external planes, broadcasting a signal that daemons perceive and orient toward. Through careful shaping of that broadcast, a Summoner calls specific beings to their location and holds them in the material world for as long as the energetic connection remains coherent.
-
-Summoned daemons are not bound or compelled — they arrive because the Summoner's pneuma resonates with them, and they stay because the connection holds. They will generally cooperate, but they are not mindless tools and will not act against their fundamental nature. Summoners use **Charisma** as their casting stat, work with all eight energies, and choose a **Primary Resonance** at creation that determines which daemon categories their pneuma naturally attracts and which energies receive bonuses. Their eyes glow violet only at the moment a summoning completes, fading once the daemon stabilizes.
-
-## Divine Gift
-Devout weavers who open their pneuma through faith, prayer, and disciplined devotion. Divine Gift characters use **Wisdom** as their casting stat, work with all eight energies, and gain **Channel Divinity** uses equal to their current tier per long rest. Their patron choice determines their favored divine expressions.
 
 
 ### Magic Effect Types & Terminology
@@ -230,33 +187,26 @@ The forbidden nature of necromancy is a feature, not a bug—it should feel dang
 
 
 ### Weaving (Casting) Mechanics
-The weaving roll reflects whether you formed the magic properly. The targeting roll or save comparison determines how fully the effect lands on a creature or situation. This keeps magical power dependent on both magical structure and delivery, rather than collapsing everything into one check.
 
 #### Step 1: Declare Intent
 - What effect do you want?
 - Which energies will you use?
 
 #### Step 2: Allocate Energy Points
-Choose the Primary Energy of the weave. This determines the base effect. Simple weaves use a single energy. Complex weaves require the addition of a Supporting (Secondary) Energy. The Secondary energy modifes how the primary energy manifests (ex. Turning water to ice or steam, see Energy Pairing Reference Table for more) and also covers the cost of any range, area or duration the weave requires.
+- Choose Primary Energy (determines effect type)
+- Optional: Supporting Energy (modifies range/area/duration)
+- Spend points from your Energy Pool
 
-#### Step 3: Apply Overspending Penalties
-If Energy Points spent exceed your Mastery in that energy, then the weave will incur penalties on the roll.  You may not spend more energy than your Potential in any energy.
-  - Penalty = Add 1 to both die results per point over Mastery
-  - Applies to BOTH Potential and Mastery dice for that energy
-
-#### Step 4: Make Weaving Roll
-This roll determines how well you pulled and shaped the magical energies, not the final effect strength.
+#### Step 3: Make Weaving Roll (Channeling Quality)
+**Purpose:** This roll determines how well you channel and shape the magical energies, not the final effect strength.
 
 **Simple Weaves (1 action):**
-Roll Primary Potential + Primary Mastery (2d8)
-Apply overspending penalties (if any)
+- Roll Primary Potential + Primary Mastery (2d8)
 
 **Complex Weaves (2 actions):**
-Roll Primary Potential + Primary Mastery (2d8)
-Apply overspending penalties (if any)
-Roll Supporting Potential + Supporting Mastery (2d8)
-Apply overspending penalties (if any)
-Total possible: Up to 4 successes (5 with a critical roll)
+- Roll Primary Potential + Primary Mastery (2d8)
+- Also roll Supporting Potential + Supporting Mastery (2d8)
+- Total possible: Up to 4 successes (5 with a critical roll)
 
 **Weaving Success Results:**
 - **0 successes:** Weave fails, lose half Energy Points spent (rounded up)
@@ -266,10 +216,19 @@ Total possible: Up to 4 successes (5 with a critical roll)
 - **4 successes:** Reduce targeting die results by 2 (split or stacked as caster chooses)
 - **5 successes (critical):** Reduce targeting die results by 3 (split or stacked as caster chooses)
 
+#### Step 4: Apply Overspending Penalties
+- If Energy Points spent exceed your Mastery in that energy:
+  - Penalty = Add 1 to both die results per point over Mastery
+  - Applies to BOTH Potential and Mastery dice for that energy
+- Cannot spend more than your Potential (absolute ceiling)
+
 #### Step 5: Make Targeting Roll (Effect Strength)
-This roll determines how effectively you deliver the weave to your target(s). All Weaves Require Targeting (except willing targets for beneficial effects). To perform a targeting roll follow these steps:
+**Purpose:** This roll determines how effectively you deliver the weave to your target(s).
+
+**All Weaves Require Targeting (except willing targets for beneficial effects):**
 - Roll Casting Stat + Primary Energy Mastery (2d8)
 - Apply any bonuses from weaving roll BEFORE counting successes
+- Each die that rolls under its value = 1 success
 - Maximum 2 successes per targeting roll (3 with critical)
 
 **Targeting Success Scaling:**

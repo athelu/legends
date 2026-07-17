@@ -18,13 +18,13 @@ This condensed cosmology consolidates many of the traditional planes.
 ## Ethereal Plane
 
 The Ethereal Plane is a mystical, otherworldly realm that exists parallel to the Prime Material Plane and is home to a variety of beings and phenomena. It is a place of swirling mists and dimly lit landscapes, where the physical laws of the material world do not always apply.
-The Ethereal Plane is typically only accessible through magic, such as the weave Ethereal Shift, and is often used as a means of transportation or escape by skilled spellcasters. While on the Ethereal Plane, travelers can see into the material world, but they are invisible and intangible to those on the material plane.
+The Ethereal Plane is typically only accessible through magic, such as the weave Ethereal Shift, and may be used as a means of transportation or escape by skilled weavers. While on the Ethereal Plane, travelers can see into the material world, but they are invisible and intangible to those on the material plane.
 It is a place of great mystery and potential danger, as travelers must navigate its strange terrain and be wary of the beings that dwell within it.
 
 ## Shadow Plane
 
 The Shadow Plane, also known as the Plane of Shadow or Shadowfell, is a parallel dimension that is both similar and different from the Material Plane. It is a dark and eerie reflection of the Material Plane, with its features distorted and twisted. The Shadow Plane is a place of darkness and shadow, where light is dimmed, and colors are muted.
-In the Shadow Plane, the boundaries between the living and the dead are blurred, and the shadowy spirits of the departed roam free. The Shadow Plane is also home to a variety of strange and dangerous creatures, many of which are native to this dark realm. These include shadow beasts, dark fey, and undead creatures. The landscape of the Shadow Plane is varied, ranging from desolate wastelands to twisted forests and dark, haunted cities.
+In the Shadow Plane, the boundaries between the living and the dead are blurred. The Shadow Plane is home to a variety of strange and dangerous creatures, many of which are native to this dark realm. These include shadow beasts and undead creatures. The landscape of the Shadow Plane is varied, ranging from desolate wastelands to twisted forests and dark, haunted cities.
 Travel to the Shadow Plane is difficult and dangerous, and most mortals who venture there do so only at great risk to their lives and souls. 
 
 ## The Elemental Planes
