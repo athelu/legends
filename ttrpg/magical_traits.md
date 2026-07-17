@@ -15,7 +15,7 @@ You were born with an innate connection to the planes flowing through your pneum
 -   Assign rolls strategically to maximize bonuses without waste
 -   Example: Rolling [8,7,6,5...] → Affinity gets 6+2=8, Secondary gets 7+1=8, third energy gets natural 8
 -   Use **Intelligence** as Casting Stat
--   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0, untrained)
+-   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 1)
 -   Can weave arcane magic using all 8 energies
 -   **Energy Pool:** Sum of 8 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)
 -   **Gain Ritual Casting ability:** Can cast any weave as a 10-minute ritual for half Energy cost (minimum 1). Cannot be used in combat.
@@ -39,7 +39,7 @@ Select which of the Eight you primarily serve, or choose to serve the Pantheon e
   - Assign rolls strategically to maximize bonuses without waste
   - Example: Rolling [8,7,6,5...] with Fire/Positive patron → Fire gets 6+2=8, Positive gets 7+1=8, third energy gets natural 8
 - Use **Wisdom** as Casting Stat
-- Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 0)
+- Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 1)
 - Can weave divine magic using all 8 energies
 - **Energy Pool:** Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
 - **Channel Divinity:** Uses equal to your tier per long rest. Gain access to all Channel Divinity options for your chosen patron as well as the base 6 channel divinity types.
@@ -336,7 +336,7 @@ You have discovered the connection between spoken words and magic. You are a dia
 -   Assign rolls strategically to maximize bonuses
 -   Example: Rolling [8,7,6,5,4] → Air gets 6+2=8, Positive gets 7+1=8, other energies get 8/5/4
 -   Use **Charisma** as Casting Stat
--   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 0, untrained)
+-   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 1)
 -   Can weave invoker magic using only these 5 energies
 -   **Energy Pool:** Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
 -   **Gain Words of Power ability:** A number of times per short rest equal to your current Tier, spend 1 [Combat] action to speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. Additionally, your next weave cast before the end of your next turn benefits from the resonance — subtract 1 from one targeting die result of your choice on that weave.
@@ -368,7 +368,7 @@ You have discovered how to channel magical energy directly into physical objects
 -   Assign rolls strategically to maximize bonuses
 -   Example: Rolling [8,7,6,5,4] → Earth gets 6+2=8, Space gets 7+1=8, other energies get 8/5/4
 -   Use **Intelligence** as Casting Stat
--   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 0, untrained)
+-   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 1)
 -   Can weave infuser magic using only these 5 energies
 -   **Energy Pool:** Sum of 5 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)
 -   **Gain Imbue Item ability:** Once per short rest, spend 1 [Combat] action and touch a weapon or piece of armor. For 1 minute, the item gains one benefit: weapons deal +1d8 damage on next hit, or armor grants +1 DR. The infusion ends after triggering once or when duration expires.
@@ -567,7 +567,7 @@ Drakes: Drakes are the spawn of the great dragon daemons of legend. Summoning th
 **Benefits:**
 - Roll 8d8, assign to eight Magical Potentials.
 - Use Charisma as Casting Stat.
-- Gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 0, untrained).
+- Gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 1).
 - Can weave summoner magic using all 8 energies.Energy Pool: Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
 - Choose Primary Resonance from the seven options below. This determines which daemon categories your pneuma naturally attracts and grants your energy bonuses. Assign rolls strategically to maximize bonuses without waste:
 

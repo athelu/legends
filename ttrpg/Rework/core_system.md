@@ -39,6 +39,20 @@ Every character begins with all eight Mastery skills at rank 1, reflecting the u
 
 Mastery skills are capped by their corresponding Potential value, the same way standard skills are capped by their governing attribute.
 
+## The Energy Pool
+
+Every character has an Energy Pool.
+
+**Pool formula for characters:**
+Sum of all eight Potentials + (Casting Stat × 2) + Constitution + (Total Mastery ranks ÷ 2, rounded down)
+
+This pool fuels both weaving and physical energy expression. The distinction between the two is direction, not resource type.
+
+**External** pushes energy outward through pneuma into the planes and back as a shaped effect called a weave. This requires conscious planar access requiring a trait or flaw.
+
+**Internal** burns energy inward through the body as enhanced capability. This is available to any character who has developed sufficient Potential and Mastery in the relevant energy through feat investment.
+
+Both cost from the same pool. Both recover on the same rest schedule. 
 
 ## Dice Rolling 
 
