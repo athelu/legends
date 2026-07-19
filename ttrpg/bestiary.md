@@ -333,7 +333,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 - **DR:** 0
 - **Speed:** 50 ft
 - **Attributes:** Str 4 / Con 4 / Agi 5 / Dex 4 / Int 2 / Wis 4 / Cha 3 / Luck 3
-- **Skills:** Melee Combat 5, Perception 5, Stealth 4, Survival 3
+- **Skills:** Melee Combat 5, Perception 5, Stealth 4, Wilderness 3
 - **Senses:** Darkvision 60 ft, Keen Hearing and Smell
 - **Initiative Bonus:** +5 (Agi 5)
 **Attacks:**

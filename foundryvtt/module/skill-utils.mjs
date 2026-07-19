@@ -103,10 +103,7 @@ export const CRAFT_TYPES = [
   { keyword: 'Alchemist',    label: 'Craft: Alchemist', alchemistOnly: true },
 ];
 
-export const LEGACY_SKILL_KEYS = {
-  wilderness: ['survival'],
-  empathy: ['insight']
-};
+export const LEGACY_SKILL_KEYS = {};
 
 const RAW_SKILL_ALIASES = {
   athletics: 'athletics',
@@ -132,9 +129,7 @@ const RAW_SKILL_ALIASES = {
   investigate: 'investigate',
   investigation: 'investigate',
   empathy: 'empathy',
-  insight: 'empathy',
   wilderness: 'wilderness',
-  survival: 'wilderness',
   religion: 'religion',
   melee: 'meleeCombat',
   'melee combat': 'meleeCombat',

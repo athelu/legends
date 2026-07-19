@@ -84,7 +84,6 @@ SKILL_NAME_MAP = {
     'performance':    'perform',
     'medicine':       'medicine',
     'wilderness':     'wilderness',
-    'survival':       'wilderness',
     'religion':       'religion',
     'craft':          'craft',
 }

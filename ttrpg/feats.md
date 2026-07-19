@@ -16,11 +16,11 @@ Feats are the primary way characters gain special abilities and combat technique
 When creating new feats, follow these guidelines:
 
 ### Prerequisites (Updated)
-- **Tier 1 feats:** Attribute 3, Skill 3
-- **Tier 2 feats:** Attribute 4, Skill 4
-- **Tier 3 feats:** Attribute 5, Skill 5
-- **Tier 4 feats:** Attribute 5-6, Skill 5-6
-- **Tier 5+ feats:** Attribute 6-7, Skill 6-7
+- **Tier 1 feats:** Attribute 3, Skill 4
+- **Tier 2 feats:** Attribute 4, Skill 5
+- **Tier 3 feats:** Attribute 5, Skill 6
+- **Tier 4 feats:** Attribute 5-6, Skill 6-7
+- **Tier 5+ feats:** Attribute 6-7, Skill 7-8
 
 ### Power Levels
 - **Basic feat:** Single +1-2 bonus or minor ability
@@ -61,7 +61,7 @@ roll.modifier rollType=defense value=-1 applyTo=both when=unarmored
 **Benefit:** When you completely negate an attack using Shield Master's once-per-combat negation, you may immediately drive your shield into the attacker as a [Free] action. Make an attack using Strength + Melee Combat. On hit, deal 4 bludgeoning damage regardless of shield size and the target is pushed 5 feet directly away from you.
 
 #### Alert
-**Prerequisites:** Wis 3, Perception 3
+**Prerequisites:** Wis 3, Perception 4
 **Usage:** Passive
 **Keyword:** [Initiative], [General]
 **Description:** Danger rarely announces itself politely. You've learned to read the subtle signs. By the time others realize there's a threat, you're already moving.
@@ -105,7 +105,7 @@ condition.immunity conditionName=Surprised
 **Benefit:** Once per short rest, recover Energy equal to your Intelligence × 2
 
 #### Arcane Theory
-**Prerequisites:** Mageborn trait, Int 3, Arcana 3
+**Prerequisites:** Mageborn trait, Int 3, Arcana 4
 **Usage:** Passive
 **Keyword:** [Magic], [Mageborn]
 **Description:**  Where others feel their way through a weave instinctively, you perceive the underlying structure of every effect you produce, and every effect aimed at you.
@@ -119,21 +119,21 @@ condition.immunity conditionName=Surprised
 **Benefit:** Your Harmonic Weaving becomes more responsive to combat flow. After you or an ally within 60 feet rolls a critical failure (double 8s) on any roll, you immediately regain one use of Harmonic Weaving. This can trigger multiple times per combat
 
 #### Battle-Hardened
-**Prerequisites:** Agi 4, any combat skill 4
+**Prerequisites:** Agi 4, any combat skill 5
 **Usage:** Passive
 **Keyword:** [Combat], [Defense]
 **Description:** After being struck once, you adapt instantly to that opponent's style
 **Benefit:** When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn
 
 #### Beast of Burden
-**Prerequisites:** Str 5, Might 4
+**Prerequisites:** Str 5, Might 5
 **Usage:** Passive
 **Keyword:** [General]
 **Description:** Your body stopped complaining about carrying extra weight a long time ago.
 **Benefit:** Your encumbrance thresholds use Strength × 12 for Encumbered and Strength × 18 for Heavily Encumbered instead of the standard multiples. You ignore the dice penalties from the Encumbered condition entirely. Heavily Encumbered still reduces your speed but does not add to your dice.
 
 #### Beast Whisperer
-**Prerequisites:** Wis 4, Wilderness 4
+**Prerequisites:** Wis 4, Wilderness 5
 **Usage:** Passive communication, action to calm
 **Keyword:** [Wilderness]
 **Description:** Animals don't speak your language, but you've learned to speak theirs. Most creatures just want to be left alone, and you know how to communicate that you're not a threat.
@@ -147,14 +147,14 @@ condition.immunity conditionName=Surprised
 **Benefit:** Cross Parry may now trigger twice per round instead of once. Each use is still a separate [Reaction] and reduces damage by your Strength score.
 
 #### Bleeding Edge
-**Prerequisites:** Agi 5, Melee 5, Exposed Strike feat
+**Prerequisites:** Agi 5, Melee 6, Exposed Strike feat
 **Usage:** Passive
 **Keyword:** [Combat], [Duelist]
 **Description:** You know exactly where to place the blade.
 **Benefit:** When you deal damage through Exposed Strike, the target also gains 1 Bleeding stack in addition to any other effects.
 
 #### Bleeding Flurry
-**Prerequisites:** Agi 5, Melee 5, Dual Strike feat
+**Prerequisites:** Agi 5, Melee 6, Dual Strike feat
 **Usage:** Passive, triggers when Dual Strike activates
 **Keyword:** [Combat], [Dual]
 **Description:** Two blades leave two wounds.
@@ -185,7 +185,7 @@ damage.bonus target=melee value=2 when=primalFury,belowHalfHP
 **Benefit:** Once per round when an adjacent ally is hit by any attack, you may use a [Reaction] to have that attack target you instead. The attack resolves against your defenses and DR as normal.
 
 #### Bound by Name
-**Prerequisites:** Invoker trait, Cha 4, Air Mastery 3, True Name Seeker feat
+**Prerequisites:** Invoker trait, Cha 4, Air Mastery 4, True Name Seeker feat
 **Usage:** Passive, enhances control weaves
 **Keyword:** [Magic], [Invoker], [Control]
 **Description:** When you speak something's true name as part of a binding weave, the magic carries an authority that transcends ordinary compulsion.
@@ -199,7 +199,7 @@ damage.bonus target=melee value=2 when=primalFury,belowHalfHP
 **Benefit:** You may call daemon categories from any of the six Primary Resonance energy types. Time-aspected daemons and Drakes remain inaccessible regardless.
 
 #### Brutal Critical
-**Prerequisites:** Str 5, Melee 5, Primal Fury feat
+**Prerequisites:** Str 5, Melee 6, Primal Fury feat
 **Usage:** Passive, requires Primal Fury active
 **Keyword:** [Combat], [Savage]
 **Description:** When rage and opportunity align perfectly, your strikes don't just wound, they devastate. In that moment of fury and focus, you hit with enough force to shatter bone and end fights decisively. Subtlety is for people who aren't winning.
@@ -215,7 +215,7 @@ roll.modifier rollType=attack value=0 applyTo=both when=primalFury
 **Benefit:** Once per session reroll failed social check; double 1s count as ally success
 
 #### Climber
-**Prerequisites:** Athletics 4, Acrobatics 2
+**Prerequisites:** Athletics 4, Acrobatics 4
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** Walls are just vertical floors to you. Falling is still dangerous, of course, but you've gotten good at catching yourself.
@@ -231,7 +231,7 @@ roll.modifier rollType=attack value=0 applyTo=both when=primalFury
 - **Margin 2:** your next attack against it this combat subtracts 1 from one die (your choice)
 
 #### Combat Reading
-**Prerequisites:** Agi 4, Melee 4, Wis 4
+**Prerequisites:** Agi 5, Melee 5, Wis 5
 **Usage:** Passive
 **Keyword:** [Combat], [Discipline]
 **Description:** You have spent years winning exactly these moments. Your opponent is still deciding. You already know.
@@ -257,7 +257,7 @@ roll.modifier rollType=attack value=0 applyTo=both when=primalFury
 **Benefit:** Add 1 to targeting successes when determining disposition, to a maximum of 3. A result of 1 becomes 2, a result of 2 becomes 3. A failed summon (0 successes) is unaffected.
 
 #### Compounding Toxins
-**Prerequisites:** Dex 4, Medicine or Wilderness 4
+**Prerequisites:** Dex 4, Medicine or Wilderness 5
 **Usage:** Passive
 **Keyword:** [Poisoner]
 **Description:** The poison softens them up.
@@ -271,14 +271,14 @@ roll.modifier rollType=attack value=0 applyTo=both when=primalFury
 **Benefit:** You ignore the first two points of overspending penalty on your Primary pact energy (instead of the usual zero). For your Secondary pact energy, you ignore the first point of overspending penalty. On your remaining three pact energies, overspending penalties apply normally.
 
 #### Controlled Threat
-**Prerequisites:** Cha 4, Intimidate 4
+**Prerequisites:** Cha 4, Intimidate 5
 **Usage:** Passive
 **Keyword:** [Social]
 **Description:** You can make the implicit threat do the work so the explicit one never has to land.
 **Benefit:** When you successfully Coerce an NPC, their attitude drops only after the interaction ends rather than immediately. Treat the target as Cooperative for the purpose of further social checks. Additionally, when you successfully Frighten an NPC, you may choose to have them become Uncooperative instead of Hostile at the encounter's end.
 
 #### Coordinated Strike
-**Prerequisites:** Agi 4, any combat skill 4
+**Prerequisites:** Agi 4, any combat skill 5
 **Usage:** Once per turn
 **Keyword:** [Combat]
 **Description:** Represents fighting in coordination with allies, flowing from one opponent to the next
@@ -292,7 +292,7 @@ roll.modifier rollType=attack value=0 applyTo=both when=primalFury
 **Benefit:** When a creature misses you with a melee attack, as a [Reaction] you may make one melee weapon attack against that creature
 
 #### Covering Fire
-**Prerequisites:** Dex 3, Ranged 3
+**Prerequisites:** Dex 4, Ranged 4
 **Usage:** 2 [Combat] actions, lasts until start of your next turn
 **Keyword:** [Combat], [Ranged], [Marksman]
 **Description:** You don't always need to hit someone to control them. A well-placed shot that clips the wall beside their head sends a clear message.
@@ -301,7 +301,7 @@ roll.modifier rollType=attack value=0 applyTo=both when=primalFury
 - **Margin 1:** The creature may move normally but their movement speed is halved while within the zone
 
 #### Crippling Strike
-**Prerequisites:** Agi 4, Melee or Ranged 4
+**Prerequisites:** Agi 4, Melee or Ranged 5
 **Usage:** Passive
 **Keyword:** [Combat], [Shadow]
 **Description:** You know where to hit to make running an optimistic ambition.
@@ -318,14 +318,14 @@ roll.modifier rollType=attack value=0 applyTo=both when=primalFury
   3. Grant all allies within 30 feet temporary HP equal to your tier × 2
 
 #### Cross Parry
-**Prerequisites:** Str 4, Agi 4, Melee 4, Two-Weapon Fighting feat
+**Prerequisites:** Str 4, Agi 4, Melee 5, Two-Weapon Fighting feat
 **Usage:** Once per round, Reaction
 **Keyword:** [Combat], [Dual], [Reaction]
 **Description:**  You have learned to cross both weapons at the moment of impact, catching incoming strikes and bleeding off their force before they reach you.
 Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction] to reduce the incoming damage by your Strength score. This ability does not apply if your off-hand weapon is a Shield.
 
 #### Crushing Advance
-**Prerequisites:** Str 4, Melee 4, must wield a [Two-Handed] weapon
+**Prerequisites:** Str 5, Melee 5, must wield a [Two-Handed] weapon
 **Usage:** Passive
 **Keyword:** [Combat], [Two-Handed]
 **Description:** The weight behind a two-handed weapon isn't just damage.
@@ -360,14 +360,14 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Benefit:** Your Exposed Strike damage increases to Charisma × 2.
 
 #### Debilitating Strike
-**Prerequisites:** Agi 5, Melee or Ranged 5
+**Prerequisites:** Agi 5, Melee or Ranged 6
 **Usage:** Passive
 **Keyword:** [Combat], [Shadow]
 **Description:** Every successful hit leaves them a little slower, a little less certain. 
 **Benefit:** When you deal damage through Exploit Weakness, the target adds 1 to both of their attack dice until the end of their next turn. This effect stacks up to a maximum of 2 times simultaneously. Each subsequent Exploit Weakness hit refreshes the duration.
 
 #### Decisive Strike
-**Prerequisites:** Melee 5, Precision Training feat, Exploit the Margin feat
+**Prerequisites:** Melee 6, Precision Training feat, Exploit the Margin feat
 **Usage:** Triggers when Precision Training activates
 **Keyword:** [Combat], [Discipline]
 **Description:** The perfect strike is not just more damage. Sometimes you need to create openings for the next strike.
@@ -378,7 +378,7 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 - **Momentum:** You may immediately move up to 10 feet without provoking opportunity attacks
 
 #### Deep Study
-**Prerequisites:** Mageborn trait, Int 4, Arcana 4, Ritual Mastery feat
+**Prerequisites:** Mageborn trait, Int 5, Arcane 5, Ritual Mastery feat
 **Usage:** Applies whenever you use Ritual Casting
 **Keyword:** [Magic], [Mageborn]
 **Description:** You have learned to push Ritual Casting into territory that defies what combat magic can accomplish.
@@ -391,21 +391,21 @@ Benefit: When hit by a melee attack while dual wielding, you may use a [Reaction
 **Description:** Some daemons have answered your call enough times that the relationship has become something more than transactional.
 **Benefit:** Choose one creature type from the established daemon taxonomy (Elementals, Fae, Nephilim, Outsiders, Shadow plane creatures, or Aberrations). Creatures of that type always arrive at minimum Cooperative disposition regardless of targeting roll result, provided the weaving roll succeeds. Once per long rest, a creature of that type arrives Friendly automatically without requiring a targeting roll.
 
-#### Deflect Missiles
-**Prerequisites:** Agi 4, Dex 3
-**Usage:** Reaction (catching and throwing costs Luck)
-**Keyword:** [Combat], [Ascetic], [Reaction]
-**Description:** The old masters claimed that a true warrior could pluck arrows from the air. Most people assumed that was metaphor. You've managed it, though catching them is still more impressive when you're not desperately trying to avoid being shot.
-**Benefit:** When hit by a ranged weapon attack, you may use a [Reaction] to reduce damage by 4 + Dex + Wis. If you reduce damage to 0, you can catch the projectile. If you catch it, you can spend 1 Luck to make a ranged attack with it as part of same reaction (range 20/60 ft)
-
 #### Defensive Stance
-**Prerequisites:** Agi 3, Melee 3
+**Prerequisites:** Agi 4, Melee 4
 **Usage:** Toggle on/off
 **Keyword:** [Combat], [Defense]
 **Description:** Sometimes the best offense is not getting hit. You can shift your entire fighting style to focus on defense, making yourself a harder target at the cost of offensive capability.
 **Benefit:** You can enter a defensive stance: opponents add 1 to both attack dice when attacking you. You can enter or leave this stance at the start of your turn
 **Effects:**
 toggle.state stateKey=defensiveStance label="Defensive Stance"
+
+#### Deflect Missiles
+**Prerequisites:** Agi 4, Dex 3
+**Usage:** Reaction (catching and throwing costs Luck)
+**Keyword:** [Combat], [Ascetic], [Reaction]
+**Description:** The old masters claimed that a true warrior could pluck arrows from the air. Most people assumed that was metaphor. You've managed it, though catching them is still more impressive when you're not desperately trying to avoid being shot.
+**Benefit:** When hit by a ranged weapon attack, you may use a [Reaction] to reduce damage by 4 + Dex + Wis. If you reduce damage to 0, you can catch the projectile. If you catch it, you can spend 1 Luck to make a ranged attack with it as part of same reaction (range 20/60 ft)
 
 #### Desperate Surge
 **Prerequisites:** Eldritch Pact trait, Cha 4
@@ -431,14 +431,14 @@ roll.modifier rollType=attack value=-1 applyTo=both
 **Benefit:** Your Exploit Weakness damage increases to Dexterity × 2
 
 #### Devoted Channeler
-**Prerequisites:** Divine Gift trait, Wis 3, Religion 3
+**Prerequisites:** Divine Gift trait, Wis 4, Religion 4
 **Usage:** 1 Luck cost per use
 **Keyword:** [Magic], [Divine]
 **Description:** Through discipline and daily prayer, you have learned to reach deeper into your connection with your patron.
 **Benefit:** You may spend 1 Luck to use any Channel Divinity option that normally costs 2 [Combat] actions as 1 [Combat] action instead.
 
 #### Dirty Fighter
-**Prerequisites:** Agi 3, Melee or Ranged 3
+**Prerequisites:** Agi 4, Melee or Ranged 4
 **Usage:** Passive
 **Keyword:** [Combat], [Shadow]
 **Description:** You have learned that a fair fight is a fight you chose poorly.
@@ -452,7 +452,7 @@ roll.modifier rollType=attack value=-1 applyTo=both
 **Benefit:** When you hit with a weapon attack, force target to make a Fortitude save (opposed by your attack). If you win by 1+ successes, target drops one held item of your choice.
 
 #### Disrupting Throw
-**Prerequisites:** Dex 4, Ranged 3, Throwing Arm feat
+**Prerequisites:** Dex 4, Ranged 4, Throwing Arm feat
 **Usage:** Once per turn
 **Keyword:** [Combat], [Thrown]
 **Description:** The throw does not need to be the killing blow. It needs to make them flinch at exactly the wrong moment.
@@ -466,7 +466,7 @@ roll.modifier rollType=attack value=-1 applyTo=both
 **Benefit:** Once per round when you are hit by an attack or fail a saving throw, you may spend 1 Luck to invoke your patron's protection. Roll 1d8 — if the result is under your Wisdom score, the attack deals half damage or you succeed on the saving throw instead. Additionally, creatures that hit you with melee attacks while you have at least 1 Channel Divinity use remaining take Positive or Negative damage (matching your patron's primary energy type) equal to your Wisdom score. This is not a choice and triggers automatically.
 
 #### Dual Strike
-**Prerequisites:** Str 3, Agi 3, Melee 3, Two-Weapon Fighting feat
+**Prerequisites:** Str 4, Agi 4, Melee 5, Two-Weapon Fighting feat
 **Usage:** Passive, triggers when both attacks hit same target
 **Keyword:** [Combat], [Dual]
 **Description:** Two weapons, one target, no hesitation.
@@ -525,7 +525,7 @@ toggle.state stateKey=elementalBody label="Elemental Body"
     - **0 successes:** 4 elemental damage (lose opposed check)
 
 #### Elemental Enlightenment
-**Prerequisites:**  Casting Attribute 4, chosen elemental Mastery 5
+**Prerequisites:**  Casting Attribute 6, chosen elemental Mastery 6
 **Usage:** Passive
 **Keyword:** [Magic]
 **Description:** Your connection to one element has deepened beyond mere technique into true understanding. Can be taken multiple times for different elements
@@ -535,7 +535,7 @@ toggle.state stateKey=elementalBody label="Elemental Body"
   - Your weaves using that energy ignore the first point of overspending penalty
 
 #### Elemental Mantle
-**Prerequisites:** Pneuma Strike (any element), chosen elemental Mastery 4
+**Prerequisites:** Pneuma Strike (any element), chosen elemental Mastery 5
 **Usage:** Costs 4 Energy, lasts 1 minute
 **Keyword:** [Combat], [Ascetic], [Magic]
 **Description:** Rather than releasing pneuma in bursts, you maintain a constant flow around your body. The element clings to you like a second skin
@@ -560,7 +560,7 @@ toggle.state stateKey=elementalMantle label="Elemental Mantle"
     - **2 successes:** Each hit deals +8 elemental damage
 
 #### En Garde
-**Prerequisites:** Cha 4, Deception 4
+**Prerequisites:** Cha 4, Deception 5
 **Usage:** Once per turn
 **Keyword:** [Combat], [Duelist]
 **Description:**  A flick of the wrist, a shift of the eyes — the setup costs you nothing now.
@@ -583,7 +583,7 @@ toggle.state stateKey=elementalMantle label="Elemental Mantle"
 roll.modifier rollType=attack value=1 applyTo=both
 
 #### Expertise
-**Prerequisites:** Any skill rank 5
+**Prerequisites:** Any skill rank 6
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** There's a difference between someone who is good at something and someone who has made it a part of themselves. What takes others careful effort, you do the way you breathe.
@@ -593,7 +593,7 @@ roll.modifier rollType=skill value=-1 applyTo=both target=chosen
 **Note:** Can be taken multiple times for different skills
 
 #### Exploit the Margin
-**Prerequisites:** Melee 5, Precision Training feat
+**Prerequisites:** Melee 6, Precision Training feat
 **Usage:** Once per turn, declare before rolling
 **Keyword:** [Combat], [Discipline]
 **Description:** Every attack is a question. You have learned to choose which question you are asking before you throw the first blow.
@@ -611,28 +611,28 @@ roll.modifier rollType=skill value=-1 applyTo=both target=chosen
 **Benefit:** Once per turn when you hit a creature that is below its maximum HP, deal an extra 4 damage
 
 #### Exploit Weakness
-**Prerequisites:** Agi 4, Stealth or Thievery 3
+**Prerequisites:** Agi 4, Stealth or Thievery 4
 **Usage:** Once per round
 **Keyword:** [Combat], [Shadow]
 **Description:** Every defense has a gap, and you're good at finding them and turning glancing blows into serious wounds. Precision beats power every time.
 **Benefit:** Once per round, when you attack with an ally within 5 feet of your target OR you subtract from your attack dice (from any source), add your Dexterity score to damage
 
 #### Exposed Strike
-**Prerequisites:** Agi 3, Cha 3, Melee 3
+**Prerequisites:** Agi 4, Cha 4, Melee 4
 **Usage:** Passive, triggers after successful feint
 **Keyword:** [Combat], [Duelist]
 **Description:** The feint creates the gap — you just make sure something fills it.
 **Benefit:** When you make a melee attack against a target you have successfully feinted this turn, add your Charisma score to damage. This applies to the next attack against that target only, and requires your off-hand to be free.
 
 #### Extended Infusion
-**Prerequisites:** Infuser trait, Int 4, Craft 4
+**Prerequisites:** Infuser trait, Int 4, Craft 5
 **Usage:** Passive enhancement to all infusion durations
 **Keyword:** [Magic], [Infuser]
 **Description:** Through obsessive study of how magical energy degrades within matter, you have found ways to slow the inevitable decay.
 **Benefit:** Your Imbue Item duration increases from 1 minute to 10 minutes. Your Prepared Infusions now persist until the end of your next long rest rather than expiring at long rest. Additionally you may now prepare up to four dormant infusions instead of two.
 
 #### Extended Tether
-**Prerequisites:** Summoner trait, Cha 4, Time Mastery 3
+**Prerequisites:** Summoner trait, Cha 4, Time Mastery 5
 **Usage:** Passive
 **Keyword:** [Magic], [Summoner]
 **Description:** The connection holds longer for the same expenditure.
@@ -648,7 +648,7 @@ roll.modifier rollType=skill value=-1 applyTo=both target=chosen
 hp.shortRest.bonus formula=constitution
 
 #### Fearsome Reputation
-**Prerequisites:** Cha or Str 4, Primal Fury feat, Intimidate 4
+**Prerequisites:** Cha or Str 5, Primal Fury feat, Intimidate 5
 **Usage:** Passive
 **Keyword:** [Savage], [Social]
 **Description:** You don't need to raise your voice. The way you move, the scars you carry, the look in your eyes all adds up to a single message that most people are wise enough to read.
@@ -666,7 +666,7 @@ condition.immunity conditionName=Surprised
 condition.immunity conditionName=Frightened,Charmed when=primalFury
 
 #### Flanking Mastery
-**Prerequisites:** Agi 4, Melee 4, Exploit Weakness
+**Prerequisites:** Agi 5, Melee 5, Exploit Weakness
 **Usage:** Passive
 **Keyword:** [Combat], [Shadow]
 **Description:** When an ally occupies the opponent's attention, you find the angle they cannot cover.
@@ -716,7 +716,7 @@ toggle.state stateKey=flowingGuard label="Flowing Guard"
 **Usage:** Once per long rest
 **Keyword:** [Wilderness], [Skill]
 **Description:** Food, water, medicine; it's all out there if you know where the wilderness keeps its secrets.
-**Benefit:** Find food and water for 6 people per day with Survival check (Simple task). 2 successes = find medicinal herbs worth 1d8 × 5 gp
+**Benefit:** Find food and water for 6 people per day with Wilderness check (Simple task). 2 successes = find medicinal herbs worth 1d8 × 5 gp
 
 #### Formation Fighting
 **Prerequisites:** Str 3
@@ -728,11 +728,11 @@ toggle.state stateKey=flowingGuard label="Flowing Guard"
 dr.modify value=2 damageTypes=physical
 
 #### Formulaic Precision
-**Prerequisites:** Mageborn trait, Int 5, Arcana 5
+**Prerequisites:** Mageborn trait, Int 6, Arcana 6
 **Usage:** Applies whenever you use Ritual Casting
 **Keyword:** [Magic], [Mageborn]
 **Description:** You have memorized the precise mathematical relationship between energy expenditure and effect. When you have time to prepare, the formula plays out in your mind with perfect clarity.
-**Benefit:** When using Ritual Casting, you never suffer overspending penalties regardless of how far your Energy expenditure exceeds your Mastery. The preparation time compensates for raw Mastery gaps with theoretical knowledge.
+**Benefit:** When using Ritual Casting, you never suffer overspending penalties regardless of how far your Energy expenditure exceeds your Mastery.
 
 #### Fortune's Favorite
 **Prerequisites:** Luck 5
@@ -742,21 +742,21 @@ dr.modify value=2 damageTypes=physical
 **Benefit:** Once per session, after seeing any roll result (yours or an enemy's), force a reroll and choose which result to use
 
 #### Graceful Exit
-**Prerequisites:** Agi 3, Deception 3
+**Prerequisites:** Cha 4, Deception 4
 **Usage:** Once per scene
 **Keyword:** [Social], [Shadow]
 **Description:** Knowing when a conversation has turned against you and leaving before it fully collapses is its own skill.
 **Benefit:** When a social interaction is going badly. The interaction ends without the negative attitude shift triggering. The NPC retains their current attitude rather than worsening it. You cannot use this ability if violence has already started or if you have already attempted to exit and been stopped.
 
 #### Grappling Mastery
-**Prerequisites:** Str 5, Athletics 4
+**Prerequisites:** Str 5, Athletics 5
 **Usage:** Passive
 **Keyword:** [Combat], [Grapple]
 **Description:** Getting hold of someone is only the first problem. Keeping them, punishing them for struggling is where the real skill lies.
 **Benefit:** Subtract 1 from both dice when making Athletics checks to grapple. When you successfully grapple a creature, you can immediately deal 4 [Bludgeoning] damage. Creatures you grapple add 1 to both dice when attempting to escape
 
 #### Guardian's Protection
-**Prerequisites:** Str 3, Melee 3, must be using a shield
+**Prerequisites:** Str 4, Melee 5, must be using a shield
 **Usage:** Passive (uses reactions)
 **Keyword:** [Combat], [Reaction]
 **Description:** You've made yourself into a wall between the enemy and the people beside you.
@@ -770,7 +770,7 @@ dr.modify value=2 damageTypes=physical
 **Benefit:** When an ally within 60 feet casts a weave, you can use your [Reaction] to impose Misfortune on one enemy's saving throw against that weave (they roll 3d8, take worst 2). Alternatively, you can grant the casting ally Fortune on their weaving roll
 
 #### Hammering Blows
-**Prerequisites:** Str 4, Melee 4, Dual Strike feat
+**Prerequisites:** Str 4, Melee 5, Dual Strike feat
 **Usage:** Passive, triggers when both attacks hit same target
 **Keyword:** [Combat], [Dual]
 **Description:** One blade distracts, the other drives through.
@@ -793,7 +793,7 @@ dr.modify value=2 damageTypes=physical
 **Benefit:** This is the core ability of Sorcerous Origin, automatically gained with the trait. When you cast a weave, you can reroll one die (either a Potential die or Mastery die) and take the better result. Can use this Wisdom times per long rest
 
 #### Healing Current
-**Prerequisites:** Wis 4, any magical tradition trait, positive energy Mastery 3
+**Prerequisites:** Wis 5, any magical tradition trait, positive energy Mastery 5
 **Usage:** Passive, triggers when you cast healing weaves
 **Keyword:** [Magic], [Heal]
 **Description:** The flow of energy lingers after the weave completes.
@@ -814,7 +814,7 @@ dr.modify value=2 damageTypes=physical
 **Benefit:** You cannot be moved against your will by any non-magical forced movement. Shoves, bull rushes, and knockback effects automatically fail against you. Additionally you have Fortune on Fortitude saves against effects that would move or reposition you.
 
 #### Infusion Specialization
-**Prerequisites:** Infuser trait, Int 4, Craft 4
+**Prerequisites:** Infuser trait, Int 5, Craft 5
 **Usage:** Passive expansion of Imbue Item options
 **Keyword:** [Magic], [Infuser]
 **Description:** You have developed a personal catalogue of infusion formulae of specific combinations of energy and material that you have refined through repetition into reliable, potent effects. Where improvised infusions scatter energy broadly, your formulae focus it to precise purpose.
@@ -826,7 +826,7 @@ dr.modify value=2 damageTypes=physical
 - **Null Ward:** Any item; bearer gains resistance to one energy type (chosen at infusion time). Reduce incoming damage of that type by 4 until end of their next short rest or until they take 20 damage of that type.
 
 #### Improved Imbue
-**Prerequisites:** Infuser trait, Int 3, Craft 3
+**Prerequisites:** Infuser trait, Int 5, Craft 5
 **Usage:** Passive enhancement to Imbue Item
 **Keyword:** [Magic], [Infuser]
 **Description:** Your understanding of how magical energy settles into material objects has grown precise enough to pack more into each infusion without destabilizing it. The object holds more, and holds it longer.
@@ -870,14 +870,14 @@ dr.modify value=2 damageTypes=physical
 **Benefit:** Subtract 1 from both dice on Willpower saving throws
 
 #### Jack of All Trades
-**Prerequisites:** Int 4, five skills at 3+
+**Prerequisites:** Int 4, five skills at 4+
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** A shallow familiarity with a skill is still familiarity. You've gathered enough of them that almost nothing is completely foreign, and raw ignorance rarely stops you.
 **Benefit:** Rank 2 skills count as rank 3
 
 ### Keen Eye
-**Prerequisites:** Dex 4, Ranged 4
+**Prerequisites:** Dex 5, Ranged 5
 **Usage:** Passive, natural rolls only
 **Keyword:** [Combat], [Ranged], [Marksman]
 **Description:** The shot that feels perfect before it leaves the string. You have learned to recognize when it is happening and let it.
@@ -886,28 +886,28 @@ dr.modify value=2 damageTypes=physical
 - **Margin 3:** Target is Slowed (major) until end of their next turn, or target gains 1 Bleeding stack
 
 #### Layered Weave
-**Prerequisites:** Mageborn trait, Int 5, Arcana 5
+**Prerequisites:** Mageborn trait, Int 6, Arcana 6
 **Usage:** Applies to Ritual Casting only; ritual takes 20 minutes
 **Keyword:** [Magic], [Mageborn]
 **Description:** Through careful preparation, you can weave two separate effects into a single ritual.
 **Benefit:** When using Ritual Casting, you may combine two weaves into a single ritual (ritual takes 20 minutes instead of 10). Both weaves use the half-Energy cost benefit. When the ritual completes, both effects trigger simultaneously. They may target the same creature or location, or different ones within range. You make separate weaving and targeting rolls for each weave.
 
 #### Linguist
-**Prerequisites:** Int 3, Language 3
+**Prerequisites:** Int 4, Language 4
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** Not every tongue comes naturally, but you have never met one you couldn't eventually master.
 **Benefit:** For languages known gain +2; learn new languages faster
 
 #### Lingering Toxin
-**Prerequisites:** Dex 3, Medicine or Wilderness 3
+**Prerequisites:** Dex 3, Medicine or Wilderness 4
 **Usage:** Passive
 **Keyword:** [Poisoner]
 **Description:** The dose that doesn't drop them keeps working.
 **Benefit:** When a creature makes a successful Fortitude save against a poison you applied or created, they gain the Poisoned (Weak) condition for 1 round instead of suffering no effect. A critical success (2 successes) on their save still negates entirely.
 
 #### Living Infusion
-**Prerequisites:** Infuser trait, Int 5, Craft 5
+**Prerequisites:** Infuser trait, Int 6, Craft 6
 **Usage:** Uses one Imbue Item charge; touch required; willing creatures only
 **Keyword:** [Magic], [Infuser]
 **Description:** Living creatures are the challenge you have been building toward. Infusing a person directly requires understanding both the material and the vital simultaneously.
@@ -917,14 +917,14 @@ dr.modify value=2 damageTypes=physical
 - **Accelerated Healing:** At the start of each of the target's turns, they regain HP equal to your Intelligence score
 
 #### Marked Target
-**Prerequisites:** Dex 5, Ranged 5
+**Prerequisites:** Dex 6, Ranged 6
 **Usage:** Passive
 **Keyword:** [Combat], [Shadow]
 **Description:** Distance is not an obstacle when you know exactly where to aim.
 **Benefit:** When you make a ranged attack against a target that has any [Hindered] condition applied to them, you meet the Exploit Weakness trigger condition without requiring an ally within 5 feet of the target.
 
 #### Master Archer
-**Prerequisites:** Dex 5, Ranged 5
+**Prerequisites:** Dex 6, Ranged 6
 **Usage:** Passive
 **Keyword:** [Combat], [Ranged]
 **Description:** At this range, with this bow, you shoot where you aim.
@@ -933,28 +933,28 @@ dr.modify value=2 damageTypes=physical
 damage.bonus target=ranged value=2
 
 #### Master Craftsman
-**Prerequisites:** Dex 5, Craft 5
+**Prerequisites:** Dex 5, Craft 6
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** You make things that last, things that work, things that exceed what the materials had any right to become.
 **Benefit:** Work twice as fast on crafting projects and produce enhanced quality items
 
 #### Medical Expert
-**Prerequisites:** Wis 4, Medicine 4
+**Prerequisites:** Wis 5, Medicine 5
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** Medicine is part knowledge, part observation, and part willingness to act decisively when someone's life is on the line.
 **Benefit:** Subtract 1 from both dice on Medicine checks and heal 4 additional HP
 
 #### Momentum Strike
-**Prerequisites:** Str or Agi 4, Melee 4
+**Prerequisites:** Str or Agi 5, Melee 5
 **Usage:** Once per turn
 **Keyword:** [Combat]
 **Description:** You've trained yourself to carry the motion forward. The same swing, the same energy, redirected before your boots finish the step.
-**Benefit:** When you reduce a creature to 0 HP with a melee attack, you can immediately make one additional melee attack against another creature within 5 feet. Use the same Attribute roll, roll Melee Combat skill separately. If the original attack suffered a Mulitiple Attack Penalty, the same penalty is applied to this strik. This can trigger once per turn.
+**Benefit:** When you reduce a creature to 0 HP with a melee attack, you can immediately make one additional melee attack against another creature within 5 feet. Use the same Attribute roll, roll Melee Combat skill separately. If the original attack suffered a Mulitiple Attack Penalty, the same penalty is applied to this strike. This can trigger once per turn.
 
 #### Mounted Combatant
-**Prerequisites:** Athletics 4
+**Prerequisites:** Athletics 5
 **Usage:** Passive
 **Keyword:** [Combat], [Mounted]
 **Description:** Horse and rider become something neither could be alone.
@@ -971,14 +971,14 @@ roll.modifier rollType=attack value=-1 applyTo=both
 **Note:** Can be combined with Savage Resilience if you meet both prerequisites; use the better DR
 
 #### Name of Healing
-**Prerequisites:** Invoker trait, Cha 4, Positive Mastery 3
+**Prerequisites:** Invoker trait, Cha 4, Positive Mastery 5
 **Usage:** Passive
 **Keyword:** [Magic], [Invoker], [Heal]
 **Description:** You have learned the syllables that resonate with vitality itself; words that call a body back toward its own wholeness.
-**Benefit:** When you cast a healing weave using Positive as the primary energy, add your Charisma score to the total HP restored. Additionally, healing weaves you cast can target creatures at Close range (30 feet) without requiring Space as a supporting energy.
+**Benefit:** When you cast a healing weave using Positive as the primary energy, add your Charisma score to the total HP restored. Additionally, healing weaves you cast can target creatures at Close range (30 feet) without requiring a supporting energy.
 
 #### Name of Knowing
-**Prerequisites:** Invoker trait, Cha 3, Empathy 3
+**Prerequisites:** Invoker trait, Cha 4, Empathy 5
 **Usage:** Once per short rest
 **Keyword:** [Magic], [Invoker], [Social]
 **Description:** A thing named truly cannot easily hide its nature.
@@ -989,7 +989,7 @@ roll.modifier rollType=attack value=-1 applyTo=both
 This ability does not reveal magically concealed information and cannot compel answers about things the creature genuinely does not know. Outside combat this requires no action cost.
 
 #### Natural Explorer
-**Prerequisites:** Survival 4
+**Prerequisites:** Wilderness 5
 **Usage:** Passive
 **Keyword:** [Wilderness]
 **Description:** You know the wilderness, its moods, its rhythms, its shortcuts and its warnings. In the right terrain, you move like you belong there.
@@ -1000,14 +1000,14 @@ roll.modifier rollType=skill skillKey=wilderness value=-1 applyTo=both
 **Note:** Can take multiple times for different terrains
 
 #### Object Conduit
-**Prerequisites:** Infuser trait, Int 5, Craft 5
+**Prerequisites:** Infuser trait, Int 5, Craft 6
 **Usage:** Passive range extension via active infused objects; detonation is a [Reaction] that consumes the infusion
 **Keyword:** [Magic], [Infuser], [Reaction]
 **Description:** An infused object carries your magical signature. If you can reach the object, you can reach anything the object touches.
 **Benefit:** When you have an active infused object in play you may cast weaves targeting that object's location or bearer without being adjacent to them. Range is determined normally from your position to the target. Additionally, you may detonate an active infusion as a [Reaction] when the bearer is hit by an attack. The infusion ends immediately but deals damage equal to your Intelligence × 2 to the attacker using your chosen elemental energy type. No save.
 
 #### Opportunist
-**Prerequisites:** Agi 4, Melee 4
+**Prerequisites:** Agi 5, Melee 5
 **Usage:** Once per round, Reaction
 **Keyword:** [Combat], [Shadow], [Reaction]
 **Description:** You never waste the moment someone else creates. While they're reacting to your ally, you're already moving.
@@ -1049,14 +1049,14 @@ roll.modifier rollType=skill skillKey=wilderness value=-1 applyTo=both
 **Benefit:** Once per short rest, you may declare a Pact Surge before making a weaving roll. You may spend Energy up to double your Potential in that energy for this one weave (ignoring the Potential ceiling entirely). For every point spent beyond your normal Potential ceiling, add 1 to both dice on the weaving roll.
 
 #### Paralytic Expertise
-**Prerequisites:** Dex 4, Craft: Alchemist 3, Venom Crafter feat
+**Prerequisites:** Dex 5, Craft: Alchemist 5, Venom Crafter feat
 **Usage:** Passive
 **Keyword:** [Poisoner], [Alchemist]
 **Description:** Paralysis is just the beginning of the problem.
 **Benefit:** When a creature becomes Paralyzed from one of your preparations, they cannot attempt to break free on their first turn. Starting on their second turn, recovery proceeds normally.
 
 #### Patron’s Favor
-**Prerequisites:** Divine Gift trait, Wis 6, Religion 6, Sustained Prayer feat
+**Prerequisites:** Divine Gift trait, Wis 7, Religion 7, Sustained Prayer feat
 **Usage:** Once per long rest; must be declared before rolling
 **Keyword:** [Magic], [Divine]
 **Description:** Your years of devotion have not gone unnoticed. Your patron watches over you with active interest , occasionally intervening in ways that defy what channeling alone should produce.
@@ -1096,7 +1096,7 @@ roll.modifier rollType=skill skillKey=wilderness value=-1 applyTo=both
 **Benefit:** Once per long rest, you can enter a state of "Perfect Harmony" for 1 minute. During this time, every weave you cast automatically benefits from Harmonic Weaving (reroll one die per weave) without expending uses. You still have your normal Harmonic uses after this ends
 
 #### Planar Attunement
-**Prerequisites:** Summoner trait, Cha 3, chosen energy Mastery 3
+**Prerequisites:** Summoner trait, Cha 5, chosen energy Mastery 5
 **Usage:** Passive
 **Keyword:** [Magic], [Summoner]
 **Description:** Your pneuma has learned a second frequency.
@@ -1116,14 +1116,14 @@ roll.modifier rollType=skill skillKey=wilderness value=-1 applyTo=both
   - **Lingering Effect:** Creatures that fail their save also gain appropriate condition
 
 #### Pneuma Sensitivity
-**Prerequisites:** Arcana 5, Religion 3, any magical tradition trait
+**Prerequisites:** Arcana 5, Religion 5, any magical tradition trait
 **Usage:** Passive
 **Keyword:** [Magic], [Skill]
 **Description:** Ley lines, undead, daemons, the lingering pneuma of the recently dead: you feel them the way others feel weather changing.
 **Benefit:** Sense ley lines and nexuses within 1 mile (Arcana check). 1 success = general direction and type; 2 successes = exact location and strongest energy types. Within 100 feet of daemons or undead, subtract 1 from Perception die to sense presence. Determine if corpse possessed pneuma with Medicine or Religion check
 
 #### Pneuma Strike (Elemental)
-**Prerequisites:** Unarmed Mastery feat, chosen elemental Mastery 3
+**Prerequisites:** Unarmed Mastery feat, chosen elemental Mastery 5
 **Usage:** Once per turn, costs 2 Energy
 **Keyword:** [Combat], [Ascetic], [Magic]
 **Description:** You've learned to channel elemental pneuma through your strikes. Fire, ice, lightning, or stone—you make the energy flow through your meridians and release it at the point of impact
@@ -1133,21 +1133,21 @@ roll.modifier rollType=skill skillKey=wilderness value=-1 applyTo=both
   - **2+ successes:** Deal +8 elemental damage
 
 #### Point Blank
-**Prerequisites:** Dex 4, Ranged 4
+**Prerequisites:** Agil 5, Dex 5, Ranged 5
 **Usage:** Once per turn
 **Keyword:** [Combat], [Ranged], [Move]
 **Description:** The shot at arm's length is harder to aim and worse for the weapon, but the look on their face when it lands is worth it.
 **Benefit:** When you make a ranged attack against a creature within 5 feet, you may immediately move up to 10 feet as a [Free] action after the attack resolves, without provoking opportunity attacks from the creature you attacked. The +1 to both attack dice penalty for shooting while threatened still applies to the attack.
 
 #### Poison Proficiency
-**Prerequisites:** Dex 3, Craft or Thievery 2
+**Prerequisites:** Dex 5, Craft or Thievery 4
 **Usage:** Passive
 **Keyword:** [Skill], [Poisoner]
 **Description:** You know which end of the vial to open.
 **Benefit:** Applying poison costs a [Minor] action instead of a [Combat] action. Identifying a poison by sight or smell requires only 1 success on a Medicine or Wilderness check.
 
 #### Power Attack
-**Prerequisites:** Str 3, Melee 3
+**Prerequisites:** Str 4, Melee 4
 **Usage:** Unlimited
 **Keyword:** [Combat]
 **Description:** Precision is nice. Power is better. When you swing your weapon, you fully commit, putting your entire body behind the blow with enough force to crack armor and break bones.
@@ -1157,14 +1157,14 @@ roll.modifier rollType=attack value=1 applyTo=both
 damage.bonus target=melee value=4
 
 #### Precise Shot
-**Prerequisites:** Dex 3, Ranged 3
+**Prerequisites:** Dex 4, Ranged 4
 **Usage:** Passive
 **Keyword:** [Combat], [Ranged]
 **Description:** You've learned to find the gap between the bodies, between the planks, and send the shot through anyway.
 **Benefit:** Ignore penalties for shooting into melee or partial cover
 
 #### Precision Duelist
-**Prerequisites:** Agi 4, Melee 4
+**Prerequisites:** Agi 4, Melee 5
 **Usage:** Passive
 **Keyword:** [Combat]
 **Description:** Freedom of movement, economy of motion, and the knowledge that you don't need to hide behind anything to win.
@@ -1174,14 +1174,14 @@ roll.modifier rollType=attack value=-1 applyTo=skill when=duelistStance
 damage.bonus target=melee value=2 when=duelistStance
 
 #### Precision Training
-**Prerequisites:** Agi 4, Melee 4
+**Prerequisites:** Agi 5, Melee 5
 **Usage:** Passive, natural rolls only
 **Keyword:** [Combat], [Discipline]
 **Description:** Years of drilling the same strikes, the same footwork, the same timing have produced something that transcends conscious thought.
 **Benefit:** When you make a melee attack and both dice show the same value and both are successes, gain +1 additional success. This is not a critical hit and does not restore Luck or grant the additional critical benefits
 
 #### Prepared Infusion
-**Prerequisites:** Infuser trait, Int 3, Craft 3
+**Prerequisites:** Infuser trait, Int 4, Craft 4
 **Usage:** Prepare up to 2 objects during short rest using Imbue Item charges; activated by touch as [Minor] action
 **Keyword:** [Magic], [Infuser]
 **Description:** Combat is a poor time to do careful work. You have learned to prepare infusions in advance during the quiet moments between conflicts, so that when violence arrives you already have tools ready to hand.
@@ -1195,7 +1195,7 @@ damage.bonus target=melee value=2 when=duelistStance
 **Benefit:** When you land a hit that triggers Exposed Strike damage, you may immediately make a Feint attempt against the same target as a [Free] action. This feint follows all normal rules including the MAP exemption on success.
 
 #### Pressure Fighter
-**Prerequisites:** Agi 5, Melee 5
+**Prerequisites:** Agi 6, Melee 6
 **Usage:** Passive, triggers once per target per encounter
 **Keyword:** [Combat], [Discipline]
 **Description:** The first exchange tells you everything. The fight is already over. They just don't know it yet.
@@ -1220,7 +1220,7 @@ roll.modifier rollType=save saveType=fortitude value=-1 applyTo=both when=primal
 - **2 successes:** No Exhaustion gained; remove 1 existing Exhaustion level
 
 #### Primal Multiattack
-**Prerequisites:** Primal Fury feat, Melee 5
+**Prerequisites:** Primal Fury feat, Melee 6
 **Usage:** While in Primal Fury, once per turn
 **Keyword:** [Combat], [Savage]
 **Benefit:** While in Primal Fury, can make two melee attacks as 1 [Combat] action. Use Shared Attribute Roll: roll Attribute once, apply to both attacks. Roll Melee skill die separately for each attack. This counts as 1 action for multiple action penalty
@@ -1249,14 +1249,14 @@ action.add description="Primal Multiattack: two melee attacks as 1 Combat action
 **Benefit:** During a short rest, you can give a rousing speech to inspire your companions. Choose up to 6 allies who can hear and understand you. Each gains temporary HP equal to your Tier + your Charisma score. These temporary HP last until their next long rest
 
 #### Rapid Stabilization
-**Prerequisites:** Wis 3, Medicine 3
+**Prerequisites:** Wis 4, Medicine 4
 **Usage:** Passive
 **Keyword:** [Heal]
 **Description:** Getting someone out of the dying condition fast means not always elegant.
 **Benefit:** Stabilize costs 1 [Minor] action instead of 1 [Interact] action. On 2 successes, the creature regains HP equal to your Wisdom score plus your Medicine rank rather than Wisdom alone.
 
 #### Rapid Strikes
-**Prerequisites:** Agi 4, Wis 3, Melee 4, Unarmed Mastery feat
+**Prerequisites:** Agi 4, Wis 4, Melee 4, Unarmed Mastery feat
 **Usage:** Once per turn
 **Keyword:** [Combat], [Ascetic], [Unarmed]
 **Description:** Three strikes, one breath, one motion. You've drilled this until it stopped being three things and became one thing with three results.
@@ -1295,7 +1295,7 @@ roll.modifier rollType=attack value=-1 applyTo=both when=recklessAttack
 roll.modifier rollType=attack value=1 applyTo=both when=primalFury
 
 #### Relentless Impact
-**Prerequisites:** Str 5, Melee 5, Crushing Advance feat
+**Prerequisites:** Str 6, Melee 6, Crushing Advance feat
 **Usage:** Passive
 **Keyword:** [Combat], [Two-Handed]
 **Description:** Every swing lands with enough force that even a clean block costs something.
@@ -1323,14 +1323,14 @@ roll.modifier rollType=attack value=1 applyTo=both when=primalFury
 **Benefit:** When you use Words of Power, the effect extends to the next two rolls your allies make instead of just one. Additionally, you may include yourself as one of the targets of Words of Power. Energy spent on Words of Power is refunded after each short rest.
 
 #### Restorative Touch
-**Prerequisites:** Wis 3, Medicine 3
+**Prerequisites:** Wis 4, Medicine 4
 **Usage:** Passive
 **Keyword:** [Heal]
 **Description:** You have learned to read what a wound actually needs.
 **Benefit:** When you use Field Dressing, Administered Treatment, or Evening Treatment, add your Medicine rank to the HP restored in addition to the standard formula. This applies to your own self-treatment where permitted
 
 #### Resurgence
-**Prerequisites:** Wis 5, any magical tradition trait, Positive Mastery 4, Healing Current feat
+**Prerequisites:** Wis 5, any magical tradition trait, Positive Mastery 5, Healing Current feat
 **Usage:** Passive
 **Keyword:** [Magic], [Heal]
 **Description:** Healing builds on itself when you guide it correctly.
@@ -1344,14 +1344,14 @@ roll.modifier rollType=attack value=1 applyTo=both when=primalFury
 **Benefit:** Once per round when a creature hits you with a melee attack, they take bludgeoning damage equal to your Strength score as the shield absorbs and redirects the impact back into them. No action required — this triggers automatically on the hit.
 
 #### Ritual Efficiency
-**Prerequisites:** Arcana 4, any magical tradition trait with ritual casting
+**Prerequisites:** Arcane 5, any magical tradition trait with ritual casting
 **Usage:** Passive
 **Keyword:** [Magic]
 **Description:** You've streamlined the process without cutting corners, halving the time and finding ways around missing pieces.
 **Benefit:** Cast rituals in half the normal time (5 minutes instead of 10). Component costs reduced by 25%. When missing a component, can make Arcana check (Hard task) to substitute similar materials. Can teach rituals to other casters (they learn in half time if you teach them)
 
 #### Ritual Mastery
-**Prerequisites:** Mageborn trait, Arcana 3
+**Prerequisites:** Mageborn trait, Arcane 4
 **Usage:** Applies whenever you use Ritual Casting
 **Keyword:** [Magic], [Mageborn]
 **Description:** The extended ritual form of a weave becomes something fundamentally more powerful. The extra preparation time lets you layer the magical structure with a precision that combat casting cannot achieve.
@@ -1361,7 +1361,7 @@ roll.modifier rollType=attack value=1 applyTo=both when=primalFury
 - Add one additional target at no additional Energy cost
 
 #### Sacred Domain
-**Prerequisites:** Divine Gift trait, Wis 3, chosen patron's primary energy Mastery 3
+**Prerequisites:** Divine Gift trait, Wis 4, chosen patron's primary energy Mastery 4
 **Usage:** Passive
 **Keyword:** [Magic], [Divine]
 **Description:** Your devotion to your patron has sharpened your attunement to their divine domain. When you work within their sphere of influence, your weaves carry the deity's authority behind them.
@@ -1391,28 +1391,28 @@ roll.modifier rollType=attack value=-1 applyTo=both when=primalFury
 **Benefit:** Your organization provides identity protection and operational security. Gain **Fortune** on saves against prophecy weaves and truth detection. Can request your organization erase records of your activity in specific locations (takes 1 week, GM approval required). Once per mission, can call for extraction from dangerous situation
 
 #### Sense Magic (At-Will)
-**Prerequisites:** Arcana 3, any magical tradition trait
+**Prerequisites:** Arcane 4, any magical tradition trait
 **Usage:** Passive
 **Keyword:** [Magic], [Skill]
 **Description:** You've learned to open that sense at will, reading the magical landscape around you without ceremony or cost.
 **Benefit:** Sense magical auras as [Minor] action without Energy cost. Make Arcana check: 1 success = detect presence and general intensity within 30 feet; 2 successes = identify energy types and general purpose (harmful/helpful, permanent/temporary)
 
 #### Setup Strike
-**Prerequisites:** Agi 3, Melee or Ranged 3
+**Prerequisites:** Agi 5, Melee or Ranged 5
 **Usage:** Once per turn
 **Keyword:** [Combat], [Shadow]
 **Description:** The first hit isn't meant to finish them. It's meant to make the second one inevitable.
 **Benefit:** Once per turn when you hit with a weapon attack, you may apply either the Slowed (Minor) or Disoriented condition to the target until the end of their next turn.
 
 #### Shadow Step
-**Prerequisites:** Agi 5, Melee 4
+**Prerequisites:** Agi 5, Melee 5
 **Usage:** Once per turn
 **Keyword:** [Combat], [Shadow], [Move]
 **Description:** By the time they look for you, you are already somewhere else.
 **Benefit:** Once per turn, after making a melee attack, you may move up to half your movement speed without provoking opportunity attacks.
 
 #### Sharpshooter
-**Prerequisites:** Ranged Combat 4, Perception 4, Wis 3
+**Prerequisites:** Ranged Combat 5, Perception 5, Wis 4
 **Usage:** Once per turn
 **Keyword:** [Combat], [Ranged]
 **Description:** Wind, range, or moving targets; you have learned to account for everything instinctively, putting arrows or bolts exactly where they need to be.
@@ -1452,7 +1452,7 @@ damage.bonus target=ranged value=4
 - **Margin 2:** Target is knocked Prone, pushed 10 feet, and gains the Stunned [Hindered] condition until the end of their next turn.
 
 #### Shield Master
-**Prerequisites:** Str 3, Melee 3, must be using a shield
+**Prerequisites:** Str 4, Melee 4, must be using a shield
 **Usage:** Passive + once per combat reaction
 **Keyword:** [Combat], [Reaction]
 **Description:** You've mastered the shield, turning that disc of metal or wood into reliable protection that can mean the difference between injury and death.
@@ -1466,7 +1466,7 @@ damage.bonus target=ranged value=4
 **Benefit:** When a creature hits you with a melee attack while you are wielding a shield, you may use a [Reaction] to reduce the incoming damage by your Constitution score.
 
 #### Skill Mastery
-**Prerequisites:** Any skill rank 6
+**Prerequisites:** Any skill rank 7
 **Usage:** Once per session
 **Keyword:** [Skill]
 **Description:** There are tasks so routine, so fundamental to what you do, that failure isn't even a possibility anymore. 
@@ -1533,7 +1533,7 @@ damage.bonus target=ranged value=4
 **Benefit:** When you use Harmonic Weaving to reroll one of your own dice, you may simultaneously grant one ally within 60 feet Fortune on their next roll within the next minute (they roll 3d8, take best 2)
 
 #### Supreme Stealth
-**Prerequisites:** Stealth 5
+**Prerequisites:** Stealth 6
 **Usage:** Passive
 **Keyword:** [Skill], [Shadow]
 **Description:** Through perfect understanding of shadows, sound, and sightlines, you can make yourself effectively invisible without magic.
@@ -1551,7 +1551,7 @@ damage.bonus target=ranged value=4
 - Bleeding stacks applied through ranged attacks can only be removed from an ally's Medicine check or magical healing.
 
 #### Sustained Prayer
-**Prerequisites:** Divine Gift trait, Wis 4, Religion 4, Sacred Domain feat
+**Prerequisites:** Divine Gift trait, Wis 5, Religion 5, Sacred Domain feat
 **Usage:** Passive; applies to patron primary energy weaves with duration only
 **Keyword:** [Magic], [Divine]
 **Description:** Where other casters must spend supporting energy to extend their effects, your patron sustains what they have blessed. A weave offered as a prayer lingers far longer than its energy alone would suggest.
@@ -1573,10 +1573,10 @@ damage.bonus target=ranged value=4
 - A creature moves from Full Cover, Half Cover, or Hidden into a lesser state
 - A creature stands up from Prone
 - A creature that was Concealed or Hidden reveals themselves by taking any action
-This attack adds 1 to both dice. If you also have Keen Eye and it triggers on this attack ignore the dice penalty. 
+This attack adds 1 to both dice. If you also have Keen Eye and it triggers on this attack, ignore the dice penalty. 
 
 #### Throwing Arm
-**Prerequisites:** Dex 4, Ranged 3
+**Prerequisites:** Dex 4, Ranged 4
 **Usage:** Passive
 **Keyword:** [Combat], [Thrown]
 **Description:** The throw is not a separate decision from the draw.
@@ -1592,14 +1592,14 @@ This attack adds 1 to both dice. If you also have Keen Eye and it triggers on th
 hp.bonus formula="constitution * tier"
 
 #### Toxin Amplifier
-**Prerequisites:** Dex 5, Craft: Alchemist 4, Venom Crafter feat
+**Prerequisites:** Dex 5, Craft: Alchemist 5, Venom Crafter feat
 **Usage:** Passive
 **Keyword:** [Poisoner], [Alchemist]
 **Description:** A dose that should weaken instead devastates.
 **Benefit:** Negative-primary preparations you create impose their condition at one step higher on the severity track: Poisoned (Weak) becomes Poisoned (Strong), Poisoned (Strong) becomes Poisoned (Deadly). A preparation already causing Poisoned (Deadly) is unaffected.
 
 #### Tracker
-**Prerequisites:** Survival 3, Perception 3
+**Prerequisites:** Wilderness 4, Perception 4
 **Usage:** Passive
 **Keyword:** [Wilderness], [Skill]
 **Description:** Every creature leaves a trail and you can read these signs like a book, following trails that others wouldn't even notice exist.
@@ -1620,7 +1620,7 @@ hp.bonus formula="constitution * tier"
 **Benefit:** When you hit with a melee weapon attack, force target to make a Reflex save (opposed by your attack). If you win by 1+ successes, target falls Prone
 
 #### True Name Seeker
-**Prerequisites:** Invoker trait, Cha 3, Arcane 3
+**Prerequisites:** Invoker trait, Cha 4, Arcane 4
 **Usage:** Once per short rest
 **Keyword:** [Magic], [Invoker], [Skill]
 **Description:** Every creature has a true name woven into its nature. You have learned to listen for the echo of it.
@@ -1650,31 +1650,31 @@ hp.bonus formula="constitution * tier"
 roll.modifier rollType=attack value=-1 applyTo=both when=belowHalfHP
 
 #### Unarmed Mastery
-**Prerequisites:** Agi 3, Melee 3
+**Prerequisites:** Agi 4, Melee 4
 **Usage:** Passive
 **Keyword:** [Combat], [Ascetic], [Unarmed]
 **Description:** Your body is a weapon. Fists, elbows, knees, and feet all honed into effective tools for violence, you are never unarmed.
 **Benefit:** Your unarmed strikes deal 6 damage (same as standard weapons). Additionally, all weapons with the **Monk** property count as monk weapons for your abilities
 
 #### Unraveling Word
-**Prerequisites:** Invoker trait, Cha 5, Air Mastery 4, Bound by Name feat
+**Prerequisites:** Invoker trait, Cha 5, Air Mastery 5, Bound by Name feat
 **Usage:** Once per short rest
 **Keyword:** [Magic], [Invoker], [Control], [Reaction]
 **Description:** You know the word that unmakes a thing's purpose.
 **Benefit:** Once per short rest, when a creature within 60 feet you can see takes a [Combat] action, you may use a [Reaction] to speak a word against it. Make an opposed Charisma + Air Mastery check vs the creature's Wisdom + Luck (Will save).
 - **Margin 1:** Their action succeeds but they cannot take another [Combat] action until the start of their next turn
 - **Margin 2:** Their action fails entirely and is wasted. They are Dazed until the end of their next turn
-- **Margin 3:** Their action fails entirely. They are Stunned until the end of their next turn (Fortitude save at end of each turn, 1 success ends the condition)
+- **Margin 3:** Their action fails entirely. They are Stunned until the end of their next turn.
 
 #### Unreadable
-**Prerequisites:** Cha 5, Deception 5, Cunning Feint feat
+**Prerequisites:** Cha 5, Deception 6, Cunning Feint feat
 **Usage:** Passive
 **Keyword:** [Combat], [Duelist]
 **Description:** They have been trying to get your measure since the first exchange, and still do not know what is coming.
 **Benefit:** Targets add 1 to both dice when making Empathy or Wisdom checks to resist your Feint attempts. Additionally, if a target fails to resist your feint, they cannot attempt to resist your next feint against them this combat — they automatically fail the opposed check.
 
 #### Unyielding Advance
-**Prerequisites:** Str or Agi 6, Melee 6
+**Prerequisites:** Str or Agi 6, Melee 7
 **Usage:** Passive
 **Keyword:** [Combat], [Discipline]
 **Description:** Lesser fighters control a space. You control the entire engagement.
@@ -1685,14 +1685,14 @@ roll.modifier rollType=attack value=-1 applyTo=both when=belowHalfHP
 - Creatures that start their turn adjacent to you must succeed on a Will save (opposed by your Strength + Intimidate or Melee Combat ) or cannot willingly move away from you that turn.
 
 #### Urban Tracker
-**Prerequisites:** Investigation 4, Society 3
+**Prerequisites:** Investigation 4, Society 4
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** Being able to track prey through the urban wilderness, inside crowds and alleys instead of forests and fields. The patterns and principles are much the same.
 **Benefit:** In urban environments, can track people through crowds using Investigation. Learn useful information about neighborhoods (safe houses, gang territories, guard patrols) with Society check. When searching for a specific location, make Investigate check: 1 success = find it within 1 hour; 2 successes = find it within 10 minutes and discover a shortcut or alternate route.
 
 #### Venom Crafter
-**Prerequisites:** Dex 4, Craft: Alchemist 2
+**Prerequisites:** Dex 4, Craft: Alchemist 4
 **Usage:** Passive
 **Keyword:** [Poisoner], [Alchemist]
 **Description:** Your poisons do not behave like other people's poisons.
@@ -1706,7 +1706,7 @@ roll.modifier rollType=attack value=-1 applyTo=both when=belowHalfHP
 **Benefit:** Once per long rest, when an ally within 30 feet would be reduced to 0 HP, you may use a [Reaction] to call upon your patron. Choose any one of your patron's Channel Divinity options — it triggers immediately. This use does not consume one of your Channel Divinity uses.
 
 #### Voice of Restoration
-**Prerequisites:** Invoker trait, Cha 5, Positive Mastery 4, Name of Healing feat
+**Prerequisites:** Invoker trait, Cha 5, Positive Mastery 5, Name of Healing feat
 **Usage:** Once per short rest
 **Keyword:** [Magic], [Invoker], [Heal]
 **Description:** You speak the name of a creature's wholeness, not what they are now, but what they are meant to be.
@@ -1723,42 +1723,42 @@ roll.modifier rollType=attack value=-1 applyTo=both when=belowHalfHP
 **Benefit:** Your Weapon Weaver ability can now combine with weaves costing up to 4 Energy (instead of just 2 Energy or less)
 
 #### Ward Analysis
-**Prerequisites:** Arcana 4, Space Mastery 2 or Time Mastery 2
+**Prerequisites:** Arcana 4, Space Mastery 4 or Time Mastery 4
 **Usage:** Active
 **Keyword:** [Magic], [Skill]
 **Description:** Intrinsic understanding of weaves and wards allows you to perceive their structure, finding the patterns and logic behind their construction, locating their triggers and weaknesses
 **Benefit:** Can analyze magical wards and barriers. Make Arcana check (opposed by ward creator's Arcana): 1 net success = identify ward type and triggering conditions; 2+ net successes = find safe bypass or temporary weakness. Attempting to dispel a ward costs 2 Energy and requires winning the opposed check
 
 #### Weapon Momentum
-**Prerequisites:** Str 4, Agi 4, Melee 4, Two-Weapon Fighting feat
+**Prerequisites:** Str 4, Agi 4, Melee 5, Two-Weapon Fighting feat
 **Usage:** Passive, triggers when both attacks hit same target
 **Keyword:** [Combat], [Dual]
 **Description:** The second strike lands before they have recovered from the first.
 **Benefit:** When both attacks from a Two-Weapon Fighting action hit the same target, you may apply either the Slowed (Minor) or Disoriented [Hindered] condition to the target until the end of their next turn.
 
 #### Weapon Specialization
-**Prerequisites:** Chosen combat skill 5
+**Prerequisites:** Chosen combat skill 6
 **Usage:** Passive
 **Keyword:** [Combat]
 **Description:** This weapon is like an extension of your body.
 **Benefit:** Choose one weapon type (longswords, bows, spears, etc.). When attacking with that weapon type, subtract 1 from your combat skill die result before comparing (minimum 1). Can be taken multiple times for different weapon types
 
 #### Weapon Weaver
-**Prerequisites:** Melee Combat 3, any magical tradition trait
+**Prerequisites:** Melee Combat 4, any magical tradition trait
 **Usage:** Passive
 **Keyword:** [Combat], [Magic]
 **Description:** You may combine a weapon attack and a Simple Weave into a single action. It does not bypass the need to make weaving checks.
 **Benefit:** When you take a [Combat] action with a melee weapon, can cast one Simple Weave (2 Energy cost or less) as part of the same action. You still make the normal weaving check for the weave (Potential + Mastery for each energy used). Both the attack and the weave use the same [Combat] action
 
 #### Weapon's Full Edge
-**Prerequisites:** Str 4, Melee 4, Crushing Advance feat
+**Prerequisites:** Str 4, Melee 5, Crushing Advance feat
 **Usage:** Passive
 **Keyword:** [Combat], [Two-Handed]
 **Description:** Most fighters treat the alternate face of their weapon as a fallback.
 **Benefit:** When you use a [Two-Handed] weapon's [Alternate-Strike], it deals the same base damage as the weapon's primary damage value. Strength still applies on Margin 2 as normal.
 
 #### Whirlwind Strike
-**Prerequisites:** Str or Agi 5, Melee 5
+**Prerequisites:** Str or Agi 6, Melee 6
 **Usage:** Once per turn
 **Keyword:** [Combat]
 **Description:** One devastating rotation of your weapon strikes every enemy within reach, turning encirclement from a tactical advantage for them into a very serious problem.
@@ -1771,7 +1771,7 @@ Legendary feats count toward the standard feat limits. The only difference is th
 **Legendary Feat Cost:** 80 xp
 
 #### Air Savant
-**Prerequisites:** Air Mastery 6, Air Potential 6, any magical tradition trait
+**Prerequisites:** Air Mastery 7, Air Potential 7, any magical tradition trait
 **Usage:** Passive
 **Keyword:** [Magic]
 **Description:** The wind answers your call like an old friend. You've transcended mere manipulation of air and you've become part of the storm itself. Lightning courses through your veins, and gravity is more of a suggestion than a law.
@@ -1809,7 +1809,7 @@ Legendary feats count toward the standard feat limits. The only difference is th
 **Benefit:** Gain proficiency in all saving throws. When you fail a saving throw, you can spend 1 Luck to reroll and must take the new result
 
 #### Earth Savant
-**Prerequisites:** Earth Mastery 6, Earth Potential 6, any magical tradition trait
+**Prerequisites:** Earth Mastery 7, Earth Potential 7, any magical tradition trait
 **Usage:** Passive
 **Keyword:** [Magic]
 **Description:** Your mastery of earth has made you immovable, unbreakable and as inevitable as a mountain.
@@ -1819,7 +1819,7 @@ Legendary feats count toward the standard feat limits. The only difference is th
   - **Tremorsense:** You can sense vibrations through solid surfaces, detecting movement within 30 feet even if you cannot see
 
 #### Enlightened Casting
-**Prerequisites:** Sorcerous Origin trait, Wis 7
+**Prerequisites:** Sorcerous Origin trait, Wis 7, one mastery 7
 **Usage:** Once per long rest
 **Keyword:** [Magic], [Sorcerer]
 **Description:** Every variable aligns, every current runs true, and the weave emerges exactly as you intended without effort or cost.
@@ -1830,7 +1830,7 @@ Legendary feats count toward the standard feat limits. The only difference is th
   - Must be a weave you've cast before
 
 #### Fire Savant
-**Prerequisites:** Fire Mastery 6, Fire Potential 6, any magical tradition trait
+**Prerequisites:** Fire Mastery 7, Fire Potential 7, any magical tradition trait
 **Usage:** Passive
 **Keyword:** [Magic]
 **Description:** You've embraced the passion, fire and destruciton becoming a living conduit for flame. When you command fire, it doesn't just burn, it consumes. Ordinary heat no longer bothers you.
@@ -1840,7 +1840,7 @@ Legendary feats count toward the standard feat limits. The only difference is th
   - **Flame Walker:** You can walk across lava or flames as if solid ground (take no damage). Fire-based difficult terrain doesn't slow you
 
 #### Grand Ritual
-**Prerequisites:** Mageborn trait, Int 7, Arcana 7, Layered Weave feat
+**Prerequisites:** Mageborn trait, Int 7, Arcane 7, Layered Weave feat
 **Usage:** Once per long rest; requires 1 hour of uninterrupted preparation
 **Keyword:** [Magic], [Mageborn]
 **Description:** You posses the ability to construct weaves of such complexity and duration that they reshape the world in ways that persist long after you are gone.
@@ -1868,7 +1868,7 @@ Legendary feats count toward the standard feat limits. The only difference is th
 - **Elusive Blade:** Opportunity attacks against you have Misfortune.
 
 #### Living Grace
-**Prerequisites:** Wis 7, any magical tradition trait, Positive Mastery 6, Resurgence feat
+**Prerequisites:** Wis 7, any magical tradition trait, Positive Mastery 7, Resurgence feat
 **Usage:** Passive; Surge of Life once per long rest
 **Keyword:** [Magic], [Heal]
 **Description:** You have made healing into something the body remembers after you leave.
@@ -1896,7 +1896,7 @@ Legendary feats count toward the standard feat limits. The only difference is th
 **Benefit:** Your summoning limit increases by 2 (Charisma score + 2 combined Tier). The Tier gap penalty no longer applies to creatures within your Deepened Bond creature type. Once per long rest, call a creature whose Tier would exceed your Charisma-based summoning limit by 1. This creature arrives Friendly regardless of targeting roll and remains for 10 minutes at no additional energy cost beyond the initial summoning weave. Time-aspected daemons and Drakes remain inaccessible through this feat.
 
 #### Master Poisoner
-**Prerequisites:** Dex 6, Craft: Alchemist 6, Toxin Amplifier feat, Paralytic Expertise feat
+**Prerequisites:** Dex 6, Craft: Alchemist 7, Toxin Amplifier feat, Paralytic Expertise feat
 **Usage:** Passive; Signature Toxin once per long rest
 **Keyword:** [Poisoner], [Alchemist]
 **Description:** You have spent years studying what the body can withstand and, more importantly, what it cannot.
@@ -1926,7 +1926,7 @@ Legendary feats count toward the standard feat limits. The only difference is th
   - When you roll double 8s on a weaving roll (critical failure), immediately gain a free Harmonic Weaving reroll for that same weave
 
 #### The Unspoken Name
-**Prerequisites:** Invoker trait, Cha 7, Air Mastery 6, Unraveling Word feat, Echoing Invocation feat
+**Prerequisites:** Invoker trait, Cha 7, Air Mastery 7, Unraveling Word feat, Echoing Invocation feat
 **Usage:** Once per long rest
 **Keyword:** [Magic], [Invoker]
 **Description:** Every named thing can be unnamed. To speak it is to reach into the fundamental nature of a creature and rewrite what it is permitted to do.
@@ -1985,7 +1985,7 @@ roll.modifier rollType=attack value=-1 applyTo=both when=belowHalfHP
 **Benefit:** Your Pact Conduit passive now applies to every weave you cast, regardless of energy type. Once per long rest, you may fully invoke the patron's presence for 1 minute: during this time, your Pact Gift ability has no action cost (it triggers as part of any action), your Energy costs for all weaves are halved (rounded up), and creatures that fail saves against your weaves must also make a Will save (Hard task) or become Frightened of you for 1 minute. When this minute ends, you gain one level of Exhaustion
 
 #### Water Savant
-**Prerequisites:** Water Mastery 6, Water Potential 6, any magical tradition trait
+**Prerequisites:** Water Mastery 7, Water Potential 7, any magical tradition trait
 **Usage:** Passive
 **Keyword:** [Magic]
 **Description:** Embracing the patient and adaptable nature of water your weaves have become as fluid and unstoppable as the ocean itself.
@@ -1995,7 +1995,7 @@ roll.modifier rollType=attack value=-1 applyTo=both when=belowHalfHP
   - **Aquatic Adaptation:** You can breathe underwater. Gain swimming speed equal to your normal movement speed. Water-based Wilderness checks gain Fortune
 
 #### Wrath Incarnate
-**Prerequisites:** Bloodied Fury feat, Fearsome Reputation feat, Con 7, Str or Agi 7
+**Prerequisites:** Bloodied Fury feat, Fearsome Reputation feat, Con 7, Str or Agi 7, Melee 7
 **Usage:** Exhaustion immunity is passive while in fury; battlefield presence once per long rest
 **Keyword:** [Combat], [Savage]
 **Description:** You are not someone who gets angry. You are what anger looks like when it has been trained, tested, and refined across years of surviving things that had no right to leave survivors.

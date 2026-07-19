@@ -187,7 +187,7 @@ SKILL_MAP = {
     'athletics': 'athletics', 'might': 'might',
     'acrobatics': 'acrobatics', 'stealth': 'stealth',
     'thievery': 'thievery', 'devices': 'devices',
-    'perception': 'perception', 'wilderness': 'wilderness', 'survival': 'wilderness',
+    'perception': 'perception', 'wilderness': 'wilderness',
     'medicine': 'medicine', 'empathy': 'empathy', 'religion': 'religion',
     'arcana': 'arcane', 'arcane': 'arcane',
     'history': 'history', 'society': 'society',
