@@ -218,7 +218,7 @@ The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents
 ---
 
 ### Wilderness (Wisdom)
-**Description:** Survival skills, tracking, and knowledge of nature. Combines nature lore and outdoor survival.
+**Description:** Wilderness skills, tracking, and knowledge of nature. Combines nature lore and outdoor survival.
 
 **Simple Task (1 success):** Find food and water in abundant wilderness, follow obvious tracks, predict tomorrow's weather, identify common plants and animals.
 

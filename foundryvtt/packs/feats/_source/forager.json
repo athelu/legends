@@ -17,7 +17,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Find food and water for 6 people per day with Survival check (Simple task). 2 successes = find medicinal herbs worth 1d8 × 5 gp</p>",
+    "benefits": "<p>Find food and water for 6 people per day with Wilderness check (Simple task). 2 successes = find medicinal herbs worth 1d8 × 5 gp</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",
