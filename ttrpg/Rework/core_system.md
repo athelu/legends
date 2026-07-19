@@ -34,8 +34,8 @@ Potentials are generated at character creation alongside attributes. Every chara
 
 ## Skills and Mastery
 
-All skills, including the eight Mastery skills corresponding to the eight energies, start at rank 1.
-Every character begins with all eight Mastery skills at rank 1, reflecting the universal presence of pneuma. This baseline represents an unconscious resonance with the body and pneuma shaped by the same life without deliberate cultivation. Conscious development begins at rank 2, purchased through XP at the standard skill cost of 8 × current rank.
+All skills, including the eight Mastery skills corresponding to the eight energies, start at rank 2.
+Every character begins with all eight Mastery skills at rank 2, reflecting the universal presence of pneuma. This baseline represents an unconscious resonance with the body and pneuma shaped by the same life without deliberate cultivation. Conscious development begins at rank 3, purchased through XP at the standard skill cost of 8 × current rank.
 
 Mastery skills are capped by their corresponding Potential value, the same way standard skills are capped by their governing attribute.
 
@@ -416,8 +416,7 @@ One checkbox per skill per session: repeated use of the same skill in one sessio
 ##### Training Requirements
 | Advancement | Trainer Required                |
 |-------------|---------------------------------|
-|  Rank 0-1   | Yes. Any character or NPC with at least rank 1 in that skill. |
-|  Rank 1-4   | No. Self-directed advancement. |
+|  Rank 2-4   | No. Self-directed advancement. |
 |  Rank 5+    | Yes. Trainer must have rank equal to or higher than the target rank. |
 
 ###### Trainer Requirements
@@ -426,8 +425,7 @@ Not all advancement is self-directed. Some thresholds require instruction from s
 **Finding Trainers:**
 Trainers may be fellow party members, NPCs in settlements, faction contacts, or wandering specialists. A character with Craft: Blacksmith at rank 6 can train another character to rank 6 in that skill. Faction standing often determines access to high-rank trainers (see Faction Work below).
 
-**Wilderness Training:**
-Rank 0 → 1 training may be performed anywhere, including the field, as long as a qualifying trainer is present. Party members with sufficient rank may always serve as trainers for each other.
+
 
 ### Practice
 Practice generates checkboxes without advancing skills or spending XP. It represents deliberate drilling, elemental exercises, or rehearsal during time when there is nothing more pressing to do.
@@ -470,7 +468,7 @@ The Craft skill is not a single skill. Each area of craft represents distinct kn
 | Glassblower   | Glass vessels, lenses, windows | Blowpipe, marver, annealing access | 60 gp |
 | Shipwright    | Boats, ships, large watercraft, repairs | Large tools, forms, caulking equipment | 150 gp (or guild access) |
 
-**Acquiring a new Craft:** Keyword skill follows the same rules as any skill. The character must have the appropriate tools and must be trained by someone with rank 1 or higher in that keyword before reaching rank 1 themselves. After reaching rank 1, advancement to rank 4 is self-directed. Rank 5 and above require a trainer with equal or higher rank.
+**Acquiring a new Craft:** Keyword skill follows the same rules as any skill. The character must have the appropriate tools and must be trained by someone with rank 2 or higher in that keyword before reaching rank 2 themselves. After reaching rank 2, advancement to rank 4 is self-directed. Rank 5 and above require a trainer with equal or higher rank.
 
 **Workshop Access:**
 Some keywords require infrastructure that cannot be carried — a forge for Blacksmithing, a kiln for Glassblowing, a shipyard for Shipwright work. Characters who own the tools but lack workshop access cannot perform those crafting activities in the field. Guild membership or appropriate faction standing may substitute for personal ownership by providing access to shared facilities.
@@ -592,7 +590,7 @@ Standing within a faction determines access to the faction's trainers and resour
 
 #### Retraining
 Characters may replace a feat they have previously chosen with a different feat during downtime. Retraining represents seeking out instruction, unlearning ingrained habits, and rebuilding technique from the ground up.
-Retraining applies to feats only. Skills, attributes, and magical potentials represent genuine learned experience and cannot be retrained. A character may retrain once per tier. Starting Feats (the two free feats received at character creation) cannot be retrained. They represent foundational training from before the campaign began.
+Retraining applies to feats only. Skills, attributes, and magical potentials represent genuine learned experience and cannot be retrained. A character may retrain once per tier. Starting Feats (the three free feats received at character creation) cannot be retrained. They represent foundational training from before the campaign began.
 
 **Requirements:**
 A trainer who possesses the feat being learned, OR appropriate faction standing (rank 3+ for Standard Feats, rank 5+ for Legendary Feats). The character must meet all prerequisites for the new feat.

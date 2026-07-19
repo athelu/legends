@@ -1,6 +1,6 @@
 ## Skills Overview
 
-The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents training and expertise in specific areas. Skills range from rank 1 to rank 8.
+The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents training and expertise in specific areas. Skills range from rank 2 to rank 8.
 
 **Skill Checks:**
 - Roll attribute die + skill die
@@ -108,7 +108,7 @@ The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents
 
 **Hard Task (2 successes):** Decipher an ancient or dead language (if related to one you know), understand complex technical or poetic writing, translate idioms and cultural references accurately.
 
-**Note:** Rank in Language = number of languages known. Rank 0 = common tongue only, Rank 1 = common + 1 language, Rank 3 = common + 3 languages, etc.
+**Note:** Rank in Language = number of languages known. Rank 2 = common + 2 languages, Rank 3 = common + 3 languages, etc.
 
 ---
 
@@ -273,7 +273,6 @@ When not under time pressure, the GM may allow you to automatically succeed at S
 **Starting Skills:** Determined by your Background
 
 **Improving Skills:**
-- Rank 1→2: 8 XP (8 × current rank)
 - Rank 2→3: 16 XP
 - Rank 3→4: 24 XP
 - Maximum: Skill rank cannot exceed governing attribute

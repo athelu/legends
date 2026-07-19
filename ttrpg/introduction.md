@@ -27,7 +27,7 @@ You'll describe what characters see, hear, smell, and experience. You'll portray
 
 This might sound overwhelming if you're new to GMing, but remember: you don't need to know everything. When you're unsure how a rule works, make a quick decision to keep the game moving, then look it up later. When players take unexpected actions (and they will), improvise something that makes sense and move forward.
 
-Your primary goal isn't to "beat" the players or tell them your story. It's to create interesting situations, present meaningful choices, and facilitate everyone having a good time. Some GMs run published adventures; others create everything from scratch; most do a mix of both. All approaches work.
+Your primary goal isn't to "beat" the players or tell them your story. It's to create interesting situations, present meaningful choices, and facilitate everyone having a good time. Some GMs run published adventures while others create everything from scratch, most do a mix of both. All approaches work.
 
 ### What you will Need
 To run Legends of Athelu, you will need the following items:
@@ -82,7 +82,7 @@ The number 8 carries deep significance throughout the world:
 | 8 months per year: Jaetber, Atheluber, Summeber, Gaeshber, Ormanber, Perdober, Creigsber, Lontaber |
 | Adulthood milestones: page at 8, squire at 16, knight at 24 |
 | 8 magical energies: Earth, Air, Water, Fire, Positive, Negative, Space, Time |
-| 8 humors of the body: Muscle, Bone, Blood, Ile, Brain, Pneuma, Consciousness, Phlegm |
+| 8 humors of the body: Muscle, Bone, Blood, Bile, Brain, Pneuma, Consciousness, Phlegm |
 | 8 dragons of myth: Aq-Yin-To, Char-Talt, Har-Ten-Mo, Kylo, Luk-Anda, Sein-Tuk-Tak, Tiet-Amor, Garro-Leth |
 | 8 gods of the pantheon: Ambis, Alkira, Athore, Nevil, Rudlu, Hirnaloyta, Enschede, Shu-Jahan |
 | 8 external planes: Negative, Positive, Shadow, Ethereal, Air, Earth, Water, Fire |
@@ -110,11 +110,11 @@ Eight Attributes measure raw potential in different areas. **Strength** for phys
 
 **Skills** represent training in specific tasks: swinging a sword, sneaking past guards, persuading merchants, identifying magical effects. Skills range from 0 (untrained) to 8 (legendary mastery). Unlike attributes, skills start at 0 and must be improved with experience points.
 
-**Feats** are special abilities that make your character unique. Combat techniques, magical enhancements, and skill specializations are provided through feats and help define what you can do that others cannot. Every character begins with 2 free feats, and more can be purchased with XP.
+**Feats** are special abilities that make your character unique. Combat techniques, magical enhancements, and skill specializations are provided through feats and help define what you can do that others cannot. Every character begins with 3 free feats, and more can be purchased with XP.
 
 **Hit Points** (HP) measure how much damage you can sustain before falling unconscious. Equal to Constitution × 8. Importantly, your HP doesn't increase as you gain experience. A starting character might have 32 HP, and they'll still have 32 HP after years of adventuring. Combat remains dangerous for everyone. You survive by getting better at avoiding and reducing damage, not by becoming a damage sponge.
 
-**Luck** is both an attribute and a depletable resource. Each session you begin with Luck points equal to your Luck attribute. You spend these points to improve dice rolls or avoid complications. As your Current Luck depletes during the session, you become more vulnerable to danger.
+**Luck** is both an attribute and a depletable resource. After a long rest you begin with Luck points equal to your Luck attribute. You spend these points to improve dice rolls or avoid complications. As your Current Luck depletes during the session, you become more vulnerable to danger.
 
 **Tiers** represent overall power and experience. Tier 1 characters are beginners; Tier 8 characters are legendary heroes. Unlike levels in other games, tiers don't automatically grant abilities. Tiers are just a convenient way to gauge how powerful a character is compared to others and what challenges are appropriate.
 
@@ -177,7 +177,7 @@ On your turn, you have **three actions** to spend. Most activities cost one acti
 
 **Multiple Action Penalty:** If you use more than one [Combat] action in a turn, each one after the first gets harder. Your second combat action adds 1 to both die results. Your third combat action adds 2 to both die results. This represents fatigue and loss of precision from repeated attacks.
 
-Importantly, this penalty only applies to actions tagged [Combat], like attacking, casting attack spells, and using combat maneuvers. You can move, interact with objects, and perform other non-combat actions freely without penalty.
+Importantly, this penalty only applies to actions tagged [Combat], like attacking, casting attack weaves, and using combat maneuvers. You can move, interact with objects, and perform other non-combat actions freely without penalty.
 
 ### Attacking at Range
 Ranged attacks work differently as the target doesn't normally actively defend. You roll Dexterity + Ranged Combat against success thresholds based on distance:
@@ -208,7 +208,7 @@ When you reach 0 HP, you fall unconscious and start dying. Each turn you make a 
 Allies can stabilize you with successful Medicine checks, or magical healing can restore you immediately.
 
 ### Conditions and Status Effects
-Combat inflicts more than just damage. Spells and special attacks can impose conditions that limit what you can do:
+Combat inflicts more than just damage. Weaves and special attacks can impose conditions that limit what you can do:
 - **Prone:** Harder to hit with ranged attacks, easier to hit in melee
 - **Grappled:** Can't move until you escape
 - **Stunned:** Can't take actions for a duration
@@ -223,17 +223,29 @@ Once per round (the time between your turns), you can use a reaction, which is a
 The most common reaction is the Opportunity Attack: when an enemy moves out of your melee reach, you can use your reaction to make one melee attack against them.
 This creates tactical choices. Do enemies risk taking opportunity attacks to run away? Do they use the Disengage action to avoid attacks but sacrifice an offensive action?
 
-Other reactions include Shield Block (if you're wielding a shield) and Counterweave (if you can counter enemy spells). Some feats grant additional reaction options.
+Other reactions include Shield Block (if you're wielding a shield) and Counterweave (if you can counter enemy weaves). Some feats grant additional reaction options.
 
 ### Magic: Weaving the Eight Energies
 When the gods created Athelu, they wove magic into the fabric of reality itself. This magic flows through eight distinct energies: Earth, Air, Fire, Water, Positive, Negative, Time, and Space. Each energy embodies different aspects of existence, from the physical elements to the concepts of life, death, and reality manipulation.
 Mortals gifted with magical ability can tap into these energies and shape them through an act called weaving. But this isn't some subtle, invisible force. Magic in Athelu announces itself. A mage's eyes glow with violet light constantly. Spells create luminous displays like violet fire, glowing ice, shimmering barriers and the like. Anyone nearby knows when magic is being used.
 
+To become a weaver, you must possess a magical trait. These traits represent different paths to power:
+- **Mageborn** study magic as a science, understanding the theoretical interactions between energies.
+- **Divine casters** channel power through faith, connecting to gods or natural forces.
+- **Sorcerers** unlock magic through profound self-knowledge and enlightenment.
+- **Warlocks** make pacts with otherworldly patrons who grant them power.
+- **Invokers** speak true names and words of power to command reality.
+- **Infusers** bind magical energy into physical objects.
+- **Alchemists** use the magic in natural objects to create magical effects.
+- **Summoners** use their pneuma to lure daemons to the material plane.
+
+Each path has unique advantages and limitations, but all can manipulate the same eight energies.
+
 ### How Weaving Works
 A spell (called a weave) combines energies to create effects:
 The **Primary Energy** determines the main effect. Fire creates flames and heat. Positive creates healing and growth. Space allows teleportation and barriers.
 
-**Supporting Energies** provide enhancements like range, duration, and area. That simple fire burst you create with pure Fire energy only works at touch range. Want to throw it 60 feet? Add supporting (air) energy. Want it to explode in an area? More Air energy. 
+**Supporting Energies** Modify how the core energy manifests, such as turning water to ice or steam and provide enhancements like range, duration, and area. That simple fire burst you create with pure Fire energy only works at touch range. Want to throw it 60 feet? Add supporting (air) energy. Want it to explode in an area? More Air energy. 
 
 More powerful weaves cost more Energy points from your pool. This pool recharges when you rest for 8 hours
 
@@ -256,12 +268,12 @@ Legends handles character growth differently than most RPGs. There are no levels
 Every session, each player receives 24 XP. This happens regardless of whether you won fights, found treasure, or completed objectives. As long as you showed up and participated, you get your 24 XP.
 
 **You can spend this XP immediately or save it for larger purchases:**
-- **Skills** cost 4 XP to go from untrained (rank 0) to trained (rank 1). After that, each rank costs 8 × current rank. Going from rank 3 to rank 4 costs 24 XP.
+- **Skills** cost 8 × current rank. Going from rank 3 to rank 4 costs 24 XP.
 - **Attributes** cost 16 × current rank. Raising Strength from 4 to 5 costs 64 XP—almost three sessions of savings.
 - **Potentials** (for magic users) also cost 16 × current rank, same as attributes.
 - **Feats** cost a flat 40 XP each—almost two sessions of savings for a new special ability.
 
-This creates meaningful choices. Do you specialize in a few skills and attributes, becoming exceptional at specific things? Or do you spread XP around to be more versatile? Both approaches work.
+Do you specialize in a few skills and attributes, becoming exceptional at specific things? Or do you spread XP around to be more versatile? Both approaches work.
 
 ### Character Tiers
 As your total accumulated XP grows, you pass through eight tiers representing rough power levels:
@@ -283,8 +295,8 @@ The progression is steady: 5 sessions to reach Tier 2, then roughly 10 sessions 
 **Condition:** An ongoing effect that changes how a character can act or alters their capabilities (Prone, Stunned, Grappled, etc.).
 **Damage Reduction (DR):** How much damage armor (or other protections) prevents. Subtracted from incoming damage.
 **Energy:** The resource pool used to weave magic. Recharges on long rest.
-**Feat:** A special ability that defines what makes your character unique. All characters start with 2 free feats.
-**Flaw:** A limitation or hardship accepted during character creation to earn points for purchasing Traits.
+**Feat:** A special ability that defines what makes your character unique. All characters start with 3 free feats.
+**Flaw:** A limitation or hardship accepted during character creation or during gameplay that earns points for purchasing Traits.
 **Fortune:** A bonus that lets you roll 3d8 and take the best (lowest) 2 results.
 **Game Master (GM):** The player who adjudicates rules and narrates the world, story, and NPCs.
 **Hit Points (HP):** How much damage a character can sustain before falling unconscious. Equal to Constitution × 8, does not increase with tier.
@@ -311,7 +323,7 @@ The best way to learn Legends is to play! If you're new to roleplaying games, st
 - Choose an ancestry and background
 - Distribute attributes
 - Select traits and flaws
-- Choose your 2 starting feats
+- Choose your 3 starting feats
 - Spend starting XP on skills
 - Select equipment
 - Give your character a personality and goals

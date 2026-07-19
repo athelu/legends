@@ -40,7 +40,7 @@
 **Variants:**
 - **Farmer:** Replace Athletics 2 with Wilderness 2, use Farmer background (Wilderness 2, Might 2, Athletics 1, Craft 1)
 - **Dock Worker:** Same stats, carries cargo hook instead of club (same damage)
-- **Servant:** Use Servant background (Empathy 2, Society 2, Perception 2, Stealth 2, Pattern A with +24 XP), lower Str to 3, raise Dex to 4
+- **Servant:** Use Servant background (Empathy 3, Society 3, Perception 3, Stealth 3, Deception 3, Pattern A with +40 XP), lower Str to 3, raise Dex to 4
 - **Craftsperson:** Replace Might 2 with Craft 3, use appropriate artisan tools
 
 ---

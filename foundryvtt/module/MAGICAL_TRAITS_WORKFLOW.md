@@ -59,7 +59,7 @@ For the parser in `foundryvtt/scripts/build_traits_pack.py`, the markdown source
    - Any roll + 1 assigned to chosen energy
 6. **Assign Remaining Rolls** to other 6 energies
 7. Set Intelligence as Casting Stat
-8. Initialize 8 Mastery skills (all rank 0)
+8. Initialize 8 Mastery skills (all rank 2)
 9. Add Ritual Casting ability
 
 **Key Choices**:

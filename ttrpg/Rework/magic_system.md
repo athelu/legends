@@ -178,9 +178,9 @@ The forbidden nature of necromancy is a feature, not a bug—it should feel dang
 - Can be raised with XP (costs same as attributes: 16 × current rank)
 - Determines maximum Energy you can spend in that type
 
-##### Mastery (1-8, like skills)
+##### Mastery (2-8, like skills)
 - Trained control of each energy
-- All start at rank 1
+- All start at rank 2
 - Can be raised with XP (costs same as skills)
 - Cannot exceed corresponding Potential
 - Determines reliability when weaving

@@ -20,7 +20,7 @@ A condition may carry both keywords when it both penalizes the creature and crea
 ### Bleeding
 **Keyword:** [Hindered]
 **Effect:** Take 2 damage per stack at the end of each of your turns. Multiple bleeding effects add together (2 stacks = 4 damage per turn, 3 stacks = 6 damage per turn). If at 0 HP or below, bleeding damage stops. Add your total bleeding stack count to both dice when making stabilization saves.
-**Recovery:** Magical healing removes all bleeding stacks. Target may use 1 [Interact] action to make a Medicine check (rank 1 required) to reduce bleeding:
+**Recovery:** Magical healing removes all bleeding stacks. Target may use 1 [Interact] action to make a Medicine check (rank 3 required) to reduce bleeding:
 - **1 success:** Remove 1 bleeding stack.
 - **2 successes:** Remove all bleeding stacks.
 **Ally Assistance:** An ally within 5 feet may use 1 [Interact] action to make a Medicine check:

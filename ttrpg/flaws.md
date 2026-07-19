@@ -13,29 +13,27 @@ Flaws represent physical, mental, and social disadvantages that limit your chara
 ## PHYSICAL FLAWS
 
 ### Bad Luck (6)
-Luck is costly and inefficient.
-- Luck attribute functions normally for starting value and regeneration
-- Spending Luck costs 2 points per die reduction instead of 1
-- You still roll Luck for saves normally
-- Complications on partial success work normally
+Luck is costly and inefficient. Spending Luck costs 2 points per die reduction instead of 1
 
 ### Blind (7)
 Lost sight in both eyes.
 - Permanently Blinded (see Blinded condition)
 
-### Chronic Pain (3-5)
-You suffer from persistent pain that flares during stress.
-- **Mild (3):** At start of combat or during extended physical activity, make Will save (1 success required). On failure, add 1 to all die results for 1d8 rounds.
-- **Severe (5):** As Mild, but Will save is at Misfortune (1 success required). On failure, add 2 to all die results for 2d8 rounds.
+### Chronic Pain - Mild(3)
+You suffer from persistent pain that flares during stress. At the start of combat or during extended physical activity, make Will save (1 success required). On failure, add 1 to all attribute die results for 1d8 rounds.
 
-### Clumsy (2-4)
-You are awkward and accident-prone.
-- **Minor (2):** Add 1 to Acrobatics, Climb, and balance-related Athletics checks
-- **Major (4):** Add 2 to all Agility-based checks requiring coordination. On natural 8 during physical activities, something goes wrong (drop weapon, trip, knock something over)
+### Chronic Pain - Severe (5)
+You suffer from persistent pain that flares during stress. At the start of combat or during extended physical activity, make Will save with Misfortune (1 success required). On failure, add 2 to all attribute die results for 2d8 rounds
+
+### Clumsy - Minor (2)
+You are awkward and accident-prone. Add 1 to Acrobatics, Climb, and balance-related Athletics checks skill dice.
+
+### Clumsy - Major (4)
+You are awkward and accident-prone. Add 2 to Acrobatics, Climb, and balance-related Athletics checks skill dice. On a natural 8 during physical activities, something goes wrong (drop weapon, trip, knock something over).
 
 ### Color Blindness (2)
 Cannot distinguish colors.
-- Perception where color matters: Add 1 to die results
+- Perception where color matters: Add 1 to skill die results
 
 ### Deafness (3)
 Totally deaf.
@@ -44,38 +42,38 @@ Totally deaf.
 ### Deep Sleeper (1)
 Difficult to awaken.
 - Require 2 successes to wake
-- First round after waking: Add 2 to all die results
+- First round after waking: Add 2 to all skill die results
 
 ### Disfigured (5)
 Missing appendage (hand, foot, arm, leg).
 - Missing hand/foot: Add 2 to related skill die results
-- Missing arm/leg: Related skills impossible or add 4 to die results
+- Missing arm/leg: Related skills impossible or add 4 to skill die results
 
 ### Hard of Hearing (2)
-- Sound-based Perception: Add 1 to die results
+- Sound-based Perception: Add 1 to skill die results
 - Initiative: -1
 
 ### Light Sensitive (2)
 Not accustomed to bright light.
 - Permanently Dazzled in daylight (see Dazzled condition)
-- Normal at twilight/night with artificial light
+- Normal at twilight/night or artificial light
 
 ### One Eye (3)
 Missing one eye.
-- Add 1 to ranged attack rolls
-- Perception checks involving depth perception: Add 1 to die results
+- Add 1 to ranged attack skill die rolls
+- Perception checks involving depth perception: Add 1 to skill die results
 - No peripheral vision on one side
 
 ### Overweight (1)
 You carry extra weight that affects your mobility.
 - Choose one when taking this flaw:
-  - **Athletics Penalty:** Add 1 to Athletics die results
-  - **Acrobatics Penalty:** Add 1 to Acrobatics die results
+  - **Athletics Penalty:** Add 1 to Athletics skill die results
+  - **Acrobatics Penalty:** Add 1 to Acrobatics skill die results
 
 ### Poor Eyesight (2)
 Myopia/hyperopia. Without corrective lenses:
-- Vision-based Perception: Add 2 to die results
-- Ranged Combat: Add 1 to die results
+- Vision-based Perception: Add 2 to skill die results
+- Ranged Combat: Add 1 to skill die results
 
 ### Sickly (5)
 Incurable debilitating illness.
@@ -83,7 +81,7 @@ Incurable debilitating illness.
 
 ### Speech Impediment (2)
 Serious stutter/lisp/defect.
-- Persuasion, Perform, Deception when speaking: Add 2 to die results
+- Persuasion, Perform, Deception when speaking: Add 2 to skill die results
 
 ---
 
@@ -109,7 +107,7 @@ You want to see your foes dead. In battle, you go for killing blows and finish d
 ### Callous (2)
 You are merciless and don't care about others' feelings.
 - Cannot provide comfort or emotional support effectively
-- Persuasion checks to empathize or console: Add 2 to die results
+- Persuasion checks to empathize or console: Add 2 to skill die results
 - May receive bonuses to Intimidate in certain situations (GM discretion)
 
 ### Charitable (3)
@@ -150,7 +148,7 @@ Covet money above all. Will go to any length to gain more.
 ### Gullibility (2)
 You believe what people tell you.
 - Make Will save (1 success required) to disbelieve lies or doubt stated intentions
-- Insight and Investigate checks to detect lies: Add 2 to die results
+- Investigate checks to detect lies: Add 2 to skill die results
 
 ### Hatred (3)
 Overpowering contempt for someone/something. Hatred overrides other emotions.
@@ -190,34 +188,34 @@ Horrible nightmares prevent restful sleep.
 - Long rest only restores half Luck (rounded down)
 
 ### Overconfidence (2)
-Believe you're best at everything.
+You believe that you're best at everything.
 - Must make Will save (1 success required) to retreat from dangerous situations or admit you're wrong
 - NPCs may react negatively to your arrogance (GM discretion)
 
-### Pacifism (3-5)
-You are opposed to violence.
-- **Restrained Violence (3):** Will not attack non-combatants, surrendered foes, or clearly innocent people. Make Will save (1 success required) to harm anyone who hasn't directly threatened you.
-- **Absolute Non-Violence (5):** Will never deal lethal damage. All your attacks must be non-lethal, and you cannot deliver killing blows even to defeated enemies.
+### Pacifism - Minor (3)
+You are opposed to violence. You will not attack non-combatants, surrendered foes, or clearly innocent people. Make a Will save (1 success required) to harm anyone who hasn't directly threatened you.
+
+### Pacifism - Major (5)
+You will never deal lethal damage. All your attacks must be non-lethal, and you cannot deliver killing blows even to defeated enemies.
 
 ### Phobia (3)
-Deathly afraid of something. Make Will save (1 success required) or flee/cower when confronted.
+You are deathly afraid of something. Make a Will save (1 success required) or gain the fleeing or cowering condition when confronted by the source of your phobia. This may be taken multiple times.
 
 ### Pyromania (2)
 You are fascinated by fire and have an urge to set things ablaze.
 - Make Will save (1 success required) to resist starting fires or using fire-based solutions when they arise
 
-### Protector's Oath (2-5)
-You have sworn to defend those under your care.
-- **Personal (2):** Sworn to protect your party, family, or a specific small group
-- **Collective (3):** Oath extends to all members of your faith, nation, or organization
-- **Universal (5):** Cannot abandon or harm any sapient being; all life is sacred to you
-You must honor your oath to protect, even at great personal risk
+### Protector's Oath - Minor (2)
+Sworn to protect your party, family, or a specific small group. You must honor your oath to protect, even at great personal risk.
 
+### Protector's Oath - Serious (3)
+Sworn to protect all members of your faith, nation, or organization. You must honor your oath to protect, even at great personal risk.
 
-### Squeamish (2)
-You are disturbed by blood, gore, and corpses.
-- Make Will save (1 success required) when exposed to gruesome scenes or be unable to approach/interact with source
-- Medicine and Healing checks involving blood: Add 2 to die results
+### Protector's Oath - Major (5)
+Sworn to never abandon or harm any sapient being; all life is sacred to you. You must honor your oath to protect, even at great personal risk.
+
+### Squeamish (2):
+You are disturbed by blood, gore, and corpses. Make a Will save (1 success required) when exposed to gruesome scenes or be unable to approach/interact with source. Medicine and Healing checks involving blood: Add 2 to skill die results.
 
 ### Stubbornness (2)
 You refuse to change your mind easily.
@@ -241,15 +239,14 @@ You work obsessively and have trouble relaxing.
 
 ## SOCIAL FLAWS
 
-### Bad Reputation (2-4)
-You are known for something dishonorable or embarrassing.
-- **Minor (2):** Known in your region for something embarrassing or dishonorable
-- **Major (4):** Widely known as criminal, coward, traitor, etc.
-- NPCs who know of you react negatively
-- Persuasion in social situations: Add 1-2 to die results depending on severity
+### Bad Reputation - Minor (2)
+You are known in your region for something embarrassing or dishonorable. Persuasion in social situations: Add 1 to skill die results.
+
+### Bad Reputation - Major (4)
+You are widely known as criminal, coward, traitor, etc. Persuasion in social situations: Add 2 to skill die results.
 
 ### Black Sheep (2)
-Family has disowned you. No family support.
+You family has disowned you. No family support.
 
 ### Child (5)
 Begin below minimum age, inexperienced.
@@ -268,14 +265,15 @@ Always-just-out-of-reach goal you constantly pursue.
 
 ### Duty Bound (2)
 True to your word. Avoid lies, must keep promises.
-- Different from Honesty: Duty Bound is about keeping your word and promises, Honesty is about following laws/rules
-- Example: A Duty Bound character might break into a building to save someone they promised to protect. An Honest character couldn't do that because it's illegal.
 
-### Enemy (1-5)
-Someone/group has animosity toward you.
-- Minor (1): Occasional trouble
-- Powerful (3): Significant threat
-- Group/Extremely Powerful (5): Organized, constant danger
+### Enemy - Minor (1)
+Someone, or some group has animosity toward you that causes you occasional trouble.
+
+### Enemy - Serious (3)
+A powerful person or group has animosity toward you that causes you trouble.
+
+### Enemy - Major (3)
+A powerful organization or nation has animosity toward you and is constantly pursuing you.
 
 ### Fealty (2)
 Sworn allegiance to political faction. Must honor it.
@@ -283,12 +281,11 @@ Sworn allegiance to political faction. Must honor it.
 ### Hired Sword (3)
 Mercenary reputation. Will do anything for price. No loyalty possible.
 
-### Intolerance (2-3)
-You have strong prejudice against a group.
-- **Specific Group (2):** Particular ancestry, class, religion, nationality
-- **Broad Category (3):** All non-humans, all magic users, all aristocrats, etc.
-- Persuasion with disliked group: Add 2 to die results
-- May receive negative reactions from them
+### Intolerance - Minor (2)
+You have a strong prejudice  to a particular ethnicity, social class, religion, or nationality. Persuasion with disliked group: Add 2 to skill die results.
+
+### Intolerance - Major (2)
+You have a strong prejudice  to a broad category such as all non-humans, magic users, etc. Persuasion with disliked group: Add 2 to skill die results.
 
 ### Mistaken Identity (1)
 Common appearance, often mistaken for others.
@@ -298,32 +295,30 @@ Cannot vocalize.
 - Speech-based social skills automatically fail
 
 ### Orphan (1)
-Forsaken as child, raised on streets/by others/in orphanage.
+Forsaken as a child and raised on the streets by others or in an orphanage.
 
 ### Plague (7)
-Spread disease to others.
-- Immune yourself
-- All within 10 feet must make daily Fortitude saves or contract disease
+You are a disease carrier but are yourself Immune to the disease. All within 10 feet of you must make daily Fortitude saves (1 success required) or contract the disease.
 
 ### Poor Memory (1)
 Cannot remember faces, names, times, dates, places.
 - Cannot benefit from Eidetic Memory
-- History and Society: Add 2 to die results
+- History and Society: Add 2 to skill die results
 
 ### Recognizable Trait (1)
 Peculiar characteristic or marking makes you easily identifiable.
 
 ### Touch of Evil (3)
 Bloodline tainted with darkness.
-- Persuasion with good-aligned NPCs: Add 2 to die results
-- Intimidate: Subtract 2 from die results
+- Persuasion with good-aligned NPCs: Add 2 to skill die results
+- Intimidate: Subtract 2 from skill die results
 
 ### Unluckiness (3)
 Nothing goes your way.
 - Once per session, GM forces reroll of successful roll, take worse result
 
 ### Vengeance (2)
-Someone wronged you terribly. Life devoted to revenge.
+Someone wronged you terribly. Your life has since been devoted to revenge.
 
 ---
 

@@ -56,7 +56,6 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 
 - **24 XP per session** (awarded equally to all players)
 - Spend XP on:
-  - Untrained Skills: Rank 0 -> 1 costs 4 xp
   - Skills: 8 × current rank
   - Attributes: 16 × current rank
   - Potentials (if magical): 16 × current rank

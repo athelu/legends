@@ -35,7 +35,7 @@ const CREATION_STEP_METADATA = [
   { key: 'origin', label: 'Choose Nationality and Native Language' },
   { key: 'background', label: 'Choose Background' },
   { key: 'traitsAndFlaws', label: 'Select Traits and Flaws' },
-  { key: 'startingFeats', label: 'Select 2 Starting Feats' },
+  { key: 'startingFeats', label: 'Select 3 Starting Feats' },
   { key: 'spendXp', label: 'Spend Starting XP' },
   { key: 'hitPoints', label: 'Calculate Hit Points' },
   { key: 'equipment', label: 'Select Starting Equipment' },
@@ -677,7 +677,7 @@ async function showIntroDialog(actor) {
           <li>Choose Nationality and Native Language</li>
           <li>Choose Background</li>
           <li>Select Traits and Flaws</li>
-          <li>Select 2 Starting Feats</li>
+          <li>Select 3 Starting Feats</li>
           <li>Spend Starting XP</li>
           <li>Calculate Hit Points</li>
           <li>Select Starting Equipment</li>
@@ -1574,7 +1574,7 @@ async function chooseStartingFeat(actor) {
     position: { width: 980 },
     content: `
       <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
-        <div><strong>Choose a free starting feat.</strong> These two feats do not cost XP.</div>
+        <div><strong>Choose a free starting feat.</strong> These three feats do not cost XP.</div>
         <div style="font-size: 12px; color: #666;">Showing all feats. Unavailable options remain visible so players can review prerequisites and effects before they qualify.</div>
         <div style="font-size: 12px; color: #666;">${availableCount} of ${options.length} feats currently qualify for this character.</div>
         <input type="hidden" name="featChoice" value="${initialIndex >= 0 ? initialIndex : 0}" />
@@ -1691,8 +1691,8 @@ async function runStartingFeatsStep(actor) {
       position: { width: 580 },
       content: `
         <div style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
-          <div><strong>Starting Feats</strong>: choose exactly 2 free feats.</div>
-          <div>Selected: <strong>${startingFeats.length}</strong> / 2</div>
+          <div><strong>Starting Feats</strong>: choose exactly 3 free feats.</div>
+          <div>Selected: <strong>${startingFeats.length}</strong> / 3</div>
           ${formatItemList(startingFeats, 'No starting feats selected yet.')}
         </div>
       `,
@@ -1705,8 +1705,8 @@ async function runStartingFeatsStep(actor) {
 
     if (!action) return false;
     if (action === 'continue') {
-      if (startingFeats.length !== 2) {
-        ui.notifications.warn('Choose exactly 2 starting feats before continuing.');
+      if (startingFeats.length !== 3) {
+        ui.notifications.warn('Choose exactly 3 starting feats before continuing.');
         continue;
       }
 
@@ -1720,8 +1720,8 @@ async function runStartingFeatsStep(actor) {
     }
 
     if (action === 'add') {
-      if (startingFeats.length >= 2) {
-        ui.notifications.warn('This actor already has 2 starting feats selected.');
+      if (startingFeats.length >= 3) {
+        ui.notifications.warn('This actor already has 3 starting feats selected.');
         continue;
       }
       await chooseStartingFeat(actor);

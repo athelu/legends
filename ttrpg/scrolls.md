@@ -3,7 +3,7 @@ Scrolls are physical documents that store a weave for later use. Creating a scro
 A character without a magical trait cannot create scrolls, even with Craft: Scribe. A character with a magical trait but without Craft: Scribe may collaborate with a scribe — the caster provides magical encoding while the scribe handles the physical creation, splitting the downtime requirement between them.
 
 **Requirements for scroll creation:**
-- Craft: Scribe rank 1 or higher.
+- Craft: Scribe rank 3 or higher.
 - A magical trait.
 - The weave must be one the caster has successfully cast before.
 - The caster must expend Energy equal to the weave's full cost during creation (the Energy is stored in the scroll).
