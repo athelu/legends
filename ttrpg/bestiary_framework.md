@@ -836,7 +836,7 @@ Elite/Boss Monsters can exceed these benchmarks by 50-100% due to lower numbers 
 - [ ] Selected appropriate background
 - [ ] XP budget calculated: Background + Tier XP
 - [ ] Followed tier-appropriate XP spending strategy
-- [ ] Selected 2 starting feats + appropriate purchased feats (max 2 per tier)
+- [ ] Selected 3 starting feats + appropriate purchased feats (max 2 per tier)
 - [ ] Success rate matches tier expectations
 - [ ] HP = Constitution × 8
 - [ ] Equipment follows equipment.md, armor.md, weapons.md

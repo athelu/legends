@@ -1,9 +1,10 @@
 # Character Creation
 
 ## Character Attributes
+The Legends RPG System has eight core attributes.
 
 ### The Eight Core Attributes (1-8 scale)
-Strength represents raw physical power and the capacity to exert force upon the world. It governs feats of lifting, pushing, breaking, and overpowering obstacles through sheer muscle. In combat, Strength determines the damage dealt with melee weapons and the ability to grapple or shove opponents. Those with high Strength can carry heavy loads without encumbrance, force open stuck doors, and bend iron bars.
+**Strength** represents raw physical power and the capacity to exert force upon the world. It governs feats of lifting, pushing, breaking, and overpowering obstacles through sheer muscle. In combat, Strength determines the damage dealt with melee weapons and the ability to grapple or shove opponents. Those with high Strength can carry heavy loads without encumbrance, force open stuck doors, and bend iron bars.
 
 **Constitution** measures overall health, stamina, and physical resilience. It determines how much punishment a character can endure before falling unconscious and how quickly they recover from exhaustion, disease, and poison. Constitution governs a character's ability to maintain physical exertion over extended periods, from forced marches to swimming against strong currents. Those with exceptional Constitution can fight through injuries that would fell lesser individuals and resist environmental extremes.
 
@@ -25,7 +26,7 @@ Strength represents raw physical power and the capacity to exert force upon the 
 2. **Choose Ancestry**
 3. **Choose Background**
 4. **Select Traits and Flaws**
-5. **Select 2 Starting Feats**
+5. **Select 3 Starting Feats**
 6. **Spend Starting XP**
 7. **Calculate Hit Points**
 8. **Select Starting Equipment**
@@ -38,7 +39,16 @@ There are two standard methods available for determining your characters eight c
 ## Step 2. Determine Ancestry
 The player must choose an ancestry from those available in the ancestry section.
 
-## Step 3. Choose Background
+## Step 3. Land of Origin
+Unless the DM or story requires otherwise, choose which of the following nations your character is from:
+- Kingdom of Meresaw
+- Republic of Coudassis
+- Bellicose Empire
+- Far-Eastern Grasslands
+
+There are a few other nations available, but these would require permission from the GM.
+
+## Step 4. Choose Background
 Characters must choose a background from the ones available in the Background section or they may roll for a random background. This will determine some starting gear as well as skills.
 
 ### Random Background Table (d88)
@@ -47,46 +57,46 @@ Roll 2d8 - first die is the "tens" digit, second die is the "ones" digit.
 
 | Roll | Background | Roll | Background |
 |------|-----------|------|-----------|
-| 11 | Acolyte | 51 | Nomad |
-| 12 | Archaeologist | 52 | Refugee |
-| 13 | Artisan | 53 | Sage |
-| 14 | Artist | 54 | Sailor |
-| 15 | Athlete | 55 | Scholar |
-| 16 | Bandit | 56 | Servant |
-| 17 | Barber | 57 | Shepherd |
-| 18 | Barkeep | 58 | Smith |
-| 21 | Barrister | 61 | Smuggler |
-| 22 | Bookkeeper | 62 | Soldier |
-| 23 | Butcher | 63 | Squire |
-| 24 | Carpenter | 64 | Tailor |
-| 25 | Charlatan | 65 | Teacher |
-| 26 | Cook | 66 | Urchin |
-| 27 | Courtier | 67 | Ward |
-| 28 | Courier | 68 | Reroll (Player's Choice) |
-| 31 | Criminal | 71 | Reroll (Player's Choice) |
-| 32 | Driver | 72 | Reroll (Player's Choice) |
-| 33 | Entertainer | 73 | Reroll (Player's Choice) |
-| 34 | Farmer | 74 | Reroll (Player's Choice) |
-| 35 | Fisher | 75 | Reroll (Player's Choice) |
-| 36 | Gambler | 76 | Reroll (Player's Choice) |
-| 37 | Guard | 77 | Reroll (Player's Choice) |
-| 38 | Herbalist | 78 | Reroll (Player's Choice) |
-| 41 | Hermit | 81 | Reroll (Player's Choice) |
-| 42 | Hunter | 82 | Reroll (Player's Choice) |
-| 43 | Investigator | 83 | Reroll (Player's Choice) |
-| 44 | Laborer | 84 | Reroll (Player's Choice) |
-| 45 | Merchant | 85 | Reroll (Player's Choice) |
-| 46 | Mercenary | 86 | Reroll (Player's Choice) |
-| 47 | Miner | 87 | Reroll (Player's Choice) |
-| 48 | Noble | 88 | Reroll (Player's Choice) |
+| 11 | Acolyte | 51 | Hunter |
+| 12 | Archaeologist | 52 | Investigator |
+| 13 | Artisan | 53 | Jeweler |
+| 14 | Artist | 54 | Laborer |
+| 15 | Bandit | 55 | Mason |
+| 16 | Barber | 56 | Merchant |
+| 17 | Barkeep | 57 | Mercenary |
+| 18 | Barrister | 58 | Midwife |
+| 21 | Bookkeeper | 61 | Miner |
+| 22 | Bowyer | 62 | Monk |
+| 23 | Brewer | 63 | Noble |
+| 24 | Butcher | 64 | Nomad |
+| 25 | Carpenter | 65 | Pilgrim |
+| 26 | Cartographer | 66 | Rat Catcher |
+| 27 | Charlatan | 67 | Refugee |
+| 28 | Cobbler | 68 | Sage |
+| 31 | Cook | 71 | Sailor |
+| 32 | Courtier | 72 | Scholar |
+| 33 | Courier | 73 | Scribe |
+| 34 | Criminal | 74 | Servant |
+| 35 | Debt Collector | 75 | Shepherd |
+| 36 | Driver | 76 | Shipwright |
+| 37 | Dyer | 77 | Smith |
+| 38 | Entertainer | 78 | Smuggler |
+| 41 | Farmer | 81 | Soldier |
+| 42 | Fisher | 82 | Squire |
+| 43 | Fletcher | 83 | Tailor |
+| 44 | Gambler | 84 | Teacher |
+| 45 | Glassblower | 85 | Town Crier |
+| 46 | Guard | 86 | Urchin |
+| 47 | Herbalist | 87 | Ward |
+| 48 | Hermit | 88 | Reroll (Player's Choice) |
 
-## Step 4. Flaws & Traits
+## Step 5. Flaws & Traits
 Review the Flaws and Traits section. You MUST choose Flaws in order to earn points to spend on Traits. All magic using characters require a trait that costs between 5-7 points. You may not spend more points on traits than you have earned from flaws.
-To take a trait, you must have equal or greater flaw points. Traits and Flaws are ONLY available during Character creation, and cannot be taken after initial creation.
+To take a trait, you must have equal or greater flaw points.
 Traits are primarily for Magical abilities, granting Energy pools, Mastery skills, and weaving capability and for Exceptional characteristics such as supernatural heritage, extreme longevity, etc.
 
 ## Step 5. Starting Feats
-Every character receives 2 free feats at character creation. These represent your foundational training and abilities. Choose feats that define your character concept and help you meet your prerequisite requirements for the type of character that you have in mind. Many feats complement each other mechanically, or build upon each other.
+Every character receives 3 free feats at character creation. These represent your foundational training and abilities. Choose feats that define your character concept and help you meet your prerequisite requirements for the type of character that you have in mind. Many feats complement each other mechanically, or build upon each other.
 These starting feats do NOT count against your tier feat limits.
 
 ## Step 6. Spend starting XP

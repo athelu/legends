@@ -5,9 +5,9 @@ Feats are the primary way characters gain special abilities and combat technique
 
 ### Feat Costs and Limits
 -   **Cost:** 40 XP per feat
--   **Starting Feats:** Every character receives 2 free feats at creation
+-   **Starting Feats:** Every character receives 3 free feats at creation
 -   **Tier Limits:** Can purchase up to 2 feats per tier (starting feats don't count)
--   **Total by Tier 8:** 2 starting + 16 purchased = 18 feats maximum
+-   **Total by Tier 8:** 3 starting + 16 purchased = 19 feats maximum
 
 ---
 
@@ -627,7 +627,7 @@ roll.modifier rollType=skill value=-1 applyTo=both target=chosen
 #### Extended Infusion
 **Prerequisites:** Infuser trait, Int 4, Craft 4
 **Usage:** Passive enhancement to all infusion durations
-**Keyword:** [Magic], [Infuser
+**Keyword:** [Magic], [Infuser]
 **Description:** Through obsessive study of how magical energy degrades within matter, you have found ways to slow the inevitable decay.
 **Benefit:** Your Imbue Item duration increases from 1 minute to 10 minutes. Your Prepared Infusions now persist until the end of your next long rest rather than expiring at long rest. Additionally you may now prepare up to four dormant infusions instead of two.
 
@@ -874,7 +874,7 @@ dr.modify value=2 damageTypes=physical
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** A shallow familiarity with a skill is still familiarity. You've gathered enough of them that almost nothing is completely foreign, and raw ignorance rarely stops you.
-**Benefit:** Rank 1 skills count as rank 2
+**Benefit:** Rank 2 skills count as rank 3
 
 ### Keen Eye
 **Prerequisites:** Dex 4, Ranged 4

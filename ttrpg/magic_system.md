@@ -221,9 +221,9 @@ The forbidden nature of necromancy is a feature, not a bug—it should feel dang
 - Can be raised with XP (costs same as attributes: 16 × current rank)
 - Determines maximum Energy you can spend in that type
 
-##### Mastery (1-8, like skills)
+##### Mastery (2-8, like skills)
 - Trained control of each energy
-- All start at rank 1
+- All start at rank 2
 - Can be raised with XP (costs same as skills)
 - Cannot exceed corresponding Potential
 - Determines reliability when weaving
@@ -932,7 +932,7 @@ Some creatures have specific elemental resistances or immunities listed in their
 
 ### Condition Application in Weaves
 
-Many weaves can inflict conditions on targets when achieving high success thresholds. The conditions applied depend on the primary energy type used in the weave and the power level of the spell.
+Many weaves can inflict conditions on targets when achieving high success thresholds. The conditions applied depend on the primary energy type used in the weave and the power level (energy spent).
 
 #### Success Threshold Framework
 

@@ -26,7 +26,7 @@ Strength represents raw physical power and the capacity to exert force upon the 
 3. **Choose Ancestry**
 4. **Choose Background**
 5. **Select Traits and Flaws**
-6. **Select 2 Starting Feats**
+6. **Select 3 Starting Feats**
 7. **Spend Starting XP**
 8. **Calculate Hit Points**
 9. **Select Starting Equipment**
@@ -92,7 +92,7 @@ To take a trait, you must have equal or greater flaw points. Traits and Flaws ar
 Traits are primarily for Magical abilities, granting Energy pools, Mastery skills, and weaving capability and for Exceptional characteristics such as supernatural heritage, extreme longevity, etc.
 
 ## Step 5. Starting Feats
-Every character receives 2 free feats at character creation. These represent your foundational training and abilities. Choose feats that define your character concept and help you meet your prerequisite requirements for the type of character that you have in mind. Many feats complement each other mechanically, or build upon each other.
+Every character receives 3 free feats at character creation. These represent your foundational training and abilities. Choose feats that define your character concept and help you meet your prerequisite requirements for the type of character that you have in mind. Many feats complement each other mechanically, or build upon each other.
 These starting feats do NOT count against your tier feat limits.
 
 ## Step 6. Spend starting XP

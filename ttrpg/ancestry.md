@@ -30,8 +30,8 @@ The Urjack are a solitary people who inhabit the Lackabier peaks mountain range 
 **Mountain Peoples:** The solitary Urjack of the Lackabier peaks are renowned for physical endurance and self-reliance in harsh terrain. Gain 1 free rank in either Athletics or Might.
 
 ## Human Abilities
-**Adaptable:** At character creation, gain 1 free rank in any skill of your choice. This rank does not cost XP.
-**Resourceful:** Once per session, when you fail a skill check, you may immediately attempt it again using a different skill that you can narratively justify. The GM must approve the substitution. The second roll stands regardless of result.
+**Resourceful:** At character creation, increase any 4 skills not gained from background to rank 3.
+**Adaptable:** When you fail a skill check, you may immediately attempt it again using a different skill that you can narratively justify. The GM must approve the substitution. The second roll stands regardless of result.
 
 ### Human Characteristics
 | Characteristics | Male | Female |
@@ -156,9 +156,9 @@ Elves are tall, thin, fair skinned humanoids with pointed ears. They have a deli
 
 ## Elven abilities
 **Low-Light Vision:** Elves treat dim light as bright light. They do not see in total darkness.
-Keen Awareness: Gain 1 free rank in Perception at character creation. This rank does not cost XP.
+**Lengthy Upbringing:** At character creation, increase any 1 skil not gained from background to rank 4.
 **Graceful Precision:** Subtract 1 from the skill die only on Acrobatics checks.
-**Otherworldly:** Persuasion and Deception checks against strangers or unfamiliar humans add 1 to the skill die only. This penalty disappears once the NPC's attitude reaches Cooperative or better.
+**Otherworldly:** Persuasion and Deception checks against humans add 1 to the skill die only. This penalty disappears once the NPC's attitude reaches Cooperative or better.
 
 #### Elven Characteristics
 | Characteristics | Male     | Female   |
