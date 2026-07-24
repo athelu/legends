@@ -117,12 +117,12 @@
 
 ### Illusory Torment
 **Primary Energy:** Space 7 (illusory effect + medium range + 10ft cube)
-**Supporting Energy:** Time 2 (duration 1 minute)
+**Supporting Energy:** Negative 2 (duration 1 minute)
 **Range:** Medium, 60 ft. (10-foot cube)
 **Duration:** 1 minute
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Negative Potential + Negative Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Create an illusory effect at medium range in one creature's mind. Target makes Will save. Compare your targeting successes to their save successes. If you have more, target perceives illusory effect as real and rationalizes illogical elements. If illusory effect could damage target, it takes 8 psychic damage per round. Target can use action + Perception vs your Space Mastery to recognize illusory effect.
 **Applies Effects:** disoriented
@@ -132,14 +132,14 @@
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round (8), 2 = 1 minute (8), 3 = 1 minute (8) + disoriented
 
 ### Invisibility
-**Primary Energy:** Space 4 (bending light around target)
-**Supporting Energy:** Time 3 (duration 10 minutes or until broken)
+**Primary Energy:** Water 4 (bending light around target through refractive medium)
+**Supporting Energy:** Fire 3 (duration 10 minutes or until broken)
 **Range:** Touch
 **Duration:** 10 minutes (or until broken)
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
-**Targeting Roll:** Casting Stat + Space Mastery
+**Weaving Roll:** Water Potential + Water Mastery / Fire Potential + Fire Mastery
+**Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on Stealth checks to remain undetected, and observers have Misfortune on Perception checks to detect target. Breaks if target uses a [Combat] action or casts a weave.
 **Applies Effects:** hidden
 **Saving Throw:** None
@@ -261,12 +261,12 @@
 
 ### Mend Flesh, Mass
 **Primary Energy:** Positive 4 (healing energy)
-**Supporting Energy:** Air 3 (close range + 6 targets)
+**Supporting Energy:** space 3 (close range + 6 targets)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Up to 6 creatures you choose within range heal 16 HP each.
 **Saving Throw:** None
@@ -274,12 +274,12 @@
 
 ### Mental Domination
 **Primary Energy:** Space 8 (controlling mind + medium range)
-**Supporting Energy:** Time 2 (duration 1 minute)
+**Supporting Energy:** Negative 2 (duration 1 minute)
 **Range:** Medium, 60 ft.
 **Duration:** 1 minute
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Negative Potential + Negative Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Humanoid target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, you control target's actions (won't take obviously harmful actions). Target can repeat save when taking damage (1 success ends effect).
 **Applies Effects:** charmed
@@ -302,12 +302,12 @@
 
 ### Minor Illusion
 **Primary Energy:** Space 3 (small sensory illusion + close range)
-**Supporting Energy:** Time 2 (duration 1 minute)
+**Supporting Energy:** Fire 2 (duration 1 minute)
 **Range:** Close, 30 ft.
 **Duration:** 1 minute
 **Total Cost:** 5 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Fire Potential + Fire Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Create a sound or image at close range no larger than a 5ft cube. Sound can be any noise. Image is static unless you use action to move it. Physical interaction reveals illusory effect.
 **Saving Throw:** Perception vs Space Mastery
@@ -327,14 +327,14 @@
 **Targeting Success Scaling:** 0 = fails, 1 = suppress condition (10 minutes), 2 = remove 1 condition, 3 = remove 2 conditions
 
 ### Mist Form
-**Primary Energy:** Air 4 (transforming into mist)
-**Supporting Energy:** Time 3 (duration 10 minutes)
+**Primary Energy:** Water 4 (transforming into mist)
+**Supporting Energy:** Fire 3 (duration 10 minutes)
 **Range:** Self, touch
 **Duration:** 10 minutes
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Air Potential + Air Mastery / Time Potential + Time Mastery
-**Targeting Roll:** Casting Stat + Air Mastery
+**Weaving Roll:** Water Potential + Water Mastery / Fire Potential + Fire Mastery
+**Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Target at touch and equipment become a misty cloud. Fly speed 10 feet, DR 8 against non-magical damage, can pass through small openings. Cannot attack, cast weaves, or manipulate objects.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour

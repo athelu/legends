@@ -10,7 +10,7 @@ Enhanced magical talent - add this trait BEFORE applying Mageborn or Divine Gift
 
 ### Balanced Channeler (-1)
 Predictable magical talent - add this trait BEFORE applying Mageborn or Divine Gift.
--   Use fixed array: 5,4,3,3,2,2,1,1
+-   Use fixed array: 5, 5, 5, 4, 4, 3, 3, 3
 -   Trait bonuses still apply
 
 ---
@@ -27,11 +27,6 @@ Beyond normal capabilities.
 -   Can detect poison with Perception check
 -   Perception using these senses: Subtract 1 from die results
 -   Can track by scent
-
-### Alertness (-3)
-Aware of surroundings.
--   Initiative: +1
--   All Perception: Subtract 1 from die results
 
 ### Double-Jointed (-3)
 Hyper-extend joints.
@@ -81,11 +76,14 @@ Unfaltering courage.
 
 ## SOCIAL & BACKGROUND TRAITS
 
-### Contacts (-1 to -3)
-Associates or influential people for information/favors.
--   One Contact (-1)
--   Two Contacts (-2)
--   Three Contacts (-3)
+### Contacts (-1)
+You have 1 associate or influential person that you can call on for information or favors during game play. 
+
+### Contacts (-2)
+You have 2 associates or influential people that you can call on for information or favors during game play. 
+
+### Contacts (-3)
+You have 3 associates or influential people that you can call on for information or favors during game play. 
 
 ### Loyalty (-1)
 Can be trusted.

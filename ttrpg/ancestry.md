@@ -7,27 +7,27 @@ Humans can hail from any of the nations or regions on the continent of Estaea. T
 
 ### Bellicosian
 Bellicosians tend to be slightly taller on average, and of fair/pale complexion. Building and clothing styles are Asiatic in inspiration. Bellicosian names follow traditional Germanic and Slavic styles.
-**Martial Culture:** Military discipline and fanatical religious devotion define Bellicosian society. Gain 1 free rank in either Melee Combat or Religion.
+**Martial Culture:** Raise Melee Combat to 3 and Religion to 3.
 
 ### Coudassian
 Coudassians vary in complexion, with the southerners having a honey or coffee complexion and the northerners being more pale. Coudassian names follow Spanish, Portuguese and Italian styles.
-**Old Blood:** Coudassians built their civilization through trade, negotiation, and sea travel across a vast and varied nation. Gain 1 free rank in either Persuasion or Athletics.
+**Old Blood:** Raise Persuasion to 3 and Athletics 3.
 
 ### Echartesh
 In Appearance the Echartesh have swarthy skin, and long, dark hair. Eyes tend to be light brown, but blue, green, yellow/amber are also seen. Echartesh names follow Jewish and Arabic styles.
-**Tradecraft:** The Echartesh are deeply philosophical, with strong traditions around fate, law, and forbidden knowledge. Gain 1 free rank in either Arcane or Society.
+**Tradecraft:** Raise Empathy to 3 and Society to 3.
 
 ### Mersagian
 Mersagian populace vary in appearance with the Northerners being quite pale and with all shades of hair and eye color. The Central and southern Meresaw populace tends to be olive skinned with darker hair and eyes. Mersagian names follow traditional English and American styles. It is quite possible to have a name from any of the other regions as the kingdom of Meresaw is very cosmopolitan.
-**Cosmopolitan:** The most diverse and adaptable of the human peoples, the Mersagian kingdom absorbs cultures readily. Gain 1 free rank in either Empathy or Deception.
+**Cosmopolitan:** Raise Empathy to 3 and Athletics to 3.
 
 ### Odani
 The Odani people are made up of the Reshi and Tandu tribes. They populate the southern coast of what is considered the Mersaw Kingdom. Their skin is dark, deep shades of black and brown, but eye color tends to be light such as blue, green, amber, or grey.
-**Coastal Hunter:** The Reshi and Tandu tribes of the southern coast are skilled hunters and warriors shaped by the sea and desert. Gain 1 free rank in either Wilderness or Ranged Combat.
+**Coastal Hunter:** Raise Wilderness to 3 and Ranged Combat to 3.
 
 ### Urjack
 The Urjack are a solitary people who inhabit the Lackabier peaks mountain range in eastern Estaea. They are taller and broader than most humans from the other realms. Light eye color is common, as well as blonde hair, but browns and reds occur as well.
-**Mountain Peoples:** The solitary Urjack of the Lackabier peaks are renowned for physical endurance and self-reliance in harsh terrain. Gain 1 free rank in either Athletics or Might.
+**Mountain Peoples:** Raise Athletics to 3 and Wilderness to 3.
 
 ## Human Abilities
 **Resourceful:** At character creation, increase any 4 skills not gained from background to rank 3.
@@ -156,7 +156,7 @@ Elves are tall, thin, fair skinned humanoids with pointed ears. They have a deli
 
 ## Elven abilities
 **Low-Light Vision:** Elves treat dim light as bright light. They do not see in total darkness.
-**Lengthy Upbringing:** At character creation, increase any 1 skil not gained from background to rank 4.
+**Lengthy Upbringing:** At character creation, increase 2 skills not gained from background to rank 4 and two others to 3.
 **Graceful Precision:** Subtract 1 from the skill die only on Acrobatics checks.
 **Otherworldly:** Persuasion and Deception checks against humans add 1 to the skill die only. This penalty disappears once the NPC's attitude reaches Cooperative or better.
 
