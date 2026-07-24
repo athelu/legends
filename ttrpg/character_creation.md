@@ -34,7 +34,7 @@ The Legends RPG System has eight core attributes.
 ## Step 1: Determine Attributes
 There are two standard methods available for determining your characters eight core attributes.
 **Random roll:** Roll 8d8. This becomes your attribute pool. You may assign as desired to the core attributes.
-**Standard Array:** Players assign the following values to their core attributes: 5, 4, 3, 3, 3, 2, 2, 2
+**Standard Array:** Players assign the following values to their core attributes: 5, 5, 5, 4, 4, 3, 3, 3
 
 ## Step 2. Determine Ancestry
 The player must choose an ancestry from those available in the ancestry section.

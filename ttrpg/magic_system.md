@@ -118,12 +118,14 @@ Any weave that alters a creature's mental state, emotions, or thoughts without d
 **Immunity Note:** When a creature is listed as "immune to mind-affecting effects" or "immune to mind-affecting effects (charm, fear, sleep)," they cannot be affected by any weaves that rely on mental/emotional manipulation. Constructs, undead, and mindless creatures typically have this immunity.
 
 #### illusory effects (False Perception)
-Weaves that create false sensory information or conceal the truth. Primarily uses Space energy to manipulate perception and create false images or sounds. May also use Air energy for auditory illusory effects or Negative energy for shadow-based illusory effects.
+Weaves that create false sensory information or conceal the truth. Space + Fire create standard illusions. Fire provides the light source that gives the false image visible substance; Space provides its location and form. Used for phantom images, false appearances, and sensory illusions that fool the eye without harming the mind.
+Water + Fire create concealment and invisibility effects.  Fire (light) is bent and refracted through Water (the medium) so that light wraps around the target rather than reflecting off it.
+Space + Negative create negative mental effects like nightmares and psychic damage.  The void of Space combined with entropic Negative energy reaches past the senses to assault the mind directly.
 
 **Key Characteristic:** Creates false perceptions, doesn't change reality
 **Seeing Through illusory effects:** Creatures with truesight, blindsight, or tremorsense may see through illusory effects automatically. Physical interaction typically reveals an illusory effect as false (you can pass your hand through it, it has no substance, etc.).
 
-**Common Examples:** Phantom Image, invisibility, False Visage, Complex Illusion
+**Common Examples:** Phantom Image, Complex Illusion (Space/Fire); Invisibility, False Visage (Water/Fire); Illusory Torment, Nightmare Manifestation (Space/Negative)
 
 #### Protective Effects (Warding Magic)
 Weaves that create barriers, wards, or defensive magic. Primarily uses Space energy to create force barriers or Reactive Ward effects. These are referred to as protective weaves or wards.
@@ -312,62 +314,62 @@ The following table covers all 56 primary/secondary combinations. The secondary 
 
 | Primary | Secondary | Damage Type | DR Rule | Character of Effect |
 |---------|-----------|-------------|---------|---------------------|
-| Fire | Air | Energy (Fire) | Half DR | Plasma, explosion, combustion with direction and expansion |
-| Fire | Earth | Physical (Bludgeoning + Fire) | Full DR | Meteor, molten rock arriving as mass with thermal component |
-| Fire | Water | Energy (Fire) | Half DR | Steam, scalding vapor, thermal energy carried through moisture |
-| Fire | Positive | Energy (Radiant) | Half DR | Sacred flame, purifying light, fire that sanctifies |
-| Fire | Negative | Energy (Negative) | Half DR | Necrotic burn, life-consuming fire, heat that drains |
-| Fire | Space | Energy (Fire) | Half DR | Fire placed instantly at distance, combustion without travel |
-| Fire | Time | Energy (Fire) | Half DR | Slow burn, combustion that develops in stages over rounds |
-| Air | Fire | Energy (Sonic) | No DR | Superheated shockwave, sonic with thermal character |
-| Air | Earth | Physical (Bludgeoning) | Full DR | Compressed air as physical force, wind made solid |
-| Air | Water | Energy (Lightning) | Half DR | Lightning and pure electricity/energy effects |
-| Air | Positive | Energy (Positive) | Half DR | Restorative wind, breath of life, air that clears corruption |
-| Air | Negative | Energy (Negative) | Half DR | poison gas, miasma, fumes |
-| Air | Space | Energy (Sonic) | No DR | Sound crossing impossible distances, targeted vibration |
-| Air | Time | Energy (Sonic) | No DR | Sustained resonance, echoes that build in intensity over time |
-| Earth | Air | Physical (Bludgeoning) | Full DR | Stone given velocity by wind, avalanche, thrown mass |
-| Earth | Fire | Physical (Bludgeoning + Fire) | Full DR | Molten rock, magma as physical mass with fire component |
-| Earth | Water | Physical (Bludgeoning) | Full DR | Liquefaction, sinkhole, saturated earth moving as mass |
-| Earth | Positive | Physical (Bludgeoning) | Full DR | Consecrated stone, earth that fortifies and strengthens |
-| Earth | Negative | Physical (Bludgeoning) | Full DR | Structural decay collapsing as physical damage |
-| Earth | Space | Physical (Bludgeoning) | Full DR | Walls appearing, stone anchored to a specific location |
-| Earth | Time | Physical (Bludgeoning) | Full DR | Petrification, geological force compressed into moments |
-| Water | Air | Physical (Cold + Bludgeoning) | Full DR | Ice formation and projection, frozen mass with impact |
-| Water | Earth | Physical (Bludgeoning) | Full DR | Flood with mass, water carrying crushing weight |
-| Water | Fire | Energy (Fire) | Half DR | Steam, thermal energy through liquid medium |
-| Water | Positive | Energy (Positive) | Half DR | Cleansing water, healing through immersion, restorative liquid |
-| Water | Negative | Energy (Negative) | Half DR | Poison, acid, contamination, corruption carried in liquid |
-| Water | Space | Physical (Cold + Bludgeoning) | Full DR | Water appearing at location with mass and cold impact |
-| Water | Time | Physical (Bludgeoning) | Full DR | Erosion compressed into moments, tidal force commanded |
-| Positive | Air | Energy (Positive) | Half DR | Healing breath, restoration of mind and senses, clarity |
-| Positive | Earth | Energy (Positive) | Half DR | Physical restoration, structural healing of body and bone |
-| Positive | Fire | Energy (Radiant) | Half DR | Radiant purification, sacred light as weapon against darkness |
-| Positive | Water | Energy (Positive) | Half DR | Deep healing that persists and builds over duration |
-| Positive | Negative | Energy (Positive) | Half DR | Balance of forces — unstable, GM adjudicates outcome |
-| Positive | Space | Energy (Positive) | Half DR | Healing at distance, protective aura projected outward |
-| Positive | Time | Energy (Positive) | Half DR | Accelerated recovery, healing of wounds time refused to close |
-| Negative | Air | Energy (Negative) | Half DR | Suffocation of life force, silencing of vitality |
-| Negative | Earth | Energy (Negative) | Half DR | Rot in matter, decay from the structural foundation |
+| Fire | Air | Energy (Fire) | Half DR | Plasma, explosion |
+| Fire | Earth | Physical (Bludgeoning + Fire) | Full DR | Meteor, fire barrier |
+| Fire | Water | Energy (Fire) | Half DR | Steam |
+| Fire | Positive | Energy (Radiant) | Half DR | Sacred flame |
+| Fire | Negative | Energy (Negative) | Half DR | Necrotic burn |
+| Fire | Space | Energy (Fire) | Half DR | Fire placed instantly at distance |
+| Fire | Time | Energy (Fire) | Half DR | Slow burn |
+| Air | Fire | Energy (Sonic) | No DR | Superheated shockwave |
+| Air | Earth | Physical (Bludgeoning) | Full DR | wind made solid |
+| Air | Water | Energy (Lightning) | Half DR | Lightning/electricity |
+| Air | Positive | Energy (Positive) | Half DR | breath of life |
+| Air | Negative | Energy (Negative) | Half DR | poison gas, miasma |
+| Air | Space | Energy (Sonic) | No DR | targeted vibration |
+| Air | Time | Energy (Sonic) | No DR | building echoes |
+| Earth | Air | Physical (Bludgeoning) | Full DR | thrown mass |
+| Earth | Fire | Physical (Bludgeoning + Fire) | Full DR | Volcanic stone, molten terrain |
+| Earth | Water | Physical (Bludgeoning) | Full DR | Quicksand, mud |
+| Earth | Positive | Physical (Bludgeoning) | Full DR | Consecrated stone |
+| Earth | Negative | Physical (Bludgeoning) | Full DR | Earth, Decay |
+| Earth | Space | Physical (Bludgeoning) | Full DR | Aappearing Walls |
+| Earth | Time | Physical (Bludgeoning) | Full DR | Petrification |
+| Water | Air | Physical (Cold + Bludgeoning) | Full DR | Ice formation and projection |
+| Water | Earth | Physical (Bludgeoning) | Full DR | Flood, ooze |
+| Water | Fire | No damage | — | Light refraction, invisibility, concealment |
+| Water | Positive | Energy (Positive) | Half DR | Cleansing water |
+| Water | Negative | Energy (Negative) | Half DR | Poison, acid |
+| Water | Space | Physical (Cold + Bludgeoning) | Full DR | Summoned water |
+| Water | Time | Physical (Bludgeoning) | Full DR | Erosion in moments |
+| Positive | Air | Energy (Positive) | Half DR | Restoration, clarity, Radiant burst |
+| Positive | Earth | Energy (Positive) | Half DR | Physical restoration |
+| Positive | Fire | Energy (Radiant) | Half DR | Purification, sacred light |
+| Positive | Water | Energy (Positive) | Half DR | Persistant Healing |
+| Positive | Negative | Energy (Positive) | Half DR | Balance of forces |
+| Positive | Space | Energy (Positive) | Half DR | Healing at distance |
+| Positive | Time | Energy (Positive) | Half DR | Accelerated recovery |
+| Negative | Air | Energy (Negative) | Half DR | Suffocation, Fear, Confusion |
+| Negative | Earth | Energy (Negative) | Half DR | unnatural darkness |
 | Negative | Fire | Energy (Negative) | Half DR | Necrotic burning, life consumed as fuel for entropy |
-| Negative | Water | Energy (Negative) | Half DR | Poison, slow corruption working through a system |
+| Negative | Water | Energy (Negative) | Half DR | Biological corruption, vital drain |
 | Negative | Positive | Energy (Negative) | Half DR | Catastrophic tension — GM adjudicates instability |
-| Negative | Space | Energy (Negative) | No DR | Life drain projected outward, void reaching past armor to pneuma |
-| Negative | Time | Energy (Negative) | Half DR | Accelerated aging, decay running at unnatural speed |
-| Space | Air | Physical (Bludgeoning) | Full DR | Teleportation with violent arrival, kinetic impact at destination |
-| Space | Earth | Physical (Bludgeoning) | Full DR | Barriers and walls appearing, anchored physical mass |
-| Space | Fire | Energy (Fire) | Half DR | Fire placed through spatial fold, combustion at chosen point |
-| Space | Water | Physical (Bludgeoning + Cold) | Full DR | Water mass displaced spatially, cold impact at destination |
-| Space | Positive | Energy (Positive) | Half DR | Sanctuary, protected space, life force as spatial barrier |
-| Space | Negative | Energy (Negative) | No DR | Spatial void, absence reaching what physical armor cannot stop |
-| Space | Time | No damage | — | Planar travel, temporal displacement — no conventional damage |
-| Time | Air | No damage | — | Haste, slow, the subjective pace of time altered |
-| Time | Earth | Physical (Bludgeoning) | Full DR | Petrification, geological force compressed into moments |
-| Time | Fire | Energy (Fire) | Half DR | Combustion in stages, slow burn developing across rounds |
-| Time | Water | Physical (Bludgeoning) | Full DR | Erosion compressed, tidal force arriving in moments |
-| Time | Positive | Energy (Positive) | Half DR | Accelerated healing, restoration of time-damaged wounds |
-| Time | Negative | Energy (Negative) | Half DR | Aging as damage, forced decay at unnatural speed |
-| Time | Space | No damage | — | Deepest pairing — planar and temporal travel, no conventional damage |
+| Negative | Space | Energy (Negative) | No DR | breakdown physical matter |
+| Negative | Time | Energy (Negative) | Half DR | Accelerated aging |
+| Space | Air | Physical (Bludgeoning) | Full DR | Abrupt Teleportation |
+| Space | Earth | Physical (Bludgeoning) | Full DR | gravity, magenetism |
+| Space | Fire | No damage | — | Illusory construction, false images, phantom appearances |
+| Space | Water | Physical (Bludgeoning + Cold) | Full DR | Spatial compression, cold displacement |
+| Space | Positive | Energy (Positive) | Half DR | Sanctuary, protected space |
+| Space | Negative | Energy (Negative) | No DR | Spatial void, Mind Alter|
+| Space | Time | No damage | — | Planar displacement |
+| Time | Air | No damage | — | Haste, slow |
+| Time | Earth | Physical (Bludgeoning) | Full DR | Accelerated natural growth, compressed seasons |
+| Time | Fire | Energy (Fire) | Half DR | Anchored flame, fire outside of time |
+| Time | Water | Physical (Bludgeoning) | Full DR | Temporal force through water, tidal impact |
+| Time | Positive | Energy (Positive) | Half DR | Fortunate foresight, temporal blessing |
+| Time | Negative | Energy (Negative) | Half DR | Cursed fate, doom through time |
+| Time | Space | No damage | — | Temporal displacement, echoes of past and future |
 
 #### Edge Case Notes
 
@@ -375,7 +377,11 @@ The following table covers all 56 primary/secondary combinations. The secondary 
 
 **Space/Time and Time/Space** do not produce conventional damage. These pairings move targets between planes or through time. The consequence is displacement, not injury.
 
-**Negative/Space and Space/Negative** both ignore DR because the effect reaches past physical matter to touch the pneuma or mind directly. This is the natural home of psychic and life-draining effects in the new model.
+**Negative/Space and Space/Negative** both ignore DR because the effect reaches past physical matter to touch the pneuma or mind directly. This is the natural home of psychic harm, nightmare effects, and life-draining effects. Standard illusions (false images, phantom appearances) use **Space/Fire** instead — those weaves create something visible, not something that damages the mind.
+
+**Water/Fire** is the pairing for light manipulation. Unlike Fire/Water (which produces steam and thermal effects), Water/Fire bends light through a water medium rather than generating heat. This produces no damage — its character is refraction, concealment, and invisibility. Fire here is the light being bent, not a source of burning.
+
+**Space/Fire** produces illusory constructions — false images given visible form by fire (light) occupying a space defined by Space energy. These illusions have no physical substance and deal no damage; they fool the eye, not the mind.
 
 **Air producing sonic effects** ignores DR when the secondary is Fire, Space, or Time — pairings where the Air expresses vibration and resonance rather than physical force. Air/Earth and Air/Water produce physical mass instead, which is why those land as full DR physical damage.
 

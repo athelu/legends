@@ -1,11 +1,11 @@
 ### Nightmare Manifestation
 **Primary Energy:** Space 8 (terrifying mental illusion + medium range)
-**Supporting Energy:** Time 2 (duration 1 minute)
+**Supporting Energy:** Negative 2 (duration 1 minute)
 **Range:** Medium, 60 ft.
 **Duration:** 1 minute
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Negative Potential + Negative Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes 12 psychic damage at start of each turn. Can repeat Will save each round to end effect (1 success ends effect).
 **Applies Effects:** frightened
@@ -30,12 +30,12 @@
 
 ### Null Sphere
 **Primary Energy:** Space 8 (negating magical energies in area)
-**Supporting Energy:** Time 3 (duration 10 minutes)
+**Supporting Energy:** Negative 3 (duration 10 minutes)
 **Range:** 10-foot radius, centered on self
 **Duration:** 10 minutes
 **Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Negative Potential + Negative Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Creates a 10ft radius sphere around you that suppresses all magic. Weaves cannot be cast into or out of the field. Magical items cease functioning. Active weaves are suppressed while in the field.
 **Saving Throw:** None
@@ -68,14 +68,14 @@
 **Targeting Success Scaling:** 0 = fails, 1 = 10 ft (1 round), 2= 20 ft (1 minute), 3 = 30 ft (10 minutes)
 
 ### Perfect Invisibility
-**Primary Energy:** Space 6 (bending light completely)
-**Supporting Energy:** Time 2 (duration 1 minute)
+**Primary Energy:** Water 6 (bending light completely around target)
+**Supporting Energy:** Fire 2 (duration 1 minute)
 **Range:** self, touch
 **Duration:** 1 minute
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
-**Targeting Roll:** Casting Stat + Space Mastery
+**Weaving Roll:** Water Potential + Water Mastery / Fire Potential + Fire Mastery
+**Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Target at touch becomes invisible and gains the Hidden condition. Target has Fortune on attacks and Stealth checks, and observers have Misfortune on Perception checks to detect target. Unlike normal invisibility, this weave does NOT break when target attacks or casts weaves.
 **Applies Effects:** hidden
 **Saving Throw:** None
@@ -95,13 +95,13 @@
 **Targeting Success Scaling:** 0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 1 hour
 
 ### Phantom Decoy
-**Primary Energy:** Space 6 (invisibility + illusory double)
-**Supporting Energy:** Time 3 (duration 10 minutes)
+**Primary Energy:** Space 6 (illusory double + self-concealment)
+**Supporting Energy:** Fire 3 (duration 10 minutes)
 **Range:** Self
 **Duration:** 10 minutes
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Fire Potential + Fire Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** You become invisible and gain the Hidden condition, while simultaneously creating an illusory double of yourself that appears where you were standing. You have Fortune on Stealth checks and observers have Misfortune on Perception checks to detect your true location. Can use action to move the double up to twice your speed and make it gesture, speak, and behave however you wish.
 **Applies Effects:** hidden
@@ -110,12 +110,12 @@
 
 ### Phantom Doubles
 **Primary Energy:** Space 4 (illusory duplicates)
-**Supporting Energy:** Time 2 (duration 1 minute)
+**Supporting Energy:** Fire 2 (duration 1 minute)
 **Range:** Self
 **Duration:** 1 minute
 **Total Cost:** 6 Energy
 **Action:** Complex weave (1 action)
-**Weaving Roll:** Space Potential + Space Mastery /Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Fire Potential + Fire Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the "hits duplicate" range.
 **Saving Throw:** None
@@ -123,25 +123,25 @@
 
 ### Phantom Image
 **Primary Energy:** Space 4 (visual illusion + medium range + 15ft cube)
-**Supporting Energy:** Time 2 (duration 1 minute)
+**Supporting Energy:** Fire 2 (duration 1 minute)
 **Range:** Medium, 60 ft. (15-ft cube)
 **Duration:** 1 minute
 **Total Cost:** 6 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Fire Potential + Fire Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Create a visual illusory effect of object, creature, or phenomenon at medium range in 15ft cube. Can move illusory effect with action. No sound, smell, or other sensory elements. Physical interaction reveals illusory effect.
 **Saving Throw:** Perception vs Space Mastery
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes
 
 ### Plant Growth
-**Primary Energy:** Earth 4 (accelerating and densifying natural growth)
-**Supporting Energy:** Space 7 (medium range + 30-foot diameter + extended duration)
+**Primary Energy:** Earth 4 (accelerating natural growth)
+**Supporting Energy:** Time 7 (medium range + 30-foot diameter + extended duration)
 **Range:** Medium, 60 ft. (30-foot diameter)
 **Duration:** 8 hours
 **Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
+**Weaving Roll:** Earth Potential + Earth Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
 **Description:** Plants in the target area erupt into dense, tangled growth. The area becomes difficult terrain, and movement through it costs 4 feet per foot of distance (double the normal difficult terrain cost). Creatures with a fly speed or climb speed are unaffected. The growth is natural and persists for 8 hours; clearing a 5-foot section takes approximately 10 minutes with cutting tools. Has no effect in areas without plants.
 **Saving Throw:** None
@@ -175,12 +175,12 @@
 
 ### Protection from Energy
 **Primary Energy:** Space 5 (protective barrier against energy)
-**Supporting Energy:** Time 3 (duration 10 minutes)
+**Supporting Energy:** Elemental Energy 3 (duration 10 minutes)
 **Range:** self, touch
 **Duration:** 10 minutes
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Elemental energy Potential + Elemental energy Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Target at touch gains Resistance (+4) against one chosen damage type (fire, cold, acid, lightning, thunder).
 **Saving Throw:** None
@@ -203,14 +203,14 @@
 **Targeting Success Scaling:** 0 = fails, 1 = half damage (4), 2= full damage (8), 3 = enhanced damage (16) + blinded
 
 ### Radiant Sphere
-**Primary Energy:** Fire 4 (creating bright magical light)
-**Supporting Energy:** Positive 8 (medium range + 20ft radius + duration 1 minute)
+**Primary Energy:** Positive 4 (creating bright magical light)
+**Supporting Energy:** Fire 8 (medium range + 20ft radius + duration 1 minute)
 **Range:** Medium, 60 ft. (20-foot radius sphere)
 **Duration:** 1 minute
 **Total Cost:** 12 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Fire Potential + Fire Mastery / Positive Potential + Positive Mastery
-**Targeting Roll:** Casting Stat + Fire Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Fire Potential + Fire Mastery
+**Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Bright light fills a 20ft radius sphere at medium range. Acts as sunlight for creatures vulnerable to it. Dispels magical darkness of equal or lower energy.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 1 hour
@@ -258,12 +258,12 @@
 
 ### Revealing Light
 **Primary Energy:** Positive 2 (revealing light outlining creatures)
-**Supporting Energy:** Air 6 (medium range + 10ft radius + 1 minute)
+**Supporting Energy:** Fire 6 (medium range + 10ft radius + 1 minute)
 **Range:** Medium, 60 ft. (10-foot radius)
 **Duration:** 1 minute
 **Total Cost:** 8 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
+**Weaving Roll:** Positive Potential + Positive Mastery / Fire Potential + Fire Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** All objects and creatures in 10-foot radius at medium range are outlined in violet light. Targets make Reflex save. Compare your targeting successes to their save successes. Those you beat are outlined and shed dim light in 10-foot radius. Outlined creatures can't benefit from invisibility. Attacks against outlined creatures subtract 1 from one attack die.
 **Applies Effects:** revealed

@@ -659,9 +659,8 @@ hp.shortRest.bonus formula=constitution
 **Usage:** Passive
 **Keyword:** [Combat], [Savage]
 **Description:** While the battle-rage burns, some deeper part of your mind stays cold and alert, reading the room before your conscious thoughts catch up. Fear and charm find no purchase in a mind already consumed by fury.
-**Benefit:** +2 to initiative. You cannot be surprised while conscious. While in Primal Fury, you are immune to the Frightened and Charmed conditions
+**Benefit:** You cannot be surprised while conscious. While in Primal Fury, you are immune to the Frightened and Charmed conditions
 **Effects:**
-initiative.modify value=2
 condition.immunity conditionName=Surprised
 condition.immunity conditionName=Frightened,Charmed when=primalFury
 

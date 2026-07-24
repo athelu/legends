@@ -6,43 +6,48 @@
 
 You were born with an innate connection to the planes flowing through your pneuma. Your eyes glow with constant violet light, marking you as a mage from birth. Through careful study and understanding of magical theory, you have learned to channel the eight energies through precise intellectual control.
 
-**Visual Effects:** Your weaves manifest with orbiting glyphs, bright flashes of violet light, and cascading magical symbols. Motes of energy trail from your gestures, and your magic leaves shimmering afterimages in the air. 
+Your weaves manifest with orbiting glyphs, bright flashes of violet light, and cascading magical symbols. Motes of energy trail from your gestures, and your magic leaves shimmering afterimages in the air. You use Intelligence as your Casting Stat for weaving.
 
-**Mechanical Benefits:**
--   Roll **8d8**, assign to eight Magical Potentials
--   Choose **Elemental Affinity** (Earth/Air/Fire/Water): Apply +2 bonus (max 8 total)
--   Choose **Secondary Focus** (any other energy): Apply +1 bonus (max 8 total)
--   Assign rolls strategically to maximize bonuses without waste
--   Example: Rolling [8,7,6,5...] → Affinity gets 6+2=8, Secondary gets 7+1=8, third energy gets natural 8
--   Use **Intelligence** as Casting Stat
--   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 2)
--   Can weave arcane magic using all 8 energies
--   **Energy Pool:** Sum of 8 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)
--   **Gain Ritual Casting ability:** Can cast any weave as a 10-minute ritual for half Energy cost (minimum 1). Cannot be used in combat.
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 2). You can weave magic using all 8 of these energies.
 
+Roll 8d8, assign to eight Magical Potentials.
 
-## Divine Gift (-7)
+**Choose Elemental Affinity**
+Choose from one of the Elemental energies to be your Primary Energy (Earth/Air/Fire/Water).
+Primary Energy = + 2 (to max 8) bonus. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Choose Secondary Focus (any other energy).Secondary Energy =  + 1 bonus ( to max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 8 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)
+
+#### Ritual Casting
+You can cast any weave as a 10-minute ritual for half Energy cost (minimum 1).
+
+### Divine Gift (-7)
 **Image:** `icons/skills/holy/halo-divine-light.webp`
 **Requirements:** Wisdom ≥ 3
 
-You have dedicated yourself to the gods through deep study and spiritual devotion. You may worshp all eight deities (or the eight dragons of myth) one has called to you as your patron (or you serve the pantheon equally), granting you the ability to channel divine power through your pneuma. Your eyes flash with violet light when completing each weave.
+You have dedicated yourself to the Pantheon of Eight, a Twisted interpretation of one of the Eight, or the Dragons of Legend. Through deep study and spiritual devotion, One has called to you as your patron (or you serve the pantheon equally), granting you the ability to channel divine power through your pneuma. Your eyes flash with violet light when completing each weave. You use Wisdom as your Casting Stat for weaving.
+
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 2). You can weave divine magic using all 8 of these energies.
+
+Roll 8d8, assign to eight Magical Potentials.
 
 **Choose Your Patron:**
-Select which of the deity you primarily serve, or choose to serve the Pantheon equally as a generalist. This determines your energy affinities and grants you specific Channel Divinity options. You still worship and respect the entire pantheon.
+Select which of the Eight Gods you primarily serve, or choose to serve the Pantheon equally as a generalist, or choose to worship a Twisted variation of the Eight or the Dragons of Legend (See section: The Faith). This choice determines your energy affinities and grants you specific Channel Divinity options.
+Your patron deity determines Primary and Secondary energy bonuses.
 
-**Mechanical Benefits:**
-- Roll **8d8**, assign to eight Magical Potentials
-- Your patron deity determines **Primary** and **Secondary** energy bonuses:
-  - **Primary Energy:** Apply +2 bonus to one energy (max 8 total)
-  - **Secondary Energy:** Apply +1 bonus to one energy (max 8 total)
-  - **Generalist:** Apply +1 bonus to each of three energies (each max 8 total)
-  - Assign rolls strategically to maximize bonuses without waste
-  - Example: Rolling [8,7,6,5...] with Fire/Positive patron → Fire gets 6+2=8, Positive gets 7+1=8, third energy gets natural 8
-- Use **Wisdom** as Casting Stat
-- Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 2)
-- Can weave divine magic using all 8 energies
-- **Energy Pool:** Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
-- **Channel Divinity:** Uses equal to your tier per long rest. Gain access to all Channel Divinity options for your chosen patron as well as the base 6 channel divinity types.
+Primary Energy = + 2 (to max 8) bonus. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Secondary Energy =  + 1 bonus ( to max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Generalist = 3 +1 bonuses to assign as desired.
+
+**Calculate your Energy Pool**
+Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2).
+
+#### Channel Divinity
+You can use channel divinity equal to your Tier times  per long rest. Gain access to all Channel Divinity options for your chosen patron as well as the base 6 channel divinity types.
 
 ---
 
@@ -318,81 +323,81 @@ For characters who worship a corrupted version of one of the Eight.
 ### Invoker (-5)
 **Requirements:** Charisma ≥ 3
 
-You have discovered the connection between spoken words and magic. You are a diabolist. Awakened to magical power through research or accident rather than born with it. Through study and practice, you learned that certain sounds and syllables are the true names of forces and concepts and have inherent power when spoken by one who understands them.
+You have discovered the connection between spoken words and magic. You are a diabolist, awakened to magical power through research or accident rather than born with it. Through study and practice, you learned that certain sounds and syllables are the true names of forces and concepts and have inherent power when spoken by one who understands them.
 
-**Visual Effects:** When you speak true names, the syllables manifest as visible violet light in the air. Ancient glyphs and runic symbols materialize around you as each word of power is pronounced. Your eyes flash with violet radiance when the weave completes, then return to normal. The words themselves seem to echo with unnatural resonance, leaving shimmering afterimages of sound made visible.
+When you speak true names, the syllables manifest as visible violet light in the air. Ancient glyphs and runic symbols materialize around you as each word of power is pronounced. Your eyes flash with violet radiance when the weave completes, then return to normal. The words themselves seem to echo with unnatural resonance, leaving shimmering afterimages of sound made visible.
 
-**The True Names:** These words of power are rarely from any spoken language known to scholars. They may be fragments of primordial speech, echoes from the outer planes, or sounds that existed before language itself. Each invoker's pronunciation is unique. What matters is understanding the concept behind the sound, not perfect replication.
+These words of power are rarely from any spoken language known to scholars. They may be fragments of primordial speech, echoes from the outer planes, or sounds that existed before language itself. Each invoker's pronunciation is unique. What matters is understanding the concept behind the sound, not perfect replication. You use Charisma as your Casting Stat for weaving.
 
-**Mechanical Benefits:**
--   Roll **5d8**, assign to five Magical Potentials:
--   **Air Potential:** Apply +2 bonus (max 8 total)
--   **Positive Potential:** Apply +1 bonus (max 8 total)
--   **Space Potential:** No bonus
--   **Time Potential:** No bonus
--   **Choose one Elemental or Conceptual energy** (Earth, Fire, Water, or Negative): assign final roll, no bonus
--   Assign rolls strategically to maximize bonuses
--   Example: Rolling [8,7,6,5,4] → Air gets 6+2=8, Positive gets 7+1=8, other energies get 8/5/4
--   Use **Charisma** as Casting Stat
--   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 2)
--   Can weave invoker magic using only these 5 energies
--   **Energy Pool:** Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
--   **Words of Power:** A number of times per short rest equal to your current Tier, spend 1 [Combat] action to speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. Additionally, your next weave cast before the end of your next turn benefits from the resonance — subtract 1 from one targeting die result of your choice on that weave.
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 5 Magical Mastery skills corresponding to your 5 energies (start at rank 2). You can weave magic using all 5 of these energies.
 
-**Invoker Requirement:** You must have line of sight to targets of your weaves. If you cannot see your target, you cannot speak their true name or bind them with your magic.
+Roll 5d8, assign to five Magical Potentials.
 
-**Elemental True Name Themes:**
--   **Fire**: Names of combustion, heat, passion, destruction
--   **Water**: Names of flow, cold, adaptation, persistence  
--   **Earth**: Names of stone, stability, growth, endurance
--   **Negative**: Names of entropy, shadow, endings, void
+**Assign your Potentials**
+Air Potential = + 2 (max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Positive Potential = + 1. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Choose three of the remaining energies (Earth, Fire, Water, Space, Time or Negative) and assign the remaining rolls as desired.
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2).
+
+#### Words of Power
+A number of times per short rest equal to your current Tier, spend 1 [Combat] action to speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. Additionally, your next weave cast before the end of your next turn benefits from the resonance: Subtract 1 from one targeting die result of your choice on that weave.
+Invoker weaves require that you have line of sight to targets of your weaves. If you cannot see your target, you cannot speak their true name or bind them with your magic.
 
 ### Infuser (-5)
 **Requirements:** Intelligence ≥ 3
 
-You have discovered how to channel magical energy directly into physical objects. You are a diabolist—awakened to magical power through research and experimentation rather than born with it. Through careful study of how pneuma interacts with matter, you learned to infuse temporary magical properties into items, creating enchanted objects that hold power for brief periods. 
+You have discovered how to channel magical energy directly into physical objects. You are a diabolist. Awakened to magical power through research and experimentation rather than born with it. Through careful study of how pneuma interacts with matter, you learned to infuse temporary magical properties into items, creating enchanted objects that hold power for brief periods.
 
-**Visual Effects:** When you infuse an object, violet light flows from your hands into the item like liquid energy. Glyphs and symbols briefly shimmer across the object's surface before fading into the material itself. Your eyes flash with violet radiance as the infusion completes, then return to normal. Infused items glow faintly with violet light while holding your magic, and leave trailing motes of energy when used.
+When you infuse an object, violet light flows from your hands into the item like liquid energy. Glyphs and symbols briefly shimmer across the object's surface before fading into the material itself. Your eyes flash with violet radiance as the infusion completes, then return to normal. Infused items glow faintly with violet light while holding your magic, and leave trailing motes of energy when used.
 
-**The Art of Infusion:** Unlike mages who channel energy through themselves, or invokers who speak power into being, you transfer magical energy directly from your pneuma into physical objects. The object becomes a temporary reservoir of power, holding the effect until triggered or until the magic fades. This requires understanding both magical theory and the material properties of what you're enchanting.
+Unlike mages who channel energy through themselves, or invokers who speak power into existence, you transfer magical energy directly from your pneuma into physical objects. The object becomes a temporary reservoir of power, holding the effect until triggered or until the magic fades. This requires understanding both magical theory and the material properties of what you're enchanting. You use Intelligence as your Casting Stat for effects.
 
-**Mechanical Benefits:**
--   Roll **5d8**, assign to five Magical Potentials:
--   **Earth Potential:** Apply +2 bonus (max 8 total)
--   **Space Potential:** Apply +1 bonus (max 8 total)
--   **Positive Potential:** No bonus
--   **Time Potential:** No bonus
--   **Choose one Elemental or Conceptual energy** (Air, Fire, Water, or Negative): assign final roll, no bonus
--   Assign rolls strategically to maximize bonuses
--   Example: Rolling [8,7,6,5,4] → Earth gets 6+2=8, Space gets 7+1=8, other energies get 8/5/4
--   Use **Intelligence** as Casting Stat
--   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 2)
--   Can weave infuser magic using only these 5 energies
--   **Energy Pool:** Sum of 5 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)
--   **Imbue Item:** Once per short rest, spend 1 [Combat] action and touch a weapon or piece of armor. For 1 minute, the item gains one benefit: weapons deal +1d8 damage on next hit, or armor grants +1 DR. The infusion ends after triggering once or when duration expires.
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 5 Magical Mastery skills corresponding to your 5 energies (start at rank 2). You can weave magic using all 5 of these energies.
 
-**Infuser Requirement:** You must touch an object to infuse it with magic. Most of your weaves require physical contact with the target or a material component you're manipulating. You cannot cast at range without an infused item as an intermediary.
+Roll 5d8, assign to five Magical Potentials.
 
-**Elemental Infusion Themes:**
--   **Air**: Lightning-charged weapons, items that crackle with static, wind-enhanced movement
--   **Fire**: Flame-wreathed weapons, heat-radiating armor, burning 
--   **Water**: Frost-touched items, flowing defensive wards, adaptive protections
--   **Negative**: Withering weapons, life-draining effects, entropic decay infusions
+**Assign Potentials**
+Earth Potential = + 2 (max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Space Potential = + 1. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Choose three of the remaining energies (Air, Fire, Water,,Time, Positive or Negative) and assign the remaining rolls as desired.
 
+**Calculate your Energy Pool**
+Energy Pool: Sum of 5 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2).
+
+#### Imbue Item
+A number of times per short rest equal to your current Tier, spend 1 [Combat] action and touch a weapon or piece of armor. For 1 minute, infused weapons deal +4 elemental damage on every hit (choose the energy type from your five pact energies at the time of infusion)Bonus energy damage added by infusion uses full DR. If the target has vulnerability or immunity to the energy type, apply that to the energy damage portion only; infused armor grants +3 DR for the duration. You may have a number of active infusions simultaneously equal to your current Tier. An infusion ends when the duration expires or when you imbue the same item again.
+Infusers must touch an object to infuse it with magic. Most of your weaves require physical contact with the target or a material component you're manipulating. You cannot cast at range without an infused item as an intermediary.
 
 ### Sorcerous Origin (-7)
 **Requirements:** Wisdom ≥ 3
 
-You are an Arcanisty, your eyes glow with constant violet light from birth, marking your inherent connection to the planes. Unlike Mageborn who study magic intellectually or clerics who channel divine power, your magic flows from perfect self-knowledge and unshakeable inner certainty. Your pneuma is so clear, so completely understood, that reality itself recognizes and responds to your true nature.
+You are an Arcanist, your eyes glow with constant violet light from birth, marking your inherent connection to the planes. Unlike Mageborn who study magic intellectually or clerics who channel divine power, your magic flows from perfect self-knowledge and unshakeable inner certainty. Your pneuma is so clear, so completely understood, that reality itself recognizes and responds to your true nature.
 
-**The Source of Power:**
-Where Mageborn study external principles and clerics channel external deities, sorcerers have achieved something rarer: **perfect internal understanding**. You've looked within and seen yourself completely—not your surface thoughts or emotions, but your fundamental nature across space, time, and probability.
+Where Mageborn study external principles and clerics channel external deities, sorcerers have achieved something rarer: perfect internal understanding. You've looked within and seen yourself completely, not just your surface thoughts or emotions, but your fundamental nature across space, time, and probability.
 
-**Visual Effects:** Your weaves flow naturally, almost effortlessly, as if reality is simply acknowledging what already is. Violet light constantly emanates from your eyes—not flickering like other mageborn, but steady, like a candle that never wavers. When you cast, magic moves through you like water finding its level, inevitable and serene. Your Force of Will manifestation determines how this manifests aesthetically.
+Your weaves flow naturally, almost effortlessly, as if reality is simply acknowledging what already is. When you cast, magic moves through you like water finding its level, inevitable and serene. Your Force of Will manifestation determines how this manifests aesthetically. You use Wisdom as your Casting Stat for weaving.
 
-**Mechanical Benefits:**
--   Roll **8d8**, assign to eight Magical Potentials
--   **Choose Force of Will Manifestation:** Determines which energy aligns with your deepest truth and grants unique benefits
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 2). You can weave magic using all 8 of these energies.
+
+Roll 8d8, assign to eight Magical Potentials.
+
+**Choose Manifestation**
+Your force of will manifestation determines your Primary energy which aligns with your deepest truth and grants unique benefits.
+Choose Secondary Focus (any other energy)= + 1. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2).
+
+#### Resonant Weaving (Passive)
+You ignore the first point of overspending penalty on all energy types. If you have Fire Mastery 4 and spend 6 Energy (2 over), you only add +1 to both dice instead of +2
+
+#### Harmonic Weaving
+When you make a weaving roll, you can declare "Harmonic" to reroll one die (Potential OR Mastery, your choice). You must take the new result. You can use this ability a number of times per long rest equal to your Tier.
 
 #### Unchanging Stone (Earth/Fire)
 **Story:** *"I know my nature completely—I am solid as stone, constant as truth"*
@@ -419,7 +424,7 @@ Where Mageborn study external principles and clerics channel external deities, s
 **Story:** *"I perceive myself completely across space and time—I exist in total self-awareness"*
 **Primary Energy:** Choose Space or Air → Apply +2 bonus to reach 8 maximum (assign roll strategically)
 **Manifestation Benefits:**
--   **Omnipresent Mind:** Add your Wisdom to initiative. Once per short rest, as [Free] action, perceive from any point within 60 feet for 1 round
+-   **Omnipresent Mind:** Once per short rest, as [Free] action, perceive from any point within 60 feet for 1 round
 -   **Mental Clarity:** Subtract 1 from both dice on saves against mental effects (Charmed, Frightened, possession)
 
 **Common Mechanical Elements:**
@@ -445,16 +450,21 @@ Where Mageborn study external principles and clerics channel external deities, s
 
 You are a diabolist, awakened to magical power through trauma rather than born with it. At some moment of desperate need, when death seemed certain or loss unbearable, you reached out to *anything* that might answer. Something did. You don't fully understand what you called to, what answered, or what price you'll pay. You only know that power came when you needed it most, and now you're bound to something beyond mortal understanding.
 
-**Visual Effects:** When you weave, your eyes flash with violet light and your pact's influence is unmistakable. Between castings, your eyes appear normal, but careful observers might notice subtle signs like strange reflections, unnatural shadows, or otherworldly glimmers. The nature of what you've bound yourself to manifests in your magic's appearance.
+Your eyes glow with violet light only when you complete a weave, the power flowing from your pact through your pneuma at the moment of casting. When your eyes flash your pact's influence is unmistakable. Between castings, your eyes appear normal, but careful observers might notice subtle signs like strange reflections, unnatural shadows, or otherworldly glimmers. The nature of what you've bound yourself to manifests in your magic's appearance. You use Charisma as your Casting Stat for weaving.
 
-**Mechanical Benefits:**
--   Roll **5d8**, assign to five Magical Potentials based on pact type
--   **Choose Survival Pact Type:** Determines energy access and how the pact manifests
--   Your pact type determines Primary and Secondary energies:
-    -   **Primary Energy:** Apply +2 bonus to reach 8 maximum
-    -   **Secondary Energy:** Apply +1 bonus to reach 8 maximum
-    -   Assign rolls strategically to maximize bonuses
--   Example: Rolling [8,7,6,5,4] for Survivor's Bargain → Space gets 6+2=8, Negative gets 7+1=8, others get 8/5/4
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 5 Magical Mastery skills corresponding to your 5 energies (start at rank 2). You can weave magic using all 5 of these energies.
+
+Roll 5d8, assign to five Magical Potentials.
+
+**Choose Pact**
+Choose you survival pact type which determines energy access and how your pact abilities manifest.
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
+
+#### Pact Magic
+Your energy pool regenerates on short rest as well as on long rest.
 
 #### The Survivor's Bargain
 **Energies:** Space (Primary), Negative (Secondary), Fire, Earth, Time
@@ -497,75 +507,78 @@ You are a diabolist, awakened to magical power through trauma rather than born w
 **Requirements:** Intelligence ≥ 3
 
 You have no innate connection to the planes. Your eyes do not glow, your pneuma carries no magical resonance, and in a room full of mages you are indistinguishable from anyone else. What you have is a precise understanding of how magical energy concentrates within natural objects, and how those energies can be extracted, combined, and directed toward purposeful effect. Where a Mageborn reaches into the planes through their pneuma, you reach into the physical world and find what was already there.
+
 Your magic requires forethought, preparation, and access to the right materials. It is slower and more deliberate than any other tradition. In exchange, your preparations persist indefinitely, can be used by anyone, and accumulate across the days between crises in ways that no other tradition's power can.
 
-Alchemical preparations produce the same violet light as any magical effect when activated. The Alchemist themselves shows no glowing eyes, and no motes of energy trailing from their hands. The magic is in the bottles, not the person holding them. An Alchemist's workspace tells its own story: stained surfaces, unusual smells, carefully labeled containers, and the faint violet residue of completed work.
+Alchemical preparations produce the same violet light as any magical effect when activated. The Alchemist themselves shows no glowing eyes, and no motes of energy trailing from their hands. The magic is in the bottles, not the person holding them. An Alchemist's workspace tells its own story: stained surfaces, unusual smells, carefully labeled containers, and the faint violet residue of completed work. Use Intelligence as your effective Casting Stat for preparation identification and activation resolution.
 
-**Benefits:**
-- Gain the ability to create alchemical preparations using physical components containing concentrated magical energy.
-- Gain **Craft: Alchemist** as a skill (starts at rank 2). See Crafting section for details.
-- Use Intelligence as your effective Casting Stat for preparation identification and activation resolution.
-- May reference the full weave list to determine energy requirements for any desired preparation.
-- **Thrown Delivery:** May substitute up to Space 2 worth of component cost by designating a preparation as a thrown item. The physical arc of the throw provides the spatial delivery that Space energy would otherwise create. Thrown preparations use Dexterity + Ranged Combat to hit a target or location (range 30/60 ft as a thrown weapon). Space 3 and above cannot be substituted by throwing. Area effects, barriers, and other Space-primary effects still require Space components.
+#### Craft: Alchemist
+Gain Craft: Alchemist as a skill (starts at rank 2). See Crafting section for details. May reference the full weave list to determine energy requirements for any desired preparation.
+
+#### Thrown Delivery
+May substitute up to 2 points worth of supporting energy used for range by designating a preparation as a thrown item. The physical arc of the throw provides the spatial delivery that energy would otherwise create. Thrown preparations use Dexterity + Ranged Combat to hit a target or location (range 30/60 ft as a thrown weapon). Area effects, barriers, and other effects still require point cost spending.
 
 #### Daily Preparations
-After each long rest, the Alchemist spends 1 hour in routine morning preparation1 mixing basic materials they always keep on hand into a fresh set of simple preparations for the day ahead.
-- **Quantity:** Intelligence score + Craft: Alchemist rank.
-- **Energy cost limit:** Total energy cost per preparation must be 4 or less.
-- **Energy types:** Common only (Fire, Air, Earth, Water).
-- **Time:** 1 hour, only after completing a Long Rest.
-- No Craft check required.
-- No component cost.
-- Unused daily preparations expire at the next long rest.
+After each long rest, the Alchemist spends 1 hour in routine morning preparation mixing basic materials they always keep on hand into a fresh set of simple preparations for the day ahead. No Craft check required and no component cost is needed. Unused daily preparations expire at the next long rest.
+- Quantity: Intelligence score + Craft: Alchemist rank.
+- Energy cost limit: Total energy cost per preparation must be 4 or less.
+- Energy types: Common only (Fire, Air, Earth, Water).
 
 #### Short Rest Preparations
-- During any 1-hour short rest, the Alchemist may spend part of their rest time producing a small set of field preparations from their portable kit.
-- **Quantity:** Craft: Alchemist rank.
-- **Energy cost limit:** Total energy cost per preparation must be 4 or less.
-- **Energy types:** Common only (Fire, Air, Earth, Water).
-- **Time:** Included within the short rest.
-- No Craft check required.
-- No component cost.
-- Unused short rest preparations expire at the next long rest.
+During any 1-hour short rest, the Alchemist may spend part of their rest time producing a small set of field preparations from their portable kit. No Craft check required and no component cost is needed. Unused short rest preparations expire at the next long rest.
+-  Quantity: Craft: Alchemist rank.
+- Energy cost limit: Total energy cost per preparation must be 4 or less.
+- Energy types: Common only (Fire, Air, Earth, Water).
 
 #### Field Improvisation
-When the Alchemist needs a specific preparation that they did not make during daily or short rest production, they may improvise one in the field using 10 minutes of focused work.
-- **Quantity:** Always 1.
-- **Energy cost limit:** Total energy cost must be 4 or less.
-- **Energy types:** Common only (Fire, Air, Earth, Water).
+When the Alchemist needs a specific preparation that they did not make during daily or short rest production, they may improvise one in the field using 10 minutes of focused work. Unused field improvised preparations expire at the next long rest
+- Quantity: Always 1.
+- Energy cost limit: Total energy cost must be 4 or less.
+- Energy types: Common only (Fire, Air, Earth, Water).
 - Add 1 to both dice on the Craft: Alchemist check.
-- Unused field improvised preparations expire at the next long rest
 
 #### Crafted Preparations (Downtime)
-The Alchemist's most powerful productions require dedicated downtime, physical components, and a proper workspace. Crafted preparations are the only way to access Uncommon or Rare energy types, produce complex multi-energy effects, and build a stockpile that persists indefinitely across sessions.
-- **Yield:** Craft: Alchemist rank.
-- **Energy cost:** Up to Craft rank × 2.
-- **Energy types:** All types, subject to component availability.
-- **Time:** Determined by total energy cost.
-- Craft check required.
-- Components cost gold or must be harvested.
-- Crafted preparations never expire.
-- **Critical Failure on Mixing:** If the Craft: Alchemist check during any crafted preparation session results in a critical failure (double 8s), the preparation activates immediately upon completion. Offensive preparations release in the workspace. The Alchemist and any nearby creatures may be affected. The preparation is consumed. 
+The Alchemist's most powerful productions require dedicated downtime, physical components, and a proper workspace. Crafted preparations are the only way to access Uncommon or Rare energy types, produce complex multi-energy effects, and build a stockpile that persists indefinitely across sessions. A Craft: Alchemist check is required. Components cost gold or must be harvested. Crafted preparations never expire.
+- Yield: Craft: Alchemist rank.
+- Energy cost: Up to Craft rank × 2.
+- Energy types: All types, subject to component availability.
+- Time: Determined by total energy cost.
+- Critical Failure on Mixing: If the Craft: Alchemist check during any crafted preparation session results in a critical failure (double 8s), the preparation activates immediately upon completion. Offensive preparations release in the workspace. The Alchemist and any nearby creatures may be affected. The preparation is consumed. 
 
 ### Summoner (-7)
 **Requirements:** Charisma ≥ 3
 
 Your pneuma does not channel inward like other magic users. It radiates outward, broadcasting across the barriers between the material plane and the external planes in a signal that daemons perceive and orient toward. You have learned to shape that broadcast with enough precision to call specific beings to your location, holding them in the material world for as long as the connection remains energetically coherent.
 
-Your eyes glow violet only when a summoning completes, the light fading once the daemon stabilizes its presence. While a summoned daemon is present, a faint violet luminescence surrounds it; visible evidence of the pneuma-tether anchoring it here.
+Your eyes glow violet only when a summoning completes, the light fading once the daemon stabilizes its presence. While a summoned daemon is present, a faint violet luminescence surrounds it; visible evidence of the pneuma-tether anchoring it here. You use Charisma as your Casting Stat for weaving.
 
-**The Nature of Summoning:** Daemons you call are not bound or compelled. They arrive because your pneuma is resonant to them and they stay because the connection holds. They will generally cooperate, but they are not mindless tools. A daemon asked to act against its fundamental nature may refuse regardless of disposition.
+The Nature of Summoning: Daemons you call are not bound or compelled. They arrive because your pneuma is resonant to them and they stay because the connection holds. They will generally cooperate, but they are not mindless tools. A daemon asked to act against its fundamental nature may refuse regardless of disposition.
 
 Summoned daemons understand the summoner's spoken instructions and will follow them within the bounds of their disposition and nature. Issuing instructions beyond a single simple command costs the summoner 1 [Minor] action on their turn. Summoned creatures act on their own initiative using their bestiary stat block.
 
-Drakes: Drakes are the spawn of the great dragon daemons of legend. Summoning them is not available at character creation and cannot be accessed through normal feat investment. A summoner who discovers this possibility through play does so through story, not mechanics.
+**Drakes:** Drakes are the spawn of the great dragon daemons of legend. Summoning them is not available at character creation and cannot be accessed through normal feat investment. A summoner who discovers this possibility through play does so through story, not mechanics.
 
-**Benefits:**
-- Roll 8d8, assign to eight Magical Potentials.
-- Use Charisma as Casting Stat.
-- Gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 2).
-- Can weave summoner magic using all 8 energies.Energy Pool: Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
-- Choose Primary Resonance from the seven options below. This determines which daemon categories your pneuma naturally attracts and grants your energy bonuses. Assign rolls strategically to maximize bonuses without waste:
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 2). You can weave magic using all 8 of these energies.
+
+Roll 8d8, assign to eight Magical Potentials.
+
+**Primary Resonance**
+Choose Primary Resonance from the seven options below. This determines which daemon categories your pneuma naturally attracts and grants your energy bonuses. Assign rolls strategically to maximize bonuses without waste:
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
+
+#### Summoning Weaves
+Summoning uses the native energy of the daemon's home plane as Primary and Time as Supporting. The weaving roll uses Primary Potential + Primary Mastery / Time Potential + Time Mastery. The targeting roll uses Charisma + Primary Energy Mastery.
+
+Summoning is a Complex Weave costing 2 [Combat] actions. The creature appears in an unoccupied space within 30 feet of the summoner.
+
+**Tier Gap Penalty:** For each Tier the summoned creature exceeds the summoner's current Tier, add 1 to both dice on the weaving roll. The targeting roll is unaffected by Tier gap.
+
+**Summoning Limit:** You can have summoned daemons with combined Tier equal to your Charisma score present simultaneously. Summoning beyond this limit causes the oldest summoned creature to immediately return to its plane.
+
+**Dismissal:** You can dismiss your summoned daemon as a [Free] action at any time.
 
 | Primary Source | Daemon Categories | Primary Bonus | Secondary Bonus |
 |---|---|---|---|
@@ -576,15 +589,6 @@ Drakes: Drakes are the spawn of the great dragon daemons of legend. Summoning th
 | Positive | Outsiders | Positive +2 | Space +1 |
 | Negative | Shadow creatures, Outsiders | Negative +2 | Space +1 |
 | Space | Aberrations | Space +2 | Time +1 |
-
-#### Summoning Weaves
-Summoning uses the native energy of the daemon's home plane as Primary and Time as Supporting. The weaving roll uses Primary Potential + Primary Mastery / Time Potential + Time Mastery. The targeting roll uses Charisma + Primary Energy Mastery.
-
-Summoning is a Complex Weave costing 2 [Combat] actions. The creature appears in an unoccupied space within 30 feet of the summoner.
-
-- **Tier Gap Penalty:** For each Tier the summoned creature exceeds the summoner's current Tier, add 1 to both dice on the weaving roll. The targeting roll is unaffected by Tier gap.
-- **Summoning Limit:** You can have summoned daemons with combined Tier equal to your Charisma score present simultaneously. Summoning beyond this limit causes the oldest summoned creature to immediately return to its plane.
-- **Dismissal:** You can dismiss your summoned daemon as a [Free] action at any time.
 
 **Targeting Success**
 The results of the targeting roll for the summoning weave determine the disposition (social attitude) of the summoned daemon.

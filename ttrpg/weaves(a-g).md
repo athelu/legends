@@ -239,12 +239,12 @@
 
 ### Complex Illusion
 **Primary Energy:** Space 6 (complex illusion + medium range + 20ft cube area)
-**Supporting Energy:** Time 3 (duration 10 minutes)
+**Supporting Energy:** Fire 3 (duration 10 minutes)
 **Range:** Medium, 60 ft. (20-foot cube)
 **Duration:** 10 minutes
 **Total Cost:** 9 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Fire Potential + Fire Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Create an illusion of an object, creature, or phenomenon within a 20-foot cube at medium range. The illusion includes sight, sound, smell, and temperature effects. Physical interaction reveals it as an illusion.
 **Saving Throw:** Perception vs Space Mastery
@@ -350,12 +350,12 @@
 
 ### Disintegrate
 **Primary Energy:** Negative 8 (reducing matter to dust, extreme damage)
-**Supporting Energy:** Air 2 (medium range 60ft)
+**Supporting Energy:** Space 2 (medium range 60ft)
 **Range:** Medium, 60 ft.
 **Duration:** Instantaneous
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Air Potential + Air Mastery
+**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Target takes 40 negative damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target is disintegrated (turned to dust). Only resurrection magic can restore them.
 **Saving Throw:** Fortitude
@@ -431,14 +431,14 @@
 **Targeting Success Scaling:** 0 = Fails, 1 = 10 minutes, 2 = 1 hour, 3 = 4 hours
 
 ### False Visage
-**Primary Energy:** Space 4 (bending light
-**Supporting Energy:** Time 3 (duration 10 minutes)
+**Primary Energy:** Water 4 (bending light through refractive medium)
+**Supporting Energy:** Fire 3 (duration 10 minutes)
 **Range:** Self, Touch
 **Duration:** 10 minutes (or until broken)
 **Total Cost:** 7 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
-**Targeting Roll:** Casting Stat + Space Mastery
+**Weaving Roll:** Water Potential + Water Mastery / Fire Potential + Fire Mastery
+**Targeting Roll:** Casting Stat + Water Mastery
 **Description:** Alter your appearance to resemble a specific humanoid creature of the same size category. The illusion covers clothing, equipment, and surface features: voice, height within a few inches, build, and distinguishing marks. Physical interaction does not automatically reveal the illusion, but a careful observer may attempt a Perception check opposed by your Space Mastery to notice inconsistencies. The weave does not replicate scent, weight, or the texture of materials. Breaks if you take damage exceeding your Tier × 4 in a single hit.
 **Saving Throw:** None
 **Applies Effects:** False Visage

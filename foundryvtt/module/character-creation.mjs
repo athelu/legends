@@ -41,7 +41,7 @@ const CREATION_STEP_METADATA = [
   { key: 'equipment', label: 'Select Starting Equipment' },
 ];
 
-const STANDARD_ARRAY = [5, 4, 3, 3, 3, 2, 2, 2];
+const STANDARD_ARRAY = [5, 5, 5, 4, 4, 3, 3, 3];
 
 const BACKGROUND_RANDOM_TABLE = {
   11: 'Acolyte',
@@ -893,7 +893,7 @@ async function runAttributeStep(actor) {
     content: `
       <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
         <div><strong>Determine Attributes</strong></div>
-        <label><input type="radio" name="attributeMethod" value="standard" checked /> Standard Array (5, 4, 3, 3, 3, 2, 2, 2)</label>
+        <label><input type="radio" name="attributeMethod" value="standard" checked /> Standard Array (5, 5, 5, 4, 4, 3, 3, 3)</label>
         <label><input type="radio" name="attributeMethod" value="random" /> Random Roll (8d8, then assign)</label>
         <label><input type="radio" name="attributeMethod" value="freeform" /> Freeform Assignment</label>
       </form>
