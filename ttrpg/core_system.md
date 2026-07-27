@@ -90,7 +90,7 @@ This 1 success would remove one of Lex’s successes, leaving him with a margin 
 
 ## Advanced Test Mechanics
 
-The basic skill test can be adjusted to accommodate bonuses or penalties applied due to abilities or changing situations. The standard methods and ways that skill tests can be modified at outlined here. 
+The basic skill test can be adjusted to accommodate bonuses or penalties applied due to abilities or changing situations. The standard methods and ways that skill tests can be modified are outlined here. 
 
 ### Shared Attribute Roll
 
