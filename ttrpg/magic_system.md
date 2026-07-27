@@ -1,21 +1,178 @@
 # The Magical Gift
 “Gifted” is the term used for magic users, both Arcane and Divine casters. The gift is nothing more than one being able to open their pneuma to the planes and allowing the magical energies to flow through them.
+
 The term Arcanist is used to refer to natural born arcane magic users. Arcanists are born with a permanent bond to the planes that can strengthen and grow over time. This connection is constant and resonates with their pneuma which in turn causes the eyes of mages to always glow with magical light. 
-Arcane Magic users that can learn to access arcane powers or have been gifted them through some other means are called Diabolists. 
-Divine casters are latent magic users whose access to their magical gift requires faith and a focus to complete the connection.
-Arcane and Divine connections are the opposite sides of a coin. Arcanists tap into the same wild, raw elemental and magical forces as the Divine, but through a different method. 
-While wielding these magic energies, Arcane magic users describe much the same emotions and sensations that their Divine counterparts do: Euphoria, Elation, Intoxication, Joy, Inspiration. 
-For the divine casters these feelings are felt upon the completion of the ritual or prayer. A divine caster’s eyes will glow like an arcanists, but only upon the completion of the spell. 
-Regardless of the physical changes of the magic user, all magical effects produce a violet light whether it be magical flame, magical writing, magical barriers etc. Magical weapons will likewise produce light of this color.
+
+Arcane Magic users that can learn to access arcane powers or have been gifted them through some other means are called Diabolists.
+
+Divine casters are latent magic users that can be trained to access their magical gift but require faith and a focus to complete the connection.
+
+Arcane and Divine connections are the opposite sides of a coin. Arcanists tap into the same wild, raw elemental and magical forces as the Divine, but through a different method. While wielding these magic energies, Arcane magic users describe much the same emotions and sensations that their Divine counterparts do: Euphoria, Elation, Intoxication, Joy, Inspiration. For the divine casters these feelings are felt upon the completion of the ritual or prayer. 
+
+A divine caster’s eyes will glow like an arcanists, but only upon the completion of the spell. Regardless of the physical changes of the magic user, all magical effects produce a violet light whether it be magical flame, magical writing, magical barriers etc. Magical weapons will likewise produce light of this color. 
+
 Magic in this world is anything but subtle and it is the same for its practitioners. Magic effects are very showy, leaving motes of energy, symbols, and other telltale signs that can be interpreted by those who can Sense magic.
 
-Magic in Athelu is the shaping of the Eight Energies through pneuma. It is not subtle. Weaves, wards, divine workings, and infused objects all manifest as visible violet light, glyphs, motes, resonant sounds, or other unmistakable signs that supernatural power is being used.
+#### Necromancy
+The Necromantic arts are lost to the current inhabitant of Athelu. Player characters should be forbidden from taking any weaves with the Necromantic keyword. Necromancy is a part of the knowledge of the First men that has been lost to time. It is up to the DM to determine if this knowledge can be recovered, but if it can be, it should only be done during gameplay, exploration, or finding some trove of ancient knowledge.
 
-## The Eight Energies
+The first men knew the Necromantic arts well from their study of pneuma, and how it calls to the Daemons outside the physical realm. Necromanctic magic has a tarnishing effect upon the Pneuma of the user. The daemons that are attracted are more selfish or vile, and further influence the mind of the Magic user.
 
-All magic works by channeling a Primary Energy directed by a Secondary Energy. The Primary Energy defines what the effect fundamentally is. The Secondary Energy defines how it is delivered, what form it takes, and what range, area, or duration it carries.
+#### Pneuma and Necromancy
+Pneuma is the soul-essence that connects all living beings to the planes. Every creature's pneuma acts as a conduit through which magical energies flow. When a mage weaves fire or a cleric channels healing, they are directing elemental and conceptual energies through their pneuma, but they are not manipulating the pneuma itself.
 
-The eight energies are:
+#### Arcanists
+The practices vary from land to land, but Arcanists are born with innate magical ability and are identifiable upon birth. Their pupils and iris are no longer visible, their eyes instead glow with a distinct purple light. Within each culture some action is taken upon the birth of an Arcanist.
+
+It normally involves having the child placed within a learning institution that will teach the Arcanist how to harness their abilities. This could be placement with an established magical college, or given to the local wise woman, but all people understand that when they find a newborn Arcanist, it is essential they are brought somewhere to teach them.
+
+Not all Arcanists are able to learn to use their magic the same way - and it requires skill and training to identify how to best teach an Arcanist. Some Arcanists access their magic through their understanding of the world and their intellect. Others harness their arcane power through the knowledge of self.  A person born with innate magical ability will only succeed in controlling their power once they understand how they need to access it. Although the resultant magical effect may be the same, the way a mageborn and a sorcerer accomplish the feat are not the same.
+
+#### Diabolist
+Diabolists are often misunderstood - if not feared. The people of the world have come to expect the arcane to announce itself through glowing eyes. Diabolists do not have an innate magical ability - but instead are awakened.
+
+## Magic System
+It is necessary for players to decide if their character will be able to use magic during character creation. Even if they decide this will be something there character will do eventually - they must purchase the trait during the character creation process. 
+
+Access to magic in the Legends comes in a few different forms, described as the paths to magic.
+
+### Eight Paths to Magic
+
+#### Mageborn
+
+Mageborn represent the most populace group of Arcanists. Mageborn create magic through very careful study of the world around them - not just the physical world or the prime material, but the outer realms of the planes as well. It is through a clear understanding (at least to the mage) of how these components interact that allows them to exploit their connections to create magical effects.
+
+Mageborn use Intelligence as their casting stat, work with all eight energies, and gain Ritual Casting, allowing any weave to be cast as a 10-minute ritual for half Energy cost outside combat.
+
+#### Sorcerous Origin
+
+Sorcerers, on the other hand, have such an indomitable understanding of self that they can produce magical effects almost from sheer force of will alone. Sorcerers are so confident in their place in the universe that it would be anathema for the universe to deny them access to such powers. Sorcerers need not understand fully where their power comes from, only that it is available to them. 
+
+Sorcerers and Mageborn have such a divergent understanding of magic that they cannot learn to master their abilities in the same way. A person born with innate magical ability will only succeed in controlling their power once they understand how they need to access it.
+
+Although the resultant magical effect may be the same, the way a mageborn and a sorcerer accomplish the feat are not the same. Sorcerous Origin characters use Wisdom as their casting stat, work with all eight energies, and gain reality-bending abilities such as Harmonic Weaving.
+
+#### Eldritch Pact
+
+Some major trauma or event normally spurs this awakening. At some point the diabolist is forced to access power outside of themselves to survive or accomplish some greater deed. Diabolists are rare because the circumstances surrounding their awakening are rare - or in most cases fatal. 
+
+Near death experience is the most consistent method of awakening; Someone subjected to such stress and trauma that they open themselves up to anything to save themselves.
+
+These events create diabolists known as Warlocks. Eldritch Pact characters will often have a tale of how they came into their powers but most commonly it will involve having someone - or something - grant them the strength they needed to survive. This outside force is called a patron. Warlocks and their patrons are forever linked. The Eldritch Pact character gets their magical ability and their power from this connection. Like Divine casters, their eyes glow with the familiar magical light only upon the completion of their magic.
+
+Eldritch Pact characters use Charisma as their casting stat, work with five patron-defined energies, and recover their power on a short rest rather than a long rest.
+
+#### Invoker
+
+Invokers are diabolists that have discovered the connection between the spoken word and magic. This connection may not be fully understood, and in some cases may even be accidental. These words often are not of any spoken language and are rarely words used in the incantations of other arcanists - but these sounds have power when spoken by an invoker.
+
+Invokers use Charisma as their casting stat and work with five energies: Air, Positive, Space, Time, and one chosen additional energy. They gain Words of Power, usable a number of times per short rest equal to their current tier.
+
+#### Infuser
+
+Other diabolists are researchers of the arcane. Though not having an innate magical ability, there are many who attempt to understand the arcane with a philosophical approach. These researchers can discover pieces of magic interwoven into everyday life.
+
+Infusers are diabolists who have discovered links between rare elements, symbols, and magic. Through clever craftsmanship and skill, infusers can imbue magical energy into their creations.
+
+Infusers use Intelligence as their casting stat and work with five energies centered on Earth and Space. They gain Imbue Item, allowing them to temporarily charge weapons and armor with magical effects.
+
+#### Alchemical Tradition
+
+Alchemists do not weave by opening their pneuma to the planes in the same way as other traditions. Instead, they harvest magical concentration from the physical world and encode effects into preparations, reagents, and volatile mixtures.
+
+Alchemists use Craft: Alchemist and Intelligence to identify, prepare, and resolve these effects. Their preparations obey the same energy logic as weaves, but rely on components, downtime, and catalysts rather than a personal Energy pool.
+
+#### Summoner
+
+Summoners do not channel magic inward. Their pneuma radiates outward across the barriers between the material plane and the external planes, broadcasting a signal that daemons perceive and orient toward. Through careful shaping of that broadcast, a Summoner calls specific beings to their location and holds them in the material world for as long as the energetic connection remains coherent.
+
+Summoned daemons are not bound or compelled; they arrive because the Summoner's pneuma resonates with them, and they stay because the connection holds. They will generally cooperate, but they are not mindless tools and will not act against their fundamental nature.
+
+Summoners use Charisma as their casting stat, work with all eight energies, and choose a Primary Resonance that determines which daemon categories their pneuma naturally attracts and which energies receive bonuses. Their eyes glow violet only at the moment a summoning completes, fading once the daemon stabilizes.
+
+#### Divine Gift
+
+Devout weavers who open their pneuma through faith, prayer, and disciplined devotion. Divine Gift characters use Wisdom as their casting stat, work with all eight energies, and gain Channel Divinity uses equal to their current tier per long rest. Their patron choice determines their favored divine expressions.
+
+## Magic Effect Types
+
+### Damage Effects (Destructive Magic)
+
+These weaves deal direct harm through elemental or negative energy and are referred to as damage weaves.
+
+Most energies can be used in a destructive manner. The combination of specific energies resulting in different type of effects.
+
+**Key characteristic:** targets take HP damage.
+**Common Examples:** Fireball, lightning bolt, Hailstorm, acid blast, necrotic blast
+
+### Mind-affecting Effects (Mind-Affecting Magic)
+
+Any weave that alters a creature's mental state, emotions, or thoughts. 
+
+Positive energy can be used for beneficial effects such as heroism, calm emotions, sleep. The positive energy reinforces existing beliefs or remove detrimental influences.
+
+Negative energy impairs or influences the mind resulting in effects like fear, beguiling weave, command and confusion.
+
+Space energy invokes direct mind control such as charm and domination and other effects that force a creature to act against its will. These effects are fundamentally altering the target.
+
+**Key characteristic:** affecting the mental state or decision making capability of the target.
+**Common Examples:** Beguiling Weave, Sleep, Fear Domination, command.
+**Immunity Note:** When a creature is listed as "immune to mind-affecting effects" or "immune to mind-affecting effects (charm, fear, sleep)," they cannot be affected by any weaves that rely on mental/emotional manipulation. Constructs, undead, and mindless creatures typically have this immunity.
+
+### Illusory effects (False Perception)
+
+Weaves that create false sensory information or conceal the truth. Used for phantom images, false appearances, and sensory illusions that fool the eye without harming the mind.
+
+Water + Fire create concealment and invisibility effects.  Fire (light) is bent and refracted through Water (the medium) so that light wraps around the target rather than reflecting off it.
+
+Space + Negative create negative mental effects like nightmares and psychic damage.  The void of Space combined with entropic Negative energy reaches past the senses to assault the mind directly.
+
+**Key Characteristic:** Creates false perceptions, but doesn't change reality
+**Common Examples:** Phantom Image, invisibility, False Visage, Complex Illusion
+**Seeing Through illusory effects:** Creatures with truesight, blindsight, or tremorsense may see through illusory effects automatically. Physical interaction typically reveals an illusory effect as false (you can pass your hand through it, it has no substance, etc.).
+
+### Protective Effects (Warding Magic)
+
+Weaves that create barriers, wards, or defensive magic. These could be protective circles, shields or armor made of force energy, or auras that prevent negative influence. 
+These also include using raw magic (space) energy to interrupt or unravel magic effects. 
+
+Space is the primary energy when creating most wards, force barriers, countering weaves, or unweaving magic.
+
+Space can be combined with other energies to impart specific benefits, such as fire resistance, cold resistance or protection from certain forces.
+
+**Key Characteristic:** Preventing damange or influence. Disrupting magic.
+**Common Examples:** Reactive Ward, Force Armor, protection from energy, CounterWeave, Unweave
+
+### Transformation Effects (Physical Alteration)
+
+Transformation weaves are broken into two categories; those that affect inert objects and those that affect living things.
+
+Space energy creates weaves that physically change or enhance creatures. These would altering a creature for beneficial or non-beneficial reasons. 
+
+Elemental energies  (Earth, Fire, Water, Air) are used to transform inanimate objects and reshape non-living matter. 
+
+**Key Characteristic:** Physical transformation of living or non-living things.
+**Common Examples:** Beastial Transformation, Size Shift, stone shape, enhance ability
+
+### Summoning & Teleportation Effects (Spatial Manipulation)
+
+Weaves that move creatures or objects through space or bring things from other places or even external planes. Direct travel on the same plane or between planes.
+
+Elemental energies  (Earth, Fire, Water, Air) summoning uses the native energy of the daemon's home plane as Primary and Space as supporting.
+
+Space as primary is used for summoning Aberrations. Space is also used for portals, teleportation and pushing daemons out of the prime materials.
+
+**Key Characteristic:** Summoning and movement
+**Common Examples:** Teleport, Spatial Step, summon elemental, create food and water
+
+### Information & Prophecy Effects (Temporal/Spatial Perception)
+Weaves that gather information, predict the future, or perceive distant locations. Uses Space energy (scrying, detection) or Time energy (foresight, prophecy).
+
+**Common Examples:** Sense Magic, scrying, foresight, identify, Object Seeking
+
+## The Eight Magical Energies
+
+All magic works by channeling a Primary Energy often directed by a Secondary Energy. The Primary Energy defines what the effect fundamentally is. The Secondary Energy defines how it is delivered, what form it takes, and what range, area, or duration it carries.
 
 ### Fire
 Hunger and intensity with the risk of breaking free from control. Highly focused energy to the point it consumes all fuel. Rage, passion, and violent explosions. Converting earth to energy and heat, Water to steam and being fed and directed by air. Combined with Positive energy to smite evil and banish darkness. Producing ash unstoppable fire when combined with Negative energy.
@@ -41,195 +198,68 @@ Speeding up or slowing down perception or even reality. Compressing what should 
 ### Space
 Space is the void and the unknown. The birthplace of aberrations and the home of eldritch undefinable entities. It is the nothing that surround all creation, constantly trying to break through the barriers of the outer planes and the physical realms. It is the magic of portals, teleportation, pocket dimensions and nightmares.
 
-The **Primary Energy** determines what the weave fundamentally does. Supporting energies expand that effect by adding range, duration, area, barriers, movement, perception, and other refinements.
+All eight energies flow through pneuma as a conduit, but standard weaving does not manipulate souls directly.
 
-## Arcanists
-The practices vary from land to land, but Arcanists are born with innate magical ability and are identifiable upon birth. Their pupils and iris are no longer visible, their eyes instead glow with a distinct purple light. 
-Within each culture - some action is taken upon the birth of an Arcanist. It normally involves having the child placed within a learning institution that will teach the Arcanist how to harness their abilities.
-This could be placement with an established magical college, or given to the local wise woman, but all people understand that when they find a newborn Arcanist, it is essential they are brought somewhere to teach them. 
-Not all Arcanists are able to learn to use their magic the same way - and it requires skill and training to identify how to best teach an Arcanist. Some Arcanists access their magic through their understanding of the world and their intellect. Others harness their arcane power through the knowledge of self.  This distinction represents the next levels of classification of mages: The Mageborn and the Sorcerer.
-
-## The Eight Traditions
-
-The current magical traditions in Legends are:
-
-### Mageborn
-Mageborn represent the most populace group of Arcanists. Mageborn create magic through very careful study of the world around them - not just the physical world or the prime material, but the outer realms of the planes as well. It is through a clear understanding (at least to the mage) of how these components interact that allows them to exploit their connections to create magical effects. Mageborn use **Intelligence** as their casting stat, work with all eight energies, and gain **Ritual Casting**, allowing any weave to be cast as a 10-minute ritual for half Energy cost outside combat.
-
-### Sorcerous Origin
-Sorcerers, on the other hand, have such an indomitable understanding of self that they can produce magical effects almost from sheer force of will alone. Sorcerers are so confident in their place in the universe that it would be anathema for the universe to deny them access to such powers. Sorcerers need not understand fully where their power comes from, only that it is available to them. 
-
-Sorcerers and Mageborn have such a divergent understanding of magic that they cannot learn to master their abilities in the same way. A person born with innate magical ability will only succeed in controlling their power once they understand how they need to access it.  Although the resultant magical effect may be the same, the way a mageborn and a sorcerer accomplish the feat are not the same. Sorcerous Origin characters use **Wisdom** as their casting stat, work with all eight energies, and gain reality-bending abilities such as **Harmonic Weaving**.
-
-## Diabolist
-Diabolists are often misunderstood - if not feared. The people of the world have come to expect the arcane to announce itself through glowing eyes. Diabolists do not have an innate magical ability - but instead are awakened. The following arcane magical traditions are considered diabolists.
-
-### Eldritch Pact
-Some major trauma or event normally spurs this awakening. At some point the diabolist is forced to access power outside of themselves to survive or accomplish some greater deed. Diabolists are rare because the circumstances surrounding their awakening are rare - or in most cases fatal. 
-Near death experience is the most consistent method of awakening; Someone subjected to such stress and trauma that they open themselves up to anything to save themselves.
-These events create diabolists known as Warlocks. Eldritch Pact characters will often have a tale of how they came into their powers but most commonly it will involve having someone - or something - grant them the strength they needed to survive. This outside force is called a patron. Warlocks and their patrons are forever linked. The Eldritch Pact character gets their magical ability and their power from this connection. Like Divine casters, their eyes glow with the familiar magical light only upon the completion of their magic. Eldritch Pact characters use **Charisma** as their casting stat, work with five patron-defined energies, and recover their power on a **short rest** rather than a long rest.
-
-### Invoker
-Invokers are diabolists that have discovered the connection between the spoken word and magic. This connection may not be fully understood, and in some cases may even be accidental. These words often are not of any spoken language and are rarely words used in the incantations of other arcanists - but these sounds have power when spoken by an invoker.  Invokers use **Charisma** as their casting stat and work with five energies: Air, Positive, Space, Time, and one chosen additional energy. They gain **Words of Power**, usable a number of times per short rest equal to their current tier.
-
-### Infuser
-Other diabolists are researchers of the arcane. Though not having an innate magical ability, there are many who attempt to understand the arcane with a philosophical approach. These researchers can discover pieces of magic interwoven into everyday life.
-Infusers are diabolists who have discovered links between rare elements, symbols, and magic. Through clever craftsmanship and skill, infusers can imbue magical energy into their creations. Infusers use **Intelligence** as their casting stat and work with five energies centered on Earth and Space. They gain **Imbue Item**, allowing them to temporarily charge weapons and armor with magical effects.
-
-### Alchemical Tradition
-Alchemists do not weave by opening their pneuma to the planes in the same way as other traditions. Instead, they harvest magical concentration from the physical world and encode effects into preparations, reagents, and volatile mixtures. Alchemists use **Craft: Alchemist** and **Intelligence** to identify, prepare, and resolve these effects. Their preparations obey the same energy logic as weaves, but rely on components, downtime, and catalysts rather than a personal Energy pool.
-
-Alchemical preparations use the weave list as their foundation. The Alchemist determines the desired effect by referencing the same energy combinations used by ordinary weaves, then substitutes harvested components, tools, and catalysts for direct channeling. Thrown alchemical preparations may substitute limited Space cost with physical delivery, but broader spatial effects still require real Space components.
-
-### Summoner
-Summoners do not channel magic inward. Their pneuma radiates outward across the barriers between the material plane and the external planes, broadcasting a signal that daemons perceive and orient toward. Through careful shaping of that broadcast, a Summoner calls specific beings to their location and holds them in the material world for as long as the energetic connection remains coherent.
-
-Summoned daemons are not bound or compelled — they arrive because the Summoner's pneuma resonates with them, and they stay because the connection holds. They will generally cooperate, but they are not mindless tools and will not act against their fundamental nature. Summoners use **Charisma** as their casting stat, work with all eight energies, and choose a **Primary Resonance** at creation that determines which daemon categories their pneuma naturally attracts and which energies receive bonuses. Their eyes glow violet only at the moment a summoning completes, fading once the daemon stabilizes.
-
-## Divine Gift
-Devout weavers who open their pneuma through faith, prayer, and disciplined devotion. Divine Gift characters use **Wisdom** as their casting stat, work with all eight energies, and gain **Channel Divinity** uses equal to their current tier per long rest. Their patron choice determines their favored divine expressions.
-
-
-### Magic Effect Types & Terminology
-
-#### Damage Effects (Destructive Magic)
-These weaves deal direct harm either through energy or physical damage and are referred to as damage weaves. Key characteristic: targets take HP damage.
-
-**Common Examples:** Fireball, lightning bolt, Hailstorm, acid blast, necrotic blast
-
-**Physical damage** applies full DR. **Energy damage** applies half DR. **Some energy damage ignores DR entirely** when the effect bypasses physical matter to reach the pneuma or mind directly.
-
-#### What Determines Physical vs Energy
-
-**Physical damage requires matter.** Earth is matter directly. Ice and frozen water are matter. Compressed air made solid is matter. Floods carrying mass are matter. Any pairing that produces a physical object or moving mass deals physical damage.
-
-**Energy damage is heat, life force, entropy, light, temporal manipulation, or force that interacts with the target as energy rather than mass.** Steam is energy damage despite being water, because its harm is thermal transfer not impact. Cold as a temperature effect is energy; ice is physical.
-
-**DR is ignored** when the effect reaches past physical matter to touch the pneuma or mind directly. Sonic vibration passes through armor. Spatial voids and pure negative energy projected through space reach what steel cannot stop.
-
-
-#### mind-affecting effects (Mind-Affecting Magic)
-Any weave that alters a creature's mental state, emotions, or thoughts without direct mind control. Typically uses Negative energy (for fear, sleep, mental assault) or Positive energy (for courage, inspiration, euphoria). Creatures immune to psychic effects or described as "mindless" are immune to mind-affecting effects.
-
-**Includes:** Charm, fear, sleep, emotion manipulation, mental influence
-**Does NOT include:** Direct mind control (compulsion), illusory effects, or physical transformations
-**Common Examples:** Beguiling Weave, Sleep, Terror Weave, heroism
-
-**Immunity Note:** When a creature is listed as "immune to mind-affecting effects" or "immune to mind-affecting effects (charm, fear, sleep)," they cannot be affected by any weaves that rely on mental/emotional manipulation. Constructs, undead, and mindless creatures typically have this immunity.
-
-#### illusory effects (False Perception)
-Weaves that create false sensory information or conceal the truth. Space + Fire create standard illusions. Fire provides the light source that gives the false image visible substance; Space provides its location and form. Used for phantom images, false appearances, and sensory illusions that fool the eye without harming the mind.
-Water + Fire create concealment and invisibility effects.  Fire (light) is bent and refracted through Water (the medium) so that light wraps around the target rather than reflecting off it.
-Space + Negative create negative mental effects like nightmares and psychic damage.  The void of Space combined with entropic Negative energy reaches past the senses to assault the mind directly.
-
-**Key Characteristic:** Creates false perceptions, doesn't change reality
-**Seeing Through illusory effects:** Creatures with truesight, blindsight, or tremorsense may see through illusory effects automatically. Physical interaction typically reveals an illusory effect as false (you can pass your hand through it, it has no substance, etc.).
-
-**Common Examples:** Phantom Image, Complex Illusion (Space/Fire); Invisibility, False Visage (Water/Fire); Illusory Torment, Nightmare Manifestation (Space/Negative)
-
-#### Protective Effects (Warding Magic)
-Weaves that create barriers, wards, or defensive magic. Primarily uses Space energy to create force barriers or Reactive Ward effects. These are referred to as protective weaves or wards.
-
-**Common Examples:** Reactive Ward, Force Armor, protection from energy, Counterweave, Unweave
-
-#### Transformation Effects (Physical Alteration)
-Weaves that physically change or enhance creatures or objects. Uses elemental energies (Earth, Fire, Water, Air) to reshape matter, or Positive/Negative to enhance/wither living tissue.
-
-**Common Examples:** Beastial Transformation, Size Shift, stone shape, enhance ability
-
-#### Summoning & Teleportation Effects (Spatial Manipulation)
-Weaves that move creatures/objects through space or bring things from other places. Uses Space energy as primary, often with Time energy for duration of summons.
-
-**Common Examples:** Teleport, Spatial Step, summon creature, create food and water
-
-#### Information & Prophecy Effects (Temporal/Spatial Perception)
-Weaves that gather information, predict the future, or perceive distant locations. Uses Space energy (scrying, detection) or Time energy (foresight, prophecy).
-
-**Common Examples:** Sense Magic, scrying, foresight, identify, Object Seeking
-
-### Pneuma and Necromancy
-
-**Pneuma** is the soul-essence that connects all living beings to the planes. Every creature's pneuma acts as a conduit through which magical energies flow. When a mage weaves fire or a cleric channels healing, they are directing elemental and conceptual energies *through* their pneuma—but they are not manipulating the pneuma itself.
-
-**The Eight Energies:**
-- **Elemental:** Earth, Air, Fire, Water (Physical forces)
-- **Vital:** Positive (life, growth, healing) and Negative (entropy, decay, harm)
-- **Conceptual:** Space (distance, barriers, perception) and Time (duration, speed, causality)
-
-All eight energies flow *through* pneuma as a conduit, but standard weaving does not manipulate souls directly.
-
-#### Necromancy: The Forbidden Art
-
-The Necromantic arts are lost to the current inhabitant of Athelu. Player characters should be forbidden from taking any weaves with the [Necromantic] keyword. Necromancy is a part of the knowledge of the First men that has been lost to time. It is up to the DM to determine if this knowledge can be recovered, but if it can be, it should only be done during gameplay, exploration, or finding some trove of ancient knowledge.
-The first men knew the Necromantic arts well from their study of pneuma, and how it calls to the Daemons outside the physical realm.
-Necromanctic magic has a tarnishing effect upon the Pneuma of the user. The daemons that are attracted are more selfish or vile, and further influence the mind of the Magic user. 
-
-Necromancy is not merely the use of Negative energy. It is the direct manipulation, binding, imprisonment, corruption, or consumption of pneuma itself. These arts belong to the lost knowledge of the First Men and are not normally available to player characters. Weaves with the **[Necromantic]** keyword should remain forbidden unless recovered through play with explicit GM permission. Their use carries narrative and spiritual consequences, including corruption and unwanted attention from malignant powers.
-
-
-#### The [Necromantic] Keyword
-
-Weaves marked with the **[Necromantic]** keyword are forbidden and represent lost First Men knowledge. These weaves don't merely channel Negative energy for harm, they actually bind, trap, reshape, or consume souls:
+## Necromancy
+Weaves marked with the [Necromantic] keyword are forbidden and represent lost First Men knowledge. These weaves don't merely channel Negative energy for harm—they bind, trap, reshape, or consume souls:
 
 **Examples of Necromantic Weaves:**
-- **Bind the Fallen** - Binding soul fragments or echoes to corpses
-- **Soul Cage** - Trapping a departing soul in a vessel
-- **Magic Jar** - Displacing souls between bodies
-- **Speak with Dead** - Forcing communion with departed souls
-- **Create Undead** - Binding stronger soul remnants to corpses
-- **Finger of Death** - Killing and instantly raising as undead (soul binding)
+- Bind the Fallen - Binding soul fragments or echoes to corpses
+- Soul Cage - Trapping a departing soul in a vessel
+- Magic Jar - Displacing souls between bodies
+- Commune with Dead - Forcing communion with departed souls
+- Create Undead - Binding stronger soul remnants to corpses
+- Finger of Death - Killing and instantly raising as undead (soul binding)
 
 **Non-Necromantic Uses of Negative Energy:**
+The following are not necromantic, as they channel entropy and harm without manipulating souls:
 
-The following are *not* necromantic, as they channel entropy and harm without manipulating souls:
-- **Inflict Wounds** - Channeling decay and necrotic energy
-- **Harm** - Draining life force
-- **Withering Touch** - Withering and entropy
-- **Curse Weaving** - Imposing misfortune
-- **Shadow-based effects** - Manipulating darkness and shadow
-- **Ray of Enfeeblement** - Weakening through entropy
+- Inflict Wounds - Channeling decay and necrotic energy
+- Harm - Draining life force
+- Blight - Withering and entropy
+- Curse Weaving - Imposing misfortune
+- Shadow Sphere - Manipulating darkness and shadow
+- Ray of Enfeeblement - Weakening through entropy
 
-#### Identifying Necromantic Intent
+A cleric channeling Negative energy to harm living creatures, or a wizard casting Blight to wither plants, is using entropy and decay and not manipulating souls. These are standard (if dark) magical practices and do not carry the corruption and forbidden nature of true necromancy.
 
-**Ask these questions:**
-1. Does the weave bind, trap, or manipulate a soul?
-2. Does it create undead (which requires binding soul energy to corpses)?
-3. Does it force interaction with departed souls against their will?
-4. Does it consume or damage pneuma directly?
+### Identifying Necromantic Intent
+To determine if the character is attempting a [Necromantic] weave,  Ask these questions:
+- Does the weave bind, trap, or manipulate a soul?
+- Does it create undead (which requires binding soul energy to corpses)?
+- Does it force interaction with departed souls against their will?
+- Does it consume or damage pneuma directly?
+If yes to any of these, the weave is necromantic and requires the [Necromantic] keyword.
 
-If yes to any of these, the weave is necromantic and requires the **[Necromantic]** keyword.
-
-**Using Negative Energy ≠ Necromancy**
-
-A cleric channeling Negative energy to harm living creatures, or a wizard casting Blight to wither plants, is using entropy and decay, not manipulating souls. These are standard (if dark) magical practices and do not carry the corruption and forbidden nature of true necromancy.
-
-#### GM Guidelines for Necromancy
-
+### GM Guidelines for Necromancy
 If players discover lost First Men texts or forbidden knowledge:
-
-1. **Require significant in-game discovery** - This cannot simply be learned through normal advancement
-2. **Warn of consequences** - Necromancy attracts daemons and corrupts the caster's pneuma
-3. **Consider moral weight and story** - This is dark magic with serious narrative weight
-4. **Use sparingly** - Necromancy should remain rare and dangerous, not a common tool
-5. **Apply penalties** - Regular use might impose Misfortune on certain rolls, attract unwanted attention, or cause other story consequences
+- Require significant in-game discovery - This cannot simply be learned through normal advancement
+- Warn of consequences - Necromancy attracts daemons and corrupts the caster's pneuma
+- Consider alignment and story - This is dark magic with serious narrative weight
+- Use sparingly - Necromancy should remain rare and dangerous, not a common tool
+- Apply penalties - Regular use might impose Misfortune on certain rolls, attract unwanted attention, or cause other story consequences
 
 The forbidden nature of necromancy is a feature, not a bug—it should feel dangerous and consequential when encountered.
 
-#### Magical Potentials & Mastery
+## Magical Potentials
+Potentials are like an additional set of attributes, but they specifically define the characters magical capabilities. They represent the magical affinity for each energy - not the mastery. Potential measures the limits of what a magic user can accomplish, not how well they perform.
 
-##### Potentials (1-8, like attributes)
-- Raw magical affinity for each energy
-- Rolled at character creation (8d8, assign results)
-- Can be raised with XP (costs same as attributes: 16 × current rank)
-- Determines maximum Energy you can spend in that type
+How you determine your Magical Potentials depends on which magical trait you selected during character creation. Some magical paths have access to more energies than others. 
+Regardless, the initial values of your magical potentials is determined by rolling 1d8 for each potential your character has access to. The particular magical path will define how you place these potential, and if you receive any bonuses to these potentials.
 
-##### Mastery (2-8, like skills)
-- Trained control of each energy
-- All start at rank 2
-- Can be raised with XP (costs same as skills)
-- Cannot exceed corresponding Potential
-- Determines reliability when weaving
+Magical potential can be raised by spending XP, and costs same as attributes: 16 × current rank.
 
+## Magical Mastery
+Magical Mastery are a new set of skills unlocked when you choose a magical trait. You will have a mastery skill for each of the Magical potentials you have access to. These skills measure how competent you are with the different types of magical energy. 
+
+Like all skills, they will start with 2 ranks. You can purchase additional ranks just as you can with any other skill. The Skill rank cap is equal to the Characters magical potential for that mastery. 
+
+## Magical Energy Pool
+Your Magical Energy Pool represents the amount of magical energy you are able to channel before requiring rest. Depending on your magical trait, this could be a long or a short rest. 
+
+The Magical Energy Pool is calculated the same way for all magic practitioners.
+##### Energy Pool Formula
+Energy Pool = (Sum of all your Potentials) + (Casting Stat × 2) + Constitution + (Total Mastery Ranks ÷ 2, rounded down).
 
 ### Weaving (Casting) Mechanics
 The weaving roll reflects whether you formed the magic properly. The targeting roll or save comparison determines how fully the effect lands on a creature or situation. This keeps magical power dependent on both magical structure and delivery, rather than collapsing everything into one check.

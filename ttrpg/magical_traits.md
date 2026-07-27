@@ -570,7 +570,7 @@ Choose Primary Resonance from the seven options below. This determines which dae
 Energy Pool: Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
 
 #### Summoning Weaves
-Summoning uses the native energy of the daemon's home plane as Primary and Time as Supporting. The weaving roll uses Primary Potential + Primary Mastery / Time Potential + Time Mastery. The targeting roll uses Charisma + Primary Energy Mastery.
+Summoning uses the native energy of the daemon's home plane as Primary and Space as supporting for all summons EXCEPT for Aberrations. Abertations use Space as the Primary and Time as the secondary.
 
 Summoning is a Complex Weave costing 2 [Combat] actions. The creature appears in an unoccupied space within 30 feet of the summoner.
 
