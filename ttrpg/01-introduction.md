@@ -1,5 +1,35 @@
 # Introduction
 
+Many campaign settings are like a fresh coat of paint upon the same role-playing game experience; they bring in new continents, countries, and rulers, and perhaps some juxtaposition of the normal bad guys or a unique lurking threat. New spells, Classes or magic items can add flavor, but the core game experience remains the same. 
+Admittedly, Legends of Athelu™ supports many of the tropes of the typical fantasy setting, but some have been deliberately omitted. Removing some of these elements forces the DM and the Players to play the game differently. 
+The intent is to do away with the de-humanizing of the villains of the story, instead replacing them with even more cunning villains - mankind or elvenkind
+This leads to the most significant change in the Legends of Athelu™ setting and that is that many traditional player races do not exist. Only two sentient races populate the game world, humans and elves, and they are distinct and not evolutionary linked so cross breeding is not possible.
+
+No other races mean no other humanoids such as halflings, gnomes, orcs, goblins, trolls, bugbears, kobolds, gnolls, etc. Monstrosities, aberrations, oozes, plant creatures, and outsiders do exist, but they are not native to the world of Athelu. These creatures typically have an explanation for their existence, such as wild magic, magical experimentation, or something similar. 
+
+When these creatures do make it to Athelu, they become the stuff of legends and folktales. These mysterious magical beings often become revered as small gods, with the local folk making offerings or sacrifices to appease them. This is a world where fantastical things are truly fantastic, where the stuff of a normal fantasy world would be astonishing to the local populace. 
+
+Magic does exist in Legends of Athelu™, and its use is visible to the naked eye. Magic is never inconspicuous, and neither are its practitioners. Spells are accompanied by dramatic flashes, swirling patterns, glowing magical symbols, and light. Even once a spell has been cast, the target of the spell will bear telltale signs of the magic currently in effect. 
+
+There is a disparity in how divine magic and arcane magic are viewed by the populace. Divine magic, because it is bestowed by the gods, is considered pure and a blessing. Arcane magic is viewed as a mutation or taint upon the wielder.
+
+Because of this, arcane magic users are often viewed with suspicion and at the very least wariness. In most nations arcane magic users must be registered with the state and provide papers detailing the extent of their training. Elves are considered the masters of magic, as their longevity allows them to gain true mastery. 
+
+Ley lines of pure magical power course across the surface of the world, invisible to the casual, and often trained, observer; their purpose and meaning long forgotten. Many secrets of magic and understanding of the world fall into the category of wonders that have been lost to time.
+
+To clarify this a bit, these powerful magics exist, but they are not common knowledge. These wonders include the entire magical school of necromancy, (see the details in the Magic section). 
+
+Combat can also be quite deadly. Resurrection is restrictive and very uncommon. This should result in more realistic and thought-provoking challenges and encounters, instead of always seeing combat as the only solution.
+
+Legends of Athelu™ puts humans in the role of being the oldest race. In truth, humans are currently experiencing their second coming, but have not reached the pinnacle of technology or magical aptitude that their predecessors the first men had.
+
+Men and elves have coexisted over several millennia to shape the world as it currently is. The Legends of Athelu™ campaign setting takes place in the world of Athelu, upon the continent of Estaea. Here, four great nations vie for control; Three human nations and the remains of the once great elven empire.
+
+The world has been remade since the age of the first men; continents have shifted, and seas arisen while humans struggled back from the edge of extinction. The empires of the dwarves and elves reached their zenith and then collapsed in the time it has taken men to reach the shores of Estaea. The ruins of the first men, the dwarves and even the elves are spread throughout the continent. 
+
+It is here that the denizens of the world will decide its fate.
+
+
 Legends of Athelu™ is a tabletop roleplaying game built around collaborative storytelling. You and your friends create heroes who explore the world of Athelu. This isn't a game about following a predetermined story. The Game Master (GM) presents situations, but you decide how your character responds.
 
 ### How Roleplaying Games Work
