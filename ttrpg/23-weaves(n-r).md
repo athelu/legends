@@ -175,7 +175,7 @@
 
 ### Protection from Energy
 **Primary Energy:** Space 5 (protective barrier against energy)
-**Supporting Energy:** Elemental Energy 3 (duration 10 minutes)
+**Supporting Energy:** Matching elemental energy (Earth/Air/Fire/Water) 3 (duration 10 minutes)
 **Range:** self, touch
 **Duration:** 10 minutes
 **Total Cost:** 8 Energy
@@ -226,8 +226,8 @@
 **Targeting Roll:** Casting Stat + Positive Mastery
 **Description:** Touch a target and channel searing radiant energy. Target takes 4 radiant damage. Deals double damage to undead creatures. This is an attack weave—no saving throw allowed.
 **Saving Throw:** None
-**Damage Type:** Radiant (energy)
-**DR Interaction:** Half DR
+**Damage Type:** Positive
+**DR Interaction:** None
 **Targeting Success Scaling:** 0 = fails, 1 = half, damage (2), 2= full damage (4), 3 = enhanced damage (8)
 
 ### Reactive Ward

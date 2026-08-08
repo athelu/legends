@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft, Blindsight 30 ft (in water)",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Water Tendril [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 2), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 3 damage (Small, standard: 4 − 1) + 2 cold damage (Half DR)</li>\n<li><em>Margin 2:</em> 5 damage (3 + 2 Str) + 2 cold damage; target gains Chilled condition</li>\n<li><em>Margin 3:</em> 5 damage + 2 cold damage; target gains Numbed condition</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Water Tendril [Combat]:</strong> Melee attack (Agil 5 + Melee Combat 2), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 3 damage (Small, standard: 4 − 1) + 2 cold damage (Half DR)</li>\n<li><em>Margin 2:</em> 5 damage (3 + 2 Str) + 2 cold damage; target gains Chilled condition</li>\n<li><em>Margin 3:</em> 5 damage + 2 cold damage; target gains Numbed condition</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Slick Trail:</strong> When the Tide Wisp moves across a surface, that surface becomes Difficult Terrain for other creatures until the start of the Wisp's next turn.</li>\n<li><strong>Aqueous Form:</strong> As Droplet.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

@@ -205,10 +205,10 @@ Specify the constituent creature type. Carry over relevant special abilities fro
 This represents innate talent, specialized training, or supernatural ability.
 
 **Examples:**
-- Wolf (TR 1/4, Agi 4): Melee Combat can be 4 or 5 (max +1)
-- Orc Warrior (TR 1/2, Agi 3): Melee Combat can be 3 or 4 (max +1)
-- Young Dragon (TR 4, Agi 6): Melee Combat can be 6, 7, or 8 (max +2)
-- Ancient Dragon (TR 8, Agi 8): Melee Combat can be 8 (already at max, +3 would exceed cap)
+- Wolf (TR 1/4, Agil 4): Melee Combat can be 4 or 5 (max +1)
+- Orc Warrior (TR 1/2, Agil 3): Melee Combat can be 3 or 4 (max +1)
+- Young Dragon (TR 4, Agil 6): Melee Combat can be 6, 7, or 8 (max +2)
+- Ancient Dragon (TR 8, Agil 8): Melee Combat can be 8 (already at max, +3 would exceed cap)
 
 ### Primary Attributes
 - Physical monsters: Str, Con, Agi
@@ -280,7 +280,7 @@ To continue progressing, characters MUST invest in raising attributes to enable 
 - 40% on skills (keeping pace with new attribute values)
 - 20% on feats
 
-At Tier 3, a character with Agi 5, Melee 5 has reached their ceiling. To grow further requires raising the attribute first, then the skill. Without attribute investment at this tier, a Tier 3 NPC will feel indistinguishable from a Tier 2 NPC.
+At Tier 3, a character with Agil 5, Melee 5 has reached their ceiling. To grow further requires raising the attribute first, then the skill. Without attribute investment at this tier, a Tier 3 NPC will feel indistinguishable from a Tier 2 NPC.
 
 ---
 
@@ -676,11 +676,11 @@ Immune to mind-affecting effects (charm, fear, sleep) in most cases — note exc
 **HP:** X (Con Y × Multiplier Z [Fragile/Standard/Tough/Massive])
 **DR:** X (source)
 **Speed:** X ft, [other movement types]
-**Attributes:** Str X / Con X / Agi X / Dex X / Int X / Wis X / Cha X / Luck X
+**Attributes:** Str X / Con X / Agil X / Dex X / Int X / Wis X / Cha X / Luck X
 **Skills:** Melee Combat X, [other skills]
 **Senses:** [Vision types and ranges]
 **Equipment:** [If applicable — note weapon size if non-Medium]
-**Initiative Bonus:** +X (Agi X)
+**Initiative Bonus:** +X (Agil X)
 **Languages:** [If applicable]
 
 **Attacks:**

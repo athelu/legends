@@ -49,7 +49,7 @@ Unless the DM or story requires otherwise, choose which of the following nations
 There are a few other nations available, but these would require permission from the GM.
 
 ## Step 4. Choose Background
-Characters must choose a background from the ones available in the Background section or they may roll for a random background. This will determine some starting gear as well as skills.
+Characters must choose a background from the ones available in the Background section or they may roll for a random background. This will determine some starting gear, skills, as well as some starting XP to be spent on the character.
 
 ### Random Background Table (d88)
 

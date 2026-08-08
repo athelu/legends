@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 120 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 4 damage (Small, standard: 4 − 1 + 1 for fiend density = 4) + 2 Negative damage (Half DR)</li>\n<li><em>Margin 2:</em> 7 damage (4 + 3 Str) + 2 Negative damage; target makes Fortitude save (1 success) or Weakened until end of their next turn</li>\n<li><em>Margin 3:</em> 7 damage + 2 Negative damage; Weakened; no save; target also gains Sickened condition until end of their next turn</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agil 5 + Melee Combat 3), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 4 damage (Small, standard: 4 − 1 + 1 for fiend density = 4) + 2 Negative damage (Half DR)</li>\n<li><em>Margin 2:</em> 7 damage (4 + 3 Str) + 2 Negative damage; target makes Fortitude save (1 success) or Weakened until end of their next turn</li>\n<li><em>Margin 3:</em> 7 damage + 2 Negative damage; Weakened; no save; target also gains Sickened condition until end of their next turn</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Pack Menace:</strong> When two or more Gnashers are within 5 feet of the same target, both subtract 1 from both attack dice against that target.</li>\n<li><strong>Death Frenzy:</strong> When any creature within 30 feet drops to 0 HP, the Gnasher may immediately move up to half its speed toward that creature as a [Free] action. This triggers even if the fallen creature is an ally — Gnashers do not distinguish.</li>\n<li><strong>Devil's Sight:</strong> As Spite.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

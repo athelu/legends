@@ -306,12 +306,12 @@
 
 ### Cutting Words
 **Primary Energy:** Negative 2 (psychic assault through cruel words)
-**Supporting Energy:** Air 2 (medium range)
+**Supporting Energy:** Space 2 (medium range)
 **Range:** Medium, 60 ft.
 **Duration:** Instantaneous
 **Total Cost:** 4 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Negative Potential + Negative Mastery / Air Potential + Air Mastery
+**Weaving Roll:** Negative Potential + Negative Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Speak cutting words at one creature you can see within medium range. Target takes 4 psychic damage and makes Will save. Compare your targeting successes to their save successes. If you have more, target adds 1 to both their dice on their next attack roll before end of their next turn.
 **Applies Effects:** dazed
@@ -359,8 +359,8 @@
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Target takes 40 negative damage. Target makes Fortitude save to reduce. If reduced to 0 HP by this weave, target is disintegrated (turned to dust). Only resurrection magic can restore them.
 **Saving Throw:** Fortitude
-**Damage Type:** Negative (energy)
-**DR Interaction:** Half DR
+**Damage Type:** Negative
+**DR Interaction:** None
 **Targeting Success Scaling:** 0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48)
 
 ### Disk of Force

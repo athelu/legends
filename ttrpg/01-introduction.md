@@ -138,7 +138,7 @@ Respect boundaries. Everyone has different comfort levels with violence, horror,
 Your character exists as a collection of numbers representing their capabilities:
 Eight Attributes measure raw potential in different areas. **Strength** for physical power, **Agility** for combat reflexes, **Intelligence** for reasoning, **Wisdom** for intuition, and so on. These range from 1 (poor) to 8 (exceptional). Most starting characters have attributes between 2 and 5.
 
-**Skills** represent training in specific tasks: swinging a sword, sneaking past guards, persuading merchants, identifying magical effects. Skills range from 0 (untrained) to 8 (legendary mastery). Unlike attributes, skills start at 0 and must be improved with experience points.
+**Skills** represent training in specific tasks: swinging a sword, sneaking past guards, persuading merchants, identifying magical effects. Skills range from 2 (untrained) to 8 (legendary mastery).
 
 **Feats** are special abilities that make your character unique. Combat techniques, magical enhancements, and skill specializations are provided through feats and help define what you can do that others cannot. Every character begins with 3 free feats, and more can be purchased with XP.
 
@@ -307,16 +307,17 @@ Do you specialize in a few skills and attributes, becoming exceptional at specif
 
 ### Character Tiers
 As your total accumulated XP grows, you pass through eight tiers representing rough power levels:
-- **Tier 1 (0-120 XP):** Novice adventurers, roughly equivalent to D&D levels 1-2 
-- **Tier 2 (120-360 XP):** Competent heroes, comparable to levels 3-5
-- **Tier 3 (360-600 XP):** Experienced adventurers, like levels 6-8 ...continuing up through... 
-- **Tier 8 (1560+ XP):** Legendary heroes, equivalent to level 20
+- **Tier 1 (0-120 XP):** Novice adventurers.
+- **Tier 2 (120-360 XP):** Competent heroes.
+- **Tier 3 (360-600 XP):** Experienced adventurers.
+- **Tier 8 (1560+ XP):** Legendary heroes.
 
 These tiers don't grant automatic benefits. They're guideposts for the GM when designing challenges. A Tier 1 group fights bandits and giant rats. A Tier 8 group confronts ancient dragons and artifacts from the First Age.
 
 The progression is steady: 5 sessions to reach Tier 2, then roughly 10 sessions per tier afterward. Most campaigns span several tiers, giving characters time to develop their identities through the choices they make about where to spend XP.
 
 ### Key Terms
+**Actions:** each player has three actions per turn, split into types like attack, move, interact etc
 **Actor:** A being in the game world including, characters, monsters, shop keepers etc.
 **Ancestry:** The heritage of a character (human, elf, etc.), determining some starting capabilities and characteristics.
 **Attribute:** One of eight scores (Strength, Constitution, Agility, Dexterity, Intelligence, Wisdom, Charisma, Luck) representing raw potential, rated 1–8.
@@ -330,6 +331,7 @@ The progression is steady: 5 sessions to reach Tier 2, then roughly 10 sessions 
 **Fortune:** A bonus that lets you roll 3d8 and take the best (lowest) 2 results.
 **Game Master (GM):** The player who adjudicates rules and narrates the world, story, and NPCs.
 **Hit Points (HP):** How much damage a character can sustain before falling unconscious. Equal to Constitution × 8, does not increase with tier.
+**Initiative:** The order in which actors take their turns in combat encounters. 
 **Keyword:** A label on an item that refers to a specific gameplay rule. Instead of printing the full rules on each item, a keyword is used to refer to the rule.
 **Luck:** Both an attribute and a depleting resource. Spent to improve rolls, also used in saving throws.
 **Misfortune:** A penalty that makes you roll 3d8 and take the worst (highest) 2 results.

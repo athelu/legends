@@ -240,7 +240,7 @@ def _parse_speed(speed_str: str) -> dict:
 
 
 def _parse_attributes(attr_str: str) -> dict:
-    """Parse 'Str 4 / Con 5 / Agi 3 / ...' into the attributes dict."""
+    """Parse 'Str 4 / Con 5 / Agil 3 / ...' into the attributes dict."""
     attrs = {v: 2 for v in ATTR_ABBREV.values()}
     for abbr, key in ATTR_ABBREV.items():
         m = re.search(rf'\b{abbr}\s+(\d+)', attr_str, re.IGNORECASE)
@@ -784,7 +784,7 @@ def build_npc_doc(name: str, body: str) -> dict:
     spd_raw   = _get('Speed') or '30 ft'
     speed     = _parse_speed(spd_raw)
 
-    attr_raw  = _get('Attributes') or 'Str 2 / Con 2 / Agi 2 / Dex 2 / Int 2 / Wis 2 / Cha 2 / Luck 2'
+    attr_raw  = _get('Attributes') or 'Str 2 / Con 2 / Agil 2 / Dex 2 / Int 2 / Wis 2 / Cha 2 / Luck 2'
     attributes_raw = _parse_attributes(attr_raw)
     attributes = {k: {'value': v, 'label': k.capitalize()} for k, v in attributes_raw.items()}
 

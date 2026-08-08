@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft",
     "tactics": "Ember Motes dart toward flammable targets or anything the summoner points them at. They are not strategic. They burn and that is their entire agenda. Most useful for lighting torches, igniting terrain, or harrying enemies who are already engaged with something else.",
-    "attacksNotes": "<ul>\n<li><strong>Scorch [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 2), Reach: 5 ft\n<ul>\n<li><strong>Margin 1:</strong> 2 damage (Tiny, standard natural weapon: 3 − 1 = 2) + 2 fire damage</li>\n<li><strong>Margin 2:</strong> 3 damage + 2 fire damage</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Scorch [Combat]:</strong> Melee attack (Agil 4 + Melee Combat 2), Reach: 5 ft\n<ul>\n<li><strong>Margin 1:</strong> 2 damage (Tiny, standard natural weapon: 3 − 1 = 2) + 2 fire damage</li>\n<li><strong>Margin 2:</strong> 3 damage + 2 fire damage</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Illumination:</strong> Sheds dim light in a 10-foot radius at all times.\n<ul>\n<li><strong>Flammable Contact:</strong> Any flammable object the Ember Mote touches ignites at the end of the round unless held by a creature who spends 1 [Interact] action smothering it.</li>\n</ul></li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

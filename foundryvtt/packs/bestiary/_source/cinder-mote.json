@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Scorch [Combat]:</strong> Melee attack (Agi 4 + Melee Combat 1), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 1 damage + 2 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 1 damage + 2 fire damage; target gains the Singed condition</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Scorch [Combat]:</strong> Melee attack (Agil 4 + Melee Combat 1), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 1 damage + 2 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 1 damage + 2 fire damage; target gains the Singed condition</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Illumination:</strong> Sheds dim light in a 10-foot radius continuously.</li>\n<li><strong>Flammable Contact:</strong> Any flammable object the Cinder Mote touches ignites at the end of the round unless an adjacent creature spends 1 [Interact] action smothering the flame.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

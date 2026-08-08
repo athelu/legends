@@ -835,7 +835,7 @@ _prepareCharacterData(actorData) {
       // Shortcuts (totals)
       data.str = data.attributes.strength?.value ?? 0;
       data.con = data.attributes.constitution?.value ?? 0;
-      data.agi = data.attributes.agility?.value ?? 0;
+      data.Agil = data.attributes.agility?.value ?? 0;
       data.dex = data.attributes.dexterity?.value ?? 0;
       data.int = data.attributes.intelligence?.value ?? 0;
       data.wis = data.attributes.wisdom?.value ?? 0;

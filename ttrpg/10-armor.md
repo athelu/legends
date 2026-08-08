@@ -9,8 +9,8 @@ When selecting armor, weigh protection against the penalties heavier suits impos
 - **[Noisy]** - Armor with this keyword imparts a +1 penalty to the stealth skill die.
 - **[Loud]** - Armor with this keyword imparts a +2 penalty to the stealth skill die.
 - **[LightArmor]** - Armor with this Keyword requires 1 minute to don/doff
-- **[MediumArmor]** - Armor with this keyword impart a +1 to athletics die on swimming checks. Swim speed is reduced to 1/3 movement speed. This armor requires 5 minute to don, 1 minute to doff
-- **[HeavyArmor]** - Armor with this keyword impart a +2 to athletics die on swimming checks. Swim speed is reduced to 1/4 movement speed. Heavy armor worn 8+ hours in extreme conditions or contant battle require Constitution checks or gain Exhaustion. This armor requires 10 minutes to don, 5 minutes to doff
+- **[MediumArmor]** - Armor with this keyword imparts a +1 to athletics die on swimming checks. Swim speed is reduced to 1/3 movement speed. This armor requires 5 minutes to don, 1 minute to doff
+- **[HeavyArmor]** - Armor with this keyword imparts a +2 to athletics die on swimming checks. Swim speed is reduced to 1/4 movement speed. Heavy armor worn 8+ hours in extreme conditions or contant battle require Constitution checks or gain Exhaustion. This armor requires 10 minutes to don, 5 minutes to doff
 
 ## Shields
 ---
@@ -101,7 +101,7 @@ When selecting armor, weigh protection against the penalties heavier suits impos
 
 #### Chain Mail
 - **Image:** `icons/equipment/chest/breastplate-scale-grey.webp`
-- **Description:** Thousands of interlocking metal rings riveted together into a flexible mesh that drapes over the body like a heavy garment. Chain mail is excellent against slashing attacks, which struggle to find purchase between the rings, but offers less resistance to the focused point of a thrust or the concentrated impact of a crushing blow.
+- **Description:** Thousands of interlocking metal rings riveted together into a flexible mesh that drapes over the body like a heavy garment. Chain mail is excellent against slashing attacks, which struggle to pierce the rings, but offers less resistance to the focused point of a thrust or the concentrated impact of a crushing blow.
 - **DR:** Slashing 6, Piercing 5, Bludgeoning 4
 - **Cost:** 200 gp
 - **Keyword:** [MediumArmor], [Noisy]

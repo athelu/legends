@@ -11,16 +11,16 @@
 **HP:** 40 (Con 5 × 8)
 **DR:** 0 (no armor)
 **Speed:** 30 ft
-**Attributes:** Str 4 / Con 5 / Agi 3 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 4 / Con 5 / Agil 3 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
 **Background:** Laborer
 **Skills:** Might 2, Athletics 2, Constitution saves 1, Craft 1
 **Senses:** Normal
 **Creature Type:** Humanoid (no special immunities)
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Languages:** Common
 
 **Attacks:**
-- **Club [Combat]:** Melee attack (Agi 3 + Melee Combat 0), Reach: 5 ft
+- **Club [Combat]:** Melee attack (Agil 3 + Melee Combat 0), Reach: 5 ft
   - ***Margin 1:*** 4 damage, Margin 2: 8 damage (4 + 4 Str)
 
 **Alternative Actions:**
@@ -54,16 +54,16 @@
 **HP:** 24 (Con 3 × 8)
 **DR:** S: 2, P: 1, B: 3 (aketon)
 **Speed:** 30 ft
-**Attributes:** Str 4 / Con 3 / Agi 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 4 / Con 3 / Agil 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 3, Athletics 2, Intimidate 1, Perception 2
 **Background:** Soldier
 **Senses:** Normal
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Humanoid (no special immunities)
 **Languages:** Common
 
 **Attacks:**
-- **Spear [Combat]:** Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft
+- **Spear [Combat]:** Melee attack (Agil 5 + Melee Combat 3), Reach: 5 ft
   - One-handed:
     - ***Margin 1:*** 6 damage
     - ***Margin 2:*** 10 damage (6 + 4 Str)
@@ -78,7 +78,7 @@
 - **Increase DR:** [Reaction] once per round, Gain +2 DR against this attack only
 
 **Feats:**
-- **Defensive Stance** (Agi 3, Melee 3): Can enter a defensive stance as a toggle. While in defensive stance, opponents add 1 to both attack dice when attacking you. Can enter or leave this stance at the start of your turn.
+- **Defensive Stance** (Agil 3, Melee 3): Can enter a defensive stance as a toggle. While in defensive stance, opponents add 1 to both attack dice when attacking you. Can enter or leave this stance at the start of your turn.
 - **Danger Sense** (Wis 3): Subtract 1 from both dice on Reflex saves against effects you can see.
 - **Shield Master** (Str 3, Melee 3, must use shield - 40 XP): Subtract 1 from both dice on Reflex saves while using a shield.
 
@@ -101,29 +101,29 @@
 **HP:** 24 (Con 3 × 8)
 **DR:** 0 (no armor)
 **Speed:** 30 ft
-**Attributes:** Str 3 / Con 3 / Agi 5 / Dex 4 / Int 2 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 3 / Con 3 / Agil 5 / Dex 4 / Int 2 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Stealth 3, Thievery 2, Deception 2, Intimidate 2, Melee Combat 3
 **Background:** Criminal
 **Senses:** Normal
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Humanoid (no special immunities)
 **Languages:** Common
 
 **Attacks:**
-- **Dagger [Combat]:** Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft
+- **Dagger [Combat]:** Melee attack (Agil 5 + Melee Combat 3), Reach: 5 ft
   - ***Margin 1:*** 4 damage
   - ***Margin 2:*** 9 damage (4 + 5 Agi)
 - **With Exploit Weakness:** When ally within 5 ft of target OR subtracting from attack dice, add Dex 4 to damage
   - ***Margin 1:*** 8 damage (4 + 4 Dex)
-  - ***Margin 2:*** 13 damage (4 + 5 Agi + 4 Dex)
+  - ***Margin 2:*** 13 damage (4 + 5 Agil + 4 Dex)
 - **Thrown (Range 30/60 ft):** Use Dex 4 + Ranged Combat 0
   - ***Margin 1:*** 4 damage
   - ***Margin 2:*** 9 damage (4 + 3 Str)
 
 **Feats:**
-- **Swift Movement** (Agi 4): Can Disengage or Hide using only 1 [Minor] action instead of a full action. Perfect for hit-and-run tactics.
+- **Swift Movement** (Agil 4): Can Disengage or Hide using only 1 [Minor] action instead of a full action. Perfect for hit-and-run tactics.
 - **Danger Sense** (Wis 3): Subtract 1 from both dice on Reflex saves against effects you can see. Represents street-smart reflexes.
-- **Exploit Weakness** (Agi 4, Stealth or Thievery 3, 40 XP): Once per round, when attacking with an ally within 5 feet of target OR subtracting from attack dice (from any source), add Dexterity score (4) to damage.
+- **Exploit Weakness** (Agil 4, Stealth or Thievery 3, 40 XP): Once per round, when attacking with an ally within 5 feet of target OR subtracting from attack dice (from any source), add Dexterity score (4) to damage.
 
 **Description:** Street criminals - muggers, gang members, hired muscle for criminal organizations. More dangerous than commoners due to actual combat training (Melee 3) and willingness to use violence. Operate in rough neighborhoods, extorting shopkeepers, robbing travelers, collecting debts for loan sharks. Cowards at heart - fight dirty, gang up on isolated victims, flee when facing real danger. May be redeemed or may be irredeemably vicious depending on circumstances. Criminal background gives them underworld contacts for fencing stolen goods.
 
@@ -147,16 +147,16 @@
 **HP:** 32 (Con 4 × 8)
 **DR:** S: 6, P: 5, B: 2 (chain mail)
 **Speed:** 30 ft
-**Attributes:** Str 4 / Con 4 / Agi 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 4 / Con 4 / Agil 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 4, Perception 3, Intimidate 3, Society 1, Athletics 2
 **Background:** Guard
 **Senses:** Normal
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Humanoid (no special immunities)
 **Languages:** Common
 
 **Attacks:**
-- **Longsword [Combat]:** Melee attack (Agi 5 + Melee Combat 4), Reach: 5 ft
+- **Longsword [Combat]:** Melee attack (Agil 5 + Melee Combat 4), Reach: 5 ft
   - One-handed:
     - ***Margin 1:*** 8 damage
     - ***Margin 2:*** 12 damage (8 + 4 Str)
@@ -173,7 +173,7 @@
   - **Increase DR:** [Reaction] once per round, Gain +2 DR against this attack only
 
 **Feats:**
-- **Defensive Stance** (Agi 3, Melee 3): Can enter defensive stance where opponents add 1 to both attack dice when attacking you. Toggle on/off at start of turn. Used when outnumbered or protecting others.
+- **Defensive Stance** (Agil 3, Melee 3): Can enter defensive stance where opponents add 1 to both attack dice when attacking you. Toggle on/off at start of turn. Used when outnumbered or protecting others.
 - **Danger Sense** (Wis 3): Subtract 1 from both dice on Reflex saves against effects you can see. Represents trained awareness.
 - **Power Attack** (Str 3, Melee 3, 40 XP): Declare before rolling - add 1 to both die results and deal +1d8 damage on hit. Risk/reward for ending fights quickly.
 - **Shield Master** (Str 3, Melee 3, must use shield, 40 XP): Subtract 1 from both dice on Reflex saves while using shield.
@@ -209,13 +209,13 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 12 (Con 2 × 6, Fragile)
 **DR:** 0
 **Speed:** 30 ft
-**Attributes:** Str 2 / Con 2 / Agi 4 / Dex 3 / Int 1 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 2 / Con 2 / Agil 4 / Dex 3 / Int 1 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 2, Stealth 3, Perception 3
 **Senses:** Darkvision 60 ft, Keen Smell
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Beast
 - **Attacks:**
-  - **Bite [Combat]:** Melee attack (Agi 4 + Melee Combat 2), Reach: 5 ft
+  - **Bite [Combat]:** Melee attack (Agil 4 + Melee Combat 2), Reach: 5 ft
     - ***Margin 1:*** 3 damage (Small size, light natural weapon: 4 - 1 = 3)
     - ***Margin 2:*** 5 damage (3 + 2 Str)
 
@@ -242,13 +242,13 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 14 (Con 2 × 7, Standard)
 **DR:** S: 3, P: 1, B: 4 (leather armor)
 **Speed:** 30 ft
-**Attributes:** Str 2 / Con 2 / Agi 4 / Dex 3 / Int 2 / Wis 2 / Cha 2 / Luck 2
+**Attributes:** Str 2 / Con 2 / Agil 4 / Dex 3 / Int 2 / Wis 2 / Cha 2 / Luck 2
 **Skills:** Melee Combat 3, Ranged Combat 2, Stealth 4, Perception 2
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Humanoid (no special immunities)
 - **Attacks:**
-  - **Scimitar [Combat]:** Melee attack (Agi 4 + Melee Combat 3), Reach: 5 ft
+  - **Scimitar [Combat]:** Melee attack (Agil 4 + Melee Combat 3), Reach: 5 ft
     - ***Margin 1:*** 5 damage (Small size, standard weapon: 6 - 1 = 5)
     - ***Margin 2:*** 7 damage (5 + 2 Str)
 - **Shortbow [Combat]:** Ranged attack (Dex 3 + Ranged Combat 2), Range: 80/320 ft
@@ -285,17 +285,17 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 36 (Con 4 × 9, Tough)
 **DR:** S: 3, P: 1, B: 4 (leather armor)
 **Speed:** 30 ft
-**Attributes:** Str 4 / Con 4 / Agi 3 / Dex 3 / Int 2 / Wis 3 / Cha 3 / Luck 2
+**Attributes:** Str 4 / Con 4 / Agil 3 / Dex 3 / Int 2 / Wis 3 / Cha 3 / Luck 2
 **Skills:** Melee Combat 4, Ranged Combat 2, Intimidate 3, Perception 2
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Humanoid (no special immunities)
 - **Attacks (Greataxe Configuration):**
-  - **Greataxe [Combat]:** Melee attack (Agi 3 + Melee Combat 4), Reach: 5 ft
+  - **Greataxe [Combat]:** Melee attack (Agil 3 + Melee Combat 4), Reach: 5 ft
     - ***Margin 1:*** 10 damage (two-handed weapon)
     - ***Margin 2:*** 14 damage (10 + 4 Str)
 - **Attacks (Battleaxe + Shield Configuration):**
-  - **Battleaxe [Combat]:** Melee attack (Agi 3 + Melee Combat 4), Reach: 5 ft
+  - **Battleaxe [Combat]:** Melee attack (Agil 3 + Melee Combat 4), Reach: 5 ft
     - ***Margin 1:*** 8 damage (heavy one-handed weapon)
     - ***Margin 2:*** 12 damage (8 + 4 Str)
 - **Ranged Attack:**
@@ -332,12 +332,12 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 - **HP:** 32 (Con 4 × 8, Standard)
 - **DR:** 0
 - **Speed:** 50 ft
-- **Attributes:** Str 4 / Con 4 / Agi 5 / Dex 4 / Int 2 / Wis 4 / Cha 3 / Luck 3
+- **Attributes:** Str 4 / Con 4 / Agil 5 / Dex 4 / Int 2 / Wis 4 / Cha 3 / Luck 3
 - **Skills:** Melee Combat 5, Perception 5, Stealth 4, Wilderness 3
 - **Senses:** Darkvision 60 ft, Keen Hearing and Smell
-- **Initiative Bonus:** +5 (Agi 5)
+- **Initiative Bonus:** +5 (Agil 5)
 **Attacks:**
-- **Bite [Combat]:** Melee attack (Agi 5 + Melee Combat 5 vs opponent's defense)
+- **Bite [Combat]:** Melee attack (Agil 5 + Melee Combat 5 vs opponent's defense)
   - Reach: 5 ft
   - Margin 1: 6 damage (standard natural weapon)
   - Margin 2: 10 damage (6 + 4 Str)
@@ -361,14 +361,14 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 - **HP:** 76 (Con 4 × 19, Massive)
 - **DR:** 2 (thick hide, natural armor)
 - **Speed:** 40 ft
-- **Attributes:** Str 6 / Con 4 / Agi 2 / Dex 2 / Int 1 / Wis 2 / Cha 2 / Luck 2
+- **Attributes:** Str 6 / Con 4 / Agil 2 / Dex 2 / Int 1 / Wis 2 / Cha 2 / Luck 2
 - **Skills:** Melee Combat 4, Ranged Combat 1, Might 5, Intimidate 3
 - **Senses:** Darkvision 60 ft
 - **Equipment:** Greatclub (two-handed weapon), 3 javelins
-- **Initiative Bonus:** +2 (Agi 2)
+- **Initiative Bonus:** +2 (Agil 2)
 - **Creature Type:** Nephilim (Giant) — Large size (10×10 ft space, 10 ft reach). Powerful Build: counts as one size larger for carrying, pushing, dragging, lifting. Does not need air, food, drink, or sleep.
 **Attacks:**
-- **Greatclub [Combat]:** Melee attack (Agi 2 + Melee Combat 4), Reach: 10 ft (Large creature with long weapon)
+- **Greatclub [Combat]:** Melee attack (Agil 2 + Melee Combat 4), Reach: 10 ft (Large creature with long weapon)
   - Margin 1: 12 damage (Large size, two-handed weapon: 10 + 2 = 12)
   - Margin 2: 18 damage (12 + 6 Str)
 - **Javelin [Combat]:** Ranged attack (Dex 2 + Ranged Combat 1)
@@ -390,16 +390,16 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 52 (Con 4 × 13, Standard Undead)
 **DR:** 0
 **Speed:** 30 ft, Climb 30 ft
-**Attributes:** Str 3 / Con 4 / Agi 4 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 3 / Con 4 / Agil 4 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 5, Stealth 4, Perception 3
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Undead (Immune to poison damage, Poisoned condition, disease, exhaustion. Does not need air, food, drink, or sleep.)
 - **Attacks:**
-  - **Bite [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft
+  - **Bite [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach: 5 ft
     - ***Margin 1:*** 6 damage (standard natural weapon)
     - ***Margin 2:*** 9 damage (6 + 3 Str)
-  - **Claws [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft
+  - **Claws [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach: 5 ft
     - ***Margin 1:*** 4 damage (light natural weapon)
     - ***Margin 2:*** 7 damage (4 + 3 Str)
     - ***Special:*** On any hit (margin 1+), target must make Fortitude save:
@@ -407,7 +407,7 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
       - 1+ successes: No effect
       - Paralyzed creatures can repeat save at end of each turn (2 successes ends early, 1 success adds Fortune to next save)
 - **Multiattack [Combat]:** The ghoul makes one bite and two claw attacks
-  - ***Shared Attribute Roll (Agi 4):*** Roll once, apply to all three attacks
+  - ***Shared Attribute Roll (Agil 4):*** Roll once, apply to all three attacks
 
 - **Special Abilities:**
   - **Paralytic Claws:** Creatures hit by claw attacks must save vs paralysis (see Claws attack)
@@ -432,20 +432,20 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 2 (thick hide and feathers, natural armor)
 **Speed:** 40 ft
-**Attributes:** Str 6 / Con 6 / Agi 4 / Dex 3 / Int 1 / Wis 4 / Cha 2 / Luck 3
+**Attributes:** Str 6 / Con 6 / Agil 4 / Dex 3 / Int 1 / Wis 4 / Cha 2 / Luck 3
 **Skills:** Melee Combat 6, Perception 5
 **Senses:** Darkvision 60 ft, Keen Sight and Smell
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Monstrosity (no special immunities)
 - **Attacks:**
-  - **Beak [Combat]:** Melee attack (Agi 4 + Melee Combat 6), Reach: 10 ft (Large creature)
+  - **Beak [Combat]:** Melee attack (Agil 4 + Melee Combat 6), Reach: 10 ft (Large creature)
     - ***Margin 1:*** 10 damage (Large size, heavy natural weapon: 8 + 2 = 10)
     - ***Margin 2:*** 16 damage (10 + 6 Str)
-  - **Claws [Combat]:** Melee attack (Agi 4 + Melee Combat 6 vs opponent's defense), Reach: 10 ft (Large creature)
+  - **Claws [Combat]:** Melee attack (Agil 4 + Melee Combat 6 vs opponent's defense), Reach: 10 ft (Large creature)
     - ***Margin 1:*** 10 damage (Large size, standard natural weapon: 8 + 2 = 10, representing both claws)
     - ***Margin 2:*** 16 damage (10 + 6 Str)
 - **Multiattack [Combat]:** The owlbear makes one beak attack and one claw attack
-  - ***Shared Attribute Roll (Agi 4):*** Roll once, apply to both attacks
+  - ***Shared Attribute Roll (Agil 4):*** Roll once, apply to both attacks
 
 - **Special Abilities:**
   - **Large Size:** Occupies 10×10 ft space, 10 ft reach
@@ -464,13 +464,13 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 90 (Con 5 × 18, Tough)
 **DR:** 4 (thick scales, natural armor)
 **Speed:** 20 ft
-**Attributes:** Str 5 / Con 5 / Agi 3 / Dex 2 / Int 1 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 5 / Con 5 / Agil 3 / Dex 2 / Int 1 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 5, Stealth 4, Perception 3
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Monstrosity (no special immunities)
 - **Attacks:**
-  - **Bite [Combat]:** Melee attack (Agi 3 + Melee Combat 5), Reach: 5 ft
+  - **Bite [Combat]:** Melee attack (Agil 3 + Melee Combat 5), Reach: 5 ft
     - ***Margin 1:*** 8 damage (heavy natural weapon) + Poisoned
     - ***Margin 2:*** 13 damage (8 + 5 Str) + Poisoned
   **Poison Bite:**
@@ -507,20 +507,20 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 5 (dragon scales, natural armor)
 **Speed:** 40 ft, Climb 40 ft, Fly 80 ft
-**Attributes:** Str 6 / Con 6 / Agi 4 / Dex 4 / Int 4 / Wis 4 / Cha 5 / Luck 4
+**Attributes:** Str 6 / Con 6 / Agil 4 / Dex 4 / Int 4 / Wis 4 / Cha 5 / Luck 4
 **Skills:** Melee Combat 6, Perception 7, Stealth 4, Arcane 4, Intimidate 6
 **Senses:** Darkvision 120 ft, Blindsight 30 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Drake (Darkvision 120 ft, Blindsight 30 ft, can inspire fear, Immune to Fear)
 - **Attacks:**
-  - **Bite [Combat]:** Melee attack (Agi 4 + Melee Combat 6), Reach: 10 ft
+  - **Bite [Combat]:** Melee attack (Agil 4 + Melee Combat 6), Reach: 10 ft
     - ***Margin 1:*** 12 damage + 6 fire damage
     - ***Margin 2:*** 18 damage (12 + 6 Str) + 6 fire damage
-  - **Claw [Combat]:** Melee attack (Agi 4 + Melee Combat 6 vs opponent's defense), Reach: 5 ft
+  - **Claw [Combat]:** Melee attack (Agil 4 + Melee Combat 6 vs opponent's defense), Reach: 5 ft
     - ***Margin 1:*** 8 damage (Large, light weapon: 6 + 2)
     - ***Margin 2:*** 14 damage (8 + 6 Str)
 - **Multiattack [Combat]:** The dragon makes one bite attack and two claw attacks
-  - ***Shared Attribute Roll (Agi 4):*** Roll once, apply to all three attacks
+  - ***Shared Attribute Roll (Agil 4):*** Roll once, apply to all three attacks
 **Breath Weapon:**
 - **Fire Breath (Recharge 5-8) [Combat]:** 30-foot cone. Each creature in area makes Reflex save:
   - Add 1 to both Reflex save dice (represents difficulty of avoiding)
@@ -554,17 +554,17 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 6 (stone body, natural armor)
 **Speed:** 30 ft
-**Attributes:** Str 7 / Con 6 / Agi 2 / Dex 2 / Int 1 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 7 / Con 6 / Agil 2 / Dex 2 / Int 1 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 5
 **Senses:** Darkvision 120 ft, Blindsight 60 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Construct (Immune to poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified. Mindless: immune to mind-affecting effects (Beguiling Weave, fear, Sleep), fear, psychic effects. Does not need air, food, drink, or sleep.)
 - **Attacks:**
-  - **Slam [Combat]:** Melee attack (Agi 2 + Melee Combat 7), Reach: 10 ft 
+  - **Slam [Combat]:** Melee attack (Agil 2 + Melee Combat 7), Reach: 10 ft 
     - ***Margin 1:*** 12 damage (Large, two-handed natural: 10 + 2)
     - ***Margin 2:*** 19 damage (12 + 7 Str)
 - **Multiattack [Combat]:** The golem makes two slam attacks
-  - ***Shared Attribute Roll (Agi 2):*** Roll once, apply to both attacks
+  - ***Shared Attribute Roll (Agil 2):*** Roll once, apply to both attacks
 
 - **Special Abilities:**
   - **Large Size:** Occupies 10×10 ft space, 10 ft reach
@@ -589,13 +589,13 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 14 (Con 2 × 7, Standard)
 **DR:** 0
 **Speed:** 30 ft
-**Attributes:** Str 1 / Con 2 / Agi 4 / Dex 3 / Int 1 / Wis 2 / Cha 1 / Luck 2
+**Attributes:** Str 1 / Con 2 / Agil 4 / Dex 3 / Int 1 / Wis 2 / Cha 1 / Luck 2
 **Skills:** Melee Combat 2, Perception 2
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to fire damage; does not need air, food, drink, or sleep)
 **Attacks:**
-  - **Scorch [Combat]:** Melee attack (Agi 4 + Melee Combat 2), Reach: 5 ft
+  - **Scorch [Combat]:** Melee attack (Agil 4 + Melee Combat 2), Reach: 5 ft
       - **Margin 1:** 2 damage (Tiny, standard natural weapon: 3 − 1 = 2) + 2 fire damage
       - **Margin 2:** 3 damage + 2 fire damage
 
@@ -612,13 +612,13 @@ These monsters follow the Bestiary Framework guidelines and demonstrate proper m
 **HP:** 14 (Con 2 × 7, Standard)
 DR: 0
 Speed: 30 ft, Fly 40 ft (Hover)
-Attributes: Str 2 / Con 2 / Agi 5 / Dex 3 / Int 1 / Wis 2 / Cha 1 / Luck 2
+Attributes: Str 2 / Con 2 / Agil 5 / Dex 3 / Int 1 / Wis 2 / Cha 1 / Luck 2
 Skills: Melee Combat 2, Perception 2
 Senses: Darkvision 60 ft
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to lightning damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Buffet [Combat]: Melee attack (Agi 5 + Melee Combat 2), Reach: 5 ft
+  - Buffet [Combat]: Melee attack (Agil 5 + Melee Combat 2), Reach: 5 ft
     - Margin 1: 3 damage (Small, standard natural weapon)
     - Margin 2: 5 damage (3 + 2 Str)
 Special Abilities:
@@ -632,13 +632,13 @@ Size: Small
 HP: 14 (Con 2 × 7, Standard)
 DR: 1 (hardened clay shell)
 Speed: 20 ft, Burrow 20 ft
-Attributes: Str 3 / Con 2 / Agi 2 / Dex 2 / Int 1 / Wis 2 / Cha 1 / Luck 2
+Attributes: Str 3 / Con 2 / Agil 2 / Dex 2 / Int 1 / Wis 2 / Cha 1 / Luck 2
 Skills: Melee Combat 2, Perception 1
 Senses: Darkvision 60 ft, Tremorsense 30 ft
-Initiative Bonus: +2 (Agi 2)
+Initiative Bonus: +2 (Agil 2)
 Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; does not need air, food, drink, or sleep)
 Attacks:
-  - Bite [Combat]: Melee attack (Agi 2 + Melee Combat 2), Reach: 5 ft
+  - Bite [Combat]: Melee attack (Agil 2 + Melee Combat 2), Reach: 5 ft
     - Margin 1: 3 damage (Small, standard natural weapon)
     - Margin 2: 6 damage (3 + 3 Str)
 Special Abilities:
@@ -652,12 +652,12 @@ Size: Small
 HP: 14 (Con 2 × 7, Standard)
 DR: 0
 Speed: 20 ft, Swim 40 ft
-Attributes: Str 2 / Con 2 / Agi 4 / Dex 3 / Int 1 / Wis 2 / Cha 1 / Luck 2
+Attributes: Str 2 / Con 2 / Agil 4 / Dex 3 / Int 1 / Wis 2 / Cha 1 / Luck 2
 Skills: Melee Combat 2, Perception 2
 Senses: Darkvision 60 ft
-Initiative Bonus: +4 (Agi 4) Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to cold damage; does not need air, food, drink, or sleep)
+Initiative Bonus: +4 (Agil 4) Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to cold damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Water Lash [Combat]: Melee attack (Agi 4 + Melee Combat 2), Reach: 10 ft
+  - Water Lash [Combat]: Melee attack (Agil 4 + Melee Combat 2), Reach: 10 ft
     - Margin 1: 3 damage (Small, standard natural: 3) + 2 cold damage
     - Margin 2: 5 damage (3 + 2 Str) + 2 cold damage
 Special Abilities:
@@ -671,13 +671,13 @@ Size: Medium
 HP: 20 (Con 2 × 8, Tough, rounded down from 2.5 × 8)
 DR: 0
 Speed: 40 ft
-Attributes: Str 3 / Con 3 / Agi 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
+Attributes: Str 3 / Con 3 / Agil 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
 Skills: Melee Combat 3, Perception 3, Stealth 2
 Senses: Darkvision 60 ft, Keen Smell (Fortune on scent-based Perception)
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to fire damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Bite [Combat]: Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft
+  - Bite [Combat]: Melee attack (Agil 5 + Melee Combat 3), Reach: 5 ft
     - Margin 1: 6 damage (standard natural weapon) + 2 fire damage
     - Margin 2: 9 damage (6 + 3 Str) + 2 fire damage
     - Margin 3: 9 damage + 2 fire damage; target gains Singed condition
@@ -692,13 +692,13 @@ Size: Medium
 HP: 36 (Con 4 × 9, Tough)
 DR: 3 (granite skin)
 Speed: 25 ft
-Attributes: Str 5 / Con 4 / Agi 3 / Dex 2 / Int 2 / Wis 2 / Cha 1 / Luck 2
+Attributes: Str 5 / Con 4 / Agil 3 / Dex 2 / Int 2 / Wis 2 / Cha 1 / Luck 2
 Skills: Melee Combat 4, Might 3, Perception 2
 Senses: Darkvision 60 ft, Tremorsense 30 ft
-Initiative Bonus: +3 (Agi 3)
+Initiative Bonus: +3 (Agil 3)
 Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; does not need air, food, drink, or sleep)
 Attacks:
-  - Slam [Combat]: Melee attack (Agi 3 + Melee Combat 4), Reach: 5 ft
+  - Slam [Combat]: Melee attack (Agil 3 + Melee Combat 4), Reach: 5 ft
     - Margin 1: 6 damage (standard natural weapon)
     - Margin 2: 11 damage (6 + 5 Str)
     - Margin 3: 11 damage; target is knocked Prone
@@ -715,13 +715,13 @@ Size: Medium
 HP: 32 (Con 4 × 8, Standard)
 DR: 0
 Speed: 20 ft, Fly 60 ft (Hover)
-Attributes: Str 2 / Con 4 / Agi 6 / Dex 4 / Int 2 / Wis 3 / Cha 2 / Luck 3
+Attributes: Str 2 / Con 4 / Agil 6 / Dex 4 / Int 2 / Wis 3 / Cha 2 / Luck 3
 Skills: Melee Combat 5, Ranged Combat 3, Perception 4
 Senses: Darkvision 60 ft, Blindsight 30 ft
-Initiative Bonus: +6 (Agi 6)
+Initiative Bonus: +6 (Agil 6)
 Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to lightning damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Wind Strike [Combat]: Melee attack (Agi 6 + Melee Combat 5), Reach: 10 ft
+  - Wind Strike [Combat]: Melee attack (Agil 6 + Melee Combat 5), Reach: 10 ft
     - Margin 1: 6 damage (standard natural weapon)
     - Margin 2: 8 damage (6 + 2 Str); target makes Fortitude save (1 success) or is pushed 10 feet
     - Margin 3: 8 damage; target pushed 10 feet and knocked Prone (no save)
@@ -740,18 +740,18 @@ Size: Large
 HP: 76 (Con 4 × 19, Massive)
 DR: 2 (fluid body disperses impact)
 Speed: 20 ft, Swim 60 ft
-Attributes: Str 5 / Con 4 / Agi 4 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
+Attributes: Str 5 / Con 4 / Agil 4 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
 Skills: Melee Combat 5, Might 4, Perception 3
 Senses: Darkvision 60 ft, Blindsight 30 ft (in water)
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to cold damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Slam [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft
+  - Slam [Combat]: Melee attack (Agil 4 + Melee Combat 5), Reach: 10 ft
     - Margin 1: 12 damage (Large size, standard natural weapon: 8 + 2 = 10... + 2 water surge bonus)
     - Margin 2: 17 damage (10 + 5 Str + 2); target makes Fortitude save (1 success) or is knocked Prone
-Multiattack [Combat]: The Deep Tide makes two Slam attacks. Shared Attribute Roll (Agi 4).
+Multiattack [Combat]: The Deep Tide makes two Slam attacks. Shared Attribute Roll (Agil 4).
 Special Abilities:
-  - Engulf (Recharge 5-8) [Combat]: The Deep Tide surges over one creature of Medium size or smaller within 5 feet. Target makes a Reflex save (opposed by Agi 4 + Melee Combat 5). On failure, the creature is Grappled and Restrained within the elemental's body. Each round it remains engulfed, the creature takes 8 cold damage and must make a Fortitude save (Constitution + Current Luck, 1 success) or gain 1 Exhaustion level from the crushing water pressure. A creature can use an action to attempt to escape (Might or Athletics, Hard task, 2 successes).
+  - Engulf (Recharge 5-8) [Combat]: The Deep Tide surges over one creature of Medium size or smaller within 5 feet. Target makes a Reflex save (opposed by Agil 4 + Melee Combat 5). On failure, the creature is Grappled and Restrained within the elemental's body. Each round it remains engulfed, the creature takes 8 cold damage and must make a Fortitude save (Constitution + Current Luck, 1 success) or gain 1 Exhaustion level from the crushing water pressure. A creature can use an action to attempt to escape (Might or Athletics, Hard task, 2 successes).
   - Water Mastery: While in water, the Deep Tide's attacks ignore cover, and the Engulf recharge DC drops to 4-8.
 Tactics: Deep Tides prioritize Engulf, targeting whoever the summoner indicates or whoever poses the greatest threat. On dry ground they are dangerous but limited; near water they become significantly more capable and will attempt to drag engulfed targets into any body of water present.
 
@@ -761,22 +761,22 @@ Size: Large
 HP: 108 (Con 6 × 18, Tough)
 DR: 5 (volcanic hide)
 Speed: 30 ft, Burrow 20 ft (through earth and stone)
-Attributes: Str 6 / Con 6 / Agi 4 / Dex 3 / Int 3 / Wis 3 / Cha 3 / Luck 3
+Attributes: Str 6 / Con 6 / Agil 4 / Dex 3 / Int 3 / Wis 3 / Cha 3 / Luck 3
 Skills: Melee Combat 6, Perception 5, Intimidate 4
 Senses: Darkvision 120 ft, Tremorsense 60 ft
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to fire damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Bite [Combat]: Melee attack (Agi 4 + Melee Combat 6), Reach: 10 ft
+  - Bite [Combat]: Melee attack (Agil 4 + Melee Combat 6), Reach: 10 ft
     - Margin 1: 10 damage + 6 fire damage (Half DR)
     - Margin 2: 16 damage (10 + 6 Str) + 6 fire damage (Half DR)
     - Margin 3: 16 damage + 6 fire damage; target gains Ignited condition
-  - Claw [Combat]: Melee attack (Agi 4 + Melee Combat 6), Reach: 10 ft
+  - Claw [Combat]: Melee attack (Agil 4 + Melee Combat 6), Reach: 10 ft
     - Margin 1: 10 damage (Large, standard natural weapon)
     - Margin 2: 16 damage (10 + 6 Str)
-Multiattack [Combat]: The Magma Drake makes one Bite and two Claw attacks. Shared Attribute Roll (Agi 4).
+Multiattack [Combat]: The Magma Drake makes one Bite and two Claw attacks. Shared Attribute Roll (Agil 4).
 Special Abilities:
-  - Magma Surge (Recharge 5-8) [Combat]: The Magma Drake vomits a torrent of lava in a 30-foot cone. Each creature in the area makes a Reflex save. Compare Drake's Agi 4 + Melee Combat 6 targeting to each target's save successes. Net 1: 12 fire damage; Net 2: 24 fire damage + Ignited; Net 3: 24 fire damage + Burning. Full DR does not apply (Half DR).
+  - Magma Surge (Recharge 5-8) [Combat]: The Magma Drake vomits a torrent of lava in a 30-foot cone. Each creature in the area makes a Reflex save. Compare Drake's Agil 4 + Melee Combat 6 targeting to each target's save successes. Net 1: 12 fire damage; Net 2: 24 fire damage + Ignited; Net 3: 24 fire damage + Burning. Full DR does not apply (Half DR).
   - Living Heat: Creatures that start their turn within 5 feet of the Magma Drake take 4 fire damage (Half DR) automatically.
   - Lava Walk: The Magma Drake can move across lava or magma without penalty. Its burrowing creates a channel of superheated stone that cools within 1 minute (dealing 8 fire damage to creatures who enter the channel before it cools).
 Tactics: Magma Drakes are apex hunters. They burrow beneath battlefields and surface under enemy formations when Magma Surge is available, then wade into melee. The Living Heat aura discourages sustained close combat while they churn through targets with their multiattack. They are intelligent enough to protect a summoner if clearly instructed.
@@ -787,13 +787,13 @@ Size: Large
 HP: 180 (Con 6 × 30, Massive)
 DR: 3 (diffuse air body)
 Speed: 20 ft, Fly 80 ft (Hover)
-Attributes: Str 4 / Con 6 / Agi 7 / Dex 5 / Int 4 / Wis 4 / Cha 4 / Luck 4
+Attributes: Str 4 / Con 6 / Agil 7 / Dex 5 / Int 4 / Wis 4 / Cha 4 / Luck 4
 Skills: Melee Combat 7, Ranged Combat 6, Perception 6
 Senses: Darkvision 120 ft, Blindsight 60 ft
-Initiative Bonus: +7 (Agi 7)
+Initiative Bonus: +7 (Agil 7)
 Creature Type: Elemental (immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to lightning damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Wind Blade [Combat]: Melee attack (Agi 7 + Melee Combat 7), Reach: 15 ft
+  - Wind Blade [Combat]: Melee attack (Agil 7 + Melee Combat 7), Reach: 15 ft
     - Margin 1: 10 damage + 8 lightning damage (Half DR)
     - Margin 2: 14 damage (10 + 4 Str) + 8 lightning damage; target pushed 15 feet
     - Margin 3: 14 damage + 8 lightning damage; target pushed 15 feet and Stunned until end of their next turn
@@ -801,7 +801,7 @@ Attacks:
     - Margin 1: 20 lightning damage (Half DR)
     - Margin 2: 40 lightning damage (Half DR)
     - Margin 3: 40 lightning damage + Stunned until end of their next turn
-Multiattack [Combat]: The Elder Stormcaller makes two Wind Blade attacks. Shared Attribute Roll (Agi 7).
+Multiattack [Combat]: The Elder Stormcaller makes two Wind Blade attacks. Shared Attribute Roll (Agil 7).
 Special Abilities:
   - Storm Presence: When the Elder Stormcaller takes its turn, all creatures within 30 feet must make a Fortitude save (1 success) or be buffeted — movement speed halved until the start of their next turn as howling wind presses against them.
   - Momentum Defense: While it has moved at least half its fly speed this turn, attacks against it add 1 to both attack dice.
@@ -816,13 +816,13 @@ Size: Tiny
 HP: 10 (Con 2 × 5, Fragile)
 DR: 0
 Speed: 20 ft, Fly 30 ft
-Attributes: Str 1 / Con 2 / Agi 5 / Dex 4 / Int 3 / Wis 3 / Cha 4 / Luck 4
+Attributes: Str 1 / Con 2 / Agil 5 / Dex 4 / Int 3 / Wis 3 / Cha 4 / Luck 4
 Skills: Stealth 4, Perception 3, Deception 3, Thievery 3
 Senses: Darkvision 60 ft, Low-Light Vision
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Fae (Fortune on saves vs charm effects; does not need air, food, drink, or sleep in the conventional sense)
 Attacks:
-  - Needle [Combat]: Melee attack (Agi 5 + Melee Combat 1), Reach: 5 ft
+  - Needle [Combat]: Melee attack (Agil 5 + Melee Combat 1), Reach: 5 ft
     - Margin 1: 1 damage
     - Margin 2: 2 damage + target makes Fortitude save (1 success) or gains Poisoned (Weak) for 1 hour (pixie dust)
 Special Abilities:
@@ -837,9 +837,9 @@ Size: Tiny
 HP: 12 (Con 2 × 6, Fragile)
 DR: 0
 Speed: 20 ft, Fly 40 ft
-Attributes: Str 1 / Con 2 / Agi 5 / Dex 5 / Int 3 / Wis 4 / Cha 3 / Luck 3
+Attributes: Str 1 / Con 2 / Agil 5 / Dex 5 / Int 3 / Wis 4 / Cha 3 / Luck 3
 Skills: Stealth 4, Perception 4, Ranged Combat 4, Wilderness 3
-Senses: Darkvision 60 ft, Low-Light Vision Initiative Bonus: +5 (Agi 5) Creature Type: Fae (Fortune on saves vs charm effects)
+Senses: Darkvision 60 ft, Low-Light Vision Initiative Bonus: +5 (Agil 5) Creature Type: Fae (Fortune on saves vs charm effects)
 Attacks:
   - Shortbow [Combat]: Ranged attack (Dex 5 + Ranged Combat 4), Range: 40/80 ft
     - Margin 1: 3 damage (Tiny: 4 − 1) + Fortitude save (1 success) or Poisoned (Weak) for 1 minute
@@ -855,13 +855,13 @@ Size: Small
 HP: 27 (Con 3 × 9, Tough)
 DR: 2 (thick hide)
 Speed: 30 ft
-Attributes: Str 4 / Con 3 / Agi 4 / Dex 3 / Int 3 / Wis 3 / Cha 2 / Luck 3
+Attributes: Str 4 / Con 3 / Agil 4 / Dex 3 / Int 3 / Wis 3 / Cha 2 / Luck 3
 Skills: Melee Combat 4, Stealth 4, Deception 3, Intimidate 3, Perception 3
 Senses: Darkvision 60 ft, Low-Light Vision
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Fae (Fortune on saves vs charm effects)
 Attacks:
-  - Claws [Combat]: Melee attack (Agi 4 + Melee Combat 4), Reach: 5 ft
+  - Claws [Combat]: Melee attack (Agil 4 + Melee Combat 4), Reach: 5 ft
     - Margin 1: 5 damage (Small, standard natural weapon: 6 − 1 = 5)
     - Margin 2: 9 damage (5 + 4 Str)
     - Margin 3: 9 damage; target makes Will save (1 success) or gains Frightened condition for 1 round
@@ -875,17 +875,17 @@ Threat Rating: 1
 Size: Small HP: 40 (Con 5 × 8, Tough)
 DR: S: 3, P: 2, B: 4 (iron-soled boots and dense body)
 Speed: 35 ft
-Attributes: Str 5 / Con 5 / Agi 4 / Dex 3 / Int 2 / Wis 2 / Cha 3 / Luck 2
+Attributes: Str 5 / Con 5 / Agil 4 / Dex 3 / Int 2 / Wis 2 / Cha 3 / Luck 2
 Skills: Melee Combat 5, Intimidate 4, Athletics 3, Perception 2
 Senses: Darkvision 60 ft, Low-Light Vision
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Fae (Fortune on saves vs charm effects)
 Attacks:
-  - Scythe [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft
+  - Scythe [Combat]: Melee attack (Agil 4 + Melee Combat 5), Reach: 5 ft
     - Margin 1: 8 damage [Slashing]
     - Margin 2: 13 damage (8 + 5 Str) [Slashing]; target gains 1 Bleeding stack
     - Margin 3: 13 damage; target gains 2 Bleeding stacks
-  - Boot Stomp [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft (only against Prone targets)
+  - Boot Stomp [Combat]: Melee attack (Agil 4 + Melee Combat 5), Reach: 5 ft (only against Prone targets)
     - Margin 1: 8 damage [Bludgeoning]
     - Margin 2: 13 damage; target is Pinned until the Redcap moves away
 Special Abilities:
@@ -899,13 +899,13 @@ Size: Medium
 HP: 52 (Con 4 × 13, Standard)
 DR: 2 (fae resilience)
 Speed: 40 ft, Fly 20 ft
-Attributes: Str 4 / Con 4 / Agi 5 / Dex 5 / Int 4 / Wis 5 / Cha 4 / Luck 4
+Attributes: Str 4 / Con 4 / Agil 5 / Dex 5 / Int 4 / Wis 5 / Cha 4 / Luck 4
 Skills: Melee Combat 5, Ranged Combat 5, Stealth 6, Perception 6, Wilderness 4
 Senses: Darkvision 60 ft, Low-Light Vision, Truesight 30 ft
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Fae (Fortune on saves vs charm effects)
 Attacks:
-  - Fae Blade [Combat]: Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft
+  - Fae Blade [Combat]: Melee attack (Agil 5 + Melee Combat 5), Reach: 5 ft
     - Margin 1: 8 damage + 4 psychic damage (Ignore DR)
     - Margin 2: 12 damage (8 + 4 Str) + 4 psychic damage
   - Hunter's Arrow [Combat]: Ranged attack (Dex 5 + Ranged Combat 5), Range: 80/160/320 ft
@@ -923,17 +923,17 @@ Size: Large
 HP: 180 (Con 6 × 30, Massive)
 DR: 4 (bark-like skin)
 Speed: 40 ft
-Attributes: Str 6 / Con 6 / Agi 4 / Dex 4 / Int 6 / Wis 7 / Cha 6 / Luck 5
+Attributes: Str 6 / Con 6 / Agil 4 / Dex 4 / Int 6 / Wis 7 / Cha 6 / Luck 5
 Skills: Melee Combat 6, Perception 7, Wilderness 7, Intimidate 5, Empathy 5
 Senses: Darkvision 120 ft, Low-Light Vision, Truesight 60 ft, Tremorsense 120 ft (through roots and soil)
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Fae (Fortune on saves vs charm effects; immune to mind-affecting effects from non-Fae sources; does not age)
 Attacks:
-  - Branch Slam [Combat]: Melee attack (Agi 4 + Melee Combat 6), Reach: 15 ft
+  - Branch Slam [Combat]: Melee attack (Agil 4 + Melee Combat 6), Reach: 15 ft
     - Margin 1: 12 damage (Large, two-handed natural weapon: 10 + 2)
     - Margin 2: 18 damage (12 + 6 Str); target is knocked Prone
     - Margin 3: 18 damage; target is knocked Prone and Restrained by animate roots until they succeed on an Athletics check (Hard task, 2 successes)
-Multiattack [Combat]: The Forest Lord makes two Branch Slam attacks. Shared Attribute Roll (Agi 4).
+Multiattack [Combat]: The Forest Lord makes two Branch Slam attacks. Shared Attribute Roll (Agil 4).
 Special Abilities:
   - Forest Domain: In natural terrain, the Forest Lord can communicate with all plants and beasts within 1 mile. At will, it can cause roots and vines to animate in a 30-foot diameter, making the area Difficult Terrain for all creatures it has not blessed.
   - Verdant Aura: Allies designated by the Forest Lord within 30 feet regain 4 HP at the start of their turns. This includes the summoner.
@@ -947,13 +947,13 @@ Size: Large
 HP: 36 (Con 4 × 9, Tough)
 DR: 3 (rough stone hide)
 Speed: 30 ft
-Attributes: Str 5 / Con 4 / Agi 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2
+Attributes: Str 5 / Con 4 / Agil 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2
 Skills: Melee Combat 4, Might 4, Perception 2
 Senses: Darkvision 60 ft
-Initiative Bonus: +2 (Agi 2)
+Initiative Bonus: +2 (Agil 2)
 Creature Type: Nephilim (Large size, Powerful Build; does not need air, food, drink, or sleep)
 Attacks:
-  - Slam [Combat]: Melee attack (Agi 2 + Melee Combat 4), Reach: 10 ft
+  - Slam [Combat]: Melee attack (Agil 2 + Melee Combat 4), Reach: 10 ft
     - Margin 1: 10 damage (Large, standard natural weapon: 8 + 2)
     - Margin 2: 15 damage (10 + 5 Str)
   - Rock Throw [Combat]: Ranged attack (Dex 2 + Ranged Combat 1), Range: 60/120 ft
@@ -970,13 +970,13 @@ Size: Large
 HP: 40 (Con 5 × 8, Standard)
 DR: 2 (heat-hardened skin)
 Speed: 35 ft
-Attributes: Str 5 / Con 5 / Agi 4 / Dex 3 / Int 3 / Wis 3 / Cha 3 / Luck 2
+Attributes: Str 5 / Con 5 / Agil 4 / Dex 3 / Int 3 / Wis 3 / Cha 3 / Luck 2
 Skills: Melee Combat 5, Intimidate 4, Perception 3
 Senses: Darkvision 60 ft
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Nephilim (Large size, Powerful Build; immune to fire damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Burning Fist [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft
+  - Burning Fist [Combat]: Melee attack (Agil 4 + Melee Combat 5), Reach: 10 ft
     - Margin 1: 10 damage (Large, standard natural) + 4 fire damage (Half DR)
     - Margin 2: 15 damage (10 + 5 Str) + 4 fire damage; target gains Singed condition
     - Margin 3: 15 damage + 4 fire damage; target gains Ignited condition
@@ -992,19 +992,19 @@ Size: Huge
 HP: 144 (Con 6 × 24, Tough)
 DR: 2 (wind dispersal)
 Speed: 40 ft, Fly 60 ft (Hover)
-Attributes: Str 7 / Con 6 / Agi 5 / Dex 4 / Int 4 / Wis 4 / Cha 4 / Luck 3
+Attributes: Str 7 / Con 6 / Agil 5 / Dex 4 / Int 4 / Wis 4 / Cha 4 / Luck 3
 Skills: Melee Combat 6, Ranged Combat 5, Perception 5, Intimidate 5
 Senses: Darkvision 60 ft, Blindsight 30 ft
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Nephilim (Huge size, Powerful Build; immune to lightning damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Wind-Forged Greatclub [Combat]: Melee attack (Agi 5 + Melee Combat 6), Reach: 15 ft
+  - Wind-Forged Greatclub [Combat]: Melee attack (Agil 5 + Melee Combat 6), Reach: 15 ft
     - Margin 1: 14 damage (Huge, two-handed: 12 + 2 size; see note) + 8 lightning damage (Half DR)
     - Margin 2: 21 damage (14 + 7 Str) + 8 lightning damage; target is pushed 15 feet
     - Margin 3: 21 damage + 8 lightning damage; target pushed 15 feet and knocked Prone
   - Lightning Bolt [Combat]: Ranged attack (Dex 4 + Ranged Combat 5), Range: 120 ft, 5-foot-wide line
     - Each creature in line: Margin 1: 28 lightning damage (Half DR); Margin 2: 36 lightning damage
-Multiattack [Combat]: The Tempest Giant makes two Greatclub attacks. Shared Attribute Roll (Agi 5).
+Multiattack [Combat]: The Tempest Giant makes two Greatclub attacks. Shared Attribute Roll (Agil 5).
 Special Abilities:
   - Storm Step (Recharge 6-8): As a [Move] action, the Tempest Giant teleports up to 60 feet and arrives in a crack of thunder. All creatures within 10 feet of its arrival point make a Fortitude save (1 success) or be knocked Prone.
   - Powerful Build.
@@ -1017,10 +1017,10 @@ Size: Tiny
 HP: 14 (Con 2 × 7, Standard)
 DR: 2 (divine resilience)
 Speed: 0 ft, Fly 60 ft (Hover)
-Attributes: Str 1 / Con 2 / Agi 5 / Dex 4 / Int 4 / Wis 5 / Cha 3 / Luck 3
+Attributes: Str 1 / Con 2 / Agil 5 / Dex 4 / Int 4 / Wis 5 / Cha 3 / Luck 3
 Skills: Perception 4, Religion 3, Melee Combat 1
 Senses: Darkvision 60 ft, Truesight 30 ft
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Outsider/Celestial (immune to poison, disease, fear; Fortune on saves vs magic; does not need air, food, drink, or sleep)
 Attacks:
   - Light Ray [Combat]: Ranged attack (Dex 4 + Ranged Combat 2), Range: 30 ft
@@ -1039,20 +1039,20 @@ Size: Medium
 HP: 40 (Con 5 × 8, Standard)
 DR: S: 4, P: 4, B: 3 (divine plate)
 Speed: 40 ft
-Attributes: Str 5 / Con 5 / Agi 4 / Dex 3 / Int 4 / Wis 5 / Cha 4 / Luck 3
+Attributes: Str 5 / Con 5 / Agil 4 / Dex 3 / Int 4 / Wis 5 / Cha 4 / Luck 3
 Skills: Melee Combat 5, Perception 5, Athletics 4, Intimidate 3, Religion 3
 Senses: Darkvision 60 ft, Truesight 30 ft, Keen Hearing and Smell
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Outsider/Celestial (immune to poison, disease, fear; Fortune on saves vs magic; does not need air, food, drink, or sleep)
 Attacks:
-  - Holy Sword [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft
+  - Holy Sword [Combat]: Melee attack (Agil 4 + Melee Combat 5), Reach: 5 ft
     - Margin 1: 8 damage + 4 Positive damage (Half DR)
     - Margin 2: 12 damage (8 + 4... using Int/Wis-based bonus: 8 + 4 Positive = 12) + 4 Positive damage; undead and fiends gain Frightened condition
     - Margin 3: 12 damage + 4 Positive damage; condition applies with no save
-  - Bite [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft
+  - Bite [Combat]: Melee attack (Agil 4 + Melee Combat 5), Reach: 5 ft
     - Margin 1: 6 damage (standard natural weapon)
     - Margin 2: 11 damage (6 + 5 Str)
-Multiattack [Combat]: The Hound Archon makes one Sword attack and one Bite. Shared Attribute Roll (Agi 4).
+Multiattack [Combat]: The Hound Archon makes one Sword attack and one Bite. Shared Attribute Roll (Agil 4).
 Special Abilities:
   - Change Shape: The Hound Archon can assume the form of any Medium humanoid as a [Interact] action. Its stats do not change; the form is cosmetic only.
   - Magic Circle: Once per encounter, the Hound Archon can establish a 10-foot diameter zone of protection centered on a point within 30 feet. Fiends and corrupted creatures cannot enter this zone and cannot charm, frighten, or possess creatures within it. Duration 10 minutes.
@@ -1064,13 +1064,13 @@ Size: Large
 HP: 180 (Con 6 × 30, Massive)
 DR: 6 (celestial armor)
 Speed: 50 ft, Fly 100 ft (Hover)
-Attributes: Str 7 / Con 6 / Agi 6 / Dex 5 / Int 7 / Wis 8 / Cha 7 / Luck 6
+Attributes: Str 7 / Con 6 / Agil 6 / Dex 5 / Int 7 / Wis 8 / Cha 7 / Luck 6
 Skills: Melee Combat 7, Ranged Combat 6, Perception 8, Religion 8
 Senses: Darkvision 120 ft, Truesight 120 ft
-Initiative Bonus: +6 (Agi 6)
+Initiative Bonus: +6 (Agil 6)
 Creature Type: Outsider/Celestial (immune to poison, disease, fear, charm, necrotic damage; immune to non-magical weapons; Fortune on all saves vs magic; does not need air, food, drink, or sleep)
 Attacks:
-  - Radiant Greatsword [Combat]: Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft
+  - Radiant Greatsword [Combat]: Melee attack (Agil 6 + Melee Combat 7), Reach: 10 ft
     - Margin 1: 16 damage + 16 Positive damage (Half DR)
     - Margin 2: 23 damage (16 + 7 Str) + 16 Positive damage; fiends and corrupted creatures make a Will save or become Blinded until end of their next turn
     - Margin 3: 23 damage + 16 Positive damage; Blinded condition, no save
@@ -1092,13 +1092,13 @@ Size: Tiny
 HP: 14 (Con 2 × 7, Standard)
 DR: 2 (scaled skin)
 Speed: 20 ft, Fly 40 ft
-Attributes: Str 1 / Con 2 / Agi 5 / Dex 5 / Int 5 / Wis 3 / Cha 4 / Luck 3
+Attributes: Str 1 / Con 2 / Agil 5 / Dex 5 / Int 5 / Wis 3 / Cha 4 / Luck 3
 Skills: Stealth 5, Deception 4, Perception 3, Melee Combat 2
 Senses: Darkvision 120 ft, Truesight 20 ft
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Outsider/Fiend (resistant to fire, cold, lightning damage (+2 DR); immune to poison, Poisoned condition; Fortune on saves vs magic; does not need air, food, drink, or sleep)
 Attacks:
-  - Sting [Combat]: Melee attack (Agi 5 + Melee Combat 2), Reach: 5 ft
+  - Sting [Combat]: Melee attack (Agil 5 + Melee Combat 2), Reach: 5 ft
     - Margin 1: 3 damage + Fortitude save (1 success) or Poisoned (Weak) for 1 minute
     - Margin 2: 4 damage (3 + 1 Str... effectively minimum) + Fortitude save or Poisoned (Strong) for 1 minute
 Special Abilities:
@@ -1114,13 +1114,13 @@ Size: Medium
 HP: 27 (Con 3 × 9, Tough)
 DR: 0
 Speed: 40 ft
-Attributes: Str 4 / Con 3 / Agi 6 / Dex 4 / Int 2 / Wis 4 / Cha 2 / Luck 3
+Attributes: Str 4 / Con 3 / Agil 6 / Dex 4 / Int 2 / Wis 4 / Cha 2 / Luck 3
 Skills: Melee Combat 5, Stealth 5, Perception 4
 Senses: Darkvision 120 ft, Devil's Sight (sees through magical darkness)
-Initiative Bonus: +6 (Agi 6)
+Initiative Bonus: +6 (Agil 6)
 Creature Type: Outsider/Fiend (resistant to fire, cold, lightning (+2 DR); immune to Poisoned, poison damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Bite [Combat]: Melee attack (Agi 6 + Melee Combat 5), Reach: 5 ft
+  - Bite [Combat]: Melee attack (Agil 6 + Melee Combat 5), Reach: 5 ft
     - Margin 1: 6 damage + 4 Negative damage (Half DR)
     - Margin 2: 10 damage (6 + 4 Str) + 4 Negative damage; target makes Fortitude save (1 success) or gains Weakened condition until end of their next turn
     - Margin 3: 10 damage + 4 Negative damage; Weakened condition, no save
@@ -1136,19 +1136,19 @@ Size: Large
 HP: 76 (Con 4 × 19, Massive)
 DR: 4 (bone armor)
 Speed: 40 ft, Fly 40 ft
-Attributes: Str 5 / Con 4 / Agi 4 / Dex 3 / Int 5 / Wis 4 / Cha 5 / Luck 3
+Attributes: Str 5 / Con 4 / Agil 4 / Dex 3 / Int 5 / Wis 4 / Cha 5 / Luck 3
 Skills: Melee Combat 5, Perception 5, Deception 5, Intimidate 5
 Senses: Darkvision 120 ft, Devil's Sight, Truesight 30 ft
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Outsider/Fiend (resistant to fire, cold, lightning (+2 DR); immune to poison, Poisoned condition; Fortune on saves vs magic; does not need air, food, drink, or sleep)
 Attacks:
-  - Claw [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft
+  - Claw [Combat]: Melee attack (Agil 4 + Melee Combat 5), Reach: 10 ft
     - Margin 1: 10 damage (Large, standard natural)
     - Margin 2: 15 damage (10 + 5 Str)
-  - Tail Sting [Combat]: Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft
+  - Tail Sting [Combat]: Melee attack (Agil 4 + Melee Combat 5), Reach: 10 ft
     - Margin 1: 8 damage + Fortitude save (1 success) or Poisoned (Strong)
     - Margin 2: 8 damage + Poisoned (Strong) (no save) + Weakened condition for 1 minute
-Multiattack [Combat]: The Bone Devil makes two Claw attacks and one Tail Sting. Shared Attribute Roll (Agi 4).
+Multiattack [Combat]: The Bone Devil makes two Claw attacks and one Tail Sting. Shared Attribute Roll (Agil 4).
 Special Abilities:
   - Fear Aura: Creatures within 10 feet that are not Fiends make a Will save at the start of their turn (1 success). On failure, they gain the Frightened condition until they succeed. Creatures immune to fear or charm are unaffected.
   - Wall of Ice (1/day): As 2 [Combat] actions, create a 60-foot-long, 20-foot-high wall of ice. Each section has HP 20 and DR 4. Duration until destroyed.
@@ -1160,13 +1160,13 @@ Size: Large
 HP: 216 (Con 6 × 36, Massive)
 DR: 6 (infernal hide)
 Speed: 30 ft, Fly 60 ft
-Attributes: Str 8 / Con 6 / Agi 4 / Dex 4 / Int 7 / Wis 6 / Cha 7 / Luck 5
+Attributes: Str 8 / Con 6 / Agil 4 / Dex 4 / Int 7 / Wis 6 / Cha 7 / Luck 5
 Skills: Melee Combat 7, Perception 7, Deception 7, Intimidate 7
 Senses: Darkvision 120 ft, Truesight 120 ft, Devil's Sight
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Outsider/Fiend (immune to fire and Negative damage; resistant to cold, lightning (+4 DR); immune to poison, Poisoned, Charmed, Frightened; Fortune on all saves vs magic; does not need air, food, drink, or sleep)
 Attacks:
-  - Crushing Fist [Combat]: Melee attack (Agi 4 + Melee Combat 7), Reach: 10 ft
+  - Crushing Fist [Combat]: Melee attack (Agil 4 + Melee Combat 7), Reach: 10 ft
     - Margin 1: 14 damage (Large heavy natural: 12 + 2)
     - Margin 2: 22 damage (14 + 8 Str); target makes Fortitude save or is Grappled
     - Margin 3: 22 damage; target Grappled and Restrained (no save)
@@ -1187,13 +1187,13 @@ Size: Medium
 HP: 16 (Con 2 × 8, Standard)
 DR: 0 (but see Shadow Form)
 Speed: 40 ft
-Attributes: Str 1 / Con 2 / Agi 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
+Attributes: Str 1 / Con 2 / Agil 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
 Skills: Melee Combat 3, Stealth 6, Perception 3
 Senses: Darkvision 120 ft
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Undead/Shadow Plane (immune to poison, Poisoned, disease, exhaustion; vulnerable to Positive damage; does not need air, food, drink, or sleep)
 Attacks:
-  - Strength Drain [Combat]: Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft
+  - Strength Drain [Combat]: Melee attack (Agil 5 + Melee Combat 3), Reach: 5 ft
     - Margin 1: 4 Negative damage (Ignore DR) + target's Strength reduced by 1 for 1 hour
     - Margin 2: 4 Negative damage + Strength reduced by 2 for 1 hour + target makes Fortitude save (1 success) or gains the Weakened condition
 Special Abilities:
@@ -1209,13 +1209,13 @@ Size: Medium
 HP: 32 (Con 4 × 8, Standard)
 DR: 2 (shadow substance)
 Speed: 40 ft, Climb 40 ft
-Attributes: Str 4 / Con 4 / Agi 5 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3
+Attributes: Str 4 / Con 4 / Agil 5 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3
 Skills: Melee Combat 5, Stealth 6, Perception 4, Deception 3
 Senses: Darkvision 120 ft, See Invisibility
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Shadow Plane (immune to poison, Poisoned; resistant to cold damage (+2 DR); does not need air, food, drink, or sleep)
 Attacks:
-  - Shadow Strike [Combat]: Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft
+  - Shadow Strike [Combat]: Melee attack (Agil 5 + Melee Combat 5), Reach: 5 ft
     - Margin 1: 8 damage + 4 Negative damage (Ignore DR)
     - Margin 2: 12 damage (8 + 4 Str) + 4 Negative damage; target is Disoriented until start of their next turn (shadow obscures their vision)
     - Margin 3: 12 damage + 4 Negative damage; target Disoriented and loses the Hidden condition if they had it
@@ -1231,13 +1231,13 @@ Size: Large
 HP: 76 (Con 4 × 19, Massive)
 DR: 2
 Speed: 60 ft, Fly 90 ft
-Attributes: Str 6 / Con 4 / Agi 5 / Dex 4 / Int 3 / Wis 3 / Cha 4 / Luck 3
+Attributes: Str 6 / Con 4 / Agil 5 / Dex 4 / Int 3 / Wis 3 / Cha 4 / Luck 3
 Skills: Melee Combat 6, Perception 4, Intimidate 4, Athletics 4
 Senses: Darkvision 60 ft, Devil's Sight
-Initiative Bonus: +5 (Agi 5)
+Initiative Bonus: +5 (Agil 5)
 Creature Type: Shadow Plane (immune to poison, Poisoned, Frightened; resistant to fire (+2 DR); does not need air, food, drink, or sleep)
 Attacks:
-  - Flaming Hooves [Combat]: Melee attack (Agi 5 + Melee Combat 6), Reach: 5 ft
+  - Flaming Hooves [Combat]: Melee attack (Agil 5 + Melee Combat 6), Reach: 5 ft
     - Margin 1: 12 damage (Large, standard natural) + 4 fire damage (Half DR)
     - Margin 2: 18 damage (12 + 6 Str) + 4 fire damage; target knocked Prone
     - Margin 3: 18 damage + 4 fire damage; target Prone and Stunned until end of their next turn (hoof strike to the head)
@@ -1253,13 +1253,13 @@ Size: Medium
 HP: 36 (Con 4 × 9, Tough)
 DR: 0
 Speed: 10 ft, Swim 10 ft
-Attributes: Str 3 / Con 4 / Agi 1 / Dex 2 / Int 1 / Wis 2 / Cha 1 / Luck 2
+Attributes: Str 3 / Con 4 / Agil 1 / Dex 2 / Int 1 / Wis 2 / Cha 1 / Luck 2
 Skills: Melee Combat 3, Perception 3
 Senses: Darkvision 60 ft, Blindsight 30 ft
-Initiative Bonus: +1 (Agi 1)
+Initiative Bonus: +1 (Agil 1)
 Creature Type: Aberration (immune to Frightened, Prone; immune to mind-affecting effects; does not need air, food, drink, or sleep)
 Attacks:
-  - Bite (Multiple) [Combat]: Melee attack (Agi 1 + Melee Combat 3), Reach: 5 ft
+  - Bite (Multiple) [Combat]: Melee attack (Agil 1 + Melee Combat 3), Reach: 5 ft
     - Margin 1: 10 damage (from multiple mouth sources, representing its chaos; using standard Medium weapon equivalent)
     - Margin 2: 10 damage; target makes Fortitude save (1 success) or is Grappled by one of the mouths. While Grappled this way, target takes 4 damage at the start of each of their turns.
     - Margin 3: 10 damage; Grappled (no save)
@@ -1275,11 +1275,11 @@ Size: Small
 HP: 32 (Con 4 × 8, Standard)
 DR: 2
 Speed: 30 ft, Fly 30 ft (Hover)
-Attributes: Str 2 / Con 4 / Agi 4 / Dex 4 / Int 5 / Wis 4 / Cha 4 / Luck 3
+Attributes: Str 2 / Con 4 / Agil 4 / Dex 4 / Int 5 / Wis 4 / Cha 4 / Luck 3
 Skills: Melee Combat 4, Perception 5, Stealth 4
-Senses: Darkvision 120 ft, Truesight 30 ft Initiative Bonus: +4 (Agi 4) Creature Type: Aberration (immune to Frightened; Fortune on saves vs magic; does not need air, food, drink, or sleep)
+Senses: Darkvision 120 ft, Truesight 30 ft Initiative Bonus: +4 (Agil 4) Creature Type: Aberration (immune to Frightened; Fortune on saves vs magic; does not need air, food, drink, or sleep)
 Attacks:
-  - Reality Pinch [Combat]: Melee attack (Agi 4 + Melee Combat 4), Reach: 5 ft
+  - Reality Pinch [Combat]: Melee attack (Agil 4 + Melee Combat 4), Reach: 5 ft
     - Margin 1: 6 damage + 4 psychic damage (Ignore DR)
     - Margin 2: 8 damage (6 + 2 Str) + 4 psychic damage; target makes Will save (1 success) or Disoriented until end of their next turn
     - Margin 3: 8 damage + 4 psychic damage; Disoriented and Dazed until end of their next turn (no save)
@@ -1294,13 +1294,13 @@ Size: Medium
 HP: 90 (Con 5 × 18, Tough)
 DR: 2 (aberrant resilience)
 Speed: 30 ft
-Attributes: Str 2 / Con 5 / Agi 4 / Dex 4 / Int 8 / Wis 6 / Cha 5 / Luck 4
+Attributes: Str 2 / Con 5 / Agil 4 / Dex 4 / Int 8 / Wis 6 / Cha 5 / Luck 4
 Skills: Melee Combat 4, Perception 7, Arcane 7, Deception 5, Empathy 6
 Senses: Darkvision 120 ft, Truesight 30 ft, Telepathy 120 ft
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Aberration (immune to Charmed; Fortune on saves vs magic; does not need air, food, drink, or sleep)
 Attacks:
-  - Tentacles [Combat]: Melee attack (Agi 4 + Melee Combat 4), Reach: 5 ft
+  - Tentacles [Combat]: Melee attack (Agil 4 + Melee Combat 4), Reach: 5 ft
     - Margin 1: 6 damage + 4 psychic damage (Ignore DR); target makes Fortitude save (1 success) or Grappled
     - Margin 2: 8 damage + 8 psychic damage; Grappled (no save)
     - Margin 3: 8 damage + 8 psychic damage; Grappled and target's Intelligence reduced by 2 until end of encounter
@@ -1317,18 +1317,18 @@ Size: Huge
 HP: 180 (Con 6 × 30, Massive)
 DR: 4 (alien hide)
 Speed: 30 ft
-Attributes: Str 8 / Con 6 / Agi 2 / Dex 2 / Int 3 / Wis 3 / Cha 3 / Luck 3
+Attributes: Str 8 / Con 6 / Agil 2 / Dex 2 / Int 3 / Wis 3 / Cha 3 / Luck 3
 Skills: Melee Combat 6, Might 7, Perception 4, Intimidate 5
 Senses: Darkvision 60 ft, Blindsight 10 ft
-Initiative Bonus: +2 (Agi 2)
+Initiative Bonus: +2 (Agil 2)
 Creature Type: Aberration (immune to Frightened, Charmed; Fortune on saves vs magic; does not need air, food, drink, or sleep)
 Attacks:
-  - Slam [Combat]: Melee attack (Agi 2 + Melee Combat 6), Reach: 15 ft
+  - Slam [Combat]: Melee attack (Agil 2 + Melee Combat 6), Reach: 15 ft
     - Margin 1: 14 damage (Huge, two-handed natural: 12 + 2)
     - Margin 2: 22 damage (14 + 8 Str); target makes Fortitude save (1 success) or Stunned until end of their next turn
     - Margin 3: 22 damage; Stunned, no save
   - Reality Shockwave (Recharge 5-8) [Combat]: All creatures within 30 feet make Will saves. Compare Hulk's Str 8 (used as the distortion measure) against each target's save. Net 1: 20 psychic damage + Disoriented; Net 2: 20 psychic damage + Dazed + Disoriented. Psychic damage ignores DR.
-Multiattack [Combat]: Two Slam attacks. Shared Attribute Roll (Agi 2).
+Multiattack [Combat]: Two Slam attacks. Shared Attribute Roll (Agil 2).
 Special Abilities:
   - Psychic Mirror: When the Star Spawn Hulk is hit by a weave that deals psychic damage or imposes a mind-affecting condition, the attacker makes a Will save (1 success) or is also affected by the same condition. This is reflexive and not a choice.
   - Powerful Build.
@@ -1342,10 +1342,10 @@ Size: Large
 HP: 216 (Con 6 × 36, Massive)
 DR: 3 (chitinous hide)
 Speed: 0 ft, Fly 20 ft (Hover)
-Attributes: Str 3 / Con 6 / Agi 4 / Dex 5 / Int 7 / Wis 7 / Cha 4 / Luck 5
+Attributes: Str 3 / Con 6 / Agil 4 / Dex 5 / Int 7 / Wis 7 / Cha 4 / Luck 5
 Skills: Melee Combat 6, Ranged Combat 7, Perception 8, Arcane 7
 Senses: Darkvision 120 ft, Truesight 120 ft
-Initiative Bonus: +4 (Agi 4)
+Initiative Bonus: +4 (Agil 4)
 Creature Type: Aberration (immune to Prone; Fortune on all saves vs magic due to Eye Wards; does not need air, food, drink, or sleep)
 Attacks:
   - Central Eye (Passive): The central eye projects a cone of antimagic 60 feet long. Creatures and objects in the cone cannot use or benefit from weaves. Magical effects in the cone are suppressed. The cone is directed by the Beholder's will — it cannot be aimed away from all of its eyestalks simultaneously.
@@ -1358,7 +1358,7 @@ Attacks:
     - Telekinetic Ray: Fortitude save (1 success). Failure: target is moved up to 30 feet in any direction
     - Sleep Ray: Will save (1 success). Failure: Unconscious for 1 minute
     - Disintegration Ray: Fortitude save (Hard task, 2 successes). Failure: 40 Negative damage (Half DR). At 0 HP from this ray, target is disintegrated.
-  - Bite [Combat]: Melee attack (Agi 4 + Melee Combat 6), Reach: 5 ft
+  - Bite [Combat]: Melee attack (Agil 4 + Melee Combat 6), Reach: 5 ft
     - Margin 1: 6 damage
     - Margin 2: 9 damage (6 + 3 Str)
 Special Abilities:
@@ -1397,14 +1397,14 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
 **HP:** 10 (Con 2 × 5, Fragile)
 **DR:** 0
 **Speed:** 30 ft
-**Attributes:** Str 1 / Con 2 / Agi 4 / Dex 2 / Int 1 / Wis 1 / Cha 1 / Luck 2
+**Attributes:** Str 1 / Con 2 / Agil 4 / Dex 2 / Int 1 / Wis 1 / Cha 1 / Luck 2
 **Skills:** Melee Combat 1, Perception 2
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Scorch [Combat]:** Melee attack (Agi 4 + Melee Combat 1), Reach: 5 ft
+- **Scorch [Combat]:** Melee attack (Agil 4 + Melee Combat 1), Reach: 5 ft
   - *Margin 1:* 1 damage + 2 fire damage (Half DR)
   - *Margin 2:* 1 damage + 2 fire damage; target gains the Singed condition
 
@@ -1423,14 +1423,14 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
 **HP:** 18 (Con 3 × 6, Standard)
 **DR:** 0
 **Speed:** 40 ft
-**Attributes:** Str 2 / Con 3 / Agi 5 / Dex 3 / Int 2 / Wis 2 / Cha 1 / Luck 2
+**Attributes:** Str 2 / Con 3 / Agil 5 / Dex 3 / Int 2 / Wis 2 / Cha 1 / Luck 2
 **Skills:** Melee Combat 3, Perception 2
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Fire Tendril [Combat]:** Melee attack (Agi 5 + Melee Combat 3), Reach: 10 ft
+- **Fire Tendril [Combat]:** Melee attack (Agil 5 + Melee Combat 3), Reach: 10 ft
   - *Margin 1:* 3 damage (Small, standard: 4 − 1) + 3 fire damage (Half DR)
   - *Margin 2:* 5 damage (3 + 2 Str) + 3 fire damage; target gains Singed condition
   - *Margin 3:* 5 damage + 3 fire damage; target gains Smoldering condition
@@ -1450,14 +1450,14 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
 **HP:** 27 (Con 3 × 9, Tough)
 **DR:** 1 (heat-hardened surface)
 **Speed:** 40 ft
-**Attributes:** Str 4 / Con 3 / Agi 5 / Dex 3 / Int 2 / Wis 2 / Cha 2 / Luck 2
+**Attributes:** Str 4 / Con 3 / Agil 5 / Dex 3 / Int 2 / Wis 2 / Cha 2 / Luck 2
 **Skills:** Melee Combat 4, Perception 3
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Burning Strike [Combat]:** Melee attack (Agi 5 + Melee Combat 4), Reach: 5 ft
+- **Burning Strike [Combat]:** Melee attack (Agil 5 + Melee Combat 4), Reach: 5 ft
   - *Margin 1:* 6 damage + 4 fire damage (Half DR)
   - *Margin 2:* 10 damage (6 + 4 Str) + 4 fire damage; target gains Singed condition
   - *Margin 3:* 10 damage + 4 fire damage; target gains Ignited condition
@@ -1477,14 +1477,14 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
 **HP:** 40 (Con 5 × 8, Standard)
 **DR:** 2 (volcanic hide)
 **Speed:** 50 ft
-**Attributes:** Str 4 / Con 5 / Agi 6 / Dex 3 / Int 3 / Wis 4 / Cha 2 / Luck 3
+**Attributes:** Str 4 / Con 5 / Agil 6 / Dex 3 / Int 3 / Wis 4 / Cha 2 / Luck 3
 **Skills:** Melee Combat 5, Perception 4, Athletics 3
 **Senses:** Darkvision 60 ft, Keen Smell (Fortune on scent-based Perception)
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Bite [Combat]:** Melee attack (Agi 6 + Melee Combat 5), Reach: 5 ft
+- **Bite [Combat]:** Melee attack (Agil 6 + Melee Combat 5), Reach: 5 ft
   - *Margin 1:* 6 damage + 4 fire damage (Half DR)
   - *Margin 2:* 10 damage (6 + 4 Str) + 4 fire damage; target gains Singed condition
   - *Margin 3:* 10 damage + 4 fire damage; target gains Ignited condition; no save
@@ -1504,20 +1504,20 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 4 (cooling magma shell)
 **Speed:** 30 ft, Burrow 20 ft (earth and stone only)
-**Attributes:** Str 6 / Con 4 / Agi 3 / Dex 2 / Int 2 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 6 / Con 4 / Agil 3 / Dex 2 / Int 2 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 5, Might 4, Perception 3
 **Senses:** Darkvision 60 ft, Tremorsense 30 ft
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Slam [Combat]:** Melee attack (Agi 3 + Melee Combat 5), Reach: 10 ft
+- **Slam [Combat]:** Melee attack (Agil 3 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard natural: 8 + 2) + 4 fire damage (Half DR)
   - *Margin 2:* 16 damage (10 + 6 Str) + 4 fire damage; target gains Ignited condition
   - *Margin 3:* 16 damage + 4 fire damage; target gains Burning condition
 
 **Special Abilities:**
-- **Lava Splash (Recharge 5-8) [Combat]:** Slams the ground, sending molten rock in a 15-foot cone. Each creature in area makes a Reflex save. Compare Agi 3 + Melee Combat 5 targeting vs. save successes. Net 1: 8 fire damage (Half DR) + Singed. Net 2: 16 fire damage + Ignited. Net 3: 16 fire damage + Burning.
+- **Lava Splash (Recharge 5-8) [Combat]:** Slams the ground, sending molten rock in a 15-foot cone. Each creature in area makes a Reflex save. Compare Agil 3 + Melee Combat 5 targeting vs. save successes. Net 1: 8 fire damage (Half DR) + Singed. Net 2: 16 fire damage + Ignited. Net 3: 16 fire damage + Burning.
 - **Heat Aura:** Creatures starting their turn within 5 feet take 4 fire damage (Half DR).
 - **Burrow:** Moves through earth and stone at burrow speed, leaving a tunnel large enough for a Medium creature. Tunnel walls remain hot for 10 minutes after passage — 4 fire damage to creatures who touch them.
 
@@ -1532,14 +1532,14 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 5 (volcanic scales)
 **Speed:** 40 ft, Fly 60 ft
-**Attributes:** Str 6 / Con 6 / Agi 5 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3
+**Attributes:** Str 6 / Con 6 / Agil 5 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3
 **Skills:** Melee Combat 6, Perception 6, Intimidate 4, Athletics 4
 **Senses:** Darkvision 120 ft, Tremorsense 60 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Burning Fist [Combat]:** Melee attack (Agi 5 + Melee Combat 6), Reach: 10 ft
+- **Burning Fist [Combat]:** Melee attack (Agil 5 + Melee Combat 6), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 6 fire damage (Half DR)
   - *Margin 2:* 16 damage (10 + 6 Str) + 6 fire damage; target gains Ignited condition
   - *Margin 3:* 16 damage + 6 fire damage; target gains Burning condition; no save
@@ -1549,7 +1549,7 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
   - *Margin 3:* 12 fire damage + Ignited; all creatures within 5 feet of target take 4 fire damage (Half DR) from splash
 
 **Special Abilities:**
-- **Fire Breath (Recharge 5-8) [Combat]:** 30-foot cone. Each creature makes a Reflex save. Compare Agi 5 + Melee Combat 6 targeting vs. save successes. Net 1: 12 fire damage (Half DR) + Singed. Net 2: 24 fire damage + Ignited. Net 3: 24 fire damage + Burning; no save.
+- **Fire Breath (Recharge 5-8) [Combat]:** 30-foot cone. Each creature makes a Reflex save. Compare Agil 5 + Melee Combat 6 targeting vs. save successes. Net 1: 12 fire damage (Half DR) + Singed. Net 2: 24 fire damage + Ignited. Net 3: 24 fire damage + Burning; no save.
 - **Heat Aura:** Creatures starting their turn within 5 feet take 6 fire damage (Half DR).
 - **Momentum Defense:** While the Pyre Lord has moved at least half its fly speed this turn, attacks against it add 1 to both attack dice.
 
@@ -1564,14 +1564,14 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 6 (ancient fire-forged shell)
 **Speed:** 40 ft, Fly 80 ft
-**Attributes:** Str 7 / Con 6 / Agi 5 / Dex 4 / Int 5 / Wis 5 / Cha 5 / Luck 4
+**Attributes:** Str 7 / Con 6 / Agil 5 / Dex 4 / Int 5 / Wis 5 / Cha 5 / Luck 4
 **Skills:** Melee Combat 7, Perception 7, Intimidate 6, Arcane 4
 **Senses:** Darkvision 120 ft, Tremorsense 60 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Magma Fist [Combat]:** Melee attack (Agi 5 + Melee Combat 7), Reach: 15 ft
+- **Magma Fist [Combat]:** Melee attack (Agil 5 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 8 fire damage (Half DR)
   - *Margin 2:* 21 damage (14 + 7 Str) + 8 fire damage; target gains Burning condition; no save
   - *Margin 3:* 21 damage + 8 fire damage + Burning; target makes Fortitude save (1 success) or gains Stunned until end of their next turn
@@ -1582,7 +1582,7 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
 
 **Special Abilities:**
 - **Conflagration Aura:** Creatures starting their turn within 10 feet take 8 fire damage (Half DR). Flammable objects within 10 feet ignite automatically at the start of each round.
-- **Immolating Presence (1/encounter) [Combat]:** As 2 [Combat] actions, releases a pulse of fire in a 30-foot diameter. All creatures in range make a Reflex save. Compare Agi 5 + Melee Combat 7 targeting vs. each save. Net 1: 20 fire damage + Ignited. Net 2: 40 fire damage + Burning. Net 3: 40 fire damage + Burning + Blinded until end of their next turn from the searing flash.
+- **Immolating Presence (1/encounter) [Combat]:** As 2 [Combat] actions, releases a pulse of fire in a 30-foot diameter. All creatures in range make a Reflex save. Compare Agil 5 + Melee Combat 7 targeting vs. each save. Net 1: 20 fire damage + Ignited. Net 2: 40 fire damage + Burning. Net 3: 40 fire damage + Burning + Blinded until end of their next turn from the searing flash.
 - **Momentum Defense:** As above.
 - **Resilient Defense (2/day).**
 
@@ -1597,14 +1597,14 @@ All Fire Elementals share: Immune to fire damage, poison damage, Poisoned condit
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 7 (primordial fire-shell)
 **Speed:** 50 ft, Fly 100 ft
-**Attributes:** Str 8 / Con 6 / Agi 6 / Dex 5 / Int 6 / Wis 6 / Cha 6 / Luck 5
+**Attributes:** Str 8 / Con 6 / Agil 6 / Dex 5 / Int 6 / Wis 6 / Cha 6 / Luck 5
 **Skills:** Melee Combat 8, Perception 8, Intimidate 7, Arcane 6
 **Senses:** Darkvision 120 ft, Blindsight 30 ft, Tremorsense 120 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Elemental — Immune to fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Primordial Strike [Combat]:** Melee attack (Agi 6 + Melee Combat 8), Reach: 15 ft
+- **Primordial Strike [Combat]:** Melee attack (Agil 6 + Melee Combat 8), Reach: 15 ft
   - *Margin 1:* 16 damage (Huge, heavy natural: 14 + 2) + 12 fire damage (Half DR)
   - *Margin 2:* 24 damage (16 + 8 Str) + 12 fire damage; Burning condition; no save
   - *Margin 3:* 24 damage + 12 fire damage + Burning; all creatures within 10 feet of target take 12 fire damage (Half DR)
@@ -1641,14 +1641,14 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 **HP:** 10 (Con 2 × 5, Fragile)
 **DR:** 0
 **Speed:** 0 ft, Fly 40 ft (Hover)
-**Attributes:** Str 1 / Con 2 / Agi 5 / Dex 3 / Int 2 / Wis 2 / Cha 1 / Luck 2
+**Attributes:** Str 1 / Con 2 / Agil 5 / Dex 3 / Int 2 / Wis 2 / Cha 1 / Luck 2
 **Skills:** Melee Combat 1, Perception 3, Stealth 3
 **Senses:** Darkvision 60 ft, Blindsight 10 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Elemental — Immune to lightning damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Gust [Combat]:** Melee attack (Agi 5 + Melee Combat 1), Reach: 5 ft
+- **Gust [Combat]:** Melee attack (Agil 5 + Melee Combat 1), Reach: 5 ft
   - *Margin 1:* 1 damage; target loses any unsecured held item lighter than 1 lb (hat, loose scroll, coin)
   - *Margin 2:* 2 damage; target's next ranged attack adds 1 to one die of their choice from wind interference
 
@@ -1667,14 +1667,14 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 **HP:** 12 (Con 2 × 6, Fragile)
 **DR:** 0
 **Speed:** 0 ft, Fly 50 ft (Hover)
-**Attributes:** Str 2 / Con 2 / Agi 6 / Dex 4 / Int 2 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 2 / Con 2 / Agil 6 / Dex 4 / Int 2 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 2, Perception 3, Stealth 3
 **Senses:** Darkvision 60 ft, Blindsight 10 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Elemental — Immune to lightning damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Wind Slash [Combat]:** Melee attack (Agi 6 + Melee Combat 2), Reach: 10 ft
+- **Wind Slash [Combat]:** Melee attack (Agil 6 + Melee Combat 2), Reach: 10 ft
   - *Margin 1:* 3 damage (Small, standard: 4 − 1)
   - *Margin 2:* 5 damage (3 + 2 Str); target's next ranged attack adds 1 to both dice from wind disruption
   - *Margin 3:* 5 damage; target knocked Prone from a sudden concentrated gust
@@ -1694,14 +1694,14 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 **HP:** 27 (Con 3 × 9, Tough)
 **DR:** 1 (compressed air shell)
 **Speed:** 0 ft, Fly 60 ft (Hover)
-**Attributes:** Str 3 / Con 3 / Agi 6 / Dex 4 / Int 2 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 3 / Con 3 / Agil 6 / Dex 4 / Int 2 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 4, Perception 4, Stealth 3
 **Senses:** Darkvision 60 ft, Blindsight 20 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Elemental — Immune to lightning damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Wind Strike [Combat]:** Melee attack (Agi 6 + Melee Combat 4), Reach: 10 ft
+- **Wind Strike [Combat]:** Melee attack (Agil 6 + Melee Combat 4), Reach: 10 ft
   - *Margin 1:* 4 damage (standard natural); target makes Fortitude save (1 success) or pushed 5 feet
   - *Margin 2:* 7 damage (4 + 3 Str); target pushed 10 feet; no save
   - *Margin 3:* 7 damage; target pushed 10 feet and knocked Prone
@@ -1722,14 +1722,14 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 **HP:** 40 (Con 5 × 8, Standard)
 **DR:** 2 (compressed air shell)
 **Speed:** 0 ft, Fly 70 ft (Hover)
-**Attributes:** Str 3 / Con 5 / Agi 7 / Dex 5 / Int 3 / Wis 4 / Cha 3 / Luck 3
+**Attributes:** Str 3 / Con 5 / Agil 7 / Dex 5 / Int 3 / Wis 4 / Cha 3 / Luck 3
 **Skills:** Melee Combat 5, Ranged Combat 4, Perception 5
 **Senses:** Darkvision 60 ft, Blindsight 30 ft
-**Initiative Bonus:** +7 (Agi 7)
+**Initiative Bonus:** +7 (Agil 7)
 **Creature Type:** Elemental — Immune to lightning damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Wind Blade [Combat]:** Melee attack (Agi 7 + Melee Combat 5), Reach: 10 ft
+- **Wind Blade [Combat]:** Melee attack (Agil 7 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 6 damage; target pushed 10 feet
   - *Margin 2:* 9 damage (6 + 3 Str); target pushed 10 feet and knocked Prone; no save
   - *Margin 3:* 9 damage + Prone + Stunned until end of their next turn from a concentrated wind impact
@@ -1742,7 +1742,7 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 - **Momentum Defense:** As above.
 - **Storm Body:** Grapple attempts add 1 to both dice. If successfully grappled, the Stormcall makes a Fortitude save at the start of its turn (1 success) to break free automatically.
 
-**Description:** Stormcalls fight from altitude, opening with Wind Blade against the closest threat, then spending a second action on Lightning Arc against anything at range, and using a third action to reposition while maintaining Momentum Defense. The MAP on that third action is real but the Stormcall accepts it — staying in motion matters more than clean dice. Agi 7 means they act before most of what they face. A summoner who gives a Stormcall a target designation and stays out of the way will find it requires little management.
+**Description:** Stormcalls fight from altitude, opening with Wind Blade against the closest threat, then spending a second action on Lightning Arc against anything at range, and using a third action to reposition while maintaining Momentum Defense. The MAP on that third action is real but the Stormcall accepts it — staying in motion matters more than clean dice. Agil 7 means they act before most of what they face. A summoner who gives a Stormcall a target designation and stays out of the way will find it requires little management.
 
 ---
 
@@ -1753,14 +1753,14 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 3 (gale-force shell)
 **Speed:** 0 ft, Fly 80 ft (Hover)
-**Attributes:** Str 4 / Con 4 / Agi 7 / Dex 5 / Int 4 / Wis 4 / Cha 3 / Luck 3
+**Attributes:** Str 4 / Con 4 / Agil 7 / Dex 5 / Int 4 / Wis 4 / Cha 3 / Luck 3
 **Skills:** Melee Combat 6, Ranged Combat 5, Perception 6
 **Senses:** Darkvision 60 ft, Blindsight 30 ft
-**Initiative Bonus:** +7 (Agi 7)
+**Initiative Bonus:** +7 (Agil 7)
 **Creature Type:** Elemental — Immune to lightning damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Gale Strike [Combat]:** Melee attack (Agi 7 + Melee Combat 6), Reach: 10 ft
+- **Gale Strike [Combat]:** Melee attack (Agil 7 + Melee Combat 6), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2); target pushed 15 feet
   - *Margin 2:* 14 damage (10 + 4 Str); target pushed 15 feet and knocked Prone; no save
   - *Margin 3:* 14 damage + Prone + Stunned until end of their next turn; all creatures within 5 feet of target when they land take 4 bludgeoning damage from wind-driven impact
@@ -1783,14 +1783,14 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 4 (ancient storm-shell)
 **Speed:** 0 ft, Fly 100 ft (Hover)
-**Attributes:** Str 5 / Con 6 / Agi 8 / Dex 6 / Int 5 / Wis 5 / Cha 4 / Luck 4
+**Attributes:** Str 5 / Con 6 / Agil 8 / Dex 6 / Int 5 / Wis 5 / Cha 4 / Luck 4
 **Skills:** Melee Combat 7, Ranged Combat 6, Perception 7
 **Senses:** Darkvision 120 ft, Blindsight 60 ft
-**Initiative Bonus:** +8 (Agi 8)
+**Initiative Bonus:** +8 (Agil 8)
 **Creature Type:** Elemental — Immune to lightning damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Thunderstrike [Combat]:** Melee attack (Agi 8 + Melee Combat 7), Reach: 15 ft
+- **Thunderstrike [Combat]:** Melee attack (Agil 8 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 8 lightning damage (Half DR); target pushed 15 feet
   - *Margin 2:* 15 damage (10 + 5 Str) + 8 lightning damage; pushed 15 feet + Stunned until end of their next turn; no save
   - *Margin 3:* 15 damage + 8 lightning damage + Stunned; target also Deafened for 1 minute from the thunder crack at impact distance
@@ -1804,7 +1804,7 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 - **Storm Body.**
 - **Resilient Defense (2/day).**
 
-**Description:** Elder Gales are the first Air Elemental that actively protects allies rather than simply fighting. Eye of the Storm ensures the summoner and designated companions are never accidentally caught in Vortex Presence or thrown by Thunderstrike's pushback — a meaningful distinction at a tier where battlefield chaos becomes genuinely dangerous. A typical turn spends two actions on Thunderstrike against priority targets and a third on Storm Surge when a line of enemies presents itself, or repositioning to maintain Momentum Defense. Agi 8 means the Elder Gale acts before virtually everything it faces.
+**Description:** Elder Gales are the first Air Elemental that actively protects allies rather than simply fighting. Eye of the Storm ensures the summoner and designated companions are never accidentally caught in Vortex Presence or thrown by Thunderstrike's pushback — a meaningful distinction at a tier where battlefield chaos becomes genuinely dangerous. A typical turn spends two actions on Thunderstrike against priority targets and a third on Storm Surge when a line of enemies presents itself, or repositioning to maintain Momentum Defense. Agil 8 means the Elder Gale acts before virtually everything it faces.
 
 ---
 
@@ -1815,14 +1815,14 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 5 (primordial storm-shell)
 **Speed:** 0 ft, Fly 120 ft (Hover)
-**Attributes:** Str 6 / Con 6 / Agi 8 / Dex 7 / Int 6 / Wis 6 / Cha 5 / Luck 5
+**Attributes:** Str 6 / Con 6 / Agil 8 / Dex 7 / Int 6 / Wis 6 / Cha 5 / Luck 5
 **Skills:** Melee Combat 8, Ranged Combat 7, Perception 8, Intimidate 6
 **Senses:** Darkvision 120 ft, Blindsight 60 ft
-**Initiative Bonus:** +8 (Agi 8)
+**Initiative Bonus:** +8 (Agil 8)
 **Creature Type:** Elemental — Immune to lightning damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Gale Fist [Combat]:** Melee attack (Agi 8 + Melee Combat 8), Reach: 15 ft
+- **Gale Fist [Combat]:** Melee attack (Agil 8 + Melee Combat 8), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 10 lightning damage (Half DR); target pushed 20 feet and knocked Prone; no save
   - *Margin 2:* 20 damage (14 + 6 Str) + 10 lightning damage; Prone + Stunned until end of their next turn
   - *Margin 3:* 20 damage + 10 lightning damage + Stunned; all creatures within 10 feet of target take 8 lightning damage (Half DR) from the discharge
@@ -1836,7 +1836,7 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 - **Momentum Defense.**
 - **Resilient Defense (3/day).**
 
-**Description:** A Storm Sovereign's Aura displaces enemies constantly. A typical turn spends two actions on Gale Fist against whoever Storm Sovereign Aura failed to clear and a third on Tempest Bolt against anything trying to engage from range — three actions, the third at MAP but still at Ranged Combat 7 and Agi 8, which makes that penalty manageable. Lightning Immunity Sharing is a notable battlefield benefit — a summoner who builds their party around a Storm Sovereign can deny an entire damage type to grouped enemies without any additional resource cost. Clear target priority is the only instruction it strictly requires; the Sovereign determines execution from there.
+**Description:** A Storm Sovereign's Aura displaces enemies constantly. A typical turn spends two actions on Gale Fist against whoever Storm Sovereign Aura failed to clear and a third on Tempest Bolt against anything trying to engage from range — three actions, the third at MAP but still at Ranged Combat 7 and Agil 8, which makes that penalty manageable. Lightning Immunity Sharing is a notable battlefield benefit — a summoner who builds their party around a Storm Sovereign can deny an entire damage type to grouped enemies without any additional resource cost. Clear target priority is the only instruction it strictly requires; the Sovereign determines execution from there.
 
 ---
 
@@ -1847,14 +1847,14 @@ All Air Elementals share: Immune to lightning damage, poison damage, Poisoned co
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 6 (world-storm shell)
 **Speed:** 0 ft, Fly 140 ft (Hover)
-**Attributes:** Str 6 / Con 6 / Agi 8 / Dex 8 / Int 7 / Wis 7 / Cha 6 / Luck 6
+**Attributes:** Str 6 / Con 6 / Agil 8 / Dex 8 / Int 7 / Wis 7 / Cha 6 / Luck 6
 **Skills:** Melee Combat 8, Ranged Combat 8, Perception 8, Intimidate 7
 **Senses:** Darkvision 120 ft, Blindsight 120 ft
-**Initiative Bonus:** +8 (Agi 8)
+**Initiative Bonus:** +8 (Agil 8)
 **Creature Type:** Elemental — Immune to lightning damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **World Wind [Combat]:** Melee attack (Agi 8 + Melee Combat 8), Reach: 20 ft
+- **World Wind [Combat]:** Melee attack (Agil 8 + Melee Combat 8), Reach: 20 ft
   - *Margin 1:* 16 damage (Huge, heavy natural: 14 + 2) + 12 lightning damage (Half DR); target pushed 30 feet and knocked Prone; no save
   - *Margin 2:* 22 damage (16 + 6 Str) + 12 lightning damage; Prone + Stunned; all creatures within 15 feet of target take 10 lightning damage (Half DR) from discharge
   - *Margin 3:* 22 damage + 12 lightning damage + Stunned + Blinded until end of their next turn from the lightning discharge at face range
@@ -1892,10 +1892,10 @@ All Earth Elementals share: Immune to non-magical piercing and slashing damage, 
 **HP:** 10 (Con 2 × 5, Fragile)
 **DR:** 1 (stone skin)
 **Speed:** 20 ft, Burrow 10 ft (loose soil only)
-**Attributes:** Str 3 / Con 2 / Agi 2 / Dex 2 / Int 1 / Wis 2 / Cha 1 / Luck 2
+**Attributes:** Str 3 / Con 2 / Agil 2 / Dex 2 / Int 1 / Wis 2 / Cha 1 / Luck 2
 **Skills:** Melee Combat 2, Perception 2
 **Senses:** Darkvision 60 ft, Tremorsense 10 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
@@ -1918,14 +1918,14 @@ All Earth Elementals share: Immune to non-magical piercing and slashing damage, 
 **HP:** 18 (Con 3 × 6, Standard)
 **DR:** 3 (stone shell)
 **Speed:** 20 ft, Burrow 20 ft (earth and stone)
-**Attributes:** Str 4 / Con 3 / Agi 2 / Dex 2 / Int 2 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 4 / Con 3 / Agil 2 / Dex 2 / Int 2 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 3, Might 3, Perception 3
 **Senses:** Darkvision 60 ft, Tremorsense 30 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Slam [Combat]:** Melee attack (Agi 2 + Melee Combat 3), Reach: 5 ft
+- **Slam [Combat]:** Melee attack (Agil 2 + Melee Combat 3), Reach: 5 ft
   - *Margin 1:* 4 damage (Small, standard: 4 − 1 + 1 for stone density = 4)
   - *Margin 2:* 8 damage (4 + 4 Str); target makes Fortitude save (1 success) or knocked Prone
 
@@ -1944,14 +1944,14 @@ All Earth Elementals share: Immune to non-magical piercing and slashing damage, 
 **HP:** 36 (Con 4 × 9, Tough)
 **DR:** 4 (granite skin)
 **Speed:** 25 ft, Burrow 20 ft
-**Attributes:** Str 5 / Con 4 / Agi 2 / Dex 2 / Int 2 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 5 / Con 4 / Agil 2 / Dex 2 / Int 2 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 4, Might 4, Perception 3
 **Senses:** Darkvision 60 ft, Tremorsense 30 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Slam [Combat]:** Melee attack (Agi 2 + Melee Combat 4), Reach: 5 ft
+- **Slam [Combat]:** Melee attack (Agil 2 + Melee Combat 4), Reach: 5 ft
   - *Margin 1:* 6 damage (standard natural weapon)
   - *Margin 2:* 11 damage (6 + 5 Str); target knocked Prone; no save
   - *Margin 3:* 11 damage + Prone; target Restrained by earth and stone until they succeed on a Might check (Hard task, 2 successes) as a [Combat] action
@@ -1974,14 +1974,14 @@ All Earth Elementals share: Immune to non-magical piercing and slashing damage, 
 **HP:** 56 (Con 4 × 14, Tough)
 **DR:** 5 (layered granite shell)
 **Speed:** 25 ft, Burrow 25 ft
-**Attributes:** Str 6 / Con 4 / Agi 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 6 / Con 4 / Agil 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 5, Might 5, Perception 3, Intimidate 3
 **Senses:** Darkvision 60 ft, Tremorsense 60 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Slam [Combat]:** Melee attack (Agi 2 + Melee Combat 5), Reach: 10 ft
+- **Slam [Combat]:** Melee attack (Agil 2 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2)
   - *Margin 2:* 16 damage (10 + 6 Str); target knocked Prone; no save
   - *Margin 3:* 16 damage + Prone; target Restrained until they succeed on Might check (Hard task, 2 successes) as a [Combat] action
@@ -1992,7 +1992,7 @@ All Earth Elementals share: Immune to non-magical piercing and slashing damage, 
 **Special Abilities:**
 - **Immovable:** As Granite Ward.
 - **Earth Bond:** As Granite Ward.
-- **Tremor Strike (1/encounter) [Combat]:** As a [Combat] action, slams both fists into the ground simultaneously. All creatures within 15 feet standing on natural ground make a Reflex save. Compare Agi 2 + Might 5 targeting vs. each save. Net 1: 8 bludgeoning damage + Prone. Net 2: 16 bludgeoning damage + Prone + Restrained. This is a single action producing simultaneous strikes — use Shared Attribute Roll (Agi 2), roll Might separately.
+- **Tremor Strike (1/encounter) [Combat]:** As a [Combat] action, slams both fists into the ground simultaneously. All creatures within 15 feet standing on natural ground make a Reflex save. Compare Agil 2 + Might 5 targeting vs. each save. Net 1: 8 bludgeoning damage + Prone. Net 2: 16 bludgeoning damage + Prone + Restrained. This is a single action producing simultaneous strikes — use Shared Attribute Roll (Agil 2), roll Might separately.
 
 **Reactions:**
 - **Stone Skin [Reaction]:** Once per round, reduce incoming physical damage by 6.
@@ -2008,14 +2008,14 @@ All Earth Elementals share: Immune to non-magical piercing and slashing damage, 
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 6 (deep granite core)
 **Speed:** 30 ft, Burrow 30 ft
-**Attributes:** Str 7 / Con 4 / Agi 2 / Dex 2 / Int 3 / Wis 4 / Cha 2 / Luck 3
+**Attributes:** Str 7 / Con 4 / Agil 2 / Dex 2 / Int 3 / Wis 4 / Cha 2 / Luck 3
 **Skills:** Melee Combat 5, Might 6, Perception 4, Intimidate 4
 **Senses:** Darkvision 60 ft, Tremorsense 120 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Crushing Fist [Combat]:** Melee attack (Agi 2 + Melee Combat 5), Reach: 10 ft
+- **Crushing Fist [Combat]:** Melee attack (Agil 2 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2)
   - *Margin 2:* 17 damage (10 + 7 Str); target Grappled; no save; Grappled target takes 8 bludgeoning damage at the start of each of their turns
   - *Margin 3:* 17 damage + Grappled + Restrained + ongoing 8 damage
@@ -2039,14 +2039,14 @@ All Earth Elementals share: Immune to non-magical piercing and slashing damage, 
 **HP:** 144 (Con 6 × 24, Tough)
 **DR:** 7 (primordial granite)
 **Speed:** 30 ft, Burrow 40 ft
-**Attributes:** Str 8 / Con 6 / Agi 2 / Dex 2 / Int 5 / Wis 5 / Cha 3 / Luck 3
+**Attributes:** Str 8 / Con 6 / Agil 2 / Dex 2 / Int 5 / Wis 5 / Cha 3 / Luck 3
 **Skills:** Melee Combat 6, Might 7, Perception 5, Intimidate 5
 **Senses:** Darkvision 60 ft, Tremorsense 300 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Ancient Slam [Combat]:** Melee attack (Agi 2 + Melee Combat 6), Reach: 15 ft
+- **Ancient Slam [Combat]:** Melee attack (Agil 2 + Melee Combat 6), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2)
   - *Margin 2:* 22 damage (14 + 8 Str); target knocked Prone and Stunned until end of their next turn; no save
   - *Margin 3:* 22 damage + Prone + Stunned + Restrained by erupting earth; Might check (Hard task, 2 successes) to escape as a [Combat] action
@@ -2075,14 +2075,14 @@ All Earth Elementals share: Immune to non-magical piercing and slashing damage, 
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 8 (deep-forged primordial shell)
 **Speed:** 30 ft, Burrow 50 ft
-**Attributes:** Str 8 / Con 6 / Agi 2 / Dex 2 / Int 6 / Wis 6 / Cha 4 / Luck 4
+**Attributes:** Str 8 / Con 6 / Agil 2 / Dex 2 / Int 6 / Wis 6 / Cha 4 / Luck 4
 **Skills:** Melee Combat 7, Might 8, Perception 6, Intimidate 6
 **Senses:** Darkvision 60 ft, Tremorsense 1 mile
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Mountain's Fist [Combat]:** Melee attack (Agi 2 + Melee Combat 7), Reach: 15 ft
+- **Mountain's Fist [Combat]:** Melee attack (Agil 2 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2)
   - *Margin 2:* 22 damage (14 + 8 Str); target Grappled + Restrained + knocked Prone; no save
   - *Margin 3:* 22 damage + Grappled + Restrained + Prone; target takes 12 bludgeoning damage at the start of each of their turns; Fortitude save (Hard task, 2 successes) each round to break free
@@ -2111,14 +2111,14 @@ All Earth Elementals share: Immune to non-magical piercing and slashing damage, 
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 9 (primordial earth-shell)
 **Speed:** 30 ft, Burrow 60 ft
-**Attributes:** Str 8 / Con 6 / Agi 2 / Dex 2 / Int 7 / Wis 7 / Cha 5 / Luck 5
+**Attributes:** Str 8 / Con 6 / Agil 2 / Dex 2 / Int 7 / Wis 7 / Cha 5 / Luck 5
 **Skills:** Melee Combat 8, Might 8, Perception 7, Intimidate 7
 **Senses:** Darkvision 60 ft, Tremorsense 2 miles
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Elemental — Immune to non-magical piercing and slashing damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **World Crush [Combat]:** Melee attack (Agi 2 + Melee Combat 8), Reach: 20 ft
+- **World Crush [Combat]:** Melee attack (Agil 2 + Melee Combat 8), Reach: 20 ft
   - *Margin 1:* 16 damage (Huge, heavy: 14 + 2)
   - *Margin 2:* 24 damage (16 + 8 Str); target Grappled + Restrained + Prone; takes 16 bludgeoning damage at start of each of their turns; no save; Fortitude save (Hard task, 2 successes) each round to break free
   - *Margin 3:* 24 damage + Grappled + Restrained + Prone; target begins Engulf — driven 5 feet into the ground at start of their next turn unless they succeed on a Fortitude save (Hard task), adding Blinded and doubling ongoing damage to 32
@@ -2160,10 +2160,10 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
 **HP:** 10 (Con 2 × 5, Fragile)
 **DR:** 0
 **Speed:** 20 ft, Swim 30 ft
-**Attributes:** Str 1 / Con 2 / Agi 4 / Dex 3 / Int 1 / Wis 2 / Cha 1 / Luck 2
+**Attributes:** Str 1 / Con 2 / Agil 4 / Dex 3 / Int 1 / Wis 2 / Cha 1 / Luck 2
 **Skills:** Melee Combat 1, Perception 2, Stealth 2
 **Senses:** Darkvision 60 ft, Blindsight 10 ft (in water only)
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Elemental — Immune to cold damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
@@ -2186,14 +2186,14 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
 **HP:** 12 (Con 2 × 6, Fragile)
 **DR:** 0
 **Speed:** 20 ft, Swim 40 ft
-**Attributes:** Str 2 / Con 2 / Agi 5 / Dex 4 / Int 2 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 2 / Con 2 / Agil 5 / Dex 4 / Int 2 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 2, Perception 3, Stealth 3, Athletics 2
 **Senses:** Darkvision 60 ft, Blindsight 30 ft (in water)
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Elemental — Immune to cold damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Water Tendril [Combat]:** Melee attack (Agi 5 + Melee Combat 2), Reach: 10 ft
+- **Water Tendril [Combat]:** Melee attack (Agil 5 + Melee Combat 2), Reach: 10 ft
   - *Margin 1:* 3 damage (Small, standard: 4 − 1) + 2 cold damage (Half DR)
   - *Margin 2:* 5 damage (3 + 2 Str) + 2 cold damage; target gains Chilled condition
   - *Margin 3:* 5 damage + 2 cold damage; target gains Numbed condition
@@ -2213,14 +2213,14 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
 **HP:** 27 (Con 3 × 9, Tough)
 **DR:** 2 (dense water-form)
 **Speed:** 20 ft, Swim 50 ft
-**Attributes:** Str 4 / Con 3 / Agi 5 / Dex 4 / Int 2 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 4 / Con 3 / Agil 5 / Dex 4 / Int 2 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 4, Perception 4, Stealth 4, Athletics 3
 **Senses:** Darkvision 60 ft, Blindsight 60 ft (in water)
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Elemental — Immune to cold damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Cold Lash [Combat]:** Melee attack (Agi 5 + Melee Combat 4), Reach: 10 ft
+- **Cold Lash [Combat]:** Melee attack (Agil 5 + Melee Combat 4), Reach: 10 ft
   - *Margin 1:* 4 damage (standard natural) + 4 cold damage (Half DR)
   - *Margin 2:* 8 damage (4 + 4 Str) + 4 cold damage; target's movement speed reduced by 10 until end of their next turn
   - *Margin 3:* 8 damage + 4 cold damage; target gains Numbed condition; movement speed reduced by 20 until end of their next turn
@@ -2228,7 +2228,7 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
 **Special Abilities:**
 - **Water Mastery:** In water, attacks against the Current Stalker add 1 to both dice. Its Cold Lash reach extends to 15 ft while in water.
 - **Aqueous Form:** As Droplet.
-- **Drag Under (Recharge 5-8) [Combat]:** When adjacent to a creature, attempts to pull them into any adjacent body of water. Opposed check: Agi 5 + Athletics 3 vs. target's Athletics or Acrobatics. On failure, target moved up to 10 feet into the water and gains the Grappled condition while submerged.
+- **Drag Under (Recharge 5-8) [Combat]:** When adjacent to a creature, attempts to pull them into any adjacent body of water. Opposed check: Agil 5 + Athletics 3 vs. target's Athletics or Acrobatics. On failure, target moved up to 10 feet into the water and gains the Grappled condition while submerged.
 
 **Description:** Current Stalkers are dramatically more effective in water than away from it. In water they are fast, harder to hit, and use Drag Under to pull enemies into their preferred environment where the fight becomes considerably more one-sided. On dry ground they slow enemies and apply cold conditions at reach. A summoner who deploys them near water and uses Drag Under to establish positioning will find them capable well above their TR suggests. One who calls them into a building and expects the same performance will be disappointed.
 
@@ -2241,14 +2241,14 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
 **HP:** 56 (Con 4 × 14, Tough)
 **DR:** 3 (dense water-shell)
 **Speed:** 20 ft, Swim 60 ft
-**Attributes:** Str 6 / Con 4 / Agi 4 / Dex 3 / Int 3 / Wis 3 / Cha 2 / Luck 3
+**Attributes:** Str 6 / Con 4 / Agil 4 / Dex 3 / Int 3 / Wis 3 / Cha 2 / Luck 3
 **Skills:** Melee Combat 5, Might 5, Perception 4, Athletics 4
 **Senses:** Darkvision 60 ft, Blindsight 60 ft (in water)
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Elemental — Immune to cold damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Crashing Slam [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft
+- **Crashing Slam [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 4 cold damage (Half DR); target pushed 5 feet
   - *Margin 2:* 16 damage (10 + 6 Str) + 4 cold damage; target pushed 10 feet and knocked Prone; no save
   - *Margin 3:* 16 damage + 4 cold damage + Prone; target gains Numbed condition
@@ -2256,7 +2256,7 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
   - Net 1: 8 cold damage (Half DR); creatures in line make Fortitude save (1 success) or pushed 10 feet. Net 2: 16 cold damage; pushed 15 feet; no save. Net 3: 16 cold damage + Frosted condition; no save.
 
 **Special Abilities:**
-- **Engulf (Recharge 6-8) [Combat]:** Surges over one Medium or smaller creature within 5 feet. Target makes a Reflex save (compare Agi 4 + Melee Combat 5 vs. save successes). On failure: Grappled, Restrained, takes 8 cold damage per round. Fortitude save each round (Hard task, 2 successes) to break free, or an ally can spend 2 [Interact] actions to pull them clear.
+- **Engulf (Recharge 6-8) [Combat]:** Surges over one Medium or smaller creature within 5 feet. Target makes a Reflex save (compare Agil 4 + Melee Combat 5 vs. save successes). On failure: Grappled, Restrained, takes 8 cold damage per round. Fortitude save each round (Hard task, 2 successes) to break free, or an ally can spend 2 [Interact] actions to pull them clear.
 - **Water Mastery:** As Current Stalker.
 
 **Description:** Wave Breakers use Water Jet to clear lines and apply cold conditions, then close to melee. Engulf is their best option — used on a single priority target when the angle appears. In water they are substantially faster and more capable. A summoner who draws enemies near a water source before a Wave Breaker surfaces will find the encounter resolved more efficiently than the TR suggests is reasonable.
@@ -2270,14 +2270,14 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 4 (ocean-depth water-shell)
 **Speed:** 20 ft, Swim 70 ft
-**Attributes:** Str 6 / Con 4 / Agi 4 / Dex 4 / Int 3 / Wis 4 / Cha 2 / Luck 3
+**Attributes:** Str 6 / Con 4 / Agil 4 / Dex 4 / Int 3 / Wis 4 / Cha 2 / Luck 3
 **Skills:** Melee Combat 6, Might 5, Perception 5, Athletics 5
 **Senses:** Darkvision 60 ft, Blindsight 120 ft (in water)
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Elemental — Immune to cold damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Slam [Combat]:** Melee attack (Agi 4 + Melee Combat 6), Reach: 10 ft
+- **Slam [Combat]:** Melee attack (Agil 4 + Melee Combat 6), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 4 cold damage (Half DR); target pushed 5 feet
   - *Margin 2:* 16 damage (10 + 6 Str) + 4 cold damage; target knocked Prone; no save
   - *Margin 3:* 16 damage + 4 cold damage + Prone; target gains Numbed condition
@@ -2302,14 +2302,14 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
 **HP:** 144 (Con 6 × 24, Tough)
 **DR:** 5 (ocean-trench water-shell)
 **Speed:** 20 ft, Swim 80 ft
-**Attributes:** Str 7 / Con 6 / Agi 5 / Dex 5 / Int 4 / Wis 5 / Cha 3 / Luck 4
+**Attributes:** Str 7 / Con 6 / Agil 5 / Dex 5 / Int 4 / Wis 5 / Cha 3 / Luck 4
 **Skills:** Melee Combat 7, Might 6, Perception 6, Athletics 6
 **Senses:** Darkvision 60 ft, Blindsight 300 ft (in water)
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Elemental — Immune to cold damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Crushing Wave [Combat]:** Melee attack (Agi 5 + Melee Combat 7), Reach: 15 ft
+- **Crushing Wave [Combat]:** Melee attack (Agil 5 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 6 cold damage (Half DR); target pushed 10 feet
   - *Margin 2:* 21 damage (14 + 7 Str) + 6 cold damage; target knocked Prone + Numbed condition; no save
   - *Margin 3:* 21 damage + 6 cold damage + Prone + Frosted; target Grappled as the wave wraps around them
@@ -2319,7 +2319,7 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
   - *Margin 3:* 20 cold damage + Frosted + Restrained by a column of pressurized water for 1 round; Fortitude save (Hard task, 2 successes) to move through it
 
 **Special Abilities:**
-- **Tidal Surge (Recharge 5-8) [Combat]:** Sends a 60-foot cone of pressurized water in a chosen direction. All creatures in the cone make a Reflex save. Compare Agi 5 + Melee Combat 7 targeting vs. each save. Net 1: 20 cold damage (Half DR) + pushed 20 feet. Net 2: 32 cold damage + pushed 30 feet + Prone. Net 3: 32 cold damage + pushed 30 feet + Prone + Frosted condition.
+- **Tidal Surge (Recharge 5-8) [Combat]:** Sends a 60-foot cone of pressurized water in a chosen direction. All creatures in the cone make a Reflex save. Compare Agil 5 + Melee Combat 7 targeting vs. each save. Net 1: 20 cold damage (Half DR) + pushed 20 feet. Net 2: 32 cold damage + pushed 30 feet + Prone. Net 3: 32 cold damage + pushed 30 feet + Prone + Frosted condition.
 - **Engulf (Recharge 5-8) [Combat]:** As Deep Tide, but can target up to 2 Medium or 1 Large creature simultaneously.
 - **Water Mastery:** In water, Abyssal Surge attacks cannot have their damage reduced by Reflex saves — targets take full damage on any net success.
 - **Resilient Defense (2/day).**
@@ -2335,14 +2335,14 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 6 (deep-current water-shell)
 **Speed:** 20 ft, Swim 100 ft
-**Attributes:** Str 8 / Con 6 / Agi 5 / Dex 6 / Int 5 / Wis 6 / Cha 4 / Luck 5
+**Attributes:** Str 8 / Con 6 / Agil 5 / Dex 6 / Int 5 / Wis 6 / Cha 4 / Luck 5
 **Skills:** Melee Combat 7, Might 7, Perception 7, Athletics 7
 **Senses:** Darkvision 60 ft, Blindsight 1 mile (in water)
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Elemental — Immune to cold damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Abyssal Strike [Combat]:** Melee attack (Agi 5 + Melee Combat 7), Reach: 15 ft
+- **Abyssal Strike [Combat]:** Melee attack (Agil 5 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 8 cold damage (Half DR); target pushed 15 feet + knocked Prone; no save
   - *Margin 2:* 22 damage (14 + 8 Str) + 8 cold damage; Prone + Frosted + Grappled; no save
   - *Margin 3:* 22 damage + 8 cold damage + Prone + Frosted + Grappled + Restrained; ongoing 16 cold damage per round while Grappled
@@ -2366,14 +2366,14 @@ All Water Elementals share: Immune to cold damage, poison damage, Poisoned condi
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 7 (world-ocean shell)
 **Speed:** 20 ft, Swim 120 ft
-**Attributes:** Str 8 / Con 6 / Agi 6 / Dex 7 / Int 6 / Wis 7 / Cha 5 / Luck 6
+**Attributes:** Str 8 / Con 6 / Agil 6 / Dex 7 / Int 6 / Wis 7 / Cha 5 / Luck 6
 **Skills:** Melee Combat 8, Might 8, Perception 8, Athletics 8
 **Senses:** Darkvision 60 ft, Blindsight 5 miles (in water)
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Elemental — Immune to cold damage, fire damage, poison damage, Poisoned, disease, exhaustion, Paralyzed, Petrified, Unconscious. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **World Current [Combat]:** Melee attack (Agi 6 + Melee Combat 8), Reach: 20 ft
+- **World Current [Combat]:** Melee attack (Agil 6 + Melee Combat 8), Reach: 20 ft
   - *Margin 1:* 16 damage (Huge, heavy natural: 14 + 2) + 12 cold damage (Half DR); Prone + Frosted; no save
   - *Margin 2:* 24 damage (16 + 8 Str) + 12 cold damage; Prone + Frozen + Grappled; ongoing 24 cold damage per round while Grappled
   - *Margin 3:* 24 damage + 12 cold damage + Frozen + Grappled + immediately Engulfed; Blinded + Restrained + doubled ongoing damage to 48
@@ -2424,14 +2424,14 @@ They are the most aggressive of the four Nephilim subtypes, sharing the Fire Ele
 **HP:** 36 (Con 4 × 9, Tough)
 **DR:** 2 (heat-hardened skin)
 **Speed:** 35 ft
-**Attributes:** Str 5 / Con 4 / Agi 3 / Dex 2 / Int 3 / Wis 3 / Cha 3 / Luck 2
+**Attributes:** Str 5 / Con 4 / Agil 3 / Dex 2 / Int 3 / Wis 3 / Cha 3 / Luck 2
 **Skills:** Melee Combat 4, Intimidate 3, Perception 3, Athletics 3
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Slam [Combat]:** Melee attack (Agi 3 + Melee Combat 4), Reach: 10 ft
+- **Slam [Combat]:** Melee attack (Agil 3 + Melee Combat 4), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard natural: 8 + 2) + 2 fire damage (Half DR)
   - *Margin 2:* 15 damage (10 + 5 Str) + 2 fire damage; target gains Singed condition
   - *Margin 3:* 15 damage + 2 fire damage; target gains Ignited condition
@@ -2454,14 +2454,14 @@ They are the most aggressive of the four Nephilim subtypes, sharing the Fire Ele
 **HP:** 56 (Con 4 × 14, Tough)
 **DR:** 3 (volcanic skin)
 **Speed:** 35 ft
-**Attributes:** Str 6 / Con 4 / Agi 3 / Dex 2 / Int 3 / Wis 3 / Cha 3 / Luck 3
+**Attributes:** Str 6 / Con 4 / Agil 3 / Dex 2 / Int 3 / Wis 3 / Cha 3 / Luck 3
 **Skills:** Melee Combat 5, Intimidate 4, Perception 3, Athletics 4
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Burning Fist [Combat]:** Melee attack (Agi 3 + Melee Combat 5), Reach: 10 ft
+- **Burning Fist [Combat]:** Melee attack (Agil 3 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 4 fire damage (Half DR)
   - *Margin 2:* 16 damage (10 + 6 Str) + 4 fire damage; target gains Ignited condition
   - *Margin 3:* 16 damage + 4 fire damage; target gains Burning condition; no save
@@ -2485,14 +2485,14 @@ They are the most aggressive of the four Nephilim subtypes, sharing the Fire Ele
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 4 (thick volcanic hide)
 **Speed:** 35 ft
-**Attributes:** Str 6 / Con 4 / Agi 4 / Dex 3 / Int 4 / Wis 4 / Cha 4 / Luck 3
+**Attributes:** Str 6 / Con 4 / Agil 4 / Dex 3 / Int 4 / Wis 4 / Cha 4 / Luck 3
 **Skills:** Melee Combat 5, Intimidate 5, Perception 4, Athletics 4
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Magma Strike [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft
+- **Magma Strike [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 6 fire damage (Half DR)
   - *Margin 2:* 16 damage (10 + 6 Str) + 6 fire damage; target gains Ignited condition
   - *Margin 3:* 16 damage + 6 fire damage; target gains Burning condition; all creatures within 5 feet of target take 4 fire damage (Half DR) from magma splash
@@ -2517,14 +2517,14 @@ They are the most aggressive of the four Nephilim subtypes, sharing the Fire Ele
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 5 (primordial volcanic hide)
 **Speed:** 40 ft
-**Attributes:** Str 7 / Con 6 / Agi 4 / Dex 3 / Int 5 / Wis 5 / Cha 5 / Luck 4
+**Attributes:** Str 7 / Con 6 / Agil 4 / Dex 3 / Int 5 / Wis 5 / Cha 5 / Luck 4
 **Skills:** Melee Combat 6, Intimidate 6, Perception 5, Athletics 5
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Inferno Fist [Combat]:** Melee attack (Agi 4 + Melee Combat 6), Reach: 15 ft
+- **Inferno Fist [Combat]:** Melee attack (Agil 4 + Melee Combat 6), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 8 fire damage (Half DR)
   - *Margin 2:* 21 damage (14 + 7 Str) + 8 fire damage; target gains Burning condition; no save
   - *Margin 3:* 21 damage + 8 fire damage + Burning; target makes Fortitude save (1 success) or Stunned until end of their next turn from the concussive force of the blow
@@ -2549,14 +2549,14 @@ They are the most aggressive of the four Nephilim subtypes, sharing the Fire Ele
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 6 (ancient volcanic shell)
 **Speed:** 40 ft
-**Attributes:** Str 8 / Con 6 / Agi 4 / Dex 4 / Int 6 / Wis 6 / Cha 6 / Luck 5
+**Attributes:** Str 8 / Con 6 / Agil 4 / Dex 4 / Int 6 / Wis 6 / Cha 6 / Luck 5
 **Skills:** Melee Combat 7, Intimidate 7, Perception 6, Athletics 6
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **World-Breaker Fist [Combat]:** Melee attack (Agi 4 + Melee Combat 7), Reach: 15 ft
+- **World-Breaker Fist [Combat]:** Melee attack (Agil 4 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 10 fire damage (Half DR)
   - *Margin 2:* 22 damage (14 + 8 Str) + 10 fire damage; Burning condition + target knocked Prone; no save
   - *Margin 3:* 22 damage + 10 fire damage + Burning + Prone; all creatures within 10 feet of target take 8 fire damage (Half DR) from the impact shockwave
@@ -2582,14 +2582,14 @@ They are the most aggressive of the four Nephilim subtypes, sharing the Fire Ele
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 7 (primordial fire-flesh)
 **Speed:** 45 ft
-**Attributes:** Str 8 / Con 6 / Agi 5 / Dex 4 / Int 7 / Wis 7 / Cha 7 / Luck 6
+**Attributes:** Str 8 / Con 6 / Agil 5 / Dex 4 / Int 7 / Wis 7 / Cha 7 / Luck 6
 **Skills:** Melee Combat 8, Intimidate 8, Perception 7, Athletics 7
 **Senses:** Darkvision 120 ft, Tremorsense 60 ft (heat signatures)
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Nephilim (Giant) — Immune to fire damage. Resistance to lightning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Cataclysm Strike [Combat]:** Melee attack (Agi 5 + Melee Combat 8), Reach: 15 ft
+- **Cataclysm Strike [Combat]:** Melee attack (Agil 5 + Melee Combat 8), Reach: 15 ft
   - *Margin 1:* 16 damage (Huge, heavy: 14 + 2) + 12 fire damage (Half DR)
   - *Margin 2:* 24 damage (16 + 8 Str) + 12 fire damage; Burning + Prone; no save; all creatures within 10 feet take 10 fire damage (Half DR)
   - *Margin 3:* 24 damage + 12 fire damage + Burning + Prone + Stunned until end of their next turn; area damage increases to 16 fire
@@ -2627,14 +2627,14 @@ They are the most communicative of the four Nephilim subtypes. Even lower-tier A
 **HP:** 36 (Con 4 × 9, Tough)
 **DR:** 2 (wind-compressed skin)
 **Speed:** 40 ft, Fly 30 ft
-**Attributes:** Str 4 / Con 4 / Agi 5 / Dex 3 / Int 3 / Wis 3 / Cha 3 / Luck 2
+**Attributes:** Str 4 / Con 4 / Agil 5 / Dex 3 / Int 3 / Wis 3 / Cha 3 / Luck 2
 **Skills:** Melee Combat 4, Perception 4, Athletics 3, Intimidate 2
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Wind Strike [Combat]:** Melee attack (Agi 5 + Melee Combat 4), Reach: 10 ft
+- **Wind Strike [Combat]:** Melee attack (Agil 5 + Melee Combat 4), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2); target pushed 5 feet
   - *Margin 2:* 14 damage (10 + 4 Str); target pushed 10 feet and knocked Prone; no save
   - *Margin 3:* 14 damage + Prone + Stunned until end of their next turn
@@ -2657,14 +2657,14 @@ They are the most communicative of the four Nephilim subtypes. Even lower-tier A
 **HP:** 56 (Con 4 × 14, Tough)
 **DR:** 3 (storm-compressed skin)
 **Speed:** 40 ft, Fly 50 ft
-**Attributes:** Str 5 / Con 4 / Agi 6 / Dex 4 / Int 4 / Wis 4 / Cha 4 / Luck 3
+**Attributes:** Str 5 / Con 4 / Agil 6 / Dex 4 / Int 4 / Wis 4 / Cha 4 / Luck 3
 **Skills:** Melee Combat 5, Perception 5, Athletics 4, Intimidate 3
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Thunder Blow [Combat]:** Melee attack (Agi 6 + Melee Combat 5), Reach: 10 ft
+- **Thunder Blow [Combat]:** Melee attack (Agil 6 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 4 lightning damage (Half DR); target pushed 10 feet
   - *Margin 2:* 15 damage (10 + 5 Str) + 4 lightning damage; pushed 10 feet + Stunned until end of their next turn; no save
   - *Margin 3:* 15 damage + 4 lightning damage + Stunned + Deafened for 1 minute from the thunderclap at impact
@@ -2688,14 +2688,14 @@ They are the most communicative of the four Nephilim subtypes. Even lower-tier A
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 4 (storm-dense flesh)
 **Speed:** 40 ft, Fly 60 ft
-**Attributes:** Str 6 / Con 4 / Agi 6 / Dex 4 / Int 4 / Wis 4 / Cha 4 / Luck 3
+**Attributes:** Str 6 / Con 4 / Agil 6 / Dex 4 / Int 4 / Wis 4 / Cha 4 / Luck 3
 **Skills:** Melee Combat 6, Perception 5, Athletics 5, Intimidate 5
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Storm Fist [Combat]:** Melee attack (Agi 6 + Melee Combat 6), Reach: 15 ft
+- **Storm Fist [Combat]:** Melee attack (Agil 6 + Melee Combat 6), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 6 lightning damage (Half DR); target pushed 15 feet
   - *Margin 2:* 20 damage (14 + 6 Str) + 6 lightning damage; pushed 15 feet + Stunned until end of their next turn; no save
   - *Margin 3:* 20 damage + 6 lightning damage + Stunned + Deafened for 1 minute; all creatures within 10 feet of target take 4 lightning damage (Half DR) from the discharge
@@ -2719,14 +2719,14 @@ They are the most communicative of the four Nephilim subtypes. Even lower-tier A
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 5 (ancient storm-flesh)
 **Speed:** 45 ft, Fly 80 ft
-**Attributes:** Str 7 / Con 6 / Agi 7 / Dex 5 / Int 5 / Wis 5 / Cha 5 / Luck 4
+**Attributes:** Str 7 / Con 6 / Agil 7 / Dex 5 / Int 5 / Wis 5 / Cha 5 / Luck 4
 **Skills:** Melee Combat 7, Perception 6, Athletics 6, Intimidate 6
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +7 (Agi 7)
+**Initiative Bonus:** +7 (Agil 7)
 **Creature Type:** Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Tempest Blow [Combat]:** Melee attack (Agi 7 + Melee Combat 7), Reach: 15 ft
+- **Tempest Blow [Combat]:** Melee attack (Agil 7 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 8 lightning damage (Half DR); target pushed 20 feet
   - *Margin 2:* 21 damage (14 + 7 Str) + 8 lightning damage; pushed 20 feet + Stunned until end of their next turn + knocked Prone; no save
   - *Margin 3:* 21 damage + 8 lightning damage + Stunned + Prone; all creatures within 15 feet of target take 8 lightning damage (Half DR) and are pushed 10 feet from the shockwave
@@ -2751,14 +2751,14 @@ They are the most communicative of the four Nephilim subtypes. Even lower-tier A
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 6 (primordial storm-flesh)
 **Speed:** 50 ft, Fly 100 ft
-**Attributes:** Str 7 / Con 6 / Agi 8 / Dex 6 / Int 6 / Wis 6 / Cha 6 / Luck 5
+**Attributes:** Str 7 / Con 6 / Agil 8 / Dex 6 / Int 6 / Wis 6 / Cha 6 / Luck 5
 **Skills:** Melee Combat 8, Perception 7, Athletics 7, Intimidate 7
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +8 (Agi 8)
+**Initiative Bonus:** +8 (Agil 8)
 **Creature Type:** Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **World Storm Fist [Combat]:** Melee attack (Agi 8 + Melee Combat 8), Reach: 15 ft
+- **World Storm Fist [Combat]:** Melee attack (Agil 8 + Melee Combat 8), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 10 lightning damage (Half DR); target pushed 20 feet + Prone; no save
   - *Margin 2:* 21 damage (14 + 7 Str) + 10 lightning damage; pushed 20 feet + Prone + Stunned until end of their next turn; all creatures within 15 feet of target take 10 lightning damage (Half DR) from discharge
   - *Margin 3:* 21 damage + 10 lightning damage + Prone + Stunned; area discharge increases to 16 lightning damage; all affected creatures also Deafened for 1 minute
@@ -2773,7 +2773,7 @@ They are the most communicative of the four Nephilim subtypes. Even lower-tier A
 - **Intimidating Presence:** As Tempest Lord.
 - **Resilient Defense (3/day).**
 
-**Description:** Storm Titans are Agi 8 — they act before almost everything they face and maintain that advantage through their entire engagement. Cyclone Aura at Hard task difficulty continuously displaces enemies regardless of how many actions they spend trying to hold position. Skyfire Bolt handles grouped formations at 150 feet. World Storm Fist's discharge damage at Margin 2 and 3 means the area around the primary target takes significant lightning damage as well. A summoner who keeps clear of the Cyclone Aura radius and lets the Storm Titan work will find most engagements resolved decisively and quickly.
+**Description:** Storm Titans are Agil 8 — they act before almost everything they face and maintain that advantage through their entire engagement. Cyclone Aura at Hard task difficulty continuously displaces enemies regardless of how many actions they spend trying to hold position. Skyfire Bolt handles grouped formations at 150 feet. World Storm Fist's discharge damage at Margin 2 and 3 means the area around the primary target takes significant lightning damage as well. A summoner who keeps clear of the Cyclone Aura radius and lets the Storm Titan work will find most engagements resolved decisively and quickly.
 
 ---
 
@@ -2784,14 +2784,14 @@ They are the most communicative of the four Nephilim subtypes. Even lower-tier A
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 7 (world-storm flesh)
 **Speed:** 55 ft, Fly 120 ft
-**Attributes:** Str 8 / Con 6 / Agi 8 / Dex 7 / Int 7 / Wis 7 / Cha 7 / Luck 6
+**Attributes:** Str 8 / Con 6 / Agil 8 / Dex 7 / Int 7 / Wis 7 / Cha 7 / Luck 6
 **Skills:** Melee Combat 8, Perception 8, Athletics 8, Intimidate 8
 **Senses:** Darkvision 120 ft, Blindsight 60 ft (air pressure)
-**Initiative Bonus:** +8 (Agi 8)
+**Initiative Bonus:** +8 (Agil 8)
 **Creature Type:** Nephilim (Giant) — Immune to lightning damage. Resistance to cold damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Worldstorm Strike [Combat]:** Melee attack (Agi 8 + Melee Combat 8), Reach: 20 ft
+- **Worldstorm Strike [Combat]:** Melee attack (Agil 8 + Melee Combat 8), Reach: 20 ft
   - *Margin 1:* 16 damage (Huge, heavy: 14 + 2) + 12 lightning damage (Half DR); target pushed 30 feet + Prone; no save
   - *Margin 2:* 24 damage (16 + 8 Str) + 12 lightning damage; pushed 30 feet + Prone + Stunned; all creatures within 20 feet of target take 12 lightning damage (Half DR) + Dazed from the discharge
   - *Margin 3:* 24 damage + 12 lightning damage + Prone + Stunned; discharge area takes 20 lightning damage + Stunned; no save on area
@@ -2829,14 +2829,14 @@ They are the least communicative of the four subtypes. Stone Nephilim speak when
 **HP:** 36 (Con 4 × 9, Tough)
 **DR:** 4 (granite flesh)
 **Speed:** 25 ft, Burrow 15 ft
-**Attributes:** Str 5 / Con 4 / Agi 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 5 / Con 4 / Agil 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 4, Might 4, Perception 3
 **Senses:** Darkvision 60 ft, Tremorsense 30 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Slam [Combat]:** Melee attack (Agi 2 + Melee Combat 4), Reach: 10 ft
+- **Slam [Combat]:** Melee attack (Agil 2 + Melee Combat 4), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2)
   - *Margin 2:* 15 damage (10 + 5 Str); target knocked Prone; no save
   - *Margin 3:* 15 damage + Prone; target Restrained by erupting stone until they succeed on a Might check (Hard task, 2 successes) as a [Combat] action
@@ -2860,14 +2860,14 @@ They are the least communicative of the four subtypes. Stone Nephilim speak when
 **HP:** 56 (Con 4 × 14, Tough)
 **DR:** 5 (deep granite flesh)
 **Speed:** 25 ft, Burrow 20 ft
-**Attributes:** Str 6 / Con 4 / Agi 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 6 / Con 4 / Agil 2 / Dex 2 / Int 3 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 5, Might 5, Perception 3, Intimidate 3
 **Senses:** Darkvision 60 ft, Tremorsense 60 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Crushing Slam [Combat]:** Melee attack (Agi 2 + Melee Combat 5), Reach: 10 ft
+- **Crushing Slam [Combat]:** Melee attack (Agil 2 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2)
   - *Margin 2:* 16 damage (10 + 6 Str); target knocked Prone + Grappled; no save; Grappled target takes 6 bludgeoning damage at the start of each of their turns
   - *Margin 3:* 16 damage + Prone + Grappled + Restrained; ongoing damage increases to 10
@@ -2895,14 +2895,14 @@ They are the least communicative of the four subtypes. Stone Nephilim speak when
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 6 (ancient granite flesh)
 **Speed:** 30 ft, Burrow 25 ft
-**Attributes:** Str 7 / Con 4 / Agi 2 / Dex 2 / Int 4 / Wis 4 / Cha 3 / Luck 3
+**Attributes:** Str 7 / Con 4 / Agil 2 / Dex 2 / Int 4 / Wis 4 / Cha 3 / Luck 3
 **Skills:** Melee Combat 5, Might 6, Perception 4, Intimidate 4
 **Senses:** Darkvision 60 ft, Tremorsense 120 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Mountain Fist [Combat]:** Melee attack (Agi 2 + Melee Combat 5), Reach: 15 ft
+- **Mountain Fist [Combat]:** Melee attack (Agil 2 + Melee Combat 5), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2)
   - *Margin 2:* 21 damage (14 + 7 Str); target Grappled + Prone; no save; ongoing 8 bludgeoning damage per round
   - *Margin 3:* 21 damage + Grappled + Prone + Restrained; ongoing damage increases to 14; Fortitude save (Hard task, 2 successes) each round to break free
@@ -2915,7 +2915,7 @@ They are the least communicative of the four subtypes. Stone Nephilim speak when
 - **Earth Bond:** Regenerates 6 HP per turn on natural earth or stone.
 - **Powerful Build.**
 - **Stone Grip:** As Rockborn, but escape checks add 2 to both dice.
-- **Ground Tremor (1/encounter) [Combat]:** As a [Combat] action, stamps the ground. All creatures within 20 feet on natural ground make a Reflex save (compare Agi 2 + Might 6 targeting vs. save). Net 1: 10 bludgeoning damage + Prone. Net 2: 18 bludgeoning damage + Prone + Restrained by cracking ground. Designated allies immune.
+- **Ground Tremor (1/encounter) [Combat]:** As a [Combat] action, stamps the ground. All creatures within 20 feet on natural ground make a Reflex save (compare Agil 2 + Might 6 targeting vs. save). Net 1: 10 bludgeoning damage + Prone. Net 2: 18 bludgeoning damage + Prone + Restrained by cracking ground. Designated allies immune.
 
 **Reactions:**
 - **Stone Skin [Reaction]:** Once per round, reduce incoming physical damage by 6.
@@ -2933,14 +2933,14 @@ They are the least communicative of the four subtypes. Stone Nephilim speak when
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 7 (primordial stone flesh)
 **Speed:** 30 ft, Burrow 30 ft
-**Attributes:** Str 8 / Con 6 / Agi 2 / Dex 2 / Int 5 / Wis 5 / Cha 4 / Luck 4
+**Attributes:** Str 8 / Con 6 / Agil 2 / Dex 2 / Int 5 / Wis 5 / Cha 4 / Luck 4
 **Skills:** Melee Combat 6, Might 7, Perception 5, Intimidate 6
 **Senses:** Darkvision 60 ft, Tremorsense 300 ft
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Earth Breaker [Combat]:** Melee attack (Agi 2 + Melee Combat 6), Reach: 15 ft
+- **Earth Breaker [Combat]:** Melee attack (Agil 2 + Melee Combat 6), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2)
   - *Margin 2:* 22 damage (14 + 8 Str); target Grappled + Prone + Stunned until end of their next turn; no save; ongoing 12 bludgeoning damage per round while Grappled
   - *Margin 3:* 22 damage + Grappled + Prone + Stunned; ongoing increases to 18; target begins being driven into the ground — Engulf triggers at start of their next turn unless they succeed Fortitude save (Hard task, 2 successes)
@@ -2970,14 +2970,14 @@ They are the least communicative of the four subtypes. Stone Nephilim speak when
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 8 (deep-forged stone flesh)
 **Speed:** 30 ft, Burrow 40 ft
-**Attributes:** Str 8 / Con 6 / Agi 2 / Dex 2 / Int 6 / Wis 6 / Cha 5 / Luck 5
+**Attributes:** Str 8 / Con 6 / Agil 2 / Dex 2 / Int 6 / Wis 6 / Cha 5 / Luck 5
 **Skills:** Melee Combat 7, Might 8, Perception 6, Intimidate 7
 **Senses:** Darkvision 60 ft, Tremorsense 1 mile
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Continental Fist [Combat]:** Melee attack (Agi 2 + Melee Combat 7), Reach: 15 ft
+- **Continental Fist [Combat]:** Melee attack (Agil 2 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2)
   - *Margin 2:* 22 damage (14 + 8 Str); target Grappled + Prone + Restrained; ongoing 16 bludgeoning damage per round; no save; Fortitude save (Hard task, 2 successes) each round to break free
   - *Margin 3:* 22 damage + immediately Engulfed (driven into ground); Blinded + Restrained + 24 bludgeoning damage per round; Might check (Hard task, 2 successes) as full [Combat] action to escape, or ally excavates over 3 [Interact] actions
@@ -3008,14 +3008,14 @@ They are the least communicative of the four subtypes. Stone Nephilim speak when
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 9 (primordial earth-flesh)
 **Speed:** 30 ft, Burrow 60 ft
-**Attributes:** Str 8 / Con 6 / Agi 2 / Dex 2 / Int 7 / Wis 7 / Cha 6 / Luck 6
+**Attributes:** Str 8 / Con 6 / Agil 2 / Dex 2 / Int 7 / Wis 7 / Cha 6 / Luck 6
 **Skills:** Melee Combat 8, Might 8, Perception 7, Intimidate 8
 **Senses:** Darkvision 60 ft, Tremorsense 2 miles
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Nephilim (Giant) — Immune to non-magical piercing and slashing damage. Resistance to non-magical bludgeoning damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **World Crush [Combat]:** Melee attack (Agi 2 + Melee Combat 8), Reach: 20 ft
+- **World Crush [Combat]:** Melee attack (Agil 2 + Melee Combat 8), Reach: 20 ft
   - *Margin 1:* 16 damage (Huge, heavy: 14 + 2)
   - *Margin 2:* 24 damage (16 + 8 Str); target immediately Engulfed (Grappled + Restrained + Prone + Blinded); 24 bludgeoning damage per round; no save; Might check (Hard task, 2 successes) as full [Combat] action each round to escape
   - *Margin 3:* 24 damage + Engulfed; damage increases to 36 per round; escape requires ally excavation (4 [Interact] actions) or Might check at Fortune (the stone has begun to fuse around them)
@@ -3058,14 +3058,14 @@ They are patient in a way that distinguishes them from other Nephilim subtypes. 
 **HP:** 36 (Con 4 × 9, Tough)
 **DR:** 3 (ice-dense flesh)
 **Speed:** 30 ft (ignores movement penalties from ice and snow)
-**Attributes:** Str 5 / Con 4 / Agi 3 / Dex 3 / Int 3 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 5 / Con 4 / Agil 3 / Dex 3 / Int 3 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 4, Athletics 3, Perception 3
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Ice Slam [Combat]:** Melee attack (Agi 3 + Melee Combat 4), Reach: 10 ft
+- **Ice Slam [Combat]:** Melee attack (Agil 3 + Melee Combat 4), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 2 cold damage (Half DR); target gains Chilled condition
   - *Margin 2:* 15 damage (10 + 5 Str) + 2 cold damage; target gains Numbed condition; target's movement speed reduced by 10 until end of their next turn
   - *Margin 3:* 15 damage + 2 cold damage; target gains Frosted condition; movement speed reduced by 20 until end of their next turn
@@ -3089,14 +3089,14 @@ They are patient in a way that distinguishes them from other Nephilim subtypes. 
 **HP:** 56 (Con 4 × 14, Tough)
 **DR:** 4 (thick ice-flesh)
 **Speed:** 30 ft (ignores ice and snow movement penalties)
-**Attributes:** Str 6 / Con 4 / Agi 3 / Dex 3 / Int 3 / Wis 4 / Cha 3 / Luck 3
+**Attributes:** Str 6 / Con 4 / Agil 3 / Dex 3 / Int 3 / Wis 4 / Cha 3 / Luck 3
 **Skills:** Melee Combat 5, Athletics 4, Perception 4, Intimidate 3
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Glacial Strike [Combat]:** Melee attack (Agi 3 + Melee Combat 5), Reach: 10 ft
+- **Glacial Strike [Combat]:** Melee attack (Agil 3 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 4 cold damage (Half DR); target gains Numbed condition
   - *Margin 2:* 16 damage (10 + 6 Str) + 4 cold damage; target gains Frosted condition; movement speed halved until end of their next turn
   - *Margin 3:* 16 damage + 4 cold damage; target gains Frozen condition; Restrained until they succeed on a Might check (1 success) as a [Combat] action
@@ -3121,14 +3121,14 @@ They are patient in a way that distinguishes them from other Nephilim subtypes. 
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 5 (ancient ice-flesh)
 **Speed:** 35 ft (ignores ice and snow movement penalties)
-**Attributes:** Str 6 / Con 4 / Agi 3 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3
+**Attributes:** Str 6 / Con 4 / Agil 3 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3
 **Skills:** Melee Combat 5, Athletics 5, Perception 5, Intimidate 4
 **Senses:** Darkvision 60 ft
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Permafrost Fist [Combat]:** Melee attack (Agi 3 + Melee Combat 5), Reach: 15 ft
+- **Permafrost Fist [Combat]:** Melee attack (Agil 3 + Melee Combat 5), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 6 cold damage (Half DR); target gains Frosted condition
   - *Margin 2:* 20 damage (14 + 6 Str) + 6 cold damage; target gains Frozen condition + Prone; no save
   - *Margin 3:* 20 damage + 6 cold damage + Frozen + Prone; target Grappled as ice encases their limbs; ongoing 8 cold damage per round while Grappled
@@ -3155,14 +3155,14 @@ They are patient in a way that distinguishes them from other Nephilim subtypes. 
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 6 (primordial ice-flesh)
 **Speed:** 35 ft (ignores ice and snow movement penalties)
-**Attributes:** Str 7 / Con 6 / Agi 4 / Dex 5 / Int 5 / Wis 5 / Cha 4 / Luck 4
+**Attributes:** Str 7 / Con 6 / Agil 4 / Dex 5 / Int 5 / Wis 5 / Cha 4 / Luck 4
 **Skills:** Melee Combat 6, Athletics 6, Perception 6, Intimidate 5
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Abyssal Freeze [Combat]:** Melee attack (Agi 4 + Melee Combat 6), Reach: 15 ft
+- **Abyssal Freeze [Combat]:** Melee attack (Agil 4 + Melee Combat 6), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 8 cold damage (Half DR); target gains Frosted + movement halved
   - *Margin 2:* 21 damage (14 + 7 Str) + 8 cold damage; target gains Frozen + Prone + Grappled; ongoing 12 cold damage per round; no save
   - *Margin 3:* 21 damage + 8 cold damage + Frozen + Prone + Grappled + Restrained; target begins Engulf — driven into ice at start of their next turn unless Fortitude save (Hard task, 2 successes)
@@ -3187,14 +3187,14 @@ They are patient in a way that distinguishes them from other Nephilim subtypes. 
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 7 (ancient glacial flesh)
 **Speed:** 40 ft (ignores ice and snow movement penalties)
-**Attributes:** Str 7 / Con 6 / Agi 4 / Dex 6 / Int 6 / Wis 6 / Cha 5 / Luck 5
+**Attributes:** Str 7 / Con 6 / Agil 4 / Dex 6 / Int 6 / Wis 6 / Cha 5 / Luck 5
 **Skills:** Melee Combat 7, Athletics 7, Perception 7, Intimidate 6
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **World Freeze [Combat]:** Melee attack (Agi 4 + Melee Combat 7), Reach: 15 ft
+- **World Freeze [Combat]:** Melee attack (Agil 4 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 14 damage (Huge, standard: 12 + 2) + 10 cold damage (Half DR); target Frozen + Prone; no save
   - *Margin 2:* 21 damage (14 + 7 Str) + 10 cold damage; Frozen + Prone + Grappled + Restrained; ongoing 16 cold damage per round; no save; Fortitude save (Hard task, 2 successes) each round to break free
   - *Margin 3:* 21 damage + 10 cold damage + immediately Engulfed in ice; Blinded + Restrained + ongoing 24 cold damage; Might check (Hard task, 2 successes) as full [Combat] action to escape, or ally must melt or break free (2 Interact actions with fire or 3 without)
@@ -3220,14 +3220,14 @@ They are patient in a way that distinguishes them from other Nephilim subtypes. 
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 8 (primordial glacial flesh)
 **Speed:** 40 ft (ignores ice and snow movement penalties)
-**Attributes:** Str 8 / Con 6 / Agi 5 / Dex 7 / Int 7 / Wis 7 / Cha 6 / Luck 6
+**Attributes:** Str 8 / Con 6 / Agil 5 / Dex 7 / Int 7 / Wis 7 / Cha 6 / Luck 6
 **Skills:** Melee Combat 8, Athletics 8, Perception 8, Intimidate 7
 **Senses:** Darkvision 120 ft, Blindsight 60 ft (cold detection)
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Nephilim (Giant) — Immune to cold damage. Resistance to non-magical piercing and slashing damage (+2 DR). Powerful Build. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Glacial Apocalypse [Combat]:** Melee attack (Agi 5 + Melee Combat 8), Reach: 20 ft
+- **Glacial Apocalypse [Combat]:** Melee attack (Agil 5 + Melee Combat 8), Reach: 20 ft
   - *Margin 1:* 16 damage (Huge, heavy: 14 + 2) + 12 cold damage (Half DR); target immediately Frozen + Prone; no save
   - *Margin 2:* 24 damage (16 + 8 Str) + 12 cold damage; immediately Engulfed in ice; Blinded + Grappled + Restrained; ongoing 28 cold damage per round; no save; Might check (Hard task, 2 successes) as full [Combat] action each round to escape
   - *Margin 3:* 24 damage + 12 cold damage + Engulfed; escape requires Might check with Misfortune, or ally intervention (4 [Interact] actions with fire, 6 without); ongoing damage increases to 40
@@ -3267,14 +3267,14 @@ All Fae share: Fortune on saving throws against charm effects. Do not need air, 
 **HP:** 8 (Con 2 × 4, Fragile)
 **DR:** 0
 **Speed:** 0 ft, Fly 40 ft (Hover)
-**Attributes:** Str 1 / Con 2 / Agi 5 / Dex 4 / Int 3 / Wis 3 / Cha 4 / Luck 4
+**Attributes:** Str 1 / Con 2 / Agil 5 / Dex 4 / Int 3 / Wis 3 / Cha 4 / Luck 4
 **Skills:** Perception 3, Stealth 4, Deception 3
 **Senses:** Darkvision 60 ft, Low-Light Vision
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fey — Fortune on saves vs charm effects. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Mote Sting [Combat]:** Melee attack (Agi 5 + Melee Combat 1), Reach: 5 ft
+- **Mote Sting [Combat]:** Melee attack (Agil 5 + Melee Combat 1), Reach: 5 ft
   - *Margin 1:* 1 damage; target must make Will save (1 success) or become briefly distracted — adds 1 to one die on their next action
   - *Margin 2:* 1 damage; distraction applies with no save; target also drops any item they were holding loosely
 
@@ -3294,10 +3294,10 @@ All Fae share: Fortune on saving throws against charm effects. Do not need air, 
 **HP:** 12 (Con 2 × 6, Fragile)
 **DR:** 0
 **Speed:** 20 ft, Fly 40 ft
-**Attributes:** Str 1 / Con 2 / Agi 5 / Dex 5 / Int 3 / Wis 4 / Cha 3 / Luck 3
+**Attributes:** Str 1 / Con 2 / Agil 5 / Dex 5 / Int 3 / Wis 4 / Cha 3 / Luck 3
 **Skills:** Perception 4, Stealth 4, Ranged Combat 4, Wilderness 3
 **Senses:** Darkvision 60 ft, Low-Light Vision
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fey — Fortune on saves vs charm effects. Does not need air, food, drink, or sleep.
 
 **Attacks:**
@@ -3322,14 +3322,14 @@ All Fae share: Fortune on saving throws against charm effects. Do not need air, 
 **HP:** 27 (Con 3 × 9, Tough)
 **DR:** 2 (thick hide)
 **Speed:** 30 ft
-**Attributes:** Str 4 / Con 3 / Agi 4 / Dex 3 / Int 3 / Wis 3 / Cha 3 / Luck 3
+**Attributes:** Str 4 / Con 3 / Agil 4 / Dex 3 / Int 3 / Wis 3 / Cha 3 / Luck 3
 **Skills:** Melee Combat 4, Stealth 4, Deception 3, Intimidate 3, Perception 3
 **Senses:** Darkvision 60 ft, Low-Light Vision
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Fey — Fortune on saves vs charm effects. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Claws [Combat]:** Melee attack (Agi 4 + Melee Combat 4), Reach: 5 ft
+- **Claws [Combat]:** Melee attack (Agil 4 + Melee Combat 4), Reach: 5 ft
   - *Margin 1:* 5 damage (Small, standard: 6 − 1)
   - *Margin 2:* 9 damage (5 + 4 Str); target makes Will save (1 success) or gains Frightened condition until end of their next turn
   - *Margin 3:* 9 damage; Frightened condition; no save; target also gains Disoriented until end of their next turn as the Boggart's appearance burns into their perception
@@ -3350,18 +3350,18 @@ All Fae share: Fortune on saving throws against charm effects. Do not need air, 
 **HP:** 40 (Con 5 × 8, Tough)
 **DR:** S: 3, P: 2, B: 4 (dense body and iron-soled boots)
 **Speed:** 35 ft
-**Attributes:** Str 5 / Con 5 / Agi 4 / Dex 3 / Int 2 / Wis 2 / Cha 3 / Luck 2
+**Attributes:** Str 5 / Con 5 / Agil 4 / Dex 3 / Int 2 / Wis 2 / Cha 3 / Luck 2
 **Skills:** Melee Combat 5, Intimidate 4, Athletics 3, Perception 2
 **Senses:** Darkvision 60 ft, Low-Light Vision
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Fey — Fortune on saves vs charm effects. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Scythe [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft
+- **Scythe [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach: 5 ft
   - *Margin 1:* 8 damage [Slashing]
   - *Margin 2:* 13 damage (8 + 5 Str) [Slashing]; target gains 1 Bleeding stack
   - *Margin 3:* 13 damage + 2 Bleeding stacks; target makes Fortitude save (1 success) or movement speed reduced by 10 until the Bleeding is removed
-- **Boot Stomp [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach: 5 ft — only usable against Prone targets
+- **Boot Stomp [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach: 5 ft — only usable against Prone targets
   - *Margin 1:* 8 damage [Bludgeoning]
   - *Margin 2:* 13 damage [Bludgeoning]; target Pinned until the Redcap moves away
   - *Margin 3:* 13 damage + Pinned; target makes Fortitude save (1 success) or gains 1 Exhaustion level from the impact
@@ -3381,14 +3381,14 @@ All Fae share: Fortune on saving throws against charm effects. Do not need air, 
 **HP:** 52 (Con 4 × 13, Standard)
 **DR:** 2 (fae resilience)
 **Speed:** 40 ft, Fly 20 ft
-**Attributes:** Str 4 / Con 4 / Agi 5 / Dex 5 / Int 4 / Wis 5 / Cha 4 / Luck 4
+**Attributes:** Str 4 / Con 4 / Agil 5 / Dex 5 / Int 4 / Wis 5 / Cha 4 / Luck 4
 **Skills:** Melee Combat 5, Ranged Combat 5, Stealth 6, Perception 6, Wilderness 4
 **Senses:** Darkvision 60 ft, Low-Light Vision, Truesight 30 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fey — Fortune on saves vs charm effects. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Fae Blade [Combat]:** Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft
+- **Fae Blade [Combat]:** Melee attack (Agil 5 + Melee Combat 5), Reach: 5 ft
   - *Margin 1:* 8 damage + 4 psychic damage (Ignore DR)
   - *Margin 2:* 12 damage (8 + 4 Str) + 4 psychic damage; target makes Will save (1 success) or Disoriented until end of their next turn
   - *Margin 3:* 12 damage + 4 psychic damage + Disoriented; target also cannot benefit from Fortune on their next roll as fae magic disrupts their momentum
@@ -3413,14 +3413,14 @@ All Fae share: Fortune on saving throws against charm effects. Do not need air, 
 **HP:** 90 (Con 5 × 18, Tough)
 **DR:** 3 (bark-like skin interwoven with thorns)
 **Speed:** 35 ft
-**Attributes:** Str 5 / Con 5 / Agi 5 / Dex 4 / Int 5 / Wis 6 / Cha 5 / Luck 4
+**Attributes:** Str 5 / Con 5 / Agil 5 / Dex 4 / Int 5 / Wis 6 / Cha 5 / Luck 4
 **Skills:** Melee Combat 6, Perception 6, Wilderness 6, Intimidate 5, Stealth 5
 **Senses:** Darkvision 60 ft, Low-Light Vision, Tremorsense 60 ft (through roots and living plants)
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fey — Fortune on saves vs charm effects. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Thorn Lash [Combat]:** Melee attack (Agi 5 + Melee Combat 6), Reach: 10 ft
+- **Thorn Lash [Combat]:** Melee attack (Agil 5 + Melee Combat 6), Reach: 10 ft
   - *Margin 1:* 8 damage + target gains 1 Bleeding stack as thorns catch skin
   - *Margin 2:* 13 damage (8 + 5 Str) + 2 Bleeding stacks; target makes Reflex save (1 success) or Restrained by animate vines until they succeed on an Athletics check (1 success) as a [Combat] action
   - *Margin 3:* 13 damage + 2 Bleeding stacks + Restrained; target's movement speed reduced by 20 even after escaping Restrained, for 1 minute, as thorns remain embedded
@@ -3444,14 +3444,14 @@ All Fae share: Fortune on saving throws against charm effects. Do not need air, 
 **HP:** 140 (Con 5 × 28, Massive — Fae vitality at this tier is substantial)
 **DR:** 4 (fae resilience, accumulated centuries)
 **Speed:** 40 ft, Fly 40 ft
-**Attributes:** Str 4 / Con 5 / Agi 6 / Dex 5 / Int 7 / Wis 7 / Cha 8 / Luck 6
+**Attributes:** Str 4 / Con 5 / Agil 6 / Dex 5 / Int 7 / Wis 7 / Cha 8 / Luck 6
 **Skills:** Melee Combat 6, Perception 7, Deception 7, Persuasion 7, Intimidate 6, Arcane 6, Empathy 7
 **Senses:** Darkvision 120 ft, Low-Light Vision, Truesight 60 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Fey — Fortune on saves vs charm effects. Immune to mind-affecting effects from non-Fae sources. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Fae Court Blade [Combat]:** Melee attack (Agi 6 + Melee Combat 6), Reach: 5 ft
+- **Fae Court Blade [Combat]:** Melee attack (Agil 6 + Melee Combat 6), Reach: 5 ft
   - *Margin 1:* 8 damage + 8 psychic damage (Ignore DR)
   - *Margin 2:* 12 damage (8 + 4 Str) + 8 psychic damage; target Charmed for 1 minute — treats the Court Noble as a trusted acquaintance, cannot attack it; Will save (Hard task, 2 successes) to resist
   - *Margin 3:* 12 damage + 8 psychic damage + Charmed; no save; Charmed target also cannot target the Court Noble's designated allies with attacks or harmful abilities for the duration
@@ -3476,14 +3476,14 @@ All Fae share: Fortune on saving throws against charm effects. Do not need air, 
 **HP:** 200 (Con 5 × 40, Massive — the Forest Sovereign's fae vitality at this tier is exceptional)
 **DR:** 5 (ancient bark-skin and layered fae resilience)
 **Speed:** 50 ft, Fly 50 ft
-**Attributes:** Str 6 / Con 5 / Agi 6 / Dex 5 / Int 8 / Wis 8 / Cha 8 / Luck 7
+**Attributes:** Str 6 / Con 5 / Agil 6 / Dex 5 / Int 8 / Wis 8 / Cha 8 / Luck 7
 **Skills:** Melee Combat 7, Perception 8, Deception 8, Persuasion 8, Intimidate 7, Arcane 7, Wilderness 8, Empathy 8
 **Senses:** Darkvision 120 ft, Low-Light Vision, Truesight 120 ft, Tremorsense 1 mile (through roots and living plants)
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Fey — Fortune on saves vs charm effects. Immune to mind-affecting effects from non-Fae sources. Immune to non-magical piercing and slashing damage (bark-skin). Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Branch Slam [Combat]:** Melee attack (Agi 6 + Melee Combat 7), Reach: 15 ft
+- **Branch Slam [Combat]:** Melee attack (Agil 6 + Melee Combat 7), Reach: 15 ft
   - *Margin 1:* 12 damage (Large, standard: 10... adjusted to 12 for Fae vitality expression) + 8 psychic damage (Ignore DR)
   - *Margin 2:* 18 damage (12 + 6 Str) + 8 psychic damage; target Charmed for 1 hour — treats the Forest Sovereign as a trusted authority; Will save (Hard task, 2 successes) to resist; Charmed target will not attack the Forest Sovereign or its designated allies
   - *Margin 3:* 18 damage + 8 psychic damage + Charmed; no save; target also Restrained by animate roots for 1 minute as the Forest Sovereign's will reaches through the ground
@@ -3524,10 +3524,10 @@ All Aetherim share: Immune to poison damage, Poisoned condition, disease, fear. 
 **HP:** 8 (Con 2 × 4, Fragile)
 **DR:** 0
 **Speed:** 0 ft, Fly 40 ft (Hover)
-**Attributes:** Str 1 / Con 2 / Agi 4 / Dex 3 / Int 3 / Wis 4 / Cha 3 / Luck 4
+**Attributes:** Str 1 / Con 2 / Agil 4 / Dex 3 / Int 3 / Wis 4 / Cha 3 / Luck 4
 **Skills:** Perception 3, Medicine 2
 **Senses:** Darkvision 60 ft, Truesight 10 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
@@ -3551,10 +3551,10 @@ All Aetherim share: Immune to poison damage, Poisoned condition, disease, fear. 
 **HP:** 14 (Con 2 × 7, Standard)
 **DR:** 2 (divine resilience)
 **Speed:** 20 ft, Fly 50 ft (Hover)
-**Attributes:** Str 2 / Con 2 / Agi 5 / Dex 4 / Int 4 / Wis 5 / Cha 4 / Luck 4
+**Attributes:** Str 2 / Con 2 / Agil 5 / Dex 4 / Int 4 / Wis 5 / Cha 4 / Luck 4
 **Skills:** Perception 4, Medicine 3, Religion 3
 **Senses:** Darkvision 60 ft, Truesight 30 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
@@ -3581,14 +3581,14 @@ All Aetherim share: Immune to poison damage, Poisoned condition, disease, fear. 
 **HP:** 32 (Con 4 × 8, Standard)
 **DR:** 4 (divine plate)
 **Speed:** 30 ft, Fly 40 ft
-**Attributes:** Str 4 / Con 4 / Agi 4 / Dex 3 / Int 4 / Wis 5 / Cha 4 / Luck 4
+**Attributes:** Str 4 / Con 4 / Agil 4 / Dex 3 / Int 4 / Wis 5 / Cha 4 / Luck 4
 **Skills:** Melee Combat 4, Perception 4, Medicine 3, Religion 3
 **Senses:** Darkvision 60 ft, Truesight 30 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Radiant Blade [Combat]:** Melee attack (Agi 4 + Melee Combat 4), Reach: 5 ft
+- **Radiant Blade [Combat]:** Melee attack (Agil 4 + Melee Combat 4), Reach: 5 ft
   - *Margin 1:* 6 damage + 4 Positive damage (Half DR)
   - *Margin 2:* 10 damage (6 + 4 Str) + 4 Positive damage; undead and evil-aligned creatures make Will save (1 success) or Frightened until end of their next turn
   - *Margin 3:* 10 damage + 4 Positive damage; Frightened condition; no save; target also Blinded until end of their next turn from the concentrated radiant discharge
@@ -3611,14 +3611,14 @@ All Aetherim share: Immune to poison damage, Poisoned condition, disease, fear. 
 **HP:** 48 (Con 4 × 12, Tough — Aetherim vitality at higher tiers reflects their Positive plane origin)
 **DR:** 4 (divine plate)
 **Speed:** 40 ft, Fly 60 ft
-**Attributes:** Str 5 / Con 4 / Agi 5 / Dex 4 / Int 4 / Wis 5 / Cha 5 / Luck 4
+**Attributes:** Str 5 / Con 4 / Agil 5 / Dex 4 / Int 4 / Wis 5 / Cha 5 / Luck 4
 **Skills:** Melee Combat 5, Perception 5, Medicine 4, Religion 4, Intimidate 3
 **Senses:** Darkvision 60 ft, Truesight 30 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Holy Blade [Combat]:** Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft
+- **Holy Blade [Combat]:** Melee attack (Agil 5 + Melee Combat 5), Reach: 5 ft
   - *Margin 1:* 8 damage + 6 Positive damage (Half DR)
   - *Margin 2:* 13 damage (8 + 5 Str) + 6 Positive damage; undead and evil-aligned creatures Frightened for 1 minute; Will save (1 success) to resist
   - *Margin 3:* 13 damage + 6 Positive damage; Frightened; no save; undead must make Fortitude save (1 success) or destroyed outright if below half HP
@@ -3643,14 +3643,14 @@ All Aetherim share: Immune to poison damage, Poisoned condition, disease, fear. 
 **HP:** 64 (Con 4 × 16, Tough)
 **DR:** 5 (divine resilience, centuries of Positive energy concentration)
 **Speed:** 40 ft, Fly 70 ft
-**Attributes:** Str 4 / Con 4 / Agi 5 / Dex 4 / Int 6 / Wis 7 / Cha 6 / Luck 5
+**Attributes:** Str 4 / Con 4 / Agil 5 / Dex 4 / Int 6 / Wis 7 / Cha 6 / Luck 5
 **Skills:** Melee Combat 5, Perception 6, Medicine 5, Religion 5, Persuasion 5, Empathy 6
 **Senses:** Darkvision 60 ft, Truesight 60 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Aetherim — Immune to poison damage, Poisoned, disease, fear. Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Radiant Strike [Combat]:** Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft
+- **Radiant Strike [Combat]:** Melee attack (Agil 5 + Melee Combat 5), Reach: 5 ft
   - *Margin 1:* 8 damage + 8 Positive damage (Half DR)
   - *Margin 2:* 12 damage (8 + 4 Str) + 8 Positive damage; undead Frightened for 1 minute; Will save (Hard task, 2 successes) to resist
   - *Margin 3:* 12 damage + 8 Positive damage; Frightened; no save; undead at half HP or below destroyed outright
@@ -3677,14 +3677,14 @@ All Aetherim share: Immune to poison damage, Poisoned condition, disease, fear. 
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 6 (divine plate, ancient construction)
 **Speed:** 50 ft, Fly 90 ft
-**Attributes:** Str 6 / Con 6 / Agi 6 / Dex 5 / Int 6 / Wis 7 / Cha 7 / Luck 6
+**Attributes:** Str 6 / Con 6 / Agil 6 / Dex 5 / Int 6 / Wis 7 / Cha 7 / Luck 6
 **Skills:** Melee Combat 7, Perception 7, Medicine 6, Religion 6, Persuasion 6, Intimidate 6
 **Senses:** Darkvision 120 ft, Truesight 120 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Aetherim — Immune to poison damage, Poisoned, disease, fear, necrotic damage. Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Radiant Greatsword [Combat]:** Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft
+- **Radiant Greatsword [Combat]:** Melee attack (Agil 6 + Melee Combat 7), Reach: 10 ft
   - *Margin 1:* 12 damage (Large, standard: 10 + 2) + 10 Positive damage (Half DR)
   - *Margin 2:* 18 damage (12 + 6 Str) + 10 Positive damage; evil-aligned creatures and undead make Will save (Hard task, 2 successes) or Blinded for 1 minute + Frightened for 1 minute; both conditions apply simultaneously
   - *Margin 3:* 18 damage + 10 Positive damage; Blinded + Frightened; no save; undead at or below half HP destroyed outright
@@ -3711,14 +3711,14 @@ All Aetherim share: Immune to poison damage, Poisoned condition, disease, fear. 
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 7 (ancient divine construction)
 **Speed:** 50 ft, Fly 110 ft
-**Attributes:** Str 7 / Con 6 / Agi 6 / Dex 5 / Int 7 / Wis 8 / Cha 7 / Luck 6
+**Attributes:** Str 7 / Con 6 / Agil 6 / Dex 5 / Int 7 / Wis 8 / Cha 7 / Luck 6
 **Skills:** Melee Combat 7, Perception 8, Medicine 7, Religion 7, Persuasion 7, Intimidate 7
 **Senses:** Darkvision 120 ft, Truesight 120 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Aetherim — Immune to poison damage, Poisoned, disease, fear, necrotic damage, non-magical weapons. Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Sovereign Blade [Combat]:** Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft
+- **Sovereign Blade [Combat]:** Melee attack (Agil 6 + Melee Combat 7), Reach: 10 ft
   - *Margin 1:* 14 damage (Large, heavy: 12 + 2) + 14 Positive damage (Half DR)
   - *Margin 2:* 21 damage (14 + 7 Str) + 14 Positive damage; all evil-aligned creatures and undead within 10 feet of the target make Will save (Hard task, 2 successes) or Blinded + Frightened for 1 minute; radiant discharge spreads from the impact point
   - *Margin 3:* 21 damage + 14 Positive damage; area effect triggers; no save; undead at or below half HP in the area destroyed outright
@@ -3746,14 +3746,14 @@ All Aetherim share: Immune to poison damage, Poisoned condition, disease, fear. 
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 8 (primordial divine construction)
 **Speed:** 60 ft, Fly 130 ft
-**Attributes:** Str 7 / Con 6 / Agi 7 / Dex 6 / Int 8 / Wis 8 / Cha 8 / Luck 7
+**Attributes:** Str 7 / Con 6 / Agil 7 / Dex 6 / Int 8 / Wis 8 / Cha 8 / Luck 7
 **Skills:** Melee Combat 8, Perception 8, Medicine 8, Religion 8, Persuasion 8, Intimidate 7
 **Senses:** Darkvision 120 ft, Truesight 120 ft, Perfect Sight 60 ft
-**Initiative Bonus:** +7 (Agi 7)
+**Initiative Bonus:** +7 (Agil 7)
 **Creature Type:** Aetherim — Immune to poison damage, Poisoned, disease, fear, necrotic damage, non-magical weapons. Fortune on all saves. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Primordial Radiance [Combat]:** Melee attack (Agi 7 + Melee Combat 8), Reach: 10 ft
+- **Primordial Radiance [Combat]:** Melee attack (Agil 7 + Melee Combat 8), Reach: 10 ft
   - *Margin 1:* 14 damage (Large, heavy: 12 + 2) + 16 Positive damage (Half DR)
   - *Margin 2:* 21 damage (14 + 7 Str) + 16 Positive damage; all evil-aligned creatures and undead within 20 feet of the target make Will save (Hard task, 2 successes) or Blinded + Frightened for 1 minute + 16 Positive damage (Half DR) from the radiant discharge; living allies in the same radius heal 8 HP
   - *Margin 3:* 21 damage + 16 Positive damage; all effects apply with no save; undead at or below half HP in the area destroyed; living allies heal 16 HP
@@ -3797,14 +3797,14 @@ All Fiends share: Immune to poison damage, Poisoned condition. Resistance to fir
 **HP:** 10 (Con 2 × 5, Fragile)
 **DR:** 1 (scaled hide)
 **Speed:** 20 ft, Fly 30 ft
-**Attributes:** Str 1 / Con 2 / Agi 5 / Dex 5 / Int 4 / Wis 3 / Cha 3 / Luck 3
+**Attributes:** Str 1 / Con 2 / Agil 5 / Dex 5 / Int 4 / Wis 3 / Cha 3 / Luck 3
 **Skills:** Stealth 5, Deception 4, Perception 3, Melee Combat 1
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fiend — Immune to poison damage, Poisoned. Resistance to fire, cold, lightning (+2 DR each). Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Sting [Combat]:** Melee attack (Agi 5 + Melee Combat 1), Reach: 5 ft
+- **Sting [Combat]:** Melee attack (Agil 5 + Melee Combat 1), Reach: 5 ft
   - *Margin 1:* 1 damage; target makes Fortitude save (1 success) or gains Poisoned (Weak) for 1 minute
   - *Margin 2:* 1 damage; Poisoned (Weak) for 1 hour; no save; target also gains Sickened condition for 1 round
 
@@ -3825,14 +3825,14 @@ All Fiends share: Immune to poison damage, Poisoned condition. Resistance to fir
 **HP:** 16 (Con 2 × 8, Tough)
 **DR:** 2 (thick hide)
 **Speed:** 35 ft
-**Attributes:** Str 3 / Con 2 / Agi 5 / Dex 3 / Int 2 / Wis 2 / Cha 2 / Luck 2
+**Attributes:** Str 3 / Con 2 / Agil 5 / Dex 3 / Int 2 / Wis 2 / Cha 2 / Luck 2
 **Skills:** Melee Combat 3, Perception 2, Athletics 2, Stealth 3
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fiend — Immune to poison damage, Poisoned. Resistance to fire, cold, lightning (+2 DR each). Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Bite [Combat]:** Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft
+- **Bite [Combat]:** Melee attack (Agil 5 + Melee Combat 3), Reach: 5 ft
   - *Margin 1:* 4 damage (Small, standard: 4 − 1 + 1 for fiend density = 4) + 2 Negative damage (Half DR)
   - *Margin 2:* 7 damage (4 + 3 Str) + 2 Negative damage; target makes Fortitude save (1 success) or Weakened until end of their next turn
   - *Margin 3:* 7 damage + 2 Negative damage; Weakened; no save; target also gains Sickened condition until end of their next turn
@@ -3853,14 +3853,14 @@ All Fiends share: Immune to poison damage, Poisoned condition. Resistance to fir
 **HP:** 27 (Con 3 × 9, Tough)
 **DR:** 2 (shadow-dense hide)
 **Speed:** 50 ft
-**Attributes:** Str 4 / Con 3 / Agi 6 / Dex 4 / Int 2 / Wis 4 / Cha 2 / Luck 3
+**Attributes:** Str 4 / Con 3 / Agil 6 / Dex 4 / Int 2 / Wis 4 / Cha 2 / Luck 3
 **Skills:** Melee Combat 5, Stealth 5, Perception 4
 **Senses:** Darkvision 120 ft, Devil's Sight, Keen Smell (Fortune on scent-based Perception)
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Fiend — Immune to poison damage, Poisoned. Resistance to fire, cold, lightning (+2 DR each). Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Bite [Combat]:** Melee attack (Agi 6 + Melee Combat 5), Reach: 5 ft
+- **Bite [Combat]:** Melee attack (Agil 6 + Melee Combat 5), Reach: 5 ft
   - *Margin 1:* 6 damage + 4 Negative damage (Half DR)
   - *Margin 2:* 10 damage (6 + 4 Str) + 4 Negative damage; target makes Fortitude save (1 success) or Weakened until end of their next turn
   - *Margin 3:* 10 damage + 4 Negative damage; Weakened; no save; target also loses 2 from their Current Luck pool as the negative energy drains vitality directly
@@ -3882,14 +3882,14 @@ All Fiends share: Immune to poison damage, Poisoned condition. Resistance to fir
 **HP:** 40 (Con 5 × 8, Standard)
 **DR:** 3 (fiend hide)
 **Speed:** 40 ft, Fly 30 ft
-**Attributes:** Str 4 / Con 5 / Agi 5 / Dex 4 / Int 5 / Wis 4 / Cha 5 / Luck 3
+**Attributes:** Str 4 / Con 5 / Agil 5 / Dex 4 / Int 5 / Wis 4 / Cha 5 / Luck 3
 **Skills:** Melee Combat 5, Intimidate 5, Deception 4, Perception 4, Stealth 3
 **Senses:** Darkvision 120 ft, Devil's Sight, Truesight 15 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fiend — Immune to poison damage, Poisoned. Resistance to fire, cold, lightning (+2 DR each). Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Barbed Claws [Combat]:** Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft
+- **Barbed Claws [Combat]:** Melee attack (Agil 5 + Melee Combat 5), Reach: 5 ft
   - *Margin 1:* 8 damage + 1 Bleeding stack
   - *Margin 2:* 12 damage (8 + 4 Str) + 2 Bleeding stacks; target makes Will save (1 success) or Frightened until end of their next turn
   - *Margin 3:* 12 damage + 2 Bleeding stacks; Frightened; no save; target also Disoriented until end of their next turn — the Tormentor's appearance burns into their perception
@@ -3913,18 +3913,18 @@ All Fiends share: Immune to poison damage, Poisoned condition. Resistance to fir
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 5 (bone armor, fiend resilience)
 **Speed:** 40 ft, Fly 40 ft
-**Attributes:** Str 5 / Con 4 / Agi 4 / Dex 3 / Int 5 / Wis 4 / Cha 5 / Luck 3
+**Attributes:** Str 5 / Con 4 / Agil 4 / Dex 3 / Int 5 / Wis 4 / Cha 5 / Luck 3
 **Skills:** Melee Combat 5, Perception 5, Deception 5, Intimidate 5
 **Senses:** Darkvision 120 ft, Devil's Sight, Truesight 30 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Fiend — Immune to poison damage, Poisoned. Resistance to fire, cold, lightning (+2 DR each). Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Claw [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft
+- **Claw [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2)
   - *Margin 2:* 15 damage (10 + 5 Str); target Grappled; no save; Grappled target takes 6 Negative damage (Half DR) at start of each of their turns
   - *Margin 3:* 15 damage + Grappled + Restrained; ongoing damage increases to 10 Negative
-- **Tail Sting [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach: 10 ft
+- **Tail Sting [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach: 10 ft
   - *Margin 1:* 8 damage; target makes Fortitude save (1 success) or Poisoned (Strong) for 1 hour
   - *Margin 2:* 8 damage; Poisoned (Strong); no save; target also Weakened for 1 minute
   - *Margin 3:* 8 damage; Poisoned (Strong) + Weakened; target loses 3 from Current Luck pool as the venom disrupts vital energy
@@ -3946,18 +3946,18 @@ All Fiends share: Immune to poison damage, Poisoned condition. Resistance to fir
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 5 (rage-hardened hide)
 **Speed:** 50 ft, Fly 50 ft
-**Attributes:** Str 7 / Con 6 / Agi 5 / Dex 4 / Int 4 / Wis 4 / Cha 5 / Luck 4
+**Attributes:** Str 7 / Con 6 / Agil 5 / Dex 4 / Int 4 / Wis 4 / Cha 5 / Luck 4
 **Skills:** Melee Combat 7, Intimidate 6, Perception 5, Athletics 5
 **Senses:** Darkvision 120 ft, Devil's Sight
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fiend — Immune to poison damage, Poisoned. Resistance to fire, cold, lightning (+2 DR each). Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Devastation Strike [Combat]:** Melee attack (Agi 5 + Melee Combat 7), Reach: 10 ft
+- **Devastation Strike [Combat]:** Melee attack (Agil 5 + Melee Combat 7), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 6 Negative damage (Half DR)
   - *Margin 2:* 17 damage (10 + 7 Str) + 6 Negative damage; target knocked Prone + Stunned until end of their next turn; no save
   - *Margin 3:* 17 damage + 6 Negative damage + Prone + Stunned; target makes Fortitude save (1 success) or loses 1 point of Strength permanently until they receive Major Restoration — the Wrath Fiend's strike is not merely physical damage but a direct assault on the target's vital essence
-- **Infernal Roar [Combat]:** As a [Combat] action, releases a roar of pure destructive fury in a 30-foot cone. All creatures in range make a Will save (compare Agi 5 + Intimidate 6 targeting vs. save). Net 1: Frightened for 1 round. Net 2: Frightened for 1 minute; Will save each round to end. Net 3: Cowering until end of their next turn, then Frightened for 1 minute.
+- **Infernal Roar [Combat]:** As a [Combat] action, releases a roar of pure destructive fury in a 30-foot cone. All creatures in range make a Will save (compare Agil 5 + Intimidate 6 targeting vs. save). Net 1: Frightened for 1 round. Net 2: Frightened for 1 minute; Will save each round to end. Net 3: Cowering until end of their next turn, then Frightened for 1 minute.
 
 **Special Abilities:**
 - **Unstoppable Fury:** The Wrath Fiend cannot be Stunned, Dazed, or Charmed. When it would be affected by these conditions, it ignores them entirely.
@@ -3977,14 +3977,14 @@ All Fiends share: Immune to poison damage, Poisoned condition. Resistance to fir
 **HP:** 160 (Con 5 × 32, Massive)
 **DR:** 6 (ancient fiend resilience)
 **Speed:** 40 ft, Fly 60 ft
-**Attributes:** Str 5 / Con 5 / Agi 5 / Dex 5 / Int 7 / Wis 6 / Cha 7 / Luck 5
+**Attributes:** Str 5 / Con 5 / Agil 5 / Dex 5 / Int 7 / Wis 6 / Cha 7 / Luck 5
 **Skills:** Melee Combat 6, Perception 6, Deception 7, Intimidate 7, Arcane 6
 **Senses:** Darkvision 120 ft, Devil's Sight, Truesight 60 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fiend — Immune to poison damage, Poisoned. Resistance to fire, cold, lightning (+2 DR each). Fortune on saves vs magic. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Fiend Blade [Combat]:** Melee attack (Agi 5 + Melee Combat 6), Reach: 10 ft
+- **Fiend Blade [Combat]:** Melee attack (Agil 5 + Melee Combat 6), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 8 Negative damage (Half DR)
   - *Margin 2:* 15 damage (10 + 5 Str) + 8 Negative damage; target Weakened + Sickened for 1 minute; no save
   - *Margin 3:* 15 damage + 8 Negative damage + Weakened + Sickened; target also loses 4 from Current Luck pool; target makes Fortitude save (1 success) or gains 1 Exhaustion level
@@ -4009,14 +4009,14 @@ All Fiends share: Immune to poison damage, Poisoned condition. Resistance to fir
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 7 (primordial fiend resilience)
 **Speed:** 40 ft, Fly 80 ft
-**Attributes:** Str 7 / Con 6 / Agi 5 / Dex 6 / Int 8 / Wis 7 / Cha 8 / Luck 6
+**Attributes:** Str 7 / Con 6 / Agil 5 / Dex 6 / Int 8 / Wis 7 / Cha 8 / Luck 6
 **Skills:** Melee Combat 7, Perception 7, Deception 8, Intimidate 8, Arcane 7
 **Senses:** Darkvision 120 ft, Devil's Sight, Truesight 120 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Fiend — Immune to poison damage, Poisoned, non-magical weapons, fire damage. Resistance to cold, lightning (+4 DR each). Fortune on all saves. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Entropic Strike [Combat]:** Melee attack (Agi 5 + Melee Combat 7), Reach: 10 ft
+- **Entropic Strike [Combat]:** Melee attack (Agil 5 + Melee Combat 7), Reach: 10 ft
   - *Margin 1:* 14 damage (Large, heavy: 12 + 2) + 12 Negative damage (Half DR)
   - *Margin 2:* 21 damage (14 + 7 Str) + 12 Negative damage; target Weakened + Sickened + loses 6 from Current Luck; no save; target makes Fortitude save (1 success) or gains 1 Exhaustion level
   - *Margin 3:* 21 damage + 12 Negative damage + all conditions; Exhaustion level; no save; target also loses 1 point of Constitution permanently until Major Restoration — the Void Fiend's touch erodes the body's fundamental resilience
@@ -4061,15 +4061,15 @@ Sunlight Sensitivity is noted per entry where it applies. Not all Shadow creatur
 **HP:** 10 (Con 2 × 5, Fragile)
 **DR:** 0
 **Speed:** 40 ft
-**Attributes:** Str 1 / Con 2 / Agi 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 1 / Con 2 / Agil 5 / Dex 3 / Int 2 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 2, Stealth 5, Perception 3
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.
 **Sunlight Sensitivity:** In bright light, adds 1 to both attack dice and skill check dice.
 
 **Attacks:**
-- **Strength Drain [Combat]:** Melee attack (Agi 5 + Melee Combat 2), Reach: 5 ft
+- **Strength Drain [Combat]:** Melee attack (Agil 5 + Melee Combat 2), Reach: 5 ft
   - *Margin 1:* 4 Negative damage (Ignore DR); target's Strength reduced by 1 for 1 hour
   - *Margin 2:* 4 Negative damage; Strength reduced by 2 for 1 hour; target gains Weakened condition
   - *Margin 3:* 4 Negative damage; Strength reduced by 3 for 1 hour; Weakened; target makes Fortitude save (1 success) or movement speed reduced by 10 until Strength restores
@@ -4090,15 +4090,15 @@ Sunlight Sensitivity is noted per entry where it applies. Not all Shadow creatur
 **HP:** 14 (Con 2 × 7, Standard)
 **DR:** 1
 **Speed:** 40 ft, Climb 40 ft
-**Attributes:** Str 2 / Con 2 / Agi 5 / Dex 4 / Int 3 / Wis 3 / Cha 2 / Luck 3
+**Attributes:** Str 2 / Con 2 / Agil 5 / Dex 4 / Int 3 / Wis 3 / Cha 2 / Luck 3
 **Skills:** Melee Combat 3, Stealth 6, Perception 4, Athletics 3
 **Senses:** Darkvision 120 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.
 **Sunlight Sensitivity:** In bright light, adds 1 to both attack dice and skill check dice.
 
 **Attacks:**
-- **Shadow Claw [Combat]:** Melee attack (Agi 5 + Melee Combat 3), Reach: 5 ft
+- **Shadow Claw [Combat]:** Melee attack (Agil 5 + Melee Combat 3), Reach: 5 ft
   - *Margin 1:* 5 damage + 3 Negative damage (Half DR); target's Current Luck reduced by 1
   - *Margin 2:* 7 damage (5 + 2 Str) + 3 Negative damage; Current Luck reduced by 2; target gains Disoriented condition until end of their next turn
   - *Margin 3:* 7 damage + 3 Negative damage; Current Luck reduced by 3; Disoriented; target makes Will save (1 success) or Frightened until end of their next turn as the darkness seems to press in around them
@@ -4120,15 +4120,15 @@ Sunlight Sensitivity is noted per entry where it applies. Not all Shadow creatur
 **HP:** 27 (Con 3 × 9, Tough)
 **DR:** 2 (shadow substance)
 **Speed:** 40 ft, Climb 40 ft
-**Attributes:** Str 4 / Con 3 / Agi 5 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3
+**Attributes:** Str 4 / Con 3 / Agil 5 / Dex 4 / Int 4 / Wis 4 / Cha 3 / Luck 3
 **Skills:** Melee Combat 5, Stealth 6, Perception 4, Deception 3
 **Senses:** Darkvision 120 ft, See Invisibility
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.
 **Sunlight Sensitivity:** In bright light, adds 1 to both attack dice and skill check dice.
 
 **Attacks:**
-- **Shadow Strike [Combat]:** Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft
+- **Shadow Strike [Combat]:** Melee attack (Agil 5 + Melee Combat 5), Reach: 5 ft
   - *Margin 1:* 8 damage + 4 Negative damage (Ignore DR); target loses 2 from Current Luck
   - *Margin 2:* 12 damage (8 + 4 Str) + 4 Negative damage; Current Luck reduced by 3; target Disoriented until start of their next turn; target loses the Hidden condition if they had it
   - *Margin 3:* 12 damage + 4 Negative damage; Current Luck reduced by 4; Disoriented; target also Dazed until end of their next turn — the shadow energy disrupts their timing and coordination
@@ -4150,14 +4150,14 @@ Sunlight Sensitivity is noted per entry where it applies. Not all Shadow creatur
 **HP:** 40 (Con 5 × 8, Standard)
 **DR:** 3 (dense shadow-substance)
 **Speed:** 50 ft, Climb 50 ft
-**Attributes:** Str 4 / Con 5 / Agi 6 / Dex 5 / Int 5 / Wis 5 / Cha 4 / Luck 4
+**Attributes:** Str 4 / Con 5 / Agil 6 / Dex 5 / Int 5 / Wis 5 / Cha 4 / Luck 4
 **Skills:** Melee Combat 6, Stealth 7, Perception 5, Deception 4, Athletics 4
 **Senses:** Darkvision 120 ft, Devil's Sight, See Invisibility
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Shadow Blade [Combat]:** Melee attack (Agi 6 + Melee Combat 6), Reach: 5 ft
+- **Shadow Blade [Combat]:** Melee attack (Agil 6 + Melee Combat 6), Reach: 5 ft
   - *Margin 1:* 8 damage + 6 Negative damage (Ignore DR); target loses 3 from Current Luck
   - *Margin 2:* 12 damage (8 + 4 Str) + 6 Negative damage; Current Luck reduced by 4; target Disoriented + Dazed until end of their next turn; no save
   - *Margin 3:* 12 damage + 6 Negative damage; Current Luck reduced by 5; Disoriented + Dazed; target makes Will save (1 success) or Frightened until end of their next turn as the accumulated shadow energy overwhelms their sense of safety
@@ -4182,14 +4182,14 @@ Sunlight Sensitivity is noted per entry where it applies. Not all Shadow creatur
 **HP:** 76 (Con 4 × 19, Massive)
 **DR:** 3 (shadow-dense hide)
 **Speed:** 70 ft, Fly 100 ft
-**Attributes:** Str 6 / Con 4 / Agi 6 / Dex 4 / Int 4 / Wis 4 / Cha 5 / Luck 4
+**Attributes:** Str 6 / Con 4 / Agil 6 / Dex 4 / Int 4 / Wis 4 / Cha 5 / Luck 4
 **Skills:** Melee Combat 6, Perception 5, Intimidate 5, Athletics 5, Stealth 4
 **Senses:** Darkvision 120 ft, Devil's Sight
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Flaming Hooves [Combat]:** Melee attack (Agi 6 + Melee Combat 6), Reach: 5 ft
+- **Flaming Hooves [Combat]:** Melee attack (Agil 6 + Melee Combat 6), Reach: 5 ft
   - *Margin 1:* 12 damage (Large, standard: 8 + 2 + 2 shadow density) + 4 fire damage (Half DR); target gains Singed condition
   - *Margin 2:* 18 damage (12 + 6 Str) + 4 fire damage; target knocked Prone; no save; target gains Ignited condition
   - *Margin 3:* 18 damage + 4 fire damage; Prone + Ignited; target makes Fortitude save (1 success) or Stunned until end of their next turn from the concussive force of the hooves
@@ -4212,14 +4212,14 @@ Sunlight Sensitivity is noted per entry where it applies. Not all Shadow creatur
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 4 (concentrated shadow-matter)
 **Speed:** 50 ft, Fly 60 ft
-**Attributes:** Str 5 / Con 6 / Agi 6 / Dex 5 / Int 6 / Wis 6 / Cha 5 / Luck 5
+**Attributes:** Str 5 / Con 6 / Agil 6 / Dex 5 / Int 6 / Wis 6 / Cha 5 / Luck 5
 **Skills:** Melee Combat 7, Stealth 7, Perception 6, Deception 5, Arcane 4
 **Senses:** Darkvision 120 ft, Devil's Sight, See Invisibility, Truesight 30 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Void Touch [Combat]:** Melee attack (Agi 6 + Melee Combat 7), Reach: 10 ft
+- **Void Touch [Combat]:** Melee attack (Agil 6 + Melee Combat 7), Reach: 10 ft
   - *Margin 1:* 10 damage (Large, standard: 8 + 2) + 8 Negative damage (Ignore DR); target loses 4 from Current Luck; target's maximum HP reduced by 8 until long rest (life drain)
   - *Margin 2:* 15 damage (10 + 5 Str) + 8 Negative damage; Current Luck reduced by 5; max HP reduced by 12; target Weakened + Sickened for 1 minute; no save
   - *Margin 3:* 15 damage + 8 Negative damage; Current Luck reduced by 6; max HP reduced by 16; Weakened + Sickened; target makes Fortitude save (1 success) or gains 1 Exhaustion level as the life drain reaches deeper than surface vitality
@@ -4244,14 +4244,14 @@ Sunlight Sensitivity is noted per entry where it applies. Not all Shadow creatur
 **HP:** 180 (Con 6 × 30, Massive)
 **DR:** 5 (ancient shadow-matter)
 **Speed:** 60 ft, Fly 80 ft
-**Attributes:** Str 6 / Con 6 / Agi 7 / Dex 6 / Int 7 / Wis 7 / Cha 6 / Luck 6
+**Attributes:** Str 6 / Con 6 / Agil 7 / Dex 6 / Int 7 / Wis 7 / Cha 6 / Luck 6
 **Skills:** Melee Combat 8, Stealth 8, Perception 7, Deception 6, Arcane 6, Intimidate 6
 **Senses:** Darkvision 120 ft, Devil's Sight, See Invisibility, Truesight 60 ft
-**Initiative Bonus:** +7 (Agi 7)
+**Initiative Bonus:** +7 (Agil 7)
 **Creature Type:** Shadow — Darkvision 120 ft. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+2 DR). Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Shadow Rend [Combat]:** Melee attack (Agi 7 + Melee Combat 8), Reach: 10 ft
+- **Shadow Rend [Combat]:** Melee attack (Agil 7 + Melee Combat 8), Reach: 10 ft
   - *Margin 1:* 14 damage (Large, heavy: 12 + 2) + 10 Negative damage (Ignore DR); target loses 5 from Current Luck; max HP reduced by 12 until long rest
   - *Margin 2:* 20 damage (14 + 6 Str) + 10 Negative damage; Current Luck reduced by 6; max HP reduced by 18; Weakened + Sickened + Disoriented for 1 minute; no save
   - *Margin 3:* 20 damage + 10 Negative damage; all conditions; max HP reduced by 24; target makes Fortitude save (Hard task, 2 successes) or gains 1 Exhaustion level and loses 1 point of Constitution permanently until Major Restoration
@@ -4277,14 +4277,14 @@ Sunlight Sensitivity is noted per entry where it applies. Not all Shadow creatur
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 6 (primordial shadow-matter)
 **Speed:** 60 ft, Fly 100 ft
-**Attributes:** Str 7 / Con 6 / Agi 7 / Dex 7 / Int 8 / Wis 8 / Cha 7 / Luck 7
+**Attributes:** Str 7 / Con 6 / Agil 7 / Dex 7 / Int 8 / Wis 8 / Cha 7 / Luck 7
 **Skills:** Melee Combat 8, Stealth 8, Perception 8, Deception 7, Arcane 7, Intimidate 7
 **Senses:** Darkvision unlimited, Devil's Sight, See Invisibility, Truesight 120 ft, Perfect Sight 60 ft
-**Initiative Bonus:** +7 (Agi 7)
+**Initiative Bonus:** +7 (Agil 7)
 **Creature Type:** Shadow — Darkvision unlimited range. Shadow Meld (passive). Positive energy vulnerability. Cold Resistance (+4 DR). Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Void Rend [Combat]:** Melee attack (Agi 7 + Melee Combat 8), Reach: 15 ft
+- **Void Rend [Combat]:** Melee attack (Agil 7 + Melee Combat 8), Reach: 15 ft
   - *Margin 1:* 16 damage (Huge, heavy: 14 + 2) + 14 Negative damage (Ignore DR); target loses 6 from Current Luck; max HP reduced by 16 until long rest
   - *Margin 2:* 23 damage (16 + 7 Str) + 14 Negative damage; Current Luck reduced by 8; max HP reduced by 24; Weakened + Sickened + Disoriented + Dazed for 1 minute; no save
   - *Margin 3:* 23 damage + 14 Negative damage; all conditions; max HP reduced by 32; target makes Fortitude save (Hard task, 2 successes) or loses 2 points of Constitution permanently until Major Restoration; target also loses 1 point of Wisdom permanently until Major Restoration as the void touches their mind
@@ -4328,14 +4328,14 @@ Individual entries note additional capabilities. Aberrations are the only daemon
 **HP:** 6 (Con 1 × 6, Fragile)
 **DR:** 0
 **Speed:** 0 ft, Fly 30 ft (hover)
-**Attributes:** Str 1 / Con 1 / Agi 4 / Dex 4 / Int 1 / Wis 2 / Cha 1 / Luck 2
+**Attributes:** Str 1 / Con 1 / Agil 4 / Dex 4 / Int 1 / Wis 2 / Cha 1 / Luck 2
 **Skills:** Melee Combat 1, Stealth 4, Perception 3
 **Senses:** Darkvision 120 ft, Tremorsense 30 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Aberration — Darkvision 120 ft. Immune to Frightened, Charm. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Reality Nibble [Combat]:** Melee attack (Agi 4 + Melee Combat 1), Reach: 5 ft
+- **Reality Nibble [Combat]:** Melee attack (Agil 4 + Melee Combat 1), Reach: 5 ft
   - *Margin 1:* 2 damage (Ignore DR); target's next skill check adds 1 to the result (makes it harder to succeed, stacks across multiple Void Mote hits in the same encounter)
   - *Margin 2:* 2 damage; two stacks of the skill check penalty; target makes Will save (1 success) or gains the Disoriented condition until end of their next turn as local reality briefly stutters around them
   - *Margin 3:* 2 damage; three stacks; Disoriented without a save; target also has difficulty distinguishing distances — all ranged attacks they make add 1 to both attack dice until the skill check penalty clears
@@ -4356,14 +4356,14 @@ Individual entries note additional capabilities. Aberrations are the only daemon
 **HP:** 12 (Con 2 × 6, Standard)
 **DR:** 1
 **Speed:** 30 ft, Climb 30 ft, Fly 20 ft
-**Attributes:** Str 2 / Con 2 / Agi 4 / Dex 5 / Int 3 / Wis 3 / Cha 2 / Luck 3
+**Attributes:** Str 2 / Con 2 / Agil 4 / Dex 5 / Int 3 / Wis 3 / Cha 2 / Luck 3
 **Skills:** Melee Combat 3, Stealth 5, Perception 4, Arcane 2
 **Senses:** Darkvision 120 ft, Tremorsense 30 ft, Seam Sense 60 ft
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Aberration — Darkvision 120 ft. Immune to Frightened, Charm. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Phase Claw [Combat]:** Melee attack (Agi 4 + Melee Combat 3), Reach: 5 ft
+- **Phase Claw [Combat]:** Melee attack (Agil 4 + Melee Combat 3), Reach: 5 ft
   - *Margin 1:* 4 damage (Ignore DR); target's DR reduced by 1 for 1 minute (the phase claw creates micro-tears in whatever barrier DR represents — armor, toughness, magical protection)
   - *Margin 2:* 6 damage (4 + 2 Str) + 2 force damage (Ignore DR); DR reduced by 2 for 1 minute; target's next defensive roll adds 1 to both dice
   - *Margin 3:* 6 damage + 2 force damage; DR reduced by 3 for 1 minute; defensive roll penalty; target makes Will save (1 success) or loses spatial orientation briefly — their next [Move] action moves them in a random direction rather than their intended direction
@@ -4384,14 +4384,14 @@ Individual entries note additional capabilities. Aberrations are the only daemon
 **HP:** 24 (Con 3 × 8, Standard)
 **DR:** 2
 **Speed:** 40 ft, Climb 40 ft, Fly 30 ft
-**Attributes:** Str 3 / Con 3 / Agi 5 / Dex 5 / Int 4 / Wis 4 / Cha 3 / Luck 4
+**Attributes:** Str 3 / Con 3 / Agil 5 / Dex 5 / Int 4 / Wis 4 / Cha 3 / Luck 4
 **Skills:** Melee Combat 5, Stealth 5, Perception 4, Arcane 3
 **Senses:** Darkvision 120 ft, Tremorsense 60 ft, Seam Sense 120 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Aberration — Darkvision 120 ft. Immune to Frightened, Charm. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Reality Fracture [Combat]:** Melee attack (Agi 5 + Melee Combat 5), Reach: 5 ft
+- **Reality Fracture [Combat]:** Melee attack (Agil 5 + Melee Combat 5), Reach: 5 ft
   - *Margin 1:* 7 damage (Ignore DR); target's DR reduced by 2 for 1 minute; target must succeed on a Will save (1 success) or lose 1 action on their next turn as their sense of sequential time briefly misfires
   - *Margin 2:* 10 damage (7 + 3 Str) + 4 force damage (Ignore DR); DR reduced by 3; action loss without save; target Disoriented for 1 minute
   - *Margin 3:* 10 damage + 4 force damage; DR reduced by 4; action loss; Disoriented; target makes Will save (Hard task, 2 successes) or loses their [Reaction] until the start of their next turn — the fracture disrupts their ability to respond to events as they occur
@@ -4413,14 +4413,14 @@ Individual entries note additional capabilities. Aberrations are the only daemon
 **HP:** 48 (Con 6 × 8, Tough)
 **DR:** 3
 **Speed:** 40 ft, Fly 40 ft
-**Attributes:** Str 6 / Con 6 / Agi 5 / Dex 4 / Int 3 / Wis 4 / Cha 3 / Luck 4
+**Attributes:** Str 6 / Con 6 / Agil 5 / Dex 4 / Int 3 / Wis 4 / Cha 3 / Luck 4
 **Skills:** Melee Combat 6, Perception 4, Athletics 5, Intimidate 4
 **Senses:** Darkvision 120 ft, Tremorsense 60 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Aberration — Darkvision 120 ft. Immune to Frightened, Charm. Does not need air, food, drink, or sleep.
 
 **Attacks:**
-- **Gnashing Maw [Combat]:** Melee attack (Agi 5 + Melee Combat 6), Reach: 10 ft
+- **Gnashing Maw [Combat]:** Melee attack (Agil 5 + Melee Combat 6), Reach: 10 ft
   - *Margin 1:* 12 damage (Large, standard: 8 + 4 from jaw pressure) + 4 force damage (Ignore DR); target is Grappled if they are Medium or smaller (Athletics vs Athletics to escape)
   - *Margin 2:* 18 damage (12 + 6 Str) + 4 force damage; Grappled; target takes 6 damage at the start of each of their turns while Grappled as the gnashing continues; target Disoriented while Grappled
   - *Margin 3:* 18 damage + 4 force damage; Grappled + ongoing 6 damage + Disoriented; the Gnasher has bitten deeply enough that the target is also Pinned — they cannot take [Move] actions while Grappled
@@ -4443,10 +4443,10 @@ Individual entries note additional capabilities. Aberrations are the only daemon
 **HP:** 80 (Con 5 × 16, Massive)
 **DR:** 3
 **Speed:** 0 ft, Fly 60 ft (hover)
-**Attributes:** Str 4 / Con 5 / Agi 5 / Dex 6 / Int 5 / Wis 6 / Cha 4 / Luck 5
+**Attributes:** Str 4 / Con 5 / Agil 5 / Dex 6 / Int 5 / Wis 6 / Cha 4 / Luck 5
 **Skills:** Melee Combat 5, Ranged Combat 6, Perception 6, Arcane 4, Stealth 4
 **Senses:** Darkvision 120 ft, Seam Sense 120 ft, See Invisibility
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Aberration — Darkvision 120 ft. Immune to Frightened, Charm. Does not need air, food, drink, or sleep.
 
 **Attacks:**
@@ -4474,10 +4474,10 @@ Individual entries note additional capabilities. Aberrations are the only daemon
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 4
 **Speed:** 20 ft, Fly 60 ft
-**Attributes:** Str 4 / Con 6 / Agi 5 / Dex 5 / Int 8 / Wis 7 / Cha 6 / Luck 6
+**Attributes:** Str 4 / Con 6 / Agil 5 / Dex 5 / Int 8 / Wis 7 / Cha 6 / Luck 6
 **Skills:** Melee Combat 4, Ranged Combat 5, Perception 7, Arcane 7, Deception 5, Intimidate 5
 **Senses:** Darkvision 120 ft, Seam Sense 300 ft, See Invisibility, Truesight 60 ft
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Aberration — Darkvision 120 ft. Immune to Frightened, Charm. Does not need air, food, drink, or sleep.
 
 **Attacks:**
@@ -4504,10 +4504,10 @@ Individual entries note additional capabilities. Aberrations are the only daemon
 **HP:** 192 (Con 6 × 32, Massive)
 **DR:** 5
 **Speed:** 30 ft, Fly 70 ft
-**Attributes:** Str 5 / Con 6 / Agi 6 / Dex 7 / Int 8 / Wis 8 / Cha 7 / Luck 7
+**Attributes:** Str 5 / Con 6 / Agil 6 / Dex 7 / Int 8 / Wis 8 / Cha 7 / Luck 7
 **Skills:** Melee Combat 6, Ranged Combat 7, Perception 8, Arcane 8, Deception 6, Intimidate 6
 **Senses:** Darkvision unlimited, Seam Sense unlimited, See Invisibility, Truesight 120 ft, Perfect Sight 60 ft
-**Initiative Bonus:** +6 (Agi 6)
+**Initiative Bonus:** +6 (Agil 6)
 **Creature Type:** Aberration — Darkvision unlimited. Immune to Frightened, Charm. Does not need air, food, drink, or sleep.
 
 **Attacks:**
@@ -4535,10 +4535,10 @@ Individual entries note additional capabilities. Aberrations are the only daemon
 **HP:** 216 (Con 6 × 36, Massive)
 **DR:** 6
 **Speed:** 0 ft, Fly 80 ft (hover, ignores difficult terrain and environmental movement penalties)
-**Attributes:** Str 6 / Con 6 / Agi 7 / Dex 8 / Int 8 / Wis 8 / Cha 8 / Luck 8
+**Attributes:** Str 6 / Con 6 / Agil 7 / Dex 8 / Int 8 / Wis 8 / Cha 8 / Luck 8
 **Skills:** Melee Combat 7, Ranged Combat 8, Perception 8, Arcane 8, Deception 7, Intimidate 7
 **Senses:** Darkvision unlimited, Seam Sense unlimited, See Invisibility, Truesight unlimited, Perfect Sight 120 ft
-**Initiative Bonus:** +7 (Agi 7)
+**Initiative Bonus:** +7 (Agil 7)
 **Creature Type:** Aberration — Darkvision unlimited. Immune to Frightened, Charm. Does not need air, food, drink, or sleep.
 
 **Attacks:**
@@ -4569,15 +4569,15 @@ Mechanically: Spatial Sovereignty reshapes a 120-foot zone, Enhanced Discontinui
 **HP:** 80 (Con 5 × 16, Standard)
 **DR:** 4 (natural armor)
 **Speed:** 30 ft., Swim 30 ft.
-**Attributes:** Str 6 / Con 5 / Agi 3 / Dex 3 / Int 4 / Wis 4 / Cha 6 / Luck 3
+**Attributes:** Str 6 / Con 5 / Agil 3 / Dex 3 / Int 4 / Wis 4 / Cha 6 / Luck 3
 **Skills:** Melee Combat 5, Deception 6, Perception 4, Stealth 4, Arcane 4
 **Senses:** Darkvision 60 ft.
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Fae
 **Languages:** Common, Draconic, Elven
 
 ### Attacks
- **Claws [Combat]:** Melee attack (Agi 3 + Melee Combat 5), Reach 5 ft.
+ **Claws [Combat]:** Melee attack (Agil 3 + Melee Combat 5), Reach 5 ft.
 - ***Margin 1:*** 8 damage
 - ***Margin 2:*** 14 damage (8 + 6 Str)
 While Natural Weapons form is active, Margin 2 damage increases to 18 (see Malleable Form below).
@@ -4617,7 +4617,7 @@ Grigwarga casts instinctively rather than through study. Her pool does not refre
  
 While Grigwarga is in her lair and conscious, the swamp responds to her will. At the start of each round, she may cause one of the following effects without spending any of her actions. Only one effect may be active at a time; triggering a new one ends the previous.
  
-- **Erupting Roots:** Roots burst from the ground in a 10-foot square Grigwarga can see within 120 feet. Each creature in that square makes a Reflex save (Agi + Luck, opposed by Grigwarga's Wis 4 + Earth Mastery 4). Those who fail are Restrained. The roots persist until the start of the next round or until a different lair effect is triggered.
+- **Erupting Roots:** Roots burst from the ground in a 10-foot square Grigwarga can see within 120 feet. Each creature in that square makes a Reflex save (Agil + Luck, opposed by Grigwarga's Wis 4 + Earth Mastery 4). Those who fail are Restrained. The roots persist until the start of the next round or until a different lair effect is triggered.
 - **Cloying Ground:** A 20-foot square Grigwarga can see within 120 feet becomes difficult terrain until the start of the next round.
 - **Swamp Mist:** Thick mist rolls across a 15-foot area Grigwarga can see within 60 feet. All creatures in the area gain the [Concealed] condition until the start of the next round.
 When Grigwarga dies or leaves her lair, all active lair effects end immediately and do not refresh.
@@ -4642,25 +4642,25 @@ She retreats into Invisible Passage the moment she takes significant damage (bel
 **HP:** 156 (Con 6 × 26, Massive)
 **DR:** 8 (stone body, natural armor)
 **Speed:** 20 ft., Burrow 20 ft.
-**Attributes:** Str 7 / Con 6 / Agi 2 / Dex 2 / Int 1 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 7 / Con 6 / Agil 2 / Dex 2 / Int 1 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 6, Might 6, Perception 3
 **Senses:** Darkvision 60 ft., Tremorsense 60 ft.
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Elemental
 **Languages:** Terran
 
 ### Attacks
-**Slam [Combat]:** Melee attack (Agi 2 + Melee Combat 6), Reach 15 ft. (Huge creature)
+**Slam [Combat]:** Melee attack (Agil 2 + Melee Combat 6), Reach 15 ft. (Huge creature)
 - ***Margin 1:*** 14 damage (Huge, standard natural weapon: 10 + 4)
 - ***Margin 2:*** 21 damage (14 + 7 Str)
 **Multiattack [Combat]:** The Sentinel makes two slam attacks.
-- ***Shared Attribute Roll (Agi 2):*** Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.
+- ***Shared Attribute Roll (Agil 2):*** Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.
  
 ### Special Abilities
 **Earth Glide:** The Sentinel burrows through nonmagical unworked earth and stone without disturbing the material it moves through. It leaves no tunnel, no displaced soil, no warning of its passage until it chooses to emerge.
 **Tremorsense:** The Sentinel detects all creatures in contact with the ground within 60 feet. The [Hidden] condition does not apply to creatures detected this way, though they still gain the [Concealed] condition against the Sentinel's attacks.
 **Siege Monster:** The Sentinel deals double damage to objects and structures.
-**Earth Tremor (Recharge 5–8) [Combat]:** Costs 2 actions. The Sentinel drives its fists into the ground, sending violent tremors through the earth in a 60-foot diameter. Every creature on the ground in the area makes a Reflex save (Agi + Luck, opposed by the Sentinel's Con 6 + Wis 3). Creatures that fail take 12 bludgeoning damage (full DR applies — this is physical impact) and gain the Prone condition. Creatures that succeed take no damage. Flying creatures and those not in contact with the ground are unaffected. The Sentinel may use Earth Tremor even while submerged via Earth Glide; when it does, it erupts from the ground as part of the same action.
+**Earth Tremor (Recharge 5–8) [Combat]:** Costs 2 actions. The Sentinel drives its fists into the ground, sending violent tremors through the earth in a 60-foot diameter. Every creature on the ground in the area makes a Reflex save (Agil + Luck, opposed by the Sentinel's Con 6 + Wis 3). Creatures that fail take 12 bludgeoning damage (full DR applies — this is physical impact) and gain the Prone condition. Creatures that succeed take no damage. Flying creatures and those not in contact with the ground are unaffected. The Sentinel may use Earth Tremor even while submerged via Earth Glide; when it does, it erupts from the ground as part of the same action.
 
 ### Creature Type Traits — Elemental
 - Immune to poison damage, Poisoned condition, disease, exhaustion, Paralyzed, Petrified, Unconscious
@@ -4695,10 +4695,10 @@ It does not retreat. It does not negotiate. When the ward boundary is breached i
 **HP:** 28 (Con 2 × 14, Fragile)
 **DR:** 0
 **Speed:** 50 ft.
-**Attributes:** Str 1 / Con 2 / Agi 8 / Dex 6 / Int 3 / Wis 5 / Cha 2 / Luck 3
+**Attributes:** Str 1 / Con 2 / Agil 8 / Dex 6 / Int 3 / Wis 5 / Cha 2 / Luck 3
 **Skills:** Melee Combat 0, Perception 5, Stealth 6
 **Senses:** Darkvision 120 ft.
-**Initiative Bonus:** +8 (Agi 8)
+**Initiative Bonus:** +8 (Agil 8)
 **Creature Type:** Fae
 **Languages:** None spoken. Communicates directly with its creator hag through a shared sensory link.
 
@@ -4749,16 +4749,16 @@ A Hag Eye encountered without its creating hag nearby is either lost, acting on 
 **HP:** 48 (Con 4 × 12, Standard)
 **DR:** S: 6, P: 5, B: 4 (Hide)
 **Speed:** 35 ft.
-**Attributes:** Str 3 / Con 4 / Agi 3 / Dex 4 / Int 2 / Wis 6 / Cha 3 / Luck 3
+**Attributes:** Str 3 / Con 4 / Agil 3 / Dex 4 / Int 2 / Wis 6 / Cha 3 / Luck 3
 **Skills:** Melee Combat 3, Perception 5, Stealth 5, Wilderness 5, Medicine 3, Empathy 3
 **Senses:** Darkvision 60 ft.
-**Initiative Bonus:** +3 (Agi 3)
+**Initiative Bonus:** +3 (Agil 3)
 **Creature Type:** Humanoid
 **Background:** Hermit
 **Languages:** Common, Hadriaeth
 
 ### Attacks
-**Staff of the Darach [Combat]:** Melee attack (Agi 3 + Melee Combat 3), Reach 5 ft.
+**Staff of the Darach [Combat]:** Melee attack (Agil 3 + Melee Combat 3), Reach 5 ft.
 - ***Margin 1:*** 7 damage (Versatile one-handed: 6 + 1 magic bonus)
 - ***Margin 2:*** 10 damage (7 + 3 Str)
 - Two-handed:
@@ -4824,19 +4824,19 @@ He flees rather than dies. Communion with the Wound means he recovers faster tha
 **HP:** 156 (Con 6 × 26, Massive)
 **DR:** 5 (dense vegetal mass, natural armor)
 **Speed:** 20 ft., Swim 20 ft.
-**Attributes:** Str 6 / Con 6 / Agi 2 / Dex 2 / Int 1 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 6 / Con 6 / Agil 2 / Dex 2 / Int 1 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 6, Stealth 4, Might 5
 **Senses:** Blindsight 60 ft. (blind beyond this radius)
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Monstrosity
 **Languages:** None
 
 ### Attacks
-**Slam [Combat]:** Melee attack (Agi 2 + Melee Combat 6), Reach 10 ft. (Large creature)
+**Slam [Combat]:** Melee attack (Agil 2 + Melee Combat 6), Reach 10 ft. (Large creature)
 - ***Margin 1:*** 10 damage (Large, standard natural weapon: 8 + 2)
 - ***Margin 2:*** 16 damage (10 + 6 Str)
 **Multiattack [Combat]:** The Swamp Beast makes two slam attacks.
-- ***Shared Attribute Roll (Agi 2):*** Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.
+- ***Shared Attribute Roll (Agil 2):*** Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.
 - ***Engulf Trigger:*** If both slam attacks hit the same Medium or smaller target in the same turn, the Swamp Beast immediately uses Engulf on that target as a [Free] action.
  
 ### Special Abilities
@@ -4848,7 +4848,7 @@ He flees rather than dies. Communion with the Wound means he recovers faster tha
 At the start of each of the Swamp Beast's turns, an engulfed creature makes a Fortitude save (Con + Luck, opposed by the Beast's Con 6 + Wis 3). On failure, the creature takes 12 bludgeoning damage (full DR applies — this is crushing physical force). On success, no damage that turn.
 The Swamp Beast can have only one creature engulfed at a time. The engulfed creature moves with the Beast when it moves. To escape, the creature must win an opposed Athletics or Acrobatics check against the Beast's Might 5 + Str 6 on its turn, spending a [Combat] action (2 successes required). An adjacent ally may attempt the same check as a [Combat] action to pull the engulfed creature free.
 The engulfed creature is released immediately if the Swamp Beast is reduced to 0 HP.
-**Spit Acid (Recharge 5–8) [Combat]:** Costs 2 actions. The Beast expels a stream of acidic fluid in a 15-foot cone. Every creature in the area makes a Reflex save (Agi + Luck, opposed by the Beast's Con 6 + Wis 3). Creatures that fail take 28 acid damage (half DR applies — energy damage). Creatures that succeed take 14 acid damage.
+**Spit Acid (Recharge 5–8) [Combat]:** Costs 2 actions. The Beast expels a stream of acidic fluid in a 15-foot cone. Every creature in the area makes a Reflex save (Agil + Luck, opposed by the Beast's Con 6 + Wis 3). Creatures that fail take 28 acid damage (half DR applies — energy damage). Creatures that succeed take 14 acid damage.
 
 ### Resistances and Immunities
 **Immunities:** Lightning damage (see Lightning Absorption), Blinded condition, Deafened condition, Exhaustion
@@ -4858,7 +4858,7 @@ The engulfed creature is released immediately if the Swamp Beast is reduced to 0
 ### Lair Feature — Living Swamp
 While the Swamp Beast is in its territory and conscious, the swamp around it responds as an extension of its body. At the start of each round, the Beast may cause one of the following effects without spending any of its actions. Only one effect may be active at a time; triggering a new one ends the previous.
  
-- **Grasping Roots:** Up to three roots or vines erupt from the ground at points the Beast can perceive within 60 feet. Each root targets one creature. Each targeted creature makes a Reflex save (Agi + Luck, opposed by the Beast's Might 5 + Con 6). Creatures that fail are Restrained. Each root is a separate object: HP 12, DR 2, immune to poison and psychic damage. A root disappears when reduced to 0 HP, when the Beast triggers a different lair effect, or when the Beast dies. A Restrained creature is released when its root is destroyed.
+- **Grasping Roots:** Up to three roots or vines erupt from the ground at points the Beast can perceive within 60 feet. Each root targets one creature. Each targeted creature makes a Reflex save (Agil + Luck, opposed by the Beast's Might 5 + Con 6). Creatures that fail are Restrained. Each root is a separate object: HP 12, DR 2, immune to poison and psychic damage. A root disappears when reduced to 0 HP, when the Beast triggers a different lair effect, or when the Beast dies. A Restrained creature is released when its root is destroyed.
 - **Spore Cloud:** A cloud of toxic spores fills a 20-foot diameter sphere centered on a point the Beast can perceive within 60 feet. The cloud does not move once placed. Every creature in the cloud when it appears makes a Fortitude save (Con + Luck, opposed by the Beast's Con 6 + Wis 3). Creatures that fail take 16 poison damage (half DR applies). Creatures that succeed take 8 poison damage. Any creature that ends its turn inside the cloud takes 8 poison damage automatically with no save. All creatures within the cloud gain the Blinded condition while inside it. The cloud persists until the Beast triggers a different lair effect or dies.
 When the Swamp Beast dies, all active lair effects end immediately and the roots collapse.
  
@@ -4891,22 +4891,22 @@ It does not retreat. It does not recognize the concept.
 **HP:** 52 (Con 4 × 13, Tough)
 **DR:** 2 (natural hide)
 **Speed:** 40 ft.
-**Attributes:** Str 5 / Con 4 / Agi 4 / Dex 3 / Int 1 / Wis 3 / Cha 2 / Luck 2
+**Attributes:** Str 5 / Con 4 / Agil 4 / Dex 3 / Int 1 / Wis 3 / Cha 2 / Luck 2
 **Skills:** Melee Combat 5, Stealth 5, Perception 3
 **Senses:** Darkvision 120 ft., Keen Smell
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Beast
 **Languages:** None
 
 ### Attacks
-**Bite [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach 5 ft.
+**Bite [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach 5 ft.
 - ***Margin 1:*** 10 damage (Large, standard natural weapon: 8 + 2)
 - ***Margin 2:*** 15 damage (10 + 5 Str)
-**Claw [Combat]:** Melee attack (Agi 4 + Melee Combat 5), Reach 5 ft.
+**Claw [Combat]:** Melee attack (Agil 4 + Melee Combat 5), Reach 5 ft.
 - ***Margin 1:*** 10 damage (Large, standard natural weapon: 8 + 2)
 - ***Margin 2:*** 15 damage (10 + 5 Str)
 **Multiattack [Combat]:** The Swamp Cat makes one bite and one claw attack.
-- ***Shared Attribute Roll (Agi 4):*** Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.
+- ***Shared Attribute Roll (Agil 4):*** Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.
  
 ### Special Abilities
 **Keen Smell:** Scent-based Perception checks have Fortune.
@@ -4926,15 +4926,15 @@ Swamp Cats hunt in pairs or small groups, using the terrain to stalk prey before
 **HP:** 64 (Con 5 × 13, Tough)
 **DR:** 8 (shell, natural armor) / 3 while Prone (belly exposed)
 **Speed:** 30 ft., Swim 40 ft.
-**Attributes:** Str 6 / Con 5 / Agi 2 / Dex 2 / Int 1 / Wis 3 / Cha 1 / Luck 2
+**Attributes:** Str 6 / Con 5 / Agil 2 / Dex 2 / Int 1 / Wis 3 / Cha 1 / Luck 2
 **Skills:** Melee Combat 4, Perception 3
 **Senses:** Darkvision 60 ft.
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Beast
 **Languages:** None
  
 ### Attacks
-**Bite [Combat]:** Melee attack (Agi 2 + Melee Combat 4), Reach 10 ft. (Large creature, long neck)
+**Bite [Combat]:** Melee attack (Agil 2 + Melee Combat 4), Reach 10 ft. (Large creature, long neck)
 - ***Margin 1:*** 10 damage (Large, heavy natural weapon: 8 + 2)
 - ***Margin 2:*** 16 damage (10 + 6 Str)
  
@@ -4958,19 +4958,19 @@ The Giant Turtle is not an aggressive predator. It bites when threatened or when
 **HP:** 28 (Con 3 × 9, Tough)
 **DR:** 2 (scaled hide)
 **Speed:** 20 ft., Swim 30 ft.
-**Attributes:** Str 4 / Con 3 / Agi 2 / Dex 2 / Int 1 / Wis 2 / Cha 1 / Luck 2
+**Attributes:** Str 4 / Con 3 / Agil 2 / Dex 2 / Int 1 / Wis 2 / Cha 1 / Luck 2
 **Skills:** Melee Combat 3, Stealth 3, Perception 2
 **Senses:** Normal
-**Initiative Bonus:** +2 (Agi 2)
+**Initiative Bonus:** +2 (Agil 2)
 **Creature Type:** Beast
 **Languages:** None
  
 ### Attacks
-**Bite [Combat]:** Melee attack (Agi 2 + Melee Combat 3), Reach 5 ft.
+**Bite [Combat]:** Melee attack (Agil 2 + Melee Combat 3), Reach 5 ft.
 - ***Margin 1:*** 8 damage (Large, standard natural weapon: 8 + 0 — Str does not add at Margin 1)
 - ***Margin 2:*** 12 damage (8 + 4 Str)
 - ***Special:*** On any hit (Margin 1+), the target is Grappled. While Grappled this way the Crocodile cannot bite a different target. The Grappled creature makes an opposed Athletics or Acrobatics check against the Crocodile's Might 3 + Str 4 to escape (1 success required). If the Bite Grapples a target, Death Roll replaces Bite for all subsequent attacks against that target while the Grapple holds.
-**Death Roll [Combat]:** Melee attack against the currently Grappled target only (Agi 2 + Melee Combat 3), Reach 5 ft.
+**Death Roll [Combat]:** Melee attack against the currently Grappled target only (Agil 2 + Melee Combat 3), Reach 5 ft.
 - ***Margin 1:*** 8 damage (Large, standard natural weapon: 8 + 0 — Str does not add at Margin 1)
 - ***Margin 2:*** 12 damage (8 + 4 Str)
 - ***Special:*** The target makes a Fortitude save (Con + Luck, opposed by the Crocodile's Str 4 + Melee Combat 3). On failure, the target takes an additional 4 damage and gains the Disoriented condition until the end of its next turn. If the target is submerged, it also advances one step along the Drowning condition progression.
@@ -4991,29 +4991,29 @@ Crocodiles wait submerged with only eyes and nostrils above the waterline, motio
 **HP:** 108 (Con 6 × 18, Tough)
 **DR:** 3 (scaled hide)
 **Speed:** 30 ft., Swim 50 ft.
-**Attributes:** Str 6 / Con 6 / Agi 4 / Dex 3 / Int 1 / Wis 4 / Cha 2 / Luck 2
+**Attributes:** Str 6 / Con 6 / Agil 4 / Dex 3 / Int 1 / Wis 4 / Cha 2 / Luck 2
 **Skills:** Melee Combat 6, Stealth 6, Perception 5
 **Senses:** Normal (one eye — see below)
-**Initiative Bonus:** +4 (Agi 4)
+**Initiative Bonus:** +4 (Agil 4)
 **Creature Type:** Beast
 **Languages:** None
  
 ### Attacks
-**Bite [Combat]:** Melee attack (Agi 4 + Melee Combat 6), Reach 10 ft. (Huge creature)
+**Bite [Combat]:** Melee attack (Agil 4 + Melee Combat 6), Reach 10 ft. (Huge creature)
 - ***Margin 1:*** 12 damage (Huge, standard natural weapon: 10 + 2)
 - ***Margin 2:*** 18 damage (12 + 6 Str)
 - ***Special:*** On any hit (Margin 1+), the target is Grappled and Restrained simultaneously. While Grappled this way Old One Eye cannot bite a different target. The Grappled creature makes an opposed Athletics or Acrobatics check against Old One Eye's Might 5 + Str 6 to escape (Hard task — 2 successes).
-**Death Roll [Combat]:** Melee attack against the currently Grappled target only (Agi 4 + Melee Combat 6), Reach 5 ft.
+**Death Roll [Combat]:** Melee attack against the currently Grappled target only (Agil 4 + Melee Combat 6), Reach 5 ft.
 - ***Margin 1:*** 12 damage (Huge, standard natural weapon: 10 + 2)
 - ***Margin 2:*** 18 damage (12 + 6 Str)
 - ***Special:*** The target makes a Fortitude save (Con + Luck, opposed by Old One Eye's Str 6 + Melee Combat 6). On failure, the target takes an additional 6 damage and gains the Disoriented condition until the end of its next turn. If the target is submerged, it also advances one step along the Drowning condition progression.
-**Tail [Combat]:** Melee attack (Agi 4 + Melee Combat 6), Reach 15 ft. (Huge creature, sweeping tail)
+**Tail [Combat]:** Melee attack (Agil 4 + Melee Combat 6), Reach 15 ft. (Huge creature, sweeping tail)
 - Can only target creatures not currently Grappled by Old One Eye.
 - ***Margin 1:*** 10 damage (Huge, standard natural weapon: 10)
 - ***Margin 2:*** 16 damage (10 + 6 Str)
 - ***Special:*** On Margin 2, the target makes a Fortitude save (Con + Luck, opposed by Old One Eye's Str 6 + Melee Combat 6). On failure, the target gains the Prone condition.
 **Multiattack [Combat]:** Old One Eye makes one bite or death roll attack and one tail attack.
-- ***Shared Attribute Roll (Agi 4):*** Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.
+- ***Shared Attribute Roll (Agil 4):*** Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.
 - If the bite Grapples a target, the death roll replaces bite in all subsequent turns against that target while the Grapple holds.
  
 ### Special Abilities
@@ -5050,15 +5050,15 @@ It retreats into deep water when reduced below 40 HP, holding its breath and sin
 **HP:** 72 (Con 4 × 18, Standard Undead)
 **DR:** 0 (incorporeal — physical DR does not apply; see Resistances)
 **Speed:** 0 ft., Fly 30 ft. (Hover)
-**Attributes:** Str 3 / Con 4 / Agi 5 / Dex 4 / Int 4 / Wis 5 / Cha 4 / Luck 3
+**Attributes:** Str 3 / Con 4 / Agil 5 / Dex 4 / Int 4 / Wis 5 / Cha 4 / Luck 3
 **Skills:** Melee Combat 4, Perception 5, Stealth 5, Arcane 3
 **Senses:** Blindsight 30 ft., Darkvision 60 ft. (including magical darkness)
-**Initiative Bonus:** +5 (Agi 5)
+**Initiative Bonus:** +5 (Agil 5)
 **Creature Type:** Undead
 **Languages:** Understands Elven (Hadriaeth). Cannot speak.
 
 ### Attacks
-**Life Drain [Combat]:** Melee attack (Agi 5 + Melee Combat 4), Reach 5 ft.
+**Life Drain [Combat]:** Melee attack (Agil 5 + Melee Combat 4), Reach 5 ft.
 - ***Margin 1:*** 8 necrotic damage (half DR applies). The target's maximum HP is reduced by 8. Current HP is unaffected unless it now exceeds the new maximum, in which case reduce current HP to the new maximum.
 - ***Margin 2:*** 11 necrotic damage (8 + 3 Str). The target's maximum HP is reduced by 11.
 

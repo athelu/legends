@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 120 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Sting [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 1), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 1 damage; target makes Fortitude save (1 success) or gains Poisoned (Weak) for 1 minute</li>\n<li><em>Margin 2:</em> 1 damage; Poisoned (Weak) for 1 hour; no save; target also gains Sickened condition for 1 round</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Sting [Combat]:</strong> Melee attack (Agil 5 + Melee Combat 1), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 1 damage; target makes Fortitude save (1 success) or gains Poisoned (Weak) for 1 minute</li>\n<li><em>Margin 2:</em> 1 damage; Poisoned (Weak) for 1 hour; no save; target also gains Sickened condition for 1 round</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Invisibility (At-Will):</strong> As a [Minor] action, becomes invisible. Ends if it attacks.</li>\n<li><strong>Devil's Sight:</strong> Sees through magical darkness as if dim light.</li>\n<li><strong>Whisper Malice:</strong> Once per encounter, the Spite whispers something into the ear of a sleeping or distracted creature within 5 feet. The target makes a Will save (1 success). On failure, they wake with a specific false belief planted by the Spite — a suspicion about an ally, a misremembered detail, a conviction that something they heard was said by someone who did not say it. The belief feels like their own thought. The Spite communicates what it planted to the summoner afterward, accurately.</li>\n<li><strong>Diminutive Target:</strong> Attacks against the Spite add 1 to both dice.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

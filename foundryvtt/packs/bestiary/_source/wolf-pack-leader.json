@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft, Keen Hearing and Smell",
     "tactics": "The pack leader coordinates wolf attacks, using Pack Tactics and Coordinated Strike to bring down large prey. It targets spellcasters and archers first, attempting to knock them prone for the pack to tear apart.",
-    "attacksNotes": "<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 5 vs opponent's defense)\n<ul>\n<li>Reach: 5 ft</li>\n<li>Margin 1: 6 damage (standard natural weapon)</li>\n<li>Margin 2: 10 damage (6 + 4 Str)</li>\n<li>Special: On margin 2+, target must make Fortitude save (Con + Luck, 1 success) or be knocked Prone</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agil 5 + Melee Combat 5 vs opponent's defense)\n<ul>\n<li>Reach: 5 ft</li>\n<li>Margin 1: 6 damage (standard natural weapon)</li>\n<li>Margin 2: 10 damage (6 + 4 Str)</li>\n<li>Special: On margin 2+, target must make Fortitude save (Con + Luck, 1 success) or be knocked Prone</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Pack Tactics:</strong> When an ally is within 5 feet of the target, subtract 1 from both attack dice</li>\n<li><strong>Keen Hearing and Smell:</strong> Sound and scent-based Perception checks have Fortune</li>\n<li><strong>Coordinated Strike (1/day):</strong> As a [Free] action when this wolf hits an enemy, all allied wolves within 5 feet of that enemy can immediately make one bite attack as a reaction</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

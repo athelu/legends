@@ -5,7 +5,7 @@
   "img": "icons/svg/mystery-man.svg",
   "system": {
     "biography": {
-      "value": "<p>Stormcalls fight from altitude, opening with Wind Blade against the closest threat, then spending a second action on Lightning Arc against anything at range, and using a third action to reposition while maintaining Momentum Defense. The MAP on that third action is real but the Stormcall accepts it — staying in motion matters more than clean dice. Agi 7 means they act before most of what they face. A summoner who gives a Stormcall a target designation and stays out of the way will find it requires little management.</p>"
+      "value": "<p>Stormcalls fight from altitude, opening with Wind Blade against the closest threat, then spending a second action on Lightning Arc against anything at range, and using a third action to reposition while maintaining Momentum Defense. The MAP on that third action is real but the Stormcall accepts it — staying in motion matters more than clean dice. Agil 7 means they act before most of what they face. A summoner who gives a Stormcall a target designation and stays out of the way will find it requires little management.</p>"
     },
     "visibility": {
       "concealed": false,
@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft, Blindsight 30 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Wind Blade [Combat]:</strong> Melee attack (Agi 7 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage; target pushed 10 feet</li>\n<li><em>Margin 2:</em> 9 damage (6 + 3 Str); target pushed 10 feet and knocked Prone; no save</li>\n<li><em>Margin 3:</em> 9 damage + Prone + Stunned until end of their next turn from a concentrated wind impact</li>\n</ul></li>\n<li><strong>Lightning Arc [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 4), Range: 60 ft\n<ul>\n<li><em>Margin 1:</em> 8 lightning damage (Half DR)</li>\n<li><em>Margin 2:</em> 13 lightning damage (8 + 5 Dex); target gains Dazed condition until end of their next turn</li>\n<li><em>Margin 3:</em> 13 lightning damage + Dazed + Stunned until end of their next turn</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Wind Blade [Combat]:</strong> Melee attack (Agil 7 + Melee Combat 5), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage; target pushed 10 feet</li>\n<li><em>Margin 2:</em> 9 damage (6 + 3 Str); target pushed 10 feet and knocked Prone; no save</li>\n<li><em>Margin 3:</em> 9 damage + Prone + Stunned until end of their next turn from a concentrated wind impact</li>\n</ul></li>\n<li><strong>Lightning Arc [Combat]:</strong> Ranged attack (Dex 5 + Ranged Combat 4), Range: 60 ft\n<ul>\n<li><em>Margin 1:</em> 8 lightning damage (Half DR)</li>\n<li><em>Margin 2:</em> 13 lightning damage (8 + 5 Dex); target gains Dazed condition until end of their next turn</li>\n<li><em>Margin 3:</em> 13 lightning damage + Dazed + Stunned until end of their next turn</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Momentum Defense:</strong> As above.</li>\n<li><strong>Storm Body:</strong> Grapple attempts add 1 to both dice. If successfully grappled, the Stormcall makes a Fortitude save at the start of its turn (1 success) to break free automatically.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

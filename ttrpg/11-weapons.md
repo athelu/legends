@@ -6,26 +6,25 @@ Before choosing a weapon, consider not just raw damage but how its properties in
 
 ## Weapon Properties
 
-
-**[Light]** Easily wielded in the off-hand. Required for off-hand in Two-Weapon Fighting.
-
-**[Standard]** Default weapons requiring one hand. Cannot be wielded two-handed for benefit.
-
-**[Versatile]** Can be wielded one-handed or two-handed for +1 damage when two-handed.
-
-**[Two-Handed]** Requires both hands to wield. Cannot be used with shields or in Two-Weapon Fighting.
+**[Alternate-Strike]** Can use secondary attack for different damage type at reduced damage.
 
 **[Finesse]** Can use either Strength or Agility for damage calculations (player's choice).
 
-**[Alternate-Strike]** Can use secondary attack for different damage type at reduced damage.
+**[Light]** Easily wielded in the off-hand. Required for off-hand in Two-Weapon Fighting.
 
 **[Multi-Type]** Deals full damage with multiple damage types - player chooses which type when attacking.
 
 **[Ranged]** For ranged attacks using Ranged Combat skill. Has range increments.
 
+**[Reach]** add +5 feet to melee range.
+
+**[Standard]** Default weapons requiring one hand. Cannot be wielded two-handed for benefit.
+
 **[Thrown]** Can be thrown using Ranged Combat skill, retains damage type and value.
 
-**[Reach]** add +5 feet to melee range.
+**[Two-Handed]** Requires both hands to wield. Cannot be used with shields or in Two-Weapon Fighting.
+
+**[Versatile]** Can be wielded one-handed or two-handed for +1 damage when two-handed.
 
 
 ## Weapon Table
@@ -73,8 +72,9 @@ Before choosing a weapon, consider not just raw damage but how its properties in
 ### Weapon Damage Keywords
 
 **[Bludgeoning]** Blunt damage, relying on crushing, smashing, and often weight to deal damage.
-**[Slashing]** Cutting, hacking, slicing, where the sharp edge is drawn across the target.
 **[Piercing]** Power concentrated at the tip of the weapon, with thrusts or propulsion.
+**[Slashing]** Cutting, hacking, slicing, where the sharp edge is drawn across the target.
+
 
 ### Range Format
 Ranges listed as Short/Medium/Long (e.g., 60/120/240 means short range 60ft, medium 120ft, long 240ft)
@@ -123,7 +123,7 @@ A massive two-handed axe designed for sweeping, devastating blows. The heavy bla
 **Cost:** 50 gp | **Weight:** 10 lbs | **Damage:** 10 | **Properties:** [Two-Handed], [Alternate-Strike]
 **Damage Type:** [Slashing], [Bludgeoning] (8)
 
-A large two-handed sword with an extended blade and handle designed for powerful sweeping cuts. The pommel and crossguard can be used for bludgeoning strikes (the "murder stroke"). This category includes zweihänders, claymores, montantes, and similar large battlefield swords. Often wielded by elite infantry, these weapons require significant training but offer exceptional reach and power.
+A large two-handed sword with an extended blade and handle designed for powerful sweeping cuts. The pommel and crossguard can be used for bludgeoning strikes (the "murder stroke"). This category includes zweihänders, claymores, montantes, and similar large battlefield swords. Often wielded by elite infantry, these weapons require significant training.
 
 ### Hand Axe
 **Cost:** 15 gp | **Weight:** 2 lbs | **Damage:** 4 | **Properties:** [Light], [Thrown]
