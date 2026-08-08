@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft, Tremorsense 30 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agi 2 + Melee Combat 3), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 4 damage (Small, standard: 4 − 1 + 1 for stone density = 4)</li>\n<li><em>Margin 2:</em> 8 damage (4 + 4 Str); target makes Fortitude save (1 success) or knocked Prone</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Slam [Combat]:</strong> Melee attack (Agil 2 + Melee Combat 3), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 4 damage (Small, standard: 4 − 1 + 1 for stone density = 4)</li>\n<li><em>Margin 2:</em> 8 damage (4 + 4 Str); target makes Fortitude save (1 success) or knocked Prone</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Submerge:</strong> As a [Move] action, the Stone Lurker submerges into natural earth or stone it is standing on. While submerged it is Hidden and moves at its burrow speed. It must surface to attack.</li>\n<li><strong>Ambush:</strong> When the Stone Lurker attacks on the same turn it surfaced from Submerge, it has Fortune on that attack.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

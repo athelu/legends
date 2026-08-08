@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft, Blindsight 20 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Wind Strike [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 4), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 4 damage (standard natural); target makes Fortitude save (1 success) or pushed 5 feet</li>\n<li><em>Margin 2:</em> 7 damage (4 + 3 Str); target pushed 10 feet; no save</li>\n<li><em>Margin 3:</em> 7 damage; target pushed 10 feet and knocked Prone</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Wind Strike [Combat]:</strong> Melee attack (Agil 6 + Melee Combat 4), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 4 damage (standard natural); target makes Fortitude save (1 success) or pushed 5 feet</li>\n<li><em>Margin 2:</em> 7 damage (4 + 3 Str); target pushed 10 feet; no save</li>\n<li><em>Margin 3:</em> 7 damage; target pushed 10 feet and knocked Prone</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Whirlwind Form:</strong> Can move through spaces as narrow as 1 inch. Grapple attempts against it add 1 to both dice.</li>\n<li><strong>Buffeting Winds:</strong> Creatures ending their turn within 10 feet make a Fortitude save (1 success) or are pushed 5 feet directly away.</li>\n<li><strong>Momentum Defense:</strong> While the Cyclone has moved at least half its fly speed this turn, attacks against it add 1 to both attack dice.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft, Blindsight 10 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Wind Slash [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 2), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 3 damage (Small, standard: 4 − 1)</li>\n<li><em>Margin 2:</em> 5 damage (3 + 2 Str); target's next ranged attack adds 1 to both dice from wind disruption</li>\n<li><em>Margin 3:</em> 5 damage; target knocked Prone from a sudden concentrated gust</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Wind Slash [Combat]:</strong> Melee attack (Agil 6 + Melee Combat 2), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 3 damage (Small, standard: 4 − 1)</li>\n<li><em>Margin 2:</em> 5 damage (3 + 2 Str); target's next ranged attack adds 1 to both dice from wind disruption</li>\n<li><em>Margin 3:</em> 5 damage; target knocked Prone from a sudden concentrated gust</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Air Cushion:</strong> The Gust Sprite surrounds one adjacent creature with a pocket of calm air. That creature has Fortune on Reflex saves against area effects until the start of the Sprite's next turn. No action cost.</li>\n<li><strong>Speed Burst (1/short rest):</strong> Fly speed increases to 80 ft until the end of its next turn.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

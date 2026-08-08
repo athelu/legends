@@ -86,7 +86,7 @@ The D8 TTRPG uses 24 core skills tied to eight attributes. Each skill represents
 ---
 
 ### Intimidate (Charisma)
-**Description:** Using threat, violence, or force of personality to coerce compliance. Intimidate does not improve relationships instaed it extracts what you need at the cost of goodwill. Can impose the Frightened condition or force immediate compliance, always moving the target's attitude one step toward Hostile. See Social Interactions in the Core System for full rules.
+**Description:** Using threat, violence, or force of personality to coerce compliance. Intimidate does not improve relationships instead it extracts what you need at the cost of goodwill. Can impose the Frightened condition or force immediate compliance, always moving the target's attitude one step toward Hostile. See Social Interactions in the Core System for full rules.
 **Simple Task (1 success):** Coerce a common person into immediate compliance, establish dominance in a social situation, make someone back down from a confrontation.
 **Hard Task (2 successes):** Frighten or coerce a trained warrior, authority figure, or someone with strong reason to resist; cow a hostile crowd into standing down
 

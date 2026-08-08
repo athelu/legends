@@ -62,8 +62,8 @@
 **Targeting Roll:** Casting Stat + Negative Mastery
 **Description:** Touch a target and drain their life force with necrotic energy. Target takes 4 necrotic damage. You regain HP equal to half the damage dealt (rounded down). This is an attack weave—no saving throw allowed.
 **Saving Throw:** None
-**Damage Type:** Necrotic (energy)
-**DR Interaction:** Half DR
+**Damage Type:** Negative
+**DR Interaction:** None
 **Targeting Success Scaling:** 0 = fails, 1 = half damage (2), heal (1), 2= full damage (4), heal (2), 3 = enhanced damage (8), heal (4)
 
 ### Shape Stone
@@ -414,12 +414,12 @@
 
 ### Unerring Bolt
 **Primary Energy:** Space 3 (force bolts that always hit)
-**Supporting Energy:** Air 2 (medium range)
+**Supporting Energy:** Time 2 (medium range)
 **Range:** Medium, 60 ft.
 **Duration:** Instantaneous
 **Total Cost:** 5 Energy for 3 bolts
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Space Potential + Space Mastery / Air Potential + Air Mastery
+**Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
 **Description:** Create 3 glowing darts of force. Each dart deals 4 damage. Can target same creature or divide among multiple.
 **Saving Throw:** None
@@ -458,12 +458,12 @@
 
 ### Wall of Fire
 **Primary Energy:** Fire 5 (curtain of flames)
-**Supporting Energy:** Earth 7 (medium range + wall area, duration 10 minutes)
+**Supporting Energy:** Air 7 (medium range + wall area, duration 10 minutes)
 **Range:** Medium, 60 ft. (60 feet long, 20 feet high OR ring 20 feet diameter)
 **Duration:** 10 minutes
 **Total Cost:** 12 Energy
 **Action:** Complex weave (2 actions)
-**Weaving Roll:** Fire Potential + Fire Mastery / Earth Potential + Earth Mastery
+**Weaving Roll:** Fire Potential + Fire Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Fire Mastery
 **Description:** Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals 16 fire damage to creatures within 10 feet (choose side when casting). Passing through wall deals 24 fire damage. Provides total cover.
 **Applies Effects:** Ignited

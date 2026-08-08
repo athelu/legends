@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Fire Tendril [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 3), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 3 damage (Small, standard: 4 − 1) + 3 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 5 damage (3 + 2 Str) + 3 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 5 damage + 3 fire damage; target gains Smoldering condition</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Fire Tendril [Combat]:</strong> Melee attack (Agil 5 + Melee Combat 3), Reach: 10 ft\n<ul>\n<li><em>Margin 1:</em> 3 damage (Small, standard: 4 − 1) + 3 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 5 damage (3 + 2 Str) + 3 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 5 damage + 3 fire damage; target gains Smoldering condition</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Illumination:</strong> Sheds bright light in a 10-foot radius, dim light for an additional 10 feet.</li>\n<li><strong>Fire Aura:</strong> Creatures that hit the Flame Lash with a melee attack take 2 fire damage (Half DR).</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

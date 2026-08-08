@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Burning Strike [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 4), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage + 4 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 10 damage (6 + 4 Str) + 4 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 10 damage + 4 fire damage; target gains Ignited condition</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Burning Strike [Combat]:</strong> Melee attack (Agil 5 + Melee Combat 4), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage + 4 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 10 damage (6 + 4 Str) + 4 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 10 damage + 4 fire damage; target gains Ignited condition</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Heat Aura:</strong> Creatures that start their turn within 5 feet of the Ashwalker take 2 fire damage (Half DR) automatically.</li>\n<li><strong>Illumination:</strong> Sheds bright light in a 20-foot radius, dim light for an additional 20 feet.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

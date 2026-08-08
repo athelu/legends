@@ -93,58 +93,77 @@ Devout weavers who open their pneuma through faith, prayer, and disciplined devo
 ### Magic Effect Types & Terminology
 
 #### Damage Effects (Destructive Magic)
-These weaves deal direct harm either through energy or physical damage and are referred to as damage weaves. Key characteristic: targets take HP damage.
+These weaves deal direct harm through elemental or negative energy and are referred to as damage weaves.
 
+Most energies can be used in a destructive manner. The combination of specific energies resulting in different type of effects.
+
+**Key characteristic:** targets take HP damage.
 **Common Examples:** Fireball, lightning bolt, Hailstorm, acid blast, necrotic blast
 
-**Physical damage** applies full DR. **Energy damage** applies half DR. **Some energy damage ignores DR entirely** when the effect bypasses physical matter to reach the pneuma or mind directly.
+#### Mind-affecting Effects (Mind-Affecting Magic)
+Any weave that alters a creature's mental state, emotions, or thoughts. 
 
-#### What Determines Physical vs Energy
+Positive energy can be used for beneficial effects such as heroism, calm emotions, sleep. The positive energy reinforces existing beliefs or remove detrimental influences.
 
-**Physical damage requires matter.** Earth is matter directly. Ice and frozen water are matter. Compressed air made solid is matter. Floods carrying mass are matter. Any pairing that produces a physical object or moving mass deals physical damage.
+Negative energy impairs or influences the mind resulting in effects like fear, beguiling weave, command and confusion.
 
-**Energy damage is heat, life force, entropy, light, temporal manipulation, or force that interacts with the target as energy rather than mass.** Steam is energy damage despite being water, because its harm is thermal transfer not impact. Cold as a temperature effect is energy; ice is physical.
+Space energy invokes direct mind control such as charm and domination and other effects that force a creature to act against its will. These effects are fundamentally altering the target.
 
-**DR is ignored** when the effect reaches past physical matter to touch the pneuma or mind directly. Sonic vibration passes through armor. Spatial voids and pure negative energy projected through space reach what steel cannot stop.
-
-
-#### mind-affecting effects (Mind-Affecting Magic)
-Any weave that alters a creature's mental state, emotions, or thoughts without direct mind control. Typically uses Negative energy (for fear, sleep, mental assault) or Positive energy (for courage, inspiration, euphoria). Creatures immune to psychic effects or described as "mindless" are immune to mind-affecting effects.
-
-**Includes:** Charm, fear, sleep, emotion manipulation, mental influence
-**Does NOT include:** Direct mind control (compulsion), illusory effects, or physical transformations
-**Common Examples:** Beguiling Weave, Sleep, Terror Weave, heroism
+**Key characteristic:** affecting the mental state or decision making capability of the target.
+**Common Examples:** Beguiling Weave, Sleep, Fear Domination, command.
 
 **Immunity Note:** When a creature is listed as "immune to mind-affecting effects" or "immune to mind-affecting effects (charm, fear, sleep)," they cannot be affected by any weaves that rely on mental/emotional manipulation. Constructs, undead, and mindless creatures typically have this immunity.
 
-#### illusory effects (False Perception)
-Weaves that create false sensory information or conceal the truth. Space + Fire create standard illusions. Fire provides the light source that gives the false image visible substance; Space provides its location and form. Used for phantom images, false appearances, and sensory illusions that fool the eye without harming the mind.
+#### Illusory effects (False Perception)
+Weaves that create false sensory information or conceal the truth. Used for phantom images, false appearances, and sensory illusions that fool the eye without harming the mind.
+
 Water + Fire create concealment and invisibility effects.  Fire (light) is bent and refracted through Water (the medium) so that light wraps around the target rather than reflecting off it.
+
 Space + Negative create negative mental effects like nightmares and psychic damage.  The void of Space combined with entropic Negative energy reaches past the senses to assault the mind directly.
 
-**Key Characteristic:** Creates false perceptions, doesn't change reality
+**Key Characteristic:** Creates false perceptions, but doesn't change reality
+**Common Examples:** Phantom Image, invisibility, False Visage, Complex Illusion
+
 **Seeing Through illusory effects:** Creatures with truesight, blindsight, or tremorsense may see through illusory effects automatically. Physical interaction typically reveals an illusory effect as false (you can pass your hand through it, it has no substance, etc.).
 
-**Common Examples:** Phantom Image, Complex Illusion (Space/Fire); Invisibility, False Visage (Water/Fire); Illusory Torment, Nightmare Manifestation (Space/Negative)
-
 #### Protective Effects (Warding Magic)
-Weaves that create barriers, wards, or defensive magic. Primarily uses Space energy to create force barriers or Reactive Ward effects. These are referred to as protective weaves or wards.
+Weaves that create barriers, wards, or defensive magic. These could be protective circles, shields or armor made of force energy, or auras that prevent negative influence. These also include using raw magic (space) energy to interrupt or unravel magic effects. 
 
-**Common Examples:** Reactive Ward, Force Armor, protection from energy, Counterweave, Unweave
+Space is the primary energy when creating most wards, force barriers, countering weaves, or unweaving magic.
+
+Space can be combined with other energies to impart specific benefits, such as fire resistance, cold resistance or protection from certain forces.
+
+**Key Characteristic:** Preventing damange or influence. Disrupting magic.
+**Common Examples:** Reactive Ward, Force Armor, protection from energy, CounterWeave, Unweave
 
 #### Transformation Effects (Physical Alteration)
-Weaves that physically change or enhance creatures or objects. Uses elemental energies (Earth, Fire, Water, Air) to reshape matter, or Positive/Negative to enhance/wither living tissue.
+Transformation weaves are broken into two categories; those that affect inert objects and those that affect living things.
 
+Space energy creates weaves that physically change or enhance creatures. These would altering a creature for beneficial or non-beneficial reasons. 
+
+Elemental energies  (Earth, Fire, Water, Air) are used to transform inanimate objects and reshape non-living matter. 
+
+**Key Characteristic:** Physical transformation of living or non-living things.
 **Common Examples:** Beastial Transformation, Size Shift, stone shape, enhance ability
 
 #### Summoning & Teleportation Effects (Spatial Manipulation)
-Weaves that move creatures/objects through space or bring things from other places. Uses Space energy as primary, often with Time energy for duration of summons.
+Weaves that move creatures or objects through space or bring things from other places or even external planes. Direct travel on the same plane or between planes.
 
-**Common Examples:** Teleport, Spatial Step, summon creature, create food and water
+Elemental energies  (Earth, Fire, Water, Air) summoning uses the native energy of the daemon's home plane as Primary and Space as supporting.
+
+Space as primary is used for summoning Aberrations. Space is also used for portals, teleportation and pushing daemons out of the prime materials.
+
+**Key Characteristic:** Summoning and movement
+**Common Examples:** Teleport, Spatial Step, summon elemental, create food and water
 
 #### Information & Prophecy Effects (Temporal/Spatial Perception)
-Weaves that gather information, predict the future, or perceive distant locations. Uses Space energy (scrying, detection) or Time energy (foresight, prophecy).
+Weaves that gather information, predict the future, or perceive distant locations.
 
+Space as primary allows for viewing location, people and places from a distance, such as scrying and detection or location.
+
+Time as primary energy provides foresight and prophecy.
+
+**Key Characteristic:** Reveals information the caster doesn't already have (ex.  location, properties, magical nature) rather than affecting anything physically.
 **Common Examples:** Sense Magic, scrying, foresight, identify, Object Seeking
 
 ### Pneuma and Necromancy
@@ -173,21 +192,14 @@ Weaves marked with the **[Necromantic]** keyword are forbidden and represent los
 
 **Examples of Necromantic Weaves:**
 - **Bind the Fallen** - Binding soul fragments or echoes to corpses
-- **Soul Cage** - Trapping a departing soul in a vessel
-- **Magic Jar** - Displacing souls between bodies
-- **Speak with Dead** - Forcing communion with departed souls
-- **Create Undead** - Binding stronger soul remnants to corpses
-- **Finger of Death** - Killing and instantly raising as undead (soul binding)
+- **Commune with Dead** - Forcing communion with departed souls
+- **Death's Touch** - Killing and instantly raising as undead (soul binding)
 
 **Non-Necromantic Uses of Negative Energy:**
 
 The following are *not* necromantic, as they channel entropy and harm without manipulating souls:
-- **Inflict Wounds** - Channeling decay and necrotic energy
-- **Harm** - Draining life force
-- **Withering Touch** - Withering and entropy
-- **Curse Weaving** - Imposing misfortune
+- **Blight** - Withering and entropy
 - **Shadow-based effects** - Manipulating darkness and shadow
-- **Ray of Enfeeblement** - Weakening through entropy
 
 #### Identifying Necromantic Intent
 
@@ -201,8 +213,7 @@ If yes to any of these, the weave is necromantic and requires the **[Necromantic
 
 **Using Negative Energy ≠ Necromancy**
 
-A cleric channeling Negative energy to harm living creatures, or a wizard casting Blight to wither plants, is using entropy and decay, not manipulating souls. These are standard (if dark) magical practices and do not carry the corruption and forbidden nature of true necromancy.
-
+Channeling Negative energy to harm living creatures, or casting Blight to wither plants, is using entropy and decay and not manipulating souls. These are standard (if dark) magical practices and do not carry the corruption and forbidden nature of true necromancy.
 #### GM Guidelines for Necromancy
 
 If players discover lost First Men texts or forbidden knowledge:
@@ -315,34 +326,34 @@ The following table covers all 56 primary/secondary combinations. The secondary 
 | Primary | Secondary | Damage Type | DR Rule | Character of Effect |
 |---------|-----------|-------------|---------|---------------------|
 | Fire | Air | Energy (Fire) | Half DR | Plasma, explosion |
-| Fire | Earth | Physical (Bludgeoning + Fire) | Full DR | Meteor, fire barrier |
+| Fire | Earth | Physical (Bludgeoning + Fire) | Full DR | Meteor |
 | Fire | Water | Energy (Fire) | Half DR | Steam |
 | Fire | Positive | Energy (Radiant) | Half DR | Sacred flame |
 | Fire | Negative | Energy (Negative) | Half DR | Necrotic burn |
 | Fire | Space | Energy (Fire) | Half DR | Fire placed instantly at distance |
 | Fire | Time | Energy (Fire) | Half DR | Slow burn |
 | Air | Fire | Energy (Sonic) | No DR | Superheated shockwave |
-| Air | Earth | Physical (Bludgeoning) | Full DR | wind made solid |
+| Air | Earth | Physical (Bludgeoning) | Full DR | Air made solid |
 | Air | Water | Energy (Lightning) | Half DR | Lightning/electricity |
-| Air | Positive | Energy (Positive) | Half DR | breath of life |
+| Air | Positive | Energy (Positive) | Half DR | air of life |
 | Air | Negative | Energy (Negative) | Half DR | poison gas, miasma |
 | Air | Space | Energy (Sonic) | No DR | targeted vibration |
-| Air | Time | Energy (Sonic) | No DR | building echoes |
-| Earth | Air | Physical (Bludgeoning) | Full DR | thrown mass |
-| Earth | Fire | Physical (Bludgeoning + Fire) | Full DR | Volcanic stone, molten terrain |
+| Air | Time | Energy (Sonic) | No DR | building echoes, agility |
+| Earth | Air | Physical (Bludgeoning) | Full DR | thrown rock, web |
+| Earth | Fire | Physical (Bludgeoning + Fire) | Full DR | Magma, Lava |
 | Earth | Water | Physical (Bludgeoning) | Full DR | Quicksand, mud |
 | Earth | Positive | Physical (Bludgeoning) | Full DR | Consecrated stone |
-| Earth | Negative | Physical (Bludgeoning) | Full DR | Earth, Decay |
-| Earth | Space | Physical (Bludgeoning) | Full DR | Aappearing Walls |
+| Earth | Negative | Physical (Bludgeoning) | Full DR | Decay, rot |
+| Earth | Space | Physical (Bludgeoning) | Full DR | wall manipulation |
 | Earth | Time | Physical (Bludgeoning) | Full DR | Petrification |
-| Water | Air | Physical (Cold + Bludgeoning) | Full DR | Ice formation and projection |
+| Water | Air | Physical (Cold + Bludgeoning) | Full DR | Ice, frozen projectiles |
 | Water | Earth | Physical (Bludgeoning) | Full DR | Flood, ooze |
-| Water | Fire | No damage | — | Light refraction, invisibility, concealment |
+| Water | Fire | No damage | — | Light refraction, fog, mist |
 | Water | Positive | Energy (Positive) | Half DR | Cleansing water |
 | Water | Negative | Energy (Negative) | Half DR | Poison, acid |
 | Water | Space | Physical (Cold + Bludgeoning) | Full DR | Summoned water |
 | Water | Time | Physical (Bludgeoning) | Full DR | Erosion in moments |
-| Positive | Air | Energy (Positive) | Half DR | Restoration, clarity, Radiant burst |
+| Positive | Air | Energy (Positive) | Half DR | Restoration, clarity, Energy |
 | Positive | Earth | Energy (Positive) | Half DR | Physical restoration |
 | Positive | Fire | Energy (Radiant) | Half DR | Purification, sacred light |
 | Positive | Water | Energy (Positive) | Half DR | Persistant Healing |
@@ -351,25 +362,25 @@ The following table covers all 56 primary/secondary combinations. The secondary 
 | Positive | Time | Energy (Positive) | Half DR | Accelerated recovery |
 | Negative | Air | Energy (Negative) | Half DR | Suffocation, Fear, Confusion |
 | Negative | Earth | Energy (Negative) | Half DR | unnatural darkness |
-| Negative | Fire | Energy (Negative) | Half DR | Necrotic burning, life consumed as fuel for entropy |
+| Negative | Fire | Energy (Negative) | Half DR | Life as fuel |
 | Negative | Water | Energy (Negative) | Half DR | Biological corruption, vital drain |
-| Negative | Positive | Energy (Negative) | Half DR | Catastrophic tension — GM adjudicates instability |
+| Negative | Positive | Energy (Negative) | Half DR | Balance of forces|
 | Negative | Space | Energy (Negative) | No DR | breakdown physical matter |
 | Negative | Time | Energy (Negative) | Half DR | Accelerated aging |
 | Space | Air | Physical (Bludgeoning) | Full DR | Abrupt Teleportation |
 | Space | Earth | Physical (Bludgeoning) | Full DR | gravity, magenetism |
-| Space | Fire | No damage | — | Illusory construction, false images, phantom appearances |
-| Space | Water | Physical (Bludgeoning + Cold) | Full DR | Spatial compression, cold displacement |
+| Space | Fire | No damage | — | Illusions, false images |
+| Space | Water | Physical (Bludgeoning + Cold) | Full DR | Compression, pressur|
 | Space | Positive | Energy (Positive) | Half DR | Sanctuary, protected space |
 | Space | Negative | Energy (Negative) | No DR | Spatial void, Mind Alter|
-| Space | Time | No damage | — | Planar displacement |
-| Time | Air | No damage | — | Haste, slow |
-| Time | Earth | Physical (Bludgeoning) | Full DR | Accelerated natural growth, compressed seasons |
-| Time | Fire | Energy (Fire) | Half DR | Anchored flame, fire outside of time |
-| Time | Water | Physical (Bludgeoning) | Full DR | Temporal force through water, tidal impact |
-| Time | Positive | Energy (Positive) | Half DR | Fortunate foresight, temporal blessing |
-| Time | Negative | Energy (Negative) | Half DR | Cursed fate, doom through time |
-| Time | Space | No damage | — | Temporal displacement, echoes of past and future |
+| Space | Time | No damage | — | Planar displacement, force |
+| Time | Air | No damage | — | Speed manipulation |
+| Time | Earth | Physical (Bludgeoning) | Full DR | Accelerated natural growth |
+| Time | Fire | Energy (Fire) | Half DR | Anchored light |
+| Time | Water | Physical (Bludgeoning) | Full DR | torrential rain, geyser |
+| Time | Positive | Energy (Positive) | Half DR | Fortune, foresight |
+| Time | Negative | Energy (Negative) | Half DR | Curse, bane |
+| Time | Space | No damage | — | Temporal displacement |
 
 #### Edge Case Notes
 
@@ -849,16 +860,13 @@ Physical armor and natural defenses interact differently with magical damage bas
 
 #### Energy Damage - Half DR (Rounded Down)
 
-**Energy-based magical damage types apply half DR:**
-- **Fire** (flames, heat, burning)
-- **Cold** (frost, ice energy, freezing)
-- **Lightning** (electricity, shock)
-- **Acid** (corrosive energy)
-- **Thunder** (sonic energy, sound waves)
-- **Negative** (life-draining, necrotic energy)
-- **Positive** (radiant, divine energy)
-- **Force** (pure magical energy)
-- **Psychic** (mental damage)
+- **Fire**
+- **Cold**
+- **Lightning**
+- **Acid**
+- **Negative**
+- **Positive**
+- **Force**
 
 **Formula:** Damage - (DR ÷ 2, rounded down)
 
@@ -872,14 +880,9 @@ Physical armor and natural defenses interact differently with magical damage bas
 
 #### Physical Magic Damage - Full DR
 
-**Physical-based magical effects respect full DR:**
-- **HailStorm** (physical ice chunks and hail)
-- **Meteor Swarm** (physical meteors with impact)
-- **Conjured Weapons** (summoned blades, magical projectiles)
-- **Stone Shape** (crushing stone)
-- **Earthquake** (falling debris, collapsing structures)
-- **Wall of Stone/Ice** (physical crushing)
-- **Thorn Whip** (physical thorns)
+- **HailStorm**
+- **Earthquake**
+- **Wall of Stone/Ice**
 - **Any spell creating physical objects that strike/crush**
 
 **Formula:** Damage - DR (normal physical damage reduction)
@@ -890,6 +893,13 @@ Physical armor and natural defenses interact differently with magical damage bas
 - Conjured Blade 10 damage vs DR 3 → 10 - 3 = **7 damage**
 
 **Rationale:** These spells create actual physical matter or force that impacts like mundane weapons. Armor protects normally.
+
+#### Vitality Damage - None
+
+- **Sonic/Thunder**
+- **Poison**
+- **Psychic**
+
 
 #### Quick Reference Table
 

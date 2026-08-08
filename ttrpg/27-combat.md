@@ -134,20 +134,25 @@ Temporary HP is a buffer that absorbs damage before your actual HP. Temporary HP
 
 ## Damage Types
 In a fantasy world there are plenty of ways that you can get hurt. Below are the different types of damage that can be applied.
+
 ### Physical Damage
-- Slashing - Cuts, bleeds (swords, axes)
-- Piercing - Penetration, precision (spears, arrows, daggers)
-- Bludgeoning - Impact, crushing (maces, hammers, clubs)
+- Slashing
+- Piercing
+- Bludgeoning
 
 ### Energy Damage
-- Fire (flames, heat, burning)
-- Cold (frost, ice energy, freezing)
-- Lightning (electricity, shock)
-- Acid (corrosive energy)
-- Thunder (sonic energy, sound waves)
-- Negative (life-draining, necrotic energy)
-- Positive (radiant, divine energy)
-- Force (pure magical energy)
+- Fire
+- Cold
+- Lightning
+- Acid
+- Negative
+- Positive
+- Force
+
+### Vitality Damage
+- Sonic
+- Poison
+- Psychic
 
 ## Damage Resistance (DR)
 Damage resistance reduces the amount of damage that a character takes from attacks. Damage resistance will normally specify the type (bludgeoning, slashing, fire etc). If a type is NOT listed then the Damage Resistance is considered to be universal and applies equally to all sources.
@@ -195,7 +200,7 @@ A number of traits, feats and weaves can provide an initiative modifier, some ex
 ### Initiative Roll
 Each actor in a combat will need to make an initiative roll to determine when they will act in the combat round.  You determine your initiative for the combat using the following:
 - Initiative Bonus + Current Luck + Desired Skill + 1d8
-- Initiative Bonus: Your fixed Agi + mods
+- Initiative Bonus: Your fixed Agil + mods
 - Current Luck: Your Luck pool at combat start 
 - Desired Skill: The skill you use to react
 - 1d8: Random element
@@ -214,6 +219,9 @@ Tie Breakers (in order):
 	2	Higher skill rank used
 	3	Higher maximum Luck attribute
 	4	Simultaneous actions (or GM decides)
+
+### Hold Turn
+When it becomes an actor’s turn, they may choose to hold their entire turn to some later point in the initiative track. They instead to choose take their turn immediately before or after another actor’s turn. They cannot interrupt another the actor’s turn. The actor that chose to delay their turn is now in this new initiative position for the remainder of the combat. If the actor does not choose to take their turn, they will retain their current initiative place on the next turn, having effectively waited a round to act.
 
 ## Cover
 Cover provides physical protection from attacks through defensive positioning and is one of the only ways to gain protection from ranged attacks. Cover only applies against attacks coming from the direction of the obstacle. Flanking or attacking from different angles may negate cover. Cover is broken into 3 classes for determining how you are benefited.

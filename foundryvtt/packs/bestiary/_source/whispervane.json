@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft, Blindsight 10 ft",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Gust [Combat]:</strong> Melee attack (Agi 5 + Melee Combat 1), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 1 damage; target loses any unsecured held item lighter than 1 lb (hat, loose scroll, coin)</li>\n<li><em>Margin 2:</em> 2 damage; target's next ranged attack adds 1 to one die of their choice from wind interference</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Gust [Combat]:</strong> Melee attack (Agil 5 + Melee Combat 1), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 1 damage; target loses any unsecured held item lighter than 1 lb (hat, loose scroll, coin)</li>\n<li><em>Margin 2:</em> 2 damage; target's next ranged attack adds 1 to one die of their choice from wind interference</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Wind Whisper:</strong> The Whispervane carries a spoken message of up to 25 words to any creature within 300 feet it can perceive. Message delivered as a whisper only the target can hear. Transit time is 1 round. It executes this without fail.</li>\n<li><strong>Near-Invisible:</strong> Perception checks to spot the Whispervane by sight alone add 2 to both dice except in strong light or dusty conditions.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {

@@ -116,7 +116,7 @@
     ],
     "sensesNotes": "Darkvision 60 ft, Keen Smell (Fortune on scent-based Perception)",
     "tactics": "",
-    "attacksNotes": "<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agi 6 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage + 4 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 10 damage (6 + 4 Str) + 4 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 10 damage + 4 fire damage; target gains Ignited condition; no save</li>\n</ul></li>\n</ul>",
+    "attacksNotes": "<ul>\n<li><strong>Bite [Combat]:</strong> Melee attack (Agil 6 + Melee Combat 5), Reach: 5 ft\n<ul>\n<li><em>Margin 1:</em> 6 damage + 4 fire damage (Half DR)</li>\n<li><em>Margin 2:</em> 10 damage (6 + 4 Str) + 4 fire damage; target gains Singed condition</li>\n<li><em>Margin 3:</em> 10 damage + 4 fire damage; target gains Ignited condition; no save</li>\n</ul></li>\n</ul>",
     "specialAbilitiesNotes": "<ul>\n<li><strong>Blazing Pounce (Recharge 5-8):</strong> If the Pyre Hound moves at least 20 feet straight toward a target before its Bite on the same turn, subtract 1 from both attack dice. On hit at Margin 2+, target gains Ignited and is knocked Prone with no save.</li>\n<li><strong>Keen Smell:</strong> Fortune on scent-based Perception. Can track by scent across any terrain.</li>\n</ul>",
     "reactionsNotes": "",
     "weaves": {
