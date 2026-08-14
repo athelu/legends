@@ -144,53 +144,59 @@ def extract_culture(section_body):
     return '\n\n'.join(blocks).strip()
 
 
-def split_either_options(text):
-    normalized = text.replace('/', ' or ')
-    parts = [part.strip(' .,:;') for part in re.split(r'\s+or\s+', normalized, flags=re.IGNORECASE) if part.strip()]
-    return list(dict.fromkeys(parts))
+_WORD_TO_INT = {'one': 1, 'two': 2, 'three': 3, 'four': 4, 'five': 5, 'six': 6, 'seven': 7, 'eight': 8}
+
+
+def _parse_count(word):
+    w = str(word).lower().strip()
+    try:
+        return int(w)
+    except ValueError:
+        return _WORD_TO_INT.get(w, 1)
 
 
 def parse_skill_grant(description):
     if not description:
         return None
 
-    any_match = re.search(
-        r'gain\s+(\d+)\s+free\s+rank(?:s)?\s+in\s+any\s+skill',
-        description,
-        flags=re.IGNORECASE,
+    # "increase N skills to rank M and N others to rank K" (compound — split into two grants)
+    compound = re.search(
+        r'increase\s+(\w+)\s+skills?.*?to\s+rank\s+(\d+)\s+and\s+(\w+)\s+others?\s+to\s+(?:rank\s+)?(\d+)',
+        description, flags=re.IGNORECASE,
     )
-    if any_match:
+    if compound:
         return {
-            'mode': 'any',
-            'ranks': int(any_match.group(1)),
-            'options': [],
+            '_compound': True,
+            'parts': [
+                {'mode': 'any', 'targetRank': int(compound.group(2)), 'count': _parse_count(compound.group(1)), 'options': []},
+                {'mode': 'any', 'targetRank': int(compound.group(4)), 'count': _parse_count(compound.group(3)), 'options': []},
+            ],
         }
 
-    either_match = re.search(
-        r'gain\s+(\d+)\s+free\s+rank(?:s)?\s+in\s+either\s+(.+?)(?:\.|$)',
-        description,
-        flags=re.IGNORECASE,
+    # "increase any N skills to rank M"
+    multi_any = re.search(
+        r'increase\s+(?:any\s+)?(\w+)\s+skills?.*?to\s+rank\s+(\d+)',
+        description, flags=re.IGNORECASE,
     )
-    if either_match:
-        options = split_either_options(either_match.group(2))
-        if options:
-            return {
-                'mode': 'oneOf',
-                'ranks': int(either_match.group(1)),
-                'options': options,
-            }
+    if multi_any:
+        return {'mode': 'any', 'targetRank': int(multi_any.group(2)), 'count': _parse_count(multi_any.group(1)), 'options': []}
 
-    fixed_match = re.search(
-        r'gain\s+(\d+)\s+free\s+rank(?:s)?\s+in\s+([A-Za-z][A-Za-z\s\-]+?)(?:\s+at\s+character\s+creation|\.|$)',
+    # "Raise X to N and Y to N" or "Raise X to N and Y N" (both fixed, same rank → allOf)
+    raise_both = re.search(
+        r'[Rr]aise\s+(.+?)\s+to\s+(\d+)\s+and\s+(.+?)\s+(?:to\s+)?(\d+)',
         description,
-        flags=re.IGNORECASE,
     )
-    if fixed_match:
+    if raise_both:
+        skill1, rank1 = raise_both.group(1).strip(' .'), int(raise_both.group(2))
+        skill2, rank2 = raise_both.group(3).strip(' .'), int(raise_both.group(4))
+        if rank1 == rank2:
+            return {'mode': 'allOf', 'targetRank': rank1, 'options': [skill1, skill2]}
         return {
-            'mode': 'fixed',
-            'ranks': int(fixed_match.group(1)),
-            'skill': fixed_match.group(2).strip(' .,:;'),
-            'options': [],
+            '_compound': True,
+            'parts': [
+                {'mode': 'fixed', 'skill': skill1, 'targetRank': rank1, 'options': []},
+                {'mode': 'fixed', 'skill': skill2, 'targetRank': rank2, 'options': []},
+            ],
         }
 
     return None
@@ -243,11 +249,26 @@ def extract_ancestry_ability_grants(section_text):
         parsed = parse_ability_line(line)
         if not parsed:
             continue
-        grant_id = parsed['id']
-        if grant_id in seen_ids:
-            continue
-        seen_ids.add(grant_id)
-        grants.append(parsed)
+
+        skill_grant = parsed.get('skillGrant')
+        if skill_grant and skill_grant.get('_compound'):
+            base_id = parsed['id']
+            for i, part in enumerate(skill_grant['parts']):
+                tier_id = f'{base_id}-tier-{i + 1}'
+                if tier_id in seen_ids:
+                    continue
+                seen_ids.add(tier_id)
+                tier_grant = dict(part)
+                if i > 0:
+                    tier_grant['excludeGrantIds'] = [f'{base_id}-tier-{j + 1}' for j in range(i)]
+                grants.append({'id': tier_id, 'name': parsed['name'], 'description': parsed['description'], 'skillGrant': tier_grant})
+        else:
+            grant_id = parsed['id']
+            if grant_id in seen_ids:
+                continue
+            seen_ids.add(grant_id)
+            grants.append(parsed)
+
     return grants
 
 
@@ -380,7 +401,7 @@ def main():
     script_dir = Path(__file__).parent.parent.parent
     
     # Parse from markdown
-    md_file = script_dir / "ttrpg" / "ancestry.md"
+    md_file = script_dir / "ttrpg" / "03-ancestry.md"
     if md_file.exists():
         print("Parsing ancestry.md...")
         items = parse_ancestries_md(md_file)

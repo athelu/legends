@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You dedicated yourself to sharing knowledge with others, whether in a formal school or as a private tutor. The work taught you patience, clarity, and the understanding that every student learns differently. Even when not teaching you still find yourself explaining things to your companions.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Society 2, History 2, Persuasion 1, Empathy 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Society 3, History 3, Persuasion 3, Empathy 3, +56 XP",
     "startingEquipment": "General topic book\nquill\nink\nrobe\npapyrus parchment x5\nshoes",
     "suggestedFeats": "",
     "features": "Educator: You can explain complex topics simply and effectively. When teaching skills to others, they learn faster (GM discretion on mechanical benefits).",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "society": 2,
-      "history": 2,
-      "persuasion": 1,
-      "empathy": 1
+      "society": 3,
+      "history": 3,
+      "persuasion": 3,
+      "empathy": 3
     },
     "craftKeyword": null,
     "itemGrants": [

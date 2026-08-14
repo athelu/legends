@@ -1,0 +1,57 @@
+{
+  "_id": "15b8fd1d78eb7b84",
+  "name": "Debt Collector",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>You worked for moneylenders, merchants, and noble houses, finding people who owed money and extracting it through whatever combination of persuasion and implied consequence the situation called for. The work required reading people quickly, knowing when to press and when to wait, and maintaining a professional demeanor while engaged in something most people found unpleasant. You were good at it. Whether that reflects well on you is a question you've stopped asking.</p>"
+    },
+    "startingXP": 56,
+    "skillBonuses": "Intimidate 3, Empathy 3, Society 3, Perception 3, +56 XP",
+    "startingEquipment": "Common clothes\nmanacles\nlow boots",
+    "suggestedFeats": "",
+    "features": "Collector's Reputation: Your profession carries a weight that precedes you. Moneylenders, merchants, and civic officials recognize the role and take your stated expectations seriously.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "intimidate": 3,
+      "empathy": 3,
+      "society": 3,
+      "perception": 3
+    },
+    "craftKeyword": null,
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "Common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Manacles",
+        "quantity": 1,
+        "originalText": "manacles",
+        "sourceId": "dc54332725e7d0fb"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Low",
+        "quantity": 1,
+        "originalText": "low boots",
+        "sourceId": "ef7b8aa832f26893"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!15b8fd1d78eb7b84"
+}

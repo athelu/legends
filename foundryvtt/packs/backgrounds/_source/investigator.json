@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You made your living uncovering truths that others wanted hidden. You developed a reputation for finding answers. Your skills at noticing details and following leads are invaluable, even if your companions find your constant questions irritating.</p>"
     },
-    "startingXP": 32,
-    "skillBonuses": "Investigate 3, Perception 2, +32 XP",
+    "startingXP": 48,
+    "skillBonuses": "Investigate 4, Perception 3, Empathy 3, +48 XP",
     "startingEquipment": "Magnifying glass\njournal\nink\nquill\nfine clothes\nshoes",
     "suggestedFeats": "",
     "features": "Keen Mind: When examining a crime scene or mystery, you may uncover one crucial clue or detail others might miss.",
@@ -16,8 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "investigate": 3,
-      "perception": 2
+      "investigate": 4,
+      "perception": 3,
+      "empathy": 3
     },
     "craftKeyword": null,
     "itemGrants": [

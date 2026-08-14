@@ -3,7 +3,7 @@
 All of the standard actions that are available to actors have been compiled here.
 
 ## Combat Actions
-All characters have access to these combat options:
+All characters have access to these combat options. Each action costs the listed number of actions to perform.
 
 ### Aid Another [Combat]
 **Cost:** 1
@@ -150,7 +150,7 @@ Movement actions allow you to reposition, navigate terrain, and control the batt
 
 ### Stand from Prone [Move]
 **Cost:** 1
-**Effect:** Remove the Prone condition. If your speed is 0, you cannot stand up. Standing up does not provoke Opportunity Attacks.
+**Effect:** Remove the Prone condition. If your speed has been reduced to 0, you cannot stand up. Standing up does not provoke Opportunity Attacks.
 
 ### Swim [Move]
 **Cost:** 1
@@ -205,7 +205,7 @@ Interact actions involve manipulating objects, the environment, or simple physic
 
 ### Draw/Stow Weapon [Interact]
 **Cost:** 1
-**Effect:** Draw a weapon or stow it in its sheath/holster. Can draw/stow ONE weapon as a [Free] action once per turn as part of movement. Drawing two weapons requires Quick Draw feat or two separate actions. Doesn't provoke Opportunity Attacks
+**Effect:** Draw a weapon or stow it in its sheath. An actor can draw/stow ONE weapon as a [Free] action once per turn as part of movement. Drawing two weapons requires Quick Draw feat or two separate actions. Regardless, drawing or stowing a weapon doesn't provoke Opportunity Attacks.
 
 ### Evening Treatment
 **Cost:** During long rest.

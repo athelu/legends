@@ -1,0 +1,83 @@
+{
+  "_id": "6697226434d9ba45",
+  "name": "Cartographer",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>You spent years penning charts and routes for explorers, merchants, military commanders, and nobles who wanted to know what they owned. You have been to enough places that most people find your knowledge useful. You have also learned that the gaps on a map are often more informative than what fills them.</p>"
+    },
+    "startingXP": 48,
+    "skillBonuses": "Craft: Cartographer 4, Wilderness 3, Perception 3, +48 XP",
+    "startingEquipment": "Map case\njournal\nquill\nink\ntraveler's clothes\nlow boots",
+    "suggestedFeats": "",
+    "features": "Surveyor's Eye: When you enter a new region or settlement, you can make an Intelligence check to recall or reconstruct useful geographic details such as patrol routes, choke points, water sources, and likely shelter.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "craft": 4,
+      "wilderness": 3,
+      "perception": 3
+    },
+    "craftKeyword": "Cartographer",
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Map Case",
+        "quantity": 1,
+        "originalText": "Map case",
+        "sourceId": "c9a749f06795873a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Journal",
+        "quantity": 1,
+        "originalText": "journal",
+        "sourceId": "1b02ead55fc70f66"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Quill",
+        "quantity": 1,
+        "originalText": "quill",
+        "sourceId": "4e18e27b51e765ec"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Ink, 1 oz",
+        "quantity": 1,
+        "originalText": "ink",
+        "sourceId": "0a04bf0388f541a3"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Traveler's",
+        "quantity": 1,
+        "originalText": "traveler's clothes",
+        "sourceId": "0e79b3267533a030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Low",
+        "quantity": 1,
+        "originalText": "low boots",
+        "sourceId": "ef7b8aa832f26893"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!6697226434d9ba45"
+}

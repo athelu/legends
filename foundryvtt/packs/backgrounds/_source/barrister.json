@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>Piles of legal manuals, stern teachers, and experience in the courtroom have instructed you in legal matters. You're capable of mounting a prosecution or defense in court, and you tend to keep abreast of local laws. You never know when you might need to talk your way out of trouble on short notice. Or talk your friends out of it, for that matter.</p>"
     },
-    "startingXP": 32,
-    "skillBonuses": "Society 3, Persuasion 2, +32 XP",
+    "startingXP": 48,
+    "skillBonuses": "Society 4, Persuasion 3, Investigate 3, +48 XP",
     "startingEquipment": "Fine clothes\nquill\nink\nvellum parchment x5\nshoes",
     "suggestedFeats": "",
     "features": "Legal Knowledge: You understand laws and courts. Can navigate legal systems and provide counsel (though not always successfully).",
@@ -16,8 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "society": 3,
-      "persuasion": 2
+      "society": 4,
+      "persuasion": 3,
+      "investigate": 3
     },
     "craftKeyword": null,
     "itemGrants": [

@@ -33,7 +33,7 @@
 **Supporting Energy:** Air 1 (close range)
 **Range:** Close, 30 ft.
 **Duration:** Instantaneous
-**Total Cost:** 7 Energy
+**Total Cost:** 4 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery

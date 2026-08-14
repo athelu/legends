@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You served in a noble household or wealthy establishment, learning to be efficient, discreet, and above all, invisible. A good servant sees everything and says nothing; at least not where their employer can hear. You might have left seeking independence, or you learned something that made staying dangerous. You have learned how to blend in and how to listen, skills that prove surprisingly useful in adventuring.</p>"
     },
-    "startingXP": 24,
-    "skillBonuses": "Empathy 2, Society 2, Perception 2, Stealth 2, +24 XP",
+    "startingXP": 40,
+    "skillBonuses": "Empathy 3, Society 3, Perception 3, Stealth 3, Deception 3, +40 XP",
     "startingEquipment": "Uniform or livery\ncommon clothes\nshoes",
     "suggestedFeats": "",
     "features": "Invisible Presence: Servants are often overlooked. You can blend into servile settings and gain access to places where servants are expected but not noticed.",
@@ -16,10 +16,11 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "empathy": 2,
-      "society": 2,
-      "perception": 2,
-      "stealth": 2
+      "empathy": 3,
+      "society": 3,
+      "perception": 3,
+      "stealth": 3,
+      "deception": 3
     },
     "craftKeyword": null,
     "itemGrants": [

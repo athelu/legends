@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>As a formally trained apothecary or a rural practitioner of folk medicine, you learned the healing properties of various herbs. Adventuring gives you access to rare specimens you could never afford before.</p>"
     },
-    "startingXP": 32,
-    "skillBonuses": "Medicine 3, Wilderness 2, +32 XP",
+    "startingXP": 48,
+    "skillBonuses": "Medicine 4, Wilderness 3, Empathy 3, +48 XP",
     "startingEquipment": "Herbalism kit\nmortar and pestle\ncommon clothes\nshoes",
     "suggestedFeats": "",
     "features": "Plant Lore: You can identify useful plants and create basic remedies.",
@@ -16,8 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "medicine": 3,
-      "wilderness": 2
+      "medicine": 4,
+      "wilderness": 3,
+      "empathy": 3
     },
     "craftKeyword": null,
     "itemGrants": [

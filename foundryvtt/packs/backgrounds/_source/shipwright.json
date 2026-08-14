@@ -1,0 +1,56 @@
+{
+  "_id": "665506ae28d957b9",
+  "name": "Shipwright",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>You built vessels that went where land ended. The work was large-scale and collaborative, requiring you to manage other people's labor while keeping the structural logic of the whole thing in your head simultaneously.</p>"
+    },
+    "startingXP": 48,
+    "skillBonuses": "Craft: Shipwright 4, Athletics 3, Might 3, +48 XP",
+    "startingEquipment": "Common clothes\nwork gloves\nwork boots",
+    "suggestedFeats": "",
+    "features": "Harbor Standing: Every vessel you built or repaired is evidence of your skill, visible in ports where it still sails. Harbor masters, ship owners, and maritime merchants know a skilled shipwright when they see one. In any working port your expertise opens access to shipyards, dry docks, and the offices of those who commission vessels, and your assessment of a ship's condition carries weight in any maritime negotiation.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "craft": 4,
+      "athletics": 3,
+      "might": 3
+    },
+    "craftKeyword": "Shipwright",
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "Common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Gloves, Work",
+        "quantity": 1,
+        "originalText": "work gloves",
+        "sourceId": "56d09fece9f4243e"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Work",
+        "quantity": 1,
+        "originalText": "work boots",
+        "sourceId": "6a6394e3ffbccf86"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!665506ae28d957b9"
+}

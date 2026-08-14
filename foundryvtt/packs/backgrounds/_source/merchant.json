@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>In a dusty shop or market stall you bartered wares for coin and trade goods. The skills you picked up still apply in the adventuring life, where a good deal on a suit of armor could prevent your death. You understand that everything has a price and knowing how to negotiate can be as important as knowing how to fight.</p>"
     },
-    "startingXP": 24,
-    "skillBonuses": "Persuasion 2, Society 2, Empathy 2, Investigate 2, +24 XP",
+    "startingXP": 40,
+    "skillBonuses": "Persuasion 3, Society 3, Empathy 3, Investigate 3, History 3, +40 XP",
     "startingEquipment": "Fine clothes\njournal\nquill\nink\nshoes",
     "suggestedFeats": "",
     "features": "Trade Network: You have contacts in merchant guilds and can find buyers or sellers for most goods.",
@@ -16,10 +16,11 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "persuasion": 2,
-      "society": 2,
-      "empathy": 2,
-      "investigate": 2
+      "persuasion": 3,
+      "society": 3,
+      "empathy": 3,
+      "investigate": 3,
+      "history": 3
     },
     "craftKeyword": null,
     "itemGrants": [

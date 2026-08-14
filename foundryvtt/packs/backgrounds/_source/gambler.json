@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>The thrill of the win drew you into games of chance, though you know that in the long run, the house always wins, that is unless you cheat, and you definitely know how to do that. Adventuring could be a way out of debt or buy-in to the next big game. At least when you gamble with your life, the odds are more honest.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Deception 2, Empathy 2, Perception 1, Society 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Deception 3, Empathy 3, Perception 3, Society 3, +56 XP",
     "startingEquipment": "Dice set\nplaying cards\ncommon clothes\nshoes",
     "suggestedFeats": "",
     "features": "Never Tell the Odds: You have a knack for reading people during games of chance and can often spot loaded dice or marked cards.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "deception": 2,
-      "empathy": 2,
-      "perception": 1,
-      "society": 1
+      "deception": 3,
+      "empathy": 3,
+      "perception": 3,
+      "society": 3
     },
     "craftKeyword": null,
     "itemGrants": [
@@ -33,11 +33,13 @@
         "sourceId": "b27e90bafad282a8"
       },
       {
-        "mode": "placeholder",
+        "mode": "reference",
         "itemType": "equipment",
-        "sourceName": "playing cards",
+        "pack": "legends.equipment",
+        "sourceName": "Playing Cards",
         "quantity": 1,
-        "originalText": "playing cards"
+        "originalText": "playing cards",
+        "sourceId": "875ec801ffe215ba"
       },
       {
         "mode": "reference",

@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You poured drinks and kept the peace in an establishment where ale flowed as freely as stories. Every regular had a tale, every stranger brought news from afar, and you were right in the middle of it all. You know how to read people and make them comfortable and those are useful skills anywhere.</p>"
     },
-    "startingXP": 24,
-    "skillBonuses": "Empathy 2, Persuasion 2, Society 2, Perception 2, +24 XP",
+    "startingXP": 40,
+    "skillBonuses": "Empathy 3, Persuasion 3, Society 3, Perception 3, Intimidate 3, +40 XP",
     "startingEquipment": "Apron\ncommon clothes\nshoes",
     "suggestedFeats": "",
     "features": "Tavern Talk: You know how to listen and learn and have a chance to pick up useful information in drinking establishments.",
@@ -16,10 +16,11 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "empathy": 2,
-      "persuasion": 2,
-      "society": 2,
-      "perception": 2
+      "empathy": 3,
+      "persuasion": 3,
+      "society": 3,
+      "perception": 3,
+      "intimidate": 3
     },
     "craftKeyword": null,
     "itemGrants": [

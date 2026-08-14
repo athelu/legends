@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You traveled from place to place, peddling false fortunes in one town, pretending to be a long-lost heir in the next. Becoming an adventurer might be your next big scam or an attempt to put your talents to use for a greater cause. You realize that after pretending to be a hero for so long, you've become the mask. Or maybe you're just running from that last con that went sideways.</p>"
     },
-    "startingXP": 24,
-    "skillBonuses": "Deception 2, Persuasion 2, Perform 2, Thievery 2, +24 XP",
+    "startingXP": 40,
+    "skillBonuses": "Deception 3, Persuasion 3, Perform 3, Thievery 3, Empathy 3, +40 XP",
     "startingEquipment": "Fine clothes\ndisguise kit\nplaying cards\nshoes",
     "suggestedFeats": "",
     "features": "False Identity: You have created a second identity with documentation and can switch between identities convincingly.",
@@ -16,10 +16,11 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "deception": 2,
-      "persuasion": 2,
-      "perform": 2,
-      "thievery": 2
+      "deception": 3,
+      "persuasion": 3,
+      "perform": 3,
+      "thievery": 3,
+      "empathy": 3
     },
     "craftKeyword": null,
     "itemGrants": [
@@ -42,11 +43,13 @@
         "sourceId": "58b900cc51a61f63"
       },
       {
-        "mode": "placeholder",
+        "mode": "reference",
         "itemType": "equipment",
-        "sourceName": "playing cards",
+        "pack": "legends.equipment",
+        "sourceName": "Playing Cards",
         "quantity": 1,
-        "originalText": "playing cards"
+        "originalText": "playing cards",
+        "sourceId": "875ec801ffe215ba"
       },
       {
         "mode": "reference",
