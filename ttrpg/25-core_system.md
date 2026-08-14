@@ -47,7 +47,7 @@ A d8 roll under mechanic is used to determine results. The only dice required fo
 
 ## Skill Test
 
-A skill test is used when the character wishes to perform some action in the game using a skill, regardless if they posses any ranks in the skill. To perform a skill test:
+A skill test is used when the character wishes to perform some action in the game using a skill, regardless if they possess any ranks in the skill. To perform a skill test:
 1. Roll d8 for the governing attribute
 2. Roll d8 for the skill
 3. Each die that rolls under its value = 1 success
@@ -124,14 +124,14 @@ Multiple sources providing fortune and misfortune cancel each other out on a 1-t
 
 ### Critical Success
 
-A critical success occurs when both of the dice rolled in a skill test result in natural 1s. Dice that are modified to be a 1 do not count. A critical success results in the following:
+A critical success occurs when both of the dice rolled in a skill test result in natural 1s. Dice rolls that are modified to be a 1 do not count. A critical success results in the following:
 - Both dice generate success regardless of target number.
 - Grants +1 additional success (total 3 successes)
 - Restore the characters Luck points to maximum
 
 ### Critical Failure
 
-A critical failure occurs when both of the dice rolled in a skill test result in natural 8s. Dice that are modified to be a 8 do not count. A critical failure results in the following: 
+A critical failure occurs when both of the dice rolled in a skill test result in natural 8s. Dice rolls that are modified to be a 8 do not count. A critical failure results in the following: 
 - Both dice automatically fail (0 successes)
 - Action fails catastrophically
 - GM determines consequences
@@ -147,7 +147,7 @@ During the course of a session a character may choose to spend their luck in two
 
 ### Reduce die roll
 
-Spending 1 Luck point reduces any single die result by 1. You can spend multiple points on one roll.
+Spend 1 Luck point to reduce any single die result for that player by 1. You can spend multiple points on one roll.
 
 ### Prevent complication
 
@@ -164,10 +164,10 @@ A characters Current Luck resets to full after a long rest.
 A character restores 1 Luck point for completing a short rest. This cannot exceed the characters luck attribute value.
 
 #### Story Awards
-The GM may restore luck points for heroic actions and epic roleplay moments, clever solutions, Lucky breaks, fortuitous discoveries, major story milestones or defeating significant enemies. The choice to restore luck points and the amount restored is up to the GM.
+The GM may restore luck points for heroic actions and epic roleplay moments, clever solutions, lucky breaks, fortuitous discoveries, major story milestones, or defeating significant enemies. The choice to restore luck points and the amount restored is up to the GM.
 
 #### Critical Success
-Rolling double 1s restores a character Current Luck points to maximum their maximum
+Rolling double 1s restores a character's Current Luck points to maximum their maximum.
 
 ## Saving Throws
 A saving throw is another type of test made using just the characters attributes. All three saving throw types roll Attribute + Current Luck and count successes:
@@ -188,8 +188,8 @@ A break in adventuring, a minimum of 1 hour, spent to eat, make short preparatio
 ### Long Rest
 A long rest can only be taken in a safe place and requires a minimum of 8 hours. This is typically a sleeping period. A long rest has the following standard benefits:
 - Regain HP equal to Constitution × 4
-- Restore all Luck points to maximum
-- Restore all Energy points to maximum
+- Restore Luck points to maximum
+- Restore Energy points to maximum
 - Remove certain conditions (GM discretion)
 - **Unbind magic items** — you may deliberately unbind one or more Bound items during a long rest; items not in your possession when you complete the rest automatically unbind
 
@@ -277,7 +277,7 @@ Maximum HP lost to life drain restores fully after a long rest.
 When characters attempt to influence the attitudes and behavior of NPCs, the outcome depends on both the approach taken and the existing relationship between the parties. Social skills — Persuasion, Deception, and Intimidate — each operate differently, but all interact with the same underlying Attitude Scale.
 
 ### The Attitude Scale
-Every NPC has an attitude toward every other significant party — whether that is toward the player characters, toward each other, or toward third parties entirely. This attitude determines how difficult social interaction is and what is even possible.
+Every NPC has an attitude toward every other significant party, whether that is toward the player characters, toward each other, or toward third parties. This attitude determines how difficult social interaction is and what is even possible.
 
 
 | Attitude |         Description          |
@@ -294,7 +294,7 @@ The GM sets starting attitudes based on context — a known criminal walking int
 Attitude is persistent. A merchant charmed during last week's visit remembers it. An NPC whose trust was betrayed does not forget.
 
 ### Social Skill Tests
-Social interactions use either simple skill tests or opposed skill tests depending on how invested the NPC is in the outcome.
+Social interactions use either simple skill tests or opposed skill tests depending on how invested the NPC is in the outcome. Consider this set of rules as an option to support, not replace, roleplaying.
 - **Simple Skill Test:** Used when the NPC has no particular stake in resisting. A bystander, a disinterested merchant, someone with no reason to push back.
 - **Opposed Skill Test:** Used when the NPC is actively invested in the outcome. A suspicious noble, someone being interrogated, a rival with something to lose.
 

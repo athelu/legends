@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You took what you needed from those who had more than enough, or at least that's what you told yourself. As a member of a gang or working alone, the outlaw life taught you skills that polite society condemns but secretly envies. You might be seeking redemption, or you might just be looking for richer targets. Perhaps it's a bit of both.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Stealth 2, Intimidate 2, Wilderness 1, Melee Combat 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Stealth 3, Intimidate 3, Wilderness 3, Melee Combat 3, +56 XP",
     "startingEquipment": "Hemp rope\ncommon clothes\nlow boots",
     "suggestedFeats": "",
     "features": "Outlaw Network: You know how to find and contact criminal elements in the wilderness and small settlements.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "stealth": 2,
-      "intimidate": 2,
-      "wilderness": 1,
-      "meleeCombat": 1
+      "stealth": 3,
+      "intimidate": 3,
+      "wilderness": 3,
+      "meleeCombat": 3
     },
     "craftKeyword": null,
     "itemGrants": [

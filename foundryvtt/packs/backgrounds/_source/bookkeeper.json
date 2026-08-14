@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>Numbers don't lie, but the people who record them often do. You spent your days tracking accounts and managing ledgers, developing an eye for discrepancies that most people miss. Adventure is certainly more exciting than balance sheets, though sometimes the pay isn't as reliable.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Society 2, Investigate 2, Writing 1, Perception 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Society 3, Investigate 3, Writing 3, Perception 3, +56 XP",
     "startingEquipment": "Journal\nink\nquill\nabacus\nfine clothes\nshoes",
     "suggestedFeats": "",
     "features": "Head for Numbers: You can quickly assess financial records and spot discrepancies or patterns in accounts.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "society": 2,
-      "investigate": 2,
-      "writing": 1,
-      "perception": 1
+      "society": 3,
+      "investigate": 3,
+      "writing": 3,
+      "perception": 3
     },
     "craftKeyword": null,
     "itemGrants": [

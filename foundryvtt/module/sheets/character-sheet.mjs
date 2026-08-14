@@ -365,6 +365,11 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       input.value = updateData[fieldName];
     }
 
+    if (fieldName.startsWith('system.skills.')) {
+      updateData[fieldName] = Math.max(2, Math.floor(Number(numValue) || 2));
+      input.value = updateData[fieldName];
+    }
+
     if (fieldName === 'system.tier.xp') {
       const tierInfo = game.legends?.progression?.getTierInfoFromXp?.(numValue);
       if (tierInfo) {

@@ -1,5 +1,5 @@
 # The Magical Gift
-“Gifted” is the term used for magic users, both Arcane and Divine casters. The gift is nothing more than one being able to open their pneuma to the planes and allowing the magical energies to flow through them.
+“Gifted” is the term used for magic users, both Arcane and Divine casters. The gift is the ability for someone to open their pneuma to the planes and allow the magical energies to flow through them.
 The term Arcanist is used to refer to natural born arcane magic users. Arcanists are born with a permanent bond to the planes that can strengthen and grow over time. This connection is constant and resonates with their pneuma which in turn causes the eyes of mages to always glow with magical light. 
 Arcane Magic users that can learn to access arcane powers or have been gifted them through some other means are called Diabolists. 
 Divine casters are latent magic users whose access to their magical gift requires faith and a focus to complete the connection.
@@ -59,7 +59,7 @@ Mageborn represent the most populace group of Arcanists. Mageborn create magic t
 ### Sorcerous Origin
 Sorcerers, on the other hand, have such an indomitable understanding of self that they can produce magical effects almost from sheer force of will alone. Sorcerers are so confident in their place in the universe that it would be anathema for the universe to deny them access to such powers. Sorcerers need not understand fully where their power comes from, only that it is available to them. 
 
-Sorcerers and Mageborn have such a divergent understanding of magic that they cannot learn to master their abilities in the same way. A person born with innate magical ability will only succeed in controlling their power once they understand how they need to access it.  Although the resultant magical effect may be the same, the way a mageborn and a sorcerer accomplish the feat are not the same. Sorcerous Origin characters use **Wisdom** as their casting stat, work with all eight energies, and gain reality-bending abilities such as **Harmonic Weaving**.
+A person born with innate magical ability will only succeed in controlling their power once they understand how they need to access it. Sorcerous Origin characters use Wisdom as their casting stat, work with all eight energies, and gain reality-bending abilities such as **Harmonic Weaving.**
 
 ## Diabolist
 Diabolists are often misunderstood - if not feared. The people of the world have come to expect the arcane to announce itself through glowing eyes. Diabolists do not have an innate magical ability - but instead are awakened. The following arcane magical traditions are considered diabolists.

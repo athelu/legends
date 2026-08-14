@@ -226,7 +226,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
-**Description:** Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action.
+**Description:** Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action but cannot be further from the caster than the Range of the weave.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes
 
@@ -239,7 +239,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
-**Description:** Create invisible, mindless, shapeless force within close range. Has DR 8, 4 HP, Strength 2, can't attack. Can perform simple tasks: fetch, clean, mend, fold, light fires, serve food. Can carry 30 lbs or drag 60 lbs. Command as [Minor] action. Moves 15 feet per round. Vanishes if reduced to 0 HP or when weave ends.
+**Description:** Create invisible, mindless, shapeless force within close range. Has DR 8, 4 HP, Strength 2, can't attack. Can perform simple tasks: fetch, clean, mend, fold, light fires, serve food. Can carry 30 lbs or drag 60 lbs. Command as [Minor] action. Moves 15 feet per round but cannot be further from the caster than the Range of the weave. Vanishes if reduced to 0 HP or when weave ends.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 10 minutes, 2= 1 hour, 3 = 4 hours
 
@@ -303,7 +303,7 @@
 **Primary Energy:** Matching elemental energy (Earth/Air/Fire/Water) 6
 **Supporting Energy:** Time 5 (close range, duration 10 minutes)
 **Range:** Close, 30 ft.
-**Duration:** 10 minutes
+**Duration:** 11 minutes
 **Total Cost:** 10 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Primary Potential + Primary Mastery / Time Potential + Time Mastery
@@ -465,7 +465,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Fire Potential + Fire Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Fire Mastery
-**Description:** Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals 16 fire damage to creatures within 10 feet (choose side when casting). Passing through wall deals 24 fire damage. Provides total cover.
+**Description:** Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals 16 fire damage to creatures within 10 feet (choose side when casting). Passing through wall in either direction deals 24 fire damage. Provides total cover.
 **Applies Effects:** Ignited
 **Saving Throw:** Reflex
 **Damage Type:** Fire (energy)
@@ -503,14 +503,14 @@
 
 ### Wall of Stone
 **Primary Energy:** Earth 6 (solid stone barrier anchored at location)
-**Supporting Energy:** Space 2 (medium range + wall area)
+**Supporting Energy:** Space 5 (medium range + wall area + 10 minutes)
 **Range:** Medium, 60 ft. (60 feet long, 20 feet high)
-**Duration:** Permanent
-**Total Cost:** 8 Energy
+**Duration:** 10 minutes
+**Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
-**Description:** Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 8. Can shape into crenellations, bridges, etc.
+**Description:** Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 8.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 minute, 2= permanent, 3 = double HP
 

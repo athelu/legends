@@ -54,12 +54,12 @@ The Nevil lineage, likewise, diverged and developed three more deities. Order, n
 
 It is important to note that Enschede’s and Nevil’s powers were not diminished after this division, but they are also no stronger or more important than their “children” (if that is what they can be called). Despite only existing independently of the rest of the pantheon for a millisecond, though, they are far more ancient than the other six.
 
-One only has to look at mosaics of the Matron and Patron or glance upon their black-robed and blank-masked acolytes to understand that there is a decidedly distant, other factor about them. Their influence may be easier to overlook than the dynamic action of Alkira or Rudlu, but they are as steady and undeniable as a river shaping a canyon.
+One only has to look at mosaics of the Matron and Patron or glance upon their black-robed and blank-masked acolytes to understand that there is a decidedly distant, other factor to Enschede and Nevil. Their influence may be easier to overlook than the dynamic action of Alkira or Rudlu, but they are as steady and undeniable as a river shaping a canyon.
 
 #### Small gods
 
 Some rural or less civilized folk worship what are called Small Gods. Often these are daemons that have become associated with forested areas, deep pools of water, or other remote areas where a daemon may call home on the prime material.
-Many are common daemons such as fey, keres, or elementals but people may still treat these outsiders with reverence. The Priests of the pantheon attempt to educate people in these matters, but many small faiths exist around these daemons. 
+Many are common daemons such as fey, keres, or elementals but people may still treat these outsiders with reverence. The Priests of the pantheon attempt to educate people in these matters, but nontheless small faiths exist around these daemons. 
 
 ### Alkira
 
@@ -72,7 +72,7 @@ The tenet of Alkira is that all life is precious. This may appear at odds for th
 The dual nature of Alkira is that all life has value, and it is most important that the warriors of the land show respect. Death is not the goal of war – the goal of war is to restore order. 
 When war is necessary, Alkira directs that death and casualties should be minimized. Alkira is worshipped by many warriors. Any follower who dies in battle is guaranteed salvation by Alkira.
 Alkira’s chosen day is known as the Rising of the Ruby and falls on the summer solstice.  Sacrifices of precious metals and gems are required.
-Iconography of fire and Alkira’s sunburst are prolific on this day: the sky is filled with fireworks, and the streets are lined with mirrors reflecting light and braziers burning offerings.
+Iconography of fire and Alkira’s sunburst are prolific on this day: the sky is filled with lanterns and kites, and the streets are lined with mirrors reflecting light and braziers burning offerings.
 From sunrise until the moment the sun reaches its zenith, it is a day of festivities and carnivals; as the afternoon approaches, the mood grows more serious.
 Families are expected to gather and show gratitude toward the soldiers and warriors who fell within the last year. The smoke and sunbeams that fill the air at this time are believed to be the spirits of the fallen ascending to Alkira’s side.
 High priests of Alkira perform rituals and services in decorative, but functional, suits of armor.  Tests of skill in combat are expected by both Alkira and his priests.  
@@ -102,34 +102,52 @@ Those who leave Ambis's care carrying nothing but gratitude are expected to pass
 **God of Justice**
 
 The most rigid and righteous of the gods, Athore represents all that is lawful and good in the world. He is the most ferocious opponent of chaos in every sense of the word; the hammer he carries doubles as both a gavel and a grave weapon against forces of evil.
+
 Athore is envisioned as a large, robed, Dwarven male.  He is grayed and wrinkled with age and thought.  His right hand is that of logic and his left is justice. 
+
 He is the judge and juror of both the Gods and mankind.  His actions are never to be spurned or questioned.   Stories abound of the justice that Athore has dealt to both mortals and immortals, but none is so famous as his dealing with the Dwarven King Derhagar.
-Derhagar, drunk on conquest and convinced of his own supremacy, ordered the slaughter of the elven peoples out of nothing more than greed and jealousy. Athore's response was not swift; it was considered. He allowed the king to believe himself untouchable long enough to be certain of his guilt, then descended and crushed him beneath his boot at the shore of what is now called Athore's Foot. The lesson was not lost on those who witnessed it: Athore does not rush to judgment, but he arrives at it inevitably.
-Because of his fundamentally unyielding nature, Athore has experienced the most disagreement within the Eight. He finds issue with the neutrally aligned gods for he sees them to be spineless and passive, and his arguments with Rudlu have resulted in earthquakes and storms for the world below as the god of law and the goddess of trickery shouted at one another. 
+
+Derhagar, drunk on conquest and convinced of his own supremacy, ordered the slaughter of the elven peoples out of nothing more than greed and jealousy. Athore's response was not swift; it was considered. He allowed the king to believe himself untouchable long enough to be certain of his guilt, then descended and crushed him beneath his boot at the shore of what is now called Athore's Foot.
+
+Because of his fundamentally unyielding nature, Athore has experienced the most disagreement within the Eight. He finds issue with the gods unwilling to choose a side, believing them to be spineless and passive, and his arguments with Rudlu have resulted in earthquakes and storms for the world below as the god of law and the goddess of trickery shouted at one another.
+
 His priests reflect his temperament closely. They are not unkind, but they are exacting, and they have little patience for equivocation. A priest of Athore will hear both sides of a dispute with genuine attention and then render a verdict without apology. Their reputation for impartiality makes them sought after as arbiters across Estaea. To have a ruling delivered by one of his clergy is considered as close to divine judgment as a mortal is likely to receive.
+
 Outside of formal dispute, the daily worship of Athore is understated. His followers are expected to keep their word, fulfill their obligations, and hold others to the same standard without exception. The prayer matters less to him than the conduct.
+
 Athore’s holiday is a twofold event: the melancholy Dawn of Atonement, followed by the Eve of Righteousness. Beginning with the sunrise on the autumn solstice, people are expected to spend the morning contemplating their shortcomings of the last year.
+
 After noon and into the evening, the pensiveness of the morning is left behind and a more honorable, just atmosphere is taken up. After acknowledging and atoning for failures through prayer and offerings, one is to commit to being better.
+
 The evening is full of events of charity and fairness as folks model their behavior after the principles of Athore. Many trials are held on the Eve of Righteousness as well, for it is seen as an auspicious and clear-headed time to deliver justice.
-The largest of Athore’s temples is found on an island in the middle of the Lake known as Athore’s foot. As the site of where Athore’s boot crushed King Derhagar after the dwarven armies slaughtered the elves out of greed and jealousy, the atmosphere of the temple is understandably sober.
-It serves as a place of forgiveness, where one can come to confess and repent; it serves also as a place of retribution, where trials are carried out and executions are delivered. Were it not built with an open stone courtyard that is washed with the tides every night, the temple would likely be a bit more bloodstained than it currently is.
+
+The largest of Athore’s temples is found on an island in the middle of the Lake known as Athore’s foot. It serves as a place of forgiveness, where one can come to confess and repent; it serves also as a place of retribution, where trials are carried out and executions are delivered. Were it not built with an open stone courtyard that is washed with the tides every night, the temple would likely be a bit more bloodstained than it currently is.
 
 ### Enschede
 
 **Goddess of Fate**
 
 In comparison to the rest of the Eight, Enschede is one of the more impartial deities. She, along with her “descendants” Rudlu and Athore, still care for the world, of course, but in many ways, it is more out of interest or sense of duty than it is out of pure love.
-Given their domains, this makes sense. None of them could truly, effectively do their job if they were smitten with mortality. This has led to the occasional clashing between Enschede and Ambis in particular, but it has never tipped over into the scale of legitimate conflict.
+
+Given their domains, this makes sense. None of them could truly, effectively do their job if they were smitten with morality. This has led to the occasional clashing between Enschede and Ambis in particular, but it has never tipped over into the scale of legitimate conflict.
+
 The disagreement is a philosophical one at its core. Ambis believes that love can change outcomes; Enschede knows that it cannot. She bears no ill will toward the Mother of the pantheon for believing otherwise. If anything, she finds it quietly admirable that Ambis continues to try. Enschede herself stopped trying long ago, if she ever began at all.
+
 The goddess of fate is depicted as a female with dark hair and a slender build.  She has no facial features, only a flat, unemotional, gray surface where her face should be.
 Fate shows no partiality and Enschede does not associate with the other gods.  She knows all that is to come and is often believed to be in a permanent state of melancholia. 
 The divination of fortunes or the future can be obtained through Enschede, but she does not recommend that mortals ask for such information.  The people of Echartesh forbid the divination of fortunes for this reason.
+
 The prohibition is not born of superstition but of hard experience. Those who have received truthful answers from Enschede's priests rarely find the knowledge useful in the way they imagined. Knowing what is coming does not change it, and the weight of that knowledge has broken more than a few who sought it.
+
 Priests and Priestesses of Enschede on the continent of Estaea typically wear featureless masks. It is not merely an affectation. The mask is a theological statement: fate does not have a face you can appeal to, and neither does its servant. Her clergy are trained to be similarly impartial in their counsel, offering what they know without comfort or embellishment. They are among the least sought-after confidants in Estaea and among the most honest.
+
 While many of the holidays of other deities are celebrations borne out of admiration or love, Enschede’s day Kismet Calling is one of pure obligation. There are no festivals or festivities or feasts, only the dutiful observation of the thousand-eyed mistress of fate.
+
 Sacrifices of silver and practical things, like compasses or craftsmen tools, are made; Enschede does not demand massive amounts of wealth or glory to be given, but instead asks for commonplace things as a reminder that the power of fate touches even the most humble of things in life.
+
 Enschede’s largest temple is called the Convergent Edge and is found in a deep gorge of Echartea. It is located in the gorge because the location is believed to be the site where ley lines and borders between the planes converge, allowing one to more easily scry or divine the future. Enschede’s acolytes thus serve as warrior-priests to guard the location from those who would take advantage of the taboo magics.
-It is considered one of the more dangerous postings a priest can receive, not because of the enemies at the gate, but because of the prolonged exposure to the site itself. Acolytes who serve long rotations at the Convergent Edge are said to return quieter than they left, as though they have seen something they cannot put back.
+
+It is considered one of the more dangerous postings a priest can receive, not only because of the enemies at the gate, but because of the prolonged exposure to the site itself. Acolytes who serve long rotations at the Convergent Edge are said to return quieter than they left, as though they have seen something they cannot put back.
 
 ### Hirnaloyta
 
@@ -154,9 +172,13 @@ Hirnaloyta’s Promise is found at the heart of the city and is likely the reaso
 **God of the Underworld**
 
 The god Nevil is, unsurprisingly, not a well-loved character of the pantheon. Those that worship him often do so in a somewhat begrudging manner; no one rejoices in the god that holds the souls of their loved ones from them, yet no one dares transgress against him lest he retaliate at a lack of respect.
+
 Nevil is not an evil god but he holds dominion over the dead and darkness.  His role is a necessary part of life and he works in conjunction with other gods to keep things in order.
+
 What mortals do not want to realize is that a god with power over death also holds sway over life. Nevil, along with his descendants Alkira and Ambis, is actually one of the deities most fond of humanity, as he spends the most time out of any of the pantheon with their souls.
-Nevil is depicted as a tall, gaunt male figure robed entirely in black, his face that of a crow; black-feathered, sharp-beaked, and unreadable. He carries no weapon. He has no need of one. His statues are among the more unsettling works of religious art found across Estaea, though his clergy consider them an honest rendering of a god who has never pretended to be something easier to look at.
+
+Nevil is depicted as a tall, gaunt male figure robed entirely in black, his face that of a crow; black-feathered, sharp-beaked, and unreadable. He carries no weapon. He has no need of one. His statues are among the more unsettling works of religious art found across Estaea, though his clergy consider them an honest rendering of a god who has never pretended to be something easy to look at.
+
 Nevil himself is not the claimer of the dead or their souls but his followers are. His followers serve him on earth by helping the sick and wounded, and by claiming the souls of the dead.  Each new moon a priest is expected to give his claimed souls to Nevil.
 Outside of their funerary duties, priests of Nevil serve as attendants to the dying and are often found in places of illness or hardship. They do not hasten death, but they do not flinch from it either. Their presence at a bedside is understood as a kindness, not an omen, though the distinction is lost on the grieving.
 Whereas Alkira’s festival, the Rising of the Ruby, joyously celebrates the souls of warriors who have passed from this world unto the next, Nevil’s Day of the Departed is a day of mourning. It is a subdued and humble recognition that Nevil’s power will claim all souls in the end.
@@ -164,7 +186,7 @@ While the atmosphere is austere, the food is not: the Day of the Departed, thoug
 The chosen temple of Nevil is a bleak inversion of Hirnaloyta’s lush center. It was once referred to as the Garden of Souls, located in the swampy birch and reed forests of the Fens, but Nevil’s acolytes let it fall to disuse after a particularly bad season of flooding and storm. People have since taken to calling it the Bone Garden as a nod to both the eerie white trees surrounding it and to the deathly nature of the god himself
 The priests of Nevil oversee all funeral ceremonies throughout the land. Most are largely the same, as all the cultures worship the same 8 gods. The final resting place, prayers, and ceremonies differ depending upon which God’s favor the deceased wishes to invoke.
 The black robed High Priests of Nevil, with their Black skull masks, ride silently upon their elegant white steeds. 4 of them ride in procession ahead and behind the bier that the deceased is bourn upon.
-The Silent Brothers of Nevil, in their gray robes and masks, make up the majority of the procession, but there are also the children and acolytes of Nevil in their white diaphanous robes and streamers that move throughout the crowd and the procession, symbolizing the spirits of the deceased welcoming their new member.
+The Silent Brothers of Nevil, in their gray robes and masks, make up the majority of the procession, but there are also the Children and Acolytes of Nevil in their white diaphanous robes and streamers that move throughout the crowd and the procession, symbolizing the spirits of the deceased welcoming their new member.
 
 ### Rudlu
 
@@ -172,8 +194,9 @@ The Silent Brothers of Nevil, in their gray robes and masks, make up the majorit
 
 Lady Luck, Mistress of Fortune and Misfortune alike, and the Maiden of Foxes are all titles that the trickster goddess Rudlu answers to. She is often depicted as an impish-faced young woman, smiling and frolicking with children and small animals.
 Of all the pantheon, she has the most childlike nature: active and playful, albeit somewhat fickle and prone to squabbling. This squabbling is typically directed at Athore and Alkira as they are most at odds with her unorthodox approach to dealings with mortals. Where Athore demands discipline and order, Rudlu delights in chaos and spontaneity. Where Alkira values careful calculation and preparation, Rudlu revels in the unpredictable moment. Yet despite these tensions, even the most rigid of her divine siblings cannot deny that fortune and misfortune touch all mortal endeavors, whether planned or impromptu.
-The relaxed, unstructured nature of Rudlu is reflected in the fact that Rudlu alone lacks an official day of praise. Instead, festivals for her are held at various times of the year based on region and custom. Scholars of divine practice note that this irregularity is itself a form of worship, accepting that luck cannot be scheduled or controlled, only acknowledged when it arrives.
-The Echartean humans, for example, celebrate her with a week-long festival in the dark of winter, full of fun and games and gambling. During this time, debts between friends are often forgiven by lot or coin flip, and children play elaborate games of chance for small prizes. It is said that fortunes told during this week carry special weight, as Rudlu herself walks among the revelers in disguise.
+The relaxed, unstructured nature of Rudlu is reflected in that Rudlu alone lacks an official day of praise. Instead, festivals for her are held at various times of the year based on region and custom. Scholars of divine practice note that this irregularity is itself a form of worship, accepting that luck cannot be scheduled or controlled, only acknowledged when it arrives.
+The Echartean humans, for example, celebrate her with a week-long festival in the dark of winter, full of fun and games and gambling. During this time, debts between friends are often forgiven by lot or coin flip, and children play elaborate games of chance for small prizes.
+
 The elves, by contrast, worship her on the spring equinox with a somber event called Fortune's Bounty. On this day, one is to reflect on the good fortune they've had in the last year by giving a precious possession of theirs away to a loved one. The elven philosophy holds that luck is a river that must flow freely and that hoarded fortune grows stagnant and sours, while freely given luck returns tenfold. Some elven communities have expanded this tradition to include the anonymous gifting of useful items to strangers, believing that such acts of generosity prime the cosmic scales to tip in one's favor when need is greatest.
 Unsurprisingly, worship of Rudlu is anything but organized. She boasts no dedicated temples outside of the standard eight-pointed ones that give praise to all the pantheon. Priests who claim to serve Rudlu exclusively are rare and often regarded with suspicion; after all, how can one dedicate themselves to the goddess of unpredictability and expect consistent divine favor? Those who do claim such vocations tend to be wandering fortune-tellers, professional gamblers, or facilitators of games of chance who travel from town to town, never settling in one place for long.
 There is a theological argument, debated more in taverns than temples, about where Rudlu ends and Enschede begins. Fate says the outcome is written; luck says it is anything but. Rudlu's wandering priests tend to land firmly on the side of chaos in this debate, and they will happily wager on it. They do not consider their vocation a contradiction. If anything, they believe that Rudlu chose them precisely because they were the least likely candidates, and that this is exactly her point.
@@ -192,9 +215,9 @@ Patience and time are two of the main teachings of Shu-Jahan and the lessons of 
 Shu-Jahan is celebrated most widely during the Week of the Waters. Folks flock to coastlines and blessed reflection pools, gathering in groups ranging anywhere from a handful of people to hundreds. Such gathering marks the beginning of a week of philosophy and debate, community, and healing.
 Everyone ends the eighth day richer than they began it, though this never entails human wealth. The spirit of Shu-Jahan moves freely in this time, granting inspiration and breakthrough to some followers and miracles of blessed healing to others.
 The Grand Temple of Shu-Jahan is found in the Lockabier Peaks, throughout a lush mountain range that features almost supernaturally clear waters. Called the Monks of the Six Springs, the monastery is spread both aboveground and below, inside stone and crystal-laced caverns.
-The six major locations of the temple are all found built around a reflection pool, which are meant to inspire contemplation and the expansion outside of oneself.
-Priests of Shu-Jahan are encouraged to travel and explore as they grow in their faith. Some serve Shu-Jahan within the confines of scrolls and texts, but there is a demand to have the experiences to fill those volumes.
-The priests, often warrior priests, are elevated above the rank of the Initiates and acolytes. They are free from the constraints of the formal church clergy and are viewed as missionaries. The priest’s schedule is their own, but ideally they would look to help the temple in any area they are in.
+The six major locations of the temple are all built around a reflection pool, which are meant to inspire contemplation and the expansion outside of oneself.
+Priests of Shu-Jahan are encouraged to travel and explore as they grow in their faith. Some serve Shu-Jahan within the confines of scrolls and texts, but there is a demand to have the life experiences to fill those volumes.
+The Priests, often warrior priests, are elevated above the rank of the Initiates and Acolytes. They are free from the constraints of the formal church clergy and are viewed as missionaries. The priest’s schedule is their own, but ideally they would look to help the temple in any area they are in.
 Shu-Jahan sees those that first come to him as blind and robes them in black. They cannot understand the differences that make up the greater things in this world.
 As the follower climbs in understanding, their vestments change accordingly, moving through the spectrum from black toward white. It is easy to recognize members of rank by their distinctive colored robes, and those who have reached the higher gradations are treated with a reverence that Shu-Jahan himself would likely find a little excessive.
 
@@ -213,5 +236,4 @@ Only seven avatars walk the land at any one time. An avatar of the eight is easi
 Avatars are reawakened every eight years. Each avatar corresponds to one of the Eight, carrying with them the particular disposition and domain of their god as naturally as a person carries their own face. Those who encounter an avatar and know what they are looking at describe the experience as deeply unsettling, not because the avatars are threatening in bearing, but because the nimbus around them makes the ordinary world look thin by comparison.
 The politics of the avatars are a subject of considerable sensitivity. Their verdicts supersede local law, which most rulers accept in principle and resent in practice. A king who has spent years maneuvering toward a particular outcome has no recourse when an avatar steps in and rules otherwise. The mob that tends to form around an avatar's pronouncement is not merely religious fervor — it is the weight of popular legitimacy, and rulers have learned that opposing an avatar's ruling publicly is a fast way to lose the confidence of their own people.
 The institution of the avatars serves a function that no purely mortal body could replicate: a mediating authority that no nation controls and no army can effectively threaten. An avatar cannot be bribed. They cannot be appointed, cultivated, or anticipated. 
-The reawakening itself is not witnessed. An avatar simply appears, already walking, already present, on the morning of their return. No ceremony marks it. The closest thing to an announcement is the nimbus, which announces itself.
-The eighth seat is the one that occupies theologians most. Only seven avatars walk at any given time, which means one of the Eight goes unrepresented in the mortal world at all times. Which god is currently without an avatar, and why, is a question that has never been answered to anyone's satisfaction. The priesthoods each have their own theories, and none of them agree. Some scholars argue the absent seat rotates and always has; others believe the eighth avatar exists but moves in ways that make them undetectable. The question is considered unanswerable and is, for that reason, rarely left alone.
+The reawakening itself is not witnessed. An avatar simply appears, already walking, already present, on the morning of their return. No ceremony marks it.The eighth seat is the one that occupies theologians most. Only seven avatars walk at any given time, which means one of the Eight goes unrepresented in the mortal world at all times. Which god is currently without an avatar, and why, is a question that has never been answered to anyone's satisfaction. The priesthoods each have their own theories, and none of them agree. Some scholars argue the absent seat rotates and always has; others believe the eighth avatar exists but moves in ways that make them undetectable. The question is considered unanswerable and is, for that reason, rarely left alone.

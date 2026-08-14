@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You heard the call of the sea from a young age. Maybe you signed onto a merchant's vessel, joined the navy, or even fell in with a crew of pirates and scalawags. Life at sea taught you to work as part of a crew and stay steady when solid ground is just a memory. You might be on land now, but the ocean never really lets go of those who've sailed her waters.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Athletics 2, Acrobatics 2, Perception 1, Wilderness 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Athletics 3, Acrobatics 3, Perception 3, Wilderness 3, +56 XP",
     "startingEquipment": "Lime bast rope\ncommon clothes\nbelt knife\nshoes",
     "suggestedFeats": "",
     "features": "Ship Passage: You can secure free or reduced passage on ships and are welcomed in port taverns. Sailors recognize and trust one of their own.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "athletics": 2,
-      "acrobatics": 2,
-      "perception": 1,
-      "wilderness": 1
+      "athletics": 3,
+      "acrobatics": 3,
+      "perception": 3,
+      "wilderness": 3
     },
     "craftKeyword": null,
     "itemGrants": [

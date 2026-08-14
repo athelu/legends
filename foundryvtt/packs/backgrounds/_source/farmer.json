@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>With a strong back and an understanding of seasonal cycles, you tilled the land and tended crops. Your farm could have been razed by invaders, you could have lost the family tying you to the land, or you might have simply tired of the drudgery. Whatever the reason, you still find yourself reading the weather and judging soil quality out of habit.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Wilderness 2, Might 2, Athletics 1, Craft: Cook 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Wilderness 3, Might 3, Athletics 3, Craft: Cook 3, +56 XP",
     "startingEquipment": "Common clothes\nwork gloves\nwork boots",
     "suggestedFeats": "",
     "features": "Rural Knowledge: You understand seasons, weather, and crops, gaining useful insights about agricultural communities.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "wilderness": 2,
-      "might": 2,
-      "athletics": 1,
-      "craft": 1
+      "wilderness": 3,
+      "might": 3,
+      "athletics": 3,
+      "craft": 3
     },
     "craftKeyword": "Cook",
     "itemGrants": [

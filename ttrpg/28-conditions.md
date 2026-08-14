@@ -42,7 +42,7 @@ See Medicine Applications in this full Field Dressing rules.
 ### Charmed
 **Keyword:** [Hindered]
 **Effect:** The charmer has Fortune on Charisma-based checks against you. You cannot attack the charmer or target them with harmful abilities/weaves. You can still act freely otherwise and defend yourself. You interpret the charmer's words and actions in the most favorable way possible. You won't follow commands that are obviously harmful to yourself or that go against your core values. The charmer must still convince you through normal social interaction
-**Recovery:** Condition ends immediately if charmer or their allies harm you. Some charm effects allow for a will save to end early.
+**Recovery:** Condition ends immediately if charmer or their allies harm you. Some charm effects allow for a Will save to end early.
 
 ### Clumsy
 **Keyword:** [Hindered]
@@ -163,7 +163,7 @@ Exhaustion can be gained from the following:
 
 ## Fear Effects
 Fear is a stacking condition and making a successful saving throw will reduce the level of the condition down the stack. 
-If the character can no longer see or perceive the fear source, they Subtract 1 from both of their recovery save die results.
+If the character can no longer see or perceive the fear source, they subtract 1 from both of their recovery save die results.
 If the source of fear is destroyed or defeated, the character immediately downgrades their fear stack one level.
 
 ### Frightened (Level 1 Fear)
@@ -222,20 +222,20 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 **Recovery:** Use 1 [Action] to drop and roll: Make Reflex save
 - 1 success: Reduce condition to Ignited
 - 2 successes: Remove all fire conditions
-**Ally assistance:** Ally can use 1 [Action]: Make Reflex save
+**Ally assistance:** Ally can use 2 [Action]: Make Reflex save
 - 1 success: Reduce condition to Ignited
 - 2 successes:  Remove all fire conditions
 
 ### Grappled
 **Keyword:** [Hindered]
-**Effect:** Movement speed reduced to 0. Cannot take [Move] actions. Attacks and skill checks: Add 1 to both die results.
+**Effect:** Movement speed reduced to 0. Cannot take [Move] actions. Attacks and skill checks: Add 1 to both die results. Unable to make ranged attacks.
 **Recovery:** Use 1 action to make an opposed Athletics, Might or Acrobatics check.
 - Margin 1+: Remove grappled condition.
 
 ### Grievously Wounded
 **Keyword:** [Hindered]
 **Effect:** Applied when you regain consciousness at 0 HP or below. Can only take one action per turn. Cannot take reactions. Gain the Clumsy and Dazzled Conditions.
-**Recovery:** Condition ends when healed above 1 HP through magical healing OR a successful Medicine check (rank 3 required, 2 successes) by an ally. Self-treatment cannot remove this condition. See Medicine Applications.
+**Recovery:** Condition ends when healed above 1 HP through magical healing OR a successful Medicine check (rank 4 required, 2 successes) by an ally. Self-treatment cannot remove this condition. See Medicine Applications.
 
 ### Hidden
 **Keyword:** [Tactical]
@@ -272,17 +272,17 @@ Fire is a stacking condition and making a successful saving throw will reduce th
 ### Poisoned (Weak)
 **Keyword:** [Hindered]
 **Effect:** All attribute dice: Add 1 to die results. HP regeneration from short/long rests reduced by half.
-**Recovery:** Fortitude save at end of 1 hour (1 success cures). Medicine check by self or ally (rank 2 required, 2 successes) can end Poisoned early. See Medicine Applications.
+**Recovery:** Fortitude save at end of 1 hour (1 success cures). Medicine check by self or ally (rank 3 required, 2 successes) can end Poisoned early. See Medicine Applications.
 
 ### Poisoned (Strong)
 **Keyword:** [Hindered]
 **Effect:** All attribute dice: Add 2 to die results. HP regeneration from short/long rests reduced by half.Target takes 4 damage each hour until the condition is removed.
-**Recovery:** Fortitude save at end of 4 hours (1 success cures). Medicine check by self or ally (rank 3 required, 2 successes) can end Poisoned early. See Medicine Applications.
+**Recovery:** Fortitude save at end of 4 hours (1 success cures). Medicine check by self or ally (rank 4 required, 2 successes) can end Poisoned early. See Medicine Applications.
 
 ### Poisoned (Deadly)
 **Keyword:** [Hindered]
-**Effect:** All attribute dice: Add 2 to die results. Long and short rests provide no benefit..Target takes 8 damage each hour until the condition is removed.
-**Recovery:** Fortitude save at end of 4 hours (1 success). Medicine check (rank 4 required, 2 successes) suppresses  symptoms for 4 hours but does not cure. Antidote or magical healing required for full cure. See Medicine Applications.
+**Effect:** All attribute dice: Add 2 to die results. Long and short rests provide no benefit. Target takes 8 damage each hour until the condition is removed.
+**Recovery:** Fortitude save at end of 4 hours (1 success). Medicine check (rank 5 required, 2 successes) suppresses  symptoms for 4 hours but does not cure. Antidote or magical healing required for full cure. See Medicine Applications.
 
 ### Prone
 **Keyword:** [Hindered], [Tactical]

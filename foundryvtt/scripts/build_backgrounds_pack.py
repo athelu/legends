@@ -107,6 +107,13 @@ DIRECT_ITEM_GRANTS = {
     'high boots': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Boots, High'},
     'work boots': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Boots, Work'},
     'arrows bolts': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Arrows/Bolts'},
+    'playing cards': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Playing Cards'},
+    'quiver': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Quiver'},
+    'holy symbol': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Holy Symbol, Wood'},
+    'scrollcase': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Scrollcase'},
+    'wineskin': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Wineskin'},
+    'blanket': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Blanket'},
+    'work apron': {'mode': 'reference', 'itemType': 'equipment', 'pack': 'legends.equipment', 'sourceName': 'Apron'},
 }
 
 
@@ -347,7 +354,7 @@ def main():
     script_dir = Path(__file__).parent.parent.parent
     
     # Parse from markdown
-    md_file = script_dir / "ttrpg" / "backgrounds.md"
+    md_file = script_dir / "ttrpg" / "04-backgrounds.md"
     if md_file.exists():
         print("Parsing backgrounds.md...")
         items = parse_backgrounds_md(md_file)

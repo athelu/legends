@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You have an insatiable desire for learning and sequestered yourself from the outside world to learn all you could. You read about so many wondrous places and things in your books, and always dreamed about one day seeing the real things. Eventually, that curiosity led you to leave your studies and become an adventurer.</p>"
     },
-    "startingXP": 32,
-    "skillBonuses": "Arcane 3, History 2, +32 XP",
+    "startingXP": 48,
+    "skillBonuses": "Arcane 4, History 3, Writing 3, +48 XP",
     "startingEquipment": "General topic book\nquill\nink\npapyrus parchment x5\nrobe\nshoes",
     "suggestedFeats": "",
     "features": "Researcher: You know how to find information in libraries and archives, and have contacts among scholars who can provide access or assistance.",
@@ -16,8 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "arcane": 3,
-      "history": 2
+      "arcane": 4,
+      "history": 3,
+      "writing": 3
     },
     "craftKeyword": null,
     "itemGrants": [

@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You were raised in a noble or wealthy household, educated and cared for but never quite family. The experience gave you access to privilege while reminding you constantly that it could be taken away. You learned etiquette, history, and the subtle art of navigating high society from the margins. Now you're free to make your own way, though whether that freedom is liberating or terrifying probably depends on the day.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Society 2, History 2, Empathy 1, Perception 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Society 3, History 3, Empathy 3, Perception 3, +56 XP",
     "startingEquipment": "Fine clothes\ngeneral topic book\nquill\nink\nvellum parchment x2\nshoes",
     "suggestedFeats": "",
     "features": "Noble Education: You were raised in a noble household and understand etiquette and high society, though you lack the full privileges and recognition that true nobles command.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "society": 2,
-      "history": 2,
-      "empathy": 1,
-      "perception": 1
+      "society": 3,
+      "history": 3,
+      "empathy": 3,
+      "perception": 3
     },
     "craftKeyword": null,
     "itemGrants": [

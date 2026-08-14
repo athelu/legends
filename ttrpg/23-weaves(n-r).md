@@ -7,7 +7,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery / Negative Potential + Negative Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
-**Description:** Target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes 12 psychic damage at start of each turn. Can repeat Will save each round to end effect (1 success ends effect).
+**Description:** Target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, target sees its worst fear manifest. Target is Frightened and takes 12 psychic damage at start of each turn. Can repeat Will save each round to end effect (1 success ends effect).
 **Applies Effects:** frightened
 **Damage Type:** Psychic (mental)
 **DR Interaction:** ignore
@@ -63,7 +63,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Earth Potential + Earth Mastery / Space Potential + Space Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
-**Description:** Create a passage at close range up to 5 feet wide, 8 feet tall, and 20 feet deep through wood, plaster, or stone. When weave ends, creatures still in passage are ejected safely.
+**Description:** Create a passage at close range up to 5 feet wide, 8 feet tall, and 20 feet deep through wood, plaster, or stone. When weave ends, creatures still in passage are ejected safely to the nearest side.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 10 ft (1 round), 2= 20 ft (1 minute), 3 = 30 ft (10 minutes)
 
@@ -117,7 +117,7 @@
 **Action:** Complex weave (1 action)
 **Weaving Roll:** Space Potential + Space Mastery / Fire Potential + Fire Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
-**Description:** Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the "hits duplicate" range.
+**Description:** Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the "hits duplicate" chances.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 duplicate (1 round), 2= 3 duplicates (1 minute), 3 = 4 duplicates (10 minutes)
 

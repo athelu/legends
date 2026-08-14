@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>The water was your livelihood and your teacher. You might have left because the catches grew thin, or perhaps you realized the biggest fish weren't in the water at all. Either way, patience is a virtue you've mastered, and the sea's lessons apply to more than just fishing.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Wilderness 2, Athletics 2, Perception 1, Craft: Cook 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Wilderness 3, Athletics 3, Perception 3, Craft: Cook 3, +56 XP",
     "startingEquipment": "Net\ncommon clothes\nshoes",
     "suggestedFeats": "",
     "features": "Water Sense: You understand water, tides, and aquatic life.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "wilderness": 2,
-      "athletics": 2,
-      "perception": 1,
-      "craft": 1
+      "wilderness": 3,
+      "athletics": 3,
+      "perception": 3,
+      "craft": 3
     },
     "craftKeyword": "Cook",
     "itemGrants": [

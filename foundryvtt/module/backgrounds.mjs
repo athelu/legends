@@ -448,7 +448,7 @@ export async function applyBackgroundGrants(actor, background) {
       }
     } else {
       const current = Number(actor.system.skills?.[skillKey] ?? 0);
-      updates[`system.skills.${skillKey}`] = Math.max(0, current + Number(amount || 0));
+      updates[`system.skills.${skillKey}`] = Math.max(2, current + Number(amount || 0));
     }
   }
 
@@ -483,7 +483,7 @@ export async function revokeBackgroundGrants(actor, background) {
   const updates = {};
   for (const [skillKey, amount] of Object.entries(appliedSkills)) {
     const current = Number(actor.system.skills?.[skillKey] ?? 0);
-    updates[`system.skills.${skillKey}`] = Math.max(0, current - Number(amount || 0));
+    updates[`system.skills.${skillKey}`] = Math.max(2, current - Number(amount || 0));
   }
 
   if (Object.keys(updates).length) {

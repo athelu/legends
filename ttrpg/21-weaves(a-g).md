@@ -372,7 +372,7 @@
 **Action:** Complex weave (1 action)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
-**Description:** Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends.
+**Description:** Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Should events occur that cause the distance between the weaver and the disc to exceed 30’ the weave ends.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = Fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour
 
@@ -409,7 +409,7 @@
 **Supporting Energy:** Time 4 (duration 1 hour)
 **Range:** Self, touch
 **Duration:** 1 hour
-**Total Cost:** 9 Energy
+**Total Cost:** 11 Energy
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery

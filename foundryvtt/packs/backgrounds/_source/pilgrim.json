@@ -1,0 +1,75 @@
+{
+  "_id": "b96091278d3fe672",
+  "name": "Pilgrim",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>You walked. Through Coudassian cities, across Bellicosian plains, through the mountain passes of Echartesh — following temple routes, seeking shrines, completing vows that made sense when you made them. Along the way you learned that people are more similar across national borders than governments find convenient, and that hospitality from strangers is real but conditional. You returned changed. Whether you found what you were looking for is harder to say.</p>"
+    },
+    "startingXP": 56,
+    "skillBonuses": "Wilderness 3, Religion 3, Persuasion 3, Athletics 3, +56 XP",
+    "startingEquipment": "Traveler's clothes\nbedroll\nwaterskin\nholy symbol (wood)\nlow boots",
+    "suggestedFeats": "",
+    "features": "Road Fellowship: Ancient pilgrim routes maintain traditions of mutual aid among travelers. You know the customs, courtesy signals, and hospitality codes that pilgrims use to identify and assist one another. Communities along established pilgrimage roads will offer shelter, food, and local knowledge to those who travel in good faith, and you know how to present yourself as exactly that.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "wilderness": 3,
+      "religion": 3,
+      "persuasion": 3,
+      "athletics": 3
+    },
+    "craftKeyword": null,
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Traveler's",
+        "quantity": 1,
+        "originalText": "Traveler's clothes",
+        "sourceId": "0e79b3267533a030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Bedroll",
+        "quantity": 1,
+        "originalText": "bedroll",
+        "sourceId": "7f53e37546634877"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Waterskin",
+        "quantity": 1,
+        "originalText": "waterskin",
+        "sourceId": "c4a16e4b3f3ac1af"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Holy Symbol, Wood",
+        "quantity": 1,
+        "originalText": "holy symbol (wood)",
+        "sourceId": "b33ff68ba85b44be"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Low",
+        "quantity": 1,
+        "originalText": "low boots",
+        "sourceId": "ef7b8aa832f26893"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!b96091278d3fe672"
+}
