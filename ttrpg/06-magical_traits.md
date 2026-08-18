@@ -54,6 +54,8 @@ You can use channel divinity equal to your Tier times  per long rest. Gain acces
 ## The Nine Patron Choices
 ## ALKIRA - God of War and Order
 
+**Primary Energy:** Fire
+
 ### Guided Strike
 - **Action Cost:** 1 [Combat] action or [Reaction]
 - **Trigger (if Reaction):** An ally within 60 feet makes an attack roll
@@ -82,6 +84,8 @@ You can use channel divinity equal to your Tier times  per long rest. Gain acces
 
 ## AMBIS - The Mother
 
+**Primary Energy:** Water
+
 ### Preserve Life
 - **Action Cost:** 1 [Combat] action
 - **Range:** 30 feet
@@ -95,15 +99,17 @@ You can use channel divinity equal to your Tier times  per long rest. Gain acces
 - **Effect:** Choose up to 6 allies within range who can see you. They gain +2 DR for 1 minute.
 - **Usage:** Uses 1 Channel Divinity
 
-### Sanctuary
+### Undertow
 - **Action Cost:** 1 [Combat] action
-- **Range:** Touch
-- **Effect:** Touch a willing creature. For 1 minute, any enemy who targets them with an attack or harmful weave must make Will save (Wisdom + Luck) opposed by your Wisdom + Positive Mastery. If you win (more successes), they must choose a different target or their action is wasted. If the protected creature attacks or harms anyone, the effect ends.
+- **Range:** 30 feet
+- **Effect:** Target within range makes a Reflex save opposed by Wisdom + Water Mastery; on a loss they're pulled 15 feet toward Ambis's chosen point and gain the Restrained condition, as the water drags and holds.
 - **Usage:** Uses 1 Channel Divinity
 
 ---
 
 ## ATHORE - God of Justice
+
+**Primary Energy:** Positive
 
 ### Divine Judgment
 - **Action Cost:** 2 [Combat] actions
@@ -130,6 +136,8 @@ You can use channel divinity equal to your Tier times  per long rest. Gain acces
 
 ## ENSCHEDE - Goddess of Fate
 
+**Primary Energy:** Time
+
 ### Portent
 - **Action Cost:** [Reaction]
 - **Trigger:** Any creature you can see makes a roll
@@ -154,6 +162,8 @@ You can use channel divinity equal to your Tier times  per long rest. Gain acces
 
 ## HIRNALOYTA - Goddess of Nature
 
+**Primary Energy:** Earth
+
 ### Speak with Nature
 - **Action Cost:** 1 [Interact] action
 - **Range:** Self
@@ -175,6 +185,8 @@ You can use channel divinity equal to your Tier times  per long rest. Gain acces
 ---
 
 ## NEVIL - God of the Underworld
+
+**Primary Energy:** Negative
 
 ### Claim the Dead
 - **Action Cost:** 1 [Interact] action
@@ -200,6 +212,8 @@ You can use channel divinity equal to your Tier times  per long rest. Gain acces
 
 ## RUDLU - Goddess of Luck
 
+**Primary Energy:** Space
+
 ### Blessing of the Trickster
 - **Action Cost:** 1 [Minor] action
 - **Range:** 30 feet (must see target)
@@ -222,6 +236,8 @@ You can use channel divinity equal to your Tier times  per long rest. Gain acces
 ---
 
 ## SHU-JAHAN - God of Wisdom
+
+**Primary Energy:** Air
 
 ### Knowledge of the Ages
 - **Action Cost:** 1 [Interact] action
