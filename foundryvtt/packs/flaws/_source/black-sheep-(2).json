@@ -5,7 +5,7 @@
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Family has disowned you. No family support.</p>"
+      "value": "<p>You family has disowned you. No family support.</p>"
     },
     "pointValue": 2,
     "flawType": "social",

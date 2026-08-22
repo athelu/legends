@@ -22,7 +22,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Once per short rest when you use Words of Power, before speaking you may choose one of the following modes:</p>\n<ul>\n<li><strong>Guiding Word:</strong> The standard Words of Power effect (subtract 1 from both dice on next roll) applies to the next two rolls each ally makes instead of one</li>\n<li><strong>Opening Word:</strong> Allies within 30 feet gain Fortune on their next roll instead of the subtract-1 bonus. This replaces rather than stacks with the standard Words of Power effect.</li>\n</ul>",
+    "benefits": "<p>Once per short rest when you use Words of Power, before speaking you may choose one of the following modes:</p>\n<ul>\n<li><strong>Guiding Word:</strong> The standard Words of Power effect applies to the next two rolls each ally makes instead of one.</li>\n<li><strong>Opening Word:</strong> Allies within 30 feet gain Fortune on their next roll instead of the subtract-1 bonus. This replaces rather than stacks with the standard Words of Power effect.</li>\n</ul>",
     "usageType": "special",
     "usage": {
       "mode": "special",

@@ -15,7 +15,7 @@
         "cost": 2
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 1
       }
     },
@@ -50,7 +50,7 @@
       }
     },
     "targetingSuccessScaling": "0 = Miss, 1 = Half damage (4), 2 = Full damage (8), 3 = Enhanced damage (16) + applies effects",
-    "weavingRoll": "Fire Potential + Fire Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Fire Potential + Fire Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
       {

@@ -10,7 +10,7 @@
     "pointValue": 1,
     "flawType": "physical",
     "severity": "minor",
-    "mechanicalEffects": "<ul>\n<li>Choose one when taking this flaw:\n<ul>\n<li><strong>Athletics Penalty:</strong> Add 1 to Athletics die results</li>\n<li><strong>Acrobatics Penalty:</strong> Add 1 to Acrobatics die results</li>\n</ul></li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Choose one when taking this flaw:\n<ul>\n<li><strong>Athletics Penalty:</strong> Add 1 to Athletics skill die results</li>\n<li><strong>Acrobatics Penalty:</strong> Add 1 to Acrobatics skill die results</li>\n</ul></li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

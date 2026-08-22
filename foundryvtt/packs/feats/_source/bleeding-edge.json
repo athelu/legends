@@ -11,15 +11,13 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 5
-      },
-      "skills": "meleeCombat:5",
+      "attributes": {},
+      "skills": "meleeCombat:6",
       "feats": [
         "Exposed Strike"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>When you deal damage through Exposed Strike, the target also gains 1 Bleeding stack in addition to any other effects.</p>",
     "usageType": "passive",

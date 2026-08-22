@@ -10,7 +10,7 @@
     "pointValue": 1,
     "flawType": "social",
     "severity": "minor",
-    "mechanicalEffects": "<ul>\n<li>Cannot benefit from Eidetic Memory</li>\n<li>History and Society: Add 2 to die results</li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Cannot benefit from Eidetic Memory</li>\n<li>History and Society: Add 2 to skill die results</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

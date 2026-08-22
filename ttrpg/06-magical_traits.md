@@ -37,10 +37,10 @@ Roll 8d8, assign to eight Magical Potentials.
 
 **Choose Your Patron:**
 Select which of the Eight Gods you primarily serve, or choose to serve the Pantheon equally as a generalist, or choose to worship a Twisted variation of the Eight or the Dragons of Legend (See section: The Faith). This choice determines your energy affinities and grants you specific Channel Divinity options.
-Your patron deity determines Primary and Secondary energy bonuses.
+Your patron deity determines your Primary energy bonus. You choose your Secondary energy freely.
 
 Primary Energy = + 2 (to max 8) bonus. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
-Secondary Energy =  + 1 bonus ( to max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Secondary Energy (your choice) = + 1 bonus (to max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
 Generalist = 3 +1 bonuses to assign as desired.
 
 **Calculate your Energy Pool**
@@ -312,7 +312,7 @@ For evil characters who worship the ancient daemons known as Dragons instead of 
 
 **Mechanical Framework:**
 - Use the same mechanical structure as Divine Gift
-- Dragon patron determines Primary (+2) and Secondary (+1) energy based on dragon's nature
+- Dragon patron determines Primary (+2) energy based on dragon's nature; player chooses Secondary (+1) energy
 - Channel Divinity options are corrupted/twisted versions of the Eight's abilities
 - GM should create custom Channel Divinity options reflecting the dragon's personality and goals
 

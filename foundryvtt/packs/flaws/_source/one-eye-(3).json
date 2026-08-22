@@ -10,7 +10,7 @@
     "pointValue": 3,
     "flawType": "physical",
     "severity": "moderate",
-    "mechanicalEffects": "<ul>\n<li>Add 1 to ranged attack rolls</li>\n<li>Perception checks involving depth perception: Add 1 to die results</li>\n<li>No peripheral vision on one side</li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Add 1 to ranged attack skill die rolls</li>\n<li>Perception checks involving depth perception: Add 1 to skill die results</li>\n<li>No peripheral vision on one side</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

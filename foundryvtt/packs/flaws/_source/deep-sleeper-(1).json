@@ -10,7 +10,7 @@
     "pointValue": 1,
     "flawType": "physical",
     "severity": "minor",
-    "mechanicalEffects": "<ul>\n<li>Require 2 successes to wake</li>\n<li>First round after waking: Add 2 to all die results</li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Require 2 successes to wake</li>\n<li>First round after waking: Add 2 to all skill die results</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

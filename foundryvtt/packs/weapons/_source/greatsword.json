@@ -5,7 +5,7 @@
   "img": "icons/weapons/swords/sword-long-crossguard-brown.webp",
   "system": {
     "description": {
-      "value": "<p>A large two-handed sword with an extended blade and handle designed for powerful sweeping cuts. The pommel and crossguard can be used for bludgeoning strikes (the \"murder stroke\"). This category includes zweihänders, claymores, montantes, and similar large battlefield swords. Often wielded by elite infantry, these weapons require significant training but offer exceptional reach and power.</p>"
+      "value": "<p>A large two-handed sword with an extended blade and handle designed for powerful sweeping cuts. The pommel and crossguard can be used for bludgeoning strikes (the \"murder stroke\"). This category includes zweihänders, claymores, montantes, and similar large battlefield swords. Often wielded by elite infantry, these weapons require significant training.</p>"
     },
     "damage": {
       "base": 10,

@@ -5,7 +5,7 @@
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Deathly afraid of something. Make [[/save type=will]] (1 success required) or flee/cower when confronted.</p>"
+      "value": "<p>You are deathly afraid of something. Make a [[/save type=will]] (1 success required) or gain the fleeing or cowering condition when confronted by the source of your phobia. This may be taken multiple times.</p>"
     },
     "pointValue": 3,
     "flawType": "mental",

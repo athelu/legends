@@ -19,7 +19,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Fortitude saves: subtract 1 from die results; success on ongoing effect ends it</p>",
+    "benefits": "<p>Fortitude saves: subtract 1 from both die results.</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

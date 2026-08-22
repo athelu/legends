@@ -10,7 +10,7 @@
     "pointValue": 2,
     "flawType": "physical",
     "severity": "minor",
-    "mechanicalEffects": "<ul>\n<li>Persuasion, Perform, Deception when speaking: Add 2 to die results</li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Persuasion, Perform, Deception when speaking: Add 2 to skill die results</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

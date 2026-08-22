@@ -1,0 +1,69 @@
+{
+  "_id": "cc16657dd3d75364",
+  "name": "Plant Growth",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Plants in the target area erupt into dense, tangled growth. The area becomes difficult terrain, and movement through it costs 4 feet per foot of distance (double the normal difficult terrain cost). Creatures with a fly speed or climb speed are unaffected. The growth is natural and persists for 8 hours; clearing a 5-foot section takes approximately 10 minutes with cutting tools. Has no effect in areas without plants.</p>"
+    },
+    "weaveType": "complex",
+    "actionCost": 2,
+    "energyCost": {
+      "primary": {
+        "type": "earth",
+        "cost": 4
+      },
+      "supporting": {
+        "type": "time",
+        "cost": 7
+      }
+    },
+    "range": "Medium, 60 ft. (30-foot diameter)",
+    "duration": "8 hours",
+    "target": "area",
+    "savingThrow": "none",
+    "effect": "Plants in the target area erupt into dense, tangled growth. The area becomes difficult terrain, and movement through it costs 4 feet per foot of distance (double the normal difficult terrain cost). Creatures with a fly speed or climb speed are unaffected. The growth is natural and persists for 8 hours; clearing a 5-foot section takes approximately 10 minutes with cutting tools. Has no effect in areas without plants.",
+    "effectType": "utility",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "20-foot diameter (1 hour)",
+          "duration": "20-foot diameter (1 hour)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "30-foot diameter (8 hours)",
+          "duration": "30-foot diameter (8 hours)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "30-foot diameter (8 hours) + growth suppresses tracking — creatures passing through leave no trail",
+          "duration": "30-foot diameter (8 hours) + growth suppresses tracking — creatures passing through leave no trail"
+        }
+      }
+    },
+    "targetingSuccessScaling": "0 = fails, 1 = 20-foot diameter (1 hour), 2 = 30-foot diameter (8 hours), 3 = 30-foot diameter (8 hours) + growth suppresses tracking — creatures passing through leave no trail",
+    "weavingRoll": "Earth Potential + Earth Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Earth Mastery",
+    "appliesEffects": [],
+    "deliveryMethod": "automatic",
+    "tags": [
+      "aoe",
+      "ranged",
+      "ritual",
+      "utility"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!cc16657dd3d75364"
+}

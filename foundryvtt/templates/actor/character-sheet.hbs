@@ -88,37 +88,36 @@
             <label>Texture:</label>
             <input type="text" name="system.biography.hairTexture" value="{{system.biography.hairTexture}}" placeholder="Hair texture"/>
           </div>
-          {{!-- Rest buttons + progression controls share the bottom of the right column --}}
-          <div class="header-bottom-right">
-            <div class="header-rest-buttons">
-              <button type="button" data-action="shortRest" title="Short Rest (1 hour): Regain Con HP + 1 Luck">
-                <i class="fas fa-moon"></i> Short Rest
-              </button>
-              <button type="button" data-action="longRest" title="Long Rest (8 hours): Regain (Con × 4) HP, restore all Luck & Energy">
-                <i class="fas fa-bed"></i> Long Rest
-              </button>
-            </div>
-            <div class="header-progression-controls">
-              <div class="info-line progression-line">
-                <span class="progression-badge">{{progression.phaseLabel}}</span>
-                {{#if progression.manualOverride}}
-                <span class="progression-badge warning">Manual</span>
-                {{/if}}
-                {{#if canAwardXp}}
-                <button type="button" class="progression-button" data-action="awardXp">Award XP</button>
-                {{/if}}
-                {{#if canSpendXp}}
-                <button type="button" class="progression-button" data-action="spendXp">Spend XP</button>
-                {{/if}}
-              </div>
-              {{#if canManageProgression}}
-              <div class="info-line progression-line">
-                <button type="button" class="progression-button" data-action="toggleProgressionPhase">{{progression.nextPhaseLabel}}</button>
-                <button type="button" class="progression-button" data-action="toggleManualOverride">{{#if progression.manualOverride}}Disable Manual Override{{else}}Enable Manual Override{{/if}}</button>
-              </div>
-              {{/if}}
-            </div>
+        </div>
+      </div>
+      {{!-- Action bar: rest buttons + progression controls as a single full-width row --}}
+      <div class="header-action-bar">
+        <div class="header-rest-buttons">
+          <button type="button" data-action="shortRest" title="Short Rest (1 hour): Regain Con HP + 1 Luck">
+            <i class="fas fa-moon"></i> Short Rest
+          </button>
+          <button type="button" data-action="longRest" title="Long Rest (8 hours): Regain (Con × 4) HP, restore all Luck & Energy">
+            <i class="fas fa-bed"></i> Long Rest
+          </button>
+        </div>
+        <div class="header-progression-controls">
+          <span class="progression-badge">{{progression.phaseLabel}}</span>
+          {{#if canAwardXp}}
+          <button type="button" class="progression-button" data-action="awardXp">Award XP</button>
+          {{/if}}
+          {{#if canSpendXp}}
+          <button type="button" class="progression-button" data-action="spendXp">Spend XP</button>
+          {{/if}}
+          {{#if canManageProgression}}
+          <div class="toggle-switch" role="button" title="{{progression.nextPhaseLabel}}" data-action="toggleProgressionPhase">
+            <span class="toggle-track {{#if progression.isCreation}}active{{/if}}"></span>
+            <span class="toggle-label">Creation</span>
           </div>
+          <div class="toggle-switch" role="button" title="{{#if progression.manualOverride}}Disable Manual Override{{else}}Enable Manual Override{{/if}}" data-action="toggleManualOverride">
+            <span class="toggle-track {{#if progression.manualOverride}}active{{/if}}"></span>
+            <span class="toggle-label">Override</span>
+          </div>
+          {{/if}}
         </div>
       </div>
     </div>

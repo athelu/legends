@@ -12,12 +12,12 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "dexterity": 4
+        "dexterity": 5
       },
-      "skills": "rangedCombat:4",
+      "skills": "rangedCombat:5",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>When you make a ranged attack against a creature within 5 feet, you may immediately move up to 10 feet as a [Free] action after the attack resolves, without provoking opportunity attacks from the creature you attacked. The +1 to both attack dice penalty for shooting while threatened still applies to the attack.</p>",
     "usageType": "special",

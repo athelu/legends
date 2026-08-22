@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 3
-      },
-      "skills": "meleeCombat:3",
+      "attributes": {},
+      "skills": "meleeCombat:4",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>Your unarmed strikes deal [[/damage 6]] damage (same as standard weapons). Additionally, all weapons with the <strong>Monk</strong> property count as monk weapons for your abilities</p>",
     "usageType": "passive",

@@ -21,7 +21,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Your attacks with [Two-Handed] weapons ignore the first point of Multiple Action Penalty. Your second [Combat] action adds nothing to both dice instead of adding 1. Additionally, once per long rest when you reduce a creature to 0 HP with a [Two-Handed] weapon, every hostile creature within 30 feet that can see you must make a [[/save type=will]] opposed by your Strength + Intimidate. Failure inflicts Frightened until the start of your next turn. Creatures that succeed are immune to this effect for the remainder of the combat.</p>",
+    "benefits": "<p>Your second [Combat] attack in your turn with a [Two-Handed] weapon ignores the Multiple Action Penalty. Additionally, once per long rest when you reduce a creature to 0 HP with a [Two-Handed] weapon, every hostile creature within 30 feet that can see you must make a [[/save type=will]] opposed by your Strength + Intimidate. Failure inflicts Frightened until the start of your next turn. Creatures that succeed are immune to this effect for the remainder of the combat.</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",
@@ -37,7 +37,8 @@
     },
     "keywords": [
       "[Combat]",
-      "[Two-Handed]"
+      "[Two-Handed]",
+      "[Legendary]"
     ],
     "notes": "",
     "effects": []

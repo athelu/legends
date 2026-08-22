@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "intelligence": 3
+        "intelligence": 4
       },
-      "skills": "language:3",
+      "skills": "language:4",
       "feats": [],
       "tier": 0,
       "other": ""

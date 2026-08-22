@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "wisdom": 6
+        "wisdom": 7
       },
-      "skills": "religion:6",
+      "skills": "religion:7",
       "feats": [
         "Divine Gift",
         "Sustained Prayer"

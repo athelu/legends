@@ -15,11 +15,11 @@
         "cost": 2
       },
       "supporting": {
-        "type": "space",
+        "type": "earth",
         "cost": 4
       }
     },
-    "range": "Close, 30 ft. (10-foot square)",
+    "range": "Close, 30 ft. (10-foot diameter)",
     "duration": "1 minute",
     "target": "area",
     "savingThrow": "reflex",
@@ -47,13 +47,13 @@
         },
         "3": {
           "appliesEffects": true,
-          "description": "10 minutes (20ft square)",
-          "duration": "10 minutes (20ft square)"
+          "description": "10 minutes (20ft diameter)",
+          "duration": "10 minutes (20ft diameter)"
         }
       }
     },
-    "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes (20ft square)",
-    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes (20ft diameter)",
+    "weavingRoll": "Water Potential + Water Mastery / Earth Potential + Earth Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {

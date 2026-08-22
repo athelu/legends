@@ -239,7 +239,7 @@ def main():
     source_dir = pack_dir / "_source"
 
     # If equipment.md exists, parse it and generate _source JSON files
-    md_file = script_dir / "ttrpg" / "equipment.md"
+    md_file = script_dir / "ttrpg" / "12-equipment.md"
     if md_file.exists():
         print(f"  Parsing markdown: {md_file}")
         content = md_file.read_text(encoding='utf-8')

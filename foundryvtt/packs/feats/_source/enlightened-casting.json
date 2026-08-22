@@ -19,7 +19,7 @@
         "Sorcerous Origin"
       ],
       "tier": 0,
-      "other": ""
+      "other": "one mastery 7"
     },
     "benefits": "<p>Once per long rest, you can cast one weave at maximum possible effect without rolling:</p>\n<ul>\n<li>Automatically achieve 4 successes (critical effect)</li>\n<li>No Energy cost</li>\n<li>No action cost (can cast as [Free] action)</li>\n<li>Must be a weave you've cast before</li>\n</ul>",
     "usageType": "special",
@@ -37,7 +37,8 @@
     },
     "keywords": [
       "[Magic]",
-      "[Sorcerer]"
+      "[Sorcerer]",
+      "[Legendary]"
     ],
     "notes": "",
     "effects": []

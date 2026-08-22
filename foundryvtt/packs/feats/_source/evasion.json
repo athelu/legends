@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 5
-      },
+      "attributes": {},
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>When subjected to an effect allowing [[/save type=reflex]]: if you win (1+ successes) take no damage; if you lose (0 successes) take half damage</p>",
     "usageType": "passive",

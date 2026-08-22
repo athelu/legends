@@ -1,0 +1,22 @@
+{
+  "_id": "0a0d12b957d1c741",
+  "name": "Intolerance - Major (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>You have a strong prejudice  to a broad category such as all non-humans, magic users, etc. Persuasion with disliked group: Add 2 to skill die results.</p>"
+    },
+    "pointValue": 2,
+    "flawType": "social",
+    "severity": "minor",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!0a0d12b957d1c741"
+}

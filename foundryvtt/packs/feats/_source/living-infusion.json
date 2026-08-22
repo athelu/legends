@@ -5,16 +5,16 @@
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Living creatures are the challenge you have been building toward. Infusing a person directly requires understanding both the material and the vital simultaneously.</p>"
+      "value": "<p>Infusing a person directly requires understanding both the material and the vital simultaneously.</p>"
     },
     "flavorText": "",
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "intelligence": 5
+        "intelligence": 6
       },
-      "skills": "craft:5",
+      "skills": "craft:6",
       "feats": [
         "Infuser"
       ],

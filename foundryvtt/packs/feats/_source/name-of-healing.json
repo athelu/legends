@@ -19,9 +19,9 @@
         "Invoker"
       ],
       "tier": 0,
-      "other": "Positive Mastery 3"
+      "other": "Positive Mastery 5"
     },
-    "benefits": "<p>When you cast a healing weave using Positive as the primary energy, add your Charisma score to the total HP restored. Additionally, healing weaves you cast can target creatures at Close range (30 feet) without requiring Space as a supporting energy.</p>",
+    "benefits": "<p>When you cast a healing weave using Positive as the primary energy, add your Charisma score to the total HP restored. Additionally, healing weaves you cast can target creatures at Close range (30 feet) without requiring a supporting energy.</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

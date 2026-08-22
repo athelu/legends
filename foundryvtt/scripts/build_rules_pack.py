@@ -239,8 +239,8 @@ def main():
     script_dir = Path(__file__).resolve().parent
     pack_dir = script_dir.parent / 'packs' / 'rules'
     source_dir = pack_dir / '_source'
-    skills_md_path = script_dir.parent.parent / 'ttrpg' / 'skills.md'
-    combat_md_path = script_dir.parent.parent / 'ttrpg' / 'combat.md'
+    skills_md_path = script_dir.parent.parent / 'ttrpg' / '09-skills.md'
+    combat_md_path = script_dir.parent.parent / 'ttrpg' / '27-combat.md'
 
     source_dir.mkdir(parents=True, exist_ok=True)
 

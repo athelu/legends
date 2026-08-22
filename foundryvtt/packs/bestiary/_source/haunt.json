@@ -1,0 +1,173 @@
+{
+  "_id": "92fb28da4ca35273",
+  "name": "Haunt",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Haunt is what remains when something died with unfinished business and the pneuma could not let go. It understands Elven but cannot speak — whatever part of its former self held language is gone. What remains is hunger, patience, and the specific kind of cunning that belongs to predators that have been hunting the same territory for a very long time.</p>\n<p>It does not attack immediately. It watches. The fog goes up first, then the illusions start — sounds that don't match their apparent sources, shapes glimpsed at the edge of torchlight, the sense that something is just behind you in a room you know is empty. By the time a creature realizes what is happening, the Haunt is already within reach.</p>\n<p>What it wants is unclear. The life drain suggests sustenance, but the Haunt does not seem to need it the way living things need food. It may simply be habit — the echo of something it did in life, continuing past the point where life gave it meaning.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 30,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 3,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 3,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 72,
+      "max": 72,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 3,
+      "max": 3
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "perception": 5,
+      "wilderness": 0,
+      "athletics": 0,
+      "rangedCombat": 0,
+      "devices": 0,
+      "writing": 0,
+      "empathy": 0,
+      "investigate": 0,
+      "deception": 0,
+      "intimidate": 0,
+      "meleeCombat": 4,
+      "arcane": 3,
+      "acrobatics": 0,
+      "religion": 0,
+      "persuasion": 0,
+      "might": 0,
+      "history": 0,
+      "language": 0,
+      "society": 0,
+      "perform": 0,
+      "medicine": 0,
+      "craft": 0,
+      "stealth": 5,
+      "thievery": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 0,
+      "fly": 30,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "undead",
+    "creatureSubtype": "",
+    "hpMultiplier": 18,
+    "immunities": {
+      "damageTypes": [
+        "poison",
+        "necrotic"
+      ],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "understands elven (hadriaeth). cannot speak."
+    ],
+    "sensesNotes": "Blindsight 30 ft., Darkvision 60 ft. (including magical darkness)",
+    "tactics": "The Haunt opens at range, placing Fog Cloud to fragment the party and eliminate sightlines. It then uses Invisibility and moves into the fog where its Blindsight functions and the party's vision does not. Phantom Image and Minor Illusion run simultaneously to pull individual creatures away from the group — a familiar voice, a figure retreating into the dark, the sound of someone calling for help from the wrong direction.\n\nOnce a target is isolated the Haunt uses Frightful Presence before closing to Life Drain range. A Frightened creature trying to flee has already moved away from its allies. The Haunt follows, draining maximum HP with each hit, and retreats back into the fog before the rest of the party can respond.\n\nIt prioritizes one target at a time and does not switch until that target is dead or the tactical situation forces it.\n\nSunlight is its only reliable deterrent. A party that can create or sustain a Magical Radiant Light effect of sufficient energy inside the fog forces the Haunt to disengage or fight at Misfortune — its preferred environment stops being safe. It will withdraw rather than fight on those terms, returning when the light source expires.\n\nSilver weapons and magical attacks are the only physical options. A party without either cannot damage it through conventional means and should treat the encounter as a puzzle rather than a fight until they find another approach.",
+    "attacksNotes": "<p><strong>Life Drain [Combat]:</strong> Melee attack (Agil 5 + Melee Combat 4), Reach 5 ft.</p>\n<ul>\n<li><strong><em>Margin 1:</strong></em> 8 necrotic damage (half DR applies). The target's maximum HP is reduced by 8. Current HP is unaffected unless it now exceeds the new maximum, in which case reduce current HP to the new maximum.</li>\n<li><strong><em>Margin 2:</strong></em> 11 necrotic damage (8 + 3 Str). The target's maximum HP is reduced by 11.</li>\n</ul>\n<p>Maximum HP lost to Life Drain restores fully after a long rest. Any magical healing that restores HP simultaneously restores an equal amount of lost maximum HP up to the total drained. A target whose maximum HP is reduced to 0 dies.</p>",
+    "specialAbilitiesNotes": "<p><strong>Undead Traits:</strong></p>\n<ul>\n<li>Immune to poison damage, Poisoned condition, disease, exhaustion</li>\n<li>Immune to the Charmed, Grappled, Paralyzed, Petrified, Prone, Restrained, and Unconscious conditions</li>\n<li>Does not need air, food, drink, or sleep</li>\n<li>Mindless immunity does not apply — the Haunt retains intelligence and volition</li>\n</ul>\n<p><strong>Incorporeal Movement:</strong> The Haunt moves through other creatures and objects as if they were difficult terrain. It takes 4 force damage if it ends its turn inside an object.</p>\n<p><strong>Sunlight Sensitivity:</strong> While in direct sunlight, the Haunt has Misfortune on attack rolls and on Perception checks that rely on sight.</p>\n<p><strong>Frightful Presence (3/day) [Combat]:</strong> Costs 1 action. Every creature of the Haunt's choice within 30 feet that can see it makes a Will save (Wis + Luck, opposed by the Haunt's Cha 4 + Perception 5). Creatures that fail gain the Frightened condition for 1 minute with the Haunt as the source. They may repeat the save at the end of each of their turns (1 success ends the effect). A creature that succeeds on its save, or recovers from the condition, cannot be affected by this Haunt's Frightful Presence for 24 hours.</p>\n<p><strong>Silver and Magic:</strong> Nonmagical, non-silver weapons deal no damage to the Haunt. Magical weapons and silver weapons deal damage normally. This is not a DR reduction — nonmagical non-silver damage simply does not register.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "Wisdom",
+      "potentials": {
+        "earth": 0,
+        "fire": 0,
+        "positive": 0,
+        "negative": 0,
+        "space": 0,
+        "air": 0,
+        "time": 0,
+        "water": 0
+      },
+      "mastery": {
+        "earth": 0,
+        "fire": 0,
+        "positive": 0,
+        "negative": 0,
+        "space": 0,
+        "air": 0,
+        "time": 0,
+        "water": 0
+      },
+      "energyPool": {
+        "value": 32,
+        "max": 32
+      },
+      "targetingRoll": "Wisdom + primary Energy Mastery",
+      "notes": "<p>The Haunt does not channel magic through study or faith. Its weaves are the residue of whatever it was in life, leaking outward as instinct. It cannot explain what it does. It simply does it.</p>\n<p>| Weave | Energy | Actions | Frequency | |---|---|---|---| | Fog Cloud | Air 2 + Space 4 = 6 | 2 | At will | | Invisibility | Space 4 + Time 3 = 7 | 2 | At will | | Minor Illusion | Space 3 + Time 2 = 5 | 2 | At will | | Phantom Image | Space 4 + Time 2 = 6 | 2 | At will | | Complex Illusion | Space 6 + Time 3 = 9 | 2 | 1/encounter |</p>\n<p><strong>Fog Cloud:</strong> Creates a heavily obscured sphere 40 feet diameter at medium range (60 ft.). All creatures inside gain the Concealed condition against all attackers. The Haunt can see through its own fog using Blindsight within 30 feet.</p>\n<p><strong>Invisibility:</strong> The Haunt gains the Hidden condition. The effect ends if it takes a [Combat] action or casts a weave other than Fog Cloud, which it can maintain while invisible since Fog Cloud requires no ongoing action to sustain once placed.</p>\n<p><strong>Minor Illusion and Phantom Image:</strong> Function as written in the weave list. The Haunt uses these to create sounds, figures, and movement — a voice from the wrong direction, the shape of something familiar in the fog, footsteps retreating down a corridor that has no exit.</p>"
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Haunt",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!92fb28da4ca35273"
+}

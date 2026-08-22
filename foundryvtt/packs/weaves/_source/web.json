@@ -15,7 +15,7 @@
         "cost": 4
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 8
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 10ft radius (1 round), 2= 20ft radius (1 minute), 3 = 30ft radius (10 minutes)",
-    "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Earth Potential + Earth Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [
       {

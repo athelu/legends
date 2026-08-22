@@ -12,13 +12,12 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "agility": 4,
         "wisdom": 4
       },
       "skills": "meleeCombat:4",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When you hit the same creature 2+ times in one turn, you may attempt to stun: opposed [[/save type=will]] (your Wisdom + Melee Combat vs target's Wisdom + Luck). If you win target is Stunned until the end of your next turn</p>",
     "usageType": "special",

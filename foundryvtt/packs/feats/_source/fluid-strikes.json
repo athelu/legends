@@ -11,15 +11,13 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 5
-      },
+      "attributes": {},
       "skills": "meleeCombat:5",
       "feats": [
         "Two-Weapon Fighting"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>When making a Two-Weapon Fighting action, the off-hand attack no longer adds 1 to the skill die. Both attacks are made at normal dice.</p>",
     "usageType": "passive",

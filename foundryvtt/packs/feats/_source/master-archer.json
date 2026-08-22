@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "dexterity": 5
+        "dexterity": 6
       },
-      "skills": "rangedCombat:5",
+      "skills": "rangedCombat:6",
       "feats": [],
       "tier": 0,
       "other": ""

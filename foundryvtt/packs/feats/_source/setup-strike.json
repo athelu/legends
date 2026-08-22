@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 3
-      },
-      "skills": "rangedCombat:3, meleeCombat:3",
+      "attributes": {},
+      "skills": "rangedCombat:5, meleeCombat:5",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>Once per turn when you hit with a weapon attack, you may apply either the Slowed (Minor) or Disoriented condition to the target until the end of their next turn.</p>",
     "usageType": "special",

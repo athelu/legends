@@ -278,7 +278,7 @@ def main():
     script_dir = Path(__file__).parent.parent.parent
     
     # Try to parse from markdown
-    md_file = script_dir / "ttrpg" / "weapons.md"
+    md_file = script_dir / "ttrpg" / "11-weapons.md"
     if md_file.exists():
         print("Parsing weapons.md...")
         items = parse_weapons_md(md_file)

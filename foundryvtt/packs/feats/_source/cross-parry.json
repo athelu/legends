@@ -12,15 +12,14 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "strength": 4,
-        "agility": 4
+        "strength": 4
       },
-      "skills": "meleeCombat:4",
+      "skills": "meleeCombat:5",
       "feats": [
         "Two-Weapon Fighting"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "",
     "usageType": "reaction",

@@ -1,0 +1,22 @@
+{
+  "_id": "acb456aad0a7dfb2",
+  "name": "Protector's Oath - Serious (3)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>Sworn to protect all members of your faith, nation, or organization. You must honor your oath to protect, even at great personal risk.</p>"
+    },
+    "pointValue": 3,
+    "flawType": "mental",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!acb456aad0a7dfb2"
+}

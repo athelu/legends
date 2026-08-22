@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 5
-      },
+      "attributes": {},
       "skills": "meleeCombat:5",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>When a creature misses you with a melee attack, as a [Reaction] you may make one melee weapon attack against that creature</p>",
     "usageType": "reaction",

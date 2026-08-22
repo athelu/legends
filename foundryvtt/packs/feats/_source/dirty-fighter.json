@@ -11,13 +11,13 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 3
-      },
-      "skills": "rangedCombat:3, meleeCombat:3",
-      "feats": [],
+      "attributes": {},
+      "skills": "rangedCombat:4, meleeCombat:4",
+      "feats": [
+        "Exploit Weakness"
+      ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When you make an attack against a target that has any [Hindered] condition applied to them, you meet the Exploit Weakness trigger condition, regardless of positioning or dice modifiers.</p>",
     "usageType": "passive",

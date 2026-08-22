@@ -19,7 +19,7 @@
         "Summoner"
       ],
       "tier": 0,
-      "other": "Time Mastery 3"
+      "other": "Time Mastery 5"
     },
     "benefits": "<p>When casting a summoning weave, extend the duration one step on the duration table at no additional Time energy cost.</p>",
     "usageType": "passive",

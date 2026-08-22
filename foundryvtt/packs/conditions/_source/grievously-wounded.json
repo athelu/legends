@@ -5,7 +5,7 @@
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Applied when you regain consciousness at 0 HP or below. Can only take one action per turn. Cannot take reactions. Gain the Clumsy and Dazzled Conditions. <strong>Recovery:</strong> Condition ends when healed above 1 HP through magical healing OR a successful [[/check skill=medicine]] (rank 3 required, 2 successes) by an ally. Self-treatment cannot remove this condition. See Medicine Applications.</p>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Applied when you regain consciousness at 0 HP or below. Can only take one action per turn. Cannot take reactions. Gain the Clumsy and Dazzled Conditions. <strong>Recovery:</strong> Condition ends when healed above 1 HP through magical healing OR a successful [[/check skill=medicine]] (rank 4 required, 2 successes) by an ally. Self-treatment cannot remove this condition. See Medicine Applications.</p>"
     },
     "label": "Grievously Wounded",
     "category": "incapacitation",

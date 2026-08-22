@@ -1,0 +1,22 @@
+{
+  "_id": "b10c5da3444aad46",
+  "name": "Clumsy - Major (4)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>You are awkward and accident-prone. Add 2 to Acrobatics, Climb, and balance-related Athletics checks skill dice. On a natural 8 during physical activities, something goes wrong (drop weapon, trip, knock something over).</p>"
+    },
+    "pointValue": 4,
+    "flawType": "physical",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!b10c5da3444aad46"
+}

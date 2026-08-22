@@ -11,11 +11,11 @@
     "actionCost": 2,
     "energyCost": {
       "primary": {
-        "type": "fire",
+        "type": "positive",
         "cost": 4
       },
       "supporting": {
-        "type": "space",
+        "type": "fire",
         "cost": 8
       }
     },
@@ -53,8 +53,8 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= 10 minutes, 3 = 1 hour",
-    "weavingRoll": "Fire Potential + Fire Mastery / Space Potential + Space Mastery",
-    "targetingRoll": "Casting Stat + Fire Mastery",
+    "weavingRoll": "Positive Potential + Positive Mastery / Fire Potential + Fire Mastery",
+    "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
     "deliveryMethod": "automatic",
     "tags": [

@@ -1,0 +1,22 @@
+{
+  "_id": "c7c273cd517a2b15",
+  "name": "Enemy - Major (3)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>A powerful organization or nation has animosity toward you and is constantly pursuing you.</p>"
+    },
+    "pointValue": 3,
+    "flawType": "social",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!c7c273cd517a2b15"
+}

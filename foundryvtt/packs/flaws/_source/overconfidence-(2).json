@@ -5,7 +5,7 @@
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Believe you're best at everything.</p>"
+      "value": "<p>You believe that you're best at everything.</p>"
     },
     "pointValue": 2,
     "flawType": "mental",

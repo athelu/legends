@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create invisible, mindless, shapeless force within close range. Has DR 8, 4 HP, Strength 2, can't attack. Can perform simple tasks: fetch, clean, mend, fold, light fires, serve food. Can carry 30 lbs or drag 60 lbs. Command as [Minor] action. Moves 15 feet per round. Vanishes if reduced to 0 HP or when weave ends.</p>"
+      "value": "<p>Create invisible, mindless, shapeless force within close range. Has DR 8, 4 HP, Strength 2, can't attack. Can perform simple tasks: fetch, clean, mend, fold, light fires, serve food. Can carry 30 lbs or drag 60 lbs. Command as [Minor] action. Moves 15 feet per round but cannot be further from the caster than the Range of the weave. Vanishes if reduced to 0 HP or when weave ends.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -23,7 +23,7 @@
     "duration": "1 hour",
     "target": "",
     "savingThrow": "none",
-    "effect": "Create invisible, mindless, shapeless force within close range. Has DR 8, 4 HP, Strength 2, can't attack. Can perform simple tasks: fetch, clean, mend, fold, light fires, serve food. Can carry 30 lbs or drag 60 lbs. Command as [Minor] action. Moves 15 feet per round. Vanishes if reduced to 0 HP or when weave ends.",
+    "effect": "Create invisible, mindless, shapeless force within close range. Has DR 8, 4 HP, Strength 2, can't attack. Can perform simple tasks: fetch, clean, mend, fold, light fires, serve food. Can carry 30 lbs or drag 60 lbs. Command as [Minor] action. Moves 15 feet per round but cannot be further from the caster than the Range of the weave. Vanishes if reduced to 0 HP or when weave ends.",
     "effectType": "debuff",
     "damage": {
       "base": 0,

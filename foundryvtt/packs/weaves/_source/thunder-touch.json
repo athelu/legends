@@ -1,0 +1,67 @@
+{
+  "_id": "228e750c0b445756",
+  "name": "Thunder Touch",
+  "type": "weave",
+  "img": "icons/magic/abjuration/abjuration-purple.webp",
+  "system": {
+    "description": {
+      "value": "<p>Touch a target and channel a burst of sonic vibration into them. Target takes [[/damage 4 type=thunder]] damage. This is an attack weave—no saving throw allowed.</p>"
+    },
+    "weaveType": "simple",
+    "actionCost": 1,
+    "energyCost": {
+      "primary": {
+        "type": "air",
+        "cost": 2
+      },
+      "supporting": {
+        "type": "",
+        "cost": 0
+      }
+    },
+    "range": "Touch",
+    "duration": "Instantaneous",
+    "target": "sphere",
+    "savingThrow": "none",
+    "effect": "Touch a target and channel a burst of sonic vibration into them. Target takes 4 thunder damage. This is an attack weave—no saving throw allowed.",
+    "effectType": "utility",
+    "damage": {
+      "base": 0,
+      "type": "",
+      "drInteraction": "",
+      "scaling": {
+        "0": {
+          "appliesEffects": false,
+          "description": "fails",
+          "duration": null
+        },
+        "1": {
+          "appliesEffects": true,
+          "description": "half damage (2)",
+          "duration": "half damage (2)"
+        },
+        "2": {
+          "appliesEffects": true,
+          "description": "full damage (4)",
+          "duration": "full damage (4)"
+        },
+        "3": {
+          "appliesEffects": true,
+          "description": "enhanced damage (8)",
+          "duration": "enhanced damage (8)"
+        }
+      }
+    },
+    "targetingSuccessScaling": "0 = fails, 1 = half damage (2), 2 = full damage (4), 3 = enhanced damage (8)",
+    "weavingRoll": "Air Potential + Air Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
+    "appliesEffects": [],
+    "deliveryMethod": "save",
+    "tags": [
+      "aoe",
+      "touch"
+    ]
+  },
+  "effects": [],
+  "_key": "!items!228e750c0b445756"
+}

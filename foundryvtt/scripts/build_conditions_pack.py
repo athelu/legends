@@ -838,7 +838,7 @@ def main():
     script_dir = Path(__file__).parent.parent.parent
     items = []
 
-    md_file = script_dir / 'ttrpg' / 'conditions.md'
+    md_file = script_dir / 'ttrpg' / '28-conditions.md'
     if md_file.exists():
         print('Parsing conditions.md...')
         condition_items = parse_conditions_md(md_file)
@@ -847,7 +847,7 @@ def main():
     else:
         print(f'  Warning: {md_file} not found')
 
-    combat_md_file = script_dir / 'ttrpg' / 'combat.md'
+    combat_md_file = script_dir / 'ttrpg' / '27-combat.md'
     if combat_md_file.exists():
         print('Parsing cover conditions from combat.md...')
         cover_items = parse_cover_conditions(combat_md_file)

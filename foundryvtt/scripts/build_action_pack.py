@@ -317,7 +317,7 @@ def parse_actions_md(md_file):
 def main():
     script_dir = Path(__file__).parent.parent.parent
 
-    md_file = script_dir / 'ttrpg' / 'actions.md'
+    md_file = script_dir / 'ttrpg' / '26-actions.md'
     if md_file.exists():
         print('Parsing actions.md...')
         items = parse_actions_md(md_file)

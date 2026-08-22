@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "dexterity": 4
+        "dexterity": 5
       },
-      "skills": "craft:3",
+      "skills": "craft:5",
       "feats": [
         "Venom Crafter"
       ],

@@ -633,6 +633,54 @@
   background: rgba(255, 255, 255, 0.24);
 }
 
+/* Toggle switch (Creation / Override) */
+.legends .header-info .toggle-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.legends .header-info .toggle-track {
+  position: relative;
+  width: 28px;
+  height: 14px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.legends .header-info .toggle-track::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.legends .header-info .toggle-track.active {
+  background: rgba(99, 179, 237, 0.55);
+  border-color: rgba(99, 179, 237, 0.8);
+}
+
+.legends .header-info .toggle-track.active::after {
+  transform: translateX(14px);
+  background: #fff;
+}
+
+.legends .header-info .toggle-label {
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+}
+
 /* ========================================
    SHEET TABS
    ======================================== */
@@ -804,7 +852,7 @@
 
 .legends .skill-row {
   display: flex;
-  align-items: left;
+  align-items: center;
   gap: 6px;
   padding: 4px 8px;
   background: var(--d8-bg-light);
@@ -826,10 +874,12 @@
 .legends .training-checkbox {
   width: 11px;
   height: 11px;
-  margin: 0;
+  margin: 0 6px 0 0;
   accent-color: var(--d8-success);
   cursor: pointer;
   flex: 0 0 auto;
+  align-self: center;
+  vertical-align: middle;
 }
 
 .legends .skill-row .skill-attr {
@@ -1482,35 +1532,33 @@
 
 .legends .header-rest-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 5px;
 }
 
 .legends .header-rest-buttons button {
-  padding: 6px 12px;
-  font-size: 12px;
+  padding: 4px 10px;
+  font-size: 11px;
 }
 
-/* Bottom-right block: rest buttons + progression controls side-by-side */
-.legends .header-bottom-right {
+/* Action bar spans the full header width below the info columns */
+.legends .header-action-bar {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  gap: 10px;
-  margin-top: auto;
-  padding-top: 8px;
-}
-
-.legends .header-bottom-right .header-rest-buttons {
-  flex: 0 0 auto;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 2px;
 }
 
 .legends .header-progression-controls {
-  flex: 1 1 0;
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
 }
 
 /* Tier row inside the left column */

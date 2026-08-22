@@ -12,7 +12,6 @@
     "classification": "legendary",
     "prerequisites": {
       "attributes": {
-        "agility": 7,
         "charisma": 7
       },
       "skills": "",
@@ -21,7 +20,7 @@
         "Unreadable"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 7"
     },
     "benefits": "<p>You gain the following permanent abilities:</p>\n<ul>\n<li><strong>Imperious Presence:</strong> Feint attempts against you automatically fail — no roll is made.</li>\n<li><strong>Sustained Exposure:</strong> Exposed Strike now triggers on every attack against a feinted target until the start of your next turn, not just the next attack.</li>\n<li><strong>Elusive Blade:</strong> Opportunity attacks against you have Misfortune.</li>\n</ul>",
     "usageType": "passive",
@@ -39,7 +38,8 @@
     },
     "keywords": [
       "[Combat]",
-      "[Duelist]"
+      "[Duelist]",
+      "[Legendary]"
     ],
     "notes": "",
     "effects": []
