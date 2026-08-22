@@ -1,0 +1,168 @@
+{
+  "_id": "c0ba278232dbf097",
+  "name": "Swamp Cat",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 4,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 1,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 2,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 52,
+      "max": 52,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 2,
+      "max": 2
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "perception": 3,
+      "wilderness": 0,
+      "athletics": 0,
+      "rangedCombat": 0,
+      "devices": 0,
+      "writing": 0,
+      "empathy": 0,
+      "investigate": 0,
+      "deception": 0,
+      "intimidate": 0,
+      "meleeCombat": 5,
+      "arcane": 0,
+      "acrobatics": 0,
+      "religion": 0,
+      "persuasion": 0,
+      "might": 0,
+      "history": 0,
+      "language": 0,
+      "society": 0,
+      "perform": 0,
+      "medicine": 0,
+      "craft": 0,
+      "stealth": 5,
+      "thievery": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "beast",
+    "creatureSubtype": "",
+    "hpMultiplier": 13,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [],
+    "sensesNotes": "Darkvision 120 ft., Keen Smell",
+    "tactics": "Swamp Cats hunt in pairs or small groups, using the terrain to stalk prey before committing to Pounce. Pack Tactics and Pounce together make their opening turn devastating — one cat charges to trigger Prone while the second attacks with subtracted dice against the downed target. They break off if badly wounded, retreating into the swamp to recover.\n \n---",
+    "attacksNotes": "<p><strong>Bite [Combat]:</strong> Melee attack (Agil 4 + Melee Combat 5), Reach 5 ft.</p>\n<ul>\n<li><strong><em>Margin 1:</strong></em> 10 damage (Large, standard natural weapon: 8 + 2)</li>\n<li><strong><em>Margin 2:</strong></em> 15 damage (10 + 5 Str)</li>\n</ul>\n<p><strong>Claw [Combat]:</strong> Melee attack (Agil 4 + Melee Combat 5), Reach 5 ft.</p>\n<ul>\n<li><strong><em>Margin 1:</strong></em> 10 damage (Large, standard natural weapon: 8 + 2)</li>\n<li><strong><em>Margin 2:</strong></em> 15 damage (10 + 5 Str)</li>\n</ul>\n<p><strong>Multiattack [Combat]:</strong> The Swamp Cat makes one bite and one claw attack.</p>\n<ul>\n<li><strong><em>Shared Attribute Roll (Agil 4):</strong></em> Roll once, apply to both attacks. Roll Melee Combat skill die separately for each.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p><strong>Keen Smell:</strong> Scent-based Perception checks have Fortune.</p>\n<p><strong>Pack Tactics:</strong> When an ally is within 5 feet of the target, subtract 1 from both attack dice.</p>\n<p><strong>Pounce:</strong> If the Swamp Cat moves at least 20 feet straight toward a target and then hits with a claw attack on the same turn, the target must make a Fortitude save (Con + Luck, opposed by the Cat's Str 5 + Melee Combat 5). On failure, the target gains the Prone condition. If the target is Prone, the Swamp Cat may immediately make one bite attack against it as a [Free] action.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "earth": 0,
+        "fire": 0,
+        "positive": 0,
+        "negative": 0,
+        "space": 0,
+        "air": 0,
+        "time": 0,
+        "water": 0
+      },
+      "mastery": {
+        "earth": 0,
+        "fire": 0,
+        "positive": 0,
+        "negative": 0,
+        "space": 0,
+        "air": 0,
+        "time": 0,
+        "water": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Swamp Cat",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!c0ba278232dbf097"
+}

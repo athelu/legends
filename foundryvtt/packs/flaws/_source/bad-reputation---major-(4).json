@@ -1,0 +1,22 @@
+{
+  "_id": "3644832ef47b4624",
+  "name": "Bad Reputation - Major (4)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>You are widely known as criminal, coward, traitor, etc. Persuasion in social situations: Add 2 to skill die results.</p>"
+    },
+    "pointValue": 4,
+    "flawType": "social",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!3644832ef47b4624"
+}

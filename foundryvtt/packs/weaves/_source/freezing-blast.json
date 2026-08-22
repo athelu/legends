@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>A blast of cold air erupts from your hands. All creatures in a 60-foot cone take [[/damage 40 type=cold]] damage. Each target takes the full listed damage and makes their own save.</p>"
+      "value": "<p>A barrage of frozen shards and sleet erupts from your hands. All creatures in a 60-foot cone take 40 cold and bludgeoning damage. Each target takes the full listed damage and makes their own save.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -15,7 +15,7 @@
         "cost": 6
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 5
       }
     },
@@ -23,12 +23,12 @@
     "duration": "Instantaneous",
     "target": "cone",
     "savingThrow": "reflex",
-    "effect": "A blast of cold air erupts from your hands. All creatures in a 60-foot cone take 40 cold damage. Each target takes the full listed damage and makes their own save.",
+    "effect": "A barrage of frozen shards and sleet erupts from your hands. All creatures in a 60-foot cone take 40 cold and bludgeoning damage. Each target takes the full listed damage and makes their own save.",
     "effectType": "damage",
     "damage": {
       "base": 40,
       "type": "cold",
-      "drInteraction": "half",
+      "drInteraction": "full",
       "scaling": {
         "0": {
           "damage": 0,
@@ -50,7 +50,7 @@
       }
     },
     "targetingSuccessScaling": "0 = Fails, 1 = Half damage (20), 2 = Full damage (40), 3 = Enhanced damage (48) + applies effects",
-    "weavingRoll": "Water Potential + Water Mastery + Space Potential + Space Mastery",
+    "weavingRoll": "Water Potential + Water Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {

@@ -1,0 +1,22 @@
+{
+  "_id": "ccc1202ed8863e41",
+  "name": "Pacifism - Minor (3)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>You are opposed to violence. You will not attack non-combatants, surrendered foes, or clearly innocent people. Make a [[/save type=will]] (1 success required) to harm anyone who hasn't directly threatened you.</p>"
+    },
+    "pointValue": 3,
+    "flawType": "mental",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!ccc1202ed8863e41"
+}

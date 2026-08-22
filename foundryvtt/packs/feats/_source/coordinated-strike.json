@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4
-      },
+      "attributes": {},
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": "any combat skill 4"
+      "other": "Agil 4, any combat skill 5"
     },
     "benefits": "<p>Once per turn when you make a weapon attack, you can make another attack with the same weapon against a different creature within 5 feet of the original target. Use Shared Attribute Roll: roll your Attribute die once, use that result for both attacks. Roll Combat skill die separately for each attack</p>",
     "usageType": "special",

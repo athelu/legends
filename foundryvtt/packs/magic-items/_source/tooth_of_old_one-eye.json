@@ -1,0 +1,38 @@
+{
+  "_id": "c8aa48d685a37362",
+  "name": "Tooth of Old One-eye",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Type:</strong> Weapon (Dagger) <strong>Rarity:</strong> Uncommon <strong>Attack Bonus:</strong> 1 (2 vs beasts) <strong>Weight:</strong> 1 <strong>Description:</strong> The tooth of the ancient crocodile known as Old One-eye — 11 inches of yellowed, ridged ivory. It functions as a magic dagger. Its Attack Bonus of 1 is reduced from the skill die as normal. Against beasts, its Attack Bonus is treated as 2 instead (an additional −1 to the die result).</p>\n<p>The tooth carries an old, territorial magic. While it is on your person, you benefit passively from the effects of <strong>Barkward</strong> — your skin takes on a faint bark-like hardness without any action on your part.</p>\n<p><strong>Passive Effect:</strong> Barkward (always active while carried; no charges or activation required)</p>\n<p>> <strong>Foundry:</strong> `attackBonus: 1`, `conditionalBonuses: [{ value: 1, condition: \"beast\" }]`, `passiveEffects: [{ effectId: \"Barkward\" }]`. When the attacker has a beast targeted, the system automatically adds the extra −1 to the die roll modifier.</p>\n<p>---</p>"
+    },
+    "primaryEnergy": "",
+    "charges": {
+      "value": 0,
+      "max": 0,
+      "recharge": "",
+      "rechargePeriod": "dawn"
+    },
+    "properties": [],
+    "grantedWeaves": [],
+    "isMagical": true,
+    "identified": true,
+    "weight": 1.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "uncommon",
+    "requiresAttunement": false,
+    "notes": "",
+    "implementType": "weapon",
+    "attackBonus": 1,
+    "damage": {
+      "base": 4,
+      "type": "bludgeoning",
+      "properties": []
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

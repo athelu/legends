@@ -1,0 +1,38 @@
+{
+  "_id": "e828bb283bfa3ac5",
+  "name": "Haunt Scrap",
+  "type": "broach",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Type:</strong> Broach <strong>Rarity:</strong> Rare <strong>Slot:</strong> Neck <strong>Weight:</strong> 0 <strong>Description:</strong> A ragged piece of heavy, dark-green, woolen cloth with a blacksmith’s nail pushed through it like a pin. While worn it becomes difficult for undead creatures  to locate you. An undead creature must succeed on a DC 14 Wisdom saving throw or be unable to detect or locate you with sight, hearing or smell. Even extraordinary senses such as blindsight and tremorsense are not effective. The effects automatically end if you take an action which uses radiant energy, attempt to turn undead, or attack an undead creature, at which point the effect is lost until after a long rest. The Haunt Scrap must be bound before it may be used.</p>\n<p>---</p>"
+    },
+    "primaryEnergy": "",
+    "charges": {
+      "value": 0,
+      "max": 0,
+      "recharge": "",
+      "rechargePeriod": "dawn"
+    },
+    "properties": [],
+    "grantedWeaves": [],
+    "isMagical": true,
+    "identified": true,
+    "weight": 0.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "rare",
+    "requiresAttunement": false,
+    "notes": "",
+    "implementType": "broach",
+    "attackBonus": 0,
+    "damage": {
+      "base": 4,
+      "type": "bludgeoning",
+      "properties": []
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

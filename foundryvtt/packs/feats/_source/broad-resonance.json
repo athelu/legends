@@ -22,7 +22,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>You may call daemon categories from any of the six Primary Resonance energy types. Time-aspected daemons and Drakes remain inaccessible regardless.</p>",
+    "benefits": "<p>You may call daemon categories from any of the eight energies.</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

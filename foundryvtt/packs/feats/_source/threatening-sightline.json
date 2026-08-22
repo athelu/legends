@@ -19,7 +19,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Once per round, you may use a [Reaction] to make a ranged attack when one of the following occurs within your range and line of sight:</p>\n<ul>\n<li>A creature moves from Full Cover, Half Cover, or Hidden into a lesser state</li>\n<li>A creature stands up from Prone</li>\n<li>A creature that was Concealed or Hidden reveals themselves by taking any action</li>\n</ul>\n<p>This attack adds 1 to both dice. If you also have Keen Eye and it triggers on this attack ignore the dice penalty.</p>",
+    "benefits": "<p>Once per round, you may use a [Reaction] to make a ranged attack when one of the following occurs within your range and line of sight:</p>\n<ul>\n<li>A creature moves from Full Cover, Half Cover, or Hidden into a lesser state</li>\n<li>A creature stands up from Prone</li>\n<li>A creature that was Concealed or Hidden reveals themselves by taking any action</li>\n</ul>\n<p>This attack adds 1 to both dice. If you also have Keen Eye and it triggers on this attack, ignore the dice penalty.</p>",
     "usageType": "reaction",
     "usage": {
       "mode": "reaction",

@@ -12,7 +12,6 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "agility": 5,
         "dexterity": 4
       },
       "skills": "",
@@ -20,7 +19,7 @@
         "Disrupting Throw"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>When you make a thrown weapon attack, you may move up to 10 feet before or after the attack without provoking opportunity attacks. This movement does not consume a [Move] action.</p>",
     "usageType": "passive",

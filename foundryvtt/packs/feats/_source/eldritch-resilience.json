@@ -5,7 +5,7 @@
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "<p>You have survived things that should have ended you once already. Whatever grante dyou power still wants you alive</p>"
+      "value": "<p>You have survived things that should have ended you once already.</p>"
     },
     "flavorText": "",
     "xpCost": 40,

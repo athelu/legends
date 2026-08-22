@@ -15,7 +15,7 @@
         "cost": 4
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 2
       }
     },
@@ -32,7 +32,7 @@
       "scaling": {}
     },
     "targetingSuccessScaling": "Must equal or exceed original weaving successes to dispel",
-    "weavingRoll": "Space Potential + Space Mastery",
+    "weavingRoll": "Space Potential + Space Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "automatic",

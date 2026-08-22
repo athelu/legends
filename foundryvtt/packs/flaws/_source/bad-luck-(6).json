@@ -5,12 +5,12 @@
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Luck is costly and inefficient.</p>"
+      "value": "<p>Luck is costly and inefficient. Spending Luck costs 2 points per die reduction instead of 1</p>"
     },
     "pointValue": 6,
     "flawType": "physical",
     "severity": "major",
-    "mechanicalEffects": "<ul>\n<li>Luck attribute functions normally for starting value and regeneration</li>\n<li>Spending Luck costs 2 points per die reduction instead of 1</li>\n<li>You still roll Luck for saves normally</li>\n<li>Complications on partial success work normally</li>\n</ul>",
+    "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

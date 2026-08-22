@@ -11,13 +11,13 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4
-      },
-      "skills": "rangedCombat:4, meleeCombat:4",
-      "feats": [],
+      "attributes": {},
+      "skills": "rangedCombat:5, meleeCombat:5",
+      "feats": [
+        "Exploit Weakness"
+      ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When you deal damage through Exploit Weakness, the target gains the Slowed (Minor) condition until the end of their next turn.</p>",
     "usageType": "passive",

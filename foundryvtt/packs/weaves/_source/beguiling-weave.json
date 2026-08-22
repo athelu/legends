@@ -15,7 +15,7 @@
         "cost": 2
       },
       "supporting": {
-        "type": "space",
+        "type": "time",
         "cost": 5
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = Fails, 1 = 1 round, 2 = 1 hour, 3 = 4 hours",
-    "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Positive Potential + Positive Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [
       {

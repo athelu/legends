@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "wisdom": 4
+        "wisdom": 5
       },
-      "skills": "religion:4",
+      "skills": "religion:5",
       "feats": [
         "Divine Gift",
         "Sacred Domain"

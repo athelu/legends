@@ -522,52 +522,15 @@ export const CASTING_STATS = {
 
 // Patron deity configurations
 export const DIVINE_PATRONS = {
-  alkira: { 
-    name: "Alkira - God of War and Order", 
-    primary: "fire", 
-    secondary: "positive" 
-  },
-  ambis: { 
-    name: "Ambis - The Mother", 
-    primary: "positive", 
-    secondary: "water" 
-  },
-  athore: { 
-    name: "Athore - God of Justice", 
-    primary: "positive", 
-    secondary: "fire" 
-  },
-  enschede: { 
-    name: "Enschede - Goddess of Fate", 
-    primary: "time", 
-    secondary: "space" 
-  },
-  hirnaloyta: { 
-    name: "Hirnaloyta - Goddess of Nature", 
-    primary: "earth", 
-    secondary: "water" 
-  },
-  nevil: { 
-    name: "Nevil - God of the Underworld", 
-    primary: "negative", 
-    secondary: "earth" 
-  },
-  rudlu: { 
-    name: "Rudlu - Goddess of Luck", 
-    primary: "space", 
-    secondary: "air" 
-  },
-  shuJahan: { 
-    name: "Shu-Jahan - God of Wisdom", 
-    primary: "time", 
-    secondary: "space" 
-  },
-  generalist: { 
-    name: "Pantheon Generalist", 
-    primary: null, 
-    secondary: null,
-    tertiary: null
-  }
+  alkira:     { name: "Alkira - God of War and Order",   primary: "fire"     },
+  ambis:      { name: "Ambis - The Mother",               primary: "water"    },
+  athore:     { name: "Athore - God of Justice",          primary: "positive" },
+  enschede:   { name: "Enschede - Goddess of Fate",       primary: "time"     },
+  hirnaloyta: { name: "Hirnaloyta - Goddess of Nature",   primary: "earth"    },
+  nevil:      { name: "Nevil - God of the Underworld",    primary: "negative" },
+  rudlu:      { name: "Rudlu - Goddess of Luck",          primary: "space"    },
+  shuJahan:   { name: "Shu-Jahan - God of Wisdom",        primary: "air"      },
+  generalist: { name: "Pantheon Generalist",              primary: null       }
 };
 
 // Sorcerous Origin manifestations
@@ -839,7 +802,7 @@ export async function showAffinityDialog() {
  * @param {string} excludeEnergy - Energy to exclude (already chosen as affinity)
  * @returns {Promise<string>} Chosen energy
  */
-export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMultiple = []) {
+export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMultiple = [], availableRolls = null) {
   // Combine single exclude and multiple excludes
   const excluded = excludeEnergy ? [excludeEnergy, ...excludeMultiple] : excludeMultiple;
   const availableEnergies = ALL_ENERGIES.filter(e => !excluded.includes(e));
@@ -848,12 +811,28 @@ export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMult
     `<option value="${e}">${ENERGY_TYPES[e].label} ${ENERGY_TYPES[e].icon}</option>`
   ).join('');
 
+  // Show the roll that will be auto-assigned to whichever energy the player picks
+  let rollPreviewHtml = '';
+  if (availableRolls && availableRolls.length > 0) {
+    const idx = findOptimalRollForBonus([...availableRolls], 1);
+    if (idx !== -1) {
+      const roll = availableRolls[idx];
+      const final = Math.min(roll + 1, 8);
+      rollPreviewHtml = `
+        <div style="padding: 6px 8px; background: rgba(0,0,0,0.1); border-radius: 4px; font-size: 12px;">
+          Best available roll for +1 bonus: <strong>${roll}</strong> → <strong>${final}</strong>
+        </div>
+      `;
+    }
+  }
+
   const result = await foundry.applications.api.DialogV2.wait({
     window: { title: 'Choose Secondary Focus' },
     position: { width: 420 },
     rejectClose: false,
     content: `
       <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        ${rollPreviewHtml}
         <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
           <label style="font-weight: bold;">Secondary Focus:</label>
           <select name="secondary" style="width: 100%;">
@@ -898,7 +877,7 @@ export async function showPatronDialog() {
             ${patronsHtml}
           </select>
         </div>
-        <p style="margin: 0; font-size: 12px; color: #666;"><em>Your patron determines your energy affinities</em></p>
+        <p style="margin: 0; font-size: 12px; color: #666;"><em>Your patron determines your Primary energy. You'll choose your Secondary energy next.</em></p>
       </form>
     `,
     buttons: [
@@ -1234,7 +1213,10 @@ export async function applyMagebornWorkflow(actor, traitItem, mode) {
   }
   
   // Step 3: Choose secondary focus
-  const secondary = await showSecondaryFocusDialog(affinity);
+  // Simulate removing the affinity roll so the preview reflects the actual available pool
+  const rollsAfterAffinity = [...rolls];
+  rollsAfterAffinity.splice(findOptimalRollForBonus(rollsAfterAffinity, 2), 1);
+  const secondary = await showSecondaryFocusDialog(affinity, [], rollsAfterAffinity);
   if (!secondary) {
     ui.notifications.warn("Mageborn application cancelled");
     return false;
@@ -1343,20 +1325,26 @@ export async function applyDivineGiftWorkflow(actor, traitItem, mode) {
     }
     remainingRolls = availableRolls;
   } else {
-    // Patron-based: +2 to primary, +1 to secondary
+    // Patron-based: +2 to patron's primary, +1 to player's chosen secondary
     const primaryIndex = findOptimalRollForBonus(availableRolls, 2);
     const primaryRoll = availableRolls.splice(primaryIndex, 1)[0];
-    
+
+    const secondaryEnergy = await showSecondaryFocusDialog(patron.primary, [], availableRolls);
+    if (!secondaryEnergy) {
+      ui.notifications.warn("Divine Gift application cancelled");
+      return false;
+    }
+
     const secondaryIndex = findOptimalRollForBonus(availableRolls, 1);
     const secondaryRoll = availableRolls.splice(secondaryIndex, 1)[0];
-    
+
     preAssigned = {
       [patron.primary]: Math.min(primaryRoll + 2, 8),
-      [patron.secondary]: Math.min(secondaryRoll + 1, 8)
+      [secondaryEnergy]: Math.min(secondaryRoll + 1, 8)
     };
     preAssignedDetails = {
       [patron.primary]: { roll: primaryRoll, bonus: 2 },
-      [patron.secondary]: { roll: secondaryRoll, bonus: 1 }
+      [secondaryEnergy]: { roll: secondaryRoll, bonus: 1 }
     };
     remainingRolls = availableRolls;
   }

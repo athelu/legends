@@ -12,16 +12,16 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "intelligence": 5
+        "intelligence": 6
       },
-      "skills": "arcane:5",
+      "skills": "arcane:6",
       "feats": [
         "Mageborn"
       ],
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>When using Ritual Casting, you may combine two weaves into a single ritual (ritual takes 20 minutes instead of 10). Both weaves use the half-Energy cost benefit. When the ritual completes, both effects trigger simultaneously. They may target the same creature or location, or different ones within range. You make separate weaving and targeting rolls for each weave.</p>",
+    "benefits": "<p>You may combine two weaves into a single, longer ritual. Both weaves use the half-Energy cost benefit. When the ritual completes, both effects trigger simultaneously. They may have different  targets. You make separate weaving and targeting rolls for each weave.</p>",
     "usageType": "active",
     "usage": {
       "mode": "active",

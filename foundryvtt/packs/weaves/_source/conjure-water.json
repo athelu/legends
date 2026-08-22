@@ -15,7 +15,7 @@
         "cost": 2
       },
       "supporting": {
-        "type": "space",
+        "type": "earth",
         "cost": 1
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = Fails, 1 = 5 gallons, 2 = 10 gallons, 3 = 20 gallons",
-    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Water Potential + Water Mastery / Earth Potential + Earth Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [],
     "deliveryMethod": "automatic",

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target at medium range makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes [[/damage 12 type=psychic]] damage at start of each turn. Can repeat [[/save type=will]] each round to end effect (1 success ends effect).</p>"
+      "value": "<p>Target at medium range makes [[/save type=will]]. Compare your targeting successes to their save successes. If you have more, target sees its worst fear manifest. Target is Frightened and takes [[/damage 12 type=psychic]] damage at start of each turn. Can repeat [[/save type=will]] each round to end effect (1 success ends effect).</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -15,7 +15,7 @@
         "cost": 8
       },
       "supporting": {
-        "type": "time",
+        "type": "negative",
         "cost": 2
       }
     },
@@ -23,7 +23,7 @@
     "duration": "1 minute",
     "target": "single",
     "savingThrow": "will",
-    "effect": "Target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, target sees its worst fear made manifest. Target is Frightened and takes 12 psychic damage at start of each turn. Can repeat Will save each round to end effect (1 success ends effect).",
+    "effect": "Target at medium range makes Will save. Compare your targeting successes to their save successes. If you have more, target sees its worst fear manifest. Target is Frightened and takes 12 psychic damage at start of each turn. Can repeat Will save each round to end effect (1 success ends effect).",
     "effectType": "control",
     "damage": {
       "base": 0,
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = Frightened, 2= Frightened (12), 3 = Frightened (16)",
-    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "weavingRoll": "Space Potential + Space Mastery / Negative Potential + Negative Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {

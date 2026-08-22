@@ -227,7 +227,11 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   tabGroups = { primary: "main" };
 
   get title() {
-    return this.document.name || "Character";
+    const name = this.document.name || "Character";
+    const prog = this.document.system?.progression;
+    if (prog?.phase === 'creation') return `${name} — Creation`;
+    if (prog?.manualOverride) return `${name} — Override`;
+    return name;
   }
 
   /** @override - Configure the window title to show just the actor name */
@@ -840,6 +844,12 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       current: 1,
       xp: Number(xp || 0)
     };
+  }
+
+  /** @override */
+  _updateFrame(options) {
+    super._updateFrame(options);
+    if (this.window?.title) this.window.title.textContent = this.title;
   }
 
   /** @override */

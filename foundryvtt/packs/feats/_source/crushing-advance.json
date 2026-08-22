@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "strength": 4
+        "strength": 5
       },
-      "skills": "meleeCombat:4",
+      "skills": "meleeCombat:5",
       "feats": [],
       "tier": 0,
       "other": "must wield a [Two-Handed] weapon"

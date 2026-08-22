@@ -1,0 +1,22 @@
+{
+  "_id": "37c1ab955bd16cca",
+  "name": "Chronic Pain - Mild(3)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>You suffer from persistent pain that flares during stress. At the start of combat or during extended physical activity, make [[/save type=will]] (1 success required). On failure, add 1 to all attribute die results for 1d8 rounds.</p>"
+    },
+    "pointValue": 3,
+    "flawType": "physical",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!37c1ab955bd16cca"
+}

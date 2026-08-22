@@ -12,16 +12,16 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "intelligence": 5
+        "intelligence": 6
       },
-      "skills": "arcane:5",
+      "skills": "arcane:6",
       "feats": [
         "Mageborn"
       ],
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>When using Ritual Casting, you never suffer overspending penalties regardless of how far your Energy expenditure exceeds your Mastery. The preparation time compensates for raw Mastery gaps with theoretical knowledge.</p>",
+    "benefits": "<p>When using Ritual Casting, you never suffer overspending penalties regardless of how far your Energy expenditure exceeds your Mastery.</p>",
     "usageType": "active",
     "usage": {
       "mode": "active",

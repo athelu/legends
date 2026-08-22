@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4
-      },
+      "attributes": {},
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>Reduce falling damage by an amount equal to 5 × your Tier</p>",
     "usageType": "passive",

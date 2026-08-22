@@ -15,7 +15,7 @@
         "cost": 3
       },
       "supporting": {
-        "type": "space",
+        "type": "time",
         "cost": 2
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 1 dart (4), 2= 3 darts (4 x3), 3 = 4 darts (4 x4)",
-    "weavingRoll": "Space Potential + Space Mastery",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "automatic",

@@ -5,7 +5,7 @@
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Forsaken as child, raised on streets/by others/in orphanage.</p>"
+      "value": "<p>Forsaken as a child and raised on the streets by others or in an orphanage.</p>"
     },
     "pointValue": 1,
     "flawType": "social",

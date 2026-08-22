@@ -28,7 +28,7 @@
     "damage": {
       "base": 0,
       "type": "",
-      "drInteraction": "half",
+      "drInteraction": "ignore",
       "scaling": {
         "0": {
           "appliesEffects": false,

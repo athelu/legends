@@ -5,7 +5,7 @@
   "img": "icons/skills/social/diplomacy-handshake.webp",
   "system": {
     "description": {
-      "value": "<p>You can make the implicit threat do the work so the explicit one never has to land.</p>"
+      "value": "<p>Your threats carry weight that silences any resistance.</p>"
     },
     "flavorText": "",
     "xpCost": 40,
@@ -14,7 +14,7 @@
       "attributes": {
         "charisma": 4
       },
-      "skills": "intimidate:4",
+      "skills": "intimidate:5",
       "feats": [],
       "tier": 0,
       "other": ""

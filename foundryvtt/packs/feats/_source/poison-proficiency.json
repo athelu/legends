@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "dexterity": 3
+        "dexterity": 5
       },
-      "skills": "thievery:2, craft:2",
+      "skills": "thievery:4, craft:4",
       "feats": [],
       "tier": 0,
       "other": ""

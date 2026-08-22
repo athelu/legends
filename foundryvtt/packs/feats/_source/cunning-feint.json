@@ -12,13 +12,12 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "agility": 4,
         "charisma": 4
       },
       "skills": "deception:4",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When you successfully feint a target, in addition to the normal margin effect you may apply either the Disoriented or Dazed [Hindered] condition to the target until the end of their next turn.</p>",
     "usageType": "active",

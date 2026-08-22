@@ -10,7 +10,7 @@
     "pointValue": 2,
     "flawType": "physical",
     "severity": "minor",
-    "mechanicalEffects": "<ul>\n<li>Sound-based Perception: Add 1 to die results</li>\n<li>Initiative: -1</li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Sound-based Perception: Add 1 to skill die results</li>\n<li>Initiative: -1</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

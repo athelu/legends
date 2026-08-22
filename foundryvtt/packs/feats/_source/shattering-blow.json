@@ -21,7 +21,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Once per short rest when you hit with a [Two-Handed] weapon at Margin 2, you may declare a Shattering Blow. The target's DR is reduced by 4 for the remainder of the combat, in addition to the normal DR reduction from Crushing Advance. This reduction applies to all damage sources, not just your attacks. Multiple Shattering Blows against the same target do not stack.</p>",
+    "benefits": "<p>Once per short rest when you hit with a [Two-Handed] weapon at Margin 2, you may declare a Shattering Blow. The target's DR is reduced by 4 for the remainder of the combat, in addition to the normal DR reduction from Crushing Advance. Multiple Shattering Blows against the same target do not stack.</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",

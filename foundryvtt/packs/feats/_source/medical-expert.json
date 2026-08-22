@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "wisdom": 4
+        "wisdom": 5
       },
-      "skills": "medicine:4",
+      "skills": "medicine:5",
       "feats": [],
       "tier": 0,
       "other": ""

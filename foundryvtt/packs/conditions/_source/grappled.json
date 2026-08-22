@@ -5,7 +5,7 @@
   "img": "icons/svg/net.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Movement speed reduced to 0. Cannot take [Move] actions. Attacks and skill checks: Add 1 to both die results. <strong>Recovery:</strong> Use 1 action to make an opposed Athletics, Might or [[/check skill=acrobatics]].</p>\n<ul>\n<li>Margin 1+: Remove grappled condition.</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Movement speed reduced to 0. Cannot take [Move] actions. Attacks and skill checks: Add 1 to both die results. Unable to make ranged attacks. <strong>Recovery:</strong> Use 1 action to make an opposed Athletics, Might or [[/check skill=acrobatics]].</p>\n<ul>\n<li>Margin 1+: Remove grappled condition.</li>\n</ul>"
     },
     "label": "Grappled",
     "category": "movement",

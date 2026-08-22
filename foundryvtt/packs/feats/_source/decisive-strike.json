@@ -12,7 +12,7 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "meleeCombat:5",
+      "skills": "meleeCombat:6",
       "feats": [
         "Precision Training",
         "Exploit the Margin"

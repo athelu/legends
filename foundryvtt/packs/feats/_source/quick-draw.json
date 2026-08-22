@@ -12,13 +12,12 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "agility": 3,
         "dexterity": 3
       },
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 3"
     },
     "benefits": "<p>Once per turn you may draw or stow a weapon as a [Free] action.</p>",
     "usageType": "special",

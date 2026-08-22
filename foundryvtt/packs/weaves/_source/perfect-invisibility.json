@@ -11,11 +11,11 @@
     "actionCost": 2,
     "energyCost": {
       "primary": {
-        "type": "space",
+        "type": "water",
         "cost": 6
       },
       "supporting": {
-        "type": "time",
+        "type": "fire",
         "cost": 2
       }
     },
@@ -53,8 +53,8 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes",
-    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
-    "targetingRoll": "Casting Stat + Space Mastery",
+    "weavingRoll": "Water Potential + Water Mastery / Fire Potential + Fire Mastery",
+    "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {
         "effectId": "hidden",

@@ -12,15 +12,14 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "strength": 6,
-        "agility": 6
+        "strength": 6
       },
       "skills": "meleeCombat:6",
       "feats": [
         "Fluid Strikes"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 6"
     },
     "benefits": "<p>Your Two-Weapon Fighting action now generates three attacks instead of two — main hand, off-hand, main hand. The third attack adds 1 to the skill die only. All three attacks use the same Shared Attribute Roll.</p>",
     "usageType": "passive",

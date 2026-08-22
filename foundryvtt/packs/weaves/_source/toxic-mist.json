@@ -11,17 +11,17 @@
     "actionCost": 2,
     "energyCost": {
       "primary": {
-        "type": "negative",
+        "type": "air",
         "cost": 2
       },
       "supporting": {
-        "type": "space",
+        "type": "negative",
         "cost": 1
       }
     },
-    "range": "Touch or 10 feet",
+    "range": "Close, 30 ft.",
     "duration": "Instantaneous",
-    "target": "single",
+    "target": "",
     "savingThrow": "fortitude",
     "effect": "Target takes 8 poison damage. Target makes Fortitude save to reduce damage.",
     "effectType": "debuff",
@@ -53,8 +53,8 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2= full damage (8), 3 = enhanced damage (16) + Poisoned (Weak)",
-    "weavingRoll": "Negative Potential + Negative Mastery / Space Potential + Space Mastery",
-    "targetingRoll": "Casting Stat + Negative Mastery",
+    "weavingRoll": "Air Potential + Air Mastery / Negative Potential + Negative Mastery",
+    "targetingRoll": "Casting Stat + Air Mastery",
     "appliesEffects": [
       {
         "effectId": "Poisoned (Weak)",
@@ -64,8 +64,7 @@
     "deliveryMethod": "save",
     "tags": [
       "debuff",
-      "ranged",
-      "touch"
+      "ranged"
     ]
   },
   "effects": [],

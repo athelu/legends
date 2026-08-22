@@ -15,7 +15,7 @@
         "cost": 3
       },
       "supporting": {
-        "type": "time",
+        "type": "fire",
         "cost": 2
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
-    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "weavingRoll": "Space Potential + Space Mastery / Fire Potential + Fire Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "automatic",

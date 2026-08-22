@@ -11,16 +11,13 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4,
-        "strength": 4
-      },
-      "skills": "meleeCombat:4",
+      "attributes": {},
+      "skills": "meleeCombat:5",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Str or Agil 5"
     },
-    "benefits": "<p>When you reduce a creature to 0 HP with a melee attack, you can immediately make one additional melee attack against another creature within 5 feet. Use the same Attribute roll, roll Melee Combat skill separately. If the original attack suffered a Mulitiple Attack Penalty, the same penalty is applied to this strik. This can trigger once per turn.</p>",
+    "benefits": "<p>When you reduce a creature to 0 HP with a melee attack, you can immediately make one additional melee attack against another creature within 5 feet. Use the same Attribute roll, roll Melee Combat skill separately. If the original attack suffered a Multiple Attack Penalty, the same penalty is applied to this strike. This can trigger once per turn.</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",

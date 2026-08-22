@@ -12,13 +12,12 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "agility": 4,
         "dexterity": 3
       },
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When making dual-weapon attacks in a single [Combat] action, first attack is normal, second attack adds 1 to skill die only (instead of adding to both dice). Both attacks use Shared Attribute Roll</p>",
     "usageType": "passive",

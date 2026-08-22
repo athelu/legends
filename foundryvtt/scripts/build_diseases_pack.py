@@ -477,7 +477,7 @@ def main():
     source_dir = pack_dir / '_source'
     source_dir.mkdir(parents=True, exist_ok=True)
 
-    diseases_md = ttrpg_dir / 'diseases.md'
+    diseases_md = ttrpg_dir / '29-diseases.md'
     if not diseases_md.exists():
         print(f"ERROR: {diseases_md} not found")
         return False
