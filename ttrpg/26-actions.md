@@ -197,21 +197,9 @@ Activate actions involve using items, equipment, or abilities that require delib
 ## Interact Actions
 Interact actions involve manipulating objects, the environment, or simple physical tasks that don't require specialized skills. Many Interact actions can be combined with movement for efficiency.
 
-### Administered Treatment
-**Cost:** Performed during the short rest period.
-**Effect:** At the start of the short rest, the treating ally makes a Medicine check on the patient before rest begins. A single healer can administer treatment to multiple patients during the same short rest, making one Medicine check per patient. Using a healer's kit subtracts 1 from one Medicine die. Without one, the check is made at normal difficulty.
-- **1 success:** Patient regains an additional HP equal to the treating ally's Wisdom score on top of the standard short rest recovery.
-- **2 successes:** Patient regains additional HP equal to the treating ally's Wisdom score + Medicine rank.
-
 ### Draw/Stow Weapon [Interact]
 **Cost:** 1
 **Effect:** Draw a weapon or stow it in its sheath. An actor can draw/stow ONE weapon as a [Free] action once per turn as part of movement. Drawing two weapons requires Quick Draw feat or two separate actions. Regardless, drawing or stowing a weapon doesn't provoke Opportunity Attacks.
-
-### Evening Treatment
-**Cost:** During long rest.
-**Effect:** Make a Medicine check before the patient sleeps. If self administered: Add 1 to skill die  Once per long rest, per patient. Using a healer's kit subtracts 1 from one Medicine die regardless of who is administering.
-- **1 success:** Patient regains an additional HP equal to the treating character's Wisdom score during the long rest (added to the standard Constitution × 4 recovery).
-- **2 successes:** Patient regains additional HP equal to the treating character's Wisdom × 2. Additionally, the patient removes one level of Exhaustion beyond the standard one removed by long rest.
 
 ### Extinguish Flames [Interact]
 **Cost:** 1
@@ -219,9 +207,15 @@ Interact actions involve manipulating objects, the environment, or simple physic
 
 ### Field Dressing [Interact]
 **Cost:** 1
-**Effect:** Make a Medicine check on a conscious, adjacent ally. This requires a healer's kit and Medicine rank 2+. Each target may benefit from Field Dressing once per combat encounter. You may treat a number of different patients per encounter equal to your Medicine rank.
+**Effect:** Make a Medicine check on a conscious, adjacent ally. This requires a healer's kit and Medicine rank 4+. Each target may benefit from Field Dressing once per combat encounter. You may treat a number of different patients per encounter equal to your Medicine rank.
 - **1 success:** Target regains HP equal to your Wisdom score.
 - **2 successes:** Target regains HP equal to your Wisdom score + your Medicine rank.
+
+### Full Treatment
+**Cost:** During long rest.
+**Effect:** Make a Medicine check before the patient sleeps. If self administered: Add 1 to skill die  Once per long rest, per patient. Using a healer's kit subtracts 1 from the Medicine Skill die regardless of who is administering.
+- **1 success:** Patient regains additional HP equal to the treating character's Wisdom score during the long rest (added to the standard Constitution × 4 recovery).
+- **2 successes:** Patient regains additional HP equal to the treating character's Wisdom × 2. Additionally, the patient removes one level of Exhaustion beyond the standard one removed by long rest.
 
 ### Hand Off Item [Interact]
 **Cost:** Free
@@ -241,12 +235,12 @@ Interact actions involve manipulating objects, the environment, or simple physic
 
 | Condition | Rank | Required Successes |
 |-----------|------|--------------------|
-| Bleeding (1 stack) | 1 | 1 success |
-|Bleeding (all stacks) | 1 | 2 successes |
-|Poisoned (Weak) | 2 | 2 successes |
-| Poisoned (Strong) | 3 | 2 successes |
-| Poisoned (Deadly) | 4 | 2 successes (suppresses for 4 hours; full cure requires antidote) |
-| Grievously Wounded | 3 | 2 successes |
+| Bleeding (1 stack) | 3 | 1 success |
+|Bleeding (all stacks) | 3 | 2 successes |
+|Poisoned (Weak) | 3 | 2 successes |
+| Poisoned (Strong) | 4 | 2 successes |
+| Poisoned (Deadly) | 5 | 2 successes (suppresses for 4 hours; full cure requires antidote) |
+| Grievously Wounded | 4 | 2 successes |
 | Disease (reduce one stage) | varies by disease severity | 2 successes |
 
 ### Search [Interact]
@@ -259,13 +253,19 @@ Interact actions involve manipulating objects, the environment, or simple physic
 
 ### Stabilize [Interact]
 **Cost:** 1
-**Effect:** Make a Medicine check against a creature at 0 HP or below. Require 1+ rank in Medicine.
+**Effect:** Make a Medicine check against a creature at 0 HP or below. Require 3+ ranks in Medicine.
 - **1 success:** The creature stabilizes at 0 HP and is no longer dying. They remain unconscious.
 - **2 successes:** As above. The creature also regains HP equal to your Wisdom score and regains consciousness.
 
 ### Take Cover [Interact]
 **Cost:** 1
 **Effect:** Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free] action during a move.
+
+### Triage
+**Cost:** Performed during the short rest period.
+**Effect:** At the start of the short rest, the treating ally makes a Medicine check on the patient before rest begins. A single healer can administer treatment to multiple patients during the same short rest, making one Medicine check per patient. Using a healer's kit subtracts 1 from the Medicine skill die. Without one, the check is made at normal difficulty.
+- **1 success:** Patient regains additional HP equal to the treating ally's Wisdom score on top of the standard short rest recovery.
+- **2 successes:** Patient regains additional HP equal to the treating ally's Wisdom score + Medicine rank.
 
 ### Use Tool/Kit [Interact]
 **Cost:** Variable (typically 1-10)

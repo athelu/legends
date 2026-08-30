@@ -321,7 +321,7 @@ This is a decreased level of light, often found inside of buildings at night. Ex
 
 ### Darkness
 The absence of light and a hindrance to almost all without a light source. Darkness is found when underground without a torch, within a windowless rooms at night, or a moonless night in the wilderness.
-**Effect:** Creatures without Darkvision or Blindsight treat all other creatures as having the [Hidden] condition. Creatures without Darkvision or Blindsight automatically fail vision-based Perception checks. Initiative: −2. A creature moving in darkness must make an Acrobatics check (Easy task, 1 success) or treat all ground as difficult terrain. On a critical failure (double 8s), they fall Prone.
+**Effect:** Creatures without Darkvision or Blindsight treat all other creatures as having the [Hidden] condition. Creatures without Darkvision or Blindsight automatically fail vision-based Perception checks. Initiative: −2. A creature moving in darkness must make an Acrobatics (Easy) check or treat all ground as difficult terrain. On a critical failure (double 8s), they fall Prone.
 
 ### Magical Darkness
 Created by weaves (Shadow Sphere, etc.) or supernatural effects. Explicitly blocks both normal light and magical light of equal or lesser energy.
@@ -417,7 +417,7 @@ Prone has no meaningful effect on flying creatures. The prone condition is remov
 ## Underwater Combat
 Characters can hold their breath for a number of rounds equal to their Constitution score before beginning to drown.
 
-At the end of any round where the character has exceeded their breath limit, they make a Fortitude save (1 success). On failure, they gain 1 Exhaustion level and gain the drowning condition.
+At the end of any round where the character has exceeded their breath limit, they make a Fortitude (Easy) save. On failure, they gain 1 Exhaustion level and gain the drowning condition.
 
 ### Combat Penalties Underwater
 Unless a creature is explicitly aquatic or has an ability stating otherwise (Water Savant, Malleable Form with aquatic adaptation), the following apply:

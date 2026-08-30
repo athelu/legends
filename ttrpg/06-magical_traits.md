@@ -377,9 +377,9 @@ You gain access to the magical potential and mastery system. You gain 5 Magical 
 Roll 5d8, assign to five Magical Potentials.
 
 **Assign Potentials**
-Earth Potential = + 2 (max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
-Space Potential = + 1. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
-Choose three of the remaining energies (Air, Fire, Water,,Time, Positive or Negative) and assign the remaining rolls as desired.
+Primary Energy Potential = + 2 (max 8). Choose any of the four elemental energies. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Secondary Potential = + 1. Choose any energy. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Choose three of the remaining energies and assign the remaining rolls as desired.
 
 **Calculate your Energy Pool**
 Energy Pool: Sum of 5 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2).
@@ -387,6 +387,9 @@ Energy Pool: Sum of 5 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷
 #### Imbue Item
 A number of times per short rest equal to your current Tier, spend 1 [Combat] action and touch a weapon or piece of armor. For 1 minute, infused weapons deal +4 elemental damage on every hit (choose the energy type from your five pact energies at the time of infusion)Bonus energy damage added by infusion uses full DR. If the target has vulnerability or immunity to the energy type, apply that to the energy damage portion only; infused armor grants +3 DR for the duration. You may have a number of active infusions simultaneously equal to your current Tier. An infusion ends when the duration expires or when you imbue the same item again.
 Infusers must touch an object to infuse it with magic. Most of your weaves require physical contact with the target or a material component you're manipulating. You cannot cast at range without an infused item as an intermediary.
+
+#### Gain Craft Skill
+Infusers specialize in their work and choose a corresponding craft keyword. The like likely choices are Armorsmith or Weaponsmith. The character gains Rank 2 in the chosen Craft skill.
 
 ### Sorcerous Origin (-7)
 **Requirements:** Wisdom ≥ 3
