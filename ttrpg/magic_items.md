@@ -8,20 +8,20 @@ Canonical definitions for named magic items in the Legends system. Reference the
 
 ### Body Slots
 
-Each worn magic item occupies a body slot. Only one item may occupy a slot at a time; the Ring slot is the exception in that each hand can wear one ring (2 rings total).
+Each worn magic item occupies a **body slot**. Only one item may occupy a slot at a time; the Ring slot is the exception in that each hand can wear one ring (2 rings total).
 
 | Slot | Typical Items |
 |---|---|
 | Head | Circlets, helms, crowns, hoods |
 | Eyes | Goggles, lenses, monocles |
-| Neck | Amulets, necklaces, pendants, brooches |
+| Neck | Amulets, necklaces, pendants |
 | Shoulders | Cloaks, capes, mantles |
-| Chest | Vests, robes, medallions |
+| Chest | Vests, robes, medallions, broaches|
 | Wrists | Bracers, bracelets |
 | Hands | Gloves, gauntlets |
 | Ring | Rings (2 slots: left and right hand) |
-| Waist | Belts, sashes |
-| Feet | Boots, sandals |
+| Waist | Belts, sashes, Girdles |
+| Feet | Boots, shoes, sandals |
 
 Items held rather than worn (ex. rods, staves, wands) do not occupy a body slot.
 
@@ -29,14 +29,14 @@ Items held rather than worn (ex. rods, staves, wands) do not occupy a body slot.
 Curios are slotless magic items (stones, tokens, fetishes, flasks) that are carried rather than worn in a specific slot.
 
 ### Binding
-Some magic items require a personal bond, called a Binding, before they can be activated. A Bound item is attuned to a specific character's essence; only that character can trigger its effects.
+Some magic items require a personal bond, called a **Binding**, before they can be activated. A Bound item is attuned to a specific character's essence; only that character can trigger its effects.
 Picking up an unbound item that Requires Binding grants no activations or use. The item occupies the body slot required but is otherwise inert to the new holder.
 A character may have up to 3 Bound items at any one time. Binding an item requires a minimum of a Short Rest (1 hour) of uninterrupted attentive contact with the item.
 Unbinding an item requires a Long Rest with deliberate intent. 
 
 ### Magic Implements
 Magic Implements are magic items crafted in a way that only characters with magical ability (a magical trait) can use them. Alchemical Tradition characters cannot activate Magic Implements as they do not have access to an energy pool.
-Magic Implements have their own energy pool called charges. A Magic implement will state how many charges it contains, how many charges each activation costs, and the Recharge Period. The Magic Implement will also have a Primary Energy associated with it. 
+Magic Implements have their own energy pool called **Charges**. A Magic implement will state how many charges it contains, how many charges each activation costs, and the Recharge Period. The Magic Implement will also have a Primary Energy associated with it. 
 Magic Implements reproduce specific weave effects. Any saving throw or DR associated with the referenced weave applies to the weave created by the Magic Implement.
 If the implement has an Attack Bonus, this is applied as a bonus to both dice (each die result is reduced by the attack bonus, making the target threshold easier to meet).
 Magic Implements are broken into two categories: Staves and Wands.
@@ -48,7 +48,7 @@ Each implement has a charge pool (e.g. 10/10). Charges replenish according to th
 **Never:** charges do not replenish; the implement is finite
 
 #### Wand or Staff Activation
-The wielder selects a weave from the implement's list of granted weaves. The implement must have sufficient charges to cover the weave's charge cost. A Weave Targeting roll is made to deliver the effect.  Charges are consumed whether or not the targeting roll succeeds.
+The wielder uses an [Activate] Action and selects a weave from the implement's list of granted weaves The implement must have sufficient charges to cover the weave's charge cost. A Weave Targeting roll is made to deliver the effect.  Charges are consumed whether or not the targeting roll succeeds.
 
 #### Targeting Roll
 The effect is assumed successfully woven. No weaving roll is needed as the implement holds the weave. Only Weave Targeting toll is required. This works similar to a standard weave targeting roll, using the magic user’s casting stat and their mastery of the Magic Implement’s Primary Energy.
@@ -58,7 +58,7 @@ Targeting successes work the same as if the weave was created by the magic user 
 Rods are utilitarian magic items that anyone can activate (no magical trait required). They have self-contained effects triggered on command.
 
 #### Activation
-The wielder spends an Action and speaks the rod's command word or triggers its mechanism.
+The wielder uses an [Activate] Action and speaks the rod's command word or triggers its mechanism.
 The rod must have at least enough charges to cover the effect's cost. No targeting roll is required and the effect generates 2 successes. Each activation consumes the listed charges.
 
 #### Charges
@@ -68,7 +68,7 @@ Rods use the standard charge model. Most rods recharge at the end of a Long Rest
 Magic rings require no magical trait and any character may wear and activate a ring. Rings often require Binding to work.
 
 #### Activation
-The wearer spends an Action and speaks the ring's command word. The ring must have at least 1 charge available. No targeting roll is required and the effect generates 2 successes. Each activation consumes the listed charges.
+The wielder uses an [Activate] Action and speaks the ring's command word. The ring must have at least 1 charge available. No targeting roll is required and the effect generates 2 successes. Each activation consumes the listed charges.
 
 #### Charges
 Rings use the standard charge model. Most rings have 1/1 charge. Most rings recharge at the end of a Long Rest.

@@ -37,8 +37,7 @@ Any character who can read may attempt to use a scroll. Reading a scroll costs 2
 If the scroll is unknown, the character must first identify it with an Arcane check or Sense Magic before use. Failure means the character does not know the effect before triggering it. A character without a magical trait adds 1 to both dice on this check.
 
 **Step 2: Attempt the weave:**
-The reader makes only the targeting roll. The weaving roll is skipped as the scroll handles channeling. This is the primary advantage of scrolls: they bypass the risk of weave failure at the channeling stage.
-Characters with a magical trait use their normal Casting Stat + Primary Energy Mastery.
+The reader makes only the targeting roll. The weaving roll is skipped as this is handled by the creation of the scroll. This is the primary advantage of scrolls: they bypass the risk of weave failure.
 Characters without a magical trait use Intelligence + Wisdom, and add 2 to both targeting dice. 
 
 **Step 3: Scroll is consumed**
