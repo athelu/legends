@@ -1,0 +1,34 @@
+{
+  "_id": "367dd3321fc93f71",
+  "name": "Tools, Fishing",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A rod, line, hooks, and assorted lures and bait sufficient for basic angling. With an hour of effort near a body of water containing fish, a character may attempt a Wilderness (Easy) check to catch enough food for one person for a day.</p>"
+    },
+    "equipmentType": "tools",
+    "weight": 2.0,
+    "cost": 10.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "Wilderness",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!367dd3321fc93f71"
+}

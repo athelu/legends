@@ -100,7 +100,7 @@ From surprisingly good family stock.
 
 ### Luckiness (-2)
 Fortune favors you.
--   Start each session with 2 bonus Luck points beyond attribute
+-   You can spend 2 points of your Current Luck pool before reducing its value. This resets after a long rest.
 
 ---
 

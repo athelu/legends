@@ -1,0 +1,34 @@
+{
+  "_id": "b461206d1b8c9bfe",
+  "name": "Mirror",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A small hand mirror with a polished metal surface. Useful for seeing around corners, signaling across distances, or personal grooming.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.5,
+    "cost": 5.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!b461206d1b8c9bfe"
+}

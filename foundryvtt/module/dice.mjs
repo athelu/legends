@@ -70,8 +70,9 @@ export async function showRollDialog(options) {
         <hr style="margin: 15px 0;"/>
         <div class="form-group">
           <p style="font-size: 12px; color: #666; margin: 0;">
-            <strong>Multiple Attack Penalty (MAP):</strong><br/>
-            Second Attack: -2 penalty, Third Attack: -4 penalty<br/>
+            <strong>Multiple Action Penalty (MAP):</strong><br/>
+            Second combat action: +1 to both dice<br/>
+            Third combat action: +2 to both dice<br/>
             <strong>Fortune:</strong> Roll 3d8, choose best 2<br/>
             <strong>Misfortune:</strong> Roll 3d8, choose worst 2
           </p>
@@ -104,12 +105,12 @@ export async function showRollDialog(options) {
       },
       {
         action: "second-attack",
-        label: "Second Attack (MAP +2)",
+        label: "Second Attack (MAP +1)",
         callback: async (event, button, dialog) => {
           const modifierInput = dialog.element.querySelector('[name="modifier"]');
           const rawValue = modifierInput?.value || "";
           const baseModifier = parseInt(rawValue) || 0;
-          const modifier = baseModifier + 2; // Apply MAP penalty
+          const modifier = baseModifier + 1; // Canon: second combat action adds +1 to both dice
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
           const result = await resolveD8DialogRoll({
@@ -126,12 +127,12 @@ export async function showRollDialog(options) {
       },
       {
         action: "third-attack",
-        label: "Third Attack (MAP +4)",
+        label: "Third Attack (MAP +2)",
         callback: async (event, button, dialog) => {
           const modifierInput = dialog.element.querySelector('[name="modifier"]');
           const rawValue = modifierInput?.value || "";
           const baseModifier = parseInt(rawValue) || 0;
-          const modifier = baseModifier + 4; // Apply MAP penalty
+          const modifier = baseModifier + 2; // Canon: third combat action adds +2 to both dice
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
           const applyToSkill = dialog.element.querySelector('[name="applyToSkill"]').checked;
           const result = await resolveD8DialogRoll({
@@ -206,6 +207,7 @@ export async function showSkillCheckDialog(options) {
     defaultApplyToSkill = true,
     defaultFortune = 0,
     defaultMisfortune = 0,
+    forceFortuneOnly = false,
   } = options;
 
   const markTraining = async () => {
@@ -250,14 +252,15 @@ export async function showSkillCheckDialog(options) {
         <hr style="margin: 15px 0;"/>
         <div class="form-group">
           <p style="font-size: 12px; color: #666; margin: 0;">
-            <strong>Fortune:</strong> Roll 3d8, choose best 2<br/>
-            <strong>Misfortune:</strong> Roll 3d8, choose worst 2
+            ${forceFortuneOnly
+              ? '<strong>Shield Defense:</strong> Fortune is granted automatically for this melee defense roll.<br/>'
+              : '<strong>Fortune:</strong> Roll 3d8, choose best 2<br/><strong>Misfortune:</strong> Roll 3d8, choose worst 2'}
           </p>
         </div>
       </form>
     `,
     buttons: [
-      {
+      ...(!forceFortuneOnly ? [{
         action: "roll",
         label: "Roll",
         default: true,
@@ -279,10 +282,11 @@ export async function showSkillCheckDialog(options) {
           if (onRollComplete) await onRollComplete(result);
           return result;
         }
-      },
+      }] : []),
       {
         action: "fortune",
-        label: "Fortune",
+        label: forceFortuneOnly ? "Fortune (Shield Defense)" : "Fortune",
+        default: forceFortuneOnly,
         callback: async (event, button, dialog) => {
           const modifier = parseInt(dialog.element.querySelector('[name="modifier"]').value) || 0;
           const applyToAttr = dialog.element.querySelector('[name="applyToAttr"]').checked;
@@ -299,7 +303,7 @@ export async function showSkillCheckDialog(options) {
           });
         }
       },
-      {
+      ...(!forceFortuneOnly ? [{
         action: "misfortune",
         label: "Misfortune",
         callback: async (event, button, dialog) => {
@@ -317,7 +321,7 @@ export async function showSkillCheckDialog(options) {
             onRollComplete
           });
         }
-      }
+      }] : [])
     ]
   });
 }
@@ -579,23 +583,9 @@ if (criticalSuccess) {
     criticalFailure: criticalFailure
   };
 
-  const fakeRoll = Roll.fromData({
-      class: "Roll",
-      formula: `3d8`,
-      terms: [{
-        class: "Die",
-        number: 3,
-        faces: 8,
-        results: allResults.map(r => ({ result: r, active: true }))
-      }],
-      total: allResults.reduce((a, b) => a + b, 0),
-      evaluated: true
-    });
-  
   const message = await ChatMessage.create({
     speaker: ChatMessage.getSpeaker({ actor }),
     content: content,
-    rolls: [fakeRoll],  // Pass the roll for Dice So Nice
     flags: {
       'legends.rollData': serializableData
     }
@@ -1550,6 +1540,48 @@ async function renderTargetingResult(data) {
       </div>
     </div>
   `;
+}
+
+/**
+ * Force a reroll of one of an attacker's dice (e.g. Shield Block's Force Reroll option).
+ * Rerolls the chosen die, recalculates successes, and updates the original roll message.
+ * @param {string} messageId - Chat message ID of the attacker's roll
+ * @param {'attr'|'skill'} target - Which die to reroll
+ * @returns {Promise<Object|null>} The updated roll data, or null if unavailable
+ */
+export async function forceRerollAttackDie(messageId, target) {
+  const message = game.messages.get(messageId);
+  const rollData = message?.flags?.legends?.rollData;
+  if (!rollData || (target !== 'attr' && target !== 'skill')) return null;
+
+  const attrModifier = rollData.applyToAttr ? rollData.modifier : 0;
+  const skillModifier = rollData.applyToSkill ? rollData.modifier : 0;
+
+  const rerollRoll = new Roll('1d8');
+  await rerollRoll.evaluate();
+  if (game.dice3d) await game.dice3d.showForRoll(rerollRoll, game.user, true);
+  const newDie = rerollRoll.total;
+
+  if (target === 'attr') {
+    rollData.originalAttrDie = newDie;
+    rollData.currentAttrDie = newDie + attrModifier;
+  } else {
+    rollData.originalSkillDie = newDie;
+    rollData.currentSkillDie = newDie + skillModifier;
+  }
+
+  const updatedResult = calculateSuccesses(rollData);
+  rollData.successes = updatedResult.successes;
+  rollData.criticalSuccess = updatedResult.criticalSuccess;
+  rollData.criticalFailure = updatedResult.criticalFailure;
+
+  const newContent = await renderRollResult(rollData);
+  await message.update({
+    content: newContent.replace('{{messageId}}', messageId),
+    flags: { 'legends.rollData': rollData }
+  });
+
+  return rollData;
 }
 
 /**

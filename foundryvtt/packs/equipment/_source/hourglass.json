@@ -1,0 +1,34 @@
+{
+  "_id": "edf9f754521455ca",
+  "name": "Hourglass",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A glass instrument containing sand that measures a fixed interval of time, typically one hour, as it flows from the upper chamber to the lower. Useful for timing watches, rituals, or negotiations. More fragile than a clock and will shatter if dropped.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 25.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!edf9f754521455ca"
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "29c32dcb5f6721c4",
+  "name": "Vial",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A small glass container with a tight stopper, typically holding 1 to 4 ounces of liquid. Used to store potions, poisons, alchemical reagents, or other substances in small quantities. More fragile than a flask but suitable for precise measurements.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.1,
+    "cost": 1.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!29c32dcb5f6721c4"
+}

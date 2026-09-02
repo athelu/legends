@@ -1,0 +1,34 @@
+{
+  "_id": "11f8ecd45f80a86d",
+  "name": "Trap, Snare",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A simple loop trap made of cord or wire set to cinch tight around the leg or neck of passing game. When triggered by a Small or smaller creature, it restrains the target automatically. A Medium creature must succeed on a Reflex (Hard) save or be restrained. A restrained creature can escape Athletics (Hard) or Might (Hard) check.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 3.0,
+    "cost": 1.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!11f8ecd45f80a86d"
+}

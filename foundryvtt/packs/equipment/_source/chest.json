@@ -1,0 +1,34 @@
+{
+  "_id": "c6d003dbeb9a5d11",
+  "name": "Chest",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A wooden chest with iron fittings and a latch, providing secure storage for up to 150 lbs or 12 cubic feet of goods. Commonly used to transport valuables, supplies, or equipment. Can be locked with a padlock purchased separately.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 25.0,
+    "cost": 5.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!c6d003dbeb9a5d11"
+}

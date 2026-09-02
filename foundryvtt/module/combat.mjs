@@ -4,7 +4,7 @@
  * Foundry VTT V13 - Uses renderChatMessageHTML hook (native DOM, not jQuery)
  */
 
-import { rollD8Check, showRollDialog, showSkillCheckDialog } from './dice.mjs';
+import { rollD8Check, showRollDialog, showSkillCheckDialog, forceRerollAttackDie } from './dice.mjs';
 import * as featEffects from './feat-effects.mjs';
 import * as reactions from './reactions.mjs';
 
@@ -487,46 +487,144 @@ export async function handleDefenseClick(messageId, attackData) {
     // ignore
   }
 
-  const shieldAbilities = game.legends?.shields?.getShieldReactionsForActor(defender) || [];
+  // No shield prompt before the defense roll. A shield reaction is only valid
+  // after the attack is confirmed to have hit, which is determined by the
+  // defender's defense roll and margin calculation.
+  await _continueDefenseFlow(defenseType, defender, attackData, messageId);
+}
 
-  if (shieldAbilities.length > 0) {
-    // Build dialog content listing available shield reactions
-    let content = `<p>Select a shield reaction to use (or Skip to continue):</p><ul>`;
-    for (let i = 0; i < shieldAbilities.length; i++) {
-      const a = shieldAbilities[i];
-      content += `<li><strong>${a.reaction.name || a.reaction.type}</strong> — from <em>${a.shieldName}</em>: ${a.reaction.description || ''}</li>`;
-    }
-    content += `</ul>`;
-
-    await foundry.applications.api.DialogV2.wait({
-      window: { title: 'Shield Reaction' },
-      rejectClose: false,
-      content: content,
-      buttons: [
-        ...shieldAbilities.map((a, idx) => ({
-          action: `use_${idx}`,
-          label: `Use: ${a.reaction.name || a.reaction.type}`,
-          callback: async () => {
-            const result = await game.legends.shields.applyShieldReaction(defender, a, { damage: attackData.baseDamage, damageType: attackData.damageType, attacker: attackData.actorId });
-            attackData._shieldEffect = result;
-            await _continueDefenseFlow(defenseType, defender, attackData, messageId);
-          }
-        })),
-        {
-          action: "skip",
-          label: "Skip",
-          default: true,
-          callback: async () => {
-            await _continueDefenseFlow(defenseType, defender, attackData, messageId);
-          }
-        }
-      ]
-    });
-    return;
+async function promptShieldReactionIfAvailable(defender, attackData, margin) {
+  if (!defender || !attackData || attackData.defenseType !== 'melee' || margin < 1) {
+    return null;
   }
 
-  // No shield abilities or none chosen — continue
-  await _continueDefenseFlow(defenseType, defender, attackData, messageId);
+  const shieldAbilities = game.legends?.shields?.getShieldReactionsForActor(defender) || [];
+  if (shieldAbilities.length === 0) {
+    return null;
+  }
+
+  let selectedEffect = null;
+  let content = `<p>Select a shield reaction to use (or Skip to continue):</p><ul>`;
+  for (const a of shieldAbilities) {
+    content += `<li><strong>${a.reaction.name || a.reaction.type}</strong> — from <em>${a.shieldName}</em>: ${a.reaction.description || ''}</li>`;
+  }
+  content += `</ul>`;
+
+  const buttons = [];
+  for (const a of shieldAbilities) {
+    const label = a.reaction.name || a.reaction.type;
+    if (label === 'Shield Block') {
+      // Shield Block (ttrpg/26-actions.md) grants a choice of two effects.
+      buttons.push({
+        action: `${a.shieldId}_dr`,
+        label: `${label}: Increase DR (+4)`,
+        callback: async () => {
+          selectedEffect = await game.legends.shields.applyShieldReaction(defender, a, {
+            damage: attackData.baseDamage,
+            damageType: attackData.damageType,
+            attacker: attackData.actorId
+          }, 'increase-dr');
+        }
+      });
+      buttons.push({
+        action: `${a.shieldId}_reroll`,
+        label: `${label}: Force Reroll`,
+        callback: async () => {
+          selectedEffect = await _resolveShieldBlockForceReroll(attackData, a);
+        }
+      });
+    } else {
+      buttons.push({
+        action: `use_${a.shieldId}`,
+        label: `Use: ${label}`,
+        callback: async () => {
+          selectedEffect = await game.legends.shields.applyShieldReaction(defender, a, {
+            damage: attackData.baseDamage,
+            damageType: attackData.damageType,
+            attacker: attackData.actorId
+          });
+        }
+      });
+    }
+  }
+  buttons.push({
+    action: 'skip',
+    label: 'Skip',
+    default: true,
+    callback: async () => {
+      selectedEffect = null;
+    }
+  });
+
+  await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Shield Reaction' },
+    rejectClose: false,
+    content,
+    buttons
+  });
+
+  return selectedEffect;
+}
+
+/**
+ * Resolve Shield Block's "Force Reroll" choice: let the defender pick which of the
+ * attacker's successful dice gets rerolled, then reroll it on the original attack message.
+ * @param {Object} attackData
+ * @param {Object} reactionEntry - { shieldId, shieldName, reaction }
+ * @returns {Object|null} shield effect result
+ */
+async function _resolveShieldBlockForceReroll(attackData, reactionEntry) {
+  const messageId = attackData.attackRollMessageId;
+  const rollData = messageId ? game.messages.get(messageId)?.flags?.legends?.rollData : null;
+  if (!rollData) {
+    ui.notifications.warn("Cannot force a reroll: attacker's roll data is unavailable.");
+    return null;
+  }
+
+  const attrSucceeded = rollData.originalAttrDie === 1
+    || (rollData.originalAttrDie !== 8 && rollData.currentAttrDie < rollData.attrValue);
+  const skillSucceeded = rollData.originalSkillDie === 1
+    || (rollData.originalSkillDie !== 8 && rollData.currentSkillDie < rollData.skillValue);
+
+  let target = null;
+  if (attrSucceeded && skillSucceeded) {
+    target = await new Promise((resolve) => {
+      foundry.applications.api.DialogV2.wait({
+        window: { title: 'Force Reroll' },
+        rejectClose: false,
+        content: `<p>Choose which of the attacker's successful dice to force a reroll on:</p>`,
+        buttons: [
+          {
+            action: 'attr',
+            label: `${rollData.attrLabel} die (${rollData.originalAttrDie})`,
+            callback: () => resolve('attr')
+          },
+          {
+            action: 'skill',
+            label: `${rollData.skillLabel} die (${rollData.originalSkillDie})`,
+            callback: () => resolve('skill')
+          }
+        ]
+      }).then(() => resolve(null));
+    });
+  } else if (attrSucceeded) {
+    target = 'attr';
+  } else if (skillSucceeded) {
+    target = 'skill';
+  }
+
+  if (!target) return null;
+
+  const updatedRollData = await forceRerollAttackDie(messageId, target);
+  if (!updatedRollData) return null;
+
+  return {
+    applied: true,
+    type: 'reroll',
+    reduction: 0,
+    reason: `Shield Block (Force Reroll) from ${reactionEntry.shieldName}`,
+    newSuccesses: updatedRollData.successes
+  };
 }
 
 async function _continueDefenseFlow(defenseType, defender, attackData, messageId) {
@@ -545,6 +643,19 @@ async function _continueDefenseFlow(defenseType, defender, attackData, messageId
  * @param {Object} attackData - Attack data
  * @param {string} attackMessageId - The attack message ID
  */
+function hasAutomaticShieldDefense(defender) {
+  if (!defender?.items) return false;
+
+  return defender.items.some(item => {
+    if (item.type !== 'shield' || !item.system?.equipped) return false;
+    const shieldType = String(item.system.shieldType || '').toLowerCase();
+    const name = String(item.name || '').toLowerCase();
+    if (shieldType !== 'medium' && shieldType !== 'heavy') return false;
+    if (name.includes('pavise')) return false;
+    return true;
+  });
+}
+
 async function rollMeleeDefense(defender, attackData, attackMessageId) {
   // Get effective attribute value (with bonuses from feats/abilities)
   const agility = defender.system.attributesEffective?.agility 
@@ -568,6 +679,11 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
     defFortune = rollMods.fortune;
     defMisfortune = rollMods.misfortune;
   } catch { /* ignore */ }
+
+  const autoShieldDefense = hasAutomaticShieldDefense(defender);
+  if (autoShieldDefense) {
+    defFortune += 1;
+  }
   
   await showSkillCheckDialog({
     actor: defender,
@@ -580,6 +696,7 @@ async function rollMeleeDefense(defender, attackData, attackMessageId) {
     defaultModifier: defModifier,
     defaultFortune: defFortune,
     defaultMisfortune: defMisfortune,
+    forceFortuneOnly: autoShieldDefense,
     onRollComplete: async (rollResult) => {
       // Wait for defense roll to post
       await new Promise(resolve => setTimeout(resolve, 100));
@@ -691,7 +808,7 @@ async function calculateDamage(attackData, attackMessageId, defenseRollMessage, 
     defenseSuccesses = defenseRollData.successes;
   }
   
-  const margin = actualAttackSuccesses - defenseSuccesses;
+  let margin = actualAttackSuccesses - defenseSuccesses;
   
   const attacker = game.actors.get(attackData.actorId);
   const defender = game.actors.get(attackData.targetId);
@@ -705,6 +822,22 @@ async function calculateDamage(attackData, attackMessageId, defenseRollMessage, 
   let damageAmount = 0;
   let damageDescription = '';
   let tiebreakerNote = '';
+
+  // Shield reactions trigger only after the attack is confirmed to hit.
+  let activeShieldEffect = attackData._shieldEffect ?? shieldEffect ?? null;
+  if (margin >= 1 && !activeShieldEffect) {
+    activeShieldEffect = await promptShieldReactionIfAvailable(defender, attackData, margin);
+  }
+
+  // Shield Block's Force Reroll may have changed the attacker's successes.
+  if (activeShieldEffect?.type === 'reroll' && typeof activeShieldEffect.newSuccesses === 'number') {
+    actualAttackSuccesses = activeShieldEffect.newSuccesses;
+    margin = actualAttackSuccesses - defenseSuccesses;
+    const refreshedMessage = attackData.attackRollMessageId ? game.messages.get(attackData.attackRollMessageId) : null;
+    if (refreshedMessage?.flags?.legends?.rollData) {
+      attackRollData = refreshedMessage.flags.legends.rollData;
+    }
+  }
   
   if (margin < 0) {
     // Defender wins
@@ -784,12 +917,13 @@ async function calculateDamage(attackData, attackMessageId, defenseRollMessage, 
 
   // Apply shield effect (if any)
   let _shieldNote = '';
-  if (shieldEffect && shieldEffect.applied && (shieldEffect.reduction || shieldEffect.reduction === 0)) {
-    const red = Number(shieldEffect.reduction) || 0;
-    const prev = damageAmount;
+  if (activeShieldEffect?.applied && activeShieldEffect.type === 'reroll') {
+    _shieldNote = `<div class="shield-note"><strong>Shield:</strong> ${activeShieldEffect.reason || ''} (attacker successes now ${activeShieldEffect.newSuccesses})</div>`;
+  } else if (activeShieldEffect && activeShieldEffect.applied && (activeShieldEffect.reduction || activeShieldEffect.reduction === 0)) {
+    const red = Number(activeShieldEffect.reduction) || 0;
     damageAmount = Math.max(0, damageAmount - red);
-    damageDescription += ` (reduced by ${red} from shield${shieldEffect.reason ? `: ${shieldEffect.reason}` : ''})`;
-    _shieldNote = `<div class="shield-note"><strong>Shield:</strong> ${shieldEffect.reason || ''} (-${red} damage)</div>`;
+    damageDescription += ` (reduced by ${red} from shield${activeShieldEffect.reason ? `: ${activeShieldEffect.reason}` : ''})`;
+    _shieldNote = `<div class="shield-note"><strong>Shield:</strong> ${activeShieldEffect.reason || ''} (-${red} damage)</div>`;
   }
 
   // Build on-hit feat effect buttons (Cat 5)

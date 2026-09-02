@@ -1238,7 +1238,7 @@ action.add description="Primal Multiattack: two melee attacks as 1 Combat action
 **Usage:** Passive
 **Keyword:** [Skill]
 **Description:** You've figured out how learning works and stopped wasting the effort that others spend relearning their mistakes.
-**Benefit:** All skill improvements cost 2 less XP
+**Benefit:** All skill improvements cost 1 x current rank less XP to increase.
 
 #### Rally Cry
 **Prerequisites:** Cha 4

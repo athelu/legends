@@ -1,0 +1,34 @@
+{
+  "_id": "ac4461086b64f83d",
+  "name": "Tools, Thieves'",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A set of small specialized instruments for bypassing locks and mechanical traps: picks, tension wrenches, a short mirror, and a length of wire. Required to make Devices checks to pick locks or disarm mechanical traps.</p>"
+    },
+    "equipmentType": "tools",
+    "weight": 2.0,
+    "cost": 50.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "Devices",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!ac4461086b64f83d"
+}

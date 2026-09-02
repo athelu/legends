@@ -70,30 +70,30 @@
       "value": 3.0
     },
     "skills": {
-      "perception": 5,
-      "wilderness": 5,
-      "athletics": 0,
-      "rangedCombat": 0,
+      "language": 0,
+      "medicine": 3,
+      "thievery": 0,
       "devices": 0,
-      "writing": 0,
-      "empathy": 3,
-      "investigate": 0,
-      "deception": 0,
-      "intimidate": 0,
-      "meleeCombat": 3,
       "arcane": 0,
-      "acrobatics": 0,
+      "writing": 0,
+      "perception": 5,
+      "meleeCombat": 3,
+      "investigate": 0,
       "religion": 0,
       "persuasion": 0,
-      "might": 0,
-      "history": 0,
-      "language": 0,
-      "society": 0,
-      "perform": 0,
-      "medicine": 3,
       "craft": 0,
+      "acrobatics": 0,
+      "intimidate": 0,
+      "history": 0,
+      "deception": 0,
+      "athletics": 0,
+      "wilderness": 5,
+      "society": 0,
+      "rangedCombat": 0,
       "stealth": 5,
-      "thievery": 0
+      "empathy": 3,
+      "might": 0,
+      "perform": 0
     },
     "size": "medium",
     "speed": {
@@ -123,24 +123,24 @@
     "weaves": {
       "castingStat": "Wisdom",
       "potentials": {
-        "earth": 6,
-        "fire": 2,
-        "positive": 4,
-        "negative": 4,
         "space": 4,
         "air": 3,
+        "negative": 4,
+        "water": 5,
+        "fire": 2,
         "time": 3,
-        "water": 5
+        "earth": 6,
+        "positive": 4
       },
       "mastery": {
-        "earth": 5,
-        "fire": 0,
-        "positive": 3,
-        "negative": 3,
         "space": 3,
         "air": 0,
+        "negative": 3,
+        "water": 4,
+        "fire": 0,
         "time": 2,
-        "water": 4
+        "earth": 5,
+        "positive": 3
       },
       "energyPool": {
         "value": 42,
@@ -227,8 +227,7 @@
         }
       },
       "effects": [],
-      "flags": {},
-      "_key": "!items!cc34e1434f15f43b"
+      "flags": {}
     }
   ],
   "effects": [],

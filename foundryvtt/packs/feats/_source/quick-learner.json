@@ -19,7 +19,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>All skill improvements cost 2 less XP</p>",
+    "benefits": "<p>All skill improvements cost 1 x current rank less XP to increase.</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

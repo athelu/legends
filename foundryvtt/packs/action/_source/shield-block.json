@@ -5,13 +5,13 @@
   "img": "icons/skills/melee/shield-block-gray-yellow.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Trigger:</strong> You are hit by an attack while wielding a shield <strong>Effect:</strong> Once per round, Gain +6 DR against this attack only</p>"
+      "value": "<p><strong>Trigger:</strong> You are hit by an attack while wielding a shield <strong>Effect:</strong> Choose one:</p>\n<ul>\n<li><strong>Increase DR:</strong> [Reaction] once per round, Gain +4 DR against this attack only</li>\n<li><strong>Force Reroll:</strong> [Reaction] once per round, Attacker must reroll one of their success dice</li>\n</ul>"
     },
     "actionType": "reaction",
     "actionCost": "",
     "requirements": "",
     "trigger": "You are hit by an attack while wielding a shield",
-    "effect": "Once per round, Gain +6 DR against this attack only",
+    "effect": "Choose one:\n- **Increase DR:** [Reaction] once per round, Gain +4 DR against this attack only\n- **Force Reroll:** [Reaction] once per round, Attacker must reroll one of their success dice",
     "appliesEffects": [],
     "keywords": [],
     "range": "",

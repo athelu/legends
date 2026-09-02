@@ -3,6 +3,8 @@
  * Handles application and management of magical traits (Mageborn, Divine Gift, etc.)
  */
 
+import { CRAFT_TYPES } from './skill-utils.mjs';
+
 // ========================================
 // CONSTANTS & DATA STRUCTURES
 // ========================================
@@ -213,23 +215,10 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
       break;
       
     case 'eldritch-pact':
-      // Grant pact-specific abilities based on pact type
-      const pactType = magicalTraitUpdate.pactType || updates['system.magicalTrait.pactType'];
-      
-      switch (pactType) {
-        case 'survivor':
-          abilityNamesToGrant.push("Scavenged Power (Survivor's Bargain)");
-          break;
-        case 'desperate':
-          abilityNamesToGrant.push('Borrowed Vitality (Desperate Deal)');
-          break;
-        case 'answered':
-          abilityNamesToGrant.push('Void Resonance (Answered Cry)', 'Void Speech (Answered Cry)');
-          break;
-        case 'stolen':
-          abilityNamesToGrant.push('Unstable Surge (Stolen Shard)', "Shard's Terror (Stolen Shard)");
-          break;
-      }
+      abilityNamesToGrant.push(
+        magicalTraitUpdate.pactConduitAbility,
+        magicalTraitUpdate.pactGiftAbility
+      );
       break;
 
     case 'alchemical-tradition':
@@ -257,6 +246,34 @@ async function grantMagicalTraitAbilities(actor, traitType, updates) {
         abilitiesToCreate.push(document.toObject());
       } else {
         console.warn(`Could not load ability: ${abilityName}`);
+      }
+    } else if (traitType === 'eldritch-pact') {
+      const description = abilityName === magicalTraitUpdate.pactConduitAbility
+        ? magicalTraitUpdate.pactConduitDescription
+        : magicalTraitUpdate.pactGiftDescription;
+      if (description) {
+        abilitiesToCreate.push({
+          name: abilityName,
+          type: 'ability',
+          img: 'icons/svg/magic.svg',
+          system: {
+            description: { value: `<p>${description}</p>` },
+            abilityType: 'passive',
+            source: 'Eldritch Pact',
+            keywords: [],
+            trigger: '',
+            frequency: '',
+            effect: description,
+            isActive: false,
+            actionCost: '',
+            requirements: '',
+            range: '',
+            target: '',
+            usage: '',
+            appliesEffects: []
+          },
+          effects: []
+        });
       }
     } else {
       console.warn(`Ability not found in compendium: ${abilityName}`);
@@ -557,35 +574,73 @@ export const FORCE_OF_WILL = {
   }
 };
 
-// Eldritch Pact types
+// Pact story is purely narrative — energies and abilities are chosen independently.
 export const PACT_TYPES = {
   survivorsBargain: {
     name: "The Survivor's Bargain",
-    energies: ['space', 'negative', 'fire', 'earth', 'time'],
-    primary: 'space',
-    secondary: 'negative',
-    story: "You should have died. You didn't. Something intervened."
+    story: "You should have died. You didn't. Something intervened — you may not even know what it was."
   },
   desperateDeal: {
     name: "The Desperate Deal",
-    energies: ['positive', 'space', 'air', 'time', 'water'],
-    primary: 'positive',
-    secondary: 'space',
-    story: "You promised something to someone in your darkest hour. Power came immediately."
+    story: "You promised something in your darkest hour. Something deliberately vague answered. You agreed without reading the proverbial contract."
   },
   answeredCry: {
     name: "The Answered Cry",
-    energies: ['air', 'negative', 'space', 'time', 'water'],
-    primary: 'air',
-    secondary: 'negative',
-    story: "You screamed into the void. The void answered."
+    story: "You screamed into the void. The void answered that one time. Now it is silent — and you feel like you are being observed constantly."
   },
   stolenShard: {
     name: "The Stolen Shard",
-    energies: ['fire', 'negative', 'space', 'earth', 'time'],
-    primary: 'fire',
-    secondary: 'negative',
-    story: "You found/touched/stole something not meant for you. This power wasn't offered—you took it."
+    story: "You found, touched, or stole something not meant for you. This power wasn't offered — you took it."
+  }
+};
+
+export const PACT_CONDUITS = {
+  scavengedPower: {
+    name: "Scavenged Power",
+    energy: 'space',
+    description: "Whenever you weave using Space energy as primary, regain Energy equal to half the Energy spent (min 1).",
+    abilityName: "Scavenged Power"
+  },
+  borrowedVitality: {
+    name: "Borrowed Vitality",
+    energy: 'positive',
+    description: "Whenever you weave using Positive energy as primary, the target gains +4 temporary HP until your next short rest.",
+    abilityName: "Borrowed Vitality"
+  },
+  voidResonance: {
+    name: "Void Resonance",
+    energy: 'air',
+    description: "Whenever you weave using Air energy as primary, you may target one additional creature within range.",
+    abilityName: "Void Resonance"
+  },
+  unstableSurge: {
+    name: "Unstable Surge",
+    energy: 'fire',
+    description: "Whenever you weave using Fire energy as primary, add +4 damage OR extend duration by 1 round.",
+    abilityName: "Unstable Surge"
+  }
+};
+
+export const PACT_GIFTS = {
+  pactSiphon: {
+    name: "Pact Siphon",
+    description: "When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier.",
+    abilityName: "Pact Siphon"
+  },
+  pactHealing: {
+    name: "Pact Healing",
+    description: "Once per short rest, heal yourself or a touched ally for HP equal to Charisma × tier.",
+    abilityName: "Pact Healing"
+  },
+  pactSpeech: {
+    name: "Pact Speech",
+    description: "You can communicate telepathically with any creature you can see within 30 feet.",
+    abilityName: "Pact Speech"
+  },
+  fearOfThePact: {
+    name: "Fear of the Pact",
+    description: "Once per short rest, as [Combat] action, target within 30 feet makes Will save vs Charisma + Primary Mastery. On win, they gain Frightened for 1 minute.",
+    abilityName: "Fear of the Pact"
   }
 };
 
@@ -763,13 +818,13 @@ function calcInitialEnergy(actor, assignments, castingStat) {
  * Show dialog to choose elemental affinity
  * @returns {Promise<string>} Chosen element
  */
-export async function showAffinityDialog() {
-  const affinityHtml = ELEMENTAL_ENERGIES.map(e =>
+export async function showAffinityDialog(energies = ELEMENTAL_ENERGIES, title = 'Choose Elemental Affinity') {
+  const affinityHtml = energies.map(e =>
     `<option value="${e}">${ENERGY_TYPES[e].label} ${ENERGY_TYPES[e].icon}</option>`
   ).join('');
 
   const result = await foundry.applications.api.DialogV2.wait({
-    window: { title: 'Choose Elemental Affinity' },
+    window: { title },
     position: { width: 420 },
     rejectClose: false,
     content: `
@@ -802,7 +857,7 @@ export async function showAffinityDialog() {
  * @param {string} excludeEnergy - Energy to exclude (already chosen as affinity)
  * @returns {Promise<string>} Chosen energy
  */
-export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMultiple = [], availableRolls = null) {
+export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMultiple = [], availableRolls = null, title = 'Choose Secondary Focus') {
   // Combine single exclude and multiple excludes
   const excluded = excludeEnergy ? [excludeEnergy, ...excludeMultiple] : excludeMultiple;
   const availableEnergies = ALL_ENERGIES.filter(e => !excluded.includes(e));
@@ -827,7 +882,7 @@ export async function showSecondaryFocusDialog(excludeEnergy = null, excludeMult
   }
 
   const result = await foundry.applications.api.DialogV2.wait({
-    window: { title: 'Choose Secondary Focus' },
+    window: { title },
     position: { width: 420 },
     rejectClose: false,
     content: `
@@ -1037,6 +1092,85 @@ export async function showPactTypeDialog() {
     ],
   });
 
+  return (result && result !== 'cancel') ? result : null;
+}
+
+async function showPactChoiceDialog(title, fieldName, label, choices, descriptions) {
+  const optionsHtml = Object.entries(choices).map(([key, choice]) =>
+    `<option value="${key}">${choice.name}</option>`
+  ).join('');
+  const firstKey = Object.keys(choices)[0];
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title },
+    position: { width: 520 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
+        <div class="form-group" style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-weight: bold;">${label}:</label>
+          <select name="${fieldName}" style="width: 100%;">${optionsHtml}</select>
+        </div>
+        <div id="pact-choice-description" style="padding: 8px; background: rgba(0,0,0,0.15); border-radius: 4px; font-size: 12px;">
+          <em>${descriptions[firstKey] ?? ''}</em>
+        </div>
+      </form>
+    `,
+    render: (event, dialog) => {
+      const select = dialog.element.querySelector(`[name="${fieldName}"]`);
+      const description = dialog.element.querySelector('#pact-choice-description');
+      select.addEventListener('change', () => {
+        description.innerHTML = `<em>${descriptions[select.value] ?? ''}</em>`;
+      });
+    },
+    buttons: [
+      { action: 'confirm', label: 'Confirm', default: true, callback: (event, button, dialog) => dialog.element.querySelector(`[name="${fieldName}"]`).value },
+      { action: 'cancel', label: 'Cancel', callback: () => null },
+    ],
+  });
+  return (result && result !== 'cancel') ? result : null;
+}
+
+export function showPactConduitDialog() {
+  return showPactChoiceDialog(
+    'Choose Pact Conduit',
+    'conduit',
+    'Pact Conduit',
+    PACT_CONDUITS,
+    Object.fromEntries(Object.entries(PACT_CONDUITS).map(([key, value]) => [key, value.description]))
+  );
+}
+
+export function showPactGiftDialog() {
+  return showPactChoiceDialog(
+    'Choose Pact Gift',
+    'gift',
+    'Pact Gift',
+    PACT_GIFTS,
+    Object.fromEntries(Object.entries(PACT_GIFTS).map(([key, value]) => [key, value.description]))
+  );
+}
+
+export async function showInfuserCraftDialog() {
+  const choices = CRAFT_TYPES.filter(({ keyword }) => ['Armorsmith', 'Weaponsmith'].includes(keyword));
+  const result = await foundry.applications.api.DialogV2.wait({
+    window: { title: 'Choose Infuser Craft Skill' },
+    position: { width: 420 },
+    rejectClose: false,
+    content: `
+      <form style="padding: 12px;">
+        <div class="form-group">
+          <label>Craft Skill</label>
+          <select name="craftSkill" style="width: 100%;">
+            ${choices.map(({ keyword, label }) => `<option value="${keyword}">${label}</option>`).join('')}
+          </select>
+        </div>
+      </form>
+    `,
+    buttons: [
+      { action: 'confirm', label: 'Confirm', default: true, callback: (event, button, dialog) => dialog.element.querySelector('[name="craftSkill"]').value },
+      { action: 'cancel', label: 'Cancel', callback: () => null },
+    ],
+  });
   return (result && result !== 'cancel') ? result : null;
 }
 
@@ -1596,36 +1730,38 @@ export async function applyInfuserWorkflow(actor, traitItem, mode) {
   // Step 1: Generate potentials with appropriate mode
   const rolls = await rollPotentials(5, mode);
   
-  // Step 2: Intelligently assign bonuses for Earth (+2) and Space (+1)
-  const availableRolls = [...rolls];
-  
-  const earthIndex = findOptimalRollForBonus(availableRolls, 2);
-  const earthRoll = availableRolls.splice(earthIndex, 1)[0];
-  
-  const spaceIndex = findOptimalRollForBonus(availableRolls, 1);
-  const spaceRoll = availableRolls.splice(spaceIndex, 1)[0];
-  
-  const preAssigned = {
-    earth: Math.min(earthRoll + 2, 8),
-    space: Math.min(spaceRoll + 1, 8)
-  };
-  const preAssignedDetails = {
-    earth: { roll: earthRoll, bonus: 2 },
-    space: { roll: spaceRoll, bonus: 1 }
-  };
-  
-  // Step 3: Choose one elemental or conceptual for 5th slot
-  const chosenElement = await showSecondaryFocusDialog();
-  if (!chosenElement) {
+  // Step 2: Choose primary and secondary energies
+  const primaryEnergy = await showAffinityDialog(ELEMENTAL_ENERGIES, 'Choose Primary Energy');
+  if (!primaryEnergy) {
     ui.notifications.warn("Infuser application cancelled");
     return false;
   }
+
+  const availableRolls = [...rolls];
+  const primaryIndex = findOptimalRollForBonus(availableRolls, 2);
+  const primaryRoll = availableRolls.splice(primaryIndex, 1)[0];
+  const secondary = await showSecondaryFocusDialog(primaryEnergy, [], availableRolls);
+  if (!secondary) {
+    ui.notifications.warn("Infuser application cancelled");
+    return false;
+  }
+  const secondaryIndex = findOptimalRollForBonus(availableRolls, 1);
+  const secondaryRoll = availableRolls.splice(secondaryIndex, 1)[0];
   
-  // Step 4: Assign remaining rolls (Positive, Time, chosen element)
-  const availableEnergies = ['positive', 'time', chosenElement];
+  const preAssigned = {
+    [primaryEnergy]: Math.min(primaryRoll + 2, 8),
+    [secondary]: Math.min(secondaryRoll + 1, 8)
+  };
+  const preAssignedDetails = {
+    [primaryEnergy]: { roll: primaryRoll, bonus: 2 },
+    [secondary]: { roll: secondaryRoll, bonus: 1 }
+  };
+  
+  // Step 3: Assign the remaining three energies
+  const infuserEnergies = ALL_ENERGIES.filter(e => e !== primaryEnergy && e !== secondary);
   const assignments = await showAssignmentDialog(
     availableRolls,
-    availableEnergies,
+    infuserEnergies,
     preAssigned,
     { allRolls: rolls, preAssignedDetails }
   );
@@ -1634,19 +1770,27 @@ export async function applyInfuserWorkflow(actor, traitItem, mode) {
     ui.notifications.warn("Infuser application cancelled");
     return false;
   }
+
+  const craftSkill = await showInfuserCraftDialog();
+  if (!craftSkill) {
+    ui.notifications.warn("Infuser application cancelled");
+    return false;
+  }
   
-  const infuserEnergies = ['earth', 'space', 'positive', 'time', chosenElement];
-  
-  // Step 5: Build updates object
+  // Step 4: Build updates object
   const updates = {
     'system.potentials': createPotentialsObject(assignments),
     'system.mastery': initializeMastery(infuserEnergies),
     'system.castingStat.value': 'intelligence',
     'system.energy.current': calcInitialEnergy(actor, assignments, 'intelligence'),
+    [`system.craftSkills.${craftSkill}`]: Math.max(2, Number(actor.system.craftSkills?.[craftSkill] || 0)),
+    [`system.training.craftSkills.${craftSkill}`]: Boolean(actor.system.training?.craftSkills?.[craftSkill] || false),
     'system.magicalTrait': {
       type: 'infuser',
       subtype: 'diabolist',
-      chosenElement: chosenElement,
+      primaryEnergy,
+      secondaryEnergy: secondary,
+      craftSkill,
       availableEnergies: infuserEnergies,
       isSetup: true
     }
@@ -1786,31 +1930,49 @@ export async function applyEldritchPactWorkflow(actor, traitItem, mode) {
   
   const pact = PACT_TYPES[pactKey];
   
-  // Step 3: Intelligently assign bonuses
+  // Step 3: Choose conduit and gift
+  const conduitKey = await showPactConduitDialog();
+  if (!conduitKey) {
+    ui.notifications.warn("Eldritch Pact application cancelled");
+    return false;
+  }
+  const giftKey = await showPactGiftDialog();
+  if (!giftKey) {
+    ui.notifications.warn("Eldritch Pact application cancelled");
+    return false;
+  }
+
+  // Step 4: Choose primary and secondary energies
   const availableRolls = [...rolls];
-  
+  const primaryEnergy = await showAffinityDialog(ALL_ENERGIES, 'Choose Primary Energy');
+  if (!primaryEnergy) {
+    ui.notifications.warn("Eldritch Pact application cancelled");
+    return false;
+  }
   const primaryIndex = findOptimalRollForBonus(availableRolls, 2);
   const primaryRoll = availableRolls.splice(primaryIndex, 1)[0];
-  
+  const secondary = await showSecondaryFocusDialog(primaryEnergy, [], availableRolls);
+  if (!secondary) {
+    ui.notifications.warn("Eldritch Pact application cancelled");
+    return false;
+  }
   const secondaryIndex = findOptimalRollForBonus(availableRolls, 1);
   const secondaryRoll = availableRolls.splice(secondaryIndex, 1)[0];
   
   const preAssigned = {
-    [pact.primary]: Math.min(primaryRoll + 2, 8),
-    [pact.secondary]: Math.min(secondaryRoll + 1, 8)
+    [primaryEnergy]: Math.min(primaryRoll + 2, 8),
+    [secondary]: Math.min(secondaryRoll + 1, 8)
   };
   const preAssignedDetails = {
-    [pact.primary]: { roll: primaryRoll, bonus: 2 },
-    [pact.secondary]: { roll: secondaryRoll, bonus: 1 }
+    [primaryEnergy]: { roll: primaryRoll, bonus: 2 },
+    [secondary]: { roll: secondaryRoll, bonus: 1 }
   };
   
-  // Step 4: Assign remaining rolls
-  const remainingEnergies = pact.energies.filter(
-    e => e !== pact.primary && e !== pact.secondary
-  );
+  // Step 5: Assign remaining rolls
+  const pactEnergies = ALL_ENERGIES.filter(e => e !== primaryEnergy && e !== secondary);
   const assignments = await showAssignmentDialog(
     availableRolls,
-    remainingEnergies,
+    pactEnergies,
     preAssigned,
     { allRolls: rolls, preAssignedDetails }
   );
@@ -1820,17 +1982,25 @@ export async function applyEldritchPactWorkflow(actor, traitItem, mode) {
     return false;
   }
   
-  // Step 5: Build updates object
+  // Step 6: Build updates object
   const updates = {
     'system.potentials': createPotentialsObject(assignments),
-    'system.mastery': initializeMastery(pact.energies),
+    'system.mastery': initializeMastery([primaryEnergy, secondary, ...pactEnergies]),
     'system.castingStat.value': 'charisma',
     'system.energy.current': calcInitialEnergy(actor, assignments, 'charisma'),
     'system.magicalTrait': {
       type: 'eldritch-pact',
       subtype: 'diabolist',
       pactType: pactKey,
-      availableEnergies: pact.energies,
+      primaryEnergy,
+      secondaryEnergy: secondary,
+      pactConduit: conduitKey,
+      pactConduitAbility: PACT_CONDUITS[conduitKey].abilityName,
+      pactConduitDescription: PACT_CONDUITS[conduitKey].description,
+      pactGift: giftKey,
+      pactGiftAbility: PACT_GIFTS[giftKey].abilityName,
+      pactGiftDescription: PACT_GIFTS[giftKey].description,
+      availableEnergies: [primaryEnergy, secondary, ...pactEnergies],
       isSetup: true
     }
   };

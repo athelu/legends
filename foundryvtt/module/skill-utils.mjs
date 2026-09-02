@@ -100,6 +100,7 @@ export const CRAFT_TYPES = [
   { keyword: 'Shipwright',   label: 'Craft: Shipwright' },
   { keyword: 'Tailor',       label: 'Craft: Tailor' },
   { keyword: 'Woodworker',   label: 'Craft: Woodworker' },
+  { keyword: 'Weaponsmith',  label: 'Craft: Weaponsmith' },
   { keyword: 'Alchemist',    label: 'Craft: Alchemist', alchemistOnly: true },
 ];
 
