@@ -1,0 +1,34 @@
+{
+  "_id": "84f61b43aa7a70f4",
+  "name": "Pot, Iron",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A large cast iron pot with a handle and lid, suitable for cooking stews, boiling water, or rendering materials. Invaluable for extended wilderness travel or sieges.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 10.0,
+    "cost": 2.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!84f61b43aa7a70f4"
+}

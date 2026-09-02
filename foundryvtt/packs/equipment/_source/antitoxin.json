@@ -1,0 +1,34 @@
+{
+  "_id": "300e9e106cbda696",
+  "name": "Antitoxin",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A small vial of alchemically prepared solution that neutralizes common poisons. When consumed, a creature gains Fortune on saving throws against poison for 1 hour, and any existing poison afflicting the creature is suppressed for the duration. Does not affect supernatural or magical poisons.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.1,
+    "cost": 50.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!300e9e106cbda696"
+}

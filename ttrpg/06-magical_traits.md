@@ -1,4 +1,5 @@
 ## MAGICAL TRAITS
+A character may only possess one Magical Trait at a time. It is possible that the character gains a Magical trait or that it changes during gameplay.
 
 ### Mageborn (-7)
 **Image:** `icons/skills/arcane/wand-sparks-purple.webp`
@@ -386,7 +387,7 @@ Energy Pool: Sum of 5 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷
 
 #### Imbue Item
 A number of times per short rest equal to your current Tier, spend 1 [Combat] action and touch a weapon or piece of armor. For 1 minute, infused weapons deal +4 elemental damage on every hit (choose the energy type from your five pact energies at the time of infusion)Bonus energy damage added by infusion uses full DR. If the target has vulnerability or immunity to the energy type, apply that to the energy damage portion only; infused armor grants +3 DR for the duration. You may have a number of active infusions simultaneously equal to your current Tier. An infusion ends when the duration expires or when you imbue the same item again.
-Infusers must touch an object to infuse it with magic. Most of your weaves require physical contact with the target or a material component you're manipulating. You cannot cast at range without an infused item as an intermediary.
+
 
 #### Gain Craft Skill
 Infusers specialize in their work and choose a corresponding craft keyword. The like likely choices are Armorsmith or Weaponsmith. The character gains Rank 2 in the chosen Craft skill.
@@ -479,35 +480,60 @@ Roll 5d8, assign to five Magical Potentials.
 **Choose Pact**
 Choose you survival pact type which determines energy access and how your pact abilities manifest.
 
-**Calculate your Energy Pool**
-Energy Pool: Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
+### The Desperate Deal
+You promised something to an entity in your darkest hour and this power came immediately. Something deliberately vague answered. It communicated in euphemisms and has never appeared directly. It sends you signs, omens, and whispers. You agreed without reading the proverbial contract. Your magic feels like borrowed tools that are functional but foreign.
+
+#### The Survivor's Bargain
+You should have died but you didn't. Something intervened on your behalf and you might not even know what it was. There is the possibility that it doesn't even know you exist and you may have stolen its power accidentally. Your magic feels scavenged and cobbled together as if incomplete.
+
+#### The Answered Cry
+You screamed into the void. The void answered that one time. Now it is silent and you feels like you are being observed constantly. You don't know what it wants from you or if it's good, evil, or indifferent. Your magic feels like a gift from an absent benefactor.
+
+#### The Stolen Shard
+You found, touched, or stole something that was not meant for you. This power wasn't offered; you took it. The source might not even be sentient; It could be residual power from a dead entity, a trapped daemon, or a lost fragment of a god. You don't know if the original owner wants it back or if taking it cursed you. Your magic feels unstable, like wielding something too powerful for mortal hands.
+
+**Choose Pact Conduit**
+
+#### Pact Conduit - Scavenged Power
+Whenever you weave using Space energy as primary, you immediately regain Energy equal to half the Energy spent on that weave (rounded down, minimum 1). 
+
+#### Pact Conduit - Borrowed Vitality
+Whenever you weave using Positive energy as primary, the target gains +4 temporary HP that lasts until your next short rest. 
+
+#### Pact Conduit - Void Resonance
+Whenever you weave using Air energy as primary, you may target one additional creature within range (make separate weaving rolls for each). 
+
+#### Pact Conduit - Unstable Surge
+Whenever you weave using your Primary Energy (Fire), add +4 damage OR extend duration by 1 round. 
+
+**Choose Pact Gift**
+
+#### Pact Gift - Pact Siphon
+When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier
+
+#### Pact Gift - Pact Healing
+Once per short rest, heal yourself or touched ally for HP equal to Charisma × tier.
+
+#### Pact Gift - Pact Speech
+You can communicate telepathically with any creature you can see within 30 feet
+
+#### Pact Gift - Fear of the Pact
+Once per short rest, as [Combat] action, target within 30 feet makes Will save versus your Charisma + Primary Mastery. If you win by 1+ successes, target gains the Frightened  condition for 1 minute (they can repeat save each turn).
+
+**Choose Primary Energy**
+Primary energy Potential +2. Use the potential roll that will allow you to make this 8 or as close to 8 as possible
+
+**Choose Secondary Energy**
+Secondary energy Potential +1. Use the potential roll that will allow you to make this 8 or as close to 8 as possible
+
+**Choose Remaining Energies**
+Choose three of the remaining energies and assign the remaining rolls as desired.
 
 #### Pact Magic
 Your energy pool regenerates on short rest as well as on long rest.
 
-#### The Survivor's Bargain
-**Energies:** Space (Primary), Negative (Secondary), Fire, Earth, Time
-**Story:** *You should have died. You didn't. Something intervened.*
-**Pact Conduit - Scavenged Power:** Whenever you weave using Space energy as primary, you immediately regain Energy equal to half the Energy spent on that weave (rounded down, minimum 1). 
-**Pact Gift:** When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier
-
-#### The Desperate Deal
-**Energies:** Positive (Primary), Space (Secondary), Air, Time, Water
-**Story:** *You promised something to someone in your darkest hour. Power came immediately.*
-**Pact Conduit - Borrowed Vitality:** Whenever you weave using Positive energy as primary, the target (or you, if healing self) gains +4 temporary HP that lasts until your next short rest.
-**Pact Gift:** Once per short rest, as [Combat] action, heal yourself or touched ally for HP equal to Charisma × tier
-
-#### The Answered Cry
-**Energies:** Air (Primary), Negative (Secondary), Space, Time, Water
-**Story:** *You screamed into the void. The void answered.*
-**Pact Conduit - Void Resonance:** Whenever you weave using Air energy as primary, you may target one additional creature within range (make separate weaving rolls for each). 
-**Pact Gift:** You can communicate telepathically with any creature you can see within 30 feet
-
-#### The Stolen Shard
-**Energies:** Fire (Primary), Negative (Secondary), Space, Earth, Time
-**Story:** *You found/touched/stole something not meant for you. This power wasn't offered—you took it.*
-**Pact Conduit - Unstable Surge:** Whenever you weave using your Primary Energy (Fire), add +4 damage OR extend duration by 1 round. Power stolen doesn't flow smoothly—it erupts.
-**Pact Gift:** Once per short rest, as [Combat] action, target within 30 feet makes Will save (your Charisma + Fire Mastery vs their Wisdom + Luck). If you win by 1+ successes, target is Frightened for 1 minute (they can repeat save each turn)
+**Calculate your Energy Pool**
+Energy Pool: Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
 
 **Common Mechanical Elements:**
 -   Use **Charisma** as Casting Stat

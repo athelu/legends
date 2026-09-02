@@ -1,0 +1,34 @@
+{
+  "_id": "77b5cbea381cf4c1",
+  "name": "Pack, Dungeoneer's",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A bundled kit for exploring ruins, crypts, and underground passages, sold at a modest discount over purchasing the contents individually.</p>\n<p><strong>Contents:</strong> Backpack, Bedroll, Bell, Blanket, Crowbar, Flint and Steel, Grappling Hook, Hammer, Hardtack ×5, Oil ×2, Pitons ×10, Rope (Hemp, 50 ft), String (50 ft), Tinderbox, Torches ×5, Waterskin.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 54.0,
+    "cost": 50.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!77b5cbea381cf4c1"
+}

@@ -1,0 +1,34 @@
+{
+  "_id": "23c9dec55437ec78",
+  "name": "Ladder",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A 10-foot wooden ladder used for reaching elevated areas, scaling short walls, or bridging narrow gaps. Cumbersome to transport but invaluable in prepared sieges or dungeon exploration.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 25.0,
+    "cost": 0.1,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!23c9dec55437ec78"
+}

@@ -313,4 +313,6 @@ If you have access to multiple reactions, you must choose which one to use when 
 
 ### Shield Block [Reaction]
 **Trigger:** You are hit by an attack while wielding a shield
-**Effect:** Once per round, Gain +6 DR against this attack only
+**Effect:** Choose one:
+ - **Increase DR:** [Reaction] once per round, Gain +4 DR against this attack only
+ - **Force Reroll:** [Reaction] once per round, Attacker must reroll one of their success dice

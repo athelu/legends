@@ -17,12 +17,15 @@ TOOL_SKILL_MAP = {
     "artist's tools": 'Perform',
     "carpenter's tools": 'Craft: Carpenter',
     'disguise kit': 'Deception',
+    "healer's kit": 'Medicine',
     'herbalism kit': 'Medicine',
     'musical instrument, basic': 'Perform',
     'musical instrument, standard': 'Perform',
     'musical instrument, fine': 'Perform',
     'sewing kit': 'Craft: Tailor',
     "smith's tools": 'Craft: Smith',
+    "tools, fishing": 'Wilderness',
+    "tools, thieves'": 'Devices',
 }
 
 CONTAINER_KEYWORDS = {
