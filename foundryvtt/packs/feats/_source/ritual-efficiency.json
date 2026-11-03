@@ -12,7 +12,7 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "arcane:4",
+      "skills": "arcane:5",
       "feats": [],
       "tier": 0,
       "other": "any magical tradition trait with ritual casting"

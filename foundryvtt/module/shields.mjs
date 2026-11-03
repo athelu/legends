@@ -60,22 +60,36 @@ async function resolveLinkedCompendiumDocument(entry) {
 }
 
 /**
- * Apply a shield reaction. Supports reactions of type 'melee' or 'ranged'
- * which reduce incoming damage for a single hit.
- * Returns an object describing the effect applied.
+ * Shield Block (ttrpg/26-actions.md) grants a choice of two effects once per round.
+ * The "Force Reroll" option is resolved by combat.mjs, which needs access to the
+ * attacker's roll message to let the defender pick which success die gets rerolled.
+ */
+export const SHIELD_BLOCK_INCREASE_DR = 4;
+
+/**
+ * Apply a shield reaction. Shield Block requires an `optionKey` of 'increase-dr'
+ * or 'force-reroll' (the latter is actually resolved by the caller in combat.mjs;
+ * this just returns the DR-increase result when that option is chosen).
  * @param {Actor} defender
  * @param {Object} reactionEntry - { shieldId, shieldName, reaction }
  * @param {Object} context - { damage, damageType, attackType, attacker }
+ * @param {string|null} optionKey - which Shield Block choice was selected
  * @returns {Object} { applied: boolean, reduction: number, reason: string }
  */
-export async function applyShieldReaction(defender, reactionEntry, context={}) {
+export async function applyShieldReaction(defender, reactionEntry, context={}, optionKey=null) {
   const reaction = reactionEntry?.reaction;
   if (!reaction || !defender) return { applied: false, reduction: 0, reason: 'No reaction' };
 
-  // Shield reactions don't inherently reduce damage in this simple impl
-  // Reactions like "Force Misfortune" or "Force Reroll" are handled in combat logic
-  // This is a placeholder for future shield reaction implementation
-  
+  if (reaction.name === 'Shield Block' && optionKey === 'increase-dr') {
+    return {
+      applied: true,
+      type: 'dr',
+      reduction: SHIELD_BLOCK_INCREASE_DR,
+      reason: `Shield Block (Increase DR) from ${reactionEntry.shieldName}`
+    };
+  }
+
+  // Other shield reactions (e.g. Ranged Defense) don't reduce damage directly.
   return { applied: true, reduction: 0, reason: `${reaction.name || reaction.type} from ${reactionEntry.shieldName}` };
 }
 

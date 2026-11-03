@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "charisma": 3
+        "charisma": 4
       },
-      "skills": "arcane:3",
+      "skills": "arcane:4",
       "feats": [
         "Invoker"
       ],

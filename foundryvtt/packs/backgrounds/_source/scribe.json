@@ -1,0 +1,75 @@
+{
+  "_id": "73ad174d57d07672",
+  "name": "Scribe",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>You copied documents, drafted correspondence, and maintained records for institutions that depended on accurate information to function. You learned to read carefully, write precisely, and notice discrepancies that people assumed no one would catch. What you did with that information varied.</p>"
+    },
+    "startingXP": 56,
+    "skillBonuses": "Craft: Scribe 3, History 3, Society 3, Investigate 3, +56 XP",
+    "startingEquipment": "Quill\nink\nscrollcase\nrobe\nshoes",
+    "suggestedFeats": "",
+    "features": "Institutional Access: Organizations that depend on accurate records extend professional trust to those who maintain them. When approaching temples, guilds, courts, or civic offices, you can present yourself as a working colleague and gain access to archives, official correspondence, and administrative personnel that ordinary visitors cannot reach. Clerks and record-keepers treat your requests as legitimate professional business.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "craft": 3,
+      "history": 3,
+      "society": 3,
+      "investigate": 3
+    },
+    "craftKeyword": "Scribe",
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Quill",
+        "quantity": 1,
+        "originalText": "Quill",
+        "sourceId": "4e18e27b51e765ec"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Ink, 1 oz",
+        "quantity": 1,
+        "originalText": "ink",
+        "sourceId": "0a04bf0388f541a3"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Scrollcase",
+        "quantity": 1,
+        "originalText": "scrollcase",
+        "sourceId": "58ed81acdb5868cf"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Robe",
+        "quantity": 1,
+        "originalText": "robe",
+        "sourceId": "cead7ceedf80bfbc"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!73ad174d57d07672"
+}

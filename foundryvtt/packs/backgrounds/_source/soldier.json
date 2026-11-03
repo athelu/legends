@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>In your younger days, you waded into battle as part of an organized military force. You might have wanted to break out from the regimented structure of these forces, or you could have always been as independent a warrior as you are now. The discipline remains, though, along with the understanding that sometimes the only way forward is straight through. Your service taught you that courage and stupidity often look the same from the outside.</p>"
     },
-    "startingXP": 36,
-    "skillBonuses": "Melee Combat 3, Athletics 1, Intimidate 1, +36 XP",
+    "startingXP": 48,
+    "skillBonuses": "Melee Combat 4, Athletics 3, Intimidate 3, +48 XP",
     "startingEquipment": "Uniform\nweapon of choice\nbedroll\nhigh boots\ncommon clothes",
     "suggestedFeats": "",
     "features": "Military Rank: You have (or had) rank in an army. Can secure lodging at military posts, understand military protocols, and could be recognized by fellow soldiers.",
@@ -16,9 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "meleeCombat": 3,
-      "athletics": 1,
-      "intimidate": 1
+      "meleeCombat": 4,
+      "athletics": 3,
+      "intimidate": 3
     },
     "craftKeyword": null,
     "itemGrants": [

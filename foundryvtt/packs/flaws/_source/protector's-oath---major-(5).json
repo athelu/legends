@@ -1,0 +1,22 @@
+{
+  "_id": "b46f468e82999b3c",
+  "name": "Protector's Oath - Major (5)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>Sworn to never abandon or harm any sapient being; all life is sacred to you. You must honor your oath to protect, even at great personal risk.</p>"
+    },
+    "pointValue": 5,
+    "flawType": "mental",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!b46f468e82999b3c"
+}

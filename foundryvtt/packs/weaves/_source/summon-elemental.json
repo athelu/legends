@@ -15,12 +15,12 @@
         "cost": 6
       },
       "supporting": {
-        "type": "space",
+        "type": "time",
         "cost": 5
       }
     },
     "range": "Close, 30 ft.",
-    "duration": "10 minutes",
+    "duration": "11 minutes",
     "target": "",
     "savingThrow": "none",
     "effect": "Summon an elemental matching your Primary Energy at close range. Elemental has HP = (Your Potential × 6), deals 10 damage, uses your Mastery for attacks, and has special abilities based on type. You can command it as [Free] action.",
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 1 minute, 2= full effect, 3 = 1 hour",
-    "weavingRoll": "Primary Potential + Primary Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Primary Potential + Primary Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Primary Mastery",
     "appliesEffects": [],
     "deliveryMethod": "automatic",

@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 5
-      },
+      "attributes": {},
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>Opportunity attacks against you add 1 to both attack dice</p>",
     "usageType": "passive",

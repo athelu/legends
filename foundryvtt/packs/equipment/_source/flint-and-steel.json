@@ -1,0 +1,34 @@
+{
+  "_id": "3feb58023caa6495",
+  "name": "Flint and Steel",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A piece of flint and a curved steel striker used to produce sparks for lighting fires. With appropriate tinder, a fire can be started in about 1 minute under normal conditions, or longer in wet or windy weather.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 0.2,
+    "cost": 1.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!3feb58023caa6495"
+}

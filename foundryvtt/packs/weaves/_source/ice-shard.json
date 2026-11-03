@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target takes [[/damage 8 type=cold]] damage. This is an attack weave—no saving throw allowed.</p>"
+      "value": "<p>Target takes 8 cold and bludgeoning damage. This is an attack weave—no saving throw allowed.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -15,7 +15,7 @@
         "cost": 2
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 1
       }
     },
@@ -23,12 +23,12 @@
     "duration": "Instantaneous",
     "target": "",
     "savingThrow": "none",
-    "effect": "Target takes 8 cold damage. This is an attack weave—no saving throw allowed.",
+    "effect": "Target takes 8 cold and bludgeoning damage. This is an attack weave—no saving throw allowed.",
     "effectType": "damage",
     "damage": {
       "base": 8,
       "type": "cold",
-      "drInteraction": "half",
+      "drInteraction": "full",
       "scaling": {
         "0": {
           "damage": 0,
@@ -50,7 +50,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2 = full damage (8), 3 = enhanced damage (16) + applies effects",
-    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Water Potential + Water Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {

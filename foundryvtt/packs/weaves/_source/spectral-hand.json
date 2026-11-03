@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action.</p>"
+      "value": "<p>Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action but cannot be further from the caster than the Range of the weave.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -23,7 +23,7 @@
     "duration": "1 minute",
     "target": "",
     "savingThrow": "none",
-    "effect": "Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action.",
+    "effect": "Create a spectral hand at close range that can manipulate objects (lift up to 10 lbs, open unlocked doors, retrieve items). Cannot attack or activate magic items. Can move hand up to 30 feet each round as [Free] action but cannot be further from the caster than the Range of the weave.",
     "effectType": "utility",
     "damage": {
       "base": 0,

@@ -12,13 +12,12 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "agility": 3,
-        "charisma": 3
+        "charisma": 4
       },
-      "skills": "meleeCombat:3",
+      "skills": "meleeCombat:4",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When you make a melee attack against a target you have successfully feinted this turn, add your Charisma score to damage. This applies to the next attack against that target only, and requires your off-hand to be free.</p>",
     "usageType": "special",

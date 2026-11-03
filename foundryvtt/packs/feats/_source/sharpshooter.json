@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "wisdom": 3
+        "wisdom": 4
       },
-      "skills": "rangedCombat:4, perception:4",
+      "skills": "rangedCombat:5, perception:5",
       "feats": [],
       "tier": 0,
       "other": ""

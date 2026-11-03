@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4
-      },
+      "attributes": {},
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": "any combat skill 4"
+      "other": "Agil 4, any combat skill 5"
     },
     "benefits": "<p>When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn</p>",
     "usageType": "passive",

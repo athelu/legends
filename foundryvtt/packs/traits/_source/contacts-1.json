@@ -1,0 +1,28 @@
+{
+  "_id": "b66ab5d49c7722be",
+  "name": "Contacts (-1)",
+  "type": "trait",
+  "img": "icons/skills/social/diplomacy-handshake.webp",
+  "system": {
+    "description": {
+      "value": "<p>You have 1 associate or influential person that you can call on for information or favors during game play.</p>"
+    },
+    "pointCost": -1,
+    "traitType": "social",
+    "isMagical": false,
+    "magicalType": "",
+    "requirements": "",
+    "benefits": "",
+    "notes": "",
+    "visualEffects": "",
+    "castingStat": "",
+    "elementalAffinity": "",
+    "grantsEnergyPool": false,
+    "grantsMasterySkills": false,
+    "grantsRitualCasting": false,
+    "requiresGMApproval": false,
+    "requiresExistingTrait": ""
+  },
+  "effects": [],
+  "_key": "!items!b66ab5d49c7722be"
+}

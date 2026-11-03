@@ -1,0 +1,34 @@
+{
+  "_id": "9dbe93360f5eb760",
+  "name": "Caltrops",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A bag of 20 small iron spikes arranged so that one point always faces upward. Scattered across a 5-foot square, caltrops create difficult terrain. Any creature moving through the area must make a Reflex (Easy) test or stop moving and take [[/damage 1 type=piercing]] damage. The area remains hazardous until cleared, taking 1 minute per 5-foot square.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 2.0,
+    "cost": 2.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!9dbe93360f5eb760"
+}

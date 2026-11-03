@@ -585,7 +585,7 @@ _prepareCharacterData(actorData) {
     for (const [k, v] of Object.entries(systemData.skills || {})) {
       const canonicalKey = normalizeSkillKey(k) || k;
       const mod = featMods.skills[canonicalKey] || featMods.skills[k] || 0;
-      systemData.skillsEffective[k] = (typeof v === 'object' ? (v.value ?? 0) : v) + mod;
+      systemData.skillsEffective[k] = Math.max(2, (typeof v === 'object' ? (v.value ?? 0) : v) + mod);
     }
 
     systemData.attributesEffective = {};
@@ -835,7 +835,7 @@ _prepareCharacterData(actorData) {
       // Shortcuts (totals)
       data.str = data.attributes.strength?.value ?? 0;
       data.con = data.attributes.constitution?.value ?? 0;
-      data.agi = data.attributes.agility?.value ?? 0;
+      data.Agil = data.attributes.agility?.value ?? 0;
       data.dex = data.attributes.dexterity?.value ?? 0;
       data.int = data.attributes.intelligence?.value ?? 0;
       data.wis = data.attributes.wisdom?.value ?? 0;

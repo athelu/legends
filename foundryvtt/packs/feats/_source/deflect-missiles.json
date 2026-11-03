@@ -12,13 +12,12 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "agility": 4,
         "dexterity": 3
       },
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When hit by a ranged weapon attack, you may use a [Reaction] to reduce damage by 4 + Dex + Wis. If you reduce damage to 0, you can catch the projectile. If you catch it, you can spend 1 Luck to make a ranged attack with it as part of same reaction (range 20/60 ft)</p>",
     "usageType": "reaction",

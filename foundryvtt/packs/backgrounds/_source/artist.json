@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>Your art is your greatest passion, whatever form it takes. You may adventure for inspiration, or maybe you're just trying to survive until the world recognizes your genius. You have discovered that wealthy patrons are more interested in artists who have exciting stories to tell and nothing makes for a better story than a brush with death.</p>"
     },
-    "startingXP": 32,
-    "skillBonuses": "Perform 3, Perception 2, +32 XP",
+    "startingXP": 48,
+    "skillBonuses": "Perform 4, Perception 3, Empathy 3, +48 XP",
     "startingEquipment": "Artist's tools\nfine clothes\nshoes",
     "suggestedFeats": "",
     "features": "Artistic Reputation: Your work is recognized in certain circles. Can earn money through commissions and gain access to wealthy patrons.",
@@ -16,8 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "perform": 3,
-      "perception": 2
+      "perform": 4,
+      "perception": 3,
+      "empathy": 3
     },
     "craftKeyword": null,
     "itemGrants": [

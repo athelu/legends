@@ -11,15 +11,13 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 5
-      },
-      "skills": "meleeCombat:5",
+      "attributes": {},
+      "skills": "meleeCombat:6",
       "feats": [
         "Dual Strike"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>When Dual Strike triggers, the target also gains 1 Bleeding stack in addition to the bonus damage.</p>",
     "usageType": "special",

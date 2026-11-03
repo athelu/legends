@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the \"hits duplicate\" range.</p>"
+      "value": "<p>Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the \"hits duplicate\" chances.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -15,7 +15,7 @@
         "cost": 4
       },
       "supporting": {
-        "type": "time",
+        "type": "fire",
         "cost": 2
       }
     },
@@ -23,7 +23,7 @@
     "duration": "1 minute",
     "target": "single",
     "savingThrow": "none",
-    "effect": "Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the \"hits duplicate\" range.",
+    "effect": "Create 3 illusory duplicates of yourself. When attacked, roll 1d8: 1-2 = hits you, 3-8 = hits a duplicate (which is destroyed). Each duplicate destroyed removes 2 from the \"hits duplicate\" chances.",
     "effectType": "utility",
     "damage": {
       "base": 0,
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 1 duplicate (1 round), 2= 3 duplicates (1 minute), 3 = 4 duplicates (10 minutes)",
-    "weavingRoll": "Space Potential + Space Mastery /Time Potential + Time Mastery",
+    "weavingRoll": "Space Potential + Space Mastery / Fire Potential + Fire Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "automatic",

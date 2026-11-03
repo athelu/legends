@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>Bringing in lawbreakers or fighting in petty wars lined your pockets. Maybe you had an altruistic motive and genuinely believed in your employers' causes, or maybe the coin was motivation enough. Your techniques for staying alive in combat transfer easily to adventuring, though at least now you can choose your battles. Most of the time, anyway.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Melee Combat 2, Athletics 2, Intimidate 1, Wilderness 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Melee Combat 3, Athletics 3, Intimidate 3, Wilderness 3, +56 XP",
     "startingEquipment": "Weapon of choice\ncommon clothes\nwork boots",
     "suggestedFeats": "",
     "features": "Soldier of Fortune: You can find mercenary work and may be recognized by other sellswords. Know how to negotiate contracts and identify legitimate employers.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "meleeCombat": 2,
-      "athletics": 2,
-      "intimidate": 1,
-      "wilderness": 1
+      "meleeCombat": 3,
+      "athletics": 3,
+      "intimidate": 3,
+      "wilderness": 3
     },
     "craftKeyword": null,
     "itemGrants": [

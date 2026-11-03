@@ -8,93 +8,89 @@ A classless tabletop roleplaying game built entirely around the number eight, us
 
 ### Core Design Principles
 
-- Everything based on the number 8
-- Roll-under system rewards investment while maintaining challenge at all tiers
-- Success counting creates gradients
-- Resource management (Luck, Energy) creates tactical decisions
-- **True classless system:** Any character can learn any ability if they meet prerequisites
-- Characters are specialists, not jack-of-all-trades. 
+**The Number 8** - Everything (where possible) within the system is based on the number 8. This started from the worldbuilding and was decided to be carried into the mechanics.
+**Roll-under** - Roll under success counting encourages investment in increasing skills/abilites to maximum value. Attempts to use eual-to-and-under resulted in no point in maxing out abilities. 
+**Success counting**  - Variable number of successes allow for gradients of success; partial success and partial failure. A complication mechanic allows for things to happen when not all the necessary successes were achieved.
+**Resource management** - The game system is not overly dependant upon resource management but there are two resource pools: Luck and Energy. Luck in particular requires careful management.
+**True classless system:** - Standard RPG archetypes are attainable but the character is not locked into one via choosing a class. Instead abilites are gained through feats that any character can learn if they meet prerequisites. This is not gated by overly long feat chains, but instead in most places by a gateway feat required to unlock a certain playstyle.
+**Specialist Characters** - Characters made within the system are specialists, not jack-of-all-trades. The system rewards focusing on key abilities and strengths. At higher power levels, broader character concepts are available.
+
 
 ### Key Features
 
-- No Levels: Power tiers, similar to how many game systems manage threats instead of character levels
-- Static HP: Combat remains dangerous at all Tiers (levels)
-- XP Spending: XP Gained is directly spent into improving your character
-- Luck depletion: use luck to adjust dice rolls
-- Elemental Energy Magic System: ad-hoc spell creation (templates provided for common spells)
-- Opposed combat: Attacks are opposed rolls, negating or reducing the damage.
-- Armor matters: DR instead of AC. Armor protects you from damage, not from being hit.
+**No Levels** The Gamemaster uses ranges of power, called tiers, to manage threats instead of character levels.
+**Static HP** The characters Hit points do NOT increase with power. This means combat and damage remain a constant threat.
+**XP Spending** The characters continually improve after every session. XP Gained is directly spent into improving your character.
+**Luck depletion** Luck is an attribute and a resource pool. you can use luck to adjust dice rolls, at the risk of making saving throws more difficult.
+**Elemental Energy Magic System** ad-hoc spell creation (templates provided for common spells) allowing the combintation of magical energy to create custom spell effects
+**Opposed combat** Attacks are opposed rolls, negating or reducing the damage inflicted, providing a challenge instead of static target number.
+*Armor matters* Armor provides characters Damage reduction. Armor protects you from damage, not from being hit.
 
 
 ### Character Building Philosophy
 
-**Feats** provide:
-- Combat techniques and abilities
-- Skill expertise and specializations
-- Magical enhancements
+**Feats** 
+An expansive feat system has been created to allow for a multitude of character creation options. Feats unlock combat techniques and new abilities, provide skill expertise and specializations as well as enhancements to a characters magical ability.
 
 ### Flaws and Traits
 
-- Access to some powerful abilities and character options (traits) require taking flaws
-- Flaws and traits may only be taken during character creation
-- Taking a flaw provides points to purchase traits
-- You cannot spend more points on traits than you have gained from flaws
-
-#### Flaws
-
-- Flaws represent Physical and Societal penalties the character has/must endure
-- Flaws range in value from 1 - 10
-- Some Flaws require DM Approval
-
-#### Traits
-
-- Traits represent magical abilities, unique resource systems, and supernatural characteristics
-- Traits range in value from 1 - 10
-- Some Traits require DM Approval
+Traits provide powerful abilities and character options, but must be purchased with points earned from taking flaws. Flaws are typically physical or societal penalties that help flesh out a character and provide story and roleplaying hooks. You cannot spend more points on traits than you have gained from flaws
 
 ### Experience System
 
-- **24 XP per session** (awarded equally to all players)
-- Spend XP on:
+**24 XP per session** XP is awarded equally to all players at the end of a session. 24 xp is the standard amount. the GM could increase (or decrease) this amount. XP is converted direclty into character improvements. You may pend XP on:
   - Skills: 8 × current rank
   - Attributes: 16 × current rank
   - Potentials (if magical): 16 × current rank
   - Feats: 40 XP each
+  - Legendary Feats: 80 xp each
 
 ## Sections
 
-The rules are broken down into different sections for easier management:
+For this archive, the rules are broken down into physical files, representing different sections of the game for easier management:
 
 ```
 legends/ttrpg/
-├── actions.md
-├── ancestry.md
-├── armor.md
+├── 01-introduction.md
+├── 02-character_creation.md
+├── 03-ancestry.md
+├── 04-backgrounds.md
+├── 05-flaws.md
+├── 06-magical_traits.md
+├── 07-traits.md
+├── 08-feats.md
+├── 09-skills.md
+├── 10-armor.md
+├── 11-weapons.md
+├── 12-equipment.md
+├── 13-daemon.md
+├── 14-history.md
+├── 15-language.md
+├── 16-faith.md
+├── 17-world_at_a_glance.md
+├── 18-magic_system.md
+├── 19-channel.md
+├── 20-weaves.md
+├── 21-weaves(a-g).md
+├── 22-weaves(h-m).md
+├── 23-weaves(n-r).md
+├── 24-weaves(s-z).md
+├── 25-core_system.md
+├── 26-actions.md
+├── 27-combat.md
+├── 28-conditions.md
+├── 29-diseases.md
+├── 30-encumberance.md
+├── 31-scrolss.md
+├── 32-alchemy.md
+├── ability.md
 ├── ashan.md
-├── backgrounds.md
-├── bestiary.md
 ├── bestiary_framework.md
-├── character_creation.md
-├── combat.md
-├── conditions.md
-├── core_system.md
-├── daemon.md
-├── equipment.md
-├── faith.md
-├── feats.md
-├── flaws.md
-├── history.md
-├── magic_system.md
-├── magic.md
+├── bestiary.md
+├── DMsection.md
+├── magic_items.md
 ├── number8.md
-├── README.md
-├── skills.md
-├── traits.md
-├── weapons.md
-├── weaves(a-g).md
-├── weaves(h-m).md
-├── weaves(n-r).md
-└── weaves(s-z).md
+└── README.md
 ```
 
 ## Bonuses and Penalties
@@ -122,6 +118,18 @@ Guidelines for applying bonus/penatlies
 | 8 | 1560+ | ~10+ | 2 start + 16 purchased | Level 20 |
 
 ## Version History
+
+### v0.5.0 - Skill and Magic overhaul
+- Spell weaving energy pairing updated, allowing for greater flexibility
+- Energies definitions provided to allow for easier understanding on how they work
+- Skills start at Rank 2 (instead of 0). No mechanical difference
+- Updated starting array - more safe/balanced
+- Increased starting feats from 2 to 3
+- 17 new backgrounds added. Additional background skills
+- Ancestry provides more skills
+- updated character sheet
+- updated filenames to match book order
+
 
 ### v0.4.3 - New feats and World content
 - Pantheon added to aid in building out divine powers

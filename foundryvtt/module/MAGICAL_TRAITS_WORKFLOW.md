@@ -75,18 +75,19 @@ For the parser in `foundryvtt/scripts/build_traits_pack.py`, the markdown source
 2. Show intro dialog
 3. Generate 8 potentials
 4. **Choose Patron Deity** (9 options + Generalist)
-   - Each patron has Primary and Secondary energies
+   - Each patron defines Primary energy only
    - Generalist gets +1 to top 3 rolls instead
-5. **Auto-assign Primary** (highest + 2) and **Secondary** (2nd highest + 1)
-6. **Assign Remaining Rolls** to other energies
-7. Set Wisdom as Casting Stat
-8. Initialize 8 Mastery skills
-9. Add Channel Divinity uses equal to current Tier per long rest
-10. Grant Channel Divinity abilities for chosen patron
+5. **Auto-assign Primary** (best roll + 2)
+6. **Player chooses Secondary energy** (best remaining roll + 1)
+7. **Assign Remaining Rolls** to other energies
+8. Set Wisdom as Casting Stat
+9. Initialize 8 Mastery skills
+10. Add Channel Divinity uses equal to current Tier per long rest
+11. Grant Channel Divinity abilities for chosen patron
 
 **Key Choices**:
 - Patron choice is permanent and defines your divine connection
-- Primary/Secondary energies are auto-assigned based on patron
+- Primary energy is set by patron; Secondary energy is player's choice
 - Generalist has more flexibility but no focused power
 
 ### Invoker (-5)

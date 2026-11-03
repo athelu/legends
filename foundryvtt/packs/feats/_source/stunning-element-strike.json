@@ -14,10 +14,11 @@
       "attributes": {},
       "skills": "",
       "feats": [
-        "Stunning Strike"
+        "Stunning Strike",
+        "Pneuma Strike"
       ],
       "tier": 0,
-      "other": "Pneuma Strike (any element)"
+      "other": ""
     },
     "benefits": "<p>When you successfully Stun an opponent with Stunning Strike, you can spend an additional 2 Energy to infuse them with elemental energy:</p>\n<ul>\n<li>Choose one element you have Pneuma Strike for</li>\n<li>Target immediately takes [[/damage 8 type=elemental]] damage (no weaving check, ignores DR)</li>\n<li>Energy courses through their paralyzed form</li>\n<li><strong>If Stunned condition ends early:</strong> Target takes additional [[/damage 4 type=elemental]] damage as residual energy releases</li>\n</ul>",
     "usageType": "active",

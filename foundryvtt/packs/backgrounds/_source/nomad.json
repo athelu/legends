@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>Traveling far and wide, you picked up basic tactics for surviving on the road and in unknown lands, getting by with few supplies and even fewer comforts. As an adventurer, you travel still, often into even more dangerous places. The difference is that now you have companions and you're not sure yet whether that makes things easier or more complicated.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Wilderness 2, Athletics 2, Perception 1, Society 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Wilderness 3, Athletics 3, Perception 3, Society 3, +56 XP",
     "startingEquipment": "Tent\ntraveler's clothes\nhemp rope\nwineskin\nwork boots",
     "suggestedFeats": "",
     "features": "Wanderer's Knowledge: You know routes and shortcuts across wilderness and can find nomadic communities for trade or information.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "wilderness": 2,
-      "athletics": 2,
-      "perception": 1,
-      "society": 1
+      "wilderness": 3,
+      "athletics": 3,
+      "perception": 3,
+      "society": 3
     },
     "craftKeyword": null,
     "itemGrants": [
@@ -51,11 +51,13 @@
         "sourceId": "80bb5d0cbb1888e5"
       },
       {
-        "mode": "placeholder",
+        "mode": "reference",
         "itemType": "equipment",
-        "sourceName": "wineskin",
+        "pack": "legends.equipment",
+        "sourceName": "Wineskin",
         "quantity": 1,
-        "originalText": "wineskin"
+        "originalText": "wineskin",
+        "sourceId": "9964182dcfdc9559"
       },
       {
         "mode": "reference",

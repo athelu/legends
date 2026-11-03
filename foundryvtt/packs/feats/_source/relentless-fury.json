@@ -21,7 +21,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>While in Primal Fury, if you drop to 0 HP you can make a [[/save type=fortitude]] (Hard task = 2 successes). On success, drop to 1 HP instead. Each time you use this after the first, add 1 to both dice. Resets after long rest</p>",
+    "benefits": "<p>While in Primal Fury, if you drop to 0 HP you can make a Fortitude (Hard) save. On success, drop to 1 HP instead. Each time you use this after the first, add 1 to both dice. Resets after long rest</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",

@@ -11,13 +11,13 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 5
-      },
+      "attributes": {},
       "skills": "meleeCombat:5",
-      "feats": [],
+      "feats": [
+        "Exposed Strike"
+      ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>When you land a hit that triggers Exposed Strike damage, you may immediately make a Feint attempt against the same target as a [Free] action. This feint follows all normal rules including the MAP exemption on success.</p>",
     "usageType": "free",

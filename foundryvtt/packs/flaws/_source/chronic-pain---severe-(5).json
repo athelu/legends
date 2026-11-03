@@ -1,0 +1,22 @@
+{
+  "_id": "a8a17feae792b58a",
+  "name": "Chronic Pain - Severe (5)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>You suffer from persistent pain that flares during stress. At the start of combat or during extended physical activity, make [[/save type=will]] with Misfortune (1 success required). On failure, add 2 to all attribute die results for 2d8 rounds</p>"
+    },
+    "pointValue": 5,
+    "flawType": "physical",
+    "severity": "moderate",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!a8a17feae792b58a"
+}

@@ -15,7 +15,7 @@
         "cost": 3
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 6
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = Fails, 1 = 12 hours, 2 = 24 hours, 3 = 48 hours",
-    "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Positive Potential + Positive Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [],
     "deliveryMethod": "automatic",

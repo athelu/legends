@@ -12,15 +12,15 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "agility": 6,
         "charisma": 6
       },
       "skills": "meleeCombat:6",
       "feats": [
-        "Bleeding Edge"
+        "Bleeding Edge",
+        "Exposed Strike"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 6"
     },
     "benefits": "<p>Your Exposed Strike damage increases to Charisma × 2.</p>",
     "usageType": "passive",

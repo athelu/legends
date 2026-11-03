@@ -1,0 +1,170 @@
+{
+  "_id": "5bf28ba939133e3e",
+  "name": "Name: Earth Sentinel",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>The Earth Elemental Sentinel is not a creature that hunts. It guards. Something called it here — a nexus, a sacred site, a ward placed by a long-dead mage — and here it remains, patient in the way that stone is patient, which is to say without any awareness that patience is required. It does not distinguish between threats and travelers. Anything that enters the area it protects is a threat. It emerges from the ground with no warning, no posturing, no moment of hesitation before the first slam lands.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 60,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 7,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 7,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 7,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 210,
+      "max": 210,
+      "temp": 0
+    },
+    "dr": {
+      "value": 8,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 7,
+      "max": 7
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 6,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 7,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 20,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 20
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "Earth",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft., Tremorsense 60 ft.",
+    "tactics": "The Sentinel opens from below, using Earth Glide to position directly beneath the most clustered group before emerging and immediately triggering Earth Tremor as part of the same turn. It follows with ### Attacks against the nearest standing target, prioritizing whatever is closest rather than identifying priority threats. It does not retreat. It does not negotiate.and continues attacking until either the threat is gone or it is destroyed.",
+    "attacksNotes": "<p>Slam [Combat]: Melee attack (Agil 5 + Melee Combat 7), Reach 15 ft. (Huge creature).</p>\n<ul>\n<li><strong>Margin 1:</strong>: 18 damage (11 + 7 Str).</li>\n<li><strong>Margin 2:</strong> 18 damage, DR halved (round up).</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Earth Glide: The Sentinel burrows through nonmagical unworked earth and stone without disturbing the material it moves through. It leaves no tunnel, no displaced soil, no warning of its passage until it chooses to emerge. Tremorsense: The Sentinel detects all creatures in contact with the ground within 60 feet. The [Hidden] condition does not apply to creatures detected this way, though they still gain the [Concealed] condition against the Sentinel's ### Attacks. Siege Monster: The Sentinel deals double damage to objects and structures. Earth Tremor (Recharge 5–8) [Combat]: Costs 2 actions. The Sentinel drives its fists into the ground, sending violent tremors through the earth in a 60-foot diameter. Every creature on the ground in the area makes a Reflex save opposed by the Sentinel's Con 6 + Wis 3. Creatures that fail take 12 bludgeoning damage and gain the Prone condition. Creatures that succeed take no damage. Flying creatures and those not in contact with the ground are unaffected. The Sentinel may use Earth Tremor even while submerged via Earth Glide; when it does, it erupts from the ground as part of the same action. Resistances and Vulnerabilities Resistances: Nonmagical bludgeoning damage reduced by 4 Vulnerability: The Sentinel takes full damage with no DR reduction from thunder (Sonic) damge. On any hit that deals thunder damage, it must make a Fortitude [Easy] save. On failure, it loses its Earth Glide ability until the start of its next turn. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Earth Sentinel",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!5bf28ba939133e3e"
+}

@@ -12,7 +12,7 @@
     "isMagical": true,
     "magicalType": "balanced-channeler",
     "requirements": "",
-    "benefits": "<ul>\n<li>Use fixed array: 5,4,3,3,2,2,1,1</li>\n<li>Trait bonuses still apply</li>\n</ul>\n<h2>PHYSICAL & MENTAL TRAITS</h2>",
+    "benefits": "<ul>\n<li>Use fixed array: 5, 5, 5, 4, 4, 3, 3, 3</li>\n<li>Trait bonuses still apply</li>\n</ul>\n<h2>PHYSICAL & MENTAL TRAITS</h2>",
     "notes": "",
     "visualEffects": "",
     "castingStat": "",

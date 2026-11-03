@@ -1,0 +1,34 @@
+{
+  "_id": "c3b27c68799afdea",
+  "name": "Oil",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A flask of lamp oil sufficient to fuel a lamp or lantern for 6 hours. Oil can also be poured on the ground and lit, creating a 5-foot square of fire that burns for 2 rounds and deals [[/damage 4 type=fire]] damage to any creature that enters or ends its turn in the area.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 0.1,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!c3b27c68799afdea"
+}

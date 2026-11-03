@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You learned to move goods past customs agents, border guards, and other obstacles that stand between supply and demand. The work required nerve, connections, and intimate knowledge of routes that authorities don't patrol. Knowing how to slip past authority has its uses, even in an honest profession. If such a thing exists.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Stealth 2, Deception 2, Society 1, Perception 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Stealth 3, Deception 3, Society 3, Perception 3, +56 XP",
     "startingEquipment": "Common clothes\nhemp rope\nlow boots",
     "suggestedFeats": "",
     "features": "Hidden Routes: You know smuggling routes, secret passages, and which officials can be bribed in settlements you've worked in. Can find black market contacts.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "stealth": 2,
-      "deception": 2,
-      "society": 1,
-      "perception": 1
+      "stealth": 3,
+      "deception": 3,
+      "society": 3,
+      "perception": 3
     },
     "craftKeyword": null,
     "itemGrants": [

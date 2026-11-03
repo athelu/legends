@@ -12,19 +12,17 @@
     "classification": "legendary",
     "prerequisites": {
       "attributes": {
-        "constitution": 7,
-        "agility": 7,
-        "strength": 7
+        "constitution": 7
       },
-      "skills": "",
+      "skills": "meleeCombat:7",
       "feats": [
         "Bloodied Fury",
         "Fearsome Reputation"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Str or Agil 7"
     },
-    "benefits": "<p>While in Primal Fury, Exhaustion levels do not reduce your actions, movement, or apply their dice penalties. You still accumulate Exhaustion and it still applies outside of fury, but inside the rage you are beyond its reach. Once per long rest when you enter Primal Fury, every hostile creature within 30 feet that can see or hear you must make a [[/save type=will]] (opposed by your Strength or Constitution + Intimidate). Creatures that succeed are immune to this effect for the remainder of the encounter:</p>\n<ul>\n<li><strong>Margin 1:</strong> Frightened until the start of your next turn</li>\n<li><strong>Margin 2:</strong> Cowering until the start of your next turn, then Frightened for 1 minute</li>\n</ul>",
+    "benefits": "<p>While in Primal Fury, Exhaustion levels do not reduce your actions, movement, or apply their dice penalties. You still accumulate Exhaustion and it still applies outside of fury. Once per long rest when you enter Primal Fury, every hostile creature within 30 feet that can see or hear you must make a [[/save type=will]] (opposed by your Strength or Constitution + Intimidate). Creatures that succeed are immune to this effect for the remainder of the encounter:</p>\n<ul>\n<li><strong>Margin 1:</strong> Frightened until the start of your next turn</li>\n<li><strong>Margin 2:</strong> Cowering until the start of your next turn, then Frightened for 1 minute</li>\n</ul>",
     "usageType": "special",
     "usage": {
       "mode": "special",
@@ -40,7 +38,8 @@
     },
     "keywords": [
       "[Combat]",
-      "[Savage]"
+      "[Savage]",
+      "[Legendary]"
     ],
     "notes": "",
     "effects": [

@@ -1,0 +1,168 @@
+{
+  "_id": "22aa7ac80263441e",
+  "name": "Name: Squid, Giant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 6,
+      "perception": 5,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 7,
+      "acrobatics": 0,
+      "stealth": 5
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 0,
+      "fly": 0,
+      "climb": 0,
+      "swim": 60,
+      "burrow": 0
+    },
+    "creatureType": "beast",
+    "creatureSubtype": "",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [],
+    "sensesNotes": "Darkvision 120 ft, Ink Sense",
+    "tactics": "Giant Squids attack from below, opening with Ink Cloud before separating a vessel's crew. They grapple swimmers and drag them away from rescue, then use the Beak on anyone who closes. They flee if badly wounded unless defending a nest or wreck.",
+    "attacksNotes": "<p>Tentacle [Combat]: Melee attack (Agil 7 + Melee Combat 7), Reach: 20 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 16 damage (10 + 6 Str)</li>\n<li><strong>Margin 2:</strong> 16 damage, DR halved (round up); target is Grappled</li>\n</ul>\n<p>Beak [Combat]: Melee attack (Agil 7 + Melee Combat 7), Reach: 5 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 18 damage (12 + 6 Str)</li>\n<li><strong>Margin 2:</strong> 18 damage, DR halved (round up)</li>\n</ul>\n<p>Multiattack [Combat]: The Giant Squid makes four Tentacle ### Attacks against up to four targets. It cannot make a Beak attack during the same action. Shared Attribute Roll (Agil 4): Roll Agility once and apply it to all four ### Attacks.</p>",
+    "specialAbilitiesNotes": "<p>Ink Cloud (Recharge 5-8) [Combat]: The Giant Squid releases a cloud in a 30-foot radius. The area becomes heavily obscured for 1 minute, and the squid may immediately Hide without cover. The cloud disperses in strong current or after the squid leaves it. Crushing Grip: A creature Grappled by a Tentacle takes 6 bludgeoning damage at the start of the squid's turn. A creature can escape with a Hard Athletics check. Aquatic Body: The Giant Squid can breathe water indefinitely. On land, it moves at half speed and adds 1 to both attack dice. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Squid, Giant",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!22aa7ac80263441e"
+}

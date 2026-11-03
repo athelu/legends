@@ -1,0 +1,366 @@
+# Introduction
+
+Many campaign settings are like a fresh coat of paint upon the same role-playing game experience; they bring in new continents, countries, and rulers, and perhaps some juxtaposition of the normal bad guys or a unique lurking threat. New spells, Classes or magic items can add flavor, but the core game experience remains the same. 
+Admittedly, Legends of Athelu™ supports many of the tropes of the typical fantasy setting, but some have been deliberately omitted. Removing some of these elements forces the DM and the Players to play the game differently. 
+The intent is to do away with the de-humanizing of the villains of the story, instead replacing them with even more cunning villains - mankind or elvenkind
+This leads to the most significant change in the Legends of Athelu™ setting and that is that many traditional player races do not exist. Only two sentient races populate the game world, humans and elves, and they are distinct and not evolutionary linked so cross breeding is not possible.
+
+No other races mean no other humanoids such as halflings, gnomes, orcs, goblins, trolls, bugbears, kobolds, gnolls, etc. Monstrosities, aberrations, oozes, plant creatures, and outsiders do exist, but they are not native to the world of Athelu. These creatures typically have an explanation for their existence, such as wild magic, magical experimentation, or something similar. 
+
+When these creatures do make it to Athelu, they become the stuff of legends and folktales. These mysterious magical beings often become revered as small gods, with the local folk making offerings or sacrifices to appease them. This is a world where fantastical things are truly fantastic, where the stuff of a normal fantasy world would be astonishing to the local populace. 
+
+Magic does exist in Legends of Athelu™, and its use is visible to the naked eye. Magic is never inconspicuous, and neither are its practitioners. Spells are accompanied by dramatic flashes, swirling patterns, glowing magical symbols, and light. Even once a spell has been cast, the target of the spell will bear telltale signs of the magic currently in effect. 
+
+There is a disparity in how divine magic and arcane magic are viewed by the populace. Divine magic, because it is bestowed by the gods, is considered pure and a blessing. Arcane magic is viewed as a mutation or taint upon the wielder.
+
+Because of this, arcane magic users are often viewed with suspicion and at the very least wariness. In most nations arcane magic users must be registered with the state and provide papers detailing the extent of their training. Elves are considered the masters of magic, as their longevity allows them to gain true mastery. 
+
+Ley lines of pure magical power course across the surface of the world, invisible to the casual, and often trained, observer; their purpose and meaning long forgotten. Many secrets of magic and understanding of the world fall into the category of wonders that have been lost to time.
+
+To clarify this a bit, these powerful magics exist, but they are not common knowledge. These wonders include the entire magical school of necromancy, (see the details in the Magic section). 
+
+Combat can also be quite deadly. Resurrection is restrictive and very uncommon. This should result in more realistic and thought-provoking challenges and encounters, instead of always seeing combat as the only solution.
+
+Legends of Athelu™ puts humans in the role of being the oldest race. In truth, humans are currently experiencing their second coming, but have not reached the pinnacle of technology or magical aptitude that their predecessors the first men had.
+
+Men and elves have coexisted over several millennia to shape the world as it currently is. The Legends of Athelu™ campaign setting takes place in the world of Athelu, upon the continent of Estaea. Here, four great nations vie for control; Three human nations and the remains of the once great elven empire.
+
+The world has been remade since the age of the first men; continents have shifted, and seas arisen while humans struggled back from the edge of extinction. The empires of the dwarves and elves reached their zenith and then collapsed in the time it has taken men to reach the shores of Estaea. The ruins of the first men, the dwarves and even the elves are spread throughout the continent. 
+
+It is here that the denizens of the world will decide its fate.
+
+
+Legends of Athelu™ is a tabletop roleplaying game built around collaborative storytelling. You and your friends create heroes who explore the world of Athelu. This isn't a game about following a predetermined story. The Game Master (GM) presents situations, but you decide how your character responds.
+
+### How Roleplaying Games Work
+Imagine sitting around a table with friends. One person, the Game Master, describes a scene:
+"You're in a tavern when a hooded figure approaches your table. They slide a sealed letter across the wood and whisper, 'She knows what you did in Bellicose.'"
+Now everyone else at the table controls a character in this scene. One player might say, "I grab the figure's wrist before they can leave." Another: "I break the seal and read the letter." A third: "I scan the tavern to see if anyone's watching us."
+The GM determines what happens next based on what characters attempt, the rules of the game, and dice rolls when outcomes are uncertain. The conversation continues, building scenes into adventures and adventures into campaigns.
+That's the heart of roleplaying: a conversation where everyone contributes to creating a story together.
+
+### Your Role at the Table
+If you're playing a character (rather than running the game as GM), your job is straightforward: decide what your character does and roll dice when the rules call for it.
+
+You'll create this character during session zero, which is an initial game session where the GM will discuss the limits and rules of campaign. You will follow the character creation rules provided herein. You'll choose where your character is  from, what they did before adventuring, which skills they've mastered, and what special abilities they possess.
+
+Whether you want to play a street-smart thief, a scholarly mage, a former soldier, or a charismatic con artist is entirely up to you. Legends of Athelu™ has no classes restricting your choices, allowing you to create any character you could dream of.
+
+During play, describe your character's actions in whatever way feels natural. Some players speak in first person as their character: "I don't trust her. I'm keeping my hand on my sword." Others narrate in third person: "Kael doesn't trust her and keeps his hand on his sword." Both approaches work fine.
+
+The most important guideline: be a good collaborator. You're creating a story together, which means giving other players chances to shine, engaging with the situations the GM presents, and respecting the boundaries everyone agreed on during session zero.
+
+### The Game Master's Role
+The GM has a different but equally important job: bringing the world of Athelu to life.
+
+You'll describe what characters see, hear, smell, and experience. You'll portray every character they meet, from kings to beggars to monsters. You'll determine the consequences of their actions and adjudicate the rules when questions arise.
+
+This might sound overwhelming if you're new to GMing, but remember: you don't need to know everything. When you're unsure how a rule works, make a quick decision to keep the game moving, then look it up later. When players take unexpected actions (and they will), improvise something that makes sense and move forward.
+
+Your primary goal isn't to "beat" the players or tell them your story. It's to create interesting situations, present meaningful choices, and facilitate everyone having a good time. Some GMs run published adventures while others create everything from scratch, most do a mix of both. All approaches work.
+
+### What you will Need
+To run Legends of Athelu, you will need the following items:
+
+- This rulebook (or access to the rules)
+- Character sheets for each player
+- Eight-sided dice (d8s) — several per person, ideally 4–6 each
+- Paper and pencils for notes
+- A way to track initiative during encounters
+
+Optional but helpful:
+
+- A battle map and miniatures to visualize combat
+- Reference sheets for commonly used rules
+- Digital tools for character tracking
+- Dice rolling apps if you prefer digital dice
+
+The most important tool is imagination and willingness to collaborate. 
+
+### Running Sessions
+A typical Legends session lasts 2-4 hours. Groups usually meet weekly or biweekly, though the schedule is whatever works for your group.
+A single session might contain a complete short story: the characters accept a job, investigate a mystery, confront the villain, and collect their reward. More commonly, sessions are chapters in a longer campaign that unfolds over months or years of play.
+
+What happens during those hours varies dramatically based on your group's preferences. Some players love tactical combat and dungeon crawling. Others focus on political intrigue and social encounters. Many mix investigation, exploration, negotiation, and occasional fights. There's no "right" way to play. Just run the kind of game your group enjoys.
+
+Between sessions, characters grow stronger by spending the experience points they've earned. Unlike many RPGs, this growth is entirely player-directed. Want to improve your sword skills? Spend XP on the Melee Combat skill. Want to learn a new magical technique? Buy a feat. Every character advances at the same rate but becomes unique through their spending choices.
+
+### The Three Modes of Play
+Legends gameplay shifts between three modes with different pacing and structures:
+
+**Exploration** is free-form investigation and travel. You might be searching a noble's estate for evidence, traveling through dangerous territory, or negotiating with an informant. Players describe what they want to do; the GM describes what happens. Time passes in whatever chunks make sense: minutes, hours, or days.
+
+**Encounters** are structured scenes where every second matters. Usually this means combat, but it could also represent a chase, a complex heist, or navigating a collapsing building. Everyone rolls initiative to determine turn order, then takes turns using their three actions to move, attack, weave spells, or perform other tasks. Time advances in 8-second rounds.
+
+**Downtime** covers weeks or months when characters aren't adventuring. During this mode, you pursue long-term projects: crafting equipment, researching mysteries, training new skills, managing businesses, or recuperating from injuries. This lets the GM advance time quickly when needed.
+
+These modes flow naturally into each other. You might be exploring a wizard's tower (exploration), trigger a trap that creates an encounter (encounter), defeat the trap and continue searching (exploration), find the wizard and fight them (encounter), then spend a month recovering and identifying the magic items you found (downtime).
+
+### The Number Eight
+
+### The Number Eight
+
+Everything in Legends of Athelu™ revolves around the number eight. Eight attributes define your character. Eight magical energies power weaving. Characters progress through eight tiers. The gods' original creation involved eight fundamental principles.
+
+The number 8 carries deep significance throughout the world:
+
+| Significance |
+|---|
+| 8 planets in the solar system: Summe, Gaesh, Orman, Athelu, Jaet, Perdo, Lonta, Creigs |
+| 8 days of the week: Ambisday, Alkirasday, Athoresday, Nevilsday, Rudlusday, Hirnasday, Enscheday, Jahanday |
+| 8 weeks per month |
+| 8 months per year: Jaetber, Atheluber, Summeber, Gaeshber, Ormanber, Perdober, Creigsber, Lontaber |
+| Adulthood milestones: page at 8, squire at 16, knight at 24 |
+| 8 magical energies: Earth, Air, Water, Fire, Positive, Negative, Space, Time |
+| 8 humors of the body: Muscle, Bone, Blood, Bile, Brain, Pneuma, Consciousness, Phlegm |
+| 8 dragons of myth: Aq-Yin-To, Char-Talt, Har-Ten-Mo, Kylo, Luk-Anda, Sein-Tuk-Tak, Tiet-Amor, Garro-Leth |
+| 8 gods of the pantheon: Ambis, Alkira, Athore, Nevil, Rudlu, Hirnaloyta, Enschede, Shu-Jahan |
+| 8 external planes: Negative, Positive, Shadow, Ethereal, Air, Earth, Water, Fire |
+
+This obsession with eight manifests in the core mechanic: eight-sided dice (d8s). When the rules say "roll 2d8," grab two eight-sided dice and roll them.
+This consistency makes the math intuitive once you understand the pattern. Most rules reference d8s, and most statistics range from 1 to 8.
+
+Everything in Legends of Athelu™ revolves around the number eight. Eight attributes define your character. Eight magical energies power weaving. Characters progress through eight tiers. The gods' original creation involved eight fundamental principles.
+
+This obsession with eight manifests in the core mechanic: eight-sided dice (d8s). When the rules say "roll 2d8," grab two eight-sided dice and roll them.
+This consistency makes the math intuitive once you understand the pattern. Most rules reference d8s, and most statistics range from 1 to 8.
+
+### Core Principles
+Make the game yours. These rules provide a framework, but your player’s enjoyment matters more than strict adherence to every rule. If something doesn't work for your group, change it. House rules and modifications are not just acceptable, they're encouraged when they improve your game.
+Embrace uncertainty. Dice create dramatic tension. When you attempt something dangerous or difficult, you don't know if you'll succeed. That uncertainty makes success sweeter and failure more interesting. Trust the dice and see where they take the story.
+
+Consequences matter. Actions have repercussions in Legends of Athelu™. If you pick a fight with the city guard, they'll remember. If you help a merchant, they'll return the favor. If you unleash necromantic magic, your soul will begin to tarnish. The world responds to what characters do.
+Create together. The GM isn't your opponent; they're another player helping create an interesting story. Players aren't passive audience members; they're active participants shaping the narrative. Collaboration beats competition.
+
+Respect boundaries. Everyone has different comfort levels with violence, horror, romance, and other content. Discuss boundaries during session zero and respect them during play. If someone indicates discomfort, adjust course immediately without making them defend their feelings.
+
+### Understanding Your Character
+Your character exists as a collection of numbers representing their capabilities:
+Eight Attributes measure raw potential in different areas. **Strength** for physical power, **Agility** for combat reflexes, **Intelligence** for reasoning, **Wisdom** for intuition, and so on. These range from 1 (poor) to 8 (exceptional). Most starting characters have attributes between 2 and 5.
+
+**Skills** represent training in specific tasks: swinging a sword, sneaking past guards, persuading merchants, identifying magical effects. Skills range from 2 (untrained) to 8 (legendary mastery).
+
+**Feats** are special abilities that make your character unique. Combat techniques, magical enhancements, and skill specializations are provided through feats and help define what you can do that others cannot. Every character begins with 3 free feats, and more can be purchased with XP.
+
+**Hit Points** (HP) measure how much damage you can sustain before falling unconscious. Equal to Constitution × 8. Importantly, your HP doesn't increase as you gain experience. A starting character might have 32 HP, and they'll still have 32 HP after years of adventuring. Combat remains dangerous for everyone. You survive by getting better at avoiding and reducing damage, not by becoming a damage sponge.
+
+**Luck** is both an attribute and a depletable resource. After a long rest you begin with Luck points equal to your Luck attribute. You spend these points to improve dice rolls or avoid complications. As your Current Luck depletes during the session, you become more vulnerable to danger.
+
+**Tiers** represent overall power and experience. Tier 1 characters are beginners; Tier 8 characters are legendary heroes. Unlike levels in other games, tiers don't automatically grant abilities. Tiers are just a convenient way to gauge how powerful a character is compared to others and what challenges are appropriate.
+
+Legends of Athelu™ has no classes. A "warrior" is just someone who invested in Strength, Constitution, Agility, and combat skills. A "wizard" invested in Intelligence and magical traits and feats. You could create a character who's excellent at both fighting and magic, or one who focuses on skills and social manipulation. The system doesn't restrict your choices, but does reward specialization.
+
+### How Dice Rolling Works
+When you attempt something uncertain, you make a check. The GM tells you which attribute and which skill to use based on what you're attempting.
+#### Roll two eight-sided dice:
+- One die represents your attribute
+- One die represents your skill
+- Each die that rolls under its value counts as a success.
+
+**Example:** You're trying to sneak past a guard. The GM calls for an Agility + Stealth check. Your Agility is 4 and your Stealth skill is 3.
+
+#### You roll two d8s:
+- Attribute die shows 3 (under 4 = success!)
+- Skill die shows 5 (not under 3 = failure)
+- You got 1 success.
+
+Most tasks require either **1 success (easy)** or **2 successes (hard)**. In this case, if the GM decided sneaking past required 1 success, you made it. If they decided it required 2 successes, you failed, or more likely, you succeeded but with a complication.
+
+### Special results:
+- Rolling 1 on a die always counts as a success, even if your attribute/skill is 1 (or zero)
+- Rolling 8 on a die always fails, even if your attribute/skill is 8
+- Rolling double 1s (both dice show 1) is a critical success: both dice succeed, you gain an extra success, and all your Luck points restore to maximum
+- Rolling double 8s (both dice show 8) is a critical failure: the attempt fails catastrophically
+
+### Modifying Your Rolls
+Sometimes circumstances work in your favor or against you.
+
+**Fortune** represents favorable conditions. Instead of rolling 2d8, roll 3d8 and keep the best (lowest) 2 results. This significantly improves your odds of success.
+
+**Misfortune** represents unfavorable conditions. Roll 3d8 and keep the worst (highest) 2 results. This makes success much harder.
+
+Multiple sources of Fortune and Misfortune cancel each other 1-to-1. If you have 2 sources of Fortune and 1 source of Misfortune, you end up with 1 Fortune.
+
+Spending Luck directly improves your rolls. Each Luck point spent reduces one die result by 1. If you rolled a 6 on your die, you may spend 2 Luck to reduce it to 4, potentially turning a failure into a success.
+
+But remember: spending Luck depletes your Current Luck pool, which makes you more vulnerable when enemies force you to make saving throws later.
+
+### Opposed Rolls
+Sometimes you're not rolling for a set number of successes and instead you're competing directly with another character.
+
+In combat, melee attacks use opposed rolls: both the attacker and defender roll Agility + Melee Combat and count successes. Whoever gets more successes wins.
+
+If you tie (both get the same number of successes), whoever rolled the lower total number wins.
+
+**The success margin (difference between successes) matters in combat:**
+- **Margin of 0:** Defender wins, no damage
+- **Margin of 1:** Attacker hits for base weapon damage
+- **Margin of 2:** Attacker hits for base weapon damage plus Strength
+
+This creates interesting tactical decisions. Do you use Luck points to turn a 1-success win into a 2-success win for extra damage? Or save that Luck for defense later?
+
+### When Combat Begins
+Eventually, talking fails and combat begins. This shifts gameplay into encounter mode, where every second matters.
+Everyone rolls for **initiative** using typically Agility + Perception, though you might decide a different skill could help out in a certain situation. The results determine turn order from highest to lowest.
+
+On your turn, you have **three actions** to spend. Most activities cost one action: moving your speed, attacking once, drinking a potion, opening a door. Some complex activities (like casting most spells) cost two actions. A few things, like dropping an item or speaking briefly, cost zero actions.
+
+**Multiple Action Penalty:** If you use more than one [Combat] action in a turn, each one after the first gets harder. Your second combat action adds 1 to both die results. Your third combat action adds 2 to both die results. This represents fatigue and loss of precision from repeated attacks.
+
+Importantly, this penalty only applies to actions tagged [Combat], like attacking, casting attack weaves, and using combat maneuvers. You can move, interact with objects, and perform other non-combat actions freely without penalty.
+
+### Attacking at Range
+Ranged attacks work differently as the target doesn't normally actively defend. You roll Dexterity + Ranged Combat against success thresholds based on distance:
+- **Short range:** 1 success deals base damage, 2 successes deals base + Dexterity
+- **Medium range:** Need 2 successes for base + Dexterity
+- **Long range:** Need 2 successes for base + Dexterity, but add 1 to both dice
+
+Shooting into melee (where allies are adjacent to your target) adds 1 to both dice.
+
+Making a ranged attack while threatened by an enemy (someone within 5 feet who can hit you) adds 1 to both dice as it's hard to aim with a sword in your face.
+
+### Casting Spells in Combat
+Magic users can weave spells during combat using one of two approaches:
+
+**Simple Weaves** cost 1 action and use only a single energy type. They're limited to touch or very close range (touch - 5 feet) but don't trigger Opportunity Attacks. These are instinctive bursts of raw energy such as fire erupting from your hands, frost coating your touch, or lightning crackling between your fingers.
+
+**Complex Weaves** cost 2 actions but allow you to combine multiple energies for range, area effects, and duration. A Fireball (Fire + Space) can explode 60 feet away and affect a large area. The downside: complex weaves provoke Opportunity Attacks if you're threatened, as they require gestures and time that leave you vulnerable.
+Smart mages stay at range where they can use complex weaves safely, or they use simple weaves when enemies get close.
+
+### Damage and Survival
+When an attack hits, it deals damage. Subtract that damage from your Hit Points.
+Armor provides **Damage Reduction (DR)**, not a bonus to avoid attacks. If you're wearing chainmail with DR 4 and get hit for 15 damage, you subtract 4 and take 11 damage.
+
+This means armor always helps, but combat remains dangerous for everyone. A Tier 1 character might have 32 HP. A Tier 8 character still has 32 HP. Both can be killed by a lucky hit or being overwhelmed by multiple opponents. You survive longer fights by getting better at avoiding attacks, using cover, and positioning strategically.
+
+When you reach 0 HP, you fall unconscious and start dying. Each turn you make a Fortitude save (Constitution + Current Luck). Success stabilizes you; failure drops you further into negative HP. If your negative HP equals your Constitution score, you die.
+
+Allies can stabilize you with successful Medicine checks, or magical healing can restore you immediately.
+
+### Conditions and Status Effects
+Combat inflicts more than just damage. Weaves and special attacks can impose conditions that limit what you can do:
+- **Prone:** Harder to hit with ranged attacks, easier to hit in melee
+- **Grappled:** Can't move until you escape
+- **Stunned:** Can't take actions for a duration
+- **Blinded:** Massive penalties to perception and attacks
+- **Ignited:** Taking fire damage each turn until extinguished
+
+Each condition has specific mechanics detailed in the conditions reference section.
+
+### Reactions
+Once per round (the time between your turns), you can use a reaction, which is a response triggered by specific circumstances.
+
+The most common reaction is the Opportunity Attack: when an enemy moves out of your melee reach, you can use your reaction to make one melee attack against them.
+This creates tactical choices. Do enemies risk taking opportunity attacks to run away? Do they use the Disengage action to avoid attacks but sacrifice an offensive action?
+
+Other reactions include Shield Block (if you're wielding a shield) and Counterweave (if you can counter enemy weaves). Some feats grant additional reaction options.
+
+### Magic: Weaving the Eight Energies
+When the gods created Athelu, they wove magic into the fabric of reality itself. This magic flows through eight distinct energies: Earth, Air, Fire, Water, Positive, Negative, Time, and Space. Each energy embodies different aspects of existence, from the physical elements to the concepts of life, death, and reality manipulation.
+Mortals gifted with magical ability can tap into these energies and shape them through an act called weaving. But this isn't some subtle, invisible force. Magic in Athelu announces itself. A mage's eyes glow with violet light constantly. Spells create luminous displays like violet fire, glowing ice, shimmering barriers and the like. Anyone nearby knows when magic is being used.
+
+To become a weaver, you must possess a magical trait. These traits represent different paths to power:
+- **Mageborn** study magic as a science, understanding the theoretical interactions between energies.
+- **Divine casters** channel power through faith, connecting to gods or natural forces.
+- **Sorcerers** unlock magic through profound self-knowledge and enlightenment.
+- **Warlocks** make pacts with otherworldly patrons who grant them power.
+- **Invokers** speak true names and words of power to command reality.
+- **Infusers** bind magical energy into physical objects.
+- **Alchemists** use the magic in natural objects to create magical effects.
+- **Summoners** use their pneuma to lure daemons to the material plane.
+
+Each path has unique advantages and limitations, but all can manipulate the same eight energies.
+
+### How Weaving Works
+A spell (called a weave) combines energies to create effects:
+The **Primary Energy** determines the main effect. Fire creates flames and heat. Positive creates healing and growth. Space allows teleportation and barriers.
+
+**Supporting Energies** Modify how the core energy manifests, such as turning water to ice or steam and provide enhancements like range, duration, and area. That simple fire burst you create with pure Fire energy only works at touch range. Want to throw it 60 feet? Add supporting (air) energy. Want it to explode in an area? More Air energy. 
+
+More powerful weaves cost more Energy points from your pool. This pool recharges when you rest for 8 hours
+
+The distinction between simple touch-range weaves and complex long-range weaves matters in combat. Simple weaves (1 action, one energy) don't leave you vulnerable. Complex weaves (2 actions, multiple energies) do. Choose wisely based on whether enemies are breathing down your neck or standing at a safe distance.
+
+### The Soul Question: Necromancy
+There's a critical distinction in Legends between using Negative energy and practicing necromancy.
+
+Negative energy represents entropy, decay, and harm. Channel it through a spell and you can wither flesh, drain life force, or create shadows. This is morally questionable but not forbidden knowledge.
+
+Necromancy is something else entirely. It's the direct manipulation of souls (pneuma). Binding a soul fragment to a corpse. Trapping a departing spirit in a vessel. Forcing communion with the dead. The First Men mastered these arts, and it corrupted them utterly.
+
+This knowledge has been lost. Modern magic users cannot perform necromantic weaves as the techniques simply aren't known. Attempting to rediscover them taints your soul, attracting malevolent forces from beyond the mortal plane.
+
+GMs can allow necromancy to be discovered during gameplay, but it should require significant story justification and come with severe consequences.
+
+### Growing Stronger: Experience and Advancement
+Legends handles character growth differently than most RPGs. There are no levels that grant you a package of improvements. Instead, you earn experience points and decide exactly how to spend them.
+
+Every session, each player receives 24 XP. This happens regardless of whether you won fights, found treasure, or completed objectives. As long as you showed up and participated, you get your 24 XP.
+
+**You can spend this XP immediately or save it for larger purchases:**
+- **Skills** cost 8 × current rank. Going from rank 3 to rank 4 costs 24 XP.
+- **Attributes** cost 16 × current rank. Raising Strength from 4 to 5 costs 64 XP—almost three sessions of savings.
+- **Potentials** (for magic users) also cost 16 × current rank, same as attributes.
+- **Feats** cost a flat 40 XP each—almost two sessions of savings for a new special ability.
+
+Do you specialize in a few skills and attributes, becoming exceptional at specific things? Or do you spread XP around to be more versatile? Both approaches work.
+
+### Character Tiers
+As your total accumulated XP grows, you pass through eight tiers representing rough power levels:
+- **Tier 1 (0-120 XP):** Novice adventurers.
+- **Tier 2 (120-360 XP):** Competent heroes.
+- **Tier 3 (360-600 XP):** Experienced adventurers.
+- **Tier 8 (1560+ XP):** Legendary heroes.
+
+These tiers don't grant automatic benefits. They're guideposts for the GM when designing challenges. A Tier 1 group fights bandits and giant rats. A Tier 8 group confronts ancient dragons and artifacts from the First Age.
+
+The progression is steady: 5 sessions to reach Tier 2, then roughly 10 sessions per tier afterward. Most campaigns span several tiers, giving characters time to develop their identities through the choices they make about where to spend XP.
+
+### Key Terms
+**Actions:** each player has three actions per turn, split into types like attack, move, interact etc
+**Actor:** A being in the game world including, characters, monsters, shop keepers etc.
+**Ancestry:** The heritage of a character (human, elf, etc.), determining some starting capabilities and characteristics.
+**Attribute:** One of eight scores (Strength, Constitution, Agility, Dexterity, Intelligence, Wisdom, Charisma, Luck) representing raw potential, rated 1–8.
+**Background:** What a character did before adventuring (soldier, merchant, etc.), providing starting skills and equipment.
+**Check:** Rolling 2d8 (one for attribute, one for skill) to determine success or failure at a task.
+**Condition:** An ongoing effect that changes how a character can act or alters their capabilities (Prone, Stunned, Grappled, etc.).
+**Damage Reduction (DR):** How much damage armor (or other protections) prevents. Subtracted from incoming damage.
+**Energy:** The resource pool used to weave magic. Recharges on long rest.
+**Feat:** A special ability that defines what makes your character unique. All characters start with 3 free feats.
+**Flaw:** A limitation or hardship accepted during character creation or during gameplay that earns points for purchasing Traits.
+**Fortune:** A bonus that lets you roll 3d8 and take the best (lowest) 2 results.
+**Game Master (GM):** The player who adjudicates rules and narrates the world, story, and NPCs.
+**Hit Points (HP):** How much damage a character can sustain before falling unconscious. Equal to Constitution × 8, does not increase with tier.
+**Initiative:** The order in which actors take their turns in combat encounters. 
+**Keyword:** A label on an item that refers to a specific gameplay rule. Instead of printing the full rules on each item, a keyword is used to refer to the rule.
+**Luck:** Both an attribute and a depleting resource. Spent to improve rolls, also used in saving throws.
+**Misfortune:** A penalty that makes you roll 3d8 and take the worst (highest) 2 results.
+**Opposed Roll:** When two actors compete, both roll and compare successes.
+**Reaction:** A special action taken outside your turn in response to a specific trigger. One per round.
+**Round:** A period during an encounter where all participants get a turn, representing about 8 seconds.
+**Saving Throw:** A roll to avoid or resist danger, using Attribute + Current Luck. Three types: 
+- Fortitude (Constitution), Reflex (Agility), Will (Wisdom).
+
+**Skill:** Training in a specific task (Stealth, Athletics, Medicine, etc.), rated 0–8.
+**Success:** When a die rolls under its corresponding value (attribute or skill). Most tasks need 1–2 successes.
+**Tier:** A measure of a character's overall power, from 1 (beginning) to 8 (legendary). Based on total XP accumulated.
+**Trait:** An exceptional characteristic (often a magical ability) purchased with points earned from Flaws.
+**Turn:** When it's your time to act in an encounter. You get 3 actions per turn.
+**Weaving:** The act of casting spells by manipulating magical energies.
+**XP (Experience Points):** Points earned each session (24 per session) and spent to improve attributes, skills, and purchase feats.
+
+### Getting Started
+The best way to learn Legends is to play! If you're new to roleplaying games, start as a player so you can learn the rules and world without the added responsibility of being the GM.
+- Read the Character Creation chapter
+- Choose an ancestry and background
+- Distribute attributes
+- Select traits and flaws
+- Choose your 3 starting feats
+- Spend starting XP on skills
+- Select equipment
+- Give your character a personality and goals
+
+For Game Masters, the bestiary and adventure creation guidelines will help you build exciting challenges for your players.
+Most importantly, remember that Legends is your game. The rules exist to help you tell great stories together. If something isn't working for your players, change it. The goal is for everyone to have fun telling stories of heroes, villains, magic, and adventure in the world of Athelu.
+
+Welcome to Legends!

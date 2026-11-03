@@ -40,6 +40,7 @@ const ENERGY_LABELS = {
 // ─── Energy label map ─────────────────────────────────────────────────────────
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
+function _getAttrValue(actor, key) {
   return (
     actor.system?.attributesEffective?.[key] ??
     actor.system?.attributes?.[key]?.value ??

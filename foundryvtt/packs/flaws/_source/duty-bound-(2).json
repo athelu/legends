@@ -10,7 +10,7 @@
     "pointValue": 2,
     "flawType": "social",
     "severity": "minor",
-    "mechanicalEffects": "<ul>\n<li>Different from Honesty: Duty Bound is about keeping your word and promises, Honesty is about following laws/rules</li>\n<li>Example: A Duty Bound character might break into a building to save someone they promised to protect. An Honest character couldn't do that because it's illegal.</li>\n</ul>",
+    "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

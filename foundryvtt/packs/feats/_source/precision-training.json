@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4
-      },
-      "skills": "meleeCombat:4",
+      "attributes": {},
+      "skills": "meleeCombat:5",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>When you make a melee attack and both dice show the same value and both are successes, gain +1 additional success. This is not a critical hit and does not restore Luck or grant the additional critical benefits</p>",
     "usageType": "active",

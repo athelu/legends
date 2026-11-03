@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "intelligence": 4
+        "intelligence": 5
       },
-      "skills": "arcane:4",
+      "skills": "arcane:5",
       "feats": [
         "Mageborn",
         "Ritual Mastery"

@@ -284,7 +284,7 @@ def _append_skill(prereqs, skill_key, value):
 
 def _parse_prerequisites(prereq_text, prereqs):
     """
-    Parse a prerequisite string like 'Agi 4, Acrobatics 4, Primal Fury feat, Tier 3'
+    Parse a prerequisite string like 'Agil 4, Acrobatics 4, Primal Fury feat, Tier 3'
     into structured data in the prereqs dict.
     """
     remaining = []
@@ -334,7 +334,7 @@ def _parse_prerequisites(prereq_text, prereqs):
             _append_skill(prereqs, 'craft', int(craft_spec_m.group(1)))
             continue
 
-        # Check for attribute requirement: "Str 4", "Agi 5", "Str or Agi 4"
+        # Check for attribute requirement: "Str 4", "Agil 5", "Str or Agil 4"
         # Pattern: optional "AttrAbbr or " prefix, then AttrAbbr + number
         attr_m = re.match(
             r'^(?:(\w+)\s+or\s+)?(\w+)\s+(\d+)$',
@@ -540,7 +540,7 @@ def main():
     script_dir = Path(__file__).parent.parent.parent
     
     # Parse from markdown
-    md_file = script_dir / "ttrpg" / "feats.md"
+    md_file = script_dir / "ttrpg" / "08-feats.md"
     if md_file.exists():
         print("Parsing feats.md...")
         items = parse_feats_md(md_file)

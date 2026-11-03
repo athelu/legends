@@ -12,10 +12,12 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "dexterity": 5
+        "dexterity": 6
       },
-      "skills": "rangedCombat:5",
-      "feats": [],
+      "skills": "rangedCombat:6",
+      "feats": [
+        "Exploit Weakness"
+      ],
       "tier": 0,
       "other": ""
     },

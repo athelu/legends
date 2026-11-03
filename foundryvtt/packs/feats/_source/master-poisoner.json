@@ -14,7 +14,7 @@
       "attributes": {
         "dexterity": 6
       },
-      "skills": "craft:6",
+      "skills": "craft:7",
       "feats": [
         "Toxin Amplifier",
         "Paralytic Expertise"
@@ -38,7 +38,8 @@
     },
     "keywords": [
       "[Poisoner]",
-      "[Alchemist]"
+      "[Alchemist]",
+      "[Legendary]"
     ],
     "notes": "",
     "effects": []

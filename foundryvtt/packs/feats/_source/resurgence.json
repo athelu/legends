@@ -19,7 +19,7 @@
         "Healing Current"
       ],
       "tier": 0,
-      "other": "any magical tradition trait, Positive Mastery 4"
+      "other": "any magical tradition trait, Positive Mastery 5"
     },
     "benefits": "<p>When you restore HP to a creature, add your Casting Stat score to the amount healed. This applies to weave-based healing only, not Medicine checks. When you cast a healing weave and achieve 3 or more targeting successes, the target also removes one [Hindered] condition of their choice.</p>",
     "usageType": "passive",

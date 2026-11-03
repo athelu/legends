@@ -5,16 +5,16 @@
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "<p>You have developed a personal catalogue of infusion formulae of specific combinations of energy and material that you have refined through repetition into reliable, potent effects. Where improvised infusions scatter energy broadly, your formulae focus it to precise purpose.</p>"
+      "value": "<p>You have developed a personal catalogue of infusion formulae of specific combinations of energy and material that you have refined through repetition into reliable, potent effects.</p>"
     },
     "flavorText": "",
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "intelligence": 4
+        "intelligence": 5
       },
-      "skills": "craft:4",
+      "skills": "craft:5",
       "feats": [
         "Infuser"
       ],

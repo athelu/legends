@@ -5,14 +5,14 @@
   "img": "icons/magic/symbols/star-rising-purple.webp",
   "system": {
     "description": {
-      "value": "<p>You've learned to open that sense at will, reading the magical landscape around you without ceremony or cost.</p>"
+      "value": "<p>You read the magical landscape around you without ceremony or cost.</p>"
     },
     "flavorText": "",
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "arcane:3",
+      "skills": "arcane:4",
       "feats": [],
       "tier": 0,
       "other": "any magical tradition trait"

@@ -15,7 +15,7 @@
         "cost": 2
       },
       "supporting": {
-        "type": "space",
+        "type": "fire",
         "cost": 6
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 5-ft radius, 2= 10-ft radius, 3 = 10-ft radius + revealed",
-    "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Positive Potential + Positive Mastery / Fire Potential + Fire Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [
       {

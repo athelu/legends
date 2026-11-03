@@ -15,7 +15,7 @@
         "cost": 8
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 8
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = Fails, 1 = Prone (1 round, 20ft radius), 2 = Prone (1 minute, 20ft radius), 3 = Prone (1 minute, 40ft radius)",
-    "weavingRoll": "Earth Potential + Earth Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Earth Potential + Earth Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Earth Mastery",
     "appliesEffects": [
       {

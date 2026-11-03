@@ -15,7 +15,7 @@
         "cost": 5
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 6
       }
     },
@@ -28,7 +28,7 @@
     "damage": {
       "base": 0,
       "type": "",
-      "drInteraction": "half",
+      "drInteraction": "full",
       "scaling": {
         "0": {
           "appliesEffects": false,
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 1 round (6 HP), 2= full effect (12 HP), 3 = 10 minutes (24 HP) + frosted",
-    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Water Potential + Water Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {

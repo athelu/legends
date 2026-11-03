@@ -257,9 +257,9 @@ Magical healing (Minor Restoration or Major Restoration) can cure a disease imme
 
 ### Disease Severity Tags
 Diseases carry a severity tag indicating how dangerous they are:
-- [Mild] Uncomfortable but not life-threatening. Easy task Fortitude save (1 success) to prevent from progressing.
-- [Serious] Significant threat. Hard task Fortitude save (2 successes) to cure; 1 success = no change; 0 successes = worsen.
-- [Deadly]  Life-threatening. Hard task Fortitude save (2 successes) to cure; anything less = worsen.
+- [Mild] Uncomfortable but not life-threatening.  Fortitude (Easy) save to prevent from progressing.
+- [Serious] Significant threat. Fortitude (Hard) save to cure; 1 success = no change; 0 successes = worsen.
+- [Deadly] Life-threatening. Fortitude (Hard) save to cure; anything less = worsen
 
 ## Attribute Drain
 Some creatures and effects can temporarily reduce a character's core attributes, often instead of inflicting damage directly. These attacks may drain strength, clouded mind,  or weaken the characters constitution.

@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>Time was always your enemy. You raced against weather, bandits, and deadlines, carrying messages and packages that others deemed too valuable to trust to slower methods. The pay was decent, the life was exciting, and you saw more of the world than most people dream of. Adventuring is just a logical extension and now at least you can fight back when someone tries to rob you.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Athletics 2, Society 2, Perception 1, Wilderness 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Athletics 3, Society 3, Perception 3, Wilderness 3, +56 XP",
     "startingEquipment": "Traveler's clothes\nmap case\nriding boots",
     "suggestedFeats": "",
     "features": "Swift Delivery: You know the fastest routes between settlements and can navigate unfamiliar cities quickly.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "athletics": 2,
-      "society": 2,
-      "perception": 1,
-      "wilderness": 1
+      "athletics": 3,
+      "society": 3,
+      "perception": 3,
+      "wilderness": 3
     },
     "craftKeyword": null,
     "itemGrants": [

@@ -5,13 +5,13 @@
   "img": "icons/skills/movement/feet-winged-boots-brown.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Remove the Prone condition. If your speed is 0, you cannot stand up. Standing up does not provoke Opportunity Attacks.</p>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Remove the Prone condition. If your speed has been reduced to 0, you cannot stand up. Standing up does not provoke Opportunity Attacks.</p>"
     },
     "actionType": "move",
     "actionCost": "1",
     "requirements": "",
     "trigger": "",
-    "effect": "Remove the Prone condition. If your speed is 0, you cannot stand up. Standing up does not provoke Opportunity Attacks.",
+    "effect": "Remove the Prone condition. If your speed has been reduced to 0, you cannot stand up. Standing up does not provoke Opportunity Attacks.",
     "appliesEffects": [
       {
         "effectId": "Prone",

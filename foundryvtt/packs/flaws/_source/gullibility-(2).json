@@ -10,7 +10,7 @@
     "pointValue": 2,
     "flawType": "mental",
     "severity": "minor",
-    "mechanicalEffects": "<ul>\n<li>Make [[/save type=will]] (1 success required) to disbelieve lies or doubt stated intentions</li>\n<li>Insight and Investigate checks to detect lies: Add 2 to die results</li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Make [[/save type=will]] (1 success required) to disbelieve lies or doubt stated intentions</li>\n<li>Investigate checks to detect lies: Add 2 to skill die results</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

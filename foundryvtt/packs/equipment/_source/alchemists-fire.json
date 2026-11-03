@@ -1,0 +1,34 @@
+{
+  "_id": "607565b4f1b5b876",
+  "name": "Alchemist's Fire",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A flask of sticky, combustible liquid that ignites on impact. Thrown as a ranged attack (Dexterity + Ranged Combat), a direct hit deals [[/damage 4 type=fire]] damage. On Margin 2, the target also gains the Singed condition; on Margin 3, the target gains the Ignited condition. The adhesive liquid cannot simply be wiped away; see Fire Effects in the Conditions section.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 50.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!607565b4f1b5b876"
+}

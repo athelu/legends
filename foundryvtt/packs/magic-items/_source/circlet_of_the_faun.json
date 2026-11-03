@@ -1,0 +1,38 @@
+{
+  "_id": "1d65173f7bc726f4",
+  "name": "Circlet of the Faun",
+  "type": "circlet",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Type:</strong> Circlet <strong>Rarity:</strong> Uncommon <strong>Slot:</strong> Head <strong>Weight:</strong> 0 <strong>Description:</strong> While wearing this circlet, you can understand and be understood by animals as though sharing a common language. This is a passive benefit — no action or charges are required. The effect ends if the circlet is removed.</p>\n<p>This ability allows natural communication but confers no special influence over animals; their disposition and cooperation remain entirely up to the GM. Note that it does not replicate the <strong>Beast Courier</strong> weave, which compels a beast to deliver a message.</p>\n<p>---</p>"
+    },
+    "primaryEnergy": "",
+    "charges": {
+      "value": 0,
+      "max": 0,
+      "recharge": "",
+      "rechargePeriod": "dawn"
+    },
+    "properties": [],
+    "grantedWeaves": [],
+    "isMagical": true,
+    "identified": true,
+    "weight": 0.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "uncommon",
+    "requiresAttunement": false,
+    "notes": "",
+    "implementType": "circlet",
+    "attackBonus": 0,
+    "damage": {
+      "base": 4,
+      "type": "bludgeoning",
+      "properties": []
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

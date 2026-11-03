@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>As an unscrupulous independent or as a member of an underworld organization, you lived a life of crime. You might have become an adventurer to seek redemption, to escape the law, or simply to get access to bigger and better loot. Your old contacts remain useful, though maintaining those relationships means you're never quite free of your past.</p>"
     },
-    "startingXP": 24,
-    "skillBonuses": "Stealth 2, Thievery 2, Deception 2, Intimidate 2, +24 XP",
+    "startingXP": 40,
+    "skillBonuses": "Stealth 3, Thievery 3, Deception 3, Intimidate 3, Perception 3, +40 XP",
     "startingEquipment": "Crowbar\ncommon clothes\nbelt pouch\nwool hood\nlow boots",
     "suggestedFeats": "",
     "features": "Criminal Contact: You have a reliable contact in the criminal underworld who can provide information or fence stolen goods.",
@@ -16,10 +16,11 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "stealth": 2,
-      "thievery": 2,
-      "deception": 2,
-      "intimidate": 2
+      "stealth": 3,
+      "thievery": 3,
+      "deception": 3,
+      "intimidate": 3,
+      "perception": 3
     },
     "craftKeyword": null,
     "itemGrants": [

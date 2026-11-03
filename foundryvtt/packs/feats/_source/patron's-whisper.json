@@ -22,7 +22,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Once per long rest, you may spend 10 minutes in silent stillness and ask your patron for guidance. The GM provides a single piece of information the patron knows that is relevant to your current situation ex. where an enemy is, the nature of a magical effect, the weakness of a creature. Additionally, when you use your Pact Gift ability, you may choose to spend 2 Luck instead of the normal action cost to use it as a [Reaction] instead.</p>",
+    "benefits": "<p>Once per long rest, you may spend 10 minutes in silent stillness and ask your patron for guidance. The GM provides a single piece of information the patron knows that is relevant to your current situation (ex. where an enemy is, the nature of a magical effect, the weakness of a creature). Additionally, when you use your Pact Gift ability, you may choose to spend 2 Luck instead of the normal action cost to use it as a [Reaction] instead.</p>",
     "usageType": "reaction",
     "usage": {
       "mode": "reaction",

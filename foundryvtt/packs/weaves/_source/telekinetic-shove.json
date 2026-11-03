@@ -15,7 +15,7 @@
         "cost": 2
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 1
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 5 feet, 2= 10 feet, 3 = 15 feet + prone",
-    "weavingRoll": "Space Potential + Space Mastery",
+    "weavingRoll": "Space Potential + Space Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {

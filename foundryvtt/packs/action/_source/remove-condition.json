@@ -5,13 +5,13 @@
   "img": "icons/skills/social/wave-halt-stop.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Treat an active condition on an adjacent creature. Success thresholds and applicable conditions are listed below.</p>\n<p>| Condition | Rank | Required Successes | |-----------|------|--------------------| | Bleeding (1 stack) | 1 | 1 success | |Bleeding (all stacks) | 1 | 2 successes | |Poisoned (Weak) | 2 | 2 successes | | Poisoned (Strong) | 3 | 2 successes | | Poisoned (Deadly) | 4 | 2 successes (suppresses for 4 hours; full cure requires antidote) | | Grievously Wounded | 3 | 2 successes | | Disease (reduce one stage) | varies by disease severity | 2 successes |</p>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Treat an active condition on an adjacent creature. Success thresholds and applicable conditions are listed below.</p>\n<p>| Condition | Rank | Required Successes | |-----------|------|--------------------| | Bleeding (1 stack) | 3 | 1 success | |Bleeding (all stacks) | 3 | 2 successes | |Poisoned (Weak) | 3 | 2 successes | | Poisoned (Strong) | 4 | 2 successes | | Poisoned (Deadly) | 5 | 2 successes (suppresses for 4 hours; full cure requires antidote) | | Grievously Wounded | 4 | 2 successes | | Disease (reduce one stage) | varies by disease severity | 2 successes |</p>"
     },
     "actionType": "interact",
     "actionCost": "1",
     "requirements": "",
     "trigger": "",
-    "effect": "Treat an active condition on an adjacent creature. Success thresholds and applicable conditions are listed below.\n\n| Condition | Rank | Required Successes |\n|-----------|------|--------------------|\n| Bleeding (1 stack) | 1 | 1 success |\n|Bleeding (all stacks) | 1 | 2 successes |\n|Poisoned (Weak) | 2 | 2 successes |\n| Poisoned (Strong) | 3 | 2 successes |\n| Poisoned (Deadly) | 4 | 2 successes (suppresses for 4 hours; full cure requires antidote) |\n| Grievously Wounded | 3 | 2 successes |\n| Disease (reduce one stage) | varies by disease severity | 2 successes |",
+    "effect": "Treat an active condition on an adjacent creature. Success thresholds and applicable conditions are listed below.\n\n| Condition | Rank | Required Successes |\n|-----------|------|--------------------|\n| Bleeding (1 stack) | 3 | 1 success |\n|Bleeding (all stacks) | 3 | 2 successes |\n|Poisoned (Weak) | 3 | 2 successes |\n| Poisoned (Strong) | 4 | 2 successes |\n| Poisoned (Deadly) | 5 | 2 successes (suppresses for 4 hours; full cure requires antidote) |\n| Grievously Wounded | 4 | 2 successes |\n| Disease (reduce one stage) | varies by disease severity | 2 successes |",
     "appliesEffects": [],
     "keywords": [],
     "range": "",

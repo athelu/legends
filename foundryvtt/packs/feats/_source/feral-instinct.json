@@ -21,7 +21,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>+2 to initiative. You cannot be surprised while conscious. While in Primal Fury, you are immune to the Frightened and Charmed conditions</p>",
+    "benefits": "<p>You cannot be surprised while conscious. While in Primal Fury, you are immune to the Frightened and Charmed conditions</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",
@@ -41,10 +41,6 @@
     ],
     "notes": "",
     "effects": [
-      {
-        "type": "initiative.modify",
-        "value": 2
-      },
       {
         "type": "condition.immunity",
         "conditionName": "Surprised"

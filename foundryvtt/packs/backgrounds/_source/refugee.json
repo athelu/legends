@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You fled your homeland due to war, disaster, or persecution. Everything you knew was torn away, but somehow you survived. You could be searching for a new home, or maybe you're trying to earn enough to reclaim what was lost. The experience taught you that survival requires both strength and flexibility, and you learned never to take safety for granted.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Stealth 2, Wilderness 2, Empathy 1, Society 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Stealth 3, Wilderness 3, Empathy 3, Society 3, +56 XP",
     "startingEquipment": "Common clothes\nbedroll\nshoes",
     "suggestedFeats": "",
     "features": "Survivor's Instinct: You know how to avoid danger and find help. Can identify safe havens and sympathetic people in unfamiliar places.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "stealth": 2,
-      "wilderness": 2,
-      "empathy": 1,
-      "society": 1
+      "stealth": 3,
+      "wilderness": 3,
+      "empathy": 3,
+      "society": 3
     },
     "craftKeyword": null,
     "itemGrants": [

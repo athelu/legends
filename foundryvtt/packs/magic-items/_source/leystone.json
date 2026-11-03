@@ -1,0 +1,38 @@
+{
+  "_id": "1ae85f03bd5e38e3",
+  "name": "Leystone",
+  "type": "curio",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Type:</strong> Curio <strong>Rarity:</strong> rare <strong>Slot:</strong> None <strong>Weight:</strong> 0 <strong>Description:</strong> While this vaguely arrow shaped stone is on your person, you can correctly detect the direction toward the nearest ley line.</p>\n<p>---</p>"
+    },
+    "primaryEnergy": "",
+    "charges": {
+      "value": 0,
+      "max": 0,
+      "recharge": "",
+      "rechargePeriod": "dawn"
+    },
+    "properties": [],
+    "grantedWeaves": [],
+    "isMagical": true,
+    "identified": true,
+    "weight": 0.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "rare",
+    "requiresAttunement": false,
+    "notes": "",
+    "implementType": "curio",
+    "attackBonus": 0,
+    "damage": {
+      "base": 4,
+      "type": "bludgeoning",
+      "properties": []
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

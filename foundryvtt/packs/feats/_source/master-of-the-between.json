@@ -23,7 +23,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Your summoning limit increases by 2 (Charisma score + 2 combined Tier). The Tier gap penalty no longer applies to creatures within your Deepened Bond creature type. Once per long rest, call a creature whose Tier would exceed your Charisma-based summoning limit by 1. This creature arrives Friendly regardless of targeting roll and remains for 10 minutes at no additional energy cost beyond the initial summoning weave. Time-aspected daemons and Drakes remain inaccessible through this feat.</p>",
+    "benefits": "<p>Your summoning limit increases by 2 (Charisma score + 2 combined Tier). The Tier gap penalty no longer applies to creatures within your Deepened Bond creature type. Once per long rest, call a creature whose Tier would exceed your Charisma-based summoning limit by 1. This creature arrives Friendly regardless of targeting roll and remains for 10 minutes at no additional energy cost beyond the initial summoning weave.</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",
@@ -39,7 +39,8 @@
     },
     "keywords": [
       "[Magic]",
-      "[Summoner]"
+      "[Summoner]",
+      "[Legendary]"
     ],
     "notes": "",
     "effects": []

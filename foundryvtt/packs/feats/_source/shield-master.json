@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "strength": 3
+        "strength": 4
       },
-      "skills": "meleeCombat:3",
+      "skills": "meleeCombat:4",
       "feats": [],
       "tier": 0,
       "other": "must be using a shield"

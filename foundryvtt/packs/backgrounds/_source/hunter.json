@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You stalked and took down animals and other creatures of the wild. The skills transfer remarkably well regardless if you're tracking a deer or a bandit, the principles are the same. You just have to hope the prey doesn't shoot back.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Wilderness 2, Ranged Combat 2, Stealth 1, Perception 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Wilderness 3, Ranged Combat 3, Stealth 3, Perception 3, +56 XP",
     "startingEquipment": "Bow or crossbow\narrows/bolts\nhigh boots\nwork clothes\nwork gloves",
     "suggestedFeats": "",
     "features": "Tracker: You can track creatures through wilderness and identify animal signs.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "wilderness": 2,
-      "rangedCombat": 2,
-      "stealth": 1,
-      "perception": 1
+      "wilderness": 3,
+      "rangedCombat": 3,
+      "stealth": 3,
+      "perception": 3
     },
     "craftKeyword": null,
     "itemGrants": [

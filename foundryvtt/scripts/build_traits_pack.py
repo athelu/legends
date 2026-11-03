@@ -357,7 +357,7 @@ def main():
     script_dir = Path(__file__).parent.parent.parent
     
     # Parse from markdown
-    md_file = script_dir / "ttrpg" / "traits.md"
+    md_file = script_dir / "ttrpg" / "07-traits.md"
     if md_file.exists():
         print("Parsing traits.md...")
         items = parse_traits_md(md_file)

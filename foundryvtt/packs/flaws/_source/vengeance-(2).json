@@ -5,7 +5,7 @@
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Someone wronged you terribly. Life devoted to revenge.</p>"
+      "value": "<p>Someone wronged you terribly. Your life has since been devoted to revenge.</p>"
     },
     "pointValue": 2,
     "flawType": "social",

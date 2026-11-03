@@ -11,13 +11,13 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 6
-      },
+      "attributes": {},
       "skills": "rangedCombat:6, meleeCombat:6",
-      "feats": [],
+      "feats": [
+        "Exploit Weakness"
+      ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 6"
     },
     "benefits": "<p>When you deal damage through Exploit Weakness, the target gains 1 Bleeding stack in addition to any other effects.</p>",
     "usageType": "passive",

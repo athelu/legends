@@ -5,7 +5,7 @@
   "img": "icons/svg/fire.svg",
   "system": {
     "description": {
-      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Character is engulfed in intense flames. Take [[/damage 8 type=fire]] damage at the beginning of each of your turns. All actions: Add 1 to die results. <strong>Recovery:</strong> Use 1 [Action] to drop and roll: Make [[/save type=reflex]]</p>\n<ul>\n<li>1 success: Reduce condition to Ignited</li>\n<li>2 successes: Remove all fire conditions</li>\n</ul>\n<p><strong>Ally assistance:</strong> Ally can use 1 [Action]: Make [[/save type=reflex]]</p>\n<ul>\n<li>1 success: Reduce condition to Ignited</li>\n<li>2 successes:  Remove all fire conditions</li>\n</ul>"
+      "value": "<p><strong>Keyword:</strong> [Hindered] <strong>Effect:</strong> Character is engulfed in intense flames. Take [[/damage 8 type=fire]] damage at the beginning of each of your turns. All actions: Add 1 to die results. <strong>Recovery:</strong> Use 1 [Action] to drop and roll: Make [[/save type=reflex]]</p>\n<ul>\n<li>1 success: Reduce condition to Ignited</li>\n<li>2 successes: Remove all fire conditions</li>\n</ul>\n<p><strong>Ally assistance:</strong> Ally can use 2 [Action]: Make [[/save type=reflex]]</p>\n<ul>\n<li>1 success: Reduce condition to Ignited</li>\n<li>2 successes:  Remove all fire conditions</li>\n</ul>"
     },
     "label": "Burning",
     "category": "magic",

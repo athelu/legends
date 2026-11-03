@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4
-      },
-      "skills": "meleeCombat:4",
+      "attributes": {},
+      "skills": "meleeCombat:5",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When wielding a melee weapon in one hand with your other hand free (no shield, no second weapon), you gain +[[/damage 2 type=to]] damage and subtract 1 from your Agility die result when making attacks (minimum 1)</p>",
     "usageType": "passive",

@@ -1,0 +1,34 @@
+{
+  "_id": "5332209d3fcf0c22",
+  "name": "Bottle, Glass",
+  "type": "equipment",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p>A glass bottle with a cork stopper suitable for storing liquids, powders, or small objects. Holds approximately 1 pint. Fragile compared to ceramic, but allows visual inspection of the contents.</p>"
+    },
+    "equipmentType": "adventuring-gear",
+    "weight": 1.0,
+    "cost": 2.0,
+    "quantity": 1,
+    "equipped": false,
+    "capacity": "",
+    "brightLight": 0,
+    "dimLight": 0,
+    "duration": "",
+    "uses": {
+      "value": 0,
+      "max": 0
+    },
+    "consumable": false,
+    "associatedSkill": "",
+    "toolBonus": 0,
+    "rarity": "",
+    "requiresAttunement": false,
+    "magicalProperties": "",
+    "properties": "",
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!5332209d3fcf0c22"
+}

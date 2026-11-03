@@ -15,7 +15,7 @@
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": "Air Mastery 6, Air Potential 6, any magical tradition trait"
+      "other": "Air Mastery 7, Air Potential 7, any magical tradition trait"
     },
     "benefits": "<p>Your mastery of Air energy grants the following abilities:</p>\n<ul>\n<li><strong>Shocking Weaves:</strong> When you cast a weave using Air as primary energy and deal lightning damage, targets that fail their save gain the <strong>Stunned</strong> condition until end of their next turn</li>\n<li><strong>Storm Resistance:</strong> You are immune to lightning damage from non-magical sources. You have Resistance (+2 DR) against magical lightning damage</li>\n<li><strong>Windwalker:</strong> You ignore movement penalties from difficult terrain. Can walk on water or other liquids as if solid ground. Falling damage reduced by half</li>\n</ul>",
     "usageType": "passive",
@@ -32,7 +32,8 @@
       "text": "Passive"
     },
     "keywords": [
-      "[Magic]"
+      "[Magic]",
+      "[Legendary]"
     ],
     "notes": "",
     "effects": []

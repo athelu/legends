@@ -5,13 +5,13 @@
   "img": "icons/skills/social/wave-halt-stop.webp",
   "system": {
     "description": {
-      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free] action during a move.</p>"
+      "value": "<p><strong>Cost:</strong> 1 <strong>Effect:</strong> Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free] action during a move.</p>\n<h3>Triage</h3>\n<p><strong>Cost:</strong> Performed during the short rest period. <strong>Effect:</strong> At the start of the short rest, the treating ally makes a [[/check skill=medicine]] on the patient before rest begins. A single healer can administer treatment to multiple patients during the same short rest, making one [[/check skill=medicine]] per patient. Using a healer's kit subtracts 1 from the Medicine skill die. Without one, the check is made at normal difficulty.</p>\n<ul>\n<li><strong>1 success:</strong> Patient regains additional HP equal to the treating ally's Wisdom score on top of the standard short rest recovery.</li>\n<li><strong>2 successes:</strong> Patient regains additional HP equal to the treating ally's Wisdom score + Medicine rank.</li>\n</ul>"
     },
     "actionType": "interact",
     "actionCost": "1",
     "requirements": "",
     "trigger": "",
-    "effect": "Position yourself to gain cover benefits. Must have cover available (wall, boulder, etc.). Can be done as a [Free] action during a move.",
+    "effect": "At the start of the short rest, the treating ally makes a Medicine check on the patient before rest begins. A single healer can administer treatment to multiple patients during the same short rest, making one Medicine check per patient. Using a healer's kit subtracts 1 from the Medicine skill die. Without one, the check is made at normal difficulty.\n- **1 success:** Patient regains additional HP equal to the treating ally's Wisdom score on top of the standard short rest recovery.\n- **2 successes:** Patient regains additional HP equal to the treating ally's Wisdom score + Medicine rank.",
     "appliesEffects": [
       {
         "effectId": "Covered",
@@ -22,7 +22,7 @@
     "range": "",
     "target": "",
     "frequency": "",
-    "special": ""
+    "special": "Cost: Performed during the short rest period."
   },
   "effects": [],
   "_key": "!items!18c7c339c429f9e5"

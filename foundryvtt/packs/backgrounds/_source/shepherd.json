@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You spent long days and nights watching over flocks, responsible for their safety in all weather and against all threats. You might have left when the flock was lost, or you simply realized that protecting people pays better than protecting sheep. The principles are the same, though people complain more.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Wilderness 2, Perception 2, Athletics 1, Medicine 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Wilderness 3, Perception 3, Athletics 3, Medicine 3, +56 XP",
     "startingEquipment": "Sling\ncommon clothes\nwaterskin\nblanket\nshoes",
     "suggestedFeats": "",
     "features": "Animal Empathy: You understand animal behavior and can calm domesticated animals, predict their actions, and gain their trust more easily.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "wilderness": 2,
-      "perception": 2,
-      "athletics": 1,
-      "medicine": 1
+      "wilderness": 3,
+      "perception": 3,
+      "athletics": 3,
+      "medicine": 3
     },
     "craftKeyword": null,
     "itemGrants": [
@@ -51,11 +51,13 @@
         "sourceId": "c4a16e4b3f3ac1af"
       },
       {
-        "mode": "placeholder",
+        "mode": "reference",
         "itemType": "equipment",
-        "sourceName": "blanket",
+        "pack": "legends.equipment",
+        "sourceName": "Blanket",
         "quantity": 1,
-        "originalText": "blanket"
+        "originalText": "blanket",
+        "sourceId": "dbfc3648e7ed940f"
       },
       {
         "mode": "reference",

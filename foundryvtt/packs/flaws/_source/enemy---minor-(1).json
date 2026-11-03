@@ -1,0 +1,22 @@
+{
+  "_id": "276c281c7a98d895",
+  "name": "Enemy - Minor (1)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>Someone, or some group has animosity toward you that causes you occasional trouble.</p>"
+    },
+    "pointValue": 1,
+    "flawType": "social",
+    "severity": "minor",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!276c281c7a98d895"
+}

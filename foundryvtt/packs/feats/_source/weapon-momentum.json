@@ -12,15 +12,14 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "strength": 4,
-        "agility": 4
+        "strength": 4
       },
-      "skills": "meleeCombat:4",
+      "skills": "meleeCombat:5",
       "feats": [
         "Two-Weapon Fighting"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When both attacks from a Two-Weapon Fighting action hit the same target, you may apply either the Slowed (Minor) or Disoriented [Hindered] condition to the target until the end of their next turn.</p>",
     "usageType": "special",

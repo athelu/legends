@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends.</p>"
+      "value": "<p>Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Should events occur that cause the distance between the weaver and the disc to exceed 30’ the weave ends.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -23,7 +23,7 @@
     "duration": "10 minutes",
     "target": "single",
     "savingThrow": "none",
-    "effect": "Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Can't move more than 30 feet from you or it ends.",
+    "effect": "Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Should events occur that cause the distance between the weaver and the disc to exceed 30’ the weave ends.",
     "effectType": "utility",
     "damage": {
       "base": 0,
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = Fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour",
-    "weavingRoll": "Space Potential + Space Mastery + Time Potential + Time Mastery",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
     "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [],
     "deliveryMethod": "automatic",

@@ -12,10 +12,10 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "strength": 4,
-        "charisma": 4
+        "strength": 5,
+        "charisma": 5
       },
-      "skills": "intimidate:4",
+      "skills": "intimidate:5",
       "feats": [
         "Primal Fury"
       ],

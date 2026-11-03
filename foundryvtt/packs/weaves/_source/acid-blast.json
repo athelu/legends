@@ -15,7 +15,7 @@
         "cost": 2
       },
       "supporting": {
-        "type": "space",
+        "type": "negative",
         "cost": 1
       }
     },
@@ -50,7 +50,7 @@
       }
     },
     "targetingSuccessScaling": "0 = Miss, 1 = Half damage (4), 2 = Full damage (8), 3 = Enhanced damage (16) + applies effects",
-    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Water Potential + Water Mastery / Negative Potential + Negative Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {

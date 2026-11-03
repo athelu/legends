@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4
-      },
-      "skills": "meleeCombat:4",
+      "attributes": {},
+      "skills": "meleeCombat:5",
       "feats": [],
       "tier": 0,
-      "other": "Exploit Weakness"
+      "other": "Agil 5, Exploit Weakness"
     },
     "benefits": "<p>When you make a melee attack against a target that has an ally within 5 feet of them, subtract 1 from both of your attack dice.</p>",
     "usageType": "passive",

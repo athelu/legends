@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You might have been an actor, a dancer, a musician, a street magician, or any other sort of performer. Adventuring offers new audiences and new material and every narrow escape is another dramatic moment for future performances.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Perform 2, Persuasion 2, Acrobatics 1, Perception 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Perform 3, Persuasion 3, Acrobatics 3, Perception 3, +56 XP",
     "startingEquipment": "Basic musical instrument\ncommon clothes\ndisguise kit\nshoes",
     "suggestedFeats": "",
     "features": "By Popular Demand: You can find performance venues and earn money entertaining in most settlements.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "perform": 2,
-      "persuasion": 2,
-      "acrobatics": 1,
-      "perception": 1
+      "perform": 3,
+      "persuasion": 3,
+      "acrobatics": 3,
+      "perception": 3
     },
     "craftKeyword": null,
     "itemGrants": [

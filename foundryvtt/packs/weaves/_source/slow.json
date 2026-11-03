@@ -15,7 +15,7 @@
         "cost": 4
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 5
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = no effect, 1 = 1 round, 2= 1 minute, 3 = 10 minutes",
-    "weavingRoll": "Time Potential + Time Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Time Potential + Time Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Time Mastery",
     "appliesEffects": [
       {

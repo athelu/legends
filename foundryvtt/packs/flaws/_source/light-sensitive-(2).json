@@ -10,7 +10,7 @@
     "pointValue": 2,
     "flawType": "physical",
     "severity": "minor",
-    "mechanicalEffects": "<ul>\n<li>Permanently Dazzled in daylight (see Dazzled condition)</li>\n<li>Normal at twilight/night with artificial light</li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Permanently Dazzled in daylight (see Dazzled condition)</li>\n<li>Normal at twilight/night or artificial light</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

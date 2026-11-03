@@ -1,0 +1,22 @@
+{
+  "_id": "65847bc1b23efb09",
+  "name": "Intolerance - Minor (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>You have a strong prejudice  to a particular ethnicity, social class, religion, or nationality. Persuasion with disliked group: Add 2 to skill die results.</p>"
+    },
+    "pointValue": 2,
+    "flawType": "social",
+    "severity": "minor",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!65847bc1b23efb09"
+}

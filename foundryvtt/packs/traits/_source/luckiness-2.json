@@ -12,7 +12,7 @@
     "isMagical": false,
     "magicalType": "",
     "requirements": "",
-    "benefits": "<ul>\n<li>Start each session with 2 bonus Luck points beyond attribute</li>\n</ul>\n<h2>SPECIAL TRAITS (GM Approval Required)</h2>",
+    "benefits": "<ul>\n<li>You can spend 2 points of your Current Luck pool before reducing its value. This resets after a long rest.</li>\n</ul>\n<h2>SPECIAL TRAITS (GM Approval Required)</h2>",
     "notes": "",
     "visualEffects": "",
     "castingStat": "",

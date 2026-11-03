@@ -5,10 +5,10 @@
   "img": "icons/svg/book.svg",
   "system": {
     "description": {
-      "value": "<p>You served in the guard, standing watch while others slept. You know the boredom of endless patrols punctuated by moments of sudden terror. Whether you left because of corruption in the ranks, disagreements with your commander, or simple wanderlust, you still think like a guard. Old habits die hard, and honestly, they've kept you alive more than once.</p>"
+      "value": "<p>You served in the guard, standing watch while others slept. You know the boredom of endless patrols punctuated by moments of sudden terror. Whether you left because of corruption in the ranks, disagreements with your commander, or simple wanderlust, you still think like a guard.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Melee Combat 2, Perception 2, Intimidate 1, Society 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Melee Combat 3, Perception 3, Intimidate 3, Society 3, +56 XP",
     "startingEquipment": "Spear or club\nuniform\nmanacles\nwork gloves\nwork boots",
     "suggestedFeats": "",
     "features": "Watchful Eye: You're trained to spot trouble and know typical guard procedures in most settlements.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "meleeCombat": 2,
-      "perception": 2,
-      "intimidate": 1,
-      "society": 1
+      "meleeCombat": 3,
+      "perception": 3,
+      "intimidate": 3,
+      "society": 3
     },
     "craftKeyword": null,
     "itemGrants": [

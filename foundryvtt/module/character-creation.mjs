@@ -31,9 +31,9 @@ const ATTRIBUTE_LABELS = {
 
 const CREATION_STEP_METADATA = [
   { key: 'attributes', label: 'Determine Attributes' },
-  { key: 'ancestry', label: 'Choose Ancestry' },
-  { key: 'origin', label: 'Choose Nationality and Native Language' },
   { key: 'background', label: 'Choose Background' },
+  { key: 'ancestry', label: 'Choose Ancestry' },
+  { key: 'origin', label: 'Choose Ethnicity and Native Language' },
   { key: 'traitsAndFlaws', label: 'Select Traits and Flaws' },
   { key: 'startingFeats', label: 'Select 3 Starting Feats' },
   { key: 'spendXp', label: 'Spend Starting XP' },
@@ -496,11 +496,6 @@ function hasCompletedWorkflowStep(state, stepKey) {
 }
 
 function getResumeWorkflowStep(steps, state) {
-  const currentStep = steps.find((step) => step.key === state?.currentStep);
-  if (currentStep && !hasCompletedWorkflowStep(state, currentStep.key)) {
-    return currentStep;
-  }
-
   return steps.find((step) => !hasCompletedWorkflowStep(state, step.key)) || null;
 }
 
@@ -669,13 +664,13 @@ async function showIntroDialog(actor) {
     position: { width: 560 },
     content: `
       <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
-        <p style="margin: 0;">This workflow follows the character creation steps in the rules and walks the actor through attributes, ancestry, background, traits/flaws, starting feats, XP spending, HP, and equipment/wealth guidance.</p>
+        <p style="margin: 0;">This workflow follows the rules and walks the actor through attributes, background, ancestry, ethnicity/native language, traits/flaws, starting feats, XP spending, HP, and equipment/wealth guidance.</p>
         ${resumeStep ? `<p style="margin: 0;"><strong>Next step:</strong> ${escapeHtml(resumeStep.label)}</p>` : ''}
         <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 4px;">
           <li>Determine Attributes</li>
-          <li>Choose Ancestry</li>
-          <li>Choose Nationality and Native Language</li>
           <li>Choose Background</li>
+          <li>Choose Ancestry</li>
+          <li>Choose Ethnicity and Native Language</li>
           <li>Select Traits and Flaws</li>
           <li>Select 3 Starting Feats</li>
           <li>Spend Starting XP</li>
@@ -1030,6 +1025,8 @@ async function runAncestryStep(actor) {
   if (created) {
     await updateWorkflowState(actor, { ancestry: { name: created.name, completedAt: new Date().toISOString() } });
     ui.notifications.info(`${actor.name} ancestry set to ${created.name}.`);
+    const { applyAncestryAbilityGrants } = await import('./ancestry-grants.mjs');
+    await applyAncestryAbilityGrants(actor, created, { allowPrompt: true });
     await runAppearanceStep(actor, created.name);
   }
   return true;
@@ -1185,11 +1182,11 @@ async function runOriginStep(actor) {
     position: { width: 600 },
     content: `
       <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
-        <div><strong>Choose Nationality and Native Language</strong></div>
+        <div><strong>Choose Ethnicity and Native Language</strong></div>
         <div>Selected ancestry: <strong>${escapeHtml(primaryAncestry.name)}</strong></div>
-        <div style="font-size: 12px; color: #666;">Nationality determines the native language assigned to the character.</div>
+        <div style="font-size: 12px; color: #666;">Ethnicity determines the native language assigned to the character.</div>
         <div class="form-group">
-          <label>Nationality</label>
+          <label>Ethnicity</label>
           <select name="originChoice" style="width: 100%; padding: 6px;">
             ${options.map((option, index) => `<option value="${index}" ${index === selectedIndex ? 'selected' : ''}>${escapeHtml(option.label)}${option.requiresGMApproval ? ' (GM approval)' : ''}</option>`).join('')}
           </select>
@@ -1200,7 +1197,7 @@ async function runOriginStep(actor) {
     buttons: [
       {
         action: 'apply',
-        label: 'Apply Nationality',
+        label: 'Apply Ethnicity',
         default: true,
         callback: (event, button, dialog) => options[Number.parseInt(dialog.element.querySelector('[name="originChoice"]')?.value || String(selectedIndex), 10)] || null,
       },
@@ -1228,6 +1225,8 @@ async function runOriginStep(actor) {
     'system.languages.native': nativeLanguage,
     'system.languages.selected': selectedLanguages,
   });
+  const { syncAncestryGrantsForActor } = await import('./ancestry-grants.mjs');
+  await syncAncestryGrantsForActor(actor, { allowPrompt: true });
   await updateWorkflowState(actor, {
     origin: {
       key: result.key,
@@ -1329,6 +1328,7 @@ async function addTraitOrFlaw(actor, type) {
   }
 
   const summary = getTraitFlawPointSummary(actor);
+  const existingPrimaryMagicalTrait = type === 'trait' ? detectPrimaryMagicalTrait(actor) : null;
   const ownedNames = new Set(
     actor.items
       .filter((item) => item.type === type)
@@ -1338,6 +1338,13 @@ async function addTraitOrFlaw(actor, type) {
   const documents = await pack.getDocuments();
   const options = documents
     .filter((entry) => !ownedNames.has(String(entry.name || '').trim().toLowerCase()))
+    .filter((entry) => {
+      if (!existingPrimaryMagicalTrait || type !== 'trait' || !entry.system?.isMagical) return true;
+      return ![
+        'mageborn', 'divine gift', 'invoker', 'infuser', 'sorcerous origin',
+        'eldritch pact', 'alchemical tradition', 'summoner'
+      ].some((pattern) => String(entry.name || '').toLowerCase().includes(pattern));
+    })
     .map((entry) => {
       const pointDelta = type === 'trait'
         ? Math.abs(Number(entry.system?.pointCost || 0))
@@ -1960,9 +1967,9 @@ export async function launchCharacterCreationWorkflow(actor) {
 
   const steps = [
     { key: 'attributes', run: runAttributeStep },
+    { key: 'background', run: runBackgroundStep },
     { key: 'ancestry', run: runAncestryStep },
     { key: 'origin', run: runOriginStep },
-    { key: 'background', run: runBackgroundStep },
     { key: 'traitsAndFlaws', run: runTraitsAndFlawsStep },
     { key: 'startingFeats', run: runStartingFeatsStep },
     { key: 'spendXp', run: runSpendXpStep },

@@ -17,12 +17,15 @@ TOOL_SKILL_MAP = {
     "artist's tools": 'Perform',
     "carpenter's tools": 'Craft: Carpenter',
     'disguise kit': 'Deception',
+    "healer's kit": 'Medicine',
     'herbalism kit': 'Medicine',
     'musical instrument, basic': 'Perform',
     'musical instrument, standard': 'Perform',
     'musical instrument, fine': 'Perform',
     'sewing kit': 'Craft: Tailor',
     "smith's tools": 'Craft: Smith',
+    "tools, fishing": 'Wilderness',
+    "tools, thieves'": 'Devices',
 }
 
 CONTAINER_KEYWORDS = {
@@ -239,7 +242,7 @@ def main():
     source_dir = pack_dir / "_source"
 
     # If equipment.md exists, parse it and generate _source JSON files
-    md_file = script_dir / "ttrpg" / "equipment.md"
+    md_file = script_dir / "ttrpg" / "12-equipment.md"
     if md_file.exists():
         print(f"  Parsing markdown: {md_file}")
         content = md_file.read_text(encoding='utf-8')

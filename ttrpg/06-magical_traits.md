@@ -1,0 +1,654 @@
+## MAGICAL TRAITS
+A character may only possess one Magical Trait at a time. It is possible that the character gains a Magical trait or that it changes during gameplay.
+
+### Mageborn (-7)
+**Image:** `icons/skills/arcane/wand-sparks-purple.webp`
+**Requirements:** Intelligence ≥ 3
+
+You were born with an innate connection to the planes flowing through your pneuma. Your eyes glow with constant violet light, marking you as a mage from birth. Through careful study and understanding of magical theory, you have learned to channel the eight energies through precise intellectual control.
+
+Your weaves manifest with orbiting glyphs, bright flashes of violet light, and cascading magical symbols. Motes of energy trail from your gestures, and your magic leaves shimmering afterimages in the air. You use Intelligence as your Casting Stat for weaving.
+
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 2). You can weave magic using all 8 of these energies.
+
+Roll 8d8, assign to eight Magical Potentials.
+
+**Choose Elemental Affinity**
+Choose from one of the Elemental energies to be your Primary Energy (Earth/Air/Fire/Water).
+Primary Energy = + 2 (to max 8) bonus. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Choose Secondary Focus (any other energy).Secondary Energy =  + 1 bonus ( to max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 8 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2)
+
+#### Ritual Casting
+You can cast any weave as a 10-minute ritual for half Energy cost (minimum 1).
+
+### Divine Gift (-7)
+**Image:** `icons/skills/holy/halo-divine-light.webp`
+**Requirements:** Wisdom ≥ 3
+
+You have dedicated yourself to the Pantheon of Eight, a Twisted interpretation of one of the Eight, or the Dragons of Legend. Through deep study and spiritual devotion, One has called to you as your patron (or you serve the pantheon equally), granting you the ability to channel divine power through your pneuma. Your eyes flash with violet light when completing each weave. You use Wisdom as your Casting Stat for weaving.
+
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 2). You can weave divine magic using all 8 of these energies.
+
+Roll 8d8, assign to eight Magical Potentials.
+
+**Choose Your Patron:**
+Select which of the Eight Gods you primarily serve, or choose to serve the Pantheon equally as a generalist, or choose to worship a Twisted variation of the Eight or the Dragons of Legend (See section: The Faith). This choice determines your energy affinities and grants you specific Channel Divinity options.
+Your patron deity determines your Primary energy bonus. You choose your Secondary energy freely.
+
+Primary Energy = + 2 (to max 8) bonus. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Secondary Energy (your choice) = + 1 bonus (to max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Generalist = 3 +1 bonuses to assign as desired.
+
+**Calculate your Energy Pool**
+Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2).
+
+#### Channel Divinity
+You can use channel divinity equal to your Tier times  per long rest. Gain access to all Channel Divinity options for your chosen patron as well as the base 6 channel divinity types.
+
+---
+
+## The Nine Patron Choices
+## ALKIRA - God of War and Order
+
+**Primary Energy:** Fire
+
+### Guided Strike
+- **Action Cost:** 1 [Combat] action or [Reaction]
+- **Trigger (if Reaction):** An ally within 60 feet makes an attack roll
+- **Range:** 60 feet (must see target)
+- **Effect:** Choose an ally within range who is about to make or has just rolled an attack. They gain **Fortune** on that attack roll.
+- **Usage:** Uses 1 Channel Divinity
+
+### Alkira's Wrath
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 30-foot radius centered on you
+- **Effect:** All enemies within range who attacked an ally since your last turn take Fire damage equal to your Tier × 8. Each target makes Reflex save (Agility + Luck). Compare your Wisdom + Fire Mastery to their save successes. Net successes determine damage:
+  - Net 0 or less: No damage (they dodge the flames)
+  - Net 1: Half damage (Tier × 4)
+  - Net 2+: Full damage (Tier × 8)
+- **Damage Type:** Fire (energy)
+- **DR Interaction:** Half DR
+- **Usage:** Uses 1 Channel Divinity
+
+### Rally the Troops
+- **Action Cost:** 1 [Combat] action
+- **Range:** 30-foot radius centered on you
+- **Effect:** All allies within range who can see or hear you gain temporary HP equal to your Wisdom score + your Tier that expire upon a long rest.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## AMBIS - The Mother
+
+**Primary Energy:** Water
+
+### Preserve Life
+- **Action Cost:** 1 [Combat] action
+- **Range:** 30 feet
+- **Effect:** Restore HP to creatures within range. Distribute HP equal to your Wisdom × your Tier among any number of creatures. Cannot heal a creature above half their maximum HP.
+- **Usage:** Uses 1 Channel Divinity
+- **Example:** Tier 3 priest with Wisdom 5 can distribute 15 HP among allies
+
+### Mother's Embrace
+- **Action Cost:** 1 [Combat] action
+- **Range:** 30 feet
+- **Effect:** Choose up to 6 allies within range who can see you. They gain +2 DR for 1 minute.
+- **Usage:** Uses 1 Channel Divinity
+
+### Undertow
+- **Action Cost:** 1 [Combat] action
+- **Range:** 30 feet
+- **Effect:** Target within range makes a Reflex save opposed by Wisdom + Water Mastery; on a loss they're pulled 15 feet toward Ambis's chosen point and gain the Restrained condition, as the water drags and holds.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## ATHORE - God of Justice
+
+**Primary Energy:** Positive
+
+### Divine Judgment
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 60 feet
+- **Effect:** Target one creature you can see. Make opposed check: your Wisdom + Positive Mastery vs their Wisdom + Luck (Will save). If you win by 1+ net successes, they are Stunned until end of their next turn.
+- **Usage:** Uses 1 Channel Divinity
+
+### Hammer of Justice
+- **Action Cost:** [Reaction]
+- **Trigger:** You see a creature attack an innocent, helpless, or defenseless target
+- **Range:** 60 feet
+- **Effect:** Deal Positive damage equal to your Tier × 8 to the attacker. No save.
+- **Damage Type:** Positive (energy)
+- **DR Interaction:** Half DR
+- **Usage:** Uses 1 Channel Divinity
+
+### Zone of Truth
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 60 feet
+- **Effect:** Create a 15-foot radius zone centered on a point within range. For 10 minutes, creatures who enter or start their turn in the zone make Will save (Wisdom + Luck) opposed by your Wisdom + Positive Mastery. If you win (more successes), they cannot deliberately lie while in the zone. They may refuse to speak or be evasive, but cannot speak falsehood. They can repeat the save at the start of each of their turns.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## ENSCHEDE - Goddess of Fate
+
+**Primary Energy:** Time
+
+### Portent
+- **Action Cost:** [Reaction]
+- **Trigger:** Any creature you can see makes a roll
+- **Range:** 60 feet (line of sight)
+- **Effect:** Force the creature to reroll all dice for that check. You choose which result they must use (original or reroll).
+- **Usage:** Uses 1 Channel Divinity
+
+### Glimpse of Destiny
+- **Action Cost:** 1 [Minor] action
+- **Range:** 60 feet (must see target)
+- **Effect:** Grant one ally **Fortune** on their next roll within 1 minute.
+- **Usage:** Uses 1 Channel Divinity
+
+### Kismet's Touch
+- **Action Cost:** [Reaction]
+- **Trigger:** Any roll is made (yours or another creature's) that you can see
+- **Range:** 60 feet
+- **Effect:** After seeing the result, you can declare it an automatic success (both dice count as successes) or automatic failure (both dice count as failures), regardless of the actual roll.
+- **Usage:** Uses 1 Channel Divinity (can only be used once per long rest in addition to normal Channel Divinity limit)
+
+---
+
+## HIRNALOYTA - Goddess of Nature
+
+**Primary Energy:** Earth
+
+### Speak with Nature
+- **Action Cost:** 1 [Interact] action
+- **Range:** Self
+- **Effect:** For 10 minutes, you can communicate with plants and beasts. They understand your words and can respond (though beasts have limited intelligence and plants have even less). Plants can convey information about recent events in their vicinity. Beasts can describe what they've seen or sensed.
+- **Usage:** Uses 1 Channel Divinity
+
+### Nature's Wrath
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 60 feet
+- **Effect:** Choose a 10-foot diameter within range that contains natural vegetation. Plants animate and grasp at creatures. All creatures in area make Reflex save (Agility + Luck) opposed by your Wisdom + Earth Mastery. If you win (more net successes), they become Restrained. Creatures can use 1 [Combat] action to break free (Athletics check requiring 2 successes). Effect lasts 1 minute or until all creatures escape.
+- **Usage:** Uses 1 Channel Divinity
+
+### Hirnaloyta's Bounty
+- **Action Cost:** Special (during short rest)
+- **Range:** Natural surroundings
+- **Effect:** During a short rest in natural surroundings (forest, grassland, etc. - not dungeon or city), you and up to 6 allies who rest with you regain additional HP equal to your Wisdom score + your Tier. Nature nurtures those who honor it.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## NEVIL - God of the Underworld
+
+**Primary Energy:** Negative
+
+### Claim the Dead
+- **Action Cost:** 1 [Interact] action
+- **Range:** Touch
+- **Effect:** Touch a corpse. It is preserved from decay indefinitely and cannot become undead through any means.
+- **Usage:** Uses 1 Channel Divinity
+
+### Guide the Soul
+- **Action Cost:** 1 [Combat] action
+- **Range:** Touch
+- **Effect:** Touch a dying creature (at 0 HP or negative HP). They automatically stabilize at 0 HP. Additionally, for 1 minute, they subtract 1 from both dice on all stabilization attempts and cannot die from reaching negative HP equal to their Constitution (death threshold suspended).
+- **Usage:** Uses 1 Channel Divinity
+
+### Touch of Death
+- **Action Cost:** 1 [Combat] action
+- **Range:** Touch (melee touch attack)
+- **Effect:** Make a melee touch attack (Agility + Melee Combat opposed by target's Agility + Melee Combat). On hit, deal Negative damage equal to your Tier × 8.
+- **Damage Type:** Negative (energy)
+- **DR Interaction:** Half DR
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## RUDLU - Goddess of Luck
+
+**Primary Energy:** Space
+
+### Blessing of the Trickster
+- **Action Cost:** 1 [Minor] action
+- **Range:** 30 feet (must see target)
+- **Effect:** Grant one creature **Fortune** on their next roll. Lady Luck smiles upon them.
+- **Usage:** Uses 1 Channel Divinity
+
+### Curse of Misfortune
+- **Action Cost:** 1 [Combat] action
+- **Range:** 60 feet (must see target)
+- **Effect:** Curse one enemy. Make opposed check: your Wisdom + Space Mastery vs their Wisdom + Luck (Will save). If you win (more successes), they have **Misfortune** on their next roll.
+- **Usage:** Uses 1 Channel Divinity
+
+### Trickster's Escape
+- **Action Cost:** [Reaction]
+- **Trigger:** An attack would hit you (after opposed roll but before damage)
+- **Range:** Self (can teleport up to 30 feet)
+- **Effect:** Teleport up to 30 feet to an unoccupied space you can see. The attack automatically misses as you vanish in a shimmer of violet light and reappear elsewhere. You cannot teleport through solid barriers.
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## SHU-JAHAN - God of Wisdom
+
+**Primary Energy:** Air
+
+### Knowledge of the Ages
+- **Action Cost:** 1 [Interact] action
+- **Range:** Self
+- **Effect:** Choose any one skill. For 10 minutes, you count as having rank 5 proficiency in that skill (use rank 5 for all checks, even if your actual rank is higher or lower). The wisdom of ages flows through you, granting you temporary mastery. If you already have rank 5+, you instead subtract 1 from both dice when using that skill for the duration.
+- **Usage:** Uses 1 Channel Divinity
+
+### Read Thoughts
+- **Action Cost:** 2 [Combat] actions
+- **Range:** 60 feet (must see target)
+- **Effect:** Target one creature. Make opposed check: your Wisdom + Space Mastery vs their Wisdom + Luck (Will save). If you win (more successes), you can read their surface thoughts for 1 minute. You sense their emotional state and immediate intentions. You know what they're thinking about in the moment, but not deep memories or secrets unless they're actively thinking about them. They can repeat the save at the start of each of their turns (1 success required).
+- **Usage:** Uses 1 Channel Divinity
+
+### Philosopher's Insight
+- **Action Cost:** 1 [Minor] action
+- **Range:** Self
+- **Effect:** For 10 minutes, you gain the following benefits:
+  - You automatically see through all illusory effects (no check needed)
+  - You know when creatures speak lies (though not what the truth is)
+  - You have **Fortune** on Perception and Investigate checks
+- **Usage:** Uses 1 Channel Divinity
+
+---
+
+## PANTHEON GENERALIST - Servant of the Eight
+
+The generalist can use any of the following Channel Divinity options, choosing which deity to invoke each time:
+
+### From Alkira:
+**Guided Strike** - Grant ally Fortune on their next attack roll
+
+### From Ambis:
+**Preserve Life** - Heal creatures within 30 feet (distribute Wisdom × Tier HP, can't exceed half max)
+
+### From Athore:
+**Zone of Truth** - Create 15ft radius where creatures cannot lie (Will save to resist)
+
+### From Enschede:
+**Glimpse of Destiny** - Grant ally Fortune on their next roll within 1 minute
+
+### From Hirnaloyta:
+**Speak with Nature** - Communicate with plants and beasts for 10 minutes
+
+### From Nevil:
+**Guide the Soul** - Stabilize dying creature and improve their stabilization chances
+
+### From Rudlu:
+**Blessing of the Trickster** - Grant creature Fortune on next roll
+
+### From Shu-Jahan:
+**Philosopher's Insight** - See through illusory effects, detect lies, Fortune on Perception/Investigate for 10 minutes
+
+**Usage:** You have Channel Divinity uses equal to your tier per long rest, but you can choose which deity to invoke each time. This versatility is the generalist's strength.
+
+---
+
+## Evil Divine Casters
+
+### Dragon Cult Devotee
+
+For evil characters who worship the ancient daemons known as Dragons instead of the Pantheon of Eight. Dragon cultists believe dragons were/are the true gods, superior to the Eight. Their magic is dark, selfish, and corrupting.
+
+**Patron Options (choose one of the eight dragons):**
+1. **Aq-Yin-To** - Water Dragon
+2. **Char-Talt** - Air Dragon
+3. **Har-Ten-Mo** - Earth Dragon
+4. **Kylo** - Fire Dragon
+5. **Luk-Anda** - Positive Dragon
+6. **Sein-Tuk-Tak** - Negative Dragon
+7. **Tiet-Amor** - Time Dragon
+8. **Garro-Leth** - Space Dragon
+
+**Mechanical Framework:**
+- Use the same mechanical structure as Divine Gift
+- Dragon patron determines Primary (+2) energy based on dragon's nature; player chooses Secondary (+1) energy
+- Channel Divinity options are corrupted/twisted versions of the Eight's abilities
+- GM should create custom Channel Divinity options reflecting the dragon's personality and goals
+
+
+### Twisted Denomination
+
+For characters who worship a corrupted version of one of the Eight.
+
+**Examples:**
+- **Ja'Alkira Extremists** (Bellicose) - Believe only Alkira matters, rejecting the other seven. Mechanically identical to Alkira patron but with fanatical roleplay.
+- **Death Cult of Nevil** - Worship Nevil as god of murder and undeath rather than natural death. Same mechanics as Nevil patron but perverted purpose.
+- **Tyrant's Justice** - Athore worship twisted to oppression, cruelty, and tyranny rather than righteous justice.
+- **Dark Fortune** - Rudlu worship focused on cursing enemies and stealing luck rather than playful trickery.
+
+**Mechanical Framework:**
+- Choose one of the Eight as patron
+- Use normal Divine Gift mechanics for that deity
+- Flavor and roleplay reflect the corruption
+- GM may impose consequences for betraying the deity's true nature (loss of powers, divine retribution, etc.)
+
+---
+
+
+### Invoker (-5)
+**Requirements:** Charisma ≥ 3
+
+You have discovered the connection between spoken words and magic. You are a diabolist, awakened to magical power through research or accident rather than born with it. Through study and practice, you learned that certain sounds and syllables are the true names of forces and concepts and have inherent power when spoken by one who understands them.
+
+When you speak true names, the syllables manifest as visible violet light in the air. Ancient glyphs and runic symbols materialize around you as each word of power is pronounced. Your eyes flash with violet radiance when the weave completes, then return to normal. The words themselves seem to echo with unnatural resonance, leaving shimmering afterimages of sound made visible.
+
+These words of power are rarely from any spoken language known to scholars. They may be fragments of primordial speech, echoes from the outer planes, or sounds that existed before language itself. Each invoker's pronunciation is unique. What matters is understanding the concept behind the sound, not perfect replication. You use Charisma as your Casting Stat for weaving.
+
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 5 Magical Mastery skills corresponding to your 5 energies (start at rank 2). You can weave magic using all 5 of these energies.
+
+Roll 5d8, assign to five Magical Potentials.
+
+**Assign your Potentials**
+Air Potential = + 2 (max 8). Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Positive Potential = + 1. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Choose three of the remaining energies (Earth, Fire, Water, Space, Time or Negative) and assign the remaining rolls as desired.
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2).
+
+#### Words of Power
+A number of times per short rest equal to your current Tier, spend 1 [Combat] action to speak a word of power. All allies you can see within 30 feet subtract 1 from both dice on their next roll. Additionally, your next weave cast before the end of your next turn benefits from the resonance: Subtract 1 from one targeting die result of your choice on that weave.
+Invoker weaves require that you have line of sight to targets of your weaves. If you cannot see your target, you cannot speak their true name or bind them with your magic.
+
+### Infuser (-5)
+**Requirements:** Intelligence ≥ 3
+
+You have discovered how to channel magical energy directly into physical objects. You are a diabolist. Awakened to magical power through research and experimentation rather than born with it. Through careful study of how pneuma interacts with matter, you learned to infuse temporary magical properties into items, creating enchanted objects that hold power for brief periods.
+
+When you infuse an object, violet light flows from your hands into the item like liquid energy. Glyphs and symbols briefly shimmer across the object's surface before fading into the material itself. Your eyes flash with violet radiance as the infusion completes, then return to normal. Infused items glow faintly with violet light while holding your magic, and leave trailing motes of energy when used.
+
+Unlike mages who channel energy through themselves, or invokers who speak power into existence, you transfer magical energy directly from your pneuma into physical objects. The object becomes a temporary reservoir of power, holding the effect until triggered or until the magic fades. This requires understanding both magical theory and the material properties of what you're enchanting. You use Intelligence as your Casting Stat for effects.
+
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 5 Magical Mastery skills corresponding to your 5 energies (start at rank 2). You can weave magic using all 5 of these energies.
+
+Roll 5d8, assign to five Magical Potentials.
+
+**Assign Potentials**
+Primary Energy Potential = + 2 (max 8). Choose any of the four elemental energies. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Secondary Potential = + 1. Choose any energy. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+Choose three of the remaining energies and assign the remaining rolls as desired.
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 5 Potentials + (Intelligence × 2) + Con + (Total Mastery ÷ 2).
+
+#### Imbue Item
+A number of times per short rest equal to your current Tier, spend 1 [Combat] action and touch a weapon or piece of armor. For 1 minute, infused weapons deal +4 elemental damage on every hit (choose the energy type from your five pact energies at the time of infusion)Bonus energy damage added by infusion uses full DR. If the target has vulnerability or immunity to the energy type, apply that to the energy damage portion only; infused armor grants +3 DR for the duration. You may have a number of active infusions simultaneously equal to your current Tier. An infusion ends when the duration expires or when you imbue the same item again.
+
+
+#### Gain Craft Skill
+Infusers specialize in their work and choose a corresponding craft keyword. The like likely choices are Armorsmith or Weaponsmith. The character gains Rank 2 in the chosen Craft skill.
+
+### Sorcerous Origin (-7)
+**Requirements:** Wisdom ≥ 3
+
+You are an Arcanist, your eyes glow with constant violet light from birth, marking your inherent connection to the planes. Unlike Mageborn who study magic intellectually or clerics who channel divine power, your magic flows from perfect self-knowledge and unshakeable inner certainty. Your pneuma is so clear, so completely understood, that reality itself recognizes and responds to your true nature.
+
+Where Mageborn study external principles and clerics channel external deities, sorcerers have achieved something rarer: perfect internal understanding. You've looked within and seen yourself completely, not just your surface thoughts or emotions, but your fundamental nature across space, time, and probability.
+
+Your weaves flow naturally, almost effortlessly, as if reality is simply acknowledging what already is. When you cast, magic moves through you like water finding its level, inevitable and serene. Your Force of Will manifestation determines how this manifests aesthetically. You use Wisdom as your Casting Stat for weaving.
+
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 2). You can weave magic using all 8 of these energies.
+
+Roll 8d8, assign to eight Magical Potentials.
+
+**Choose Manifestation**
+Your force of will manifestation determines your Primary energy which aligns with your deepest truth and grants unique benefits.
+Choose Secondary Focus (any other energy)= + 1. Use the potential roll that will allow you to make this 8 or as close to 8 as possible.
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2).
+
+#### Resonant Weaving (Passive)
+You ignore the first point of overspending penalty on all energy types. If you have Fire Mastery 4 and spend 6 Energy (2 over), you only add +1 to both dice instead of +2
+
+#### Harmonic Weaving
+When you make a weaving roll, you can declare "Harmonic" to reroll one die (Potential OR Mastery, your choice). You must take the new result. You can use this ability a number of times per long rest equal to your Tier.
+
+#### Unchanging Stone (Earth/Fire)
+**Story:** *"I know my nature completely—I am solid as stone, constant as truth"*
+**Primary Energy:** Choose Earth or Fire → Apply +2 bonus to reach 8 maximum (assign roll strategically)
+**Manifestation Benefits:**
+-   **Stone's Certainty:** Subtract 1 from both dice on saves against effects that would change your form or nature (Beastial Transformation, petrification, forced movement, mind control that alters personality)
+-   **Enduring Form:** +1 max HP per tier, DR = 1 when unarmored
+
+#### Thread of Fate (Time/Positive)
+**Story:** *"I perceive my place in the pattern—I see where I'm meant to be"*
+**Primary Energy:** Choose Time or Positive → Apply +2 bonus to reach 8 maximum (assign roll strategically)
+**Manifestation Benefits:**
+-   **Fate's Insight:** Once per long rest, reroll any attack roll, saving throw, or ability check after seeing the result
+-   **Glimpse Ahead:** Once per short rest, gain a cryptic one-sentence hint about immediate danger or opportunity in the next 10 minutes (ask GM)
+
+#### Death's Lesson (Fire/Negative)
+**Story:** *"I understand survival is my truth—I've seen death and know it's not my path"*
+**Primary Energy:** Choose Fire or Negative → Apply +2 bonus to reach 8 maximum (assign roll strategically)
+**Manifestation Benefits:**
+-   **Survivor's Truth:** When reduced below half HP, gain Fortune on your next weaving roll and temporary HP equal to your Wisdom (once per long rest)
+-   **Death's Defiance:** Subtract 1 from both dice when making death saves
+
+#### Perfect Self-Perception (Space/Air)
+**Story:** *"I perceive myself completely across space and time—I exist in total self-awareness"*
+**Primary Energy:** Choose Space or Air → Apply +2 bonus to reach 8 maximum (assign roll strategically)
+**Manifestation Benefits:**
+-   **Omnipresent Mind:** Once per short rest, as [Free] action, perceive from any point within 60 feet for 1 round
+-   **Mental Clarity:** Subtract 1 from both dice on saves against mental effects (Charmed, Frightened, possession)
+
+**Common Mechanical Elements:**
+-   Choose **Secondary Focus** (any other energy): Apply +1 bonus to reach 8 maximum (assign roll strategically)
+-   Use **Wisdom** as Casting Stat
+-   Gain **8 Magical Mastery skills** corresponding to the 8 energies (start at rank 2)
+-   Can weave sorcerous magic using all 8 energies
+-   **Energy Pool:** Sum of 8 Potentials + (Wisdom × 2) + Con + (Total Mastery ÷ 2)
+
+**Sorcerer Signature Abilities:**
+-   **Resonant Weaving (Passive):** You ignore the first point of overspending penalty on all energy types. If you have Fire Mastery 4 and spend 6 Energy (2 over), you only add +1 to both dice instead of +2
+-   **Harmonic Weaving:** When you make a weaving roll, you can declare "Harmonic" to reroll one die (Potential OR Mastery, your choice). You must take the new result. You can use this ability a number of times per long rest equal to your Wisdom + Tier
+
+**Visual Aesthetics by Manifestation:**
+-   **Unchanging Stone:** Weaves manifest as solid, geometric constructs—crystalline shields, perfectly straight beams, enduring walls of force
+-   **Thread of Fate:** Weaves shimmer with silver-white threads, as if woven from probability itself, showing glimpses of what must be
+-   **Death's Lesson:** Weaves burn with fierce, defiant energy—not chaotic but purposeful, like a forge fire that refuses to die
+-   **Perfect Self-Perception:** Weaves are impossibly precise, beautiful in their symmetry, reflecting your complete awareness of position and form
+"
+
+### Eldritch Pact (-7)
+**Requirements:** Charisma ≥ 3
+
+You are a diabolist, awakened to magical power through trauma rather than born with it. At some moment of desperate need, when death seemed certain or loss unbearable, you reached out to *anything* that might answer. Something did. You don't fully understand what you called to, what answered, or what price you'll pay. You only know that power came when you needed it most, and now you're bound to something beyond mortal understanding.
+
+Your eyes glow with violet light only when you complete a weave, the power flowing from your pact through your pneuma at the moment of casting. When your eyes flash your pact's influence is unmistakable. Between castings, your eyes appear normal, but careful observers might notice subtle signs like strange reflections, unnatural shadows, or otherworldly glimmers. The nature of what you've bound yourself to manifests in your magic's appearance. You use Charisma as your Casting Stat for weaving.
+
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 5 Magical Mastery skills corresponding to your 5 energies (start at rank 2). You can weave magic using all 5 of these energies.
+
+Roll 5d8, assign to five Magical Potentials.
+
+**Choose Pact**
+Choose you survival pact type which determines energy access and how your pact abilities manifest.
+
+### The Desperate Deal
+You promised something to an entity in your darkest hour and this power came immediately. Something deliberately vague answered. It communicated in euphemisms and has never appeared directly. It sends you signs, omens, and whispers. You agreed without reading the proverbial contract. Your magic feels like borrowed tools that are functional but foreign.
+
+#### The Survivor's Bargain
+You should have died but you didn't. Something intervened on your behalf and you might not even know what it was. There is the possibility that it doesn't even know you exist and you may have stolen its power accidentally. Your magic feels scavenged and cobbled together as if incomplete.
+
+#### The Answered Cry
+You screamed into the void. The void answered that one time. Now it is silent and you feels like you are being observed constantly. You don't know what it wants from you or if it's good, evil, or indifferent. Your magic feels like a gift from an absent benefactor.
+
+#### The Stolen Shard
+You found, touched, or stole something that was not meant for you. This power wasn't offered; you took it. The source might not even be sentient; It could be residual power from a dead entity, a trapped daemon, or a lost fragment of a god. You don't know if the original owner wants it back or if taking it cursed you. Your magic feels unstable, like wielding something too powerful for mortal hands.
+
+**Choose Pact Conduit**
+
+#### Pact Conduit - Scavenged Power
+Whenever you weave using Space energy as primary, you immediately regain Energy equal to half the Energy spent on that weave (rounded down, minimum 1). 
+
+#### Pact Conduit - Borrowed Vitality
+Whenever you weave using Positive energy as primary, the target gains +4 temporary HP that lasts until your next short rest. 
+
+#### Pact Conduit - Void Resonance
+Whenever you weave using Air energy as primary, you may target one additional creature within range (make separate weaving rolls for each). 
+
+#### Pact Conduit - Unstable Surge
+Whenever you weave using your Primary Energy (Fire), add +4 damage OR extend duration by 1 round. 
+
+**Choose Pact Gift**
+
+#### Pact Gift - Pact Siphon
+When you reduce a hostile creature to 0 HP, gain temporary HP equal to your Charisma + tier
+
+#### Pact Gift - Pact Healing
+Once per short rest, heal yourself or touched ally for HP equal to Charisma × tier.
+
+#### Pact Gift - Pact Speech
+You can communicate telepathically with any creature you can see within 30 feet
+
+#### Pact Gift - Fear of the Pact
+Once per short rest, as [Combat] action, target within 30 feet makes Will save versus your Charisma + Primary Mastery. If you win by 1+ successes, target gains the Frightened  condition for 1 minute (they can repeat save each turn).
+
+**Choose Primary Energy**
+Primary energy Potential +2. Use the potential roll that will allow you to make this 8 or as close to 8 as possible
+
+**Choose Secondary Energy**
+Secondary energy Potential +1. Use the potential roll that will allow you to make this 8 or as close to 8 as possible
+
+**Choose Remaining Energies**
+Choose three of the remaining energies and assign the remaining rolls as desired.
+
+#### Pact Magic
+Your energy pool regenerates on short rest as well as on long rest.
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
+
+**Common Mechanical Elements:**
+-   Use **Charisma** as Casting Stat
+-   Gain **5 Magical Mastery skills** corresponding to your 5 energies (start at rank 2)
+-   Can weave eldritch magic using only these 5 energies
+-   **Energy Pool:** Sum of 5 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
+-   **Pact Magic:** Energy regenerates on **short rest** instead of long rest
+
+**Pact Nature (Roleplay Guidance):**
+-   **Survivor's Bargain:** You might not even know what intervened. Could be anything. Possibly doesn't even know you exist—you may have stolen its power accidentally. Your magic feels scavenged, cobbled together.
+-   **Desperate Deal:** Something deliberately vague answered. Uses euphemisms. Never appears directly. Sends signs, omens, whispers. You agreed without reading the contract. Your magic feels like borrowed tools—functional but foreign.
+-   **Answered Cry:** Silent. Watchful. Grants power but gives no guidance. Feels like being observed constantly. You don't know if it's good/evil/neutral or what it wants from you. Your magic feels like a gift from an absent benefactor.
+-   **Stolen Shard:** Might not even be sentient—could be residual power from dead entity, trapped daemon, or lost fragment of god. You don't know if the original owner wants it back or if taking it cursed you. Your magic feels unstable, like wielding something too powerful for mortal hands.
+
+### Alchemical Tradition (-5)
+**Requirements:** Intelligence ≥ 3
+
+You have no innate connection to the planes. Your eyes do not glow, your pneuma carries no magical resonance, and in a room full of mages you are indistinguishable from anyone else. What you have is a precise understanding of how magical energy concentrates within natural objects, and how those energies can be extracted, combined, and directed toward purposeful effect. Where a Mageborn reaches into the planes through their pneuma, you reach into the physical world and find what was already there.
+
+Your magic requires forethought, preparation, and access to the right materials. It is slower and more deliberate than any other tradition. In exchange, your preparations persist indefinitely, can be used by anyone, and accumulate across the days between crises in ways that no other tradition's power can.
+
+Alchemical preparations produce the same violet light as any magical effect when activated. The Alchemist themselves shows no glowing eyes, and no motes of energy trailing from their hands. The magic is in the bottles, not the person holding them. An Alchemist's workspace tells its own story: stained surfaces, unusual smells, carefully labeled containers, and the faint violet residue of completed work. Use Intelligence as your effective Casting Stat for preparation identification and activation resolution.
+
+#### Craft: Alchemist
+Gain Craft: Alchemist as a skill (starts at rank 2). See Crafting section for details. May reference the full weave list to determine energy requirements for any desired preparation.
+
+#### Thrown Delivery
+May substitute up to 2 points worth of supporting energy used for range by designating a preparation as a thrown item. The physical arc of the throw provides the spatial delivery that energy would otherwise create. Thrown preparations use Dexterity + Ranged Combat to hit a target or location (range 30/60 ft as a thrown weapon). Area effects, barriers, and other effects still require point cost spending.
+
+#### Daily Preparations
+After each long rest, the Alchemist spends 1 hour in routine morning preparation mixing basic materials they always keep on hand into a fresh set of simple preparations for the day ahead. No Craft check required and no component cost is needed. Unused daily preparations expire at the next long rest.
+- Quantity: Intelligence score + Craft: Alchemist rank.
+- Energy cost limit: Total energy cost per preparation must be 4 or less.
+- Energy types: Common only (Fire, Air, Earth, Water).
+
+#### Short Rest Preparations
+During any 1-hour short rest, the Alchemist may spend part of their rest time producing a small set of field preparations from their portable kit. No Craft check required and no component cost is needed. Unused short rest preparations expire at the next long rest.
+-  Quantity: Craft: Alchemist rank.
+- Energy cost limit: Total energy cost per preparation must be 4 or less.
+- Energy types: Common only (Fire, Air, Earth, Water).
+
+#### Field Improvisation
+When the Alchemist needs a specific preparation that they did not make during daily or short rest production, they may improvise one in the field using 10 minutes of focused work. Unused field improvised preparations expire at the next long rest
+- Quantity: Always 1.
+- Energy cost limit: Total energy cost must be 4 or less.
+- Energy types: Common only (Fire, Air, Earth, Water).
+- Add 1 to both dice on the Craft: Alchemist check.
+
+#### Crafted Preparations (Downtime)
+The Alchemist's most powerful productions require dedicated downtime, physical components, and a proper workspace. Crafted preparations are the only way to access Uncommon or Rare energy types, produce complex multi-energy effects, and build a stockpile that persists indefinitely across sessions. A Craft: Alchemist check is required. Components cost gold or must be harvested. Crafted preparations never expire.
+- Yield: Craft: Alchemist rank.
+- Energy cost: Up to Craft rank × 2.
+- Energy types: All types, subject to component availability.
+- Time: Determined by total energy cost.
+- Critical Failure on Mixing: If the Craft: Alchemist check during any crafted preparation session results in a critical failure (double 8s), the preparation activates immediately upon completion. Offensive preparations release in the workspace. The Alchemist and any nearby creatures may be affected. The preparation is consumed. 
+
+### Summoner (-7)
+**Requirements:** Charisma ≥ 3
+
+Your pneuma does not channel inward like other magic users. It radiates outward, broadcasting across the barriers between the material plane and the external planes in a signal that daemons perceive and orient toward. You have learned to shape that broadcast with enough precision to call specific beings to your location, holding them in the material world for as long as the connection remains energetically coherent.
+
+Your eyes glow violet only when a summoning completes, the light fading once the daemon stabilizes its presence. While a summoned daemon is present, a faint violet luminescence surrounds it; visible evidence of the pneuma-tether anchoring it here. You use Charisma as your Casting Stat for weaving.
+
+The Nature of Summoning: Daemons you call are not bound or compelled. They arrive because your pneuma is resonant to them and they stay because the connection holds. They will generally cooperate, but they are not mindless tools. A daemon asked to act against its fundamental nature may refuse regardless of disposition.
+
+Summoned daemons understand the summoner's spoken instructions and will follow them within the bounds of their disposition and nature. Issuing instructions beyond a single simple command costs the summoner 1 [Minor] action on their turn. Summoned creatures act on their own initiative using their bestiary stat block.
+
+**Drakes:** Drakes are the spawn of the great dragon daemons of legend. Summoning them is not available at character creation and cannot be accessed through normal feat investment. A summoner who discovers this possibility through play does so through story, not mechanics.
+
+**Generate Potentials**
+You gain access to the magical potential and mastery system. You gain 8 Magical Mastery skills corresponding to the 8 energies (start at rank 2). You can weave magic using all 8 of these energies.
+
+Roll 8d8, assign to eight Magical Potentials.
+
+**Primary Resonance**
+Choose Primary Resonance from the seven options below. This determines which daemon categories your pneuma naturally attracts and grants your energy bonuses. Assign rolls strategically to maximize bonuses without waste:
+
+**Calculate your Energy Pool**
+Energy Pool: Sum of 8 Potentials + (Charisma × 2) + Con + (Total Mastery ÷ 2)
+
+#### Summoning Weaves
+Summoning uses the native energy of the daemon's home plane as Primary and Space as supporting for all summons EXCEPT for Aberrations. Abertations use Space as the Primary and Time as the secondary.
+
+Summoning is a Complex Weave costing 2 [Combat] actions. The creature appears in an unoccupied space within 30 feet of the summoner.
+
+**Tier Gap Penalty:** For each Tier the summoned creature exceeds the summoner's current Tier, add 1 to both dice on the weaving roll. The targeting roll is unaffected by Tier gap.
+
+**Summoning Limit:** You can have summoned daemons with combined Tier equal to your Charisma score present simultaneously. Summoning beyond this limit causes the oldest summoned creature to immediately return to its plane.
+
+**Dismissal:** You can dismiss your summoned daemon as a [Free] action at any time.
+
+| Primary Source | Daemon Categories | Primary Bonus | Secondary Bonus |
+|---|---|---|---|
+| Earth | Elementals, Fae, Nephilim | Earth +2 | Water +1 |
+| Air | Elementals, Fae, Nephilim | Air +2 | Fire +1 |
+| Fire | Elementals, Fae, Nephilim | Fire +2 | Air +1 |
+| Water | Elementals, Fae, Nephilim | Water +2 | Earth +1 |
+| Positive | Outsiders | Positive +2 | Space +1 |
+| Negative | Shadow creatures, Outsiders | Negative +2 | Space +1 |
+| Space | Aberrations | Space +2 | Time +1 |
+
+**Targeting Success**
+The results of the targeting roll for the summoning weave determine the disposition (social attitude) of the summoned daemon.
+- **0 successes:** The call reaches the planes but the connection collapses. Energy is spent, no creature arrives. On a critical failure (double 8s), something briefly crossed over on its own terms before departing (GM discretion on narrative consequence.)
+- **1 success:** The creature arrives Indifferent. It will follow clear simple instructions that don't conflict with its nature. Complex commands require a basic Empathy check.
+- **2 successes:** The creature arrives Cooperative. It follows instructions within its capability without requiring persuasion, provided those instructions don't violate its fundamental nature. Summoner may specify a daemon category within their accessible types.
+- **3 successes:** The creature arrives Friendly. It actively tries to fulfill the summoner's intent rather than the literal instruction. Summoner may describe more specific characteristics and the GM honors reasonable requests.
+
+**Summoning Tier**
+| Tier | Cost |
+|---|---|
+| 1/4 | 1 |
+| 1/2 | 2 |
+| 1 | 3 |
+| 2 | 4 |
+| 3 | 5 |
+| 4 | 6 |
+| 5 | 7 |

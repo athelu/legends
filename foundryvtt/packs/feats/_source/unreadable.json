@@ -14,14 +14,14 @@
       "attributes": {
         "charisma": 5
       },
-      "skills": "deception:5",
+      "skills": "deception:6",
       "feats": [
         "Cunning Feint"
       ],
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Targets add 1 to both dice when making Empathy or Wisdom checks to resist your Feint attempts. Additionally, if a target fails to resist your feint, they cannot attempt to resist your next feint against them this combat — they automatically fail the opposed check.</p>",
+    "benefits": "<p>Targets add 1 to both dice when making Empathy or Wisdom checks to resist your Feint attempts. Additionally, if a target fails to resist your feint, they cannot attempt to resist your next feint against them this combat.</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

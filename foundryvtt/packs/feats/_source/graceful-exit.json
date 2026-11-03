@@ -12,9 +12,9 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "agility": 3
+        "charisma": 4
       },
-      "skills": "deception:3",
+      "skills": "deception:4",
       "feats": [],
       "tier": 0,
       "other": ""

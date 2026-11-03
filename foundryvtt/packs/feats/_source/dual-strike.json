@@ -12,15 +12,14 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "strength": 3,
-        "agility": 3
+        "strength": 4
       },
-      "skills": "meleeCombat:3",
+      "skills": "meleeCombat:5",
       "feats": [
         "Two-Weapon Fighting"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When both attacks from a Two-Weapon Fighting action hit the same target, deal bonus damage equal to your Strength score. This is applied once after both attacks resolve.</p>",
     "usageType": "special",

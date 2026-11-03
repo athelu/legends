@@ -221,7 +221,7 @@ DR: Full DR applies to physical damage
 ### Fighter Performance
 - **Strengths:**
   - Higher HP pool (32 vs 24)
-  - Better melee combat (Agi 3 + Melee 3 vs Agi 3 + Melee 0)
+  - Better melee combat (Agil 3 + Melee 3 vs Agil 3 + Melee 0)
   - Strength bonus on Margin 2+ hits
   
 - **Weaknesses:**

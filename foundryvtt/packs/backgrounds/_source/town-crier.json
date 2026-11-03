@@ -1,0 +1,57 @@
+{
+  "_id": "ea0994c00b83efc9",
+  "name": "Town Crier",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>Your voice was the city's voice. You memorized proclamations, delivered verdicts, announced deaths and marriages and market days, and did all of it loudly enough to carry over street noise to people who weren't paying attention. The work made you a fixture — present at public moments, recognizable to nearly everyone, trusted to transmit information accurately. You also heard a great deal that was never meant for general circulation.</p>"
+    },
+    "startingXP": 56,
+    "skillBonuses": "Perform 3, Society 3, History 3, Perception 3, +56 XP",
+    "startingEquipment": "Common clothes\nuniform or livery\nlow boots",
+    "suggestedFeats": "",
+    "features": "Public Voice: Officials, guild masters, and civic administrators know the value of a reliable channel to the public and maintain good relations with those who hold the role. Even as a former crier, you are recognized by the administrative class as a trustworthy institutional figure. You can approach civic authorities and public officials with an expectation of cooperation, and you often receive advance word of public announcements before they reach the general population.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "perform": 3,
+      "society": 3,
+      "history": 3,
+      "perception": 3
+    },
+    "craftKeyword": null,
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "Common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Uniform/Livery",
+        "quantity": 1,
+        "originalText": "uniform or livery",
+        "sourceId": "2a559b2da4deccd5"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Low",
+        "quantity": 1,
+        "originalText": "low boots",
+        "sourceId": "ef7b8aa832f26893"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!ea0994c00b83efc9"
+}

@@ -12,16 +12,16 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "strength": 5
+        "strength": 6
       },
-      "skills": "meleeCombat:5",
+      "skills": "meleeCombat:6",
       "feats": [
         "Crushing Advance"
       ],
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Your DR reduction from Crushing Advance increases to 4. Additionally when you hit with a [Two-Handed] weapon at Margin 2, the target cannot use reactions until the start of their next turn.</p>",
+    "benefits": "<p>The Target's DR reduction from Crushing Advance increases to 4. Additionally when you hit with a [Two-Handed] weapon at Margin 2, the target cannot use reactions until the start of their next turn.</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

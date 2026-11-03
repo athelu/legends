@@ -15,7 +15,7 @@
         "cost": 5
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 4
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = half damage (14), 2 = full damage (28), 3 = enhanced damage (36) + prone",
-    "weavingRoll": "Water Potential + Water Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Water Potential + Water Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Water Mastery",
     "appliesEffects": [
       {

@@ -1,0 +1,22 @@
+{
+  "_id": "0ac05bf51c79aa29",
+  "name": "Protector's Oath - Minor (2)",
+  "type": "flaw",
+  "img": "icons/svg/hazard.svg",
+  "system": {
+    "description": {
+      "value": "<p>Sworn to protect your party, family, or a specific small group. You must honor your oath to protect, even at great personal risk.</p>"
+    },
+    "pointValue": 2,
+    "flawType": "mental",
+    "severity": "minor",
+    "mechanicalEffects": "",
+    "roleplayingImpact": "",
+    "canBeOvercome": false,
+    "overcomeMethod": "",
+    "requiresGMApproval": false,
+    "notes": ""
+  },
+  "effects": [],
+  "_key": "!items!0ac05bf51c79aa29"
+}

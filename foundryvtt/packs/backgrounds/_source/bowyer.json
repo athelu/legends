@@ -1,0 +1,56 @@
+{
+  "_id": "4ad2a78a088e85bd",
+  "name": "Bowyer",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>You shaped the tools that put arrows into the air. Everything from the bend of the stave to the tension of the string passed through your hands, and you developed an eye for what holds under pressure and what fails at the worst possible moment.</p>"
+    },
+    "startingXP": 48,
+    "skillBonuses": "Craft: Bowyer 4, Ranged Combat 3, Perception 3, +48 XP",
+    "startingEquipment": "Work clothes\nwork gloves\nwork boots",
+    "suggestedFeats": "",
+    "features": "Read the Weapon: When examining a ranged weapon, you immediately identify any flaws, modifications, or exceptional qualities it has. You can assess whether ammunition is properly made for a given bow.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "craft": 4,
+      "rangedCombat": 3,
+      "perception": 3
+    },
+    "craftKeyword": "Bowyer",
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Work",
+        "quantity": 1,
+        "originalText": "Work clothes",
+        "sourceId": "e9a99873e17f718a"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Gloves, Work",
+        "quantity": 1,
+        "originalText": "work gloves",
+        "sourceId": "56d09fece9f4243e"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Work",
+        "quantity": 1,
+        "originalText": "work boots",
+        "sourceId": "6a6394e3ffbccf86"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!4ad2a78a088e85bd"
+}

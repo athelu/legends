@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4
-      },
+      "attributes": {},
       "skills": "acrobatics:4",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 4"
     },
     "benefits": "<p>When unarmored, subtract 1 from both defense dice.</p>",
     "usageType": "passive",

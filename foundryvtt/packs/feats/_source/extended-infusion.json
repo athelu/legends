@@ -14,7 +14,7 @@
       "attributes": {
         "intelligence": 4
       },
-      "skills": "craft:4",
+      "skills": "craft:5",
       "feats": [
         "Infuser"
       ],
@@ -36,7 +36,8 @@
       "text": "Passive enhancement to all infusion durations"
     },
     "keywords": [
-      "[Magic]"
+      "[Magic]",
+      "[Infuser]"
     ],
     "notes": "",
     "effects": []

@@ -10,7 +10,7 @@
     "pointValue": 3,
     "flawType": "supernatural",
     "severity": "moderate",
-    "mechanicalEffects": "<ul>\n<li>Persuasion with good-aligned NPCs: Add 2 to die results</li>\n<li>Intimidate: Subtract 2 from die results</li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Persuasion with good-aligned NPCs: Add 2 to skill die results</li>\n<li>Intimidate: Subtract 2 from skill die results</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>Whether hauling cargo for merchants or transporting passengers, you developed a reputation for getting through when others turned back. The work was steady but monotonous, and eventually, you decided that if you were going to risk your life on dangerous roads anyway, you might as well do it for more interesting reasons.</p>"
     },
-    "startingXP": 40,
-    "skillBonuses": "Wilderness 2, Athletics 2, Society 1, Perception 1, +40 XP",
+    "startingXP": 56,
+    "skillBonuses": "Wilderness 3, Athletics 3, Society 3, Perception 3, +56 XP",
     "startingEquipment": "Whip\ntraveler's clothes\nbedroll\nwork gloves\nwork boots",
     "suggestedFeats": "",
     "features": "Beast Handler: You have expertise with draft animals and vehicles.",
@@ -16,10 +16,10 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "wilderness": 2,
-      "athletics": 2,
-      "society": 1,
-      "perception": 1
+      "wilderness": 3,
+      "athletics": 3,
+      "society": 3,
+      "perception": 3
     },
     "craftKeyword": null,
     "itemGrants": [

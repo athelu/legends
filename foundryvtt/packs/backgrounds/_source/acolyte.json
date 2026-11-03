@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You spent your early days in a religious monastery or cloister. You may have traveled out into the world to spread the message of your faith or because you cast away the teachings of your religion, but deep down you'll always carry within you the lessons you learned. Whether those lessons bring you comfort or haunt you probably depends on the day.</p>"
     },
-    "startingXP": 36,
-    "skillBonuses": "Religion 3, Empathy 1, History 1, +36 XP",
+    "startingXP": 48,
+    "skillBonuses": "Religion 4, Empathy 3, History 3, +48 XP",
     "startingEquipment": "Iron Holy symbol\nprayer book\nRobe\nincense stick x 10\ncommon clothes\nshoes",
     "suggestedFeats": "",
     "features": "Shelter of the Faithful: You can receive free healing and care at temples of your faith.",
@@ -16,9 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "religion": 3,
-      "empathy": 1,
-      "history": 1
+      "religion": 4,
+      "empathy": 3,
+      "history": 3
     },
     "craftKeyword": null,
     "itemGrants": [

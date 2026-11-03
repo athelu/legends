@@ -1,0 +1,170 @@
+{
+  "_id": "a92b80a22cbd8346",
+  "name": "Name: Pit Fiend",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 7,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 210,
+      "max": 210,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 7,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 7,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 7,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 30,
+      "fly": 60,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "outsider",
+    "creatureSubtype": "immune to fire and Negative damage; resistant to cold, lightning (+4 DR",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Truesight 120 ft, Devil's Sight",
+    "tactics": "A Pit Fiend enters a battle and immediately establishes hierarchy. Infernal Command suppresses any other Fiend present. Fear Presence scatters weaker opponents. It uses Hellfire on grouped enemies and Crushing Fists to control priority targets. A Summoner who has negotiated clearly will find it an extraordinarily capable ally. A Summoner who assumed good faith will find the agreement technically honored in ways they did not intend.",
+    "attacksNotes": "<p>Crushing Fist [Combat]: Melee attack (Agil 7 + Melee Combat 7), Reach: 10 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 20 damage (13 + 7 Str)</li>\n<li><strong>Margin 2:</strong> 20 damage, DR halved (round up); target makes Fortitude [Easy] save or is Grappled</li>\n<li><strong>Margin 3:</strong> 20 damage, DR halved (round up); target Grappled and Restrained (no save).</li>\n</ul>\n<p>Hellfire [Combat]: Ranged attack (Dex 3 + Ranged Combat 6), Range: 120 ft, 20-foot diameter</p>\n<ul>\n<li><strong>Margin 1:</strong>: 20 fire damage (17 + 3 Dex).</li>\n<li><strong>Margin 2:</strong> 20 fire damage, DR halved (round up) + Ignited condition.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Infernal Command: The Pit Fiend can issue commands to any Fiend of lower TR within 300 feet as a [Free] action. Those Fiends must succeed on a Will [Hard] save to refuse. If other Fiends are present on the battlefield from any source, they must make this save or follow the Pit Fiend's orders. Regeneration 10: The Pit Fiend regains 10 HP at the start of its turn unless it took Positive damage this round. Fear Presence: All non-Fiend creatures within 60 feet make a Will [Easy] save at the start of combat. Failure: Frightened for 1 minute. Success: Immune to this Pit Fiend's Fear Presence for 24 hours. Resilient Defense (3/day). When the Pit Fiend fails a saving throw, it may choose to succeed instead. Binding Contract: Any Pit Fiend that agrees to be summoned expects something in return. This is a GM narrative element, not a mechanical one — but the Pit Fiend will not forget. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Pit Fiend",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!a92b80a22cbd8346"
+}

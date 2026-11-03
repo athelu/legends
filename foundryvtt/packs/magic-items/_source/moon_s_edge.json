@@ -1,0 +1,38 @@
+{
+  "_id": "b6fe985b101258bc",
+  "name": "Moon's Edge",
+  "type": "weapon",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": {
+      "value": "<p><strong>Type:</strong> Weapon (Katana) <strong>Rarity:</strong> Rare <strong>Attack Bonus:</strong> 1 <strong>Weight:</strong> 5 <strong>Description:</strong> A katana with a blackened blade and a brilliant, razor-sharp edge that catches the light like a crescent moon. The tsuba features cut-out phases of the moon; the tsuka is inlaid to match. On a critical success (double 1s on the attack roll), the target takes an additional 1d8 slashing damage beyond the normal critical result.</p>\n<p>> <strong>Foundry:</strong> `attackBonus: 1`, `criticalDamageBonus: \"1d8\"`. The bonus damage is rolled automatically and added to the damage total whenever `criticalSuccess` is true on the attack roll.</p>"
+    },
+    "primaryEnergy": "",
+    "charges": {
+      "value": 0,
+      "max": 0,
+      "recharge": "",
+      "rechargePeriod": "dawn"
+    },
+    "properties": [],
+    "grantedWeaves": [],
+    "isMagical": true,
+    "identified": true,
+    "weight": 5.0,
+    "cost": 0,
+    "quantity": 1,
+    "equipped": false,
+    "rarity": "rare",
+    "requiresAttunement": false,
+    "notes": "",
+    "implementType": "weapon",
+    "attackBonus": 1,
+    "damage": {
+      "base": 4,
+      "type": "bludgeoning",
+      "properties": []
+    }
+  },
+  "effects": [],
+  "flags": {}
+}

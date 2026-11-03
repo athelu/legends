@@ -1,0 +1,170 @@
+{
+  "_id": "f79e8656fb77f6ed",
+  "name": "Name: Shadow",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 2,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 3,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 12,
+      "max": 12,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 0.25
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 2,
+      "acrobatics": 0,
+      "stealth": 6
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "undead",
+    "creatureSubtype": "immune to poison, Poisoned, disease, exhaustion; vulnerable to Positive damage; does not need air, food, drink, or sleep",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft",
+    "tactics": "Shadows avoid bright light and exploit dim areas. They stack Strength Drain against a single target, attempting to reduce them to 0 Strength. A Summoner who calls one should be prepared for it to ignore tactical nuance in favor of finding the darkest spot in the room and hunting from there.",
+    "attacksNotes": "<p>Strength Drain [Combat]: Melee attack (Agil 6 + Melee Combat 2), Reach: 5 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 6 Negative damage (4 + 2 Str) + target's Strength reduced by 1 for 1 hour.</li>\n<li><strong>Margin 2:</strong> 6 Negative damage, DR halved (round up) + Strength reduced by 2 for 1 hour + target makes Fortitude [Easy] save  or gains the Weakened condition.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Shadow Form: While in dim light or darkness, the Shadow has DR 8 against all non-magical damage. Positive-energy damage ignores this entirely. Amorphous: The Shadow can move through a space as narrow as 1 inch. Sunlight Weakness: In bright light, the Shadow has Misfortune on all rolls. Shadow Spawn: If a non-undead creature is killed by Strength Drain-induced Strength reduction (Strength reduced to 0), it rises as a Shadow under the controlling summoner's influence at the start of its next turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Shadow",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!f79e8656fb77f6ed"
+}

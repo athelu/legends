@@ -1,0 +1,170 @@
+{
+  "_id": "22bc681bb50ea4ad",
+  "name": "Name: Sprite",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Sprites are scouts and poison delivery systems. They shoot from concealment, apply poison conditions, and retreat before retaliation. Heart Sight makes them genuinely valuable as truth-detection assets — a summoner who needs to know whether an NPC is lying during a negotiation and has a Cooperative Sprite available has an advantage that most participants in the negotiation will not notice. Nature's Ally extends their intelligence-gathering to the natural environment. A summoner who understands what Sprites are good at will use them for information, not damage.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": true,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 1,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 3,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 9,
+      "max": 9,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 0.25
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 4,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 3,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 2,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 0,
+      "acrobatics": 0,
+      "stealth": 4
+    },
+    "size": "tiny",
+    "speed": {
+      "walk": 20,
+      "fly": 40,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fae",
+    "creatureSubtype": "Fortune on saves vs charm effects",
+    "hpMultiplier": 3,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Low-Light Vision **Initiative Bonus:** +5 (Agil 5)",
+    "tactics": "Sprites are excellent scouts and poison delivery systems. They rarely engage in melee, preferring to shoot from concealment. A Cooperative Sprite that has used Heart Sight can report back honestly on whether an NPC is trustworthy — one of the most genuinely useful things a low-tier summoner can get.",
+    "attacksNotes": "<p>Shortbow [Combat]: Ranged attack (Dex 5 + Ranged Combat 2), Range: 40/80 ft 1 success: 8 damage (3 + 5 Dex) + Fortitude [Easy] save or Poisoned (Weak) for 1 minute. (Short Range) 2 successes: 8 damage, DR halved (round up) + Fortitude [Easy] save or Poisoned (Weak) for 1 hour.</p>",
+    "specialAbilitiesNotes": "<p>Heart Sight: Once per encounter, when the Sprite looks at a creature's eyes, it automatically discerns the creature's emotional state and whether it is lying. Will saves and Deception checks against the Sprite add 1 to both dice for creatures whose heart it has read. Nature's Ally: The Sprite can communicate with beasts and plants as if they share a language.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Sprite",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 0.5,
+    "height": 0.5,
+    "disposition": -1
+  },
+  "_key": "!actors!22bc681bb50ea4ad"
+}

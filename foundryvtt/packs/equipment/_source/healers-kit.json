@@ -21,7 +21,7 @@
       "max": 0
     },
     "consumable": false,
-    "associatedSkill": "",
+    "associatedSkill": "Medicine",
     "toolBonus": 0,
     "rarity": "",
     "requiresAttunement": false,

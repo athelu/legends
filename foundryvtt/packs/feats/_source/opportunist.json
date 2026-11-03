@@ -11,13 +11,11 @@
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
-      "attributes": {
-        "agility": 4
-      },
-      "skills": "meleeCombat:4",
+      "attributes": {},
+      "skills": "meleeCombat:5",
       "feats": [],
       "tier": 0,
-      "other": ""
+      "other": "Agil 5"
     },
     "benefits": "<p>Once per round, when an ally hits a target within your melee reach, you may use a [Reaction] to make one melee attack against that target.</p>",
     "usageType": "reaction",

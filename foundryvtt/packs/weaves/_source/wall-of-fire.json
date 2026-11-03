@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals [[/damage 16 type=fire]] damage to creatures within 10 feet (choose side when casting). Passing through wall deals [[/damage 24 type=fire]] damage. Provides total cover.</p>"
+      "value": "<p>Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals [[/damage 16 type=fire]] damage to creatures within 10 feet (choose side when casting). Passing through wall in either direction deals [[/damage 24 type=fire]] damage. Provides total cover.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -15,7 +15,7 @@
         "cost": 5
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 7
       }
     },
@@ -23,7 +23,7 @@
     "duration": "10 minutes",
     "target": "area",
     "savingThrow": "reflex",
-    "effect": "Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals 16 fire damage to creatures within 10 feet (choose side when casting). Passing through wall deals 24 fire damage. Provides total cover.",
+    "effect": "Create wall of fire at medium range up to 60 feet long, 20 feet high, 1 foot thick (or ring 20 feet diameter). One side deals 16 fire damage to creatures within 10 feet (choose side when casting). Passing through wall in either direction deals 24 fire damage. Provides total cover.",
     "effectType": "utility",
     "damage": {
       "base": 0,
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = half damage (8), 2= full damage (16), 3 = enhanced damage (24) + ignited",
-    "weavingRoll": "Fire Potential + Fire Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Fire Potential + Fire Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Fire Mastery",
     "appliesEffects": [
       {

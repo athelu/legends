@@ -1,0 +1,57 @@
+{
+  "_id": "3366aa845d0f210b",
+  "name": "Monk",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>A monastery gave you years of structured contemplation, physical discipline, and access to texts that most people never see. You were trained to think clearly, act deliberately, and maintain equanimity under conditions designed to test it. Whether you left the order willingly or were expelled, the habits it built in you are not things you can simply set aside.</p>"
+    },
+    "startingXP": 56,
+    "skillBonuses": "Religion 3, Athletics 3, History 3, Medicine 3, +56 XP",
+    "startingEquipment": "Robe\njournal\nshoes",
+    "suggestedFeats": "",
+    "features": "Open Cloister: Monastic orders recognize one another's discipline regardless of doctrine. Temples, abbeys, and scriptoriums of faiths other than your own will extend you hospitality, library access, and respectful discourse when you approach as a fellow student of contemplative practice. Clergy and religious scholars treat you as a peer rather than a stranger.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "religion": 3,
+      "athletics": 3,
+      "history": 3,
+      "medicine": 3
+    },
+    "craftKeyword": null,
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Robe",
+        "quantity": 1,
+        "originalText": "Robe",
+        "sourceId": "cead7ceedf80bfbc"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Journal",
+        "quantity": 1,
+        "originalText": "journal",
+        "sourceId": "1b02ead55fc70f66"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!3366aa845d0f210b"
+}

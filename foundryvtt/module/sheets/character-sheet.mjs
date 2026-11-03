@@ -227,7 +227,11 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
   tabGroups = { primary: "main" };
 
   get title() {
-    return this.document.name || "Character";
+    const name = this.document.name || "Character";
+    const prog = this.document.system?.progression;
+    if (prog?.phase === 'creation') return `${name} — Creation`;
+    if (prog?.manualOverride) return `${name} — Override`;
+    return name;
   }
 
   /** @override - Configure the window title to show just the actor name */
@@ -362,6 +366,11 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
 
     if (isCurrencyField) {
       updateData[fieldName] = Math.max(0, Math.floor(Number(numValue) || 0));
+      input.value = updateData[fieldName];
+    }
+
+    if (fieldName.startsWith('system.skills.')) {
+      updateData[fieldName] = Math.max(2, Math.floor(Number(numValue) || 2));
       input.value = updateData[fieldName];
     }
 
@@ -835,6 +844,12 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
       current: 1,
       xp: Number(xp || 0)
     };
+  }
+
+  /** @override */
+  _updateFrame(options) {
+    super._updateFrame(options);
+    if (this.window?.title) this.window.title.textContent = this.title;
   }
 
   /** @override */
@@ -1762,23 +1777,23 @@ export class D8CharacterSheet extends HandlebarsApplicationMixin(ActorSheetV2) {
     const currentOrigin = normalizeOriginKey(this.actor.system?.biography?.origin);
     const selectedIndex = Math.max(0, options.findIndex((option) => option.key === currentOrigin));
     const result = await foundry.applications.api.DialogV2.wait({
-      window: { title: `Choose Nationality: ${this.actor.name}` },
+      window: { title: `Choose Ethnicity: ${this.actor.name}` },
       content: `
         <form style="padding: 12px; display: flex; flex-direction: column; gap: 10px;">
-          <div><strong>${escapeHtml(primaryAncestry.name)}</strong> nationality determines the native language assigned during creation.</div>
+          <div><strong>${escapeHtml(primaryAncestry.name)}</strong> ethnicity determines the native language assigned during creation.</div>
           <div class="form-group">
-            <label>Nationality</label>
+            <label>Ethnicity</label>
             <select name="originChoice" style="width: 100%; padding: 6px;">
               ${options.map((option, index) => `<option value="${index}" ${index === selectedIndex ? 'selected' : ''}>${escapeHtml(option.label)}${option.requiresGMApproval ? ' (GM approval)' : ''}</option>`).join('')}
             </select>
           </div>
-          <div style="font-size: 12px; color: #666;">Some nationalities may require GM approval based on campaign scope.</div>
+          <div style="font-size: 12px; color: #666;">Each ethnicity grants the listed skill bonuses and language profile.</div>
         </form>
       `,
       buttons: [
         {
           action: 'apply',
-          label: 'Apply Nationality',
+          label: 'Apply Ethnicity',
           default: true,
           callback: (dialogEvent, button, dialog) => options[Number.parseInt(dialog.element.querySelector('[name="originChoice"]')?.value || `${selectedIndex}`, 10)] || null,
         },

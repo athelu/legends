@@ -1,0 +1,195 @@
+{
+  "_id": "574581f47938a23c",
+  "name": "Name: Drowned Mariner",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 4,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 5,
+      "acrobatics": 0,
+      "stealth": 3
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 20,
+      "fly": 0,
+      "climb": 0,
+      "swim": 40,
+      "burrow": 0
+    },
+    "creatureType": "undead",
+    "creatureSubtype": "Shadow",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "understands the local regional language it knew in life; cannot speak"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "Drowned Mariners attack from below docks, wrecks, and dark water. They grapple the nearest target and drag it away from the vessel before turning on anyone who attempts a rescue. They do not pursue prey onto dry land unless commanded or protecting the site of their death.",
+    "attacksNotes": "<p>Rusting Cutlass [Combat]: Melee attack (Agil 7 + Melee Combat 5), Reach: 5 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 10 damage (6 + 4 Str)</li>\n<li><strong>Margin 2:</strong> 10 damage, DR halved (round up)</li>\n</ul>\n<p>Drowning Grip: When the Drowned Mariner hits with Margin 2 while in water, the target must make a Fortitude save against the mariner's Strength 4 + Athletics 4. On a failure, the target is Grappled and pulled 10 feet toward deeper water.</p>",
+    "specialAbilitiesNotes": "<p>Waterlogged Persistence: The Drowned Mariner has Fortune on checks to resist forced movement while in water. It can remain submerged indefinitely. Drag Below: A creature Grappled by the Drowned Mariner while submerged gains the Drowning condition. The creature can escape normally, but the mariner always attempts to pull it deeper.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [
+    {
+      "_id": "cc17a938c1fb01b4",
+      "name": "Rusting cutlass, torn sailor's coat, barnacle-covered belt, length of chain",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": {
+          "value": "<p>Rusting cutlass, torn sailor's coat, barnacle-covered belt, length of chain</p>"
+        },
+        "equipmentType": "adventuring-gear",
+        "isMagical": false,
+        "identified": true,
+        "weight": 1,
+        "cost": 0,
+        "quantity": 1,
+        "equipped": true,
+        "rarity": "",
+        "requiresAttunement": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_key": "!items!cc17a938c1fb01b4"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Drowned Mariner",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!574581f47938a23c"
+}

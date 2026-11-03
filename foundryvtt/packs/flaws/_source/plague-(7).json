@@ -5,12 +5,12 @@
   "img": "icons/svg/hazard.svg",
   "system": {
     "description": {
-      "value": "<p>Spread disease to others.</p>"
+      "value": "<p>You are a disease carrier but are yourself Immune to the disease. All within 10 feet of you must make daily Fortitude saves (1 success required) or contract the disease.</p>"
     },
     "pointValue": 7,
     "flawType": "supernatural",
     "severity": "major",
-    "mechanicalEffects": "<ul>\n<li>Immune yourself</li>\n<li>All within 10 feet must make daily Fortitude saves or contract disease</li>\n</ul>",
+    "mechanicalEffects": "",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

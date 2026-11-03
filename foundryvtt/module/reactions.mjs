@@ -619,7 +619,7 @@ async function _reactUnarmedStrike(reactor, target, cfg) {
     content: `<div class="legends-combat-result reaction-result">` +
       `<p><strong>${reactor.name}</strong> uses <em>Flowing Guard</em> [Reaction]: ` +
       `unarmed strike against <strong>${target?.name ?? 'attacker'}</strong> (−1 Luck).</p>` +
-      `<p><em>Roll Agi + Melee vs defender. Margin 1: unarmed base. Margin 2+: +${strVal} Str damage.</em></p></div>`,
+      `<p><em>Roll Agil + Melee vs defender. Margin 1: unarmed base. Margin 2+: +${strVal} Str damage.</em></p></div>`,
   });
 }
 

@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>All creatures in 15-foot cube originating from you take [[/damage 12 type=thunder]] damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.</p>"
+      "value": "<p>A thunderous burst erupts outward from you in all directions. All creatures within 10 feet take [[/damage 12 type=thunder]] damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -19,12 +19,12 @@
         "cost": 1
       }
     },
-    "range": "Self (15-foot cube)",
+    "range": "Self (10-foot diameter sphere)",
     "duration": "Instantaneous",
-    "target": "area",
+    "target": "sphere",
     "savingThrow": "fortitude",
-    "effect": "All creatures in 15-foot cube originating from you take 12 thunder damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.",
-    "effectType": "control",
+    "effect": "A thunderous burst erupts outward from you in all directions. All creatures within 10 feet take 12 thunder damage and make Fortitude saves. Compare your targeting successes to their save successes. Those you beat are pushed 10 feet away from you. Unsecured objects are also pushed.",
+    "effectType": "protection",
     "damage": {
       "base": 0,
       "type": "",
@@ -64,7 +64,8 @@
     "deliveryMethod": "save",
     "tags": [
       "aoe",
-      "control"
+      "control",
+      "defensive"
     ]
   },
   "effects": [],

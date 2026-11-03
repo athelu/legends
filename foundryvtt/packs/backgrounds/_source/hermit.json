@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You lived a life of solitude. Adventuring might represent your first foray out among other people in some time. This might be a welcome reprieve from solitude or an unwanted change, but in either case, you're likely still rough around the edges.</p>"
     },
-    "startingXP": 36,
-    "skillBonuses": "Wilderness 3, Medicine 1, Religion 1, +36 XP",
+    "startingXP": 48,
+    "skillBonuses": "Wilderness 4, Medicine 3, Religion 3, +48 XP",
     "startingEquipment": "Robe\nherbalism kit\nshoes",
     "suggestedFeats": "",
     "features": "Solitary Discovery: During your isolation, you discovered something significant (work with GM). People seek your wisdom, though they may not understand it.",
@@ -16,9 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "wilderness": 3,
-      "medicine": 1,
-      "religion": 1
+      "wilderness": 4,
+      "medicine": 3,
+      "religion": 3
     },
     "craftKeyword": null,
     "itemGrants": [

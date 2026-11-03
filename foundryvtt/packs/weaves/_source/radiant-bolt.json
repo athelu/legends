@@ -15,7 +15,7 @@
         "cost": 4
       },
       "supporting": {
-        "type": "space",
+        "type": "air",
         "cost": 3
       }
     },
@@ -53,7 +53,7 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = half damage (4), 2= full damage (8), 3 = enhanced damage (16) + blinded",
-    "weavingRoll": "Positive Potential + Positive Mastery / Space Potential + Space Mastery",
+    "weavingRoll": "Positive Potential + Positive Mastery / Air Potential + Air Mastery",
     "targetingRoll": "Casting Stat + Positive Mastery",
     "appliesEffects": [
       {

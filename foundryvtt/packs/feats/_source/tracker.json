@@ -5,14 +5,14 @@
   "img": "icons/environment/wilderness/tree-oak.webp",
   "system": {
     "description": {
-      "value": "<p>Every creature leaves a trail and you can read these signs like a book, following trails that others wouldn't even notice exist.</p>"
+      "value": "<p>Every creature leaves a trail and you can read these signs like a book.</p>"
     },
     "flavorText": "",
     "xpCost": 40,
     "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "wilderness:3, perception:3",
+      "skills": "wilderness:4, perception:4",
       "feats": [],
       "tier": 0,
       "other": ""

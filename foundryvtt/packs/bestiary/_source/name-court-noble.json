@@ -1,0 +1,170 @@
+{
+  "_id": "eb5fe785f356ee17",
+  "name": "Name: Court Noble",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Court Nobles are the first Fae that a summoner genuinely needs to approach carefully. They are Charming in the mechanical sense and the social one — Fae Authority means their words have compulsive weight, Glamour Veil removes a single target from the fight entirely, and Fae Court Blade applies Charm through combat as effectively as through conversation. Ancient Compact is the key to getting the most from them: a summoner who treats the summoning as an exchange and phrases instructions precisely will find a Court Noble an extraordinarily capable ally. One who treats it as a tool will find it technically cooperative in ways that somehow never quite achieve the intended result. Court Nobles have had centuries to practice the gap between the letter and the spirit of an agreement.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": true,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 7,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "persuasion": 7,
+      "athletics": 0,
+      "perception": 7,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 6,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 7,
+      "arcane": 6,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 7,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 7,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 40,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fae",
+    "creatureSubtype": "",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Low-Light Vision, Perfect Sight 60 ft",
+    "tactics": "",
+    "attacksNotes": "<p>Fae Court Blade [Combat]: Melee attack (Agil 5 + Melee Combat 7), Reach: 5 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 damage (8 + 4 Str) + 4 psychic damage (Ignore DR).</li>\n<li><strong>Margin 2:</strong> 12 damage, DR halved (round up) + 4 psychic damage; target Charmed for 1 minute treating the Court Noble as a trusted acquaintance, cannot attack it; Will [Hard] save to resist.</li>\n<li><strong>Margin 3:</strong> 12 damage, DR halved (round up) + 4 psychic damage + Charmed; no save; Charmed target also cannot target the Court Noble's designated allies with ### Attacks or harmful abilities for the duration.</li>\n</ul>\n<p>Glamour Bolt [Combat]: Ranged attack (Dex 4 + Ranged Combat 6), Range: 60 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 16 psychic damage (12 + 4 Dex); target Disoriented until end of their next turn.</li>\n<li><strong>Margin 2:</strong> 16 psychic damage, DR halved (round up) + Dazed for 1 minute; Will [Easy]save each round to end early.</li>\n<li><strong>Margin 3:</strong> 16 psychic damage, DR halved (round up) + Charmed for 1 minute; no save.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Fae Authority: The Court Noble's words carry weight that transcends ordinary persuasion. When it speaks to a creature directly and that creature fails a Will save (opposed by Cha 8 + Persuasion 7), the creature follows one reasonable instruction as if it had received a Command weave. \"Reasonable\" is defined by the Court Noble, whose standards differ significantly from mortal ones. Ancient Compact: The Court Noble is bound by Fae law to honor precise agreements. A summoner who phrases their instructions as a formal exchange — offering something the Court Noble values in return for specific service — will find the Court Noble follows those instructions with absolute precision and finds no gaps to exploit. A summoner who simply commands will find the Court Noble technically compliant in ways they did not intend. Glamour Veil (1/encounter): As a [Combat] action, wraps one creature within 30 feet in glamour. That creature believes they are somewhere else — in a safe location, in a pleasant memory, in a dream. They take no actions for 1 minute; Will [Hard] save at the start of each turn to end. Effect ends immediately if the creature takes damage. Resilient Defense (2/day): When the Court Noble fails a saving throw, it may choose to succeed instead. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Court Noble",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!eb5fe785f356ee17"
+}

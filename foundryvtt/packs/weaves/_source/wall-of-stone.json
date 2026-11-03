@@ -5,7 +5,7 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 8. Can shape into crenellations, bridges, etc.</p>"
+      "value": "<p>Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 8.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
@@ -16,14 +16,14 @@
       },
       "supporting": {
         "type": "space",
-        "cost": 2
+        "cost": 5
       }
     },
     "range": "Medium, 60 ft. (60 feet long, 20 feet high)",
-    "duration": "Permanent",
+    "duration": "10 minutes",
     "target": "area",
     "savingThrow": "none",
-    "effect": "Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 8. Can shape into crenellations, bridges, etc.",
+    "effect": "Create permanent wall of stone at medium range up to 60 feet long, 20 feet high, 6 inches thick (or 30 feet long and 1 foot thick). Each 10ft section has HP = 16 + Earth Potential, DR 8.",
     "effectType": "utility",
     "damage": {
       "base": 0,
@@ -60,6 +60,7 @@
     "tags": [
       "defensive",
       "ranged",
+      "ritual",
       "utility",
       "wall"
     ]

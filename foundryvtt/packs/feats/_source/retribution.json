@@ -21,7 +21,7 @@
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Once per round when a creature hits you with a melee attack, they take bludgeoning damage equal to your Strength score as the shield absorbs and redirects the impact back into them. No action required — this triggers automatically on the hit.</p>",
+    "benefits": "<p>Once per round when a creature hits you with a melee attack, they take bludgeoning damage equal to your Strength score as the shield absorbs and redirects the impact back into them. No action required; this triggers automatically on the hit.</p>",
     "usageType": "special",
     "usage": {
       "mode": "special",

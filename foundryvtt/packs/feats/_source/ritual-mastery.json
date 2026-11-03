@@ -12,7 +12,7 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {},
-      "skills": "arcane:3",
+      "skills": "arcane:4",
       "feats": [
         "Mageborn"
       ],

@@ -10,7 +10,7 @@
     "pointValue": 5,
     "flawType": "physical",
     "severity": "moderate",
-    "mechanicalEffects": "<ul>\n<li>Missing hand/foot: Add 2 to related skill die results</li>\n<li>Missing arm/leg: Related skills impossible or add 4 to die results</li>\n</ul>",
+    "mechanicalEffects": "<ul>\n<li>Missing hand/foot: Add 2 to related skill die results</li>\n<li>Missing arm/leg: Related skills impossible or add 4 to skill die results</li>\n</ul>",
     "roleplayingImpact": "",
     "canBeOvercome": false,
     "overcomeMethod": "",

@@ -1,0 +1,195 @@
+{
+  "_id": "d4de9b11fc8f2a50",
+  "name": "Name: Town Guard",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Professional city guards - trained, disciplined, paid soldiers who take their duty seriously. Unlike militia (part-timers) or thugs (criminals), these are career guardsmen with years of experience. They know the law, recognize troublemakers, and maintain order. Respect from citizens, feared by criminals. Will show mercy to those who surrender but are hardened enough to use lethal force when necessary. Loyal to their city and fellow guards - won't abandon posts or comrades easily.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 3,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 3,
+      "intimidate": 3,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 3,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 3,
+      "investigate": 0,
+      "society": 3,
+      "meleeCombat": 4,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "humanoid",
+    "creatureSubtype": "",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "local (region-dependent)"
+    ],
+    "sensesNotes": "Normal",
+    "tactics": "Town guards are professional soldiers who patrol cities and enforce laws. They use formation tactics, working in pairs or small groups. When facing threats, they use Defensive Stance to protect citizens while calling for backup. Against dangerous foes, they use Power Attack to end fights quickly before reinforcements arrive. The heater shield provides excellent defense against both melee (Fortune on defense rolls) and ranged ### Attacks (force Misfortune on attackers).\nGuards prioritize de-escalation and arrest over lethal force when possible, using Intimidate 3 to command compliance. They know the local area (Society 3) and can quickly summon help. Against multiple weak opponents, they hold defensive positions. Against single strong opponents, they use Power Attack aggressively while one guard runs for help.\nShield Master's once-per-combat negation is saved for critical moments - blocking a potentially fatal blow to themselves or buying time for civilians to escape.",
+    "attacksNotes": "<p>Longsword [Combat]: Melee attack (Agil 8 + Melee Combat 4), Reach: 5 ft One-handed:</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 damage (8 + 4 Str)</li>\n<li><strong>Margin 2:</strong> 12 damage, DR halved (round up)</li>\n</ul>\n<p>Two-handed (versatile):</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 damage (8 + 4 Str)</li>\n<li><strong>Margin 2:</strong> 12 damage, DR halved (round up)</li>\n</ul>\n<p>With Power Attack (declared before roll): Add 1 to both dice, deal +4 damage on hit</p>",
+    "specialAbilitiesNotes": "<h4>Feats</h4>\n<p>Defensive Stance: Can enter defensive stance where opponents add 1 to both attack dice when attacking you. Toggle on/off at start of turn. Used when outnumbered or protecting others. Danger Sense: Subtract 1 from both dice on Reflex saves against effects you can see. Represents trained awareness. Power Attack: Declare before rolling - add 1 to both die results and deal +4 damage on hit. Risk/reward for ending fights quickly. Shield Master: Subtract 1 from both dice on Reflex saves while using shield. Once per combat as a [Reaction], completely negate one attack that would hit you Purchased Feats: Power Attack (1 at TR 1) With Heater Shield: Gains Fortune on defensive melee rolls</p>\n<h4>Variants</h4>\n<p>Gate Guard: Replace Intimidate 3 with Investigate 3, focused on spotting smugglers and checking papers Archer Guard: Replace Melee 4 with Ranged 4, use longbow instead of longsword, swap Power Attack for Precise Shot Sergeant: Add +1 Cha (becomes 3), can lead 4-6 guards effectively</p>",
+    "reactionsNotes": "<p>Ranged Defense (from heater shield): [Reaction] when targeted by a ranged attack, force Misfortune on that attack. Shield Block (from heater shield): [Reaction] when hit while wielding the shield, choose one: gain +4 DR against this attack or force the attacker to reroll one success die. Shield Master Negation: Once per combat as a [Reaction], completely negate one attack that would hit you.</p>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [
+    {
+      "_id": "704bf0d0ab7c4fbe",
+      "name": "Longsword, heater shield, chain mail, uniform, manacles, work gloves, work boots",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": {
+          "value": "<p>Longsword, heater shield, chain mail, uniform, manacles, work gloves, work boots</p>"
+        },
+        "equipmentType": "adventuring-gear",
+        "isMagical": false,
+        "identified": true,
+        "weight": 1,
+        "cost": 0,
+        "quantity": 1,
+        "equipped": true,
+        "rarity": "",
+        "requiresAttunement": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_key": "!items!704bf0d0ab7c4fbe"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Town Guard",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!d4de9b11fc8f2a50"
+}

@@ -338,7 +338,7 @@ def parse_armor_md(md_file):
 def main():
     script_dir = Path(__file__).parent.parent.parent
 
-    md_file = script_dir / "ttrpg" / "armor.md"
+    md_file = script_dir / "ttrpg" / "10-armor.md"
     if md_file.exists():
         print("Parsing armor.md...")
         items = parse_armor_md(md_file)

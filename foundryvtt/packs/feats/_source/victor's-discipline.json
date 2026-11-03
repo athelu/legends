@@ -11,17 +11,14 @@
     "xpCost": 80,
     "classification": "legendary",
     "prerequisites": {
-      "attributes": {
-        "agility": 7,
-        "strength": 7
-      },
+      "attributes": {},
       "skills": "meleeCombat:7",
       "feats": [
         "Decisive Strike",
         "Unyielding Advance"
       ],
       "tier": 0,
-      "other": ""
+      "other": "Str or Agil 7"
     },
     "benefits": "<p>Your mastery of combat grants permanent benefits:</p>\n<ul>\n<li>The Multiple Action Penalty for [Combat] actions is reduced by 1 (second action: no penalty; third action: add 1 instead of 2)</li>\n<li>Precision Training now triggers on matching pairs where only one die needs to be a success (if Pressure Fighter's 6th action bonus hasn't already provided this, it is now always active)</li>\n</ul>",
     "usageType": "special",
@@ -39,7 +36,8 @@
     },
     "keywords": [
       "[Combat]",
-      "[Discipline]"
+      "[Discipline]",
+      "[Legendary]"
     ],
     "notes": "",
     "effects": [

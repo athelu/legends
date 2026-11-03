@@ -1,0 +1,170 @@
+{
+  "_id": "27e2e7b529813a1e",
+  "name": "Name: Shade",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Shades are the most basic expression of the Shadow Plane's predatory nature; a barely-manifested hunger that drains strength through contact. Their combat capability is minimal against anything that fights back effectively, but Strength Drain accumulates across hits in a way that compounds. Shadow Form in darkness makes them genuinely difficult to put down through mundane means.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 1,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 6,
+      "max": 6,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 1,
+      "acrobatics": 0,
+      "stealth": 5
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "shadow",
+    "creatureSubtype": "passive",
+    "hpMultiplier": 3,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft",
+    "tactics": "",
+    "attacksNotes": "<p>Strength Drain [Combat]: Melee attack (Agil 6 + Melee Combat 1), Reach: 5 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 5 Negative damage (4 + 1 Str); target's Strength reduced by 1 for 1 hour.</li>\n<li><strong>Margin 2:</strong> 5 Negative damage, DR halved (round up); Strength reduced by 2 for 1 hour; target gains Weakened condition.</li>\n<li><strong>Margin 3:</strong> 5 Negative damage, DR halved (round up); Strength reduced by 3 for 1 hour; Weakened; target makes Fortitude [Easy] save or movement speed reduced by 10 until Strength restores.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Amorphous: Can move through spaces as narrow as 1 inch without squeezing. Shadow Form: While in dim light or darkness, DR increases to 6 against all non-magical damage and non-Positive energy damage. Positive energy ignores this entirely. Shadow Spawn: If a non-undead creature is killed while their Strength has been reduced to 0 by the Shade's ### Attacks, a new Shade rises from their shadow at the start of the next round. This new Shade is not under the summoner's control — it is a free Shadow creature that has just arrived on the prime material through the death. The summoner's Summoning Limit does not apply to it.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Shade",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!27e2e7b529813a1e"
+}

@@ -5,13 +5,13 @@
   "img": "icons/magic/abjuration/abjuration-purple.webp",
   "system": {
     "description": {
-      "value": "<p>Target gains +2 Intelligence for the duration. Recalculate Intelligence-based checks and casting values if Intelligence is the target's casting stat. If this changes max Energy Pool, current Energy does not increase when this weave is applied. This bonus does not stack with other beneficial Intelligence modifiers; use the highest bonus.</p>"
+      "value": "<p>Target gains +2 Intelligence for the duration. The void-like clarity of Space energy strips away distraction and sharpens cognition. Recalculate Intelligence-based checks and casting values if Intelligence is the target's casting stat. If this changes max Energy Pool, current Energy does not increase when this weave is applied. This bonus does not stack with other beneficial Intelligence modifiers; use the highest bonus.</p>"
     },
     "weaveType": "complex",
     "actionCost": 2,
     "energyCost": {
       "primary": {
-        "type": "negative",
+        "type": "space",
         "cost": 4
       },
       "supporting": {
@@ -23,7 +23,7 @@
     "duration": "1 minute",
     "target": "single",
     "savingThrow": "none",
-    "effect": "Target gains +2 Intelligence for the duration. Recalculate Intelligence-based checks and casting values if Intelligence is the target's casting stat. If this changes max Energy Pool, current Energy does not increase when this weave is applied. This bonus does not stack with other beneficial Intelligence modifiers; use the highest bonus.",
+    "effect": "Target gains +2 Intelligence for the duration. The void-like clarity of Space energy strips away distraction and sharpens cognition. Recalculate Intelligence-based checks and casting values if Intelligence is the target's casting stat. If this changes max Energy Pool, current Energy does not increase when this weave is applied. This bonus does not stack with other beneficial Intelligence modifiers; use the highest bonus.",
     "effectType": "buff",
     "damage": {
       "base": 0,
@@ -53,8 +53,8 @@
       }
     },
     "targetingSuccessScaling": "0 = fails, 1 = 1 round, 2 = 1 minute, 3 = 10 minutes",
-    "weavingRoll": "Negative Potential + Negative Mastery / Time Potential + Time Mastery",
-    "targetingRoll": "Casting Stat + Negative Mastery",
+    "weavingRoll": "Space Potential + Space Mastery / Time Potential + Time Mastery",
+    "targetingRoll": "Casting Stat + Space Mastery",
     "appliesEffects": [
       {
         "effectId": "Nevil's Clarity",

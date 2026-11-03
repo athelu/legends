@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>You pursued formal education at a university or academy, studying alongside peers and engaging in scholarly debate. Your education was broad rather than deep, covering philosophy, natural sciences, mathematics, and the arts. You've attended lectures, defended theses, and networked with the academic elite. Now you seek to apply your theoretical knowledge to real-world problems.</p>"
     },
-    "startingXP": 32,
-    "skillBonuses": "History 3, Society 2, +32 XP",
+    "startingXP": 48,
+    "skillBonuses": "History 4, Writing 3, Investigate 3, +48 XP",
     "startingEquipment": "General topic book\nquill\nink\npapyrus parchment x5\nrobe\nshoes",
     "suggestedFeats": "",
     "features": "Academic Network: You have connections with universities and scholars, allowing you to access libraries, seek expert advice, and be recognized in academic circles.",
@@ -16,8 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "history": 3,
-      "society": 2
+      "history": 4,
+      "writing": 3,
+      "investigate": 3
     },
     "craftKeyword": null,
     "itemGrants": [

@@ -1,0 +1,66 @@
+{
+  "_id": "b28d97436edd6caf",
+  "name": "Fletcher",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>Crafting projectiles is precise work, and the margins for error were small enough that carelessness had consequences you could trace back to yourself. You understand projectiles in a physical, technical sense that most archers never bother to develop, and that understanding transfers to situations where precision matters.</p>"
+    },
+    "startingXP": 56,
+    "skillBonuses": "Craft: Fletcher 3, Ranged Combat 3, Perception 3, Wilderness 3, +56 XP",
+    "startingEquipment": "Quiver\ncommon clothes\nwork gloves\nlow boots",
+    "suggestedFeats": "",
+    "features": "Field Fletching: You can produce functional arrows or bolts from natural materials during a short rest, requiring no tools beyond a knife and access to wood and feathers. The ammunition is serviceable but not sellable. You are also more likely to recover reusable ammunition after a battle.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "craft": 3,
+      "rangedCombat": 3,
+      "perception": 3,
+      "wilderness": 3
+    },
+    "craftKeyword": "Fletcher",
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Quiver",
+        "quantity": 1,
+        "originalText": "Quiver",
+        "sourceId": "1c52b8d0318cd715"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Common",
+        "quantity": 1,
+        "originalText": "common clothes",
+        "sourceId": "3c04add8a4f62030"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Gloves, Work",
+        "quantity": 1,
+        "originalText": "work gloves",
+        "sourceId": "56d09fece9f4243e"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Boots, Low",
+        "quantity": 1,
+        "originalText": "low boots",
+        "sourceId": "ef7b8aa832f26893"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!b28d97436edd6caf"
+}

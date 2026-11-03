@@ -17,9 +17,9 @@
       "skills": "",
       "feats": [],
       "tier": 0,
-      "other": "five skills at 3+"
+      "other": "five skills at 4+"
     },
-    "benefits": "<p>Rank 1 skills count as rank 2</p>",
+    "benefits": "<p>Rank 2 skills count as rank 3</p>",
     "usageType": "passive",
     "usage": {
       "mode": "passive",

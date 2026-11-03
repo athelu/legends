@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>Crumbling ruins called to you louder than the comforts of civilization. You've spent years piecing together fragments of lost empires, and you know that the greatest treasures aren't gold, they're answers. Adventuring might have started as just another dig, but you've discovered that sometimes the most interesting artifacts are still being used by their current owners.</p>"
     },
-    "startingXP": 32,
-    "skillBonuses": "History 3, Investigate 2, +32 XP",
+    "startingXP": 48,
+    "skillBonuses": "History 4, Investigate 3, Wilderness 3, +48 XP",
     "startingEquipment": "journal\nmap case\ntraveler's clothes\nwork boots",
     "suggestedFeats": "",
     "features": "Historical Insight: When examining ruins or artifacts, the character will know one useful historical fact or context clue.",
@@ -16,8 +16,9 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "history": 3,
-      "investigate": 2
+      "history": 4,
+      "investigate": 3,
+      "wilderness": 3
     },
     "craftKeyword": null,
     "itemGrants": [

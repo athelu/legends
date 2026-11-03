@@ -7,8 +7,8 @@
     "description": {
       "value": "<p>To the common folk, court life seems like an endless parade of balls and banquets. You know better. Every smile hides an agenda, every compliment is calculated, and one misstep can mean social death, or sometimes the regular kind. You learned to navigate these treacherous waters with grace, though whether you're fleeing court intrigue or pursuing it in a new arena is anyone's guess.</p>"
     },
-    "startingXP": 24,
-    "skillBonuses": "Persuasion 2, Society 2, Empathy 2, Perform 2, +24 XP",
+    "startingXP": 40,
+    "skillBonuses": "Persuasion 3, Society 3, Empathy 3, Perform 3, History 3, +40 XP",
     "startingEquipment": "Fine clothes\nsignet ring\nperfume\nshoes",
     "suggestedFeats": "",
     "features": "Court Connections: You know how to navigate noble society. Can gain audience with important figures and understand court politics.",
@@ -16,10 +16,11 @@
     "traits": "",
     "notes": "",
     "grantedSkills": {
-      "persuasion": 2,
-      "society": 2,
-      "empathy": 2,
-      "perform": 2
+      "persuasion": 3,
+      "society": 3,
+      "empathy": 3,
+      "perform": 3,
+      "history": 3
     },
     "craftKeyword": null,
     "itemGrants": [

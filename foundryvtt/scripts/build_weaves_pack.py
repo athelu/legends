@@ -497,10 +497,10 @@ def parse_weaves_md(ttrpg_dir, source_dir=None):
     
     # List of weave files to parse
     weave_files = [
-        'weaves(a-g).md',
-        'weaves(h-m).md',
-        'weaves(n-r).md',
-        'weaves(s-z).md'
+        '21-weaves(a-g).md',
+        '22-weaves(h-m).md',
+        '23-weaves(n-r).md',
+        '24-weaves(s-z).md'
     ]
     
     for weave_file in weave_files:

@@ -14,7 +14,7 @@
       "attributes": {
         "dexterity": 4
       },
-      "skills": "rangedCombat:3",
+      "skills": "rangedCombat:4",
       "feats": [
         "Throwing Arm"
       ],

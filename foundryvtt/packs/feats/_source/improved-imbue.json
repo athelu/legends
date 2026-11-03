@@ -12,16 +12,16 @@
     "classification": "standard",
     "prerequisites": {
       "attributes": {
-        "intelligence": 3
+        "intelligence": 5
       },
-      "skills": "craft:3",
+      "skills": "craft:5",
       "feats": [
         "Infuser"
       ],
       "tier": 0,
       "other": ""
     },
-    "benefits": "<p>Your Imbue Item ability improves: weapon infusions deal +[[/damage 8 type=elemental]] damage per hit instead of +4, and armor infusions grant +4 DR instead of +3. Durations are unchange</p>",
+    "benefits": "<p>Your Imbue Item ability improves: weapon infusions deal +[[/damage 8 type=elemental]] damage per hit instead of +4, and armor infusions grant +4 DR instead of +3. Durations are unchanged.</p>",
     "usageType": "active",
     "usage": {
       "mode": "active",

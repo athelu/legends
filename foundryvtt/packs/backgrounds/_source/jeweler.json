@@ -1,0 +1,57 @@
+{
+  "_id": "f63b547c2ba5a2fb",
+  "name": "Jeweler",
+  "type": "background",
+  "img": "icons/svg/book.svg",
+  "system": {
+    "description": {
+      "value": "<p>The jewelry trade sits at the intersection of craft, finance, and social currency, and you navigated all three with enough success to survive in a profession where trust is the primary material.</p>"
+    },
+    "startingXP": 56,
+    "skillBonuses": "Craft: Jeweler 3, Society 3, Persuasion 3, Perception 3, +56 XP",
+    "startingEquipment": "Fine clothes\nmagnifying glass\nshoes",
+    "suggestedFeats": "",
+    "features": "Appraiser's Eye: You can accurately assess the value of gems, jewelry, and precious metalwork at a glance. Merchants cannot easily deceive you on the worth of such items.",
+    "sampleNames": "",
+    "traits": "",
+    "notes": "",
+    "grantedSkills": {
+      "craft": 3,
+      "society": 3,
+      "persuasion": 3,
+      "perception": 3
+    },
+    "craftKeyword": "Jeweler",
+    "itemGrants": [
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Clothes, Fine",
+        "quantity": 1,
+        "originalText": "Fine clothes",
+        "sourceId": "55f402d8cc15c40f"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Magnifying Glass",
+        "quantity": 1,
+        "originalText": "magnifying glass",
+        "sourceId": "0c1ef171ce564a54"
+      },
+      {
+        "mode": "reference",
+        "itemType": "equipment",
+        "pack": "legends.equipment",
+        "sourceName": "Shoes",
+        "quantity": 1,
+        "originalText": "shoes",
+        "sourceId": "7fa6c1e8322f9dd6"
+      }
+    ]
+  },
+  "effects": [],
+  "_key": "!items!f63b547c2ba5a2fb"
+}
