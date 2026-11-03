@@ -1,0 +1,170 @@
+{
+  "_id": "7449e1b778ced740",
+  "name": "Name: Star Spawn Grue",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 3,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 5,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 4,
+      "acrobatics": 0,
+      "stealth": 4
+    },
+    "size": "small",
+    "speed": {
+      "walk": 30,
+      "fly": 30,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "immune to Frightened; Fortune on saves vs magic; does not need air, food, drink, or sleep",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Perfect Sight 30 ft **Initiative Bonus:** +4 (Agil 4) **Creature Type:** Aberration (immune to Frightened; Fortune on saves vs magic; does not need air, food, drink, or sleep)",
+    "tactics": "Star Spawn Grues are irritants at TR 1 but genuinely disruptive in groups. Their Aura of Unreality affects allies as well as enemies, which a summoner should account for. They use Spatial Slip to avoid being pinned and target spellcasters with Reality Pinch. An Indifferent Grue's concept of the instructions it was given may be subtly distorted in ways it doesn't understand itself.",
+    "attacksNotes": "<p>Reality Pinch [Combat]: Melee attack (Agil 7 + Melee Combat 4), Reach: 5 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 9 damage (6 + 3 Str) + 3 psychic damage (Ignore DR)</li>\n<li><strong>Margin 2:</strong> 9 damage, DR halved (round up) + 3 psychic damage; target makes Will [Easy] save or Disoriented until end of their next turn.</li>\n<li><strong>Margin 3:</strong> 9 damage, DR halved (round up) + 3 psychic damage; Disoriented and Dazed until end of their next turn (no save).</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Aura of Unreality: Creatures within 10 feet that are not Aberrations add 1 to both dice on attack rolls and skill checks. Spatial Slip (1/turn): When the Grue is targeted by an attack and misses, it may teleport up to 10 feet as a [Free] action.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Star Spawn Grue",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!7449e1b778ced740"
+}

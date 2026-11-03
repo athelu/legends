@@ -1,0 +1,195 @@
+{
+  "_id": "f485dae180f1b8b8",
+  "name": "Name: Militia Member",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Local militia members called to defend their town or region. Part-time soldiers - farmers, craftsmen, merchants, and workers who train together regularly for local defense. More disciplined and organized than bandits but less professional than full-time soldiers. Loyal to their community and willing to defend it, though they may break and flee if facing overwhelming odds or supernatural threats. They know the local area well and can call for reinforcements from fellow militia or town guards.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 0.5
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 3,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 3,
+      "intimidate": 3,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 3,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 2,
+      "investigate": 0,
+      "society": 3,
+      "meleeCombat": 3,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "humanoid",
+    "creatureSubtype": "",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "local (region-dependent)"
+    ],
+    "sensesNotes": "Normal",
+    "tactics": "Militia members use defensive tactics, forming shield walls with Defensive Stance when outnumbered. They use spears to maintain reach, keeping enemies at bay while supporting each other. Shield Master allows them to negate one devastating attack per fight - typically saved for critical moments. They fight in coordinated groups when possible, using their numbers and defensive training to overcome individual skill gaps. Against ranged attackers, they advance in formation, shields raised.",
+    "attacksNotes": "<p>Spear [Combat]: Melee attack (Agil 7 + Melee Combat 3), Reach: 5 ft One-handed:</p>\n<ul>\n<li><strong>Margin 1:</strong>: 10 damage (6 + 4 Str)</li>\n<li><strong>Margin 2:</strong> 10 damage, DR halved (round up)</li>\n</ul>\n<p>Two-handed (versatile):</p>\n<ul>\n<li><strong>Margin 1:</strong>: 10 damage (6 + 4 Str)</li>\n<li><strong>Margin 2:</strong> 10 damage, DR halved (round up)</li>\n</ul>",
+    "specialAbilitiesNotes": "<h4>Feats</h4>\n<p>Defensive Stance: Can enter a defensive stance as a toggle. While in defensive stance, opponents add 1 to both attack dice when attacking you. Can enter or leave this stance at the start of your turn. Danger Sense: Subtract 1 from both dice on Reflex saves against effects you can see. Shield Master: Subtract 1 from both dice on Reflex saves while using a shield. Once per combat as a [Reaction], completely negate one attack that would hit you.</p>\n<h4>Variants</h4>\n<p>Militia Archer: Swap the combat ranks (Ranged Combat 3, Melee Combat 2), use Dex as the attack attribute (raise Dex to 7, lower Agil to 5), use a shortbow instead of a spear, replace Shield Master with Precise Shot Militia Sergeant: Add +1 to Cha (becomes 3), add Intimidating Presence as a purchased feat (requires Cha 4 - would need to adjust attributes or wait for TR 1 version)</p>",
+    "reactionsNotes": "<p>Shield Block (from Buckler): [Reaction] when hit while wielding the buckler, choose one: gain +4 DR against this attack or force the attacker to reroll one success die. Shield Master: Once per combat as a [Reaction], completely negate one attack that would hit you.</p>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [
+    {
+      "_id": "fdeba0a094feeee2",
+      "name": "Spear, buckler, aketon armor, uniform, bedroll, high boots, common clothes",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": {
+          "value": "<p>Spear, buckler, aketon armor, uniform, bedroll, high boots, common clothes</p>"
+        },
+        "equipmentType": "adventuring-gear",
+        "isMagical": false,
+        "identified": true,
+        "weight": 1,
+        "cost": 0,
+        "quantity": 1,
+        "equipped": true,
+        "rarity": "",
+        "requiresAttunement": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_key": "!items!fdeba0a094feeee2"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Militia Member",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!f485dae180f1b8b8"
+}

@@ -1,0 +1,195 @@
+{
+  "_id": "099de808d67e8d22",
+  "name": "Name: Pirate",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A practiced raider who has survived enough boarding actions to become dangerous. Pirates may serve a captain, prey on isolated vessels, or work as privateers whose legality depends on which flag is flying.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 3,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 3,
+      "intimidate": 0,
+      "thievery": 4,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 3,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 4,
+      "acrobatics": 3,
+      "stealth": 3
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 15,
+      "burrow": 0
+    },
+    "creatureType": "humanoid",
+    "creatureSubtype": "",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "local (region-dependent)"
+    ],
+    "sensesNotes": "Normal",
+    "tactics": "Pirates open with thrown daggers, then cross the gap quickly. They use Power Attack against isolated targets and Exploit Weakness when an ally is adjacent. They cut ropes, take hostages, and use the ship's rail as both cover and a weapon. Pirates break when the captain is clearly defeated unless greed gives them a reason to stay.",
+    "attacksNotes": "<p>Scimitar [Combat]: Melee attack (Agil 8 + Melee Combat 4), Reach: 5 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 10 damage (6 + 4 Str)</li>\n<li><strong>Margin 2:</strong> 10 damage, DR halved (round up)</li>\n</ul>\n<p>Thrown Dagger [Combat]: Ranged attack (Dex 4 + Ranged Combat 3), Range: 30/60 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 8 damage (4 + 4 Dex)</li>\n<li><strong>Margin 2:</strong> 8 damage, DR halved (round up)</li>\n</ul>",
+    "specialAbilitiesNotes": "<h4>Feats</h4>\n<p>Quick Draw: Once per turn you may draw or stow a weapon as a [Free] action. Power Attack: Declare before making a melee attack roll. Add 1 to both die results and deal +4 damage on hit. Exploit Weakness: Once per round, when you attack with an ally within 5 feet of your target OR you subtract from your attack dice (from any source), add your Dexterity score to damage.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [
+    {
+      "_id": "a103209a59a1aaea",
+      "name": "Scimitar, dagger, coil of rope, sailor's clothes, grappling hook",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": {
+          "value": "<p>Scimitar, dagger, coil of rope, sailor's clothes, grappling hook</p>"
+        },
+        "equipmentType": "adventuring-gear",
+        "isMagical": false,
+        "identified": true,
+        "weight": 1,
+        "cost": 0,
+        "quantity": 1,
+        "equipped": true,
+        "rarity": "",
+        "requiresAttunement": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_key": "!items!a103209a59a1aaea"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Pirate",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!099de808d67e8d22"
+}

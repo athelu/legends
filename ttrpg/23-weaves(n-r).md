@@ -145,7 +145,7 @@
 **Targeting Roll:** Casting Stat + Earth Mastery
 **Description:** Plants in the target area erupt into dense, tangled growth. The area becomes difficult terrain, and movement through it costs 4 feet per foot of distance (double the normal difficult terrain cost). Creatures with a fly speed or climb speed are unaffected. The growth is natural and persists for 8 hours; clearing a 5-foot section takes approximately 10 minutes with cutting tools. Has no effect in areas without plants.
 **Saving Throw:** None
-**Targeting Success Scaling:** 0 = fails, 1 = 20-foot diameter (1 hour), 2 = 30-foot diameter (8 hours), 3 = 30-foot diameter (8 hours) + growth suppresses tracking — creatures passing through leave no trail
+**Targeting Success Scaling:** 0 = fails, 1 = 20-foot diameter (1 hour), 2 = 30-foot diameter (8 hours), 3 = 30-foot diameter (8 hours) + growth suppresses tracking - creatures passing through leave no trail
 
 ### Preserve Remains
 **Primary Energy:** Positive 2 (preserving deceased)
@@ -195,7 +195,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
-**Description:** A bolt of radiant energy strikes the target. Target takes 8 radiant damage. A nimbus of light surrounds the target for one round. The next person to attack the target before the duration ends has Fortune. The nimbus disappears afterward. This is an attack weave—no saving throw allowed.
+**Description:** A bolt of radiant energy strikes the target. Target takes 8 radiant damage. A nimbus of light surrounds the target for one round. The next person to attack the target before the duration ends has Fortune. The nimbus disappears afterward. This is an attack weave - no saving throw allowed.
 **Applies Effects:** blinded
 **Saving Throw:** None
 **Damage Type:** Positive (energy)
@@ -224,7 +224,7 @@
 **Action:** Simple weave (1 action)
 **Weaving Roll:** Positive Potential + Positive Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
-**Description:** Touch a target and channel searing radiant energy. Target takes 4 radiant damage. Deals double damage to undead creatures. This is an attack weave—no saving throw allowed.
+**Description:** Touch a target and channel searing radiant energy. Target takes 4 radiant damage. Deals double damage to undead creatures. This is an attack weave - no saving throw allowed.
 **Saving Throw:** None
 **Damage Type:** Positive
 **DR Interaction:** None

@@ -1,0 +1,170 @@
+{
+  "_id": "e56143d291186019",
+  "name": "Name: Nightmare",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 30,
+      "max": 30,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 4,
+      "perception": 4,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 4,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 3,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 60,
+      "fly": 90,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "shadow",
+    "creatureSubtype": "immune to poison, Poisoned, Frightened; resistant to fire (+2 DR",
+    "hpMultiplier": 6,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Devil's Sight",
+    "tactics": "Nightmares are mounts first and combatants second. In combat without a rider, they rear and strike with their hooves, using their speed to break through formations. As a summoner's mount they are exceptional — fast, terrifying, and capable of brief planar transit. A Cooperative Nightmare will carry the summoner wherever they indicate; an Indifferent one runs toward whatever frightens it least and expects to be chased.",
+    "attacksNotes": "<p>Flaming Hooves [Combat]: Melee attack (Agil 8 + Melee Combat 3), Reach: 5 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 11 damage (6 + 5 Str) + 3 fire damage (Half DR).</li>\n<li><strong>Margin 2:</strong> 11 damage, DR halved (round up) + 3 fire damage; target knocked Prone.</li>\n<li><strong>Margin 3:</strong> 11 damage, DR halved (round up) + 3 fire damage; target Prone and Stunned until end of their next turn.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Shadow Stride (1/day): The Nightmare can carry up to 3 riders into the Shadow Plane for up to 1 hour, moving through solid objects during transit. It must return to the material plane within the duration or the effect ends suddenly and all passengers are ejected. Smoke: The Nightmare's flaming hooves generate a thick smoke trail when running at full speed (40+ feet moved in a turn). The trail persists for 1 minute and creates a 10-foot-wide path of Difficult Terrain and heavy obscurement. Terror Mount: A rider on a Nightmare adds 2 to both dice on Intimidate checks while mounted.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Nightmare",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!e56143d291186019"
+}

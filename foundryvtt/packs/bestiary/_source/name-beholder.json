@@ -1,0 +1,170 @@
+{
+  "_id": "2a4d2ffb2e4c911d",
+  "name": "Name: Beholder",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 3,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 7,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 8,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 8,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 210,
+      "max": 210,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 8,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 7,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 6,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 7,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 0,
+      "fly": 20,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "immune to Prone; Fortune on all saves vs magic due to Eye Wards; does not need air, food, drink, or sleep",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Truesight 120 ft",
+    "tactics": "The Beholder positions its Antimagic Cone toward spellcasters and fires Eye Rays at everyone else. It selects rays based on perceived threat: Disintegration for primary threats, Charm for creatures it would rather use than destroy, Slowing for fast-moving opponents, Fear for clustered groups. A Cooperative Beholder follows target priority and is one of the most devastatingly effective summoned allies possible, as long as the summoner does not rely on weaves themselves while the central eye is pointed their way.",
+    "attacksNotes": "<p>Central Eye (Passive): The central eye projects a cone of antimagic 60 feet long. Creatures and objects in the cone cannot use or benefit from weaves. Magical effects in the cone are suppressed. The cone is directed by the Beholder's will. It cannot be aimed away from all of its eyestalks simultaneously. Eye Rays [Combat]: The Beholder uses 3 of its 8 eye rays per turn. Roll or select which rays fire. Range: 120 ft, Targeted: Charm Ray: Will [Easy] save. Failure: Charmed for 1 hour (or until harmed). Paralyzing Ray: Fortitude [Easy] save. Failure: Paralyzed for 1 minute. Fear Ray: Will [Easy] save. Failure: Frightened (Fleeing) for 1 minute. Slowing Ray: Will [Easy] save. Failure: Slowed (Major) for 1 minute. Enervation Ray: Fortitude [Easy] save. Failure: 28 Negative damage (Half DR) Telekinetic Ray: Fortitude [Easy] save. Failure: target is moved up to 30 feet in any direction. Sleep Ray: Will [Easy] save. Failure: Unconscious for 1 minute. Disintegration Ray: Fortitude [Hard] save. Failure: 40 Negative damage (Half DR). At 0 HP from this ray, target is disintegrated. Bite [Combat]: Melee attack (Agil 5 + Melee Combat 7), Reach: 5 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 9 damage (6 + 3 Str)</li>\n<li><strong>Margin 2:</strong> 9 damage, DR halved (round up)</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Eye Wards: The Beholder's many eyes give it Fortune on all saves vs magic. It cannot be surprised while its eyes are open. Antimagic Cone: As above. This is always active and the Beholder uses it as a weapon. Resilient Defense (3/day): When the Beholder Fiend fails a saving throw, it may choose to succeed instead. Alien Paranoia: Beholders distrust other Beholders and have extremely idiosyncratic definitions of \"cooperation.\" A Summoner who achieves a Friendly Beholder result should understand that its Friendly disposition means it has decided the summoner is interesting and worth protecting, not that it necessarily agrees with the summoner's goals. It will pursue its own agenda in parallel unless its instructions are extremely specific. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Beholder",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!2a4d2ffb2e4c911d"
+}

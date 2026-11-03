@@ -1,0 +1,170 @@
+{
+  "_id": "5bd97dc78e567ac0",
+  "name": "Name: Void Tempest",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Void Tempest is an apex Air Nephilim that has existed long enough to understand mortal warfare at a strategic rather than tactical level. World-Storm Presence on arrival; World Vortex Aura maintaining continuous battlefield control; Heaven's Bolt suppressing enemy formations at range while Worldstorm Strike removes priority targets. It will communicate its assessment of the engagement openly and expects the summoner to engage with that assessment rather than simply repeat instructions. A summoner who treats a Void Tempest as a tool will find it technically compliant. One who treats it as a partner will find it does things with that relationship that compliance alone cannot produce.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 60,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 7,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 210,
+      "max": 210,
+      "temp": 0
+    },
+    "dr": {
+      "value": 7,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 8,
+      "perception": 8,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 8,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 7,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 55,
+      "fly": 120,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Blindsight 60 ft (air pressure)",
+    "tactics": "",
+    "attacksNotes": "<p>Worldstorm Strike [Combat]: Melee attack (Agil 8 + Melee Combat 7), Reach: 20 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 15 damage (8 + 7 Str) + 5 lightning damage (Half DR); target pushed 30 feet + Prone; no save.</li>\n<li><strong>Margin 2:</strong> 15 damage, DR halved (round up) + 5 lightning damage; pushed 30 feet + Prone + Stunned; all creatures within 20 feet of target take 12 lightning damage + Dazed from the discharge.</li>\n<li><strong>Margin 3:</strong> 15 damage, DR halved (round up) + 5 lightning damage + Prone + Stunned; discharge area takes 20 lightning damage + Stunned; no save on area.</li>\n</ul>\n<p>Heaven's Bolt [Combat]: Ranged attack (Dex 3 + Ranged Combat 6), Range: 200 ft, 20-foot diameter.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 20 lightning damage (17 + 3 Dex) + Stunned until end of their next turn.</li>\n<li><strong>Margin 2:</strong> 20 lightning damage, DR halved (round up) + Stunned + Deafened for 1 minute.</li>\n<li><strong>Margin 3:</strong> 20 lightning damage, DR halved (round up) + Stunned + Deafened + knocked Prone; no save.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>World Vortex Aura: Creatures within 30 feet that are not designated make a Fortitude [Hard] save at the start of their turn. Failure: pushed 30 feet, knocked Prone, and Deafened for 1 minute. 1 success: pushed 15 feet only. Powerful Build: The Void Tempest counts as Gargantuan for carrying, pushing, dragging, and lifting. World-Storm Presence (1/day) [Combat]: As 2 [Combat] actions, the Void Tempest manifests its full elemental nature in an 80-foot diameter. All non-designated creatures make a Reflex [Hard] save .</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 damage only. Buildings and structures take structural damage.</li>\n<li><strong>Margin 2:</strong> 12 damage, DR halved (round up) + Stunned until end of their next turn.</li>\n<li><strong>Margin 3:</strong> 12 lightning damage, DR halved (round up) + Stunned for 1 minute + Deafened permanently (Fortitude save, 2 successes, to reduce to 1 hour).</li>\n</ul>\n<p>Lightning Immunity Sharing: The summoner and up to 6 designated allies gain immunity to non-magical lightning damage within 60 feet. Intimidating Presence: As a [Combat] action all creatures within 40 feet that can hear it make a Will [Hard] save. On failure: target gains the Frightened condition for 1 minute. Creatures immune to fear are unaffected. Resilient Defense (3/day): When the Void Tempest fails a saving throw, it may choose to succeed instead. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Void Tempest",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!5bd97dc78e567ac0"
+}

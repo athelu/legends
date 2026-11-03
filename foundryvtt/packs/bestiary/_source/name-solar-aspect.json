@@ -1,0 +1,170 @@
+{
+  "_id": "76828d8610cd183d",
+  "name": "Name: Solar Aspect",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 8,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 8,
+      "rangedCombat": 6,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 7,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 50,
+      "fly": 100,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "outsider",
+    "creatureSubtype": "immune to poison, disease, fear, charm, necrotic damage; immune to non-magical weapons; Fortune on all saves vs magic; does not need air, food, drink, or sleep",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Truesight 120 ft",
+    "tactics": "Solar Aspects fight with authority and precision. Empower Good goes up first when allies need it; otherwise they alternate between suppressing the most dangerous enemy with Radiant Greatsword and denying concealment with Radiant Arrows. Their Blinding Presence passively disrupts fiends and corrupted opponents throughout the fight.",
+    "attacksNotes": "<p>Radiant Greatsword [Combat]: Melee attack (Agil 8 + Melee Combat 7), Reach: 10 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 14 damage (8 + 6 Str) + 4 Positive damage (Half DR)</li>\n<li><strong>Margin 2:</strong> 14 damage, DR halved (round up) + 4 Positive damage; fiends and corrupted creatures make a Will save or become Blinded until end of their next turn</li>\n<li><strong>Margin 3:</strong> 14 damage, DR halved (round up) + 4 Positive damage; Blinded condition, no save</li>\n</ul>\n<p>Radiant Arrow [Combat]: Ranged attack (Dex 3 + Ranged Combat 6), Range: 120 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 14 damage (11 + 3 Dex) + 4 Positive damage (Half DR)</li>\n<li><strong>Margin 2:</strong> 14 damage, DR halved (round up) + 4 Positive damage; target is Revealed (cannot gain Invisible, Hidden, or Concealed) for 1 minute</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Blinding Presence: Fiends and corrupted creatures that begin their turn within 30 feet make a Fortitude save (1 success) or gain the Dazzled condition until they move out of range. Divine Awareness: Cannot be surprised. Knows the nature and intent of any creature within 60 feet. Empower Good (1/day): As 2 [Combat] actions, all allies within 60 feet gain temporary HP equal to 40 and Fortune on all attack rolls and saves for 1 minute. Resilient Defense (3/day). When the Solar Aspect fails a saving throw, it may choose to succeed instead Celestial Compact: A Solar Aspect will not arrive for a Summoner it judges to be acting in bad faith. This is a purely GM determination — a Solar Aspect called by a character who has recently committed serious moral wrongs arrives only at Indifferent regardless of targeting roll, and may use its Divine Awareness to announce its assessment to the party before deciding whether to cooperate. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Solar Aspect",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!76828d8610cd183d"
+}

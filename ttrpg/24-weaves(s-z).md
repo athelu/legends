@@ -60,7 +60,7 @@
 **Action:** Simple weave (1 action)
 **Weaving Roll:** Negative Potential + Negative Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
-**Description:** Touch a target and drain their life force with necrotic energy. Target takes 4 necrotic damage. You regain HP equal to half the damage dealt (rounded down). This is an attack weave—no saving throw allowed.
+**Description:** Touch a target and drain their life force with necrotic energy. Target takes 4 necrotic damage. You regain HP equal to half the damage dealt (rounded down). This is an attack weave - no saving throw allowed.
 **Saving Throw:** None
 **Damage Type:** Negative
 **DR Interaction:** None
@@ -212,7 +212,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
-**Description:** Create a Large hand of force at medium range. Can use action to command it: Grapple (opposed Athletics using your Space Mastery), Shove (move target 10 feet), or Interpose (grant target subtract 1 from both defense dice). Hand has HP = Space Potential × 4.
+**Description:** Create a Large hand of force at medium range. Can use action to command it: Grapple (opposed Athletics using your Space Mastery), Shove (move target 10 feet), or Interpose (grant target subtract 1 from both defense dice). Hand has HP = Space Potential x 4.
 **Applies Effects:** Grappled
 **Saving Throw:** Athletics vs Space Mastery
 **Targeting Success Scaling:** 0 = fails, 1 = 1 round, 2= 1 minute, 3 = 10 minutes
@@ -252,7 +252,7 @@
 **Action:** Simple weave (1 action)
 **Weaving Roll:** Earth Potential + Earth Mastery
 **Targeting Roll:** Casting Stat + Earth Mastery
-**Description:** Harden your fist to stone and strike a target within touch range. Target takes 4 bludgeoning damage. This is an attack weave—no saving throw allowed.
+**Description:** Harden your fist to stone and strike a target within touch range. Target takes 4 bludgeoning damage. This is an attack weave - no saving throw allowed.
 **Saving Throw:** None
 **Damage Type:** Bludgeoning (physical)
 **DR Interaction:** Full DR applies
@@ -308,7 +308,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Primary Potential + Primary Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Primary Mastery
-**Description:** Summon an elemental matching your Primary Energy at close range. Elemental has HP = (Your Potential × 6), deals 10 damage, uses your Mastery for attacks, and has special abilities based on type. You can command it as [Free] action.
+**Description:** Summon an elemental matching your Primary Energy at close range. Elemental has HP = (Your Potential x 6), deals 10 damage, uses your Mastery for attacks, and has special abilities based on type. You can command it as [Free] action.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = fails, 1 = 1 minute, 2= full effect, 3 = 1 hour
 
@@ -449,7 +449,7 @@
 **Action:** Complex weave (2 actions) to cast, then complex weave (1 action) to discharge
 **Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
-**Description:** Your touch deals 12 negative damage. You heal HP equal to half damage dealt. Can hold the charge for up to 1 minute and attack multiple times if charge remains. This is an attack weave when discharging—no saving throw on the touch.
+**Description:** Your touch deals 12 negative damage. You heal HP equal to half damage dealt. Can hold the charge for up to 1 minute and attack multiple times if charge remains. This is an attack weave when discharging - no saving throw on the touch.
 **Applies Effects:** Weakened
 **Saving Throw:** None
 **Damage Type:** Negative (energy)

@@ -1,0 +1,195 @@
+{
+  "_id": "fefaf3465fa8517d",
+  "name": "Name: Pirate Captain",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>The commander of a pirate vessel, mutinous crew, or coastal raiding band.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 3,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0
+    },
+    "dr": {
+      "value": 3,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 3,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 3,
+      "intimidate": 3,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 3,
+      "religion": 0,
+      "rangedCombat": 4,
+      "investigate": 0,
+      "society": 3,
+      "meleeCombat": 5,
+      "acrobatics": 3,
+      "stealth": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 15,
+      "burrow": 0
+    },
+    "creatureType": "humanoid",
+    "creatureSubtype": "",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "local (region-dependent)"
+    ],
+    "sensesNotes": "Normal",
+    "tactics": "The captain stays near the center of the crew, opening with Rally Cry or Intimidating Presence before choosing a vulnerable target. Defensive Stance protects the captain while the crew closes. Power Attack is reserved for an enemy already isolated or cornered against the rail. A captain who loses half the crew may bargain, flee, or surrender rather than die for cargo.",
+    "attacksNotes": "<p>Longsword [Combat]: Melee attack (Agil 8 + Melee Combat 5), Reach: 5 ft One-handed:</p>\n<ul>\n<li><strong>Margin 1:</strong>: 13 damage (8 + 5 Str)</li>\n<li><strong>Margin 2:</strong> 13 damage, DR halved (round up)</li>\n</ul>\n<p>Two-handed (versatile):</p>\n<ul>\n<li><strong>Margin 1:</strong>: 14 damage (9 + 5 Str)</li>\n<li><strong>Margin 2:</strong> 14 damage, DR halved (round up)</li>\n</ul>\n<p>Thrown Dagger [Combat]: Ranged attack (Dex 4 + Ranged Combat 4), Range: 30/60 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 8 damage (4 + 4 Dex)</li>\n<li><strong>Margin 2:</strong> 8 damage, DR halved (round up)</li>\n</ul>",
+    "specialAbilitiesNotes": "<h4>Feats</h4>\n<p>Defensive Stance: Can enter a defensive stance as a toggle. While in defensive stance, opponents add 1 to both attack dice when attacking you. Can enter or leave this stance at the start of your turn. Power Attack: Declare before making a melee attack roll. Add 1 to both die results and deal +4 damage on hit Rally Cry: You give a rousing speech to inspire your companions. Choose up to 6 allies who can hear and understand you. Each gains Temp HP equal to your Tier + your Charisma score. These Temp HP last until their next long rest. Intimidating Presence:  As 1 [Combat] action, choose one creature within 30 feet that can see or hear you. Target makes Will save opposed by your Charisma + Intimidation. If you win, target gains the Frightened condition until end of your next turn. Battle-Hardened: When a creature hits you with an attack, that creature adds 2 to all subsequent attack dice against you until the start of your next turn.</p>",
+    "reactionsNotes": "<p>Command the Crew: Once per round when an ally within 30 feet fails an attack or save, the captain may use a [Reaction] to grant that ally +1 to both dice on a reroll of the same attempt. The reroll stands.</p>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [
+    {
+      "_id": "98c05afd6715c49c",
+      "name": "Longsword, daggers, reinforced coat, spyglass, whistle, grappling hook, chart case",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": {
+          "value": "<p>Longsword, daggers, reinforced coat, spyglass, whistle, grappling hook, chart case</p>"
+        },
+        "equipmentType": "adventuring-gear",
+        "isMagical": false,
+        "identified": true,
+        "weight": 1,
+        "cost": 0,
+        "quantity": 1,
+        "equipped": true,
+        "rarity": "",
+        "requiresAttunement": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_key": "!items!98c05afd6715c49c"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Pirate Captain",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!fefaf3465fa8517d"
+}

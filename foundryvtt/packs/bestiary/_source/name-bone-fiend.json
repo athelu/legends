@@ -1,0 +1,170 @@
+{
+  "_id": "6dd8cecd06cd6c8f",
+  "name": "Name: Bone Fiend",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Bone Fiends are commanders. They assess before committing, use Wall of Bone to reshape the engagement geometry, Claw to hold high-priority targets, and Tail Sting to degrade the most dangerous opponent's combat effectiveness. Tactical Assessment makes them the first Fiend that actively contributes to the summoner's strategic planning rather than simply executing instructions. A summoner who engages with that assessment will find the Bone Fiend performs considerably above its TR. One who ignores it will find it still performs adequately — it will simply note, for its own satisfaction, that the summoner made an error. Bone Fiends remember everything and find incompetence irritating in a way that, over multiple summonings, tends to express itself in subtle ways that are technically within the terms of their agreement.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 150,
+      "max": 150,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 5,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 5,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 4,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 40,
+      "fly": 40,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fiend",
+    "creatureSubtype": "+2 DR each",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Devil's Sight, Truesight 30 ft",
+    "tactics": "",
+    "attacksNotes": "<p>Claw [Combat]: Melee attack (Agil 7 + Melee Combat 4), Reach: 10 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 damage (8 + 4 Str).</li>\n<li><strong>Margin 2:</strong> 12 damage, DR halved (round up); target Grappled; no save; Grappled target takes 6 Negative damage at start of each of their turns.</li>\n<li><strong>Margin 3:</strong> 12 damage, DR halved (round up) + Grappled + Restrained; ongoing damage increases to 10 Negative.</li>\n</ul>\n<p>Tail Sting [Combat]: Melee attack (Agil 7 + Melee Combat 4), Reach: 10 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 damage (8 + 4 Str); target makes Fortitude [Easy] save or Poisoned (Strong) for 1 hour.</li>\n<li><strong>Margin 2:</strong> 12 damage, DR halved (round up); Poisoned (Strong); no save; target also Weakened for 1 minute.</li>\n<li><strong>Margin 3:</strong> 12 damage, DR halved (round up); Poisoned (Strong) + Weakened; target loses 3 from Current Luck pool as the venom disrupts vital energy.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Fear Aura: 10-foot diameter; Will [Easy] save; failure: Frightened until outside aura. Wall of Bone (1/day) [Combat]: As 2 [Combat] actions, raises a 40-foot-long, 10-foot-high wall of bone and calcified matter from any available surface within 60 feet. Each 10-foot section has HP 20 and DR 4 against non-magical damage. Duration: until destroyed. The wall cannot be raised through living creatures. Tactical Assessment: At the start of combat, the Bone Fiend evaluates the battlefield and communicates its assessment to the summoner — primary threats, potential flanking angles, weakest targets. This assessment is accurate and delivered as a [Free] action on its first turn. Whether the summoner uses it is their decision. Resilient Defense (1/day): When the Bone Fiend fails a saving throw, it may choose to succeed instead. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Bone Fiend",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!6dd8cecd06cd6c8f"
+}

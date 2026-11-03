@@ -108,14 +108,14 @@ Guidelines for applying bonus/penatlies
 
 | Tier | XP Range | Sessions at 24/session | Max Feats | D&D Equivalent |
 |------|----------|------------------------|-----------|----------------|
-| 1 | 0–120 | ~5 | 2 start + 2 purchased | Levels 1–2 |
-| 2 | 120–360 | ~10 | 2 start + 4 purchased | Levels 3–5 |
-| 3 | 360–600 | ~10 | 2 start + 6 purchased | Levels 6–8 |
-| 4 | 600–840 | ~10 | 2 start + 8 purchased | Levels 9–11 |
-| 5 | 840–1080 | ~10 | 2 start + 10 purchased | Levels 12–14 |
-| 6 | 1080–1320 | ~10 | 2 start + 12 purchased | Levels 15–17 |
-| 7 | 1320–1560 | ~10 | 2 start + 14 purchased | Levels 18–19 |
-| 8 | 1560+ | ~10+ | 2 start + 16 purchased | Level 20 |
+| 1 | 0–120 | ~5 | 3 start + 2 purchased | Levels 1–2 |
+| 2 | 120–360 | ~10 | 3 start + 4 purchased | Levels 3–5 |
+| 3 | 360–600 | ~10 | 3 start + 6 purchased | Levels 6–8 |
+| 4 | 600–840 | ~10 | 3 start + 8 purchased | Levels 9–11 |
+| 5 | 840–1080 | ~10 | 3 start + 10 purchased | Levels 12–14 |
+| 6 | 1080–1320 | ~10 | 3 start + 12 purchased | Levels 15–17 |
+| 7 | 1320–1560 | ~10 | 3 start + 14 purchased | Levels 18–19 |
+| 8 | 1560+ | ~10+ | 3 start + 16 purchased | Level 20 |
 
 ## Version History
 

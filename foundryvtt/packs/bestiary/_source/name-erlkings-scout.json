@@ -1,0 +1,170 @@
+{
+  "_id": "a99f7cc9f2647558",
+  "name": "Name: Erlking's Scout",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Erlking's Scouts serve the great Fae hunting lord. They are patient, methodical, and relentless toward a designated target. They designate quarry at the start of combat and pursue that creature until it is down, switching only when directly ordered.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": true,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 6,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 4,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 4,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 5,
+      "acrobatics": 0,
+      "stealth": 6
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 40,
+      "fly": 20,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fae",
+    "creatureSubtype": "Fortune on saves vs charm effects",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Low-Light Vision, Truesight 30 ft",
+    "tactics": "Erlking's Scouts are methodical and patient. They designate a quarry at the start of combat and pursue that creature until it is down, switching only when directly ordered. They open from range, use Hunter's Arrow to mark their target (denying the hidden condition), then close with Fae Step when the opportunity arises.",
+    "attacksNotes": "<p>Fae Blade [Combat]: Melee attack (Agil 8 + Melee Combat 5), Reach: 5 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 11 damage (7 + 4 Str) + 3 psychic damage (Ignore DR)</li>\n<li><strong>Margin 2:</strong> 11 damage, DR halved (round up) + 3 psychic damage</li>\n</ul>\n<p>Hunter's Arrow [Combat]: Ranged attack (Dex 4 + Ranged Combat 4), Range: 80/160/320 ft 1 success: 12 damage (8 + 4 Dex) (short range) 2 successes: 12 damage, DR halved (round up); target cannot benefit from invisibility or the Hidden condition for 1 hour.</p>",
+    "specialAbilitiesNotes": "<p>Quarry: As a [Minor] action, the Scout designates one creature as its quarry. Against the quarry, the Scout subtracts 1 from both attack dice. Only one quarry can be designated at a time. Fae Step (1/short rest): As a [Move] action, the Scout teleports up to 30 feet to an unoccupied space it can see. Perfect Sight 30 ft: Sees through invisibility, illusory effects, shapechanges, and into the Ethereal Plane within 30 feet.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Erlking's Scout",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!a99f7cc9f2647558"
+}

@@ -167,8 +167,8 @@ def split_npc_entries(content: str) -> list[tuple[str, str]]:
         if _is_section_header(heading_text):
             continue
 
-        # Only keep entries that define Threat Rating anywhere in their body
-        if not re.search(r'\*\*Threat Rating:\*\*', body):
+        # Only keep entries that define a Tier (formerly Threat Rating) anywhere in their body
+        if not re.search(r'\*\*(?:Threat Rating|Tier):\*\*', body):
             continue
 
         entries.append((heading_text, body))
@@ -771,7 +771,7 @@ def build_npc_doc(name: str, body: str) -> dict:
             val = _field(body, field_name)
         return val
 
-    tr_raw  = _get('Threat Rating') or '1'
+    tr_raw  = _get('Threat Rating') or _get('Tier') or '1'
     tr      = _parse_tr(tr_raw)
     size    = _parse_size(_get('Size') or 'Medium')
 

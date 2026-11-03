@@ -1,0 +1,170 @@
+{
+  "_id": "d29ccbcd70d54193",
+  "name": "Name: The Unbound",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>The Unbound is named for what it no longer is. At some point in the incomprehensibly long period of its existence in the Space between planes, it ceased to be bounded by the rules that govern creatures from specific planes. It does not have a home plane. It does not have a form that is consistently present in any given plane. It has imperatives and it has a perspective that has been developing since before the current configuration of planes existed. When a summoner binds one, they are not binding a creature to their will — they are entering into a temporary agreement with something that has agreed to be bound, for reasons that may relate to the summoner's instructions or may relate to something the Unbound has decided the summoner's instructions will accomplish that the summoner has not yet understood. The agreement holds. The Unbound does not break bindings. But a summoner who has called one should be aware that something with a perspective that old has context they do not have.</p>\n<p>Mechanically: Spatial Sovereignty reshapes a 120-foot zone, Enhanced Discontinuity reduces effective damage by 50%, Eye Rays fire every round at no action cost, Void Cascade hits an entire area for 32 force damage with no save on the damage, and the Overwhelming Signal removes creatures from the encounter entirely if their Current Luck reaches 0. A summoner who calls one into a combat encounter has introduced something that will end the encounter. The question of how the encounter ends, and what conclusions the Unbound draws from the experience, is worth considering before the binding is completed.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 7,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 6,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 210,
+      "max": 210,
+      "temp": 0
+    },
+    "dr": {
+      "value": 6,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 8,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 8,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 7,
+      "religion": 0,
+      "rangedCombat": 7,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 6,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 0,
+      "fly": 80,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision unlimited, Seam Sense unlimited, See Invisibility, Perfect Sight 120 ft",
+    "tactics": "",
+    "attacksNotes": "<p>Reality Erasure [Combat]: Ranged attack (Dex 6 + Ranged Combat 7), Range: 200 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 20 force damage (14 + 6 Dex); target loses 6 Current Luck; DR reduced by 4 for 1 minute; target makes Will [Easy] save or Confused for 1 minute.</li>\n<li><strong>Margin 2:</strong> 20 force damage, DR halved (round up); Current Luck reduced by 8; DR reduced by 6; target makes Will [Hard] save or Confused for 1 minute; target makes Reflex [Easy] save or loses their [Reaction] until the end of their next turn.</li>\n<li><strong>Margin 3:</strong> 20 force damage, DR halved (round up); Current Luck reduced by 10; DR reduced by 8; target makes Will [Hard] save or Confused for 1 minute; target makes Reflex [Hard] save or loses their [Reaction] until the end of their next turn.</li>\n</ul>\n<p>Void Cascade [Combat — Recharge 6-8]: 40-foot diameter centered on a point within 150 feet. All creatures in radius:</p>\n<ul>\n<li><strong>Margin 1:</strong>: 20 force damage (14 + 6 Dex); Current Luck reduced by 3; DR reduced by 2 for 1 minute.</li>\n<li><strong>Margin 2:</strong> 20 force damage, DR halved (round up); Current Luck reduced by 6; DR reduced by 4 for 1 minute; Will [Easy] save or Disoriented + Confused for 1 minute.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>The Signal: Any creature that begins its turn within 90 feet of the Unbound must succeed on a Will [Hard] save or take 16 force damage (Ignore DR) and lose 4 from Current Luck. Creatures reduced to 0 Current Luck by this effect fall Unconscious for 1 hour. Spatial Sovereignty: As a [Combat] action, the Unbound selects a 120-foot diameter for 10 minutes. Within this zone: all teleportation is blocked (as Rift Anchor); difficult terrain costs triple movement; all ranged ### Attacks beyond 30 feet add 2 to both attack dice; the Unbound's own movement costs are halved. The Unbound cannot be moved out of this zone involuntarily while it persists. Partial Discontinuity (Enhanced): The Unbound's body exists partially between planes. ### Attacks against it have a 50% chance (roll 5-8 on d8) of passing through a discontinuous portion and dealing no damage. This is determined per hit, after the attack resolves. Area effects are not subject to this.</p>\n<ul>\n<li>Eye Rays (Enhanced — 1/round, no recharge): As Rift Warden's Eye Rays but 80-foot cone. Activates once per round on the Unbound's turn at no action cost — it is not using an action to fire them, it simply does.</li>\n<li>Reality Anchor Destruction: The Unbound can, as a [Combat] action, target any magical effect, summoning circle, planar boundary marker, or similar spatial construct within 60 feet and attempt to unmake it. The effect ends immediately unless it was created by a TR 5 creature or a weave of cost 12 or higher, in which case the creator makes an opposed Arcane check against the Unbound's Arcane 8 to maintain it.</li>\n</ul>\n<p>Resilient Defense (3/day): When the Unbound fails a saving throw, it may choose to succeed instead. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: The Unbound",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!d29ccbcd70d54193"
+}
