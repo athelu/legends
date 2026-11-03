@@ -133,7 +133,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
-**Description:** [FORBIDDEN KNOWLEDGE] Bind soul fragments or echoes to 1 corpse, animating it as a skeleton or zombie under your control. Undead has HP equal to your Negative Potential × 4, deals 6 damage, uses your Negative Mastery for attacks. Can command as [Free] action.
+**Description:** [FORBIDDEN KNOWLEDGE] Bind soul fragments or echoes to 1 corpse, animating it as a skeleton or zombie under your control. Undead has HP equal to your Negative Potential x 4, deals 6 damage, uses your Negative Mastery for attacks. Can command as [Free] action.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = Fails, 1 = 1 round, 2 = 1 hour, 3 = 4 hours
 
@@ -372,7 +372,7 @@
 **Action:** Complex weave (1 action)
 **Weaving Roll:** Space Potential + Space Mastery / Time Potential + Time Mastery
 **Targeting Roll:** Casting Stat + Space Mastery
-**Description:** Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Should events occur that cause the distance between the weaver and the disc to exceed 30’ the weave ends.
+**Description:** Create a 3-foot diameter horizontal disk of force that floats 3 feet above ground. Holds up to 500 lbs and follows you at a distance of 20 feet. Should events occur that cause the distance between the weaver and the disc to exceed 30 ft; the weave ends.
 **Saving Throw:** None
 **Targeting Success Scaling:** 0 = Fails, 1 = 1 minute, 2 = 10 minutes, 3 = 1 hour
 
@@ -439,7 +439,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Water Potential + Water Mastery / Fire Potential + Fire Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
-**Description:** Alter your appearance to resemble a specific humanoid creature of the same size category. The illusion covers clothing, equipment, and surface features: voice, height within a few inches, build, and distinguishing marks. Physical interaction does not automatically reveal the illusion, but a careful observer may attempt a Perception check opposed by your Space Mastery to notice inconsistencies. The weave does not replicate scent, weight, or the texture of materials. Breaks if you take damage exceeding your Tier × 4 in a single hit.
+**Description:** Alter your appearance to resemble a specific humanoid creature of the same size category. The illusion covers clothing, equipment, and surface features: voice, height within a few inches, build, and distinguishing marks. Physical interaction does not automatically reveal the illusion, but a careful observer may attempt a Perception check opposed by your Space Mastery to notice inconsistencies. The weave does not replicate scent, weight, or the texture of materials. Breaks if you take damage exceeding your Tier x 4 in a single hit.
 **Saving Throw:** None
 **Applies Effects:** False Visage
 **Targeting Success Scaling:** 0 = Fails, 1 = 1 minute; surface features only, 2 = 10 minutes; full appearance including voice, 3 = 1 hour; perfect rendering.
@@ -467,7 +467,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Fire Potential + Fire Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Fire Mastery
-**Description:** You hurl a mote of fire at a creature or object within range. Target takes 8 fire damage. This is an attack weave—no saving throw allowed.
+**Description:** You hurl a mote of fire at a creature or object within range. Target takes 8 fire damage. This is an attack weave - no saving throw allowed.
 **Applies Effects:** ignited
 **Saving Throw:** None
 **Damage Base:** 8
@@ -501,7 +501,7 @@
 **Action:** Simple weave (1 action)
 **Weaving Roll:** Fire Potential + Fire Mastery
 **Targeting Roll:** Casting Stat + Fire Mastery
-**Description:** Channel flames through your palm to burn a target within 5 feet. Target takes 4 fire damage. This is an attack weave—no saving throw allowed.
+**Description:** Channel flames through your palm to burn a target within 5 feet. Target takes 4 fire damage. This is an attack weave - no saving throw allowed.
 **Applies Effects:** ignited
 **Saving Throw:** None
 **Damage Base:** 4
@@ -606,7 +606,7 @@
 **Action:** Simple weave (1 action)
 **Weaving Roll:** Water Potential + Water Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
-**Description:** Touch a target and channel freezing energy into them. Target takes 4 cold damage. This is an attack weave—no saving throw allowed.
+**Description:** Touch a target and channel freezing energy into them. Target takes 4 cold damage. This is an attack weave - no saving throw allowed.
 **Saving Throw:** None
 **Damage Type:** Cold (energy)
 **DR Interaction:** Half DR

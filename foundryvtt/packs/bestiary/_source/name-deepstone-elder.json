@@ -1,0 +1,170 @@
+{
+  "_id": "1578d9c6835556b9",
+  "name": "Name: Deepstone Elder",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Deepstone Elders arrived at their current form by outlasting everything that attempted to move or break them. Tremorsense at 300 feet means nothing on the ground approaches without their awareness. Ground Shatter resets the battlefield on arrival; Ancient Slam handles whatever remains. Their regeneration and DR make sustained mundane damage against them impractical — without magical weapons or significant energy expenditure, fighting a Deepstone Elder on natural ground is an exercise in attrition the attacker will lose.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 300,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 7,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 5,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 7,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 6,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 40
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 300 ft",
+    "tactics": "",
+    "attacksNotes": "<p>Ancient Slam [Combat]: Melee attack (Agil 5 + Melee Combat 6), Reach: 15 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 16 damage (10 + 6 Str).</li>\n<li><strong>Margin 2:</strong> 16 damage, DR halved (round up); target knocked Prone and Stunned until end of their next turn; no save.</li>\n<li><strong>Margin 3:</strong> 22 damage + Prone + Stunned + Restrained by erupting earth; Might/Acrobatics [Hard]check to escape as a [Combat] action.</li>\n</ul>\n<p>Rock Hurl [Combat]: Ranged attack (Dex 3 + Ranged Combat 5), Range: 60/120 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 16 damage (13 + 3 Dex).</li>\n<li><strong>Margin 2:</strong> 16 damage, DR halved (round up); target knocked Prone; no save.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Immovable: Cannot be knocked Prone by non-magical forced movement. Shoves automatically fail unless the attacker wins an opposed Strength + Athletics [Hard] check. Earth Bond: While standing on natural earth or stone, regains 8 HP at the start of its turn. Suppressed if it took magical damage this round. Ground Shatter (Recharge 5-8) [Combat]: Slams the earth with both fists simultaneously. All creatures on the ground within 40 feet make a Reflex save. Compare Str 8 + Might 7 targeting vs. each save.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 16 bludgeoning damage + Prone.</li>\n<li><strong>Margin 2:</strong> 16 bludgeoning damage, DR halved (round up) + Prone + Restrained by cracking earth.</li>\n<li><strong>Margin 3:</strong> 16 bludgeoning damage, DR halved (round up) + Prone + Restrained + Stunned until end of their next turn. Designated allies are immune.</li>\n</ul>\n<p>Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "<p>Stone Skin [Reaction]: Once per round, reduce incoming physical damage by 10. Resilient Defense (2/day): When the Deepstone Elder fails a saving throw, it may choose to succeed instead.</p>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Deepstone Elder",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!1578d9c6835556b9"
+}

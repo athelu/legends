@@ -1,0 +1,170 @@
+{
+  "_id": "a6969946237dea23",
+  "name": "Name: Star Spawn Hulk",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 10,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 8,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 6,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 4,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 7,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 6,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aberration",
+    "creatureSubtype": "immune to Frightened, Charmed; Fortune on saves vs magic; does not need air, food, drink, or sleep",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Blindsight 10 ft",
+    "tactics": "Star Spawn Hulks advance and hit things. They lack tactical judgment but execute instructions with perfect obedience, which makes them reliable in a way that smarter Aberrations often are not. Reality Shockwave is used instinctively when multiple enemies cluster within range — the Hulk does not distinguish ally from enemy in that zone, which the summoner should communicate clearly before the encounter begins.",
+    "attacksNotes": "<p>Slam [Combat]: Melee attack (Agil 4 + Melee Combat 6), Reach: 15 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 18 damage (10 + 8 Str).</li>\n<li><strong>Margin 2:</strong> 18 damage, DR halved (round up); target makes Fortitude [Easy] save or Stunned until end of their next turn.</li>\n<li><strong>Margin 3:</strong> 18 damage, DR halved (round up); Stunned, no save.</li>\n</ul>\n<p>Reality Shockwave (Recharge 5-8) [Combat]: All creatures within 30 feet make Will saves. Compare Hulk's Str 8 against each target's save.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 20 psychic damage + Disoriented,</li>\n<li><strong>Margin 2:</strong> 20 psychic damage, DR halved (round up) + Dazed + Disoriented. Psychic damage ignores DR.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Psychic Mirror: When the Star Spawn Hulk is hit by a weave that deals psychic damage or imposes a mind-affecting condition, the attacker makes a Will [Easy] save or is also affected by the same condition. This is reflexive and not a choice. Powerful Build: Counts as Gigantic for carrying, pushing, dragging, and lifting. Alien Mind: The Hulk is immune to Charmed and to all mind-reading or telepathy effects. It cannot be communicated with through telepathy. A summoner's instructions are received as direct behavioral commands. Resilient Defense (2/day): When the Star Spawn Hulk Fiend fails a saving throw, it may choose to succeed instead. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Star Spawn Hulk",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!a6969946237dea23"
+}

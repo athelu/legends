@@ -1,0 +1,168 @@
+{
+  "_id": "d6944b0063f845fc",
+  "name": "Name: Rat Swarm",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 30,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 2,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 2,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 6,
+      "max": 6,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 0.125
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 1,
+      "acrobatics": 0,
+      "stealth": 3
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "swarm",
+    "creatureSubtype": "Tiny beasts",
+    "hpMultiplier": 3,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [],
+    "sensesNotes": "Darkvision 30 ft, Keen Smell",
+    "tactics": "Rat Swarms pour through gaps, surround isolated targets, and retreat through cracks when exposed to fire or area effects. They are common aboard poorly maintained ships, in docks, and below warehouses.",
+    "attacksNotes": "<p>Bites: Opposed Reflex save using Agil 4 + Melee Combat 2 against every creature sharing the swarm's space. Target loses: 6 piercing damage. Target wins: 4 piercing damage. At half HP or lower, deal 4 piercing damage on a loss and 2 piercing damage on a win.</p>",
+    "specialAbilitiesNotes": "<p>Pack Instinct: When another Rat Swarm shares the target's space, both swarms subtract 1 from their attack dice. Disease Carrier: A creature that takes full damage must make a Fortitude [Easy] save or contract Filth Fever. Swarm Body: The Rat Swarm can occupy another creature's space and move through openings large enough for its constituent rats. Swarms: Swarms occupy a 5 × 5 ft space, halve physical damage, ignore Grappled, Restrained, Prone, and Bleeding, and resolve their ### Attacks as opposed Reflex saves. Each entry lists full damage and reduced damage once the swarm is at half HP or lower.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Rat Swarm",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!d6944b0063f845fc"
+}

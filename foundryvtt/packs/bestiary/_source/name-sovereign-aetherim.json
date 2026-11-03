@@ -1,0 +1,170 @@
+{
+  "_id": "874b6421f10eeaf3",
+  "name": "Name: Sovereign Aetherim",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Sovereign Aetherim's presence reshapes the terms of any engagement involving undead, fiends, or evil-aligned creatures — Blinding Presence, Turn Undead, and immunity to non-magical weapons mean those categories of opponent cannot effectively engage it. Against living opponents it is still a powerful combatant with significant support capability. Sovereign Healing at this tier can restore an entire party from serious damage in a single action. A summoner whose moral standing is genuinely good will find a Sovereign Aetherim the most capable protective ally available at any tier. One whose standing is ambiguous will find it Cooperative at best, technically compliant, and quietly persistent in noting when its observations suggest the summoner might reconsider a course of action.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 180,
+      "max": 180,
+      "temp": 0
+    },
+    "dr": {
+      "value": 7,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 4.0
+    },
+    "skills": {
+      "persuasion": 7,
+      "athletics": 0,
+      "perception": 8,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 7,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 7,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 7,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 7,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 50,
+      "fly": 110,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "aetherim",
+    "creatureSubtype": "",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Perfect Sight 120 ft",
+    "tactics": "",
+    "attacksNotes": "<p>Sovereign Blade [Combat]: Melee attack (Agil 8 + Melee Combat 7), Reach: 10 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 14 damage (8 + 6 Str) + 4 Positive damage (Half DR).</li>\n<li><strong>Margin 2:</strong> 14 damage, DR halved (round up) + 4 Positive damage; all evil-aligned creatures and undead within 10 feet of the target make Will [Hard] save or Blinded + Frightened for 1 minute.</li>\n<li><strong>Margin 3:</strong> 14 damage, DR halved (round up) + 4 Positive damage; area effect triggers; no save; undead at or below half HP in the area destroyed outright.</li>\n</ul>\n<p>Heaven's Arrow [Combat]: Ranged attack (Dex 3 + Ranged Combat 6), Range: 150 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 18 Positive damage (15 + 3 Dex) + Revealed for 1 hour.</li>\n<li><strong>Margin 2:</strong> 18 Positive damage, DR halved (round up) + Revealed + Blinded for 1 minute; no save.</li>\n<li><strong>Margin 3:</strong> 18 Positive damage, DR halved (round up) + Revealed + Blinded + Frightened for 1 minute; undead take double damage from this attack; no save.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Sovereign Healing (1/short rest) [Combat]: As 2 [Combat] actions, releases a wave of Positive energy in a 50-foot diameter. All living allies heal HP equal to the Sovereign Aetherim's Wisdom score × 2 (16). Additionally, one ally of the summoner's choice within range is restored from any single condition affecting them. Cannot affect undead or constructs. Blinding Presence: Undead within 40 feet make a Fortitude [Hard] save at the start of their turn. Failure: Blinded for 1 round. This is passive and always active. Divine Proclamation (1/encounter) [Combat]: As a [Combat] action, the Herald Aetherim speaks a word of absolute authority. All creatures within 60 feet that can hear it make a Will [Hard]save. Failure: Stunned and Frightened for 1 minute. 1 success: Dazed until end of their next turn only. Creatures that succeed are immune to this Herald's Divine Proclamation for 24 hours. Protective Aura: Allies within 50 feet of the Voice Aetherim gain +5 DR against all damage. This aura is always active. Turn Undead (1/encounter) [Combat]: As a [Combat] action, releases a pulse of Positive energy in a 60-foot diameter. All undead in range make a Will save (opposed by Wis 7 + Religion 6). On failure, undead are Frightened and must move away from the Herald Aetherim as fast as possible for 1 hour. They cannot willingly move closer for the duration. Undead with less then ½ HP remaining are destroyed. Resilient Defense (2/day): When the Sovereign Aetherim fails a saving throw, it may choose to succeed instead. Continual Radiance: Sheds bright light in a 80-foot radius and dim light for an additional 80 feet. The Sovereign Aetherim cannot suppress this light voluntarily. Immunity to Non-Magical Weapons: Mundane weapons simply pass through the Sovereign Aetherim's form without effect. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Sovereign Aetherim",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!874b6421f10eeaf3"
+}

@@ -1,0 +1,170 @@
+{
+  "_id": "804750c4a5e627c1",
+  "name": "Name: Boulder Soldier",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Boulder Soldiers are siege engines that walk. They advance slowly, shrug off mundane weapons entirely, and hit hard enough to flatten anyone who does not step back. Rock Throw handles opponents attempting to stay outside their reach. Tremor Strike is their battlefield opener when enemies have clustered — a single action that resets the positioning of everything nearby. A summoner who needs a wall broken or a cluster of fighters scattered will find them effective. Speed and nuance are not in their vocabulary.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 60,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 25,
+      "max": 25,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 3,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 3,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 5,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 3,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 25,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 25
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 5,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Tremorsense 60 ft",
+    "tactics": "",
+    "attacksNotes": "<p>Slam [Combat]: Melee attack (Agil 5 + Melee Combat 3), Reach: 10 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 damage (7 + 5 Str).</li>\n<li><strong>Margin 2:</strong> 12 damage, DR halved (round up); target knocked Prone; no save.</li>\n<li><strong>Margin 3:</strong> 12 damage + Prone; target Restrained until they succeed on Might [Hard] check as a [Combat] action.</li>\n</ul>\n<p>Rock Throw [Combat]: Ranged attack (Dex 4 + Ranged Combat 2), Range: 60/120 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 damage (8 + 4 Dex).</li>\n<li><strong>Margin 2:</strong> 12 damage, DR halved (round up); target knocked Prone.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Immovable: Cannot be knocked Prone by non-magical forced movement. Shoves automatically fail unless the attacker wins an opposed Strength + Athletics [Hard] check. Earth Bond: While standing on natural earth or stone, regains 4 HP at the start of its turn. Suppressed if it took magical damage this round. Tremor Strike (1/encounter) [Combat]: As a [Combat] action, slams both fists into the ground simultaneously. All creatures within 15 feet standing on natural ground make a Reflex save. Compare Agil 2 + Might 5 targeting vs. each save.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 8 bludgeoning damage + Prone.</li>\n<li><strong>Margin 2:</strong> 8 bludgeoning damage, DR halved (round up) + Prone + Restrained.</li>\n</ul>",
+    "reactionsNotes": "<p>Stone Skin [Reaction]: Once per round, reduce incoming physical damage by 6.</p>",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Boulder Soldier",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!804750c4a5e627c1"
+}

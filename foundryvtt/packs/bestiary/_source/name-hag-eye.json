@@ -1,0 +1,170 @@
+{
+  "_id": "895b5edbf8cf2846",
+  "name": "Name: Hag Eye",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Hag Eye is exactly what the name suggests — an eye, plucked from a lesser creature or conjured from hag-magic, animated and sent out into the world as a scout. It moves in silence, leaves no tracks, and reports everything it sees back to the hag who made it. Alone it is nearly harmless in the conventional sense. It cannot lift a stone or open a door. What it can do is look at something in a particular way, and the things it looks at have a tendency to fall asleep, or start running, or feel profoundly unwell. Most parties encounter a Hag Eye and immediately understand the problem: somewhere within range, a hag is watching through it. Destroying the eye is straightforward given its fragility. Finding the hag watching through it is the actual challenge.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 2,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 15,
+      "max": 15,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 5,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 5,
+      "acrobatics": 0,
+      "stealth": 6
+    },
+    "size": "tiny",
+    "speed": {
+      "walk": 50,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "fae",
+    "creatureSubtype": "",
+    "hpMultiplier": 3,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "none spoken. communicates directly with its creator hag through a shared sensory link."
+    ],
+    "sensesNotes": "Darkvision 120 ft.",
+    "tactics": "The Hag Eye avoids direct engagement entirely. It uses its extraordinary Agility and Stealth to position where it can observe the party, feeding information back to its creator while staying out of reach.\n When forced to act offensively it prioritizes Asleep on the most dangerous martial threat, then Panicked on whoever is most likely to cause problems while running, then Sickened on spellcasters or anyone left standing. It will not engage a target that has already saved against its gaze.\nThe Hag Eye flees at the first sign it has been spotted. It is nearly impossible to catch at speed 50 with Unnatural Speed preventing opportunity ### Attacks.",
+    "attacksNotes": "<p>The Hag Eye has no meaningful physical ### Attacks. Str 1 renders it incapable of harming anything with its body. Its entire offensive capability is its gaze.</p>",
+    "specialAbilitiesNotes": "<p>Hag's Sight: The hag that created this creature sees and hears everything the Hag Eye perceives, regardless of distance, provided both are on the same plane. The hag can close or open this link as a [Free] action on her turn. Unnatural <strong>Speed:</strong> The Hag Eye's movement does not provoke opportunity ### Attacks. It can move through spaces occupied by other creatures without penalty. Withering Gaze (At-Will) [Combat]: Costs 2 actions. The Hag Eye fixes its gaze on one creature within 60 feet that it can see. The target makes a Will save, opposed by the Hag Eye's Wis 5 + Perception 5). On failure, the target suffers one of the following effects chosen by the Hag Eye at the time of the gaze. A creature that succeeds on its save cannot be targeted by Withering Gaze again for the remainder of the encounter. Each round on the Hag Eye's turn, it may redirect its gaze to a new target as a [Combat] action (2 actions), leaving the previous target's condition in place until that target recovers. A creature can only be under one gaze effect at a time. Asleep: The target gains the Unconscious condition. It wakes immediately if it takes any damage or if an adjacent creature spends a [Combat] action to shake it awake. Panicked: The target gains the Fleeing condition with the Hag Eye as the source of fear. On each of its turns the target must use its full movement to move away from the Hag Eye by the safest available route. If the target reaches a position at least 60 feet from the Hag Eye where it can no longer see it, the effect ends immediately. The target may make a Will [Easy] save at the end of each of its turns. Sickened: The target gains the Sickened condition and the Disoriented condition simultaneously. At the end of each of its turns the target may make a Will [Easy] save. Resistances Resistances: Nonmagical bludgeoning, piercing, and slashing damage: reduce incoming damage of these types by 3. Condition Immunities: Exhaustion, Frightened, Grappled, Prone, Restrained, Stunned, Unconscious. The Hag Eye's nature as a detached piece of hag magic makes most physical conditions meaningless. It has no legs to trip, no throat to choke, no mind of its own to terrify.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Hag Eye",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 0.5,
+    "height": 0.5,
+    "disposition": -1
+  },
+  "_key": "!actors!895b5edbf8cf2846"
+}

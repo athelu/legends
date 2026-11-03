@@ -1,0 +1,170 @@
+{
+  "_id": "6b53cf2346e5ae67",
+  "name": "Name: Primordial Wave",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>A Primordial Wave at war is the ocean deciding to fight. World Tide resets the battlefield on arrival. World Current removes individuals with a single attack that Engulfs at Margin 3. Ocean's Wrath handles grouped formations at extreme range. In any environment with significant water it becomes effectively impossible to stop without overwhelming magical force — Water Mastery in that context grants near-total immunity to conventional damage. A summoner who calls one knows they are not deploying a creature. They are opening a door, and what comes through it intends to stay.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 5,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 7,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 7,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 6,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 5,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 210,
+      "max": 210,
+      "temp": 0
+    },
+    "dr": {
+      "value": 7,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 5.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 8,
+      "perception": 8,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 8,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 7,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 20,
+      "fly": 0,
+      "climb": 0,
+      "swim": 120,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Blindsight 5 miles (in water)",
+    "tactics": "",
+    "attacksNotes": "<p>World Current [Combat]: Melee attack (Agil 5 + Melee Combat 7), Reach: 20 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 15 damage (8 + 7 Str) + 5 cold damage (Half DR); Prone + Frosted; no save.</li>\n<li><strong>Margin 2:</strong> 15 damage, DR halved (round up) + 5 cold damage; Prone + Frozen + Grappled; ongoing 24 cold damage per round while Grappled.</li>\n<li><strong>Margin 3:</strong> 15 damage, DR halved (round up) + 5 cold damage + Frozen + Grappled + immediately Engulfed; Blinded + Restrained + doubled ongoing damage to 48.</li>\n</ul>\n<p>Ocean's Wrath [Combat]: Ranged attack (Dex 6 + Ranged Combat 6), Range: 200 ft, 20-foot diameter.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 20 cold damage (14 + 6 Dex).</li>\n<li><strong>Margin 2:</strong> 20 cold damage, DR halved (round up) + Frosted.</li>\n<li><strong>Margin 3:</strong> 20 cold damage, DR halved (round up) + Frozen condition; no save.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>World Tide (1/day) [Combat]: As 2 [Combat] actions, calls a tidal surge across a 100-foot diameter. Terrain in the radius becomes Difficult Terrain for 1 hour. Every non-designated creature not flying makes a Fortitude [Hard] save.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 damage.  Creates enough water to flood a significant area on natural ground.</li>\n<li><strong>Margin 2:</strong> 12 damage, DR halved (round up) + Prone.</li>\n<li><strong>Margin 3:</strong> 12 cold damage, DR halved (round up) + Prone + Frozen for 1 hour.</li>\n</ul>\n<p>Ocean Mastery: In water, the Primordial Wave is immune to all damage except Positive energy and magical fire. On land, normal immunities apply. Cold Immunity Sharing: The summoner and up to 4 designated allies are immune to non-magical cold damage while within 60 feet. Maelstrom (1/encounter) [Combat]: As 2 [Combat] actions, creates a 40-foot diameter vortex of pressurized water. All creatures in range make Athletics or Acrobatics [Hard] checks or dragged 20 feet toward the center and knocked Prone. Creatures reaching the center are Grappled and take 11 cold damage per round. Creatures starting their turn in range must check again. Designated allies immune. Lasts 1 minute. Resilient Defense (3/day): When the Primordial Wave fails a saving throw, it may choose to succeed instead. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Primordial Wave",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!6b53cf2346e5ae67"
+}

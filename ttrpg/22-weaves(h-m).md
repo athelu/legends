@@ -78,7 +78,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Positive Potential + Positive Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Positive Mastery
-**Description:** Target takes 8 radiant damage. This is an attack weave—no saving throw allowed.
+**Description:** Target takes 8 radiant damage. This is an attack weave - no saving throw allowed.
 **Applies Effects:** revealed
 **Saving Throw:** None
 **Damage Type:** Positive (energy)
@@ -94,7 +94,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Water Potential + Water Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Water Mastery
-**Description:** Target takes 8 cold and bludgeoning damage. This is an attack weave—no saving throw allowed.
+**Description:** Target takes 8 cold and bludgeoning damage. This is an attack weave - no saving throw allowed.
 **Damage Base:** 8
 **Applies Effects:** Slowed (minor)
 **Saving Throw:** None
@@ -167,7 +167,7 @@
 **Action:** Complex weave (2 actions)
 **Weaving Roll:** Negative Potential + Negative Mastery / Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Negative Mastery
-**Description:** Target takes 8 negative damage. You heal HP equal to half the damage dealt (after DR). This is an attack weave—no saving throw allowed.
+**Description:** Target takes 8 negative damage. You heal HP equal to half the damage dealt (after DR). This is an attack weave - no saving throw allowed.
 **Applies Effects:** weakened
 **Saving Throw:** None
 **Damage Type:** Negative (energy)
@@ -214,7 +214,7 @@
 **Action:** Simple weave (1 action)
 **Weaving Roll:** Air Potential + Air Mastery
 **Targeting Roll:** Casting Stat + Air Mastery
-**Description:** Touch a target and channel a burst of sonic vibration into them. Target takes 4 thunder damage. This is an attack weave—no saving throw allowed.
+**Description:** Touch a target and channel a burst of sonic vibration into them. Target takes 4 thunder damage. This is an attack weave - no saving throw allowed.
 **Saving Throw:** None
 **Damage Type:** Thunder (sonic)
 **DR Interaction:** No DR

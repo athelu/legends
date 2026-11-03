@@ -1,0 +1,170 @@
+{
+  "_id": "ca0bf88a8af9a893",
+  "name": "Name: Iceborn",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Iceborn can apply the Frozen condition through Glacial Strike, which is the first Ice Nephilim capable of fully Restraining a target through cold alone. Permafrost spreads hazardous terrain passively as they move and stand, meaning the longer an engagement lasts the more difficult the battlefield becomes for anything that relies on movement. A summoner who gives one a target and space to maneuver will find the target increasingly unable to move by the second or third round of contact.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 25,
+      "max": 25,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 4,
+      "perception": 4,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 3,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 3,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 5,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "",
+    "attacksNotes": "<p>Glacial Strike [Combat]: Melee attack (Agil 6 + Melee Combat 3), Reach: 10 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 9 damage (4 + 5 Str) + 3 cold damage (Half DR); target gains Numbed condition.</li>\n<li><strong>Margin 2:</strong> 9 damage, DR halved (round up) + 3 cold damage; target gains Frosted condition; movement speed halved until end of their next turn.</li>\n<li><strong>Margin 3:</strong> 12 damage + 4 cold damage; target gains Frozen condition; Restrained until they succeed on a Might check (1 success) as a [Combat] action.</li>\n</ul>\n<p>Frost Lance [Combat]: Ranged attack (Dex 4 + Ranged Combat 2), Range: 60 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 cold damage (8 + 4 Dex); target gains Numbed.</li>\n<li><strong>Margin 2:</strong> 12 cold damage, DR halved (round up); target gains Frosted + movement speed halved until end of their next turn.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Frost Aura: Creatures starting their turn within 10 feet take 3 cold damage (Half DR) and gain the Chilled condition. Powerful Build: Iceborn counts as Huge for carrying, pushing, dragging, and lifting. Ice Stride: Moves across ice and snow at full speed. Creates a thin frost trail wherever it walks; surfaces within 5 feet of its path become Difficult Terrain for 1 minute. Permafrost: Ground within 15 feet of the Iceborn where it has stood for at least 1 round becomes frozen. Frozen ground is Difficult Terrain and creatures moving across it make Acrobatics [Easy] checks or fall Prone.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Iceborn",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!ca0bf88a8af9a893"
+}

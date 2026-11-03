@@ -1,0 +1,170 @@
+{
+  "_id": "c29d83e91804c639",
+  "name": "Name: Bone Devil",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 120,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 3,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 5,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 30,
+      "max": 30,
+      "temp": 0
+    },
+    "dr": {
+      "value": 4,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 5,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 5,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 5,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 3,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 40,
+      "fly": 40,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "outsider",
+    "creatureSubtype": "resistant to fire, cold, lightning (+2 DR",
+    "hpMultiplier": 6,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 120 ft, Devil's Sight, Truesight 30 ft",
+    "tactics": "Bone Devils are commanders and negotiators — they spend the first round assessing before fully committing. Fear Aura keeps weaker enemies at a distance while they focus on primary threats. A Bone Devil that has agreed to terms will execute those terms with precision and will always point out when you could have asked for more.",
+    "attacksNotes": "<p>Claw [Combat]: Melee attack (Agil 7 + Melee Combat 3), Reach: 10 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 14 damage (9 + 5 Str)</li>\n<li><strong>Margin 2:</strong> 14 damage, DR halved (round up)</li>\n</ul>\n<p>Tail Sting [Combat]: Melee attack (Agil 7 + Melee Combat 3), Reach: 10 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 13 damage (8 + 5 Str) + Fortitude [Easy] save or Poisoned (Strong).</li>\n<li><strong>Margin 2:</strong> 13 damage, DR halved (round up) + Poisoned (Strong) (no save) + Weakened condition for 1 minute.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Fear Aura: Creatures within 10 feet that are not Fiends make a Will [Easy] save at the start of their turn. On failure, they gain the Frightened condition until they succeed. Creatures immune to fear or charm are unaffected. Wall of Ice (1/day): As 2 [Combat] actions, create a 60-foot-long, 20-foot-high wall of ice. Each section has HP 20 and DR 4. Duration until destroyed.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Bone Devil",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!c29d83e91804c639"
+}

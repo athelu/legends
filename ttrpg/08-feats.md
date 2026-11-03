@@ -722,7 +722,7 @@ toggle.state stateKey=flowingGuard label="Flowing Guard"
 **Usage:** Passive + reaction
 **Keyword:** [Combat], [Defense], [Reaction]
 **Description:** A wall of shields held by people who trust each other is harder to break than stone. 
-**Benefit:** When you and at least two allies adjacent to you are all wielding shields, all of you gain +2 DR. When an adjacent ally is attacked, you can use a [Reaction] to grant them +2 to both dice on their defense roll
+**Benefit:** When you and at least two allies adjacent to you are all wielding shields, all of you gain +2 DR. When an adjacent ally is attacked, you can use a [Reaction] to grant them -2 to both dice on their defense roll
 **Effects:**
 dr.modify value=2 damageTypes=physical
 

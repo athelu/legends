@@ -1,0 +1,170 @@
+{
+  "_id": "2a0c7ca556e89ff8",
+  "name": "Name: Owlbear",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 5,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 6,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 6,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 30,
+      "max": 30,
+      "temp": 0
+    },
+    "dr": {
+      "value": 2,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 3.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 5,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 5,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "large",
+    "speed": {
+      "walk": 40,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "monstrosity",
+    "creatureSubtype": "",
+    "hpMultiplier": 5,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Keen Sight and Smell",
+    "tactics": "Owlbears charge aggressively, attempting to trigger Aggressive Charge to knock prey prone. They use Multiattack every round, trying to trigger Maul for devastating damage. Wounded owlbears become frenzied and reckless.",
+    "attacksNotes": "<p>Beak [Combat]: Melee attack (Agil 7 + Melee Combat 5), Reach: 10 ft (Large creature)</p>\n<ul>\n<li><strong>Margin 1:</strong>: 15 damage (10 + 5 Str)</li>\n<li><strong>Margin 2:</strong> 15 damage, DR halved (round up)</li>\n</ul>\n<p>Claws [Combat]: Melee attack (Agil 7 + Melee Combat 5 vs opponent's defense), Reach: 10 ft (Large creature)</p>\n<ul>\n<li><strong>Margin 1:</strong>: 15 damage (10 + 5 Str)</li>\n<li><strong>Margin 2:</strong> 15 damage, DR halved (round up)</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Large <strong>Size:</strong> Occupies 10×10 ft space, 10 ft reach Keen Sight and Smell: Vision and scent-based Perception checks have Fortune Maul: If both ### Attacks (beak AND claw) hit the same target in one turn, target takes additional 4 damage (no attribute modifier, represents crushing embrace) Aggressive Charge (Recharge 6-8): If the owlbear moves at least 20 feet straight toward a target and then hits with a claw attack on the same turn, the target must make a Fortitude [Easy] save or be knocked Prone. If prone, owlbear can immediately make a beak attack as a [Free] action.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Owlbear",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 2,
+    "height": 2,
+    "disposition": -1
+  },
+  "_key": "!actors!2a0c7ca556e89ff8"
+}

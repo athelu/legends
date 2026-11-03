@@ -1,0 +1,170 @@
+{
+  "_id": "f54a85799d35de2e",
+  "name": "Name: Glacier Giant",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Glacier Giants apply Frozen reliably at Margin 2, which Restrains targets, and then Grapple at Margin 3 to add ongoing cold damage on top of the movement restriction. Glacier Hurl can apply Frozen at range, meaning they can immobilize high-priority targets before closing. The Frost Aura's Numbed condition on everything within 10 feet means enemies fighting in melee are taking stacking cold conditions from proximity alone. A summoner who keeps one engaged consistently will find the battlefield progressively frozen — literally — within a few rounds.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 6,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 150,
+      "max": 150,
+      "temp": 0
+    },
+    "dr": {
+      "value": 5,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 2.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 5,
+      "perception": 5,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 4,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 5,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "huge",
+    "speed": {
+      "walk": 35,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "nephilim",
+    "creatureSubtype": "Giant",
+    "hpMultiplier": 30,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft",
+    "tactics": "",
+    "attacksNotes": "<p>Permafrost Fist [Combat]: Melee attack (Agil 6 + Melee Combat 5), Reach: 15 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 11 damage (5 + 6 Str) + 3 cold damage (Half DR); target gains Frosted condition.</li>\n<li><strong>Margin 2:</strong> 11 damage, DR halved (round up) + 3 cold damage; target gains Frozen condition + Prone; no save.</li>\n<li><strong>Margin 3:</strong> 11 damage, DR halved (round up) + 3 cold damage + Frozen + Prone; target Grappled as ice encases their limbs; ongoing 8 cold damage per round while Grappled.</li>\n</ul>\n<p>Glacier Hurl [Combat]: Ranged attack (Dex 5 + Ranged Combat 4), Range: 80/160 ft.</p>\n<ul>\n<li><strong>Margin 1:</strong>: 14 cold damage (9 + 5 Dex); target gains Frosted + movement halved.</li>\n<li><strong>Margin 2:</strong> 14 cold damage, DR halved (round up); target gains Frozen + Prone; no save.</li>\n<li><strong>Margin 3:</strong> 14 cold damage, DR halved (round up) + Frozen + Prone; target Restrained by ice impact for 1 round; Fortitude save (1 success) to move.</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Frost Aura: Creatures starting their turn within 10 feet take 6 cold damage (Half DR) and gain the Numbed condition. Powerful Build: Glacier Giant counts as Gargantuan for carrying, pushing, dragging, and lifting. Ice Stride: Moves across ice and snow at full speed. Creates a thin frost trail wherever it walks; surfaces within 5 feet of its path become Difficult Terrain for 1 minute. Permafrost: Ground within 20 feet of the Glacier Giant where it has stood for at least 1 round becomes frozen. Frozen ground is Difficult Terrain and creatures moving across it make Acrobatics [Easy] checks or fall Prone. Resilient Defense (1/day): When the Glacier Giant fails a saving throw, it may choose to succeed instead. Action Points (3): Boss template. Spend at the end of any other creature's turn: Move (1, up to half speed), Attack (1, no Multiple Action Penalty), Detect (1), Special Ability (2). Regains all at the start of its own turn.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Glacier Giant",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 3,
+    "height": 3,
+    "disposition": -1
+  },
+  "_key": "!actors!f54a85799d35de2e"
+}

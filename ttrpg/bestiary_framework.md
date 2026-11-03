@@ -2,28 +2,109 @@
 
 ## Monster Design Philosophy
 
-Monsters use the same core d8 roll-under mechanics as player characters, but with streamlined presentation and special abilities. Each monster has a **Threat Rating** that indicates appropriate challenge level.
+Monsters use the same core d8 roll-under mechanics as player characters, but with streamlined presentation and special abilities. Each monster has a **Tier** that indicates appropriate challenge level.
+
+**Design targets (playtest-derived):**
+- A standard encounter should resolve in **about 3-4 rounds**. Nobody enjoys a fight that lasts 5+.
+- A boss fight can run longer, but should not exceed about 8 rounds.
+- A standard encounter should cost a party roughly 30-40% of its total HP.
 
 ---
 
-## Threat Rating System
+## Tier Rating System
 
-### Threat Rating Scale
-Monsters use the same tier system as characters, including fractional ratings:
+### What a Tier Means
+A **Tier N creature is worth one Tier N player character.** Encounters are built by counting creatures (see Encounter Building). Fractional tiers are fractions of a PC.
 
-| Threat Rating | Equivalent | Challenge For |
-|--------------|------------|---------------|
-| 1/8 | CR 1/8 | 4 Tier 1 PCs (trivial for 1 PC) |
-| 1/4 | CR 1/4 | 2 Tier 1 PCs (easy for 1 PC) |
-| 1/2 | CR 1/2 | 1 Tier 1 PC (fair fight) |
-| 1 | CR 1 | 1 Tier 1 PC (challenging) |
-| 2 | CR 2-4 | 1 Tier 2 PC |
-| 3 | CR 5-7 | 1 Tier 3 PC |
-| 4 | CR 8-10 | 1 Tier 4 PC |
-| 5 | CR 11-15 | 1 Tier 5 PC |
-| 6 | CR 16-20 | 1 Tier 6 PC |
-| 7 | CR 21-25 | 1 Tier 7 PC |
-| 8 | CR 26+ | 1 Tier 8 PC |
+| Tier | Equivalent | Encounter Value | Notes |
+|------|------------|-----------------|-------|
+| 1/8 | CR 1/8 | 1/8 of a PC | Vermin, sprites, motes. Only dangerous in numbers |
+| 1/4 | CR 1/4 | 1/4 of a PC | Animals, civilians, lesser spawn |
+| 1/2 | CR 1/2 | 1/2 of a PC | Trained but unremarkable fighters |
+| 1 | CR 1 | 1 Tier 1 PC | Competent fighter |
+| 2 | CR 2-4 | 1 Tier 2 PC | |
+| 3 | CR 5-7 | 1 Tier 3 PC | |
+| 4 | CR 8-10 | 1 Tier 4 PC | |
+| 5 | CR 11-15 | 1 Tier 5 PC | |
+| 6 | CR 16-20 | 1 Tier 6 PC | |
+| 7 | CR 21-25 | 1 Tier 7 PC | |
+| 8 | CR 26+ | 1 Tier 8 PC | |
+
+A lone Tier N creature is **not** a challenge for a party of four Tier N PCs. It is one quarter of one. A solo threat must use the Boss template.
+
+---
+
+## Design Baseline: The Reference PC
+
+All benchmarks in this document are calibrated against the way players actually build characters, not against the standard array. Playtesting and simulation showed that the old creature benchmarks assumed a character far weaker than the one at the table.
+
+**Reference PC assumptions:**
+- **36 attribute points** (the average of 8d8), not the 32-point standard array.
+- The **damage-supporting attribute is 7 or 8**: Agility for melee, Dexterity for ranged, the casting attribute for weaves.
+- **Luck is 5 or more.** Creatures cannot spend Luck, but Luck is the second die on every saving throw, so it still matters for them.
+- Players spend Luck to reduce dice and focus fire on one target.
+- Armor, shields and feats routinely give a Tier 1 PC **DR 4-6**.
+- Melee Combat or Ranged Combat is 5 at Tier 1, rising to 8 by Tier 4.
+- PC HP is Con × 8 and never grows with tier. PCs become harder to hit, not harder to kill.
+
+| Tier | Attack Attr | Attack Skill | Damage Attr | Con | HP | Typical DR | Weapon Damage |
+|------|-------------|--------------|-------------|-----|----|-----------|---------------|
+| 1 | 8 | 5 | 4 | 5 | 40 | 4 | 8 |
+| 2 | 8 | 6 | 5 | 5 | 40 | 5 | 8 |
+| 3 | 8 | 7 | 5 | 6 | 48 | 6 | 10 |
+| 4 | 8 | 8 | 6 | 6 | 48 | 7 | 10 |
+| 5 | 8 | 8 | 7 | 7 | 56 | 8 | 10 |
+
+### Why Opposed Rolls Make Fights Long
+Against an equal defender, an attacker hits about 47% of the time (tie-breakers included), but reaches Margin 2 only about 3% of the time. Margin 3 is effectively unreachable between equals. Whatever damage is attached to Margin 1 is therefore almost all the damage that is ever dealt. This drives every number in this document:
+- Damage bonuses must apply on **Margin 1**, not only on higher margins.
+- Creature HP must be low enough that a standard fight ends in 3-4 rounds.
+- Creature damage is judged against an assumed PC DR of 4-6.
+
+---
+
+## Damage Model
+
+Natural weapons and manufactured weapons deal damage as follows:
+
+| Margin | Damage |
+|--------|--------|
+| 1 | Weapon damage + damage attribute (Str for melee and natural weapons, Dex for ranged), minus the target's full DR |
+| 2 | The same damage, but the target's DR is **halved (round up)** |
+| 3+ | The same damage, DR halved (round up), **plus a condition** (prone, disarmed, bleeding, or the attack's listed rider) |
+
+Stat blocks list the damage value once and note the DR effect:
+
+```
+- **Margin 1:** 12 damage (8 + 4 Str)
+- **Margin 2:** 12 damage, DR halved (round up)
+- **Margin 3:** 12 damage, DR halved (round up), plus [condition]
+```
+
+A hit always deals at least 1 damage.
+
+### Damage Caps by Tier
+Damage must not scale with tier the way HP once did. PC HP is flat, so a hit that is acceptable at Tier 1 is still acceptable at Tier 8.
+
+| Tier | Max Single Hit (Weapon + Attr) | Fail Damage on a Save-Based Effect |
+|------|--------------------------------|------------------------------------|
+| 1/8 | 6 | 4 |
+| 1/4 | 8 | 6 |
+| 1/2 | 10 | 8 |
+| 1 | 12 | 12 |
+| 2 | 14 | 16 |
+| 3 | 16 | 20 |
+| 4 | 18 | 24 |
+| 5 | 20 | 28 |
+| 6 | 22 | 32 |
+| 7 | 24 | 36 |
+| 8 | 26 | 40 |
+
+**Save-based effects** (breath weapons, auras, area blasts) skip the attack roll, so they must be weaker than an attack. A failed save (0 successes) deals the amount above, 1 success deals half, and 2+ successes deal one quarter. Rounds up. Boss creatures may use 1.5× these values.
+
+**Damage over time and auras:** Auras and start-of-turn damage deal no more than one quarter of the failed-save value per trigger.
+
+**Riders:** Extra damage from abilities (Maul, Power Attack, Aggressive Charge and similar) counts toward the single-hit cap unless the ability is limited to once per encounter.
 
 ---
 
@@ -180,41 +261,50 @@ Specify the constituent creature type. Carry over relevant special abilities fro
 
 ---
 
-## Attribute Guidelines by Threat Rating
+## Attribute Guidelines by Tier
 
-### Attribute Benchmarks
+### The 36-Point Baseline
+**Every creature starts from a pool of 36 attribute points**, the same as a player character who rolled average on 8d8. The old standard array of 32 points is no longer used for creatures.
 
-| Threat | Primary Attrs | Secondary Attrs | Dump Attrs | Skill Ranks (combat) | Max Skill > Attr |
-|--------|---------------|-----------------|------------|---------------------|------------------|
-| 1/8 | 2-3 | 1-2 | 1 | 0-1 | +1 |
-| 1/4 | 2-3 | 2 | 1 | 1-2 | +1 |
-| 1/2 | 3-4 | 2-3 | 1-2 | 2-3 | +1 |
-| 1 | 3-4 | 2-3 | 1-2 | 2-3 | +1 |
-| 2 | 4-5 | 3-4 | 1-2 | 3-4 | +2 |
-| 3 | 4-6 | 3-5 | 1-3 | 4-5 | +2 |
-| 4 | 5-7 | 4-6 | 2-3 | 5-6 | +2 |
-| 5 | 6-8 | 5-7 | 2-4 | 6-7 | +3 |
-| 6 | 7-8 | 6-8 | 3-5 | 7-8 | +3 |
-| 7-8 | 8 | 7-8 | 4-6 | 8 | +3 |
+The 36-point baseline applies to humanoids at every tier and to non-humanoid creatures at Tier 1 and above. **Non-humanoid minions below Tier 1** (vermin, motes, small beasts) use a reduced pool of **28 (Tier 1/8), 30 (Tier 1/4) or 34 (Tier 1/2)**, because 36 points cannot be spent sensibly on a rat (an Int 1 creature does not need Wis 8 and Luck 7). Their weakness still comes mainly from skill ranks, HP and damage.
 
-**Note:** Monster skills can exceed their governing attribute by a limited amount:
-- **TR 1/8 to 1:** Skills can exceed attribute by +1 maximum
-- **TR 2 to 4:** Skills can exceed attribute by +2 maximum
-- **TR 5 to 8:** Skills can exceed attribute by +3 maximum
+Higher tiers add points the way PCs earn them through XP:
 
-This represents innate talent, specialized training, or supernatural ability.
+| Tier | Attribute Pool | Attack Attr (Agil melee / Dex ranged) | Attack Skill | Damage Attr (Str melee / Dex ranged) | Con | Luck |
+|------|----------------|---------------------------------------|--------------|--------------------------------------|-----|------|
+| 1/8 | 36 | 6 | 1-2 | 2 | 2 | 5 |
+| 1/4 | 36 | 6 | 2 | 3 | 3 | 5 |
+| 1/2 | 36 | 7 | 3 | 4 | 4 | 5 |
+| 1 | 36 | 8 | 4 | 4 | 5 | 5 |
+| 2 | 38 | 8 | 5 | 5 | 5 | 5 |
+| 3 | 40 | 8 | 6 | 5 | 6 | 5-6 |
+| 4 | 43 | 8 | 7 | 6 | 6 | 5-6 |
+| 5 | 46 | 8 | 7 | 7 | 7 | 5-6 |
+| 6 | 49 | 8 | 8 | 7 | 7 | 6 |
+| 7 | 52 | 8 | 8 | 8 | 8 | 6 |
+| 8 | 55 | 8 | 8 | 8 | 8 | 6-7 |
 
-**Examples:**
-- Wolf (TR 1/4, Agil 4): Melee Combat can be 4 or 5 (max +1)
-- Orc Warrior (TR 1/2, Agil 3): Melee Combat can be 3 or 4 (max +1)
-- Young Dragon (TR 4, Agil 6): Melee Combat can be 6, 7, or 8 (max +2)
-- Ancient Dragon (TR 8, Agil 8): Melee Combat can be 8 (already at max, +3 would exceed cap)
+These are **Standard role** values (see Role Adjustments). The remaining points go to the secondary attack attribute, Wis, Int, Cha and so on. Beasts that keep Int 1-2 simply have more points left for physical and sensory attributes.
 
-### Primary Attributes
-- Physical monsters: Str, Con, Agi
-- Ranged monsters: Dex, Agi, Wis (perception)
-- Spellcasters: Int, Wis, or Cha (depending on type)
-- All threatening creatures: Luck 2+ (represents threat level)
+**Luck is at least 5.** Creatures cannot spend Luck, but Luck is the second die on every Fortitude, Reflex and Willpower save. A creature with Luck 2-3 fails saves constantly, which makes every control weave and condition on the PC side far stronger than intended.
+
+**Skill cap above attribute:** Monster skills can exceed their governing attribute by a limited amount:
+- **Tier 1/8 to 1:** +1 maximum
+- **Tier 2 to 4:** +2 maximum
+- **Tier 5 to 8:** +3 maximum
+
+### Role Adjustments
+The Attack Attr and Attack Skill columns describe a skirmisher-type creature that fights as a PC does. Creatures that trade accuracy and defense for something else adjust as follows. Because Agility is both attack and defense, a slow brute is also easy to hit; that is part of the trade.
+
+| Role | Attack Attr | Attack Skill | HP Type | Damage Attr | Examples |
+|------|-------------|--------------|---------|-------------|----------|
+| Skirmisher | Benchmark | Benchmark | Standard (×4) | Benchmark | Wolf, pirate, sprite |
+| Brute | −2 to −3 | Benchmark | Tough (×5) | +1 over benchmark | Ogre, golem, giant |
+| Artillery | Benchmark (Dex) | Benchmark | Fragile (×3) | Benchmark (Dex) | Archer, caster |
+| Tough/Massive | Benchmark | −1 (Tough), −2 (Massive) | ×5 / ×6 | Benchmark | Dragons, titans |
+| Minion | −1 | −1 | Fragile (×3) | −1 | Swarms, motes |
+
+Tough and Massive creatures take longer to kill, so they count for more in an encounter (see Encounter Building).
 
 ---
 
@@ -222,28 +312,32 @@ This represents innate talent, specialized training, or supernatural ability.
 
 ### IMPORTANT: Humanoid NPCs Use PC Creation Rules
 
-**The attribute benchmarks table applies ONLY to non-humanoid creatures** (beasts, monstrosities, undead, constructs, dragons, etc.).
+**Humanoid NPCs (guards, soldiers, bandits, adventurers, etc.) are built using standard PC creation rules, with the following NPC adjustments:**
 
-**Humanoid NPCs (guards, soldiers, bandits, adventurers, etc.) MUST be built using standard PC creation rules:**
+1. **Use 36 points for attributes.** Put the damage-supporting attribute at the benchmark above (Agility 7-8 for melee fighters, Dexterity 7-8 for archers) and **Luck at 5**. Example arrays:
+   - Melee: Str 4 / Con 5 / Agil 8 / Dex 3 / Int 3 / Wis 4 / Cha 4 / Luck 5
+   - Ranged: Str 3 / Con 5 / Agil 4 / Dex 8 / Int 3 / Wis 4 / Cha 4 / Luck 5
+2. **Follow the PC creation process:** choose a background, spend XP per tier, select feats.
+3. **Calculate HP = Constitution × 4** (Standard). Armored soldiers and veterans use ×5 (Tough). **NPCs do not use the PC Con × 8 rule.** PCs have the Dying state and Luck to absorb damage; NPCs die at 0 HP and are built to end fights in 3-4 rounds.
+4. **Attack skill follows the tier benchmark above**, which is one rank below a PC of the same tier.
+5. **XP budgets for humanoid NPCs:**
 
-1. **Use PC Attribute Array:** 5, 4, 3, 3, 3, 2, 2, 2 (total 24)
-2. **Follow PC Creation Process:** Choose background, spend XP per tier, select feats, calculate HP = Constitution × 8
-3. **XP Budgets for Humanoid NPCs:**
+**PC skill baseline:** All PC skills begin at rank 2 under the current mechanics. In a humanoid NPC stat block, list only skills at rank 3 or higher; an omitted skill is rank 2 unless the entry explicitly says otherwise. This presentation rule applies to PC-equivalent humanoids only. Non-humanoid creatures use the benchmarks above, including ranks below 2 where appropriate.
 
-| Threat | Tier | XP Beyond Background | Max Purchased Feats | Target Success Rate* |
-|--------|------|---------------------|---------------------|---------------------|
-| 1/4 | Civilian | 0 (background only) | 0 | 55-60% |
-| 1/2 | Early T1 | 60-80 XP | 1 | 65-75% |
-| 1 | Mid-Late T1 | 120-180 XP | 2 | 80-90% |
-| 2 | T2 | 240-300 XP | 4 | 85-90% |
-| 3 | T3 | 480-540 XP | 6 | 90-95% |
-| 4 | T4 | 720-780 XP | 8 | 95-98% |
-| 5 | T5 | 960-1020 XP | 10 | 98-100% |
-| 6 | T6 | 1200-1260 XP | 12 | 100% |
-| 7 | T7 | 1440-1500 XP | 14 | 100% |
-| 8 | T8 | 1680+ XP | 16 | 100% |
+| Tier | Class | XP Beyond Background | Max Purchased Feats | Attack (Attr / Skill) | 1+ Success Rate* |
+|------|-------|---------------------|---------------------|-----------------------|------------------|
+| 1/4 | Civilian | 0 (background only) | 0 | 6 / 2 | 67% |
+| 1/2 | Early T1 | 60-80 XP | 1 | 7 / 3 | 81% |
+| 1 | Mid-Late T1 | 120-180 XP | 2 | 8 / 4 | 92% |
+| 2 | T2 | 240-300 XP | 4 | 8 / 5 | 94% |
+| 3 | T3 | 480-540 XP | 6 | 8 / 6 | 95% |
+| 4 | T4 | 720-780 XP | 8 | 8 / 7 | 97% |
+| 5 | T5 | 960-1020 XP | 10 | 8 / 7 | 97% |
+| 6 | T6 | 1200-1260 XP | 12 | 8 / 8 | 98% |
+| 7 | T7 | 1440-1500 XP | 14 | 8 / 8 | 98% |
+| 8 | T8 | 1680+ XP | 16 | 8 / 8 | 98% |
 
-*Target success rate for primary action (1+ success on primary attribute + skill roll)
+*Chance of at least one success on the attack roll. Success rate is a poor measure of threat in an opposed system: what matters is the margin against the defender's roll. Use the benchmark columns, not the success rate, to judge a build.
 
 ---
 
@@ -261,7 +355,7 @@ Characters are learning their trades. They maximize efficiency by raising skills
 **XP Distribution:**
 - 70-80% on skills
 - 10-20% on attributes (usually just for HP or feat prerequisites)
-- 10% on feats (2 starting + 0-2 purchased)
+- 10% on feats (3 starting + 0-2 purchased)
 
 **Typical Progression:**
 - **Tier 1/4 (TR 1/4):** Background skills only, no additional advancement
@@ -322,17 +416,9 @@ An effective caster needs high Mastery in their primary energy, and a strong sup
 
 **For casters: Mastery before Potentials.** Same principle. Mastery is rolled every weave. Potentials mainly affect the Energy pool.
 
-**Success rate progression should feel smooth:**
+**Judge a build by its margin, not its success rate.** The attack pool of the benchmark table above, set against a PC defense of about Agility 8 + skill 5, is what makes a creature threatening. A 97% chance of "1+ success" means little when the defender is also rolling.
 
-| Tier | Target Success (1+) | Feel |
-|------|---------------------|------|
-| 1 | 65-85% | Competent but unreliable |
-| 2 | 85-90% | Professional |
-| 3 | 90-95% | Heroic (clear jump from Tier 2) |
-| 4 | 95-98% | Champion |
-| 5-8 | 98-100% | Mastery |
-
-**Don't forget HP scaling.** Con raises matter for survivability at higher tiers.
+**HP does not scale with tier.** HP stays low and flat; tier shows up as accuracy, defense, DR and abilities, exactly as it does for PCs.
 
 ---
 
@@ -342,27 +428,25 @@ An effective caster needs high Mastery in their primary energy, and a strong sup
 
 **HP = Constitution × HP Multiplier**
 
-| Threat Rating | Fragile (×) | Standard (×) | Tough (×) | Massive (×) |
-|--------------|-------------|--------------|-----------|-------------|
-| 1/8 | 5 | 7 | 7 | 11 |
-| 1/4 | 6 | 8 | 8 | 12 |
-| 1/2 | 7 | 9 | 9 | 13 |
-| 1 | 8 | 10 | 10 | 14 |
-| 2 | 10 | 13 | 14 | 19 |
-| 3 | 12 | 16 | 18 | 24 |
-| 4 | 15 | 20 | 23 | 30 |
-| 5 | 18 | 24 | 28 | 36 |
-| 6 | 22 | 30 | 36 | 46 |
-| 7 | 26 | 36 | 44 | 56 |
-| 8 | 30 | 42 | 52 | 66 |
+HP multipliers are **flat across tiers**. PC HP never grows with tier (Con × 8, 40-64 total), so creature HP must not either. Simulation showed that raising creature HP by only 50% over the benchmark, with offense unchanged, drops the party's win rate from about 98% to about 56% and doubles fight length.
+
+| Type | Multiplier | Tier 1 (Con 5) | Tier 3 (Con 6) | Tier 5 (Con 7) |
+|------|------------|----------------|----------------|----------------|
+| Fragile | ×3 | 15 | 18 | 21 |
+| Standard | ×4 | 20 | 24 | 28 |
+| Tough | ×5 | 25 | 30 | 35 |
+| Massive | ×6 | 30 | 36 | 42 |
+| Boss | ×30 | 150 | 180 | 210 |
+
+Tough and Massive creatures also take a −1 and −2 penalty to attack skill (see Role Adjustments). The Boss multiplier applies only to the Boss template (see Elite/Boss Monster Mechanics).
 
 ### Creature Type Categories
 
-**Fragile:** Small beasts, Tiny creatures, low-Con spellcasters, swarms
+**Fragile:** Small beasts, Tiny creatures, low-Con spellcasters, swarms, minions
 
 **Standard:** Most humanoids, medium beasts, constructs (medium toughness), standard undead
 
-**Tough:** Warriors and soldiers, large beasts, armored constructs, tough undead (zombies), most monstrosities
+**Tough:** Warriors and soldiers in heavy armor, large beasts, armored constructs, tough undead (zombies), most monstrosities
 
 **Massive:** Giants, dragons, Huge+ creatures, siege monsters, legendary creatures
 
@@ -411,8 +495,8 @@ Alien biology. Often has alien mind (Fortune vs mental effects or vulnerability,
 **Celestial Resistances:** Often resistant to positive, negative energy.
 **Magic Resistance:** Subtract 1 from both dice on saves vs magical effects.
 
-#### Fey
-**Fey Ancestry:** Fortune on saves vs charm effects.
+#### Fae
+**Fae Ancestry:** Fortune on saves vs charm effects.
 **Magic Affinity:** Often can innately weave.
 **Iron Weakness (optional):** Takes extra damage from cold iron.
 
@@ -529,16 +613,21 @@ All monsters must list Melee Combat rank (if they make melee attacks) and Ranged
 
 ### Skill Rank Guidelines
 
-| Threat | Skill Rank (combat) | With Attribute 4 | Success Rate (1+) |
-|--------|---------------------|------------------|-------------------|
-| 1/8-1/4 | 1-2 | 4/2 | 44-53% |
-| 1/2-1 | 2-3 | 4/3 | 53-66% |
-| 2 | 3-4 | 5/4 | 66-78% |
-| 3 | 4-5 | 5/5 | 78-86% |
-| 4 | 5-6 | 6/6 | 86-94% |
-| 5+ | 6-8 | 7/7-8/8 | 94-100% |
+Use the attack skill column of the Attribute Guidelines by Tier table. Against a PC defending with Agility 8 and a combat skill of 5, the attack pool that matters is the margin, not the success rate:
 
-Skills can exceed attributes for monsters to represent specialized combat ability.
+| Tier | Attack Pool (Attr / Skill) | Tough (−1) | Massive (−2) |
+|------|----------------------------|------------|--------------|
+| 1/8 | 6 / 1-2 | 6 / 1 | 6 / 1 |
+| 1/4 | 6 / 2 | 6 / 1-2 | 6 / 1 |
+| 1/2 | 7 / 3 | 7 / 2 | 7 / 1 |
+| 1 | 8 / 4 | 8 / 3 | 8 / 2 |
+| 2 | 8 / 5 | 8 / 4 | 8 / 3 |
+| 3 | 8 / 6 | 8 / 5 | 8 / 4 |
+| 4 | 8 / 7 | 8 / 6 | 8 / 5 |
+| 5 | 8 / 7 | 8 / 6 | 8 / 5 |
+| 6-8 | 8 / 8 | 8 / 7 | 8 / 6 |
+
+Brutes subtract 2-3 from the attack attribute. Skills can exceed attributes for monsters to represent specialized combat ability, within the caps in the Attribute Guidelines.
 
 ---
 
@@ -618,9 +707,46 @@ Some powerful monsters (typically Threat 4+) have **Action Points** representing
 
 ### Resilient Defense (replaces Legendary Resistance)
 
-**Resilient Defense (X/day):** When the creature fails a saving throw, it can choose to succeed instead. Common amounts: 1/day (Threat 3-4), 2/day (Threat 5-6), 3/day (Threat 7-8).
+**Resilient Defense (X/day):** When the creature fails a saving throw, it can choose to succeed instead. Common amounts: 1/day (Tier 3-4), 2/day (Tier 5-6), 3/day (Tier 7-8).
+
+### Boss Template
+
+A lone creature of the party's tier is worth about one quarter of the party (see Tier Rating System). To run a **solo or boss encounter**, apply the Boss template:
+
+- **HP = Con × 30** (instead of Con × 4). Simulation showed that matching a party's action economy with HP alone needs far more HP and produces fights of 12+ rounds. HP × 30 plus Action Points gives roughly 5-6 rounds and about 35-40% party HP lost against the Reference PC.
+- **3 Action Points**, available at every tier (not only Tier 4+), spent at the end of other creatures' turns. Attacks made with Action Points do not take the Multiple Action Penalty.
+- **Resilient Defense** at the rates above.
+- **Save-based effects** may use 1.5× the failed-save values in the Damage Caps table.
+- The base attack benchmarks and damage caps are otherwise unchanged. Do **not** raise single-hit damage to make a boss threatening.
+
+A Boss counts as **4 creatures** for Encounter Building. A boss encounter should still not exceed about 8 rounds; if the party is not threatening the boss by round 4, the boss has too much HP.
 
 ---
+
+## Encounter Building
+
+**Count creatures against the party.** Each creature of the party's tier counts as 1. Creatures one tier below count as 1/2, two tiers below as 1/4. Creatures one tier above count as 2, two tiers above as 4. Tough creatures count as 1.25, Massive creatures as 1.5, and Boss creatures as 4.
+
+**Minions (fractional tiers).** Against Tier 1 PCs with DR 4-6, light attackers barely scratch the party, so minions are worth less than their name suggests. Use these values:
+
+| Minion Tier | Value | Creatures per 1 Tier 1 Creature |
+|-------------|-------|---------------------------------|
+| 1/2 | 1/2 | 2 |
+| 1/4 | 1/3 | 3 |
+| 1/8 | 1/5 | 5 |
+
+For a party of 4 PCs, simulated results for Tier 1 creatures at benchmark:
+
+| Encounter | Creature Count | Expected Rounds | Party HP Lost |
+|-----------|----------------|-----------------|---------------|
+| Easy | 3 | 2-3 | 10-20% |
+| Standard | 4-5 | 3-4 | 25-40% |
+| Hard | 6 | 4-5 | 50-65% |
+| Deadly | 7+ | 5+ | 75%+ |
+
+In general: **Standard = party size + 1**, **Hard = party size + 2**, **Deadly = party size + 3**.
+
+Minion crowds are limited by space as much as by the count: 6-8 creatures can surround four PCs; 16 cannot.
 
 ---
 
@@ -671,23 +797,24 @@ Immune to mind-affecting effects (charm, fear, sleep) in most cases — note exc
 
 ```
 ### [Monster Name]
-**Threat Rating:** X
+**Tier:** X
 **Size:** [Tiny/Small/Medium/Large/Huge/Gargantuan] — [Creature Type]
-**HP:** X (Con Y × Multiplier Z [Fragile/Standard/Tough/Massive])
+**HP:** X (Con Y × Z, [Fragile/Standard/Tough/Massive/Boss])
 **DR:** X (source)
 **Speed:** X ft, [other movement types]
 **Attributes:** Str X / Con X / Agil X / Dex X / Int X / Wis X / Cha X / Luck X
-**Skills:** Melee Combat X, [other skills]
+**Skills:** Melee Combat X, [other skills at rank 3+]
 **Senses:** [Vision types and ranges]
 **Equipment:** [If applicable — note weapon size if non-Medium]
 **Initiative Bonus:** +X (Agil X)
-**Languages:** [If applicable]
+**Languages:** [Local (region-dependent), named languages if applicable]
 
 **Attacks:**
 - **[Attack Name] [Combat]:** [Melee/Ranged] attack ([Attribute + Skill] vs [target])
   - Reach: X ft
-  - Margin 1: X damage [type]
-  - Margin 2: X damage + X ([attribute] mod) [type]
+  - Margin 1: X damage [type] (weapon + attribute)
+  - Margin 2: X damage [type], DR halved (round up)
+  - Margin 3: X damage [type], DR halved (round up), plus [condition]
   - [Special effects if any]
 
 **Multiattack (if applicable):**
@@ -749,7 +876,7 @@ Immune to mind-affecting effects (charm, fear, sleep) in most cases — note exc
 **Method 2 — Quick Rule of Thumb:** Convert attribute, then divide the 5e attack bonus by 2 (round as needed) for approximate skill rank. Adjust up for primary skills, down for secondary.
 
 #### 3. HP (5e → d8)
-Take 5e HP and reduce by 30-40%, then round to match the HP multiplier table.
+Do not convert 5e HP. Set HP from Constitution × the flat multiplier in the Hit Point Calculation Tables (×3 Fragile, ×4 Standard, ×5 Tough, ×6 Massive, ×30 Boss). 5e hit point totals are far too high for this system.
 
 #### 4. AC → DR
 
@@ -765,7 +892,7 @@ Take 5e HP and reduce by 30-40%, then round to match the HP multiplier table.
 | 24+ | 7-8 |
 
 #### 5. Damage (5e → d8)
-Use d8 weapon damage tables with size modifiers applied. Convert average damage to the closest d8 equivalent. Strength or Dexterity modifiers to damage translate to the Margin 2 bonus.
+Use d8 weapon damage tables with size modifiers applied, then add the damage attribute on any hit (Margin 1). Do not convert 5e average damage directly: clamp the result to the Max Single Hit and Save-Based Effect values in the Damage Caps table for the creature's tier.
 
 #### 6. Save DCs (5e → d8)
 
@@ -791,29 +918,33 @@ Use d8 weapon damage tables with size modifiers applied. Convert average damage 
 
 ## Balancing & Playtesting
 
-### Success Rate Targets
+### Fight Length and Attrition Targets
 
-| Threat | vs Same-Tier PC Defense | Target Success Rate (1+) |
-|--------|-------------------------|-------------------------|
-| 1/8-1/4 | ~40% | At least 1 hit per 3 attacks |
-| 1/2-1 | ~50% | At least 1 hit per 2 attacks |
-| 2-3 | ~60% | At least 2 hits per 3 attacks |
-| 4-5 | ~70% | At least 7 hits per 10 attacks |
-| 6+ | ~80% | At least 4 hits per 5 attacks |
+Playtest and simulation results against the Reference PC (see Design Baseline):
+
+| Encounter | Rounds | Party HP Lost | Party Win Rate |
+|-----------|--------|---------------|----------------|
+| Standard (party size + 1 creatures) | 3-4 | 25-40% | 95%+ |
+| Hard (party size + 2) | 4-5 | 50-65% | 80-90% |
+| Boss (Boss template) | 5-8 | 40-60% | 90%+ |
+
+If a test fight runs more than 5 rounds with a standard encounter, **lower creature HP or raise attack accuracy before raising damage.** Raising damage past the Max Single Hit cap makes creatures lethal at the moment they connect while leaving the fight length unchanged.
+
+### Tuning Levers, In Order
+1. **HP multiplier.** Most sensitive lever. A 50% HP increase flips a fair fight into a loss.
+2. **Attack skill.** One rank of attack skill changes party HP lost by roughly 5-8 percentage points.
+3. **Creature count.** Each extra creature adds roughly 10-20 percentage points of party HP lost in a standard fight.
+4. **DR.** PC DR of 4-6 means damage below 6-8 is almost harmless. Check low-damage creatures against it.
+5. **Damage.** Last. Stay inside the Damage Caps table.
 
 Remember to account for the size modifier when setting skill ranks. A Large creature attacking Medium PCs has no size modifier. A Medium creature attacking a Large monster subtracts 1 from both attack dice. These modifiers affect the effective combat success rate without changing the listed skill rank.
 
-### Damage Output Benchmarks
-
-| Threat | Avg Damage per Hit | % of PC HP (Tier-appropriate) |
-|--------|-------------------|------------------------------|
-| 1/8 | 4-6 | 15-25% |
-| 1/4-1/2 | 6-10 | 20-30% |
-| 1-2 | 10-16 | 25-40% |
-| 3-4 | 16-24 | 30-50% |
-| 5+ | 24-40+ | 40-60% |
-
-Elite/Boss Monsters can exceed these benchmarks by 50-100% due to lower numbers on the field.
+### Things Playtesting Showed Were Weak Assumptions
+- **Creature Luck of 2-3.** Luck is the second die on every save; PCs at Luck 5+ with Luck spending make creatures fail saves far more often than the framework assumed.
+- **HP multipliers that grew with tier** while PC HP stayed flat.
+- **Damage that grew with tier,** including save-based breath weapons and auras of 40+ against PCs with 40-64 HP.
+- **Margin 2 as the damage bonus.** It almost never triggers against comparable defenders.
+- **Ignoring DR.** PCs reach DR 4-6 at Tier 1 through armor, shields and feats.
 
 ---
 
@@ -824,21 +955,24 @@ Elite/Boss Monsters can exceed these benchmarks by 50-100% due to lower numbers 
 - [ ] Attack difficulty modifiers noted for expected combat scenarios (creature vs likely PC sizes)
 - [ ] Natural weapon damage pulled from correct size row and weight category
 - [ ] Equipment weapons noted as correct size; grip and damage modifier applied if non-native size
-- [ ] Attribute benchmarks match Threat Rating
+- [ ] Attribute pool totals 36 (plus tier raises), Luck at least 5
+- [ ] Attack attribute, attack skill and damage attribute match the tier benchmark and role
 - [ ] Skill ranks within the allowed excess over governing attribute
-- [ ] HP calculated from Con × appropriate multiplier
+- [ ] HP calculated from Con × flat multiplier (×3 / ×4 / ×5 / ×6, or ×30 Boss)
+- [ ] Single-hit damage (weapon + attribute) within the Max Single Hit cap for the tier
+- [ ] Save-based and aura damage within the Save-Based Effect cap for the tier
 - [ ] Creature type traits listed
 - [ ] Resistances, immunities, and vulnerabilities specified
 - [ ] Tactics section explains how size and special abilities work together
 
 **Humanoid NPCs:**
-- [ ] Used standard PC attribute array (5, 4, 3, 3, 3, 2, 2, 2)
+- [ ] Used a 36-point attribute pool with the damage attribute at 7-8 and Luck 5
 - [ ] Selected appropriate background
 - [ ] XP budget calculated: Background + Tier XP
 - [ ] Followed tier-appropriate XP spending strategy
 - [ ] Selected 3 starting feats + appropriate purchased feats (max 2 per tier)
-- [ ] Success rate matches tier expectations
-- [ ] HP = Constitution × 8
+- [ ] Attack pool matches the tier benchmark
+- [ ] HP = Constitution × 4 (×5 for armored veterans)
 - [ ] Equipment follows equipment.md, armor.md, weapons.md
 
 **Swarms:**

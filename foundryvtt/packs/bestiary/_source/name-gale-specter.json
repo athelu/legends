@@ -1,0 +1,170 @@
+{
+  "_id": "032786c843268a80",
+  "name": "Name: Gale Specter",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": ""
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 60,
+      "blindsight": 30,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 3,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 5,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 3,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 4,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 3,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 20,
+      "max": 20,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 1.0
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 0,
+      "perception": 4,
+      "history": 0,
+      "devices": 0,
+      "language": 0,
+      "wilderness": 0,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 0,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 0,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 3,
+      "investigate": 0,
+      "society": 0,
+      "meleeCombat": 4,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 20,
+      "fly": 60,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "elemental",
+    "creatureSubtype": "immune to poison, disease, exhaustion, Paralyzed, Petrified, Unconscious; immune to lightning damage; does not need air, food, drink, or sleep",
+    "hpMultiplier": 4,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "common"
+    ],
+    "sensesNotes": "Darkvision 60 ft, Blindsight 30 ft",
+    "tactics": "Gale Specters use their fly speed aggressively, staying mobile to maintain Momentum Defense. They use Wind Strike to push melee fighters away from protected targets and Lightning Arc to pressure at range. A Cooperative Gale Specter will follow target priority; an Indifferent one picks whoever seems most challenging.",
+    "attacksNotes": "<p>Wind Strike [Combat]: Melee attack (Agil 8 + Melee Combat 4), Reach: 10 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 9 damage (6 + 3 Str)</li>\n<li><strong>Margin 2:</strong> 9 damage, DR halved (round up); target makes Fortitude save (1 success) or is pushed 10 feet</li>\n<li><strong>Margin 3:</strong> 9 damage, DR halved (round up); target pushed 10 feet and knocked Prone (no save)</li>\n</ul>\n<p>Lightning Arc [Combat]: Ranged attack (Dex 5 + Ranged Combat 3), Range: 60 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 12 lightning damage (7 + 5 Dex)</li>\n<li><strong>Margin 2:</strong> 12 lightning damage, DR halved (round up)</li>\n</ul>",
+    "specialAbilitiesNotes": "<p>Storm Body: The Gale Specter is difficult to hold. Grapple attempts add 1 to both dice. If successfully grappled, it makes a Fortitude [Easy] save at the start of its turn to break free automatically. Momentum Defense: While it has moved at least half its fly speed this turn, ### Attacks against it add 1 to both attack dice.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Gale Specter",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!032786c843268a80"
+}

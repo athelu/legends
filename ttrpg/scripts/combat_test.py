@@ -539,7 +539,7 @@ def run_combat(pc: Creature, enemies: List[Creature], encounter_name: str) -> di
 def create_wizard() -> Creature:
     """
     Create a Tier 1 Wizard with CHAIN MAIL
-    Standard array: 5, 4, 3, 3, 3, 2, 2, 2
+    Standard array: 5, 5, 5, 4, 4, 3, 3, 3
     Int 5, Luck 4, Con 3, Wis 3, Dex 3, Agi 3, Cha 2, Str 2
     
     Chain Mail: DR 5
@@ -578,7 +578,7 @@ def create_wizard() -> Creature:
 def create_fighter() -> Creature:
     """
     Create a Tier 1 Fighter with CHAIN MAIL
-    Standard array: 5, 4, 3, 3, 3, 2, 2, 2
+    Standard array: 5, 5, 5, 4, 4, 3, 3, 3
     Str 5, Con 4, Agi 3, Dex 3, Wis 3, Luck 4, Cha 2, Int 2
     
     Chain Mail: DR 5

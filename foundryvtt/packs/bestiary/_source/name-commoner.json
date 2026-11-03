@@ -1,0 +1,195 @@
+{
+  "_id": "0e895c7258a0c45e",
+  "name": "Name: Commoner",
+  "type": "npc",
+  "img": "icons/svg/mystery-man.svg",
+  "system": {
+    "biography": {
+      "value": "<p>Everyday working people - laborers, dockworkers, farmers in off-season, craftspeople, servants. No combat training whatsoever. Strong and hardy from physical work (hence Con 5) but completely inexperienced in fighting.</p>"
+    },
+    "visibility": {
+      "concealed": false,
+      "hidden": false,
+      "invisible": false
+    },
+    "vision": {
+      "lowLight": false,
+      "darkvision": 0,
+      "blindsight": 0,
+      "tremorsense": 0,
+      "perfectSight": 0
+    },
+    "attributes": {
+      "strength": {
+        "value": 4,
+        "label": "Strength"
+      },
+      "constitution": {
+        "value": 5,
+        "label": "Constitution"
+      },
+      "agility": {
+        "value": 2,
+        "label": "Agility"
+      },
+      "dexterity": {
+        "value": 4,
+        "label": "Dexterity"
+      },
+      "intelligence": {
+        "value": 4,
+        "label": "Intelligence"
+      },
+      "wisdom": {
+        "value": 5,
+        "label": "Wisdom"
+      },
+      "charisma": {
+        "value": 4,
+        "label": "Charisma"
+      },
+      "luck": {
+        "value": 5,
+        "label": "Luck"
+      }
+    },
+    "hp": {
+      "value": 15,
+      "max": 15,
+      "temp": 0
+    },
+    "dr": {
+      "value": 0,
+      "bonus": 0
+    },
+    "luck": {
+      "current": 5,
+      "max": 5
+    },
+    "cr": {
+      "value": 0.25
+    },
+    "skills": {
+      "persuasion": 0,
+      "athletics": 3,
+      "perception": 3,
+      "history": 0,
+      "devices": 3,
+      "language": 0,
+      "wilderness": 3,
+      "intimidate": 0,
+      "thievery": 0,
+      "perform": 0,
+      "empathy": 3,
+      "arcane": 0,
+      "writing": 0,
+      "medicine": 0,
+      "might": 3,
+      "craft": 0,
+      "deception": 0,
+      "religion": 0,
+      "rangedCombat": 0,
+      "investigate": 0,
+      "society": 3,
+      "meleeCombat": 2,
+      "acrobatics": 0,
+      "stealth": 0
+    },
+    "size": "medium",
+    "speed": {
+      "walk": 30,
+      "fly": 0,
+      "climb": 0,
+      "swim": 0,
+      "burrow": 0
+    },
+    "creatureType": "humanoid",
+    "creatureSubtype": "",
+    "hpMultiplier": 3,
+    "immunities": {
+      "damageTypes": [],
+      "conditions": []
+    },
+    "resistances": [],
+    "languages": [
+      "local (region-dependent)"
+    ],
+    "sensesNotes": "Normal",
+    "tactics": "Commoners avoid combat whenever possible. If forced to fight, they use improvised weapons (clubs, tools, pitchforks) and rely on numbers. More likely to grapple, shove, or flee than engage in actual weapon combat.",
+    "attacksNotes": "<p>Club [Combat]: Melee attack (Agil 5 + Melee Combat 2), Reach: 5 ft</p>\n<ul>\n<li><strong>Margin 1:</strong>: 8 damage (4 + 4 Str)</li>\n<li><strong>Margin 2:</strong> 8 damage, DR halved (round up)</li>\n</ul>\n<p>Alternative Actions: Grapple/Shove: Str 4 + Athletics 3 (opposed by target's Str + Athletics) On success, can grapple (restrain) or shove (knock prone or push 5 ft)</p>",
+    "specialAbilitiesNotes": "<h4>Feats:</h4>\n<p>Fast Healer: Short rest: gain +Con HP; long rest: gain double HP. Forager: Find food and water for 6 people per day. With a Survival (hard) success:  find medicinal herbs worth 1d8 × 5 gp. Quick Draw: Once per turn you may draw or stow a weapon as a [Free] action.</p>\n<h4>Variants</h4>\n<p>Farmer: Use Farmer background (Wilderness 3, Might 3, Athletics 3, Craft: Cook 3) Dock Worker: Same stats, carries cargo hook instead of club (same damage) Servant: Use Servant background (Empathy 3, Society 3, Perception 3, Stealth 3, Deception 3, Pattern A with +40 XP), lower Str to 3, raise Dex to 4 Craftsperson: Use an appropriate Artisan background and Craft skill at rank 3 or 4.</p>",
+    "reactionsNotes": "",
+    "weaves": {
+      "castingStat": "",
+      "potentials": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "mastery": {
+        "fire": 0,
+        "air": 0,
+        "earth": 0,
+        "negative": 0,
+        "space": 0,
+        "water": 0,
+        "time": 0,
+        "positive": 0
+      },
+      "energyPool": {
+        "value": 0,
+        "max": 0
+      },
+      "targetingRoll": "",
+      "notes": ""
+    },
+    "lairActions": {
+      "name": "",
+      "description": "",
+      "effects": []
+    },
+    "npcType": "npc",
+    "attitude": "indifferent"
+  },
+  "items": [
+    {
+      "_id": "3c5a7aaa7ca4dfa9",
+      "name": "Club (improvised weapon), work clothes, work gloves, work boots.",
+      "type": "equipment",
+      "img": "icons/svg/item-bag.svg",
+      "system": {
+        "description": {
+          "value": "<p>Club (improvised weapon), work clothes, work gloves, work boots.</p>"
+        },
+        "equipmentType": "adventuring-gear",
+        "isMagical": false,
+        "identified": true,
+        "weight": 1,
+        "cost": 0,
+        "quantity": 1,
+        "equipped": true,
+        "rarity": "",
+        "requiresAttunement": false,
+        "notes": ""
+      },
+      "effects": [],
+      "flags": {},
+      "_key": "!items!3c5a7aaa7ca4dfa9"
+    }
+  ],
+  "effects": [],
+  "flags": {},
+  "prototypeToken": {
+    "name": "Name: Commoner",
+    "img": "icons/svg/mystery-man.svg",
+    "width": 1,
+    "height": 1,
+    "disposition": -1
+  },
+  "_key": "!actors!0e895c7258a0c45e"
+}

@@ -272,7 +272,7 @@ Someone, or some group has animosity toward you that causes you occasional troub
 ### Enemy - Serious (3)
 A powerful person or group has animosity toward you that causes you trouble.
 
-### Enemy - Major (3)
+### Enemy - Major (5)
 A powerful organization or nation has animosity toward you and is constantly pursuing you.
 
 ### Fealty (2)
